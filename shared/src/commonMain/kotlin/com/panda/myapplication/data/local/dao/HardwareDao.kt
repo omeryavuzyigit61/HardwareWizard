@@ -45,6 +45,12 @@ abstract class HardwareDao {
 
     // region Writes
 
+    @Query("SELECT * FROM hardware_items")
+    abstract suspend fun getAllHardwareItems(): List<HardwareItemEntity>
+
+    @Upsert
+    abstract suspend fun upsertHardwareItems(items: List<HardwareItemEntity>)
+
     @Upsert
     protected abstract suspend fun upsertItems(items: List<HardwareItemEntity>)
 

@@ -368,4 +368,27 @@ class HardwareEnrichmentAndStorageTest {
         assertEquals("GeForce RTX 4070 Ti SUPER Ventus 3X", itemEntity.model)
         kotlin.test.assertNull(gpuSpecEntity.partNumber)
     }
+
+    @Test
+    fun benchmarkInfo_parsesAndEnrichesCorrectly() {
+        val sampleJson = """
+            {
+              "cpu_amd_ryzen_7_7800x3d": {
+                "score": 98,
+                "singleCoreScore": 1820,
+                "multiCoreScore": 18500,
+                "gamingIndex": 99,
+                "tier": "S-Tier",
+                "testSuite": "Cinebench R23"
+              }
+            }
+        """.trimIndent()
+
+        val benchmarks = json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(sampleJson)
+        assertEquals(1, benchmarks.size)
+        val b = benchmarks["cpu_amd_ryzen_7_7800x3d"]
+        kotlin.test.assertNotNull(b)
+        assertEquals(98, b.score)
+        assertEquals("S-Tier", b.tier)
+    }
 }

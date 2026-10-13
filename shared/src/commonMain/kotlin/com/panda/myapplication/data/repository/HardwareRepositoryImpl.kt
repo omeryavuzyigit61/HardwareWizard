@@ -90,36 +90,59 @@ class HardwareRepositoryImpl(
     }
 
     override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
-        val result = remoteDataSource.fetchAllHardware()
-        result.fold(
-            onSuccess = { catalog ->
-                runCatching {
-                    val now = Clock.System.now()
-                    val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
-                    val localPrices = localDataSource.loadLocalPricesTr()
-                    val allPrices = localPrices + remotePrices
+        val now = Clock.System.now()
+        val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
+        val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
+        val localPrices = localDataSource.loadLocalPricesTr()
+        val localBenchmarks = localDataSource.loadLocalBenchmarks()
+        val allPrices = localPrices + remotePrices
+        val allBenchmarks = localBenchmarks + remoteBenchmarks
 
-                    val snapshot = HardwareMapper.buildCatalogSnapshot(
-                        cpus = catalog.cpus,
-                        gpus = catalog.gpus,
-                        rams = catalog.rams,
-                        motherboards = catalog.motherboards,
-                        psus = catalog.psus,
-                        storages = catalog.storages,
-                        coolers = catalog.coolers,
-                        cases = catalog.cases,
-                        pricesTr = allPrices,
-                        syncedAt = now,
-                    )
-                    hardwareDao.replaceCatalog(snapshot, syncedAt = now)
-                }.fold(
-                    onSuccess = { DomainResult.Success(Unit) },
-                    onFailure = { error -> DomainResult.Failure(DomainError.Storage) },
+        val catalogResult = remoteDataSource.fetchAllHardware()
+        if (catalogResult.isSuccess) {
+            val catalog = catalogResult.getOrThrow()
+            runCatching {
+                val snapshot = HardwareMapper.buildCatalogSnapshot(
+                    cpus = catalog.cpus,
+                    gpus = catalog.gpus,
+                    rams = catalog.rams,
+                    motherboards = catalog.motherboards,
+                    psus = catalog.psus,
+                    storages = catalog.storages,
+                    coolers = catalog.coolers,
+                    cases = catalog.cases,
+                    pricesTr = allPrices,
+                    benchmarks = allBenchmarks,
+                    syncedAt = now,
                 )
-            },
-            onFailure = { error ->
-                DomainResult.Failure(DomainError.Network)
-            },
-        )
+                hardwareDao.replaceCatalog(snapshot, syncedAt = now)
+                DomainResult.Success(Unit)
+            }.getOrElse { DomainResult.Failure(DomainError.Storage) }
+        } else {
+            // If full catalog remote fetch fails, update existing cached items with latest prices and benchmarks from repo
+            runCatching {
+                val existing = hardwareDao.getAllHardwareItems()
+                if (existing.isNotEmpty()) {
+                    val updated = existing.map { item ->
+                        val priceData = allPrices[item.id]
+                        val benchData = allBenchmarks[item.id]
+                        item.copy(
+                            currentPriceTry = priceData?.currentPriceTry ?: item.currentPriceTry,
+                            lowestPriceTry = priceData?.lowestPriceTry ?: item.lowestPriceTry,
+                            highestPriceTry = priceData?.highestPriceTry ?: item.highestPriceTry,
+                            priceHistory = priceData?.priceHistory ?: item.priceHistory,
+                            benchmarkScore = benchData?.score ?: item.benchmarkScore,
+                            benchmarkTier = benchData?.tier ?: item.benchmarkTier,
+                            benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
+                            benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
+                        )
+                    }
+                    hardwareDao.upsertHardwareItems(updated)
+                    DomainResult.Success(Unit)
+                } else {
+                    DomainResult.Failure(DomainError.Network)
+                }
+            }.getOrElse { DomainResult.Failure(DomainError.Network) }
+        }
     }
 }

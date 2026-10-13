@@ -29,6 +29,16 @@ object HardwareEnrichmentEngine {
         val fullName = item.displayName.uppercase()
         val brand = item.brand.uppercase()
 
+        item.benchmarkInfo?.let { bench ->
+            badges.add(
+                EngineeringBadge(
+                    label = "Performans Benchmark Puanı",
+                    value = "${bench.score}/100 • ${bench.tier} (${bench.testSuite})",
+                    isHighlighted = true,
+                )
+            )
+        }
+
         when (val s = item.spec) {
             is PsuSpec -> {
                 // Tier Rating

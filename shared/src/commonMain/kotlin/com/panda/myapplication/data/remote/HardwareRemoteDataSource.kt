@@ -87,6 +87,13 @@ class HardwareRemoteDataSource(
         }
     }
 
+    suspend fun fetchBenchmarks(url: String = DEFAULT_BENCHMARKS_URL): Result<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>> = withContext(ioDispatcher) {
+        runCatching {
+            val text = httpClient.get(url).bodyAsText()
+            json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(text)
+        }
+    }
+
     private suspend inline fun <reified T> fetchJsonList(url: String): List<T> = runCatching {
         val text = httpClient.get(url).bodyAsText()
         val jsonElement = json.parseToJsonElement(text)
@@ -101,6 +108,7 @@ class HardwareRemoteDataSource(
 
     companion object {
         const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/docyx/pc-part-dataset/main/data/json"
-        const val DEFAULT_PRICES_TR_URL = "https://raw.githubusercontent.com/docyx/pc-part-dataset/main/data/json/prices_tr.json"
+        const val DEFAULT_PRICES_TR_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/prices_tr.json"
+        const val DEFAULT_BENCHMARKS_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/hardware_benchmarks.json"
     }
 }

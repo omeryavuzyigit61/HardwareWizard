@@ -40,6 +40,7 @@ class HardwareLocalDataSource(
             val psus = readJsonAsset<List<PsuRawDto>>("files/power-supply.json").orEmpty()
 
             val pricesTr = loadLocalPricesTr()
+            val benchmarks = loadLocalBenchmarks()
 
             val snapshot = HardwareMapper.buildCatalogSnapshot(
                 cpus = cpus,
@@ -48,6 +49,7 @@ class HardwareLocalDataSource(
                 motherboards = motherboards,
                 psus = psus,
                 pricesTr = pricesTr,
+                benchmarks = benchmarks,
                 syncedAt = Clock.System.now(),
             )
 
@@ -60,6 +62,11 @@ class HardwareLocalDataSource(
     @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalPricesTr(): Map<String, com.panda.myapplication.domain.model.ProductPriceInfo> = withContext(ioDispatcher) {
         readJsonAsset<Map<String, com.panda.myapplication.domain.model.ProductPriceInfo>>("files/prices_tr.json").orEmpty()
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    suspend fun loadLocalBenchmarks(): Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo> = withContext(ioDispatcher) {
+        readJsonAsset<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>("files/hardware_benchmarks.json").orEmpty()
     }
 
     @OptIn(ExperimentalResourceApi::class)

@@ -8,6 +8,7 @@ data class HardwareItem(
     val price: Money?,
     val spec: HardwareSpec,
     val priceInfo: ProductPriceInfo? = null,
+    val benchmarkInfo: HardwareBenchmarkInfo? = null,
 ) {
     val category: HardwareCategory get() = spec.category
 
@@ -15,6 +16,8 @@ data class HardwareItem(
     val lowestPriceTry: Double? get() = priceInfo?.lowestPriceTry
     val highestPriceTry: Double? get() = priceInfo?.highestPriceTry
     val priceHistory: List<PricePoint> get() = priceInfo?.priceHistory.orEmpty()
+    val benchmarkScore: Int? get() = benchmarkInfo?.score
+    val benchmarkTier: String? get() = benchmarkInfo?.tier
 
     val displayName: String get() = if (model.startsWith(brand, ignoreCase = true)) {
         model

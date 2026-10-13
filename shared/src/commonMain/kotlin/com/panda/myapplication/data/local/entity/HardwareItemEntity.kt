@@ -24,4 +24,8 @@ data class HardwareItemEntity(
     @ColumnInfo(name = "lowest_price_try") val lowestPriceTry: Double? = null,
     @ColumnInfo(name = "highest_price_try") val highestPriceTry: Double? = null,
     @ColumnInfo(name = "price_history") val priceHistory: List<PricePoint>? = null,
+    @ColumnInfo(name = "benchmark_score") val benchmarkScore: Int? = null,
+    @ColumnInfo(name = "benchmark_tier") val benchmarkTier: String? = null,
+    @ColumnInfo(name = "benchmark_test_suite") val benchmarkTestSuite: String? = null,
+    @ColumnInfo(name = "benchmark_gaming_index") val benchmarkGamingIndex: Int? = null,
 )
