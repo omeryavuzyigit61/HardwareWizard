@@ -29,14 +29,61 @@ object HardwareEnrichmentEngine {
         val fullName = item.displayName.uppercase()
         val brand = item.brand.uppercase()
 
-        item.benchmarkInfo?.let { bench ->
+        val bench = item.benchmarkInfo ?: BenchmarkEngine.evaluate(item).info
+        val verifiedBadge = if (bench.isVerified) "Doğrulanmış Test" else "Simülasyon"
+        badges.add(
+            EngineeringBadge(
+                label = "Performans Benchmark Puanı",
+                value = "${bench.score}/100 • ${bench.tier} ($verifiedBadge)",
+                isHighlighted = true,
+            )
+        )
+        badges.add(
+            EngineeringBadge(
+                label = "TechPowerUp Bağıl Güç Endeksi",
+                value = "%${bench.relativePerformanceIndex} Bağıl Performans",
+                isHighlighted = bench.relativePerformanceIndex >= 80.0,
+            )
+        )
+        bench.cinebenchR23?.let { cb ->
             badges.add(
                 EngineeringBadge(
-                    label = "Performans Benchmark Puanı",
-                    value = "${bench.score}/100 • ${bench.tier} (${bench.testSuite})",
+                    label = "Cinebench R23 Skoru",
+                    value = "Tek: ${cb.singleCore} Puan | Çoklu: ${cb.multiCore} Puan",
                     isHighlighted = true,
                 )
             )
+        }
+        bench.mark3d?.let { m3d ->
+            val pts = listOfNotNull(
+                m3d.timeSpy?.let { "TimeSpy: $it" },
+                m3d.fireStrike?.let { "FireStrike: $it" },
+                m3d.portRoyal?.let { "Port Royal: $it" },
+            ).joinToString(" | ")
+            if (pts.isNotBlank()) {
+                badges.add(
+                    EngineeringBadge(
+                        label = "3DMark Sentetik Grafik Puanı",
+                        value = pts,
+                        isHighlighted = true,
+                    )
+                )
+            }
+        }
+        bench.gameFps?.let { games ->
+            val cp = games.cyberpunk2077?.let { "Cyberpunk: ${it.p1440.toInt()} FPS" }
+            val fh = games.forzaHorizon5?.let { "Forza: ${it.p1440.toInt()} FPS" }
+            val cs = games.counterStrike2?.let { "CS2: ${it.p1440.toInt()} FPS" }
+            val fpsSummary = listOfNotNull(cp, fh, cs).joinToString(" • ")
+            if (fpsSummary.isNotBlank()) {
+                badges.add(
+                    EngineeringBadge(
+                        label = "Referans Oyun Performansı (1440p Ultra)",
+                        value = fpsSummary,
+                        isHighlighted = true,
+                    )
+                )
+            }
         }
 
         when (val s = item.spec) {

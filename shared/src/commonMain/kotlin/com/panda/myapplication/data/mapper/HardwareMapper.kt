@@ -171,18 +171,8 @@ object HardwareMapper {
         } else {
             generateFallbackPriceInfo(entity.id, entity.priceMinor ?: 30000L)
         }
-        val benchmarkInfo = if (entity.benchmarkScore != null) {
-            HardwareBenchmarkInfo(
-                score = entity.benchmarkScore,
-                tier = entity.benchmarkTier ?: "A-Tier",
-                gamingIndex = entity.benchmarkGamingIndex,
-                testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
-            )
-        } else {
-            generateFallbackBenchmarkInfo(entity.id, entity.category)
-        }
 
-        return runCatching {
+        val intermediateItem = runCatching {
             HardwareItem(
                 id = HardwareId(entity.id),
                 brand = entity.brand,
@@ -190,9 +180,24 @@ object HardwareMapper {
                 price = price,
                 spec = spec,
                 priceInfo = priceInfo,
-                benchmarkInfo = benchmarkInfo,
+                benchmarkInfo = null,
             )
-        }.getOrNull()
+        }.getOrNull() ?: return null
+
+        val benchmarkInfo = if (entity.benchmarkScore != null) {
+            HardwareBenchmarkInfo(
+                score = entity.benchmarkScore,
+                tier = entity.benchmarkTier ?: "A-Tier",
+                gamingIndex = entity.benchmarkGamingIndex,
+                testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
+                relativePerformanceIndex = entity.benchmarkGamingIndex?.toDouble() ?: entity.benchmarkScore.toDouble(),
+                dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
+            )
+        } else {
+            com.panda.myapplication.domain.engine.BenchmarkEngine.simulateBenchmark(intermediateItem)
+        }
+
+        return intermediateItem.copy(benchmarkInfo = benchmarkInfo)
     }
 
     // endregion

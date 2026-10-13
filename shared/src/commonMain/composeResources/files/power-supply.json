@@ -22,5 +22,383 @@
     "efficiency": "gold",
     "wattage": 1000,
     "color": "Black"
+  },
+  {
+    "name": "MSI MAG A650BN",
+    "price": 74.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 650,
+    "modular": false,
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM1000e (2023)",
+    "price": 179.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM750e (2025)",
+    "price": 99.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 750,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM850e (2025)",
+    "price": 119.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A550BN",
+    "price": 54.99,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 550,
+    "modular": false,
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM850x (2024)",
+    "price": 144.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair SF1000 (2024)",
+    "price": 239.99,
+    "type": "SFX",
+    "efficiency": "platinum",
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A650GL",
+    "price": 129.94,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 650,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Thermaltake Smart",
+    "price": 39.95,
+    "type": "ATX",
+    "efficiency": "plus",
+    "wattage": 500,
+    "modular": false,
+    "color": null
+  },
+  {
+    "name": "Corsair SF750 (2024)",
+    "price": 179.99,
+    "type": "SFX",
+    "efficiency": "platinum",
+    "wattage": 750,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM1000x (2024)",
+    "price": 209.95,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair CX (2023)",
+    "price": 69.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 650,
+    "modular": false,
+    "color": "Black"
+  },
+  {
+    "name": "be quiet! Pure Power 12 M",
+    "price": 124.9,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM850",
+    "price": 124.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "White / Black"
+  },
+  {
+    "name": "Corsair SF850 (2024)",
+    "price": 194.99,
+    "type": "SFX",
+    "efficiency": "platinum",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM1000e (2025)",
+    "price": 159.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM650e (2025)",
+    "price": 104.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 650,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Thermaltake Toughpower GX2",
+    "price": 69.98,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 600,
+    "modular": false,
+    "color": "Black"
+  },
+  {
+    "name": "Thermaltake Toughpower GF1 (2024)",
+    "price": 103.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A750BN PCIE5",
+    "price": 74.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 750,
+    "modular": false,
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM750e (2023)",
+    "price": null,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 750,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair AX1600i",
+    "price": 609.99,
+    "type": "ATX",
+    "efficiency": "titanium",
+    "wattage": 1600,
+    "modular": "Full",
+    "color": null
+  },
+  {
+    "name": "be quiet! Dark Power 13",
+    "price": 267.36,
+    "type": "ATX",
+    "efficiency": "titanium",
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair HX1500i (2023)",
+    "price": 258.99,
+    "type": "ATX",
+    "efficiency": "platinum",
+    "wattage": 1500,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair CX650M (2021)",
+    "price": 74.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 650,
+    "modular": "Semi",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM750x (2024)",
+    "price": 119.99,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 750,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM750",
+    "price": 119.95,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 750,
+    "modular": "Full",
+    "color": "White / Black"
+  },
+  {
+    "name": "Corsair RM850e (2023)",
+    "price": 189.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair HX1200i",
+    "price": 219.99,
+    "type": "ATX",
+    "efficiency": "platinum",
+    "wattage": 1200,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM850x (2021)",
+    "price": 198.98,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM750x SHIFT",
+    "price": 154.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 750,
+    "modular": "Full / Side",
+    "color": "Black"
+  },
+  {
+    "name": "SeaSonic Focus GX V4 ATX 3 (2024)",
+    "price": 159.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Corsair CX750M (2021)",
+    "price": 99.99,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 750,
+    "modular": "Semi",
+    "color": "Black"
+  },
+  {
+    "name": "MSI A1000G PCIE5",
+    "price": 191,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MPG A850G PCIE5",
+    "price": 164.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "be quiet! Dark Power Pro 13",
+    "price": 449.9,
+    "type": "ATX",
+    "efficiency": "titanium",
+    "wattage": 1600,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A650BE",
+    "price": 69.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 650,
+    "modular": "Semi",
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A1000GL PCIE5",
+    "price": 179.69,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 1000,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "EVGA 400 N1",
+    "price": 46.25,
+    "type": "ATX",
+    "efficiency": null,
+    "wattage": 400,
+    "modular": false,
+    "color": null
+  },
+  {
+    "name": "Thermaltake Toughpower GF A3 Snow",
+    "price": 129.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "modular": "Full",
+    "color": "White"
+  },
+  {
+    "name": "Corsair HX1500i (2025)",
+    "price": 348.99,
+    "type": "ATX",
+    "efficiency": "platinum",
+    "wattage": 1500,
+    "modular": "Full",
+    "color": "Black"
+  },
+  {
+    "name": "Thermaltake Smart BM3",
+    "price": 69.98,
+    "type": "ATX",
+    "efficiency": "bronze",
+    "wattage": 650,
+    "modular": "Semi",
+    "color": "Black"
   }
 ]

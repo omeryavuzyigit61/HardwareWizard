@@ -1,0 +1,452 @@
+[
+  {
+    "name": "MSI GeForce RTX 4070 SUPER Ventus 2X",
+    "price": 599.99,
+    "chipset": "GeForce RTX 4070 SUPER",
+    "memory": 12,
+    "core_clock": 1980,
+    "boost_clock": 2505,
+    "color": "Black",
+    "length": 242.0
+  },
+  {
+    "name": "Asus TUF GAMING OC GeForce RTX 4080 SUPER",
+    "price": 999.99,
+    "chipset": "GeForce RTX 4080 SUPER",
+    "memory": 16,
+    "core_clock": 2295,
+    "boost_clock": 2580,
+    "color": "Black",
+    "length": 348.0
+  },
+  {
+    "name": "Sapphire PULSE Radeon RX 7800 XT",
+    "price": 489.99,
+    "chipset": "Radeon RX 7800 XT",
+    "memory": 16,
+    "core_clock": 1295,
+    "boost_clock": 2430,
+    "color": "Black",
+    "length": 280.0
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Ventus 2X 12G",
+    "price": 289.99,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1777,
+    "color": "Black",
+    "length": 235.0
+  },
+  {
+    "name": "PowerColor RX7800XT 16G-P",
+    "price": 599.99,
+    "chipset": "Radeon RX 7800 XT",
+    "memory": 16,
+    "core_clock": 1295,
+    "boost_clock": 2430,
+    "color": "Black",
+    "length": 260
+  },
+  {
+    "name": "PNY VCNRTX6000ADA-PB",
+    "price": 6974,
+    "chipset": "RTX 6000 Ada Generation",
+    "memory": 48,
+    "core_clock": 915,
+    "boost_clock": 2505,
+    "color": "Black / Gold",
+    "length": 267
+  },
+  {
+    "name": "Asus Dual GeForce RTX 3060 V2 OC Edition",
+    "price": 329.97,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1867,
+    "color": "Black",
+    "length": 200
+  },
+  {
+    "name": "XFX RX-79TMBABF9",
+    "price": 700.26,
+    "chipset": "Radeon RX 7900 XT",
+    "memory": 20,
+    "core_clock": 2000,
+    "boost_clock": 2400,
+    "color": "Black",
+    "length": 276
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Ti GAMING X",
+    "price": null,
+    "chipset": "GeForce RTX 3060 Ti",
+    "memory": 8,
+    "core_clock": 1410,
+    "boost_clock": 1770,
+    "color": "Black / Silver",
+    "length": 278
+  },
+  {
+    "name": "AMD Radeon RX 6950 XT",
+    "price": null,
+    "chipset": "Radeon RX 6950 XT",
+    "memory": 16,
+    "core_clock": 1890,
+    "boost_clock": 2310,
+    "color": "Black",
+    "length": 267
+  },
+  {
+    "name": "ASRock Intel Arc A380 Challenger ITX",
+    "price": 139.99,
+    "chipset": "Arc A380",
+    "memory": 6,
+    "core_clock": 2250,
+    "boost_clock": null,
+    "color": "Black",
+    "length": 190
+  },
+  {
+    "name": "XFX RX-79GMERCB9",
+    "price": 669.99,
+    "chipset": "Radeon RX 7900 GRE",
+    "memory": 16,
+    "core_clock": 1270,
+    "boost_clock": 2395,
+    "color": "Black",
+    "length": 335
+  },
+  {
+    "name": "MSI GeForce RTX 3080 VENTUS 3X 10G OC",
+    "price": 879.99,
+    "chipset": "GeForce RTX 3080 10GB",
+    "memory": 10,
+    "core_clock": 1440,
+    "boost_clock": null,
+    "color": "Black",
+    "length": 305
+  },
+  {
+    "name": "MSI GeForce RTX 2070 SUPER VENTUS GP OC",
+    "price": 689,
+    "chipset": "GeForce RTX 2070 SUPER",
+    "memory": 8,
+    "core_clock": 1605,
+    "boost_clock": 1785,
+    "color": "Silver / Black",
+    "length": 258
+  },
+  {
+    "name": "MSI GeForce RTX 3070 VENTUS 3X OC",
+    "price": 534.19,
+    "chipset": "GeForce RTX 3070",
+    "memory": 8,
+    "core_clock": 1500,
+    "boost_clock": 1755,
+    "color": "Black / Silver",
+    "length": 305
+  },
+  {
+    "name": "MSI GeForce GTX 1650 SUPER",
+    "price": 419,
+    "chipset": "GeForce GTX 1650 SUPER",
+    "memory": 4,
+    "core_clock": 1530,
+    "boost_clock": 1740,
+    "color": "Black / Silver",
+    "length": 180
+  },
+  {
+    "name": "ASRock Radeon RX6700XT CLD 12G",
+    "price": null,
+    "chipset": "Radeon RX 6700 XT",
+    "memory": 12,
+    "core_clock": 2321,
+    "boost_clock": 2581,
+    "color": "Black",
+    "length": 269
+  },
+  {
+    "name": "MSI GeForce GTX 1060 6GT OCV1",
+    "price": null,
+    "chipset": "GeForce GTX 1060 6GB",
+    "memory": 6,
+    "core_clock": 1544,
+    "boost_clock": 1759,
+    "color": "Black / White",
+    "length": 243
+  },
+  {
+    "name": "MSI RTX 3060 Ventus 3X 12G OC",
+    "price": 569.99,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1807,
+    "color": "Black",
+    "length": 316
+  },
+  {
+    "name": "MSI RTX 4070 Ti SUPER 16G VENTUS 3X BLACK OC",
+    "price": null,
+    "chipset": "GeForce RTX 4070 Ti SUPER",
+    "memory": 16,
+    "core_clock": 2340,
+    "boost_clock": 2655,
+    "color": null,
+    "length": 322
+  },
+  {
+    "name": "PNY RTX A-Series",
+    "price": 4974,
+    "chipset": "RTX A6000",
+    "memory": 48,
+    "core_clock": 1455,
+    "boost_clock": 1860,
+    "color": "Black / Gold",
+    "length": 267
+  },
+  {
+    "name": "MSI RX 6600 XT MECH 2X 8G OC",
+    "price": 648,
+    "chipset": "Radeon RX 6600 XT",
+    "memory": 8,
+    "core_clock": 1968,
+    "boost_clock": 2602,
+    "color": "Black / Silver",
+    "length": 235
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Ventus 2X 12G OC",
+    "price": 349.75,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1807,
+    "color": "Black",
+    "length": 235
+  },
+  {
+    "name": "MSI GeForce RTX 2060 VENTUS GP OC",
+    "price": 349.99,
+    "chipset": "GeForce RTX 2060",
+    "memory": 6,
+    "core_clock": 1365,
+    "boost_clock": 1710,
+    "color": "Gray / Black",
+    "length": 231
+  },
+  {
+    "name": "MSI RX 580 8G",
+    "price": 260,
+    "chipset": "Radeon RX 580",
+    "memory": 8,
+    "core_clock": 1257,
+    "boost_clock": 1340,
+    "color": "Black / Red",
+    "length": 243
+  },
+  {
+    "name": "MSI GeForce RTX 3080 GAMING X TRIO 10G",
+    "price": 779,
+    "chipset": "GeForce RTX 3080 10GB",
+    "memory": 10,
+    "core_clock": 1440,
+    "boost_clock": null,
+    "color": "Black",
+    "length": 323
+  },
+  {
+    "name": "MSI Radeon RX 5600 XT GAMING MX",
+    "price": null,
+    "chipset": "Radeon RX 5600 XT",
+    "memory": 6,
+    "core_clock": 1280,
+    "boost_clock": 1620,
+    "color": "Black / Silver",
+    "length": 297
+  },
+  {
+    "name": "MSI RTX 3070 GAMING X TRIO",
+    "price": 699,
+    "chipset": "GeForce RTX 3070",
+    "memory": 8,
+    "core_clock": 1500,
+    "boost_clock": 1830,
+    "color": "Black / Silver",
+    "length": 323
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Gaming X12G",
+    "price": null,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1837,
+    "color": "Black / Silver",
+    "length": 276
+  },
+  {
+    "name": "PowerColor RX 7900 XT 20G",
+    "price": 998.59,
+    "chipset": "Radeon RX 7900 XT",
+    "memory": 20,
+    "core_clock": 2000,
+    "boost_clock": 2400,
+    "color": "Black",
+    "length": 276
+  },
+  {
+    "name": "MSI Radeon RX 570 ARMOR 8G",
+    "price": null,
+    "chipset": "Radeon RX 570",
+    "memory": 8,
+    "core_clock": 1168,
+    "boost_clock": 1244,
+    "color": "Black / White",
+    "length": 246
+  },
+  {
+    "name": "MSI RTX 5060 Ti 16G INSPIRE 2X OC",
+    "price": 539.98,
+    "chipset": "GeForce RTX 5060 Ti",
+    "memory": 16,
+    "core_clock": 2410,
+    "boost_clock": 2632,
+    "color": "Gold / Black",
+    "length": 204
+  },
+  {
+    "name": "MSI Radeon RX 5500 XT MECH 8G OC",
+    "price": null,
+    "chipset": "Radeon RX 5500 XT",
+    "memory": 8,
+    "core_clock": 1647,
+    "boost_clock": 1845,
+    "color": "Black",
+    "length": 215
+  },
+  {
+    "name": "MSI GeForce GTX 1060 3G OCV1",
+    "price": null,
+    "chipset": "GeForce GTX 1060 3GB",
+    "memory": 3,
+    "core_clock": 1544,
+    "boost_clock": 1759,
+    "color": "Black / White",
+    "length": 188
+  },
+  {
+    "name": "PNY VCNRTX4000ADA-PB",
+    "price": 1290.73,
+    "chipset": "RTX 4000 Ada Generation",
+    "memory": 20,
+    "core_clock": 1500,
+    "boost_clock": 2175,
+    "color": "Black",
+    "length": 241
+  },
+  {
+    "name": "MSI Radeon RX 6600 MECH 2X 8G",
+    "price": 595,
+    "chipset": "Radeon RX 6600",
+    "memory": 8,
+    "core_clock": 1626,
+    "boost_clock": 2491,
+    "color": "Black / Silver",
+    "length": 235
+  },
+  {
+    "name": "MSI GeForce RTX 3090 GAMING X TRIO 24G",
+    "price": 1695.99,
+    "chipset": "GeForce RTX 3090",
+    "memory": 24,
+    "core_clock": 1395,
+    "boost_clock": null,
+    "color": "Black",
+    "length": 335
+  },
+  {
+    "name": "MSI RTX 4090 VENTUS 3X 24G OC",
+    "price": 3089,
+    "chipset": "GeForce RTX 4090",
+    "memory": 24,
+    "core_clock": 2235,
+    "boost_clock": 2565,
+    "color": "Silver / Black",
+    "length": 322
+  },
+  {
+    "name": "AMD RADEON PRO WX 7100",
+    "price": 184.96,
+    "chipset": "Radeon Pro WX 7100",
+    "memory": 8,
+    "core_clock": 900,
+    "boost_clock": 1080,
+    "color": "Blue",
+    "length": 242
+  },
+  {
+    "name": "PNY VCQRTX8000-PB",
+    "price": 3296.96,
+    "chipset": "Quadro RTX 8000",
+    "memory": 48,
+    "core_clock": 1395,
+    "boost_clock": 1770,
+    "color": "Black / White",
+    "length": 267
+  },
+  {
+    "name": "NVIDIA TITAN RTX",
+    "price": 1269,
+    "chipset": "TITAN RTX",
+    "memory": 24,
+    "core_clock": 1350,
+    "boost_clock": 1770,
+    "color": "Gold / Black",
+    "length": 267
+  },
+  {
+    "name": "Asus Phoenix GeForce RTX 3060 V2",
+    "price": 299.99,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1807,
+    "color": "Black",
+    "length": 177
+  },
+  {
+    "name": "PNY VCNRTX2000ADA-PB",
+    "price": 705.93,
+    "chipset": "RTX 2000 Ada Generation",
+    "memory": 16,
+    "core_clock": 1620,
+    "boost_clock": 2130,
+    "color": null,
+    "length": 168
+  },
+  {
+    "name": "MSI GeForce RTX 3090 TI GAMING X TRIO 24G",
+    "price": 1989,
+    "chipset": "GeForce RTX 3090 Ti",
+    "memory": 24,
+    "core_clock": 1560,
+    "boost_clock": 1920,
+    "color": "Black",
+    "length": 325
+  },
+  {
+    "name": "PNY VCQRTX4000-PB",
+    "price": 349.96,
+    "chipset": "Quadro RTX 4000",
+    "memory": 8,
+    "core_clock": 1005,
+    "boost_clock": 1545,
+    "color": "Silver / Black",
+    "length": 267
+  }
+]

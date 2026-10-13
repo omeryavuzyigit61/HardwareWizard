@@ -391,4 +391,61 @@ class HardwareEnrichmentAndStorageTest {
         assertEquals(98, b.score)
         assertEquals("S-Tier", b.tier)
     }
+
+    @Test
+    fun benchmarkEngine_usesVerifiedWhenPresentAndSimulatesWhenAbsent() {
+        val cpuVerified = HardwareItem(
+            id = HardwareId("cpu_amd_ryzen_7_7800x3d"),
+            brand = "AMD",
+            model = "Ryzen 7 7800X3D",
+            price = Money(44900L, "USD"),
+            spec = CpuSpec(
+                socket = "AM5",
+                coreCount = 8,
+                threadCount = 16,
+                baseClock = Frequency(4200),
+                boostClock = Frequency(5000),
+                tdp = Wattage(120),
+                hasIntegratedGraphics = true,
+                l3CacheMb = 96,
+                architecture = "Zen 4",
+            ),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 98,
+                tier = "S-Tier",
+                relativePerformanceIndex = 100.0,
+                dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
+            ),
+        )
+
+        val verifiedResult = com.panda.myapplication.domain.engine.BenchmarkEngine.evaluate(cpuVerified)
+        assertEquals(com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK, verifiedResult.dataSource)
+        assertEquals(98, verifiedResult.info.score)
+        assertEquals(100.0, verifiedResult.info.relativePerformanceIndex)
+
+        val cpuUnknown = HardwareItem(
+            id = HardwareId("cpu_custom_prototype"),
+            brand = "Custom",
+            model = "Experimental 16-Core",
+            price = Money(50000L, "USD"),
+            spec = CpuSpec(
+                socket = "AM5",
+                coreCount = 16,
+                threadCount = 32,
+                baseClock = Frequency(4000),
+                boostClock = Frequency(5400),
+                tdp = Wattage(170),
+                hasIntegratedGraphics = false,
+                l3CacheMb = 64,
+                architecture = "Zen 5",
+            ),
+            benchmarkInfo = null,
+        )
+
+        val estimatedResult = com.panda.myapplication.domain.engine.BenchmarkEngine.evaluate(cpuUnknown)
+        assertEquals(com.panda.myapplication.domain.model.DataSourceType.ESTIMATED_SIMULATION, estimatedResult.dataSource)
+        assertTrue(estimatedResult.info.score >= 80)
+        kotlin.test.assertNotNull(estimatedResult.info.cinebenchR23)
+        kotlin.test.assertNotNull(estimatedResult.info.gameFps?.cyberpunk2077)
+    }
 }

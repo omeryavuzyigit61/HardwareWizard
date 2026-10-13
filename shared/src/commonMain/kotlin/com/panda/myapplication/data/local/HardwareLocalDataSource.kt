@@ -2,11 +2,14 @@ package com.panda.myapplication.data.local
 
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.mapper.HardwareMapper
+import com.panda.myapplication.data.model.dto.CaseRawDto
+import com.panda.myapplication.data.model.dto.CoolerRawDto
 import com.panda.myapplication.data.model.dto.CpuRawDto
 import com.panda.myapplication.data.model.dto.GpuRawDto
 import com.panda.myapplication.data.model.dto.MotherboardRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
+import com.panda.myapplication.data.model.dto.StorageRawDto
 import hardwarewizard.shared.generated.resources.Res
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.first
@@ -38,6 +41,9 @@ class HardwareLocalDataSource(
             val rams = readJsonAsset<List<RamRawDto>>("files/memory.json").orEmpty()
             val motherboards = readJsonAsset<List<MotherboardRawDto>>("files/motherboard.json").orEmpty()
             val psus = readJsonAsset<List<PsuRawDto>>("files/power-supply.json").orEmpty()
+            val storages = readJsonAsset<List<StorageRawDto>>("files/internal-hard-drive.json").orEmpty()
+            val coolers = readJsonAsset<List<CoolerRawDto>>("files/cpu-cooler.json").orEmpty()
+            val cases = readJsonAsset<List<CaseRawDto>>("files/case.json").orEmpty()
 
             val pricesTr = loadLocalPricesTr()
             val benchmarks = loadLocalBenchmarks()
@@ -48,6 +54,9 @@ class HardwareLocalDataSource(
                 rams = rams,
                 motherboards = motherboards,
                 psus = psus,
+                storages = storages,
+                coolers = coolers,
+                cases = cases,
                 pricesTr = pricesTr,
                 benchmarks = benchmarks,
                 syncedAt = Clock.System.now(),
