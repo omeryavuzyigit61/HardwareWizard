@@ -135,6 +135,9 @@ class HardwareRepositoryImpl(
                             benchmarkTier = benchData?.tier ?: item.benchmarkTier,
                             benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
                             benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
+                            cpuSynthetic = benchData?.cpuSynthetic ?: item.cpuSynthetic,
+                            gpuSynthetic = benchData?.gpuSynthetic ?: item.gpuSynthetic,
+                            gameFps = benchData?.gameFps ?: item.gameFps,
                         )
                     }
                     hardwareDao.upsertHardwareItems(updated)

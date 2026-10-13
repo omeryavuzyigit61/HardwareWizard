@@ -217,6 +217,16 @@ fun HardwareDetailContent(
                             )
                         }
 
+                        // Synthetic Multi-Benchmark (CPU-Monkey & 3DMark) Card
+                        if (item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU || item.benchmarkInfo != null) {
+                            item {
+                                SyntheticBenchmarkCard(
+                                    category = item.category,
+                                    benchmarkInfo = item.benchmarkInfo,
+                                )
+                            }
+                        }
+
                         // Performance & Power Progress Bars
                         item {
                             PerformancePowerSection(item = item)

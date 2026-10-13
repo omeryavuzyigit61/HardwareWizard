@@ -191,6 +191,9 @@ object HardwareMapper {
                 gamingIndex = entity.benchmarkGamingIndex,
                 testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
                 relativePerformanceIndex = entity.benchmarkGamingIndex?.toDouble() ?: entity.benchmarkScore.toDouble(),
+                cpuSynthetic = entity.cpuSynthetic,
+                gpuSynthetic = entity.gpuSynthetic,
+                gameFps = entity.gameFps,
                 dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
             )
         } else {
@@ -660,6 +663,9 @@ object HardwareMapper {
                 benchmarkTier = benchData.tier,
                 benchmarkTestSuite = benchData.testSuite,
                 benchmarkGamingIndex = benchData.gamingIndex,
+                cpuSynthetic = benchData.cpuSynthetic,
+                gpuSynthetic = benchData.gpuSynthetic,
+                gameFps = benchData.gameFps,
             )
         }
 

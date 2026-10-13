@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
+import com.panda.myapplication.domain.model.CpuSyntheticBenchmark
+import com.panda.myapplication.domain.model.GameFpsBenchmark
+import com.panda.myapplication.domain.model.GpuSyntheticBenchmark
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.PricePoint
 import kotlin.time.Instant
@@ -28,4 +31,7 @@ data class HardwareItemEntity(
     @ColumnInfo(name = "benchmark_tier") val benchmarkTier: String? = null,
     @ColumnInfo(name = "benchmark_test_suite") val benchmarkTestSuite: String? = null,
     @ColumnInfo(name = "benchmark_gaming_index") val benchmarkGamingIndex: Int? = null,
+    @ColumnInfo(name = "cpu_synthetic") val cpuSynthetic: CpuSyntheticBenchmark? = null,
+    @ColumnInfo(name = "gpu_synthetic") val gpuSynthetic: GpuSyntheticBenchmark? = null,
+    @ColumnInfo(name = "game_fps") val gameFps: GameFpsBenchmark? = null,
 )

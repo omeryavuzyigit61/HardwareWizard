@@ -1028,6 +1028,27 @@ private fun ComponentSlotCard(
                                     overflow = TextOverflow.Ellipsis,
                                 )
                             }
+                            val benchSummary = when {
+                                item.spec is CpuSpec -> {
+                                    val pts = item.benchmarkInfo?.effectiveMultiCore
+                                    if (pts != null) "⚡ Cinebench: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
+                                }
+                                item.spec is GpuSpec -> {
+                                    val pts = item.benchmarkInfo?.effectiveTimeSpy
+                                    if (pts != null) "🎮 3DMark Time Spy: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
+                                }
+                                else -> item.benchmarkScore?.let { "★ Skor: $it/100 • ${item.benchmarkTier ?: "Tier"}" }
+                            }
+                            if (benchSummary != null) {
+                                Text(
+                                    text = benchSummary,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = NeonCyan,
+                                    fontWeight = FontWeight.SemiBold,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
                         }
                     }
 
@@ -1043,12 +1064,23 @@ private fun ComponentSlotCard(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
 
-                // Actions: Change & Remove
+                // Actions: Detail & Change & Remove
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
+                    OutlinedButton(
+                        onClick = onDetailClick,
+                        shape = RoundedCornerShape(6.dp),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
+                    ) {
+                        Text("Detay & Benchmark", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurface)
+                    }
+
+                    Spacer(modifier = Modifier.width(Spacing.small))
+
                     OutlinedButton(
                         onClick = onSlotClick,
                         shape = RoundedCornerShape(6.dp),

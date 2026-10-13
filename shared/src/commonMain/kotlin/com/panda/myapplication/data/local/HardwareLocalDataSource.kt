@@ -75,7 +75,16 @@ class HardwareLocalDataSource(
 
     @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalBenchmarks(): Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo> = withContext(ioDispatcher) {
-        readJsonAsset<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>("files/hardware_benchmarks.json").orEmpty()
+        runCatching {
+            val bytes = Res.readBytes("files/hardware_benchmarks.json")
+            val text = bytes.decodeToString()
+            val element = json.parseToJsonElement(text)
+            if (element is kotlinx.serialization.json.JsonObject && (element.containsKey("cpus") || element.containsKey("gpus"))) {
+                json.decodeFromJsonElement(com.panda.myapplication.data.model.dto.BenchmarkCatalogRawDto.serializer(), element).toDomainMap()
+            } else {
+                json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(text)
+            }
+        }.getOrDefault(emptyMap())
     }
 
     @OptIn(ExperimentalResourceApi::class)

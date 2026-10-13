@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
-Hardware Wizard - Benchmark Veri Tabanı Oluşturucu
-Popüler CPU ve GPU'lar için TechPowerUp bağıl endeksleri, 3DMark, Cinebench R23
-ve Cyberpunk 2077, Forza Horizon 5, Counter-Strike 2 oyunlarının 1080p, 1440p, 4K referans FPS değerlerini üretir.
+Hardware Wizard - Genişletilmiş CPU-Monkey Benchmark Veri Tabanı Oluşturucu
+CPU ve GPU'lar için TechPowerUp / CPU-Monkey standartlarında çoklu sentetik test paketi:
+- CPU: Cinebench 2024, Cinebench R23, Geekbench 6, PassMark CPU Mark
+- GPU: 3DMark Time Spy (Graphics), Time Spy Extreme, Steel Nomad
+- Oyunlar: Cyberpunk 2077, Forza Horizon 5, Counter-Strike 2 (1080p, 1440p, 4K)
 """
 
 import json
@@ -22,347 +24,508 @@ def sanitize(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
-# Doğrulanmış CPU Benchmark Verileri (TechPowerUp + Cinebench + 3DMark)
+# Doğrulanmış CPU Benchmark Verileri (TechPowerUp + Cinebench + Geekbench 6 + PassMark)
 CPU_DB = [
+    {
+        "keywords": ["9900X"],
+        "name": "AMD Ryzen 9 9900X",
+        "gaming_relative_index": 0.95,
+        "synthetic": {
+            "cinebench_2024_single": 134,
+            "cinebench_2024_multi": 2180,
+            "cinebench_r23_single": 2240,
+            "cinebench_r23_multi": 33200,
+            "geekbench_6_single": 3410,
+            "geekbench_6_multi": 20450,
+            "passmark_cpu_mark": 54200
+        },
+        "fps_cp": (168.0, 134.0, 89.0),
+        "fps_fh": (245.0, 200.0, 132.0),
+        "fps_cs": (590.0, 470.0, 290.0)
+    },
     {
         "keywords": ["9800X3D"],
         "name": "AMD Ryzen 7 9800X3D",
-        "rel": 108.0,
-        "cb_single": 2150, "cb_multi": 23400,
-        "ts_cpu": 16800,
+        "gaming_relative_index": 1.08,
+        "synthetic": {
+            "cinebench_2024_single": 142,
+            "cinebench_2024_multi": 1560,
+            "cinebench_r23_single": 2150,
+            "cinebench_r23_multi": 23400,
+            "geekbench_6_single": 3480,
+            "geekbench_6_multi": 18200,
+            "passmark_cpu_mark": 46500
+        },
         "fps_cp": (185.0, 150.0, 98.0),
         "fps_fh": (265.0, 218.0, 145.0),
-        "fps_cs": (640.0, 510.0, 310.0),
-        "tier": "S-Tier", "score": 100
+        "fps_cs": (640.0, 510.0, 310.0)
     },
     {
         "keywords": ["7800X3D"],
         "name": "AMD Ryzen 7 7800X3D",
-        "rel": 100.0,
-        "cb_single": 1820, "cb_multi": 18500,
-        "ts_cpu": 14200,
+        "gaming_relative_index": 1.00,
+        "synthetic": {
+            "cinebench_2024_single": 110,
+            "cinebench_2024_multi": 1120,
+            "cinebench_r23_single": 1820,
+            "cinebench_r23_multi": 18500,
+            "geekbench_6_single": 2780,
+            "geekbench_6_multi": 15400,
+            "passmark_cpu_mark": 35200
+        },
         "fps_cp": (165.0, 132.0, 88.0),
         "fps_fh": (240.0, 195.0, 130.0),
-        "fps_cs": (580.0, 460.0, 285.0),
-        "tier": "S-Tier", "score": 98
+        "fps_cs": (580.0, 460.0, 285.0)
     },
     {
         "keywords": ["7950X3D"],
         "name": "AMD Ryzen 9 7950X3D",
-        "rel": 99.5,
-        "cb_single": 2050, "cb_multi": 36000,
-        "ts_cpu": 20500,
+        "gaming_relative_index": 0.99,
+        "synthetic": {
+            "cinebench_2024_single": 122,
+            "cinebench_2024_multi": 2040,
+            "cinebench_r23_single": 2050,
+            "cinebench_r23_multi": 36000,
+            "geekbench_6_single": 3020,
+            "geekbench_6_multi": 20800,
+            "passmark_cpu_mark": 62500
+        },
         "fps_cp": (162.0, 130.0, 87.0),
         "fps_fh": (236.0, 192.0, 128.0),
-        "fps_cs": (570.0, 455.0, 280.0),
-        "tier": "S-Tier", "score": 99
+        "fps_cs": (570.0, 455.0, 280.0)
     },
     {
         "keywords": ["14900K"],
         "name": "Intel Core i9-14900K",
-        "rel": 97.5,
-        "cb_single": 2300, "cb_multi": 40500,
-        "ts_cpu": 24500,
+        "gaming_relative_index": 0.98,
+        "synthetic": {
+            "cinebench_2024_single": 138,
+            "cinebench_2024_multi": 2240,
+            "cinebench_r23_single": 2300,
+            "cinebench_r23_multi": 40500,
+            "geekbench_6_single": 3150,
+            "geekbench_6_multi": 21400,
+            "passmark_cpu_mark": 61200
+        },
         "fps_cp": (158.0, 128.0, 86.0),
         "fps_fh": (230.0, 188.0, 126.0),
-        "fps_cs": (565.0, 450.0, 278.0),
-        "tier": "S-Tier", "score": 98
+        "fps_cs": (565.0, 450.0, 278.0)
     },
     {
         "keywords": ["14700K"],
         "name": "Intel Core i7-14700K",
-        "rel": 94.0,
-        "cb_single": 2180, "cb_multi": 34800,
-        "ts_cpu": 21500,
+        "gaming_relative_index": 0.94,
+        "synthetic": {
+            "cinebench_2024_single": 130,
+            "cinebench_2024_multi": 1940,
+            "cinebench_r23_single": 2180,
+            "cinebench_r23_multi": 34800,
+            "geekbench_6_single": 2980,
+            "geekbench_6_multi": 19500,
+            "passmark_cpu_mark": 53500
+        },
         "fps_cp": (152.0, 124.0, 84.0),
         "fps_fh": (224.0, 182.0, 122.0),
-        "fps_cs": (545.0, 435.0, 270.0),
-        "tier": "S-Tier", "score": 96
+        "fps_cs": (545.0, 435.0, 270.0)
     },
     {
         "keywords": ["13900K"],
         "name": "Intel Core i9-13900K",
-        "rel": 96.0,
-        "cb_single": 2240, "cb_multi": 38800,
-        "ts_cpu": 23800,
+        "gaming_relative_index": 0.96,
+        "synthetic": {
+            "cinebench_2024_single": 134,
+            "cinebench_2024_multi": 2180,
+            "cinebench_r23_single": 2240,
+            "cinebench_r23_multi": 38800,
+            "geekbench_6_single": 3080,
+            "geekbench_6_multi": 20800,
+            "passmark_cpu_mark": 59800
+        },
         "fps_cp": (155.0, 126.0, 85.0),
         "fps_fh": (226.0, 184.0, 124.0),
-        "fps_cs": (550.0, 440.0, 272.0),
-        "tier": "S-Tier", "score": 97
+        "fps_cs": (550.0, 440.0, 272.0)
     },
     {
         "keywords": ["13700K"],
         "name": "Intel Core i7-13700K",
-        "rel": 92.0,
-        "cb_single": 2120, "cb_multi": 30800,
-        "ts_cpu": 19800,
+        "gaming_relative_index": 0.92,
+        "synthetic": {
+            "cinebench_2024_single": 126,
+            "cinebench_2024_multi": 1820,
+            "cinebench_r23_single": 2120,
+            "cinebench_r23_multi": 30800,
+            "geekbench_6_single": 2900,
+            "geekbench_6_multi": 18400,
+            "passmark_cpu_mark": 47200
+        },
         "fps_cp": (148.0, 120.0, 82.0),
         "fps_fh": (218.0, 178.0, 118.0),
-        "fps_cs": (530.0, 425.0, 265.0),
-        "tier": "A-Tier", "score": 93
+        "fps_cs": (530.0, 425.0, 265.0)
     },
     {
         "keywords": ["7900X"],
         "name": "AMD Ryzen 9 7900X",
-        "rel": 91.0,
-        "cb_single": 2020, "cb_multi": 29000,
-        "ts_cpu": 17500,
+        "gaming_relative_index": 0.91,
+        "synthetic": {
+            "cinebench_2024_single": 120,
+            "cinebench_2024_multi": 1680,
+            "cinebench_r23_single": 2020,
+            "cinebench_r23_multi": 29000,
+            "geekbench_6_single": 2940,
+            "geekbench_6_multi": 18600,
+            "passmark_cpu_mark": 52100
+        },
         "fps_cp": (145.0, 118.0, 81.0),
         "fps_fh": (212.0, 174.0, 116.0),
-        "fps_cs": (520.0, 415.0, 260.0),
-        "tier": "A-Tier", "score": 92
+        "fps_cs": (520.0, 415.0, 260.0)
     },
     {
         "keywords": ["7700X"],
         "name": "AMD Ryzen 7 7700X",
-        "rel": 86.0,
-        "cb_single": 2000, "cb_multi": 19800,
-        "ts_cpu": 13800,
+        "gaming_relative_index": 0.86,
+        "synthetic": {
+            "cinebench_2024_single": 118,
+            "cinebench_2024_multi": 1140,
+            "cinebench_r23_single": 2000,
+            "cinebench_r23_multi": 19800,
+            "geekbench_6_single": 2880,
+            "geekbench_6_multi": 14200,
+            "passmark_cpu_mark": 36100
+        },
         "fps_cp": (140.0, 114.0, 79.0),
         "fps_fh": (205.0, 168.0, 112.0),
-        "fps_cs": (495.0, 395.0, 250.0),
-        "tier": "A-Tier", "score": 89
+        "fps_cs": (495.0, 395.0, 250.0)
     },
     {
         "keywords": ["14600K"],
         "name": "Intel Core i5-14600K",
-        "rel": 84.5,
-        "cb_single": 2070, "cb_multi": 24800,
-        "ts_cpu": 17200,
+        "gaming_relative_index": 0.85,
+        "synthetic": {
+            "cinebench_2024_single": 124,
+            "cinebench_2024_multi": 1420,
+            "cinebench_r23_single": 2070,
+            "cinebench_r23_multi": 24800,
+            "geekbench_6_single": 2840,
+            "geekbench_6_multi": 15800,
+            "passmark_cpu_mark": 39500
+        },
         "fps_cp": (138.0, 112.0, 78.0),
         "fps_fh": (202.0, 165.0, 110.0),
-        "fps_cs": (485.0, 390.0, 245.0),
-        "tier": "A-Tier", "score": 88
+        "fps_cs": (485.0, 390.0, 245.0)
     },
     {
         "keywords": ["5800X3D"],
         "name": "AMD Ryzen 7 5800X3D",
-        "rel": 82.0,
-        "cb_single": 1490, "cb_multi": 15100,
-        "ts_cpu": 11200,
+        "gaming_relative_index": 0.82,
+        "synthetic": {
+            "cinebench_2024_single": 92,
+            "cinebench_2024_multi": 860,
+            "cinebench_r23_single": 1490,
+            "cinebench_r23_multi": 15100,
+            "geekbench_6_single": 2180,
+            "geekbench_6_multi": 11500,
+            "passmark_cpu_mark": 28400
+        },
         "fps_cp": (135.0, 110.0, 77.0),
         "fps_fh": (198.0, 162.0, 108.0),
-        "fps_cs": (475.0, 380.0, 240.0),
-        "tier": "A-Tier", "score": 87
+        "fps_cs": (475.0, 380.0, 240.0)
     },
     {
         "keywords": ["13600K"],
         "name": "Intel Core i5-13600K",
-        "rel": 81.0,
-        "cb_single": 2000, "cb_multi": 24100,
-        "ts_cpu": 16200,
+        "gaming_relative_index": 0.81,
+        "synthetic": {
+            "cinebench_2024_single": 120,
+            "cinebench_2024_multi": 1380,
+            "cinebench_r23_single": 2000,
+            "cinebench_r23_multi": 24100,
+            "geekbench_6_single": 2780,
+            "geekbench_6_multi": 15200,
+            "passmark_cpu_mark": 38200
+        },
         "fps_cp": (134.0, 109.0, 76.0),
         "fps_fh": (196.0, 160.0, 107.0),
-        "fps_cs": (470.0, 375.0, 238.0),
-        "tier": "A-Tier", "score": 86
+        "fps_cs": (470.0, 375.0, 238.0)
     },
     {
         "keywords": ["7600X"],
         "name": "AMD Ryzen 5 7600X",
-        "rel": 78.5,
-        "cb_single": 1950, "cb_multi": 15200,
-        "ts_cpu": 10500,
+        "gaming_relative_index": 0.79,
+        "synthetic": {
+            "cinebench_2024_single": 115,
+            "cinebench_2024_multi": 890,
+            "cinebench_r23_single": 1950,
+            "cinebench_r23_multi": 15200,
+            "geekbench_6_single": 2820,
+            "geekbench_6_multi": 11800,
+            "passmark_cpu_mark": 28900
+        },
         "fps_cp": (130.0, 105.0, 74.0),
         "fps_fh": (190.0, 155.0, 104.0),
-        "fps_cs": (450.0, 360.0, 230.0),
-        "tier": "A-Tier", "score": 85
+        "fps_cs": (450.0, 360.0, 230.0)
     },
     {
         "keywords": ["5800X"],
         "name": "AMD Ryzen 7 5800X",
-        "rel": 72.0,
-        "cb_single": 1600, "cb_multi": 15300,
-        "ts_cpu": 11500,
+        "gaming_relative_index": 0.72,
+        "synthetic": {
+            "cinebench_2024_single": 98,
+            "cinebench_2024_multi": 910,
+            "cinebench_r23_single": 1600,
+            "cinebench_r23_multi": 15300,
+            "geekbench_6_single": 2240,
+            "geekbench_6_multi": 11800,
+            "passmark_cpu_mark": 28100
+        },
         "fps_cp": (120.0, 98.0, 70.0),
         "fps_fh": (175.0, 142.0, 96.0),
-        "fps_cs": (410.0, 330.0, 210.0),
-        "tier": "B-Tier", "score": 79
+        "fps_cs": (410.0, 330.0, 210.0)
     },
     {
         "keywords": ["5600X"],
         "name": "AMD Ryzen 5 5600X",
-        "rel": 65.0,
-        "cb_single": 1540, "cb_multi": 11200,
-        "ts_cpu": 8200,
+        "gaming_relative_index": 0.65,
+        "synthetic": {
+            "cinebench_2024_single": 94,
+            "cinebench_2024_multi": 680,
+            "cinebench_r23_single": 1540,
+            "cinebench_r23_multi": 11200,
+            "geekbench_6_single": 2180,
+            "geekbench_6_multi": 8600,
+            "passmark_cpu_mark": 22100
+        },
         "fps_cp": (110.0, 89.0, 64.0),
         "fps_fh": (160.0, 130.0, 88.0),
-        "fps_cs": (370.0, 295.0, 190.0),
-        "tier": "B-Tier", "score": 74
+        "fps_cs": (370.0, 295.0, 190.0)
     },
     {
         "keywords": ["12400"],
         "name": "Intel Core i5-12400F",
-        "rel": 58.0,
-        "cb_single": 1690, "cb_multi": 12400,
-        "ts_cpu": 9800,
+        "gaming_relative_index": 0.58,
+        "synthetic": {
+            "cinebench_2024_single": 102,
+            "cinebench_2024_multi": 720,
+            "cinebench_r23_single": 1690,
+            "cinebench_r23_multi": 12400,
+            "geekbench_6_single": 2280,
+            "geekbench_6_multi": 9400,
+            "passmark_cpu_mark": 19800
+        },
         "fps_cp": (102.0, 82.0, 60.0),
         "fps_fh": (148.0, 120.0, 82.0),
-        "fps_cs": (340.0, 270.0, 175.0),
-        "tier": "B-Tier", "score": 70
+        "fps_cs": (340.0, 270.0, 175.0)
     }
 ]
 
-# Doğrulanmış GPU Benchmark Verileri (TechPowerUp TPU Relative Index + 3DMark + Game FPS)
+# Doğrulanmış GPU Benchmark Verileri (TechPowerUp + 3DMark Time Spy / Extreme / Steel Nomad)
 GPU_DB = [
     {
         "keywords": ["4090"],
         "name": "GeForce RTX 4090",
-        "rel": 100.0,
-        "ts_gfx": 36500, "fs": 82000, "pr": 25800,
+        "relative_performance_pct": 1.35,
+        "synthetic": {
+            "time_spy_graphics": 36500,
+            "time_spy_extreme": 19400,
+            "steel_nomad": 9420
+        },
         "fps_cp": (172.0, 134.0, 82.0),
         "fps_fh": (250.0, 205.0, 148.0),
-        "fps_cs": (610.0, 510.0, 340.0),
-        "tier": "S-Tier", "score": 100
+        "fps_cs": (610.0, 510.0, 340.0)
     },
     {
         "keywords": ["7900 XTX"],
         "name": "Radeon RX 7900 XTX",
-        "rel": 88.0,
-        "ts_gfx": 29500, "fs": 72000, "pr": 16200,
+        "relative_performance_pct": 1.18,
+        "synthetic": {
+            "time_spy_graphics": 29500,
+            "time_spy_extreme": 15200,
+            "steel_nomad": 6900
+        },
         "fps_cp": (148.0, 114.0, 66.0),
         "fps_fh": (224.0, 180.0, 126.0),
-        "fps_cs": (550.0, 450.0, 295.0),
-        "tier": "S-Tier", "score": 98
+        "fps_cs": (550.0, 450.0, 295.0)
     },
     {
         "keywords": ["4080 SUPER"],
         "name": "GeForce RTX 4080 SUPER",
-        "rel": 86.5,
-        "ts_gfx": 28400, "fs": 64200, "pr": 18500,
+        "relative_performance_pct": 1.15,
+        "synthetic": {
+            "time_spy_graphics": 28400,
+            "time_spy_extreme": 14100,
+            "steel_nomad": 6750
+        },
         "fps_cp": (142.0, 108.0, 62.0),
         "fps_fh": (210.0, 165.0, 115.0),
-        "fps_cs": (520.0, 420.0, 260.0),
-        "tier": "S-Tier", "score": 97
+        "fps_cs": (520.0, 420.0, 260.0)
     },
     {
         "keywords": ["4080"],
         "name": "GeForce RTX 4080",
-        "rel": 83.0,
-        "ts_gfx": 27100, "fs": 62000, "pr": 17600,
+        "relative_performance_pct": 1.11,
+        "synthetic": {
+            "time_spy_graphics": 27100,
+            "time_spy_extreme": 13500,
+            "steel_nomad": 6480
+        },
         "fps_cp": (138.0, 104.0, 59.0),
         "fps_fh": (204.0, 160.0, 110.0),
-        "fps_cs": (505.0, 405.0, 252.0),
-        "tier": "S-Tier", "score": 95
+        "fps_cs": (505.0, 405.0, 252.0)
     },
     {
         "keywords": ["7900 XT"],
         "name": "Radeon RX 7900 XT",
-        "rel": 76.0,
-        "ts_gfx": 25600, "fs": 63000, "pr": 13900,
+        "relative_performance_pct": 1.02,
+        "synthetic": {
+            "time_spy_graphics": 25600,
+            "time_spy_extreme": 12900,
+            "steel_nomad": 5850
+        },
         "fps_cp": (128.0, 96.0, 54.0),
         "fps_fh": (192.0, 150.0, 104.0),
-        "fps_cs": (470.0, 375.0, 240.0),
-        "tier": "S-Tier", "score": 93
+        "fps_cs": (470.0, 375.0, 240.0)
     },
     {
         "keywords": ["4070 Ti SUPER"],
         "name": "GeForce RTX 4070 Ti SUPER",
-        "rel": 76.0,
-        "ts_gfx": 24500, "fs": 56000, "pr": 15400,
+        "relative_performance_pct": 1.01,
+        "synthetic": {
+            "time_spy_graphics": 24500,
+            "time_spy_extreme": 12100,
+            "steel_nomad": 5720
+        },
         "fps_cp": (126.0, 94.0, 53.0),
         "fps_fh": (188.0, 146.0, 101.0),
-        "fps_cs": (465.0, 370.0, 235.0),
-        "tier": "S-Tier", "score": 93
+        "fps_cs": (465.0, 370.0, 235.0)
     },
     {
         "keywords": ["4070 SUPER"],
         "name": "GeForce RTX 4070 SUPER",
-        "rel": 68.5,
-        "ts_gfx": 21200, "fs": 49500, "pr": 13200,
+        "relative_performance_pct": 0.91,
+        "synthetic": {
+            "time_spy_graphics": 21200,
+            "time_spy_extreme": 10200,
+            "steel_nomad": 4920
+        },
         "fps_cp": (115.0, 85.0, 47.0),
         "fps_fh": (172.0, 132.0, 89.0),
-        "fps_cs": (420.0, 330.0, 205.0),
-        "tier": "A-Tier", "score": 91
+        "fps_cs": (420.0, 330.0, 205.0)
     },
     {
         "keywords": ["7800 XT"],
         "name": "Radeon RX 7800 XT",
-        "rel": 64.0,
-        "ts_gfx": 19800, "fs": 53100, "pr": 10400,
+        "relative_performance_pct": 0.85,
+        "synthetic": {
+            "time_spy_graphics": 19800,
+            "time_spy_extreme": 9600,
+            "steel_nomad": 4480
+        },
         "fps_cp": (109.0, 80.0, 44.0),
         "fps_fh": (165.0, 126.0, 84.0),
-        "fps_cs": (405.0, 315.0, 195.0),
-        "tier": "A-Tier", "score": 89
+        "fps_cs": (405.0, 315.0, 195.0)
     },
     {
         "keywords": ["4070"],
         "name": "GeForce RTX 4070",
-        "rel": 61.0,
-        "ts_gfx": 18200, "fs": 44000, "pr": 11400,
+        "relative_performance_pct": 0.81,
+        "synthetic": {
+            "time_spy_graphics": 18200,
+            "time_spy_extreme": 8800,
+            "steel_nomad": 4180
+        },
         "fps_cp": (102.0, 75.0, 41.0),
         "fps_fh": (155.0, 118.0, 78.0),
-        "fps_cs": (380.0, 295.0, 185.0),
-        "tier": "A-Tier", "score": 87
+        "fps_cs": (380.0, 295.0, 185.0)
     },
     {
         "keywords": ["7700 XT"],
         "name": "Radeon RX 7700 XT",
-        "rel": 54.0,
-        "ts_gfx": 17000, "fs": 44000, "pr": 8800,
+        "relative_performance_pct": 0.72,
+        "synthetic": {
+            "time_spy_graphics": 17000,
+            "time_spy_extreme": 8100,
+            "steel_nomad": 3820
+        },
         "fps_cp": (92.0, 67.0, 36.0),
         "fps_fh": (140.0, 106.0, 70.0),
-        "fps_cs": (345.0, 265.0, 165.0),
-        "tier": "A-Tier", "score": 83
+        "fps_cs": (345.0, 265.0, 165.0)
     },
     {
         "keywords": ["4060 Ti"],
         "name": "GeForce RTX 4060 Ti",
-        "rel": 48.0,
-        "ts_gfx": 13600, "fs": 34000, "pr": 8200,
+        "relative_performance_pct": 0.64,
+        "synthetic": {
+            "time_spy_graphics": 13600,
+            "time_spy_extreme": 6400,
+            "steel_nomad": 3120
+        },
         "fps_cp": (82.0, 58.0, 30.0),
         "fps_fh": (126.0, 94.0, 60.0),
-        "fps_cs": (310.0, 235.0, 142.0),
-        "tier": "B-Tier", "score": 78
+        "fps_cs": (310.0, 235.0, 142.0)
     },
     {
         "keywords": ["6700 XT"],
         "name": "Radeon RX 6700 XT",
-        "rel": 44.0,
-        "ts_gfx": 12800, "fs": 34000, "pr": 6100,
+        "relative_performance_pct": 0.58,
+        "synthetic": {
+            "time_spy_graphics": 12800,
+            "time_spy_extreme": 5900,
+            "steel_nomad": 2850
+        },
         "fps_cp": (76.0, 53.0, 27.0),
         "fps_fh": (118.0, 87.0, 55.0),
-        "fps_cs": (290.0, 218.0, 132.0),
-        "tier": "B-Tier", "score": 75
+        "fps_cs": (290.0, 218.0, 132.0)
     },
     {
         "keywords": ["4060"],
         "name": "GeForce RTX 4060",
-        "rel": 38.0,
-        "ts_gfx": 10800, "fs": 28000, "pr": 6100,
+        "relative_performance_pct": 0.51,
+        "synthetic": {
+            "time_spy_graphics": 10800,
+            "time_spy_extreme": 4900,
+            "steel_nomad": 2420
+        },
         "fps_cp": (68.0, 46.0, 23.0),
         "fps_fh": (106.0, 77.0, 48.0),
-        "fps_cs": (260.0, 195.0, 118.0),
-        "tier": "B-Tier", "score": 72
+        "fps_cs": (260.0, 195.0, 118.0)
     },
     {
         "keywords": ["7600"],
         "name": "Radeon RX 7600",
-        "rel": 37.0,
-        "ts_gfx": 10600, "fs": 28500, "pr": 5400,
+        "relative_performance_pct": 0.49,
+        "synthetic": {
+            "time_spy_graphics": 10600,
+            "time_spy_extreme": 4800,
+            "steel_nomad": 2380
+        },
         "fps_cp": (66.0, 44.0, 22.0),
         "fps_fh": (102.0, 74.0, 46.0),
-        "fps_cs": (250.0, 188.0, 114.0),
-        "tier": "B-Tier", "score": 71
+        "fps_cs": (250.0, 188.0, 114.0)
     },
     {
         "keywords": ["3060"],
         "name": "GeForce RTX 3060",
-        "rel": 29.5,
-        "ts_gfx": 8850, "fs": 22100, "pr": 5200,
+        "relative_performance_pct": 0.39,
+        "synthetic": {
+            "time_spy_graphics": 8850,
+            "time_spy_extreme": 4100,
+            "steel_nomad": 1980
+        },
         "fps_cp": (54.0, 36.0, 18.0),
         "fps_fh": (84.0, 60.0, 36.0),
-        "fps_cs": (205.0, 150.0, 90.0),
-        "tier": "B-Tier", "score": 67
+        "fps_cs": (205.0, 150.0, 90.0)
     },
     {
         "keywords": ["6600"],
         "name": "Radeon RX 6600",
-        "rel": 31.0,
-        "ts_gfx": 8400, "fs": 23000, "pr": 3900,
+        "relative_performance_pct": 0.41,
+        "synthetic": {
+            "time_spy_graphics": 8400,
+            "time_spy_extreme": 3900,
+            "steel_nomad": 1850
+        },
         "fps_cp": (56.0, 37.0, 19.0),
         "fps_fh": (86.0, 62.0, 38.0),
-        "fps_cs": (212.0, 155.0, 94.0),
-        "tier": "B-Tier", "score": 68
+        "fps_cs": (212.0, 155.0, 94.0)
     }
 ]
 
@@ -376,7 +539,10 @@ def match_entry(name: str, db: list):
 
 
 def build_benchmarks():
-    result = {}
+    result = {
+        "cpus": {},
+        "gpus": {}
+    }
 
     # CPU katalog dosyasını tara
     cpu_file = os.path.join(FILES_DIR, "cpu.json")
@@ -390,24 +556,14 @@ def build_benchmarks():
             pid = f"cpu_{sanitize(name)}"
             m = match_entry(name, CPU_DB)
             if m:
-                result[pid] = {
-                    "score": m["score"],
-                    "tier": m["tier"],
-                    "relativePerformanceIndex": m["rel"],
-                    "cinebenchR23": {
-                        "singleCore": m["cb_single"],
-                        "multiCore": m["cb_multi"]
-                    },
-                    "mark3d": {
-                        "timeSpy": m["ts_cpu"]
-                    },
-                    "gameFps": {
-                        "cyberpunk2077": {"p1080": m["fps_cp"][0], "p1440": m["fps_cp"][1], "p4k": m["fps_cp"][2]},
-                        "forzaHorizon5": {"p1080": m["fps_fh"][0], "p1440": m["fps_fh"][1], "p4k": m["fps_fh"][2]},
-                        "counterStrike2": {"p1080": m["fps_cs"][0], "p1440": m["fps_cs"][1], "p4k": m["fps_cs"][2]}
-                    },
-                    "dataSource": "VERIFIED_BENCHMARK",
-                    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
+                result["cpus"][pid] = {
+                    "gaming_relative_index": m["gaming_relative_index"],
+                    "synthetic": m["synthetic"],
+                    "games": {
+                        "cyberpunk_2077": {"p1080": m["fps_cp"][0], "p1440": m["fps_cp"][1], "p4k": m["fps_cp"][2]},
+                        "forza_horizon_5": {"p1080": m["fps_fh"][0], "p1440": m["fps_fh"][1], "p4k": m["fps_fh"][2]},
+                        "counter_strike_2": {"p1080": m["fps_cs"][0], "p1440": m["fps_cs"][1], "p4k": m["fps_cs"][2]}
+                    }
                 }
 
     # GPU katalog dosyasını tara
@@ -422,31 +578,24 @@ def build_benchmarks():
             pid = f"gpu_{sanitize(name)}"
             m = match_entry(name, GPU_DB)
             if m:
-                result[pid] = {
-                    "score": m["score"],
-                    "tier": m["tier"],
-                    "relativePerformanceIndex": m["rel"],
-                    "cinebenchR23": None,
-                    "mark3d": {
-                        "timeSpy": m["ts_gfx"],
-                        "fireStrike": m["fs"],
-                        "portRoyal": m["pr"]
-                    },
-                    "gameFps": {
-                        "cyberpunk2077": {"p1080": m["fps_cp"][0], "p1440": m["fps_cp"][1], "p4k": m["fps_cp"][2]},
-                        "forzaHorizon5": {"p1080": m["fps_fh"][0], "p1440": m["fps_fh"][1], "p4k": m["fps_fh"][2]},
-                        "counterStrike2": {"p1080": m["fps_cs"][0], "p1440": m["fps_cs"][1], "p4k": m["fps_cs"][2]}
-                    },
-                    "dataSource": "VERIFIED_BENCHMARK",
-                    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
+                result["gpus"][pid] = {
+                    "relative_performance_pct": m["relative_performance_pct"],
+                    "synthetic": m["synthetic"],
+                    "games": {
+                        "cyberpunk_2077": {"p1080": m["fps_cp"][0], "p1440": m["fps_cp"][1], "p4k": m["fps_cp"][2]},
+                        "forza_horizon_5": {"p1080": m["fps_fh"][0], "p1440": m["fps_fh"][1], "p4k": m["fps_fh"][2]},
+                        "counter_strike_2": {"p1080": m["fps_cs"][0], "p1440": m["fps_cs"][1], "p4k": m["fps_cs"][2]}
+                    }
                 }
 
-    print(f"Toplam doğrulanmış CPU/GPU benchmark kaydı: {len(result)}")
+    cpu_count = len(result["cpus"])
+    gpu_count = len(result["gpus"])
+    print(f"Toplam doğrulanmış CPU: {cpu_count}, GPU: {gpu_count}")
 
     for target in TARGETS:
         with open(target, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
-        print(f"Benchmark verisi kaydedildi: {target}")
+        print(f"Genişletilmiş benchmark verisi kaydedildi: {target}")
 
 
 if __name__ == "__main__":

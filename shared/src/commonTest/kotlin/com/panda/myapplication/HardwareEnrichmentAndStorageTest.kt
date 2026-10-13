@@ -445,7 +445,7 @@ class HardwareEnrichmentAndStorageTest {
         val estimatedResult = com.panda.myapplication.domain.engine.BenchmarkEngine.evaluate(cpuUnknown)
         assertEquals(com.panda.myapplication.domain.model.DataSourceType.ESTIMATED_SIMULATION, estimatedResult.dataSource)
         assertTrue(estimatedResult.info.score >= 80)
-        kotlin.test.assertNotNull(estimatedResult.info.cinebenchR23)
+        kotlin.test.assertNotNull(estimatedResult.info.cpuSynthetic?.cinebenchR23Multi)
         kotlin.test.assertNotNull(estimatedResult.info.gameFps?.cyberpunk2077)
     }
 }

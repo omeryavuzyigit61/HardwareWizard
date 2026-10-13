@@ -1,917 +1,845 @@
 {
-  "cpu_amd_ryzen_7_7800x3d": {
-    "score": 98,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 100.0,
-    "cinebenchR23": {
-      "singleCore": 1820,
-      "multiCore": 18500
-    },
-    "mark3d": {
-      "timeSpy": 14200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 165.0,
-        "p1440": 132.0,
-        "p4k": 88.0
+  "cpus": {
+    "cpu_amd_ryzen_7_7800x3d": {
+      "gaming_relative_index": 1.0,
+      "synthetic": {
+        "cinebench_2024_single": 110,
+        "cinebench_2024_multi": 1120,
+        "cinebench_r23_single": 1820,
+        "cinebench_r23_multi": 18500,
+        "geekbench_6_single": 2780,
+        "geekbench_6_multi": 15400,
+        "passmark_cpu_mark": 35200
       },
-      "forzaHorizon5": {
-        "p1080": 240.0,
-        "p1440": 195.0,
-        "p4k": 130.0
-      },
-      "counterStrike2": {
-        "p1080": 580.0,
-        "p1440": 460.0,
-        "p4k": 285.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 165.0,
+          "p1440": 132.0,
+          "p4k": 88.0
+        },
+        "forza_horizon_5": {
+          "p1080": 240.0,
+          "p1440": 195.0,
+          "p4k": 130.0
+        },
+        "counter_strike_2": {
+          "p1080": 580.0,
+          "p1440": 460.0,
+          "p4k": 285.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
+    "cpu_amd_ryzen_7_9800x3d": {
+      "gaming_relative_index": 1.08,
+      "synthetic": {
+        "cinebench_2024_single": 142,
+        "cinebench_2024_multi": 1560,
+        "cinebench_r23_single": 2150,
+        "cinebench_r23_multi": 23400,
+        "geekbench_6_single": 3480,
+        "geekbench_6_multi": 18200,
+        "passmark_cpu_mark": 46500
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 185.0,
+          "p1440": 150.0,
+          "p4k": 98.0
+        },
+        "forza_horizon_5": {
+          "p1080": 265.0,
+          "p1440": 218.0,
+          "p4k": 145.0
+        },
+        "counter_strike_2": {
+          "p1080": 640.0,
+          "p1440": 510.0,
+          "p4k": 310.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_5_7600x": {
+      "gaming_relative_index": 0.79,
+      "synthetic": {
+        "cinebench_2024_single": 115,
+        "cinebench_2024_multi": 890,
+        "cinebench_r23_single": 1950,
+        "cinebench_r23_multi": 15200,
+        "geekbench_6_single": 2820,
+        "geekbench_6_multi": 11800,
+        "passmark_cpu_mark": 28900
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 130.0,
+          "p1440": 105.0,
+          "p4k": 74.0
+        },
+        "forza_horizon_5": {
+          "p1080": 190.0,
+          "p1440": 155.0,
+          "p4k": 104.0
+        },
+        "counter_strike_2": {
+          "p1080": 450.0,
+          "p1440": 360.0,
+          "p4k": 230.0
+        }
+      }
+    },
+    "cpu_intel_core_i7_14700k": {
+      "gaming_relative_index": 0.94,
+      "synthetic": {
+        "cinebench_2024_single": 130,
+        "cinebench_2024_multi": 1940,
+        "cinebench_r23_single": 2180,
+        "cinebench_r23_multi": 34800,
+        "geekbench_6_single": 2980,
+        "geekbench_6_multi": 19500,
+        "passmark_cpu_mark": 53500
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 152.0,
+          "p1440": 124.0,
+          "p4k": 84.0
+        },
+        "forza_horizon_5": {
+          "p1080": 224.0,
+          "p1440": 182.0,
+          "p4k": 122.0
+        },
+        "counter_strike_2": {
+          "p1080": 545.0,
+          "p1440": 435.0,
+          "p4k": 270.0
+        }
+      }
+    },
+    "cpu_intel_core_i5_13600k": {
+      "gaming_relative_index": 0.81,
+      "synthetic": {
+        "cinebench_2024_single": 120,
+        "cinebench_2024_multi": 1380,
+        "cinebench_r23_single": 2000,
+        "cinebench_r23_multi": 24100,
+        "geekbench_6_single": 2780,
+        "geekbench_6_multi": 15200,
+        "passmark_cpu_mark": 38200
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 134.0,
+          "p1440": 109.0,
+          "p4k": 76.0
+        },
+        "forza_horizon_5": {
+          "p1080": 196.0,
+          "p1440": 160.0,
+          "p4k": 107.0
+        },
+        "counter_strike_2": {
+          "p1080": 470.0,
+          "p1440": 375.0,
+          "p4k": 238.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_7_7700x": {
+      "gaming_relative_index": 0.86,
+      "synthetic": {
+        "cinebench_2024_single": 118,
+        "cinebench_2024_multi": 1140,
+        "cinebench_r23_single": 2000,
+        "cinebench_r23_multi": 19800,
+        "geekbench_6_single": 2880,
+        "geekbench_6_multi": 14200,
+        "passmark_cpu_mark": 36100
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 140.0,
+          "p1440": 114.0,
+          "p4k": 79.0
+        },
+        "forza_horizon_5": {
+          "p1080": 205.0,
+          "p1440": 168.0,
+          "p4k": 112.0
+        },
+        "counter_strike_2": {
+          "p1080": 495.0,
+          "p1440": 395.0,
+          "p4k": 250.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_5_5600x": {
+      "gaming_relative_index": 0.65,
+      "synthetic": {
+        "cinebench_2024_single": 94,
+        "cinebench_2024_multi": 680,
+        "cinebench_r23_single": 1540,
+        "cinebench_r23_multi": 11200,
+        "geekbench_6_single": 2180,
+        "geekbench_6_multi": 8600,
+        "passmark_cpu_mark": 22100
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 110.0,
+          "p1440": 89.0,
+          "p4k": 64.0
+        },
+        "forza_horizon_5": {
+          "p1080": 160.0,
+          "p1440": 130.0,
+          "p4k": 88.0
+        },
+        "counter_strike_2": {
+          "p1080": 370.0,
+          "p1440": 295.0,
+          "p4k": 190.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_7_5800x": {
+      "gaming_relative_index": 0.72,
+      "synthetic": {
+        "cinebench_2024_single": 98,
+        "cinebench_2024_multi": 910,
+        "cinebench_r23_single": 1600,
+        "cinebench_r23_multi": 15300,
+        "geekbench_6_single": 2240,
+        "geekbench_6_multi": 11800,
+        "passmark_cpu_mark": 28100
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 120.0,
+          "p1440": 98.0,
+          "p4k": 70.0
+        },
+        "forza_horizon_5": {
+          "p1080": 175.0,
+          "p1440": 142.0,
+          "p4k": 96.0
+        },
+        "counter_strike_2": {
+          "p1080": 410.0,
+          "p1440": 330.0,
+          "p4k": 210.0
+        }
+      }
+    },
+    "cpu_intel_core_i9_14900k": {
+      "gaming_relative_index": 0.98,
+      "synthetic": {
+        "cinebench_2024_single": 138,
+        "cinebench_2024_multi": 2240,
+        "cinebench_r23_single": 2300,
+        "cinebench_r23_multi": 40500,
+        "geekbench_6_single": 3150,
+        "geekbench_6_multi": 21400,
+        "passmark_cpu_mark": 61200
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 158.0,
+          "p1440": 128.0,
+          "p4k": 86.0
+        },
+        "forza_horizon_5": {
+          "p1080": 230.0,
+          "p1440": 188.0,
+          "p4k": 126.0
+        },
+        "counter_strike_2": {
+          "p1080": 565.0,
+          "p1440": 450.0,
+          "p4k": 278.0
+        }
+      }
+    },
+    "cpu_intel_core_i5_12400f": {
+      "gaming_relative_index": 0.58,
+      "synthetic": {
+        "cinebench_2024_single": 102,
+        "cinebench_2024_multi": 720,
+        "cinebench_r23_single": 1690,
+        "cinebench_r23_multi": 12400,
+        "geekbench_6_single": 2280,
+        "geekbench_6_multi": 9400,
+        "passmark_cpu_mark": 19800
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 102.0,
+          "p1440": 82.0,
+          "p4k": 60.0
+        },
+        "forza_horizon_5": {
+          "p1080": 148.0,
+          "p1440": 120.0,
+          "p4k": 82.0
+        },
+        "counter_strike_2": {
+          "p1080": 340.0,
+          "p1440": 270.0,
+          "p4k": 175.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_9_7900x": {
+      "gaming_relative_index": 0.91,
+      "synthetic": {
+        "cinebench_2024_single": 120,
+        "cinebench_2024_multi": 1680,
+        "cinebench_r23_single": 2020,
+        "cinebench_r23_multi": 29000,
+        "geekbench_6_single": 2940,
+        "geekbench_6_multi": 18600,
+        "passmark_cpu_mark": 52100
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 145.0,
+          "p1440": 118.0,
+          "p4k": 81.0
+        },
+        "forza_horizon_5": {
+          "p1080": 212.0,
+          "p1440": 174.0,
+          "p4k": 116.0
+        },
+        "counter_strike_2": {
+          "p1080": 520.0,
+          "p1440": 415.0,
+          "p4k": 260.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_9_9900x": {
+      "gaming_relative_index": 0.95,
+      "synthetic": {
+        "cinebench_2024_single": 134,
+        "cinebench_2024_multi": 2180,
+        "cinebench_r23_single": 2240,
+        "cinebench_r23_multi": 33200,
+        "geekbench_6_single": 3410,
+        "geekbench_6_multi": 20450,
+        "passmark_cpu_mark": 54200
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 168.0,
+          "p1440": 134.0,
+          "p4k": 89.0
+        },
+        "forza_horizon_5": {
+          "p1080": 245.0,
+          "p1440": 200.0,
+          "p4k": 132.0
+        },
+        "counter_strike_2": {
+          "p1080": 590.0,
+          "p1440": 470.0,
+          "p4k": 290.0
+        }
+      }
+    },
+    "cpu_intel_core_i5_14600k": {
+      "gaming_relative_index": 0.85,
+      "synthetic": {
+        "cinebench_2024_single": 124,
+        "cinebench_2024_multi": 1420,
+        "cinebench_r23_single": 2070,
+        "cinebench_r23_multi": 24800,
+        "geekbench_6_single": 2840,
+        "geekbench_6_multi": 15800,
+        "passmark_cpu_mark": 39500
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 138.0,
+          "p1440": 112.0,
+          "p4k": 78.0
+        },
+        "forza_horizon_5": {
+          "p1080": 202.0,
+          "p1440": 165.0,
+          "p4k": 110.0
+        },
+        "counter_strike_2": {
+          "p1080": 485.0,
+          "p1440": 390.0,
+          "p4k": 245.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_7_5800xt": {
+      "gaming_relative_index": 0.72,
+      "synthetic": {
+        "cinebench_2024_single": 98,
+        "cinebench_2024_multi": 910,
+        "cinebench_r23_single": 1600,
+        "cinebench_r23_multi": 15300,
+        "geekbench_6_single": 2240,
+        "geekbench_6_multi": 11800,
+        "passmark_cpu_mark": 28100
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 120.0,
+          "p1440": 98.0,
+          "p4k": 70.0
+        },
+        "forza_horizon_5": {
+          "p1080": 175.0,
+          "p1440": 142.0,
+          "p4k": 96.0
+        },
+        "counter_strike_2": {
+          "p1080": 410.0,
+          "p1440": 330.0,
+          "p4k": 210.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_5_7600x3d": {
+      "gaming_relative_index": 0.79,
+      "synthetic": {
+        "cinebench_2024_single": 115,
+        "cinebench_2024_multi": 890,
+        "cinebench_r23_single": 1950,
+        "cinebench_r23_multi": 15200,
+        "geekbench_6_single": 2820,
+        "geekbench_6_multi": 11800,
+        "passmark_cpu_mark": 28900
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 130.0,
+          "p1440": 105.0,
+          "p4k": 74.0
+        },
+        "forza_horizon_5": {
+          "p1080": 190.0,
+          "p1440": 155.0,
+          "p4k": 104.0
+        },
+        "counter_strike_2": {
+          "p1080": 450.0,
+          "p1440": 360.0,
+          "p4k": 230.0
+        }
+      }
+    },
+    "cpu_amd_ryzen_7_5800x3d": {
+      "gaming_relative_index": 0.82,
+      "synthetic": {
+        "cinebench_2024_single": 92,
+        "cinebench_2024_multi": 860,
+        "cinebench_r23_single": 1490,
+        "cinebench_r23_multi": 15100,
+        "geekbench_6_single": 2180,
+        "geekbench_6_multi": 11500,
+        "passmark_cpu_mark": 28400
+      },
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 135.0,
+          "p1440": 110.0,
+          "p4k": 77.0
+        },
+        "forza_horizon_5": {
+          "p1080": 198.0,
+          "p1440": 162.0,
+          "p4k": 108.0
+        },
+        "counter_strike_2": {
+          "p1080": 475.0,
+          "p1440": 380.0,
+          "p4k": 240.0
+        }
+      }
+    }
   },
-  "cpu_amd_ryzen_7_9800x3d": {
-    "score": 100,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 108.0,
-    "cinebenchR23": {
-      "singleCore": 2150,
-      "multiCore": 23400
-    },
-    "mark3d": {
-      "timeSpy": 16800
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 185.0,
-        "p1440": 150.0,
-        "p4k": 98.0
+  "gpus": {
+    "gpu_msi_geforce_rtx_4070_super_ventus_2x": {
+      "relative_performance_pct": 0.91,
+      "synthetic": {
+        "time_spy_graphics": 21200,
+        "time_spy_extreme": 10200,
+        "steel_nomad": 4920
       },
-      "forzaHorizon5": {
-        "p1080": 265.0,
-        "p1440": 218.0,
-        "p4k": 145.0
-      },
-      "counterStrike2": {
-        "p1080": 640.0,
-        "p1440": 510.0,
-        "p4k": 310.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 115.0,
+          "p1440": 85.0,
+          "p4k": 47.0
+        },
+        "forza_horizon_5": {
+          "p1080": 172.0,
+          "p1440": 132.0,
+          "p4k": 89.0
+        },
+        "counter_strike_2": {
+          "p1080": 420.0,
+          "p1440": 330.0,
+          "p4k": 205.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_5_7600x": {
-    "score": 85,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 78.5,
-    "cinebenchR23": {
-      "singleCore": 1950,
-      "multiCore": 15200
-    },
-    "mark3d": {
-      "timeSpy": 10500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 130.0,
-        "p1440": 105.0,
-        "p4k": 74.0
+    "gpu_asus_tuf_gaming_oc_geforce_rtx_4080_super": {
+      "relative_performance_pct": 1.15,
+      "synthetic": {
+        "time_spy_graphics": 28400,
+        "time_spy_extreme": 14100,
+        "steel_nomad": 6750
       },
-      "forzaHorizon5": {
-        "p1080": 190.0,
-        "p1440": 155.0,
-        "p4k": 104.0
-      },
-      "counterStrike2": {
-        "p1080": 450.0,
-        "p1440": 360.0,
-        "p4k": 230.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 142.0,
+          "p1440": 108.0,
+          "p4k": 62.0
+        },
+        "forza_horizon_5": {
+          "p1080": 210.0,
+          "p1440": 165.0,
+          "p4k": 115.0
+        },
+        "counter_strike_2": {
+          "p1080": 520.0,
+          "p1440": 420.0,
+          "p4k": 260.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_intel_core_i7_14700k": {
-    "score": 96,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 94.0,
-    "cinebenchR23": {
-      "singleCore": 2180,
-      "multiCore": 34800
-    },
-    "mark3d": {
-      "timeSpy": 21500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 152.0,
-        "p1440": 124.0,
-        "p4k": 84.0
+    "gpu_sapphire_pulse_radeon_rx_7800_xt": {
+      "relative_performance_pct": 0.85,
+      "synthetic": {
+        "time_spy_graphics": 19800,
+        "time_spy_extreme": 9600,
+        "steel_nomad": 4480
       },
-      "forzaHorizon5": {
-        "p1080": 224.0,
-        "p1440": 182.0,
-        "p4k": 122.0
-      },
-      "counterStrike2": {
-        "p1080": 545.0,
-        "p1440": 435.0,
-        "p4k": 270.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 109.0,
+          "p1440": 80.0,
+          "p4k": 44.0
+        },
+        "forza_horizon_5": {
+          "p1080": 165.0,
+          "p1440": 126.0,
+          "p4k": 84.0
+        },
+        "counter_strike_2": {
+          "p1080": 405.0,
+          "p1440": 315.0,
+          "p4k": 195.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_intel_core_i5_13600k": {
-    "score": 86,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 81.0,
-    "cinebenchR23": {
-      "singleCore": 2000,
-      "multiCore": 24100
-    },
-    "mark3d": {
-      "timeSpy": 16200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 134.0,
-        "p1440": 109.0,
-        "p4k": 76.0
+    "gpu_msi_geforce_rtx_3060_ventus_2x_12g": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 196.0,
-        "p1440": 160.0,
-        "p4k": 107.0
-      },
-      "counterStrike2": {
-        "p1080": 470.0,
-        "p1440": 375.0,
-        "p4k": 238.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_7_7700x": {
-    "score": 89,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 86.0,
-    "cinebenchR23": {
-      "singleCore": 2000,
-      "multiCore": 19800
-    },
-    "mark3d": {
-      "timeSpy": 13800
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 140.0,
-        "p1440": 114.0,
-        "p4k": 79.0
+    "gpu_asus_dual_geforce_rtx_3060_v2_oc_edition": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 205.0,
-        "p1440": 168.0,
-        "p4k": 112.0
-      },
-      "counterStrike2": {
-        "p1080": 495.0,
-        "p1440": 395.0,
-        "p4k": 250.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_5_5600x": {
-    "score": 74,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 65.0,
-    "cinebenchR23": {
-      "singleCore": 1540,
-      "multiCore": 11200
-    },
-    "mark3d": {
-      "timeSpy": 8200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 110.0,
-        "p1440": 89.0,
-        "p4k": 64.0
+    "gpu_msi_geforce_rtx_3060_ti_gaming_x": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 160.0,
-        "p1440": 130.0,
-        "p4k": 88.0
-      },
-      "counterStrike2": {
-        "p1080": 370.0,
-        "p1440": 295.0,
-        "p4k": 190.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_7_5800x": {
-    "score": 79,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 72.0,
-    "cinebenchR23": {
-      "singleCore": 1600,
-      "multiCore": 15300
-    },
-    "mark3d": {
-      "timeSpy": 11500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 120.0,
-        "p1440": 98.0,
-        "p4k": 70.0
+    "gpu_msi_rtx_3060_ventus_3x_12g_oc": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 175.0,
-        "p1440": 142.0,
-        "p4k": 96.0
-      },
-      "counterStrike2": {
-        "p1080": 410.0,
-        "p1440": 330.0,
-        "p4k": 210.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_intel_core_i9_14900k": {
-    "score": 98,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 97.5,
-    "cinebenchR23": {
-      "singleCore": 2300,
-      "multiCore": 40500
-    },
-    "mark3d": {
-      "timeSpy": 24500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 158.0,
-        "p1440": 128.0,
-        "p4k": 86.0
+    "gpu_msi_rtx_4070_ti_super_16g_ventus_3x_black_oc": {
+      "relative_performance_pct": 1.01,
+      "synthetic": {
+        "time_spy_graphics": 24500,
+        "time_spy_extreme": 12100,
+        "steel_nomad": 5720
       },
-      "forzaHorizon5": {
-        "p1080": 230.0,
-        "p1440": 188.0,
-        "p4k": 126.0
-      },
-      "counterStrike2": {
-        "p1080": 565.0,
-        "p1440": 450.0,
-        "p4k": 278.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 126.0,
+          "p1440": 94.0,
+          "p4k": 53.0
+        },
+        "forza_horizon_5": {
+          "p1080": 188.0,
+          "p1440": 146.0,
+          "p4k": 101.0
+        },
+        "counter_strike_2": {
+          "p1080": 465.0,
+          "p1440": 370.0,
+          "p4k": 235.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_intel_core_i5_12400f": {
-    "score": 70,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 58.0,
-    "cinebenchR23": {
-      "singleCore": 1690,
-      "multiCore": 12400
-    },
-    "mark3d": {
-      "timeSpy": 9800
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 102.0,
-        "p1440": 82.0,
-        "p4k": 60.0
+    "gpu_msi_rx_6600_xt_mech_2x_8g_oc": {
+      "relative_performance_pct": 0.41,
+      "synthetic": {
+        "time_spy_graphics": 8400,
+        "time_spy_extreme": 3900,
+        "steel_nomad": 1850
       },
-      "forzaHorizon5": {
-        "p1080": 148.0,
-        "p1440": 120.0,
-        "p4k": 82.0
-      },
-      "counterStrike2": {
-        "p1080": 340.0,
-        "p1440": 270.0,
-        "p4k": 175.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 56.0,
+          "p1440": 37.0,
+          "p4k": 19.0
+        },
+        "forza_horizon_5": {
+          "p1080": 86.0,
+          "p1440": 62.0,
+          "p4k": 38.0
+        },
+        "counter_strike_2": {
+          "p1080": 212.0,
+          "p1440": 155.0,
+          "p4k": 94.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_9_7900x": {
-    "score": 92,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 91.0,
-    "cinebenchR23": {
-      "singleCore": 2020,
-      "multiCore": 29000
-    },
-    "mark3d": {
-      "timeSpy": 17500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 145.0,
-        "p1440": 118.0,
-        "p4k": 81.0
+    "gpu_msi_geforce_rtx_3060_ventus_2x_12g_oc": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 212.0,
-        "p1440": 174.0,
-        "p4k": 116.0
-      },
-      "counterStrike2": {
-        "p1080": 520.0,
-        "p1440": 415.0,
-        "p4k": 260.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_intel_core_i5_14600k": {
-    "score": 88,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 84.5,
-    "cinebenchR23": {
-      "singleCore": 2070,
-      "multiCore": 24800
-    },
-    "mark3d": {
-      "timeSpy": 17200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 138.0,
-        "p1440": 112.0,
-        "p4k": 78.0
+    "gpu_msi_geforce_rtx_3060_gaming_x12g": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 202.0,
-        "p1440": 165.0,
-        "p4k": 110.0
-      },
-      "counterStrike2": {
-        "p1080": 485.0,
-        "p1440": 390.0,
-        "p4k": 245.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_7_5800xt": {
-    "score": 79,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 72.0,
-    "cinebenchR23": {
-      "singleCore": 1600,
-      "multiCore": 15300
-    },
-    "mark3d": {
-      "timeSpy": 11500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 120.0,
-        "p1440": 98.0,
-        "p4k": 70.0
+    "gpu_powercolor_rx_7900_xt_20g": {
+      "relative_performance_pct": 1.02,
+      "synthetic": {
+        "time_spy_graphics": 25600,
+        "time_spy_extreme": 12900,
+        "steel_nomad": 5850
       },
-      "forzaHorizon5": {
-        "p1080": 175.0,
-        "p1440": 142.0,
-        "p4k": 96.0
-      },
-      "counterStrike2": {
-        "p1080": 410.0,
-        "p1440": 330.0,
-        "p4k": 210.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 128.0,
+          "p1440": 96.0,
+          "p4k": 54.0
+        },
+        "forza_horizon_5": {
+          "p1080": 192.0,
+          "p1440": 150.0,
+          "p4k": 104.0
+        },
+        "counter_strike_2": {
+          "p1080": 470.0,
+          "p1440": 375.0,
+          "p4k": 240.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_5_7600x3d": {
-    "score": 85,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 78.5,
-    "cinebenchR23": {
-      "singleCore": 1950,
-      "multiCore": 15200
-    },
-    "mark3d": {
-      "timeSpy": 10500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 130.0,
-        "p1440": 105.0,
-        "p4k": 74.0
+    "gpu_msi_radeon_rx_6600_mech_2x_8g": {
+      "relative_performance_pct": 0.41,
+      "synthetic": {
+        "time_spy_graphics": 8400,
+        "time_spy_extreme": 3900,
+        "steel_nomad": 1850
       },
-      "forzaHorizon5": {
-        "p1080": 190.0,
-        "p1440": 155.0,
-        "p4k": 104.0
-      },
-      "counterStrike2": {
-        "p1080": 450.0,
-        "p1440": 360.0,
-        "p4k": 230.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 56.0,
+          "p1440": 37.0,
+          "p4k": 19.0
+        },
+        "forza_horizon_5": {
+          "p1080": 86.0,
+          "p1440": 62.0,
+          "p4k": 38.0
+        },
+        "counter_strike_2": {
+          "p1080": 212.0,
+          "p1440": 155.0,
+          "p4k": 94.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "cpu_amd_ryzen_7_5800x3d": {
-    "score": 87,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 82.0,
-    "cinebenchR23": {
-      "singleCore": 1490,
-      "multiCore": 15100
-    },
-    "mark3d": {
-      "timeSpy": 11200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 135.0,
-        "p1440": 110.0,
-        "p4k": 77.0
+    "gpu_msi_rtx_4090_ventus_3x_24g_oc": {
+      "relative_performance_pct": 1.35,
+      "synthetic": {
+        "time_spy_graphics": 36500,
+        "time_spy_extreme": 19400,
+        "steel_nomad": 9420
       },
-      "forzaHorizon5": {
-        "p1080": 198.0,
-        "p1440": 162.0,
-        "p4k": 108.0
-      },
-      "counterStrike2": {
-        "p1080": 475.0,
-        "p1440": 380.0,
-        "p4k": 240.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 172.0,
+          "p1440": 134.0,
+          "p4k": 82.0
+        },
+        "forza_horizon_5": {
+          "p1080": 250.0,
+          "p1440": 205.0,
+          "p4k": 148.0
+        },
+        "counter_strike_2": {
+          "p1080": 610.0,
+          "p1440": 510.0,
+          "p4k": 340.0
+        }
       }
     },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp / Cinebench R23 / 3DMark"
-  },
-  "gpu_msi_geforce_rtx_4070_super_ventus_2x": {
-    "score": 91,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 68.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 21200,
-      "fireStrike": 49500,
-      "portRoyal": 13200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 115.0,
-        "p1440": 85.0,
-        "p4k": 47.0
+    "gpu_asus_phoenix_geforce_rtx_3060_v2": {
+      "relative_performance_pct": 0.39,
+      "synthetic": {
+        "time_spy_graphics": 8850,
+        "time_spy_extreme": 4100,
+        "steel_nomad": 1980
       },
-      "forzaHorizon5": {
-        "p1080": 172.0,
-        "p1440": 132.0,
-        "p4k": 89.0
-      },
-      "counterStrike2": {
-        "p1080": 420.0,
-        "p1440": 330.0,
-        "p4k": 205.0
+      "games": {
+        "cyberpunk_2077": {
+          "p1080": 54.0,
+          "p1440": 36.0,
+          "p4k": 18.0
+        },
+        "forza_horizon_5": {
+          "p1080": 84.0,
+          "p1440": 60.0,
+          "p4k": 36.0
+        },
+        "counter_strike_2": {
+          "p1080": 205.0,
+          "p1440": 150.0,
+          "p4k": 90.0
+        }
       }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_asus_tuf_gaming_oc_geforce_rtx_4080_super": {
-    "score": 97,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 86.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 28400,
-      "fireStrike": 64200,
-      "portRoyal": 18500
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 142.0,
-        "p1440": 108.0,
-        "p4k": 62.0
-      },
-      "forzaHorizon5": {
-        "p1080": 210.0,
-        "p1440": 165.0,
-        "p4k": 115.0
-      },
-      "counterStrike2": {
-        "p1080": 520.0,
-        "p1440": 420.0,
-        "p4k": 260.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_sapphire_pulse_radeon_rx_7800_xt": {
-    "score": 89,
-    "tier": "A-Tier",
-    "relativePerformanceIndex": 64.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 19800,
-      "fireStrike": 53100,
-      "portRoyal": 10400
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 109.0,
-        "p1440": 80.0,
-        "p4k": 44.0
-      },
-      "forzaHorizon5": {
-        "p1080": 165.0,
-        "p1440": 126.0,
-        "p4k": 84.0
-      },
-      "counterStrike2": {
-        "p1080": 405.0,
-        "p1440": 315.0,
-        "p4k": 195.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_geforce_rtx_3060_ventus_2x_12g": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_asus_dual_geforce_rtx_3060_v2_oc_edition": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_geforce_rtx_3060_ti_gaming_x": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_rtx_3060_ventus_3x_12g_oc": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_rtx_4070_ti_super_16g_ventus_3x_black_oc": {
-    "score": 93,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 76.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 24500,
-      "fireStrike": 56000,
-      "portRoyal": 15400
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 126.0,
-        "p1440": 94.0,
-        "p4k": 53.0
-      },
-      "forzaHorizon5": {
-        "p1080": 188.0,
-        "p1440": 146.0,
-        "p4k": 101.0
-      },
-      "counterStrike2": {
-        "p1080": 465.0,
-        "p1440": 370.0,
-        "p4k": 235.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_rx_6600_xt_mech_2x_8g_oc": {
-    "score": 68,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 31.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8400,
-      "fireStrike": 23000,
-      "portRoyal": 3900
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 56.0,
-        "p1440": 37.0,
-        "p4k": 19.0
-      },
-      "forzaHorizon5": {
-        "p1080": 86.0,
-        "p1440": 62.0,
-        "p4k": 38.0
-      },
-      "counterStrike2": {
-        "p1080": 212.0,
-        "p1440": 155.0,
-        "p4k": 94.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_geforce_rtx_3060_ventus_2x_12g_oc": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_geforce_rtx_3060_gaming_x12g": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_powercolor_rx_7900_xt_20g": {
-    "score": 93,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 76.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 25600,
-      "fireStrike": 63000,
-      "portRoyal": 13900
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 128.0,
-        "p1440": 96.0,
-        "p4k": 54.0
-      },
-      "forzaHorizon5": {
-        "p1080": 192.0,
-        "p1440": 150.0,
-        "p4k": 104.0
-      },
-      "counterStrike2": {
-        "p1080": 470.0,
-        "p1440": 375.0,
-        "p4k": 240.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_radeon_rx_6600_mech_2x_8g": {
-    "score": 68,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 31.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8400,
-      "fireStrike": 23000,
-      "portRoyal": 3900
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 56.0,
-        "p1440": 37.0,
-        "p4k": 19.0
-      },
-      "forzaHorizon5": {
-        "p1080": 86.0,
-        "p1440": 62.0,
-        "p4k": 38.0
-      },
-      "counterStrike2": {
-        "p1080": 212.0,
-        "p1440": 155.0,
-        "p4k": 94.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_msi_rtx_4090_ventus_3x_24g_oc": {
-    "score": 100,
-    "tier": "S-Tier",
-    "relativePerformanceIndex": 100.0,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 36500,
-      "fireStrike": 82000,
-      "portRoyal": 25800
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 172.0,
-        "p1440": 134.0,
-        "p4k": 82.0
-      },
-      "forzaHorizon5": {
-        "p1080": 250.0,
-        "p1440": 205.0,
-        "p4k": 148.0
-      },
-      "counterStrike2": {
-        "p1080": 610.0,
-        "p1440": 510.0,
-        "p4k": 340.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
-  },
-  "gpu_asus_phoenix_geforce_rtx_3060_v2": {
-    "score": 67,
-    "tier": "B-Tier",
-    "relativePerformanceIndex": 29.5,
-    "cinebenchR23": null,
-    "mark3d": {
-      "timeSpy": 8850,
-      "fireStrike": 22100,
-      "portRoyal": 5200
-    },
-    "gameFps": {
-      "cyberpunk2077": {
-        "p1080": 54.0,
-        "p1440": 36.0,
-        "p4k": 18.0
-      },
-      "forzaHorizon5": {
-        "p1080": 84.0,
-        "p1440": 60.0,
-        "p4k": 36.0
-      },
-      "counterStrike2": {
-        "p1080": 205.0,
-        "p1440": 150.0,
-        "p4k": 90.0
-      }
-    },
-    "dataSource": "VERIFIED_BENCHMARK",
-    "testSuite": "TechPowerUp Relative Performance Index & 3DMark"
+    }
   }
 }

@@ -1,13 +1,13 @@
 package com.panda.myapplication.domain.engine
 
 import com.panda.myapplication.domain.model.BenchmarkResult
-import com.panda.myapplication.domain.model.CinebenchScores
+import com.panda.myapplication.domain.model.CpuSyntheticBenchmark
 import com.panda.myapplication.domain.model.DataSourceType
 import com.panda.myapplication.domain.model.GameFpsBenchmark
+import com.panda.myapplication.domain.model.GpuSyntheticBenchmark
 import com.panda.myapplication.domain.model.HardwareBenchmarkInfo
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
-import com.panda.myapplication.domain.model.Mark3dScores
 import com.panda.myapplication.domain.model.ResolutionFps
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
@@ -87,20 +87,31 @@ object BenchmarkEngine {
             ),
         )
 
+        val cb2024Single = (singleCore / 16.5).toInt().coerceAtLeast(60)
+        val cb2024Multi = (multiCore / 15.2).toInt().coerceAtLeast(800)
+        val gb6Single = (singleCore * 1.52).toInt().coerceAtLeast(1500)
+        val gb6Multi = (multiCore * 0.62).toInt().coerceAtLeast(6000)
+        val passmark = (multiCore * 1.63).toInt().coerceAtLeast(15000)
+
+        val cpuSynthetic = CpuSyntheticBenchmark(
+            cinebench2024Single = cb2024Single,
+            cinebench2024Multi = cb2024Multi,
+            cinebenchR23Single = singleCore,
+            cinebenchR23Multi = multiCore,
+            geekbench6Single = gb6Single,
+            geekbench6Multi = gb6Multi,
+            passmarkScore = passmark,
+        )
+
         return HardwareBenchmarkInfo(
             score = score,
             tier = tier,
+            gamingRelativeIndex = round1(relativeIndex) / 100.0,
             relativePerformanceIndex = round1(relativeIndex),
-            cinebenchR23 = CinebenchScores(singleCore = singleCore, multiCore = multiCore),
-            mark3d = Mark3dScores(timeSpy = (multiCore * 0.75).toInt()),
+            cpuSynthetic = cpuSynthetic,
             gameFps = gameFps,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
             testSuite = "Matematiksel IPC & Saat Hızı Simülasyonu",
-            singleCoreScore = singleCore,
-            multiCoreScore = multiCore,
-            timeSpyScore = (multiCore * 0.75).toInt(),
-            gamingIndex = score,
-            productivityIndex = (multiCore / 350).coerceIn(10, 100),
         )
     }
 
@@ -111,9 +122,9 @@ object BenchmarkEngine {
         val rawPower = (tdp * 1.5 + vramGb * 80.0 + (clockMhz / 100.0) * 15.0)
         val relativeIndex = (rawPower / 9.5).coerceIn(15.0, 100.0)
         val score = relativeIndex.toInt().coerceIn(10, 100)
-        val timeSpyGraphics = (relativeIndex * 310.0).toInt()
-        val fireStrike = (relativeIndex * 700.0).toInt()
-        val portRoyal = (relativeIndex * 210.0).toInt()
+        val timeSpyGfx = (relativeIndex * 310.0).toInt()
+        val timeSpyExt = (timeSpyGfx * 0.49).toInt()
+        val steelNomad = (timeSpyGfx * 0.238).toInt()
         val tier = when {
             score >= 93 -> "S-Tier"
             score >= 80 -> "A-Tier"
@@ -140,17 +151,21 @@ object BenchmarkEngine {
             ),
         )
 
+        val gpuSynthetic = GpuSyntheticBenchmark(
+            timeSpyGraphics = timeSpyGfx,
+            timeSpyExtreme = timeSpyExt,
+            steelNomad = steelNomad,
+        )
+
         return HardwareBenchmarkInfo(
             score = score,
             tier = tier,
+            relativePerformancePct = round1(relativeIndex) / 100.0,
             relativePerformanceIndex = round1(relativeIndex),
-            mark3d = Mark3dScores(timeSpy = timeSpyGraphics, fireStrike = fireStrike, portRoyal = portRoyal),
+            gpuSynthetic = gpuSynthetic,
             gameFps = gameFps,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
             testSuite = "Matematiksel TFLOPS & Raster Simülasyonu",
-            timeSpyScore = timeSpyGraphics,
-            gamingIndex = score,
-            productivityIndex = (relativeIndex * 0.95).toInt().coerceIn(10, 100),
         )
     }
 

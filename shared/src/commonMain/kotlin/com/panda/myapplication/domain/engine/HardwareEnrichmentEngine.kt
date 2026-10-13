@@ -45,20 +45,24 @@ object HardwareEnrichmentEngine {
                 isHighlighted = bench.relativePerformanceIndex >= 80.0,
             )
         )
-        bench.cinebenchR23?.let { cb ->
-            badges.add(
-                EngineeringBadge(
-                    label = "Cinebench R23 Skoru",
-                    value = "Tek: ${cb.singleCore} Puan | Çoklu: ${cb.multiCore} Puan",
-                    isHighlighted = true,
+        bench.cpuSynthetic?.let { cb ->
+            val single = cb.cinebenchR23Single ?: cb.cinebench2024Single ?: cb.geekbench6Single
+            val multi = cb.cinebenchR23Multi ?: cb.cinebench2024Multi ?: cb.geekbench6Multi ?: cb.passmarkScore
+            if (single != null || multi != null) {
+                badges.add(
+                    EngineeringBadge(
+                        label = "CPU Sentetik Benchmark Skoru",
+                        value = "Tek: ${single ?: "-"} Puan | Çoklu: ${multi ?: "-"} Puan",
+                        isHighlighted = true,
+                    )
                 )
-            )
+            }
         }
-        bench.mark3d?.let { m3d ->
+        bench.gpuSynthetic?.let { gpu ->
             val pts = listOfNotNull(
-                m3d.timeSpy?.let { "TimeSpy: $it" },
-                m3d.fireStrike?.let { "FireStrike: $it" },
-                m3d.portRoyal?.let { "Port Royal: $it" },
+                gpu.timeSpyGraphics?.let { "Time Spy: $it pts" },
+                gpu.timeSpyExtreme?.let { "Extreme: $it pts" },
+                gpu.steelNomad?.let { "Steel Nomad: $it pts" },
             ).joinToString(" | ")
             if (pts.isNotBlank()) {
                 badges.add(

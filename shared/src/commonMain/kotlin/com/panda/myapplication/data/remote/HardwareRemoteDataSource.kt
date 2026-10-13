@@ -90,8 +90,18 @@ class HardwareRemoteDataSource(
     suspend fun fetchBenchmarks(url: String = DEFAULT_BENCHMARKS_URL): Result<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>> = withContext(ioDispatcher) {
         runCatching {
             val text = httpClient.get(url).bodyAsText()
-            json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(text)
+            parseBenchmarkJson(text)
         }
+    }
+
+    fun parseBenchmarkJson(text: String): Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo> {
+        val element = json.parseToJsonElement(text)
+        if (element is kotlinx.serialization.json.JsonObject && (element.containsKey("cpus") || element.containsKey("gpus"))) {
+            return json.decodeFromJsonElement(com.panda.myapplication.data.model.dto.BenchmarkCatalogRawDto.serializer(), element).toDomainMap()
+        }
+        return runCatching {
+            json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(text)
+        }.getOrDefault(emptyMap())
     }
 
     private suspend inline fun <reified T> fetchJsonList(url: String): List<T> = runCatching {

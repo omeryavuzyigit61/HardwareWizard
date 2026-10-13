@@ -33,6 +33,36 @@ class HardwareTypeConverters {
         runCatching { json.decodeFromString<List<PricePoint>>(it) }.getOrNull()
     }
 
+    @TypeConverter
+    fun cpuSyntheticToJson(value: com.panda.myapplication.domain.model.CpuSyntheticBenchmark?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToCpuSynthetic(value: String?): com.panda.myapplication.domain.model.CpuSyntheticBenchmark? = value?.let {
+        runCatching { json.decodeFromString<com.panda.myapplication.domain.model.CpuSyntheticBenchmark>(it) }.getOrNull()
+    }
+
+    @TypeConverter
+    fun gpuSyntheticToJson(value: com.panda.myapplication.domain.model.GpuSyntheticBenchmark?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToGpuSynthetic(value: String?): com.panda.myapplication.domain.model.GpuSyntheticBenchmark? = value?.let {
+        runCatching { json.decodeFromString<com.panda.myapplication.domain.model.GpuSyntheticBenchmark>(it) }.getOrNull()
+    }
+
+    @TypeConverter
+    fun gameFpsToJson(value: com.panda.myapplication.domain.model.GameFpsBenchmark?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToGameFps(value: String?): com.panda.myapplication.domain.model.GameFpsBenchmark? = value?.let {
+        runCatching { json.decodeFromString<com.panda.myapplication.domain.model.GameFpsBenchmark>(it) }.getOrNull()
+    }
+
     private companion object {
         val json = Json {
             ignoreUnknownKeys = true
