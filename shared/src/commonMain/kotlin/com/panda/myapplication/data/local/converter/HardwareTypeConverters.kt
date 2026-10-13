@@ -1,0 +1,43 @@
+package com.panda.myapplication.data.local.converter
+
+import androidx.room.TypeConverter
+import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.builtins.serializer
+import kotlinx.serialization.json.Json
+import kotlin.time.Instant
+
+import com.panda.myapplication.domain.model.PricePoint
+
+/** Enums are persisted by name via Room's built-in enum support; only non-primitive types live here. */
+class HardwareTypeConverters {
+
+    @TypeConverter
+    fun instantToEpochMillis(value: Instant): Long = value.toEpochMilliseconds()
+
+    @TypeConverter
+    fun epochMillisToInstant(value: Long): Instant = Instant.fromEpochMilliseconds(value)
+
+    @TypeConverter
+    fun stringListToJson(value: List<String>): String = json.encodeToString(stringListSerializer, value)
+
+    @TypeConverter
+    fun jsonToStringList(value: String): List<String> = json.decodeFromString(stringListSerializer, value)
+
+    @TypeConverter
+    fun pricePointListToJson(value: List<PricePoint>?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToPricePointList(value: String?): List<PricePoint>? = value?.let {
+        runCatching { json.decodeFromString<List<PricePoint>>(it) }.getOrNull()
+    }
+
+    private companion object {
+        val json = Json {
+            ignoreUnknownKeys = true
+            coerceInputValues = true
+        }
+        val stringListSerializer = ListSerializer(String.serializer())
+    }
+}

@@ -1,0 +1,27 @@
+package com.panda.myapplication.data.local.entity
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.Index
+import androidx.room.PrimaryKey
+import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.domain.model.PricePoint
+import kotlin.time.Instant
+
+@Entity(
+    tableName = "hardware_items",
+    indices = [Index(value = ["category"]), Index(value = ["cached_at"])],
+)
+data class HardwareItemEntity(
+    @PrimaryKey val id: String,
+    val brand: String,
+    val model: String,
+    val category: HardwareCategory,
+    @ColumnInfo(name = "price_minor") val priceMinor: Long?,
+    @ColumnInfo(name = "currency_code") val currencyCode: String?,
+    @ColumnInfo(name = "cached_at") val cachedAt: Instant,
+    @ColumnInfo(name = "current_price_try") val currentPriceTry: Double? = null,
+    @ColumnInfo(name = "lowest_price_try") val lowestPriceTry: Double? = null,
+    @ColumnInfo(name = "highest_price_try") val highestPriceTry: Double? = null,
+    @ColumnInfo(name = "price_history") val priceHistory: List<PricePoint>? = null,
+)

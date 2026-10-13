@@ -1,0 +1,65 @@
+package com.panda.myapplication.data.local
+
+import androidx.room.ConstructedBy
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import androidx.room.RoomDatabaseConstructor
+import androidx.room.TypeConverters
+import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import com.panda.myapplication.data.local.converter.HardwareTypeConverters
+import com.panda.myapplication.data.local.dao.HardwareDao
+import com.panda.myapplication.data.local.entity.CaseSpecEntity
+import com.panda.myapplication.data.local.entity.CoolerSpecEntity
+import com.panda.myapplication.data.local.entity.CpuSpecEntity
+import com.panda.myapplication.data.local.entity.GpuSpecEntity
+import com.panda.myapplication.data.local.entity.HardwareItemEntity
+import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
+import com.panda.myapplication.data.local.entity.PsuSpecEntity
+import com.panda.myapplication.data.local.entity.RamSpecEntity
+import com.panda.myapplication.data.local.entity.StorageSpecEntity
+import kotlinx.coroutines.CoroutineDispatcher
+
+@Database(
+    entities = [
+        HardwareItemEntity::class,
+        CpuSpecEntity::class,
+        GpuSpecEntity::class,
+        RamSpecEntity::class,
+        MotherboardSpecEntity::class,
+        PsuSpecEntity::class,
+        StorageSpecEntity::class,
+        CoolerSpecEntity::class,
+        CaseSpecEntity::class,
+    ],
+    version = 5,
+    exportSchema = false,
+)
+@TypeConverters(HardwareTypeConverters::class)
+@ConstructedBy(HardwareDatabaseConstructor::class)
+abstract class HardwareDatabase : RoomDatabase() {
+
+    abstract fun hardwareDao(): HardwareDao
+
+    companion object {
+        const val DATABASE_NAME = "hardware_wizard.db"
+    }
+}
+
+/** Implemented per platform by the Room KSP processor. */
+@Suppress("KotlinNoActualForExpect")
+expect object HardwareDatabaseConstructor : RoomDatabaseConstructor<HardwareDatabase> {
+    override fun initialize(): HardwareDatabase
+}
+
+/**
+ * Finalizes a platform-provided builder. Destructive migration is acceptable because the
+ * database is a re-fetchable cache, not a source of user-generated data.
+ */
+fun buildHardwareDatabase(
+    builder: RoomDatabase.Builder<HardwareDatabase>,
+    queryDispatcher: CoroutineDispatcher,
+): HardwareDatabase = builder
+    .setDriver(BundledSQLiteDriver())
+    .setQueryCoroutineContext(queryDispatcher)
+    .fallbackToDestructiveMigration(dropAllTables = true)
+    .build()

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "AMD Ryzen 7 7800X3D",
+    "price": 340.05,
+    "core_count": 8,
+    "core_clock": 4.2,
+    "boost_clock": 5.0,
+    "microarchitecture": "Zen 4",
+    "tdp": 120,
+    "graphics": "Radeon"
+  },
+  {
+    "name": "AMD Ryzen 7 9800X3D",
+    "price": 451.50,
+    "core_count": 8,
+    "core_clock": 4.7,
+    "boost_clock": 5.2,
+    "microarchitecture": "Zen 5",
+    "tdp": 120,
+    "graphics": "Radeon"
+  },
+  {
+    "name": "AMD Ryzen 5 7600X",
+    "price": 170.49,
+    "core_count": 6,
+    "core_clock": 4.7,
+    "boost_clock": 5.3,
+    "microarchitecture": "Zen 4",
+    "tdp": 105,
+    "graphics": "Radeon"
+  },
+  {
+    "name": "Intel Core i7-14700K",
+    "price": 369.99,
+    "core_count": 20,
+    "core_clock": 3.4,
+    "boost_clock": 5.6,
+    "microarchitecture": "Raptor Lake Refresh",
+    "tdp": 125,
+    "graphics": "Intel UHD Graphics 770"
+  },
+  {
+    "name": "Intel Core i5-13600K",
+    "price": 249.99,
+    "core_count": 14,
+    "core_clock": 3.5,
+    "boost_clock": 5.1,
+    "microarchitecture": "Raptor Lake",
+    "tdp": 125,
+    "graphics": "Intel UHD Graphics 770"
+  }
+]

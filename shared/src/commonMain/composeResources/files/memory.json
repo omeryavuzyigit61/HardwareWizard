@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Corsair Vengeance RGB 32 GB",
+    "price": 94.99,
+    "speed": [5, 6000],
+    "modules": [2, 16],
+    "price_per_gb": 2.968,
+    "color": "Black",
+    "first_word_latency": 12.0,
+    "cas_latency": 36
+  },
+  {
+    "name": "G.Skill Flare X5 32 GB",
+    "price": 89.99,
+    "speed": [5, 6000],
+    "modules": [2, 16],
+    "price_per_gb": 2.812,
+    "color": "Black",
+    "first_word_latency": 10.0,
+    "cas_latency": 30
+  },
+  {
+    "name": "Corsair Vengeance LPX 16 GB",
+    "price": 45.99,
+    "speed": [4, 3200],
+    "modules": [2, 8],
+    "price_per_gb": 2.874,
+    "color": "Black",
+    "first_word_latency": 10.0,
+    "cas_latency": 16
+  }
+]

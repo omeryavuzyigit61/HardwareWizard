@@ -1,0 +1,42 @@
+[
+  {
+    "name": "MSI GeForce RTX 4070 SUPER Ventus 2X",
+    "price": 599.99,
+    "chipset": "GeForce RTX 4070 SUPER",
+    "memory": 12,
+    "core_clock": 1980,
+    "boost_clock": 2505,
+    "color": "Black",
+    "length": 242.0
+  },
+  {
+    "name": "Asus TUF GAMING OC GeForce RTX 4080 SUPER",
+    "price": 999.99,
+    "chipset": "GeForce RTX 4080 SUPER",
+    "memory": 16,
+    "core_clock": 2295,
+    "boost_clock": 2580,
+    "color": "Black",
+    "length": 348.0
+  },
+  {
+    "name": "Sapphire PULSE Radeon RX 7800 XT",
+    "price": 489.99,
+    "chipset": "Radeon RX 7800 XT",
+    "memory": 16,
+    "core_clock": 1295,
+    "boost_clock": 2430,
+    "color": "Black",
+    "length": 280.0
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Ventus 2X 12G",
+    "price": 289.99,
+    "chipset": "GeForce RTX 3060 12GB",
+    "memory": 12,
+    "core_clock": 1320,
+    "boost_clock": 1777,
+    "color": "Black",
+    "length": 235.0
+  }
+]

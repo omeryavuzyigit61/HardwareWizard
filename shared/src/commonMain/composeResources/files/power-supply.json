@@ -1,0 +1,26 @@
+[
+  {
+    "name": "MSI MAG A750GL PCIE5",
+    "price": 109.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 750,
+    "color": "Black"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5",
+    "price": 121.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 850,
+    "color": "Black"
+  },
+  {
+    "name": "Corsair RM1000e ATX 3.0",
+    "price": 179.99,
+    "type": "ATX",
+    "efficiency": "gold",
+    "wattage": 1000,
+    "color": "Black"
+  }
+]

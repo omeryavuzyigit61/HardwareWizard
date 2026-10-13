@@ -1,0 +1,25 @@
+package com.panda.myapplication.domain.model
+
+data class CpuSpec(
+    val socket: String,
+    val coreCount: Int,
+    val threadCount: Int,
+    val baseClock: Frequency,
+    val boostClock: Frequency?,
+    val tdp: Wattage,
+    val hasIntegratedGraphics: Boolean,
+    val architecture: String? = null,
+    val l3CacheMb: Int = 32,
+) : HardwareSpec {
+
+    override val category: HardwareCategory get() = HardwareCategory.CPU
+
+    init {
+        require(socket.isNotBlank()) { "CPU socket must not be blank." }
+        require(coreCount > 0) { "coreCount must be positive: $coreCount" }
+        require(threadCount >= coreCount) { "threadCount ($threadCount) must be >= coreCount ($coreCount)." }
+        require(boostClock == null || boostClock.mhz >= baseClock.mhz) {
+            "boostClock (${boostClock?.mhz}) must be >= baseClock (${baseClock.mhz})."
+        }
+    }
+}

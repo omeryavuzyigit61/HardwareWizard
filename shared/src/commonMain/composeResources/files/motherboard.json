@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Asus PRIME B650-PLUS WIFI",
+    "price": 159.99,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "memory_slots": 4,
+    "color": "Black / Silver"
+  },
+  {
+    "name": "MSI MAG B650 TOMAHAWK WIFI",
+    "price": 189.42,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "memory_slots": 4,
+    "color": "Black"
+  },
+  {
+    "name": "MSI B760 GAMING PLUS WIFI",
+    "price": 149.99,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "memory_slots": 4,
+    "color": "Black"
+  }
+]

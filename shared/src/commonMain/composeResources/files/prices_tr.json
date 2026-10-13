@@ -1,0 +1,734 @@
+{
+  "cpu_amd_ryzen_7_7800x3d": {
+    "currentPriceTry": 18999.0,
+    "lowestPriceTry": 16499.0,
+    "highestPriceTry": 21500.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-15",
+        "price": 17200.0
+      },
+      {
+        "date": "2025-12-01",
+        "price": 18500.0
+      },
+      {
+        "date": "2026-02-10",
+        "price": 21500.0
+      },
+      {
+        "date": "2026-04-15",
+        "price": 19800.0
+      },
+      {
+        "date": "2026-06-01",
+        "price": 18200.0
+      },
+      {
+        "date": "2026-08-10",
+        "price": 16499.0
+      },
+      {
+        "date": "2026-09-20",
+        "price": 17900.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 18999.0
+      }
+    ]
+  },
+  "cpu_amd_ryzen_7_9800x3d": {
+    "currentPriceTry": 24500.0,
+    "lowestPriceTry": 22900.0,
+    "highestPriceTry": 26800.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2026-02-15",
+        "price": 26800.0
+      },
+      {
+        "date": "2026-04-10",
+        "price": 25500.0
+      },
+      {
+        "date": "2026-06-05",
+        "price": 24900.0
+      },
+      {
+        "date": "2026-08-12",
+        "price": 22900.0
+      },
+      {
+        "date": "2026-09-22",
+        "price": 23800.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 24500.0
+      }
+    ]
+  },
+  "cpu_amd_ryzen_5_7600x": {
+    "currentPriceTry": 8499.0,
+    "lowestPriceTry": 7200.0,
+    "highestPriceTry": 9800.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-01",
+        "price": 9500.0
+      },
+      {
+        "date": "2026-01-15",
+        "price": 9800.0
+      },
+      {
+        "date": "2026-03-20",
+        "price": 8900.0
+      },
+      {
+        "date": "2026-05-18",
+        "price": 8200.0
+      },
+      {
+        "date": "2026-07-25",
+        "price": 7200.0
+      },
+      {
+        "date": "2026-09-10",
+        "price": 7900.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 8499.0
+      }
+    ]
+  },
+  "cpu_intel_core_i7_14700k": {
+    "currentPriceTry": 16999.0,
+    "lowestPriceTry": 15200.0,
+    "highestPriceTry": 19400.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-20",
+        "price": 19400.0
+      },
+      {
+        "date": "2026-01-10",
+        "price": 18600.0
+      },
+      {
+        "date": "2026-03-15",
+        "price": 17800.0
+      },
+      {
+        "date": "2026-05-22",
+        "price": 16500.0
+      },
+      {
+        "date": "2026-07-30",
+        "price": 15200.0
+      },
+      {
+        "date": "2026-09-15",
+        "price": 16200.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 16999.0
+      }
+    ]
+  },
+  "cpu_intel_core_i5_13600k": {
+    "currentPriceTry": 11499.0,
+    "lowestPriceTry": 10100.0,
+    "highestPriceTry": 13500.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-10",
+        "price": 13500.0
+      },
+      {
+        "date": "2026-01-05",
+        "price": 12800.0
+      },
+      {
+        "date": "2026-04-01",
+        "price": 11900.0
+      },
+      {
+        "date": "2026-07-10",
+        "price": 10100.0
+      },
+      {
+        "date": "2026-09-05",
+        "price": 10900.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 11499.0
+      }
+    ]
+  },
+  "gpu_asus_tuf_gaming_oc_geforce_rtx_4080_super": {
+    "currentPriceTry": 44999.0,
+    "lowestPriceTry": 41500.0,
+    "highestPriceTry": 49999.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-15",
+        "price": 49999.0
+      },
+      {
+        "date": "2026-01-20",
+        "price": 48500.0
+      },
+      {
+        "date": "2026-04-15",
+        "price": 46200.0
+      },
+      {
+        "date": "2026-06-30",
+        "price": 43800.0
+      },
+      {
+        "date": "2026-08-20",
+        "price": 41500.0
+      },
+      {
+        "date": "2026-09-25",
+        "price": 43200.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 44999.0
+      }
+    ]
+  },
+  "gpu_msi_geforce_rtx_4070_super_ventus_2x": {
+    "currentPriceTry": 28499.0,
+    "lowestPriceTry": 25900.0,
+    "highestPriceTry": 31200.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-25",
+        "price": 31200.0
+      },
+      {
+        "date": "2026-01-10",
+        "price": 29800.0
+      },
+      {
+        "date": "2026-03-18",
+        "price": 28900.0
+      },
+      {
+        "date": "2026-06-12",
+        "price": 26800.0
+      },
+      {
+        "date": "2026-08-05",
+        "price": 25900.0
+      },
+      {
+        "date": "2026-09-18",
+        "price": 27400.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 28499.0
+      }
+    ]
+  },
+  "gpu_sapphire_pulse_radeon_rx_7800_xt": {
+    "currentPriceTry": 21999.0,
+    "lowestPriceTry": 19800.0,
+    "highestPriceTry": 24500.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-05",
+        "price": 24500.0
+      },
+      {
+        "date": "2026-01-25",
+        "price": 23600.0
+      },
+      {
+        "date": "2026-04-10",
+        "price": 22400.0
+      },
+      {
+        "date": "2026-07-02",
+        "price": 20800.0
+      },
+      {
+        "date": "2026-08-25",
+        "price": 19800.0
+      },
+      {
+        "date": "2026-09-30",
+        "price": 21200.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 21999.0
+      }
+    ]
+  },
+  "gpu_msi_geforce_rtx_3060_ventus_2x_12g": {
+    "currentPriceTry": 11999.0,
+    "lowestPriceTry": 10200.0,
+    "highestPriceTry": 13800.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-15",
+        "price": 13800.0
+      },
+      {
+        "date": "2026-01-15",
+        "price": 12900.0
+      },
+      {
+        "date": "2026-04-10",
+        "price": 11800.0
+      },
+      {
+        "date": "2026-07-15",
+        "price": 10200.0
+      },
+      {
+        "date": "2026-09-12",
+        "price": 11200.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 11999.0
+      }
+    ]
+  },
+  "ram_corsair_vengeance_rgb_32_gb": {
+    "currentPriceTry": 4899.0,
+    "lowestPriceTry": 4200.0,
+    "highestPriceTry": 5600.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-10",
+        "price": 5600.0
+      },
+      {
+        "date": "2026-02-05",
+        "price": 5200.0
+      },
+      {
+        "date": "2026-05-15",
+        "price": 4700.0
+      },
+      {
+        "date": "2026-08-01",
+        "price": 4200.0
+      },
+      {
+        "date": "2026-09-18",
+        "price": 4500.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 4899.0
+      }
+    ]
+  },
+  "ram_g_skill_flare_x5_32_gb": {
+    "currentPriceTry": 4499.0,
+    "lowestPriceTry": 3950.0,
+    "highestPriceTry": 5100.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-30",
+        "price": 5100.0
+      },
+      {
+        "date": "2026-01-20",
+        "price": 4800.0
+      },
+      {
+        "date": "2026-04-12",
+        "price": 4350.0
+      },
+      {
+        "date": "2026-07-18",
+        "price": 3950.0
+      },
+      {
+        "date": "2026-09-15",
+        "price": 4200.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 4499.0
+      }
+    ]
+  },
+  "ram_corsair_vengeance_lpx_16_gb": {
+    "currentPriceTry": 1799.0,
+    "lowestPriceTry": 1450.0,
+    "highestPriceTry": 2100.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-01",
+        "price": 2100.0
+      },
+      {
+        "date": "2026-02-14",
+        "price": 1950.0
+      },
+      {
+        "date": "2026-05-20",
+        "price": 1700.0
+      },
+      {
+        "date": "2026-08-10",
+        "price": 1450.0
+      },
+      {
+        "date": "2026-09-25",
+        "price": 1650.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 1799.0
+      }
+    ]
+  },
+  "motherboard_msi_b650_gaming_plus_wifi": {
+    "currentPriceTry": 7499.0,
+    "lowestPriceTry": 6500.0,
+    "highestPriceTry": 8600.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-20",
+        "price": 8600.0
+      },
+      {
+        "date": "2026-02-10",
+        "price": 8100.0
+      },
+      {
+        "date": "2026-05-05",
+        "price": 7500.0
+      },
+      {
+        "date": "2026-07-28",
+        "price": 6500.0
+      },
+      {
+        "date": "2026-09-20",
+        "price": 7100.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 7499.0
+      }
+    ]
+  },
+  "motherboard_asus_tuf_gaming_b650_plus_wifi": {
+    "currentPriceTry": 8899.0,
+    "lowestPriceTry": 7900.0,
+    "highestPriceTry": 9999.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-15",
+        "price": 9999.0
+      },
+      {
+        "date": "2026-01-18",
+        "price": 9400.0
+      },
+      {
+        "date": "2026-04-20",
+        "price": 8700.0
+      },
+      {
+        "date": "2026-07-15",
+        "price": 7900.0
+      },
+      {
+        "date": "2026-09-10",
+        "price": 8400.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 8899.0
+      }
+    ]
+  },
+  "storage_samsung_990_pro_2_tb": {
+    "currentPriceTry": 7899.0,
+    "lowestPriceTry": 6700.0,
+    "highestPriceTry": 8900.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-05",
+        "price": 8900.0
+      },
+      {
+        "date": "2026-02-01",
+        "price": 8400.0
+      },
+      {
+        "date": "2026-05-12",
+        "price": 7600.0
+      },
+      {
+        "date": "2026-08-08",
+        "price": 6700.0
+      },
+      {
+        "date": "2026-09-22",
+        "price": 7300.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 7899.0
+      }
+    ]
+  },
+  "storage_kingston_nv2_1_tb": {
+    "currentPriceTry": 2499.0,
+    "lowestPriceTry": 1990.0,
+    "highestPriceTry": 2950.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-25",
+        "price": 2950.0
+      },
+      {
+        "date": "2026-01-10",
+        "price": 2700.0
+      },
+      {
+        "date": "2026-04-15",
+        "price": 2350.0
+      },
+      {
+        "date": "2026-07-20",
+        "price": 1990.0
+      },
+      {
+        "date": "2026-09-15",
+        "price": 2250.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 2499.0
+      }
+    ]
+  },
+  "cooler_deepcool_ak620": {
+    "currentPriceTry": 2799.0,
+    "lowestPriceTry": 2300.0,
+    "highestPriceTry": 3200.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-12",
+        "price": 3200.0
+      },
+      {
+        "date": "2026-02-18",
+        "price": 2950.0
+      },
+      {
+        "date": "2026-05-22",
+        "price": 2650.0
+      },
+      {
+        "date": "2026-08-05",
+        "price": 2300.0
+      },
+      {
+        "date": "2026-09-18",
+        "price": 2550.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 2799.0
+      }
+    ]
+  },
+  "cooler_arctic_liquid_freezer_iii_360": {
+    "currentPriceTry": 4999.0,
+    "lowestPriceTry": 4200.0,
+    "highestPriceTry": 5650.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-30",
+        "price": 5650.0
+      },
+      {
+        "date": "2026-01-25",
+        "price": 5300.0
+      },
+      {
+        "date": "2026-04-18",
+        "price": 4800.0
+      },
+      {
+        "date": "2026-07-12",
+        "price": 4200.0
+      },
+      {
+        "date": "2026-09-20",
+        "price": 4650.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 4999.0
+      }
+    ]
+  },
+  "case_nzxt_h9_flow": {
+    "currentPriceTry": 6499.0,
+    "lowestPriceTry": 5600.0,
+    "highestPriceTry": 7400.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-15",
+        "price": 7400.0
+      },
+      {
+        "date": "2026-02-20",
+        "price": 6900.0
+      },
+      {
+        "date": "2026-05-18",
+        "price": 6300.0
+      },
+      {
+        "date": "2026-08-10",
+        "price": 5600.0
+      },
+      {
+        "date": "2026-09-22",
+        "price": 6100.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 6499.0
+      }
+    ]
+  },
+  "case_corsair_4000d_airflow": {
+    "currentPriceTry": 3899.0,
+    "lowestPriceTry": 3100.0,
+    "highestPriceTry": 4500.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-20",
+        "price": 4500.0
+      },
+      {
+        "date": "2026-01-15",
+        "price": 4200.0
+      },
+      {
+        "date": "2026-04-10",
+        "price": 3750.0
+      },
+      {
+        "date": "2026-07-15",
+        "price": 3100.0
+      },
+      {
+        "date": "2026-09-18",
+        "price": 3550.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 3899.0
+      }
+    ]
+  },
+  "psu_corsair_rm850x": {
+    "currentPriceTry": 5999.0,
+    "lowestPriceTry": 5100.0,
+    "highestPriceTry": 6900.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-11-08",
+        "price": 6900.0
+      },
+      {
+        "date": "2026-02-12",
+        "price": 6400.0
+      },
+      {
+        "date": "2026-05-15",
+        "price": 5800.0
+      },
+      {
+        "date": "2026-08-01",
+        "price": 5100.0
+      },
+      {
+        "date": "2026-09-20",
+        "price": 5600.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 5999.0
+      }
+    ]
+  },
+  "psu_msi_mag_a850gl_pcie5": {
+    "currentPriceTry": 5299.0,
+    "lowestPriceTry": 4600.0,
+    "highestPriceTry": 6100.0,
+    "currency": "TRY",
+    "priceHistory": [
+      {
+        "date": "2025-10-28",
+        "price": 6100.0
+      },
+      {
+        "date": "2026-01-22",
+        "price": 5750.0
+      },
+      {
+        "date": "2026-04-18",
+        "price": 5200.0
+      },
+      {
+        "date": "2026-07-22",
+        "price": 4600.0
+      },
+      {
+        "date": "2026-09-15",
+        "price": 4950.0
+      },
+      {
+        "date": "2026-10-13",
+        "price": 5299.0
+      }
+    ]
+  }
+}
