@@ -31,31 +31,6 @@ class HardwareLocalDataSource(
     @OptIn(ExperimentalResourceApi::class)
     suspend fun seedDatabaseIfEmpty(): Result<Unit> = withContext(ioDispatcher) {
         runCatching {
-            val existing = hardwareDao.getAllHardwareItems()
-            if (existing.isNotEmpty()) {
-                val hasMissingData = existing.any { it.currentPriceTry == null || it.imageUrl == null }
-                if (hasMissingData) {
-                    val localPrices = loadLocalPricesTr()
-                    if (localPrices.isNotEmpty()) {
-                        val updated = existing.map { item ->
-                            val p = localPrices[item.id]
-                            if (p != null) {
-                                item.copy(
-                                    imageUrl = p.imageUrl ?: item.imageUrl,
-                                    currentPriceTry = p.currentPriceTry ?: item.currentPriceTry,
-                                    lowestPriceTry = p.lowestPriceTry ?: p.currentPriceTry ?: item.lowestPriceTry,
-                                    highestPriceTry = p.highestPriceTry ?: p.currentPriceTry ?: item.highestPriceTry,
-                                    offers = if (!p.offers.isNullOrEmpty()) p.offers else item.offers,
-                                    priceHistory = if (!p.priceHistory.isNullOrEmpty()) p.priceHistory else item.priceHistory,
-                                )
-                            } else item
-                        }
-                        hardwareDao.upsertHardwareItems(updated)
-                    }
-                }
-                return@runCatching
-            }
-
             val cpus = readJsonAssetList<CpuRawDto>("files/cpu.json")
             val gpus = readJsonAssetList<GpuRawDto>("files/video-card.json")
             val rams = readJsonAssetList<RamRawDto>("files/memory.json")
@@ -68,6 +43,7 @@ class HardwareLocalDataSource(
             val pricesTr = loadLocalPricesTr()
             val benchmarks = loadLocalBenchmarks()
 
+            val syncedAt = Clock.System.now()
             val snapshot = HardwareMapper.buildCatalogSnapshot(
                 cpus = cpus,
                 gpus = gpus,
@@ -79,11 +55,11 @@ class HardwareLocalDataSource(
                 cases = cases,
                 pricesTr = pricesTr,
                 benchmarks = benchmarks,
-                syncedAt = Clock.System.now(),
+                syncedAt = syncedAt,
             )
 
             if (snapshot.items.isNotEmpty()) {
-                hardwareDao.replaceCatalog(snapshot, syncedAt = Clock.System.now())
+                hardwareDao.replaceCatalog(snapshot, syncedAt = syncedAt)
             }
         }
     }

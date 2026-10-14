@@ -28,18 +28,22 @@ def clean_key(name: str) -> str:
 # ==============================================================================
 PSU_BRANDS_SERIES = [
     ("Lian Li", ["EDGE", "SP"], [750, 850, 1000, 1300]),
-    ("Corsair", ["RMx (2024 / ATX 3.1)", "RMe (2025 / ATX 3.1)", "HXi Platinum (ATX 3.1)", "SF-L"], [650, 750, 850, 1000, 1200, 1500]),
-    ("MSI", ["MAG GL PCIE5", "MPG G PCIE5", "MEG Ai PCIE5"], [650, 750, 850, 1000, 1300]),
-    ("ASUS", ["ROG Thor Platinum II", "ROG Strix Gold Aura Edition", "TUF Gaming Gold ATX 3.0", "Prime Gold"], [650, 750, 850, 1000, 1200, 1600]),
-    ("FSP", ["Hydro G Pro PCIe 5.0", "Hydro PTM Pro ATX 3.0", "VITA GM ATX 3.1", "Hyper K Pro"], [550, 650, 750, 850, 1000, 1200]),
-    ("Seasonic", ["Focus GX ATX 3.0", "Vertex GX ATX 3.0", "Prime TX Titanium"], [650, 750, 850, 1000, 1200, 1600]),
-    ("Be Quiet!", ["Pure Power 12 M", "Dark Power 13", "Straight Power 12"], [550, 650, 750, 850, 1000, 1200]),
-    ("NZXT", ["C-Series Gold Core ATX 3.1", "C-Series Bronze"], [650, 750, 850, 1000, 1200]),
-    ("DeepCool", ["PX-G ATX 3.0", "PQ-M", "PN-M ATX 3.1"], [650, 750, 850, 1000, 1200]),
-    ("Cooler Master", ["MWE Gold V2", "GX III Gold ATX 3.0", "V Platinum V2"], [550, 650, 750, 850, 1050, 1250]),
-    ("Thermaltake", ["Toughpower GF3", "Toughpower GF A3", "Smart BM3"], [550, 650, 750, 850, 1050, 1200]),
+    ("Corsair", ["RMx (2024 / ATX 3.1)", "RMe (2025 / ATX 3.1)", "HXi Platinum (ATX 3.1)", "SF-L", "RM Gold", "CX-M"], [650, 750, 850, 1000, 1200, 1500]),
+    ("MSI", ["MAG GL PCIE5", "MPG G PCIE5", "MEG Ai PCIE5", "MAG A-DN"], [550, 650, 750, 850, 1000, 1300]),
+    ("ASUS", ["ROG Thor Platinum II", "ROG Thor Titanium III", "ROG Strix Gold Aura Edition", "TUF Gaming Gold ATX 3.0", "Prime Gold"], [650, 750, 850, 1000, 1200, 1600]),
+    ("FSP", ["Hydro Ti Pro ATX 3.0", "Hydro PTM X Pro ATX 3.0", "Hydro G Pro PCIe 5.0", "Hydro PTM Pro ATX 3.0", "VITA GM ATX 3.1", "Hyper K Pro"], [550, 650, 750, 850, 1000, 1200]),
+    ("Seasonic", ["Focus GX ATX 3.0", "Focus PX ATX 3.0", "Vertex GX ATX 3.0", "Vertex PX ATX 3.0", "Prime TX Titanium"], [650, 750, 850, 1000, 1200, 1600]),
+    ("Be Quiet!", ["Pure Power 12 M", "Dark Power 13", "Dark Power Pro 13", "Straight Power 12", "System Power 10"], [550, 650, 750, 850, 1000, 1200, 1500]),
+    ("Super Flower", ["Leadex VII Gold ATX 3.0", "Leadex Titanium", "Leadex Platinum SE", "Combat FG ATX 3.1"], [750, 850, 1000, 1200, 1300, 1600]),
+    ("NZXT", ["C-Series Gold Core ATX 3.1", "C-Series Bronze", "C1500 Platinum ATX 3.1"], [650, 750, 850, 1000, 1200, 1500]),
+    ("DeepCool", ["PX-G ATX 3.0", "PX-P Platinum ATX 3.0", "PQ-M", "PN-M ATX 3.1", "PK-D"], [550, 650, 750, 850, 1000, 1200]),
+    ("Cooler Master", ["MWE Gold V2", "GX III Gold ATX 3.0", "V Platinum V2", "V SFX Gold ATX 3.0"], [550, 650, 750, 850, 1050, 1250]),
+    ("Thermaltake", ["Toughpower GF3", "Toughpower GF A3", "Toughpower PF3 Platinum", "Smart BM3"], [550, 650, 750, 850, 1050, 1200]),
     ("Gigabyte", ["UD750GM PCIE5", "UD850GM PCIE5", "UD1000GM PCIE5", "Aorus P1200W"], [750, 850, 1000, 1200]),
-    ("XPG", ["Core Reactor II ATX 3.1", "Kyber", "Cybercore II"], [650, 750, 850, 1000, 1200]),
+    ("EVGA", ["SuperNOVA G7 ATX 3.0", "SuperNOVA GT", "SuperNOVA P6", "SuperNOVA T2"], [650, 750, 850, 1000, 1300, 1600]),
+    ("XPG", ["Core Reactor II ATX 3.1", "Core Reactor", "Kyber", "Cybercore II", "Pylon"], [650, 750, 850, 1000, 1200]),
+    ("Montech", ["Titan Gold ATX 3.0", "Century G5 ATX 3.0", "AP Series"], [650, 750, 850, 1000, 1200]),
+    ("Fractal Design", ["Ion+ 2 Platinum", "Ion Gold", "Anode Bronze"], [650, 750, 850]),
     ("Raijintek", ["Cratos ATX 3.0", "Ampere"], [750, 850, 1000, 1200]),
     ("High Power", ["Performance GD", "Super+ Gold ATX 3.0"], [600, 750, 850, 1000]),
     ("Enermax", ["Revolution D.F. X ATX 3.0", "Platimax D.F."], [750, 850, 1050, 1200])
@@ -432,9 +436,13 @@ CPU_MASTER_LIST = [
     ("AMD Ryzen 5 1600", {"socket": "AM4", "cores": 6, "threads": 12, "base": 3.2, "boost": 3.6, "l2": 3.0, "l3": 16, "tdp": 65, "node": "GlobalFoundries 14nm", "arch": "Zen", "igpu": None}),
     # Intel Core Ultra 200S
     ("Intel Core Ultra 9 285K", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.7, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
+    ("Intel Core Ultra 7 275K", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.5, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
+    ("Intel Core Ultra 7 275KF", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.5, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": None}),
     ("Intel Core Ultra 7 270K Plus", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.5, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 7 265K", {"socket": "LGA1851", "cores": 20, "threads": 20, "base": 3.9, "boost": 5.5, "l2": 36.0, "l3": 30, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 7 265KF", {"socket": "LGA1851", "cores": 20, "threads": 20, "base": 3.9, "boost": 5.5, "l2": 36.0, "l3": 30, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": None}),
+    ("Intel Core Ultra 5 255K", {"socket": "LGA1851", "cores": 18, "threads": 18, "base": 3.3, "boost": 5.2, "l2": 30.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
+    ("Intel Core Ultra 5 255KF", {"socket": "LGA1851", "cores": 18, "threads": 18, "base": 3.3, "boost": 5.2, "l2": 30.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": None}),
     ("Intel Core Ultra 5 250K Plus", {"socket": "LGA1851", "cores": 18, "threads": 18, "base": 3.3, "boost": 5.2, "l2": 30.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 5 245K", {"socket": "LGA1851", "cores": 14, "threads": 14, "base": 4.2, "boost": 5.2, "l2": 26.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 5 245KF", {"socket": "LGA1851", "cores": 14, "threads": 14, "base": 4.2, "boost": 5.2, "l2": 26.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": None}),
@@ -473,6 +481,28 @@ CPU_MASTER_LIST = [
     ("Intel Core i3-10100F", {"socket": "LGA1200", "cores": 4, "threads": 8, "base": 3.6, "boost": 4.3, "l2": 1.0, "l3": 6, "tdp": 65, "node": "14nm", "arch": "Comet Lake", "igpu": None}),
 ]
 
+def get_default_cpu_image(name: str) -> str:
+    upper = name.upper()
+    if any(x in upper for x in ["9800X3D", "9950X", "9900X", "9700X", "9600X"]):
+        return "https://www.incehesap.com/resim/urun/202412/67583ce66022a8.23281091_qpohljnmefikg_cropped_288.webp"
+    elif any(x in upper for x in ["7800X3D", "7950X", "7900X", "7700X", "7600X", "7600", "7500F"]):
+        return "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
+    elif any(x in upper for x in ["8700G", "8600G", "8500G"]):
+        return "https://www.tebilon.com/picture300x300/amd-ryzen-7-8700g-4-20ghz-8-cekirdek-24mb-onbellek-soket-am5-mpk-islemci-1.jpg"
+    elif any(x in upper for x in ["5800X3D", "5700X3D", "5950X", "5900X", "5800X", "5700X", "5600", "5500"]):
+        return "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    elif any(x in upper for x in ["ULTRA", "285K", "275K", "270K", "265K", "255K", "250K", "245K"]):
+        return "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
+    elif any(x in upper for x in ["14900", "14700", "14600", "14400"]):
+        return "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+    elif any(x in upper for x in ["13900", "13700", "13600", "13400"]):
+        return "https://www.tebilon.com/picture300x300/intel-core-i7-13700k-13-nesil-30mb-l3-onbellek-intel-islemci.jpg"
+    elif any(x in upper for x in ["12900", "12700", "12600", "12400"]):
+        return "https://www.tebilon.com/picture300x300/intel-core-i5-12400f-2-50ghz-18mb-l3-onbellek-intel-islemci.jpg"
+    elif "RYZEN" in upper:
+        return "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
+    return "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+
 def generate_cpu_catalog(existing_items):
     seen = {clean_key(x.get("name", "")): x for x in existing_items if x.get("name")}
     results = list(existing_items)
@@ -482,6 +512,7 @@ def generate_cpu_catalog(existing_items):
         unlocked = True if ("K" in name or "Ryzen" in name) and "PRO" not in name else False
         pcie = "PCIe 5.0" if spec["socket"] in ["AM5", "LGA1851", "LGA1700"] else "PCIe 4.0"
         mem = "DDR5" if spec["socket"] in ["AM5", "LGA1851"] else ("DDR5 / DDR4" if spec["socket"] == "LGA1700" else "DDR4")
+        default_img = get_default_cpu_image(name)
 
         item = {
             "name": name,
@@ -499,13 +530,20 @@ def generate_cpu_catalog(existing_items):
             "process_node": spec["node"],
             "pcie_version": pcie,
             "max_memory_speed": mem,
-            "unlocked_multiplier": unlocked
+            "unlocked_multiplier": unlocked,
+            "imageUrl": default_img
         }
         if k in seen:
             seen[k].update({k2: v for k2, v in item.items() if v is not None})
+            if not seen[k].get("imageUrl"):
+                seen[k]["imageUrl"] = default_img
         else:
             seen[k] = item
             results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_cpu_image(it.get("name", ""))
 
     return results
 
@@ -814,12 +852,18 @@ def load_and_sanitize(path: str, category: str) -> list[dict]:
 
         # Platform & Mimari Whitelist (Soket / Nesil Tabanlı Filtre - 10-15 yıllık antika parçaları süpürür)
         if category == "cpu":
-            if not any(k in name.lower() for k in ["ryzen", "core", "ultra", "intel", "amd", "athlon", "threadripper", "pentium"]):
+            name_lower = name.lower()
+            if not any(k in name_lower for k in ["ryzen", "core", "ultra", "intel", "amd", "athlon", "threadripper"]):
                 continue
-            if any(k in name.lower() for k in ["ssd", "soğutucu", "sogutucu", "fan", "kasa", "ram", "ddr"]):
+            if any(k in name_lower for k in ["ssd", "soğutucu", "sogutucu", "fan", "kasa", "ram", "ddr", "motherboard", "anakart"]):
                 continue
-            # Eski antika aile ve soketleri temizle (AM4 Ryzen 5000/3000 KORUNUR)
-            if any(b in name.lower() for b in ["xeon", "pentium 4", "core 2", "celeron", "fx-", "phenom", "athlon ii", "athlon x4", "sempron", "opteron"]):
+            # AMD Eski antika APU ve işlemciler (A4, A6-5400K, A8, A10, A12, FX, Phenom, Athlon II, Sempron, Opteron, FM1, FM2) KESİNLİKLE ELENİR!
+            if "amd" in name_lower and not any(r in name_lower for r in ["ryzen", "threadripper", "athlon 3000g", "athlon 200ge", "athlon 220ge", "athlon 240ge"]):
+                continue
+            if any(b in name_lower for b in ["a4-", "a6-", "a8-", "a10-", "a12-", "a6 5400", "a6-5400", "fm1", "fm2", "am1", "am2", "am3", "fx-", "phenom", "athlon ii", "athlon x4", "sempron", "opteron", "turion"]):
+                continue
+            # Intel Eski İşlemciler (Xeon, Celeron, Pentium, Core 2 ve 10. nesil öncesi i3/i5/i7/i9) KESİNLİKLE ELENİR!
+            if any(b in name_lower for b in ["xeon", "pentium", "core 2", "celeron", "lga775", "lga1155", "lga1150", "lga1156", "lga1151"]):
                 continue
             sock = it.get("socket")
             if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "sTRX4", "sWRX8", "sTR5", "Belirtilmedi"]:
@@ -854,8 +898,8 @@ def load_and_sanitize(path: str, category: str) -> list[dict]:
             sock = it.get("socket")
             if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "Belirtilmedi"]:
                 continue
-            # Eski çipsetler elenir
-            if any(b in name.upper() for b in ["H110", "B150", "Z170", "H270", "B250", "Z270", "H310", "B360", "B365", "Z370", "Z390", "H81", "B85", "Z87", "Z97", "H61", "FM2", "AM3", "970A", "990FX"]):
+            # Eski çipsetler ve soketler KESİNLİKLE elenir (AM3, AM3+, FM2, FM1, H81, H61, B85, Z97 vb.)
+            if any(b in name.upper() for b in ["H110", "B150", "Z170", "H270", "B250", "Z270", "H310", "B360", "B365", "Z370", "Z390", "H81", "B85", "Z87", "Z97", "H61", "FM2", "FM1", "AM3", "AM2", "AM1", "970A", "990FX", "A68", "A88X"]):
                 continue
 
         elif category == "ram":

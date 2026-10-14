@@ -213,6 +213,47 @@ STORE_CATEGORIES = [
     ("Sinerji", "case", "https://www.sinerji.gen.tr/bilgisayar-kasasi-c-2027?px={p}", 4),
 ]
 
+def is_valid_image_url(url: str | None) -> bool:
+    if not url or not isinstance(url, str):
+        return False
+    u = url.strip()
+    if not (u.startswith("http://") or u.startswith("https://")):
+        return False
+    u_lower = u.lower()
+    if any(b in u_lower for b in ["data:", ".svg", "svg%20", "placeholder", "blank.gif", "roundnew", "logo_2020"]):
+        return False
+    return True
+
+def clean_image_url(img_el, base_store_url: str = "") -> str | None:
+    if not img_el:
+        return None
+    candidates = [
+        img_el.get("data-src"),
+        img_el.get("data-lazy-src"),
+        img_el.get("data-original"),
+        img_el.get("srcset"),
+        img_el.get("src"),
+    ]
+    for c in candidates:
+        if not c or not isinstance(c, str):
+            continue
+        c = c.strip()
+        if c.startswith("data:") or "placeholder" in c.lower() or "blank.gif" in c.lower() or "base64" in c:
+            continue
+        if "roundnew" in c.lower() or "logo_2020" in c.lower():
+            continue
+        if "," in c and " " in c:
+            parts = [p.strip().split()[0] for p in c.split(",") if p.strip()]
+            if parts and parts[0].startswith("http"):
+                c = parts[-1] if len(parts) > 1 else parts[0]
+        if c.startswith("//"):
+            c = "https:" + c
+        elif c.startswith("/") and base_store_url:
+            c = base_store_url.rstrip("/") + "/" + c.lstrip("/")
+        if is_valid_image_url(c):
+            return c
+    return None
+
 def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
     if not html:
         return []
@@ -225,7 +266,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             p_el = prod.select_one(".price")
             a_el = prod.find("a", href=True)
             img_el = prod.select_one("img")
-            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-lazy-src")) if img_el else None
+            img_url = clean_image_url(img_el, "https://www.gaming.gen.tr")
             if t_el and p_el and a_el:
                 title = t_el.get_text(strip=True)
                 price = clean_price(p_el.get_text(strip=True))
@@ -243,8 +284,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             title = ""
             price = None
             img_el = a.find("img") or (a.parent.find("img") if a.parent else None)
-            img_src = (img_el.get("src") or img_el.get("data-src")) if img_el else None
-            img_url = f"https://www.incehesap.com{img_src}" if img_src and not img_src.startswith("http") else img_src
+            img_url = clean_image_url(img_el, "https://www.incehesap.com")
             for s in a.stripped_strings:
                 if len(s) > len(title) and "TL" not in s and "₺" not in s and not any(k in s for k in ["Yorum", "Satıyor", "Taksit", "Ürüne Git", "Fırsat", "Stokta", "Kargo"]):
                     title = s
@@ -268,7 +308,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             price = clean_price(p_el.get_text(strip=True)) if p_el else None
             href = a_tags[0]["href"] if a_tags else ""
             img_el = prod.find("img")
-            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-original")) if img_el else None
+            img_url = clean_image_url(img_el, "https://www.itopya.com")
             if title and price and href and is_valid_category_item(category, title, price):
                 full_url = f"https://www.itopya.com{href}" if not href.startswith("http") else href
                 items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
@@ -285,7 +325,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             p_el = prod.select_one(".newPrice") or prod.select_one(".price") or prod.select_one(".showcase__price")
             price = clean_price(p_el.get_text(strip=True) if hasattr(p_el, "get_text") else str(p_el)) if p_el else None
             img_el = prod.select_one(".showcase__image img, img")
-            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-original")) if img_el else None
+            img_url = clean_image_url(img_el, "https://www.tebilon.com")
             if title and price and is_valid_category_item(category, title, price):
                 full_url = f"https://www.tebilon.com{href}" if not href.startswith("http") else href
                 items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
@@ -303,7 +343,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             p_el = prod.select_one(".price") or prod.select_one(".totalPrice") or prod.find(string=lambda t: t and ("₺" in t or "TL" in t))
             price = clean_price(p_el.get_text(strip=True) if hasattr(p_el, "get_text") else str(p_el)) if p_el else None
             img_el = prod.find("img")
-            img_url = (img_el.get("src") or img_el.get("data-src")) if img_el else None
+            img_url = clean_image_url(img_el, "https://www.sinerji.gen.tr")
             if title and price and is_valid_category_item(category, title, price):
                 full_url = f"https://www.sinerji.gen.tr{href}" if not href.startswith("http") else href
                 items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
@@ -687,9 +727,9 @@ def main():
                 "url": url,
                 "inStock": True
             }
-            if sp.get("imageUrl"):
+            if is_valid_image_url(sp.get("imageUrl")):
                 offer_obj["imageUrl"] = sp["imageUrl"]
-                if not match.get("imageUrl"):
+                if not is_valid_image_url(match.get("imageUrl")):
                     match["imageUrl"] = sp["imageUrl"]
             matched_offers_by_id[prod_id].append(offer_obj)
 
@@ -732,10 +772,11 @@ def main():
             # En iyi görseli belirle (tekliflerden veya katalogdaki görselden)
             best_image = None
             for o in sorted_offers:
-                if o.get("imageUrl"):
-                    best_image = o["imageUrl"]
+                img_candidate = o.get("imageUrl")
+                if is_valid_image_url(img_candidate):
+                    best_image = img_candidate
                     break
-            if not best_image:
+            if not best_image and is_valid_image_url(it.get("imageUrl")):
                 best_image = it.get("imageUrl")
 
             prices_tr_map[prod_id] = {

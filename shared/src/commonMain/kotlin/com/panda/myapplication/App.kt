@@ -28,6 +28,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavType
+import coil3.ImageLoader
+import coil3.compose.setSingletonImageLoaderFactory
+import coil3.network.ktor3.KtorNetworkFetcherFactory
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -61,6 +64,14 @@ private sealed class BottomNavTab(
 @Composable
 @Preview
 fun App() {
+    setSingletonImageLoaderFactory { context ->
+        ImageLoader.Builder(context)
+            .components {
+                add(KtorNetworkFetcherFactory())
+            }
+            .build()
+    }
+
     KoinApplication(
         application = {
             modules(dataModule, platformDatabaseModule, presentationModule)

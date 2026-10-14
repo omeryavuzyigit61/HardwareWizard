@@ -106,7 +106,7 @@
         "priceTry": 20799.0,
         "url": "https://www.gaming.gen.tr/urun/360524/amd-ryzen-7-7800x3d-tray-5-0ghz-8-cekirdek-96mb-onbellek-soket-am5-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -224,14 +224,14 @@
         "priceTry": 26798.67,
         "url": "https://www.itopya.com/amd-ryzen-7-9800x3d-47ghz-96mb-onbellek-8-cekirdek-am5-4nm-tray-islemci_u27208",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 28299.0,
         "url": "https://www.gaming.gen.tr/urun/578427/amd-ryzen-7-9800x3d-tray-5-2ghz-8-cekirdek-96mb-onbellek-soket-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -342,7 +342,7 @@
         "priceTry": 11699.0,
         "url": "https://www.gaming.gen.tr/urun/356621/amd-ryzen-5-7600x-tray-5-3ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -453,14 +453,14 @@
         "priceTry": 22699.0,
         "url": "https://www.gaming.gen.tr/urun/754948/intel-core-i7-14700k-tray-5-6ghz-28mb-onbellek-20-cekirdek-1700-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 23235.16,
         "url": "https://www.itopya.com/intel-core-i7-14700k-34ghz-33mb-onbellek-20-cekirdek-1700-10nm-tray-islemci_u30126",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -675,7 +675,7 @@
         "priceTry": 13399.0,
         "url": "https://www.gaming.gen.tr/urun/551925/amd-ryzen-5-9600x-tray-5-4ghz-32mb-onbellek-6-cekirdek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -897,7 +897,7 @@
         "priceTry": 45299.0,
         "url": "https://www.gaming.gen.tr/urun/542782/amd-ryzen-9-9950x3d-5-7ghz-16-cekirdek-128mb-onbellek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -1015,14 +1015,14 @@
         "priceTry": 5050.0,
         "url": "https://www.itopya.com/amd-ryzen-5-5500-36ghz-16mb-onbellek-6-cekirdek-am4-7nm-tray-islemci_u27690",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 5699.0,
         "url": "https://www.gaming.gen.tr/urun/169188/amd-ryzen-5-5500-4-20ghz-6-cekirdek-16mb-onbellek-am4-7nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -1140,7 +1140,7 @@
         "priceTry": 17599.0,
         "url": "https://www.gaming.gen.tr/urun/530284/amd-ryzen-7-9700x-tray-5-5ghz-40mb-onbellek-8-cekirdek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -1150,7 +1150,7 @@
     "lowestPriceTry": 6769.0,
     "highestPriceTry": 7899.0,
     "lastUpdated": "2026-10-14T19:34:53.257527",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1237,7 +1237,7 @@
         "priceTry": 7899.0,
         "url": "https://www.gaming.gen.tr/urun/40795/amd-ryzen-5-5600x-tray-3-7ghz-32mb-onbellek-6-cekirdek-am4-7nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -1355,7 +1355,7 @@
         "priceTry": 7299.0,
         "url": "https://www.gaming.gen.tr/urun/242493/amd-ryzen-5-5600-tray-3-5ghz-32mb-onbellek-6-cekirdek-am4-7nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -1587,7 +1587,7 @@
         "priceTry": 8713.56,
         "url": "https://www.itopya.com/intel-core-i5-12400f-440ghz-18mb-onbellek-6-cekirdek-soket-1700-10nm-tray-islemci_u27568",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -2228,7 +2228,7 @@
         "priceTry": 20899.0,
         "url": "https://www.gaming.gen.tr/urun/551825/intel-core-ultra-7-265k-tray-5-50ghz-20-cekirdek-30mb-1851-soket-3nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -2450,14 +2450,14 @@
         "priceTry": 9453.6,
         "url": "https://www.itopya.com/intel-core-i5-14400f-25ghz-20mb-onbellek-10-cekirdek-1700-10nm-tray-islemci_u27590",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 9799.01,
         "url": "https://www.gaming.gen.tr/urun/651507/intel-core-i5-14400f-tray-4-7ghz-20mb-onbellek-10-cekirdek-1700-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -2686,7 +2686,7 @@
         "priceTry": 9199.0,
         "url": "https://www.gaming.gen.tr/urun/555347/amd-ryzen-5-7500f-tray-5-0ghz-6-cekirdek-32mb-onbellek-am5-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -2887,7 +2887,7 @@
         "priceTry": 33499.0,
         "url": "https://www.gaming.gen.tr/urun/517177/intel-core-ultra-9-285k-tray-5-70ghz-24-cekirdek-36mb-1851-soket-3nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -3252,7 +3252,7 @@
     "lowestPriceTry": 8221.0,
     "highestPriceTry": 9706.53,
     "lastUpdated": "2026-10-14T19:34:53.258029",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i5-12600kf-12-nesil-socket-1700-3-7ghz-20mb-onbellek-10nm-islemci-2.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3339,7 +3339,7 @@
         "priceTry": 9706.53,
         "url": "https://www.itopya.com/intel-core-i5-12600kf-37ghz-20mb-onbellek-10-cekirdek-1700-10nm-tray-islemci_u31559",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -3792,14 +3792,14 @@
         "priceTry": 23299.0,
         "url": "https://www.gaming.gen.tr/urun/200404/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 23523.8,
         "url": "https://www.itopya.com/amd-ryzen-7-5800x3d-10th-anniversary-edition-34ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci_u33771",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -4298,7 +4298,7 @@
         "priceTry": 19999.0,
         "url": "https://www.gaming.gen.tr/urun/360515/amd-ryzen-9-7900-tray-5-4ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -4402,7 +4402,7 @@
         "priceTry": 16340.43,
         "url": "https://www.itopya.com/amd-ryzen-7-8700g-42ghz-16mb-onbellek-8-cekirdek-am5-4nm-tray-islemci_u31902",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -4509,7 +4509,7 @@
     "lowestPriceTry": 15569.0,
     "highestPriceTry": 18089.0,
     "lastUpdated": "2026-10-14T19:34:53.258224",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/5-5ghz-15-nesil-intel-islemci-9.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4596,7 +4596,7 @@
         "priceTry": 17998.99,
         "url": "https://www.gaming.gen.tr/urun/517233/intel-core-ultra-7-265kf-tray-5-50ghz-20-cekirdek-30mb-1851-soket-3nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -4710,7 +4710,7 @@
     "lowestPriceTry": 10159.0,
     "highestPriceTry": 11811.0,
     "lastUpdated": "2026-10-14T19:34:53.258255",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/5-2ghz-15-nesil-tray-kutusuz-intel-islemci.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4797,7 +4797,7 @@
         "priceTry": 11799.0,
         "url": "https://www.gaming.gen.tr/urun/669043/intel-core-ultra-5-245kf-5-2ghz-14-cekirdek-24mb-onbellek-lga1851-3nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -4911,7 +4911,7 @@
     "lowestPriceTry": 21827.0,
     "highestPriceTry": 25499.0,
     "lastUpdated": "2026-10-14T19:34:53.258285",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/S89-q2x-intel14th02.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4998,7 +4998,7 @@
         "priceTry": 25499.0,
         "url": "https://www.gaming.gen.tr/urun/866980/intel-core-i9-14900kf-tray-6-0ghz-24-cekirdek-36mb-onbellek-lga1700-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -5012,7 +5012,7 @@
         "priceTry": 29741.3,
         "url": "https://www.itopya.com/intel-core-i9-14900kf-32ghz-36mb-onbellek-24-cekirdek-1700-10nm-tray-islemci_u30121",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -5338,7 +5338,7 @@
         "priceTry": 14999.0,
         "url": "https://www.gaming.gen.tr/urun/660420/intel-core-i5-14600kf-tray-5-3ghz-14-cekirdek-24mb-onbellek-1700-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -6584,14 +6584,14 @@
         "priceTry": 14799.0,
         "url": "https://www.gaming.gen.tr/urun/822006/amd-ryzen-5-7500x3d-tray-4-5ghz-96mb-onbellek-6-cekirdek-soket-am5-5nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 15082.67,
         "url": "https://www.itopya.com/amd-ryzen-5-7500x3d-40-ghz-96mb-onbellek-6-cekirdek-am5-5nm-tray-islemci_u31365",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -6702,14 +6702,14 @@
         "priceTry": 20599.0,
         "url": "https://www.gaming.gen.tr/urun/958604/amd-ryzen-7-7700x3d-tray-4-5ghz-8-cekirdek-96mb-onbellek-am5-5nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 20653.36,
         "url": "https://www.itopya.com/amd-ryzen-7-7700x3d-4-ghz-104mb-onbellek-8-cekirdek-am5-5nm-tray-islemci_u33903",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -6813,7 +6813,7 @@
         "priceTry": 8799.0,
         "url": "https://www.gaming.gen.tr/urun/851643/amd-ryzen-7-8700f-tray-5-0-ghz-16mb-onbellek-8-cekirdek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -6830,7 +6830,7 @@
     "lowestPriceTry": 25977.0,
     "highestPriceTry": 30181.0,
     "lastUpdated": "2026-10-14T19:34:53.258564",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6917,14 +6917,14 @@
         "priceTry": 30030.67,
         "url": "https://www.itopya.com/amd-ryzen-7-9850x3d-47-ghz-96mb-onbellek-8-cekirdek-am5-4nm-tray-islemci_u31845",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 30499.0,
         "url": "https://www.gaming.gen.tr/urun/868752/amd-ryzen-7-9850x3d-tray-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -7028,7 +7028,7 @@
         "priceTry": 35299.0,
         "url": "https://www.gaming.gen.tr/urun/670428/amd-ryzen-9-9900x3d-tray-5-5ghz-12-cekirdek-128mb-onbellek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -7042,7 +7042,7 @@
         "priceTry": 35821.33,
         "url": "https://www.itopya.com/amd-ryzen-9-9900x3d-44ghz-128mb-onbellek-12-cekirdek-am5-4nm-tray-islemci_u28374",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -7052,7 +7052,7 @@
     "lowestPriceTry": 49187.0,
     "highestPriceTry": 57799.0,
     "lastUpdated": "2026-10-14T19:34:53.258614",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7139,14 +7139,14 @@
         "priceTry": 57799.0,
         "url": "https://www.gaming.gen.tr/urun/910664/amd-ryzen-9-9950x3d2-dual-edition-tray-56-6ghz-16-cekirdek-192mb-onbellek-am5-4nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 59923.4,
         "url": "https://www.itopya.com/amd-ryzen-9-9950x3d2-43-ghz-208mb-onbellek-16-cekirdek-am5-4nm-tray-islemci_u33166",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -7156,7 +7156,7 @@
     "lowestPriceTry": 6598.0,
     "highestPriceTry": 7699.0,
     "lastUpdated": "2026-10-14T19:34:53.258636",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7243,14 +7243,14 @@
         "priceTry": 7699.0,
         "url": "https://www.gaming.gen.tr/urun/945015/intel-core-ultra-5-225f-tray-arrow-lake-3-30-ghz-10-cekirdek-22mb-l2-onbellek-soket-1851-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 8975.45,
         "url": "https://www.itopya.com/intel-core-ultra-5-225f-33ghz-20mb-onbellek-10-cekirdek-1851-3nm-tray-islemci_u30643",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -7454,7 +7454,7 @@
     "lowestPriceTry": 11399.0,
     "highestPriceTry": 13332.0,
     "lastUpdated": "2026-10-14T19:34:53.258707",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7541,7 +7541,7 @@
         "priceTry": 13332.0,
         "url": "https://www.itopya.com/intel-core-ultra-5-250kf-plus-42ghz-30mb-onbellek-18-cekirdek-1851-3nm-tray-islemci_u32960",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -7551,7 +7551,7 @@
     "lowestPriceTry": 17550.0,
     "highestPriceTry": 20599.0,
     "lastUpdated": "2026-10-14T19:34:53.258726",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/D4K-1q1-intel-core-ultra-5-225f-tray-islemciler-222410460.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7638,7 +7638,7 @@
         "priceTry": 20599.0,
         "url": "https://www.gaming.gen.tr/urun/921817/intel-core-ultra-7-270k-plus-tray-3-7ghz-40mb-onbellek-24-cekirdek-lga1851-3nm-islemci/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -7652,7 +7652,7 @@
         "priceTry": 22758.66,
         "url": "https://www.itopya.com/intel-core-ultra-7-270k-plus-37ghz-40mb-onbellek-24-cekirdek-1851-3nm-tray-islemci_u32813",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -7669,7 +7669,7 @@
     "lowestPriceTry": 12421.0,
     "highestPriceTry": 14544.0,
     "lastUpdated": "2026-10-14T19:34:53.258739",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i7-12700f-soket-1700-12-nesil-25mb-onbellek-10nm-islemci.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7756,7 +7756,7 @@
         "priceTry": 14544.0,
         "url": "https://www.itopya.com/intel-core-i7-12700f-36ghz-25mb-onbellek-12-cekirdek-1700-10nm-tray-islemci_u31657",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -7773,7 +7773,7 @@
     "lowestPriceTry": 10481.0,
     "highestPriceTry": 12187.33,
     "lastUpdated": "2026-10-14T19:34:53.258766",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.tebilon.com/picture300x300/5-0ghz-65w-32mb-zen-5-fansiz-kutusuz-islemci-100-000001406.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7860,7 +7860,7 @@
         "priceTry": 12187.33,
         "url": "https://www.itopya.com/amd-ryzen-5-9500f-38ghz-32mb-onbellek-6-cekirdek-am5-4nm-tray-islemci_u30916",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -13483,7 +13483,7 @@
         "priceTry": 55499.0,
         "url": "https://www.gaming.gen.tr/urun/762602/msi-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -13497,7 +13497,7 @@
         "priceTry": 58236.6,
         "url": "https://www.itopya.com/msi-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-gddr7-dlss-4-128-bit-ekran-karti_u30031",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -14693,7 +14693,7 @@
     "lowestPriceTry": 110555.0,
     "highestPriceTry": 130680.0,
     "lastUpdated": "2026-10-14T19:34:53.260210",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -14780,7 +14780,7 @@
         "priceTry": 130680.0,
         "url": "https://www.tebilon.com/gigabytegeforce-rtx-5080-gaming-oc-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -15472,7 +15472,7 @@
         "priceTry": 114999.0,
         "url": "https://www.gaming.gen.tr/urun/737637/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -15600,7 +15600,7 @@
         "priceTry": 94999.01,
         "url": "https://www.gaming.gen.tr/urun/569391/msi-geforce-rtx-5070-ti-16g-shadow-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -27904,7 +27904,7 @@
         "priceTry": 4956.02,
         "url": "https://www.itopya.com/asus-geforce-gt710-2gb-gddr5-evo-64-bit-ekran-karti_u33920",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -27918,7 +27918,7 @@
         "priceTry": 25499.0,
         "url": "https://www.gaming.gen.tr/urun/949023/asus-dual-geforce-rtx-5060-evo-oc-8gb-gddr7-128-bit-dlss-4-bulk-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -27935,7 +27935,7 @@
     "lowestPriceTry": 3363.0,
     "highestPriceTry": 3861.0,
     "lastUpdated": "2026-10-14T19:34:53.264570",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/7K2msi-gt7102gd3hlp-productpicture-boxshot.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -28022,7 +28022,7 @@
         "priceTry": 3861.0,
         "url": "https://www.tebilon.com/msi-gt-710-2gd3h-lp-2gb-ddr3-64bit-nvidia-ekran-karti/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -28036,14 +28036,14 @@
         "priceTry": 23902.31,
         "url": "https://www.itopya.com/msi-geforce-rtx-5050-8g-gaming-oc-gddr6-dlss-4-128-bit-ekran-karti_u29918",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 29499.0,
         "url": "https://www.gaming.gen.tr/urun/761509/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -28154,7 +28154,7 @@
         "priceTry": 40499.0,
         "url": "https://www.gaming.gen.tr/urun/677798/asus-dual-geforce-rtx-5060-ti-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -28258,14 +28258,14 @@
         "priceTry": 17845.92,
         "url": "https://www.itopya.com/xfx-swift-radeon-rx-9060-8gb-gddr6-128-bit-bulk-ekran-karti_u30597",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 20999.0,
         "url": "https://www.gaming.gen.tr/urun/811861/asus-dual-radeon-rx-9060-8gb-gddr6-128-bit-bulk-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -28275,7 +28275,7 @@
     "lowestPriceTry": 21526.0,
     "highestPriceTry": 24799.0,
     "lastUpdated": "2026-10-14T19:34:53.264635",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -28362,14 +28362,14 @@
         "priceTry": 24799.0,
         "url": "https://www.gaming.gen.tr/urun/645482/asus-dual-radeon-rx-9060-xt-8gb-gddr6-128-bit-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 38934.02,
         "url": "https://www.itopya.com/asus-dual-radeon-rx-9060-xt-16gb-gddr6-128-bit-ekran-karti_u30511",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -28379,7 +28379,7 @@
     "lowestPriceTry": 23165.0,
     "highestPriceTry": 26967.0,
     "lastUpdated": "2026-10-14T19:34:53.264661",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202509/68d39b7dea5d48.39290413_ojfeimhnlkgqp_cropped_288.webp",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -28466,7 +28466,7 @@
         "priceTry": 26967.0,
         "url": "https://www.itopya.com/gigabyte-geforce-rtx-5060-eagle-max-oc-8g-gddr7-dlss-4-128-bit-ekran-karti_u34263",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -28903,7 +28903,7 @@
         "priceTry": 109999.0,
         "url": "https://www.gaming.gen.tr/urun/477982/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -28913,7 +28913,7 @@
     "lowestPriceTry": 22177.0,
     "highestPriceTry": 25999.0,
     "lastUpdated": "2026-10-14T19:34:53.264773",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202509/68becb43083bd2.01748658_eqjopgikmhfln_cropped_288.webp",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -29000,7 +29000,7 @@
         "priceTry": 25999.0,
         "url": "https://www.itopya.com/asus-dual-geforce-rtx-5050-oc-edition-8gb-gddr6-dlss-4-128-bit-ekran-karti_u29910",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -29145,7 +29145,7 @@
     "lowestPriceTry": 55119.0,
     "highestPriceTry": 64999.0,
     "lastUpdated": "2026-10-14T19:34:53.264848",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -29232,7 +29232,7 @@
         "priceTry": 64999.0,
         "url": "https://www.gaming.gen.tr/urun/736054/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -29242,7 +29242,7 @@
     "lowestPriceTry": 101879.0,
     "highestPriceTry": 119999.0,
     "lastUpdated": "2026-10-14T19:34:53.264870",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202501/677d1165484429.92164452_heongkqimplfj_cropped_75.webp",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -29329,14 +29329,14 @@
         "priceTry": 119999.0,
         "url": "https://www.gaming.gen.tr/urun/478061/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 127260.0,
         "url": "https://www.itopya.com/asus-tuf-gaming-geforce-rtx-5080-16gb-gddr7-btf-oc-edition-256-bit-ekran-kart_u34281",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -29454,7 +29454,7 @@
         "priceTry": 20699.0,
         "url": "https://www.gaming.gen.tr/urun/426201/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -31585,7 +31585,7 @@
     "lowestPriceTry": 34719.0,
     "highestPriceTry": 39999.0,
     "lastUpdated": "2026-10-14T19:34:53.265367",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-gddr7-8gb-dlss-4-128bit-nvidia-ekran-karti.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -31672,7 +31672,7 @@
         "priceTry": 39999.0,
         "url": "https://www.gaming.gen.tr/urun/712740/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -31790,7 +31790,7 @@
         "priceTry": 29330.4,
         "url": "https://www.itopya.com/msi-geforce-rtx-5060-ti-shadow-2x-oc-plus-8gb-gddr7-dlss-4-128-bit-bulk-ekran-karti_u31662",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -31804,7 +31804,7 @@
         "priceTry": 40399.0,
         "url": "https://www.gaming.gen.tr/urun/754696/msi-geforce-rtx-5060-ti-8g-shadow-2x-oc-plus-8gb-gddr7-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -34587,14 +34587,14 @@
         "priceTry": 64999.0,
         "url": "https://www.gaming.gen.tr/urun/695102/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 69999.0,
         "url": "https://www.itopya.com/msi-geforce-rtx-5070-12g-ventus-2x-oc-black-gddr7-192-bit-ekran-karti_u35561",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -34705,7 +34705,7 @@
         "priceTry": 120499.0,
         "url": "https://www.gaming.gen.tr/urun/569435/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -34715,7 +34715,7 @@
     "lowestPriceTry": 174799.0,
     "highestPriceTry": 199999.0,
     "lastUpdated": "2026-10-14T19:34:53.266252",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -34802,7 +34802,7 @@
         "priceTry": 199999.0,
         "url": "https://www.gaming.gen.tr/urun/478468/galax-geforce-rtx-5080-1-click-oc-white-16gb-gddr7-256-bit-dlss-4-ekran-karti-58nzn6mdbcwh/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -34906,14 +34906,14 @@
         "priceTry": 33499.0,
         "url": "https://www.gaming.gen.tr/urun/737722/msi-geforce-rtx-5060-8g-shadow-2x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 35693.4,
         "url": "https://www.itopya.com/msi-geforce-rtx-5060-shadow-2x-oc-max-8gb-gddr7-dlss-4-128-bit-ekran-karti_u32101",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -35218,7 +35218,7 @@
         "priceTry": 23999.0,
         "url": "https://www.itopya.com/gigabyte-geforce-rtx-5050-windforce-oc-8g-gddr6-dlss-4-128-bit-ekran-karti_u29916",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -36553,7 +36553,7 @@
     "lowestPriceTry": 4423.0,
     "highestPriceTry": 5143.0,
     "lastUpdated": "2026-10-14T19:34:53.266592",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -36640,14 +36640,14 @@
         "priceTry": 5143.0,
         "url": "https://www.tebilon.com/msi-pro-b550m-b-amd-b550-soket-am4-ddr4-4600-mhz-m2-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 5858.0,
         "url": "https://www.itopya.com/msi-pro-b550m-b-4600mhzoc-ddr4-soket-am4-m2-hdmi-dp-matx-anakart_u33655",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -36875,7 +36875,7 @@
         "priceTry": 16399.0,
         "url": "https://www.tebilon.com/gigabyte-x870-aorus-elite-x3d-ice-amd-x870-soket-am5-ddr5-8800mt-s-wi-fi-7-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -36979,7 +36979,7 @@
         "priceTry": 5572.0,
         "url": "https://www.tebilon.com/msi-b550m-pro-vdh-amd-b550-soket-am4-ddr4-4400mhz-oc-m2-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -36989,7 +36989,7 @@
     "lowestPriceTry": 27551.0,
     "highestPriceTry": 32031.0,
     "lastUpdated": "2026-10-14T19:34:53.266670",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/K2H-rog-strix-x870e-e-gaming-wifi-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -37076,7 +37076,7 @@
         "priceTry": 31999.0,
         "url": "https://www.gaming.gen.tr/urun/517058/asus-rog-strix-x870e-e-gaming-wifi-8400mhzoc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -37097,7 +37097,7 @@
         "priceTry": 36966.0,
         "url": "https://www.itopya.com/asus-rog-strix-x870e-e-gaming-wifi7-neo-8600mhzoc-ddr5-soket-am5-m2-hdmi-dp-atx-anakart_u33336",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -37147,7 +37147,7 @@
     "lowestPriceTry": 7893.0,
     "highestPriceTry": 9199.0,
     "lastUpdated": "2026-10-14T19:34:53.266700",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -37234,7 +37234,7 @@
         "priceTry": 9199.0,
         "url": "https://www.tebilon.com/gigabyte-b650-gaming-x-ax-v2-soket-am5-amd-b650-ddr5-8000mhz-oc-wi-fi-6e-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -37244,7 +37244,7 @@
     "lowestPriceTry": 13244.0,
     "highestPriceTry": 15599.0,
     "lastUpdated": "2026-10-14T19:34:53.266721",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4G4-prime-x870-p-wifi-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -37331,7 +37331,7 @@
         "priceTry": 15599.0,
         "url": "https://www.gaming.gen.tr/urun/517133/asus-prime-x870-p-wifi-8000mhzoc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -37502,7 +37502,7 @@
     "lowestPriceTry": 35792.0,
     "highestPriceTry": 40999.0,
     "lastUpdated": "2026-10-14T19:34:53.266768",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/49E-rog-crosshair-x870e-hero-btf-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -37589,7 +37589,7 @@
         "priceTry": 40999.0,
         "url": "https://www.gaming.gen.tr/urun/696944/asus-rog-crosshair-x870e-apex-9600mhz-oc-ddr5-soket-am5-m-2-type-c-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -37727,14 +37727,14 @@
         "priceTry": 8398.99,
         "url": "https://www.gaming.gen.tr/urun/998170/msi-b550-gaming-4866mhz-oc-ddr4-soket-am4-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 9429.0,
         "url": "https://www.itopya.com/msi-b550-gaming-wifi6e-4866mhzoc-ddr4-soket-am4-m2-hdmi-dp-atx-anakart_u35552",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -37888,7 +37888,7 @@
         "priceTry": 28758.0,
         "url": "https://www.tebilon.com/msi-mpg-x870e-carbon-wifi-soket-am5-ddr5-8400mhz-wifi-7-rgb-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -38113,7 +38113,7 @@
         "priceTry": 7799.0,
         "url": "https://www.gaming.gen.tr/urun/84839/msi-b550-a-pro-4400mhzoc-ddr4-soket-am4-m-2-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -38123,7 +38123,7 @@
     "lowestPriceTry": 59183.0,
     "highestPriceTry": 68773.0,
     "lastUpdated": "2026-10-14T19:34:53.266876",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -38210,7 +38210,7 @@
         "priceTry": 68499.0,
         "url": "https://www.gaming.gen.tr/urun/696911/asus-rog-crosshair-x870e-extreme-9000mhz-oc-ddr5-soket-am5-m-2-hdmi-type-c-e-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -38230,7 +38230,7 @@
     "lowestPriceTry": 22967.0,
     "highestPriceTry": 26799.0,
     "lastUpdated": "2026-10-14T19:34:53.266896",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -38317,21 +38317,21 @@
         "priceTry": 26799.0,
         "url": "https://www.tebilon.com/asus-rog-strix-x870e-a-gaming-wifi7-neo-amd-x870e-soket-am5-ddr5-9600mt-soc-wi-fi-7-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 28399.0,
         "url": "https://www.gaming.gen.tr/urun/857329/asus-rog-strix-x870e-a-gaming-wifi7-neo-9000mhz-oc-ddr5-soket-am5-m-2-usb4-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 29626.67,
         "url": "https://www.itopya.com/asus-rog-strix-x870e-a-gaming-wifi7-neo-8600mhzoc-ddr5-soket-am5-m2-hdmi-dp-atx-anakart_u33216",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -38435,7 +38435,7 @@
         "priceTry": 24999.0,
         "url": "https://www.gaming.gen.tr/urun/735680/asus-tuf-gaming-x870e-plus-wifi7-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -38455,7 +38455,7 @@
     "lowestPriceTry": 26814.0,
     "highestPriceTry": 31154.0,
     "lastUpdated": "2026-10-14T19:34:53.266930",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/1J7-proart-x870e-creator-wifi-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -38542,7 +38542,7 @@
         "priceTry": 30999.0,
         "url": "https://www.gaming.gen.tr/urun/517150/asus-proart-x870e-creator-wifi-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -38673,7 +38673,7 @@
     "lowestPriceTry": 17857.0,
     "highestPriceTry": 20431.0,
     "lastUpdated": "2026-10-14T19:34:53.266965",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202511/6927ea651e17f8.91068864_plkhqojimfegn_cropped_288.webp",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -38760,14 +38760,14 @@
         "priceTry": 20431.0,
         "url": "https://www.tebilon.com/msi-mag-x870e-tomahawk-wifi-soket-am5-ddr5-8400mhz-wifi-7-rgb-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 20999.0,
         "url": "https://www.gaming.gen.tr/urun/599637/msi-mag-x870e-tomahawk-wifi-8400mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -39212,7 +39212,7 @@
     "lowestPriceTry": 12759.0,
     "highestPriceTry": 14699.0,
     "lastUpdated": "2026-10-14T19:34:53.267068",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/SR9-prime-x870-p-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -39299,7 +39299,7 @@
         "priceTry": 14699.0,
         "url": "https://www.gaming.gen.tr/urun/533543/asus-prime-x870-p-8000mhzoc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -39514,7 +39514,7 @@
         "priceTry": 11999.0,
         "url": "https://www.tebilon.com/gigabyte-x870-gaming-wifi6-amd-x870-soket-am5-ddr5-8000mhz-oc-wifi-6-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -39691,7 +39691,7 @@
     "lowestPriceTry": 32678.0,
     "highestPriceTry": 38220.0,
     "lastUpdated": "2026-10-14T19:34:53.268568",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -39778,7 +39778,7 @@
         "priceTry": 38220.0,
         "url": "https://www.gaming.gen.tr/urun/228807/asus-rog-strix-x670e-a-gaming-wifi-6400mhzoc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart-90mb1bm0-m0eay0/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -40659,7 +40659,7 @@
     "lowestPriceTry": 3988.0,
     "highestPriceTry": 4720.0,
     "lastUpdated": "2026-10-14T19:34:53.268831",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -40746,7 +40746,7 @@
         "priceTry": 4720.0,
         "url": "https://www.tebilon.com/msi-pro-a620am-b-evo-amd-a620-am5-ddr5-6800mt-s-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -41680,7 +41680,7 @@
     "lowestPriceTry": 14074.0,
     "highestPriceTry": 16499.0,
     "lastUpdated": "2026-10-14T19:34:53.269096",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-maximus-z890-apex-intel-z890-lga1851-9000mhz-o-c-ddr5-wifi-7-bt-atx-anakart.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -41767,7 +41767,7 @@
         "priceTry": 16499.0,
         "url": "https://www.gaming.gen.tr/urun/543029/asus-rog-strix-z890-i-gaming-wifi-8800mhz-oc-ddr5-soket-lga1851-m-2-hdmi-mini-itx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -42245,7 +42245,7 @@
     "lowestPriceTry": 12426.0,
     "highestPriceTry": 14499.0,
     "lastUpdated": "2026-10-14T19:34:53.269220",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -42332,7 +42332,7 @@
         "priceTry": 14499.0,
         "url": "https://www.gaming.gen.tr/urun/517702/asus-rog-strix-b860-a-gaming-wifi-8600mhz-oc-ddr5-soket-lga1851-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -44017,7 +44017,7 @@
     "lowestPriceTry": 7856.0,
     "highestPriceTry": 8999.0,
     "lastUpdated": "2026-10-14T19:34:53.269674",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -44104,7 +44104,7 @@
         "priceTry": 8999.0,
         "url": "https://www.gaming.gen.tr/urun/569756/msi-b840-gaming-plus-wifi-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -44134,7 +44134,7 @@
     "lowestPriceTry": 6554.0,
     "highestPriceTry": 7710.0,
     "lastUpdated": "2026-10-14T19:34:53.269696",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -44221,14 +44221,14 @@
         "priceTry": 7710.0,
         "url": "https://www.tebilon.com/msi-pro-b840-s-evo-wifi6e-amd-ryzen-b840-am5-soket-64mb-bios-8000mt-s-wi-fi-6e-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 9022.66,
         "url": "https://www.itopya.com/msi-pro-b840-s-evo-wifi6e-8000mhzoc-ddr5-soket-am5-m2-hdmi-atx-anakart_u33310",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -44969,14 +44969,14 @@
         "priceTry": 3499.0,
         "url": "https://www.gaming.gen.tr/urun/481293/asus-prime-a520m-r-5100mhz-oc-ddr4-soket-am4-m-2-hdmi-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 3703.33,
         "url": "https://www.itopya.com/asus-prime-a520m-k-argb-5100mhzoc-ddr4-soket-am4-m2-hdmi-dp-matx-anakart_u34116",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -44993,7 +44993,7 @@
     "lowestPriceTry": 3135.0,
     "highestPriceTry": 3599.0,
     "lastUpdated": "2026-10-14T19:34:53.269934",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/F48-prime-h610m-k-argb-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -45080,7 +45080,7 @@
         "priceTry": 3599.0,
         "url": "https://www.gaming.gen.tr/urun/351916/asus-prime-h610m-k-argb-5600mhz-ddr5-soket-1700-m-2-hdmi-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -45101,7 +45101,7 @@
         "priceTry": 56458.58,
         "url": "https://www.itopya.com/asus-rog-crosshair-2006-9600mhzoc-ddr5-soket-am5-wifi7-m2-atx-anakart_u33939",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -45205,7 +45205,7 @@
         "priceTry": 5399.0,
         "url": "https://www.gaming.gen.tr/urun/414290/asus-prime-b650m-r-7200mhz-oc-ddr5-soket-am5-m-2-hdmi-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -45215,7 +45215,7 @@
     "lowestPriceTry": 2873.0,
     "highestPriceTry": 3299.0,
     "lastUpdated": "2026-10-14T19:34:53.269973",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/12G-prime-b840m-k-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -45302,7 +45302,7 @@
         "priceTry": 3299.0,
         "url": "https://www.gaming.gen.tr/urun/335361/asus-prime-h610m-e-csm-5600mhz-ddr5-soket-1700-m-2-hdmi-dp-vga-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -45326,7 +45326,7 @@
     "lowestPriceTry": 7076.0,
     "highestPriceTry": 8224.0,
     "lastUpdated": "2026-10-14T19:34:53.269992",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/F7C-prime-b860m-a-csm-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -45413,7 +45413,7 @@
         "priceTry": 8199.0,
         "url": "https://www.gaming.gen.tr/urun/576020/asus-pro-h810m-c-csm-6400mhz-ddr5-soket-lga1851-m-2-hdmi-dp-vga-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -45849,7 +45849,7 @@
     "lowestPriceTry": 2968.0,
     "highestPriceTry": 3419.0,
     "lastUpdated": "2026-10-14T19:34:53.270093",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202305/6474b9fc2112d5.45339236_lfjeinghmpkqo_cropped_288.webp",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -45936,7 +45936,7 @@
         "priceTry": 3419.0,
         "url": "https://www.tebilon.com/msi-pro-h610m-e-intel-h610-lga1700-ddr5-5600mhz-matx-intel-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -46161,7 +46161,7 @@
     "lowestPriceTry": 12216.0,
     "highestPriceTry": 14457.05,
     "lastUpdated": "2026-10-14T19:34:53.270152",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -46248,7 +46248,7 @@
         "priceTry": 14457.05,
         "url": "https://www.itopya.com/nzxt-n7-z890-8000mhzoc-ddr5-soket-lga-1851-wifi6e-m2-hdmi-atx-anakart_u34033",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -46258,7 +46258,7 @@
     "lowestPriceTry": 13213.0,
     "highestPriceTry": 15489.77,
     "lastUpdated": "2026-10-14T19:34:53.270170",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -46345,7 +46345,7 @@
         "priceTry": 15489.77,
         "url": "https://www.itopya.com/nzxt-n9-x870e-8000mhzoc-ddr5-soket-am5-wifi7-m2-rgb-atx-anakart_u34031",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -46355,7 +46355,7 @@
     "lowestPriceTry": 12249.0,
     "highestPriceTry": 13999.0,
     "lastUpdated": "2026-10-14T19:34:53.270194",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/D3D-x870e-eagle-x3d-wifi701.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -46442,7 +46442,7 @@
         "priceTry": 13999.0,
         "url": "https://www.tebilon.com/gigabyte-x870e-eagle-wifi7-x870e-soket-am5-ddr5-8000-mt-s-wi-fi-7-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -46456,7 +46456,7 @@
         "priceTry": 17708.67,
         "url": "https://www.itopya.com/gigabyte-x870e-eagle-wifi7-8200mhzoc-ddr5-soket-am5-m2-hdmi-atx-anakart_u35489",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -46657,7 +46657,7 @@
         "priceTry": 11999.0,
         "url": "https://www.gaming.gen.tr/urun/517754/msi-b860m-gaming-plus-wifi-8600mhz-oc-ddr5-soket-lga1851-m-2-hdmi-dp-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -46858,7 +46858,7 @@
         "priceTry": 5299.0,
         "url": "https://www.tebilon.com/gigabyte-b840m-d2h-amd-ryzen-b840-am5-soket-7600oc-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -46962,7 +46962,7 @@
         "priceTry": 6001.0,
         "url": "https://www.tebilon.com/msi-pro-b840m-b-amd-ryzen-b840-am5-soket-8000mt-s-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -47277,7 +47277,7 @@
     "lowestPriceTry": 7219.0,
     "highestPriceTry": 8279.0,
     "lastUpdated": "2026-10-14T19:34:53.270356",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/R3C-n86-210265641-1.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -47364,7 +47364,7 @@
         "priceTry": 8279.0,
         "url": "https://www.tebilon.com/msi-b760m-pro-ect-zero-intel-soket-lga1700-7800ocmhz-ddr5-wi-fi-6e-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -48261,7 +48261,7 @@
     "lowestPriceTry": 11477.0,
     "highestPriceTry": 13534.0,
     "lastUpdated": "2026-10-14T19:34:53.270532",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/GMK-z890-livemixer-wifi-l1.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -48348,7 +48348,7 @@
         "priceTry": 13534.0,
         "url": "https://www.itopya.com/msi-pro-z890-s-wifi6e-8800mhzoc-ddr5-soket-1851-m2-hdmi-dp-atx-anakart_u33658",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -48362,7 +48362,7 @@
         "priceTry": 18699.0,
         "url": "https://www.gaming.gen.tr/urun/543321/asus-tuf-gaming-z890-pro-wifi-9066mhz-oc-ddr5-soket-lga1851-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -48372,7 +48372,7 @@
     "lowestPriceTry": 15928.0,
     "highestPriceTry": 18517.0,
     "lastUpdated": "2026-10-14T19:34:53.270547",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-rog-strix-b850-f-gaming-wifi7-neo-ddr5-soket-am5-m-2-hdmi-atx-anakart-2-300x300.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -48459,7 +48459,7 @@
         "priceTry": 18499.0,
         "url": "https://www.tebilon.com/asus-rog-strix-b850-f-gaming-wifi7-neo-amd-b850-soket-am5-ddr5-9000mt-soc-wi-fi-7-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
@@ -48570,7 +48570,7 @@
         "priceTry": 12499.0,
         "url": "https://www.gaming.gen.tr/urun/709980/asus-b850-max-gaming-wifi-w-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -48584,7 +48584,7 @@
         "priceTry": 13857.2,
         "url": "https://www.itopya.com/asus-b850-max-gaming-wifi-8400mhzoc-ddr5-soket-am5-m2-hdmi-dp-atx-anakart_u33337",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -48712,7 +48712,7 @@
         "priceTry": 15499.0,
         "url": "https://www.gaming.gen.tr/urun/710006/asus-tuf-gaming-b850-e-wifi-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -48732,7 +48732,7 @@
     "lowestPriceTry": 10937.0,
     "highestPriceTry": 12499.0,
     "lastUpdated": "2026-10-14T19:34:53.270604",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -48819,7 +48819,7 @@
         "priceTry": 12499.0,
         "url": "https://www.gaming.gen.tr/urun/709957/asus-prime-b850-plus-csm-8000mhz-oc-ddr5-am5-soket-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -48936,7 +48936,7 @@
     "lowestPriceTry": 10749.0,
     "highestPriceTry": 12299.0,
     "lastUpdated": "2026-10-14T19:34:53.270637",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -49023,7 +49023,7 @@
         "priceTry": 12299.0,
         "url": "https://www.gaming.gen.tr/urun/569729/msi-b850-gaming-plus-wifi-8200mhz-oc-ddr5-soket-am5-m-2-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -49083,7 +49083,7 @@
     "lowestPriceTry": 14404.0,
     "highestPriceTry": 16499.0,
     "lastUpdated": "2026-10-14T19:34:53.270668",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -49170,7 +49170,7 @@
         "priceTry": 16499.0,
         "url": "https://www.tebilon.com/gigabyte-b850-aorus-elite-x3d-amd-b850-am5-soket-ddr5-8200mt-s-wi-fi-7-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -49180,7 +49180,7 @@
     "lowestPriceTry": 9134.0,
     "highestPriceTry": 10499.0,
     "lastUpdated": "2026-10-14T19:34:53.270715",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/T3R-b850-aorus-elite-wifi7-ice-01.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -49267,7 +49267,7 @@
         "priceTry": 10499.0,
         "url": "https://www.tebilon.com/gigabyte-b850-eagle-wifi7-ice-amd-b850-am5-ddr5-soket-8200mt-s-beyaz-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -50031,7 +50031,7 @@
     "lowestPriceTry": 10271.0,
     "highestPriceTry": 11999.0,
     "lastUpdated": "2026-10-14T19:34:53.270943",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -50118,7 +50118,7 @@
         "priceTry": 11999.0,
         "url": "https://www.gaming.gen.tr/urun/735814/asus-b850m-max-gaming-wifi-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -50232,7 +50232,7 @@
         "priceTry": 16299.0,
         "url": "https://www.gaming.gen.tr/urun/543634/asus-prime-z890m-plus-wifi-8400mhz-oc-ddr5-soket-lga1851-m-2-hdmi-dp-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -50500,7 +50500,7 @@
         "priceTry": 3199.0,
         "url": "https://www.gaming.gen.tr/urun/84499/msi-a520m-a-pro-4600mhzoc-ddr4-soket-am4-m-2-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -50841,7 +50841,7 @@
         "priceTry": 8599.0,
         "url": "https://www.gaming.gen.tr/urun/569178/asus-prime-b850m-k-8400mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -50966,7 +50966,7 @@
         "priceTry": 11599.0,
         "url": "https://www.gaming.gen.tr/urun/775572/msi-b850-gaming-plus-wifi6e-8200mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -51077,21 +51077,21 @@
         "priceTry": 6730.0,
         "url": "https://www.tebilon.com/msi-pro-pro-b850m-e-evo-amd-b850-am5-ddr5-8200mt-s-matx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 7068.92,
         "url": "https://www.itopya.com/msi-pro-a620am-g-evo-wifi-7200mhzoc-ddr5-soket-am5-m2-hdmi-dp-matx-anakart_u33311",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 11299.01,
         "url": "https://www.gaming.gen.tr/urun/842648/msi-b850m-gaming-plus-wifi6e-8200mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-matx-anakart/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -51316,7 +51316,7 @@
     "lowestPriceTry": 7721.0,
     "highestPriceTry": 8999.0,
     "lastUpdated": "2026-10-14T19:34:53.271197",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -51403,7 +51403,7 @@
         "priceTry": 8999.0,
         "url": "https://www.tebilon.com/gigabyte-b850-gaming-wifi6-amd-b850-am5-soket-ddr5-8200mt-s-atx-anakart/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -52033,7 +52033,7 @@
         "priceTry": 38167.38,
         "url": "https://www.gaming.gen.tr/urun/642719/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -52722,7 +52722,7 @@
     "lowestPriceTry": 9252.0,
     "highestPriceTry": 10622.82,
     "lastUpdated": "2026-10-14T19:34:53.271469",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -52809,7 +52809,7 @@
         "priceTry": 10622.82,
         "url": "https://www.itopya.com/goodram-16gb2x8gb-irdm-rgb-3600mhz-cl18-ddr4-siyah-bulk-dual-kit-ram_u32405",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -54841,7 +54841,7 @@
         "priceTry": 33999.0,
         "url": "https://www.gaming.gen.tr/urun/584683/klevv-cras-v-rgb-32gb-2x16gb-7200mhz-cl34-intel-xmp-3-0-amd-expo-ddr5-heatsink-obsidian-black-ram-kd5agua80-72b340g-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -54858,7 +54858,7 @@
     "lowestPriceTry": 33249.0,
     "highestPriceTry": 37999.0,
     "lastUpdated": "2026-10-14T19:34:53.271961",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -54945,7 +54945,7 @@
         "priceTry": 37999.0,
         "url": "https://www.gaming.gen.tr/urun/622181/klevv-cras-v-rgb-32gb-2x16gb-7200mhz-cl34-intel-xmp-3-0-amd-expo-ddr5-heatsink-brilliant-white-ram-kd5agua80-72b340j-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -54955,7 +54955,7 @@
     "lowestPriceTry": 30851.0,
     "highestPriceTry": 35999.0,
     "lastUpdated": "2026-10-14T19:34:53.271979",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-ddr5-cl32-amd-expo-beyaz-ram-tmxsal1664832wwk-1785309911.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -55042,7 +55042,7 @@
         "priceTry": 35999.0,
         "url": "https://www.gaming.gen.tr/urun/647418/klevv-urbane-v-rgb-32gb-2x16gb-6400mhz-cl32-intel-xmp-3-0-amd-expo-ddr5-heatsink-beyaz-ram-kd5agua80-64a320m-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -55066,7 +55066,7 @@
     "lowestPriceTry": 31301.0,
     "highestPriceTry": 36999.0,
     "lastUpdated": "2026-10-14T19:34:53.271996",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -55153,7 +55153,7 @@
         "priceTry": 36999.0,
         "url": "https://www.gaming.gen.tr/urun/618364/klevv-cras-v-rgb-32gb-2x16gb-6400mhz-cl32-intel-xmp-3-0-amd-expo-ddr5-heatsink-brilliant-white-ram-kd5agua80-64a320j-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -55565,7 +55565,7 @@
         "priceTry": 51999.0,
         "url": "https://www.gaming.gen.tr/urun/957260/crucial-pro-64gb-2x32gb-5600mhz-cl46-intel-xmp-3-0-amd-expo-ddr5-ram-cp2k32g56c46u5/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -55579,7 +55579,7 @@
         "priceTry": 80879.87,
         "url": "https://www.itopya.com/gskill-64gb-2x32gb-trident-z5-neo-rgb-ddr5-6000mhz-cl36-xmpexpo-dual-kit-ram_u28025",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -55589,7 +55589,7 @@
     "lowestPriceTry": 49125.0,
     "highestPriceTry": 57999.0,
     "lastUpdated": "2026-10-14T19:34:53.272090",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -55676,7 +55676,7 @@
         "priceTry": 57999.0,
         "url": "https://www.gaming.gen.tr/urun/914984/klevv-cras-v-rgb-64gb-2x32gb-6000mhz-cl30-intel-xmp-3-0-amd-expo-ddr5-brilliant-white-ram-kd5bgua80-60a300j-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -55850,7 +55850,7 @@
         "priceTry": 42990.36,
         "url": "https://www.itopya.com/gskill-32gb-2x16gb-ripjaws-s5-6400mhz-cl36-ddr5-siyah-dual-kit-ram_u26854",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -56453,7 +56453,7 @@
         "priceTry": 33499.0,
         "url": "https://www.itopya.com/kingston-32gb-beast-rgb-expo-5600mhz-cl36-ddr5-single-kit-ram_u27733",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -57211,7 +57211,7 @@
         "priceTry": 26090.08,
         "url": "https://www.itopya.com/kingston-32gb-1x32gb-beast-siyah-3600mhz-cl18-ddr4-single-kit-ram_u25998",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -57785,7 +57785,7 @@
     "lowestPriceTry": 56206.0,
     "highestPriceTry": 64236.0,
     "lastUpdated": "2026-10-14T19:34:53.272621",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -57872,7 +57872,7 @@
         "priceTry": 64236.0,
         "url": "https://www.itopya.com/xpg-lancer-48gb2x24-rgb-8400mhz-cl40-cu-dimm-ddr5-gumus-dual-kit-ram_u31583",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -58346,7 +58346,7 @@
         "priceTry": 38154.43,
         "url": "https://www.itopya.com/lexar-32gb-2x16gb-ares-rgb-6400mhz-cl30-xmpexpo-ddr5-siyah-dual-kit-ram_u32087",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -59950,7 +59950,7 @@
         "priceTry": 11221.1,
         "url": "https://www.itopya.com/twinmos-16gb-tornadox7-pro-3200mhz-cl16-ddr4-single-kit-ram_u31942",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -60691,7 +60691,7 @@
         "priceTry": 13499.0,
         "url": "https://www.gaming.gen.tr/urun/945298/gameraider-rift-16gb-1x16gb-5600mhz-cl46-rgb-sogutuculu-ddr5-ram-gr165600u46rgb-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -60712,7 +60712,7 @@
         "priceTry": 16832.21,
         "url": "https://www.itopya.com/twinmos-16gb-voltx-5600mhz-cl36-ddr5-xmpexpo-single-kit-ram_u31819",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -60933,7 +60933,7 @@
         "priceTry": 30980.56,
         "url": "https://www.itopya.com/corsair-32gb2x16gb-vengeance-6000mhz-cl38-ddr5-xmp-siyah-dual-kit-ram_u34163",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -61812,7 +61812,7 @@
         "priceTry": 17168.88,
         "url": "https://www.itopya.com/gskill-flare-x5-16gb-ddr5-6000mhz-cl38-expoxmp-single-kit-ram_u32072",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -61952,7 +61952,7 @@
     "lowestPriceTry": 31031.0,
     "highestPriceTry": 36071.0,
     "lastUpdated": "2026-10-14T19:34:53.273846",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-ddr5-cl28-amd-expo-beyaz-ram-tmxsal1660828wwk-1785309664.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -62039,7 +62039,7 @@
         "priceTry": 35999.0,
         "url": "https://www.gaming.gen.tr/urun/716925/klevv-urbane-v-rgb-32gb-2x16gb-6000mhz-cl28-intel-xmp-3-0-amd-expo-ddr5-heatsink-beyaz-ram-kd5agua80-60b280m-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -63323,7 +63323,7 @@
         "priceTry": 14999.0,
         "url": "https://www.gaming.gen.tr/urun/430816/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -63337,7 +63337,7 @@
         "priceTry": 24391.6,
         "url": "https://www.itopya.com/xpg-lancer-16gb-rgb-6400mhz-cl32-ddr5-siyah-single-kit-ram_u31589",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -64175,7 +64175,7 @@
         "priceTry": 14999.0,
         "url": "https://www.gaming.gen.tr/urun/991226/lexar-thor-16gb-1x16gb-6000mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u16g60c360v-rgs/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -65064,7 +65064,7 @@
         "priceTry": 15999.0,
         "url": "https://www.gaming.gen.tr/urun/880669/crucial-pro-overclocking-16gb-1x16gb-6400mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-cp16g64c38u5b/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -65853,7 +65853,7 @@
         "priceTry": 9999.0,
         "url": "https://www.gaming.gen.tr/urun/729793/corsair-mp600-core-xt-1tb-nvme-1-4-pcie-gen4-x4-okuma-5000mb-yazma-4400mb-m-2-ssd-cssd-f1000gbmp600cxtr2/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -65957,7 +65957,7 @@
         "priceTry": 19915.91,
         "url": "https://www.itopya.com/corsair-2tb-mp600-core-xt-gen4-nvme-m2-2280-ssd-5900mb-okuma5000mb-yazma_u30682",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -66172,14 +66172,14 @@
         "priceTry": 14999.0,
         "url": "https://www.gaming.gen.tr/urun/233947/samsung-990-pro-1tb-pcie-nvme-2-0-okuma-7450mb-yazma-6900mb-ps5-uyumlu-m-2-ssd-mz-v9p1t0bw/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 16727.73,
         "url": "https://www.itopya.com/samsung-1tb-990-gen4-nvme-m2-ssd-7150mb-okuma-6450mb-yazma_u33937",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -66297,14 +66297,14 @@
         "priceTry": 29599.01,
         "url": "https://www.gaming.gen.tr/urun/239289/samsung-990-pro-2tb-pcie-nvme-4-0-okuma-7450mb-yazma-6900mb-ps5-uyumlu-m-2-ssd-mz-v9p2t0bw/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 33090.56,
         "url": "https://www.itopya.com/samsung-2tb-990-gen4-nvme-m2-ssd-7250mb-okuma-6450mb-yazma_u33938",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -66505,7 +66505,7 @@
         "priceTry": 12399.0,
         "url": "https://www.gaming.gen.tr/urun/191376/kingston-kc3000-1tb-nvme-pcie-4-0-7000mb-okuma-6000mb-m-2-ssd-skc3000s-1024g/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -67122,7 +67122,7 @@
         "priceTry": 8499.0,
         "url": "https://www.gaming.gen.tr/urun/871607/wd-green-sn3000-1tb-nvme-pcie-gen4-x4-okuma-5000mb-4200mb-m-2-ssd-wds100t4g0e/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -67434,14 +67434,14 @@
         "priceTry": 11499.0,
         "url": "https://www.gaming.gen.tr/urun/997452/lexar-play-2280-1tb-nvme-pcie-gen4-x4-okuma-7400mb-yazma-6500mb-ps5-uyumlu-sogutuculu-m-2-ssd-lnmply8001t-rnnng/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 11763.53,
         "url": "https://www.itopya.com/lexar-1tb-nm620-gen3-m2-ssd-3500mb-okuma-3000mb-yazma_u32091",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -67990,7 +67990,7 @@
         "priceTry": 8699.0,
         "url": "https://www.gaming.gen.tr/urun/508757/kingston-nv3-1tb-nvme-pcie-4-0-okuma-6000mb-yazma-4000mb-m-2-ssd-snv3s-1000g/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -68014,7 +68014,7 @@
     "lowestPriceTry": 13320.0,
     "highestPriceTry": 15476.0,
     "lastUpdated": "2026-10-14T19:34:53.275326",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/Y5X-snv3s2000gb-zm-lg.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -68101,7 +68101,7 @@
         "priceTry": 15399.0,
         "url": "https://www.gaming.gen.tr/urun/508776/kingston-nv3-2tb-nvme-pcie-4-0-okuma-6000mb-yazma-5000mb-m-2-ssd-snv3s-2000g/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -68694,14 +68694,14 @@
         "priceTry": 9999.0,
         "url": "https://www.gaming.gen.tr/urun/669966/msi-spatium-m470-pro-1tb-nvme-pcie-gen4-x4-okuma-6000mb-yazma-4500mb-m-2-ssd/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 15138.78,
         "url": "https://www.itopya.com/msi-spatium-m461-gen4-m2-2280-1tb-ssd-5000mb-okuma-3200mb-yazma_u31846",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -68819,7 +68819,7 @@
         "priceTry": 31693.8,
         "url": "https://www.itopya.com/msi-spatium-m571-dlp-2tb-gen5-m2-2280-ssd-14500mb-okuma-11000mb-yazma_u35636",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -68923,7 +68923,7 @@
         "priceTry": 47449.8,
         "url": "https://www.itopya.com/msi-spatium-m571-dlp-4tb-gen5-m2-2280-ssd-14500mb-okuma-11000mb-yazma_u35635",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -69553,7 +69553,7 @@
     "lowestPriceTry": 4691.0,
     "highestPriceTry": 5499.0,
     "lastUpdated": "2026-10-14T19:34:53.275627",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/6NC-image-4.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -69640,7 +69640,7 @@
         "priceTry": 5499.0,
         "url": "https://www.gaming.gen.tr/urun/961298/wd-blue-sn5100-500gb-nvme-pcie-gen4-x4-okuma-6600mb-yazma-5600mb-m-2-ssd-wds500g5b0e/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -69661,7 +69661,7 @@
         "priceTry": 7293.32,
         "url": "https://www.itopya.com/wd-500gb-blue-sn5100-nvme-gen4-m2-ssd-6600mb-okuma-5600mb-yazma_u31393",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -69772,7 +69772,7 @@
         "priceTry": 9499.0,
         "url": "https://www.gaming.gen.tr/urun/871582/wd-blue-sn5100-1tb-nvme-pcie-gen4-x4-okuma-7100mb-yazma-6700mb-m-2-ssd-wds100t5b0e/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -70762,7 +70762,7 @@
     "lowestPriceTry": 11439.0,
     "highestPriceTry": 13295.0,
     "lastUpdated": "2026-10-14T19:34:53.275854",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -70849,7 +70849,7 @@
         "priceTry": 13255.0,
         "url": "https://www.tebilon.com/asus-rog-strix-1000g-aura-80-gold-1000w-moduler-pci-e-50-atx-30-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -70859,7 +70859,7 @@
     "lowestPriceTry": 15692.0,
     "highestPriceTry": 18570.0,
     "lastUpdated": "2026-10-14T19:34:53.275872",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -70946,7 +70946,7 @@
         "priceTry": 18570.0,
         "url": "https://www.tebilon.com/asus-rog-thor-1000p2-80-platinum-1000w-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -71223,7 +71223,7 @@
     "lowestPriceTry": 9622.0,
     "highestPriceTry": 11346.34,
     "lastUpdated": "2026-10-14T19:34:53.275960",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -71310,7 +71310,7 @@
         "priceTry": 11346.34,
         "url": "https://www.gaming.gen.tr/urun/685872/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -71963,7 +71963,7 @@
         "priceTry": 5299.0,
         "url": "https://www.gaming.gen.tr/urun/651000/msi-mag-a750gn-pcie5-750w-80-gold-120mm-fanli-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -72184,7 +72184,7 @@
     "lowestPriceTry": 7507.0,
     "highestPriceTry": 8599.0,
     "lastUpdated": "2026-10-14T19:34:53.276136",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -72271,14 +72271,14 @@
         "priceTry": 8599.0,
         "url": "https://www.tebilon.com/msi-mag-a1000gl-pcie5-white-1000w-80plus-gold-atx-31-full-moduler-beyaz-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 11299.01,
         "url": "https://www.gaming.gen.tr/urun/889300/msi-mag-a1000gl-pcie5-white-1000w-80-gold-full-moduler-135mm-fanli-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -72626,7 +72626,7 @@
     "lowestPriceTry": 9395.0,
     "highestPriceTry": 10799.0,
     "lastUpdated": "2026-10-14T19:34:53.276221",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -72713,7 +72713,7 @@
         "priceTry": 10799.0,
         "url": "https://www.gaming.gen.tr/urun/231451/asus-rog-strix-loki-sfx-l-750w-80-platinum-argb-full-moduler-psu-90ye00n4-b0na00/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -72850,7 +72850,7 @@
     "lowestPriceTry": 13081.0,
     "highestPriceTry": 15444.0,
     "lastUpdated": "2026-10-14T19:34:53.276264",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -72937,7 +72937,7 @@
         "priceTry": 15444.0,
         "url": "https://www.tebilon.com/asus-rog-strix-1200w-80plus-platinum-atx-31-pcie-51-atx12v-rog-strix-1200p-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -73288,7 +73288,7 @@
     "lowestPriceTry": 5615.0,
     "highestPriceTry": 6525.0,
     "lastUpdated": "2026-10-14T19:34:53.276354",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/CLB-prime-750g-0.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -73375,14 +73375,14 @@
         "priceTry": 6499.0,
         "url": "https://www.gaming.gen.tr/urun/923307/asus-prime-750g-750w-80gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
         "priceTry": 6690.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-750w-bronze-evo-80-plus-bronze-atx-31-tam-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -73399,7 +73399,7 @@
     "lowestPriceTry": 7410.0,
     "highestPriceTry": 8609.0,
     "lastUpdated": "2026-10-14T19:34:53.276370",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -73486,7 +73486,7 @@
         "priceTry": 8566.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-850w-gold-evo-80-plus-cybenetics-gold-pcie-51-atx-31-tam-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -73600,14 +73600,14 @@
         "priceTry": 10754.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-1000w-80-plus-gold-atx-30-pcie-50-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 11599.0,
         "url": "https://www.gaming.gen.tr/urun/481891/asus-tuf-gaming-1000g-1000w-80-gold-full-moduler-fanli-beyaz-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -73627,7 +73627,7 @@
     "lowestPriceTry": 12103.0,
     "highestPriceTry": 13880.0,
     "lastUpdated": "2026-10-14T19:34:53.276408",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -73714,7 +73714,7 @@
         "priceTry": 13880.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-1200w-80-plus-gold-pcie-50-atx-30-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -76510,7 +76510,7 @@
     "lowestPriceTry": 12455.0,
     "highestPriceTry": 14499.0,
     "lastUpdated": "2026-10-14T19:34:53.277092",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -76597,14 +76597,14 @@
         "priceTry": 14499.0,
         "url": "https://www.gaming.gen.tr/urun/856359/msi-mag-a1200pls-pcie5-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
         "priceTry": 14499.0,
         "url": "https://www.tebilon.com/msi-mag-a1200pls-pcie5-1200w-80plus-platinium-atx-31-pcie-51-full-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -76714,7 +76714,7 @@
     "lowestPriceTry": 5234.0,
     "highestPriceTry": 6083.0,
     "lastUpdated": "2026-10-14T19:34:53.277149",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -76801,7 +76801,7 @@
         "priceTry": 6065.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-650w-bronze-evo-80-plus-bronze-atx-31-tam-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -77171,7 +77171,7 @@
     "lowestPriceTry": 1705.0,
     "highestPriceTry": 1996.24,
     "lastUpdated": "2026-10-14T19:34:53.277319",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/HDU-rebelp1001.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -77258,7 +77258,7 @@
         "priceTry": 1996.24,
         "url": "https://www.itopya.com/dotvolt-volt-ln-plus-650-va-line-interactive-ups-guc-kaynagi_u32539",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -77397,14 +77397,14 @@
         "priceTry": 5814.0,
         "url": "https://www.tebilon.com/asus-prime-650b-650w-80plus-bronze-atx12v-active-pfc-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 6299.0,
         "url": "https://www.gaming.gen.tr/urun/34136/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -77414,7 +77414,7 @@
     "lowestPriceTry": 26295.0,
     "highestPriceTry": 30899.0,
     "lastUpdated": "2026-10-14T19:34:53.277359",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -77501,14 +77501,14 @@
         "priceTry": 30899.0,
         "url": "https://www.gaming.gen.tr/urun/757717/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
         "priceTry": 49833.0,
         "url": "https://www.tebilon.com/asus-rog-thor-1600w-titanium-iii-gaming-oled-atx-31-pcie-51-full-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -77518,7 +77518,7 @@
     "lowestPriceTry": 32184.0,
     "highestPriceTry": 37953.0,
     "lastUpdated": "2026-10-14T19:34:53.277379",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -77605,14 +77605,14 @@
         "priceTry": 37953.0,
         "url": "https://www.tebilon.com/asus-pro-ws-2200w-80-plus-platinum-atx-31-pcie-51-full-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 37999.0,
         "url": "https://www.gaming.gen.tr/urun/757695/asus-pro-ws-2200w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -77622,7 +77622,7 @@
     "lowestPriceTry": 39561.0,
     "highestPriceTry": 46707.0,
     "lastUpdated": "2026-10-14T19:34:53.277397",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -77709,14 +77709,14 @@
         "priceTry": 46707.0,
         "url": "https://www.tebilon.com/asus-pro-ws-3000w-80-plus-platinum-atx-31-pcie-51-full-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 48499.0,
         "url": "https://www.gaming.gen.tr/urun/757667/asus-pro-ws-3000w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -77820,7 +77820,7 @@
         "priceTry": 7999.0,
         "url": "https://www.gaming.gen.tr/urun/867492/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -77837,7 +77837,7 @@
     "lowestPriceTry": 5147.0,
     "highestPriceTry": 5999.0,
     "lastUpdated": "2026-10-14T19:34:53.277441",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/YZJ-rebelp2001.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -77924,7 +77924,7 @@
         "priceTry": 5999.0,
         "url": "https://www.gaming.gen.tr/urun/851245/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -77941,7 +77941,7 @@
     "lowestPriceTry": 4867.0,
     "highestPriceTry": 5699.0,
     "lastUpdated": "2026-10-14T19:34:53.277460",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -78028,7 +78028,7 @@
         "priceTry": 5699.0,
         "url": "https://www.gaming.gen.tr/urun/851228/endorfy-supremo-fm6-850w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a012/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -78038,7 +78038,7 @@
     "lowestPriceTry": 1968.0,
     "highestPriceTry": 2299.0,
     "lastUpdated": "2026-10-14T19:34:53.277481",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -78125,7 +78125,7 @@
         "priceTry": 2299.0,
         "url": "https://www.tebilon.com/msi-mag-a600dn-600w-80-plus-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -78155,7 +78155,7 @@
     "lowestPriceTry": 7730.0,
     "highestPriceTry": 8999.0,
     "lastUpdated": "2026-10-14T19:34:53.277513",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/R7X-pic24100000000012042.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -78242,7 +78242,7 @@
         "priceTry": 8999.0,
         "url": "https://www.gaming.gen.tr/urun/587559/fsp-vita-gm-1000w-80-gold-full-moduler-120mm-fanli-guc-kaynagi-vita-1000gm/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -78471,7 +78471,7 @@
         "priceTry": 3499.0,
         "url": "https://www.tebilon.com/gigabyte-gp-p650g-pg5-650w-80plus-gold-atx-31-pcie-gen-51guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -78575,7 +78575,7 @@
         "priceTry": 15308.0,
         "url": "https://www.tebilon.com/gigabyte-gp-ud1300gm-pg5-1300w-80-plus-gold-moduler-pcie-50-destekli-psu-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -78585,7 +78585,7 @@
     "lowestPriceTry": 10451.0,
     "highestPriceTry": 11999.0,
     "lastUpdated": "2026-10-14T19:34:53.277593",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -78672,7 +78672,7 @@
         "priceTry": 11999.0,
         "url": "https://www.tebilon.com/corsair-rme-series-rm1200e-1200w-80plus-gold-pcie-51-tam-modular-atx-31-cp-9020258-eu-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -78776,7 +78776,7 @@
         "priceTry": 47767.06,
         "url": "https://www.itopya.com/dotvolt-volt-mn-plus-6-kva-on-line-ups-guc-kaynagi_u33308",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -78880,7 +78880,7 @@
         "priceTry": 4899.0,
         "url": "https://www.tebilon.com/gigabyte-gp-gp750gm-750w-80-plus-gold-moduler-psu-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -79296,7 +79296,7 @@
         "priceTry": 4499.0,
         "url": "https://www.gaming.gen.tr/urun/948353/msi-mag-a750bn-pcie5-ii-750w-80-bronze-pcie-5-1-atx-3-1-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -79306,7 +79306,7 @@
     "lowestPriceTry": 18963.0,
     "highestPriceTry": 22043.0,
     "lastUpdated": "2026-10-14T19:34:53.277755",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/9RY-ud1600pm-pg5-ai-top-02.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -79393,7 +79393,7 @@
         "priceTry": 21999.0,
         "url": "https://www.tebilon.com/gigabyte-ud1600pm-pg5-ai-top-1600w-80-plus-platinum-moduler-atx-31-pcie-51-destekli-psu-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -79507,7 +79507,7 @@
     "lowestPriceTry": 15684.0,
     "highestPriceTry": 17945.0,
     "lastUpdated": "2026-10-14T19:34:53.277789",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -79594,7 +79594,7 @@
         "priceTry": 17945.0,
         "url": "https://www.tebilon.com/asus-rog-loki-sfx-l-1200w-titanium-argb-80plus-titanium-atx-31-pci-e-5-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -80183,14 +80183,14 @@
         "priceTry": 9199.0,
         "url": "https://www.tebilon.com/msi-mag-a1250gl-pcie5-1250w-80plus-gold-atx-31-pcie-51-full-moduler-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 9499.0,
         "url": "https://www.gaming.gen.tr/urun/541217/msi-mag-a1250gl-pcie5-1250w-80-gold-full-moduler-135mm-fanli-psu/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -80315,7 +80315,7 @@
         "priceTry": 2799.0,
         "url": "https://www.gaming.gen.tr/urun/494646/msi-mag-a550bnl-550w-80-bronze-fanli-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -81653,7 +81653,7 @@
     "lowestPriceTry": 12376.0,
     "highestPriceTry": 14193.0,
     "lastUpdated": "2026-10-14T19:34:53.278211",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -81740,7 +81740,7 @@
         "priceTry": 14193.0,
         "url": "https://www.tebilon.com/asus-rog-strix-1000w-80plus-platinum-atx-31-pcie-51-atx12v-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -85559,7 +85559,7 @@
     "lowestPriceTry": 3958.0,
     "highestPriceTry": 4534.0,
     "lastUpdated": "2026-10-14T19:34:53.279315",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -85646,7 +85646,7 @@
         "priceTry": 4534.0,
         "url": "https://www.tebilon.com/msi-mag-a750bn-pcie5-750w-80plus-bronze-pcie-50-guc-kaynagi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -87257,7 +87257,7 @@
     "lowestPriceTry": 1733.0,
     "highestPriceTry": 1996.24,
     "lastUpdated": "2026-10-14T19:34:53.279804",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -87344,7 +87344,7 @@
         "priceTry": 1996.24,
         "url": "https://www.itopya.com/dotvolt-volt-ln-plus-650-va-line-interactive-ups-guc-kaynagi_u32539",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -87631,7 +87631,7 @@
     "lowestPriceTry": 1729.0,
     "highestPriceTry": 1992.12,
     "lastUpdated": "2026-10-14T19:34:53.279942",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -87718,7 +87718,7 @@
         "priceTry": 1992.12,
         "url": "https://www.itopya.com/cooler-master-hyper-212-spectrum-v3-argb-kule-tipi-islemci-sogutucu_u34043",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -88276,7 +88276,7 @@
         "priceTry": 2699.0,
         "url": "https://www.gaming.gen.tr/urun/870774/enermax-liqmax-iii-argb-240mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-elc-lmt240-w-argb-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -88290,7 +88290,7 @@
         "priceTry": 14971.76,
         "url": "https://www.itopya.com/asus-rog-strix-lc-iv-360-argb-lcd-360mm-islemci-sivi-sogutucu_u34122",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -88394,7 +88394,7 @@
         "priceTry": 929.0,
         "url": "https://www.gaming.gen.tr/urun/564608/thermalright-assassin-x-90-se-argb-tl-p9-s-92mm-4-x-6mm-isi-borulu-intel-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -88720,7 +88720,7 @@
         "priceTry": 4449.0,
         "url": "https://www.itopya.com/fsp-ad36-argb-aio-360mm-dijital-isi-gostergeli-siyah-islemci-sivi-sogutucu_u35631",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -88824,14 +88824,14 @@
         "priceTry": 2622.82,
         "url": "https://www.gaming.gen.tr/urun/560739/thermalright-aqua-elite-240-white-argb-v3-240mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 3136.94,
         "url": "https://www.itopya.com/bitfenix-s12-digital-siyah-argb-240mm-islemci-sivi-sogutucu_u35478",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -88956,14 +88956,14 @@
         "priceTry": 7177.17,
         "url": "https://www.itopya.com/corsair-nautilus-360-rs-lcd-360mm-siyah-islemci-sivi-sogutucu_u35354",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Gaming.Gen.TR",
         "priceTry": 7199.0,
         "url": "https://www.gaming.gen.tr/urun/639955/corsair-icue-link-titan-240-rx-lcd-rgb-240-mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-cw-9061025-ww/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -89067,7 +89067,7 @@
         "priceTry": 1126.44,
         "url": "https://www.itopya.com/fazeon-a5120tra-12cm-rgb-kule-tipi-siyah-islemci-sogutucu_u33763",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -89178,7 +89178,7 @@
         "priceTry": 1354.59,
         "url": "https://www.itopya.com/fsp-ne5-siyah-12cm-argb-hava-sogutucu_u33414",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -89188,7 +89188,7 @@
     "lowestPriceTry": 1027.0,
     "highestPriceTry": 1175.61,
     "lastUpdated": "2026-10-14T19:34:53.280357",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lga1851-argb-fan-120mm-beyaz-hava-sogutucu-1778656025-7.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -89275,7 +89275,7 @@
         "priceTry": 1175.61,
         "url": "https://www.itopya.com/rampage-frosty-rm-c180-beyaz-120mm-argb-kule-tipi-hava-sogutucu_u33161",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Tebilon",
@@ -89493,7 +89493,7 @@
     "lowestPriceTry": 4607.0,
     "highestPriceTry": 5439.0,
     "lastUpdated": "2026-10-14T19:34:53.280421",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -89580,7 +89580,7 @@
         "priceTry": 5439.0,
         "url": "https://www.tebilon.com/asus-prime-lc-240-argb-aura-sync-240mm-lga1700-1851-am5-sivi-sogutma/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -89687,7 +89687,7 @@
     "lowestPriceTry": 6583.0,
     "highestPriceTry": 7651.0,
     "lastUpdated": "2026-10-14T19:34:53.280463",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -89774,7 +89774,7 @@
         "priceTry": 7628.0,
         "url": "https://www.tebilon.com/asus-max-gaming-lc360-argb-lcd-24-ips-ekranli-argb-aio-siyahsivi-sogutucu/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -91178,7 +91178,7 @@
     "lowestPriceTry": 5216.0,
     "highestPriceTry": 6065.0,
     "lastUpdated": "2026-10-14T19:34:53.280788",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -91265,7 +91265,7 @@
         "priceTry": 6065.0,
         "url": "https://www.tebilon.com/asus-tuf-gaming-lc-ii-240-argb-aura-sync-240mm-aio-sivi-sogutma/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -92107,7 +92107,7 @@
         "priceTry": 3599.0,
         "url": "https://www.gaming.gen.tr/urun/501358/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İncehesap",
@@ -92121,7 +92121,7 @@
         "priceTry": 7315.0,
         "url": "https://www.tebilon.com/asus-prime-ap202-1xtype-c-temperli-camli-siyah-matx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -92225,7 +92225,7 @@
         "priceTry": 7999.0,
         "url": "https://www.gaming.gen.tr/urun/593557/asus-proart-pa401-tg-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -92235,7 +92235,7 @@
     "lowestPriceTry": 26774.0,
     "highestPriceTry": 31499.0,
     "lastUpdated": "2026-10-14T19:34:53.281025",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -92322,14 +92322,14 @@
         "priceTry": 31499.0,
         "url": "https://www.gaming.gen.tr/urun/857470/asus-rog-cronox-argb-panaromik-temperli-cam-lcd-ekranli-full-tower-e-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 33362.35,
         "url": "https://www.itopya.com/asus-rog-cronox-gr801-curve-tempered-glass-usb-32-argb-lcd-ekranli-siyah-atx-mid-tower-kasa_u35460",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -92339,7 +92339,7 @@
     "lowestPriceTry": 22050.0,
     "highestPriceTry": 25699.0,
     "lastUpdated": "2026-10-14T19:34:53.281044",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -92426,14 +92426,14 @@
         "priceTry": 25699.0,
         "url": "https://www.gaming.gen.tr/urun/365036/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-beyaz-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 33362.35,
         "url": "https://www.itopya.com/asus-rog-cronox-gr801-curve-tempered-glass-usb-32-argb-lcd-ekranli-beyaz-atx-mid-tower-kasa_u35461",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -92443,7 +92443,7 @@
     "lowestPriceTry": 1863.0,
     "highestPriceTry": 2199.0,
     "lastUpdated": "2026-10-14T19:34:53.281067",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/CUK-lyra-2.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -92530,14 +92530,14 @@
         "priceTry": 2199.0,
         "url": "https://www.gaming.gen.tr/urun/863722/bitfenix-grafi-black-4x120mm-frgb-fan-mesh-temperli-cam-usb-3-0-mid-tower-atx-gaming-kasa-bfc-grm-kkgsk-4f/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       },
       {
         "storeName": "İtopya",
         "priceTry": 4242.0,
         "url": "https://www.itopya.com/bitfenix-c20-650w-80-beyaz-psu-tempered-glass-frgb-usb-30-mesh-atx-mid-tower-beyaz-kasa_u33880",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -92655,7 +92655,7 @@
         "priceTry": 7632.65,
         "url": "https://www.gaming.gen.tr/urun/866531/cooler-master-elite-600-beyaz-7x120mm-argb-fan-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-e600-wgnn-s02/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -92665,7 +92665,7 @@
     "lowestPriceTry": 12193.0,
     "highestPriceTry": 13999.0,
     "lastUpdated": "2026-10-14T19:34:53.281117",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -92752,7 +92752,7 @@
         "priceTry": 13999.0,
         "url": "https://www.gaming.gen.tr/urun/995347/cooler-master-masterframe-600-tg-siyah-3x140mm-fanli-back-connect-anakart-destekli-aluminyum-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -92863,7 +92863,7 @@
         "priceTry": 8499.0,
         "url": "https://www.gaming.gen.tr/urun/850392/havn-bf-360-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -93071,7 +93071,7 @@
         "priceTry": 6630.35,
         "url": "https://www.itopya.com/msi-mag-forge-141a-b75-750w-80-bronze-tempered-glass-rgb-siyah-atx-bilgisayar-kasasi_u33827",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -93875,7 +93875,7 @@
         "priceTry": 3778.59,
         "url": "https://www.itopya.com/powerboost-a601b-600w-80-bronze-tempered-glass-usb-30-rgb-siyah-atx-mid-tower-kasa_u33874",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -93979,7 +93979,7 @@
         "priceTry": 14658.64,
         "url": "https://www.itopya.com/thermaltake-view-370-tg-1000w-80-gold-argb-usb-32-siyah-atx-mid-tower-kasa_u35464",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -93989,7 +93989,7 @@
     "lowestPriceTry": 2946.0,
     "highestPriceTry": 3457.76,
     "lastUpdated": "2026-10-14T19:34:53.281399",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94076,7 +94076,7 @@
         "priceTry": 3457.76,
         "url": "https://www.itopya.com/gamebooster-m6001w-600w-seaview-tempered-glass-rainbow-beyaz-matx-kasa_u35342",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -94086,7 +94086,7 @@
     "lowestPriceTry": 5470.0,
     "highestPriceTry": 6358.0,
     "lastUpdated": "2026-10-14T19:34:53.281419",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94173,7 +94173,7 @@
         "priceTry": 6345.18,
         "url": "https://www.itopya.com/fsp-m340-750w-80-gold-tempered-glass-type-c-argb-atx-mid-tower-kasa_u34262",
         "inStock": true,
-        "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+        "imageUrl": null
       }
     ]
   },
@@ -94283,7 +94283,7 @@
     "lowestPriceTry": 5949.0,
     "highestPriceTry": 6999.0,
     "lastUpdated": "2026-10-14T19:34:53.281496",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94370,7 +94370,7 @@
         "priceTry": 6999.0,
         "url": "https://www.gaming.gen.tr/urun/915074/hyte-x50-astral-orange-temperli-cam-usb-3-2-atx-mid-tower-gaming-kasa-2-yil-birebir-degisim-garantili/",
         "inStock": true,
-        "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+        "imageUrl": null
       }
     ]
   },
@@ -94671,7 +94671,7 @@
     "lowestPriceTry": 2745.0,
     "highestPriceTry": 3199.0,
     "lastUpdated": "2026-10-14T19:34:53.281573",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/EQ7-msimag-forge-340r-airflowproduct3d2.jpg",
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94758,7 +94758,7 @@
         "priceTry": 3199.0,
         "url": "https://www.tebilon.com/msi-mag-forge-120a-airflow-6x120mm-rainbow-fanli-mid-tower-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       },
       {
         "storeName": "Sinerji",
@@ -94775,7 +94775,7 @@
     "lowestPriceTry": 2044.0,
     "highestPriceTry": 2399.0,
     "lastUpdated": "2026-10-14T19:34:53.281591",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94862,7 +94862,7 @@
         "priceTry": 2399.0,
         "url": "https://www.tebilon.com/msi-mag-forge-m100a-rainbow-fanli-matx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -94872,7 +94872,7 @@
     "lowestPriceTry": 3415.0,
     "highestPriceTry": 3999.0,
     "lastUpdated": "2026-10-14T19:34:53.281611",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -94959,7 +94959,7 @@
         "priceTry": 3999.0,
         "url": "https://www.tebilon.com/gigabyte-c201-panoramic-3xargb-fanli-temperli-camli-m-atx-siyah-gaming-kasa-gb-c201p/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -95066,7 +95066,7 @@
     "lowestPriceTry": 5753.0,
     "highestPriceTry": 6690.0,
     "lastUpdated": "2026-10-14T19:34:53.281647",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -95153,7 +95153,7 @@
         "priceTry": 6690.0,
         "url": "https://www.tebilon.com/asus-a31-plus-tg-argb-temperli-camli-1xtype-c-mid-tower-beyaz-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -95163,7 +95163,7 @@
     "lowestPriceTry": 6948.0,
     "highestPriceTry": 7995.0,
     "lastUpdated": "2026-10-14T19:34:53.281665",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -95250,7 +95250,7 @@
         "priceTry": 7995.0,
         "url": "https://www.tebilon.com/msi-mpg-gungnir-300r-airflow-4x120mm-a-rgb-fanli-mid-tower-atx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -95454,7 +95454,7 @@
     "lowestPriceTry": 4369.0,
     "highestPriceTry": 5098.0,
     "lastUpdated": "2026-10-14T19:34:53.281727",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -95541,7 +95541,7 @@
         "priceTry": 5098.0,
         "url": "https://www.tebilon.com/corsair-frame-4000d-rs-3x120mm-fanli-mid-tower-cc-9011312-ww-bilgisayar-kasasi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -95648,7 +95648,7 @@
     "lowestPriceTry": 13664.0,
     "highestPriceTry": 15944.0,
     "lastUpdated": "2026-10-14T19:34:53.281766",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -95735,7 +95735,7 @@
         "priceTry": 15944.0,
         "url": "https://www.tebilon.com/asus-proart-pa602-walnut-wood-metal-siyah-e-atx-bilgisayar-kasasi/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },
@@ -95842,7 +95842,7 @@
     "lowestPriceTry": 16780.0,
     "highestPriceTry": 19695.0,
     "lastUpdated": "2026-10-14T19:34:53.281800",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png",
+    "imageUrl": null,
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -95929,7 +95929,7 @@
         "priceTry": 19695.0,
         "url": "https://www.tebilon.com/asus-rog-strix-helios-ii-gx601s-4x140mm-fanli-usb31-mid-tower-eatx-gaming-kasa/",
         "inStock": true,
-        "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+        "imageUrl": null
       }
     ]
   },

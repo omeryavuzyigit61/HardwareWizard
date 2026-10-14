@@ -869,8 +869,12 @@ object HardwareMapper {
                     ?: generateFallbackBenchmarkInfo(item.id, item.category)
             } else null
 
+            val rawImage = priceData?.imageUrl ?: item.imageUrl
+            val resolvedImage = sanitizeImageUrl(rawImage) ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
+
             item.copy(
-                imageUrl = priceData?.imageUrl ?: item.imageUrl,
+                cachedAt = syncedAt,
+                imageUrl = resolvedImage,
                 currentPriceTry = priceData?.currentPriceTry,
                 lowestPriceTry = priceData?.lowestPriceTry,
                 highestPriceTry = priceData?.highestPriceTry,
@@ -923,8 +927,76 @@ object HardwareMapper {
         )
     }
 
+    fun sanitizeImageUrl(url: String?): String? {
+        if (url.isNullOrBlank()) return null
+        val trimmed = url.trim()
+        if (trimmed.startsWith("data:", ignoreCase = true)) return null
+        if (trimmed.contains(".svg", ignoreCase = true) || trimmed.contains("svg%20", ignoreCase = true)) return null
+        if (trimmed.contains("placeholder", ignoreCase = true) || trimmed.contains("blank.gif", ignoreCase = true)) return null
+        if (trimmed.contains("roundNew", ignoreCase = true) || trimmed.contains("logo_2020", ignoreCase = true)) return null
+        if (!trimmed.startsWith("http://") && !trimmed.startsWith("https://")) return null
+        return trimmed
+    }
 
-    // endregion
+    fun resolveDefaultHardwareImage(category: HardwareCategory, model: String, brand: String): String? {
+        val upper = "${brand.uppercase()} ${model.uppercase()}"
+        return when (category) {
+            HardwareCategory.CPU -> when {
+                upper.contains("9800X3D") || upper.contains("9950X") || upper.contains("9900X") || upper.contains("9700X") || upper.contains("9600X") ->
+                    "https://www.incehesap.com/resim/urun/202412/67583ce66022a8.23281091_qpohljnmefikg_cropped_288.webp"
+                upper.contains("7800X3D") || upper.contains("7950X") || upper.contains("7900X") || upper.contains("7700X") || upper.contains("7600X") || upper.contains("7500F") ->
+                    "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
+                upper.contains("8700G") || upper.contains("8600G") || upper.contains("8500G") ->
+                    "https://www.tebilon.com/picture300x300/amd-ryzen-7-8700g-4-20ghz-8-cekirdek-24mb-onbellek-soket-am5-mpk-islemci-1.jpg"
+                upper.contains("5800X3D") || upper.contains("5700X3D") || upper.contains("5950X") || upper.contains("5900X") || upper.contains("5800X") || upper.contains("5700X") || upper.contains("5600") || upper.contains("5500") ->
+                    "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+                upper.contains("ULTRA") || upper.contains("285K") || upper.contains("275K") || upper.contains("270K") || upper.contains("265K") || upper.contains("255K") || upper.contains("250K") || upper.contains("245K") ->
+                    "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
+                upper.contains("14900") || upper.contains("14700") || upper.contains("14600") || upper.contains("14400") ->
+                    "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+                upper.contains("13900") || upper.contains("13700") || upper.contains("13600") || upper.contains("13400") ->
+                    "https://www.tebilon.com/picture300x300/intel-core-i7-13700k-13-nesil-30mb-l3-onbellek-intel-islemci.jpg"
+                upper.contains("12900") || upper.contains("12700") || upper.contains("12600") || upper.contains("12400") ->
+                    "https://www.tebilon.com/picture300x300/intel-core-i5-12400f-2-50ghz-18mb-l3-onbellek-intel-islemci.jpg"
+                upper.contains("RYZEN") ->
+                    "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
+                upper.contains("INTEL") || upper.contains("CORE") ->
+                    "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+                else -> null
+            }
+            HardwareCategory.GPU -> when {
+                upper.contains("5090") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-nvidia-ekran-karti.jpg"
+                upper.contains("5080") -> "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
+                upper.contains("5070") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
+                upper.contains("5060") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
+                upper.contains("4090") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
+                upper.contains("4080") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
+                upper.contains("4070") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
+                upper.contains("4060") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
+                upper.contains("3060") || upper.contains("3070") || upper.contains("3080") || upper.contains("3090") ->
+                    "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
+                upper.contains("7900") || upper.contains("7800") || upper.contains("7700") || upper.contains("7600") ->
+                    "https://static.sinerji.gen.tr/Images/MD/NMJ-x870e-aorus-elite-wifi7-01.jpg"
+                else -> null
+            }
+            HardwareCategory.MOTHERBOARD -> when {
+                upper.contains("X870") || upper.contains("B650") || upper.contains("X670") ->
+                    "https://static.sinerji.gen.tr/Images/MD/NMJ-x870e-aorus-elite-wifi7-01.jpg"
+                upper.contains("Z890") || upper.contains("B860") || upper.contains("Z790") || upper.contains("B760") ->
+                    "https://www.incehesap.com/resim/urun/202507/687e208064c428.81552412_ihkjlqgnmepof_cropped_288.webp"
+                upper.contains("B550") || upper.contains("A520") || upper.contains("B450") ->
+                    "https://static.sinerji.gen.tr/Images/MD/9NG-prime-b550m-k-argb-0.jpg"
+                else -> null
+            }
+            HardwareCategory.PSU -> when {
+                upper.contains("EDGE") -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
+                upper.contains("AURA") || upper.contains("THOR") || upper.contains("STRIX") ->
+                    "https://www.tebilon.com/picture300x300/asus-rog-strix-850g-aura-80-gold-850w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi-8.jpg"
+                else -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
+            }
+            else -> null
+        }
+    }
 
     // region DTO -> Domain Helpers
 
@@ -995,105 +1067,85 @@ object HardwareMapper {
     private fun deduceCpuSocket(dto: CpuRawDto, rawName: String): String {
         if (!dto.socket.isNullOrBlank()) return dto.socket.trim()
         val arch = dto.microarchitecture.orEmpty()
+        val upper = rawName.uppercase()
         return when {
             arch.contains("Zen 5", ignoreCase = true) || arch.contains("Zen 4", ignoreCase = true) ||
-                    rawName.contains("9800X", ignoreCase = true) || rawName.contains("7800X", ignoreCase = true) ||
-                    rawName.contains("7600", ignoreCase = true) || rawName.contains("7700", ignoreCase = true) ||
-                    rawName.contains("7900", ignoreCase = true) || rawName.contains("7950", ignoreCase = true) ||
-                    rawName.contains("9600", ignoreCase = true) || rawName.contains("9700", ignoreCase = true) ||
-                    rawName.contains("9900", ignoreCase = true) || rawName.contains("9950", ignoreCase = true) -> "AM5"
+                    upper.contains("9950X") || upper.contains("9900X") || upper.contains("9800X") ||
+                    upper.contains("9700X") || upper.contains("9600X") || upper.contains("7950X") ||
+                    upper.contains("7900X") || upper.contains("7900") || upper.contains("7800X") ||
+                    upper.contains("7700X") || upper.contains("7700") || upper.contains("7600X") ||
+                    upper.contains("7600") || upper.contains("7500F") || upper.contains("8700G") ||
+                    upper.contains("8600G") || upper.contains("8500G") || upper.contains("AM5") -> "AM5"
 
-            arch.contains("Zen", ignoreCase = true) || rawName.contains("5600", ignoreCase = true) ||
-                    rawName.contains("5700", ignoreCase = true) || rawName.contains("5800", ignoreCase = true) ||
-                    rawName.contains("3600", ignoreCase = true) -> "AM4"
+            arch.contains("Zen", ignoreCase = true) || upper.contains("5950X") || upper.contains("5900X") ||
+                    upper.contains("5800X") || upper.contains("5700X") || upper.contains("5700") ||
+                    upper.contains("5600X") || upper.contains("5600") || upper.contains("5500") ||
+                    upper.contains("4500") || upper.contains("3950X") || upper.contains("3900X") ||
+                    upper.contains("3800X") || upper.contains("3700X") || upper.contains("3600") ||
+                    upper.contains("2600") || upper.contains("1600") || upper.contains("AM4") -> "AM4"
 
-            rawName.contains("12900", ignoreCase = true) || rawName.contains("13600", ignoreCase = true) ||
-                    rawName.contains("13700", ignoreCase = true) || rawName.contains("13900", ignoreCase = true) ||
-                    rawName.contains("14600", ignoreCase = true) || rawName.contains("14700", ignoreCase = true) ||
-                    rawName.contains("14900", ignoreCase = true) -> "LGA1700"
+            upper.contains("CORE ULTRA") || upper.contains("285K") || upper.contains("275K") ||
+                    upper.contains("270K") || upper.contains("265K") || upper.contains("255K") ||
+                    upper.contains("250K") || upper.contains("245K") || upper.contains("LGA1851") ||
+                    upper.contains("ARROW LAKE") -> "LGA1851"
 
-            rawName.contains("Core Ultra", ignoreCase = true) || rawName.contains("265K", ignoreCase = true) ||
-                    rawName.contains("285K", ignoreCase = true) -> "LGA1851"
+            upper.contains("14900") || upper.contains("14700") || upper.contains("14600") ||
+                    upper.contains("14400") || upper.contains("14100") || upper.contains("13900") ||
+                    upper.contains("13700") || upper.contains("13600") || upper.contains("13400") ||
+                    upper.contains("13100") || upper.contains("12900") || upper.contains("12700") ||
+                    upper.contains("12600") || upper.contains("12400") || upper.contains("12100") ||
+                    upper.contains("LGA1700") -> "LGA1700"
 
-            else -> if (rawName.contains("AMD", ignoreCase = true) || rawName.contains("Ryzen", ignoreCase = true)) "AM5" else "LGA1700"
+            upper.contains("11900") || upper.contains("11700") || upper.contains("11400") ||
+                    upper.contains("10900") || upper.contains("10700") || upper.contains("10400") ||
+                    upper.contains("10100") || upper.contains("LGA1200") -> "LGA1200"
+
+            upper.contains("A4-") || upper.contains("A6-") || upper.contains("A8-") || upper.contains("A10-") -> "FM2"
+            upper.contains("FX-") || upper.contains("PHENOM") -> "AM3+"
+
+            else -> "Belirtilmedi"
         }
     }
 
     private fun deduceMotherboardSocket(name: String): String = when {
-        // Modern AMD
+        // Modern AMD AM5
         name.contains("B650", ignoreCase = true) || name.contains("X670", ignoreCase = true) ||
                 name.contains("A620", ignoreCase = true) || name.contains("B850", ignoreCase = true) ||
-                name.contains("X870", ignoreCase = true) || name.contains("AM5", ignoreCase = true) -> "AM5"
-        // AM4
+                name.contains("B840", ignoreCase = true) || name.contains("X870", ignoreCase = true) ||
+                name.contains("AM5", ignoreCase = true) -> "AM5"
+        // AMD AM4
         name.contains("B550", ignoreCase = true) || name.contains("X570", ignoreCase = true) ||
                 name.contains("A520", ignoreCase = true) || name.contains("B450", ignoreCase = true) ||
                 name.contains("X470", ignoreCase = true) || name.contains("A320", ignoreCase = true) ||
                 name.contains("B350", ignoreCase = true) || name.contains("X370", ignoreCase = true) ||
                 name.contains("AM4", ignoreCase = true) -> "AM4"
-        // Legacy AMD
-        name.contains("760G", ignoreCase = true) || name.contains("760GM", ignoreCase = true) ||
-                name.contains("970", ignoreCase = true) || name.contains("990FX", ignoreCase = true) ||
-                name.contains("990X", ignoreCase = true) || name.contains("880G", ignoreCase = true) ||
-                name.contains("890FX", ignoreCase = true) || name.contains("890GX", ignoreCase = true) ||
-                name.contains("785G", ignoreCase = true) || name.contains("780G", ignoreCase = true) ||
-                name.contains("740G", ignoreCase = true) || name.contains("AM3+", ignoreCase = true) ||
-                name.contains("AM3", ignoreCase = true) -> "AM3"
-        name.contains("FM2+", ignoreCase = true) || name.contains("FM2", ignoreCase = true) ||
-                name.contains("A88X", ignoreCase = true) || name.contains("A78", ignoreCase = true) ||
-                name.contains("A68H", ignoreCase = true) || name.contains("A58", ignoreCase = true) -> "FM2+"
-        name.contains("AM2+", ignoreCase = true) || name.contains("AM2", ignoreCase = true) -> "AM2"
-        // Modern Intel
+        // Intel LGA1851
         name.contains("Z890", ignoreCase = true) || name.contains("B860", ignoreCase = true) ||
-                name.contains("H810", ignoreCase = true) || name.contains("LGA1851", ignoreCase = true) -> "LGA1851"
+                name.contains("H810", ignoreCase = true) || name.contains("LGA1851", ignoreCase = true) ||
+                name.contains("1851", ignoreCase = true) -> "LGA1851"
+        // Intel LGA1700
         name.contains("Z790", ignoreCase = true) || name.contains("B760", ignoreCase = true) ||
                 name.contains("H770", ignoreCase = true) || name.contains("Z690", ignoreCase = true) ||
                 name.contains("B660", ignoreCase = true) || name.contains("H610", ignoreCase = true) ||
                 name.contains("LGA1700", ignoreCase = true) -> "LGA1700"
+        // Intel LGA1200
         name.contains("Z590", ignoreCase = true) || name.contains("B560", ignoreCase = true) ||
                 name.contains("H570", ignoreCase = true) || name.contains("H510", ignoreCase = true) ||
                 name.contains("Z490", ignoreCase = true) || name.contains("B460", ignoreCase = true) ||
                 name.contains("H470", ignoreCase = true) || name.contains("H410", ignoreCase = true) ||
                 name.contains("LGA1200", ignoreCase = true) -> "LGA1200"
-        name.contains("Z390", ignoreCase = true) || name.contains("Z370", ignoreCase = true) ||
-                name.contains("B365", ignoreCase = true) || name.contains("B360", ignoreCase = true) ||
-                name.contains("H370", ignoreCase = true) || name.contains("H310", ignoreCase = true) ||
-                name.contains("Z270", ignoreCase = true) || name.contains("B250", ignoreCase = true) ||
-                name.contains("H270", ignoreCase = true) || name.contains("Z170", ignoreCase = true) ||
-                name.contains("B150", ignoreCase = true) || name.contains("H110", ignoreCase = true) ||
-                name.contains("LGA1151", ignoreCase = true) -> "LGA1151"
-        name.contains("Z97", ignoreCase = true) || name.contains("H97", ignoreCase = true) ||
-                name.contains("Z87", ignoreCase = true) || name.contains("H87", ignoreCase = true) ||
-                name.contains("B85", ignoreCase = true) || name.contains("H81", ignoreCase = true) ||
-                name.contains("LGA1150", ignoreCase = true) -> "LGA1150"
-        name.contains("Z77", ignoreCase = true) || name.contains("Z75", ignoreCase = true) ||
-                name.contains("H77", ignoreCase = true) || name.contains("B75", ignoreCase = true) ||
-                name.contains("Z68", ignoreCase = true) || name.contains("P67", ignoreCase = true) ||
-                name.contains("H67", ignoreCase = true) || name.contains("H61", ignoreCase = true) ||
-                name.contains("LGA1155", ignoreCase = true) -> "LGA1155"
-        name.contains("G41", ignoreCase = true) || name.contains("P45", ignoreCase = true) ||
-                name.contains("P43", ignoreCase = true) || name.contains("P35", ignoreCase = true) ||
-                name.contains("945", ignoreCase = true) || name.contains("LGA775", ignoreCase = true) -> "LGA775"
-        else -> "Bilinmeyen Soket"
+        else -> "Belirtilmedi"
     }
 
     private fun deduceMotherboardChipset(name: String): String {
         val chipsets = listOf(
             // AMD
             "X870E", "X870", "B850", "B840", "X670E", "X670", "B650E", "B650", "A620",
-            "X570", "B550", "A520", "X470", "B450", "A320", "X370", "B350",
-            "990FX", "990X", "970", "890FX", "890GX", "880G", "870", "790FX", "790GX",
-            "785G", "780G", "760GM", "760G", "740G",
-            "A88X", "A85X", "A78", "A75", "A68H", "A58", "A55", "TRX40", "WRX80", "TRX50",
+            "X570", "B550", "A520", "B450", "A320", "TRX40", "WRX80", "TRX50",
             // Intel
             "Z890", "B860", "H810",
-            "Z790", "H770", "B760", "Z690", "H670", "B660", "H610",
-            "Z590", "H570", "B560", "H510",
-            "Z490", "H470", "B460", "H410",
-            "Z390", "Z370", "H370", "B365", "B360", "H310",
-            "Z270", "H270", "B250", "Z170", "H170", "B150", "H110",
-            "Z97", "H97", "Z87", "H87", "B85", "H81",
-            "Z77", "Z75", "H77", "B75", "Z68", "P67", "H67", "H61",
-            "X79", "X99", "X299", "G41", "P45", "P43", "P35", "945P"
+            "Z790", "B760", "H770", "Z690", "B660", "H610",
+            "Z590", "B560", "H570", "H510", "Z490", "B460", "H410"
         )
         return chipsets.firstOrNull { name.contains(it, ignoreCase = true) } ?: "Veri Bulunamadı"
     }

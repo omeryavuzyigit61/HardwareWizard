@@ -1588,8 +1588,7 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-240-rx-rgb-aio-beyaz-rx120-rgb-fanli-240mm-sivi-islemci-sogutucu-cw-9061020-ww.jpg"
+    "max_tdp": 350
   },
   {
     "name": "Corsair iCUE LINK Titan 360 RX RGB (White)",
@@ -1725,8 +1724,7 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 320,
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+    "max_tdp": 320
   },
   {
     "name": "Be Quiet! Silent Loop 2 360",

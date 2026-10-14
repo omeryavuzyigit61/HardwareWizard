@@ -8491,6 +8491,23 @@
     "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
+    "name": "GIGABYTE A620M-DS3H A620 Soket AM5 DDR5 6400MHz (O.C.) M.2 mATX Anakart",
+    "price": null,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "memory_slots": 4,
+    "memory_type": "DDR5",
+    "color": "Black",
+    "chipset": "A620M",
+    "pcie_x16_slots": 1,
+    "m2_slots": 2,
+    "sata_ports": 4,
+    "onboard_ethernet": "2.5 Gbps",
+    "wi_fi": null,
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-a620m-ds3h-a620-soket-am5-ddr5-6400mhz-o-c-m-2-matx-anakart.jpg"
+  },
+  {
     "name": "ASUS B850 ROG Strix-E Gaming",
     "price": null,
     "socket": "AM5",
@@ -8506,8 +8523,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-rog-strix-b850-f-gaming-wifi7-neo-ddr5-soket-am5-m-2-hdmi-atx-anakart-2-300x300.jpg"
+    "color": "Black"
   },
   {
     "name": "ASUS B850 ROG Strix-A Gaming WIFI",
@@ -8525,8 +8541,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "White",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "White"
   },
   {
     "name": "ASUS B850 ROG Strix-I",
@@ -8562,8 +8577,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "Black"
   },
   {
     "name": "ASUS B850 TUF Gaming PLUS",
@@ -8599,8 +8613,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "Black"
   },
   {
     "name": "ASUS B850 ProArt-CREATOR",
@@ -8618,8 +8631,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-oc-wi-fi-7-atx-anakart-1775474819-4.jpg"
+    "color": "Black"
   },
   {
     "name": "MSI B850 MEG ACE",
@@ -8655,8 +8667,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "Black"
   },
   {
     "name": "MSI B850 MAG Tomahawk WIFI",
@@ -8764,8 +8775,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+    "color": "Black"
   },
   {
     "name": "Gigabyte B850 AORUS Elite AX ICE",
@@ -8783,8 +8793,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "White",
-    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+    "color": "White"
   },
   {
     "name": "Gigabyte B850 AORUS Elite",
@@ -8820,8 +8829,7 @@
     "vrm_phases": "14+2+1 Fazlı DrMOS (80A)",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/1Q2-b850-gaming-x-wifi6e-01.jpg"
+    "color": "Black"
   },
   {
     "name": "Gigabyte B850 Eagle AX",
@@ -9991,8 +9999,7 @@
     "vrm_phases": "6+1+1 Fazlı Güç Tasarımı",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
-    "color": "White",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "White"
   },
   {
     "name": "ASUS H610 ROG Strix-I",
@@ -10028,8 +10035,7 @@
     "vrm_phases": "6+1+1 Fazlı Güç Tasarımı",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
-    "color": "Black",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "Black"
   },
   {
     "name": "ASUS H610 TUF Gaming PLUS",
@@ -10155,8 +10161,7 @@
     "vrm_phases": "6+1+1 Fazlı Güç Tasarımı",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wi-fi-7-matx-anakart-19.jpg"
+    "color": "Black"
   },
   {
     "name": "MSI H610 PRO-A WIFI",
@@ -10174,8 +10179,7 @@
     "vrm_phases": "6+1+1 Fazlı Güç Tasarımı",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
-    "color": "Black",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "color": "Black"
   },
   {
     "name": "MSI H610 MPG Edge WIFI",
@@ -10193,8 +10197,7 @@
     "vrm_phases": "6+1+1 Fazlı Güç Tasarımı",
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
-    "color": "White",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4J1-1024.jpg"
+    "color": "White"
   },
   {
     "name": "Gigabyte H610 AORUS Master",
@@ -10447,158 +10450,5 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black"
-  },
-  {
-    "name": "ASUS PRIME B850M-K 8400MHz (OC) DDR5 Soket AM5 M.2 HDMI DP mATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": null,
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
-  },
-  {
-    "name": "MSI B850 GAMING PLUS WIFI6E 8200MHz (OC) DDR5 Soket AM5 M.2 HDMI DP ATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
-  },
-  {
-    "name": "MSI B850M GAMING PLUS WIFI6E 8200MHz (OC) DDR5 Soket AM5 M.2 HDMI DP mATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
-  },
-  {
-    "name": "Gigabyte B850M FORCE WIFI6E AM5 DDR5 9600MHz (OC) mATX Gaming (Oyuncu) Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202602/698ad952864d37.09520090_hilpemgnjfqok_cropped_288.webp"
-  },
-  {
-    "name": "SAPPHIRE PURE B850A WIFI 7 AMD B850 Soket AM5 DDR5 8000+MT/s",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850A",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-oc-wifi-7-atx-anakart-52123-11-40g-3.jpg"
-  },
-  {
-    "name": "GIGABYTE B850 AI TOP AMD Soket AM5 B850 DDR5 8600MT/s Wi-Fi",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": null,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wi-fi-7-atx-anakart-85.jpg"
-  },
-  {
-    "name": "GIGABYTE A620M-DS3H A620 Soket AM5 DDR5 6400MHz (O.C.) M.2 mATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 192,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "A620M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": null,
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-a620m-ds3h-a620-soket-am5-ddr5-6400mhz-o-c-m-2-matx-anakart.jpg"
-  },
-  {
-    "name": "Sapphire PULSE B850M WIFI 7600mhz(OC) M.2 AM5 mATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 128,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/B3H-pulseb850mboxcardphoto1125.jpg"
-  },
-  {
-    "name": "ASRock B850M Pro-A 8000Mhz(OC) M.2 AM5 mATX Anakart",
-    "price": null,
-    "socket": "AM5",
-    "form_factor": "Micro ATX",
-    "max_memory": 128,
-    "memory_slots": 4,
-    "memory_type": "DDR5",
-    "color": "Black",
-    "chipset": "B850M",
-    "pcie_x16_slots": 1,
-    "m2_slots": 2,
-    "sata_ports": 4,
-    "onboard_ethernet": "2.5 Gbps",
-    "wi_fi": null,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/NMC-b850m-pro-a-l1.jpg"
   }
 ]
