@@ -26,6 +26,7 @@ data class HardwareItemEntity(
     @ColumnInfo(name = "current_price_try") val currentPriceTry: Double? = null,
     @ColumnInfo(name = "lowest_price_try") val lowestPriceTry: Double? = null,
     @ColumnInfo(name = "highest_price_try") val highestPriceTry: Double? = null,
+    @ColumnInfo(name = "offers") val offers: List<com.panda.myapplication.domain.model.StoreOffer>? = null,
     @ColumnInfo(name = "price_history") val priceHistory: List<PricePoint>? = null,
     @ColumnInfo(name = "benchmark_score") val benchmarkScore: Int? = null,
     @ColumnInfo(name = "benchmark_tier") val benchmarkTier: String? = null,

@@ -19,8 +19,16 @@ object BenchmarkEngine {
         item: HardwareItem,
         verifiedBenchmarks: Map<String, HardwareBenchmarkInfo> = emptyMap(),
     ): BenchmarkResult {
-        // 1. Doğrulanmış Benchmark Verisi (Verified Benchmark)
-        val verified = verifiedBenchmarks[item.id.value] ?: item.benchmarkInfo?.takeIf { it.isVerified }
+        // 1. Doğrulanmış Benchmark Verisi (Tam ID veya GPU Çip Normalizasyonu)
+        val gpuChipsetKey = if (item.category == HardwareCategory.GPU) {
+            val chipset = (item.spec as? GpuSpec)?.chipset ?: item.model
+            normalizeGpuChipsetKey(chipset, item.model)
+        } else null
+
+        val verified = verifiedBenchmarks[item.id.value]
+            ?: (gpuChipsetKey?.let { verifiedBenchmarks["gpu_$it"] ?: verifiedBenchmarks[it] })
+            ?: item.benchmarkInfo?.takeIf { it.isVerified }
+
         if (verified != null) {
             return BenchmarkResult(
                 info = verified.copy(dataSource = DataSourceType.VERIFIED_BENCHMARK.name),
@@ -196,6 +204,47 @@ object BenchmarkEngine {
             gamingIndex = baseScore,
             productivityIndex = baseScore,
         )
+    }
+
+    fun normalizeGpuChipsetKey(chipset: String, model: String = ""): String? {
+        val text = "$chipset $model".lowercase()
+        return when {
+            text.contains("5090") -> "rtx_5090"
+            text.contains("5080") -> "rtx_5080"
+            text.contains("5070 ti") || text.contains("5070ti") -> "rtx_5070_ti"
+            text.contains("5070") -> "rtx_5070"
+            text.contains("5060 ti") || text.contains("5060ti") -> "rtx_5060_ti"
+            text.contains("4090") -> "rtx_4090"
+            text.contains("4080 super") || text.contains("4080s") -> "rtx_4080_super"
+            text.contains("4080") -> "rtx_4080"
+            text.contains("4070 ti super") || text.contains("4070tis") -> "rtx_4070_ti_super"
+            text.contains("4070 ti") || text.contains("4070ti") -> "rtx_4070_ti"
+            text.contains("4070 super") || text.contains("4070s") -> "rtx_4070_super"
+            text.contains("4070") -> "rtx_4070"
+            text.contains("4060 ti") || text.contains("4060ti") -> "rtx_4060_ti"
+            text.contains("4060") -> "rtx_4060"
+            text.contains("3090 ti") || text.contains("3090ti") -> "rtx_3090_ti"
+            text.contains("3090") -> "rtx_3090"
+            text.contains("3080 ti") || text.contains("3080ti") -> "rtx_3080_ti"
+            text.contains("3080") -> "rtx_3080"
+            text.contains("3070 ti") || text.contains("3070ti") -> "rtx_3070_ti"
+            text.contains("3070") -> "rtx_3070"
+            text.contains("3060 ti") || text.contains("3060ti") -> "rtx_3060_ti"
+            text.contains("3060") -> "rtx_3060"
+            text.contains("7900 xtx") || text.contains("7900xtx") -> "rx_7900_xtx"
+            text.contains("7900 xt") || text.contains("7900xt") -> "rx_7900_xt"
+            text.contains("7900 gre") || text.contains("7900gre") -> "rx_7900_gre"
+            text.contains("7800 xt") || text.contains("7800xt") -> "rx_7800_xt"
+            text.contains("7700 xt") || text.contains("7700xt") -> "rx_7700_xt"
+            text.contains("7600 xt") || text.contains("7600xt") -> "rx_7600_xt"
+            text.contains("7600") -> "rx_7600"
+            text.contains("6950 xt") || text.contains("6950xt") -> "rx_6950_xt"
+            text.contains("6800 xt") || text.contains("6800xt") -> "rx_6800_xt"
+            text.contains("6700 xt") || text.contains("6700xt") -> "rx_6700_xt"
+            text.contains("6600 xt") || text.contains("6600xt") -> "rx_6600_xt"
+            text.contains("6600") -> "rx_6600"
+            else -> null
+        }
     }
 
     private fun round1(value: Double): Double = round(value * 10.0) / 10.0

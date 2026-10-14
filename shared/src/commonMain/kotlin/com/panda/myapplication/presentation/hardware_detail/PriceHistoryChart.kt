@@ -167,40 +167,42 @@ fun PriceHistoryCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Text(
-                        text = "₺${current.formatPrice()}",
+                        text = if (current > 0) "₺${current.formatPrice()}" else "Stok / Fiyat Yok",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
                     )
                 }
 
-                Row(horizontalArrangement = Arrangement.spacedBy(Spacing.medium)) {
-                    Column(horizontalAlignment = Alignment.End) {
-                        Text(
-                            text = "EN DÜŞÜK",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        Text(
-                            text = "₺${lowest.formatPrice()}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = NeonEmerald,
-                        )
-                    }
+                if (lowest > 0 || highest > 0) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(Spacing.medium)) {
+                        Column(horizontalAlignment = Alignment.End) {
+                            Text(
+                                text = "EN DÜŞÜK",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Text(
+                                text = if (lowest > 0) "₺${lowest.formatPrice()}" else "-",
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonEmerald,
+                            )
+                        }
 
-                    Column(horizontalAlignment = Alignment.End) {
-                        Text(
-                            text = "EN YÜKSEK",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        Text(
-                            text = "₺${highest.formatPrice()}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = NeonRose,
-                        )
+                        Column(horizontalAlignment = Alignment.End) {
+                            Text(
+                                text = "EN YÜKSEK",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Text(
+                                text = if (highest > 0) "₺${highest.formatPrice()}" else "-",
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonRose,
+                            )
+                        }
                     }
                 }
             }

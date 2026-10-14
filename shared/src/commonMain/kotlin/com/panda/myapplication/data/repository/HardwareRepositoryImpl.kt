@@ -125,11 +125,15 @@ class HardwareRepositoryImpl(
                 if (existing.isNotEmpty()) {
                     val updated = existing.map { item ->
                         val priceData = allPrices[item.id]
-                        val benchData = allBenchmarks[item.id]
+                        val gpuKey = if (item.category == com.panda.myapplication.domain.model.HardwareCategory.GPU) {
+                            com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
+                        } else null
+                        val benchData = allBenchmarks[item.id] ?: (gpuKey?.let { allBenchmarks["gpu_$it"] ?: allBenchmarks[it] })
                         item.copy(
                             currentPriceTry = priceData?.currentPriceTry ?: item.currentPriceTry,
                             lowestPriceTry = priceData?.lowestPriceTry ?: item.lowestPriceTry,
                             highestPriceTry = priceData?.highestPriceTry ?: item.highestPriceTry,
+                            offers = priceData?.offers ?: item.offers,
                             priceHistory = priceData?.priceHistory ?: item.priceHistory,
                             benchmarkScore = benchData?.score ?: item.benchmarkScore,
                             benchmarkTier = benchData?.tier ?: item.benchmarkTier,

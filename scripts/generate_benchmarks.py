@@ -320,6 +320,63 @@ CPU_DB = [
 # Doğrulanmış GPU Benchmark Verileri (TechPowerUp + 3DMark Time Spy / Extreme / Steel Nomad)
 GPU_DB = [
     {
+        "chipset_key": "rtx_5090",
+        "keywords": ["5090"],
+        "name": "GeForce RTX 5090",
+        "relative_performance_pct": 1.95,
+        "synthetic": {
+            "time_spy_graphics": 48500,
+            "time_spy_extreme": 26800,
+            "steel_nomad": 13400
+        },
+        "fps_cp": (240.0, 195.0, 118.0),
+        "fps_fh": (320.0, 270.0, 198.0),
+        "fps_cs": (780.0, 680.0, 460.0)
+    },
+    {
+        "chipset_key": "rtx_5080",
+        "keywords": ["5080"],
+        "name": "GeForce RTX 5080",
+        "relative_performance_pct": 1.45,
+        "synthetic": {
+            "time_spy_graphics": 37200,
+            "time_spy_extreme": 19600,
+            "steel_nomad": 9650
+        },
+        "fps_cp": (185.0, 145.0, 88.0),
+        "fps_fh": (265.0, 220.0, 155.0),
+        "fps_cs": (660.0, 560.0, 365.0)
+    },
+    {
+        "chipset_key": "rtx_5070_ti",
+        "keywords": ["5070 Ti", "5070Ti", "5070 TI"],
+        "name": "GeForce RTX 5070 Ti",
+        "relative_performance_pct": 1.25,
+        "synthetic": {
+            "time_spy_graphics": 30500,
+            "time_spy_extreme": 15800,
+            "steel_nomad": 7450
+        },
+        "fps_cp": (158.0, 122.0, 72.0),
+        "fps_fh": (235.0, 190.0, 134.0),
+        "fps_cs": (580.0, 480.0, 310.0)
+    },
+    {
+        "chipset_key": "rtx_5070",
+        "keywords": ["5070"],
+        "name": "GeForce RTX 5070",
+        "relative_performance_pct": 1.08,
+        "synthetic": {
+            "time_spy_graphics": 25800,
+            "time_spy_extreme": 13100,
+            "steel_nomad": 6150
+        },
+        "fps_cp": (135.0, 102.0, 58.0),
+        "fps_fh": (202.0, 158.0, 110.0),
+        "fps_cs": (500.0, 400.0, 255.0)
+    },
+    {
+        "chipset_key": "rtx_4090",
         "keywords": ["4090"],
         "name": "GeForce RTX 4090",
         "relative_performance_pct": 1.35,
@@ -333,7 +390,8 @@ GPU_DB = [
         "fps_cs": (610.0, 510.0, 340.0)
     },
     {
-        "keywords": ["7900 XTX"],
+        "chipset_key": "rx_7900_xtx",
+        "keywords": ["7900 XTX", "7900XTX"],
         "name": "Radeon RX 7900 XTX",
         "relative_performance_pct": 1.18,
         "synthetic": {
@@ -346,7 +404,8 @@ GPU_DB = [
         "fps_cs": (550.0, 450.0, 295.0)
     },
     {
-        "keywords": ["4080 SUPER"],
+        "chipset_key": "rtx_4080_super",
+        "keywords": ["4080 SUPER", "4080Super"],
         "name": "GeForce RTX 4080 SUPER",
         "relative_performance_pct": 1.15,
         "synthetic": {
@@ -359,6 +418,7 @@ GPU_DB = [
         "fps_cs": (520.0, 420.0, 260.0)
     },
     {
+        "chipset_key": "rtx_4080",
         "keywords": ["4080"],
         "name": "GeForce RTX 4080",
         "relative_performance_pct": 1.11,
@@ -372,7 +432,8 @@ GPU_DB = [
         "fps_cs": (505.0, 405.0, 252.0)
     },
     {
-        "keywords": ["7900 XT"],
+        "chipset_key": "rx_7900_xt",
+        "keywords": ["7900 XT", "7900XT"],
         "name": "Radeon RX 7900 XT",
         "relative_performance_pct": 1.02,
         "synthetic": {
@@ -385,7 +446,8 @@ GPU_DB = [
         "fps_cs": (470.0, 375.0, 240.0)
     },
     {
-        "keywords": ["4070 Ti SUPER"],
+        "chipset_key": "rtx_4070_ti_super",
+        "keywords": ["4070 Ti SUPER", "4070Ti SUPER", "4070 Ti Super", "4070ti super"],
         "name": "GeForce RTX 4070 Ti SUPER",
         "relative_performance_pct": 1.01,
         "synthetic": {
@@ -398,7 +460,36 @@ GPU_DB = [
         "fps_cs": (465.0, 370.0, 235.0)
     },
     {
-        "keywords": ["4070 SUPER"],
+        "chipset_key": "rtx_4070_ti",
+        "keywords": ["4070 Ti", "4070Ti", "4070 TI"],
+        "name": "GeForce RTX 4070 Ti",
+        "relative_performance_pct": 0.96,
+        "synthetic": {
+            "time_spy_graphics": 22900,
+            "time_spy_extreme": 11200,
+            "steel_nomad": 5350
+        },
+        "fps_cp": (120.0, 89.0, 50.0),
+        "fps_fh": (180.0, 138.0, 95.0),
+        "fps_cs": (440.0, 350.0, 220.0)
+    },
+    {
+        "chipset_key": "rx_7900_gre",
+        "keywords": ["7900 GRE", "7900GRE"],
+        "name": "Radeon RX 7900 GRE",
+        "relative_performance_pct": 0.94,
+        "synthetic": {
+            "time_spy_graphics": 22400,
+            "time_spy_extreme": 11000,
+            "steel_nomad": 5200
+        },
+        "fps_cp": (118.0, 88.0, 49.0),
+        "fps_fh": (176.0, 135.0, 92.0),
+        "fps_cs": (430.0, 340.0, 215.0)
+    },
+    {
+        "chipset_key": "rtx_4070_super",
+        "keywords": ["4070 SUPER", "4070Super", "4070 super"],
         "name": "GeForce RTX 4070 SUPER",
         "relative_performance_pct": 0.91,
         "synthetic": {
@@ -411,7 +502,8 @@ GPU_DB = [
         "fps_cs": (420.0, 330.0, 205.0)
     },
     {
-        "keywords": ["7800 XT"],
+        "chipset_key": "rx_7800_xt",
+        "keywords": ["7800 XT", "7800XT"],
         "name": "Radeon RX 7800 XT",
         "relative_performance_pct": 0.85,
         "synthetic": {
@@ -424,6 +516,7 @@ GPU_DB = [
         "fps_cs": (405.0, 315.0, 195.0)
     },
     {
+        "chipset_key": "rtx_4070",
         "keywords": ["4070"],
         "name": "GeForce RTX 4070",
         "relative_performance_pct": 0.81,
@@ -437,7 +530,36 @@ GPU_DB = [
         "fps_cs": (380.0, 295.0, 185.0)
     },
     {
-        "keywords": ["7700 XT"],
+        "chipset_key": "rx_6800_xt",
+        "keywords": ["6800 XT", "6800XT"],
+        "name": "Radeon RX 6800 XT",
+        "relative_performance_pct": 0.80,
+        "synthetic": {
+            "time_spy_graphics": 18100,
+            "time_spy_extreme": 8700,
+            "steel_nomad": 4100
+        },
+        "fps_cp": (100.0, 74.0, 40.0),
+        "fps_fh": (152.0, 116.0, 77.0),
+        "fps_cs": (375.0, 290.0, 180.0)
+    },
+    {
+        "chipset_key": "rtx_3080",
+        "keywords": ["3080"],
+        "name": "GeForce RTX 3080",
+        "relative_performance_pct": 0.78,
+        "synthetic": {
+            "time_spy_graphics": 17800,
+            "time_spy_extreme": 8600,
+            "steel_nomad": 4050
+        },
+        "fps_cp": (98.0, 72.0, 39.0),
+        "fps_fh": (150.0, 114.0, 75.0),
+        "fps_cs": (370.0, 285.0, 178.0)
+    },
+    {
+        "chipset_key": "rx_7700_xt",
+        "keywords": ["7700 XT", "7700XT"],
         "name": "Radeon RX 7700 XT",
         "relative_performance_pct": 0.72,
         "synthetic": {
@@ -450,7 +572,22 @@ GPU_DB = [
         "fps_cs": (345.0, 265.0, 165.0)
     },
     {
-        "keywords": ["4060 Ti"],
+        "chipset_key": "rtx_3070",
+        "keywords": ["3070"],
+        "name": "GeForce RTX 3070",
+        "relative_performance_pct": 0.65,
+        "synthetic": {
+            "time_spy_graphics": 14200,
+            "time_spy_extreme": 6800,
+            "steel_nomad": 3250
+        },
+        "fps_cp": (84.0, 60.0, 32.0),
+        "fps_fh": (130.0, 98.0, 63.0),
+        "fps_cs": (320.0, 245.0, 150.0)
+    },
+    {
+        "chipset_key": "rtx_4060_ti",
+        "keywords": ["4060 Ti", "4060Ti", "4060 TI"],
         "name": "GeForce RTX 4060 Ti",
         "relative_performance_pct": 0.64,
         "synthetic": {
@@ -463,7 +600,8 @@ GPU_DB = [
         "fps_cs": (310.0, 235.0, 142.0)
     },
     {
-        "keywords": ["6700 XT"],
+        "chipset_key": "rx_6700_xt",
+        "keywords": ["6700 XT", "6700XT"],
         "name": "Radeon RX 6700 XT",
         "relative_performance_pct": 0.58,
         "synthetic": {
@@ -476,6 +614,7 @@ GPU_DB = [
         "fps_cs": (290.0, 218.0, 132.0)
     },
     {
+        "chipset_key": "rtx_4060",
         "keywords": ["4060"],
         "name": "GeForce RTX 4060",
         "relative_performance_pct": 0.51,
@@ -489,6 +628,7 @@ GPU_DB = [
         "fps_cs": (260.0, 195.0, 118.0)
     },
     {
+        "chipset_key": "rx_7600",
         "keywords": ["7600"],
         "name": "Radeon RX 7600",
         "relative_performance_pct": 0.49,
@@ -502,6 +642,7 @@ GPU_DB = [
         "fps_cs": (250.0, 188.0, 114.0)
     },
     {
+        "chipset_key": "rtx_3060",
         "keywords": ["3060"],
         "name": "GeForce RTX 3060",
         "relative_performance_pct": 0.39,
@@ -515,6 +656,7 @@ GPU_DB = [
         "fps_cs": (205.0, 150.0, 90.0)
     },
     {
+        "chipset_key": "rx_6600",
         "keywords": ["6600"],
         "name": "Radeon RX 6600",
         "relative_performance_pct": 0.41,
@@ -566,7 +708,23 @@ def build_benchmarks():
                     }
                 }
 
-    # GPU katalog dosyasını tara
+    # 1. GPU Çip Benchmarklarını doğrudan ekle (Tüm alt modellerin eşleşmesi için)
+    for entry in GPU_DB:
+        ck = entry.get("chipset_key")
+        if ck:
+            bench_data = {
+                "relative_performance_pct": entry["relative_performance_pct"],
+                "synthetic": entry["synthetic"],
+                "games": {
+                    "cyberpunk_2077": {"p1080": entry["fps_cp"][0], "p1440": entry["fps_cp"][1], "p4k": entry["fps_cp"][2]},
+                    "forza_horizon_5": {"p1080": entry["fps_fh"][0], "p1440": entry["fps_fh"][1], "p4k": entry["fps_fh"][2]},
+                    "counter_strike_2": {"p1080": entry["fps_cs"][0], "p1440": entry["fps_cs"][1], "p4k": entry["fps_cs"][2]}
+                }
+            }
+            result["gpus"][f"gpu_{ck}"] = bench_data
+            result["gpus"][ck] = bench_data
+
+    # 2. GPU katalog dosyasını tara ve alt model ID'lerini de eşleştir
     gpu_file = os.path.join(FILES_DIR, "video-card.json")
     if os.path.exists(gpu_file):
         with open(gpu_file, "r", encoding="utf-8") as f:

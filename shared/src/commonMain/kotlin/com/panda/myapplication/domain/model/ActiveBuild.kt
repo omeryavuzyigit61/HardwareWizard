@@ -16,6 +16,9 @@ data class ActiveBuild(
     val totalPriceMinor: Long
         get() = items.sumOf { it.price?.amountMinor ?: 0L }
 
+    val totalPriceTry: Double
+        get() = items.sumOf { it.currentPriceTry ?: 0.0 }
+
     val totalCount: Int
         get() = items.size
 

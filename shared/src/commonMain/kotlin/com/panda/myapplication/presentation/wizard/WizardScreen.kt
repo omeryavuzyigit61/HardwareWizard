@@ -62,6 +62,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.panda.myapplication.presentation.util.formatPrice
+import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
 import com.panda.myapplication.domain.engine.ClearanceRadarResult
@@ -216,7 +218,7 @@ fun WizardContent(
                 SlotListHeader(
                     filledCount = uiState.activeBuild.totalCount,
                     totalCount = WIZARD_SLOTS.size,
-                    totalPriceMinor = uiState.activeBuild.totalPriceMinor,
+                    totalPriceTry = uiState.activeBuild.totalPriceTry,
                 )
             }
 
@@ -874,7 +876,7 @@ private fun GameFpsCard(game: GameFpsEstimate) {
 private fun SlotListHeader(
     filledCount: Int,
     totalCount: Int,
-    totalPriceMinor: Long,
+    totalPriceTry: Double,
 ) {
     Row(
         modifier = Modifier
@@ -891,7 +893,7 @@ private fun SlotListHeader(
             letterSpacing = 1.sp,
         )
 
-        val priceText = if (totalPriceMinor > 0) "$${totalPriceMinor / 100.0}" else "$0.00"
+        val priceText = if (totalPriceTry > 0) "₺${totalPriceTry.formatPrice()}" else "₺0"
         Text(
             text = "Toplam: $priceText",
             style = MaterialTheme.typography.titleMedium,
@@ -1052,7 +1054,7 @@ private fun ComponentSlotCard(
                         }
                     }
 
-                    val priceText = item.price?.let { "$${it.amountMinor / 100.0}" } ?: "N/A"
+                    val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
                     Text(
                         text = priceText,
                         style = MaterialTheme.typography.bodyMedium,
@@ -1288,7 +1290,7 @@ private fun PickerItemCard(
             Spacer(modifier = Modifier.width(Spacing.small))
 
             Column(horizontalAlignment = Alignment.End) {
-                val priceText = item.price?.let { "$${it.amountMinor / 100.0}" } ?: "N/A"
+                val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
                 Text(
                     text = priceText,
                     style = MaterialTheme.typography.bodyMedium,
@@ -1427,7 +1429,7 @@ private fun SystemCardShareDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    val priceText = if (build.totalPriceMinor > 0) "$${build.totalPriceMinor / 100.0}" else "N/A"
+                    val priceText = if (build.totalPriceTry > 0) "₺${build.totalPriceTry.formatPrice()}" else "N/A"
                     Column {
                         Text("TOPLAM BÜTÇE", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text(priceText, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Black, color = NeonCyan)

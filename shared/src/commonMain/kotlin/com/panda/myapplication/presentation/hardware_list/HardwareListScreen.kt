@@ -48,6 +48,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -61,10 +62,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
@@ -263,19 +267,51 @@ fun HardwareListContent(
         ) {
             when {
                 uiState.isLoading && uiState.items.isEmpty() -> {
-                    Column(
-                        modifier = Modifier.align(Alignment.Center),
-                        horizontalAlignment = Alignment.CenterHorizontally,
+                    Card(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(Spacing.large)
+                            .fillMaxWidth(0.9f),
+                        shape = RoundedCornerShape(Spacing.cardRadius),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)),
                     ) {
-                        CircularProgressIndicator(
-                            color = MaterialTheme.colorScheme.primary,
-                        )
-                        Spacer(modifier = Modifier.height(Spacing.medium))
-                        Text(
-                            text = "Açık depodan binlerce parça indiriliyor...",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(Spacing.large),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            CircularProgressIndicator(
+                                color = MaterialTheme.colorScheme.primary,
+                                strokeWidth = 3.dp,
+                                modifier = Modifier.size(44.dp),
+                            )
+                            Spacer(modifier = Modifier.height(Spacing.large))
+                            Text(
+                                text = "HARDWARE WIZARD",
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Black,
+                                color = MaterialTheme.colorScheme.primary,
+                                letterSpacing = 2.sp,
+                            )
+                            Spacer(modifier = Modifier.height(Spacing.small))
+                            Text(
+                                text = "Donanım kataloğu ve canlı TR mağaza verileri hazırlanıyor...",
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Medium,
+                                color = MaterialTheme.colorScheme.onSurface,
+                                textAlign = TextAlign.Center,
+                            )
+                            Spacer(modifier = Modifier.height(Spacing.medium))
+                            LinearProgressIndicator(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(4.dp)),
+                                color = MaterialTheme.colorScheme.primary,
+                                trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                            )
+                        }
                     }
                 }
                 uiState.errorMessage != null && uiState.items.isEmpty() -> {
@@ -442,14 +478,13 @@ fun HardwareCard(
                     )
                 }
 
-                item.price?.let { price ->
-                    Text(
-                        text = "$${price.amountMinor / 100.0}",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Black,
-                        color = MaterialTheme.colorScheme.primary,
-                    )
-                }
+                val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                Text(
+                    text = priceText,
+                    style = if (item.currentPriceTry != null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelSmall,
+                    fontWeight = if (item.currentPriceTry != null) FontWeight.Black else FontWeight.Normal,
+                    color = if (item.currentPriceTry != null) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                )
             }
 
             Spacer(modifier = Modifier.height(Spacing.small))

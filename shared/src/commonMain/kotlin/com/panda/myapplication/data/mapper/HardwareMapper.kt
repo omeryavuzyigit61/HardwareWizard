@@ -160,16 +160,17 @@ object HardwareMapper {
             Money(amountMinor = entity.priceMinor, currencyCode = entity.currencyCode)
         } else null
 
-        val priceInfo = if (entity.currentPriceTry != null && entity.priceHistory != null && entity.priceHistory.isNotEmpty()) {
+        val priceInfo = if (entity.currentPriceTry != null || !entity.offers.isNullOrEmpty() || !entity.priceHistory.isNullOrEmpty()) {
             ProductPriceInfo(
                 currentPriceTry = entity.currentPriceTry,
                 lowestPriceTry = entity.lowestPriceTry ?: entity.currentPriceTry,
                 highestPriceTry = entity.highestPriceTry ?: entity.currentPriceTry,
                 currency = "TRY",
-                priceHistory = entity.priceHistory,
+                offers = entity.offers.orEmpty(),
+                priceHistory = entity.priceHistory.orEmpty(),
             )
         } else {
-            generateFallbackPriceInfo(entity.id, entity.priceMinor ?: 30000L)
+            null
         }
 
         val intermediateItem = runCatching {
@@ -292,21 +293,16 @@ object HardwareMapper {
             else -> extractedModel
         }
 
-        val vramMb = ((dto.memory ?: 8) * 1024).coerceAtLeast(1024)
-        val memoryType = if (rawName.contains("GDDR6X", ignoreCase = true)) "GDDR6X" else "GDDR6"
+        val factorySpecs = resolveGpuFactorySpecs(chipset, rawName, dto.memory)
+        val vramMb = factorySpecs.vramMb
+        val memoryType = factorySpecs.memoryType
         val coreClockMhz = (dto.coreClockMhz ?: 1500).coerceAtLeast(500)
         val boostClockMhz = (dto.boostClockMhz ?: (coreClockMhz + 250)).coerceAtLeast(coreClockMhz)
-        val tdpWatts = estimateGpuTdp(chipset, rawName)
-        val recommendedPsuWatts = maxOf(tdpWatts + 250, 550)
+        val tdpWatts = factorySpecs.tdpWatts
+        val recommendedPsuWatts = factorySpecs.recommendedPsuWatts
         val lengthMm = (dto.length?.toInt() ?: 300).coerceAtLeast(150)
-        val powerConnectors = if (tdpWatts >= 285 || chipset.contains("4070") || chipset.contains("4080") || chipset.contains("4090")) {
-            "1x 16-pin (12VHPWR)"
-        } else if (tdpWatts >= 200) {
-            "2x 8-pin PCIe"
-        } else {
-            "1x 8-pin PCIe"
-        }
-        val slotWidth = if (tdpWatts >= 300) "3.5 Yuva" else if (tdpWatts >= 220) "3.0 Yuva" else "2.5 Yuva"
+        val powerConnectors = factorySpecs.powerConnectors
+        val slotWidth = factorySpecs.slotWidth
 
         val item = HardwareItemEntity(
             id = id,
@@ -652,13 +648,19 @@ object HardwareMapper {
             .distinctBy { it.id }
 
         val enrichedItems = rawItems.map { item ->
-            val priceData = pricesTr[item.id] ?: generateFallbackPriceInfo(item.id, item.priceMinor ?: 30000L)
-            val benchData = benchmarks[item.id] ?: generateFallbackBenchmarkInfo(item.id, item.category)
+            val priceData = pricesTr[item.id]
+            val gpuKey = if (item.category == HardwareCategory.GPU) {
+                com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
+            } else null
+            val benchData = benchmarks[item.id]
+                ?: (gpuKey?.let { benchmarks["gpu_$it"] ?: benchmarks[it] })
+                ?: generateFallbackBenchmarkInfo(item.id, item.category)
             item.copy(
-                currentPriceTry = priceData.currentPriceTry,
-                lowestPriceTry = priceData.lowestPriceTry,
-                highestPriceTry = priceData.highestPriceTry,
-                priceHistory = priceData.priceHistory,
+                currentPriceTry = priceData?.currentPriceTry,
+                lowestPriceTry = priceData?.lowestPriceTry,
+                highestPriceTry = priceData?.highestPriceTry,
+                offers = priceData?.offers,
+                priceHistory = priceData?.priceHistory,
                 benchmarkScore = benchData.score,
                 benchmarkTier = benchData.tier,
                 benchmarkTestSuite = benchData.testSuite,
@@ -710,40 +712,6 @@ object HardwareMapper {
         )
     }
 
-    fun generateFallbackPriceInfo(id: String, priceMinor: Long): ProductPriceInfo {
-        val baseUsd = if (priceMinor > 0) priceMinor / 100.0 else 180.0
-        val baseTry = (baseUsd * 38.5).coerceAtLeast(1499.0)
-        val seed = kotlin.math.abs(id.hashCode())
-        val f1 = ((seed % 17) - 8) / 100.0
-        val f2 = (((seed / 17) % 19) - 9) / 100.0
-        val f3 = (((seed / 323) % 15) - 7) / 100.0
-        val f4 = (((seed / 4845) % 21) - 10) / 100.0
-        val f5 = (((seed / 10000) % 13) - 6) / 100.0
-
-        val p1 = kotlin.math.round(baseTry * (1.08 + f1))
-        val p2 = kotlin.math.round(baseTry * (1.04 + f2))
-        val p3 = kotlin.math.round(baseTry * (1.12 + f3))
-        val p4 = kotlin.math.round(baseTry * (0.94 + f4))
-        val p5 = kotlin.math.round(baseTry * (0.97 + f5))
-        val pCurrent = kotlin.math.round(baseTry)
-
-        val history = listOf(
-            PricePoint("2025-10-15", p1),
-            PricePoint("2025-12-01", p2),
-            PricePoint("2026-02-10", p3),
-            PricePoint("2026-04-15", p4),
-            PricePoint("2026-07-01", p5),
-            PricePoint("2026-10-13", pCurrent),
-        )
-        val allPrices = history.map { it.price }
-        return ProductPriceInfo(
-            currentPriceTry = pCurrent,
-            lowestPriceTry = allPrices.minOrNull() ?: pCurrent,
-            highestPriceTry = allPrices.maxOrNull() ?: pCurrent,
-            currency = "TRY",
-            priceHistory = history,
-        )
-    }
 
     // endregion
 
@@ -861,26 +829,301 @@ object HardwareMapper {
         return chipsets.firstOrNull { name.contains(it, ignoreCase = true) } ?: "B650"
     }
 
-    private fun estimateGpuTdp(chipset: String, name: String): Int {
+    private data class ResolvedGpuSpecs(
+        val vramMb: Int,
+        val memoryType: String,
+        val tdpWatts: Int,
+        val recommendedPsuWatts: Int,
+        val powerConnectors: String,
+        val slotWidth: String,
+    )
+
+    private fun resolveGpuFactorySpecs(chipset: String, name: String, memoryFromDto: Int?): ResolvedGpuSpecs {
         val text = "$chipset $name".uppercase()
         return when {
-            text.contains("4090") -> 450
-            text.contains("4080") -> 320
-            text.contains("4070 TI") -> 285
-            text.contains("4070") -> 200
-            text.contains("4060 TI") -> 160
-            text.contains("4060") -> 115
-            text.contains("3090") -> 350
-            text.contains("3080") -> 320
-            text.contains("3070") -> 220
-            text.contains("3060 TI") -> 200
-            text.contains("3060") -> 170
-            text.contains("7900 XTX") -> 355
-            text.contains("7900 XT") -> 315
-            text.contains("7800 XT") -> 263
-            text.contains("7700 XT") -> 245
-            text.contains("7600") -> 165
-            else -> 200
+            text.contains("5090") -> ResolvedGpuSpecs(
+                vramMb = 32 * 1024,
+                memoryType = "GDDR7",
+                tdpWatts = 575,
+                recommendedPsuWatts = 1000,
+                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
+                slotWidth = "3.5 Yuva",
+            )
+            text.contains("5080") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR7",
+                tdpWatts = 360,
+                recommendedPsuWatts = 850,
+                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("5070 TI") || text.contains("5070TI") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR7",
+                tdpWatts = 300,
+                recommendedPsuWatts = 750,
+                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("5070") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR7",
+                tdpWatts = 250,
+                recommendedPsuWatts = 650,
+                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("5060 TI") || text.contains("5060TI") -> ResolvedGpuSpecs(
+                vramMb = (memoryFromDto ?: 16) * 1024,
+                memoryType = "GDDR7",
+                tdpWatts = 180,
+                recommendedPsuWatts = 600,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("4090") -> ResolvedGpuSpecs(
+                vramMb = 24 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 450,
+                recommendedPsuWatts = 850,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "3.5 Yuva",
+            )
+            text.contains("4080 SUPER") || text.contains("4080") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 320,
+                recommendedPsuWatts = 750,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "3.5 Yuva",
+            )
+            text.contains("4070 TI SUPER") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 285,
+                recommendedPsuWatts = 750,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("4070 TI") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 285,
+                recommendedPsuWatts = 700,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("4070 SUPER") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 220,
+                recommendedPsuWatts = 650,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("4070") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 200,
+                recommendedPsuWatts = 650,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("4060 TI") -> ResolvedGpuSpecs(
+                vramMb = (memoryFromDto ?: 8) * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 160,
+                recommendedPsuWatts = 550,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("4060") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 115,
+                recommendedPsuWatts = 500,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("3090 TI") -> ResolvedGpuSpecs(
+                vramMb = 24 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 450,
+                recommendedPsuWatts = 850,
+                powerConnectors = "1x 16-pin (12VHPWR)",
+                slotWidth = "3.5 Yuva",
+            )
+            text.contains("3090") -> ResolvedGpuSpecs(
+                vramMb = 24 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 350,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("3080 TI") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 350,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("3080") -> ResolvedGpuSpecs(
+                vramMb = (memoryFromDto ?: 10) * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 320,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("3070 TI") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6X",
+                tdpWatts = 290,
+                recommendedPsuWatts = 700,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("3070") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 220,
+                recommendedPsuWatts = 650,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("3060 TI") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = if (text.contains("GDDR6X")) "GDDR6X" else "GDDR6",
+                tdpWatts = 200,
+                recommendedPsuWatts = 600,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("3060") -> ResolvedGpuSpecs(
+                vramMb = (memoryFromDto ?: 12) * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 170,
+                recommendedPsuWatts = 550,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("7900 XTX") -> ResolvedGpuSpecs(
+                vramMb = 24 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 355,
+                recommendedPsuWatts = 800,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "3.0 Yuva",
+            )
+            text.contains("7900 XT") -> ResolvedGpuSpecs(
+                vramMb = 20 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 315,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("7900 GRE") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 260,
+                recommendedPsuWatts = 700,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("7800 XT") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 263,
+                recommendedPsuWatts = 700,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("7700 XT") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 245,
+                recommendedPsuWatts = 700,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("7600 XT") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 190,
+                recommendedPsuWatts = 600,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("7600") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 165,
+                recommendedPsuWatts = 550,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("6950 XT") || text.contains("6900 XT") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 335,
+                recommendedPsuWatts = 850,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("6800 XT") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 300,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("6700 XT") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 230,
+                recommendedPsuWatts = 650,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("6600 XT") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 160,
+                recommendedPsuWatts = 500,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("6600") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 132,
+                recommendedPsuWatts = 450,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            else -> {
+                val vram = ((memoryFromDto ?: 8) * 1024).coerceAtLeast(1024)
+                val memType = when {
+                    text.contains("GDDR7") -> "GDDR7"
+                    text.contains("GDDR6X") -> "GDDR6X"
+                    text.contains("HBM") -> "HBM2"
+                    text.contains("GDDR5") -> "GDDR5"
+                    else -> "GDDR6"
+                }
+                val tdp = if (text.contains("XT") || text.contains("TI") || text.contains("SUPER")) 240 else 180
+                ResolvedGpuSpecs(
+                    vramMb = vram,
+                    memoryType = memType,
+                    tdpWatts = tdp,
+                    recommendedPsuWatts = maxOf(tdp + 250, 500),
+                    powerConnectors = if (tdp >= 220) "2x 8-pin PCIe" else "1x 8-pin PCIe",
+                    slotWidth = if (tdp >= 250) "3.0 Yuva" else "2.0 Yuva",
+                )
+            }
         }
     }
 

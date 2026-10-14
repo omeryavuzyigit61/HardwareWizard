@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 curl_cffi
+
       - name: Run price tracking script
         run: |
           python scripts/update_prices.py

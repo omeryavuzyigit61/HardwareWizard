@@ -12,9 +12,10 @@ data class HardwareItem(
 ) {
     val category: HardwareCategory get() = spec.category
 
-    val currentPriceTry: Double? get() = priceInfo?.currentPriceTry ?: price?.let { (it.amountMinor / 100.0) * 38.5 }
+    val currentPriceTry: Double? get() = priceInfo?.currentPriceTry
     val lowestPriceTry: Double? get() = priceInfo?.lowestPriceTry
     val highestPriceTry: Double? get() = priceInfo?.highestPriceTry
+    val offers: List<StoreOffer> get() = priceInfo?.offers.orEmpty()
     val priceHistory: List<PricePoint> get() = priceInfo?.priceHistory.orEmpty()
     val benchmarkScore: Int? get() = benchmarkInfo?.score
     val benchmarkTier: String? get() = benchmarkInfo?.tier

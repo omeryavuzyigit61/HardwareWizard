@@ -34,6 +34,16 @@ class HardwareTypeConverters {
     }
 
     @TypeConverter
+    fun storeOfferListToJson(value: List<com.panda.myapplication.domain.model.StoreOffer>?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToStoreOfferList(value: String?): List<com.panda.myapplication.domain.model.StoreOffer>? = value?.let {
+        runCatching { json.decodeFromString<List<com.panda.myapplication.domain.model.StoreOffer>>(it) }.getOrNull()
+    }
+
+    @TypeConverter
     fun cpuSyntheticToJson(value: com.panda.myapplication.domain.model.CpuSyntheticBenchmark?): String? = value?.let {
         json.encodeToString(it)
     }

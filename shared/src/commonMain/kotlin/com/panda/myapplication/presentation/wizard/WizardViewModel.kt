@@ -25,6 +25,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import com.panda.myapplication.presentation.util.formatPrice
 
 sealed interface WizardEffect {
     data class ShowToast(val message: String) : WizardEffect
@@ -222,7 +223,7 @@ class WizardViewModel(
 
     private fun generateShareSummary(analysis: AnalysisState): String {
         val b = analysis.build
-        val priceFormatted = if (b.totalPriceMinor > 0) "$${b.totalPriceMinor / 100.0}" else "N/A"
+        val priceFormatted = if (b.totalPriceTry > 0) "₺${b.totalPriceTry.formatPrice()}" else "N/A"
         return buildString {
             appendLine("═════════════════════════════════")
             appendLine("⚡ HARDWARE WIZARD // SYSTEM BUILD")

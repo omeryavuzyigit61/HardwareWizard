@@ -51,10 +51,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.panda.myapplication.domain.model.StoreOffer
+import com.panda.myapplication.presentation.util.formatPrice
+import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CaseSpec
@@ -140,7 +146,7 @@ fun HardwareDetailContent(
             if (uiState.item != null) {
                 DetailBottomBar(
                     isAddedToBuild = uiState.isAddedToBuild,
-                    priceText = formatPrice(uiState.item.price),
+                    priceText = uiState.item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok"),
                     onAddToBuildClick = onAddToBuildClick,
                 )
             }
@@ -214,6 +220,14 @@ fun HardwareDetailContent(
                                 currentPriceTry = item.currentPriceTry,
                                 lowestPriceTry = item.lowestPriceTry,
                                 highestPriceTry = item.highestPriceTry,
+                            )
+                        }
+
+                        // Store Offers Comparison (Canlı TR Piyasası) Card
+                        item {
+                            StoreOffersCard(
+                                offers = item.offers,
+                                currentPriceTry = item.currentPriceTry,
                             )
                         }
 
@@ -1045,14 +1059,191 @@ private fun PlusIconCanvas(color: Color, modifier: Modifier = Modifier.size(16.d
 }
 
 private fun formatPrice(price: Money?): String {
-    if (price == null) return "Fiyat Belirtilmemiş"
+    if (price == null) return "Stok / Fiyat Yok"
     val major = price.amountMinor / 100
     val minor = (price.amountMinor % 100).toString().padStart(2, '0')
-    return when (price.currencyCode) {
-        "USD" -> "$$major.$minor"
-        "EUR" -> "€$major.$minor"
-        "TRY" -> "₺$major,$minor"
-        else -> "$major.$minor ${price.currencyCode}"
+    return "₺$major,$minor"
+}
+
+@Composable
+private fun StoreOffersCard(
+    offers: List<StoreOffer>,
+    currentPriceTry: Double?,
+    modifier: Modifier = Modifier,
+) {
+    if (currentPriceTry == null && offers.isEmpty()) {
+        Card(
+            modifier = modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(Spacing.cardRadius),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(Spacing.medium),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .background(MaterialTheme.colorScheme.surfaceVariant),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(text = "⚠️", fontSize = 18.sp)
+                }
+                Spacer(modifier = Modifier.width(Spacing.medium))
+                Column {
+                    Text(
+                        text = "TR Piyasasında Stok / Fiyat Bulunamadı",
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = "Bu donanım için Türkiye e-ticaret mağazalarında aktif stok veya fiyat listelemesi tespit edilemedi.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        }
+    } else if (offers.isNotEmpty()) {
+        val uriHandler = LocalUriHandler.current
+        Card(
+            modifier = modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(Spacing.cardRadius),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(Spacing.medium),
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Box(
+                            modifier = Modifier
+                                .size(8.dp)
+                                .clip(CircleShape)
+                                .background(MaterialTheme.colorScheme.primary),
+                        )
+                        Spacer(modifier = Modifier.width(Spacing.small))
+                        Text(
+                            text = "MAĞAZA FİYATLARI (CANLI TR PİYASASI)",
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.Black,
+                            color = MaterialTheme.colorScheme.primary,
+                            letterSpacing = 1.sp,
+                        )
+                    }
+
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)),
+                    ) {
+                        Text(
+                            text = "${offers.size} Mağaza",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(Spacing.medium))
+
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    offers.forEachIndexed { index, offer ->
+                        val isCheapest = index == 0
+                        Surface(
+                            onClick = {
+                                if (offer.url.isNotBlank()) {
+                                    try {
+                                        uriHandler.openUri(offer.url)
+                                    } catch (_: Exception) {}
+                                }
+                            },
+                            shape = RoundedCornerShape(Spacing.small),
+                            color = if (isCheapest) MaterialTheme.colorScheme.primary.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
+                            border = BorderStroke(
+                                1.dp,
+                                if (isCheapest) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                            ),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = Spacing.medium, vertical = Spacing.small),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.weight(1f),
+                                ) {
+                                    Text(
+                                        text = offer.storeName,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                    if (isCheapest) {
+                                        Spacer(modifier = Modifier.width(Spacing.small))
+                                        Surface(
+                                            shape = RoundedCornerShape(4.dp),
+                                            color = Color(0xFF10B981).copy(alpha = 0.2f),
+                                            border = BorderStroke(1.dp, Color(0xFF10B981)),
+                                        ) {
+                                            Text(
+                                                text = "EN UCUZ",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Black,
+                                                fontSize = 9.sp,
+                                                color = Color(0xFF10B981),
+                                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                            )
+                                        }
+                                    }
+                                }
+
+                                Spacer(modifier = Modifier.width(Spacing.small))
+
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(
+                                        text = "₺${offer.priceTry.formatPrice()}",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Black,
+                                        color = if (isCheapest) Color(0xFF10B981) else MaterialTheme.colorScheme.primary,
+                                    )
+                                    Spacer(modifier = Modifier.width(Spacing.small))
+                                    Text(
+                                        text = "↗",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

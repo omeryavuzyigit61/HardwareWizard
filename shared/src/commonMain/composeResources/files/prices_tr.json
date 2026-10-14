@@ -1,9 +1,65 @@
 {
   "cpu_amd_ryzen_7_7800x3d": {
-    "currentPriceTry": 18999.0,
-    "lowestPriceTry": 16499.0,
+    "currentPriceTry": 15431.4,
+    "lowestPriceTry": 15431.4,
     "highestPriceTry": 21500.0,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "idefix",
+        "priceTry": 15431.4,
+        "url": "https://www.akakce.com#/5740741/?s=3&v=13275&p=334009206&c=23112&g=1324299670&f=%2fr%2f%3fpr%3d334009206%26vd%3d13275%26pg%3d1324299670",
+        "inStock": true
+      },
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 15545.09,
+        "url": "https://www.akakce.com#/5740741/?s=4&v=12088&p=334009206&c=17384&g=1766904763&f=%2fr%2f%3fpr%3d334009206%26vd%3d12088%26pg%3d1766904763",
+        "inStock": true
+      },
+      {
+        "storeName": "n11",
+        "priceTry": 16249.0,
+        "url": "https://www.akakce.com#/5740741/?s=5&v=11070&p=334009206&c=15663&g=1722338245&f=%2fr%2f%3fpr%3d334009206%26vd%3d11070%26pg%3d1722338245",
+        "inStock": true
+      },
+      {
+        "storeName": "Pttavm",
+        "priceTry": 16683.27,
+        "url": "https://www.akakce.com#/5740741/?s=7&v=11281&p=334009206&c=15850&g=1754565576&f=%2fr%2f%3fpr%3d334009206%26vd%3d11281%26pg%3d1754565576",
+        "inStock": true
+      },
+      {
+        "storeName": "Teknosa",
+        "priceTry": 16709.55,
+        "url": "https://www.akakce.com#/5740741/?s=9&v=10402&p=334009206&c=21681&g=1766899303&f=%2fr%2f%3fpr%3d334009206%26vd%3d10402%26pg%3d1766899303",
+        "inStock": true
+      },
+      {
+        "storeName": "Gamemar.com Bir Oyuncu Mağazası",
+        "priceTry": 16748.9,
+        "url": "https://www.akakce.com#/5740741/?s=11&v=3215&p=334009206&c=18830&g=1766903767&f=%2fr%2f%3fpr%3d334009206%26vd%3d3215%26pg%3d1766903767",
+        "inStock": true
+      },
+      {
+        "storeName": "Piyasa Satıcısı",
+        "priceTry": 16950.0,
+        "url": "https://www.akakce.com#/5740741/?s=12&v=1538&p=334009206&c=15598&g=1766899151&f=%2fr%2f%3fpr%3d334009206%26vd%3d1538%26pg%3d1766899151",
+        "inStock": true
+      },
+      {
+        "storeName": "Teknomerkezim.com",
+        "priceTry": 17488.0,
+        "url": "https://www.akakce.com#/5740741/?s=16&v=3768&p=334009206&c=20406&g=1766899325&f=%2fr%2f%3fpr%3d334009206%26vd%3d3768%26pg%3d1766899325",
+        "inStock": true
+      },
+      {
+        "storeName": "Azaraks8,13 Yorum",
+        "priceTry": 17632.38,
+        "url": "https://www.akakce.com#/5740741/?s=1&v=2420&p=334009206&c=17362&g=1687294331&f=%2fr%2f%3fpr%3d334009206%26vd%3d2420%26pg%3d1687294331",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -36,14 +92,68 @@
       {
         "date": "2026-10-13",
         "price": 18999.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 15431.4
       }
     ]
   },
   "cpu_amd_ryzen_7_9800x3d": {
-    "currentPriceTry": 24500.0,
-    "lowestPriceTry": 22900.0,
+    "currentPriceTry": 21600.69,
+    "lowestPriceTry": 21600.69,
     "highestPriceTry": 26800.0,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 21600.69,
+        "url": "https://www.akakce.com#/8567200/?s=3&v=12088&p=812013733&c=17384&g=1766789963&f=%2fr%2f%3fpr%3d812013733%26vd%3d12088%26pg%3d1766789963",
+        "inStock": true
+      },
+      {
+        "storeName": "Amazon Prime",
+        "priceTry": 21699.0,
+        "url": "https://www.akakce.com#/8567200/?s=1&v=3656&p=812013733&c=20219&g=1741267291&f=%2fr%2f%3fpr%3d812013733%26vd%3d3656%26pg%3d1741267291",
+        "inStock": true
+      },
+      {
+        "storeName": "Pttavm",
+        "priceTry": 22217.32,
+        "url": "https://www.akakce.com#/8567200/?s=5&v=11281&p=812013733&c=15850&g=1658759525&f=%2fr%2f%3fpr%3d812013733%26vd%3d11281%26pg%3d1658759525",
+        "inStock": true
+      },
+      {
+        "storeName": "idefix",
+        "priceTry": 22689.81,
+        "url": "https://www.akakce.com#/8567200/?s=8&v=13275&p=812013733&c=23112&g=1256127710&f=%2fr%2f%3fpr%3d812013733%26vd%3d13275%26pg%3d1256127710",
+        "inStock": true
+      },
+      {
+        "storeName": "Pazarama",
+        "priceTry": 23299.0,
+        "url": "https://www.akakce.com#/8567200/?s=11&v=10694&p=812013733&c=21533&g=1237833759&f=%2fr%2f%3fpr%3d812013733%26vd%3d10694%26pg%3d1237833759",
+        "inStock": true
+      },
+      {
+        "storeName": "n11",
+        "priceTry": 23518.77,
+        "url": "https://www.akakce.com#/8567200/?s=14&v=11070&p=812013733&c=15663&g=1611388091&f=%2fr%2f%3fpr%3d812013733%26vd%3d11070%26pg%3d1611388091",
+        "inStock": true
+      },
+      {
+        "storeName": "Piyasa Satıcısı",
+        "priceTry": 23950.0,
+        "url": "https://www.akakce.com#/8567200/?s=15&v=1538&p=812013733&c=15598&g=1766900971&f=%2fr%2f%3fpr%3d812013733%26vd%3d1538%26pg%3d1766900971",
+        "inStock": true
+      },
+      {
+        "storeName": "Sinerji Bilgisayar7,828 Yorum",
+        "priceTry": 23998.8,
+        "url": "https://www.akakce.com#/8567200/?s=9&v=795&p=812013733&c=15902&g=1687451428&f=%2fr%2f%3fpr%3d812013733%26vd%3d795%26pg%3d1687451428",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2026-02-15",
@@ -68,14 +178,26 @@
       {
         "date": "2026-10-13",
         "price": 24500.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 21600.69
       }
     ]
   },
   "cpu_amd_ryzen_5_7600x": {
-    "currentPriceTry": 8499.0,
+    "currentPriceTry": 8595.0,
     "lowestPriceTry": 7200.0,
     "highestPriceTry": 9800.0,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 8595.0,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-5-7600x-alti-cekirdek-4-7-ghz-fiyati,2120992208.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-11-01",
@@ -104,14 +226,68 @@
       {
         "date": "2026-10-13",
         "price": 8499.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 8595.0
       }
     ]
   },
   "cpu_intel_core_i7_14700k": {
-    "currentPriceTry": 16999.0,
+    "currentPriceTry": 19499.52,
     "lowestPriceTry": 15200.0,
-    "highestPriceTry": 19400.0,
+    "highestPriceTry": 19499.52,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "idefix",
+        "priceTry": 19499.52,
+        "url": "https://www.akakce.com#/2978928/?s=2&v=13275&p=331588539&c=23112&g=1605077948&f=%2fr%2f%3fpr%3d331588539%26vd%3d13275%26pg%3d1605077948",
+        "inStock": true
+      },
+      {
+        "storeName": "n11",
+        "priceTry": 19529.07,
+        "url": "https://www.akakce.com#/2978928/?s=5&v=11070&p=331588539&c=15663&g=1765859702&f=%2fr%2f%3fpr%3d331588539%26vd%3d11070%26pg%3d1765859702",
+        "inStock": true
+      },
+      {
+        "storeName": "Pttavm",
+        "priceTry": 19928.04,
+        "url": "https://www.akakce.com#/2978928/?s=3&v=11281&p=331588539&c=15850&g=1718218133&f=%2fr%2f%3fpr%3d331588539%26vd%3d11281%26pg%3d1718218133",
+        "inStock": true
+      },
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 19994.07,
+        "url": "https://www.akakce.com#/2978928/?s=7&v=12088&p=331588539&c=17384&g=1698514822&f=%2fr%2f%3fpr%3d331588539%26vd%3d12088%26pg%3d1698514822",
+        "inStock": true
+      },
+      {
+        "storeName": "Pazarama",
+        "priceTry": 20142.32,
+        "url": "https://www.akakce.com#/2978928/?s=6&v=10694&p=331588539&c=21533&g=1430287907&f=%2fr%2f%3fpr%3d331588539%26vd%3d10694%26pg%3d1430287907",
+        "inStock": true
+      },
+      {
+        "storeName": "Piyasa Satıcısı",
+        "priceTry": 22426.98,
+        "url": "https://www.akakce.com#/2978928/?s=13&v=5088&p=331588539&c=23479&g=1687669956&f=%2fr%2f%3fpr%3d331588539%26vd%3d5088%26pg%3d1687669956",
+        "inStock": true
+      },
+      {
+        "storeName": "Sinerji Bilgisayar7,828 Yorum",
+        "priceTry": 22768.8,
+        "url": "https://www.akakce.com#/2978928/?s=16&v=795&p=331588539&c=15902&g=1687671260&f=%2fr%2f%3fpr%3d331588539%26vd%3d795%26pg%3d1687671260",
+        "inStock": true
+      },
+      {
+        "storeName": "Gaming'in Yeni Adresi",
+        "priceTry": 23235.16,
+        "url": "https://www.akakce.com#/2978928/?s=1&v=5625&p=331588539&c=24018&g=1766898244&f=%2fr%2f%3fpr%3d331588539%26vd%3d5625%26pg%3d1766898244",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-20",
@@ -140,14 +316,32 @@
       {
         "date": "2026-10-13",
         "price": 16999.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 19499.52
       }
     ]
   },
   "cpu_intel_core_i5_13600k": {
-    "currentPriceTry": 11499.0,
+    "currentPriceTry": 22499.98,
     "lowestPriceTry": 10100.0,
-    "highestPriceTry": 13500.0,
+    "highestPriceTry": 22499.98,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 22499.98,
+        "url": "https://www.akakce.com#/1072642/?s=8&v=12088&p=65766&c=17384&g=1599685366&f=%2fr%2f%3fpr%3d65766%26vd%3d12088%26pg%3d1599685366",
+        "inStock": true
+      },
+      {
+        "storeName": "Pttavm",
+        "priceTry": 24447.65,
+        "url": "https://www.akakce.com#/1072642/?s=7&v=11281&p=65766&c=15850&g=1577513058&f=%2fr%2f%3fpr%3d65766%26vd%3d11281%26pg%3d1577513058",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-10",
@@ -172,14 +366,19 @@
       {
         "date": "2026-10-13",
         "price": 11499.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 22499.98
       }
     ]
   },
   "gpu_asus_tuf_gaming_oc_geforce_rtx_4080_super": {
-    "currentPriceTry": 44999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 41500.0,
     "highestPriceTry": 49999.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-11-15",
@@ -212,10 +411,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_4070_super_ventus_2x": {
-    "currentPriceTry": 28499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 25900.0,
     "highestPriceTry": 31200.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-25",
@@ -248,10 +448,11 @@
     ]
   },
   "gpu_sapphire_pulse_radeon_rx_7800_xt": {
-    "currentPriceTry": 21999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19800.0,
     "highestPriceTry": 24500.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-11-05",
@@ -284,10 +485,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3060_ventus_2x_12g": {
-    "currentPriceTry": 11999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10200.0,
     "highestPriceTry": 13800.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -316,10 +518,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_32_gb": {
-    "currentPriceTry": 4899.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4200.0,
     "highestPriceTry": 5600.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-11-10",
@@ -348,10 +551,11 @@
     ]
   },
   "ram_g_skill_flare_x5_32_gb": {
-    "currentPriceTry": 4499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3950.0,
     "highestPriceTry": 5100.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-30",
@@ -380,10 +584,11 @@
     ]
   },
   "ram_corsair_vengeance_lpx_16_gb": {
-    "currentPriceTry": 1799.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1450.0,
     "highestPriceTry": 2100.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-11-01",
@@ -412,10 +617,11 @@
     ]
   },
   "motherboard_msi_b650_gaming_plus_wifi": {
-    "currentPriceTry": 7499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6500.0,
     "highestPriceTry": 8600.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-11-20",
@@ -444,10 +650,11 @@
     ]
   },
   "motherboard_asus_tuf_gaming_b650_plus_wifi": {
-    "currentPriceTry": 8899.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7900.0,
     "highestPriceTry": 9999.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -636,10 +843,11 @@
     ]
   },
   "case_corsair_4000d_airflow": {
-    "currentPriceTry": 3899.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3100.0,
     "highestPriceTry": 4500.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-20",
@@ -700,10 +908,11 @@
     ]
   },
   "psu_msi_mag_a850gl_pcie5": {
-    "currentPriceTry": 5299.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4600.0,
     "highestPriceTry": 6100.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-28",
@@ -732,10 +941,54 @@
     ]
   },
   "cpu_amd_ryzen_5_9600x": {
-    "currentPriceTry": 7892.0,
+    "currentPriceTry": 9299.0,
     "lowestPriceTry": 6787.0,
     "highestPriceTry": 9313.0,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "idefix",
+        "priceTry": 9299.0,
+        "url": "https://www.akakce.com#/5518283/?s=16&v=13275&p=706819130&c=23112&g=1280253663&f=%2fr%2f%3fpr%3d706819130%26vd%3d13275%26pg%3d1280253663",
+        "inStock": true
+      },
+      {
+        "storeName": "n11",
+        "priceTry": 9400.08,
+        "url": "https://www.akakce.com#/5518283/?s=15&v=11070&p=706819130&c=15663&g=1280227980&f=%2fr%2f%3fpr%3d706819130%26vd%3d11070%26pg%3d1280227980",
+        "inStock": true
+      },
+      {
+        "storeName": "Pttavm",
+        "priceTry": 10695.0,
+        "url": "https://www.akakce.com#/5518283/?s=11&v=11281&p=706819130&c=15850&g=1425240964&f=%2fr%2f%3fpr%3d706819130%26vd%3d11281%26pg%3d1425240964",
+        "inStock": true
+      },
+      {
+        "storeName": "Piyasa Satıcısı",
+        "priceTry": 10999.0,
+        "url": "https://www.akakce.com#/5518283/?s=10&v=317&p=706819130&c=15821&g=1766904664&f=%2fr%2f%3fpr%3d706819130%26vd%3d317%26pg%3d1766904664",
+        "inStock": true
+      },
+      {
+        "storeName": "Sinerji Bilgisayar7,828 Yorum",
+        "priceTry": 11575.2,
+        "url": "https://www.akakce.com#/5518283/?s=8&v=795&p=706819130&c=15902&g=1687537124&f=%2fr%2f%3fpr%3d706819130%26vd%3d795%26pg%3d1687537124",
+        "inStock": true
+      },
+      {
+        "storeName": "Teknomerkezim.com",
+        "priceTry": 11832.0,
+        "url": "https://www.akakce.com#/5518283/?s=6&v=3768&p=706819130&c=20406&g=1766899318&f=%2fr%2f%3fpr%3d706819130%26vd%3d3768%26pg%3d1766899318",
+        "inStock": true
+      },
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 11921.67,
+        "url": "https://www.akakce.com#/5518283/?s=2&v=12088&p=706819130&c=17384&g=1664864273&f=%2fr%2f%3fpr%3d706819130%26vd%3d12088%26pg%3d1664864273",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -764,14 +1017,26 @@
       {
         "date": "2026-10-13",
         "price": 7892.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 9299.0
       }
     ]
   },
   "cpu_amd_ryzen_7_7700x": {
-    "currentPriceTry": 9355.0,
+    "currentPriceTry": 11434.32,
     "lowestPriceTry": 9074.0,
-    "highestPriceTry": 11132.0,
+    "highestPriceTry": 11434.32,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 11434.32,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-7-7700x-sekiz-cekirdek-4-50-ghz-fiyati,2120928839.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -800,14 +1065,26 @@
       {
         "date": "2026-10-13",
         "price": 9355.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 11434.32
       }
     ]
   },
   "cpu_amd_ryzen_9_9950x3d": {
-    "currentPriceTry": 25025.0,
+    "currentPriceTry": 34623.9,
     "lowestPriceTry": 22773.0,
-    "highestPriceTry": 28779.0,
+    "highestPriceTry": 34623.9,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 34623.9,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-9-9950x3d-on-alti-cekirdek-4-3-ghz-fiyati,904043816.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -836,14 +1113,26 @@
       {
         "date": "2026-10-13",
         "price": 25025.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 34623.9
       }
     ]
   },
   "cpu_amd_ryzen_5_5500": {
-    "currentPriceTry": 2857.0,
+    "currentPriceTry": 4463.07,
     "lowestPriceTry": 2800.0,
-    "highestPriceTry": 3343.0,
+    "highestPriceTry": 4463.07,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 4463.07,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-5-5500-alti-cekirdek-3-60-ghz-fiyati,1782415465.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -872,14 +1161,26 @@
       {
         "date": "2026-10-13",
         "price": 2857.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 4463.07
       }
     ]
   },
   "cpu_amd_ryzen_7_9700x": {
-    "currentPriceTry": 11777.0,
+    "currentPriceTry": 14011.87,
     "lowestPriceTry": 11306.0,
-    "highestPriceTry": 13308.0,
+    "highestPriceTry": 14011.87,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 14011.87,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-7-9700x-sekiz-cekirdek-3-8-ghz-fiyati,706818645.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -908,14 +1209,26 @@
       {
         "date": "2026-10-13",
         "price": 11777.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 14011.87
       }
     ]
   },
   "cpu_amd_ryzen_5_5600x": {
-    "currentPriceTry": 6121.0,
+    "currentPriceTry": 7062.43,
     "lowestPriceTry": 6121.0,
     "highestPriceTry": 7100.0,
     "currency": "TRY",
+    "offers": [
+      {
+        "storeName": "Akakçe En Ucuz Mağaza",
+        "priceTry": 7062.43,
+        "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-5-5600x-alti-cekirdek-3-70-ghz-fiyati,874451068.html",
+        "inStock": true
+      }
+    ],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -944,14 +1257,19 @@
       {
         "date": "2026-10-13",
         "price": 6121.0
+      },
+      {
+        "date": "2026-10-14",
+        "price": 7062.43
       }
     ]
   },
   "cpu_amd_ryzen_5_5600": {
-    "currentPriceTry": 4836.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4497.0,
     "highestPriceTry": 5755.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -984,10 +1302,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5800x": {
-    "currentPriceTry": 6928.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5889.0,
     "highestPriceTry": 7759.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1020,10 +1339,11 @@
     ]
   },
   "cpu_intel_core_i9_14900k": {
-    "currentPriceTry": 16902.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 15888.0,
     "highestPriceTry": 18930.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1056,10 +1376,11 @@
     ]
   },
   "cpu_intel_core_i5_12400f": {
-    "currentPriceTry": 4196.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3818.0,
     "highestPriceTry": 4867.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1092,10 +1413,11 @@
     ]
   },
   "cpu_amd_ryzen_5_3600": {
-    "currentPriceTry": 3070.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2947.0,
     "highestPriceTry": 3438.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1128,10 +1450,11 @@
     ]
   },
   "cpu_amd_ryzen_5_7600": {
-    "currentPriceTry": 7583.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6901.0,
     "highestPriceTry": 8493.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1164,10 +1487,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5700x": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5490.0,
     "highestPriceTry": 6981.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1200,10 +1524,11 @@
     ]
   },
   "cpu_amd_ryzen_9_7900x": {
-    "currentPriceTry": 12093.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11367.0,
     "highestPriceTry": 14149.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1236,10 +1561,11 @@
     ]
   },
   "cpu_amd_ryzen_9_9900x": {
-    "currentPriceTry": 13822.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 13269.0,
     "highestPriceTry": 15066.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1272,10 +1598,11 @@
     ]
   },
   "cpu_intel_core_i5_14600k": {
-    "currentPriceTry": 7315.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6876.0,
     "highestPriceTry": 8559.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1308,10 +1635,11 @@
     ]
   },
   "cpu_intel_core_ultra_7_265k": {
-    "currentPriceTry": 10395.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9459.0,
     "highestPriceTry": 10915.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1344,10 +1672,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5700x3d": {
-    "currentPriceTry": 12062.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11580.0,
     "highestPriceTry": 13992.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1380,10 +1709,11 @@
     ]
   },
   "cpu_intel_core_i5_14400f": {
-    "currentPriceTry": 4851.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4802.0,
     "highestPriceTry": 5288.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1416,10 +1746,11 @@
     ]
   },
   "cpu_amd_ryzen_9_9950x": {
-    "currentPriceTry": 20552.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17675.0,
     "highestPriceTry": 23018.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1452,10 +1783,11 @@
     ]
   },
   "cpu_amd_ryzen_5_7500f": {
-    "currentPriceTry": 7800.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7644.0,
     "highestPriceTry": 8658.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1488,10 +1820,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5800xt": {
-    "currentPriceTry": 5390.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5120.0,
     "highestPriceTry": 5713.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1524,10 +1857,11 @@
     ]
   },
   "cpu_intel_core_ultra_9_285k": {
-    "currentPriceTry": 21560.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18973.0,
     "highestPriceTry": 23716.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1560,10 +1894,11 @@
     ]
   },
   "cpu_intel_core_i7_12700k": {
-    "currentPriceTry": 8245.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7256.0,
     "highestPriceTry": 9317.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1596,10 +1931,11 @@
     ]
   },
   "cpu_amd_ryzen_5_7600x3d": {
-    "currentPriceTry": 16690.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16690.0,
     "highestPriceTry": 18860.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1632,10 +1968,11 @@
     ]
   },
   "cpu_amd_ryzen_5_5600g": {
-    "currentPriceTry": 5197.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4365.0,
     "highestPriceTry": 5977.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1668,10 +2005,11 @@
     ]
   },
   "cpu_amd_ryzen_7_7700": {
-    "currentPriceTry": 11318.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10526.0,
     "highestPriceTry": 12789.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1704,10 +2042,11 @@
     ]
   },
   "cpu_intel_core_i5_13400f": {
-    "currentPriceTry": 5832.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5832.0,
     "highestPriceTry": 6765.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1740,10 +2079,11 @@
     ]
   },
   "cpu_intel_core_i7_12700kf": {
-    "currentPriceTry": 6737.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6265.0,
     "highestPriceTry": 7343.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1776,10 +2116,11 @@
     ]
   },
   "cpu_amd_ryzen_9_5900x": {
-    "currentPriceTry": 9817.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9326.0,
     "highestPriceTry": 10995.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1812,10 +2153,11 @@
     ]
   },
   "cpu_amd_ryzen_7_3700x": {
-    "currentPriceTry": 5503.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5173.0,
     "highestPriceTry": 6549.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1848,10 +2190,11 @@
     ]
   },
   "cpu_intel_core_i5_12600kf": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4354.0,
     "highestPriceTry": 5455.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1884,10 +2227,11 @@
     ]
   },
   "cpu_amd_ryzen_5_8400f": {
-    "currentPriceTry": 5296.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5031.0,
     "highestPriceTry": 5984.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1920,10 +2264,11 @@
     ]
   },
   "cpu_amd_ryzen_5_8500g": {
-    "currentPriceTry": 5871.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5049.0,
     "highestPriceTry": 6810.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1956,10 +2301,11 @@
     ]
   },
   "cpu_amd_threadripper_3990x": {
-    "currentPriceTry": 103950.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 92515.0,
     "highestPriceTry": 112266.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -1992,10 +2338,11 @@
     ]
   },
   "cpu_intel_core_i5_12600k": {
-    "currentPriceTry": 5705.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5363.0,
     "highestPriceTry": 6390.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2028,10 +2375,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5700g": {
-    "currentPriceTry": 6736.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6601.0,
     "highestPriceTry": 7679.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2064,10 +2412,11 @@
     ]
   },
   "cpu_amd_ryzen_9_5950x": {
-    "currentPriceTry": 10587.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9634.0,
     "highestPriceTry": 11857.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2100,10 +2449,11 @@
     ]
   },
   "cpu_amd_ryzen_7_5800x3d": {
-    "currentPriceTry": 27137.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 25509.0,
     "highestPriceTry": 30665.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2136,10 +2486,11 @@
     ]
   },
   "cpu_intel_core_i3_12100f": {
-    "currentPriceTry": 3059.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2631.0,
     "highestPriceTry": 3212.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2172,10 +2523,11 @@
     ]
   },
   "gpu_powercolor_rx7800xt_16g_p": {
-    "currentPriceTry": 23100.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 22407.0,
     "highestPriceTry": 26334.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2208,10 +2560,11 @@
     ]
   },
   "gpu_pny_vcnrtx6000ada_pb": {
-    "currentPriceTry": 268499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 236279.0,
     "highestPriceTry": 281924.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2244,10 +2597,11 @@
     ]
   },
   "gpu_asus_dual_geforce_rtx_3060_v2_oc_edition": {
-    "currentPriceTry": 12704.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10798.0,
     "highestPriceTry": 14356.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2280,10 +2634,11 @@
     ]
   },
   "gpu_xfx_rx_79tmbabf9": {
-    "currentPriceTry": 26960.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 22916.0,
     "highestPriceTry": 30734.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2316,10 +2671,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3060_ti_gaming_x": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17940.0,
     "highestPriceTry": 22230.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2352,10 +2708,11 @@
     ]
   },
   "gpu_amd_radeon_rx_6950_xt": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17745.0,
     "highestPriceTry": 21255.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2388,10 +2745,11 @@
     ]
   },
   "gpu_asrock_intel_arc_a380_challenger_itx": {
-    "currentPriceTry": 5390.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5013.0,
     "highestPriceTry": 6414.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2424,10 +2782,11 @@
     ]
   },
   "gpu_xfx_rx_79gmercb9": {
-    "currentPriceTry": 25795.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 23989.0,
     "highestPriceTry": 28632.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2460,10 +2819,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3080_ventus_3x_10g_oc": {
-    "currentPriceTry": 33880.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 33202.0,
     "highestPriceTry": 38284.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2496,10 +2856,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_2070_super_ventus_gp_oc": {
-    "currentPriceTry": 26526.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 24934.0,
     "highestPriceTry": 29444.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2532,10 +2893,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3070_ventus_3x_oc": {
-    "currentPriceTry": 20566.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 20155.0,
     "highestPriceTry": 23445.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2568,10 +2930,11 @@
     ]
   },
   "gpu_msi_geforce_gtx_1650_super": {
-    "currentPriceTry": 16132.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 14680.0,
     "highestPriceTry": 17745.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2604,10 +2967,11 @@
     ]
   },
   "gpu_asrock_radeon_rx6700xt_cld_12g": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18330.0,
     "highestPriceTry": 21255.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2640,10 +3004,11 @@
     ]
   },
   "gpu_msi_geforce_gtx_1060_6gt_ocv1": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19500.0,
     "highestPriceTry": 21255.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2676,10 +3041,11 @@
     ]
   },
   "gpu_msi_rtx_3060_ventus_3x_12g_oc": {
-    "currentPriceTry": 21945.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19750.0,
     "highestPriceTry": 24140.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2712,10 +3078,11 @@
     ]
   },
   "gpu_msi_rtx_4070_ti_super_16g_ventus_3x_black_oc": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16380.0,
     "highestPriceTry": 21840.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2748,10 +3115,11 @@
     ]
   },
   "gpu_pny_rtx_a_series": {
-    "currentPriceTry": 191499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 178094.0,
     "highestPriceTry": 224054.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2784,10 +3152,11 @@
     ]
   },
   "gpu_msi_rx_6600_xt_mech_2x_8g_oc": {
-    "currentPriceTry": 24948.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 23950.0,
     "highestPriceTry": 28191.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2820,10 +3189,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3060_ventus_2x_12g_oc": {
-    "currentPriceTry": 13465.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 13196.0,
     "highestPriceTry": 14273.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2856,10 +3226,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_2060_ventus_gp_oc": {
-    "currentPriceTry": 13475.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11454.0,
     "highestPriceTry": 15766.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2892,10 +3263,11 @@
     ]
   },
   "gpu_msi_rx_580_8g": {
-    "currentPriceTry": 10010.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9610.0,
     "highestPriceTry": 11111.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2928,10 +3300,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3080_gaming_x_trio_10g": {
-    "currentPriceTry": 29992.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 26093.0,
     "highestPriceTry": 33291.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -2964,10 +3337,11 @@
     ]
   },
   "gpu_msi_radeon_rx_5600_xt_gaming_mx": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18525.0,
     "highestPriceTry": 22230.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3000,10 +3374,11 @@
     ]
   },
   "gpu_msi_rtx_3070_gaming_x_trio": {
-    "currentPriceTry": 26912.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 23413.0,
     "highestPriceTry": 30680.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3036,10 +3411,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3060_gaming_x12g": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18915.0,
     "highestPriceTry": 22035.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3072,10 +3448,11 @@
     ]
   },
   "gpu_powercolor_rx_7900_xt_20g": {
-    "currentPriceTry": 38446.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 33064.0,
     "highestPriceTry": 45751.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3108,10 +3485,11 @@
     ]
   },
   "gpu_msi_radeon_rx_570_armor_8g": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19305.0,
     "highestPriceTry": 22815.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3144,10 +3522,11 @@
     ]
   },
   "gpu_msi_rtx_5060_ti_16g_inspire_2x_oc": {
-    "currentPriceTry": 20789.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18086.0,
     "highestPriceTry": 23699.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3180,10 +3559,11 @@
     ]
   },
   "gpu_msi_radeon_rx_5500_xt_mech_8g_oc": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17355.0,
     "highestPriceTry": 22230.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3216,10 +3596,11 @@
     ]
   },
   "gpu_msi_geforce_gtx_1060_3g_ocv1": {
-    "currentPriceTry": 19500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17940.0,
     "highestPriceTry": 21060.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3252,10 +3633,11 @@
     ]
   },
   "gpu_pny_vcnrtx4000ada_pb": {
-    "currentPriceTry": 49693.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 47208.0,
     "highestPriceTry": 57644.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3288,10 +3670,11 @@
     ]
   },
   "gpu_msi_radeon_rx_6600_mech_2x_8g": {
-    "currentPriceTry": 22908.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 22908.0,
     "highestPriceTry": 25428.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3324,10 +3707,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3090_gaming_x_trio_24g": {
-    "currentPriceTry": 65296.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 59419.0,
     "highestPriceTry": 71826.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3360,10 +3744,11 @@
     ]
   },
   "gpu_msi_rtx_4090_ventus_3x_24g_oc": {
-    "currentPriceTry": 118926.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 109412.0,
     "highestPriceTry": 135576.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3396,10 +3781,11 @@
     ]
   },
   "gpu_amd_radeon_pro_wx_7100": {
-    "currentPriceTry": 7121.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6765.0,
     "highestPriceTry": 8403.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3432,10 +3818,11 @@
     ]
   },
   "gpu_pny_vcqrtx8000_pb": {
-    "currentPriceTry": 126933.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 115509.0,
     "highestPriceTry": 149781.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3468,10 +3855,11 @@
     ]
   },
   "gpu_nvidia_titan_rtx": {
-    "currentPriceTry": 48856.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 41528.0,
     "highestPriceTry": 58139.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3504,10 +3892,11 @@
     ]
   },
   "gpu_asus_phoenix_geforce_rtx_3060_v2": {
-    "currentPriceTry": 11550.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10972.0,
     "highestPriceTry": 12705.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3540,10 +3929,11 @@
     ]
   },
   "gpu_pny_vcnrtx2000ada_pb": {
-    "currentPriceTry": 27178.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 24732.0,
     "highestPriceTry": 29624.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3576,10 +3966,11 @@
     ]
   },
   "gpu_msi_geforce_rtx_3090_ti_gaming_x_trio_24g": {
-    "currentPriceTry": 76576.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 69684.0,
     "highestPriceTry": 91125.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3612,10 +4003,11 @@
     ]
   },
   "gpu_pny_vcqrtx4000_pb": {
-    "currentPriceTry": 13473.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 12126.0,
     "highestPriceTry": 14955.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3648,10 +4040,11 @@
     ]
   },
   "motherboard_asus_prime_b650_plus_wifi": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5606.0,
     "highestPriceTry": 7022.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3684,10 +4077,11 @@
     ]
   },
   "motherboard_msi_mag_b650_tomahawk_wifi": {
-    "currentPriceTry": 7293.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6782.0,
     "highestPriceTry": 8606.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3720,10 +4114,11 @@
     ]
   },
   "motherboard_msi_b760_gaming_plus_wifi": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5486.0,
     "highestPriceTry": 6410.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3756,10 +4151,11 @@
     ]
   },
   "motherboard_gigabyte_x870e_aorus_elite_wifi7": {
-    "currentPriceTry": 12524.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11898.0,
     "highestPriceTry": 14904.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3792,10 +4188,11 @@
     ]
   },
   "motherboard_asus_prime_b550m_a_wifi_ii": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3349.0,
     "highestPriceTry": 4350.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3828,10 +4225,11 @@
     ]
   },
   "motherboard_gigabyte_b650_eagle_ax": {
-    "currentPriceTry": 6083.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5657.0,
     "highestPriceTry": 6448.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3864,10 +4262,11 @@
     ]
   },
   "motherboard_asrock_b650m_pro_rs_wifi": {
-    "currentPriceTry": 5390.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5336.0,
     "highestPriceTry": 5983.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3900,10 +4299,11 @@
     ]
   },
   "motherboard_msi_mag_x870_tomahawk_wifi": {
-    "currentPriceTry": 10395.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8940.0,
     "highestPriceTry": 11538.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3936,10 +4336,11 @@
     ]
   },
   "motherboard_asus_b650e_max_gaming_wifi_w": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4909.0,
     "highestPriceTry": 6699.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -3972,10 +4373,11 @@
     ]
   },
   "motherboard_msi_pro_b650_s_wifi": {
-    "currentPriceTry": 5236.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4660.0,
     "highestPriceTry": 5917.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4008,10 +4410,11 @@
     ]
   },
   "motherboard_gigabyte_b550m_k": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3542.0,
     "highestPriceTry": 4428.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4044,10 +4447,11 @@
     ]
   },
   "motherboard_msi_pro_b550m_vc_wifi": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3812.0,
     "highestPriceTry": 4428.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4080,10 +4484,11 @@
     ]
   },
   "motherboard_msi_pro_z790_a_max_wifi": {
-    "currentPriceTry": 8470.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7115.0,
     "highestPriceTry": 9317.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4116,10 +4521,11 @@
     ]
   },
   "motherboard_gigabyte_x870_eagle_wifi7": {
-    "currentPriceTry": 8855.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7881.0,
     "highestPriceTry": 10272.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4152,10 +4558,11 @@
     ]
   },
   "motherboard_gigabyte_x870_aorus_elite_wifi7_ice": {
-    "currentPriceTry": 11550.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10857.0,
     "highestPriceTry": 12821.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4188,10 +4595,11 @@
     ]
   },
   "motherboard_msi_b550m_pro_vdh_wifi": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3811.0,
     "highestPriceTry": 4997.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4224,10 +4632,11 @@
     ]
   },
   "motherboard_asus_rog_strix_x870e_e_gaming_wifi": {
-    "currentPriceTry": 18403.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17299.0,
     "highestPriceTry": 21163.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4260,10 +4669,11 @@
     ]
   },
   "motherboard_gigabyte_b760m_gaming_plus_wifi_ddr4": {
-    "currentPriceTry": 5370.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4564.0,
     "highestPriceTry": 6283.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4296,10 +4706,11 @@
     ]
   },
   "motherboard_asus_rog_strix_b650_a_gaming_wifi": {
-    "currentPriceTry": 6351.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6033.0,
     "highestPriceTry": 7240.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4332,10 +4743,11 @@
     ]
   },
   "motherboard_gigabyte_b650m_gaming_plus_wifi": {
-    "currentPriceTry": 6158.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5296.0,
     "highestPriceTry": 6835.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4368,10 +4780,11 @@
     ]
   },
   "motherboard_msi_mag_b550_tomahawk_max_wifi": {
-    "currentPriceTry": 6545.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5563.0,
     "highestPriceTry": 7789.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4404,10 +4817,11 @@
     ]
   },
   "motherboard_gigabyte_b650_gaming_x_ax_v2": {
-    "currentPriceTry": 7103.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6606.0,
     "highestPriceTry": 7742.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4440,10 +4854,11 @@
     ]
   },
   "motherboard_asus_rog_strix_x870_a_gaming_wifi": {
-    "currentPriceTry": 12281.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11667.0,
     "highestPriceTry": 14123.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4476,10 +4891,11 @@
     ]
   },
   "motherboard_asus_tuf_gaming_b550_plus_wifi_ii": {
-    "currentPriceTry": 5736.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4876.0,
     "highestPriceTry": 6711.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4512,10 +4928,11 @@
     ]
   },
   "motherboard_asus_tuf_gaming_b650_e_wifi": {
-    "currentPriceTry": 7700.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7007.0,
     "highestPriceTry": 8778.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4548,10 +4965,11 @@
     ]
   },
   "motherboard_gigabyte_z790_eagle_ax": {
-    "currentPriceTry": 6545.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6283.0,
     "highestPriceTry": 7527.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4584,10 +5002,11 @@
     ]
   },
   "motherboard_msi_pro_b650m_p": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5024.0,
     "highestPriceTry": 6295.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4620,10 +5039,11 @@
     ]
   },
   "motherboard_msi_pro_b760m_p_ddr4": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3734.0,
     "highestPriceTry": 4389.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4656,10 +5076,11 @@
     ]
   },
   "motherboard_asus_rog_strix_b550_f_gaming_wifi_ii": {
-    "currentPriceTry": 6545.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6218.0,
     "highestPriceTry": 7658.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4692,10 +5113,11 @@
     ]
   },
   "motherboard_asus_rog_crosshair_x870e_hero": {
-    "currentPriceTry": 25025.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 23023.0,
     "highestPriceTry": 28529.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4728,10 +5150,11 @@
     ]
   },
   "motherboard_gigabyte_b550m_aorus_elite_ax": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4966.0,
     "highestPriceTry": 6410.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4764,10 +5187,11 @@
     ]
   },
   "motherboard_asrock_b650m_pg_lightning_wifi": {
-    "currentPriceTry": 7379.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6494.0,
     "highestPriceTry": 8338.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4800,10 +5224,11 @@
     ]
   },
   "motherboard_msi_mpg_b550_gaming_plus": {
-    "currentPriceTry": 4042.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3517.0,
     "highestPriceTry": 4446.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4836,10 +5261,11 @@
     ]
   },
   "motherboard_msi_pro_b650m_a_wifi": {
-    "currentPriceTry": 5621.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5228.0,
     "highestPriceTry": 6352.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4872,10 +5298,11 @@
     ]
   },
   "motherboard_asus_rog_strix_b650e_f_gaming_wifi": {
-    "currentPriceTry": 9789.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8810.0,
     "highestPriceTry": 10768.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4908,10 +5335,11 @@
     ]
   },
   "motherboard_asrock_b550m_pro4": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3542.0,
     "highestPriceTry": 4466.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4944,10 +5372,11 @@
     ]
   },
   "motherboard_msi_mag_x670e_tomahawk_wifi": {
-    "currentPriceTry": 9575.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9479.0,
     "highestPriceTry": 10054.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -4980,10 +5409,11 @@
     ]
   },
   "motherboard_asus_rog_strix_b650e_i_gaming_wifi": {
-    "currentPriceTry": 8468.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7113.0,
     "highestPriceTry": 9061.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5016,10 +5446,11 @@
     ]
   },
   "motherboard_msi_mpg_x870e_carbon_wifi": {
-    "currentPriceTry": 19250.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19250.0,
     "highestPriceTry": 22330.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5052,10 +5483,11 @@
     ]
   },
   "motherboard_asus_tuf_gaming_x870_plus_wifi": {
-    "currentPriceTry": 10279.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9868.0,
     "highestPriceTry": 10999.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5088,10 +5520,11 @@
     ]
   },
   "motherboard_gigabyte_z790_aorus_elite_ax": {
-    "currentPriceTry": 7122.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6552.0,
     "highestPriceTry": 7621.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5124,10 +5557,11 @@
     ]
   },
   "motherboard_msi_b550_a_pro": {
-    "currentPriceTry": 4851.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4560.0,
     "highestPriceTry": 5676.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5160,10 +5594,11 @@
     ]
   },
   "motherboard_asus_rog_crosshair_x870e_extreme": {
-    "currentPriceTry": 38500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 37730.0,
     "highestPriceTry": 42350.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5196,10 +5631,11 @@
     ]
   },
   "ram_corsair_vengeance_32_gb": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4755.0,
     "highestPriceTry": 5706.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5232,10 +5668,11 @@
     ]
   },
   "ram_corsair_vengeance_lpx_32_gb": {
-    "currentPriceTry": 3002.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2552.0,
     "highestPriceTry": 3332.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5268,10 +5705,11 @@
     ]
   },
   "ram_crucial_pro_overclocking_32_gb": {
-    "currentPriceTry": 3272.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3272.0,
     "highestPriceTry": 3697.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5304,10 +5742,11 @@
     ]
   },
   "ram_g_skill_trident_z5_rgb_64_gb": {
-    "currentPriceTry": 9047.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8323.0,
     "highestPriceTry": 10042.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5340,10 +5779,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_64_gb": {
-    "currentPriceTry": 8855.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8412.0,
     "highestPriceTry": 9829.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5376,10 +5816,11 @@
     ]
   },
   "ram_g_skill_trident_z5_neo_rgb_32_gb": {
-    "currentPriceTry": 4620.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4481.0,
     "highestPriceTry": 5498.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5412,10 +5853,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_pro_32_gb": {
-    "currentPriceTry": 4428.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3985.0,
     "highestPriceTry": 5004.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5448,10 +5890,11 @@
     ]
   },
   "ram_kingston_fury_beast_32_gb": {
-    "currentPriceTry": 4735.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4640.0,
     "highestPriceTry": 5493.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5484,10 +5927,11 @@
     ]
   },
   "ram_g_skill_trident_z5_neo_rgb_64_gb": {
-    "currentPriceTry": 8008.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6727.0,
     "highestPriceTry": 9449.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5520,10 +5964,11 @@
     ]
   },
   "ram_g_skill_ripjaws_v_32_gb": {
-    "currentPriceTry": 2771.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2577.0,
     "highestPriceTry": 3270.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5556,10 +6001,11 @@
     ]
   },
   "ram_kingston_fury_beast_16_gb": {
-    "currentPriceTry": 2423.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2326.0,
     "highestPriceTry": 2811.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5592,10 +6038,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_pro_16_gb": {
-    "currentPriceTry": 2117.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1884.0,
     "highestPriceTry": 2244.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5628,10 +6075,11 @@
     ]
   },
   "ram_corsair_vengeance_64_gb": {
-    "currentPriceTry": 6017.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5175.0,
     "highestPriceTry": 6739.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5664,10 +6112,11 @@
     ]
   },
   "ram_g_skill_flare_x5_64_gb": {
-    "currentPriceTry": 7468.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6647.0,
     "highestPriceTry": 8364.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5700,10 +6149,11 @@
     ]
   },
   "ram_g_skill_ripjaws_v_64_gb": {
-    "currentPriceTry": 52048.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 48925.0,
     "highestPriceTry": 58814.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5736,10 +6186,11 @@
     ]
   },
   "ram_g_skill_trident_z5_royal_neo_rgb_32_gb": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5197.0,
     "highestPriceTry": 6757.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5772,10 +6223,11 @@
     ]
   },
   "ram_g_skill_trident_z_rgb_32_gb": {
-    "currentPriceTry": 3195.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2780.0,
     "highestPriceTry": 3515.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5808,10 +6260,11 @@
     ]
   },
   "ram_g_skill_ripjaws_v_16_gb": {
-    "currentPriceTry": 1771.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1771.0,
     "highestPriceTry": 1948.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5844,10 +6297,11 @@
     ]
   },
   "ram_crucial_classic_16_gb": {
-    "currentPriceTry": 1694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1542.0,
     "highestPriceTry": 1830.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5880,10 +6334,11 @@
     ]
   },
   "ram_g_skill_ripjaws_s5_32_gb": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3981.0,
     "highestPriceTry": 5040.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5916,10 +6371,11 @@
     ]
   },
   "ram_corsair_vengeance_lpx_64_gb": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5012.0,
     "highestPriceTry": 7101.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5952,10 +6408,11 @@
     ]
   },
   "ram_crucial_pro_32_gb": {
-    "currentPriceTry": 3195.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3163.0,
     "highestPriceTry": 3674.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -5988,10 +6445,11 @@
     ]
   },
   "ram_kingston_fury_beast_rgb_32_gb": {
-    "currentPriceTry": 5197.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4521.0,
     "highestPriceTry": 5873.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6024,10 +6482,11 @@
     ]
   },
   "ram_crucial_pro_64_gb": {
-    "currentPriceTry": 5390.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5120.0,
     "highestPriceTry": 5875.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6060,10 +6519,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_192_gb": {
-    "currentPriceTry": 23677.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 22730.0,
     "highestPriceTry": 26992.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6096,10 +6556,11 @@
     ]
   },
   "ram_kingston_fury_beast_64_gb": {
-    "currentPriceTry": 9009.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8739.0,
     "highestPriceTry": 10450.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6132,10 +6593,11 @@
     ]
   },
   "ram_g_skill_trident_z5_rgb_48_gb": {
-    "currentPriceTry": 10010.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9009.0,
     "highestPriceTry": 11712.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6168,10 +6630,11 @@
     ]
   },
   "ram_g_skill_trident_z5_rgb_32_gb": {
-    "currentPriceTry": 4504.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4324.0,
     "highestPriceTry": 4909.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6204,10 +6667,11 @@
     ]
   },
   "ram_corsair_vengeance_16_gb": {
-    "currentPriceTry": 2502.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2202.0,
     "highestPriceTry": 2902.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6240,10 +6704,11 @@
     ]
   },
   "ram_g_skill_ripjaws_s5_64_gb": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5251.0,
     "highestPriceTry": 6743.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6276,10 +6741,11 @@
     ]
   },
   "ram_crucial_cp2k64g56c46u5_128_gb": {
-    "currentPriceTry": 11550.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10279.0,
     "highestPriceTry": 13052.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6312,10 +6778,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_128_gb": {
-    "currentPriceTry": 21252.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19127.0,
     "highestPriceTry": 24227.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6348,10 +6815,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_pro_sl_32_gb": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3854.0,
     "highestPriceTry": 4870.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6384,10 +6852,11 @@
     ]
   },
   "ram_g_skill_trident_z5_royal_32_gb": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5311.0,
     "highestPriceTry": 6564.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6420,10 +6889,11 @@
     ]
   },
   "ram_g_skill_trident_z_rgb_16_gb": {
-    "currentPriceTry": 2117.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2096.0,
     "highestPriceTry": 2498.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6456,10 +6926,11 @@
     ]
   },
   "ram_corsair_vengeance_128_gb": {
-    "currentPriceTry": 14360.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 12206.0,
     "highestPriceTry": 16801.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6492,10 +6963,11 @@
     ]
   },
   "ram_corsair_vengeance_rgb_16_gb": {
-    "currentPriceTry": 2617.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2434.0,
     "highestPriceTry": 2800.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6528,10 +7000,11 @@
     ]
   },
   "ram_crucial_ct2k8g48c40u5_16_gb": {
-    "currentPriceTry": 1617.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1552.0,
     "highestPriceTry": 1811.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6564,10 +7037,11 @@
     ]
   },
   "ram_g_skill_trident_z5_neo_64_gb": {
-    "currentPriceTry": 7892.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6629.0,
     "highestPriceTry": 9234.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6600,10 +7074,11 @@
     ]
   },
   "ram_kingston_fury_beast_8_gb": {
-    "currentPriceTry": 1151.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1047.0,
     "highestPriceTry": 1324.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6636,10 +7111,11 @@
     ]
   },
   "ram_g_skill_trident_z5_royal_64_gb": {
-    "currentPriceTry": 10010.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9109.0,
     "highestPriceTry": 11512.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6672,10 +7148,11 @@
     ]
   },
   "ram_crucial_ct2k16g48c40u5_32_gb": {
-    "currentPriceTry": 2848.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2563.0,
     "highestPriceTry": 3332.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6708,10 +7185,11 @@
     ]
   },
   "storage_samsung_990_pro": {
-    "currentPriceTry": 5775.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5371.0,
     "highestPriceTry": 6757.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6744,10 +7222,11 @@
     ]
   },
   "storage_crucial_p3_plus": {
-    "currentPriceTry": 2193.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2105.0,
     "highestPriceTry": 2456.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6780,10 +7259,11 @@
     ]
   },
   "storage_kingston_nv3": {
-    "currentPriceTry": 2233.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2054.0,
     "highestPriceTry": 2434.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6816,10 +7296,11 @@
     ]
   },
   "storage_samsung_990_evo_plus": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4304.0,
     "highestPriceTry": 5506.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6852,10 +7333,11 @@
     ]
   },
   "storage_western_digital_wd_black_sn850x": {
-    "currentPriceTry": 5950.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5593.0,
     "highestPriceTry": 6724.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6888,10 +7370,11 @@
     ]
   },
   "storage_samsung_9100_pro": {
-    "currentPriceTry": 16555.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 14568.0,
     "highestPriceTry": 18210.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6924,10 +7407,11 @@
     ]
   },
   "storage_seagate_barracuda_compute": {
-    "currentPriceTry": 2579.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2192.0,
     "highestPriceTry": 2966.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6960,10 +7444,11 @@
     ]
   },
   "storage_western_digital_black_sn770": {
-    "currentPriceTry": 3002.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2792.0,
     "highestPriceTry": 3212.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -6996,10 +7481,11 @@
     ]
   },
   "storage_samsung_870_evo": {
-    "currentPriceTry": 3577.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3362.0,
     "highestPriceTry": 4185.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7032,10 +7518,11 @@
     ]
   },
   "storage_western_digital_blue_sn580": {
-    "currentPriceTry": 2502.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2427.0,
     "highestPriceTry": 2677.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7068,10 +7555,11 @@
     ]
   },
   "storage_seagate_ironwolf_pro": {
-    "currentPriceTry": 18480.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 15708.0,
     "highestPriceTry": 19774.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7104,10 +7592,11 @@
     ]
   },
   "storage_intel_ssdpedmd020t401": {
-    "currentPriceTry": 151574.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 127322.0,
     "highestPriceTry": 171279.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7140,10 +7629,11 @@
     ]
   },
   "storage_seagate_barracuda": {
-    "currentPriceTry": 2887.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2714.0,
     "highestPriceTry": 3291.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7176,10 +7666,11 @@
     ]
   },
   "storage_samsung_980_pro": {
-    "currentPriceTry": 7121.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6480.0,
     "highestPriceTry": 7619.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7212,10 +7703,11 @@
     ]
   },
   "storage_samsung_970_evo_plus": {
-    "currentPriceTry": 5159.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4488.0,
     "highestPriceTry": 5984.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7248,10 +7740,11 @@
     ]
   },
   "storage_western_digital_caviar_blue": {
-    "currentPriceTry": 1655.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1589.0,
     "highestPriceTry": 1969.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7284,10 +7777,11 @@
     ]
   },
   "storage_crucial_t500": {
-    "currentPriceTry": 4812.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4571.0,
     "highestPriceTry": 5486.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7320,10 +7814,11 @@
     ]
   },
   "storage_crucial_p310": {
-    "currentPriceTry": 2502.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2127.0,
     "highestPriceTry": 2852.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7356,10 +7851,11 @@
     ]
   },
   "storage_kingston_nv2": {
-    "currentPriceTry": 2532.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2329.0,
     "highestPriceTry": 2760.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7392,10 +7888,11 @@
     ]
   },
   "storage_crucial_t705": {
-    "currentPriceTry": 7700.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7700.0,
     "highestPriceTry": 9163.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7428,10 +7925,11 @@
     ]
   },
   "storage_western_digital_wd_blue_sn5000": {
-    "currentPriceTry": 2302.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2095.0,
     "highestPriceTry": 2463.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7464,10 +7962,11 @@
     ]
   },
   "storage_western_digital_wd_black_sn7100": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4354.0,
     "highestPriceTry": 5656.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7500,10 +7999,11 @@
     ]
   },
   "storage_kingston_kc3000": {
-    "currentPriceTry": 6233.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5485.0,
     "highestPriceTry": 6856.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7536,10 +8036,11 @@
     ]
   },
   "storage_samsung_870_qvo": {
-    "currentPriceTry": 24255.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 24012.0,
     "highestPriceTry": 28378.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7572,10 +8073,11 @@
     ]
   },
   "storage_crucial_p3": {
-    "currentPriceTry": 2671.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2431.0,
     "highestPriceTry": 3152.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7608,10 +8110,11 @@
     ]
   },
   "storage_western_digital_blue": {
-    "currentPriceTry": 2502.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2452.0,
     "highestPriceTry": 2977.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7644,10 +8147,11 @@
     ]
   },
   "storage_kingston_fury_renegade": {
-    "currentPriceTry": 5929.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4980.0,
     "highestPriceTry": 6640.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7680,10 +8184,11 @@
     ]
   },
   "storage_crucial_bx500": {
-    "currentPriceTry": 2579.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2502.0,
     "highestPriceTry": 2966.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7716,10 +8221,11 @@
     ]
   },
   "storage_western_digital_wd_black_sn8100": {
-    "currentPriceTry": 17902.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16291.0,
     "highestPriceTry": 19155.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7752,10 +8258,11 @@
     ]
   },
   "storage_western_digital_wd_green_sn3000": {
-    "currentPriceTry": 2618.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2330.0,
     "highestPriceTry": 2880.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7788,10 +8295,11 @@
     ]
   },
   "storage_samsung_990_pro_w_heatsink": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5298.0,
     "highestPriceTry": 7022.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7824,10 +8332,11 @@
     ]
   },
   "storage_samsung_990_evo": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4304.0,
     "highestPriceTry": 5756.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7860,10 +8369,11 @@
     ]
   },
   "storage_samsung_980": {
-    "currentPriceTry": 4116.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3787.0,
     "highestPriceTry": 4898.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7896,10 +8406,11 @@
     ]
   },
   "storage_kingston_a400": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 839.0,
     "highestPriceTry": 1179.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7932,10 +8443,11 @@
     ]
   },
   "storage_samsung_9100_pro_w_heatsink": {
-    "currentPriceTry": 17325.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16805.0,
     "highestPriceTry": 19404.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -7968,10 +8480,11 @@
     ]
   },
   "storage_crucial_p510": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3580.0,
     "highestPriceTry": 4466.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8004,10 +8517,11 @@
     ]
   },
   "storage_western_digital_green_sn350": {
-    "currentPriceTry": 2139.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1946.0,
     "highestPriceTry": 2545.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8040,10 +8554,11 @@
     ]
   },
   "storage_seagate_ironwolf_nas": {
-    "currentPriceTry": 6568.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5780.0,
     "highestPriceTry": 7750.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8076,10 +8591,11 @@
     ]
   },
   "storage_western_digital_gold": {
-    "currentPriceTry": 19250.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 18865.0,
     "highestPriceTry": 21945.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8112,10 +8628,11 @@
     ]
   },
   "storage_samsung_970_evo": {
-    "currentPriceTry": 5626.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5401.0,
     "highestPriceTry": 6470.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8148,10 +8665,11 @@
     ]
   },
   "storage_seagate_exos_x24": {
-    "currentPriceTry": 18480.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 17926.0,
     "highestPriceTry": 20882.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8184,10 +8702,11 @@
     ]
   },
   "storage_samsung_860_evo": {
-    "currentPriceTry": 5472.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4925.0,
     "highestPriceTry": 5964.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8220,10 +8739,11 @@
     ]
   },
   "storage_western_digital_wd_red_pro": {
-    "currentPriceTry": 18480.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16262.0,
     "highestPriceTry": 20328.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8256,10 +8776,11 @@
     ]
   },
   "storage_crucial_t700": {
-    "currentPriceTry": 14630.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 12582.0,
     "highestPriceTry": 16532.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8292,10 +8813,11 @@
     ]
   },
   "storage_crucial_p5_plus": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5790.0,
     "highestPriceTry": 6653.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8328,10 +8850,11 @@
     ]
   },
   "psu_msi_mag_a750gl_pcie5": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3896.0,
     "highestPriceTry": 4913.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8364,10 +8887,11 @@
     ]
   },
   "psu_corsair_rm1000e_atx_3_0": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6514.0,
     "highestPriceTry": 7900.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8400,10 +8924,11 @@
     ]
   },
   "psu_msi_mag_a650bn": {
-    "currentPriceTry": 2887.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2627.0,
     "highestPriceTry": 3436.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8436,10 +8961,11 @@
     ]
   },
   "psu_corsair_rm1000e_2023": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6930.0,
     "highestPriceTry": 7970.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8472,10 +8998,11 @@
     ]
   },
   "psu_corsair_rm750e_2025": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3658.0,
     "highestPriceTry": 4312.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8508,10 +9035,11 @@
     ]
   },
   "psu_corsair_rm850e_2025": {
-    "currentPriceTry": 4620.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4620.0,
     "highestPriceTry": 5082.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8544,10 +9072,11 @@
     ]
   },
   "psu_msi_mag_a550bn": {
-    "currentPriceTry": 2117.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1969.0,
     "highestPriceTry": 2329.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8580,10 +9109,11 @@
     ]
   },
   "psu_corsair_rm850x_2024": {
-    "currentPriceTry": 5582.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5303.0,
     "highestPriceTry": 6419.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8616,10 +9146,11 @@
     ]
   },
   "psu_corsair_sf1000_2024": {
-    "currentPriceTry": 9240.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9240.0,
     "highestPriceTry": 10903.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8652,10 +9183,11 @@
     ]
   },
   "psu_msi_mag_a650gl": {
-    "currentPriceTry": 5003.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4653.0,
     "highestPriceTry": 5603.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8688,10 +9220,11 @@
     ]
   },
   "psu_thermaltake_smart": {
-    "currentPriceTry": 1538.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1400.0,
     "highestPriceTry": 1707.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8724,10 +9257,11 @@
     ]
   },
   "psu_corsair_sf750_2024": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6029.0,
     "highestPriceTry": 7900.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8760,10 +9294,11 @@
     ]
   },
   "psu_corsair_rm1000x_2024": {
-    "currentPriceTry": 8083.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6871.0,
     "highestPriceTry": 8730.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8796,10 +9331,11 @@
     ]
   },
   "psu_corsair_cx_2023": {
-    "currentPriceTry": 2694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2398.0,
     "highestPriceTry": 3152.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8832,10 +9368,11 @@
     ]
   },
   "psu_be_quiet_pure_power_12_m": {
-    "currentPriceTry": 4809.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4617.0,
     "highestPriceTry": 5386.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8868,10 +9405,11 @@
     ]
   },
   "psu_corsair_rm850": {
-    "currentPriceTry": 4812.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4812.0,
     "highestPriceTry": 5389.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8904,10 +9442,11 @@
     ]
   },
   "psu_corsair_sf850_2024": {
-    "currentPriceTry": 7507.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6756.0,
     "highestPriceTry": 8858.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8940,10 +9479,11 @@
     ]
   },
   "psu_corsair_rm1000e_2025": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5729.0,
     "highestPriceTry": 6530.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -8976,10 +9516,11 @@
     ]
   },
   "psu_corsair_rm650e_2025": {
-    "currentPriceTry": 4042.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3921.0,
     "highestPriceTry": 4365.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9012,10 +9553,11 @@
     ]
   },
   "psu_thermaltake_toughpower_gx2": {
-    "currentPriceTry": 2694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2452.0,
     "highestPriceTry": 3017.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9048,10 +9590,11 @@
     ]
   },
   "psu_thermaltake_toughpower_gf1_2024": {
-    "currentPriceTry": 4004.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3644.0,
     "highestPriceTry": 4565.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9084,10 +9627,11 @@
     ]
   },
   "psu_msi_mag_a750bn_pcie5": {
-    "currentPriceTry": 2887.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2627.0,
     "highestPriceTry": 3147.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9120,10 +9664,11 @@
     ]
   },
   "psu_corsair_rm750e_2023": {
-    "currentPriceTry": 4200.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3528.0,
     "highestPriceTry": 4746.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9156,10 +9701,11 @@
     ]
   },
   "psu_corsair_ax1600i": {
-    "currentPriceTry": 23485.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 20197.0,
     "highestPriceTry": 27947.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9192,10 +9738,11 @@
     ]
   },
   "psu_be_quiet_dark_power_13": {
-    "currentPriceTry": 10293.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9470.0,
     "highestPriceTry": 11837.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9228,10 +9775,11 @@
     ]
   },
   "psu_corsair_hx1500i_2023": {
-    "currentPriceTry": 9971.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 8774.0,
     "highestPriceTry": 11267.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9264,10 +9812,11 @@
     ]
   },
   "psu_corsair_cx650m_2021": {
-    "currentPriceTry": 2887.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2425.0,
     "highestPriceTry": 3407.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9300,10 +9849,11 @@
     ]
   },
   "psu_corsair_rm750x_2024": {
-    "currentPriceTry": 4620.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3927.0,
     "highestPriceTry": 5498.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9336,10 +9886,11 @@
     ]
   },
   "psu_corsair_rm750": {
-    "currentPriceTry": 4618.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4341.0,
     "highestPriceTry": 5034.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9372,10 +9923,11 @@
     ]
   },
   "psu_corsair_rm850e_2023": {
-    "currentPriceTry": 7315.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6583.0,
     "highestPriceTry": 8485.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9408,10 +9960,11 @@
     ]
   },
   "psu_corsair_hx1200i": {
-    "currentPriceTry": 8470.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7792.0,
     "highestPriceTry": 9486.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9444,10 +9997,11 @@
     ]
   },
   "psu_corsair_rm850x_2021": {
-    "currentPriceTry": 7661.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7278.0,
     "highestPriceTry": 8887.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9480,10 +10034,11 @@
     ]
   },
   "psu_corsair_rm750x_shift": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5490.0,
     "highestPriceTry": 6743.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9516,10 +10071,11 @@
     ]
   },
   "psu_seasonic_focus_gx_v4_atx_3_2024": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5729.0,
     "highestPriceTry": 7084.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9552,10 +10108,11 @@
     ]
   },
   "psu_corsair_cx750m_2021": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3503.0,
     "highestPriceTry": 4196.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9588,10 +10145,11 @@
     ]
   },
   "psu_msi_a1000g_pcie5": {
-    "currentPriceTry": 7354.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6251.0,
     "highestPriceTry": 8457.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9624,10 +10182,11 @@
     ]
   },
   "psu_msi_mpg_a850g_pcie5": {
-    "currentPriceTry": 6352.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5844.0,
     "highestPriceTry": 7114.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9660,10 +10219,11 @@
     ]
   },
   "psu_be_quiet_dark_power_pro_13": {
-    "currentPriceTry": 17321.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 16801.0,
     "highestPriceTry": 19746.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9696,10 +10256,11 @@
     ]
   },
   "psu_msi_mag_a650be": {
-    "currentPriceTry": 2694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2290.0,
     "highestPriceTry": 2910.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9732,10 +10293,11 @@
     ]
   },
   "psu_msi_mag_a1000gl_pcie5": {
-    "currentPriceTry": 6918.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6226.0,
     "highestPriceTry": 7956.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9768,10 +10330,11 @@
     ]
   },
   "psu_evga_400_n1": {
-    "currentPriceTry": 1781.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1656.0,
     "highestPriceTry": 1941.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9804,10 +10367,11 @@
     ]
   },
   "psu_thermaltake_toughpower_gf_a3_snow": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4555.0,
     "highestPriceTry": 5255.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9840,10 +10404,11 @@
     ]
   },
   "psu_corsair_hx1500i_2025": {
-    "currentPriceTry": 13436.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 11689.0,
     "highestPriceTry": 15048.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9876,10 +10441,11 @@
     ]
   },
   "psu_thermaltake_smart_bm3": {
-    "currentPriceTry": 2694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2452.0,
     "highestPriceTry": 3044.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9912,10 +10478,11 @@
     ]
   },
   "cooler_thermalright_peerless_assassin_120_se": {
-    "currentPriceTry": 1344.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1223.0,
     "highestPriceTry": 1519.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9948,10 +10515,11 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_pro_360": {
-    "currentPriceTry": 3272.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3108.0,
     "highestPriceTry": 3599.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -9984,10 +10552,11 @@
     ]
   },
   "cooler_cooler_master_hyper_212_black_edition": {
-    "currentPriceTry": 1001.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 951.0,
     "highestPriceTry": 1151.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10020,10 +10589,11 @@
     ]
   },
   "cooler_thermalright_phantom_spirit_120_se_argb": {
-    "currentPriceTry": 1459.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1240.0,
     "highestPriceTry": 1619.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10056,10 +10626,11 @@
     ]
   },
   "cooler_thermalright_aqua_elite_v3": {
-    "currentPriceTry": 2114.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1966.0,
     "highestPriceTry": 2325.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10092,10 +10663,11 @@
     ]
   },
   "cooler_noctua_nh_d15_chromax_black": {
-    "currentPriceTry": 5388.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4634.0,
     "highestPriceTry": 6304.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10128,10 +10700,11 @@
     ]
   },
   "cooler_nzxt_kraken_360": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6445.0,
     "highestPriceTry": 8108.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10164,10 +10737,11 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_360_a_rgb": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5667.0,
     "highestPriceTry": 6899.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10200,10 +10774,11 @@
     ]
   },
   "cooler_thermalright_assassin_x_120_refined_se": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 869.0,
     "highestPriceTry": 1149.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10236,10 +10811,11 @@
     ]
   },
   "cooler_cooler_master_masterliquid_360l_core_argb": {
-    "currentPriceTry": 2887.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2829.0,
     "highestPriceTry": 3205.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10272,10 +10848,11 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_pro_a_rgb_360": {
-    "currentPriceTry": 3619.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3619.0,
     "highestPriceTry": 3945.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10308,10 +10885,11 @@
     ]
   },
   "cooler_thermalright_phantom_spirit_120_se": {
-    "currentPriceTry": 1382.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1299.0,
     "highestPriceTry": 1534.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10344,10 +10922,11 @@
     ]
   },
   "cooler_nzxt_kraken_240": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3349.0,
     "highestPriceTry": 4582.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10380,10 +10959,11 @@
     ]
   },
   "cooler_thermalright_peerless_assassin_120_se_argb": {
-    "currentPriceTry": 1421.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1307.0,
     "highestPriceTry": 1563.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10416,10 +10996,11 @@
     ]
   },
   "cooler_arctic_freezer_36": {
-    "currentPriceTry": 1701.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1548.0,
     "highestPriceTry": 1922.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10452,10 +11033,11 @@
     ]
   },
   "cooler_thermalright_phantom_spirit_evo": {
-    "currentPriceTry": 2310.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2148.0,
     "highestPriceTry": 2587.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10488,10 +11070,11 @@
     ]
   },
   "cooler_noctua_nh_d15": {
-    "currentPriceTry": 5003.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4453.0,
     "highestPriceTry": 5854.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10524,10 +11107,11 @@
     ]
   },
   "cooler_nzxt_kraken_elite_360_rgb": {
-    "currentPriceTry": 2400.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2400.0,
     "highestPriceTry": 2568.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10560,10 +11144,11 @@
     ]
   },
   "cooler_nzxt_kraken_360_rgb": {
-    "currentPriceTry": 8470.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 7708.0,
     "highestPriceTry": 9486.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10596,10 +11181,11 @@
     ]
   },
   "cooler_thermalright_frozen_notte_argb": {
-    "currentPriceTry": 2133.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2133.0,
     "highestPriceTry": 2453.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10632,10 +11218,11 @@
     ]
   },
   "cooler_thermalright_peerless_assassin_120_se_white_argb": {
-    "currentPriceTry": 1421.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1322.0,
     "highestPriceTry": 1535.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10668,10 +11255,11 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_pro": {
-    "currentPriceTry": 2733.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2678.0,
     "highestPriceTry": 3198.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10704,10 +11292,11 @@
     ]
   },
   "cooler_noctua_nh_l9x65_chromax_black": {
-    "currentPriceTry": 3078.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2893.0,
     "highestPriceTry": 3509.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10740,10 +11329,11 @@
     ]
   },
   "cooler_thermalright_assassin_king_se_argb": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 909.0,
     "highestPriceTry": 1179.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10776,10 +11366,11 @@
     ]
   },
   "cooler_noctua_nh_l9a_am5": {
-    "currentPriceTry": 1923.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1904.0,
     "highestPriceTry": 2096.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10812,10 +11403,11 @@
     ]
   },
   "cooler_thermalright_assassin_x_se": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 979.0,
     "highestPriceTry": 1119.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10848,10 +11440,11 @@
     ]
   },
   "cooler_cooler_master_masterliquid_240l_core_argb": {
-    "currentPriceTry": 3272.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2781.0,
     "highestPriceTry": 3828.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10884,10 +11477,11 @@
     ]
   },
   "cooler_thermalright_aqua_elite_argb_v4": {
-    "currentPriceTry": 2345.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2064.0,
     "highestPriceTry": 2720.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10920,10 +11514,11 @@
     ]
   },
   "cooler_cooler_master_hyper_212_2023": {
-    "currentPriceTry": 1001.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 871.0,
     "highestPriceTry": 1131.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10956,10 +11551,11 @@
     ]
   },
   "cooler_cooler_master_hyper_212_spectrum_v3": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 949.0,
     "highestPriceTry": 1179.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -10992,10 +11588,11 @@
     ]
   },
   "cooler_noctua_nh_l9a_am5_chromax_black": {
-    "currentPriceTry": 2308.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2100.0,
     "highestPriceTry": 2539.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11028,10 +11625,11 @@
     ]
   },
   "cooler_nzxt_kraken_240_rgb": {
-    "currentPriceTry": 4427.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4073.0,
     "highestPriceTry": 4958.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11064,10 +11662,11 @@
     ]
   },
   "cooler_nzxt_kraken_elite_360_rgb_2024": {
-    "currentPriceTry": 11165.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10607.0,
     "highestPriceTry": 12505.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11100,10 +11699,11 @@
     ]
   },
   "cooler_thermalright_axp90_x47": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 949.0,
     "highestPriceTry": 1149.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11136,10 +11736,11 @@
     ]
   },
   "cooler_msi_mag_coreliquid_a13": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3769.0,
     "highestPriceTry": 4786.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11172,10 +11773,11 @@
     ]
   },
   "cooler_thermalright_assassin_spirit_120_evo": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 869.0,
     "highestPriceTry": 1099.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11208,10 +11810,11 @@
     ]
   },
   "cooler_noctua_nh_u12a_chromax_black": {
-    "currentPriceTry": 5388.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5172.0,
     "highestPriceTry": 6142.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11244,10 +11847,11 @@
     ]
   },
   "cooler_thermalright_assassin_spirit_120_evo_dark": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 949.0,
     "highestPriceTry": 1149.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11280,10 +11884,11 @@
     ]
   },
   "cooler_thermalright_peerless_assassin_120_black": {
-    "currentPriceTry": 1875.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1744.0,
     "highestPriceTry": 2119.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11316,10 +11921,11 @@
     ]
   },
   "cooler_noctua_nh_u12s_chromax_black": {
-    "currentPriceTry": 3848.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3656.0,
     "highestPriceTry": 4310.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11352,10 +11958,11 @@
     ]
   },
   "cooler_thermalright_assassin_x_120_r_digital_argb": {
-    "currentPriceTry": 999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 959.0,
     "highestPriceTry": 1129.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11388,10 +11995,11 @@
     ]
   },
   "cooler_thermalright_peerless_assassin_120_white": {
-    "currentPriceTry": 1832.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1649.0,
     "highestPriceTry": 2034.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11424,10 +12032,11 @@
     ]
   },
   "cooler_noctua_nh_d15_g2": {
-    "currentPriceTry": 6928.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6166.0,
     "highestPriceTry": 7690.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11460,10 +12069,11 @@
     ]
   },
   "cooler_nzxt_kraken_elite_360_2024": {
-    "currentPriceTry": 10395.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9563.0,
     "highestPriceTry": 11227.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11496,10 +12106,11 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_280": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4805.0,
     "highestPriceTry": 5956.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11532,10 +12143,11 @@
     ]
   },
   "case_phanteks_xt_pro": {
-    "currentPriceTry": 2617.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2251.0,
     "highestPriceTry": 3062.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11568,10 +12180,11 @@
     ]
   },
   "case_nzxt_h5_flow_2024": {
-    "currentPriceTry": 3272.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2814.0,
     "highestPriceTry": 3796.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11604,10 +12217,11 @@
     ]
   },
   "case_corsair_3500x_argb": {
-    "currentPriceTry": 4466.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4198.0,
     "highestPriceTry": 5047.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11640,10 +12254,11 @@
     ]
   },
   "case_cooler_master_masterbox_q300l": {
-    "currentPriceTry": 1770.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1504.0,
     "highestPriceTry": 2089.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11676,10 +12291,11 @@
     ]
   },
   "case_lian_li_lancool_207": {
-    "currentPriceTry": 3157.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3031.0,
     "highestPriceTry": 3473.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11712,10 +12328,11 @@
     ]
   },
   "case_nzxt_h9_flow_2023": {
-    "currentPriceTry": 4620.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4204.0,
     "highestPriceTry": 5267.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11748,10 +12365,11 @@
     ]
   },
   "case_lian_li_o11_vision_compact": {
-    "currentPriceTry": 4812.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4620.0,
     "highestPriceTry": 5630.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11784,10 +12402,11 @@
     ]
   },
   "case_lian_li_a3_matx": {
-    "currentPriceTry": 2810.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2501.0,
     "highestPriceTry": 3344.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11820,10 +12439,11 @@
     ]
   },
   "case_fractal_design_north": {
-    "currentPriceTry": 5390.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4905.0,
     "highestPriceTry": 6252.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11856,10 +12476,11 @@
     ]
   },
   "case_fractal_design_north_xl": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6791.0,
     "highestPriceTry": 8039.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11892,10 +12513,11 @@
     ]
   },
   "case_phanteks_xt_pro_ultra": {
-    "currentPriceTry": 3118.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2993.0,
     "highestPriceTry": 3679.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11928,10 +12550,11 @@
     ]
   },
   "case_lian_li_o11d_evo_rgb": {
-    "currentPriceTry": 6160.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6037.0,
     "highestPriceTry": 7146.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -11964,10 +12587,11 @@
     ]
   },
   "case_nzxt_h6_flow": {
-    "currentPriceTry": 4234.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4065.0,
     "highestPriceTry": 4869.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12000,10 +12624,11 @@
     ]
   },
   "case_corsair_frame_4000d_rs_argb": {
-    "currentPriceTry": 4042.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3597.0,
     "highestPriceTry": 4285.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12036,10 +12661,11 @@
     ]
   },
   "case_nzxt_h3_flow": {
-    "currentPriceTry": 2694.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2613.0,
     "highestPriceTry": 3044.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12072,10 +12698,11 @@
     ]
   },
   "case_fractal_design_terra": {
-    "currentPriceTry": 6930.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6653.0,
     "highestPriceTry": 7762.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12108,10 +12735,11 @@
     ]
   },
   "case_fractal_design_pop_xl_air": {
-    "currentPriceTry": 4619.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4296.0,
     "highestPriceTry": 5081.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12144,10 +12772,11 @@
     ]
   },
   "case_lian_li_lancool_217": {
-    "currentPriceTry": 4909.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4762.0,
     "highestPriceTry": 5547.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12180,10 +12809,11 @@
     ]
   },
   "case_lian_li_o11_dynamic_evo_xl": {
-    "currentPriceTry": 9817.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 9621.0,
     "highestPriceTry": 11093.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12216,10 +12846,11 @@
     ]
   },
   "case_fractal_design_meshify_c": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3854.0,
     "highestPriceTry": 4743.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12252,10 +12883,11 @@
     ]
   },
   "case_cooler_master_masterbox_nr200": {
-    "currentPriceTry": 2591.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2591.0,
     "highestPriceTry": 2954.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12288,10 +12920,11 @@
     ]
   },
   "case_lian_li_lancool_216_rgb": {
-    "currentPriceTry": 3964.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3647.0,
     "highestPriceTry": 4519.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12324,10 +12957,11 @@
     ]
   },
   "case_fractal_design_pop_air": {
-    "currentPriceTry": 3080.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2803.0,
     "highestPriceTry": 3542.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12360,10 +12994,11 @@
     ]
   },
   "case_nzxt_h7_flow_2024": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4805.0,
     "highestPriceTry": 5656.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12396,10 +13031,11 @@
     ]
   },
   "case_corsair_3000d_airflow": {
-    "currentPriceTry": 3657.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3328.0,
     "highestPriceTry": 3950.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12432,10 +13068,11 @@
     ]
   },
   "case_lian_li_o11_vision": {
-    "currentPriceTry": 5505.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5230.0,
     "highestPriceTry": 6221.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12468,10 +13105,11 @@
     ]
   },
   "case_cooler_master_elite_301_lite": {
-    "currentPriceTry": 2500.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2350.0,
     "highestPriceTry": 2700.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12504,10 +13142,11 @@
     ]
   },
   "case_corsair_frame_4000d": {
-    "currentPriceTry": 4042.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3557.0,
     "highestPriceTry": 4608.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12540,10 +13179,11 @@
     ]
   },
   "case_nzxt_h6_flow_rgb": {
-    "currentPriceTry": 5004.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4654.0,
     "highestPriceTry": 5855.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12576,10 +13216,11 @@
     ]
   },
   "case_corsair_5000d_airflow": {
-    "currentPriceTry": 6737.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6670.0,
     "highestPriceTry": 7613.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12612,10 +13253,11 @@
     ]
   },
   "case_fractal_design_ridge_pcie_4_0": {
-    "currentPriceTry": 5005.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4605.0,
     "highestPriceTry": 5856.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12648,10 +13290,11 @@
     ]
   },
   "case_corsair_3500x": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3734.0,
     "highestPriceTry": 4466.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12684,10 +13327,11 @@
     ]
   },
   "case_nzxt_h9_elite": {
-    "currentPriceTry": 6544.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6020.0,
     "highestPriceTry": 7264.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12720,10 +13364,11 @@
     ]
   },
   "case_cooler_master_elite_301": {
-    "currentPriceTry": 1925.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1829.0,
     "highestPriceTry": 2272.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12756,10 +13401,11 @@
     ]
   },
   "case_fractal_design_pop_mini_air": {
-    "currentPriceTry": 3850.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3503.0,
     "highestPriceTry": 4389.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12792,10 +13438,11 @@
     ]
   },
   "case_lian_li_a4_h20_x4": {
-    "currentPriceTry": 5967.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5669.0,
     "highestPriceTry": 6564.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12828,10 +13475,11 @@
     ]
   },
   "case_fractal_design_focus_g": {
-    "currentPriceTry": 2310.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2287.0,
     "highestPriceTry": 2680.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12864,10 +13512,11 @@
     ]
   },
   "case_nzxt_h5_flow_rgb_2024": {
-    "currentPriceTry": 4620.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4435.0,
     "highestPriceTry": 5128.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12900,10 +13549,11 @@
     ]
   },
   "case_nzxt_h9_flow_rgb_2025": {
-    "currentPriceTry": 11165.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10495.0,
     "highestPriceTry": 13175.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12936,10 +13586,11 @@
     ]
   },
   "case_corsair_7000d_airflow": {
-    "currentPriceTry": 11165.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 10272.0,
     "highestPriceTry": 13175.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -12972,10 +13623,11 @@
     ]
   },
   "case_lian_li_odyssey_x": {
-    "currentPriceTry": 56520.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 53129.0,
     "highestPriceTry": 63868.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -13008,10 +13660,11 @@
     ]
   },
   "case_lian_li_lancool_216": {
-    "currentPriceTry": 4311.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4139.0,
     "highestPriceTry": 4958.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -13044,10 +13697,11 @@
     ]
   },
   "case_cooler_master_masterbox_nr200p_v2": {
-    "currentPriceTry": 4235.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 3557.0,
     "highestPriceTry": 4997.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
@@ -13080,10 +13734,11 @@
     ]
   },
   "case_corsair_9000d_rgb_airflow": {
-    "currentPriceTry": 20020.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 19019.0,
     "highestPriceTry": 23423.0,
     "currency": "TRY",
+    "offers": [],
     "priceHistory": [
       {
         "date": "2025-10-15",
