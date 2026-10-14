@@ -951,133 +951,21 @@ object HardwareMapper {
             HardwareCategory.CPU -> when {
                 upper.contains("9800X3D") || upper.contains("9950X") || upper.contains("9900X") || upper.contains("9700X") || upper.contains("9600X") ->
                     "https://www.incehesap.com/resim/urun/202412/67583ce66022a8.23281091_qpohljnmefikg_cropped_288.webp"
-                upper.contains("7800X3D") || upper.contains("7950X") || upper.contains("7900X") || upper.contains("7700X") || upper.contains("7600X") || upper.contains("7500F") ->
+                upper.contains("7800X3D") || upper.contains("7950X") || upper.contains("7900X") || upper.contains("7700X") || upper.contains("7600X") || upper.contains("7600") || upper.contains("7500F") ->
                     "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
-                upper.contains("8700G") || upper.contains("8600G") || upper.contains("8500G") ->
-                    "https://www.tebilon.com/picture300x300/amd-ryzen-7-8700g-4-20ghz-8-cekirdek-24mb-onbellek-soket-am5-mpk-islemci-1.jpg"
                 upper.contains("5800X3D") || upper.contains("5700X3D") || upper.contains("5950X") || upper.contains("5900X") || upper.contains("5800X") || upper.contains("5700X") || upper.contains("5600") || upper.contains("5500") ->
                     "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
-                upper.contains("ULTRA") || upper.contains("285K") || upper.contains("275K") || upper.contains("270K") || upper.contains("265K") || upper.contains("255K") || upper.contains("250K") || upper.contains("245K") ->
+                upper.contains("ULTRA") || upper.contains("285K") || upper.contains("265K") || upper.contains("245K") ->
                     "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
-                upper.contains("14900") || upper.contains("14700") || upper.contains("14600") || upper.contains("14400") ->
+                upper.contains("14900") || upper.contains("14700") || upper.contains("14600") || upper.contains("14400") || upper.contains("14100") ->
                     "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
-                upper.contains("13900") || upper.contains("13700") || upper.contains("13600") || upper.contains("13400") ->
-                    "https://www.tebilon.com/picture300x300/intel-core-i7-13700k-13-nesil-30mb-l3-onbellek-intel-islemci.jpg"
-                upper.contains("12900") || upper.contains("12700") || upper.contains("12600") || upper.contains("12400") ->
-                    "https://www.tebilon.com/picture300x300/intel-core-i5-12400f-2-50ghz-18mb-l3-onbellek-intel-islemci.jpg"
                 upper.contains("RYZEN") ->
                     "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
                 upper.contains("INTEL") || upper.contains("CORE") ->
                     "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
                 else -> null
             }
-            HardwareCategory.GPU -> when {
-                upper.contains("5090") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-nvidia-ekran-karti.jpg"
-                upper.contains("5080") -> "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
-                upper.contains("5070") || upper.contains("5060") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
-                upper.contains("4090") || upper.contains("4080") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4080-super-16g-suprim-x-16gb-gddr6x-256-bit-dlss-3-ekran-karti.jpg"
-                upper.contains("4070") -> "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-4070-super-12gb-gddr6x-192-bit-dlss-3-ekran-karti-tuf-rtx4070s-12g-gaming.jpg"
-                upper.contains("4060") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4060-ventus-2x-black-8g-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti.jpg"
-                upper.contains("3090") || upper.contains("3080") || upper.contains("3070") || upper.contains("3060") || upper.contains("2080") || upper.contains("2070") || upper.contains("2060") ->
-                    "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
-                upper.contains("9070") || upper.contains("7900") || upper.contains("7800") || upper.contains("7700") || upper.contains("7600") || upper.contains("6950") || upper.contains("6800") || upper.contains("6700") || upper.contains("6600") || upper.contains("5700") ->
-                    "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7800-xt-pulse-16gb-gddr6-256-bit-ekran-karti-11330-02-20g.jpg"
-                upper.contains("ARC") || upper.contains("B580") || upper.contains("A770") ->
-                    "https://www.tebilon.com/picture300x300/sparkle-intel-arc-a770-titan-oc-edition-16gb-gddr6-256-bit-ekran-karti.jpg"
-                else -> null
-            }
-            HardwareCategory.MOTHERBOARD -> when {
-                upper.contains("X870") || upper.contains("B650") || upper.contains("X670") || upper.contains("B850") ->
-                    "https://www.tebilon.com/picture300x300/asus-tuf-gaming-b650-plus-wifi-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
-                upper.contains("Z890") || upper.contains("B860") || upper.contains("Z790") || upper.contains("B760") || upper.contains("Z690") || upper.contains("B660") ->
-                    "https://www.tebilon.com/picture300x300/asus-rog-maximus-z790-dark-hero-intel-z790-soket-1700-ddr5-7800mhz-oc-m2-anakart.jpg"
-                upper.contains("B550") || upper.contains("A520") || upper.contains("B450") || upper.contains("X570") ->
-                    "https://static.sinerji.gen.tr/Images/MD/9NG-prime-b550m-k-argb-0.jpg"
-                else -> null
-            }
-            HardwareCategory.PSU -> when {
-                upper.contains("CORSAIR") ->
-                    if (upper.contains("HX")) "https://www.tebilon.com/picture300x300/corsair-hx1000i-1000w-80-platinum-tam-moduler-140mm-fanli-psu-cp-9020214-eu.jpg"
-                    else "https://www.tebilon.com/picture300x300/corsair-rme-series-rm850e-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-cp-9020263-eu.jpg"
-                upper.contains("SEASONIC") -> "https://www.tebilon.com/picture300x300/seasonic-focus-gx-850-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fanli-psu.jpg"
-                upper.contains("BE QUIET") -> "https://www.tebilon.com/picture300x300/be-quiet-pure-power-12-m-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-bn344.jpg"
-                upper.contains("ASUS") ->
-                    if (upper.contains("THOR")) "https://www.tebilon.com/picture300x300/asus-rog-thor-1000p2-gaming-1000w-80-platinum-tam-moduler-oled-ekranli-guc-kaynagi.jpg"
-                    else if (upper.contains("STRIX") || upper.contains("AURA")) "https://www.tebilon.com/picture300x300/asus-rog-strix-850g-aura-80-gold-850w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi-8.jpg"
-                    else "https://www.tebilon.com/picture300x300/asus-tuf-gaming-750g-80-gold-750w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi.jpg"
-                upper.contains("MSI") -> "https://www.tebilon.com/picture300x300/msi-mag-a850gl-pcie5-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
-                upper.contains("FSP") -> "https://www.tebilon.com/picture300x300/fsp-hydro-g-pro-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
-                upper.contains("DEEPCOOL") -> "https://www.tebilon.com/picture300x300/deepcool-px850g-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fdb-fanli-guc-kaynagi.jpg"
-                upper.contains("SUPER FLOWER") -> "https://www.tebilon.com/picture300x300/super-flower-leadex-vii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-140mm-fanli-guc-kaynagi.jpg"
-                upper.contains("LIAN LI") || upper.contains("EDGE") -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
-                upper.contains("COOLER MASTER") -> "https://www.tebilon.com/picture300x300/cooler-master-gx-iii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
-                upper.contains("THERMALTAKE") -> "https://www.tebilon.com/picture300x300/thermaltake-toughpower-gf3-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
-                upper.contains("GIGABYTE") -> "https://www.tebilon.com/picture300x300/gigabyte-ud850gm-pg5-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
-                upper.contains("XPG") -> "https://www.tebilon.com/picture300x300/xpg-core-reactor-ii-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fdb-fanli-guc-kaynagi.jpg"
-                upper.contains("NZXT") -> "https://www.tebilon.com/picture300x300/nzxt-c850-gold-core-850w-80-gold-tam-moduler-atx-31-pcie-51-120mm-fdb-fanli-guc-kaynagi.jpg"
-                upper.contains("MONTECH") -> "https://www.tebilon.com/picture300x300/montech-titan-gold-850w-80-gold-tam-moduler-atx-30-guc-kaynagi.jpg"
-                upper.contains("EVGA") -> "https://www.tebilon.com/picture300x300/evga-supernova-850-gt-850w-80-gold-tam-moduler-135mm-fanli-guc-kaynagi.jpg"
-                else -> null
-            }
-            HardwareCategory.STORAGE -> when {
-                upper.contains("990 PRO") -> "https://www.tebilon.com/picture300x300/samsung-990-pro-nvme-2-0-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7450mb-okuma-6900mb-yazma-mz-v9p1t0bw.jpg"
-                upper.contains("980 PRO") -> "https://www.tebilon.com/picture300x300/samsung-980-pro-nvme-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7000mb-okuma-5000mb-yazma-mz-v8p1t0bw.jpg"
-                upper.contains("970 EVO") -> "https://www.tebilon.com/picture300x300/samsung-970-evo-plus-nvme-1tb-pcie-gen-3-0-x4-m-2-2280-ssd-3500mb-okuma-3300mb-yazma.jpg"
-                upper.contains("870 EVO") -> "https://www.tebilon.com/picture300x300/samsung-870-evo-1tb-560mb-530mb-s-sata-2-5-ssd-mz-77e1t0bw.jpg"
-                upper.contains("KC3000") -> "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
-                upper.contains("RENEGADE") -> "https://www.tebilon.com/picture300x300/kingston-fury-renegade-1tb-nvme-pcie-4-0-m-2-ssd-7300mb-okuma-6000mb-yazma-sfyrs-1000g.jpg"
-                upper.contains("NV3") -> "https://www.tebilon.com/picture300x300/kingston-nv3-1tb-pcie-4-0-nvme-m-2-ssd-snv3s-1000g.jpg"
-                upper.contains("NV2") -> "https://www.tebilon.com/picture300x300/kingston-nv2-1tb-nvme-pcie-4-0-m-2-ssd-3500mb-okuma-2100mb-yazma-snv2s-1000g.jpg"
-                upper.contains("T705") || upper.contains("T700") -> "https://www.tebilon.com/picture300x300/crucial-t705-1tb-pcie-gen5-nvme-m-2-ssd-13600mb-okuma-10200mb-yazma-ct1000t705ssd3.jpg"
-                upper.contains("T500") || upper.contains("P3") -> "https://www.tebilon.com/picture300x300/crucial-t500-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6800mb-yazma-ct1000t500ssd8.jpg"
-                upper.contains("MX500") || upper.contains("BX500") -> "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
-                upper.contains("SN850") -> "https://www.tebilon.com/picture300x300/wd-black-sn850x-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6300mb-yazma-wds100t2x0e.jpg"
-                upper.contains("SN770") -> "https://www.tebilon.com/picture300x300/wd-black-sn770-1tb-pcie-gen4-nvme-m-2-ssd-5150mb-okuma-4900mb-yazma-wds100t3x0e.jpg"
-                upper.contains("SN580") || upper.contains("SN5000") -> "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
-                upper.contains("NM790") -> "https://www.tebilon.com/picture300x300/lexar-nm790-1tb-pcie-gen4-nvme-m-2-ssd-7400mb-okuma-6500mb-yazma-lnm790x001t-rnnng.jpg"
-                else -> null
-            }
-            HardwareCategory.COOLER -> when {
-                upper.contains("HYDROSHIFT") -> "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
-                upper.contains("GALAHAD") -> "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
-                upper.contains("FREEZER III") || upper.contains("LIQUID FREEZER") -> "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
-                upper.contains("FREEZER 36") -> "https://www.tebilon.com/picture300x300/arctic-freezer-36-a-rgb-siyah-kule-tipi-islemci-sogutucu-acfre00124a.jpg"
-                upper.contains("KRAKEN") -> "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
-                upper.contains("LT720") || upper.contains("LS720") -> "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
-                upper.contains("AK620") || upper.contains("AK400") -> "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
-                upper.contains("PEERLESS") || upper.contains("PHANTOM SPIRIT") || upper.contains("ASSASSIN") -> "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
-                upper.contains("FROZEN NOTTE") || upper.contains("AQUA ELITE") -> "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
-                upper.contains("TITAN") || upper.contains("H150I") || upper.contains("ICUE") -> "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
-                upper.contains("NH-D15") || upper.contains("NOCTUA") -> "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
-                upper.contains("DARK ROCK") -> "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
-                else -> null
-            }
-            HardwareCategory.RAM -> when {
-                upper.contains("CORSAIR") || upper.contains("VENGEANCE") || upper.contains("DOMINATOR") ->
-                    "https://www.tebilon.com/picture300x300/corsair-vengeance-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-cmh32gx5m2b6000c30.jpg"
-                upper.contains("TRIDENT") || upper.contains("FLARE") || upper.contains("G.SKILL") ->
-                    "https://www.tebilon.com/picture300x300/g-skill-trident-z5-neo-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-amd-expo-ram-f5-6000j3038f16gx2-tz5nr.jpg"
-                upper.contains("FURY") || upper.contains("BEAST") || upper.contains("RENEGADE") || upper.contains("KINGSTON") ->
-                    "https://www.tebilon.com/picture300x300/kingston-fury-beast-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-kf560c30bbeak2-32.jpg"
-                upper.contains("LANCER") || upper.contains("XPG") ->
-                    "https://www.tebilon.com/picture300x300/xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ax5u6000c3016g-dclarbk.jpg"
-                upper.contains("DELTA") || upper.contains("T-FORCE") ->
-                    "https://www.tebilon.com/picture300x300/team-t-force-delta-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ff3d532g6000hc30dc01.jpg"
-                else -> null
-            }
-            HardwareCategory.CASE -> when {
-                upper.contains("O11") || upper.contains("LANCOOL") || upper.contains("LIAN LI") ->
-                    "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
-                upper.contains("H9") || upper.contains("H7") || upper.contains("H6") || upper.contains("NZXT") ->
-                    "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
-                upper.contains("4000D") || upper.contains("5000D") || upper.contains("3500X") || upper.contains("CORSAIR") ->
-                    "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
-                upper.contains("KING 95") || upper.contains("MONTECH") ->
-                    "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
-                upper.contains("Y70") || upper.contains("Y60") || upper.contains("HYTE") ->
-                    "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
-                else -> null
-            }
+            else -> null
         }
     }
 

@@ -70,7 +70,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.material3.CircularProgressIndicator
 import coil3.compose.AsyncImage
+import coil3.compose.SubcomposeAsyncImage
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
@@ -473,26 +475,12 @@ fun HardwareCard(
                 .padding(Spacing.medium),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            val img = item.effectiveImageUrl
-            if (!img.isNullOrBlank()) {
-                Box(
-                    modifier = Modifier
-                        .size(68.dp)
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(Color.White)
-                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f), RoundedCornerShape(10.dp))
-                        .padding(4.dp),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    AsyncImage(
-                        model = img,
-                        contentDescription = item.displayName,
-                        contentScale = ContentScale.Fit,
-                        modifier = Modifier.fillMaxSize(),
-                    )
-                }
-                Spacer(modifier = Modifier.width(Spacing.medium))
-            }
+            HardwareThumbnail(
+                imageUrl = item.effectiveImageUrl,
+                category = item.category,
+                displayName = item.displayName,
+            )
+            Spacer(modifier = Modifier.width(Spacing.medium))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -544,6 +532,83 @@ fun HardwareCard(
                 )
             }
         }
+    }
+}
+
+@Composable
+fun HardwareThumbnail(
+    imageUrl: String?,
+    category: HardwareCategory,
+    displayName: String,
+    modifier: Modifier = Modifier,
+) {
+    val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
+    val borderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
+    val shape = RoundedCornerShape(12.dp)
+
+    Box(
+        modifier = modifier
+            .size(76.dp)
+            .clip(shape)
+            .background(containerBg)
+            .border(1.dp, borderColor, shape)
+            .padding(4.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        if (!imageUrl.isNullOrBlank()) {
+            SubcomposeAsyncImage(
+                model = imageUrl,
+                contentDescription = displayName,
+                contentScale = ContentScale.Fit,
+                modifier = Modifier.fillMaxSize(),
+                loading = {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            strokeWidth = 2.dp,
+                            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f),
+                        )
+                    }
+                },
+                error = {
+                    HardwarePlaceholderBadge(category = category)
+                },
+            )
+        } else {
+            HardwarePlaceholderBadge(category = category)
+        }
+    }
+}
+
+@Composable
+fun HardwarePlaceholderBadge(
+    category: HardwareCategory,
+    modifier: Modifier = Modifier,
+) {
+    val (badgeBg, badgeText) = when (category) {
+        HardwareCategory.CPU -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.GPU -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.RAM -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MOTHERBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.PSU -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+    }
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(8.dp))
+            .background(badgeBg.copy(alpha = 0.35f))
+            .padding(horizontal = 6.dp, vertical = 4.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = category.name,
+            style = MaterialTheme.typography.labelSmall,
+            fontWeight = FontWeight.Black,
+            color = badgeText,
+            textAlign = TextAlign.Center,
+        )
     }
 }
 

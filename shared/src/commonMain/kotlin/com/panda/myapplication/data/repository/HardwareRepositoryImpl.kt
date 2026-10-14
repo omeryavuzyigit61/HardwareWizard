@@ -173,7 +173,7 @@ class HardwareRepositoryImpl(
                     existingImages = existingImages,
                     syncedAt = now,
                 )
-                if (snapshot.items.isNotEmpty() && snapshot.items.size >= (existing.size * 0.7)) {
+                if (snapshot.items.isNotEmpty()) {
                     hardwareDao.replaceCatalog(snapshot, syncedAt = now)
                 } else if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
                     val updated = existing.map { item ->

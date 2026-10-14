@@ -59,7 +59,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.material3.CircularProgressIndicator
 import coil3.compose.AsyncImage
+import coil3.compose.SubcomposeAsyncImage
 import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
@@ -322,27 +324,12 @@ private fun HeroHeaderCard(
                 .fillMaxWidth()
                 .padding(Spacing.medium),
         ) {
-            val img = item.effectiveImageUrl
-            if (!img.isNullOrBlank()) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(180.dp)
-                        .clip(RoundedCornerShape(Spacing.cardRadius))
-                        .background(Color.White)
-                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f), RoundedCornerShape(Spacing.cardRadius))
-                        .padding(Spacing.medium),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    AsyncImage(
-                        model = img,
-                        contentDescription = item.displayName,
-                        contentScale = ContentScale.Fit,
-                        modifier = Modifier.fillMaxSize(),
-                    )
-                }
-                Spacer(modifier = Modifier.height(Spacing.medium))
-            }
+            HardwareDetailHeroImage(
+                imageUrl = item.effectiveImageUrl,
+                category = item.category,
+                displayName = item.displayName,
+            )
+            Spacer(modifier = Modifier.height(Spacing.medium))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -1283,4 +1270,82 @@ private fun HardwareDetailContentPreview() {
         )
     }
 }
+
+@Composable
+fun HardwareDetailHeroImage(
+    imageUrl: String?,
+    category: HardwareCategory,
+    displayName: String,
+    modifier: Modifier = Modifier,
+) {
+    val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
+    val borderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f)
+    val shape = RoundedCornerShape(Spacing.cardRadius)
+
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(250.dp)
+            .clip(shape)
+            .background(containerBg)
+            .border(1.dp, borderColor, shape)
+            .padding(12.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        if (!imageUrl.isNullOrBlank()) {
+            SubcomposeAsyncImage(
+                model = imageUrl,
+                contentDescription = displayName,
+                contentScale = ContentScale.Fit,
+                modifier = Modifier.fillMaxSize(),
+                loading = {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(32.dp),
+                            strokeWidth = 2.5.dp,
+                            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
+                        )
+                    }
+                },
+                error = {
+                    DetailPlaceholderHero(category = category)
+                },
+            )
+        } else {
+            DetailPlaceholderHero(category = category)
+        }
+    }
+}
+
+@Composable
+fun DetailPlaceholderHero(
+    category: HardwareCategory,
+    modifier: Modifier = Modifier,
+) {
+    val (badgeBg, badgeText) = when (category) {
+        HardwareCategory.CPU -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.GPU -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.RAM -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MOTHERBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.PSU -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+    }
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(16.dp))
+            .background(badgeBg.copy(alpha = 0.35f))
+            .padding(horizontal = 24.dp, vertical = 16.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = category.displayName,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Black,
+            color = badgeText,
+        )
+    }
+}
+
 
