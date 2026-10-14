@@ -94,7 +94,7 @@ class HardwareListViewModel(
                 if (!validSorts.contains(filterOptions.value.sortOption)) {
                     filterOptions.value = filterOptions.value.copy(sortOption = HardwareSortOption.DEFAULT)
                 }
-                _uiState.update { it.copy(selectedCategory = event.category, isLoading = true, items = emptyList()) }
+                _uiState.update { it.copy(selectedCategory = event.category) }
             }
             is HardwareListUiEvent.OnSearchQueryChanged -> {
                 onSearchQueryChange(event.query)
@@ -135,7 +135,7 @@ class HardwareListViewModel(
                     is DomainResult.Success -> {
                         val total = result.data.size
                         val filtered = filterItems(result.data, query, filters)
-                        val sorted = sortItems(filtered, filters.sortOption)
+                        val sorted = sortItems(filtered, filters.sortOption, query)
 
                         _uiState.update { current ->
                             current.copy(
@@ -151,17 +151,19 @@ class HardwareListViewModel(
                         }
                     }
                     is DomainResult.Failure -> {
-                        _uiState.update { current ->
-                            current.copy(
-                                isLoading = refreshing,
-                                items = emptyList(),
-                                totalCount = 0,
-                                selectedCategory = selectedCategory.value,
-                                filters = filters,
-                                availableBrands = brands,
-                                isFilterSheetVisible = sheetVisible,
-                                errorMessage = errorMessage.value ?: "Donanım parçaları yüklenemedi.",
-                            )
+                        if (_uiState.value.items.isEmpty()) {
+                            _uiState.update { current ->
+                                current.copy(
+                                    isLoading = false,
+                                    items = emptyList(),
+                                    totalCount = 0,
+                                    selectedCategory = selectedCategory.value,
+                                    filters = filters,
+                                    availableBrands = brands,
+                                    isFilterSheetVisible = sheetVisible,
+                                    errorMessage = "Donanım parçaları yüklenemedi.",
+                                )
+                            }
                         }
                     }
                 }
@@ -182,13 +184,9 @@ class HardwareListViewModel(
 
             // 1. Search Query
             if (query.isNotBlank()) {
-                val q = query.trim().lowercase()
-                val matches = item.displayName.lowercase().contains(q) ||
-                        item.brand.lowercase().contains(q) ||
-                        item.model.lowercase().contains(q) ||
-                        (item.spec as? GpuSpec)?.chipset?.lowercase()?.contains(q) == true ||
-                        (item.spec as? GpuSpec)?.partNumber?.lowercase()?.contains(q) == true
-                if (!matches) return@filter false
+                if (!com.panda.myapplication.domain.engine.HardwareSearchEngine.matches(item, query)) {
+                    return@filter false
+                }
             }
 
             // 2. Category Filters
@@ -233,9 +231,16 @@ class HardwareListViewModel(
     private fun sortItems(
         items: List<HardwareItem>,
         sortOption: HardwareSortOption,
+        query: String = "",
     ): List<HardwareItem> {
         return when (sortOption) {
-            HardwareSortOption.DEFAULT -> items
+            HardwareSortOption.DEFAULT -> {
+                if (query.isNotBlank()) {
+                    items.sortedByDescending { com.panda.myapplication.domain.engine.HardwareSearchEngine.calculateScore(it, query) }
+                } else {
+                    items
+                }
+            }
             HardwareSortOption.PRICE_ASC -> items.sortedBy { it.price?.amountMinor ?: Long.MAX_VALUE }
             HardwareSortOption.PRICE_DESC -> items.sortedByDescending { it.price?.amountMinor ?: 0L }
             HardwareSortOption.NAME_ASC -> items.sortedBy { it.displayName }

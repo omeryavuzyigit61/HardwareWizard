@@ -13,8 +13,11 @@ data class StoreOffer(
 @Serializable
 data class PricePoint(
     val date: String,
-    val price: Double,
-)
+    val price: Double = 0.0,
+    val priceTry: Double? = null,
+) {
+    val effectivePrice: Double get() = if (price > 0.0) price else (priceTry ?: 0.0)
+}
 
 @Serializable
 data class ProductPriceInfo(
@@ -29,7 +32,7 @@ data class ProductPriceInfo(
         get() {
             val current = currentPriceTry ?: return 0.0
             if (priceHistory.size < 2) return 0.0
-            val previousPrice = priceHistory[priceHistory.size - 2].price
+            val previousPrice = priceHistory[priceHistory.size - 2].effectivePrice
             if (previousPrice <= 0) return 0.0
             return ((current - previousPrice) / previousPrice) * 100.0
         }

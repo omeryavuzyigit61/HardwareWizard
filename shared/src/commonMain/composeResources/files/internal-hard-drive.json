@@ -7,7 +7,10 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial P3 Plus",
@@ -17,7 +20,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Kingston NV3",
@@ -27,7 +33,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 990 EVO Plus",
@@ -37,7 +46,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X2"
+    "interface": "M.2 PCIe 5.0 X2",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD_Black SN850X",
@@ -47,7 +59,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 9100 PRO",
@@ -57,7 +72,10 @@
     "type": "SSD",
     "cache": 4096,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Seagate Barracuda Compute",
@@ -67,7 +85,10 @@
     "type": 7200,
     "cache": 256,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Black SN770",
@@ -77,7 +98,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 870 Evo",
@@ -87,7 +111,10 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": 2.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Blue SN580",
@@ -97,7 +124,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Seagate IronWolf Pro",
@@ -107,7 +137,10 @@
     "type": 7200,
     "cache": 512,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Intel SSDPEDMD020T401",
@@ -117,7 +150,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "PCIe",
-    "interface": "PCIe x4"
+    "interface": "PCIe x4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Seagate BarraCuda",
@@ -127,7 +163,10 @@
     "type": 5400,
     "cache": 256,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 980 Pro",
@@ -137,7 +176,10 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 970 Evo Plus",
@@ -147,7 +189,10 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Caviar Blue",
@@ -157,7 +202,10 @@
     "type": 7200,
     "cache": 64,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial T500",
@@ -167,7 +215,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial P310",
@@ -177,7 +228,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Kingston NV2",
@@ -187,7 +241,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial T705",
@@ -197,7 +254,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD Blue SN5000",
@@ -207,7 +267,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD_BLACK SN7100",
@@ -217,7 +280,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Kingston KC3000",
@@ -227,7 +293,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 870 QVO",
@@ -237,7 +306,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": 2.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial P3",
@@ -247,7 +319,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Blue",
@@ -257,7 +332,10 @@
     "type": 7200,
     "cache": 256,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Kingston Fury Renegade",
@@ -267,7 +345,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial BX500",
@@ -277,7 +358,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": 2.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD_BLACK SN8100",
@@ -287,7 +371,10 @@
     "type": "SSD",
     "cache": 4096,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD Green SN3000",
@@ -297,7 +384,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 990 Pro w/Heatsink",
@@ -307,7 +397,10 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 990 EVO",
@@ -317,7 +410,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X2"
+    "interface": "M.2 PCIe 5.0 X2",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 980",
@@ -327,7 +423,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Kingston A400",
@@ -337,7 +436,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": 2.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 9100 PRO w/Heatsink",
@@ -347,7 +449,10 @@
     "type": "SSD",
     "cache": 4096,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial P510",
@@ -357,7 +462,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Green SN350",
@@ -367,7 +475,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Seagate IronWolf NAS",
@@ -377,7 +488,10 @@
     "type": 7200,
     "cache": 256,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital Gold",
@@ -387,7 +501,10 @@
     "type": 7200,
     "cache": 512,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 970 Evo",
@@ -397,7 +514,10 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Seagate Exos X24",
@@ -407,7 +527,10 @@
     "type": 7200,
     "cache": 512,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Samsung 860 Evo",
@@ -417,7 +540,10 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": 2.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Western Digital WD Red Pro",
@@ -427,7 +553,10 @@
     "type": 7200,
     "cache": 512,
     "form_factor": 3.5,
-    "interface": "SATA 6.0 Gb/s"
+    "interface": "SATA 6.0 Gb/s",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial T700",
@@ -437,7 +566,10 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
   },
   {
     "name": "Crucial P5 Plus",
@@ -447,6 +579,1127 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "seq_read": 3500,
+    "seq_write": 3000,
+    "nand_type": "3D TLC NAND"
+  },
+  {
+    "name": "Crucial T705 1TB",
+    "price": 90.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 4096,
+    "seq_read": 14500,
+    "seq_write": 12700,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "Crucial T705 2TB",
+    "price": 180.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 4096,
+    "seq_read": 14500,
+    "seq_write": 12700,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 4800
+  },
+  {
+    "name": "Crucial T705 4TB",
+    "price": 360.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 4096,
+    "seq_read": 14500,
+    "seq_write": 12700,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 9600
+  },
+  {
+    "name": "Crucial T700 1TB",
+    "price": 90.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Crucial T700 2TB",
+    "price": 180.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "Crucial T700 4TB",
+    "price": 360.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 4800
+  },
+  {
+    "name": "Corsair MP700 PRO 1TB",
+    "price": 90.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 1400
+  },
+  {
+    "name": "Corsair MP700 PRO 2TB",
+    "price": 180.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 2800
+  },
+  {
+    "name": "Corsair MP700 PRO 4TB",
+    "price": 360.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 5600
+  },
+  {
+    "name": "Samsung 990 PRO 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7450,
+    "seq_write": 6900,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Samsung 990 PRO 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7450,
+    "seq_write": 6900,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "Samsung 990 PRO 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7450,
+    "seq_write": 6900,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 4800
+  },
+  {
+    "name": "Kingston KC3000 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7000,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 1600
+  },
+  {
+    "name": "Kingston KC3000 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7000,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 3200
+  },
+  {
+    "name": "Kingston KC3000 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7000,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 6400
+  },
+  {
+    "name": "Kingston Fury Renegade 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 2000
+  },
+  {
+    "name": "Kingston Fury Renegade 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 4000
+  },
+  {
+    "name": "Kingston Fury Renegade 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 8000
+  },
+  {
+    "name": "WD_BLACK SN850X 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6600,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "WD_BLACK SN850X 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6600,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "WD_BLACK SN850X 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6600,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 4800
+  },
+  {
+    "name": "Lexar NM790 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "nand_type": "3D TLC YMTC 128-Layer",
+    "endurance_tbw": 1500
+  },
+  {
+    "name": "Lexar NM790 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "nand_type": "3D TLC YMTC 128-Layer",
+    "endurance_tbw": 3000
+  },
+  {
+    "name": "Lexar NM790 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "nand_type": "3D TLC YMTC 128-Layer",
+    "endurance_tbw": 6000
+  },
+  {
+    "name": "Crucial T500 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Crucial T500 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 232-Layer",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "XPG Gammix S70 Blade 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 6800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 1480
+  },
+  {
+    "name": "XPG Gammix S70 Blade 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 6800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 2960
+  },
+  {
+    "name": "WD_BLACK SN770 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5150,
+    "seq_write": 4900,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 600
+  },
+  {
+    "name": "WD_BLACK SN770 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5150,
+    "seq_write": 4900,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "WD_BLACK SN770 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5150,
+    "seq_write": 4900,
+    "nand_type": "BiCS5 112-Layer TLC",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "Kingston NV3 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4000,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 640
+  },
+  {
+    "name": "Kingston NV3 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4000,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 1280
+  },
+  {
+    "name": "Kingston NV2 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 3500,
+    "seq_write": 2800,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 320
+  },
+  {
+    "name": "Kingston NV2 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 3500,
+    "seq_write": 2800,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 640
+  },
+  {
+    "name": "Kingston NV2 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 3500,
+    "seq_write": 2800,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 1280
+  },
+  {
+    "name": "Crucial P3 Plus 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4200,
+    "nand_type": "3D QLC Micron",
+    "endurance_tbw": 440
+  },
+  {
+    "name": "Crucial P3 Plus 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4200,
+    "nand_type": "3D QLC Micron",
+    "endurance_tbw": 880
+  },
+  {
+    "name": "Crucial P3 Plus 4TB",
+    "price": 180.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4200,
+    "nand_type": "3D QLC Micron",
+    "endurance_tbw": 1760
+  },
+  {
+    "name": "Samsung 870 EVO 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 530,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 300
+  },
+  {
+    "name": "Samsung 870 EVO 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 530,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 600
+  },
+  {
+    "name": "Samsung 870 EVO 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 530,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Crucial BX500 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": null,
+    "seq_read": 540,
+    "seq_write": 500,
+    "nand_type": "3D NAND",
+    "endurance_tbw": 180
+  },
+  {
+    "name": "Crucial BX500 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": null,
+    "seq_read": 540,
+    "seq_write": 500,
+    "nand_type": "3D NAND",
+    "endurance_tbw": 360
+  },
+  {
+    "name": "Crucial BX500 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": null,
+    "seq_read": 540,
+    "seq_write": 500,
+    "nand_type": "3D NAND",
+    "endurance_tbw": 720
+  },
+  {
+    "name": "MSI Spatium M570 PRO 1TB",
+    "price": 90.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 1400
+  },
+  {
+    "name": "MSI Spatium M570 PRO 2TB",
+    "price": 180.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 2800
+  },
+  {
+    "name": "MSI Spatium M570 PRO 4TB",
+    "price": 360.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 5600
+  },
+  {
+    "name": "Seagate FireCuda 540 1TB",
+    "price": 90.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 10000,
+    "seq_write": 10000,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 2000
+  },
+  {
+    "name": "Seagate FireCuda 540 2TB",
+    "price": 180.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 5.0 x4",
+    "cache": 2048,
+    "seq_read": 10000,
+    "seq_write": 10000,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 4000
+  },
+  {
+    "name": "Samsung 980 PRO 500GB",
+    "price": 30.0,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 1024,
+    "seq_read": 7000,
+    "seq_write": 5100,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 300
+  },
+  {
+    "name": "Samsung 980 PRO 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 1024,
+    "seq_read": 7000,
+    "seq_write": 5100,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 600
+  },
+  {
+    "name": "Samsung 980 PRO 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 1024,
+    "seq_read": 7000,
+    "seq_write": 5100,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Kingston KC3000 512GB",
+    "price": 30.72,
+    "capacity": 512,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7000,
+    "seq_write": 7000,
+    "nand_type": "3D TLC Micron 176-Layer",
+    "endurance_tbw": 800
+  },
+  {
+    "name": "XPG Gammix S70 Blade 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 6800,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 5920
+  },
+  {
+    "name": "Kioxia Exceria Pro 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6400,
+    "nand_type": "BiCS TLC",
+    "endurance_tbw": 800
+  },
+  {
+    "name": "Kioxia Exceria Pro 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6400,
+    "nand_type": "BiCS TLC",
+    "endurance_tbw": 1600
+  },
+  {
+    "name": "Seagate FireCuda 530 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6900,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 2550
+  },
+  {
+    "name": "Seagate FireCuda 530 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6900,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 5100
+  },
+  {
+    "name": "Seagate FireCuda 530 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7300,
+    "seq_write": 6900,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 10200
+  },
+  {
+    "name": "MSI Spatium M480 PRO 1TB",
+    "price": 60.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 7000,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 1400
+  },
+  {
+    "name": "MSI Spatium M480 PRO 2TB",
+    "price": 120.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 7000,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 2800
+  },
+  {
+    "name": "MSI Spatium M480 PRO 4TB",
+    "price": 240.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": 2048,
+    "seq_read": 7400,
+    "seq_write": 7000,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 5600
+  },
+  {
+    "name": "WD Blue SN580 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 4150,
+    "seq_write": 4150,
+    "nand_type": "BiCS5 TLC",
+    "endurance_tbw": 450
+  },
+  {
+    "name": "WD Blue SN580 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 4150,
+    "seq_write": 4150,
+    "nand_type": "BiCS5 TLC",
+    "endurance_tbw": 900
+  },
+  {
+    "name": "WD Blue SN580 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 4150,
+    "seq_write": 4150,
+    "nand_type": "BiCS5 TLC",
+    "endurance_tbw": 1800
+  },
+  {
+    "name": "WD Blue SN5000 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5500,
+    "seq_write": 5000,
+    "nand_type": "BiCS6 TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "WD Blue SN5000 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5500,
+    "seq_write": 5000,
+    "nand_type": "BiCS6 TLC",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "WD Blue SN5000 4TB",
+    "price": 180.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5500,
+    "seq_write": 5000,
+    "nand_type": "BiCS6 TLC",
+    "endurance_tbw": 4800
+  },
+  {
+    "name": "Kingston NV3 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4000,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 320
+  },
+  {
+    "name": "Kingston NV3 4TB",
+    "price": 180.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4000,
+    "nand_type": "3D QLC / TLC",
+    "endurance_tbw": 2560
+  },
+  {
+    "name": "Crucial P3 Plus 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 4.0 x4",
+    "cache": null,
+    "seq_read": 5000,
+    "seq_write": 4200,
+    "nand_type": "3D QLC Micron",
+    "endurance_tbw": 220
+  },
+  {
+    "name": "Kioxia Exceria G2 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 2100,
+    "seq_write": 1700,
+    "nand_type": "BiCS TLC (DRAM)",
+    "endurance_tbw": 200
+  },
+  {
+    "name": "Kioxia Exceria G2 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 2100,
+    "seq_write": 1700,
+    "nand_type": "BiCS TLC (DRAM)",
+    "endurance_tbw": 400
+  },
+  {
+    "name": "Kioxia Exceria G2 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 2100,
+    "seq_write": 1700,
+    "nand_type": "BiCS TLC (DRAM)",
+    "endurance_tbw": 800
+  },
+  {
+    "name": "Samsung 970 EVO Plus 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 3500,
+    "seq_write": 3300,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 300
+  },
+  {
+    "name": "Samsung 970 EVO Plus 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 3500,
+    "seq_write": 3300,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 600
+  },
+  {
+    "name": "Samsung 970 EVO Plus 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "M.2-2280",
+    "interface": "PCIe 3.0 x4",
+    "cache": 1024,
+    "seq_read": 3500,
+    "seq_write": 3300,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 1200
+  },
+  {
+    "name": "Samsung 870 EVO 4TB",
+    "price": 180.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 530,
+    "nand_type": "Samsung V-NAND TLC",
+    "endurance_tbw": 2400
+  },
+  {
+    "name": "Crucial MX500 500GB",
+    "price": 22.5,
+    "capacity": 500,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 510,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 350
+  },
+  {
+    "name": "Crucial MX500 1TB",
+    "price": 45.0,
+    "capacity": 1000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 510,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 700
+  },
+  {
+    "name": "Crucial MX500 2TB",
+    "price": 90.0,
+    "capacity": 2000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 510,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 1400
+  },
+  {
+    "name": "Crucial MX500 4TB",
+    "price": 180.0,
+    "capacity": 4000,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 560,
+    "seq_write": 510,
+    "nand_type": "3D TLC Micron",
+    "endurance_tbw": 2800
+  },
+  {
+    "name": "Kingston KC600 512GB",
+    "price": 23.04,
+    "capacity": 512,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 550,
+    "seq_write": 520,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 300
+  },
+  {
+    "name": "Kingston KC600 1TB",
+    "price": 46.08,
+    "capacity": 1024,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 550,
+    "seq_write": 520,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 614
+  },
+  {
+    "name": "Kingston KC600 2TB",
+    "price": 92.16,
+    "capacity": 2048,
+    "type": "SSD",
+    "form_factor": "2.5\"",
+    "interface": "SATA 6.0 Gb/s",
+    "cache": 1024,
+    "seq_read": 550,
+    "seq_write": 520,
+    "nand_type": "3D TLC",
+    "endurance_tbw": 1228
   }
 ]

@@ -242,7 +242,7 @@ fun WizardContent(
             onDismissRequest = onDismissPicker,
             sheetState = sheetState,
             containerColor = CardSurface,
-            scrimColor = Color.Black.copy(alpha = 0.65f),
+            scrimColor = MaterialTheme.colorScheme.scrim.copy(alpha = 0.65f),
         ) {
             SlotPickerBottomSheetContent(
                 category = uiState.pickerCategory,

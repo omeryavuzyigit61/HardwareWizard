@@ -17,4 +17,8 @@ data class CpuRawDto(
     @SerialName("threads") val threads: Int? = null,
     @SerialName("l2_cache") val l2CacheMb: Double? = null,
     @SerialName("l3_cache") val l3CacheMb: Int? = null,
+    @SerialName("process_node") val processNode: String? = null,
+    @SerialName("pcie_version") val pcieVersion: String? = null,
+    @SerialName("max_memory_speed") val maxMemorySpeed: String? = null,
+    @SerialName("unlocked_multiplier") val unlockedMultiplier: Boolean? = null,
 )

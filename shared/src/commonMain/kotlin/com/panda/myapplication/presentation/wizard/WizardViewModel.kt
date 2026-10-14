@@ -113,10 +113,9 @@ class WizardViewModel(
         val (items, constraintDesc) = if (isPickerOpen && pickerCategory != null) {
             val compatible = getCompatibleHardwareForSlotUseCase(pickerCategory, analysis.build, rawCandidates)
             val filtered = if (searchQuery.isNotBlank()) {
-                compatible.items.filter {
-                    it.displayName.contains(searchQuery, ignoreCase = true) ||
-                            it.brand.contains(searchQuery, ignoreCase = true)
-                }
+                compatible.items
+                    .filter { com.panda.myapplication.domain.engine.HardwareSearchEngine.matches(it, searchQuery) }
+                    .sortedByDescending { com.panda.myapplication.domain.engine.HardwareSearchEngine.calculateScore(it, searchQuery) }
             } else {
                 compatible.items
             }

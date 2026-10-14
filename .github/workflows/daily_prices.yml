@@ -34,5 +34,5 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/prices_tr.json shared/src/commonMain/composeResources/files/prices_tr.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(prices): daily update Turkish hardware prices [skip ci]" && git push)
+          git add data/prices_tr.json shared/src/commonMain/composeResources/files/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(catalog): daily autonomous hardware catalog & price update [skip ci]" && git push)

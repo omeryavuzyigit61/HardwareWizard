@@ -100,11 +100,11 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Güç Değeri", "${s.wattage.watts}W"))
                 badges.add(EngineeringBadge("Verimlilik", s.efficiency.displayName, isHighlighted = true))
                 s.tierRating?.let { badges.add(EngineeringBadge("PSU Tier Derecesi", it, isHighlighted = true)) }
-                s.capacitors?.let { badges.add(EngineeringBadge("Kapasitör Markası", it, isHighlighted = true)) }
-                if (s.isAtx3Compliant || s.supportsPcie5Power) {
-                    badges.add(EngineeringBadge("Güç Standardı", "ATX 3.0 / PCIe 5.0 Uyumlu", isHighlighted = true))
-                }
+                s.capacitors?.let { badges.add(EngineeringBadge("Kapasitör Standardı", it, isHighlighted = true)) }
+                val atxText = s.atxStandard ?: if (s.isAtx3Compliant || s.supportsPcie5Power) "ATX 3.0 / PCIe 5.0 Uyumlu" else null
+                atxText?.let { badges.add(EngineeringBadge("Güç Standardı", it, isHighlighted = true)) }
                 s.modularity?.let { badges.add(EngineeringBadge("Kablo Tasarımı", it)) }
+                s.pcie12Vhpwr?.let { badges.add(EngineeringBadge("12VHPWR / 12V-2x6", it, isHighlighted = true)) }
             }
 
             is MotherboardSpec -> {
@@ -130,7 +130,11 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("İşlemci Soketi", s.socket, isHighlighted = true))
                 badges.add(EngineeringBadge("Çekirdek Yapısı", "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
                 s.architecture?.let { badges.add(EngineeringBadge("Üretim Mimarisi", it)) }
-                s.l3CacheMb?.let { badges.add(EngineeringBadge("L3 Önbellek", "$it MB")) }
+                s.l3CacheMb?.let { badges.add(EngineeringBadge("L3 Önbellek", "$it MB", isHighlighted = true)) }
+                s.processNode?.let { badges.add(EngineeringBadge("Litografi", it)) }
+                if (s.unlockedMultiplier == true) {
+                    badges.add(EngineeringBadge("Çarpan Kilidi", "Açık (OC Destekli)", isHighlighted = true))
+                }
             }
 
             is GpuSpec -> {
@@ -138,7 +142,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Bellek Kapasitesi", "${s.vram.megabytes / 1024} GB ${s.memoryType}"))
                 s.busWidthBits?.let { badges.add(EngineeringBadge("Veri Yolu", "$it-bit")) }
                 s.powerConnectors?.let { badges.add(EngineeringBadge("Güç Girişi", it)) }
-                s.tdp?.let { badges.add(EngineeringBadge("TDP", "${it.watts}W")) }
+                badges.add(EngineeringBadge("TDP", "${s.tdp.watts}W"))
                 if (s.lengthMm != null && s.slotWidth != null) {
                     badges.add(EngineeringBadge("Boyut", "${s.slotWidth} • ${s.lengthMm} mm"))
                 }

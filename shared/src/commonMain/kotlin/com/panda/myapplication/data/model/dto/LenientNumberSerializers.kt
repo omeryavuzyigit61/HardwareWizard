@@ -168,3 +168,35 @@ object FlexibleModulesListSerializer : KSerializer<List<Int>?> {
         return null
     }
 }
+
+@OptIn(ExperimentalSerializationApi::class)
+object LenientModularitySerializer : KSerializer<String?> {
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("LenientModularity", PrimitiveKind.STRING)
+
+    override fun serialize(encoder: Encoder, value: String?) {
+        if (value != null) encoder.encodeString(value) else encoder.encodeNull()
+    }
+
+    override fun deserialize(decoder: Decoder): String? {
+        val jsonDecoder = decoder as? JsonDecoder ?: return runCatching { decoder.decodeString() }.getOrNull()
+        val element = jsonDecoder.decodeJsonElement()
+        if (element is JsonNull) return null
+        if (element is JsonPrimitive) {
+            val content = element.content.trim()
+            if (content.equals("true", ignoreCase = true) || content.equals("full", ignoreCase = true)) {
+                return "Tam Modüler (Full Modular)"
+            }
+            if (content.equals("semi", ignoreCase = true)) {
+                return "Yarı Modüler"
+            }
+            if (content.equals("false", ignoreCase = true) || content.equals("none", ignoreCase = true)) {
+                return "Modüler Değil"
+            }
+            if (content.isNotBlank()) {
+                return content
+            }
+        }
+        return null
+    }
+}
+

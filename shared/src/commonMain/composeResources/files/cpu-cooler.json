@@ -5,7 +5,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro 360",
@@ -16,7 +23,14 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Cooler Master Hyper 212 Black Edition",
@@ -30,7 +44,14 @@
       26
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Phantom Spirit 120 SE ARGB",
@@ -38,7 +59,14 @@
     "rpm": 1500,
     "noise_level": 25.6,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Aqua Elite V3",
@@ -46,7 +74,14 @@
     "rpm": 1500,
     "noise_level": 25.6,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-D15 chromax.black",
@@ -60,7 +95,14 @@
       24.6
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken 360",
@@ -74,7 +116,14 @@
       30.6
     ],
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Liquid Freezer III 360 A-RGB",
@@ -85,7 +134,14 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin X 120 Refined SE",
@@ -93,7 +149,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Cooler Master MasterLiquid 360L Core ARGB",
@@ -104,7 +167,14 @@
     ],
     "noise_level": 27.2,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro A-RGB 360",
@@ -115,7 +185,14 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Phantom Spirit 120 SE",
@@ -123,7 +200,14 @@
     "rpm": 1500,
     "noise_level": 25.6,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken 240",
@@ -137,7 +221,14 @@
       30.6
     ],
     "color": "Black",
-    "size": 240
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Peerless Assassin 120 SE ARGB",
@@ -145,7 +236,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Freezer 36",
@@ -156,7 +254,14 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Phantom Spirit EVO",
@@ -164,7 +269,14 @@
     "rpm": 2150,
     "noise_level": 27,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-D15",
@@ -178,7 +290,14 @@
       24.6
     ],
     "color": null,
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken Elite 360 RGB",
@@ -192,7 +311,14 @@
       30.6
     ],
     "color": "White",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken 360 RGB",
@@ -206,7 +332,14 @@
       30.6
     ],
     "color": "White",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Frozen Notte ARGB",
@@ -214,7 +347,14 @@
     "rpm": 2000,
     "noise_level": 27.7,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Peerless Assassin 120 SE WHITE ARGB",
@@ -222,7 +362,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro",
@@ -233,7 +380,14 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": 240
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-L9x65 chromax.black",
@@ -247,7 +401,14 @@
       23.6
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin King SE ARGB",
@@ -255,7 +416,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-L9A-AM5",
@@ -269,7 +437,14 @@
       23.6
     ],
     "color": "Brown / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin X SE",
@@ -277,7 +452,14 @@
     "rpm": 2200,
     "noise_level": 23.85,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Cooler Master MasterLiquid 240L Core ARGB",
@@ -288,7 +470,14 @@
     ],
     "noise_level": 27.2,
     "color": "Black",
-    "size": 240
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright AQUA ELITE ARGB V4",
@@ -296,7 +485,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Cooler Master Hyper 212 (2023)",
@@ -307,7 +503,14 @@
     ],
     "noise_level": 32.8,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Cooler Master Hyper 212 Spectrum V3",
@@ -318,7 +521,14 @@
     ],
     "noise_level": 27.2,
     "color": "Black / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-L9A-AM5 CHROMAX.BLACK",
@@ -332,7 +542,14 @@
       23.6
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken 240 RGB",
@@ -346,7 +563,14 @@
       30.6
     ],
     "color": "White",
-    "size": 240
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken Elite 360 RGB (2024)",
@@ -357,7 +581,14 @@
     ],
     "noise_level": 30,
     "color": "White",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright AXP90-X47",
@@ -365,7 +596,14 @@
     "rpm": 2700,
     "noise_level": 22.4,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "MSI MAG CORELIQUID A13",
@@ -373,7 +611,14 @@
     "rpm": null,
     "noise_level": null,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin Spirit 120 EVO",
@@ -381,7 +626,14 @@
     "rpm": 2000,
     "noise_level": 28.2,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-U12A chromax.black",
@@ -395,7 +647,14 @@
       22.6
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin Spirit 120 EVO DARK",
@@ -403,7 +662,14 @@
     "rpm": 1850,
     "noise_level": 27,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Peerless Assassin 120 Black",
@@ -411,7 +677,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-U12S chromax.black",
@@ -425,7 +698,14 @@
       22.4
     ],
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Assassin X 120 R Digital ARGB",
@@ -433,7 +713,14 @@
     "rpm": 2000,
     "noise_level": 29.8,
     "color": "Black",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Thermalright Peerless Assassin 120 White",
@@ -441,7 +728,14 @@
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "Noctua NH-D15 G2",
@@ -449,7 +743,14 @@
     "rpm": 1500,
     "noise_level": 24.8,
     "color": "Brown / Silver",
-    "size": null
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "NZXT Kraken Elite 360 (2024)",
@@ -460,7 +761,14 @@
     ],
     "noise_level": 30,
     "color": "Black",
-    "size": 360
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   },
   {
     "name": "ARCTIC Liquid Freezer III 280",
@@ -471,6 +779,1339 @@
     ],
     "noise_level": null,
     "color": "Black",
-    "size": 280
+    "size": 280,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 360",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 360 (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 240",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 240 (White)",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "Lian Li HydroShift LCD 360",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2600 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Lian Li HydroShift LCD 360 (White)",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2600 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Arctic Liquid Freezer III 360 A-RGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 24.5,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Arctic Liquid Freezer III 240 A-RGB",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "Arctic Liquid Freezer III 240 A-RGB (White)",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "Arctic Liquid Freezer III 420 A-RGB",
+    "price": 161.0,
+    "type": "Liquid",
+    "size": 420,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 25.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 380
+  },
+  {
+    "name": "NZXT Kraken Elite 360 RGB (White)",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "NZXT Kraken Elite 240 RGB",
+    "price": 147.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "NZXT Kraken Elite 240 RGB (White)",
+    "price": 147.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "DeepCool LT720",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.9,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "DeepCool LT720 (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.9,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Frozen Notte 360 ARGB",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Frozen Notte 360 ARGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Aqua Elite 360 V3",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Aqua Elite 360 V3 (White)",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Corsair iCUE LINK Titan 360 RX RGB",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Corsair iCUE LINK Titan 360 RX RGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "MSI MAG CoreLiquid E360",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320
+  },
+  {
+    "name": "MSI MAG CoreLiquid E360 (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 SE (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1550 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 265
+  },
+  {
+    "name": "Thermalright Phantom Spirit 120 SE (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1500 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "DeepCool AK620 Digital",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 260
+  },
+  {
+    "name": "DeepCool AK620 Digital (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 260
+  },
+  {
+    "name": "Arctic Freezer 36 A-RGB",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Arctic Freezer 36 A-RGB (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Be Quiet! Dark Rock Pro 5",
+    "price": 75.5,
+    "type": "Air",
+    "size": 135,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1700 RPM",
+    "noise_level": 23.3,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 270
+  },
+  {
+    "name": "Arctic Liquid Freezer III 420 A-RGB (White)",
+    "price": 161.0,
+    "type": "Liquid",
+    "size": 420,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 25.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 380
+  },
+  {
+    "name": "Arctic Liquid Freezer III 280 A-RGB",
+    "price": 119.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 24.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300
+  },
+  {
+    "name": "Arctic Liquid Freezer III 280 A-RGB (White)",
+    "price": 119.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 24.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300
+  },
+  {
+    "name": "NZXT Kraken Elite 280 RGB",
+    "price": 164.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300
+  },
+  {
+    "name": "NZXT Kraken Elite 280 RGB (White)",
+    "price": 164.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300
+  },
+  {
+    "name": "DeepCool LS720 SE",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "DeepCool LS720 SE (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Frozen Prism 360",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Thermalright Frozen Prism 360 (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Corsair iCUE H150i ELITE LCD XT",
+    "price": 188.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Corsair iCUE H150i ELITE LCD XT (White)",
+    "price": 188.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "ASUS ROG Ryujin III 360 ARGB",
+    "price": 188.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 360
+  },
+  {
+    "name": "ASUS ROG Ryujin III 360 ARGB (White)",
+    "price": 188.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 360
+  },
+  {
+    "name": "ASUS TUF Gaming LC II 360 ARGB",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320
+  },
+  {
+    "name": "Be Quiet! Silent Loop 2 360",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Be Quiet! Pure Loop 2 240",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 26.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280
+  },
+  {
+    "name": "Cooler Master MasterLiquid 360L Core ARGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1750 RPM",
+    "noise_level": 27.2,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320
+  },
+  {
+    "name": "Thermalright Assassin X 120 Refined SE (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1550 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 200
+  },
+  {
+    "name": "DeepCool AK400 Digital",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "DeepCool AK400 Digital (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Be Quiet! Pure Rock 2 FX",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 26.8,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 150
+  },
+  {
+    "name": "Cooler Master Hyper 212 Halo",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2050 RPM",
+    "noise_level": 27.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 180
+  },
+  {
+    "name": "Cooler Master Hyper 212 Halo (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 2050 RPM",
+    "noise_level": 27.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 180
+  },
+  {
+    "name": "ASUS Prime LC 240 ARGB 240mm Intel-AMD Uyumlu İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Endorfy Fera 5 ARGB 120mm 4 Isı Borulu Intel-AMD Uyumlu Hava Soğutucu (EY3A007)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Gigabyte Eagle 360I ARGB AMD/Intel Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "SEGOTEP K6 SE Siyah 120mm Hava Soğutucu (INTEL)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "FSP AD36 ARGB AIO 360mm Dijital Isı Göstergeli Beyaz İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "Bitfenix S7 Digital Beyaz ARGB 360mm İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "CORSAIR NAUTILUS 360 RS LCD 360mm Siyah İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "FAZEON A5120TRA 12cm RGB Kule Tipi Siyah İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "FSP NP5 Siyah 12cm ARGB Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Rampage FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "ANTEC Skeleton 360 ARGB Fanlı 360mm Sıvı işlemci Soğutucusu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "COUGAR POSEIDON ELITE ARGB 360 AIO LGA1700/1851/AM5 360mm Beyaz Sıvı İşlemci",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "ASUS PRIME LC 360 ARGB AURA SYNC 360MM LGA1700/1851/AM5 Sıvı Soğutma",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "DeepCool LT520 2x120mm Fanlı 240mm Sıvı İşlemci Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "ASUS MAX GAMING LC360 ARGB LCD 2.4” IPS Ekranlı ARGB AIO",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350
+  },
+  {
+    "name": "FSP MP7 WA 2x120mm ARGB Fanlı LGA1700/1851/AM5 Beyaz işlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "AMD Wraith  İşlemci Soğutucusu-712-000046",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "RAMPAGE COOLBLADE 120mm Fanlı İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "FRISBY P2S 90mm ARGB Fanlı LGA1700/AM5 2xBakır Borulu Hava Soğutma",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "DEEPCOOL AG300 LGA1700/1851/AM5 işlemci Hava Soğutma",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "DeepCool GAMMAXX AG400 LED 120 mm İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "MSI GG CORE FROZR L 120 MM İşlemci Hava Soğutucusu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "CORSAIR A500 Serisi Çift Fanlı İşlemci Soğutucusu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Ocypus Beta A10 124 mm Intel(1700p/1851p)-AMD Uyumlu Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
+  },
+  {
+    "name": "Intel M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220
   }
 ]

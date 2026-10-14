@@ -13,6 +13,15 @@ data class PsuSpec(
     val outputs: String? = null,
     val tierRating: String? = null,
     val capacitors: String? = null,
+    val atxStandard: String? = null,
+    val pcie12Vhpwr: String? = null,
+    val epsConnectors: String? = null,
+    val pcieConnectors: String? = null,
+    val sataConnectors: String? = null,
+    val topology: String? = null,
+    val protections: String? = null,
+    val fanAndSize: String? = null,
+    val cybeneticsCert: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.PSU

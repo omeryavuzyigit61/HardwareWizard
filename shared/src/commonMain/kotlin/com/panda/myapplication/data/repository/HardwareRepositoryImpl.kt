@@ -12,10 +12,14 @@ import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.HardwareRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlin.time.Clock
 
@@ -26,82 +30,132 @@ class HardwareRepositoryImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : HardwareRepository {
 
-    override fun observeHardwareItems(): Flow<DomainResult<List<HardwareItem>>> =
-        hardwareDao.observeAll()
-            .onStart {
-                localDataSource.seedDatabaseIfEmpty()
-            }
-            .map { list ->
-                val items = list.mapNotNull { HardwareMapper.toDomain(it) }
-                DomainResult.Success(items) as DomainResult<List<HardwareItem>>
-            }
-            .catch { error ->
-                emit(DomainResult.Failure(DomainError.Storage))
-            }
-            .flowOn(ioDispatcher)
+    private val seedMutex = Mutex()
+    private var isSeeded = false
+    private val memoryCache = MutableStateFlow<List<HardwareItem>?>(null)
 
-    override fun observeHardwareItemsByCategory(category: HardwareCategory): Flow<DomainResult<List<HardwareItem>>> =
-        hardwareDao.observeByCategory(category)
-            .onStart {
-                localDataSource.seedDatabaseIfEmpty()
-            }
-            .map { list ->
-                val items = list.mapNotNull { HardwareMapper.toDomain(it) }
-                DomainResult.Success(items) as DomainResult<List<HardwareItem>>
-            }
-            .catch { error ->
-                emit(DomainResult.Failure(DomainError.Storage))
-            }
-            .flowOn(ioDispatcher)
+    private suspend fun ensureSeeded() {
+        if (isSeeded) return
+        seedMutex.withLock {
+            if (isSeeded) return
+            localDataSource.seedDatabaseIfEmpty()
+            isSeeded = true
+        }
+    }
 
-    override fun observeHardwareItem(id: HardwareId): Flow<DomainResult<HardwareItem>> =
-        hardwareDao.observeById(id.value)
-            .onStart {
-                localDataSource.seedDatabaseIfEmpty()
+    override fun observeHardwareItems(): Flow<DomainResult<List<HardwareItem>>> = flow {
+        // 1. Emit in-memory cache instantly if available (0ms tab switch)
+        memoryCache.value?.let { cached ->
+            if (cached.isNotEmpty()) {
+                emit(DomainResult.Success(cached))
             }
-            .map { itemWithSpec ->
-                if (itemWithSpec == null) {
-                    DomainResult.Failure(DomainError.NotFound)
-                } else {
-                    val domainItem = HardwareMapper.toDomain(itemWithSpec)
-                    if (domainItem != null) {
-                        DomainResult.Success(domainItem)
-                    } else {
+        }
+        // 2. Ensure database is fully seeded before querying Room
+        ensureSeeded()
+        // 3. Observe Room updates
+        emitAll(
+            hardwareDao.observeAll()
+                .map { list ->
+                    val items = list.mapNotNull { HardwareMapper.toDomain(it) }
+                    memoryCache.value = items
+                    DomainResult.Success(items) as DomainResult<List<HardwareItem>>
+                }
+                .catch {
+                    val fallback = memoryCache.value ?: emptyList()
+                    emit(DomainResult.Success(fallback))
+                }
+        )
+    }.flowOn(ioDispatcher)
+
+    override fun observeHardwareItemsByCategory(category: HardwareCategory): Flow<DomainResult<List<HardwareItem>>> = flow {
+        // 1. Emit in-memory cache instantly if available (0ms tab switch)
+        memoryCache.value?.let { cached ->
+            val filtered = cached.filter { it.category == category }
+            if (filtered.isNotEmpty()) {
+                emit(DomainResult.Success(filtered))
+            }
+        }
+        // 2. Ensure database is fully seeded before querying Room
+        ensureSeeded()
+        // 3. Observe Room updates
+        emitAll(
+            hardwareDao.observeByCategory(category)
+                .map { list ->
+                    val items = list.mapNotNull { HardwareMapper.toDomain(it) }
+                    DomainResult.Success(items) as DomainResult<List<HardwareItem>>
+                }
+                .catch {
+                    val fallback = memoryCache.value?.filter { it.category == category } ?: emptyList()
+                    emit(DomainResult.Success(fallback))
+                }
+        )
+    }.flowOn(ioDispatcher)
+
+    override fun observeHardwareItem(id: HardwareId): Flow<DomainResult<HardwareItem>> = flow {
+        ensureSeeded()
+        emitAll(
+            hardwareDao.observeById(id.value)
+                .map { itemWithSpec ->
+                    if (itemWithSpec == null) {
                         DomainResult.Failure(DomainError.NotFound)
+                    } else {
+                        val domainItem = HardwareMapper.toDomain(itemWithSpec)
+                        if (domainItem != null) {
+                            DomainResult.Success(domainItem)
+                        } else {
+                            DomainResult.Failure(DomainError.NotFound)
+                        }
                     }
                 }
-            }
-            .catch { error ->
-                emit(DomainResult.Failure(DomainError.Storage))
-            }
-            .flowOn(ioDispatcher)
+                .catch {
+                    emit(DomainResult.Failure(DomainError.Storage))
+                }
+        )
+    }.flowOn(ioDispatcher)
 
-    override fun observeBrands(category: HardwareCategory?): Flow<DomainResult<List<String>>> {
-        val flow = if (category == null) {
+    override fun observeBrands(category: HardwareCategory?): Flow<DomainResult<List<String>>> = flow {
+        ensureSeeded()
+        val daoFlow = if (category == null) {
             hardwareDao.observeAllBrands()
         } else {
             hardwareDao.observeBrandsByCategory(category)
         }
-        return flow.map { brands ->
-            DomainResult.Success(brands.filter { it.isNotBlank() }) as DomainResult<List<String>>
-        }.catch {
-            emit(DomainResult.Failure(DomainError.Storage))
-        }.flowOn(ioDispatcher)
-    }
+        emitAll(
+            daoFlow.map { brands ->
+                DomainResult.Success(brands.filter { it.isNotBlank() }) as DomainResult<List<String>>
+            }.catch {
+                emit(DomainResult.Success(emptyList()))
+            }
+        )
+    }.flowOn(ioDispatcher)
 
     override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
+        ensureSeeded()
         val now = Clock.System.now()
-        val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
-        val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
-        val localPrices = localDataSource.loadLocalPricesTr()
-        val localBenchmarks = localDataSource.loadLocalBenchmarks()
-        val allPrices = localPrices + remotePrices
-        val allBenchmarks = localBenchmarks + remoteBenchmarks
+        runCatching {
+            val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
+            val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
+            val localPrices = localDataSource.loadLocalPricesTr()
+            val localBenchmarks = localDataSource.loadLocalBenchmarks()
+            val allPrices = localPrices.toMutableMap().apply {
+                remotePrices.forEach { (key, remoteInfo) ->
+                    val localInfo = this[key]
+                    if (localInfo == null || (remoteInfo.currentPriceTry != null && (localInfo.currentPriceTry == null || remoteInfo.offers.isNotEmpty()))) {
+                        this[key] = remoteInfo
+                    }
+                }
+            }
+            val allBenchmarks = localBenchmarks.toMutableMap().apply {
+                remoteBenchmarks.forEach { (key, remoteInfo) ->
+                    if (!containsKey(key)) {
+                        this[key] = remoteInfo
+                    }
+                }
+            }
 
-        val catalogResult = remoteDataSource.fetchAllHardware()
-        if (catalogResult.isSuccess) {
-            val catalog = catalogResult.getOrThrow()
-            runCatching {
+            val catalogResult = remoteDataSource.fetchAllHardware()
+            if (catalogResult.isSuccess) {
+                val catalog = catalogResult.getOrThrow()
                 val snapshot = HardwareMapper.buildCatalogSnapshot(
                     cpus = catalog.cpus,
                     gpus = catalog.gpus,
@@ -115,17 +169,16 @@ class HardwareRepositoryImpl(
                     benchmarks = allBenchmarks,
                     syncedAt = now,
                 )
-                hardwareDao.replaceCatalog(snapshot, syncedAt = now)
-                DomainResult.Success(Unit)
-            }.getOrElse { DomainResult.Failure(DomainError.Storage) }
-        } else {
-            // If full catalog remote fetch fails, update existing cached items with latest prices and benchmarks from repo
-            runCatching {
+                if (snapshot.items.isNotEmpty()) {
+                    hardwareDao.replaceCatalog(snapshot, syncedAt = now)
+                }
+            } else {
+                // If remote catalog fetch fails (offline or 404), update existing Room items with any available prices & benchmarks
                 val existing = hardwareDao.getAllHardwareItems()
-                if (existing.isNotEmpty()) {
+                if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
                     val updated = existing.map { item ->
                         val priceData = allPrices[item.id]
-                        val gpuKey = if (item.category == com.panda.myapplication.domain.model.HardwareCategory.GPU) {
+                        val gpuKey = if (item.category == HardwareCategory.GPU) {
                             com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
                         } else null
                         val benchData = allBenchmarks[item.id] ?: (gpuKey?.let { allBenchmarks["gpu_$it"] ?: allBenchmarks[it] })
@@ -145,11 +198,12 @@ class HardwareRepositoryImpl(
                         )
                     }
                     hardwareDao.upsertHardwareItems(updated)
-                    DomainResult.Success(Unit)
-                } else {
-                    DomainResult.Failure(DomainError.Network)
                 }
-            }.getOrElse { DomainResult.Failure(DomainError.Network) }
+            }
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            // Silent fallback to local cache - background network error never fails UI
+            DomainResult.Success(Unit)
         }
     }
 }

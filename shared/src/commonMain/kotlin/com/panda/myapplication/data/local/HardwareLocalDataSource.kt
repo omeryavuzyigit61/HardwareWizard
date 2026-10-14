@@ -31,19 +31,38 @@ class HardwareLocalDataSource(
     @OptIn(ExperimentalResourceApi::class)
     suspend fun seedDatabaseIfEmpty(): Result<Unit> = withContext(ioDispatcher) {
         runCatching {
-            val currentItems = hardwareDao.observeAll().first()
-            if (currentItems.isNotEmpty()) {
+            val existing = hardwareDao.getAllHardwareItems()
+            if (existing.isNotEmpty()) {
+                val hasAnyPrices = existing.any { it.currentPriceTry != null }
+                if (!hasAnyPrices) {
+                    val localPrices = loadLocalPricesTr()
+                    if (localPrices.isNotEmpty()) {
+                        val updated = existing.map { item ->
+                            val p = localPrices[item.id]
+                            if (p != null && p.currentPriceTry != null) {
+                                item.copy(
+                                    currentPriceTry = p.currentPriceTry,
+                                    lowestPriceTry = p.lowestPriceTry ?: p.currentPriceTry,
+                                    highestPriceTry = p.highestPriceTry ?: p.currentPriceTry,
+                                    offers = p.offers,
+                                    priceHistory = p.priceHistory,
+                                )
+                            } else item
+                        }
+                        hardwareDao.upsertHardwareItems(updated)
+                    }
+                }
                 return@runCatching
             }
 
-            val cpus = readJsonAsset<List<CpuRawDto>>("files/cpu.json").orEmpty()
-            val gpus = readJsonAsset<List<GpuRawDto>>("files/video-card.json").orEmpty()
-            val rams = readJsonAsset<List<RamRawDto>>("files/memory.json").orEmpty()
-            val motherboards = readJsonAsset<List<MotherboardRawDto>>("files/motherboard.json").orEmpty()
-            val psus = readJsonAsset<List<PsuRawDto>>("files/power-supply.json").orEmpty()
-            val storages = readJsonAsset<List<StorageRawDto>>("files/internal-hard-drive.json").orEmpty()
-            val coolers = readJsonAsset<List<CoolerRawDto>>("files/cpu-cooler.json").orEmpty()
-            val cases = readJsonAsset<List<CaseRawDto>>("files/case.json").orEmpty()
+            val cpus = readJsonAssetList<CpuRawDto>("files/cpu.json")
+            val gpus = readJsonAssetList<GpuRawDto>("files/video-card.json")
+            val rams = readJsonAssetList<RamRawDto>("files/memory.json")
+            val motherboards = readJsonAssetList<MotherboardRawDto>("files/motherboard.json")
+            val psus = readJsonAssetList<PsuRawDto>("files/power-supply.json")
+            val storages = readJsonAssetList<StorageRawDto>("files/internal-hard-drive.json")
+            val coolers = readJsonAssetList<CoolerRawDto>("files/cpu-cooler.json")
+            val cases = readJsonAssetList<CaseRawDto>("files/case.json")
 
             val pricesTr = loadLocalPricesTr()
             val benchmarks = loadLocalBenchmarks()
@@ -85,6 +104,24 @@ class HardwareLocalDataSource(
                 json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(text)
             }
         }.getOrDefault(emptyMap())
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    private suspend inline fun <reified T> readJsonAssetList(path: String): List<T> = withContext(ioDispatcher) {
+        runCatching {
+            val bytes = Res.readBytes(path)
+            val text = bytes.decodeToString()
+            val element = json.parseToJsonElement(text)
+            if (element is kotlinx.serialization.json.JsonArray) {
+                element.mapNotNull { itemElement ->
+                    runCatching {
+                        json.decodeFromString<T>(itemElement.toString())
+                    }.getOrNull()
+                }
+            } else {
+                emptyList()
+            }
+        }.getOrDefault(emptyList())
     }
 
     @OptIn(ExperimentalResourceApi::class)

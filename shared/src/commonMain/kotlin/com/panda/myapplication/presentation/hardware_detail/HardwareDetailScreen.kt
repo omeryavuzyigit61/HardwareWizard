@@ -751,7 +751,7 @@ private fun PolymorphicTechnicalSpecsSection(
                         text = value,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = if (value == "Veri Bulunamadı") MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurface,
+                        color = if (value == "Veri Bulunamadı" || value == "Belirtilmedi") MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurface,
                         modifier = Modifier.weight(1.3f),
                     )
                 }
@@ -769,100 +769,127 @@ private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, Stri
         is CpuSpec -> {
             rows.add("Soket" to s.socket)
             rows.add("Çekirdek / İzlek" to "${s.coreCount} Çekirdek / ${s.threadCount} İzlek")
+            rows.add("Temel Saat Hızı" to "${s.baseClock.mhz / 1000f} GHz")
             val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: "Veri Bulunamadı"
-            rows.add("Temel / Boost Saat Hızı" to "${s.baseClock.mhz / 1000f} GHz / $boostText")
-            val cacheParts = listOfNotNull(
-                s.l2CacheMb?.let { "L2: ${it} MB" },
-                s.l3CacheMb?.let { "L3: ${it} MB" },
-            ).joinToString(" • ")
-            rows.add("L2 / L3 Önbellek" to cacheParts.ifBlank { "Veri Bulunamadı" })
+            rows.add("Turbo / Boost Frekans" to boostText)
+            rows.add("L2 Önbellek" to (s.l2CacheMb?.let { "${it} MB" } ?: "Veri Bulunamadı"))
+            rows.add("L3 Önbellek" to (s.l3CacheMb?.let { "${it} MB" } ?: "Veri Bulunamadı"))
             rows.add("TDP Güç Tüketimi" to "${s.tdp.watts} W")
+            rows.add("Üretim Teknolojisi (Litografi)" to (s.processNode ?: "Veri Bulunamadı"))
             rows.add("Mimari" to (s.architecture ?: "Veri Bulunamadı"))
-            rows.add("Dahili GPU" to if (s.hasIntegratedGraphics) "Mevcut" else "Bulunmuyor")
+            rows.add("PCIe Veri Yolu Sürümü" to (s.pcieVersion ?: "Belirtilmedi"))
+            rows.add("Maks. Bellek Desteği" to (s.maxMemorySpeed ?: "Belirtilmedi"))
+            rows.add("Dahili Grafik (iGPU)" to if (s.hasIntegratedGraphics) "Mevcut (Dahili Ekran Kartı)" else "Bulunmuyor (Harici GPU Gerekli)")
+            rows.add("Çarpan Kilidi (Overclock)" to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else "Belirtilmedi")
         }
 
         is GpuSpec -> {
-            rows.add("GPU Çipi" to s.chipset)
-            rows.add("VRAM" to "${s.vram.megabytes / 1024} GB")
+            rows.add("Grafik İşlemci (GPU Çipi)" to s.chipset)
+            rows.add("VRAM Kapasitesi" to "${s.vram.megabytes / 1024} GB")
             rows.add("Bellek Tipi" to s.memoryType)
-            rows.add("Bit Değeri" to (s.busWidthBits?.let { "$it-bit" } ?: "Veri Bulunamadı"))
-            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: "Veri Bulunamadı"
-            rows.add("Temel / Boost MHz" to "${s.coreClock.mhz} MHz / $boostText")
-            rows.add("TDP Güç Tüketimi" to "${s.tdp.watts} W (Önerilen PSU: ${s.recommendedPsu.watts} W)")
-            rows.add("Kart Uzunluğu" to (s.lengthMm?.let { "$it mm" } ?: "Veri Bulunamadı"))
-            rows.add("Güç Girişi" to (s.powerConnectors ?: "Veri Bulunamadı"))
-            rows.add("Görüntü Çıkışları" to (s.displayOutputs ?: "Veri Bulunamadı"))
+            rows.add("Bellek Veri Yolu (Bus Width)" to (s.busWidthBits?.let { "$it-bit" } ?: "Belirtilmedi"))
+            rows.add("Temel Çekirdek Frekansı" to "${s.coreClock.mhz} MHz")
+            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: "Belirtilmedi"
+            rows.add("Boost Çekirdek Frekansı" to boostText)
+            rows.add("TDP Güç Tüketimi" to "${s.tdp.watts} W")
+            rows.add("Önerilen Güç Kaynağı (PSU)" to "${s.recommendedPsu.watts} W")
+            rows.add("Kart Uzunluğu" to (s.lengthMm?.let { "$it mm" } ?: "Belirtilmedi"))
+            rows.add("Slot Genişliği" to (s.slotWidth ?: "Belirtilmedi"))
+            rows.add("Güç Girişleri" to (s.powerConnectors ?: "Belirtilmedi"))
+            rows.add("Görüntü Çıkışları" to (s.displayOutputs ?: "Belirtilmedi"))
+            rows.add("Parça Numarası (Part Number)" to (s.partNumber ?: item.model))
         }
 
         is MotherboardSpec -> {
-            rows.add("Soket" to s.socket)
+            rows.add("Soket Tipi" to s.socket)
             rows.add("Yonga Seti (Chipset)" to s.chipset)
             rows.add("Form Faktörü" to s.formFactor.displayName)
-            rows.add("Bellek Tipi" to s.memoryGeneration.displayName)
-            rows.add("Maks. Bellek" to (s.maxMemoryGb?.let { "$it GB" } ?: "Veri Bulunamadı"))
-            rows.add("RAM Slot Sayısı" to "${s.ramSlots} Slot")
-            rows.add("M.2 Yuva Sayısı" to (s.m2Slots?.let { "${it}x M.2" } ?: "Veri Bulunamadı"))
-            rows.add("PCIe Slot Sayısı" to (s.pcieSlotCount?.let { "${it}x PCIe" } ?: "Veri Bulunamadı"))
-            rows.add("SATA Port Sayısı" to (s.sataPorts?.let { "${it}x SATA" } ?: "Veri Bulunamadı"))
+            rows.add("Bellek Nesli (DDR Tipi)" to s.memoryGeneration.displayName)
+            rows.add("RAM Slot Sayısı" to "${s.ramSlots} Yuva")
+            rows.add("Maksimum Bellek Desteği" to (s.maxMemoryGb?.let { "$it GB" } ?: "Belirtilmedi"))
+            rows.add("PCIe Gen Standardı" to s.pcieGeneration.displayName)
+            rows.add("PCIe Genişleme Yuvaları" to (s.pcieSlotCount?.let { "${it}x PCIe Slot" } ?: "Belirtilmedi"))
+            rows.add("M.2 NVMe Yuva Sayısı" to (s.m2Slots?.let { "${it}x M.2 NVMe" } ?: "Belirtilmedi"))
+            rows.add("SATA 6Gb/s Port Sayısı" to (s.sataPorts?.let { "${it}x SATA 3.0" } ?: "Belirtilmedi"))
+            rows.add("VRM Güç Fazları" to (s.vrmPhases ?: "Belirtilmedi"))
+            rows.add("Kablosuz Bağlantı (Wi-Fi)" to if (s.hasWifi == true) "Dahili Wi-Fi & Bluetooth" else if (s.hasWifi == false) "Bulunmuyor" else "Belirtilmedi")
+            rows.add("Arka Panel I/O Çıkışları" to (s.interfacePorts ?: "Belirtilmedi"))
         }
 
         is RamSpec -> {
-            rows.add("Bellek Tipi" to s.generation.displayName)
+            rows.add("Bellek Standardı" to s.generation.displayName)
             val totalGb = s.capacity.megabytes / 1024
             val perModGb = totalGb / s.moduleCount
-            rows.add("Kapasite & Modül" to "${totalGb} GB (${s.moduleCount}x${perModGb} GB)")
-            rows.add("Hız" to "${s.speed.mhz} MHz (MT/s)")
-            rows.add("CL Değeri" to "CL${s.casLatency}")
-            rows.add("İlk Tepki Süresi" to (s.firstWordLatencyNs?.let { "$it ns" } ?: "Veri Bulunamadı"))
-            rows.add("Voltaj" to (s.voltage?.let { "$it V" } ?: "Veri Bulunamadı"))
+            rows.add("Kapasite & Kit Yapısı" to "${totalGb} GB (${s.moduleCount}x${perModGb} GB Kit)")
+            rows.add("Frekans Hızı (MT/s)" to "${s.speed.mhz} MHz (MT/s)")
+            rows.add("CAS Gecikme Süresi (CL)" to "CL${s.casLatency}")
+            rows.add("İlk Tepki Süresi (True Latency)" to (s.firstWordLatencyNs?.let { "$it ns" } ?: "Belirtilmedi"))
+            rows.add("Çalışma Gerilimi (Voltaj)" to (s.voltage?.let { "$it V" } ?: "Belirtilmedi"))
             val coolerRgb = listOfNotNull(
-                s.heatSpreader?.let { if (it) "Soğutuculu Alüminyum Blok" else "Soğutucusuz" },
+                s.heatSpreader?.let { if (it) "Alüminyum Soğutucu Blok" else "Soğutucusuz" },
                 s.rgb?.let { if (it) "RGB Aydınlatma" else "RGB Yok" },
             ).joinToString(" • ")
-            rows.add("Soğutucu / RGB" to coolerRgb.ifBlank { "Veri Bulunamadı" })
+            rows.add("Soğutucu Blok / RGB" to coolerRgb.ifBlank { "Belirtilmedi" })
+            rows.add("Hız Aşırtma Profili" to if (s.generation.name.contains("DDR5")) "Intel XMP 3.0 & AMD EXPO" else "Intel XMP 2.0")
         }
 
         is StorageSpec -> {
-            rows.add("Kapasite" to (if (s.capacity.megabytes >= 1024) "${s.capacity.megabytes / 1024} GB" else "${s.capacity.megabytes} MB"))
-            rows.add("Tip" to "${s.mediaType.displayName} (${if (s.storageInterface == StorageInterface.NVME) "NVMe" else "SATA"})")
-            rows.add("Arayüz" to (s.pcieGeneration?.let { "PCIe ${it.displayName}" } ?: s.storageInterface.displayName))
+            val totalGb = s.capacity.megabytes / 1024
+            rows.add("Depolama Kapasitesi" to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
+            rows.add("Bellek / Disk Tipi" to "${s.mediaType.displayName} (${if (s.storageInterface == StorageInterface.NVME) "NVMe M.2" else "SATA"})")
+            rows.add("Arayüz & Protokol" to (s.pcieGeneration?.let { "PCIe Gen ${it.displayName} x4" } ?: s.storageInterface.displayName))
             rows.add("Form Faktörü" to s.formFactor.displayName)
-            rows.add("Önbellek (Cache)" to (s.cacheMb?.let { "$it MB" } ?: "Veri Bulunamadı"))
-            rows.add("Okuma / Yazma Hızı" to "${s.sequentialReadMbps} MB/s Okuma / ${s.sequentialWriteMbps} MB/s Yazma")
+            rows.add("Sıralı Okuma Hızı" to if (s.sequentialReadMbps > 0) "${s.sequentialReadMbps} MB/sn" else "Belirtilmedi")
+            rows.add("Sıralı Yazma Hızı" to if (s.sequentialWriteMbps > 0) "${s.sequentialWriteMbps} MB/sn" else "Belirtilmedi")
+            rows.add("NAND Flaş Tipi" to (s.nandType ?: "Belirtilmedi"))
+            rows.add("DRAM Önbellek (Buffer)" to (s.cacheMb?.let { "$it MB DRAM Cache" } ?: "Belirtilmedi"))
+            rows.add("Dayanıklılık Ömrü (TBW)" to (s.enduranceTbw?.let { "$it TBW" } ?: "Belirtilmedi"))
         }
 
         is PsuSpec -> {
-            rows.add("Güç" to "${s.wattage.watts} Watt")
-            rows.add("80+ Verimlilik Sertifikası" to s.efficiency.displayName)
-            rows.add("Modülerlik" to (s.modularity ?: "Veri Bulunamadı"))
+            rows.add("Çıkış Gücü Kapasitesi" to "${s.wattage.watts} Watt")
+            rows.add("PSU Tier List Sınıfı" to (s.tierRating ?: "Belirtilmedi"))
+            rows.add("ATX Standardı & PCIe Desteği" to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.1 & PCIe 5.1" else "Belirtilmedi"))
+            val effText = listOfNotNull(s.efficiency.displayName, s.cybeneticsCert).joinToString(" • ")
+            rows.add("80+ & Cybenetics Sertifikası" to effText)
+            rows.add("Modülerlik Yapısı" to (s.modularity ?: "Belirtilmedi"))
+            rows.add("12VHPWR / 12V-2x6 (600W)" to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "1x 16-Pin (600W Native)" else "Belirtilmedi"))
+            rows.add("CPU (EPS 8-Pin) Güç Çıkışları" to (s.epsConnectors ?: "Belirtilmedi"))
+            rows.add("PCIe (6+2 Pin) Çıkış Sayısı" to (s.pcieConnectors ?: "Belirtilmedi"))
+            rows.add("SATA Güç Çıkış Sayısı" to (s.sataConnectors ?: "Belirtilmedi"))
+            rows.add("Topoloji & Kapasitör Standardı" to (s.topology ?: s.capacitors ?: "Belirtilmedi"))
+            rows.add("Koruma Devreleri" to (s.protections ?: "Belirtilmedi"))
+            rows.add("Soğutma Fanı & Boyut" to (s.fanAndSize ?: "Belirtilmedi"))
             rows.add("Form Faktörü" to (s.formFactor ?: "ATX"))
-            rows.add("Bağlantı Çıkışları" to (s.outputs ?: if (s.supportsPcie5Power) "12V-2x6 / 12VHPWR (PCIe 5.0) & EPS" else "Veri Bulunamadı"))
         }
 
         is CoolerSpec -> {
             rows.add("Soğutma Tipi" to s.type.displayName)
+            rows.add("Maksimum Soğutma Gücü (TDP)" to "${s.maxCoolingTdp.watts} W")
             val radOrHeight = if (s.type == CoolerType.LIQUID) {
-                s.radiatorSizeMm?.let { "${it} mm Radyatör" } ?: "Veri Bulunamadı"
+                s.radiatorSizeMm?.let { "${it} mm Alüminyum Radyatör" } ?: "Belirtilmedi"
             } else {
-                s.heightMm?.let { "${it} mm Yükseklik" } ?: "Veri Bulunamadı"
+                s.heightMm?.let { "${it} mm Kule Tipi Soğutucu" } ?: "Belirtilmedi"
             }
-            rows.add("Radyatör / Yükseklik" to radOrHeight)
-            rows.add("Fan RPM" to (s.fanRpm ?: "Veri Bulunamadı"))
-            rows.add("Gürültü" to (s.noiseDba?.let { "$it dBA" } ?: "Veri Bulunamadı"))
-            rows.add("Soket Desteği" to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else "Veri Bulunamadı"))
+            rows.add("Radyatör / Kule Yüksekliği" to radOrHeight)
+            rows.add("Fan Dönüş Hızı (RPM)" to (s.fanRpm ?: "Belirtilmedi"))
+            rows.add("Ses Seviyesi (Gürültü)" to (s.noiseDba?.let { "$it dBA" } ?: "Belirtilmedi"))
+            rows.add("Desteklenen Soketler" to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else "Belirtilmedi"))
         }
 
         is CaseSpec -> {
-            rows.add("Kasa Tipi" to (s.type ?: "Veri Bulunamadı"))
+            rows.add("Kasa Tipi / Form Faktörü" to (s.type ?: "Belirtilmedi"))
             val mbSupport = if (s.supportedMotherboardFormFactors.isNotEmpty()) {
                 s.supportedMotherboardFormFactors.joinToString(", ") { it.displayName }
             } else {
-                "ATX, Micro-ATX, Mini-ITX"
+                "Belirtilmedi"
             }
-            rows.add("Anakart Desteği" to mbSupport)
-            rows.add("Maks. GPU Uzunluğu" to (s.maxGpuLengthMm?.let { "$it mm" } ?: "Veri Bulunamadı"))
-            rows.add("Yan Panel" to (s.sidePanel ?: "Veri Bulunamadı"))
-            rows.add("Disk Yuvaları" to (s.driveBays ?: "Veri Bulunamadı"))
+            rows.add("Desteklenen Anakart Tipleri" to mbSupport)
+            rows.add("Maksimum GPU Uzunluğu" to (s.maxGpuLengthMm?.let { "$it mm" } ?: "Belirtilmedi"))
+            rows.add("Maksimum CPU Soğutucu Yüksekliği" to (s.maxCpuCoolerHeightMm?.let { "$it mm" } ?: "Belirtilmedi"))
+            rows.add("Maksimum Radyatör Desteği" to (s.maxRadiatorSizeMm?.let { "${it} mm" } ?: "Belirtilmedi"))
+            rows.add("Yan Panel Malzemesi" to (s.sidePanel ?: "Belirtilmedi"))
+            rows.add("Dahili Disk Yuvaları" to (s.driveBays ?: "Belirtilmedi"))
         }
     }
     return rows
@@ -1126,10 +1153,9 @@ private fun StoreOffersCard(
                         val isCheapest = index == 0
                         Surface(
                             onClick = {
-                                if (offer.url.isNotBlank()) {
-                                    try {
-                                        uriHandler.openUri(offer.url)
-                                    } catch (_: Exception) {}
+                                val trimmedUrl = offer.url.trim()
+                                if (trimmedUrl.startsWith("https://", ignoreCase = true) || trimmedUrl.startsWith("http://", ignoreCase = true)) {
+                                    runCatching { uriHandler.openUri(trimmedUrl) }
                                 }
                             },
                             shape = RoundedCornerShape(Spacing.small),
@@ -1234,14 +1260,3 @@ private fun HardwareDetailContentPreview() {
     }
 }
 
-private val HardwareCategory.displayName: String
-    get() = when (this) {
-        HardwareCategory.CPU -> "İşlemci (CPU)"
-        HardwareCategory.GPU -> "Ekran Kartı (GPU)"
-        HardwareCategory.RAM -> "Bellek (RAM)"
-        HardwareCategory.MOTHERBOARD -> "Anakart"
-        HardwareCategory.PSU -> "Güç Kaynağı (PSU)"
-        HardwareCategory.STORAGE -> "Depolama (SSD/HDD)"
-        HardwareCategory.COOLER -> "İşlemci Soğutucu"
-        HardwareCategory.CASE -> "Kasa"
-    }

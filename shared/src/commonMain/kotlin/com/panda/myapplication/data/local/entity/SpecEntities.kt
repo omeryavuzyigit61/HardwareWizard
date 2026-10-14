@@ -39,6 +39,10 @@ data class CpuSpecEntity(
     val architecture: String? = null,
     @ColumnInfo(name = "l2_cache_mb") val l2CacheMb: Double? = null,
     @ColumnInfo(name = "l3_cache_mb") val l3CacheMb: Int? = null,
+    @ColumnInfo(name = "process_node") val processNode: String? = null,
+    @ColumnInfo(name = "pcie_version") val pcieVersion: String? = null,
+    @ColumnInfo(name = "max_memory_speed") val maxMemorySpeed: String? = null,
+    @ColumnInfo(name = "unlocked_multiplier") val unlockedMultiplier: Boolean? = null,
 )
 
 @Entity(
@@ -117,6 +121,15 @@ data class PsuSpecEntity(
     val outputs: String? = null,
     @ColumnInfo(name = "tier_rating") val tierRating: String? = null,
     val capacitors: String? = null,
+    @ColumnInfo(name = "atx_standard") val atxStandard: String? = null,
+    @ColumnInfo(name = "pcie_12vhpwr") val pcie12Vhpwr: String? = null,
+    @ColumnInfo(name = "eps_connectors") val epsConnectors: String? = null,
+    @ColumnInfo(name = "pcie_connectors") val pcieConnectors: String? = null,
+    @ColumnInfo(name = "sata_connectors") val sataConnectors: String? = null,
+    val topology: String? = null,
+    val protections: String? = null,
+    @ColumnInfo(name = "fan_and_size") val fanAndSize: String? = null,
+    @ColumnInfo(name = "cybenetics_cert") val cybeneticsCert: String? = null,
 )
 
 @Entity(

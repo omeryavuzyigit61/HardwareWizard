@@ -173,8 +173,15 @@ fun HardwareListContent(
                             fontWeight = FontWeight.Black,
                             color = MaterialTheme.colorScheme.primary,
                         )
+                        val subtitleText = when {
+                            uiState.isLoading && uiState.items.isEmpty() -> "Donanım kataloğu hazırlanıyor..."
+                            uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor"
+                            uiState.totalCount > 0 -> "${uiState.totalCount} donanım parçası listeleniyor"
+                            uiState.errorMessage != null -> "Katalog yüklenemedi"
+                            else -> "Donanım parçası bulunamadı"
+                        }
                         Text(
-                            text = if (uiState.totalCount > 0) "${uiState.items.size} / ${uiState.totalCount} donanım listeleniyor" else "Donanım kataloğu hazırlanıyor...",
+                            text = subtitleText,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -556,7 +563,7 @@ fun HardwareFilterBottomSheet(
         sheetState = sheetState,
         containerColor = MaterialTheme.colorScheme.surface,
         contentColor = MaterialTheme.colorScheme.onSurface,
-        scrimColor = Color.Black.copy(alpha = 0.6f),
+        scrimColor = MaterialTheme.colorScheme.scrim.copy(alpha = 0.6f),
     ) {
         Column(
             modifier = Modifier
