@@ -96,6 +96,9 @@ GPU_CHIPSETS = [
     ("GeForce RTX 5080", {"vram": 16, "type": "GDDR7", "bus": 256, "tdp": 400, "psu": 850, "conn": "1x 16-Pin 12V-2x6", "core": 2200, "boost": 2620, "len": 320}),
     ("GeForce RTX 5070 Ti", {"vram": 16, "type": "GDDR7", "bus": 256, "tdp": 300, "psu": 750, "conn": "1x 16-Pin 12V-2x6", "core": 2150, "boost": 2580, "len": 305}),
     ("GeForce RTX 5070", {"vram": 12, "type": "GDDR7", "bus": 192, "tdp": 250, "psu": 650, "conn": "1x 16-Pin 12V-2x6", "core": 2100, "boost": 2510, "len": 290}),
+    ("GeForce RTX 5060 Ti", {"vram": 16, "type": "GDDR7", "bus": 128, "tdp": 180, "psu": 600, "conn": "1x 16-Pin 12V-2x6", "core": 2100, "boost": 2550, "len": 260}),
+    ("GeForce RTX 5060", {"vram": 8, "type": "GDDR7", "bus": 128, "tdp": 130, "psu": 550, "conn": "1x 8-Pin PCIe", "core": 1900, "boost": 2450, "len": 240}),
+    ("GeForce RTX 5050", {"vram": 8, "type": "GDDR6", "bus": 128, "tdp": 115, "psu": 450, "conn": "1x 8-Pin PCIe", "core": 1800, "boost": 2300, "len": 220}),
     # NVIDIA 40 Series
     ("GeForce RTX 4090", {"vram": 24, "type": "GDDR6X", "bus": 384, "tdp": 450, "psu": 850, "conn": "1x 16-Pin 12VHPWR", "core": 2235, "boost": 2520, "len": 336}),
     ("GeForce RTX 4080 SUPER", {"vram": 16, "type": "GDDR6X", "bus": 256, "tdp": 320, "psu": 750, "conn": "1x 16-Pin 12VHPWR", "core": 2295, "boost": 2550, "len": 310}),
@@ -117,6 +120,11 @@ GPU_CHIPSETS = [
     ("GeForce RTX 3060 Ti", {"vram": 8, "type": "GDDR6", "bus": 256, "tdp": 200, "psu": 600, "conn": "1x 8-Pin PCIe", "core": 1410, "boost": 1665, "len": 245}),
     ("GeForce RTX 3060", {"vram": 12, "type": "GDDR6", "bus": 192, "tdp": 170, "psu": 550, "conn": "1x 8-Pin PCIe", "core": 1320, "boost": 1777, "len": 240}),
     ("GeForce RTX 3050", {"vram": 8, "type": "GDDR6", "bus": 128, "tdp": 130, "psu": 450, "conn": "1x 8-Pin PCIe", "core": 1552, "boost": 1777, "len": 210}),
+    # Intel Arc Series
+    ("Intel Arc B580", {"vram": 12, "type": "GDDR6", "bus": 192, "tdp": 190, "psu": 600, "conn": "1x 8-Pin PCIe", "core": 2670, "boost": 2850, "len": 250}),
+    ("Intel Arc A770", {"vram": 16, "type": "GDDR6", "bus": 256, "tdp": 225, "psu": 650, "conn": "2x 8-Pin PCIe", "core": 2100, "boost": 2400, "len": 270}),
+    ("Intel Arc A750", {"vram": 8, "type": "GDDR6", "bus": 256, "tdp": 225, "psu": 600, "conn": "2x 8-Pin PCIe", "core": 2050, "boost": 2400, "len": 270}),
+    ("Intel Arc A380", {"vram": 6, "type": "GDDR6", "bus": 96, "tdp": 75, "psu": 400, "conn": "1x 8-Pin PCIe", "core": 2000, "boost": 2000, "len": 190}),
     # AMD 9000 Series
     ("Radeon RX 9070 XT", {"vram": 16, "type": "GDDR6", "bus": 256, "tdp": 290, "psu": 750, "conn": "2x 8-Pin PCIe", "core": 2200, "boost": 2700, "len": 310}),
     ("Radeon RX 9070", {"vram": 16, "type": "GDDR6", "bus": 256, "tdp": 240, "psu": 650, "conn": "2x 8-Pin PCIe", "core": 2000, "boost": 2550, "len": 290}),
@@ -692,6 +700,54 @@ def load_json(path):
             print(f"[UYARI] {path} okunamadı: {e}")
     return []
 
+def load_and_sanitize(path: str, category: str) -> list[dict]:
+    raw_items = load_json(path)
+    clean_items = []
+    seen = set()
+
+    for it in raw_items:
+        name = it.get("name", "").strip()
+        if len(name) < 5 or any(b in name.lower() for b in ["tıklayın", "tiklayin", "sepete", "tavsiye", "\ufffd"]):
+            continue
+
+        # Kategori doğrulaması ve yabancı parça temizliği
+        if category == "cpu":
+            if not any(k in name.lower() for k in ["ryzen", "core", "ultra", "intel", "amd", "athlon", "threadripper", "pentium"]):
+                continue
+            if any(k in name.lower() for k in ["ssd", "soğutucu", "sogutucu", "fan", "kasa", "ram", "ddr"]):
+                continue
+        elif category == "gpu":
+            if not any(k in name.lower() for k in ["rtx", "gtx", "radeon", "rx ", "arc", "geforce"]):
+                continue
+            name = re.sub(r"\s+Video Card$", "", name, flags=re.IGNORECASE)
+            name = re.sub(r"\s+Edition$", "", name, flags=re.IGNORECASE)
+            it["name"] = name
+        elif category == "motherboard":
+            if not any(k in name.upper() for k in ["ANAKART", "MOTHERBOARD", "B650", "B760", "Z790", "Z890", "X870", "X670", "B550", "B450", "H610", "A620", "B850", "B840", "B860", "A520", "X570"]):
+                continue
+        elif category == "ram":
+            if not any(k in name.upper() for k in ["DDR4", "DDR5", "RAM", "BELLEK", "MEMORY"]):
+                continue
+        elif category == "storage":
+            if not any(k in name.upper() for k in ["SSD", "NVME", "M.2", "SATA", "HARDDISK", "DISC", "TB", "GB"]):
+                continue
+        elif category == "psu":
+            if not any(k in name.upper() for k in ["PSU", "POWER", "WATT", "80 PLUS", "80+"]) and not re.search(r"\b\d{3,4}\s*W\b", name.upper()):
+                continue
+        elif category == "cooler":
+            if not any(k in name.upper() for k in ["SOĞUTUCU", "SOGUTUCU", "COOLER", "SIVI", "HAVA", "FREEZER", "ASSASSIN", "KRAKEN", "AIO"]):
+                continue
+        elif category == "case":
+            if not any(k in name.upper() for k in ["KASA", "CASE", "CHASSIS", "TOWER", "FLOW", "DYNAMIC", "AIRFLOW"]):
+                continue
+
+        k = clean_key(name)
+        if k not in seen:
+            seen.add(k)
+            clean_items.append(it)
+
+    return clean_items
+
 def save_json(paths, data):
     for p in paths:
         os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -706,46 +762,46 @@ def main():
 
     # 1. CPU
     cpu_path = os.path.join(FILES_DIR, "cpu.json")
-    cpus = generate_cpu_catalog(load_json(cpu_path))
+    cpus = generate_cpu_catalog(load_and_sanitize(cpu_path, "cpu"))
     save_json([cpu_path], cpus)
 
     # 2. GPU (and alias video-card.json)
     gpu_path = os.path.join(FILES_DIR, "gpu.json")
     vcard_path = os.path.join(FILES_DIR, "video-card.json")
-    gpus = generate_gpu_catalog(load_json(vcard_path) or load_json(gpu_path))
+    gpus = generate_gpu_catalog(load_and_sanitize(vcard_path, "gpu") or load_and_sanitize(gpu_path, "gpu"))
     save_json([gpu_path, vcard_path], gpus)
 
     # 3. Motherboard
     mobo_path = os.path.join(FILES_DIR, "motherboard.json")
-    mobos = generate_motherboard_catalog(load_json(mobo_path))
+    mobos = generate_motherboard_catalog(load_and_sanitize(mobo_path, "motherboard"))
     save_json([mobo_path], mobos)
 
     # 4. RAM (and alias memory.json)
     ram_path = os.path.join(FILES_DIR, "ram.json")
     mem_path = os.path.join(FILES_DIR, "memory.json")
-    rams = generate_ram_catalog(load_json(mem_path) or load_json(ram_path))
+    rams = generate_ram_catalog(load_and_sanitize(mem_path, "ram") or load_and_sanitize(ram_path, "ram"))
     save_json([ram_path, mem_path], rams)
 
     # 5. Storage (and alias internal-hard-drive.json)
     storage_path = os.path.join(FILES_DIR, "storage.json")
     drive_path = os.path.join(FILES_DIR, "internal-hard-drive.json")
-    storages = generate_storage_catalog(load_json(drive_path) or load_json(storage_path))
+    storages = generate_storage_catalog(load_and_sanitize(drive_path, "storage") or load_and_sanitize(storage_path, "storage"))
     save_json([storage_path, drive_path], storages)
 
     # 6. PSU
     psu_path = os.path.join(FILES_DIR, "power-supply.json")
-    psus = generate_psu_catalog(load_json(psu_path))
+    psus = generate_psu_catalog(load_and_sanitize(psu_path, "psu"))
     save_json([psu_path], psus)
 
     # 7. Cooler (and alias cpu-cooler.json)
     cooler_path = os.path.join(FILES_DIR, "cooler.json")
     cpu_cooler_path = os.path.join(FILES_DIR, "cpu-cooler.json")
-    coolers = generate_cooler_catalog(load_json(cpu_cooler_path) or load_json(cooler_path))
+    coolers = generate_cooler_catalog(load_and_sanitize(cpu_cooler_path, "cooler") or load_and_sanitize(cooler_path, "cooler"))
     save_json([cooler_path, cpu_cooler_path], coolers)
 
     # 8. Case
     case_path = os.path.join(FILES_DIR, "case.json")
-    cases = generate_case_catalog(load_json(case_path))
+    cases = generate_case_catalog(load_and_sanitize(case_path, "case"))
     save_json([case_path], cases)
 
     total_items = len(cpus) + len(gpus) + len(mobos) + len(rams) + len(storages) + len(psus) + len(coolers) + len(cases)
