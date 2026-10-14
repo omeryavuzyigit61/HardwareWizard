@@ -75,7 +75,8 @@
     "internal_35_bays": 4,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202309/64f70ba8248c09.37083991_mogqfhijpekln_cropped_75.webp"
   },
   {
     "name": "NZXT H7 Flow (2024)",
@@ -88,7 +89,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202409/66d9a67954aa50.29635076_jlifpkegnqmho_cropped_288.webp"
   },
   {
     "name": "Corsair 3000D AIRFLOW",
@@ -190,7 +192,8 @@
     "max_gpu_length": 455,
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202405/6645f2ff02e538.93924465_ngfmqilpoejkh_cropped_75.webp"
   },
   {
     "name": "Lian Li O11 Dynamic EVO RGB (White)",
@@ -289,7 +292,8 @@
     "max_gpu_length": 395,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891dfb883e0d9.96940323_ejnfgpmhoiklq_cropped_288.webp"
   },
   {
     "name": "Lian Li O11 Dynamic Mini (White)",
@@ -322,7 +326,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX Gaming Kasa",
@@ -333,7 +338,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS ROG Cronox GR801 ARGB Panaromik Temperli Cam LCD Ekranlı Full Tower E-ATX Gaming Kasa",
@@ -344,7 +350,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS ROG Strix Hyperion GR701 Tempered Glass ARGB USB 3.2 High Tower Beyaz Kasa",
@@ -355,7 +362,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "BitFenix Grafi Black 4x120mm FRGB Fan Mesh Temperli Cam USB 3.0 Mid Tower ATX Gaming Kasa (BFC-GRM-KKGSK-4F)",
@@ -366,7 +374,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Cooler Master MasterFrame 360 Panaroma Siyah Ayna Efektli Temperli Cam USB 3.2 Mid Tower ATX Gaming Kasa",
@@ -377,7 +386,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Cooler Master MasterFrame 600 TG Siyah 3x140mm Fanlı Back-Connect Anakart Destekli Alüminyum Mid Tower ATX Gaming Kasa",
@@ -388,7 +398,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "HAVN HS 420 Base Edition Black Temperli Cam USB 3.2 Mid Tower ATX Gaming Kasa",
@@ -399,7 +410,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Antec AX65 ARGB 4x120mm Fan ATX Siyah Mid Tower Gaming (Oyuncu) Kasası",
@@ -410,7 +422,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202602/6989b618b41399.27360196_qimogekpnflhj_cropped_288.webp"
   },
   {
     "name": "MSI MAG Forge 121A B75 PCIE5 750W Bronze 4x120mm Auto RGB Fan Tempered Glass ATX Gaming (Oyuncu) Kasa",
@@ -421,7 +434,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682eceb2804f43.85454243_fqomnlhikegjp_cropped_288.webp"
   },
   {
     "name": "Bitfenix Sepii Black 750W ATX3.1 80+ Bronze PSU 4x120mm FRGB Fan ATX Temperli Cam Siyah Gaming (Oyuncu) Kasa",
@@ -432,7 +446,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202602/699333e67ec9a9.67599105_gnqejikfholpm_cropped_288.webp"
   },
   {
     "name": "MSI MAG FORGE 150A 650W 80+ BRONZE ATX Kasa",
@@ -443,7 +458,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202605/69fc72cdadf0a2.26697764_gpemohjinkqfl_cropped_288.webp"
   },
   {
     "name": "James Donkey Helix H800 4xRainbow Fan Temperli Cam 550W 80+ Bronze ATX Siyah Gaming (Oyuncu) Kasa",
@@ -454,7 +470,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202506/684c11bdf06518.05179544_mgoqekinjplhf_cropped_288.webp"
   },
   {
     "name": "Lian Li VECTOR V100R Beyaz ATX Kasa (G99.V100RW.01)",
@@ -465,7 +482,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202512/694563e9bbda37.05350989_mkgqelojpihnf_cropped_288.webp"
   },
   {
     "name": "GamePower Warcry Pulse 4x12Cm ARGB Fan Temperli Cam ATX 650W 80+ Bronze Gaming Kasa",
@@ -476,7 +494,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202504/680770ba7e6352.98422240_enfqojmhpkilg_cropped_288.webp"
   },
   {
     "name": "SEGOTEP Endura Pro+ Siyah 750W 80+ Bronze E-ATX PCIE 5.1 Kasa (6xARGB Fan)",
@@ -487,7 +506,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202507/6882491ab18fa5.93796385_peohmniqfkgjl_cropped_288.webp"
   },
   {
     "name": "MSI MAG PANO 130R PZ 4 x ARGB Fan USB 3.2 ATX Tower Gaming (Oyuncu) Kasa",
@@ -498,7 +518,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202512/6931933670fed8.62268463_nqfejpmhogkli_cropped_288.webp"
   },
   {
     "name": "VENTO VG4200S 750W 80+ Tempered Glass USB 3.0 RGB ATX Mid Tower Kasa",
@@ -509,7 +530,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Thermaltake View 370 TG 1000W 80+ Gold ARGB USB 3.2 Siyah ATX Mid Tower Kasa",
@@ -520,7 +542,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "GameBooster M6001W 600W SeaView Tempered Glass Rainbow Beyaz mATX Kasa",
@@ -531,7 +554,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "FSP M340 750W 80+ Gold Tempered Glass Type-C ARGB ATX Mid Tower Kasa",
@@ -542,7 +566,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "SilverStone Milo Serisi ML03B HTPC Siyah Kasa (SST-ML03B)...",
@@ -663,7 +688,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/04/hyte-y70-touch-gundam-wing-temperli-cam-usb-3-2-e-atx-dual-chamber-mid-tower-dokunmatik-ekranli-gaming-kasa-cs-hyte-y70tti-gwing-2-yil-birebir-degisim-garantili-t2-300x300.jpg"
   },
   {
     "name": "ANTEC CX700 ARGB WHITE Temperli Camlı Type-C x1 Mid Tower ATX",
@@ -674,7 +700,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/antec-cx700-argb-white-temperli-camli-type-c-x1-mid-tower-atx-gaming-kasa-09.jpg"
   },
   {
     "name": "ANTEC CX500M ARGB BLACK Temperli Camlı 3x ARGB Fanlı Mini Tower",
@@ -685,7 +712,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/antec-cx500m-argb-black-temperli-camli-3x-argb-fanli-mini-tower-matx-gaming-kasa-4.jpg"
   },
   {
     "name": "ANTEC C8 WOOD Temperli Camlı Type-C x1 Dual Chamber Full Tower",
@@ -696,7 +724,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/antec-c8-wood-temperli-camli-type-c-x1-dual-chamber-full-tower-e-atx-gaming-kasa-1.jpg"
   },
   {
     "name": "MSI MAG FORGE 340R AIRFLOW 4x ARGB Fanlı Mid-Tower ATX Gaming",
@@ -707,7 +736,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "MSI MAG FORGE M120R AIRFLOW 4x120mm ARGB Fanlı mATX Gaming Kasa",
@@ -718,7 +748,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "GIGABYTE C201 PANORAMIC 3xARGB Fanlı Temperli Camlı m-ATX Siyah Gaming Kasa-GB-C201P",
@@ -729,7 +760,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "Vento VG4202FL Rainbow Fanlı Temperli Camlı ATX Gaming Kasa",
@@ -740,7 +772,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/vento-vg4202fl-rgb-fanli-temperli-camli-atx-gaming-kasa-17.jpg"
   },
   {
     "name": "ASUS A31 PLUS TG ARGB Temperli Camlı 1xType C Mid Tower",
@@ -751,7 +784,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "MSI MPG GUNGNIR 300R AIRFLOW  4x120mm A-RGB Fanlı Mid-Tower ATX",
@@ -762,7 +796,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "FRISBY FC-8960G 400W 1x120mm RGB Fanlı Mid-Tower Gaming Kasa",
@@ -773,7 +808,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/frisby-fc-8960g-400w-1x120mm-rgb-fanli-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Rampage ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower Oyuncu",
@@ -784,7 +820,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-arc-x-rgb-ledli-siyah-akrilik-panel-120mm-fanli-mid-tower-oyuncu-kasasi.jpg"
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB Temperli Camlı  Mid-Tower ATX Beyaz Gaming",
@@ -795,7 +832,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-frame-4000d-rs-3x120mm-fanli-mid-tower-cc-9011313-ww-beyaz-bilgisayar-kasasi.jpg"
   },
   {
     "name": "MSI MAG FORGE 100R Temperli Camlı 120mm ARGB Fanlı Mid Tower",
@@ -806,7 +844,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mag-forge-100r-tempered-glass-120mm-argb-fanli-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Asus ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar Kasası",
@@ -817,7 +856,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "MSI PRO SHIELD M100P 1x80mm Fanlı mATX  Bilgisayar Kasası",
@@ -828,7 +868,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-pro-shield-m100p-1x120mm-fan-matx-bilgisayar-kasasi-1776763623-7.jpg"
   },
   {
     "name": "ASUS ROG Strix Helios II GX601S 4x140mm FANLI USB3.1 Mid Tower",
@@ -839,7 +880,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "Lian Li O11 Vision",

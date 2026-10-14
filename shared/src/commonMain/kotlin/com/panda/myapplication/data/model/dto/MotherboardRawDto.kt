@@ -21,4 +21,5 @@ data class MotherboardRawDto(
     @SerialName("vrm_phases") val vrmPhases: String? = null,
     @SerialName("interface_ports") val interfacePorts: String? = null,
     @SerialName("has_wifi") val hasWifi: Boolean? = null,
+    val imageUrl: String? = null,
 )

@@ -68,16 +68,6 @@
     "slot_width": "2.5 - 3 Slot"
   },
   {
-    "name": "PNY VCNRTX6000ADA-PB",
-    "price": 6974,
-    "chipset": "RTX 6000 Ada Generation",
-    "memory": 48,
-    "core_clock": 915,
-    "boost_clock": 2505,
-    "color": "Black / Gold",
-    "length": 267
-  },
-  {
     "name": "Asus Dual GeForce RTX 3060 V2 OC",
     "price": 329.97,
     "chipset": "GeForce RTX 3060 12GB",
@@ -210,16 +200,6 @@
     "slot_width": "2.5 - 3 Slot"
   },
   {
-    "name": "MSI GeForce GTX 1060 6GT OCV1",
-    "price": null,
-    "chipset": "GeForce GTX 1060 6GB",
-    "memory": 6,
-    "core_clock": 1544,
-    "boost_clock": 1759,
-    "color": "Black / White",
-    "length": 243
-  },
-  {
     "name": "MSI RTX 3060 Ventus 3X 12G OC",
     "price": 569.99,
     "chipset": "GeForce RTX 3060 12GB",
@@ -254,16 +234,6 @@
     "slot_width": "2.5 - 3 Slot"
   },
   {
-    "name": "PNY RTX A-Series",
-    "price": 4974,
-    "chipset": "RTX A6000",
-    "memory": 48,
-    "core_clock": 1455,
-    "boost_clock": 1860,
-    "color": "Black / Gold",
-    "length": 267
-  },
-  {
     "name": "MSI RX 6600 XT MECH 2X 8G OC",
     "price": 648,
     "chipset": "Radeon RX 6600 XT",
@@ -295,7 +265,8 @@
     "recommended_psu": 550,
     "power_connectors": "1x 8-Pin PCIe",
     "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 - 3 Slot"
+    "slot_width": "2.5 - 3 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
   },
   {
     "name": "MSI GeForce RTX 2060 VENTUS GP OC",
@@ -306,16 +277,6 @@
     "boost_clock": 1710,
     "color": "Gray / Black",
     "length": 231
-  },
-  {
-    "name": "MSI RX 580 8G",
-    "price": 260,
-    "chipset": "Radeon RX 580",
-    "memory": 8,
-    "core_clock": 1257,
-    "boost_clock": 1340,
-    "color": "Black / Red",
-    "length": 243
   },
   {
     "name": "MSI GeForce RTX 3080 GAMING X TRIO 10G",
@@ -333,16 +294,6 @@
     "power_connectors": "2x 8-Pin PCIe",
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 - 3 Slot"
-  },
-  {
-    "name": "MSI Radeon RX 5600 XT GAMING MX",
-    "price": null,
-    "chipset": "Radeon RX 5600 XT",
-    "memory": 6,
-    "core_clock": 1280,
-    "boost_clock": 1620,
-    "color": "Black / Silver",
-    "length": 297
   },
   {
     "name": "MSI RTX 3070 GAMING X TRIO",
@@ -396,16 +347,6 @@
     "slot_width": "2.5 - 3 Slot"
   },
   {
-    "name": "MSI Radeon RX 570 ARMOR 8G",
-    "price": null,
-    "chipset": "Radeon RX 570",
-    "memory": 8,
-    "core_clock": 1168,
-    "boost_clock": 1244,
-    "color": "Black / White",
-    "length": 246
-  },
-  {
     "name": "MSI RTX 5060 Ti 16G INSPIRE 2X OC",
     "price": 539.98,
     "chipset": "GeForce RTX 5060 Ti",
@@ -413,27 +354,8 @@
     "core_clock": 2410,
     "boost_clock": 2632,
     "color": "Gold / Black",
-    "length": 204
-  },
-  {
-    "name": "MSI Radeon RX 5500 XT MECH 8G OC",
-    "price": null,
-    "chipset": "Radeon RX 5500 XT",
-    "memory": 8,
-    "core_clock": 1647,
-    "boost_clock": 1845,
-    "color": "Black",
-    "length": 215
-  },
-  {
-    "name": "MSI GeForce GTX 1060 3G OCV1",
-    "price": null,
-    "chipset": "GeForce GTX 1060 3GB",
-    "memory": 3,
-    "core_clock": 1544,
-    "boost_clock": 1759,
-    "color": "Black / White",
-    "length": 188
+    "length": 204,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "PNY VCNRTX4000ADA-PB",
@@ -494,37 +416,8 @@
     "recommended_psu": 850,
     "power_connectors": "1x 16-Pin 12VHPWR",
     "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 - 3 Slot"
-  },
-  {
-    "name": "AMD RADEON PRO WX 7100",
-    "price": 184.96,
-    "chipset": "Radeon Pro WX 7100",
-    "memory": 8,
-    "core_clock": 900,
-    "boost_clock": 1080,
-    "color": "Blue",
-    "length": 242
-  },
-  {
-    "name": "PNY VCQRTX8000-PB",
-    "price": 3296.96,
-    "chipset": "Quadro RTX 8000",
-    "memory": 48,
-    "core_clock": 1395,
-    "boost_clock": 1770,
-    "color": "Black / White",
-    "length": 267
-  },
-  {
-    "name": "NVIDIA TITAN RTX",
-    "price": 1269,
-    "chipset": "TITAN RTX",
-    "memory": 24,
-    "core_clock": 1350,
-    "boost_clock": 1770,
-    "color": "Gold / Black",
-    "length": 267
+    "slot_width": "2.5 - 3 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
   },
   {
     "name": "Asus Phoenix GeForce RTX 3060 V2",
@@ -680,7 +573,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.5 Slot",
     "length": 336,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-lightning-z-gddr7-32gb-512-bit-dlss-4-nvidia-ekran-karti-31.jpg"
   },
   {
     "name": "MSI GeForce RTX 5090 Gaming X Trio",
@@ -697,7 +591,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.5 Slot",
     "length": 336,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-5090-32g-gaming-trio-32gb-gddr7-dlss-4-512-bit-nvidia-ekran-karti.jpg"
   },
   {
     "name": "MSI GeForce RTX 5090 Gaming X Slim",
@@ -731,7 +626,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.5 Slot",
     "length": 336,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-dlss-4-512bit-nvidia-ekran-karti-2.jpg"
   },
   {
     "name": "MSI GeForce RTX 5090 Ventus 2X OC",
@@ -1105,7 +1001,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5080 TUF Gaming OC",
@@ -1207,7 +1104,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5080-16g-gaming-trio16gb-gddr7-256bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "MSI GeForce RTX 5080 Gaming X Slim",
@@ -1241,7 +1139,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5080-16g-ventus-3x-oc-white-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-3.jpg"
   },
   {
     "name": "MSI GeForce RTX 5080 Ventus 2X OC",
@@ -1275,7 +1174,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-aorus-geforce-rtx-5080-master-ice-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-98.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5080 Gaming OC",
@@ -1292,7 +1192,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "Gigabyte GeForce RTX 5080 AERO OC",
@@ -1309,7 +1210,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 320,
-    "color": "White"
+    "color": "White",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5080-aero-oc-sff-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-50.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5080 Windforce OC",
@@ -1632,7 +1534,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5070-ti-16gb-gddr7-white-oc-edition-dlss-4-256bit-nvidia-ekran-karti-6.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5070 Ti Dual OC",
@@ -1666,7 +1569,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-proart-geforce-rtx-5070-ti-16gb-gddr7-oc-edition-256bit-dlss-4-nvidia-ekran-karti-6.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5070 Ti Prime",
@@ -1700,7 +1604,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-ti-16g-expert-gddr7-12gb-192bit-dlss-4-nvidia-ekran-karti-2.jpg"
   },
   {
     "name": "MSI GeForce RTX 5070 Ti Gaming X Trio",
@@ -1717,7 +1622,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "MSI GeForce RTX 5070 Ti Gaming X Slim",
@@ -1751,7 +1657,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "MSI GeForce RTX 5070 Ti Ventus 2X OC",
@@ -1785,7 +1692,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202610/6acf86f8ccc368.44693825_igjhflpmkneqo_cropped_288.webp"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 Ti Gaming OC",
@@ -1802,7 +1710,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-gaming-oc-16g-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-7.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 Ti AERO OC",
@@ -1819,7 +1728,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "White"
+    "color": "White",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-aero-oc-16g-gddr7-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-79.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 Ti Windforce OC",
@@ -1836,7 +1746,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-windforce-oc-v2-16g-gddr7-16gb-256bit-dlss-4-5-nvidia-gv-n507twf3ocv2-16gd-ekran-karti-1788247776-43.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 Ti Eagle OC",
@@ -1853,7 +1764,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 305,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-eagle-oc-ice-sff-16g-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-6.jpg"
   },
   {
     "name": "ASRock GeForce RTX 5070 Ti Taichi OC",
@@ -2125,7 +2037,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 290,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-strix-geforce-rtx-5070-12gb-gddr7-192bit-dlss-4-nvidia-ekran-karti-1775809616.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5070 TUF Gaming OC",
@@ -2159,7 +2072,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 290,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5070-12gb-gddr7-192bit-dlss-3-nvidia-ekran-karti-dual-rtx5070-12g.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5070 ProArt OC",
@@ -2278,7 +2192,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 290,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-12g-ventus-2x-oc-gddr7-192-bit-dlss-4-nvidia-ekran-karti-1.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 AORUS Master",
@@ -2312,7 +2227,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 290,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-gaming-oc-12g-12g-gddr7-rgb-12gb-192bit-dlss-4-nvidia-ekran-karti-2.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 AERO OC",
@@ -2346,7 +2262,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 290,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-windforce-oc-sff-12g-gddr7-12gb-192bit-dlss-4-nvidia-ekran-karti-gv-n5070wf3oc-12gd.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5070 Eagle OC",
@@ -13073,7 +12990,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "2.5 Slot",
     "length": 230,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-amd-radeon-rx-7600-challenger-8gb-oc-128bit-fsr-3-amd-ekran-karti-rx7600-cl-8go.jpg"
   },
   {
     "name": "ASUS Radeon RX 9070 XT ROG Strix OC",
@@ -13498,7 +13416,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 310,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9070-xt-taichi-16gb-oc-gddr6-rgb-256bit-rdna-4-fsr-4-amd-ekran-karti.jpg"
   },
   {
     "name": "ASRock Radeon RX 9070 XT Phantom Gaming OC",
@@ -13532,7 +13451,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "3.0 Slot",
     "length": 310,
-    "color": "White"
+    "color": "White",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9070-xt-steel-legend-dark-16gb-rgb-256bit-rdna-4-fsr-4-amd-ekran-karti-rx9070xt-sld-16g-3.jpg"
   },
   {
     "name": "ASRock Radeon RX 9070 XT Challenger OC",
@@ -17000,7 +16920,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "2.5 Slot",
     "length": 210,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3050-ventus-2x-xs-8g-oc-8gb-gddr6-128bit-dx12-nvidia-ekran-karti.jpg"
   },
   {
     "name": "MSI GeForce RTX 3050 Vanguard",
@@ -19992,7 +19913,8 @@
     "display_outputs": "3x DisplayPort 2.1 / 1.4a • 1x HDMI 2.1a",
     "slot_width": "2.5 Slot",
     "length": 220,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-6600-eagle-8gb-128-bit-gddr6-amd-ekran-karti-56.jpg"
   },
   {
     "name": "Sapphire Radeon RX 6600 NITRO+ OC",
@@ -20230,7 +20152,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "MSI GeForce RTX 5050 8G VENTUS 2X OC 8GB GDDR6 128 Bit DLSS 4 Ekran Kartı",
@@ -20247,7 +20170,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS DUAL GeForce RTX 5060 Ti OC 16GB GDDR7 128 Bit DLSS 4 Ekran Kartı",
@@ -20264,7 +20188,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS DUAL Radeon RX 9060 8GB GDDR6 128 Bit BULK Ekran Kartı",
@@ -20281,7 +20206,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS DUAL Radeon RX 9060 XT 8GB GDDR6 128 Bit Ekran Kartı",
@@ -20298,24 +20224,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
-  },
-  {
-    "name": "ASUS TURBO Radeon Ai PRO R9700 32GB GDDR6 256 Bit Yapay Zeka Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 32,
-    "memory_type": "GDDR6",
-    "bus_width": 256,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 285,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 Slot",
-    "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Gigabyte GeForce RTX5060 WINDFORCE MAX OC GV-N5060WF2MAX OC-8GD GDDR7 8GB 128Bit Gaming (Oyuncu) Ekran Kartı",
@@ -20332,24 +20242,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
-  },
-  {
-    "name": "Axle Radeon RX 580 AX-RX580 / 8GD5P6IP2 8GB GDDR5 256Bit DX12 Gaming (Oyuncu) Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 8,
-    "memory_type": "GDDR6",
-    "bus_width": 192,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 200,
-    "recommended_psu": 650,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 Slot",
-    "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202509/68d39b7dea5d48.39290413_ojfeimhnlkgqp_cropped_288.webp"
   },
   {
     "name": "Gigabyte Radeon RX9060XT GAMING OC GV-R9060XTGAMING OC-16GD 16GB GDDR6 128Bit Gaming (Oyuncu) Ekran Kartı",
@@ -20366,7 +20260,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202506/684048845c0441.79500834_folkjiqmnehpg_cropped_288.webp"
   },
   {
     "name": "Gigabyte Radeon RX9070XT GAMING OC GV-R9070XTGAMING OC-16GD 16GB GDDR6 256Bit Gaming (Oyuncu) Ekran Kartı",
@@ -20383,7 +20278,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202504/67f635761ccbb3.55313385_jlphmoiegkfqn_cropped_288.webp"
   },
   {
     "name": "Gigabyte GeForce RTX 5060TI WINDFORCE OC GV-N506TWF2OC-8GD GDDR7 8GB 128Bit Gaming (Oyuncu) Ekran Kartı",
@@ -20400,7 +20296,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202507/68637d1cccf512.73393679_jomphekfqnilg_cropped_288.webp"
   },
   {
     "name": "PNY GeForce RTX 5070Ti 16GB GDDR7 OC 256Bit Ekran Kartı (VCG5070T16TFXPB1-O)",
@@ -20417,24 +20314,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
-  },
-  {
-    "name": "Afox Radeon R5 230 AFR5230-1024D3L5 1GB DDR3 64Bit DX11 Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 1,
-    "memory_type": "GDDR6",
-    "bus_width": 192,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 200,
-    "recommended_psu": 650,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 Slot",
-    "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS DUAL GeForce RTX 5050 8GB OC Edition DUAL-RTX5050-O8G GDDR7 128Bit Gaming (Oyuncu) Ekran Kartı",
@@ -20451,7 +20332,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5050-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-2-300x300.jpg"
   },
   {
     "name": "GAINWARD GeForce RTX5060 Ti GHOST 8GB GDDR7 128Bit Gaming Ekran Kartı",
@@ -20468,24 +20350,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 300,
-    "color": "Black"
-  },
-  {
-    "name": "ASUS GeForce GT710 2GB GDDR5 Evo 64 Bit Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 2,
-    "memory_type": "GDDR6",
-    "bus_width": 192,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 200,
-    "recommended_psu": 650,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort • 1x HDMI",
-    "slot_width": "2.5 Slot",
-    "length": 300,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202504/67ffac466c0145.77779529_iqfpohnmklgej_cropped_75.webp"
   },
   {
     "name": "ASUS TUF Gaming GeForce RTX 5090 OC 32GB GDDR7 512 Bit DLSS 4 Ekran Kartı",
@@ -20519,7 +20385,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS PRIME GeForce RTX 5080 OC 16GB GDDR7 256 Bit DLSS 4 Ekran Kartı",
@@ -20536,7 +20403,8 @@
     "bus_width": 256,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS DUAL GeForce RTX 3050 OC 6GB GDDR6 96 Bit Ekran Kartı",
@@ -20553,24 +20421,8 @@
     "bus_width": 128,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
-  },
-  {
-    "name": "ASUS TURBO Radeon AI PRO R9700 32GB GDDR6 256 Bit Yapay",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 32,
-    "memory_type": "GDDR6X",
-    "core_clock": 2200,
-    "boost_clock": 2600,
-    "color": "Black",
-    "length": 300,
-    "tdp": 250,
-    "recommended_psu": 750,
-    "bus_width": 256,
-    "power_connectors": "2x 8-Pin",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "ASUS Dual GeForce RTX 5060 8GB OC GDDR7 White Edition 128Bit",
@@ -20587,7 +20439,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5060-8gb-oc-gddr7-white-edition-128bit-dlss-4-nvidia-beyaz-ekran-karti-dual-rtx5060-o8g-white.jpg"
   },
   {
     "name": "GIGABYTE GeForce RTX 5060 EAGLE OC 8G GDDR7 8GB 128Bit DLSS",
@@ -20604,7 +20457,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5060-eagle-oc-8g-gddr7-8gb-128bit-dlss-4-nvidia-ekran-karti-gv-n5060eaglemax-oc-8gd.jpg"
   },
   {
     "name": "MSI GeForce RTX 5050 8G VENTUS 2X OC 8GB GDDR6 128Bit",
@@ -20621,7 +20475,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "GIGABYTE Radeon RX 9060 XT GAMING OC 16GB GDDR6 128Bit AMD",
@@ -20638,7 +20493,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9060-xt-gaming-oc-16gb-gddr6-128bit-amd-ekran-karti-gv-r9060xtgaming-oc-16gd.jpg"
   },
   {
     "name": "MSI GeForceRTX 5060 8G VENTUS 2X OC WHITE 8GB DLSS 4",
@@ -20655,7 +20511,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforcertx-5060-8g-ventus-2x-oc-white-8gb-dlss-4-128bit-nvidia-ekran-karti.jpg"
   },
   {
     "name": "GIGABYTE GeForce RTX 5060 Ti EAGLE OC ICE 8G GDDR7 8GB",
@@ -20672,7 +20529,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5060-ti-eagle-oc-ice-8g-gddr7-8gb-128bit-dlss-4-gv-n506teagleoc-ice-8gd-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS ROG ASTRAL GeForce RTX 5090 32GB GDDR7 OC Edition 512Bit",
@@ -20689,7 +20547,8 @@
     "bus_width": 256,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-matrix-platinum-geforce-geforce-rtx-5090-32gb-gddr7-512bit-dlss-4-nvidia-ekran-karti-rog-matrix-rtx5090-p32g-30th-59.jpg"
   },
   {
     "name": "GIGABYTE Radeon RX 9070 XT GAMING OC 16GB RGB Lighting 256Bit",
@@ -20706,7 +20565,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-xt-gaming-oc-16gb-rgb-lighting-256bit-amd-ekran-karti-8.jpg"
   },
   {
     "name": "GIGABYTE Radeon RX 9070 GAMING OC 16GB RGB Lighting 256Bit AMD",
@@ -20723,7 +20583,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-gaming-oc-16gb-rgb-lighting-256bit-amd-ekran-karti-1.jpg"
   },
   {
     "name": "GIGABYTE Radeon RX 9070 GRE GAMING OC 12GB RGB 192Bit GDDR6",
@@ -20740,24 +20601,8 @@
     "bus_width": 128,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
-  },
-  {
-    "name": "ASUS GeForce GT 710 2GB GDDR5 EVO Low Profie 64Bit DX12",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 2,
-    "memory_type": "GDDR6X",
-    "core_clock": 2200,
-    "boost_clock": 2600,
-    "color": "Black",
-    "length": 300,
-    "tdp": 250,
-    "recommended_psu": 750,
-    "bus_width": 128,
-    "power_connectors": "2x 8-Pin",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-gre-gaming-oc-12gb-rgb-lighting-192bit-gddr6-amd-ekran-karti-gv-r907gregaming-oc-12gd-1791901795-80.jpg"
   },
   {
     "name": "ASUS ROG Strix GeForce RTX 5070 12GB GDDR7 OC Edition 192Bit",
@@ -20774,7 +20619,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-strix-geforce-rtx-5070-12gb-gddr7-oc-edition-192bit-dlss-4-nvidia-ekran-karti-0.jpg"
   },
   {
     "name": "ASUS DUAL Radeon RX 9060 XT OC White Edition 16GB GDDR6",
@@ -20791,7 +20637,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-radeon-rx-9060-xt-oc-white-edition-16gb-gddr6-128bit-rdna-4-amd-beyaz-ekran-karti-dual-rx9060xt-16g-white.jpg"
   },
   {
     "name": "ASUS PROART GeForce RTX 5080 16GB GDDR7 OC Edition 256Bit DLSS",
@@ -20808,7 +20655,8 @@
     "bus_width": 256,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256bit-dlss-4-nvidia-ekran-karti-proart-rtx5080-o16g.jpg"
   },
   {
     "name": "ASUS Prime GeForce RTX 5050 8GB GDDR6 8GB  DLSS 4",
@@ -20825,7 +20673,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-prime-geforce-rtx-5050-8gb-gddr6-8gb-dlss-4-128bit-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS ASUS Prime GeForce RTX 5050 8GB GDDR6 OC Edition 8GB",
@@ -20842,7 +20691,8 @@
     "bus_width": 128,
     "power_connectors": "1x 16-Pin (12V-2x6)",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-asus-prime-geforce-rtx-5050-8gb-gddr6-oc-edition-8gb-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "SAPPHIRE Radeon RX9060 XT PULSE GDDR6 8GB 128Bit FSR 4 AMD",
@@ -20859,7 +20709,8 @@
     "bus_width": 128,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/sapphire-radeon-rx9060-xt-pulse-gddr6-8gb-128bit-fsr-4-amd-ekran-karti-11350-04-20g.jpg"
   },
   {
     "name": "ASUS Dual Radeon RX9060XT 8G GDDR6 128Bit RDNA 4 AMD Ekran",
@@ -20876,41 +20727,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
-  },
-  {
-    "name": "PNY Quadro RTX A400 4GB GDDR6 64 Bit Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 4,
-    "memory_type": "GDDR6X",
-    "core_clock": 2200,
-    "boost_clock": 2600,
-    "color": "Black",
-    "length": 300,
-    "tdp": 250,
-    "recommended_psu": 750,
-    "bus_width": 128,
-    "power_connectors": "2x 8-Pin",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
-  },
-  {
-    "name": "PNY RTX PRO 6000 Blackwell 96GB GDDR7 512 Bit Workstation Ekran Kartı",
-    "price": null,
-    "chipset": "GeForce RTX",
-    "memory": 96,
-    "memory_type": "GDDR7",
-    "core_clock": 2200,
-    "boost_clock": 2600,
-    "color": "Black",
-    "length": 300,
-    "tdp": 250,
-    "recommended_psu": 750,
-    "bus_width": 256,
-    "power_connectors": "2x 8-Pin",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-radeon-rx-9060-xt-16gb-gddr6-128bit-rdna-4-amd-ekran-karti-dual-rx9060xt-16g-2.jpg"
   },
   {
     "name": "MSI GeForce RTX 3060 Ventus 2X 12G OC 12GB GDDR6 192 Bit LHR Ekran Kartı",
@@ -20927,7 +20745,8 @@
     "bus_width": 128,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202102/603970ee699ff7.57370948_gilmfokhqpjen_cropped_75.webp"
   },
   {
     "name": "Gigabyte Radeon RX 9070 GRE GAMING OC 12G 12GB GDDR6 192 Bit Ekran Kartı",
@@ -20944,7 +20763,8 @@
     "bus_width": 128,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/T84-radeon-rx-9070-gre-gaming-oc-12g01.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5060 Ti ROG Strix OC",
@@ -20978,7 +20798,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 260,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5060-ti-8gb-oc-edition-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5060 Ti Dual OC",
@@ -21080,7 +20901,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 260,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5060-ti-8g-gaming-oc-8gb-gddr7-dlss-4-128bit-nvidia-ekran-karti.jpg"
   },
   {
     "name": "MSI GeForce RTX 5060 Ti Gaming X Slim",
@@ -21114,7 +20936,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 260,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "MSI GeForce RTX 5060 Ti Ventus 2X OC",
@@ -21131,7 +20954,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 260,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "MSI GeForce RTX 5060 Ti Vanguard",
@@ -21522,7 +21346,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 240,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5060-8gb-gddr7-oc-edition-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5060 Dual OC",
@@ -21539,7 +21364,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 240,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5060-8gb-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5060 ProArt OC",
@@ -21573,7 +21399,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 240,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-prime-geforce-rtx-5060-8gb-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5060 Astral",
@@ -22304,7 +22131,8 @@
     "display_outputs": "3x DisplayPort • 1x HDMI",
     "slot_width": "2.5 Slot",
     "length": 220,
-    "color": "Black"
+    "color": "Black",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5050-windforce-oc-8g-gddr6-8gb-128bit-dlss-4-nvidia-ekran-karti-gv-n5050wf2oc-8gd.jpg"
   },
   {
     "name": "Gigabyte GeForce RTX 5050 Eagle OC",
@@ -24769,7 +24597,8 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202506/6841884e57b667.04307563_qplmjiknehgof_cropped_288.webp"
   },
   {
     "name": "ASROCK Radeon RX 9060 XT Challenger 16GB GDDR6 128Bit AMD Ekran",
@@ -24786,6 +24615,241 @@
     "bus_width": 256,
     "power_connectors": "2x 8-Pin",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot"
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9060-xt-challenger-16gb-gddr6-128bit-amd-ekran-karti-gv-rx9060xt-cl-16go.jpg"
+  },
+  {
+    "name": "MSI GeForce RTX 5070 12G SHADOW 2X OC 12GB GDDR7 192 Bit DLSS 4 Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5070",
+    "memory": 12,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 128,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "MSI GeForce RTX 5080 16G GAMING TRIO OC 16GB GDDR7 256 Bit DLSS 4 Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5080",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "GALAX GeForce RTX 5080 1-Click OC White 16GB GDDR7 256 Bit DLSS 4 Ekran Kartı (58NZN6MDBCWH)",
+    "price": null,
+    "chipset": "RTX 5080",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "White",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "MSI GeForce RTX 5060 8G GAMING OC 8GB GDDR7 128 Bit DLSS 4 Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5060",
+    "memory": 8,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 128,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "Gigabyte GeForce RTX 5080 GAMING OC GV-N5080GAMING OC-16GD GDDR7 16G 256bit Gaming (Oyuncu) Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5080",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202503/67e41283500954.30704526_jqlfihepgkmno_cropped_288.webp"
+  },
+  {
+    "name": "Inno3D RTX 5070 TWIN X2 OC 12GB N50702-12D7X-195064N GDDR7 192Bit Gaming (Oyuncu) Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5070",
+    "memory": 12,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 128,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.incehesap.com/resim/urun/202610/6ac683ccea7e09.50205750_ihkjopgeflmqn_cropped_288.webp"
+  },
+  {
+    "name": "GIGABYTE GeForce RTX 5050 WINDFORCE OC 8G GDDR6 DLSS 4 128 Bit Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5050",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+  },
+  {
+    "name": "ASUS TURBO Radeon AI PRO R9700 32GB GDDR6 256 Bit Yapay",
+    "price": null,
+    "chipset": "GeForce RTX",
+    "memory": 32,
+    "memory_type": "GDDR6X",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "2x 8-Pin",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-turbo-radeon-ai-pro-r9700-32gb-gddr6-256-bit-yapay-zeka-is-istasyonu-ekran-karti-1791614445-8.jpg"
+  },
+  {
+    "name": "GIGABYTE Radeon AI PRO R9700 AI TOP 32GB GDDR6 256Bit AMD",
+    "price": null,
+    "chipset": "GeForce RTX",
+    "memory": 32,
+    "memory_type": "GDDR6X",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "2x 8-Pin",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-ai-pro-r9700-ai-top-32gb-gddr6-256bit-amd-yapay-zeka-destekli-ekran-karti-gv-r9700ai-top-32gd-1791901399-45.jpg"
+  },
+  {
+    "name": "ASUS GeForce GT 710 2GB GDDR5 EVO Low Profie 64Bit DX12",
+    "price": null,
+    "chipset": "GeForce RTX",
+    "memory": 2,
+    "memory_type": "GDDR6X",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 128,
+    "power_connectors": "2x 8-Pin",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-geforce-gt-710-2gb-gddr5-evo-low-profie-64bit-dx12-nvidia-ekran-karti-1776679550-8.jpg"
+  },
+  {
+    "name": "Palit GeForce RTX 5080 Infinity 3 16GB GDDR7 256 Bit DLSS 4 Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 5080",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "1x 16-Pin (12V-2x6)",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/HXN-p05809bigimage71069fdb3f82b8d7.jpg"
+  },
+  {
+    "name": "MSI GeForce RTX 3050 Ventus 2X E OC 6G 6GB GDDR6 96 Bit DLSS 3 Ekran Kartı",
+    "price": null,
+    "chipset": "RTX 3050",
+    "memory": 6,
+    "memory_type": "GDDR7",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 128,
+    "power_connectors": "2x 8-Pin",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/BRT-1024.jpg"
+  },
+  {
+    "name": "PowerColor Radeon AI PRO R9700 32GB GDDR6 256 Bit Ekran Kartı",
+    "price": null,
+    "chipset": "GeForce RTX",
+    "memory": 32,
+    "memory_type": "GDDR6X",
+    "core_clock": 2200,
+    "boost_clock": 2600,
+    "color": "Black",
+    "length": 300,
+    "tdp": 250,
+    "recommended_psu": 750,
+    "bus_width": 256,
+    "power_connectors": "2x 8-Pin",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4Y5-1.jpeg"
   }
 ]

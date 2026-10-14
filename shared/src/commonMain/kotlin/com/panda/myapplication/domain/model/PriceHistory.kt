@@ -8,6 +8,7 @@ data class StoreOffer(
     val priceTry: Double,
     val url: String,
     val inStock: Boolean = true,
+    val imageUrl: String? = null,
 )
 
 @Serializable
@@ -25,6 +26,7 @@ data class ProductPriceInfo(
     val lowestPriceTry: Double? = null,
     val highestPriceTry: Double? = null,
     val currency: String = "TRY",
+    val imageUrl: String? = null,
     val offers: List<StoreOffer> = emptyList(),
     val priceHistory: List<PricePoint> = emptyList(),
 ) {

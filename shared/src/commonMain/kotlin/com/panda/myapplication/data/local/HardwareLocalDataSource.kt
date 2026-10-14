@@ -33,19 +33,20 @@ class HardwareLocalDataSource(
         runCatching {
             val existing = hardwareDao.getAllHardwareItems()
             if (existing.isNotEmpty()) {
-                val hasAnyPrices = existing.any { it.currentPriceTry != null }
-                if (!hasAnyPrices) {
+                val hasMissingData = existing.any { it.currentPriceTry == null || it.imageUrl == null }
+                if (hasMissingData) {
                     val localPrices = loadLocalPricesTr()
                     if (localPrices.isNotEmpty()) {
                         val updated = existing.map { item ->
                             val p = localPrices[item.id]
-                            if (p != null && p.currentPriceTry != null) {
+                            if (p != null) {
                                 item.copy(
-                                    currentPriceTry = p.currentPriceTry,
-                                    lowestPriceTry = p.lowestPriceTry ?: p.currentPriceTry,
-                                    highestPriceTry = p.highestPriceTry ?: p.currentPriceTry,
-                                    offers = p.offers,
-                                    priceHistory = p.priceHistory,
+                                    imageUrl = p.imageUrl ?: item.imageUrl,
+                                    currentPriceTry = p.currentPriceTry ?: item.currentPriceTry,
+                                    lowestPriceTry = p.lowestPriceTry ?: p.currentPriceTry ?: item.lowestPriceTry,
+                                    highestPriceTry = p.highestPriceTry ?: p.currentPriceTry ?: item.highestPriceTry,
+                                    offers = if (!p.offers.isNullOrEmpty()) p.offers else item.offers,
+                                    priceHistory = if (!p.priceHistory.isNullOrEmpty()) p.priceHistory else item.priceHistory,
                                 )
                             } else item
                         }

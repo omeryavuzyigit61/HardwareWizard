@@ -20,4 +20,5 @@ data class RamRawDto(
     val voltage: Double? = null,
     @SerialName("heat_spreader") val heatSpreader: Boolean? = null,
     val rgb: Boolean? = null,
+    val imageUrl: String? = null,
 )

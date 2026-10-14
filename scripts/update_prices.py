@@ -224,12 +224,14 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             t_el = prod.select_one(".woocommerce-loop-product__title") or prod.select_one(".product-title")
             p_el = prod.select_one(".price")
             a_el = prod.find("a", href=True)
+            img_el = prod.select_one("img")
+            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-lazy-src")) if img_el else None
             if t_el and p_el and a_el:
                 title = t_el.get_text(strip=True)
                 price = clean_price(p_el.get_text(strip=True))
                 href = a_el["href"]
                 if is_valid_category_item(category, title, price):
-                    items.append({"title": title, "price": price, "url": href, "store": store, "category": category})
+                    items.append({"title": title, "price": price, "url": href, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "İncehesap":
         seen_links = set()
@@ -240,6 +242,9 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             seen_links.add(href)
             title = ""
             price = None
+            img_el = a.find("img") or (a.parent.find("img") if a.parent else None)
+            img_src = (img_el.get("src") or img_el.get("data-src")) if img_el else None
+            img_url = f"https://www.incehesap.com{img_src}" if img_src and not img_src.startswith("http") else img_src
             for s in a.stripped_strings:
                 if len(s) > len(title) and "TL" not in s and "₺" not in s and not any(k in s for k in ["Yorum", "Satıyor", "Taksit", "Ürüne Git", "Fırsat", "Stokta", "Kargo"]):
                     title = s
@@ -249,7 +254,7 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                         price = pr
             if title and price and is_valid_category_item(category, title, price):
                 full_url = f"https://www.incehesap.com{href}" if not href.startswith("http") else href
-                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category})
+                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "İtopya":
         for prod in soup.select(".product"):
@@ -262,9 +267,11 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             p_el = prod.find(class_=re.compile(r"price|amount")) or prod.find("strong")
             price = clean_price(p_el.get_text(strip=True)) if p_el else None
             href = a_tags[0]["href"] if a_tags else ""
+            img_el = prod.find("img")
+            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-original")) if img_el else None
             if title and price and href and is_valid_category_item(category, title, price):
                 full_url = f"https://www.itopya.com{href}" if not href.startswith("http") else href
-                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category})
+                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "Tebilon":
         for prod in soup.select(".showcase__product"):
@@ -277,9 +284,11 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                     href = a["href"]
             p_el = prod.select_one(".newPrice") or prod.select_one(".price") or prod.select_one(".showcase__price")
             price = clean_price(p_el.get_text(strip=True) if hasattr(p_el, "get_text") else str(p_el)) if p_el else None
+            img_el = prod.select_one(".showcase__image img, img")
+            img_url = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-original")) if img_el else None
             if title and price and is_valid_category_item(category, title, price):
                 full_url = f"https://www.tebilon.com{href}" if not href.startswith("http") else href
-                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category})
+                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "Sinerji":
         for prod in soup.select(".product"):
@@ -293,9 +302,11 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                     href = h
             p_el = prod.select_one(".price") or prod.select_one(".totalPrice") or prod.find(string=lambda t: t and ("₺" in t or "TL" in t))
             price = clean_price(p_el.get_text(strip=True) if hasattr(p_el, "get_text") else str(p_el)) if p_el else None
+            img_el = prod.find("img")
+            img_url = (img_el.get("src") or img_el.get("data-src")) if img_el else None
             if title and price and is_valid_category_item(category, title, price):
                 full_url = f"https://www.sinerji.gen.tr{href}" if not href.startswith("http") else href
-                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category})
+                items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     return items
 
@@ -670,23 +681,27 @@ def main():
             prod_id = generate_hardware_id(cat, match["name"])
             if prod_id not in matched_offers_by_id:
                 matched_offers_by_id[prod_id] = []
-            matched_offers_by_id[prod_id].append({
+            offer_obj = {
                 "storeName": store,
                 "priceTry": price,
                 "url": url,
                 "inStock": True
-            })
+            }
+            if sp.get("imageUrl"):
+                offer_obj["imageUrl"] = sp["imageUrl"]
+                if not match.get("imageUrl"):
+                    match["imageUrl"] = sp["imageUrl"]
+            matched_offers_by_id[prod_id].append(offer_obj)
 
-    # Yeni keşfedilen ürünleri katalog dosyalarına yaz
-    if newly_discovered_count > 0:
-        print(f"\n[+] {newly_discovered_count} adet yeni donanım kataloğa eklendi. JSON dosyaları güncelleniyor...")
-        for cat, filenames in CATEGORY_FILE_MAP.items():
-            for fname in filenames:
-                p = os.path.join(FILES_DIR, fname)
-                with open(p, "w", encoding="utf-8") as f:
-                    json.dump(catalogs[cat], f, indent=2, ensure_ascii=False)
+    # 4. Katalog dosyalarını güncellenmiş görseller ve yeni ürünlerle kaydet
+    print(f"\n[+] Kataloglar güncellenmiş görseller ve {newly_discovered_count} yeni ürünle kaydediliyor...")
+    for cat, filenames in CATEGORY_FILE_MAP.items():
+        for fname in filenames:
+            p = os.path.join(FILES_DIR, fname)
+            with open(p, "w", encoding="utf-8") as f:
+                json.dump(catalogs[cat], f, indent=2, ensure_ascii=False)
 
-    # 4. prices_tr.json Dosyalarını Hazırla (Eski uydurma teklifleri temizle, canlı doğrudan teklifleri bağla)
+    # 5. prices_tr.json Dosyalarını Hazırla (Eski uydurma teklifleri temizle, canlı doğrudan teklifleri bağla)
     prices_tr_map = {}
 
     for cat, items in catalogs.items():
@@ -714,17 +729,27 @@ def main():
                 lowest_price = None
                 highest_price = None
 
+            # En iyi görseli belirle (tekliflerden veya katalogdaki görselden)
+            best_image = None
+            for o in sorted_offers:
+                if o.get("imageUrl"):
+                    best_image = o["imageUrl"]
+                    break
+            if not best_image:
+                best_image = it.get("imageUrl")
+
             prices_tr_map[prod_id] = {
                 "productId": prod_id,
                 "currentPriceTry": current_price,
                 "lowestPriceTry": lowest_price,
                 "highestPriceTry": highest_price,
                 "lastUpdated": datetime.now().isoformat(),
+                "imageUrl": best_image,
                 "priceHistory": hist,
                 "offers": sorted_offers
             }
 
-    # 5. Dosyalara Kaydet
+    # 6. Dosyalara Kaydet
     for p_file in TARGET_PRICE_FILES:
         os.makedirs(os.path.dirname(p_file), exist_ok=True)
         with open(p_file, "w", encoding="utf-8") as f:

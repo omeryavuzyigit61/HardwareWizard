@@ -81,4 +81,5 @@ data class StorageRawDto(
     @SerialName("seq_write") val seqWrite: Int? = null,
     @SerialName("nand_type") val nandType: String? = null,
     @SerialName("endurance_tbw") val enduranceTbw: Int? = null,
+    val imageUrl: String? = null,
 )

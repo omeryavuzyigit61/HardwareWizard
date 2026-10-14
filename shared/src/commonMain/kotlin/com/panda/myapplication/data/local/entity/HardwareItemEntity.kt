@@ -35,4 +35,5 @@ data class HardwareItemEntity(
     @ColumnInfo(name = "cpu_synthetic") val cpuSynthetic: CpuSyntheticBenchmark? = null,
     @ColumnInfo(name = "gpu_synthetic") val gpuSynthetic: GpuSyntheticBenchmark? = null,
     @ColumnInfo(name = "game_fps") val gameFps: GameFpsBenchmark? = null,
+    @ColumnInfo(name = "image_url") val imageUrl: String? = null,
 )

@@ -9,9 +9,11 @@ data class HardwareItem(
     val spec: HardwareSpec,
     val priceInfo: ProductPriceInfo? = null,
     val benchmarkInfo: HardwareBenchmarkInfo? = null,
+    val imageUrl: String? = null,
 ) {
     val category: HardwareCategory get() = spec.category
 
+    val effectiveImageUrl: String? get() = imageUrl ?: priceInfo?.imageUrl
     val currentPriceTry: Double? get() = priceInfo?.currentPriceTry
     val lowestPriceTry: Double? get() = priceInfo?.lowestPriceTry
     val highestPriceTry: Double? get() = priceInfo?.highestPriceTry

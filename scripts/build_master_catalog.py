@@ -49,6 +49,106 @@ def generate_psu_catalog(existing_items):
     seen = {clean_key(x.get("name", "")): x for x in existing_items if x.get("name")}
     results = list(existing_items)
 
+    # 1. IRONScale Labs Verified Deep Engineering PSU Database Entegrasyonu
+    iron_path = os.path.join(ROOT_DIR, "data", "ironscale_psu_db.json")
+    if os.path.exists(iron_path):
+        try:
+            with open(iron_path, "r", encoding="utf-8") as f:
+                iron_data = json.load(f)
+            records = iron_data.get("records", [])
+            for r in records:
+                brand = r.get("brand", "").strip()
+                disp_name = r.get("display_name", "").strip()
+                tier_raw = r.get("tier", "").strip()
+                oem = r.get("oem", "").strip()
+                atx_v = r.get("atx_version", "").strip()
+                eff = r.get("efficiency", "").strip()
+                img_outside = r.get("images", {}).get("outside")
+                img_url = f"https://ironscalelabs.com/{img_outside}" if img_outside else None
+
+                tier_str = None
+                if tier_raw.startswith("A"):
+                    tier_str = "Tier A (High-End - IronScale Labs)"
+                elif tier_raw.startswith("B"):
+                    tier_str = "Tier B (Mid-Range - IronScale Labs)"
+                elif tier_raw.startswith("C"):
+                    tier_str = "Tier C (Entry-Level - IronScale Labs)"
+                elif tier_raw.startswith("D"):
+                    tier_str = "Tier D (Low-End - IronScale Labs)"
+                elif tier_raw.startswith("E"):
+                    tier_str = "Tier E (Avoid / Dikkat - IronScale Labs)"
+
+                bulk_cap = r.get("primary", {}).get("bulk_capacitor", "").replace("\n", " ").strip()
+                topo = r.get("primary", {}).get("topology", "").replace("\n", " ").strip()
+                topology_full = f"OEM: {oem} | Topoloji: {topo} | Ana Kapasitör: {bulk_cap}" if (oem or topo or bulk_cap) else None
+
+                protections = r.get("protections", "")
+                if isinstance(protections, dict):
+                    prot_list = [k for k, v in protections.items() if v]
+                    protections_str = ", ".join(prot_list) if prot_list else "OPP, OVP, UVP, OCP, OTP, SCP"
+                elif isinstance(protections, str):
+                    protections_str = protections.strip() or "OPP, OVP, UVP, OCP, OTP, SCP"
+                else:
+                    protections_str = "OPP, OVP, UVP, OCP, OTP, SCP"
+
+                watt_options = r.get("watt_options", [])
+                if not watt_options and r.get("reviewed_model"):
+                    watt_options = [r.get("reviewed_model")]
+
+                for w_str in watt_options:
+                    m_w = re.search(r"(\d+)", str(w_str))
+                    if not m_w:
+                        continue
+                    w = int(m_w.group(1))
+                    name = f"{disp_name} {w}W"
+                    k = clean_key(name)
+
+                    if k in seen:
+                        existing = seen[k]
+                        if tier_str: existing["tier"] = tier_str
+                        if topology_full: existing["topology"] = topology_full
+                        if img_url and not existing.get("imageUrl"): existing["imageUrl"] = img_url
+                        if atx_v and not existing.get("atx_standard"): existing["atx_standard"] = atx_v
+                        if protections_str: existing["protections"] = protections_str
+                        continue
+
+                    is_atx31 = "3.1" in atx_v or "3.1" in disp_name
+                    is_atx3 = is_atx31 or "3.0" in atx_v or "3.0" in disp_name
+
+                    eff_clean = "gold"
+                    if "titanium" in eff.lower(): eff_clean = "titanium"
+                    elif "platinum" in eff.lower(): eff_clean = "platinum"
+                    elif "bronze" in eff.lower(): eff_clean = "bronze"
+                    elif "gold" in eff.lower(): eff_clean = "gold"
+                    elif "silver" in eff.lower(): eff_clean = "silver"
+
+                    mod_str = r.get("modular", "Full")
+                    modular = "Full" if "tam" in mod_str.lower() or "full" in mod_str.lower() else ("Semi" if "yarı" in mod_str.lower() or "semi" in mod_str.lower() else "No")
+
+                    item = {
+                        "name": name,
+                        "price": None,
+                        "type": "ATX",
+                        "efficiency": eff_clean,
+                        "wattage": w,
+                        "color": "Black",
+                        "modular": modular,
+                        "tier": tier_str,
+                        "atx_standard": atx_v or ("ATX 3.1 & PCIe 5.1" if is_atx31 else ("ATX 3.0 & PCIe 5.0" if is_atx3 else None)),
+                        "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)" if is_atx31 else ("1x 16-Pin 12VHPWR (600W Native)" if is_atx3 else None),
+                        "eps_connectors": "2x 8-Pin (4+4) EPS CPU" if w >= 750 else "1x 8-Pin (4+4) EPS CPU",
+                        "pcie_connectors": "6x 8-Pin (6+2) PCIe" if w >= 1200 else ("4x 8-Pin (6+2) PCIe" if w >= 850 else "2x 8-Pin (6+2) PCIe"),
+                        "sata_connectors": "14x SATA" if w >= 1200 else ("10x SATA" if w >= 850 else "6x SATA"),
+                        "topology": topology_full,
+                        "protections": protections_str,
+                        "fan_size": "135mm FDB Fan" if w >= 1000 else "120mm FDB Fan",
+                        "imageUrl": img_url
+                    }
+                    seen[k] = item
+                    results.append(item)
+        except Exception as e:
+            print(f"[UYARI] ironscale_psu_db.json okuma hatası: {e}")
+
     for brand, series_list, wattages in PSU_BRANDS_SERIES:
         for series in series_list:
             for w in wattages:
@@ -332,8 +432,10 @@ CPU_MASTER_LIST = [
     ("AMD Ryzen 5 1600", {"socket": "AM4", "cores": 6, "threads": 12, "base": 3.2, "boost": 3.6, "l2": 3.0, "l3": 16, "tdp": 65, "node": "GlobalFoundries 14nm", "arch": "Zen", "igpu": None}),
     # Intel Core Ultra 200S
     ("Intel Core Ultra 9 285K", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.7, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
+    ("Intel Core Ultra 7 270K Plus", {"socket": "LGA1851", "cores": 24, "threads": 24, "base": 3.7, "boost": 5.5, "l2": 40.0, "l3": 36, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 7 265K", {"socket": "LGA1851", "cores": 20, "threads": 20, "base": 3.9, "boost": 5.5, "l2": 36.0, "l3": 30, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 7 265KF", {"socket": "LGA1851", "cores": 20, "threads": 20, "base": 3.9, "boost": 5.5, "l2": 36.0, "l3": 30, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": None}),
+    ("Intel Core Ultra 5 250K Plus", {"socket": "LGA1851", "cores": 18, "threads": 18, "base": 3.3, "boost": 5.2, "l2": 30.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake Refresh", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 5 245K", {"socket": "LGA1851", "cores": 14, "threads": 14, "base": 4.2, "boost": 5.2, "l2": 26.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": "Intel Graphics 4 Xe-cores"}),
     ("Intel Core Ultra 5 245KF", {"socket": "LGA1851", "cores": 14, "threads": 14, "base": 4.2, "boost": 5.2, "l2": 26.0, "l3": 24, "tdp": 125, "node": "TSMC 3nm N3B FinFET", "arch": "Arrow Lake", "igpu": None}),
     # Intel 14th Gen
@@ -710,27 +812,68 @@ def load_and_sanitize(path: str, category: str) -> list[dict]:
         if len(name) < 5 or any(b in name.lower() for b in ["tıklayın", "tiklayin", "sepete", "tavsiye", "\ufffd"]):
             continue
 
-        # Kategori doğrulaması ve yabancı parça temizliği
+        # Platform & Mimari Whitelist (Soket / Nesil Tabanlı Filtre - 10-15 yıllık antika parçaları süpürür)
         if category == "cpu":
             if not any(k in name.lower() for k in ["ryzen", "core", "ultra", "intel", "amd", "athlon", "threadripper", "pentium"]):
                 continue
             if any(k in name.lower() for k in ["ssd", "soğutucu", "sogutucu", "fan", "kasa", "ram", "ddr"]):
                 continue
+            # Eski antika aile ve soketleri temizle (AM4 Ryzen 5000/3000 KORUNUR)
+            if any(b in name.lower() for b in ["xeon", "pentium 4", "core 2", "celeron", "fx-", "phenom", "athlon ii", "athlon x4", "sempron", "opteron"]):
+                continue
+            sock = it.get("socket")
+            if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "sTRX4", "sWRX8", "sTR5", "Belirtilmedi"]:
+                continue
+            # Intel 10. nesil öncesi eski işlemcileri ele (i7-2600, i5-4690, i7-7700, vs.)
+            m_gen = re.search(r"i[3579]-([2-9]\d{3})", name)
+            if m_gen:
+                continue
+
         elif category == "gpu":
             if not any(k in name.lower() for k in ["rtx", "gtx", "radeon", "rx ", "arc", "geforce"]):
                 continue
             name = re.sub(r"\s+Video Card$", "", name, flags=re.IGNORECASE)
             name = re.sub(r"\s+Edition$", "", name, flags=re.IGNORECASE)
             it["name"] = name
+
+            # Modern Ekran Kartı Whitelist:
+            # NVIDIA: RTX 50, 40, 30, 20 ve GTX 16 serisi
+            # AMD: Radeon RX 9000, 7000, 6000 serisi
+            # Intel: Arc B580, B570, A770, A750, A580, A380, A310
+            # Eski antika GPU'lar elenir (GTX 1060, 1070, 1080, 1050, 970, 960, 750, RX 580, 570, 480, GT 710, vs.)
+            gpu_upper = name.upper()
+            is_modern_nvidia = bool(re.search(r"RTX\s*(50|40|30|20)\d{2}", gpu_upper) or re.search(r"GTX\s*16\d{2}", gpu_upper))
+            is_modern_amd = bool(re.search(r"RX\s*(9\d{3}|7\d{3}|6\d{3})", gpu_upper) or re.search(r"RADEON\s*(9\d{3}|7\d{3}|6\d{3})", gpu_upper))
+            is_modern_intel = bool("ARC " in gpu_upper and any(x in gpu_upper for x in ["B580", "B570", "A770", "A750", "A580", "A380", "A310"]))
+            if not (is_modern_nvidia or is_modern_amd or is_modern_intel):
+                continue
+
         elif category == "motherboard":
             if not any(k in name.upper() for k in ["ANAKART", "MOTHERBOARD", "B650", "B760", "Z790", "Z890", "X870", "X670", "B550", "B450", "H610", "A620", "B850", "B840", "B860", "A520", "X570"]):
                 continue
+            sock = it.get("socket")
+            if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "Belirtilmedi"]:
+                continue
+            # Eski çipsetler elenir
+            if any(b in name.upper() for b in ["H110", "B150", "Z170", "H270", "B250", "Z270", "H310", "B360", "B365", "Z370", "Z390", "H81", "B85", "Z87", "Z97", "H61", "FM2", "AM3", "970A", "990FX"]):
+                continue
+
         elif category == "ram":
             if not any(k in name.upper() for k in ["DDR4", "DDR5", "RAM", "BELLEK", "MEMORY"]):
                 continue
+            # DDR3, DDR2, DDR1 kesin elenir
+            if any(b in name.upper() for b in ["DDR3", "DDR2", "DDR1", "SO-DIMM DDR3"]):
+                continue
+            if it.get("type") in ["DDR3", "DDR2", "DDR"] or it.get("memory_type") in ["DDR3", "DDR2", "DDR"]:
+                continue
+
         elif category == "storage":
             if not any(k in name.upper() for k in ["SSD", "NVME", "M.2", "SATA", "HARDDISK", "DISC", "TB", "GB"]):
                 continue
+            # Çok eski IDE veya antika küçük kapasiteli sürücüler elenir
+            if any(b in name.lower() for b in ["ide ", "pata", "5400rpm 160gb", "5400rpm 250gb", "5400rpm 320gb"]):
+                continue
+
         elif category == "psu":
             if not any(k in name.upper() for k in ["PSU", "POWER", "WATT", "80 PLUS", "80+"]) and not re.search(r"\b\d{3,4}\s*W\b", name.upper()):
                 continue

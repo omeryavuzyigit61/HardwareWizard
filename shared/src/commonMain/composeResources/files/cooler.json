@@ -123,7 +123,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/JU6995590.jpg"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro A-RGB 360",
@@ -354,7 +355,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "NZXT Kraken 240 RGB",
@@ -589,7 +591,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-360-white-rgb-aio-lcd-display-360-mm-uyumlu-sivi-sogutucu.jpg"
   },
   {
     "name": "NZXT Kraken Elite 240 RGB",
@@ -657,7 +660,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-acfre00124a-islemci-sogutucu-3.jpg"
   },
   {
     "name": "Arctic Freezer 36 A-RGB (White)",
@@ -844,7 +848,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Endorfy Fera 5 ARGB 120mm 4 Isı Borulu Intel-AMD Uyumlu Hava Soğutucu (EY3A007)",
@@ -861,7 +866,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Gigabyte Eagle 360I ARGB AMD/Intel Sıvı Soğutucu",
@@ -878,7 +884,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202608/6a71d59330cef2.84684473_hpejoikqmfgln_cropped_288.webp"
   },
   {
     "name": "SEGOTEP K6 SE Siyah 120mm Hava Soğutucu (INTEL)",
@@ -895,7 +902,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202506/685badbe89fd08.59483514_mhfigjnpkoleq_cropped_288.webp"
   },
   {
     "name": "FSP AD36 ARGB AIO 360mm Dijital Isı Göstergeli Beyaz İşlemci Sıvı Soğutucu",
@@ -912,7 +920,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Bitfenix S7 Digital Beyaz ARGB 360mm İşlemci Sıvı Soğutucu",
@@ -929,7 +938,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/thermalright-peerless-vision-240-argb-white-240mm-intel-amd-uyumlu-islemci-sivi-sogutucu-2-yil-birebir-degisim-garantili-1-300x300.jpg"
   },
   {
     "name": "CORSAIR NAUTILUS 360 RS LCD 360mm Siyah İşlemci Sıvı Soğutucu",
@@ -946,7 +956,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "FAZEON A5120TRA 12cm RGB Kule Tipi Siyah İşlemci Soğutucu",
@@ -963,7 +974,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202608/6a95cb2a0dd9e6.71065540_omknpqgfejihl_cropped_288.webp"
   },
   {
     "name": "FSP NP5 Siyah 12cm ARGB Hava Soğutucu",
@@ -980,7 +992,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Rampage FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
@@ -997,7 +1010,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "ANTEC Skeleton 360 ARGB Fanlı 360mm Sıvı işlemci Soğutucusu",
@@ -1014,7 +1028,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202412/6761304b091fb8.45011919_lhoeqngfkmjip_cropped_75.webp"
   },
   {
     "name": "COUGAR POSEIDON ELITE ARGB 360 AIO LGA1700/1851/AM5 360mm Beyaz Sıvı İşlemci",
@@ -1031,7 +1046,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-360mm-beyaz-sivi-islemci-sogutucusu-1790934279-5.jpg"
   },
   {
     "name": "ASUS PRIME LC 360 ARGB AURA SYNC 360MM LGA1700/1851/AM5 Sıvı Soğutma",
@@ -1048,7 +1064,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "DeepCool LT520 2x120mm Fanlı 240mm Sıvı İşlemci Soğutucu",
@@ -1065,7 +1082,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt520-2x120mm-fanli-240mm-sivi-islemci-sogutucu.jpg"
   },
   {
     "name": "ASUS MAX GAMING LC360 ARGB LCD 2.4” IPS Ekranlı ARGB AIO",
@@ -1082,7 +1100,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "FSP MP7 WA 2x120mm ARGB Fanlı LGA1700/1851/AM5 Beyaz işlemci Soğutucu",
@@ -1099,7 +1118,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-siyah-islemci-sogutucu-34.jpg"
   },
   {
     "name": "AMD Wraith  İşlemci Soğutucusu-712-000046",
@@ -1116,7 +1136,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/amd-wraith-islemci-sogutucusu-712-000046.jpg"
   },
   {
     "name": "RAMPAGE COOLBLADE 120mm Fanlı İşlemci Soğutucu",
@@ -1133,7 +1154,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-coolblade-120mm-fanli-islemci-sogutucu.jpg"
   },
   {
     "name": "FRISBY P2S 90mm ARGB Fanlı LGA1700/AM5 2xBakır Borulu Hava Soğutma",
@@ -1150,7 +1172,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-2xbakir-borulu-hava-sogutma.jpg"
   },
   {
     "name": "DEEPCOOL AG300 LGA1700/1851/AM5 işlemci Hava Soğutma",
@@ -1167,7 +1190,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-islemci-hava-sogutma.jpg"
   },
   {
     "name": "DeepCool GAMMAXX AG400 LED 120 mm İşlemci Soğutucu",
@@ -1184,7 +1208,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-gammaxx-ag400-led-120-mm-islemci-sogutucu.jpg"
   },
   {
     "name": "MSI GG CORE FROZR L 120 MM İşlemci Hava Soğutucusu",
@@ -1201,7 +1226,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-core-frozr-s-120mm-islemci-hava-sogutucu-54.jpg"
   },
   {
     "name": "CORSAIR A500 Serisi Çift Fanlı İşlemci Soğutucusu",
@@ -1218,7 +1244,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-a500-serisi-cift-fanli-islemci-sogutucusu.jpg"
   },
   {
     "name": "Ocypus Beta A10 124 mm Intel(1700p/1851p)-AMD Uyumlu Hava Soğutucu",
@@ -1235,7 +1262,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/47A-05f65b0849b02a0c77a18de8d460db0d.jpg"
   },
   {
     "name": "Intel M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
@@ -1252,7 +1280,26 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 220
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/69T-y3k2faninte9737910101.jpg"
+  },
+  {
+    "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm  AIO 2.4\" IPS",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mpg-coreliquid-d240-lga-am5-1700-240mm-aio-2-4-ips-ekranli-argb-sivi-islemci-sogutucusu.jpg"
   },
   {
     "name": "Lian Li Galahad II Trinity 360",
@@ -1541,7 +1588,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-240-rx-rgb-aio-beyaz-rx120-rgb-fanli-240mm-sivi-islemci-sogutucu-cw-9061020-ww.jpg"
   },
   {
     "name": "Corsair iCUE LINK Titan 360 RX RGB (White)",
@@ -1677,7 +1725,8 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 320
+    "max_tdp": 320,
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
   },
   {
     "name": "Be Quiet! Silent Loop 2 360",
@@ -1899,22 +1948,5 @@
       "LGA1851"
     ],
     "max_tdp": 150
-  },
-  {
-    "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm  AIO 2.4\" IPS",
-    "price": null,
-    "type": "Liquid",
-    "size": 240,
-    "color": "Black",
-    "height": null,
-    "fan_rpm": null,
-    "noise_level": null,
-    "sockets": [
-      "AM5",
-      "AM4",
-      "LGA1700",
-      "LGA1851"
-    ],
-    "max_tdp": 350
   }
 ]

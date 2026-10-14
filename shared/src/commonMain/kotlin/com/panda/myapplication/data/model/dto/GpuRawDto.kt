@@ -26,4 +26,5 @@ data class GpuRawDto(
     @SerialName("display_outputs") val displayOutputs: String? = null,
     @SerialName("slot_width") val slotWidth: String? = null,
     @SerialName("recommended_psu") val recommendedPsuWatts: Int? = null,
+    val imageUrl: String? = null,
 )

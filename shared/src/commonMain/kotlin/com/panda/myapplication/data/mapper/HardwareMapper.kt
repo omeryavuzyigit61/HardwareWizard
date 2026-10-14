@@ -199,12 +199,13 @@ object HardwareMapper {
             Money(amountMinor = entity.priceMinor, currencyCode = entity.currencyCode)
         } else null
 
-        val priceInfo = if (entity.currentPriceTry != null || !entity.offers.isNullOrEmpty() || !entity.priceHistory.isNullOrEmpty()) {
+        val priceInfo = if (entity.currentPriceTry != null || !entity.offers.isNullOrEmpty() || !entity.priceHistory.isNullOrEmpty() || entity.imageUrl != null) {
             ProductPriceInfo(
                 currentPriceTry = entity.currentPriceTry,
                 lowestPriceTry = entity.lowestPriceTry ?: entity.currentPriceTry,
                 highestPriceTry = entity.highestPriceTry ?: entity.currentPriceTry,
                 currency = "TRY",
+                imageUrl = entity.imageUrl,
                 offers = entity.offers.orEmpty(),
                 priceHistory = entity.priceHistory.orEmpty(),
             )
@@ -220,6 +221,7 @@ object HardwareMapper {
             spec = spec,
             priceInfo = priceInfo,
             benchmarkInfo = null,
+            imageUrl = entity.imageUrl,
         )
 
         val isCpuOrGpu = entity.category == HardwareCategory.CPU || entity.category == HardwareCategory.GPU
@@ -343,6 +345,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = CpuSpecEntity(
             itemId = id,
@@ -422,6 +425,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = GpuSpecEntity(
             itemId = id,
@@ -477,6 +481,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = RamSpecEntity(
             itemId = id,
@@ -549,6 +554,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = MotherboardSpecEntity(
             itemId = id,
@@ -647,6 +653,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = PsuSpecEntity(
             itemId = id,
@@ -713,6 +720,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = StorageSpecEntity(
             itemId = id,
@@ -750,6 +758,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = CoolerSpecEntity(
             itemId = id,
@@ -802,6 +811,7 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
         )
         val spec = CaseSpecEntity(
             itemId = id,
@@ -860,6 +870,7 @@ object HardwareMapper {
             } else null
 
             item.copy(
+                imageUrl = priceData?.imageUrl ?: item.imageUrl,
                 currentPriceTry = priceData?.currentPriceTry,
                 lowestPriceTry = priceData?.lowestPriceTry,
                 highestPriceTry = priceData?.highestPriceTry,

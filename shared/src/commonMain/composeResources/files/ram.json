@@ -16,7 +16,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202302/63fc606e84bfa2.31262237_qmokfielpjnhg_cropped_288.webp"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -54,7 +55,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-oled-ddr5-cl32-intel-xmp-beyaz-ram-otmxfl1664832wwk-1785309128.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -92,7 +94,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -111,7 +114,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/D3J-image.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-6400 CL32",
@@ -206,7 +210,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-vengeance-48gb-2x24gb-rgb-6000mhz-ddr5-cl36-ram-cmh48gx5m2e6000c36-1784274752-9.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -244,7 +249,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-vengeance-rgb-64gb-2x32gb-ddr5-cl30-6000mhz-amd-expo-intel-xmp-white-ram-cmh64gx5m2b6000z30w.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -282,7 +288,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-vengeance-black-32gb-2x16gb-ddr5-7000mhz-cl34-memory-kit-cmk32gx5m2x7000c34-6.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -320,7 +327,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-rgb-pro-sl-16gb-2x8gb-ddr4-vengeance-dram-3600mhz-c18-pc-ram.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
@@ -358,7 +366,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/twinmos-32gb-ddr4-3200mhz-cl16-thundergx-sogutuculu-ram-tmd432gb3200d16bkgx.png"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR4-3200 CL16 (White)",
@@ -396,7 +405,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Corsair Vengeance RGB 16GB (2x8GB) DDR4-3600 CL18 (White)",
@@ -434,7 +444,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-32gb-2x16gb-vengeance-pro-rgb-siyah-ddr4-3600mhz-cl18-dual-kit-ram-80.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
@@ -890,7 +901,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-dominator-titanium-rgb-48gb-2x24gb-7000mhz-cl36-ddr5-ram-cmp48gx5m2b7000c36.jpg"
   },
   {
     "name": "Corsair Dominator Titanium RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -928,7 +940,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-ddr5-amd-expo-beyaz-ram-cmp64gx5m2b6000c30w.jpg"
   },
   {
     "name": "Corsair Dominator Titanium RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -966,7 +979,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-dominator-titanium-rgb-32gb-2x16gb-7000mhz-cl34-ddr5-intel-xmp-beyaz-ram-cmp32gx5m2x7000c34w.jpg"
   },
   {
     "name": "Corsair Dominator Titanium RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -1004,7 +1018,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/xmp-cmt32gx5m2b6000z30k-rgb-ram.jpg"
   },
   {
     "name": "Corsair Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -1232,7 +1247,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/xmp-cmt64gx5m2b6000z30-rgb-ram.jpg"
   },
   {
     "name": "Corsair Dominator Platinum RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -1346,7 +1362,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3YT-ekran-goruntusu-2023-08-25-120228photoaid-removed-background.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -1384,7 +1401,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/FCP-23.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -1498,7 +1516,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/JF3-image-2.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -1536,7 +1555,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/K87-166874001110.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -1555,7 +1575,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/L61-ypa-fxf-ekran-goruntusu-2023-08-25-120228photoaid-removed-background.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7200 CL34",
@@ -1574,7 +1595,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3HK-z6.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -1612,7 +1634,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/XR72101397201.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
@@ -1688,7 +1711,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/2ZN156283251511.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 16GB (2x8GB) DDR4-3600 CL18 (White)",
@@ -1764,7 +1788,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -1783,7 +1808,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL32",
@@ -1802,7 +1828,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -1821,7 +1848,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL36",
@@ -1840,7 +1868,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-beast-32gb-2x16-ddr5-6000mhz-cl36-amd-expo-sertifikali-ram-kf560c36bbe2k2-32tr-9.jpg"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -1878,7 +1907,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/17R-image-13.jpg"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -1897,7 +1927,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/04/klevv-cras-v-rgb-48gb-2x24gb-6000mhz-cl30-intel-xmp-3-0-amd-expo-ddr5-brilliant-white-ram-kd5kgud80-60a300j-2-yil-birebir-degisim-garantili-2-300x300.jpg"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 64GB (2x32GB) DDR5-6000 CL30",
@@ -1916,7 +1947,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -1935,7 +1967,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL30",
@@ -2087,7 +2120,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "G.Skill Ripjaws S5 32GB (2x16GB) DDR5-6400 CL32",
@@ -2163,7 +2197,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/U9L-20-374-451-02.jpg"
   },
   {
     "name": "G.Skill Ripjaws S5 32GB (2x16GB) DDR5-7200 CL34",
@@ -2220,7 +2255,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/92Y-ekran-goruntusu-2023-09-19-083154.jpg"
   },
   {
     "name": "G.Skill Ripjaws S5 16GB (2x8GB) DDR4-3600 CL18",
@@ -2277,7 +2313,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-beast-rgb-32gb-2x16gb-ddr5-6000mhz-cl30-siyah-ram-kf560c30bbeak2-32tr.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -2315,7 +2352,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-beast-rgb-32gb-1x32gb-ddr5-6400mhz-cl32-siyah-ram-kf564c32bbea-32tr.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -2353,7 +2391,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -2505,7 +2544,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-beast-rgb-64gb-2x32gb-ddr5-6400mhz-cl32-siyah-ram-kf564c32bbeak2-64tr.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -2543,7 +2583,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/PEU-xt3-4n2-image-8.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -2581,7 +2622,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202405/6647383b596659.07322063_hepfqknjgmilo_cropped_288.webp"
   },
   {
     "name": "Kingston Fury Beast RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
@@ -2619,7 +2661,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202405/664745e7bf2c74.50591561_qkfjhgmeniolp_cropped_288.webp"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR4-3200 CL16 (White)",
@@ -2657,7 +2700,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/16tr-96.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 16GB (2x8GB) DDR4-3600 CL18 (White)",
@@ -2695,7 +2739,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Kingston Fury Beast RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
@@ -3417,7 +3462,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/xpg-lancer-32gb-2x16gb-ddr5-6000mhz-cl30-pc-ram-ax5u6000c3016g-clabk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -3607,7 +3653,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "XPG Lancer Blade RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -4329,7 +4376,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Lexar Ares RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -4367,7 +4415,8 @@
     "cas_latency": 32,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lexar-ares-rgb-32gb-2x16-ddr5-6400mhz-siyah-cl32-pc-ram-ld5eu016g-r6400gdla-1.jpg"
   },
   {
     "name": "Lexar Ares RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -4595,7 +4644,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lexar-ares-rgb-32gb-2x16-ddr5-6800mhz-siyah-cl34-pc-ram-ld5u16g68c34la-rgd-6.jpg"
   },
   {
     "name": "Lexar Ares RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -4785,7 +4835,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/CUH-screenshot1.jpg"
   },
   {
     "name": "Patriot Viper Venom RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -4861,7 +4912,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/86H-screenshot1.jpg"
   },
   {
     "name": "Patriot Viper Venom RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -5051,7 +5103,8 @@
     "cas_latency": 34,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/6GT-screenshot1.jpg"
   },
   {
     "name": "Patriot Viper Venom RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -5317,7 +5370,8 @@
     "cas_latency": 36,
     "voltage": 1.3,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202310/6532654b0d8a69.64124834_mgljpnifkoheq_cropped_288.webp"
   },
   {
     "name": "Patriot Viper Elite 5 RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -5431,7 +5485,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202405/66504fa1c78d86.43871520_ljfqhkopignme_cropped_288.webp"
   },
   {
     "name": "Patriot Viper Elite 5 RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -5697,7 +5752,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-pro-32gb-ddr5-6000mhz-2x16-cl48-pc-ram-cp2k16g60c48u5.jpg"
   },
   {
     "name": "Crucial Pro Overclocking 32GB (2x16GB) DDR5-6000 CL32",
@@ -5849,7 +5905,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Crucial Pro Overclocking 32GB (2x16GB) DDR4-3200 CL16",
@@ -6837,7 +6894,8 @@
     "cas_latency": 28,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-vengeance-32gb-2x16gb-6000mhz-ddr5-cl28-dual-kit-ram-cmk32gx5m2b6000z28.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -6913,7 +6971,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Corsair Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -6951,7 +7010,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-cl30-amd-expo-intel-xmp-ram-cmh96gx5m2e6000z36.jpg"
   },
   {
     "name": "Corsair Vengeance RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -6989,7 +7049,8 @@
     "cas_latency": 38,
     "voltage": 1.45,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
   },
   {
     "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -7027,7 +7088,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202606/6a436c153999d6.76338019_jmgfnqipeolhk_cropped_288.webp"
   },
   {
     "name": "Corsair Vengeance RGB 16GB (1x16GB) DDR4-3200 CL16 (White)",
@@ -7464,7 +7526,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-dominator-titanium-rgb-96gb-2x48gb-ddr5-6600mhz-cl32-xmp-ram-cmp96gx5m2b6600c32.jpg"
   },
   {
     "name": "Corsair Dominator Titanium RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -7483,7 +7546,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/s-cl32-ddr5-amd-expo-ram-cmp96gx5m2b6400c32w.jpg"
   },
   {
     "name": "Corsair Dominator Titanium RGB 32GB (2x16GB) DDR5-8000 CL38",
@@ -7730,7 +7794,8 @@
     "cas_latency": 28,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/DJL-image-13.jpg"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -7806,7 +7871,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202609/6ab4f7b9046980.75403261_phjqkigeofmln_cropped_288.webp"
   },
   {
     "name": "G.Skill Trident Z5 RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -8072,7 +8138,8 @@
     "cas_latency": 28,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -8110,7 +8177,8 @@
     "cas_latency": 30,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/851-image-2.jpg"
   },
   {
     "name": "G.Skill Trident Z5 Neo RGB (AMD EXPO) 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -8224,7 +8292,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/2G4-ekran-goruntusu-2023-08-25-121707.jpg"
   },
   {
     "name": "G.Skill Ripjaws S5 96GB (2x48GB) DDR5-6000 CL30",
@@ -8433,7 +8502,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-beast-16gb-1x16-ddr5-5200mhz-siyah-cl36-pc-ram-kf552c36bbe-16tr.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -8547,7 +8617,8 @@
     "cas_latency": 16,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202101/6011c1bddd2821.63682804_gijoeqhpknfml_cropped_288.webp"
   },
   {
     "name": "Kingston Fury Beast RGB 16GB (1x16GB) DDR4-3200 CL16 (White)",
@@ -8623,7 +8694,8 @@
     "cas_latency": 18,
     "voltage": 1.35,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/64tr-05.jpg"
   },
   {
     "name": "Kingston Fury Beast RGB 64GB (2x32GB) DDR4-3600 CL18 (White)",
@@ -9022,7 +9094,8 @@
     "cas_latency": 38,
     "voltage": 1.45,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-renegade-rgb-32gb-2x16gb-ddr5-8000mhz-cl38-siyah-dual-ram-kf580c38rsak2-32tr.jpg"
   },
   {
     "name": "Kingston Fury Renegade RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -9288,7 +9361,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -9896,7 +9970,8 @@
     "cas_latency": 28,
     "voltage": 1.4,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lexar-ares-32gb-ddr5-6000mhz-siyah-cl28-rgb-pc-ram-ld5u16g60c28br-rgd-7.jpg"
   },
   {
     "name": "Lexar Ares RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -9972,7 +10047,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202601/696e2a7f02adb9.80795825_mpehgqikofjln_cropped_288.webp"
   },
   {
     "name": "Lexar Ares RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -10371,7 +10447,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Lexar Thor OC 48GB (2x24GB) DDR5-6000 CL30",
@@ -10466,7 +10543,8 @@
     "cas_latency": 38,
     "voltage": 1.45,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://www.tebilon.com/picture300x300/2-3.jpg"
   },
   {
     "name": "Lexar Thor OC 16GB (2x8GB) DDR4-3200 CL16",
@@ -10713,7 +10791,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/KCF-screenshot1.jpg"
   },
   {
     "name": "Patriot Viper Venom RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -11131,7 +11210,8 @@
     "cas_latency": 38,
     "voltage": 1.45,
     "heat_spreader": true,
-    "rgb": true
+    "rgb": true,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202310/653264dd3d4411.59513993_niqfogkhepmjl_cropped_288.webp"
   },
   {
     "name": "Patriot Viper Elite 5 RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -11359,7 +11439,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
   },
   {
     "name": "Crucial Pro Overclocking 96GB (2x48GB) DDR5-6000 CL30",
@@ -12043,7 +12124,8 @@
     "cas_latency": 40,
     "voltage": 1.25,
     "heat_spreader": true,
-    "rgb": false
+    "rgb": false,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202302/63dcfdf0c1db29.82170983_ekfmqohipnglj_cropped_288.webp"
   },
   {
     "name": "TeamGroup T-Force Vulcan 96GB (2x48GB) DDR5-6000 CL30",

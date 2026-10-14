@@ -21,4 +21,5 @@ data class CpuRawDto(
     @SerialName("pcie_version") val pcieVersion: String? = null,
     @SerialName("max_memory_speed") val maxMemorySpeed: String? = null,
     @SerialName("unlocked_multiplier") val unlockedMultiplier: Boolean? = null,
+    val imageUrl: String? = null,
 )
