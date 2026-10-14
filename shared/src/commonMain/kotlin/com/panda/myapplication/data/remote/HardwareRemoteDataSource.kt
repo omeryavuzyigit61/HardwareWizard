@@ -117,7 +117,7 @@ class HardwareRemoteDataSource(
     }.getOrDefault(emptyList())
 
     companion object {
-        const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/docyx/pc-part-dataset/main/data/json"
+        const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/catalog"
         const val DEFAULT_PRICES_TR_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/prices_tr.json"
         const val DEFAULT_BENCHMARKS_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/hardware_benchmarks.json"
     }

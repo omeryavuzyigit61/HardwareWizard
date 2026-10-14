@@ -1,0 +1,2032 @@
+[
+  {
+    "name": "Thermalright Peerless Assassin 120 SE",
+    "price": 34.9,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "Black / Silver",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "ARCTIC Liquid Freezer III Pro 360",
+    "price": 84.99,
+    "rpm": [
+      600,
+      3000
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Black Edition",
+    "price": 25.99,
+    "rpm": [
+      650,
+      2000
+    ],
+    "noise_level": [
+      6.5,
+      26
+    ],
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "NZXT Kraken 360",
+    "price": 179.99,
+    "rpm": [
+      500,
+      1800
+    ],
+    "noise_level": [
+      17.9,
+      30.6
+    ],
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "ARCTIC Liquid Freezer III 360 A-RGB",
+    "price": 159.99,
+    "rpm": [
+      200,
+      2000
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Thermalright Assassin X 120 Refined SE",
+    "price": 17.89,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "Black / Silver",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Cooler Master MasterLiquid 360L Core ARGB",
+    "price": 74.98,
+    "rpm": [
+      350,
+      1750
+    ],
+    "noise_level": 27.2,
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/JU6995590.jpg"
+  },
+  {
+    "name": "ARCTIC Liquid Freezer III Pro A-RGB 360",
+    "price": 93.99,
+    "rpm": [
+      600,
+      3000
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "NZXT Kraken 240",
+    "price": 99.99,
+    "rpm": [
+      500,
+      1800
+    ],
+    "noise_level": [
+      17.9,
+      30.6
+    ],
+    "color": "Black",
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 SE ARGB",
+    "price": 36.9,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "ARCTIC Freezer 36",
+    "price": 44.19,
+    "rpm": [
+      200,
+      1800
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-freezer-36-a-rgb-siyah-kule-tipi-islemci-sogutucu-acfre00124a.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 360 RGB",
+    "price": null,
+    "rpm": [
+      500,
+      1800
+    ],
+    "noise_level": [
+      17.9,
+      30.6
+    ],
+    "color": "White",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "NZXT Kraken 360 RGB",
+    "price": 219.99,
+    "rpm": [
+      500,
+      1800
+    ],
+    "noise_level": [
+      17.9,
+      30.6
+    ],
+    "color": "White",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 SE WHITE ARGB",
+    "price": 36.9,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "White",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "ARCTIC Liquid Freezer III Pro",
+    "price": 70.98,
+    "rpm": [
+      600,
+      3000
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Thermalright Assassin King SE ARGB",
+    "price": 19.09,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "White",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Assassin X SE",
+    "price": 16.89,
+    "rpm": 2200,
+    "noise_level": 23.85,
+    "color": "Black / Silver",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Cooler Master MasterLiquid 240L Core ARGB",
+    "price": 84.99,
+    "rpm": [
+      350,
+      1750
+    ],
+    "noise_level": 27.2,
+    "color": "Black",
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 (2023)",
+    "price": 25.99,
+    "rpm": [
+      690,
+      2500
+    ],
+    "noise_level": 32.8,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Spectrum V3",
+    "price": 16.98,
+    "rpm": [
+      650,
+      1750
+    ],
+    "noise_level": 27.2,
+    "color": "Black / Silver",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+  },
+  {
+    "name": "NZXT Kraken 240 RGB",
+    "price": 114.99,
+    "rpm": [
+      500,
+      1800
+    ],
+    "noise_level": [
+      17.9,
+      30.6
+    ],
+    "color": "White",
+    "size": 240,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 360 RGB (2024)",
+    "price": 289.99,
+    "rpm": [
+      500,
+      2400
+    ],
+    "noise_level": 30,
+    "color": "White",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "Thermalright Assassin Spirit 120 EVO",
+    "price": 25.39,
+    "rpm": 2000,
+    "noise_level": 28.2,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Assassin Spirit 120 EVO DARK",
+    "price": 25.9,
+    "rpm": 1850,
+    "noise_level": 27,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 Black",
+    "price": 48.69,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Assassin X 120 R Digital ARGB",
+    "price": 24.9,
+    "rpm": 2000,
+    "noise_level": 29.8,
+    "color": "Black",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 White",
+    "price": 47.59,
+    "rpm": 1550,
+    "noise_level": 25.6,
+    "color": "White",
+    "size": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 360 (2024)",
+    "price": 269.99,
+    "rpm": [
+      500,
+      2000
+    ],
+    "noise_level": 30,
+    "color": "Black",
+    "size": 360,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "ARCTIC Liquid Freezer III 280",
+    "price": 129.99,
+    "rpm": [
+      200,
+      1700
+    ],
+    "noise_level": null,
+    "color": "Black",
+    "size": 280,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 360 A-RGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 24.5,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 240 A-RGB",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 240 A-RGB (White)",
+    "price": 107.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 420 A-RGB",
+    "price": 161.0,
+    "type": "Liquid",
+    "size": 420,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 25.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 380,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 360 RGB (White)",
+    "price": 183.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-360-white-rgb-aio-lcd-display-360-mm-uyumlu-sivi-sogutucu.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 240 RGB",
+    "price": 147.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 240 RGB (White)",
+    "price": 147.0,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "Thermalright Peerless Assassin 120 SE (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1550 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 265,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Arctic Freezer 36 A-RGB",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-acfre00124a-islemci-sogutucu-3.jpg"
+  },
+  {
+    "name": "Arctic Freezer 36 A-RGB (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 23.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-freezer-36-a-rgb-siyah-kule-tipi-islemci-sogutucu-acfre00124a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 420 A-RGB (White)",
+    "price": 161.0,
+    "type": "Liquid",
+    "size": 420,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 25.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 380,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 280 A-RGB",
+    "price": 119.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 24.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Arctic Liquid Freezer III 280 A-RGB (White)",
+    "price": 119.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1900 RPM",
+    "noise_level": 24.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 280 RGB",
+    "price": 164.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "NZXT Kraken Elite 280 RGB (White)",
+    "price": 164.0,
+    "type": "Liquid",
+    "size": 280,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 300,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+  },
+  {
+    "name": "Cooler Master MasterLiquid 360L Core ARGB (White)",
+    "price": 143.0,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1750 RPM",
+    "noise_level": 27.2,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "Thermalright Assassin X 120 Refined SE (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1550 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 200,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Halo",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2050 RPM",
+    "noise_level": 27.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 180,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Halo (White)",
+    "price": 71.0,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 2050 RPM",
+    "noise_level": 27.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 180,
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+  },
+  {
+    "name": "ASUS Prime LC 240 ARGB 240mm Intel-AMD Uyumlu İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "Endorfy Fera 5 ARGB 120mm 4 Isı Borulu Intel-AMD Uyumlu Hava Soğutucu (EY3A007)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "Gigabyte Eagle 360I ARGB AMD/Intel Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202608/6a71d59330cef2.84684473_hpejoikqmfgln_cropped_288.webp"
+  },
+  {
+    "name": "SEGOTEP K6 SE Siyah 120mm Hava Soğutucu (INTEL)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202506/685badbe89fd08.59483514_mhfigjnpkoleq_cropped_288.webp"
+  },
+  {
+    "name": "FSP AD36 ARGB AIO 360mm Dijital Isı Göstergeli Beyaz İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+  },
+  {
+    "name": "Bitfenix S7 Digital Beyaz ARGB 360mm İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/thermalright-peerless-vision-240-argb-white-240mm-intel-amd-uyumlu-islemci-sivi-sogutucu-2-yil-birebir-degisim-garantili-1-300x300.jpg"
+  },
+  {
+    "name": "CORSAIR NAUTILUS 360 RS LCD 360mm Siyah İşlemci Sıvı Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+  },
+  {
+    "name": "FAZEON A5120TRA 12cm RGB Kule Tipi Siyah İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202608/6a95cb2a0dd9e6.71065540_omknpqgfejihl_cropped_288.webp"
+  },
+  {
+    "name": "FSP NP5 Siyah 12cm ARGB Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+  },
+  {
+    "name": "Rampage FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+  },
+  {
+    "name": "ANTEC Skeleton 360 ARGB Fanlı 360mm Sıvı işlemci Soğutucusu",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.incehesap.com/resim/urun/202412/6761304b091fb8.45011919_lhoeqngfkmjip_cropped_75.webp"
+  },
+  {
+    "name": "COUGAR POSEIDON ELITE ARGB 360 AIO LGA1700/1851/AM5 360mm Beyaz Sıvı İşlemci",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-360mm-beyaz-sivi-islemci-sogutucusu-1790934279-5.jpg"
+  },
+  {
+    "name": "ASUS PRIME LC 360 ARGB AURA SYNC 360MM LGA1700/1851/AM5 Sıvı Soğutma",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+  },
+  {
+    "name": "DeepCool LT520 2x120mm Fanlı 240mm Sıvı İşlemci Soğutucu",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt520-2x120mm-fanli-240mm-sivi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "ASUS MAX GAMING LC360 ARGB LCD 2.4” IPS Ekranlı ARGB AIO",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/template/tebilon/images/roundNew.png"
+  },
+  {
+    "name": "FSP MP7 WA 2x120mm ARGB Fanlı LGA1700/1851/AM5 Beyaz işlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-siyah-islemci-sogutucu-34.jpg"
+  },
+  {
+    "name": "AMD Wraith  İşlemci Soğutucusu-712-000046",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/amd-wraith-islemci-sogutucusu-712-000046.jpg"
+  },
+  {
+    "name": "RAMPAGE COOLBLADE 120mm Fanlı İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-coolblade-120mm-fanli-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "FRISBY P2S 90mm ARGB Fanlı LGA1700/AM5 2xBakır Borulu Hava Soğutma",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-2xbakir-borulu-hava-sogutma.jpg"
+  },
+  {
+    "name": "DEEPCOOL AG300 LGA1700/1851/AM5 işlemci Hava Soğutma",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/am5-islemci-hava-sogutma.jpg"
+  },
+  {
+    "name": "DeepCool GAMMAXX AG400 LED 120 mm İşlemci Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-gammaxx-ag400-led-120-mm-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "MSI GG CORE FROZR L 120 MM İşlemci Hava Soğutucusu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-core-frozr-s-120mm-islemci-hava-sogutucu-54.jpg"
+  },
+  {
+    "name": "CORSAIR A500 Serisi Çift Fanlı İşlemci Soğutucusu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-a500-serisi-cift-fanli-islemci-sogutucusu.jpg"
+  },
+  {
+    "name": "Ocypus Beta A10 124 mm Intel(1700p/1851p)-AMD Uyumlu Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/47A-05f65b0849b02a0c77a18de8d460db0d.jpg"
+  },
+  {
+    "name": "Intel M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/69T-y3k2faninte9737910101.jpg"
+  },
+  {
+    "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm  AIO 2.4\" IPS",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": null,
+    "noise_level": null,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mpg-coreliquid-d240-lga-am5-1700-240mm-aio-2-4-ips-ekranli-argb-sivi-islemci-sogutucusu.jpg"
+  },
+  {
+    "name": "Thermalright Frozen Notte 360 ARGB",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Frozen Notte 360 ARGB (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "MSI MAG CoreLiquid E360",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mag-coreliquid-e360-siyah-360mm-islemci-sivi-sogutucu.jpg"
+  },
+  {
+    "name": "MSI MAG CoreLiquid E360 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 1800 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320,
+    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mag-coreliquid-e360-siyah-360mm-islemci-sivi-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Phantom Spirit 120 SE",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1500 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Phantom Spirit 120 SE (White)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1500 RPM",
+    "noise_level": 25.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "DeepCool AK620 Digital",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 260,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+  },
+  {
+    "name": "DeepCool AK620 Digital (White)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 260,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+  },
+  {
+    "name": "DeepCool AK400 Digital",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+  },
+  {
+    "name": "DeepCool AK400 Digital (White)",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 1850 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 220,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 360",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 360 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 30.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 240",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+  },
+  {
+    "name": "Lian Li Galahad II Trinity 240 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2450 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+  },
+  {
+    "name": "Lian Li HydroShift LCD 360",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2600 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+  },
+  {
+    "name": "Lian Li HydroShift LCD 360 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2600 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+  },
+  {
+    "name": "DeepCool LT720",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.9,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+  },
+  {
+    "name": "DeepCool LT720 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.9,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+  },
+  {
+    "name": "DeepCool LS720 SE",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+  },
+  {
+    "name": "DeepCool LS720 SE (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2250 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+  },
+  {
+    "name": "Thermalright Aqua Elite 360 V3",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Aqua Elite 360 V3 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Thermalright Frozen Prism 360",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Thermalright Frozen Prism 360 (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Corsair iCUE LINK Titan 360 RX RGB",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+  },
+  {
+    "name": "Corsair iCUE LINK Titan 360 RX RGB (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 31.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+  },
+  {
+    "name": "Corsair iCUE H150i ELITE LCD XT",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+  },
+  {
+    "name": "Corsair iCUE H150i ELITE LCD XT (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2100 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+  },
+  {
+    "name": "ASUS ROG Ryujin III 360 ARGB",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-ryujin-iii-360-argb-siyah-360mm-oled-ekranli-islemci-sivi-sogutucu.jpg"
+  },
+  {
+    "name": "ASUS ROG Ryujin III 360 ARGB (White)",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "White",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 32.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-ryujin-iii-360-argb-siyah-360mm-oled-ekranli-islemci-sivi-sogutucu.jpg"
+  },
+  {
+    "name": "ASUS TUF Gaming LC II 360 ARGB",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 29.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 320,
+    "imageUrl": "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+  },
+  {
+    "name": "Be Quiet! Silent Loop 2 360",
+    "price": null,
+    "type": "Liquid",
+    "size": 360,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2200 RPM",
+    "noise_level": 28.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 350,
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+  },
+  {
+    "name": "Be Quiet! Pure Loop 2 240",
+    "price": null,
+    "type": "Liquid",
+    "size": 240,
+    "color": "Black",
+    "height": null,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 26.0,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+  },
+  {
+    "name": "Noctua NH-D15 chromax.black",
+    "price": null,
+    "type": "Air",
+    "size": 140,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1500 RPM",
+    "noise_level": 24.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 280,
+    "imageUrl": "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Noctua NH-D15 G2",
+    "price": null,
+    "type": "Air",
+    "size": 140,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1500 RPM",
+    "noise_level": 24.8,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 290,
+    "imageUrl": "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Noctua NH-U12A chromax.black",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 22.6,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 240,
+    "imageUrl": "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
+  },
+  {
+    "name": "Be Quiet! Dark Rock Pro 5",
+    "price": null,
+    "type": "Air",
+    "size": 135,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 1700 RPM",
+    "noise_level": 23.3,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 270,
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+  },
+  {
+    "name": "Be Quiet! Pure Rock 2 FX",
+    "price": null,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 26.8,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 150,
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+  }
+]

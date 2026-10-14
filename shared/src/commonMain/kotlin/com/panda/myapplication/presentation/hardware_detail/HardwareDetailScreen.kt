@@ -329,8 +329,8 @@ private fun HeroHeaderCard(
                         .fillMaxWidth()
                         .height(180.dp)
                         .clip(RoundedCornerShape(Spacing.cardRadius))
-                        .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f))
-                        .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(Spacing.cardRadius))
+                        .background(Color.White)
+                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f), RoundedCornerShape(Spacing.cardRadius))
                         .padding(Spacing.medium),
                     contentAlignment = Alignment.Center,
                 ) {

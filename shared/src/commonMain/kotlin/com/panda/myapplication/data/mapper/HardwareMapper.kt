@@ -260,6 +260,7 @@ object HardwareMapper {
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
 
         val socket = deduceCpuSocket(dto, rawName)
+        if (!isModernCpu(rawName, socket)) return null
         val coreCount = (dto.coreCount ?: 6).coerceAtLeast(1)
         val threadCount = (dto.threads ?: (coreCount * 2)).coerceAtLeast(coreCount)
         val baseClockMhz = ((dto.coreClockGhz ?: 3.5) * 1000).toInt().coerceAtLeast(500)
@@ -376,6 +377,7 @@ object HardwareMapper {
 
         val rawChipset = dto.chipset?.trim()?.ifBlank { null }
         val chipset = rawChipset ?: rawName
+        if (!isModernGpu(rawName, chipset)) return null
 
         // If brand was not recognized or "Generic", deduce brand from chipset
         if (brand.equals("Generic", ignoreCase = true)) {
@@ -506,6 +508,7 @@ object HardwareMapper {
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
 
         val socket = dto.socket?.ifBlank { null } ?: deduceMotherboardSocket(rawName)
+        if (!isModernMotherboard(rawName, socket)) return null
         val chipset = dto.chipset?.ifBlank { null } ?: deduceMotherboardChipset(rawName)
         val formFactor = when {
             dto.formFactor?.contains("Micro", ignoreCase = true) == true -> MotherboardFormFactor.MICRO_ATX
@@ -693,8 +696,9 @@ object HardwareMapper {
                 dto.formFactor?.contains("3.5") == true ||
                 rawName.contains("Barracuda", ignoreCase = true) ||
                 rawName.contains("IronWolf", ignoreCase = true)
+        if (isHdd || (dto.capacity != null && dto.capacity < 120)) return null
 
-        val mediaType = if (isHdd) StorageMediaType.HDD else StorageMediaType.SSD
+        val mediaType = StorageMediaType.SSD
         val isNvme = !isHdd && (dto.formFactor?.contains("M.2", ignoreCase = true) == true || dto.`interface`?.contains("PCIe", ignoreCase = true) == true)
         val storageInterface = if (isNvme) StorageInterface.NVME else StorageInterface.SATA
         val pcieGen = if (storageInterface == StorageInterface.NVME) {
@@ -836,6 +840,7 @@ object HardwareMapper {
         cases: List<CaseRawDto> = emptyList(),
         pricesTr: Map<String, ProductPriceInfo> = emptyMap(),
         benchmarks: Map<String, HardwareBenchmarkInfo> = emptyMap(),
+        existingImages: Map<String, String?> = emptyMap(),
         syncedAt: Instant,
     ): HardwareCatalogSnapshot {
         val cpuPairs = cpus.mapNotNull { runCatching { cpuDtoToEntity(it, syncedAt) }.getOrNull() }
@@ -869,8 +874,10 @@ object HardwareMapper {
                     ?: generateFallbackBenchmarkInfo(item.id, item.category)
             } else null
 
-            val rawImage = priceData?.imageUrl ?: item.imageUrl
-            val resolvedImage = sanitizeImageUrl(rawImage) ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
+            val rawImage = priceData?.imageUrl ?: item.imageUrl ?: existingImages[item.id]
+            val resolvedImage = sanitizeImageUrl(rawImage)
+                ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
+                ?: existingImages[item.id]?.let { sanitizeImageUrl(it) }
 
             item.copy(
                 cachedAt = syncedAt,
@@ -967,34 +974,110 @@ object HardwareMapper {
             HardwareCategory.GPU -> when {
                 upper.contains("5090") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-nvidia-ekran-karti.jpg"
                 upper.contains("5080") -> "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
-                upper.contains("5070") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
-                upper.contains("5060") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
-                upper.contains("4090") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
-                upper.contains("4080") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
-                upper.contains("4070") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
-                upper.contains("4060") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
-                upper.contains("3060") || upper.contains("3070") || upper.contains("3080") || upper.contains("3090") ->
+                upper.contains("5070") || upper.contains("5060") -> "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
+                upper.contains("4090") || upper.contains("4080") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4080-super-16g-suprim-x-16gb-gddr6x-256-bit-dlss-3-ekran-karti.jpg"
+                upper.contains("4070") -> "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-4070-super-12gb-gddr6x-192-bit-dlss-3-ekran-karti-tuf-rtx4070s-12g-gaming.jpg"
+                upper.contains("4060") -> "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4060-ventus-2x-black-8g-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti.jpg"
+                upper.contains("3090") || upper.contains("3080") || upper.contains("3070") || upper.contains("3060") || upper.contains("2080") || upper.contains("2070") || upper.contains("2060") ->
                     "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
-                upper.contains("7900") || upper.contains("7800") || upper.contains("7700") || upper.contains("7600") ->
-                    "https://static.sinerji.gen.tr/Images/MD/NMJ-x870e-aorus-elite-wifi7-01.jpg"
+                upper.contains("9070") || upper.contains("7900") || upper.contains("7800") || upper.contains("7700") || upper.contains("7600") || upper.contains("6950") || upper.contains("6800") || upper.contains("6700") || upper.contains("6600") || upper.contains("5700") ->
+                    "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7800-xt-pulse-16gb-gddr6-256-bit-ekran-karti-11330-02-20g.jpg"
+                upper.contains("ARC") || upper.contains("B580") || upper.contains("A770") ->
+                    "https://www.tebilon.com/picture300x300/sparkle-intel-arc-a770-titan-oc-edition-16gb-gddr6-256-bit-ekran-karti.jpg"
                 else -> null
             }
             HardwareCategory.MOTHERBOARD -> when {
-                upper.contains("X870") || upper.contains("B650") || upper.contains("X670") ->
-                    "https://static.sinerji.gen.tr/Images/MD/NMJ-x870e-aorus-elite-wifi7-01.jpg"
-                upper.contains("Z890") || upper.contains("B860") || upper.contains("Z790") || upper.contains("B760") ->
-                    "https://www.incehesap.com/resim/urun/202507/687e208064c428.81552412_ihkjlqgnmepof_cropped_288.webp"
-                upper.contains("B550") || upper.contains("A520") || upper.contains("B450") ->
+                upper.contains("X870") || upper.contains("B650") || upper.contains("X670") || upper.contains("B850") ->
+                    "https://www.tebilon.com/picture300x300/asus-tuf-gaming-b650-plus-wifi-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+                upper.contains("Z890") || upper.contains("B860") || upper.contains("Z790") || upper.contains("B760") || upper.contains("Z690") || upper.contains("B660") ->
+                    "https://www.tebilon.com/picture300x300/asus-rog-maximus-z790-dark-hero-intel-z790-soket-1700-ddr5-7800mhz-oc-m2-anakart.jpg"
+                upper.contains("B550") || upper.contains("A520") || upper.contains("B450") || upper.contains("X570") ->
                     "https://static.sinerji.gen.tr/Images/MD/9NG-prime-b550m-k-argb-0.jpg"
                 else -> null
             }
             HardwareCategory.PSU -> when {
-                upper.contains("EDGE") -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
-                upper.contains("AURA") || upper.contains("THOR") || upper.contains("STRIX") ->
-                    "https://www.tebilon.com/picture300x300/asus-rog-strix-850g-aura-80-gold-850w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi-8.jpg"
-                else -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
+                upper.contains("CORSAIR") ->
+                    if (upper.contains("HX")) "https://www.tebilon.com/picture300x300/corsair-hx1000i-1000w-80-platinum-tam-moduler-140mm-fanli-psu-cp-9020214-eu.jpg"
+                    else "https://www.tebilon.com/picture300x300/corsair-rme-series-rm850e-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-cp-9020263-eu.jpg"
+                upper.contains("SEASONIC") -> "https://www.tebilon.com/picture300x300/seasonic-focus-gx-850-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fanli-psu.jpg"
+                upper.contains("BE QUIET") -> "https://www.tebilon.com/picture300x300/be-quiet-pure-power-12-m-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-bn344.jpg"
+                upper.contains("ASUS") ->
+                    if (upper.contains("THOR")) "https://www.tebilon.com/picture300x300/asus-rog-thor-1000p2-gaming-1000w-80-platinum-tam-moduler-oled-ekranli-guc-kaynagi.jpg"
+                    else if (upper.contains("STRIX") || upper.contains("AURA")) "https://www.tebilon.com/picture300x300/asus-rog-strix-850g-aura-80-gold-850w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi-8.jpg"
+                    else "https://www.tebilon.com/picture300x300/asus-tuf-gaming-750g-80-gold-750w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi.jpg"
+                upper.contains("MSI") -> "https://www.tebilon.com/picture300x300/msi-mag-a850gl-pcie5-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+                upper.contains("FSP") -> "https://www.tebilon.com/picture300x300/fsp-hydro-g-pro-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
+                upper.contains("DEEPCOOL") -> "https://www.tebilon.com/picture300x300/deepcool-px850g-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fdb-fanli-guc-kaynagi.jpg"
+                upper.contains("SUPER FLOWER") -> "https://www.tebilon.com/picture300x300/super-flower-leadex-vii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-140mm-fanli-guc-kaynagi.jpg"
+                upper.contains("LIAN LI") || upper.contains("EDGE") -> "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
+                upper.contains("COOLER MASTER") -> "https://www.tebilon.com/picture300x300/cooler-master-gx-iii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+                upper.contains("THERMALTAKE") -> "https://www.tebilon.com/picture300x300/thermaltake-toughpower-gf3-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+                upper.contains("GIGABYTE") -> "https://www.tebilon.com/picture300x300/gigabyte-ud850gm-pg5-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
+                upper.contains("XPG") -> "https://www.tebilon.com/picture300x300/xpg-core-reactor-ii-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fdb-fanli-guc-kaynagi.jpg"
+                upper.contains("NZXT") -> "https://www.tebilon.com/picture300x300/nzxt-c850-gold-core-850w-80-gold-tam-moduler-atx-31-pcie-51-120mm-fdb-fanli-guc-kaynagi.jpg"
+                upper.contains("MONTECH") -> "https://www.tebilon.com/picture300x300/montech-titan-gold-850w-80-gold-tam-moduler-atx-30-guc-kaynagi.jpg"
+                upper.contains("EVGA") -> "https://www.tebilon.com/picture300x300/evga-supernova-850-gt-850w-80-gold-tam-moduler-135mm-fanli-guc-kaynagi.jpg"
+                else -> null
             }
-            else -> null
+            HardwareCategory.STORAGE -> when {
+                upper.contains("990 PRO") -> "https://www.tebilon.com/picture300x300/samsung-990-pro-nvme-2-0-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7450mb-okuma-6900mb-yazma-mz-v9p1t0bw.jpg"
+                upper.contains("980 PRO") -> "https://www.tebilon.com/picture300x300/samsung-980-pro-nvme-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7000mb-okuma-5000mb-yazma-mz-v8p1t0bw.jpg"
+                upper.contains("970 EVO") -> "https://www.tebilon.com/picture300x300/samsung-970-evo-plus-nvme-1tb-pcie-gen-3-0-x4-m-2-2280-ssd-3500mb-okuma-3300mb-yazma.jpg"
+                upper.contains("870 EVO") -> "https://www.tebilon.com/picture300x300/samsung-870-evo-1tb-560mb-530mb-s-sata-2-5-ssd-mz-77e1t0bw.jpg"
+                upper.contains("KC3000") -> "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
+                upper.contains("RENEGADE") -> "https://www.tebilon.com/picture300x300/kingston-fury-renegade-1tb-nvme-pcie-4-0-m-2-ssd-7300mb-okuma-6000mb-yazma-sfyrs-1000g.jpg"
+                upper.contains("NV3") -> "https://www.tebilon.com/picture300x300/kingston-nv3-1tb-pcie-4-0-nvme-m-2-ssd-snv3s-1000g.jpg"
+                upper.contains("NV2") -> "https://www.tebilon.com/picture300x300/kingston-nv2-1tb-nvme-pcie-4-0-m-2-ssd-3500mb-okuma-2100mb-yazma-snv2s-1000g.jpg"
+                upper.contains("T705") || upper.contains("T700") -> "https://www.tebilon.com/picture300x300/crucial-t705-1tb-pcie-gen5-nvme-m-2-ssd-13600mb-okuma-10200mb-yazma-ct1000t705ssd3.jpg"
+                upper.contains("T500") || upper.contains("P3") -> "https://www.tebilon.com/picture300x300/crucial-t500-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6800mb-yazma-ct1000t500ssd8.jpg"
+                upper.contains("MX500") || upper.contains("BX500") -> "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+                upper.contains("SN850") -> "https://www.tebilon.com/picture300x300/wd-black-sn850x-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6300mb-yazma-wds100t2x0e.jpg"
+                upper.contains("SN770") -> "https://www.tebilon.com/picture300x300/wd-black-sn770-1tb-pcie-gen4-nvme-m-2-ssd-5150mb-okuma-4900mb-yazma-wds100t3x0e.jpg"
+                upper.contains("SN580") || upper.contains("SN5000") -> "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
+                upper.contains("NM790") -> "https://www.tebilon.com/picture300x300/lexar-nm790-1tb-pcie-gen4-nvme-m-2-ssd-7400mb-okuma-6500mb-yazma-lnm790x001t-rnnng.jpg"
+                else -> null
+            }
+            HardwareCategory.COOLER -> when {
+                upper.contains("HYDROSHIFT") -> "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+                upper.contains("GALAHAD") -> "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+                upper.contains("FREEZER III") || upper.contains("LIQUID FREEZER") -> "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+                upper.contains("FREEZER 36") -> "https://www.tebilon.com/picture300x300/arctic-freezer-36-a-rgb-siyah-kule-tipi-islemci-sogutucu-acfre00124a.jpg"
+                upper.contains("KRAKEN") -> "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+                upper.contains("LT720") || upper.contains("LS720") -> "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+                upper.contains("AK620") || upper.contains("AK400") -> "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+                upper.contains("PEERLESS") || upper.contains("PHANTOM SPIRIT") || upper.contains("ASSASSIN") -> "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+                upper.contains("FROZEN NOTTE") || upper.contains("AQUA ELITE") -> "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+                upper.contains("TITAN") || upper.contains("H150I") || upper.contains("ICUE") -> "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+                upper.contains("NH-D15") || upper.contains("NOCTUA") -> "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
+                upper.contains("DARK ROCK") -> "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+                else -> null
+            }
+            HardwareCategory.RAM -> when {
+                upper.contains("CORSAIR") || upper.contains("VENGEANCE") || upper.contains("DOMINATOR") ->
+                    "https://www.tebilon.com/picture300x300/corsair-vengeance-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-cmh32gx5m2b6000c30.jpg"
+                upper.contains("TRIDENT") || upper.contains("FLARE") || upper.contains("G.SKILL") ->
+                    "https://www.tebilon.com/picture300x300/g-skill-trident-z5-neo-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-amd-expo-ram-f5-6000j3038f16gx2-tz5nr.jpg"
+                upper.contains("FURY") || upper.contains("BEAST") || upper.contains("RENEGADE") || upper.contains("KINGSTON") ->
+                    "https://www.tebilon.com/picture300x300/kingston-fury-beast-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-kf560c30bbeak2-32.jpg"
+                upper.contains("LANCER") || upper.contains("XPG") ->
+                    "https://www.tebilon.com/picture300x300/xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ax5u6000c3016g-dclarbk.jpg"
+                upper.contains("DELTA") || upper.contains("T-FORCE") ->
+                    "https://www.tebilon.com/picture300x300/team-t-force-delta-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ff3d532g6000hc30dc01.jpg"
+                else -> null
+            }
+            HardwareCategory.CASE -> when {
+                upper.contains("O11") || upper.contains("LANCOOL") || upper.contains("LIAN LI") ->
+                    "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+                upper.contains("H9") || upper.contains("H7") || upper.contains("H6") || upper.contains("NZXT") ->
+                    "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
+                upper.contains("4000D") || upper.contains("5000D") || upper.contains("3500X") || upper.contains("CORSAIR") ->
+                    "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
+                upper.contains("KING 95") || upper.contains("MONTECH") ->
+                    "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
+                upper.contains("Y70") || upper.contains("Y60") || upper.contains("HYTE") ->
+                    "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
+                else -> null
+            }
         }
     }
 
@@ -1447,6 +1530,74 @@ object HardwareMapper {
             }
         }
     }
+
+    // region Anti-Antique Hardware Modernity Guards
+
+    fun isModernCpu(name: String, socket: String): Boolean {
+        val u = name.uppercase()
+        val s = socket.uppercase()
+
+        // 1. Explicit antique blacklists (Purge AMD A-series, FX, Phenom, Athlon II, Sempron, Opteron, Intel Pentium, Celeron, Core 2, Xeon)
+        if (u.contains("A4-") || u.contains("A6-") || u.contains("A8-") || u.contains("A10-") || u.contains("A12-") ||
+            u.contains("ATHLON II") || u.contains("PHENOM") || u.contains("SEMPRON") || u.contains("OPTERON") ||
+            u.contains("FX-") || u.contains("PENTIUM") || u.contains("CELERON") || u.contains("CORE 2") ||
+            u.contains("XEON") || u.contains("CORE DUO") || u.contains("ATOM") ||
+            s.contains("AM1") || s.contains("AM2") || s.contains("AM3") || s.contains("FM1") || s.contains("FM2") ||
+            s.contains("775") || s.contains("1156") || s.contains("1155") || s.contains("1150") || s.contains("1151")) {
+            return false
+        }
+
+        // 2. Modern AMD Whitelist: Ryzen (1000-9000, Threadripper) or Athlon 3000G/200GE on AM4/AM5/TR4/sTRX4/sWRX8/sTR5
+        val isModernAmd = (u.contains("RYZEN") || u.contains("THREADRIPPER") || u.contains("3000G") || u.contains("200GE")) &&
+                (s.contains("AM4") || s.contains("AM5") || s.contains("TR4") || s.contains("STRX4") || s.contains("STR5") || s.contains("SWRX8") || s == "BELIRTILMEDI")
+
+        // 3. Modern Intel Whitelist: Core Ultra or 10th-14th Gen Core on LGA1200 / LGA1700 / LGA1851
+        val isModernIntel = (u.contains("CORE ULTRA") || u.contains("285K") || u.contains("275K") || u.contains("265K") || u.contains("255K") || u.contains("245K") ||
+                u.contains("14900") || u.contains("14700") || u.contains("14600") || u.contains("14500") || u.contains("14400") || u.contains("14100") ||
+                u.contains("13900") || u.contains("13700") || u.contains("13600") || u.contains("13500") || u.contains("13400") || u.contains("13100") ||
+                u.contains("12900") || u.contains("12700") || u.contains("12600") || u.contains("12500") || u.contains("12400") || u.contains("12100") ||
+                u.contains("11900") || u.contains("11700") || u.contains("11600") || u.contains("11500") || u.contains("11400") ||
+                u.contains("10900") || u.contains("10700") || u.contains("10600") || u.contains("10500") || u.contains("10400") || u.contains("10100") || u.contains("10105")) &&
+                (s.contains("1200") || s.contains("1700") || s.contains("1851") || s == "BELIRTILMEDI")
+
+        return isModernAmd || isModernIntel
+    }
+
+    fun isModernGpu(name: String, chipset: String): Boolean {
+        val u = "$name $chipset".uppercase()
+        // Explicit antique checks (Purge all GTX, GT, RX 580/570/480, R9, R7, HD series)
+        if (u.contains("GTX") || u.contains("GT 7") || u.contains("GT 6") || u.contains("GT 1030") ||
+            u.contains("RX 580") || u.contains("RX 570") || u.contains("RX 560") || u.contains("RX 550") ||
+            u.contains("RX 480") || u.contains("RX 470") || u.contains("R9") || u.contains("R7") ||
+            u.contains("HD 7") || u.contains("HD 6") || u.contains("HD 5")) {
+            return false
+        }
+        val isNvidiaRtx = u.contains("RTX") && (u.contains("20") || u.contains("30") || u.contains("40") || u.contains("50"))
+        val isAmdRx = (u.contains("RX ") || u.contains("RADEON ")) &&
+                (u.contains("5700") || u.contains("5600") || u.contains("5500") ||
+                        u.contains("6600") || u.contains("6650") || u.contains("6700") || u.contains("6750") || u.contains("6800") || u.contains("6900") || u.contains("6950") ||
+                        u.contains("7600") || u.contains("7700") || u.contains("7800") || u.contains("7900") ||
+                        u.contains("9070"))
+        val isIntelArc = u.contains("ARC")
+        return isNvidiaRtx || isAmdRx || isIntelArc
+    }
+
+    fun isModernMotherboard(name: String, socket: String): Boolean {
+        val u = name.uppercase()
+        val s = socket.uppercase()
+        // Explicit antique blacklist
+        if (u.contains("AM3") || u.contains("FM2") || u.contains("FM1") || u.contains("H81") ||
+            u.contains("H61 ") || u.contains("H61-") || u.contains("H61M") || u.contains("B85") ||
+            u.contains("Z97") || u.contains("H110") || u.contains("B250") || u.contains("Z270") ||
+            u.contains("Z370") || u.contains("H310") || u.contains("B360") || u.contains("B365") ||
+            u.contains("Z390") || s.contains("AM3") || s.contains("FM2") || s.contains("FM1") ||
+            s.contains("1155") || s.contains("1150") || s.contains("1151") || s.contains("775")) {
+            return false
+        }
+        return s.contains("AM4") || s.contains("AM5") || s.contains("1200") || s.contains("1700") || s.contains("1851") || s.contains("STRX4") || s.contains("STR5")
+    }
+
+    // endregion
 
     // endregion
 }

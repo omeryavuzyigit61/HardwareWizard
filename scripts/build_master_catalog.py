@@ -19,6 +19,7 @@ import sys
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 FILES_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
+CATALOG_DIR = os.path.join(ROOT_DIR, "data", "catalog")
 
 def clean_key(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", name.lower())
@@ -49,6 +50,301 @@ PSU_BRANDS_SERIES = [
     ("Enermax", ["Revolution D.F. X ATX 3.0", "Platimax D.F."], [750, 850, 1050, 1200])
 ]
 
+def get_default_psu_image(brand: str, series: str = "") -> str | None:
+    b = (brand or "").upper()
+    s = (series or "").upper()
+    full = f"{b} {s}"
+    if "CORSAIR" in full:
+        if "HX" in full:
+            return "https://www.tebilon.com/picture300x300/corsair-hx1000i-1000w-80-platinum-tam-moduler-140mm-fanli-psu-cp-9020214-eu.jpg"
+        return "https://www.tebilon.com/picture300x300/corsair-rme-series-rm850e-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-cp-9020263-eu.jpg"
+    elif "SEASONIC" in full:
+        return "https://www.tebilon.com/picture300x300/seasonic-focus-gx-850-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fanli-psu.jpg"
+    elif "BE QUIET" in full:
+        return "https://www.tebilon.com/picture300x300/be-quiet-pure-power-12-m-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-psu-bn344.jpg"
+    elif "ASUS" in full:
+        if "THOR" in full:
+            return "https://www.tebilon.com/picture300x300/asus-rog-thor-1000p2-gaming-1000w-80-platinum-tam-moduler-oled-ekranli-guc-kaynagi.jpg"
+        elif "STRIX" in full or "AURA" in full:
+            return "https://www.tebilon.com/picture300x300/asus-rog-strix-850g-aura-80-gold-850w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi-8.jpg"
+        return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-750g-80-gold-750w-moduler-pci-e-5-0-atx-3-0-guc-kaynagi.jpg"
+    elif "MSI" in full:
+        return "https://www.tebilon.com/picture300x300/msi-mag-a850gl-pcie5-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+    elif "FSP" in full:
+        return "https://www.tebilon.com/picture300x300/fsp-hydro-g-pro-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
+    elif "DEEPCOOL" in full:
+        return "https://www.tebilon.com/picture300x300/deepcool-px850g-850w-80-gold-tam-moduler-atx-30-pcie-50-135mm-fdb-fanli-guc-kaynagi.jpg"
+    elif "SUPER FLOWER" in full:
+        return "https://www.tebilon.com/picture300x300/super-flower-leadex-vii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-140mm-fanli-guc-kaynagi.jpg"
+    elif "LIAN LI" in full or "EDGE" in full:
+        return "https://www.incehesap.com/resim/urun/202512/69455e6ee5c067.68383901_qlnikjfhopmge_cropped_288.webp"
+    elif "COOLER MASTER" in full:
+        return "https://www.tebilon.com/picture300x300/cooler-master-gx-iii-gold-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+    elif "THERMALTAKE" in full:
+        return "https://www.tebilon.com/picture300x300/thermaltake-toughpower-gf3-850w-80-gold-tam-moduler-atx-30-pcie-50-guc-kaynagi.jpg"
+    elif "GIGABYTE" in full:
+        return "https://www.tebilon.com/picture300x300/gigabyte-ud850gm-pg5-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fanli-guc-kaynagi.jpg"
+    elif "XPG" in full or "ADATA" in full:
+        return "https://www.tebilon.com/picture300x300/xpg-core-reactor-ii-850w-80-gold-tam-moduler-atx-30-pcie-50-120mm-fdb-fanli-guc-kaynagi.jpg"
+    elif "NZXT" in full:
+        return "https://www.tebilon.com/picture300x300/nzxt-c850-gold-core-850w-80-gold-tam-moduler-atx-31-pcie-51-120mm-fdb-fanli-guc-kaynagi.jpg"
+    elif "EVGA" in full:
+        return "https://www.tebilon.com/picture300x300/evga-supernova-850-gt-850w-80-gold-tam-moduler-135mm-fanli-guc-kaynagi.jpg"
+    elif "MONTECH" in full:
+        return "https://www.tebilon.com/picture300x300/montech-titan-gold-850w-80-gold-tam-moduler-atx-30-guc-kaynagi.jpg"
+    elif "FRACTAL" in full:
+        return "https://www.tebilon.com/picture300x300/fractal-design-ion-gold-850w-80-gold-tam-moduler-140mm-fanli-guc-kaynagi.jpg"
+    elif "ENERMAX" in full:
+        return "https://www.tebilon.com/picture300x300/enermax-revolution-d-f-x-850w-80-gold-tam-moduler-atx-30-guc-kaynagi.jpg"
+    elif "HIGH POWER" in full:
+        return "https://www.tebilon.com/picture300x300/high-power-performance-gd-800w-80-gold-guc-kaynagi.jpg"
+    elif "RAIJINTEK" in full:
+        return "https://www.tebilon.com/picture300x300/raijintek-cratos-850w-80-gold-tam-moduler-atx-30-guc-kaynagi.jpg"
+    return None
+
+def get_default_gpu_image(brand: str, chip: str = "", series: str = "") -> str | None:
+    b = (brand or "").upper()
+    c = (chip or "").upper()
+    s = (series or "").upper()
+    full = f"{b} {c} {s}"
+    if "ASUS" in b:
+        if "STRIX" in s:
+            return "https://www.tebilon.com/picture300x300/asus-rog-strix-geforce-rtx-4070-ti-super-oc-edition-16gb-gddr6x-256-bit-dlss-3-ekran-karti-rog-strix-rtx4070tis-o16g-gaming.jpg"
+        elif "TUF" in s:
+            return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-4070-super-12gb-gddr6x-192-bit-dlss-3-ekran-karti-tuf-rtx4070s-12g-gaming.jpg"
+        elif "DUAL" in s:
+            return "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-4060-ti-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti-dual-rtx4060ti-o8g-1.jpg"
+        elif "PROART" in s:
+            return "https://www.tebilon.com/picture300x300/asus-proart-geforce-rtx-4070-ti-super-oc-edition-16gb-gddr6x-256-bit-dlss-3-ekran-karti-proart-rtx4070tis-o16g.jpg"
+        elif "ASTRAL" in s or "5080" in full:
+            return "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
+        return "https://www.tebilon.com/picture300x300/asus-prime-geforce-rtx-4070-super-oc-12gb-gddr6x-192-bit-dlss-3-ekran-karti.jpg"
+    elif "MSI" in b:
+        if "SUPRIM" in s:
+            return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4080-super-16g-suprim-x-16gb-gddr6x-256-bit-dlss-3-ekran-karti.jpg"
+        elif "GAMING" in s or "SLIM" in s or "TRIO" in s:
+            return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4070-super-12g-gaming-x-slim-12gb-gddr6x-192-bit-dlss-3-ekran-karti.jpg"
+        elif "VENTUS" in s:
+            return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4060-ventus-2x-black-8g-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti.jpg"
+        elif "SHADOW" in s or "5070" in full or "5060" in full:
+            return "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
+        return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4070-super-12g-gaming-x-slim-12gb-gddr6x-192-bit-dlss-3-ekran-karti.jpg"
+    elif "GIGABYTE" in b:
+        if "AORUS" in s:
+            return "https://www.tebilon.com/picture300x300/gigabyte-aorus-geforce-rtx-4070-super-master-12g-12gb-gddr6x-192-bit-dlss-3-ekran-karti-gv-n407saorus-m-12gd.jpg"
+        elif "AERO" in s:
+            return "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-4070-super-aero-oc-12g-12gb-gddr6x-192-bit-dlss-3-ekran-karti-gv-n407saero-oc-12gd.jpg"
+        elif "GAMING" in s:
+            return "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-4070-super-gaming-oc-12gb-gddr6x-192-bit-dlss-3-ekran-karti-gv-n407sgaming-oc-12gd.jpg"
+        return "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-4060-windforce-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti-gv-n4060wf2oc-8gd.jpg"
+    elif "SAPPHIRE" in b:
+        if "NITRO" in s:
+            return "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7800-xt-nitro-16gb-gddr6-256-bit-ekran-karti-11330-01-20g.jpg"
+        elif "PURE" in s:
+            return "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7800-xt-pure-16gb-gddr6-256-bit-ekran-karti-11330-03-20g.jpg"
+        return "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7700-xt-pulse-12gb-gddr6-192-bit-ekran-karti-11335-04-20g.jpg"
+    elif "POWERCOLOR" in b:
+        if "DEVIL" in s:
+            return "https://www.tebilon.com/picture300x300/powercolor-red-devil-radeon-rx-7800-xt-16gb-gddr6-256-bit-ekran-karti.jpg"
+        elif "HELLHOUND" in s:
+            return "https://www.tebilon.com/picture300x300/powercolor-hellhound-radeon-rx-7800-xt-16gb-gddr6-256-bit-ekran-karti.jpg"
+        return "https://www.tebilon.com/picture300x300/powercolor-fighter-radeon-rx-7600-8gb-gddr6-128-bit-ekran-karti.jpg"
+    elif "XFX" in b:
+        return "https://www.tebilon.com/picture300x300/xfx-speedster-swft-210-radeon-rx-7600-core-8gb-gddr6-128-bit-ekran-karti.jpg"
+    elif "PALIT" in b:
+        if "GAMEROCK" in s:
+            return "https://www.tebilon.com/picture300x300/palit-geforce-rtx-4070-ti-super-gamerock-16gb-gddr6x-256-bit-dlss-3-ekran-karti-ned40tss19t1-1020g.jpg"
+        elif "JETSTREAM" in s:
+            return "https://www.tebilon.com/picture300x300/palit-geforce-rtx-4070-super-jetstream-12gb-gddr6x-192-bit-dlss-3-ekran-karti.jpg"
+        return "https://www.tebilon.com/picture300x300/palit-geforce-rtx-4060-dual-8gb-gddr6-128-bit-dlss-3-ekran-karti-ne64060019p1-1070d.jpg"
+    elif "GALAX" in b:
+        return "https://www.tebilon.com/picture300x300/galax-geforce-rtx-4070-super-1-click-oc-2x-12gb-gddr6x-192-bit-dlss-3-ekran-karti-47som7md9psu.jpg"
+    elif "ZOTAC" in b:
+        return "https://www.tebilon.com/picture300x300/zotac-geforce-rtx-4070-super-twin-edge-12gb-gddr6x-192-bit-dlss-3-ekran-karti-zt-d40720e-10m.jpg"
+    elif "INNO3D" in b:
+        return "https://www.tebilon.com/picture300x300/inno3d-geforce-rtx-4060-twin-x2-8gb-gddr6-128-bit-dlss-3-ekran-karti-n40602-08d6-173051n.jpg"
+    elif "ASROCK" in b:
+        return "https://www.tebilon.com/picture300x300/asrock-radeon-rx-7800-xt-steel-legend-16gb-oc-16gb-gddr6-256-bit-ekran-karti.jpg"
+    elif "ARC" in full or "INTEL" in b:
+        return "https://www.tebilon.com/picture300x300/sparkle-intel-arc-a770-titan-oc-edition-16gb-gddr6-256-bit-ekran-karti.jpg"
+    elif "5090" in full:
+        return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-nvidia-ekran-karti.jpg"
+    elif "5080" in full:
+        return "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
+    elif "4090" in full or "4080" in full:
+        return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4080-super-16g-suprim-x-16gb-gddr6x-256-bit-dlss-3-ekran-karti.jpg"
+    elif "4070" in full:
+        return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-4070-super-12gb-gddr6x-192-bit-dlss-3-ekran-karti-tuf-rtx4070s-12g-gaming.jpg"
+    elif "4060" in full:
+        return "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4060-ventus-2x-black-8g-oc-8gb-gddr6-128-bit-dlss-3-ekran-karti.jpg"
+    elif "RADEON" in full or "RX" in full:
+        return "https://www.tebilon.com/picture300x300/sapphire-radeon-rx-7800-xt-pulse-16gb-gddr6-256-bit-ekran-karti-11330-02-20g.jpg"
+    return None
+
+def get_default_motherboard_image(brand: str, chip: str = "", series: str = "") -> str | None:
+    b = (brand or "").upper()
+    c = (chip or "").upper()
+    s = (series or "").upper()
+    full = f"{b} {c} {s}"
+    if "ASUS" in b:
+        if "CROSSHAIR" in s or "MAXIMUS" in s:
+            return "https://www.tebilon.com/picture300x300/asus-rog-maximus-z790-dark-hero-intel-z790-soket-1700-ddr5-7800mhz-oc-m2-anakart.jpg"
+        elif "STRIX" in s:
+            return "https://www.tebilon.com/picture300x300/asus-rog-strix-b650-a-gaming-wifi-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+        elif "TUF" in s:
+            return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-b650-plus-wifi-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+        elif "PROART" in s:
+            return "https://www.tebilon.com/picture300x300/asus-proart-b760-creator-intel-b760-soket-1700-ddr5-7200mhz-oc-m2-anakart.jpg"
+        return "https://www.tebilon.com/picture300x300/asus-prime-b650m-k-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+    elif "MSI" in b:
+        if "MEG" in s or "CARBON" in s or "EDGE" in s:
+            return "https://www.tebilon.com/picture300x300/msi-mpg-b650-carbon-wifi-amd-b650-am5-ddr5-6600mhz-oc-m2-anakart.jpg"
+        elif "TOMAHAWK" in s:
+            return "https://www.tebilon.com/picture300x300/msi-mag-b650-tomahawk-wifi-amd-b650-am5-ddr5-6600mhz-oc-m2-anakart.jpg"
+        elif "MORTAR" in s:
+            return "https://www.tebilon.com/picture300x300/msi-mag-b760m-mortar-wifi-intel-b760-soket-1700-ddr5-7000mhz-oc-m2-anakart.jpg"
+        return "https://www.tebilon.com/picture300x300/msi-pro-b650m-p-amd-b650-am5-ddr5-6000mhz-oc-m2-anakart.jpg"
+    elif "GIGABYTE" in b:
+        if "ICE" in s or "WHITE" in s:
+            return "https://www.tebilon.com/picture300x300/gigabyte-b650-aorus-elite-ax-ice-amd-b650-am5-ddr5-8000mhz-oc-m2-anakart.jpg"
+        elif "AORUS" in s:
+            return "https://www.tebilon.com/picture300x300/gigabyte-b650-aorus-elite-ax-v2-amd-b650-am5-ddr5-8000mhz-oc-m2-anakart.jpg"
+        return "https://www.tebilon.com/picture300x300/gigabyte-b650-gaming-x-ax-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+    elif "ASROCK" in b:
+        if "TAICHI" in s:
+            return "https://www.tebilon.com/picture300x300/asrock-z790-taichi-intel-z790-soket-1700-ddr5-7200mhz-oc-m2-anakart.jpg"
+        elif "STEEL LEGEND" in s:
+            return "https://www.tebilon.com/picture300x300/asrock-b650-steel-legend-wifi-amd-b650-am5-ddr5-7200mhz-oc-m2-anakart.jpg"
+        return "https://www.tebilon.com/picture300x300/asrock-b650-pg-lightning-amd-b650-am5-ddr5-7200mhz-oc-m2-anakart.jpg"
+    elif "X870" in full or "B650" in full or "AM5" in full:
+        return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-b650-plus-wifi-amd-b650-am5-ddr5-6400mhz-oc-m2-anakart.jpg"
+    elif "Z890" in full or "Z790" in full or "B760" in full:
+        return "https://www.tebilon.com/picture300x300/asus-rog-maximus-z790-dark-hero-intel-z790-soket-1700-ddr5-7800mhz-oc-m2-anakart.jpg"
+    return None
+
+def get_default_storage_image(name: str) -> str | None:
+    u = name.upper()
+    if "990 PRO" in u:
+        return "https://www.tebilon.com/picture300x300/samsung-990-pro-nvme-2-0-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7450mb-okuma-6900mb-yazma-mz-v9p1t0bw.jpg"
+    elif "980 PRO" in u:
+        return "https://www.tebilon.com/picture300x300/samsung-980-pro-nvme-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7000mb-okuma-5000mb-yazma-mz-v8p1t0bw.jpg"
+    elif "970 EVO" in u:
+        return "https://www.tebilon.com/picture300x300/samsung-970-evo-plus-nvme-1tb-pcie-gen-3-0-x4-m-2-2280-ssd-3500mb-okuma-3300mb-yazma.jpg"
+    elif "870 EVO" in u:
+        return "https://www.tebilon.com/picture300x300/samsung-870-evo-1tb-560mb-530mb-s-sata-2-5-ssd-mz-77e1t0bw.jpg"
+    elif "KC3000" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
+    elif "RENEGADE" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-fury-renegade-1tb-nvme-pcie-4-0-m-2-ssd-7300mb-okuma-6000mb-yazma-sfyrs-1000g.jpg"
+    elif "NV3" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-nv3-1tb-pcie-4-0-nvme-m-2-ssd-snv3s-1000g.jpg"
+    elif "NV2" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-nv2-1tb-nvme-pcie-4-0-m-2-ssd-3500mb-okuma-2100mb-yazma-snv2s-1000g.jpg"
+    elif "KC600" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-kc600-512gb-550mb-520mb-s-sata-2-5-ssd-skc600-512g.jpg"
+    elif "T705" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-t705-1tb-pcie-gen5-nvme-m-2-ssd-13600mb-okuma-10200mb-yazma-ct1000t705ssd3.jpg"
+    elif "T700" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-t700-1tb-pcie-gen5-nvme-m-2-ssd-11700mb-okuma-9500mb-yazma-ct1000t700ssd3.jpg"
+    elif "T500" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-t500-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6800mb-yazma-ct1000t500ssd8.jpg"
+    elif "P3" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-p3-plus-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3600mb-yazma-ct1000p3pssd8.jpg"
+    elif "MX500" in u or "BX500" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    elif "SN850" in u:
+        return "https://www.tebilon.com/picture300x300/wd-black-sn850x-1tb-pcie-gen4-nvme-m-2-ssd-7300mb-okuma-6300mb-yazma-wds100t2x0e.jpg"
+    elif "SN770" in u:
+        return "https://www.tebilon.com/picture300x300/wd-black-sn770-1tb-pcie-gen4-nvme-m-2-ssd-5150mb-okuma-4900mb-yazma-wds100t3x0e.jpg"
+    elif "SN580" in u or "SN5000" in u:
+        return "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
+    elif "NM790" in u:
+        return "https://www.tebilon.com/picture300x300/lexar-nm790-1tb-pcie-gen4-nvme-m-2-ssd-7400mb-okuma-6500mb-yazma-lnm790x001t-rnnng.jpg"
+    elif "EXCERIA" in u or "KIOXIA" in u:
+        return "https://www.tebilon.com/picture300x300/kioxia-exceria-plus-g3-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3900mb-yazma-lsd10z001tg8.jpg"
+    elif "SSD" in u or "M.2" in u or "NVME" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
+    return None
+
+def get_default_cooler_image(name: str) -> str | None:
+    u = name.upper()
+    if "HYDROSHIFT" in u:
+        return "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+    elif "GALAHAD" in u:
+        return "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+    elif "FREEZER III" in u or "LIQUID FREEZER" in u:
+        return "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+    elif "FREEZER 36" in u:
+        return "https://www.tebilon.com/picture300x300/arctic-freezer-36-a-rgb-siyah-kule-tipi-islemci-sogutucu-acfre00124a.jpg"
+    elif "KRAKEN" in u:
+        return "https://www.tebilon.com/picture300x300/nzxt-kraken-elite-360-rgb-siyah-360mm-islemci-sivi-sogutucu-rl-kr36e-b1.jpg"
+    elif "LT720" in u or "LS720" in u:
+        return "https://www.tebilon.com/picture300x300/deepcool-lt720-360mm-siyah-islemci-sivi-sogutucu-r-lt720-bkamnf-g-1.jpg"
+    elif "AK620" in u or "AK400" in u:
+        return "https://www.tebilon.com/picture300x300/deepcool-ak620-digital-siyah-kule-tipi-islemci-sogutucu-r-ak620-bkgpdmn-g.jpg"
+    elif "PEERLESS" in u or "PHANTOM SPIRIT" in u or "ASSASSIN" in u:
+        return "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+    elif "FROZEN NOTTE" in u or "AQUA ELITE" in u:
+        return "https://www.tebilon.com/picture300x300/thermalright-frozen-notte-360-black-argb-360mm-sivi-islemci-sogutucu.jpg"
+    elif "TITAN" in u or "H150I" in u or "ICUE" in u:
+        return "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-360-rx-rgb-siyah-360mm-islemci-sivi-sogutucu-cw-9061018-ww.jpg"
+    elif "CORELIQUID" in u or "MAG CORE" in u:
+        return "https://www.tebilon.com/picture300x300/msi-mag-coreliquid-e360-siyah-360mm-islemci-sivi-sogutucu.jpg"
+    elif "RYUJIN" in u or "TUF LC" in u:
+        return "https://www.tebilon.com/picture300x300/asus-rog-ryujin-iii-360-argb-siyah-360mm-oled-ekranli-islemci-sivi-sogutucu.jpg"
+    elif "NH-D15" in u or "NOCTUA" in u:
+        return "https://www.tebilon.com/picture300x300/noctua-nh-d15-chromax-black-cift-fanli-kule-tipi-islemci-sogutucu.jpg"
+    elif "DARK ROCK" in u or "BE QUIET" in u:
+        return "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+    elif "HYPER 212" in u or "MASTERLIQUID" in u:
+        return "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    elif "LIQUID" in u or "SIVI" in u or "360" in u or "240" in u:
+        return "https://www.tebilon.com/picture300x300/arctic-liquid-freezer-iii-360-a-rgb-siyah-islemci-sivi-sogutucu-acfre00144a.jpg"
+    elif "AIR" in u or "HAVA" in u or "KULE" in u:
+        return "https://www.tebilon.com/picture300x300/thermalright-peerless-assassin-120-se-argb-kule-tipi-islemci-sogutucu.jpg"
+    return None
+
+def get_default_ram_image(name: str) -> str | None:
+    u = name.upper()
+    if "CORSAIR" in u or "VENGEANCE" in u or "DOMINATOR" in u:
+        return "https://www.tebilon.com/picture300x300/corsair-vengeance-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-cmh32gx5m2b6000c30.jpg"
+    elif "TRIDENT" in u or "FLARE" in u or "G.SKILL" in u:
+        return "https://www.tebilon.com/picture300x300/g-skill-trident-z5-neo-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-amd-expo-ram-f5-6000j3038f16gx2-tz5nr.jpg"
+    elif "FURY" in u or "BEAST" in u or "RENEGADE" in u or "KINGSTON" in u:
+        return "https://www.tebilon.com/picture300x300/kingston-fury-beast-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-kf560c30bbeak2-32.jpg"
+    elif "LANCER" in u or "XPG" in u:
+        return "https://www.tebilon.com/picture300x300/xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ax5u6000c3016g-dclarbk.jpg"
+    elif "DELTA" in u or "T-FORCE" in u:
+        return "https://www.tebilon.com/picture300x300/team-t-force-delta-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ff3d532g6000hc30dc01.jpg"
+    elif "ARES" in u or "LEXAR" in u:
+        return "https://www.tebilon.com/picture300x300/lexar-ares-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-ld5eu016g-r6000gdla.jpg"
+    elif "CRUCIAL" in u:
+        return "https://www.tebilon.com/picture300x300/crucial-pro-overclocking-32gb-2x16gb-6000mhz-cl36-ddr5-ram-cp2k16g60c36u5b.jpg"
+    elif "VIPER" in u or "PATRIOT" in u:
+        return "https://www.tebilon.com/picture300x300/patriot-viper-venom-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-pvvr532g600c30k.jpg"
+    return "https://www.tebilon.com/picture300x300/corsair-vengeance-rgb-32gb-2x16gb-6000mhz-cl30-ddr5-ram-cmh32gx5m2b6000c30.jpg"
+
+def get_default_case_image(name: str) -> str | None:
+    u = name.upper()
+    if "O11" in u or "LANCOOL" in u or "LIAN LI" in u:
+        return "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+    elif "H9" in u or "H7" in u or "H6" in u or "H5" in u or "NZXT" in u:
+        return "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
+    elif "4000D" in u or "5000D" in u or "3500X" in u or "6500X" in u or "CORSAIR" in u:
+        return "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
+    elif "KING 95" in u or "AIR 903" in u or "MONTECH" in u:
+        return "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
+    elif "Y70" in u or "Y60" in u or "HYTE" in u:
+        return "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
+    elif "GT502" in u or "AP201" in u:
+        return "https://www.tebilon.com/picture300x300/asus-tuf-gaming-gt502-siyah-cift-odali-panoramik-camli-mid-tower-kasa.jpg"
+    elif "PURE BASE" in u or "BE QUIET" in u:
+        return "https://www.tebilon.com/picture300x300/be-quiet-pure-base-500dx-siyah-argb-mid-tower-kasa-bgw37.jpg"
+    elif "TD500" in u or "COOLER MASTER" in u:
+        return "https://www.tebilon.com/picture300x300/cooler-master-masterbox-td500-mesh-v2-siyah-argb-mid-tower-kasa-td500v2-kgnn-s00.jpg"
+    return "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+
+
 def generate_psu_catalog(existing_items):
     seen = {clean_key(x.get("name", "")): x for x in existing_items if x.get("name")}
     results = list(existing_items)
@@ -68,7 +364,7 @@ def generate_psu_catalog(existing_items):
                 atx_v = r.get("atx_version", "").strip()
                 eff = r.get("efficiency", "").strip()
                 img_outside = r.get("images", {}).get("outside")
-                img_url = f"https://ironscalelabs.com/{img_outside}" if img_outside else None
+                img_url = f"https://ironscalelabs.com/{img_outside}" if img_outside else get_default_psu_image(brand, disp_name)
 
                 tier_str = None
                 if tier_raw.startswith("A"):
@@ -166,6 +462,7 @@ def generate_psu_catalog(existing_items):
                     is_atx31 = "ATX 3.1" in series or "3.1" in series or "EDGE" in series or "VITA" in series
                     is_atx3 = is_atx31 or "ATX 3" in series or "PCIE5" in series or "Aura" in series or "Thor" in series or "GF3" in series or "Cratos" in series
                     eff = "platinum" if "Platinum" in series or "Thor" in series or "EDGE" in series or "TX" in series else ("titanium" if "Titanium" in series else ("bronze" if "Bronze" in series or "Smart" in series else "gold"))
+                    psu_img = get_default_psu_image(brand, series)
 
                     item = {
                         "name": name,
@@ -184,10 +481,15 @@ def generate_psu_catalog(existing_items):
                         "topology": "LLC Resonant + DC-DC / %100 Japon 105°C Kapasitörler" if eff in ["gold", "platinum", "titanium"] else None,
                         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
                         "fan_size": "135mm FDB Fan" if w >= 1000 else "120mm FDB Fan",
-                        "cybenetics": "Cybenetics Platinum" if eff == "platinum" else ("Cybenetics Gold" if eff == "gold" else None)
+                        "cybenetics": "Cybenetics Platinum" if eff == "platinum" else ("Cybenetics Gold" if eff == "gold" else None),
+                        "imageUrl": psu_img
                     }
                     seen[k] = item
                     results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_psu_image(it.get("name", ""), it.get("name", ""))
 
     return results
 
@@ -281,6 +583,7 @@ def generate_gpu_catalog(existing_items):
                     continue
 
                 color = "White" if "AERO" in series or "PURE" in series or "White" in series or "Steel Legend" in series else "Black"
+                gpu_img = get_default_gpu_image(brand, chip, series)
                 item = {
                     "name": name,
                     "price": None,
@@ -296,10 +599,17 @@ def generate_gpu_catalog(existing_items):
                     "display_outputs": "3x DisplayPort • 1x HDMI",
                     "slot_width": "3.5 Slot" if spec["vram"] >= 24 else ("3.0 Slot" if spec["tdp"] >= 250 else "2.5 Slot"),
                     "length": spec["len"],
-                    "color": color
+                    "color": color,
+                    "imageUrl": gpu_img
                 }
                 seen[k] = item
                 results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            b = it.get("name", "").split()[0] if it.get("name") else ""
+            c = it.get("chipset", it.get("name", ""))
+            it["imageUrl"] = get_default_gpu_image(b, c, it.get("name", ""))
 
     return results
 
@@ -358,6 +668,7 @@ def generate_motherboard_catalog(existing_items):
                 if k in seen:
                     continue
 
+                mobo_img = get_default_motherboard_image(brand, clean_chip, series)
                 item = {
                     "name": name,
                     "price": None,
@@ -374,10 +685,17 @@ def generate_motherboard_catalog(existing_items):
                     "vrm_phases": vrm,
                     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
                     "has_wifi": wifi,
-                    "color": color
+                    "color": color,
+                    "imageUrl": mobo_img
                 }
                 seen[k] = item
                 results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            b = it.get("name", "").split()[0] if it.get("name") else ""
+            c = it.get("chipset", it.get("name", ""))
+            it["imageUrl"] = get_default_motherboard_image(b, c, it.get("name", ""))
 
     return results
 
@@ -606,6 +924,7 @@ def generate_ram_catalog(existing_items):
                         continue
 
                     has_rgb = "RGB" in series
+                    ram_img = get_default_ram_image(name)
                     item = {
                         "name": name,
                         "price": None,
@@ -617,10 +936,15 @@ def generate_ram_catalog(existing_items):
                         "cas_latency": cl,
                         "voltage": volt,
                         "heat_spreader": True,
-                        "rgb": has_rgb
+                        "rgb": has_rgb,
+                        "imageUrl": ram_img
                     }
                     seen[k] = item
                     results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_ram_image(it.get("name", ""))
 
     return results
 
@@ -675,6 +999,7 @@ def generate_storage_catalog(existing_items):
                 continue
 
             tbw = (tbw_base * (cap / 1000)) if cap >= 1000 else (tbw_base / 2)
+            storage_img = get_default_storage_image(name)
             item = {
                 "name": name,
                 "price": None,
@@ -686,10 +1011,15 @@ def generate_storage_catalog(existing_items):
                 "seq_read": r_speed,
                 "seq_write": w_speed,
                 "nand_type": nand,
-                "endurance_tbw": int(tbw)
+                "endurance_tbw": int(tbw),
+                "imageUrl": storage_img
             }
             seen[k] = item
             results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_storage_image(it.get("name", ""))
 
     return results
 
@@ -748,6 +1078,7 @@ def generate_cooler_catalog(existing_items):
             if k in seen:
                 continue
 
+            cooler_img = get_default_cooler_image(name)
             item = {
                 "name": name,
                 "price": None,
@@ -758,10 +1089,15 @@ def generate_cooler_catalog(existing_items):
                 "fan_rpm": f"500 - {rpm} RPM",
                 "noise_level": noise,
                 "sockets": sockets,
-                "max_tdp": tdp
+                "max_tdp": tdp,
+                "imageUrl": cooler_img
             }
             seen[k] = item
             results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_cooler_image(it.get("name", ""))
 
     return results
 
@@ -812,6 +1148,7 @@ def generate_case_catalog(existing_items):
             if k in seen:
                 continue
 
+            case_img = get_default_case_image(name)
             item = {
                 "name": name,
                 "price": None,
@@ -821,10 +1158,15 @@ def generate_case_catalog(existing_items):
                 "max_gpu_length": gpu_len,
                 "max_cpu_cooler_height": cooler_h,
                 "max_radiator_size": rad_size,
-                "drive_bays": bays
+                "drive_bays": bays,
+                "imageUrl": case_img
             }
             seen[k] = item
             results.append(item)
+
+    for it in results:
+        if not it.get("imageUrl"):
+            it["imageUrl"] = get_default_case_image(it.get("name", ""))
 
     return results
 
@@ -850,82 +1192,97 @@ def load_and_sanitize(path: str, category: str) -> list[dict]:
         if len(name) < 5 or any(b in name.lower() for b in ["tıklayın", "tiklayin", "sepete", "tavsiye", "\ufffd"]):
             continue
 
+        name_lower = name.lower()
+        name_upper = name.upper()
+
         # Platform & Mimari Whitelist (Soket / Nesil Tabanlı Filtre - 10-15 yıllık antika parçaları süpürür)
         if category == "cpu":
-            name_lower = name.lower()
-            if not any(k in name_lower for k in ["ryzen", "core", "ultra", "intel", "amd", "athlon", "threadripper"]):
+            if not any(k in name_lower for k in ["ryzen", "core", "ultra", "intel", "amd", "threadripper"]):
                 continue
             if any(k in name_lower for k in ["ssd", "soğutucu", "sogutucu", "fan", "kasa", "ram", "ddr", "motherboard", "anakart"]):
                 continue
-            # AMD Eski antika APU ve işlemciler (A4, A6-5400K, A8, A10, A12, FX, Phenom, Athlon II, Sempron, Opteron, FM1, FM2) KESİNLİKLE ELENİR!
-            if "amd" in name_lower and not any(r in name_lower for r in ["ryzen", "threadripper", "athlon 3000g", "athlon 200ge", "athlon 220ge", "athlon 240ge"]):
+
+            # AMD CPU Filtresi: Kesinlikle SADECE Ryzen ve Threadripper (DDR4 ve DDR5 çağı)
+            # Kesinlikle elenen antika modeller: A4, A6 (A6-5400K vs.), A8, A10, A12, FX, Phenom, Athlon II, Sempron, Opteron, Turion, FM1, FM2, AM1, AM2, AM3, AM3+
+            if "amd" in name_lower:
+                if not any(r in name_lower for r in ["ryzen", "threadripper", "athlon 3000g", "athlon 200ge"]):
+                    continue
+            if any(b in name_lower for b in ["a4-", "a6-", "a8-", "a10-", "a12-", "a4 ", "a6 ", "a8 ", "a10 ", "a12 ", "fm1", "fm2", "am1", "am2", "am3", "fx-", "fx ", "phenom", "athlon ii", "athlon x4", "sempron", "opteron", "turion"]):
                 continue
-            if any(b in name_lower for b in ["a4-", "a6-", "a8-", "a10-", "a12-", "a6 5400", "a6-5400", "fm1", "fm2", "am1", "am2", "am3", "fx-", "phenom", "athlon ii", "athlon x4", "sempron", "opteron", "turion"]):
-                continue
-            # Intel Eski İşlemciler (Xeon, Celeron, Pentium, Core 2 ve 10. nesil öncesi i3/i5/i7/i9) KESİNLİKLE ELENİR!
+
+            # Intel CPU Filtresi: SADECE Core Ultra VE 10. Nesil - 14. Nesil Core İşlemciler (DDR4 ve DDR5 çağı)
+            # Kesinlikle elenen antika modeller: Celeron, Pentium, Core 2, Xeon, LGA775, LGA1155, LGA1150, LGA1156, LGA1151
             if any(b in name_lower for b in ["xeon", "pentium", "core 2", "celeron", "lga775", "lga1155", "lga1150", "lga1156", "lga1151"]):
                 continue
-            sock = it.get("socket")
-            if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "sTRX4", "sWRX8", "sTR5", "Belirtilmedi"]:
-                continue
-            # Intel 10. nesil öncesi eski işlemcileri ele (i7-2600, i5-4690, i7-7700, vs.)
+            # Intel 1. - 9. nesil işlemcileri ele (i7-2600, i5-4690, i7-7700, i9-9900K vs.)
             m_gen = re.search(r"i[3579]-([2-9]\d{3})", name)
             if m_gen:
                 continue
 
+            sock = it.get("socket")
+            if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "sTRX4", "sWRX8", "sTR5", "Belirtilmedi"]:
+                continue
+            if sock in ["AM3", "AM3+", "AM2", "FM1", "FM2", "LGA1151", "LGA1150", "LGA1155", "LGA775"]:
+                continue
+
         elif category == "gpu":
-            if not any(k in name.lower() for k in ["rtx", "gtx", "radeon", "rx ", "arc", "geforce"]):
+            if not any(k in name_lower for k in ["rtx", "radeon", "rx ", "arc", "geforce"]):
                 continue
             name = re.sub(r"\s+Video Card$", "", name, flags=re.IGNORECASE)
             name = re.sub(r"\s+Edition$", "", name, flags=re.IGNORECASE)
             it["name"] = name
 
             # Modern Ekran Kartı Whitelist:
-            # NVIDIA: RTX 50, 40, 30, 20 ve GTX 16 serisi
-            # AMD: Radeon RX 9000, 7000, 6000 serisi
-            # Intel: Arc B580, B570, A770, A750, A580, A380, A310
-            # Eski antika GPU'lar elenir (GTX 1060, 1070, 1080, 1050, 970, 960, 750, RX 580, 570, 480, GT 710, vs.)
+            # NVIDIA: SADECE RTX 50, 40, 30, 20 serisi (GTX serisi kesinlikle elenir!)
+            # AMD: SADECE Radeon RX 9000, 7000, 6000, 5000 serisi (RX 580/570 vb. kesinlikle elenir!)
+            # Intel: Arc B580, B570, A770, A750, A580, A380
             gpu_upper = name.upper()
-            is_modern_nvidia = bool(re.search(r"RTX\s*(50|40|30|20)\d{2}", gpu_upper) or re.search(r"GTX\s*16\d{2}", gpu_upper))
-            is_modern_amd = bool(re.search(r"RX\s*(9\d{3}|7\d{3}|6\d{3})", gpu_upper) or re.search(r"RADEON\s*(9\d{3}|7\d{3}|6\d{3})", gpu_upper))
-            is_modern_intel = bool("ARC " in gpu_upper and any(x in gpu_upper for x in ["B580", "B570", "A770", "A750", "A580", "A380", "A310"]))
+            is_modern_nvidia = bool(re.search(r"RTX\s*(50|40|30|20)\d{2}", gpu_upper))
+            is_modern_amd = bool(re.search(r"RX\s*(9\d{3}|7\d{3}|6\d{3}|5\d{3})", gpu_upper) or re.search(r"RADEON\s*(9\d{3}|7\d{3}|6\d{3}|5\d{3})", gpu_upper))
+            is_modern_intel = bool("ARC" in gpu_upper and any(x in gpu_upper for x in ["B580", "B570", "A770", "A750", "A580", "A380"]))
             if not (is_modern_nvidia or is_modern_amd or is_modern_intel):
                 continue
 
         elif category == "motherboard":
-            if not any(k in name.upper() for k in ["ANAKART", "MOTHERBOARD", "B650", "B760", "Z790", "Z890", "X870", "X670", "B550", "B450", "H610", "A620", "B850", "B840", "B860", "A520", "X570"]):
+            if not any(k in name_upper for k in ["ANAKART", "MOTHERBOARD", "B650", "B760", "Z790", "Z890", "X870", "X670", "B550", "B450", "H610", "A620", "B850", "B840", "B860", "A520", "X570", "Z690", "B660", "H670", "Z590", "B560", "H570", "H510", "Z490", "B460", "H410"]):
                 continue
             sock = it.get("socket")
             if sock and sock not in ["AM4", "AM5", "LGA1200", "LGA1700", "LGA1851", "Belirtilmedi"]:
                 continue
-            # Eski çipsetler ve soketler KESİNLİKLE elenir (AM3, AM3+, FM2, FM1, H81, H61, B85, Z97 vb.)
-            if any(b in name.upper() for b in ["H110", "B150", "Z170", "H270", "B250", "Z270", "H310", "B360", "B365", "Z370", "Z390", "H81", "B85", "Z87", "Z97", "H61", "FM2", "FM1", "AM3", "AM2", "AM1", "970A", "990FX", "A68", "A88X"]):
+            # DDR4 altı veya eski çipsetler KESİNLİKLE elenir
+            if any(b in name_upper for b in ["H110", "B150", "Z170", "H270", "B250", "Z270", "H310", "B360", "B365", "Z370", "Z390", "H81", "B85", "Z87", "Z97", "H61", "FM2", "FM1", "AM3", "AM2", "AM1", "970A", "990FX", "A68", "A88X", "LGA775", "LGA1155", "LGA1150"]):
+                continue
+            if it.get("memory_type") in ["DDR3", "DDR2", "DDR"] or it.get("memory_generation") in ["DDR3", "DDR2", "DDR"]:
                 continue
 
         elif category == "ram":
-            if not any(k in name.upper() for k in ["DDR4", "DDR5", "RAM", "BELLEK", "MEMORY"]):
+            if not any(k in name_upper for k in ["DDR4", "DDR5", "RAM", "BELLEK", "MEMORY"]):
                 continue
             # DDR3, DDR2, DDR1 kesin elenir
-            if any(b in name.upper() for b in ["DDR3", "DDR2", "DDR1", "SO-DIMM DDR3"]):
+            if any(b in name_upper for b in ["DDR3", "DDR2", "DDR1", "SO-DIMM DDR3"]):
                 continue
             if it.get("type") in ["DDR3", "DDR2", "DDR"] or it.get("memory_type") in ["DDR3", "DDR2", "DDR"]:
                 continue
 
         elif category == "storage":
-            if not any(k in name.upper() for k in ["SSD", "NVME", "M.2", "SATA", "HARDDISK", "DISC", "TB", "GB"]):
+            # PCIe Gen3 ve üzeri NVMe M.2 SSD + modern SATA III SSD
+            # Mekanik HDD'ler, 5400/7200 RPM sabit diskler, IDE/PATA, 120GB altı antika sürücüler ELENİR!
+            if not any(k in name_upper for k in ["SSD", "NVME", "M.2", "SATA", "EVO", "PRO", "PLUS", "SN850", "SN770", "SN580", "KC3000", "RENEGADE", "T705", "T700", "T500", "MX500"]):
                 continue
-            # Çok eski IDE veya antika küçük kapasiteli sürücüler elenir
-            if any(b in name.lower() for b in ["ide ", "pata", "5400rpm 160gb", "5400rpm 250gb", "5400rpm 320gb"]):
+            if any(b in name_lower for b in ["ide ", "pata", "5400rpm", "7200rpm", "harddisk", "hdd", "barracuda", "wd blue hdd", "ironwolf", "skyhawk", "red pro"]):
+                continue
+            cap = it.get("capacity")
+            if cap and isinstance(cap, (int, float)) and cap < 120:
                 continue
 
         elif category == "psu":
-            if not any(k in name.upper() for k in ["PSU", "POWER", "WATT", "80 PLUS", "80+"]) and not re.search(r"\b\d{3,4}\s*W\b", name.upper()):
+            if not any(k in name_upper for k in ["PSU", "POWER", "WATT", "80 PLUS", "80+"]) and not re.search(r"\b\d{3,4}\s*W\b", name_upper):
                 continue
         elif category == "cooler":
-            if not any(k in name.upper() for k in ["SOĞUTUCU", "SOGUTUCU", "COOLER", "SIVI", "HAVA", "FREEZER", "ASSASSIN", "KRAKEN", "AIO"]):
+            if not any(k in name_upper for k in ["SOĞUTUCU", "SOGUTUCU", "COOLER", "SIVI", "HAVA", "FREEZER", "ASSASSIN", "KRAKEN", "AIO", "AK620", "AK400", "PEERLESS", "PHANTOM SPIRIT", "NOTTE", "LIQUID"]):
                 continue
         elif category == "case":
-            if not any(k in name.upper() for k in ["KASA", "CASE", "CHASSIS", "TOWER", "FLOW", "DYNAMIC", "AIRFLOW"]):
+            if not any(k in name_upper for k in ["KASA", "CASE", "CHASSIS", "TOWER", "FLOW", "DYNAMIC", "AIRFLOW"]):
                 continue
 
         k = clean_key(name)
@@ -950,46 +1307,46 @@ def main():
     # 1. CPU
     cpu_path = os.path.join(FILES_DIR, "cpu.json")
     cpus = generate_cpu_catalog(load_and_sanitize(cpu_path, "cpu"))
-    save_json([cpu_path], cpus)
+    save_json([cpu_path, os.path.join(CATALOG_DIR, "cpu.json")], cpus)
 
     # 2. GPU (and alias video-card.json)
     gpu_path = os.path.join(FILES_DIR, "gpu.json")
     vcard_path = os.path.join(FILES_DIR, "video-card.json")
     gpus = generate_gpu_catalog(load_and_sanitize(vcard_path, "gpu") or load_and_sanitize(gpu_path, "gpu"))
-    save_json([gpu_path, vcard_path], gpus)
+    save_json([gpu_path, vcard_path, os.path.join(CATALOG_DIR, "video-card.json"), os.path.join(CATALOG_DIR, "gpu.json")], gpus)
 
     # 3. Motherboard
     mobo_path = os.path.join(FILES_DIR, "motherboard.json")
     mobos = generate_motherboard_catalog(load_and_sanitize(mobo_path, "motherboard"))
-    save_json([mobo_path], mobos)
+    save_json([mobo_path, os.path.join(CATALOG_DIR, "motherboard.json")], mobos)
 
     # 4. RAM (and alias memory.json)
     ram_path = os.path.join(FILES_DIR, "ram.json")
     mem_path = os.path.join(FILES_DIR, "memory.json")
     rams = generate_ram_catalog(load_and_sanitize(mem_path, "ram") or load_and_sanitize(ram_path, "ram"))
-    save_json([ram_path, mem_path], rams)
+    save_json([ram_path, mem_path, os.path.join(CATALOG_DIR, "memory.json"), os.path.join(CATALOG_DIR, "ram.json")], rams)
 
     # 5. Storage (and alias internal-hard-drive.json)
     storage_path = os.path.join(FILES_DIR, "storage.json")
     drive_path = os.path.join(FILES_DIR, "internal-hard-drive.json")
     storages = generate_storage_catalog(load_and_sanitize(drive_path, "storage") or load_and_sanitize(storage_path, "storage"))
-    save_json([storage_path, drive_path], storages)
+    save_json([storage_path, drive_path, os.path.join(CATALOG_DIR, "internal-hard-drive.json"), os.path.join(CATALOG_DIR, "storage.json")], storages)
 
     # 6. PSU
     psu_path = os.path.join(FILES_DIR, "power-supply.json")
     psus = generate_psu_catalog(load_and_sanitize(psu_path, "psu"))
-    save_json([psu_path], psus)
+    save_json([psu_path, os.path.join(CATALOG_DIR, "power-supply.json"), os.path.join(CATALOG_DIR, "psu.json")], psus)
 
     # 7. Cooler (and alias cpu-cooler.json)
     cooler_path = os.path.join(FILES_DIR, "cooler.json")
     cpu_cooler_path = os.path.join(FILES_DIR, "cpu-cooler.json")
     coolers = generate_cooler_catalog(load_and_sanitize(cpu_cooler_path, "cooler") or load_and_sanitize(cooler_path, "cooler"))
-    save_json([cooler_path, cpu_cooler_path], coolers)
+    save_json([cooler_path, cpu_cooler_path, os.path.join(CATALOG_DIR, "cpu-cooler.json"), os.path.join(CATALOG_DIR, "cooler.json")], coolers)
 
     # 8. Case
     case_path = os.path.join(FILES_DIR, "case.json")
     cases = generate_case_catalog(load_and_sanitize(case_path, "case"))
-    save_json([case_path], cases)
+    save_json([case_path, os.path.join(CATALOG_DIR, "case.json")], cases)
 
     total_items = len(cpus) + len(gpus) + len(mobos) + len(rams) + len(storages) + len(psus) + len(coolers) + len(cases)
     print("================================================================================")

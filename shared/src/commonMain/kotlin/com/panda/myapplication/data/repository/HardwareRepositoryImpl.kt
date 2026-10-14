@@ -153,6 +153,9 @@ class HardwareRepositoryImpl(
                 }
             }
 
+            val existing = hardwareDao.getAllHardwareItems()
+            val existingImages = existing.associate { it.id to it.imageUrl }
+
             val catalogResult = remoteDataSource.fetchAllHardware()
             if (catalogResult.isSuccess) {
                 val catalog = catalogResult.getOrThrow()
@@ -167,14 +170,37 @@ class HardwareRepositoryImpl(
                     cases = catalog.cases,
                     pricesTr = allPrices,
                     benchmarks = allBenchmarks,
+                    existingImages = existingImages,
                     syncedAt = now,
                 )
-                if (snapshot.items.isNotEmpty()) {
+                if (snapshot.items.isNotEmpty() && snapshot.items.size >= (existing.size * 0.7)) {
                     hardwareDao.replaceCatalog(snapshot, syncedAt = now)
+                } else if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
+                    val updated = existing.map { item ->
+                        val priceData = allPrices[item.id]
+                        val gpuKey = if (item.category == HardwareCategory.GPU) {
+                            com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
+                        } else null
+                        val benchData = allBenchmarks[item.id] ?: (gpuKey?.let { allBenchmarks["gpu_$it"] ?: allBenchmarks[it] })
+                        item.copy(
+                            currentPriceTry = priceData?.currentPriceTry ?: item.currentPriceTry,
+                            lowestPriceTry = priceData?.lowestPriceTry ?: item.lowestPriceTry,
+                            highestPriceTry = priceData?.highestPriceTry ?: item.highestPriceTry,
+                            offers = priceData?.offers ?: item.offers,
+                            priceHistory = priceData?.priceHistory ?: item.priceHistory,
+                            benchmarkScore = benchData?.score ?: item.benchmarkScore,
+                            benchmarkTier = benchData?.tier ?: item.benchmarkTier,
+                            benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
+                            benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
+                            cpuSynthetic = benchData?.cpuSynthetic ?: item.cpuSynthetic,
+                            gpuSynthetic = benchData?.gpuSynthetic ?: item.gpuSynthetic,
+                            gameFps = benchData?.gameFps ?: item.gameFps,
+                        )
+                    }
+                    hardwareDao.upsertHardwareItems(updated)
                 }
             } else {
                 // If remote catalog fetch fails (offline or 404), update existing Room items with any available prices & benchmarks
-                val existing = hardwareDao.getAllHardwareItems()
                 if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
                     val updated = existing.map { item ->
                         val priceData = allPrices[item.id]

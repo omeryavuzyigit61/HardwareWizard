@@ -10,7 +10,8 @@
     "internal_35_bays": 1,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Corsair 4000D Airflow",
@@ -23,7 +24,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "NZXT H9 Flow (2023)",
@@ -36,7 +38,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H6 Flow",
@@ -49,7 +52,8 @@
     "internal_35_bays": 1,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H3 Flow",
@@ -62,7 +66,8 @@
     "internal_35_bays": 1,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Lian Li O11 Dynamic EVO XL",
@@ -103,7 +108,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "NZXT H6 Flow RGB",
@@ -116,7 +122,8 @@
     "internal_35_bays": 1,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Corsair 5000D AIRFLOW",
@@ -129,7 +136,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "NZXT H5 Flow RGB (2024)",
@@ -142,7 +150,8 @@
     "internal_35_bays": 1,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H9 Flow RGB+ (2025)",
@@ -155,7 +164,8 @@
     "internal_35_bays": 2,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Corsair 7000D AIRFLOW",
@@ -168,7 +178,8 @@
     "internal_35_bays": 6,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Corsair 9000D RGB AIRFLOW",
@@ -181,7 +192,8 @@
     "internal_35_bays": 5,
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
-    "max_radiator_size": 360
+    "max_radiator_size": 360,
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Lian Li O11 Dynamic EVO RGB",
@@ -204,7 +216,8 @@
     "max_gpu_length": 455,
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "NZXT H9 Flow (2024)",
@@ -215,7 +228,8 @@
     "max_gpu_length": 435,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H9 Flow (2024) (White)",
@@ -226,7 +240,8 @@
     "max_gpu_length": 435,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H7 Flow (2024) (White)",
@@ -237,7 +252,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 185,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H6 Flow RGB (White)",
@@ -248,7 +264,8 @@
     "max_gpu_length": 365,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H5 Flow (2024) (White)",
@@ -259,7 +276,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 280,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Corsair 4000D Airflow (White)",
@@ -270,7 +288,8 @@
     "max_gpu_length": 360,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Corsair 5000D Airflow (White)",
@@ -281,7 +300,8 @@
     "max_gpu_length": 420,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Lian Li O11 Dynamic Mini",
@@ -304,7 +324,8 @@
     "max_gpu_length": 395,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Corsair 3000D Airflow (White)",
@@ -315,7 +336,8 @@
     "max_gpu_length": 360,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "ASUS A21 Plus ARGB Temperli Cam USB 3.2 mATX Mesh Beyaz Mid Tower Gaming Kasa",
@@ -578,7 +600,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone Sugo SG13B-Q  / Mini ITX Performans Kasası (SST-SG13B-Q)...",
@@ -589,7 +612,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone RM400 4U ATX Server Kasası (SST-RM400)...",
@@ -600,7 +624,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone CS381 Hot Swap Yüksek Performans NAS Kasası -  8x 3,5\"/...",
@@ -611,7 +636,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone RM22-308 8 Adet 3.5\" HDD Yuvalı ATX 2U Server Kasası (S...",
@@ -622,7 +648,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Aerocool CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim Kasa...",
@@ -633,7 +660,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC Kasası (GD09B-C)...",
@@ -644,7 +672,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone ML04 Type-C Slim mATX Salon Medya Kasa...",
@@ -655,7 +684,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "RJK ATREUS BT4 Black 4xARGB Fanlı Type-C Showcase E-ATX Bilgisayar Kasas...",
@@ -666,7 +696,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "SilverStone CS383 NAS/Server Kasası - 420mm Radyatör Destekli, 8 Adet SA...",
@@ -677,7 +708,8 @@
     "max_gpu_length": 390,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "HYTE Revolt 3 Black USB 3.2 Premium ITX Small Form Factor Gaming Kasa (CS-HYTE-REVOLT3-B) – 2 Yıl Birebir Değişim Garantili",
@@ -892,7 +924,8 @@
     "max_gpu_length": 455,
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li O11 Vision (White)",
@@ -903,7 +936,8 @@
     "max_gpu_length": 455,
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li Lancool 216 RGB",
@@ -914,7 +948,8 @@
     "max_gpu_length": 392,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 6x 2.5\""
+    "drive_bays": "2x 3.5\" + 6x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li Lancool 216 RGB (White)",
@@ -925,7 +960,8 @@
     "max_gpu_length": 392,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 6x 2.5\""
+    "drive_bays": "2x 3.5\" + 6x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li Lancool 207",
@@ -936,7 +972,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li Lancool 207 (White)",
@@ -947,7 +984,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li A3-mATX",
@@ -958,7 +996,8 @@
     "max_gpu_length": 415,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Lian Li A3-mATX (White)",
@@ -969,7 +1008,8 @@
     "max_gpu_length": 415,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "NZXT H9 Elite",
@@ -980,7 +1020,8 @@
     "max_gpu_length": 435,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "NZXT H9 Elite (White)",
@@ -991,7 +1032,8 @@
     "max_gpu_length": 435,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "Corsair 3500X ARGB",
@@ -1002,7 +1044,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Corsair 3500X ARGB (White)",
@@ -1013,7 +1056,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Corsair 6500X",
@@ -1024,7 +1068,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Corsair 6500X (White)",
@@ -1035,7 +1080,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-4000d-airflow-tempered-glass-siyah-mid-tower-kasa-cc-9011200-ww.jpg"
   },
   {
     "name": "Phanteks NV5",
@@ -1046,7 +1092,8 @@
     "max_gpu_length": 440,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "3x 3.5\" + 4x 2.5\""
+    "drive_bays": "3x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks NV5 (White)",
@@ -1057,7 +1104,8 @@
     "max_gpu_length": 440,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "3x 3.5\" + 4x 2.5\""
+    "drive_bays": "3x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks NV7",
@@ -1068,7 +1116,8 @@
     "max_gpu_length": 450,
     "max_cpu_cooler_height": 185,
     "max_radiator_size": 420,
-    "drive_bays": "3x 3.5\" + 6x 2.5\""
+    "drive_bays": "3x 3.5\" + 6x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks NV7 (White)",
@@ -1079,7 +1128,8 @@
     "max_gpu_length": 450,
     "max_cpu_cooler_height": 185,
     "max_radiator_size": 420,
-    "drive_bays": "3x 3.5\" + 6x 2.5\""
+    "drive_bays": "3x 3.5\" + 6x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks XT Pro Ultra",
@@ -1090,7 +1140,8 @@
     "max_gpu_length": 415,
     "max_cpu_cooler_height": 184,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 5x 2.5\""
+    "drive_bays": "2x 3.5\" + 5x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks XT Pro Ultra (White)",
@@ -1101,7 +1152,8 @@
     "max_gpu_length": 415,
     "max_cpu_cooler_height": 184,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 5x 2.5\""
+    "drive_bays": "2x 3.5\" + 5x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks Eclipse G360A",
@@ -1112,7 +1164,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 162,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Phanteks Eclipse G360A (White)",
@@ -1123,7 +1176,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 162,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
   },
   {
     "name": "Montech King 95 Pro",
@@ -1134,7 +1188,8 @@
     "max_gpu_length": 420,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "5x 3.5\" + 8x 2.5\""
+    "drive_bays": "5x 3.5\" + 8x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Montech King 95 Pro (White)",
@@ -1145,7 +1200,8 @@
     "max_gpu_length": 420,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "5x 3.5\" + 8x 2.5\""
+    "drive_bays": "5x 3.5\" + 8x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Montech Air 903 Max",
@@ -1156,7 +1212,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Montech Air 903 Max (White)",
@@ -1167,7 +1224,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Montech Sky Two",
@@ -1178,7 +1236,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 168,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Montech Sky Two (White)",
@@ -1189,7 +1248,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 168,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/montech-king-95-pro-siyah-argb-atx-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y70",
@@ -1200,7 +1260,8 @@
     "max_gpu_length": 422,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y70 (White)",
@@ -1211,7 +1272,8 @@
     "max_gpu_length": 422,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y70 (Red)",
@@ -1222,7 +1284,8 @@
     "max_gpu_length": 422,
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y60",
@@ -1233,7 +1296,8 @@
     "max_gpu_length": 375,
     "max_cpu_cooler_height": 160,
     "max_radiator_size": 280,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y60 (White)",
@@ -1244,7 +1308,8 @@
     "max_gpu_length": 375,
     "max_cpu_cooler_height": 160,
     "max_radiator_size": 280,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y60 (Red)",
@@ -1255,7 +1320,8 @@
     "max_gpu_length": 375,
     "max_cpu_cooler_height": 160,
     "max_radiator_size": 280,
-    "drive_bays": "2x 3.5\" + 4x 2.5\""
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y40",
@@ -1266,7 +1332,8 @@
     "max_gpu_length": 422,
     "max_cpu_cooler_height": 183,
     "max_radiator_size": 360,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "Hyte Y40 (White)",
@@ -1277,7 +1344,8 @@
     "max_gpu_length": 422,
     "max_cpu_cooler_height": 183,
     "max_radiator_size": 360,
-    "drive_bays": "1x 3.5\" + 2x 2.5\""
+    "drive_bays": "1x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/hyte-y70-touch-infinite-siyah-mid-tower-gaming-kasa.jpg"
   },
   {
     "name": "DeepCool CH560 Digital",
@@ -1288,7 +1356,8 @@
     "max_gpu_length": 380,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "DeepCool CH560 Digital (White)",
@@ -1299,7 +1368,8 @@
     "max_gpu_length": 380,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "DeepCool CH510",
@@ -1310,7 +1380,8 @@
     "max_gpu_length": 380,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "DeepCool CH510 (White)",
@@ -1321,7 +1392,8 @@
     "max_gpu_length": 380,
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\""
+    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-h9-flow-rgb-siyah-mid-tower-gaming-kasa-cm-h91fb-r1.jpg"
   },
   {
     "name": "ASUS TUF Gaming GT502",
@@ -1332,7 +1404,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 163,
     "max_radiator_size": 360,
-    "drive_bays": "4x 3.5\" / 2.5\""
+    "drive_bays": "4x 3.5\" / 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-gt502-siyah-cift-odali-panoramik-camli-mid-tower-kasa.jpg"
   },
   {
     "name": "ASUS TUF Gaming GT502 (White)",
@@ -1343,7 +1416,8 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 163,
     "max_radiator_size": 360,
-    "drive_bays": "4x 3.5\" / 2.5\""
+    "drive_bays": "4x 3.5\" / 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-gt502-siyah-cift-odali-panoramik-camli-mid-tower-kasa.jpg"
   },
   {
     "name": "ASUS Prime AP201",
@@ -1354,7 +1428,8 @@
     "max_gpu_length": 338,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "3x 3.5\" + 1x 2.5\""
+    "drive_bays": "3x 3.5\" + 1x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-gt502-siyah-cift-odali-panoramik-camli-mid-tower-kasa.jpg"
   },
   {
     "name": "ASUS Prime AP201 (White)",
@@ -1365,7 +1440,8 @@
     "max_gpu_length": 338,
     "max_cpu_cooler_height": 170,
     "max_radiator_size": 360,
-    "drive_bays": "3x 3.5\" + 1x 2.5\""
+    "drive_bays": "3x 3.5\" + 1x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-gt502-siyah-cift-odali-panoramik-camli-mid-tower-kasa.jpg"
   },
   {
     "name": "Be Quiet! Pure Base 500DX",
@@ -1376,7 +1452,8 @@
     "max_gpu_length": 369,
     "max_cpu_cooler_height": 190,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 5x 2.5\""
+    "drive_bays": "2x 3.5\" + 5x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-pure-base-500dx-siyah-argb-mid-tower-kasa-bgw37.jpg"
   },
   {
     "name": "Be Quiet! Pure Base 500DX (White)",
@@ -1387,7 +1464,8 @@
     "max_gpu_length": 369,
     "max_cpu_cooler_height": 190,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 5x 2.5\""
+    "drive_bays": "2x 3.5\" + 5x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-pure-base-500dx-siyah-argb-mid-tower-kasa-bgw37.jpg"
   },
   {
     "name": "Cooler Master MasterBox TD500 Mesh V2",
@@ -1398,7 +1476,8 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-masterbox-td500-mesh-v2-siyah-argb-mid-tower-kasa-td500v2-kgnn-s00.jpg"
   },
   {
     "name": "Cooler Master MasterBox TD500 Mesh V2 (White)",
@@ -1409,6 +1488,7 @@
     "max_gpu_length": 410,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 3x 2.5\""
+    "drive_bays": "2x 3.5\" + 3x 2.5\"",
+    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-masterbox-td500-mesh-v2-siyah-argb-mid-tower-kasa-td500v2-kgnn-s00.jpg"
   }
 ]
