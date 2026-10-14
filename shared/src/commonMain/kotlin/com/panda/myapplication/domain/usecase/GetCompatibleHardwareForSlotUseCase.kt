@@ -102,11 +102,13 @@ class GetCompatibleHardwareForSlotUseCase {
             }
 
             HardwareCategory.GPU -> {
-                if (caseSpec != null && caseSpec.maxGpuLengthMm > 0) {
-                    constraintDesc = "Kasa GPU sınırına kilitlendi: max ${caseSpec.maxGpuLengthMm}mm"
+                val maxGpu = caseSpec?.maxGpuLengthMm
+                if (maxGpu != null && maxGpu > 0) {
+                    constraintDesc = "Kasa GPU sınırına kilitlendi: max ${maxGpu}mm"
                     candidates.filter { item ->
                         val g = item.spec as? GpuSpec ?: return@filter false
-                        g.lengthMm <= 0 || g.lengthMm <= caseSpec.maxGpuLengthMm
+                        val len = g.lengthMm
+                        len == null || len <= 0 || len <= maxGpu
                     }
                 } else {
                     candidates
@@ -154,21 +156,21 @@ class GetCompatibleHardwareForSlotUseCase {
                         constraintDesc = "GPU (≥${requiredGpuLength}mm) & Radyatör (≥${liquidRadiator}mm) desteği"
                         candidates.filter { item ->
                             val cs = item.spec as? CaseSpec ?: return@filter false
-                            cs.maxGpuLengthMm >= requiredGpuLength && cs.maxRadiatorSizeMm >= liquidRadiator
+                            (cs.maxGpuLengthMm ?: 0) >= requiredGpuLength && (cs.maxRadiatorSizeMm ?: 0) >= liquidRadiator
                         }
                     }
                     requiredGpuLength > 0 -> {
                         constraintDesc = "GPU boyu desteğine kilitlendi: ≥${requiredGpuLength}mm"
                         candidates.filter { item ->
                             val cs = item.spec as? CaseSpec ?: return@filter false
-                            cs.maxGpuLengthMm >= requiredGpuLength
+                            (cs.maxGpuLengthMm ?: 0) >= requiredGpuLength
                         }
                     }
                     liquidRadiator > 0 -> {
                         constraintDesc = "Sıvı soğutucu radyatörüne kilitlendi: ≥${liquidRadiator}mm"
                         candidates.filter { item ->
                             val cs = item.spec as? CaseSpec ?: return@filter false
-                            cs.maxRadiatorSizeMm >= liquidRadiator
+                            (cs.maxRadiatorSizeMm ?: 0) >= liquidRadiator
                         }
                     }
                     else -> candidates

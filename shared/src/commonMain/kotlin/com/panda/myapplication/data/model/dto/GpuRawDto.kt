@@ -19,4 +19,11 @@ data class GpuRawDto(
     val color: String? = null,
     @Serializable(with = LenientDoubleSerializer::class)
     val length: Double? = null,
+    @SerialName("memory_type") val memoryType: String? = null,
+    @SerialName("bus_width") val busWidthBits: Int? = null,
+    @SerialName("tdp") val tdpWatts: Int? = null,
+    @SerialName("power_connectors") val powerConnectors: String? = null,
+    @SerialName("display_outputs") val displayOutputs: String? = null,
+    @SerialName("slot_width") val slotWidth: String? = null,
+    @SerialName("recommended_psu") val recommendedPsuWatts: Int? = null,
 )

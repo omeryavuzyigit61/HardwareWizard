@@ -94,7 +94,7 @@ class HardwareListViewModel(
                 if (!validSorts.contains(filterOptions.value.sortOption)) {
                     filterOptions.value = filterOptions.value.copy(sortOption = HardwareSortOption.DEFAULT)
                 }
-                _uiState.update { it.copy(selectedCategory = event.category) }
+                _uiState.update { it.copy(selectedCategory = event.category, isLoading = true, items = emptyList()) }
             }
             is HardwareListUiEvent.OnSearchQueryChanged -> {
                 onSearchQueryChange(event.query)
@@ -201,7 +201,7 @@ class HardwareListViewModel(
                 is GpuSpec -> {
                     if (filters.minVramGb != null && (s.vram.megabytes / 1024) < filters.minVramGb) return@filter false
                     if (filters.gpuBrand != null && !item.brand.contains(filters.gpuBrand, ignoreCase = true) && !s.chipset.contains(filters.gpuBrand, ignoreCase = true)) return@filter false
-                    if (filters.maxGpuLengthMm != null && s.lengthMm > filters.maxGpuLengthMm) return@filter false
+                    if (filters.maxGpuLengthMm != null && (s.lengthMm ?: 0) > filters.maxGpuLengthMm) return@filter false
                 }
                 is RamSpec -> {
                     if (filters.ramGeneration != null && s.generation != filters.ramGeneration) return@filter false
@@ -216,7 +216,7 @@ class HardwareListViewModel(
                 is MotherboardSpec -> {
                     if (filters.motherboardSocket != null && !s.socket.equals(filters.motherboardSocket, ignoreCase = true)) return@filter false
                     if (filters.motherboardFormFactor != null && s.formFactor != filters.motherboardFormFactor) return@filter false
-                    if (filters.minM2Slots != null && s.m2Slots < filters.minM2Slots) return@filter false
+                    if (filters.minM2Slots != null && (s.m2Slots ?: 0) < filters.minM2Slots) return@filter false
                 }
                 is PsuSpec -> {
                     if (filters.minPsuWattage != null && s.wattage.watts < filters.minPsuWattage) return@filter false

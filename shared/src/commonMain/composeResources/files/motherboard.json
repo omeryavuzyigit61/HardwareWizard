@@ -6,7 +6,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI MAG B650 TOMAHAWK WIFI",
@@ -15,7 +19,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI B760 GAMING PLUS WIFI",
@@ -24,7 +32,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B760",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI B650 GAMING PLUS WIFI",
@@ -33,7 +45,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte X870E AORUS ELITE WIFI7",
@@ -42,7 +58,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "Asus PRIME B550M-A WIFI II",
@@ -51,7 +71,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Blue / Silver"
+    "color": "Blue / Silver",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte B650 EAGLE AX",
@@ -60,7 +84,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Gray / Black"
+    "color": "Gray / Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "ASRock B650M Pro RS WiFi",
@@ -69,7 +97,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": null,
+    "memory_type": "DDR5",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "MSI MAG X870 TOMAHAWK WIFI",
@@ -78,7 +110,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Asus B650E MAX GAMING WIFI W",
@@ -87,7 +123,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "White"
+    "color": "White",
+    "chipset": "B650E",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI PRO B650-S WIFI",
@@ -96,7 +136,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte B550M K",
@@ -105,7 +149,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Brown / Silver"
+    "color": "Brown / Silver",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": null
   },
   {
     "name": "MSI PRO B550M-VC WIFI",
@@ -114,7 +162,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "MSI PRO Z790-A MAX WIFI",
@@ -123,7 +175,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Silver / Black"
+    "color": "Silver / Black",
+    "chipset": "Z790",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "Asus TUF GAMING B650-PLUS WIFI",
@@ -132,7 +188,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte X870 EAGLE WIFI7",
@@ -141,7 +201,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte X870 AORUS ELITE WIFI7 ICE",
@@ -150,7 +214,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "White"
+    "color": "White",
+    "chipset": "X870",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI B550M PRO-VDH WIFI",
@@ -159,7 +227,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG STRIX X870E-E GAMING WIFI",
@@ -168,7 +240,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte B760M GAMING PLUS WIFI DDR4",
@@ -177,7 +253,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG STRIX B650-A GAMING WIFI",
@@ -186,7 +266,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte B650M GAMING PLUS WIFI",
@@ -195,7 +279,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Silver / Black"
+    "color": "Silver / Black",
+    "chipset": null,
+    "memory_type": "DDR5",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "MSI MAG B550 TOMAHAWK MAX WIFI",
@@ -204,7 +292,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Silver / Black"
+    "color": "Silver / Black",
+    "chipset": "B550",
+    "memory_type": "DDR4",
+    "m2_slots": 2,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte B650 GAMING X AX V2",
@@ -213,7 +305,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Gray / Black"
+    "color": "Gray / Black",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG STRIX X870-A GAMING WIFI",
@@ -222,7 +318,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "White"
+    "color": "White",
+    "chipset": "X870",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Asus TUF GAMING B550-PLUS WIFI II",
@@ -231,7 +331,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black / Gray"
+    "color": "Black / Gray",
+    "chipset": "B550",
+    "memory_type": "DDR4",
+    "m2_slots": 2,
+    "has_wifi": true
   },
   {
     "name": "Asus TUF GAMING B650-E WIFI",
@@ -240,7 +344,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black / Orange"
+    "color": "Black / Orange",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte Z790 EAGLE AX",
@@ -249,7 +357,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Gray / Black"
+    "color": "Gray / Black",
+    "chipset": "Z790",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "MSI PRO B650M-P",
@@ -258,7 +370,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": null,
+    "memory_type": "DDR5",
+    "m2_slots": null,
+    "has_wifi": null
   },
   {
     "name": "MSI PRO B760M-P DDR4",
@@ -267,7 +383,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": null
   },
   {
     "name": "Asus ROG STRIX B550-F GAMING WIFI II",
@@ -276,7 +396,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black / Red"
+    "color": "Black / Red",
+    "chipset": "B550",
+    "memory_type": "DDR4",
+    "m2_slots": 2,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG CROSSHAIR X870E HERO",
@@ -285,7 +409,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": null
   },
   {
     "name": "Gigabyte B550M AORUS ELITE AX",
@@ -294,7 +422,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "ASRock B650M PG Lightning Wifi",
@@ -303,7 +435,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Silver / Black"
+    "color": "Silver / Black",
+    "chipset": null,
+    "memory_type": "DDR5",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "MSI MPG B550 GAMING PLUS",
@@ -312,7 +448,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B550",
+    "memory_type": "DDR4",
+    "m2_slots": 2,
+    "has_wifi": null
   },
   {
     "name": "MSI PRO B650M-A WIFI",
@@ -321,7 +461,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": null,
+    "memory_type": "DDR5",
+    "m2_slots": null,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG STRIX B650E-F GAMING WIFI",
@@ -330,7 +474,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650E",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "ASRock B550M Pro4",
@@ -339,7 +487,11 @@
     "form_factor": "Micro ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Silver / Black"
+    "color": "Silver / Black",
+    "chipset": null,
+    "memory_type": "DDR4",
+    "m2_slots": null,
+    "has_wifi": null
   },
   {
     "name": "MSI MAG X670E TOMAHAWK WIFI",
@@ -348,7 +500,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X670E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "Asus ROG STRIX B650E-I GAMING WIFI",
@@ -357,7 +513,11 @@
     "form_factor": "Mini ITX",
     "max_memory": 96,
     "memory_slots": 2,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "B650E",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI MPG X870E CARBON WIFI",
@@ -366,7 +526,11 @@
     "form_factor": "ATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "Asus TUF GAMING X870-PLUS WIFI",
@@ -375,7 +539,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "X870",
+    "memory_type": "DDR5",
+    "m2_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "Gigabyte Z790 AORUS ELITE AX",
@@ -384,7 +552,11 @@
     "form_factor": "ATX",
     "max_memory": 192,
     "memory_slots": 4,
-    "color": "Black"
+    "color": "Black",
+    "chipset": "Z790",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": true
   },
   {
     "name": "MSI B550-A PRO",
@@ -393,7 +565,11 @@
     "form_factor": "ATX",
     "max_memory": 128,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": "B550",
+    "memory_type": "DDR4",
+    "m2_slots": 2,
+    "has_wifi": null
   },
   {
     "name": "Asus ROG CROSSHAIR X870E EXTREME",
@@ -402,6 +578,10 @@
     "form_factor": "EATX",
     "max_memory": 256,
     "memory_slots": 4,
-    "color": "Black / Silver"
+    "color": "Black / Silver",
+    "chipset": "X870E",
+    "memory_type": "DDR5",
+    "m2_slots": 4,
+    "has_wifi": null
   }
 ]

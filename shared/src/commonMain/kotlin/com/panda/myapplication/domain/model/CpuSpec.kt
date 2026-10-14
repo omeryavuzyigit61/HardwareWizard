@@ -9,7 +9,8 @@ data class CpuSpec(
     val tdp: Wattage,
     val hasIntegratedGraphics: Boolean,
     val architecture: String? = null,
-    val l3CacheMb: Int = 32,
+    val l2CacheMb: Double? = null,
+    val l3CacheMb: Int? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.CPU

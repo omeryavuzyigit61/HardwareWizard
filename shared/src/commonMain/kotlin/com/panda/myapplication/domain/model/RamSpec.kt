@@ -11,6 +11,10 @@ data class RamSpec(
     val casLatency: Int,
     val capacity: MemorySize,
     val moduleCount: Int,
+    val firstWordLatencyNs: Double? = null,
+    val voltage: Double? = null,
+    val heatSpreader: Boolean? = null,
+    val rgb: Boolean? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.RAM
@@ -20,3 +24,4 @@ data class RamSpec(
         require(moduleCount > 0) { "moduleCount must be positive: $moduleCount" }
     }
 }
+

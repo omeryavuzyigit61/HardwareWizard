@@ -13,8 +13,9 @@ data class StorageSpec(
     val capacity: MemorySize,
     val sequentialReadMbps: Int,
     val sequentialWriteMbps: Int,
-    val nandType: String = "3D TLC NAND",
-    val enduranceTbw: Int = 1200,
+    val nandType: String? = null,
+    val enduranceTbw: Int? = null,
+    val cacheMb: Int? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.STORAGE
@@ -22,9 +23,6 @@ data class StorageSpec(
     init {
         require(sequentialReadMbps > 0) { "sequentialReadMbps must be positive: $sequentialReadMbps" }
         require(sequentialWriteMbps > 0) { "sequentialWriteMbps must be positive: $sequentialWriteMbps" }
-        require((storageInterface == StorageInterface.NVME) == (pcieGeneration != null)) {
-            "pcieGeneration must be set for NVMe and null for SATA."
-        }
         require(!(mediaType == StorageMediaType.HDD && storageInterface == StorageInterface.NVME)) {
             "HDD cannot use NVMe interface."
         }

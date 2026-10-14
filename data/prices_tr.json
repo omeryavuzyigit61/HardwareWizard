@@ -683,7 +683,7 @@
     ]
   },
   "storage_samsung_990_pro_2_tb": {
-    "currentPriceTry": 7899.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 6700.0,
     "highestPriceTry": 8900.0,
     "currency": "TRY",
@@ -715,7 +715,7 @@
     ]
   },
   "storage_kingston_nv2_1_tb": {
-    "currentPriceTry": 2499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 1990.0,
     "highestPriceTry": 2950.0,
     "currency": "TRY",
@@ -747,7 +747,7 @@
     ]
   },
   "cooler_deepcool_ak620": {
-    "currentPriceTry": 2799.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 2300.0,
     "highestPriceTry": 3200.0,
     "currency": "TRY",
@@ -779,7 +779,7 @@
     ]
   },
   "cooler_arctic_liquid_freezer_iii_360": {
-    "currentPriceTry": 4999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 4200.0,
     "highestPriceTry": 5650.0,
     "currency": "TRY",
@@ -811,7 +811,7 @@
     ]
   },
   "case_nzxt_h9_flow": {
-    "currentPriceTry": 6499.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5600.0,
     "highestPriceTry": 7400.0,
     "currency": "TRY",
@@ -876,7 +876,7 @@
     ]
   },
   "psu_corsair_rm850x": {
-    "currentPriceTry": 5999.0,
+    "currentPriceTry": null,
     "lowestPriceTry": 5100.0,
     "highestPriceTry": 6900.0,
     "currency": "TRY",

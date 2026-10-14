@@ -11,4 +11,8 @@ data class CaseRawDto(
     val color: String? = null,
     @SerialName("side_panel") val sidePanel: String? = null,
     @SerialName("external_volume") val externalVolume: Double? = null,
+    @SerialName("max_gpu_length") val maxGpuLengthMm: Int? = null,
+    @SerialName("max_cpu_cooler_height") val maxCpuCoolerHeightMm: Int? = null,
+    @SerialName("max_radiator_size") val maxRadiatorSizeMm: Int? = null,
+    @SerialName("drive_bays") val driveBays: String? = null,
 )

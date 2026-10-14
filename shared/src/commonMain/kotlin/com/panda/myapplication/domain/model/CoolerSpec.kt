@@ -10,14 +10,14 @@ data class CoolerSpec(
     val radiatorSizeMm: Int?,
     val maxCoolingTdp: Wattage,
     val supportedSockets: List<String>,
+    val heightMm: Int? = null,
+    val fanRpm: String? = null,
+    val noiseDba: Double? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.COOLER
 
     init {
-        require((type == CoolerType.LIQUID) == (radiatorSizeMm != null)) {
-            "radiatorSizeMm must be set for liquid coolers and null for air coolers."
-        }
         require(radiatorSizeMm == null || radiatorSizeMm > 0) { "radiatorSizeMm must be positive: $radiatorSizeMm" }
     }
 }

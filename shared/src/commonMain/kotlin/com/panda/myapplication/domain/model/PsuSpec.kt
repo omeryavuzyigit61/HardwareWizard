@@ -8,9 +8,11 @@ data class PsuSpec(
     val efficiency: PsuEfficiencyRating,
     val isAtx3Compliant: Boolean,
     val supportsPcie5Power: Boolean,
-    val tierRating: String = "Tier B",
-    val capacitors: String = "105°C Japon Kapasitörler",
-    val modularity: String = "Tam Modüler",
+    val modularity: String? = null,
+    val formFactor: String? = null,
+    val outputs: String? = null,
+    val tierRating: String? = null,
+    val capacitors: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.PSU

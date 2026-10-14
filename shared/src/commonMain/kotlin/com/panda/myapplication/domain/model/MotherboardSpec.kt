@@ -7,17 +7,19 @@ data class MotherboardSpec(
     val memoryGeneration: DdrGeneration,
     val ramSlots: Int,
     val pcieGeneration: PcieGeneration,
-    val vrmPhases: String = "14+2+1 Fazlı Güç",
-    val m2Slots: Int = 3,
-    val hasWifi: Boolean = true,
-    val interfacePorts: String = "USB 3.2 Gen 2 Type-C, 2.5G LAN",
+    val maxMemoryGb: Int? = null,
+    val m2Slots: Int? = null,
+    val pcieSlotCount: Int? = null,
+    val sataPorts: Int? = null,
+    val hasWifi: Boolean? = null,
+    val vrmPhases: String? = null,
+    val interfacePorts: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.MOTHERBOARD
 
     init {
         require(socket.isNotBlank()) { "Motherboard socket must not be blank." }
-        require(chipset.isNotBlank()) { "Motherboard chipset must not be blank." }
         require(ramSlots > 0) { "ramSlots must be positive: $ramSlots" }
     }
 }

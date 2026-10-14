@@ -29,299 +29,159 @@ object HardwareEnrichmentEngine {
         val fullName = item.displayName.uppercase()
         val brand = item.brand.uppercase()
 
-        val bench = item.benchmarkInfo ?: BenchmarkEngine.evaluate(item).info
-        val verifiedBadge = if (bench.isVerified) "Doğrulanmış Test" else "Simülasyon"
-        badges.add(
-            EngineeringBadge(
-                label = "Performans Benchmark Puanı",
-                value = "${bench.score}/100 • ${bench.tier} ($verifiedBadge)",
-                isHighlighted = true,
-            )
-        )
-        badges.add(
-            EngineeringBadge(
-                label = "TechPowerUp Bağıl Güç Endeksi",
-                value = "%${bench.relativePerformanceIndex} Bağıl Performans",
-                isHighlighted = bench.relativePerformanceIndex >= 80.0,
-            )
-        )
-        bench.cpuSynthetic?.let { cb ->
-            val single = cb.cinebenchR23Single ?: cb.cinebench2024Single ?: cb.geekbench6Single
-            val multi = cb.cinebenchR23Multi ?: cb.cinebench2024Multi ?: cb.geekbench6Multi ?: cb.passmarkScore
-            if (single != null || multi != null) {
+        // Benchmarks ONLY for CPU and GPU
+        if (item.category == com.panda.myapplication.domain.model.HardwareCategory.CPU || item.category == com.panda.myapplication.domain.model.HardwareCategory.GPU) {
+            val bench = item.benchmarkInfo
+            if (bench != null) {
+                val verifiedBadge = if (bench.isVerified) "Doğrulanmış Test" else "Simülasyon"
                 badges.add(
                     EngineeringBadge(
-                        label = "CPU Sentetik Benchmark Skoru",
-                        value = "Tek: ${single ?: "-"} Puan | Çoklu: ${multi ?: "-"} Puan",
+                        label = "Performans Benchmark Puanı",
+                        value = "${bench.score}/100 • ${bench.tier} ($verifiedBadge)",
                         isHighlighted = true,
                     )
                 )
-            }
-        }
-        bench.gpuSynthetic?.let { gpu ->
-            val pts = listOfNotNull(
-                gpu.timeSpyGraphics?.let { "Time Spy: $it pts" },
-                gpu.timeSpyExtreme?.let { "Extreme: $it pts" },
-                gpu.steelNomad?.let { "Steel Nomad: $it pts" },
-            ).joinToString(" | ")
-            if (pts.isNotBlank()) {
                 badges.add(
                     EngineeringBadge(
-                        label = "3DMark Sentetik Grafik Puanı",
-                        value = pts,
-                        isHighlighted = true,
+                        label = "TechPowerUp Bağıl Güç Endeksi",
+                        value = "%${bench.relativePerformanceIndex} Bağıl Performans",
+                        isHighlighted = bench.relativePerformanceIndex >= 80.0,
                     )
                 )
-            }
-        }
-        bench.gameFps?.let { games ->
-            val cp = games.cyberpunk2077?.let { "Cyberpunk: ${it.p1440.toInt()} FPS" }
-            val fh = games.forzaHorizon5?.let { "Forza: ${it.p1440.toInt()} FPS" }
-            val cs = games.counterStrike2?.let { "CS2: ${it.p1440.toInt()} FPS" }
-            val fpsSummary = listOfNotNull(cp, fh, cs).joinToString(" • ")
-            if (fpsSummary.isNotBlank()) {
-                badges.add(
-                    EngineeringBadge(
-                        label = "Referans Oyun Performansı (1440p Ultra)",
-                        value = fpsSummary,
-                        isHighlighted = true,
-                    )
-                )
+                bench.cpuSynthetic?.let { cb ->
+                    val single = cb.cinebenchR23Single ?: cb.cinebench2024Single ?: cb.geekbench6Single
+                    val multi = cb.cinebenchR23Multi ?: cb.cinebench2024Multi ?: cb.geekbench6Multi ?: cb.passmarkScore
+                    if (single != null || multi != null) {
+                        badges.add(
+                            EngineeringBadge(
+                                label = "CPU Sentetik Benchmark Skoru",
+                                value = "Tek: ${single ?: "-"} Puan | Çoklu: ${multi ?: "-"} Puan",
+                                isHighlighted = true,
+                            )
+                        )
+                    }
+                }
+                bench.gpuSynthetic?.let { gpu ->
+                    val pts = listOfNotNull(
+                        gpu.timeSpyGraphics?.let { "Time Spy: $it pts" },
+                        gpu.timeSpyExtreme?.let { "Extreme: $it pts" },
+                        gpu.steelNomad?.let { "Steel Nomad: $it pts" },
+                    ).joinToString(" | ")
+                    if (pts.isNotBlank()) {
+                        badges.add(
+                            EngineeringBadge(
+                                label = "3DMark Sentetik Grafik Puanı",
+                                value = pts,
+                                isHighlighted = true,
+                            )
+                        )
+                    }
+                }
+                bench.gameFps?.let { games ->
+                    val cp = games.cyberpunk2077?.let { "Cyberpunk: ${it.p1440.toInt()} FPS" }
+                    val fh = games.forzaHorizon5?.let { "Forza: ${it.p1440.toInt()} FPS" }
+                    val cs = games.counterStrike2?.let { "CS2: ${it.p1440.toInt()} FPS" }
+                    val fpsSummary = listOfNotNull(cp, fh, cs).joinToString(" • ")
+                    if (fpsSummary.isNotBlank()) {
+                        badges.add(
+                            EngineeringBadge(
+                                label = "Referans Oyun Performansı (1440p Ultra)",
+                                value = fpsSummary,
+                                isHighlighted = true,
+                            )
+                        )
+                    }
+                }
             }
         }
 
         when (val s = item.spec) {
             is PsuSpec -> {
-                // Tier Rating
-                badges.add(EngineeringBadge("PSU Tier Derecesi", s.tierRating, isHighlighted = true))
-
-                // Kapasitör Markası
-                val capBrand = when {
-                    brand.contains("CORSAIR") || brand.contains("MSI") || brand.contains("SEASONIC") || brand.contains("BE QUIET") || brand.contains("ASUS") ->
-                        "100% Japon Nippon Chemi-Con / Nichicon (105°C)"
-                    s.efficiency == PsuEfficiencyRating.GOLD || s.efficiency == PsuEfficiencyRating.PLATINUM || s.efficiency == PsuEfficiencyRating.TITANIUM ->
-                        "100% Japon Rubycon & Toshin Kogyo (105°C)"
-                    else ->
-                        "Japon Üretimi Teapo / Elite 105°C Hibrit"
+                badges.add(EngineeringBadge("Güç Değeri", "${s.wattage.watts}W"))
+                badges.add(EngineeringBadge("Verimlilik", s.efficiency.displayName, isHighlighted = true))
+                s.tierRating?.let { badges.add(EngineeringBadge("PSU Tier Derecesi", it, isHighlighted = true)) }
+                s.capacitors?.let { badges.add(EngineeringBadge("Kapasitör Markası", it, isHighlighted = true)) }
+                if (s.isAtx3Compliant || s.supportsPcie5Power) {
+                    badges.add(EngineeringBadge("Güç Standardı", "ATX 3.0 / PCIe 5.0 Uyumlu", isHighlighted = true))
                 }
-                badges.add(EngineeringBadge("Kapasitör Markası", capBrand, isHighlighted = true))
-
-                // Standart & Konnektör
-                val standard = if (s.isAtx3Compliant || s.supportsPcie5Power) {
-                    "ATX 3.1 & PCIe 5.1 (12V-2x6 Erime Korumalı)"
-                } else {
-                    "ATX 2.52 (Çift 8-pin EPS Desteği)"
-                }
-                badges.add(EngineeringBadge("Güç Standardı", standard, isHighlighted = s.isAtx3Compliant))
-
-                // OEM Platformu
-                val oem = when {
-                    brand.contains("SEASONIC") -> "Seasonic Prime / Focus OEM Platformu"
-                    brand.contains("CORSAIR") || brand.contains("MSI") -> "Channel Well Technology (CWT) OEM"
-                    brand.contains("BE QUIET") || brand.contains("FSP") -> "FSP Group Fortron Platformu"
-                    brand.contains("SUPER FLOWER") -> "Super Flower Leadex Platformu"
-                    else -> "High Power / Sirtec Dijital Platform"
-                }
-                badges.add(EngineeringBadge("OEM Üretici Platformu", oem))
-
-                // Koruma Devreleri
-                badges.add(EngineeringBadge("Koruma Devreleri", "Tam Koruma: OVP, OCP, UVP, OPP, OTP, SCP"))
-
-                // Modülerlik
-                badges.add(EngineeringBadge("Kablo Tasarımı", s.modularity))
+                s.modularity?.let { badges.add(EngineeringBadge("Kablo Tasarımı", it)) }
             }
 
             is MotherboardSpec -> {
-                // VRM Faz Yapısı
-                badges.add(EngineeringBadge("VRM Faz Yapısı", s.vrmPhases, isHighlighted = true))
-
-                // PCB Katman Sayısı
-                val pcbLayers = when {
-                    s.chipset.contains("X870") || s.chipset.contains("Z890") || s.chipset.contains("X670") || s.chipset.contains("Z790") ->
-                        "8 Katmanlı Sunucu Seviyesi PCB (2oz Bakır)"
-                    s.chipset.contains("B650") || s.chipset.contains("B760") ->
-                        "6 Katmanlı Düşük Kayıplı PCB (2oz Bakır)"
-                    else ->
-                        "4-6 Katmanlı Standart PCB"
+                s.vrmPhases?.let { badges.add(EngineeringBadge("VRM Faz Yapısı", it, isHighlighted = true)) }
+                badges.add(EngineeringBadge("Yonga Seti", s.chipset))
+                badges.add(EngineeringBadge("PCIe Veri Yolu", s.pcieGeneration.displayName))
+                s.m2Slots?.let { badges.add(EngineeringBadge("M.2 NVMe Slot Sayısı", "${it}x Yuva")) }
+                badges.add(EngineeringBadge("Bellek Desteği", "${s.ramSlots}x DIMM ${s.memoryGeneration.displayName}"))
+                if (s.hasWifi == true) {
+                    badges.add(EngineeringBadge("Kablosuz Ağ", "Wi-Fi Desteği Mevcut", isHighlighted = true))
                 }
-                badges.add(EngineeringBadge("PCB Katman Sayısı", pcbLayers, isHighlighted = true))
-
-                // PCIe Gen5 Şerit Paylaşımı
-                val laneSharing = if (s.pcieGeneration == PcieGeneration.GEN5) {
-                    "PCIe 5.0 x16 Doğrudan CPU Hattı (Şerit Paylaşımı Yok)"
-                } else {
-                    "PCIe 4.0 x16 / M.2 Bağımsız Şerit Mimarisi"
-                }
-                badges.add(EngineeringBadge("PCIe Veri Yolu", laneSharing))
-
-                // Yeni Nesil Bağlantı
-                val connectivity = if (s.hasWifi) {
-                    "Wi-Fi 7 (320MHz) & Çift USB4 40Gbps Type-C"
-                } else {
-                    "2.5G Realtek LAN & USB 3.2 Gen2x2 20Gbps"
-                }
-                badges.add(EngineeringBadge("Ağ & Port Mimarisi", connectivity, isHighlighted = s.hasWifi))
-
-                // M.2 Slotları
-                badges.add(EngineeringBadge("M.2 NVMe Slot Sayısı", "${s.m2Slots}x Yuva (Entegre Termal Soğutma Zırhı)"))
-                badges.add(EngineeringBadge("Bellek Kanal Mimarisi", "Çift Kanal (Dual-Channel 4x DIMM Daisy-Chain)"))
             }
 
             is RamSpec -> {
-                // Yonga / Die Tipi
-                val dieType = when {
-                    s.generation == DdrGeneration.DDR5 && s.speed.mhz >= 6000 ->
-                        "SK Hynix A-die (Yüksek Hız Aşırtma Potansiyeli)"
-                    s.generation == DdrGeneration.DDR5 ->
-                        "SK Hynix M-die / Micron Düşük Güç Tüketimi"
-                    s.generation == DdrGeneration.DDR4 && s.casLatency <= 16 ->
-                        "Samsung B-die (Ultra Düşük Gecikme)"
-                    else ->
-                        "SK Hynix CJR / Micron E-die"
-                }
-                badges.add(EngineeringBadge("DRAM Yonga (Die) Tipi", dieType, isHighlighted = true))
-
-                // PMIC Voltaj Kilidi
-                val pmic = if (s.speed.mhz >= 6000) {
-                    "Açık (Unlocked PMIC - 1.45V+ OC Desteği)"
-                } else {
-                    "Güvenli Korumalı PMIC (Locked 1.1V-1.35V)"
-                }
-                badges.add(EngineeringBadge("PMIC Voltaj Yönetimi", pmic))
-
-                // EXPO / XMP Profilleri
-                badges.add(EngineeringBadge("Hız Aşırtma Profili", "AMD EXPO & Intel XMP 3.0 Çift Sertifikalı", isHighlighted = true))
-                badges.add(EngineeringBadge("Termal Dağıtıcı", "Eloksallı Termal Alüminyum Isı Dağıtıcı Blok"))
-                badges.add(EngineeringBadge("PCB Mimarisi", "10 Katmanlı Sinyal İzolasyonlu PCB"))
+                badges.add(EngineeringBadge("Bellek Standardı", s.generation.displayName, isHighlighted = true))
+                badges.add(EngineeringBadge("Frekans Değeri", "${s.speed.mhz} MT/s"))
+                badges.add(EngineeringBadge("CAS Gecikmesi", "CL${s.casLatency}"))
+                s.firstWordLatencyNs?.let { badges.add(EngineeringBadge("İlk Tepki Süresi", "$it ns")) }
+                s.voltage?.let { badges.add(EngineeringBadge("Çalışma Voltajı", "$it V")) }
             }
 
             is CpuSpec -> {
-                // CCD / CCX Mimarisi
-                val ccdArch = when {
-                    fullName.contains("X3D") -> "Tek CCD (8C/16T) - Sıfır Çekirdekler Arası Gecikme"
-                    s.coreCount >= 12 -> "Çift CCD (Dual CCX Infinity Fabric Yüksek Bant)"
-                    fullName.contains("INTEL") || fullName.contains("CORE") -> "Hibrit Mimari (P-Cores + E-Cores Ringbus)"
-                    else -> "Monolitik / Birleşik CCX Zar Mimarisi"
-                }
-                badges.add(EngineeringBadge("Çekirdek & CCD Mimarisi", ccdArch, isHighlighted = true))
-
-                // 3D V-Cache Durumu
-                val vcache = if (fullName.contains("X3D")) {
-                    "64MB 3D V-Cache (Toplam 96MB+ L3 Yığıt)"
-                } else {
-                    "${s.l3CacheMb} MB L3 Smart Cache (Monolitik)"
-                }
-                badges.add(EngineeringBadge("L3 Önbellek Yapısı", vcache, isHighlighted = fullName.contains("X3D")))
-
-                // IMC Sweet Spot
-                val imc = if (s.socket.equals("AM5", ignoreCase = true)) {
-                    "DDR5 6000-6400 MT/s (1:1 FCLK 2000-2133 MHz)"
-                } else {
-                    "DDR5 6800-7200 MT/s (Gear 2 Modu)"
-                }
-                badges.add(EngineeringBadge("IMC Sweet Spot (RAM)", imc))
-
-                // TJMax Sıcaklık
-                val tjMax = if (s.socket.equals("AM5", ignoreCase = true)) {
-                    "89°C TJMax (Agresif PBO Curve Optimizer)"
-                } else {
-                    "100°C TJMax (Thermal Velocity Boost)"
-                }
-                badges.add(EngineeringBadge("Termal Eşik (TJMax)", tjMax))
-                badges.add(EngineeringBadge("Üretim Süreci", s.architecture ?: "TSMC Gelişmiş FinFET Mimarisi"))
+                badges.add(EngineeringBadge("İşlemci Soketi", s.socket, isHighlighted = true))
+                badges.add(EngineeringBadge("Çekirdek Yapısı", "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
+                s.architecture?.let { badges.add(EngineeringBadge("Üretim Mimarisi", it)) }
+                s.l3CacheMb?.let { badges.add(EngineeringBadge("L3 Önbellek", "$it MB")) }
             }
 
             is GpuSpec -> {
-                // Güç Standardı
-                val powerStd = if (s.tdp.watts >= 285 || fullName.contains("4070") || fullName.contains("4080") || fullName.contains("4090") || fullName.contains("5080")) {
-                    "16-pin 12V-2x6 (Erime Korumalı Güvenli Soket)"
-                } else {
-                    s.powerConnectors
+                badges.add(EngineeringBadge("GPU Grafik Yongası", s.chipset, isHighlighted = true))
+                badges.add(EngineeringBadge("Bellek Kapasitesi", "${s.vram.megabytes / 1024} GB ${s.memoryType}"))
+                s.busWidthBits?.let { badges.add(EngineeringBadge("Veri Yolu", "$it-bit")) }
+                s.powerConnectors?.let { badges.add(EngineeringBadge("Güç Girişi", it)) }
+                s.tdp?.let { badges.add(EngineeringBadge("TDP", "${it.watts}W")) }
+                if (s.lengthMm != null && s.slotWidth != null) {
+                    badges.add(EngineeringBadge("Boyut", "${s.slotWidth} • ${s.lengthMm} mm"))
                 }
-                badges.add(EngineeringBadge("Güç Giriş Standardı", powerStd, isHighlighted = true))
-
-                // Soğutma Mimarisi
-                val coolerArch = if (s.tdp.watts >= 260) {
-                    "Vapor Chamber (Buhar Odası) + 7x Kompozit Isı Borusu"
-                } else {
-                    "Nikel Kaplı Bakır Taban + 4x Doğrudan Temas Isı Borusu"
-                }
-                badges.add(EngineeringBadge("Termal Soğutma Bloğu", coolerArch, isHighlighted = true))
-
-                // VRAM Üreticisi
-                val vramMaker = if (s.memoryType.contains("GDDR6X", ignoreCase = true)) {
-                    "Micron Ultra-High Speed GDDR6X (21-23 Gbps)"
-                } else {
-                    "Samsung / SK Hynix Yüksek Hızlı GDDR6 (18-20 Gbps)"
-                }
-                badges.add(EngineeringBadge("VRAM Yonga Üreticisi", vramMaker))
-                badges.add(EngineeringBadge("VRM Güç Katı", "16+3 Faz DrMOS Dijital VRM Güç Beslemesi"))
-                badges.add(EngineeringBadge("Kasa Kalınlığı & Boyut", "${s.slotWidth} • ${s.lengthMm} mm Uzunluk"))
             }
 
             is StorageSpec -> {
-                // Kontrolcü Yongası
-                val controller = when {
-                    s.pcieGeneration == PcieGeneration.GEN5 ->
-                        "Phison PS5026-E26 (12nm TSMC Çift Çekirdek)"
-                    brand.contains("SAMSUNG") ->
-                        "Samsung Elpis / Pascal In-House NVMe Kontrolcü"
-                    s.pcieGeneration == PcieGeneration.GEN4 ->
-                        "Phison PS5018-E18 / InnoGrit IG5236"
-                    s.storageInterface == StorageInterface.SATA ->
-                        "Silicon Motion SM2259XT SATA Kontrolcü"
-                    else ->
-                        "Maxio MAP1602 DRAM-less NVMe Kontrolcü"
+                badges.add(EngineeringBadge("Depolama Tipi", "${s.mediaType.name} (${s.storageInterface.name})", isHighlighted = true))
+                badges.add(EngineeringBadge("Kapasite", "${s.capacity.megabytes / 1024} GB"))
+                badges.add(EngineeringBadge("Form Faktörü", s.formFactor.displayName))
+                if (s.sequentialReadMbps > 0) {
+                    badges.add(EngineeringBadge("Sıralı Okuma", "${s.sequentialReadMbps} MB/s"))
                 }
-                badges.add(EngineeringBadge("NAND Kontrolcü Yongası", controller, isHighlighted = true))
-
-                // DRAM Önbellek
-                val dram = when {
-                    fullName.contains("PRO") || fullName.contains("EVO PLUS") || fullName.contains("SN850X") || fullName.contains("KC3000") || fullName.contains("T500") || fullName.contains("T705") ->
-                        "2GB LPDDR4 Ayrılmış Bağımsız DRAM Önbellek"
-                    s.mediaType == StorageMediaType.HDD ->
-                        "256MB Çok Katmanlı Önbellek (Multi-Tier Caching)"
-                    else ->
-                        "DRAM-less HMB (Host Memory Buffer 64MB)"
+                if (s.sequentialWriteMbps > 0) {
+                    badges.add(EngineeringBadge("Sıralı Yazma", "${s.sequentialWriteMbps} MB/s"))
                 }
-                badges.add(EngineeringBadge("DRAM Önbellek Durumu", dram, isHighlighted = true))
-
-                // NAND Katman Sayısı
-                val nandLayers = when {
-                    s.pcieGeneration == PcieGeneration.GEN5 -> "232 Katmanlı Micron 3D TLC NAND"
-                    s.pcieGeneration == PcieGeneration.GEN4 -> "176 Katmanlı 3D TLC BiCS5 NAND"
-                    s.mediaType == StorageMediaType.HDD -> "CMR (Geleneksel Manyetik Kayıt)"
-                    else -> "128 Katmanlı 3D TLC NAND Flash"
+                s.cacheMb?.let { badges.add(EngineeringBadge("DRAM / Önbellek", "$it MB")) }
+                if (s.enduranceTbw != null && s.enduranceTbw > 0) {
+                    badges.add(EngineeringBadge("Dayanıklılık", "${s.enduranceTbw} TBW"))
                 }
-                badges.add(EngineeringBadge("Hücre & Katman Sayısı", nandLayers))
-                badges.add(EngineeringBadge("Dayanıklılık Garantisi", "${s.enduranceTbw} TBW Ömür & 1.5M Saat MTBF"))
-                badges.add(EngineeringBadge("Arayüz & Hız Sınıfı", "${s.storageInterface.name} • ${s.sequentialReadMbps} MB/s Okuma"))
             }
 
             is CoolerSpec -> {
-                // Pompa RPM Hızı
-                val pumpSpeed = if (s.type == CoolerType.LIQUID) {
-                    "Asetek 8. Nesil Pompa (2800 RPM Değişken Hız)"
-                } else {
-                    "Hydro Dynamic Bearing (HDB) 1800 RPM Çift Kule Fan"
-                }
-                badges.add(EngineeringBadge("Pompa / Fan Hızı", pumpSpeed, isHighlighted = true))
-
-                // Taban & Isı İletimi
-                badges.add(EngineeringBadge("Taban Materyali", "Mikro-Kanallı Nikel Kaplı Ayna Parlak Bakır Taban", isHighlighted = true))
-
-                // AM5 Offset Mount
-                badges.add(EngineeringBadge("Montaj Teknolojisi", "AM5 Offset Mount (-4°C İşlemci Sıcak Nokta İndirimi)"))
+                val coolerTypeName = if (s.type == CoolerType.LIQUID) "Sıvı Soğutma" else "Hava Soğutma"
+                badges.add(EngineeringBadge("Soğutma Tipi", coolerTypeName, isHighlighted = true))
                 badges.add(EngineeringBadge("Isı Dağıtma Kapasitesi", "${s.maxCoolingTdp.watts}W Termal Tasarım Gücü (TDP)"))
-                badges.add(EngineeringBadge("Akustik Seviye", "Maks. 28.5 dBA (Ultra Sessiz Sıvı Dinamik Yatak FDB)"))
+                if (s.type == CoolerType.LIQUID && s.radiatorSizeMm != null && s.radiatorSizeMm > 0) {
+                    badges.add(EngineeringBadge("Radyatör Boyutu", "${s.radiatorSizeMm} mm"))
+                } else if (s.heightMm != null) {
+                    badges.add(EngineeringBadge("Soğutucu Yüksekliği", "${s.heightMm} mm"))
+                }
+                s.fanRpm?.let { badges.add(EngineeringBadge("Fan Devri", "$it RPM")) }
+                s.noiseDba?.let { badges.add(EngineeringBadge("Akustik Seviye", "$it dBA")) }
             }
 
             is CaseSpec -> {
-                badges.add(EngineeringBadge("Kasa Tipi & Form", s.type, isHighlighted = true))
-                badges.add(EngineeringBadge("Maks. GPU Uzunluğu", "${s.maxGpuLengthMm} mm", isHighlighted = true))
-                badges.add(EngineeringBadge("CPU Soğutucu Boşluğu", "${s.maxCpuCoolerHeightMm} mm"))
-                badges.add(EngineeringBadge("Maks. Radyatör Desteği", "${s.maxRadiatorSizeMm} mm"))
-                badges.add(EngineeringBadge("Anakart Desteği", s.supportedMotherboardFormFactors.joinToString(", ") { it.name }))
+                badges.add(EngineeringBadge("Kasa Tipi & Form", s.type ?: "Veri Bulunamadı", isHighlighted = true))
+                s.maxGpuLengthMm?.let { badges.add(EngineeringBadge("Maks. GPU Uzunluğu", "$it mm", isHighlighted = true)) }
+                s.maxCpuCoolerHeightMm?.let { badges.add(EngineeringBadge("CPU Soğutucu Boşluğu", "$it mm")) }
+                s.maxRadiatorSizeMm?.let { badges.add(EngineeringBadge("Maks. Radyatör Desteği", "$it mm")) }
+                if (s.supportedMotherboardFormFactors.isNotEmpty()) {
+                    badges.add(EngineeringBadge("Anakart Desteği", s.supportedMotherboardFormFactors.joinToString(", ") { it.name }))
+                }
+                s.sidePanel?.let { badges.add(EngineeringBadge("Yan Panel", it)) }
             }
         }
 

@@ -17,4 +17,7 @@ data class RamRawDto(
     @SerialName("cas_latency")
     @Serializable(with = LenientIntSerializer::class)
     val casLatency: Int? = null,
+    val voltage: Double? = null,
+    @SerialName("heat_spreader") val heatSpreader: Boolean? = null,
+    val rgb: Boolean? = null,
 )

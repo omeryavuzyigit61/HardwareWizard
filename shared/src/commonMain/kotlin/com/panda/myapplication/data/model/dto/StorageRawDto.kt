@@ -76,4 +76,9 @@ data class StorageRawDto(
     @SerialName("interface")
     @Serializable(with = LenientStringSerializer::class)
     val `interface`: String? = null,
+    @SerialName("cache") val cacheMb: Int? = null,
+    @SerialName("seq_read") val seqRead: Int? = null,
+    @SerialName("seq_write") val seqWrite: Int? = null,
+    @SerialName("nand_type") val nandType: String? = null,
+    @SerialName("endurance_tbw") val enduranceTbw: Int? = null,
 )

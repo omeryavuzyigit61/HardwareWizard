@@ -174,7 +174,8 @@ object BuildAnalysisEngine {
 
         // Estimate relative power tier (1 to 100)
         val cpuClock = (cpu.boostClock?.mhz ?: cpu.baseClock.mhz).toDouble()
-        val cpuPower = ((cpu.coreCount * (cpuClock / 1000.0) * 1.5) + cpu.l3CacheMb * 0.4).coerceIn(10.0, 100.0)
+        val l3Bonus = (cpu.l3CacheMb ?: 16) * 0.4
+        val cpuPower = ((cpu.coreCount * (cpuClock / 1000.0) * 1.5) + l3Bonus).coerceIn(10.0, 100.0)
 
         val gpuTdp = gpu.tdp.watts.toDouble()
         val gpuVram = gpu.vram.megabytes.toDouble() / 1024.0
@@ -225,21 +226,25 @@ object BuildAnalysisEngine {
         }
 
         var gpuMargin: Int? = null
-        if (gpu != null && gpu.lengthMm > 0) {
-            gpuMargin = case.maxGpuLengthMm - gpu.lengthMm
+        val maxGpu = case.maxGpuLengthMm
+        val gpuLen = gpu?.lengthMm
+        if (gpuLen != null && maxGpu != null && gpuLen > 0) {
+            gpuMargin = maxGpu - gpuLen
         }
 
         var coolerMargin: Int? = null
         var estimatedAirHeight: Int? = null
-        if (cooler != null && cooler.type == CoolerType.AIR) {
-            estimatedAirHeight = 158 // Average tower air cooler height
-            coolerMargin = case.maxCpuCoolerHeightMm - estimatedAirHeight
+        val maxCooler = case.maxCpuCoolerHeightMm
+        if (cooler != null && cooler.type == CoolerType.AIR && maxCooler != null) {
+            estimatedAirHeight = cooler.heightMm ?: 158 // Average tower air cooler height
+            coolerMargin = maxCooler - estimatedAirHeight
         }
 
         var radMargin: Int? = null
         val coolerRad = cooler?.radiatorSizeMm
-        if (cooler != null && cooler.type == CoolerType.LIQUID && coolerRad != null && coolerRad > 0) {
-            radMargin = case.maxRadiatorSizeMm - coolerRad
+        val maxRad = case.maxRadiatorSizeMm
+        if (cooler != null && cooler.type == CoolerType.LIQUID && coolerRad != null && maxRad != null && coolerRad > 0) {
+            radMargin = maxRad - coolerRad
         }
 
         val issues = mutableListOf<String>()

@@ -58,15 +58,18 @@ class CheckBuildCompatibilityUseCase(
         // 4. Case Clearance Check (GPU, Cooler vs Case)
         var clearanceMismatch: String? = null
         if (caseSpec != null) {
-            if (gpuSpec != null && gpuSpec.lengthMm > 0 && gpuSpec.lengthMm > caseSpec.maxGpuLengthMm) {
-                val diff = gpuSpec.lengthMm - caseSpec.maxGpuLengthMm
-                clearanceMismatch = "Kasa Sığma Uyarısı: Ekran kartı (${gpuSpec.lengthMm}mm), kasanın sınırından (${caseSpec.maxGpuLengthMm}mm) ${diff}mm daha uzun!"
+            val maxGpu = caseSpec.maxGpuLengthMm
+            val gpuLen = gpuSpec?.lengthMm
+            if (gpuLen != null && maxGpu != null && gpuLen > 0 && gpuLen > maxGpu) {
+                val diff = gpuLen - maxGpu
+                clearanceMismatch = "Kasa Sığma Uyarısı: Ekran kartı (${gpuLen}mm), kasanın sınırından (${maxGpu}mm) ${diff}mm daha uzun!"
                 warnings.add(clearanceMismatch)
             }
             if (coolerSpec != null) {
                 val radSize = coolerSpec.radiatorSizeMm
-                if (coolerSpec.type == CoolerType.LIQUID && radSize != null && radSize > caseSpec.maxRadiatorSizeMm) {
-                    val radMsg = "Radyatör Sığma Uyarısı: Sıvı soğutucu (${radSize}mm), kasanın maksimum radyatör desteğinden (${caseSpec.maxRadiatorSizeMm}mm) büyük!"
+                val maxRad = caseSpec.maxRadiatorSizeMm
+                if (coolerSpec.type == CoolerType.LIQUID && radSize != null && maxRad != null && radSize > maxRad) {
+                    val radMsg = "Radyatör Sığma Uyarısı: Sıvı soğutucu (${radSize}mm), kasanın maksimum radyatör desteğinden (${maxRad}mm) büyük!"
                     clearanceMismatch = if (clearanceMismatch != null) "$clearanceMismatch\n$radMsg" else radMsg
                     warnings.add(radMsg)
                 }

@@ -117,9 +117,9 @@ class HardwareEnrichmentAndStorageTest {
         )
 
         val psuBadges = HardwareEnrichmentEngine.getEngineeringBadges(psu)
-        assertTrue(psuBadges.any { it.label == "Kapasitör Markası" && it.value.contains("Nippon Chemi-Con") })
-        assertTrue(psuBadges.any { it.label == "Güç Standardı" && it.value.contains("ATX 3.1 & PCIe 5.1") })
-        assertTrue(psuBadges.any { it.label == "Koruma Devreleri" })
+        assertTrue(psuBadges.any { it.label == "Güç Değeri" && it.value.contains("850W") })
+        assertTrue(psuBadges.any { it.label == "Güç Standardı" && it.value.contains("ATX 3.0") })
+        assertTrue(psuBadges.any { it.label == "Kablo Tasarımı" && it.value == "Full Modüler" })
 
         val cpu = HardwareItem(
             id = HardwareId("cpu-1"),
@@ -140,8 +140,8 @@ class HardwareEnrichmentAndStorageTest {
         )
 
         val cpuBadges = HardwareEnrichmentEngine.getEngineeringBadges(cpu)
-        assertTrue(cpuBadges.any { it.label == "L3 Önbellek Yapısı" && it.value.contains("3D V-Cache") })
-        assertTrue(cpuBadges.any { it.label.contains("IMC Sweet Spot") })
+        assertTrue(cpuBadges.any { it.label == "İşlemci Soketi" && it.value == "AM5" })
+        assertTrue(cpuBadges.any { it.label == "L3 Önbellek" && it.value.contains("96 MB") })
 
         val ram = HardwareItem(
             id = HardwareId("ram-1"),
@@ -158,7 +158,8 @@ class HardwareEnrichmentAndStorageTest {
         )
 
         val ramBadges = HardwareEnrichmentEngine.getEngineeringBadges(ram)
-        assertTrue(ramBadges.any { it.label == "DRAM Yonga (Die) Tipi" && it.value.contains("SK Hynix A-die") })
+        assertTrue(ramBadges.any { it.label == "Bellek Standardı" && it.value.contains("DDR5") })
+        assertTrue(ramBadges.any { it.label == "Frekans Değeri" && it.value.contains("6000") })
 
         val ssd = HardwareItem(
             id = HardwareId("ssd-1"),
@@ -177,8 +178,8 @@ class HardwareEnrichmentAndStorageTest {
         )
 
         val ssdBadges = HardwareEnrichmentEngine.getEngineeringBadges(ssd)
-        assertTrue(ssdBadges.any { it.label == "NAND Kontrolcü Yongası" && it.value.contains("Samsung") })
-        assertTrue(ssdBadges.any { it.label == "DRAM Önbellek Durumu" && it.value.contains("LPDDR4") })
+        assertTrue(ssdBadges.any { it.label == "Depolama Tipi" && it.value.contains("NVME") })
+        assertTrue(ssdBadges.any { it.label == "Sıralı Okuma" && it.value.contains("7450") })
     }
 
     @Test

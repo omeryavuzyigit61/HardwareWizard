@@ -14,4 +14,7 @@ data class CpuRawDto(
     val tdp: Int? = null,
     val graphics: String? = null,
     val socket: String? = null,
+    @SerialName("threads") val threads: Int? = null,
+    @SerialName("l2_cache") val l2CacheMb: Double? = null,
+    @SerialName("l3_cache") val l3CacheMb: Int? = null,
 )

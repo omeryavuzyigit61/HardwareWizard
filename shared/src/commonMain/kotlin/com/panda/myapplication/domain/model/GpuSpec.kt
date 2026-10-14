@@ -8,9 +8,11 @@ data class GpuSpec(
     val boostClock: Frequency?,
     val tdp: Wattage,
     val recommendedPsu: Wattage,
-    val lengthMm: Int = 300,
-    val powerConnectors: String = "1x 16-pin (12VHPWR)",
-    val slotWidth: String = "2.5 Yuva",
+    val busWidthBits: Int? = null,
+    val lengthMm: Int? = null,
+    val powerConnectors: String? = null,
+    val displayOutputs: String? = null,
+    val slotWidth: String? = null,
     val partNumber: String? = null,
 ) : HardwareSpec {
 

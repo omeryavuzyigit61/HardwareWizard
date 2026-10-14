@@ -37,7 +37,8 @@ data class CpuSpecEntity(
     @ColumnInfo(name = "tdp_watts") val tdpWatts: Int,
     @ColumnInfo(name = "has_integrated_graphics") val hasIntegratedGraphics: Boolean,
     val architecture: String? = null,
-    @ColumnInfo(name = "l3_cache_mb") val l3CacheMb: Int = 32,
+    @ColumnInfo(name = "l2_cache_mb") val l2CacheMb: Double? = null,
+    @ColumnInfo(name = "l3_cache_mb") val l3CacheMb: Int? = null,
 )
 
 @Entity(
@@ -53,9 +54,11 @@ data class GpuSpecEntity(
     @ColumnInfo(name = "boost_clock_mhz") val boostClockMhz: Int?,
     @ColumnInfo(name = "tdp_watts") val tdpWatts: Int,
     @ColumnInfo(name = "recommended_psu_watts") val recommendedPsuWatts: Int,
-    @ColumnInfo(name = "length_mm") val lengthMm: Int = 300,
-    @ColumnInfo(name = "power_connectors") val powerConnectors: String = "1x 16-pin (12VHPWR)",
-    @ColumnInfo(name = "slot_width") val slotWidth: String = "2.5 Yuva",
+    @ColumnInfo(name = "bus_width_bits") val busWidthBits: Int? = null,
+    @ColumnInfo(name = "length_mm") val lengthMm: Int? = null,
+    @ColumnInfo(name = "power_connectors") val powerConnectors: String? = null,
+    @ColumnInfo(name = "display_outputs") val displayOutputs: String? = null,
+    @ColumnInfo(name = "slot_width") val slotWidth: String? = null,
     @ColumnInfo(name = "part_number") val partNumber: String? = null,
 )
 
@@ -71,6 +74,10 @@ data class RamSpecEntity(
     @ColumnInfo(name = "cas_latency") val casLatency: Int,
     @ColumnInfo(name = "capacity_mb") val capacityMb: Int,
     @ColumnInfo(name = "module_count") val moduleCount: Int,
+    @ColumnInfo(name = "first_word_latency_ns") val firstWordLatencyNs: Double? = null,
+    val voltage: Double? = null,
+    @ColumnInfo(name = "heat_spreader") val heatSpreader: Boolean? = null,
+    val rgb: Boolean? = null,
 )
 
 @Entity(
@@ -86,10 +93,13 @@ data class MotherboardSpecEntity(
     @ColumnInfo(name = "memory_generation") val memoryGeneration: DdrGeneration,
     @ColumnInfo(name = "ram_slots") val ramSlots: Int,
     @ColumnInfo(name = "pcie_generation") val pcieGeneration: PcieGeneration,
-    @ColumnInfo(name = "vrm_phases") val vrmPhases: String = "14+2+1 Fazlı Güç",
-    @ColumnInfo(name = "m2_slots") val m2Slots: Int = 3,
-    @ColumnInfo(name = "has_wifi") val hasWifi: Boolean = true,
-    @ColumnInfo(name = "interface_ports") val interfacePorts: String = "USB 3.2 Gen 2 Type-C, 2.5G LAN",
+    @ColumnInfo(name = "max_memory_gb") val maxMemoryGb: Int? = null,
+    @ColumnInfo(name = "m2_slots") val m2Slots: Int? = null,
+    @ColumnInfo(name = "pcie_slot_count") val pcieSlotCount: Int? = null,
+    @ColumnInfo(name = "sata_ports") val sataPorts: Int? = null,
+    @ColumnInfo(name = "has_wifi") val hasWifi: Boolean? = null,
+    @ColumnInfo(name = "vrm_phases") val vrmPhases: String? = null,
+    @ColumnInfo(name = "interface_ports") val interfacePorts: String? = null,
 )
 
 @Entity(
@@ -102,9 +112,11 @@ data class PsuSpecEntity(
     val efficiency: PsuEfficiencyRating,
     @ColumnInfo(name = "is_atx3_compliant") val isAtx3Compliant: Boolean,
     @ColumnInfo(name = "supports_pcie5_power") val supportsPcie5Power: Boolean,
-    @ColumnInfo(name = "tier_rating") val tierRating: String = "Tier B",
-    @ColumnInfo(name = "capacitors") val capacitors: String = "105°C Japon Kapasitörler",
-    @ColumnInfo(name = "modularity") val modularity: String = "Tam Modüler",
+    val modularity: String? = null,
+    @ColumnInfo(name = "form_factor") val formFactor: String? = null,
+    val outputs: String? = null,
+    @ColumnInfo(name = "tier_rating") val tierRating: String? = null,
+    val capacitors: String? = null,
 )
 
 @Entity(
@@ -120,8 +132,9 @@ data class StorageSpecEntity(
     @ColumnInfo(name = "capacity_mb") val capacityMb: Int,
     @ColumnInfo(name = "seq_read_mbps") val sequentialReadMbps: Int,
     @ColumnInfo(name = "seq_write_mbps") val sequentialWriteMbps: Int,
-    @ColumnInfo(name = "nand_type") val nandType: String = "3D TLC NAND",
-    @ColumnInfo(name = "endurance_tbw") val enduranceTbw: Int = 1200,
+    @ColumnInfo(name = "nand_type") val nandType: String? = null,
+    @ColumnInfo(name = "endurance_tbw") val enduranceTbw: Int? = null,
+    @ColumnInfo(name = "cache_mb") val cacheMb: Int? = null,
 )
 
 @Entity(
@@ -134,6 +147,9 @@ data class CoolerSpecEntity(
     @ColumnInfo(name = "radiator_size_mm") val radiatorSizeMm: Int?,
     @ColumnInfo(name = "max_cooling_tdp_watts") val maxCoolingTdpWatts: Int,
     @ColumnInfo(name = "supported_sockets") val supportedSockets: List<String>,
+    @ColumnInfo(name = "height_mm") val heightMm: Int? = null,
+    @ColumnInfo(name = "fan_rpm") val fanRpm: String? = null,
+    @ColumnInfo(name = "noise_dba") val noiseDba: Double? = null,
 )
 
 @Entity(
@@ -142,8 +158,10 @@ data class CoolerSpecEntity(
 )
 data class CaseSpecEntity(
     @PrimaryKey @ColumnInfo(name = ITEM_ID) val itemId: String,
-    val type: String = "ATX Mid Tower",
-    @ColumnInfo(name = "max_gpu_length_mm") val maxGpuLengthMm: Int = 380,
-    @ColumnInfo(name = "max_cpu_cooler_height_mm") val maxCpuCoolerHeightMm: Int = 165,
-    @ColumnInfo(name = "max_radiator_size_mm") val maxRadiatorSizeMm: Int = 360,
+    val type: String? = null,
+    @ColumnInfo(name = "max_gpu_length_mm") val maxGpuLengthMm: Int? = null,
+    @ColumnInfo(name = "max_cpu_cooler_height_mm") val maxCpuCoolerHeightMm: Int? = null,
+    @ColumnInfo(name = "max_radiator_size_mm") val maxRadiatorSizeMm: Int? = null,
+    @ColumnInfo(name = "side_panel") val sidePanel: String? = null,
+    @ColumnInfo(name = "drive_bays") val driveBays: String? = null,
 )

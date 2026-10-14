@@ -65,6 +65,7 @@ object HardwareMapper {
                     tdp = Wattage(c.tdpWatts),
                     hasIntegratedGraphics = c.hasIntegratedGraphics,
                     architecture = c.architecture,
+                    l2CacheMb = c.l2CacheMb,
                     l3CacheMb = c.l3CacheMb,
                 )
             }
@@ -78,8 +79,10 @@ object HardwareMapper {
                     boostClock = g.boostClockMhz?.let { Frequency(it) },
                     tdp = Wattage(g.tdpWatts),
                     recommendedPsu = Wattage(g.recommendedPsuWatts),
+                    busWidthBits = g.busWidthBits,
                     lengthMm = g.lengthMm,
                     powerConnectors = g.powerConnectors,
+                    displayOutputs = g.displayOutputs,
                     slotWidth = g.slotWidth,
                     partNumber = g.partNumber,
                 )
@@ -92,6 +95,10 @@ object HardwareMapper {
                     casLatency = r.casLatency,
                     capacity = MemorySize(r.capacityMb),
                     moduleCount = r.moduleCount,
+                    firstWordLatencyNs = r.firstWordLatencyNs,
+                    voltage = r.voltage,
+                    heatSpreader = r.heatSpreader,
+                    rgb = r.rgb,
                 )
             }
             itemWithSpec.motherboard != null -> {
@@ -103,9 +110,12 @@ object HardwareMapper {
                     memoryGeneration = m.memoryGeneration,
                     ramSlots = m.ramSlots,
                     pcieGeneration = m.pcieGeneration,
-                    vrmPhases = m.vrmPhases,
+                    maxMemoryGb = m.maxMemoryGb,
                     m2Slots = m.m2Slots,
+                    pcieSlotCount = m.pcieSlotCount,
+                    sataPorts = m.sataPorts,
                     hasWifi = m.hasWifi,
+                    vrmPhases = m.vrmPhases,
                     interfacePorts = m.interfacePorts,
                 )
             }
@@ -116,9 +126,11 @@ object HardwareMapper {
                     efficiency = p.efficiency,
                     isAtx3Compliant = p.isAtx3Compliant,
                     supportsPcie5Power = p.supportsPcie5Power,
+                    modularity = p.modularity,
+                    formFactor = p.formFactor,
+                    outputs = p.outputs,
                     tierRating = p.tierRating,
                     capacitors = p.capacitors,
-                    modularity = p.modularity,
                 )
             }
             itemWithSpec.storage != null -> {
@@ -133,6 +145,7 @@ object HardwareMapper {
                     sequentialWriteMbps = s.sequentialWriteMbps,
                     nandType = s.nandType,
                     enduranceTbw = s.enduranceTbw,
+                    cacheMb = s.cacheMb,
                 )
             }
             itemWithSpec.cooler != null -> {
@@ -142,6 +155,9 @@ object HardwareMapper {
                     radiatorSizeMm = cl.radiatorSizeMm,
                     maxCoolingTdp = Wattage(cl.maxCoolingTdpWatts),
                     supportedSockets = cl.supportedSockets,
+                    heightMm = cl.heightMm,
+                    fanRpm = cl.fanRpm,
+                    noiseDba = cl.noiseDba,
                 )
             }
             itemWithSpec.case != null -> {
@@ -151,6 +167,8 @@ object HardwareMapper {
                     maxGpuLengthMm = cs.maxGpuLengthMm,
                     maxCpuCoolerHeightMm = cs.maxCpuCoolerHeightMm,
                     maxRadiatorSizeMm = cs.maxRadiatorSizeMm,
+                    sidePanel = cs.sidePanel,
+                    driveBays = cs.driveBays,
                 )
             }
             else -> return null
@@ -185,20 +203,25 @@ object HardwareMapper {
             )
         }.getOrNull() ?: return null
 
-        val benchmarkInfo = if (entity.benchmarkScore != null) {
-            HardwareBenchmarkInfo(
-                score = entity.benchmarkScore,
-                tier = entity.benchmarkTier ?: "A-Tier",
-                gamingIndex = entity.benchmarkGamingIndex,
-                testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
-                relativePerformanceIndex = entity.benchmarkGamingIndex?.toDouble() ?: entity.benchmarkScore.toDouble(),
-                cpuSynthetic = entity.cpuSynthetic,
-                gpuSynthetic = entity.gpuSynthetic,
-                gameFps = entity.gameFps,
-                dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
-            )
+        val isCpuOrGpu = entity.category == HardwareCategory.CPU || entity.category == HardwareCategory.GPU
+        val benchmarkInfo = if (isCpuOrGpu) {
+            if (entity.benchmarkScore != null) {
+                HardwareBenchmarkInfo(
+                    score = entity.benchmarkScore,
+                    tier = entity.benchmarkTier ?: "A-Tier",
+                    gamingIndex = entity.benchmarkGamingIndex,
+                    testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
+                    relativePerformanceIndex = entity.benchmarkGamingIndex?.toDouble() ?: entity.benchmarkScore.toDouble(),
+                    cpuSynthetic = entity.cpuSynthetic,
+                    gpuSynthetic = entity.gpuSynthetic,
+                    gameFps = entity.gameFps,
+                    dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
+                )
+            } else {
+                com.panda.myapplication.domain.engine.BenchmarkEngine.simulateBenchmark(intermediateItem)
+            }
         } else {
-            com.panda.myapplication.domain.engine.BenchmarkEngine.simulateBenchmark(intermediateItem)
+            null
         }
 
         return intermediateItem.copy(benchmarkInfo = benchmarkInfo)
@@ -217,14 +240,14 @@ object HardwareMapper {
 
         val socket = deduceCpuSocket(dto, rawName)
         val coreCount = (dto.coreCount ?: 6).coerceAtLeast(1)
-        val threadCount = (coreCount * 2).coerceAtLeast(coreCount)
+        val threadCount = (dto.threads ?: (coreCount * 2)).coerceAtLeast(coreCount)
         val baseClockMhz = ((dto.coreClockGhz ?: 3.5) * 1000).toInt().coerceAtLeast(500)
         val boostClockMhz = ((dto.boostClockGhz ?: dto.coreClockGhz ?: 4.0) * 1000).toInt().coerceAtLeast(baseClockMhz)
         val tdpWatts = (dto.tdp ?: 65).coerceAtLeast(15)
         val hasIntegratedGraphics = !dto.graphics.isNullOrBlank() && !dto.graphics.equals("None", ignoreCase = true)
 
         val architecture = dto.microarchitecture?.ifBlank { null }
-        val l3CacheMb = when {
+        val l3CacheMb = dto.l3CacheMb ?: when {
             coreCount >= 16 -> 64
             coreCount >= 8 -> 32
             else -> 16
@@ -249,6 +272,7 @@ object HardwareMapper {
             tdpWatts = tdpWatts,
             hasIntegratedGraphics = hasIntegratedGraphics,
             architecture = architecture,
+            l2CacheMb = dto.l2CacheMb,
             l3CacheMb = l3CacheMb,
         )
         return item to spec
@@ -294,15 +318,15 @@ object HardwareMapper {
         }
 
         val factorySpecs = resolveGpuFactorySpecs(chipset, rawName, dto.memory)
-        val vramMb = factorySpecs.vramMb
-        val memoryType = factorySpecs.memoryType
+        val vramMb = (dto.memory?.let { it * 1024 }) ?: factorySpecs.vramMb
+        val memoryType = dto.memoryType ?: factorySpecs.memoryType
         val coreClockMhz = (dto.coreClockMhz ?: 1500).coerceAtLeast(500)
         val boostClockMhz = (dto.boostClockMhz ?: (coreClockMhz + 250)).coerceAtLeast(coreClockMhz)
-        val tdpWatts = factorySpecs.tdpWatts
-        val recommendedPsuWatts = factorySpecs.recommendedPsuWatts
-        val lengthMm = (dto.length?.toInt() ?: 300).coerceAtLeast(150)
-        val powerConnectors = factorySpecs.powerConnectors
-        val slotWidth = factorySpecs.slotWidth
+        val tdpWatts = dto.tdpWatts ?: factorySpecs.tdpWatts
+        val recommendedPsuWatts = dto.recommendedPsuWatts ?: factorySpecs.recommendedPsuWatts
+        val lengthMm = dto.length?.toInt()
+        val powerConnectors = dto.powerConnectors ?: factorySpecs.powerConnectors
+        val slotWidth = dto.slotWidth ?: factorySpecs.slotWidth
 
         val item = HardwareItemEntity(
             id = id,
@@ -322,8 +346,10 @@ object HardwareMapper {
             boostClockMhz = boostClockMhz,
             tdpWatts = tdpWatts,
             recommendedPsuWatts = recommendedPsuWatts,
+            busWidthBits = dto.busWidthBits,
             lengthMm = lengthMm,
             powerConnectors = powerConnectors,
+            displayOutputs = dto.displayOutputs,
             slotWidth = slotWidth,
             partNumber = partNumber,
         )
@@ -337,18 +363,25 @@ object HardwareMapper {
         val id = generateHardwareId(HardwareCategory.RAM, rawName)
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
 
+        val isDdr3 = dto.speed?.firstOrNull() == 3 || rawName.contains("DDR3", ignoreCase = true)
         val isDdr5 = dto.speed?.firstOrNull() == 5 || rawName.contains("DDR5", ignoreCase = true)
-        val generation = if (isDdr5) DdrGeneration.DDR5 else DdrGeneration.DDR4
+        val generation = when {
+            isDdr3 -> DdrGeneration.DDR3
+            isDdr5 -> DdrGeneration.DDR5
+            else -> DdrGeneration.DDR4
+        }
         val speedMts = when {
             dto.speed != null && dto.speed.size >= 2 -> dto.speed[1]
             dto.speed != null && dto.speed.size == 1 -> dto.speed[0]
-            else -> if (isDdr5) 6000 else 3200
-        }.coerceAtLeast(1600)
+            isDdr3 -> 1600
+            isDdr5 -> 6000
+            else -> 3200
+        }.coerceAtLeast(800)
 
-        val casLatency = (dto.casLatency ?: if (isDdr5) 36 else 16).coerceAtLeast(10)
+        val casLatency = (dto.casLatency ?: if (isDdr3) 11 else if (isDdr5) 36 else 16).coerceAtLeast(7)
         val moduleCount = dto.modules?.firstOrNull()?.coerceAtLeast(1) ?: 2
-        val perModuleGb = dto.modules?.getOrNull(1)?.coerceAtLeast(4) ?: 16
-        val capacityMb = (moduleCount * perModuleGb * 1024).coerceAtLeast(4096)
+        val perModuleGb = dto.modules?.getOrNull(1)?.coerceAtLeast(2) ?: 16
+        val capacityMb = (moduleCount * perModuleGb * 1024).coerceAtLeast(2048)
 
         val item = HardwareItemEntity(
             id = id,
@@ -366,6 +399,10 @@ object HardwareMapper {
             casLatency = casLatency,
             capacityMb = capacityMb,
             moduleCount = moduleCount,
+            firstWordLatencyNs = dto.firstWordLatency,
+            voltage = dto.voltage,
+            heatSpreader = dto.heatSpreader,
+            rgb = dto.rgb,
         )
         return item to spec
     }
@@ -378,29 +415,45 @@ object HardwareMapper {
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
 
         val socket = dto.socket?.ifBlank { null } ?: deduceMotherboardSocket(rawName)
-        val chipset = deduceMotherboardChipset(rawName)
+        val chipset = dto.chipset?.ifBlank { null } ?: deduceMotherboardChipset(rawName)
         val formFactor = when {
             dto.formFactor?.contains("Micro", ignoreCase = true) == true -> MotherboardFormFactor.MICRO_ATX
             dto.formFactor?.contains("Mini", ignoreCase = true) == true -> MotherboardFormFactor.MINI_ITX
             dto.formFactor?.contains("E-ATX", ignoreCase = true) == true -> MotherboardFormFactor.E_ATX
             else -> MotherboardFormFactor.ATX
         }
-        val memoryGeneration = if (socket.equals("AM4", ignoreCase = true)) DdrGeneration.DDR4 else DdrGeneration.DDR5
-        val ramSlots = (dto.memorySlots ?: 4).coerceAtLeast(2)
-        val pcieGeneration = if (socket.equals("AM5", ignoreCase = true) || chipset.contains("Z790") || chipset.contains("X670")) {
-            PcieGeneration.GEN5
-        } else {
-            PcieGeneration.GEN4
+        val memoryGeneration = when {
+            dto.memoryType?.contains("DDR3", ignoreCase = true) == true -> DdrGeneration.DDR3
+            dto.memoryType?.contains("DDR4", ignoreCase = true) == true -> DdrGeneration.DDR4
+            dto.memoryType?.contains("DDR5", ignoreCase = true) == true -> DdrGeneration.DDR5
+            socket in listOf("AM3", "AM3+", "AM2", "AM2+", "FM1", "FM2", "FM2+", "LGA775", "LGA1156", "LGA1155", "LGA1150", "LGA2011") -> DdrGeneration.DDR3
+            socket in listOf("AM4", "LGA1200", "LGA1151", "LGA2011-v3", "LGA2066") -> DdrGeneration.DDR4
+            socket in listOf("AM5", "LGA1851") -> DdrGeneration.DDR5
+            socket == "LGA1700" -> {
+                if (rawName.contains("D4", ignoreCase = true) || rawName.contains("DDR4", ignoreCase = true)) {
+                    DdrGeneration.DDR4
+                } else {
+                    DdrGeneration.DDR5
+                }
+            }
+            rawName.contains("DDR3", ignoreCase = true) -> DdrGeneration.DDR3
+            rawName.contains("DDR4", ignoreCase = true) -> DdrGeneration.DDR4
+            rawName.contains("DDR5", ignoreCase = true) -> DdrGeneration.DDR5
+            else -> DdrGeneration.DDR4
+        }
+        val ramSlots = (dto.memorySlots ?: if (formFactor == MotherboardFormFactor.MINI_ITX) 2 else 4).coerceAtLeast(2)
+        val pcieGeneration = when {
+            dto.pcieGeneration?.contains("5.0", ignoreCase = true) == true -> PcieGeneration.GEN5
+            dto.pcieGeneration?.contains("4.0", ignoreCase = true) == true -> PcieGeneration.GEN4
+            dto.pcieGeneration?.contains("3.0", ignoreCase = true) == true -> PcieGeneration.GEN3
+            dto.pcieGeneration?.contains("2.0", ignoreCase = true) == true -> PcieGeneration.GEN2
+            socket in listOf("AM5", "LGA1851") || chipset.contains("Z790") || chipset.contains("X670") || chipset.contains("X870") || chipset.contains("Z890") -> PcieGeneration.GEN5
+            socket in listOf("AM4", "LGA1700", "LGA1200") -> PcieGeneration.GEN4
+            socket in listOf("AM3", "AM3+", "AM2", "FM2", "LGA775", "LGA1155", "LGA1150") -> PcieGeneration.GEN2
+            else -> PcieGeneration.GEN3
         }
 
-        val vrmPhases = when {
-            chipset.contains("Z790") || chipset.contains("X670") -> "18+2+1 Fazlı Güç"
-            chipset.contains("B650") || chipset.contains("B760") -> "14+2+1 Fazlı DrMOS"
-            else -> "8+2 Faz"
-        }
-        val m2Slots = if (formFactor == MotherboardFormFactor.MINI_ITX) 2 else if (chipset.contains("Z") || chipset.contains("X")) 4 else 3
-        val hasWifi = rawName.contains("WIFI", ignoreCase = true) || rawName.contains("AX", ignoreCase = true)
-        val interfacePorts = if (hasWifi) "Wi-Fi 6E, USB 3.2 Gen 2 Type-C, 2.5G LAN" else "USB 3.2 Gen 2 Type-C, Gigabit LAN"
+        val hasWifi = dto.hasWifi ?: (rawName.contains("WIFI", ignoreCase = true) || rawName.contains("AX", ignoreCase = true))
 
         val item = HardwareItemEntity(
             id = id,
@@ -419,10 +472,13 @@ object HardwareMapper {
             memoryGeneration = memoryGeneration,
             ramSlots = ramSlots,
             pcieGeneration = pcieGeneration,
-            vrmPhases = vrmPhases,
-            m2Slots = m2Slots,
+            maxMemoryGb = dto.maxMemoryGb,
+            m2Slots = dto.m2Slots,
+            pcieSlotCount = dto.pcieSlots,
+            sataPorts = dto.sataPorts,
             hasWifi = hasWifi,
-            interfacePorts = interfacePorts,
+            vrmPhases = dto.vrmPhases,
+            interfacePorts = dto.interfacePorts,
         )
         return item to spec
     }
@@ -445,15 +501,6 @@ object HardwareMapper {
         }
         val isAtx3 = rawName.contains("PCIE5", ignoreCase = true) || rawName.contains("ATX 3", ignoreCase = true) || rawName.contains("ATX3", ignoreCase = true)
 
-        val tierRating = when {
-            efficiency == PsuEfficiencyRating.TITANIUM || (efficiency == PsuEfficiencyRating.PLATINUM && wattage >= 850) -> "Tier A (En Üst Seviye)"
-            efficiency == PsuEfficiencyRating.GOLD && wattage >= 750 -> "Tier A (High-End)"
-            efficiency == PsuEfficiencyRating.GOLD || efficiency == PsuEfficiencyRating.SILVER -> "Tier B (Mid-Range)"
-            else -> "Tier C (Giriş Seviyesi)"
-        }
-        val capacitors = if (tierRating.startsWith("Tier A")) "100% Japon 105°C Kapasitörler" else "Japon Üretimi Ana Kapasitör"
-        val modularity = if (wattage >= 750) "Tam Modüler (Full-Modular)" else "Yarı Modüler"
-
         val item = HardwareItemEntity(
             id = id,
             brand = brand,
@@ -469,9 +516,11 @@ object HardwareMapper {
             efficiency = efficiency,
             isAtx3Compliant = isAtx3,
             supportsPcie5Power = isAtx3,
-            tierRating = tierRating,
-            capacitors = capacitors,
-            modularity = modularity,
+            modularity = dto.modularity,
+            formFactor = dto.type,
+            outputs = dto.outputs,
+            tierRating = dto.tierRating,
+            capacitors = dto.capacitors,
         )
         return item to spec
     }
@@ -506,10 +555,8 @@ object HardwareMapper {
             else -> StorageFormFactor.M2_2280
         }
         val capacityMb = ((dto.capacity ?: 1000) * 1024).coerceAtLeast(1024)
-        val seqRead = if (isNvme) 7000 else 550
-        val seqWrite = if (isNvme) 6000 else 500
-        val nandType = if (isNvme) "3D TLC NAND Flash" else "3D NAND"
-        val enduranceTbw = ((capacityMb / 1024) * 0.6).toInt().coerceAtLeast(300)
+        val seqRead = (dto.seqRead ?: if (isNvme) 3500 else 500).coerceAtLeast(100)
+        val seqWrite = (dto.seqWrite ?: if (isNvme) 3000 else 450).coerceAtLeast(100)
 
         val item = HardwareItemEntity(
             id = id,
@@ -529,8 +576,9 @@ object HardwareMapper {
             capacityMb = capacityMb,
             sequentialReadMbps = seqRead,
             sequentialWriteMbps = seqWrite,
-            nandType = nandType,
-            enduranceTbw = enduranceTbw,
+            nandType = dto.nandType,
+            enduranceTbw = dto.enduranceTbw,
+            cacheMb = dto.cacheMb,
         )
         return item to spec
     }
@@ -542,10 +590,10 @@ object HardwareMapper {
         val id = generateHardwareId(HardwareCategory.COOLER, rawName)
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
 
-        val isLiquid = dto.size != null && dto.size > 0
+        val isLiquid = (dto.size != null && dto.size > 0) || dto.type?.contains("Liquid", ignoreCase = true) == true
         val type = if (isLiquid) CoolerType.LIQUID else CoolerType.AIR
         val radiatorSize = if (isLiquid) dto.size else null
-        val maxTdp = if (isLiquid) 300 else 220
+        val maxTdp = dto.maxTdp ?: if (isLiquid) 300 else 220
 
         val item = HardwareItemEntity(
             id = id,
@@ -561,7 +609,10 @@ object HardwareMapper {
             type = type,
             radiatorSizeMm = radiatorSize,
             maxCoolingTdpWatts = maxTdp,
-            supportedSockets = listOf("AM5", "AM4", "LGA1700", "LGA1851"),
+            supportedSockets = dto.supportedSockets ?: listOf("AM5", "AM4", "LGA1700", "LGA1851"),
+            heightMm = dto.heightMm,
+            fanRpm = dto.fanRpm,
+            noiseDba = dto.noiseLevel,
         )
         return item to spec
     }
@@ -572,27 +623,27 @@ object HardwareMapper {
         val (brand, model) = extractBrandAndModel(rawName)
         val id = generateHardwareId(HardwareCategory.CASE, rawName)
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
-        val type = dto.type?.trim() ?: "ATX Mid Tower"
+        val type = dto.type?.trim()
 
         val maxGpu = when {
-            type.contains("Full Tower", ignoreCase = true) -> 420
-            type.contains("Mid Tower", ignoreCase = true) -> 380
-            type.contains("Mini Tower", ignoreCase = true) -> 330
-            type.contains("Mini ITX", ignoreCase = true) || type.contains("Desktop", ignoreCase = true) -> 310
+            type?.contains("Full Tower", ignoreCase = true) == true -> 420
+            type?.contains("Mid Tower", ignoreCase = true) == true -> 380
+            type?.contains("Mini Tower", ignoreCase = true) == true -> 330
+            type?.contains("Mini ITX", ignoreCase = true) == true || type?.contains("Desktop", ignoreCase = true) == true -> 310
             else -> 360
         }
         val maxCooler = when {
-            type.contains("Full Tower", ignoreCase = true) -> 185
-            type.contains("Mid Tower", ignoreCase = true) -> 165
-            type.contains("Mini Tower", ignoreCase = true) -> 155
-            type.contains("Mini ITX", ignoreCase = true) || type.contains("Desktop", ignoreCase = true) -> 140
+            type?.contains("Full Tower", ignoreCase = true) == true -> 185
+            type?.contains("Mid Tower", ignoreCase = true) == true -> 165
+            type?.contains("Mini Tower", ignoreCase = true) == true -> 155
+            type?.contains("Mini ITX", ignoreCase = true) == true || type?.contains("Desktop", ignoreCase = true) == true -> 140
             else -> 160
         }
         val maxRad = when {
-            type.contains("Full Tower", ignoreCase = true) -> 420
-            type.contains("Mid Tower", ignoreCase = true) -> 360
-            type.contains("Mini Tower", ignoreCase = true) -> 240
-            type.contains("Mini ITX", ignoreCase = true) -> 240
+            type?.contains("Full Tower", ignoreCase = true) == true -> 420
+            type?.contains("Mid Tower", ignoreCase = true) == true -> 360
+            type?.contains("Mini Tower", ignoreCase = true) == true -> 240
+            type?.contains("Mini ITX", ignoreCase = true) == true -> 240
             else -> 280
         }
 
@@ -608,9 +659,11 @@ object HardwareMapper {
         val spec = CaseSpecEntity(
             itemId = id,
             type = type,
-            maxGpuLengthMm = maxGpu,
-            maxCpuCoolerHeightMm = maxCooler,
-            maxRadiatorSizeMm = maxRad,
+            maxGpuLengthMm = dto.maxGpuLengthMm ?: maxGpu,
+            maxCpuCoolerHeightMm = dto.maxCpuCoolerHeightMm ?: maxCooler,
+            maxRadiatorSizeMm = dto.maxRadiatorSizeMm ?: maxRad,
+            sidePanel = dto.sidePanel,
+            driveBays = dto.driveBays,
         )
         return item to spec
     }
@@ -649,25 +702,29 @@ object HardwareMapper {
 
         val enrichedItems = rawItems.map { item ->
             val priceData = pricesTr[item.id]
+            val isCpuOrGpu = item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU
             val gpuKey = if (item.category == HardwareCategory.GPU) {
                 com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
             } else null
-            val benchData = benchmarks[item.id]
-                ?: (gpuKey?.let { benchmarks["gpu_$it"] ?: benchmarks[it] })
-                ?: generateFallbackBenchmarkInfo(item.id, item.category)
+            val benchData = if (isCpuOrGpu) {
+                benchmarks[item.id]
+                    ?: (gpuKey?.let { benchmarks["gpu_$it"] ?: benchmarks[it] })
+                    ?: generateFallbackBenchmarkInfo(item.id, item.category)
+            } else null
+
             item.copy(
                 currentPriceTry = priceData?.currentPriceTry,
                 lowestPriceTry = priceData?.lowestPriceTry,
                 highestPriceTry = priceData?.highestPriceTry,
                 offers = priceData?.offers,
                 priceHistory = priceData?.priceHistory,
-                benchmarkScore = benchData.score,
-                benchmarkTier = benchData.tier,
-                benchmarkTestSuite = benchData.testSuite,
-                benchmarkGamingIndex = benchData.gamingIndex,
-                cpuSynthetic = benchData.cpuSynthetic,
-                gpuSynthetic = benchData.gpuSynthetic,
-                gameFps = benchData.gameFps,
+                benchmarkScore = benchData?.score,
+                benchmarkTier = benchData?.tier,
+                benchmarkTestSuite = benchData?.testSuite,
+                benchmarkGamingIndex = benchData?.gamingIndex,
+                cpuSynthetic = benchData?.cpuSynthetic,
+                gpuSynthetic = benchData?.gpuSynthetic,
+                gameFps = benchData?.gameFps,
             )
         }
 
@@ -684,7 +741,8 @@ object HardwareMapper {
         )
     }
 
-    fun generateFallbackBenchmarkInfo(id: String, category: HardwareCategory): HardwareBenchmarkInfo {
+    fun generateFallbackBenchmarkInfo(id: String, category: HardwareCategory): HardwareBenchmarkInfo? {
+        if (category != HardwareCategory.CPU && category != HardwareCategory.GPU) return null
         val seed = kotlin.math.abs(id.hashCode())
         val baseScore = 70 + (seed % 28)
         val tier = when {
@@ -696,12 +754,7 @@ object HardwareMapper {
         val testSuite = when (category) {
             HardwareCategory.CPU -> "Cinebench R23 & 3DMark TimeSpy"
             HardwareCategory.GPU -> "3DMark TimeSpy Extreme & Port Royal"
-            HardwareCategory.RAM -> "AIDA64 Memory Latency & Bandwidth"
-            HardwareCategory.MOTHERBOARD -> "VRM Thermal Load & Signal Stability"
-            HardwareCategory.STORAGE -> "CrystalDiskMark 8 & PCMark 10"
-            HardwareCategory.COOLER -> "Thermal Dissipation 30 Dk Stres Testi"
-            HardwareCategory.PSU -> "Cybenetics Load & Transient Response"
-            HardwareCategory.CASE -> "Wind Tunnel Smoke Flow & Thermal"
+            else -> "Benchmark Laboratuvarı"
         }
         return HardwareBenchmarkInfo(
             score = baseScore,
@@ -809,24 +862,82 @@ object HardwareMapper {
     }
 
     private fun deduceMotherboardSocket(name: String): String = when {
+        // Modern AMD
         name.contains("B650", ignoreCase = true) || name.contains("X670", ignoreCase = true) ||
                 name.contains("A620", ignoreCase = true) || name.contains("B850", ignoreCase = true) ||
-                name.contains("X870", ignoreCase = true) -> "AM5"
+                name.contains("X870", ignoreCase = true) || name.contains("AM5", ignoreCase = true) -> "AM5"
+        // AM4
         name.contains("B550", ignoreCase = true) || name.contains("X570", ignoreCase = true) ||
-                name.contains("A520", ignoreCase = true) || name.contains("B450", ignoreCase = true) -> "AM4"
+                name.contains("A520", ignoreCase = true) || name.contains("B450", ignoreCase = true) ||
+                name.contains("X470", ignoreCase = true) || name.contains("A320", ignoreCase = true) ||
+                name.contains("B350", ignoreCase = true) || name.contains("X370", ignoreCase = true) ||
+                name.contains("AM4", ignoreCase = true) -> "AM4"
+        // Legacy AMD
+        name.contains("760G", ignoreCase = true) || name.contains("760GM", ignoreCase = true) ||
+                name.contains("970", ignoreCase = true) || name.contains("990FX", ignoreCase = true) ||
+                name.contains("990X", ignoreCase = true) || name.contains("880G", ignoreCase = true) ||
+                name.contains("890FX", ignoreCase = true) || name.contains("890GX", ignoreCase = true) ||
+                name.contains("785G", ignoreCase = true) || name.contains("780G", ignoreCase = true) ||
+                name.contains("740G", ignoreCase = true) || name.contains("AM3+", ignoreCase = true) ||
+                name.contains("AM3", ignoreCase = true) -> "AM3"
+        name.contains("FM2+", ignoreCase = true) || name.contains("FM2", ignoreCase = true) ||
+                name.contains("A88X", ignoreCase = true) || name.contains("A78", ignoreCase = true) ||
+                name.contains("A68H", ignoreCase = true) || name.contains("A58", ignoreCase = true) -> "FM2+"
+        name.contains("AM2+", ignoreCase = true) || name.contains("AM2", ignoreCase = true) -> "AM2"
+        // Modern Intel
+        name.contains("Z890", ignoreCase = true) || name.contains("B860", ignoreCase = true) ||
+                name.contains("H810", ignoreCase = true) || name.contains("LGA1851", ignoreCase = true) -> "LGA1851"
         name.contains("Z790", ignoreCase = true) || name.contains("B760", ignoreCase = true) ||
-                name.contains("Z690", ignoreCase = true) || name.contains("B660", ignoreCase = true) -> "LGA1700"
-        name.contains("Z890", ignoreCase = true) || name.contains("B860", ignoreCase = true) -> "LGA1851"
-        else -> "AM5"
+                name.contains("H770", ignoreCase = true) || name.contains("Z690", ignoreCase = true) ||
+                name.contains("B660", ignoreCase = true) || name.contains("H610", ignoreCase = true) ||
+                name.contains("LGA1700", ignoreCase = true) -> "LGA1700"
+        name.contains("Z590", ignoreCase = true) || name.contains("B560", ignoreCase = true) ||
+                name.contains("H570", ignoreCase = true) || name.contains("H510", ignoreCase = true) ||
+                name.contains("Z490", ignoreCase = true) || name.contains("B460", ignoreCase = true) ||
+                name.contains("H470", ignoreCase = true) || name.contains("H410", ignoreCase = true) ||
+                name.contains("LGA1200", ignoreCase = true) -> "LGA1200"
+        name.contains("Z390", ignoreCase = true) || name.contains("Z370", ignoreCase = true) ||
+                name.contains("B365", ignoreCase = true) || name.contains("B360", ignoreCase = true) ||
+                name.contains("H370", ignoreCase = true) || name.contains("H310", ignoreCase = true) ||
+                name.contains("Z270", ignoreCase = true) || name.contains("B250", ignoreCase = true) ||
+                name.contains("H270", ignoreCase = true) || name.contains("Z170", ignoreCase = true) ||
+                name.contains("B150", ignoreCase = true) || name.contains("H110", ignoreCase = true) ||
+                name.contains("LGA1151", ignoreCase = true) -> "LGA1151"
+        name.contains("Z97", ignoreCase = true) || name.contains("H97", ignoreCase = true) ||
+                name.contains("Z87", ignoreCase = true) || name.contains("H87", ignoreCase = true) ||
+                name.contains("B85", ignoreCase = true) || name.contains("H81", ignoreCase = true) ||
+                name.contains("LGA1150", ignoreCase = true) -> "LGA1150"
+        name.contains("Z77", ignoreCase = true) || name.contains("Z75", ignoreCase = true) ||
+                name.contains("H77", ignoreCase = true) || name.contains("B75", ignoreCase = true) ||
+                name.contains("Z68", ignoreCase = true) || name.contains("P67", ignoreCase = true) ||
+                name.contains("H67", ignoreCase = true) || name.contains("H61", ignoreCase = true) ||
+                name.contains("LGA1155", ignoreCase = true) -> "LGA1155"
+        name.contains("G41", ignoreCase = true) || name.contains("P45", ignoreCase = true) ||
+                name.contains("P43", ignoreCase = true) || name.contains("P35", ignoreCase = true) ||
+                name.contains("945", ignoreCase = true) || name.contains("LGA775", ignoreCase = true) -> "LGA775"
+        else -> "Bilinmeyen Soket"
     }
 
     private fun deduceMotherboardChipset(name: String): String {
         val chipsets = listOf(
+            // AMD
             "X870E", "X870", "B850", "B840", "X670E", "X670", "B650E", "B650", "A620",
-            "X570", "B550", "A520", "B450",
-            "Z890", "B860", "Z790", "B760", "H770", "Z690", "B660", "H610"
+            "X570", "B550", "A520", "X470", "B450", "A320", "X370", "B350",
+            "990FX", "990X", "970", "890FX", "890GX", "880G", "870", "790FX", "790GX",
+            "785G", "780G", "760GM", "760G", "740G",
+            "A88X", "A85X", "A78", "A75", "A68H", "A58", "A55", "TRX40", "WRX80", "TRX50",
+            // Intel
+            "Z890", "B860", "H810",
+            "Z790", "H770", "B760", "Z690", "H670", "B660", "H610",
+            "Z590", "H570", "B560", "H510",
+            "Z490", "H470", "B460", "H410",
+            "Z390", "Z370", "H370", "B365", "B360", "H310",
+            "Z270", "H270", "B250", "Z170", "H170", "B150", "H110",
+            "Z97", "H97", "Z87", "H87", "B85", "H81",
+            "Z77", "Z75", "H77", "B75", "Z68", "P67", "H67", "H61",
+            "X79", "X99", "X299", "G41", "P45", "P43", "P35", "945P"
         )
-        return chipsets.firstOrNull { name.contains(it, ignoreCase = true) } ?: "B650"
+        return chipsets.firstOrNull { name.contains(it, ignoreCase = true) } ?: "Veri Bulunamadı"
     }
 
     private data class ResolvedGpuSpecs(
