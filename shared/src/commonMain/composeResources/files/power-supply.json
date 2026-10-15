@@ -10068,5 +10068,39 @@
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm Fan",
     "imageUrl": "https://www.incehesap.com/resim/urun/202601/69777723274770.30374535_jkginmpqlhoef_cropped_288.webp"
+  },
+  {
+    "name": "ASUS Pro WS 1600W Platinum 80+ Platinum PCIe 5.1 Full Modüler ATX 3.1 Güç Kaynağı",
+    "price": null,
+    "type": "ATX",
+    "efficiency": "Platinum",
+    "wattage": 1600,
+    "modular": "Full",
+    "color": "Black",
+    "atx_version": "ATX 3.1",
+    "pcie_12vhpwr": "1x 16-Pin (12V-2x6 / 600W)",
+    "pcie_8pin_connectors": "4x 8-Pin",
+    "eps_8pin_connectors": "2x 8-Pin (4+4)",
+    "sata_connectors": 8,
+    "capacitors": null,
+    "warranty_years": null,
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-2-1-300x300.jpg"
+  },
+  {
+    "name": "ASUS Pro WS 2200W Platinum 80+ Platinum PCIe 5.1 Full Modüler ATX 3.1 Güç Kaynağı",
+    "price": null,
+    "type": "ATX",
+    "efficiency": "Platinum",
+    "wattage": 2200,
+    "modular": "Full",
+    "color": "Black",
+    "atx_version": "ATX 3.1",
+    "pcie_12vhpwr": "1x 16-Pin (12V-2x6 / 600W)",
+    "pcie_8pin_connectors": "4x 8-Pin",
+    "eps_8pin_connectors": "2x 8-Pin (4+4)",
+    "sata_connectors": 8,
+    "capacitors": null,
+    "warranty_years": null,
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-2200w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-2-1-300x300.jpg"
   }
 ]
