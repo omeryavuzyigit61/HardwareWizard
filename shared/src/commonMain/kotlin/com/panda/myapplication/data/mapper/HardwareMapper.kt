@@ -874,7 +874,7 @@ object HardwareMapper {
                     ?: generateFallbackBenchmarkInfo(item.id, item.category)
             } else null
 
-            val rawImage = priceData?.imageUrl ?: item.imageUrl ?: existingImages[item.id]
+            val rawImage = item.imageUrl ?: priceData?.imageUrl ?: existingImages[item.id]
             val resolvedImage = sanitizeImageUrl(rawImage)
                 ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
                 ?: existingImages[item.id]?.let { sanitizeImageUrl(it) }

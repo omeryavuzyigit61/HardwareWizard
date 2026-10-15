@@ -730,13 +730,14 @@ def main():
                 highest_price = None
 
             best_image = None
-            for o in sorted_offers:
-                img_candidate = o.get("imageUrl")
-                if is_valid_image_url(img_candidate):
-                    best_image = img_candidate
-                    break
-            if not best_image and is_valid_image_url(it.get("imageUrl")):
+            if is_valid_image_url(it.get("imageUrl")):
                 best_image = it.get("imageUrl")
+            else:
+                for o in sorted_offers:
+                    img_candidate = o.get("imageUrl")
+                    if is_valid_image_url(img_candidate):
+                        best_image = img_candidate
+                        break
 
             prices_tr_map[prod_id] = {
                 "productId": prod_id,
