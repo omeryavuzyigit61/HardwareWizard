@@ -22,6 +22,7 @@ data class PsuSpec(
     val protections: String? = null,
     val fanAndSize: String? = null,
     val cybeneticsCert: String? = null,
+    val cybeneticsLambda: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.PSU

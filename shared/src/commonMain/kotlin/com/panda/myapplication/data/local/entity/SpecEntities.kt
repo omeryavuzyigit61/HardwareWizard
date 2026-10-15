@@ -43,6 +43,9 @@ data class CpuSpecEntity(
     @ColumnInfo(name = "pcie_version") val pcieVersion: String? = null,
     @ColumnInfo(name = "max_memory_speed") val maxMemorySpeed: String? = null,
     @ColumnInfo(name = "unlocked_multiplier") val unlockedMultiplier: Boolean? = null,
+    @ColumnInfo(name = "core_topology") val coreTopology: String? = null,
+    @ColumnInfo(name = "power_limits") val powerLimits: String? = null,
+    @ColumnInfo(name = "igpu_model") val igpuModel: String? = null,
 )
 
 @Entity(
@@ -64,6 +67,13 @@ data class GpuSpecEntity(
     @ColumnInfo(name = "display_outputs") val displayOutputs: String? = null,
     @ColumnInfo(name = "slot_width") val slotWidth: String? = null,
     @ColumnInfo(name = "part_number") val partNumber: String? = null,
+    val architecture: String? = null,
+    @ColumnInfo(name = "process_node") val processNode: String? = null,
+    @ColumnInfo(name = "cuda_cores") val cudaCores: Int? = null,
+    @ColumnInfo(name = "tensor_ai_tops") val tensorAiTops: String? = null,
+    @ColumnInfo(name = "rt_cores") val rtCores: Int? = null,
+    @ColumnInfo(name = "memory_speed_gbps") val memorySpeedGbps: Double? = null,
+    @ColumnInfo(name = "bandwidth_gbs") val bandwidthGbs: Double? = null,
 )
 
 @Entity(
@@ -82,6 +92,9 @@ data class RamSpecEntity(
     val voltage: Double? = null,
     @ColumnInfo(name = "heat_spreader") val heatSpreader: Boolean? = null,
     val rgb: Boolean? = null,
+    @ColumnInfo(name = "die_type") val dieType: String? = null,
+    val timings: String? = null,
+    val profile: String? = null,
 )
 
 @Entity(
@@ -104,6 +117,11 @@ data class MotherboardSpecEntity(
     @ColumnInfo(name = "has_wifi") val hasWifi: Boolean? = null,
     @ColumnInfo(name = "vrm_phases") val vrmPhases: String? = null,
     @ColumnInfo(name = "interface_ports") val interfacePorts: String? = null,
+    @ColumnInfo(name = "pcb_layers") val pcbLayers: String? = null,
+    @ColumnInfo(name = "m2_slots_detail") val m2SlotsDetail: String? = null,
+    @ColumnInfo(name = "memory_speed_oc") val memorySpeedOc: String? = null,
+    val network: String? = null,
+    @ColumnInfo(name = "audio_codec") val audioCodec: String? = null,
 )
 
 @Entity(
@@ -130,6 +148,7 @@ data class PsuSpecEntity(
     val protections: String? = null,
     @ColumnInfo(name = "fan_and_size") val fanAndSize: String? = null,
     @ColumnInfo(name = "cybenetics_cert") val cybeneticsCert: String? = null,
+    @ColumnInfo(name = "cybenetics_lambda") val cybeneticsLambda: String? = null,
 )
 
 @Entity(
@@ -148,6 +167,9 @@ data class StorageSpecEntity(
     @ColumnInfo(name = "nand_type") val nandType: String? = null,
     @ColumnInfo(name = "endurance_tbw") val enduranceTbw: Int? = null,
     @ColumnInfo(name = "cache_mb") val cacheMb: Int? = null,
+    val controller: String? = null,
+    @ColumnInfo(name = "dram_cache") val dramCache: String? = null,
+    @ColumnInfo(name = "random_iops") val randomIops: String? = null,
 )
 
 @Entity(
@@ -163,6 +185,8 @@ data class CoolerSpecEntity(
     @ColumnInfo(name = "height_mm") val heightMm: Int? = null,
     @ColumnInfo(name = "fan_rpm") val fanRpm: String? = null,
     @ColumnInfo(name = "noise_dba") val noiseDba: Double? = null,
+    @ColumnInfo(name = "radiator_dimensions") val radiatorDimensions: String? = null,
+    @ColumnInfo(name = "fan_airflow") val fanAirflow: String? = null,
 )
 
 @Entity(
@@ -177,4 +201,7 @@ data class CaseSpecEntity(
     @ColumnInfo(name = "max_radiator_size_mm") val maxRadiatorSizeMm: Int? = null,
     @ColumnInfo(name = "side_panel") val sidePanel: String? = null,
     @ColumnInfo(name = "drive_bays") val driveBays: String? = null,
+    @ColumnInfo(name = "radiator_support") val radiatorSupport: String? = null,
+    @ColumnInfo(name = "included_fans") val includedFans: String? = null,
+    @ColumnInfo(name = "front_panel_usb") val frontPanelUsb: String? = null,
 )

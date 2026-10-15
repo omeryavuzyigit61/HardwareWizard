@@ -14,6 +14,13 @@ data class GpuSpec(
     val displayOutputs: String? = null,
     val slotWidth: String? = null,
     val partNumber: String? = null,
+    val architecture: String? = null,
+    val processNode: String? = null,
+    val cudaCores: Int? = null,
+    val tensorAiTops: String? = null,
+    val rtCores: Int? = null,
+    val memorySpeedGbps: Double? = null,
+    val bandwidthGbs: Double? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.GPU

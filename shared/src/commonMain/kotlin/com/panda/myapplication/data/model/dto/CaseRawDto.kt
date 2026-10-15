@@ -15,5 +15,8 @@ data class CaseRawDto(
     @SerialName("max_cpu_cooler_height") val maxCpuCoolerHeightMm: Int? = null,
     @SerialName("max_radiator_size") val maxRadiatorSizeMm: Int? = null,
     @SerialName("drive_bays") val driveBays: String? = null,
+    @SerialName("radiator_support") val radiatorSupport: String? = null,
+    @SerialName("included_fans") val includedFans: String? = null,
+    @SerialName("front_panel_usb") val frontPanelUsb: String? = null,
     val imageUrl: String? = null,
 )

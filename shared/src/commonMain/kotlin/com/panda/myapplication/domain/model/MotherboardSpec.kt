@@ -14,6 +14,11 @@ data class MotherboardSpec(
     val hasWifi: Boolean? = null,
     val vrmPhases: String? = null,
     val interfacePorts: String? = null,
+    val pcbLayers: String? = null,
+    val m2SlotsDetail: String? = null,
+    val memorySpeedOc: String? = null,
+    val network: String? = null,
+    val audioCodec: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.MOTHERBOARD

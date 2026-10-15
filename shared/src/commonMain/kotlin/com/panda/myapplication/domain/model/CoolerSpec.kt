@@ -13,6 +13,8 @@ data class CoolerSpec(
     val heightMm: Int? = null,
     val fanRpm: String? = null,
     val noiseDba: Double? = null,
+    val radiatorDimensions: String? = null,
+    val fanAirflow: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.COOLER

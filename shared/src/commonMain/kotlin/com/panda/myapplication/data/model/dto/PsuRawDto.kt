@@ -25,5 +25,6 @@ data class PsuRawDto(
     val protections: String? = null,
     @SerialName("fan_size") val fanAndSize: String? = null,
     @SerialName("cybenetics") val cybeneticsCert: String? = null,
+    @SerialName("cybenetics_lambda") val cybeneticsLambda: String? = null,
     val imageUrl: String? = null,
 )

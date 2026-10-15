@@ -8,9 +8,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 1700,
     "seq_write": 1600,
-    "nand_type": "BiCS TLC",
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
     "endurance_tbw": 200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria NVMe M.2 1TB",
@@ -21,9 +24,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 1700,
     "seq_write": 1600,
-    "nand_type": "BiCS TLC",
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
     "endurance_tbw": 400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria G2 NVMe M.2 1TB",
@@ -34,9 +40,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 2100,
     "seq_write": 1700,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria G2 NVMe M.2 2TB",
@@ -47,9 +56,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 2100,
     "seq_write": 1700,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 500GB",
@@ -60,9 +72,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 3400,
     "seq_write": 2500,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 1TB",
@@ -73,9 +88,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 3400,
     "seq_write": 3200,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 2TB",
@@ -86,9 +104,12 @@
     "interface": "PCIe 3.0 x4",
     "seq_read": 3400,
     "seq_write": 3200,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Plus G3 NVMe M.2 1TB",
@@ -99,9 +120,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 5000,
     "seq_write": 3900,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
+    "endurance_tbw": 400,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Plus G3 NVMe M.2 2TB",
@@ -112,9 +136,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 5000,
     "seq_write": 3900,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
+    "endurance_tbw": 800,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria Pro NVMe M.2 1TB",
@@ -125,9 +152,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7300,
     "seq_write": 6400,
-    "nand_type": "BiCS TLC (DRAM Cache)",
-    "endurance_tbw": 800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 400,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria Pro NVMe M.2 2TB",
@@ -138,9 +168,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7300,
     "seq_write": 6400,
-    "nand_type": "BiCS TLC (DRAM Cache)",
-    "endurance_tbw": 1600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 800,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria SATA 480GB",
@@ -151,9 +184,12 @@
     "interface": "SATA 6.0 Gb/s",
     "seq_read": 555,
     "seq_write": 540,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 120,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 192,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria SATA 960GB",
@@ -164,9 +200,12 @@
     "interface": "SATA 6.0 Gb/s",
     "seq_read": 555,
     "seq_write": 540,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 240,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 384,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Samsung 990 PRO 1TB",
@@ -177,9 +216,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7450,
     "seq_write": 6900,
-    "nand_type": "V-NAND TLC (DRAM Cache)",
+    "nand_type": "Samsung 176-Katman V-NAND V7 3D TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+    "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
+    "dram_cache": "1GB Samsung LPDDR4 DRAM Cache",
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
   },
   {
     "name": "Samsung 990 PRO 2TB",
@@ -190,9 +232,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7450,
     "seq_write": 6900,
-    "nand_type": "V-NAND TLC (DRAM Cache)",
+    "nand_type": "Samsung 176-Katman V-NAND V7 3D TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+    "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
+    "dram_cache": "2GB Samsung LPDDR4 DRAM Cache",
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
   },
   {
     "name": "Samsung 990 PRO 4TB",
@@ -203,9 +248,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7450,
     "seq_write": 6900,
-    "nand_type": "V-NAND TLC (DRAM Cache)",
+    "nand_type": "Samsung 176-Katman V-NAND V7 3D TLC",
     "endurance_tbw": 2400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+    "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
+    "dram_cache": "4GB Samsung LPDDR4 DRAM Cache",
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
   },
   {
     "name": "Samsung 990 EVO 1TB",
@@ -218,7 +266,10 @@
     "seq_write": 4200,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 990 EVO 2TB",
@@ -231,7 +282,10 @@
     "seq_write": 4200,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 980 PRO 1TB",
@@ -244,7 +298,10 @@
     "seq_write": 5000,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 980 PRO 2TB",
@@ -257,7 +314,10 @@
     "seq_write": 5000,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 980 1TB",
@@ -270,7 +330,10 @@
     "seq_write": 3000,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 970 EVO Plus 1TB",
@@ -283,7 +346,10 @@
     "seq_write": 3300,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 970 EVO Plus 2TB",
@@ -296,7 +362,10 @@
     "seq_write": 3300,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston KC3000 1TB",
@@ -306,10 +375,13 @@
     "form_factor": "M.2-2280",
     "interface": "PCIe 4.0 x4",
     "seq_read": 7000,
-    "seq_write": 6000,
-    "nand_type": "3D TLC (Phison E18 DRAM)",
+    "seq_write": 7000,
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
     "endurance_tbw": 800,
-    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "1GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kingston KC3000 2TB",
@@ -320,9 +392,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7000,
     "seq_write": 7000,
-    "nand_type": "3D TLC (Phison E18 DRAM)",
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
     "endurance_tbw": 1600,
-    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kingston KC3000 4TB",
@@ -333,9 +408,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7000,
     "seq_write": 7000,
-    "nand_type": "3D TLC (Phison E18 DRAM)",
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
     "endurance_tbw": 3200,
-    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kingston Fury Renegade 1TB",
@@ -344,11 +422,14 @@
     "type": "SSD",
     "form_factor": "M.2-2280",
     "interface": "PCIe 4.0 x4",
-    "seq_read": 7300,
-    "seq_write": 6000,
-    "nand_type": "3D TLC (DRAM Cache)",
-    "endurance_tbw": 1000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
+    "seq_read": 7000,
+    "seq_write": 7000,
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
+    "endurance_tbw": 800,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "1GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kingston Fury Renegade 2TB",
@@ -357,11 +438,14 @@
     "type": "SSD",
     "form_factor": "M.2-2280",
     "interface": "PCIe 4.0 x4",
-    "seq_read": 7300,
+    "seq_read": 7000,
     "seq_write": 7000,
-    "nand_type": "3D TLC (DRAM Cache)",
-    "endurance_tbw": 2000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
+    "endurance_tbw": 1600,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kingston NV3 1TB",
@@ -374,7 +458,10 @@
     "seq_write": 4000,
     "nand_type": "3D QLC/TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV3 2TB",
@@ -387,7 +474,10 @@
     "seq_write": 5000,
     "nand_type": "3D QLC/TLC",
     "endurance_tbw": 640,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV2 1TB",
@@ -400,7 +490,10 @@
     "seq_write": 2100,
     "nand_type": "3D TLC/QLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV2 2TB",
@@ -413,7 +506,10 @@
     "seq_write": 2800,
     "nand_type": "3D TLC/QLC",
     "endurance_tbw": 640,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Black SN850X 1TB",
@@ -423,10 +519,13 @@
     "form_factor": "M.2-2280",
     "interface": "PCIe 4.0 x4",
     "seq_read": 7300,
-    "seq_write": 6300,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "seq_write": 6600,
+    "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
+    "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
+    "dram_cache": "1GB DDR4 DRAM Cache",
+    "random_iops": "1200K / 1100K IOPS"
   },
   {
     "name": "WD Black SN850X 2TB",
@@ -437,9 +536,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7300,
     "seq_write": 6600,
-    "nand_type": "BiCS TLC (DRAM Cache)",
+    "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
+    "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1200K / 1100K IOPS"
   },
   {
     "name": "WD Black SN770 1TB",
@@ -452,7 +554,10 @@
     "seq_write": 4900,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Black SN770 2TB",
@@ -465,7 +570,10 @@
     "seq_write": 4850,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN580 1TB",
@@ -478,7 +586,10 @@
     "seq_write": 4150,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial T700 1TB",
@@ -489,9 +600,12 @@
     "interface": "PCIe 5.0 x4",
     "seq_read": 11700,
     "seq_write": 9500,
-    "nand_type": "Micron 232L TLC (DRAM)",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Crucial T700 2TB",
@@ -502,9 +616,12 @@
     "interface": "PCIe 5.0 x4",
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "Micron 232L TLC (DRAM)",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Crucial T500 1TB",
@@ -517,7 +634,10 @@
     "seq_write": 6800,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial T500 2TB",
@@ -530,7 +650,10 @@
     "seq_write": 7000,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 1200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial P3 Plus 1TB",
@@ -543,7 +666,10 @@
     "seq_write": 3600,
     "nand_type": "Micron 176L QLC",
     "endurance_tbw": 220,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial P3 Plus 2TB",
@@ -556,7 +682,10 @@
     "seq_write": 4200,
     "nand_type": "Micron 176L QLC",
     "endurance_tbw": 440,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Lexar NM790 1TB",
@@ -567,9 +696,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7400,
     "seq_write": 6500,
-    "nand_type": "YMTC 232L TLC",
-    "endurance_tbw": 1000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
+    "endurance_tbw": 750,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "random_iops": "1000K / 900K IOPS"
   },
   {
     "name": "Lexar NM790 2TB",
@@ -580,9 +712,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7400,
     "seq_write": 6500,
-    "nand_type": "YMTC 232L TLC",
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
     "endurance_tbw": 1500,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "random_iops": "1000K / 900K IOPS"
   },
   {
     "name": "Lexar NM790 4TB",
@@ -593,9 +728,12 @@
     "interface": "PCIe 4.0 x4",
     "seq_read": 7400,
     "seq_write": 6500,
-    "nand_type": "YMTC 232L TLC",
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
     "endurance_tbw": 3000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "random_iops": "1000K / 900K IOPS"
   },
   {
     "name": "Intel SSDPEDMD020T401",
@@ -609,7 +747,11 @@
     "seq_read": 3500,
     "seq_write": 3000,
     "nand_type": "3D TLC NAND",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4ab3a8901725966b71c6806fc7f6a08b.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4ab3a8901725966b71c6806fc7f6a08b.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS",
+    "endurance_tbw": 1200
   },
   {
     "name": "Crucial T705 1TB",
@@ -621,9 +763,12 @@
     "cache": 4096,
     "seq_read": 14500,
     "seq_write": 12700,
-    "nand_type": "3D TLC Micron 232-Layer",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 2400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Crucial T705 2TB",
@@ -635,9 +780,12 @@
     "cache": 4096,
     "seq_read": 14500,
     "seq_write": 12700,
-    "nand_type": "3D TLC Micron 232-Layer",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 4800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Crucial T705 4TB",
@@ -649,9 +797,12 @@
     "cache": 4096,
     "seq_read": 14500,
     "seq_write": 12700,
-    "nand_type": "3D TLC Micron 232-Layer",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 9600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Crucial T700 4TB",
@@ -663,9 +814,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC Micron 232-Layer",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 4800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Corsair MP700 PRO 1TB",
@@ -677,9 +831,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 1400,
-    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Corsair MP700 PRO 2TB",
@@ -691,9 +848,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 2800,
-    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Corsair MP700 PRO 4TB",
@@ -705,9 +865,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 5600,
-    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Kingston Fury Renegade 4TB",
@@ -717,11 +880,14 @@
     "form_factor": "M.2-2280",
     "interface": "PCIe 4.0 x4",
     "cache": 2048,
-    "seq_read": 7300,
+    "seq_read": 7000,
     "seq_write": 7000,
-    "nand_type": "3D TLC Micron 176-Layer",
-    "endurance_tbw": 8000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
+    "endurance_tbw": 3200,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "WD_BLACK SN850X 4TB",
@@ -733,9 +899,12 @@
     "cache": 2048,
     "seq_read": 7300,
     "seq_write": 6600,
-    "nand_type": "BiCS5 112-Layer TLC",
-    "endurance_tbw": 4800,
-    "imageUrl": null
+    "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
+    "endurance_tbw": 2400,
+    "imageUrl": null,
+    "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
+    "dram_cache": "2GB DDR4 DRAM Cache",
+    "random_iops": "1200K / 1100K IOPS"
   },
   {
     "name": "WD_BLACK SN770 500GB",
@@ -749,7 +918,10 @@
     "seq_write": 4900,
     "nand_type": "BiCS5 112-Layer TLC",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial P3 Plus 4TB",
@@ -763,7 +935,10 @@
     "seq_write": 4200,
     "nand_type": "3D QLC Micron",
     "endurance_tbw": 1760,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 870 EVO 500GB",
@@ -777,7 +952,10 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 870 EVO 1TB",
@@ -791,7 +969,10 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 870 EVO 2TB",
@@ -805,7 +986,10 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
@@ -817,9 +1001,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC Micron",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 1400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
@@ -831,9 +1018,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC Micron",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 2800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "MSI Spatium M570 PRO 4TB",
@@ -845,9 +1035,12 @@
     "cache": 2048,
     "seq_read": 12400,
     "seq_write": 11800,
-    "nand_type": "3D TLC Micron",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 5600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Samsung 980 PRO 500GB",
@@ -861,7 +1054,10 @@
     "seq_write": 5100,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston KC3000 512GB",
@@ -873,9 +1069,12 @@
     "cache": 2048,
     "seq_read": 7000,
     "seq_write": 7000,
-    "nand_type": "3D TLC Micron 176-Layer",
-    "endurance_tbw": 800,
-    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
+    "nand_type": "Micron 176-Katman 3D TLC (B47R)",
+    "endurance_tbw": 409,
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+    "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
+    "dram_cache": "1GB DDR4 DRAM Cache",
+    "random_iops": "1000K / 1000K IOPS"
   },
   {
     "name": "Kioxia Exceria Pro 1TB",
@@ -887,9 +1086,12 @@
     "cache": 2048,
     "seq_read": 7300,
     "seq_write": 6400,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 400,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "Kioxia Exceria Pro 2TB",
@@ -901,9 +1103,12 @@
     "cache": 2048,
     "seq_read": 7300,
     "seq_write": 6400,
-    "nand_type": "BiCS TLC",
-    "endurance_tbw": 1600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
+    "nand_type": "Kioxia 96-Katman BiCS4 TLC",
+    "endurance_tbw": 800,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+    "controller": "Phison PS5013-E13T",
+    "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
+    "random_iops": "350K / 350K IOPS"
   },
   {
     "name": "MSI Spatium M480 PRO 1TB",
@@ -917,7 +1122,10 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 1400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "MSI Spatium M480 PRO 2TB",
@@ -931,7 +1139,10 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 2800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "MSI Spatium M480 PRO 4TB",
@@ -945,7 +1156,10 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 5600,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN580 500GB",
@@ -959,7 +1173,10 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 450,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN580 2TB",
@@ -973,7 +1190,10 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 1800,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial P3 Plus 500GB",
@@ -987,7 +1207,10 @@
     "seq_write": 4200,
     "nand_type": "3D QLC Micron",
     "endurance_tbw": 220,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 970 EVO Plus 500GB",
@@ -1001,7 +1224,10 @@
     "seq_write": 3300,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Samsung 870 EVO 4TB",
@@ -1015,7 +1241,10 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 2400,
-    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial MX500 500GB",
@@ -1029,7 +1258,10 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 350,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial MX500 1TB",
@@ -1043,7 +1275,10 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 700,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial MX500 2TB",
@@ -1057,7 +1292,10 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 1400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial MX500 4TB",
@@ -1071,7 +1309,10 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 2800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Seagate FireCuda 540 1TB",
@@ -1083,9 +1324,12 @@
     "cache": 2048,
     "seq_read": 10000,
     "seq_write": 10000,
-    "nand_type": "3D TLC",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 2000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "Seagate FireCuda 540 2TB",
@@ -1097,9 +1341,12 @@
     "cache": 2048,
     "seq_read": 10000,
     "seq_write": 10000,
-    "nand_type": "3D TLC",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
     "endurance_tbw": 4000,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
   },
   {
     "name": "XPG Gammix S70 Blade 1TB",
@@ -1113,7 +1360,10 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 1480,
-    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "XPG Gammix S70 Blade 2TB",
@@ -1127,7 +1377,10 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 2960,
-    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "XPG Gammix S70 Blade 4TB",
@@ -1141,7 +1394,10 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 5920,
-    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Seagate FireCuda 530 1TB",
@@ -1155,7 +1411,10 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 2550,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Seagate FireCuda 530 2TB",
@@ -1169,7 +1428,10 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 5100,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Seagate FireCuda 530 4TB",
@@ -1183,7 +1445,10 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 10200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN5000 1TB",
@@ -1197,7 +1462,10 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN5000 2TB",
@@ -1211,7 +1479,10 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 2400,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "WD Blue SN5000 4TB",
@@ -1225,7 +1496,10 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 4800,
-    "imageUrl": null
+    "imageUrl": null,
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV3 500GB",
@@ -1239,7 +1513,10 @@
     "seq_write": 4000,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV3 4TB",
@@ -1253,7 +1530,10 @@
     "seq_write": 4000,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 2560,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston NV2 500GB",
@@ -1267,7 +1547,10 @@
     "seq_write": 2800,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kioxia Exceria G2 500GB",
@@ -1279,9 +1562,12 @@
     "cache": 1024,
     "seq_read": 2100,
     "seq_write": 1700,
-    "nand_type": "BiCS TLC (DRAM)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 200,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria G2 1TB",
@@ -1293,9 +1579,12 @@
     "cache": 1024,
     "seq_read": 2100,
     "seq_write": 1700,
-    "nand_type": "BiCS TLC (DRAM)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 400,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kioxia Exceria G2 2TB",
@@ -1307,9 +1596,12 @@
     "cache": 1024,
     "seq_read": 2100,
     "seq_write": 1700,
-    "nand_type": "BiCS TLC (DRAM)",
+    "nand_type": "Kioxia 96-Katman BiCS4 3D TLC",
     "endurance_tbw": 800,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+    "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
+    "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
+    "random_iops": "400K / 400K IOPS"
   },
   {
     "name": "Kingston KC600 512GB",
@@ -1323,7 +1615,10 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston KC600 1TB",
@@ -1337,7 +1632,10 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 614,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Kingston KC600 2TB",
@@ -1351,7 +1649,10 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 1228,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial BX500 500GB",
@@ -1365,7 +1666,10 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 180,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial BX500 1TB",
@@ -1379,7 +1683,10 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 360,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   },
   {
     "name": "Crucial BX500 2TB",
@@ -1393,6 +1700,9 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 720,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+    "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
+    "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
+    "random_iops": "750K / 650K IOPS"
   }
 ]

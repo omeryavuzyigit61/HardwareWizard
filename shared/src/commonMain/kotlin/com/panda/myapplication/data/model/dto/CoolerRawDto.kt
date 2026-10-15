@@ -15,5 +15,7 @@ data class CoolerRawDto(
     @SerialName("noise_level") val noiseLevel: Double? = null,
     @SerialName("sockets") val supportedSockets: List<String>? = null,
     @SerialName("max_tdp") val maxTdp: Int? = null,
+    @SerialName("radiator_dimensions") val radiatorDimensions: String? = null,
+    @SerialName("fan_airflow") val fanAirflow: String? = null,
     val imageUrl: String? = null,
 )

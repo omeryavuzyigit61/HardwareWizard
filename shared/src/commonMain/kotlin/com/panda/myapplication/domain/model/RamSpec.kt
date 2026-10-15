@@ -15,6 +15,9 @@ data class RamSpec(
     val voltage: Double? = null,
     val heatSpreader: Boolean? = null,
     val rgb: Boolean? = null,
+    val dieType: String? = null,
+    val timings: String? = null,
+    val profile: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.RAM

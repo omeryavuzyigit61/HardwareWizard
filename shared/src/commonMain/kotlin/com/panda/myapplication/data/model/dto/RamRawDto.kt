@@ -20,5 +20,8 @@ data class RamRawDto(
     val voltage: Double? = null,
     @SerialName("heat_spreader") val heatSpreader: Boolean? = null,
     val rgb: Boolean? = null,
+    @SerialName("die_type") val dieType: String? = null,
+    val timings: String? = null,
+    val profile: String? = null,
     val imageUrl: String? = null,
 )

@@ -31,7 +31,7 @@ import kotlinx.coroutines.CoroutineDispatcher
         CoolerSpecEntity::class,
         CaseSpecEntity::class,
     ],
-    version = 18,
+    version = 19,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

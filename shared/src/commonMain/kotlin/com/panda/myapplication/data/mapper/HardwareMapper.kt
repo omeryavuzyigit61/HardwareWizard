@@ -76,6 +76,9 @@ object HardwareMapper {
                     pcieVersion = c.pcieVersion,
                     maxMemorySpeed = c.maxMemorySpeed,
                     unlockedMultiplier = c.unlockedMultiplier,
+                    coreTopology = c.coreTopology,
+                    powerLimits = c.powerLimits,
+                    igpuModel = c.igpuModel,
                 )
             }
             itemWithSpec.gpu != null -> {
@@ -96,6 +99,13 @@ object HardwareMapper {
                     displayOutputs = g.displayOutputs,
                     slotWidth = g.slotWidth,
                     partNumber = g.partNumber,
+                    architecture = g.architecture,
+                    processNode = g.processNode,
+                    cudaCores = g.cudaCores,
+                    tensorAiTops = g.tensorAiTops,
+                    rtCores = g.rtCores,
+                    memorySpeedGbps = g.memorySpeedGbps,
+                    bandwidthGbs = g.bandwidthGbs,
                 )
             }
             itemWithSpec.ram != null -> {
@@ -110,6 +120,9 @@ object HardwareMapper {
                     voltage = r.voltage,
                     heatSpreader = r.heatSpreader,
                     rgb = r.rgb,
+                    dieType = r.dieType,
+                    timings = r.timings,
+                    profile = r.profile,
                 )
             }
             itemWithSpec.motherboard != null -> {
@@ -128,6 +141,11 @@ object HardwareMapper {
                     hasWifi = m.hasWifi,
                     vrmPhases = m.vrmPhases,
                     interfacePorts = m.interfacePorts,
+                    pcbLayers = m.pcbLayers,
+                    m2SlotsDetail = m.m2SlotsDetail,
+                    memorySpeedOc = m.memorySpeedOc,
+                    network = m.network,
+                    audioCodec = m.audioCodec,
                 )
             }
             itemWithSpec.psu != null -> {
@@ -151,6 +169,7 @@ object HardwareMapper {
                     protections = p.protections,
                     fanAndSize = p.fanAndSize,
                     cybeneticsCert = p.cybeneticsCert,
+                    cybeneticsLambda = p.cybeneticsLambda,
                 )
             }
             itemWithSpec.storage != null -> {
@@ -166,6 +185,9 @@ object HardwareMapper {
                     nandType = s.nandType,
                     enduranceTbw = s.enduranceTbw,
                     cacheMb = s.cacheMb,
+                    controller = s.controller,
+                    dramCache = s.dramCache,
+                    randomIops = s.randomIops,
                 )
             }
             itemWithSpec.cooler != null -> {
@@ -179,6 +201,8 @@ object HardwareMapper {
                     heightMm = cl.heightMm,
                     fanRpm = cl.fanRpm,
                     noiseDba = cl.noiseDba,
+                    radiatorDimensions = cl.radiatorDimensions,
+                    fanAirflow = cl.fanAirflow,
                 )
             }
             itemWithSpec.case != null -> {
@@ -190,6 +214,9 @@ object HardwareMapper {
                     maxRadiatorSizeMm = cs.maxRadiatorSizeMm,
                     sidePanel = cs.sidePanel,
                     driveBays = cs.driveBays,
+                    radiatorSupport = cs.radiatorSupport,
+                    includedFans = cs.includedFans,
+                    frontPanelUsb = cs.frontPanelUsb,
                 )
             }
             else -> return@runCatching null
@@ -364,6 +391,9 @@ object HardwareMapper {
             pcieVersion = pcieVersion,
             maxMemorySpeed = maxMemorySpeed,
             unlockedMultiplier = unlockedMultiplier,
+            coreTopology = dto.coreTopology,
+            powerLimits = dto.powerLimits,
+            igpuModel = dto.igpuModel,
         )
         return item to spec
     }
@@ -444,6 +474,13 @@ object HardwareMapper {
             displayOutputs = dto.displayOutputs,
             slotWidth = slotWidth,
             partNumber = partNumber,
+            architecture = dto.architecture,
+            processNode = dto.processNode,
+            cudaCores = dto.cudaCores,
+            tensorAiTops = dto.tensorAiTops,
+            rtCores = dto.rtCores,
+            memorySpeedGbps = dto.memorySpeedGbps,
+            bandwidthGbs = dto.bandwidthGbs,
         )
         return item to spec
     }
@@ -496,6 +533,9 @@ object HardwareMapper {
             voltage = dto.voltage,
             heatSpreader = dto.heatSpreader,
             rgb = dto.rgb,
+            dieType = dto.dieType,
+            timings = dto.timings,
+            profile = dto.profile,
         )
         return item to spec
     }
@@ -574,6 +614,11 @@ object HardwareMapper {
             hasWifi = hasWifi,
             vrmPhases = dto.vrmPhases,
             interfacePorts = dto.interfacePorts,
+            pcbLayers = dto.pcbLayers,
+            m2SlotsDetail = dto.m2SlotsDetail,
+            memorySpeedOc = dto.memorySpeedOc,
+            network = dto.network,
+            audioCodec = dto.audioCodec,
         )
         return item to spec
     }
@@ -678,6 +723,7 @@ object HardwareMapper {
             protections = protections,
             fanAndSize = fanAndSize,
             cybeneticsCert = cybeneticsCert,
+            cybeneticsLambda = dto.cybeneticsLambda,
         )
         return item to spec
     }
@@ -738,6 +784,9 @@ object HardwareMapper {
             nandType = dto.nandType,
             enduranceTbw = dto.enduranceTbw,
             cacheMb = dto.cacheMb,
+            controller = dto.controller,
+            dramCache = dto.dramCache,
+            randomIops = dto.randomIops,
         )
         return item to spec
     }
@@ -773,6 +822,8 @@ object HardwareMapper {
             heightMm = dto.heightMm,
             fanRpm = dto.fanRpm,
             noiseDba = dto.noiseLevel,
+            radiatorDimensions = dto.radiatorDimensions,
+            fanAirflow = dto.fanAirflow,
         )
         return item to spec
     }
@@ -825,6 +876,9 @@ object HardwareMapper {
             maxRadiatorSizeMm = dto.maxRadiatorSizeMm ?: maxRad,
             sidePanel = dto.sidePanel,
             driveBays = dto.driveBays,
+            radiatorSupport = dto.radiatorSupport,
+            includedFans = dto.includedFans,
+            frontPanelUsb = dto.frontPanelUsb,
         )
         return item to spec
     }

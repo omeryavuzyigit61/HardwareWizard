@@ -21,5 +21,10 @@ data class MotherboardRawDto(
     @SerialName("vrm_phases") val vrmPhases: String? = null,
     @SerialName("interface_ports") val interfacePorts: String? = null,
     @SerialName("has_wifi") val hasWifi: Boolean? = null,
+    @SerialName("pcb_layers") val pcbLayers: String? = null,
+    @SerialName("m2_slots_detail") val m2SlotsDetail: String? = null,
+    @SerialName("memory_speed_oc") val memorySpeedOc: String? = null,
+    val network: String? = null,
+    @SerialName("audio_codec") val audioCodec: String? = null,
     val imageUrl: String? = null,
 )

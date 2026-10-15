@@ -15,6 +15,9 @@ data class CpuSpec(
     val pcieVersion: String? = null,
     val maxMemorySpeed: String? = null,
     val unlockedMultiplier: Boolean? = null,
+    val coreTopology: String? = null,
+    val powerLimits: String? = null,
+    val igpuModel: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.CPU

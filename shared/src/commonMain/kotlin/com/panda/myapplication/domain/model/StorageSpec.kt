@@ -16,6 +16,9 @@ data class StorageSpec(
     val nandType: String? = null,
     val enduranceTbw: Int? = null,
     val cacheMb: Int? = null,
+    val controller: String? = null,
+    val dramCache: String? = null,
+    val randomIops: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.STORAGE

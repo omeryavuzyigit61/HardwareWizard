@@ -8,6 +8,9 @@ data class CaseSpec(
     val supportedMotherboardFormFactors: List<MotherboardFormFactor> = emptyList(),
     val sidePanel: String? = null,
     val driveBays: String? = null,
+    val radiatorSupport: String? = null,
+    val includedFans: String? = null,
+    val frontPanelUsb: String? = null,
 ) : HardwareSpec {
     override val category: HardwareCategory get() = HardwareCategory.CASE
 }
