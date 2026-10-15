@@ -568,9 +568,76 @@ def is_strict_variant_compatible(category: str, title: str, catalog_name: str) -
             if f"{num}G" in c_up and f"{num}G" not in t_up: return False
             if f"{num}G" in t_up and f"{num}G" not in c_up: return False
 
-    elif category == "ram":
-        if "DDR5" in c_up and "DDR5" not in t_up: return False
-        if "DDR4" in c_up and "DDR4" not in t_up: return False
+    elif category == "psu":
+        # 1. Wattage kontrolü: Watt kesinlikle birebir tutmalıdır
+        w_t = re.search(r"\b([0-9]{3,4})\s*W\b", t_up)
+        w_c = re.search(r"\b([0-9]{3,4})\s*W\b", c_up)
+        if w_t and w_c and w_t.group(1) != w_c.group(1):
+            return False
+
+        # 2. Seri ve Model ailesi izolasyonu (Thor, Pro WS, Strix, TUF vb.)
+        series_tokens = ["THOR", "PRO WS", "STRIX", "TUF", "TOUGHPOWER", "STRAIGHT POWER", "DARK POWER", "HYDRO", "MAG", "MPG", "FOCUS", "VERTEX", "RM", "HX", "AX"]
+        for st in series_tokens:
+            if st in c_up and st not in t_up: return False
+            if st in t_up and st not in c_up: return False
+
+        # 3. Sertifika izolasyonu
+        certs = ["TITANIUM", "PLATINUM", "BRONZE"]
+        for cert in certs:
+            if cert in c_up and cert not in t_up: return False
+            if cert in t_up and cert not in c_up: return False
+
+    elif category == "storage":
+        # 1. Model kodu / serisi izolasyonu
+        storage_models = [
+            "KC3000", "NV3", "NV2", "A400", "SN850X", "SN850", "SN770", "SN580", "SN570",
+            "990 PRO", "990 EVO", "980 PRO", "980", "970 EVO", "870 EVO",
+            "EXCERIA PRO", "EXCERIA PLUS", "EXCERIA G2", "EXCERIA",
+            "T700", "T500", "P3 PLUS", "P3", "NM790", "NM710"
+        ]
+        for sm in storage_models:
+            if sm in c_up and sm not in t_up: return False
+            if sm in t_up and sm not in c_up: return False
+
+        # 2. Kapasite kontrolü
+        for cap in ["500GB", "512GB", "1TB", "2TB", "4TB"]:
+            if cap in c_up and cap not in t_up: return False
+            if cap in t_up and cap not in c_up: return False
+
+    elif category == "cooler":
+        is_aio_c = any(x in c_up for x in ["AIO", "SIVI", "LIQUID", "240", "280", "360", "420"])
+        is_aio_t = any(x in t_up for x in ["AIO", "SIVI", "LIQUID", "240", "280", "360", "420"])
+        if is_aio_c != is_aio_t: return False
+
+        for rad in ["420", "360", "280", "240", "120"]:
+            if rad in c_up and rad not in t_up: return False
+            if rad in t_up and rad not in c_up: return False
+
+        cooler_series = ["FREEZER III", "FREEZER II", "PEERLESS ASSASSIN", "PHANTOM SPIRIT", "KRAKEN ELITE", "KRAKEN", "AK620", "AK400", "LT720", "LS720", "NH-D15", "TITAN 360", "RYUJIN"]
+        for cs in cooler_series:
+            if cs in c_up and cs not in t_up: return False
+            if cs in t_up and cs not in c_up: return False
+
+    elif category == "motherboard":
+        chips = ["X870E", "X870", "B650E", "B650", "A620", "Z890", "B860", "Z790", "B760", "H610", "B550", "B450", "X570"]
+        for ch in chips:
+            if ch in c_up and ch not in t_up: return False
+            if ch in t_up and ch not in c_up: return False
+
+        mobo_series = ["STRIX", "TUF", "PRIME", "PROART", "TOMAHAWK", "MORTAR", "CARBON", "GODLIKE", "AORUS", "EAGLE", "STEEL LEGEND", "TAICHI", "PRO RS", "N7", "N9"]
+        for ms in mobo_series:
+            if ms in c_up and ms not in t_up: return False
+            if ms in t_up and ms not in c_up: return False
+
+    elif category == "case":
+        case_models = [
+            "O11 DYNAMIC EVO XL", "O11 DYNAMIC EVO RGB", "O11 DYNAMIC EVO", "O11 VISION", "O11 MINI", "LANCOOL 216", "LANCOOL III", "A3-MATX",
+            "H9 FLOW", "H9 ELITE", "H7 FLOW", "H6 FLOW", "H5 FLOW",
+            "5000D", "4000D", "3500X", "6500X", "NORTH XL", "NORTH", "POP AIR", "KING 95", "SKY TWO", "GT502", "GT302"
+        ]
+        for cm in case_models:
+            if cm in c_up and cm not in t_up: return False
+            if cm in t_up and cm not in c_up: return False
 
     return True
 
@@ -603,9 +670,9 @@ def match_product(category: str, scraped_title: str, catalog_items: list[dict]) 
         common = scraped_tokens.intersection(item_tokens)
         score = len(common)
 
-        min_required = 2
-        if category in ["gpu", "motherboard", "psu", "cooler"]:
-            min_required = min(3, len(item_tokens))
+        min_required = 3
+        if category in ["gpu", "motherboard", "psu", "cooler", "storage"]:
+            min_required = min(4, len(item_tokens))
 
         if score > max_score and score >= min_required:
             max_score = score

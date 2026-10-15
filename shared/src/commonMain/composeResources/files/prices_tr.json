@@ -3989,100 +3989,13 @@
   },
   "gpu_asus_dual_geforce_rtx_3050_oc_6gb_gddr6_96_bit_ekran_kart": {
     "productId": "gpu_asus_dual_geforce_rtx_3050_oc_6gb_gddr6_96_bit_ekran_kart",
-    "currentPriceTry": 20699.0,
-    "lowestPriceTry": 17553.0,
-    "highestPriceTry": 20699.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758716",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_3050_oc_6gb_gddr6_96_bit_ekran_kart.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 18774.0,
-        "priceTry": 18774.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 17553.0,
-        "priceTry": 17553.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 18215.0,
-        "priceTry": 18215.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 18877.0,
-        "priceTry": 18877.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 19333.0,
-        "priceTry": 19333.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 19105.0,
-        "priceTry": 19105.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 19395.0,
-        "priceTry": 19395.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 19809.0,
-        "priceTry": 19809.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 20119.0,
-        "priceTry": 20119.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 20451.0,
-        "priceTry": 20451.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 20119.0,
-        "priceTry": 20119.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 20451.0,
-        "priceTry": 20451.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 20699.0,
-        "priceTry": 20699.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 20699.0,
-        "url": "https://www.gaming.gen.tr/urun/426201/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_asus_dual_geforce_rtx_5060_8gb_oc_gddr7_white_edition_128bit": {
     "productId": "gpu_asus_dual_geforce_rtx_5060_8gb_oc_gddr7_white_edition_128bit",
@@ -4888,294 +4801,33 @@
   },
   "gpu_msi_geforce_rtx_5070_12g_shadow_2x_oc_12gb_gddr7_192_bit_dlss_4_ekran_kart": {
     "productId": "gpu_msi_geforce_rtx_5070_12g_shadow_2x_oc_12gb_gddr7_192_bit_dlss_4_ekran_kart",
-    "currentPriceTry": 64999.0,
-    "lowestPriceTry": 56419.0,
-    "highestPriceTry": 64999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758667",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_12g_shadow_2x_oc_12gb_gddr7_192_bit_dlss_4_ekran_kart.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 58239.0,
-        "priceTry": 58239.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 56419.0,
-        "priceTry": 56419.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 58499.0,
-        "priceTry": 58499.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 58564.0,
-        "priceTry": 58564.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 59994.0,
-        "priceTry": 59994.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 61294.0,
-        "priceTry": 61294.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 62204.0,
-        "priceTry": 62204.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 61489.0,
-        "priceTry": 61489.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 62464.0,
-        "priceTry": 62464.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 63504.0,
-        "priceTry": 63504.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 64479.0,
-        "priceTry": 64479.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 63504.0,
-        "priceTry": 63504.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 64999.0,
-        "priceTry": 64999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 64999.0,
-        "url": "https://www.gaming.gen.tr/urun/695102/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_msi_geforce_rtx_5080_16g_gaming_trio_oc_16gb_gddr7_256_bit_dlss_4_ekran_kart": {
     "productId": "gpu_msi_geforce_rtx_5080_16g_gaming_trio_oc_16gb_gddr7_256_bit_dlss_4_ekran_kart",
-    "currentPriceTry": 120499.0,
-    "lowestPriceTry": 103147.0,
-    "highestPriceTry": 120499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758692",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_16g_gaming_trio_oc_16gb_gddr7_256_bit_dlss_4_ekran_kart.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 106521.0,
-        "priceTry": 106521.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 103147.0,
-        "priceTry": 103147.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 107003.0,
-        "priceTry": 107003.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 110859.0,
-        "priceTry": 110859.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 109775.0,
-        "priceTry": 109775.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 112185.0,
-        "priceTry": 112185.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 113872.0,
-        "priceTry": 113872.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 116282.0,
-        "priceTry": 116282.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 118089.0,
-        "priceTry": 118089.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 116282.0,
-        "priceTry": 116282.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 118089.0,
-        "priceTry": 118089.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 120017.0,
-        "priceTry": 120017.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 120499.0,
-        "priceTry": 120499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 120499.0,
-        "url": "https://www.gaming.gen.tr/urun/569435/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_msi_geforce_rtx_5060_8g_gaming_oc_8gb_gddr7_128_bit_dlss_4_ekran_kart": {
     "productId": "gpu_msi_geforce_rtx_5060_8g_gaming_oc_8gb_gddr7_128_bit_dlss_4_ekran_kart",
-    "currentPriceTry": 33499.0,
-    "lowestPriceTry": 29077.0,
-    "highestPriceTry": 33499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758789",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5060_8g_gaming_oc_8gb_gddr7_128_bit_dlss_4_ekran_kart.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 30015.0,
-        "priceTry": 30015.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 29077.0,
-        "priceTry": 29077.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 30149.0,
-        "priceTry": 30149.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 30183.0,
-        "priceTry": 30183.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 30920.0,
-        "priceTry": 30920.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 31590.0,
-        "priceTry": 31590.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 32059.0,
-        "priceTry": 32059.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 31690.0,
-        "priceTry": 31690.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 32193.0,
-        "priceTry": 32193.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 32729.0,
-        "priceTry": 32729.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 33231.0,
-        "priceTry": 33231.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 32729.0,
-        "priceTry": 32729.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 33499.0,
-        "priceTry": 33499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 33499.0,
-        "url": "https://www.gaming.gen.tr/urun/737722/msi-geforce-rtx-5060-8g-shadow-2x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-8g-shadow-2x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_gigabyte_geforce_rtx_5080_gaming_oc_gv_n5080gaming_oc_16gd_gddr7_16g_256bit": {
     "productId": "gpu_gigabyte_geforce_rtx_5080_gaming_oc_gv_n5080gaming_oc_16gd_gddr7_16g_256bit",
@@ -5269,294 +4921,33 @@
   },
   "gpu_msi_geforce_rtx_5050_8g_ventus_2x_oc_8gb_gddr6_128_bit_dlss_4_ekran_kart": {
     "productId": "gpu_msi_geforce_rtx_5050_8g_ventus_2x_oc_8gb_gddr6_128_bit_dlss_4_ekran_kart",
-    "currentPriceTry": 29499.0,
-    "lowestPriceTry": 25694.0,
-    "highestPriceTry": 29499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758642",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-2-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 26520.0,
-        "priceTry": 26520.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 25694.0,
-        "priceTry": 25694.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 25723.0,
-        "priceTry": 25723.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 26667.0,
-        "priceTry": 26667.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 27316.0,
-        "priceTry": 27316.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 27906.0,
-        "priceTry": 27906.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 28319.0,
-        "priceTry": 28319.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 27995.0,
-        "priceTry": 27995.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 28437.0,
-        "priceTry": 28437.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 28909.0,
-        "priceTry": 28909.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 29352.0,
-        "priceTry": 29352.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 28909.0,
-        "priceTry": 28909.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 29499.0,
-        "priceTry": 29499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 29499.0,
-        "url": "https://www.gaming.gen.tr/urun/761509/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_asus_dual_radeon_rx_9060_8gb_gddr6_128_bit_bulk_ekran_kart": {
     "productId": "gpu_asus_dual_radeon_rx_9060_8gb_gddr6_128_bit_bulk_ekran_kart",
-    "currentPriceTry": 20999.0,
-    "lowestPriceTry": 17744.0,
-    "highestPriceTry": 20999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758739",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/asus-dual-radeon-rx-9600-8gb-gddr6-128-bit-bulk-ekran-karti-2-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 18983.0,
-        "priceTry": 18983.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 17744.0,
-        "priceTry": 17744.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 18416.0,
-        "priceTry": 18416.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 19088.0,
-        "priceTry": 19088.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 19550.0,
-        "priceTry": 19550.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 19970.0,
-        "priceTry": 19970.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 19613.0,
-        "priceTry": 19613.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 20033.0,
-        "priceTry": 20033.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 20348.0,
-        "priceTry": 20348.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 20684.0,
-        "priceTry": 20684.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 20348.0,
-        "priceTry": 20348.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 20684.0,
-        "priceTry": 20684.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 20999.0,
-        "priceTry": 20999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 20999.0,
-        "url": "https://www.gaming.gen.tr/urun/811861/asus-dual-radeon-rx-9060-8gb-gddr6-128-bit-bulk-ekran-karti/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/asus-dual-radeon-rx-9600-8gb-gddr6-128-bit-bulk-ekran-karti-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "gpu_galax_geforce_rtx_5080_1_click_oc_white_16gb_gddr7_256_bit_dlss_4_ekran_kart_58nzn6mdbcwh": {
     "productId": "gpu_galax_geforce_rtx_5080_1_click_oc_white_16gb_gddr7_256_bit_dlss_4_ekran_kart_58nzn6mdbcwh",
-    "currentPriceTry": 199999.0,
-    "lowestPriceTry": 174799.0,
-    "highestPriceTry": 199999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758765",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/galax-geforce-rtx-5080-1-click-oc-white-16gb-gddr7-256-bit-ekran-karti-58nzn6mdbcwh-2-yil-birebir-degisim-garantili-2-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 180399.0,
-        "priceTry": 180399.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 174799.0,
-        "priceTry": 174799.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 174999.0,
-        "priceTry": 174999.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 181399.0,
-        "priceTry": 181399.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 185799.0,
-        "priceTry": 185799.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 189799.0,
-        "priceTry": 189799.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 186399.0,
-        "priceTry": 186399.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 190399.0,
-        "priceTry": 190399.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 193399.0,
-        "priceTry": 193399.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 196599.0,
-        "priceTry": 196599.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 199599.0,
-        "priceTry": 199599.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 196599.0,
-        "priceTry": 196599.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 199999.0,
-        "priceTry": 199999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 199999.0,
-        "url": "https://www.gaming.gen.tr/urun/478468/galax-geforce-rtx-5080-1-click-oc-white-16gb-gddr7-256-bit-dlss-4-ekran-karti-58nzn6mdbcwh/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/galax-geforce-rtx-5080-1-click-oc-white-16gb-gddr7-256-bit-ekran-karti-58nzn6mdbcwh-2-yil-birebir-degisim-garantili-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_b760_gaming_plus_wifi": {
     "productId": "motherboard_msi_b760_gaming_plus_wifi",
@@ -5767,100 +5158,13 @@
   },
   "motherboard_msi_mpg_x870e_carbon_wifi": {
     "productId": "motherboard_msi_mpg_x870e_carbon_wifi",
-    "currentPriceTry": 20999.0,
-    "lowestPriceTry": 18374.0,
-    "highestPriceTry": 20999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758889",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_mpg_x870e_carbon_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 18962.0,
-        "priceTry": 18962.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 18374.0,
-        "priceTry": 18374.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 18395.0,
-        "priceTry": 18395.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 19067.0,
-        "priceTry": 19067.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 19529.0,
-        "priceTry": 19529.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 19949.0,
-        "priceTry": 19949.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 19592.0,
-        "priceTry": 19592.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 20012.0,
-        "priceTry": 20012.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 20327.0,
-        "priceTry": 20327.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 20663.0,
-        "priceTry": 20663.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 20327.0,
-        "priceTry": 20327.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 20663.0,
-        "priceTry": 20663.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 20999.0,
-        "priceTry": 20999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 20999.0,
-        "url": "https://www.gaming.gen.tr/urun/599637/msi-mag-x870e-tomahawk-wifi-8400mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msi-mag-x870e-tomahawk-wifi-8400mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart-2-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_asus_tuf_gaming_x870_plus_wifi": {
     "productId": "motherboard_asus_tuf_gaming_x870_plus_wifi",
@@ -5971,100 +5275,13 @@
   },
   "motherboard_asus_x870e_tuf_gaming_plus_wifi": {
     "productId": "motherboard_asus_x870e_tuf_gaming_plus_wifi",
-    "currentPriceTry": 30999.0,
-    "lowestPriceTry": 26783.0,
-    "highestPriceTry": 31123.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.758936",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_x870e_tuf_gaming_plus_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 27651.0,
-        "priceTry": 27651.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 26783.0,
-        "priceTry": 26783.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 27775.0,
-        "priceTry": 27775.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 27806.0,
-        "priceTry": 27806.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 28488.0,
-        "priceTry": 28488.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 29108.0,
-        "priceTry": 29108.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 29542.0,
-        "priceTry": 29542.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 30162.0,
-        "priceTry": 30162.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 29666.0,
-        "priceTry": 29666.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 30162.0,
-        "priceTry": 30162.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 30627.0,
-        "priceTry": 30627.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 31123.0,
-        "priceTry": 31123.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 30999.0,
-        "priceTry": 30999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 30999.0,
-        "url": "https://www.gaming.gen.tr/urun/517150/asus-proart-x870e-creator-wifi-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/proart-mb-lcd-5-year-qr-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_x870e_meg_ace": {
     "productId": "motherboard_msi_x870e_meg_ace",
@@ -6422,197 +5639,23 @@
   },
   "motherboard_asus_prime_a520m_e_csm_5100mhz_oc_ddr4_soket_am4_m_2_hdmi_matx": {
     "productId": "motherboard_asus_prime_a520m_e_csm_5100mhz_oc_ddr4_soket_am4_m_2_hdmi_matx",
-    "currentPriceTry": 3299.0,
-    "lowestPriceTry": 2860.0,
-    "highestPriceTry": 3322.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759107",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/08/asus-prime-h610m-e-csm-5600mhz-ddr5-soket-1700-m-2-hdmi-dp-vga-matx-anakart-1-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 2953.0,
-        "priceTry": 2953.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 2860.0,
-        "priceTry": 2860.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 2966.0,
-        "priceTry": 2966.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 2969.0,
-        "priceTry": 2969.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 3042.0,
-        "priceTry": 3042.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 3108.0,
-        "priceTry": 3108.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 3154.0,
-        "priceTry": 3154.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 3118.0,
-        "priceTry": 3118.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 3167.0,
-        "priceTry": 3167.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 3220.0,
-        "priceTry": 3220.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 3269.0,
-        "priceTry": 3269.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 3322.0,
-        "priceTry": 3322.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 3299.0,
-        "priceTry": 3299.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 3299.0,
-        "url": "https://www.gaming.gen.tr/urun/335361/asus-prime-h610m-e-csm-5600mhz-ddr5-soket-1700-m-2-hdmi-dp-vga-matx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/08/asus-prime-h610m-e-csm-5600mhz-ddr5-soket-1700-m-2-hdmi-dp-vga-matx-anakart-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_asus_ex_b650m_v7_8000mhz_oc_ddr5_soket_am5_m_2_hdmi_matx": {
     "productId": "motherboard_asus_ex_b650m_v7_8000mhz_oc_ddr5_soket_am5_m_2_hdmi_matx",
-    "currentPriceTry": 5999.0,
-    "lowestPriceTry": 5165.0,
-    "highestPriceTry": 6005.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759151",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/01/asus-prime-b650m-r-7200mhz-oc-ddr5-soket-am5-m-2-hdmi-matx-anakart-1-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 5333.0,
-        "priceTry": 5333.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 5165.0,
-        "priceTry": 5165.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 5357.0,
-        "priceTry": 5357.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 5549.0,
-        "priceTry": 5549.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 5495.0,
-        "priceTry": 5495.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 5615.0,
-        "priceTry": 5615.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 5699.0,
-        "priceTry": 5699.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 5819.0,
-        "priceTry": 5819.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 5723.0,
-        "priceTry": 5723.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 5819.0,
-        "priceTry": 5819.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 5909.0,
-        "priceTry": 5909.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 6005.0,
-        "priceTry": 6005.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 5999.0,
-        "priceTry": 5999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 5999.0,
-        "url": "https://www.gaming.gen.tr/urun/414290/asus-prime-b650m-r-7200mhz-oc-ddr5-soket-am5-m-2-hdmi-matx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/01/asus-prime-b650m-r-7200mhz-oc-ddr5-soket-am5-m-2-hdmi-matx-anakart-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_colorful_battle_ax_b760m_g_beyaz_wifi_ddr5_7200mhz_matx_gaming_oyuncu": {
     "productId": "motherboard_colorful_battle_ax_b760m_g_beyaz_wifi_ddr5_7200mhz_matx_gaming_oyuncu",
@@ -7027,100 +6070,13 @@
   },
   "motherboard_asus_pro_a620m_dash_csm_amd_a620_soket_am5_ddr5_7200mhz_pcie_4_0": {
     "productId": "motherboard_asus_pro_a620m_dash_csm_amd_a620_soket_am5_ddr5_7200mhz_pcie_4_0",
-    "currentPriceTry": 4999.0,
-    "lowestPriceTry": 4289.0,
-    "highestPriceTry": 4999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759336",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_pro_a620m_dash_csm_amd_a620_soket_am5_ddr5_7200mhz_pcie_4_0.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 4429.0,
-        "priceTry": 4429.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 4289.0,
-        "priceTry": 4289.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 4449.0,
-        "priceTry": 4449.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 4609.0,
-        "priceTry": 4609.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 4564.0,
-        "priceTry": 4564.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 4664.0,
-        "priceTry": 4664.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 4734.0,
-        "priceTry": 4734.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 4834.0,
-        "priceTry": 4834.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 4754.0,
-        "priceTry": 4754.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 4834.0,
-        "priceTry": 4834.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 4909.0,
-        "priceTry": 4909.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 4989.0,
-        "priceTry": 4989.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 4999.0,
-        "priceTry": 4999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 4999.0,
-        "url": "https://www.gaming.gen.tr/urun/330060/asus-prime-a620m-k-6400mhz-oc-ddr5-soket-am5-m-2-hdmi-vga-matx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/08/asus-prime-a620m-k-6400mhz-ddr5-soket-am5-m-2-hdmi-matx-anakart-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_gigabyte_b650m_s2h_amd_soket_am5_ddr5_7200mhz_oc_micro_atx": {
     "productId": "motherboard_gigabyte_b650m_s2h_amd_soket_am5_ddr5_7200mhz_oc_micro_atx",
@@ -7194,197 +6150,23 @@
   },
   "motherboard_asus_b850_rog_strix_a_gaming_wifi": {
     "productId": "motherboard_asus_b850_rog_strix_a_gaming_wifi",
-    "currentPriceTry": 12499.0,
-    "lowestPriceTry": 10699.0,
-    "highestPriceTry": 12499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759403",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b850_rog_strix_a_gaming_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 11049.0,
-        "priceTry": 11049.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 10699.0,
-        "priceTry": 10699.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 11099.0,
-        "priceTry": 11099.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 11499.0,
-        "priceTry": 11499.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 11387.0,
-        "priceTry": 11387.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 11637.0,
-        "priceTry": 11637.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 11812.0,
-        "priceTry": 11812.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 12062.0,
-        "priceTry": 12062.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 12249.0,
-        "priceTry": 12249.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 12062.0,
-        "priceTry": 12062.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 12249.0,
-        "priceTry": 12249.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 12449.0,
-        "priceTry": 12449.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 12499.0,
-        "priceTry": 12499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 12499.0,
-        "url": "https://www.gaming.gen.tr/urun/709980/asus-b850-max-gaming-wifi-w-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-b850-max-gaming-wifi-w-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-dp-atx-anakart-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_asus_b850_tuf_gaming_plus_wifi": {
     "productId": "motherboard_asus_b850_tuf_gaming_plus_wifi",
-    "currentPriceTry": 12499.0,
-    "lowestPriceTry": 10787.0,
-    "highestPriceTry": 12536.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759423",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b850_tuf_gaming_plus_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 11137.0,
-        "priceTry": 11137.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 10787.0,
-        "priceTry": 10787.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 11187.0,
-        "priceTry": 11187.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 11199.0,
-        "priceTry": 11199.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 11474.0,
-        "priceTry": 11474.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 11724.0,
-        "priceTry": 11724.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 11899.0,
-        "priceTry": 11899.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 12149.0,
-        "priceTry": 12149.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 11949.0,
-        "priceTry": 11949.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 12149.0,
-        "priceTry": 12149.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 12337.0,
-        "priceTry": 12337.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 12536.0,
-        "priceTry": 12536.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 12499.0,
-        "priceTry": 12499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 12499.0,
-        "url": "https://www.gaming.gen.tr/urun/709957/asus-prime-b850-plus-csm-8000mhz-oc-ddr5-am5-soket-m-2-hdmi-dp-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-prime-b850-plus-csm-8000mhz-oc-ddr5-am5-soket-m-2-hdmi-dp-atx-anakart-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_asus_b850_proart_creator": {
     "productId": "motherboard_asus_b850_proart_creator",
@@ -7408,100 +6190,13 @@
   },
   "motherboard_asus_h610_tuf_gaming_plus_wifi": {
     "productId": "motherboard_asus_h610_tuf_gaming_plus_wifi",
-    "currentPriceTry": 14499.0,
-    "lowestPriceTry": 12513.0,
-    "highestPriceTry": 14542.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759454",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_h610_tuf_gaming_plus_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 12919.0,
-        "priceTry": 12919.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 12513.0,
-        "priceTry": 12513.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 12977.0,
-        "priceTry": 12977.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 12991.0,
-        "priceTry": 12991.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 13310.0,
-        "priceTry": 13310.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 13600.0,
-        "priceTry": 13600.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 13803.0,
-        "priceTry": 13803.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 14093.0,
-        "priceTry": 14093.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 13861.0,
-        "priceTry": 13861.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 14093.0,
-        "priceTry": 14093.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 14311.0,
-        "priceTry": 14311.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 14542.0,
-        "priceTry": 14542.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 14499.0,
-        "priceTry": 14499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 14499.0,
-        "url": "https://www.gaming.gen.tr/urun/517702/asus-rog-strix-b860-a-gaming-wifi-8600mhz-oc-ddr5-soket-lga1851-m-2-hdmi-dp-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/proart-rog-tuf-5-year-qr-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_h610_mag_mortar_wifi": {
     "productId": "motherboard_msi_h610_mag_mortar_wifi",
@@ -7515,100 +6210,13 @@
   },
   "motherboard_msi_h610_pro_a_wifi": {
     "productId": "motherboard_msi_h610_pro_a_wifi",
-    "currentPriceTry": 3199.0,
-    "lowestPriceTry": 2722.0,
-    "highestPriceTry": 3199.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759478",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_h610_pro_a_wifi.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 2911.0,
-        "priceTry": 2911.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 2722.0,
-        "priceTry": 2722.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 2825.0,
-        "priceTry": 2825.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 2927.0,
-        "priceTry": 2927.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 2997.0,
-        "priceTry": 2997.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 2962.0,
-        "priceTry": 2962.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 3007.0,
-        "priceTry": 3007.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 3071.0,
-        "priceTry": 3071.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 3119.0,
-        "priceTry": 3119.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 3071.0,
-        "priceTry": 3071.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 3119.0,
-        "priceTry": 3119.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 3170.0,
-        "priceTry": 3170.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 3199.0,
-        "priceTry": 3199.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 3199.0,
-        "url": "https://www.gaming.gen.tr/urun/84499/msi-a520m-a-pro-4600mhzoc-ddr4-soket-am4-m-2-matx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-a520m-a-pro-4600mhzoc-ddr4-soket-am4-m-2-matx-anakart-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_h610_mpg_edge_wifi": {
     "productId": "motherboard_msi_h610_mpg_edge_wifi",
@@ -7622,100 +6230,13 @@
   },
   "motherboard_asus_prime_b850m_k_8400mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_matx": {
     "productId": "motherboard_asus_prime_b850m_k_8400mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_matx",
-    "currentPriceTry": 3599.0,
-    "lowestPriceTry": 3131.0,
-    "highestPriceTry": 3599.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759508",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/asus-prime-h610m-k-argb-5600mhz-ddr5-soket-1700-m-2-hdmi-matx-anakart-2-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 3232.0,
-        "priceTry": 3232.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 3131.0,
-        "priceTry": 3131.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 3135.0,
-        "priceTry": 3135.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 3250.0,
-        "priceTry": 3250.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 3329.0,
-        "priceTry": 3329.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 3401.0,
-        "priceTry": 3401.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 3451.0,
-        "priceTry": 3451.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 3412.0,
-        "priceTry": 3412.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 3466.0,
-        "priceTry": 3466.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 3523.0,
-        "priceTry": 3523.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 3577.0,
-        "priceTry": 3577.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 3523.0,
-        "priceTry": 3523.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 3599.0,
-        "priceTry": 3599.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 3599.0,
-        "url": "https://www.gaming.gen.tr/urun/351916/asus-prime-h610m-k-argb-5600mhz-ddr5-soket-1700-m-2-hdmi-matx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/asus-prime-h610m-k-argb-5600mhz-ddr5-soket-1700-m-2-hdmi-matx-anakart-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_b850_gaming_plus_wifi6e_8200mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_atx": {
     "productId": "motherboard_msi_b850_gaming_plus_wifi6e_8200mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_atx",
@@ -8060,100 +6581,13 @@
   },
   "motherboard_asus_rog_crosshair_x870e_apex_9600mhz_oc_ddr5_soket_am5_m_2_type_c_atx_anakart": {
     "productId": "motherboard_asus_rog_crosshair_x870e_apex_9600mhz_oc_ddr5_soket_am5_m_2_type_c_atx_anakart",
-    "currentPriceTry": 24999.0,
-    "lowestPriceTry": 21274.0,
-    "highestPriceTry": 24999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.759634",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/proart-rog-tuf-5-year-qr-300x300.jpg",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 22749.0,
-        "priceTry": 22749.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 21274.0,
-        "priceTry": 21274.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 22074.0,
-        "priceTry": 22074.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 22874.0,
-        "priceTry": 22874.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 23424.0,
-        "priceTry": 23424.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 23149.0,
-        "priceTry": 23149.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 23499.0,
-        "priceTry": 23499.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 23999.0,
-        "priceTry": 23999.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 24374.0,
-        "priceTry": 24374.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 23999.0,
-        "priceTry": 23999.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 24374.0,
-        "priceTry": 24374.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 24774.0,
-        "priceTry": 24774.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 24999.0,
-        "priceTry": 24999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 24999.0,
-        "url": "https://www.gaming.gen.tr/urun/735680/asus-tuf-gaming-x870e-plus-wifi7-8000mhz-oc-ddr5-soket-am5-m-2-hdmi-atx-anakart/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/proart-rog-tuf-5-year-qr-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "motherboard_msi_b840_gaming_plus_wifi_8000mhz_oc_ddr5_soket_am5_m_2_hdmi_atx_anakart": {
     "productId": "motherboard_msi_b840_gaming_plus_wifi_8000mhz_oc_ddr5_soket_am5_m_2_hdmi_atx_anakart",
@@ -10128,100 +8562,13 @@
   },
   "storage_kingston_kc3000_2tb": {
     "productId": "storage_kingston_kc3000_2tb",
-    "currentPriceTry": 15399.0,
-    "lowestPriceTry": 13289.0,
-    "highestPriceTry": 15445.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760380",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_2tb.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 13721.0,
-        "priceTry": 13721.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 13289.0,
-        "priceTry": 13289.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 13782.0,
-        "priceTry": 13782.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 13798.0,
-        "priceTry": 13798.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 14136.0,
-        "priceTry": 14136.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 14444.0,
-        "priceTry": 14444.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 14660.0,
-        "priceTry": 14660.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 14968.0,
-        "priceTry": 14968.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 14721.0,
-        "priceTry": 14721.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 14968.0,
-        "priceTry": 14968.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 15199.0,
-        "priceTry": 15199.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 15445.0,
-        "priceTry": 15445.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 15399.0,
-        "priceTry": 15399.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 15399.0,
-        "url": "https://www.gaming.gen.tr/urun/508776/kingston-nv3-2tb-nvme-pcie-4-0-okuma-6000mb-yazma-5000mb-m-2-ssd-snv3s-2000g/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/08/kingston-nv3-2tb-nvme-pcie-4-0-okuma-6000mb-yazma-5000mb-m-2-ssd-snv3s-2000g-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "storage_kingston_kc3000_4tb": {
     "productId": "storage_kingston_kc3000_4tb",
@@ -10265,100 +8612,13 @@
   },
   "storage_wd_black_sn850x_1tb": {
     "productId": "storage_wd_black_sn850x_1tb",
-    "currentPriceTry": 8499.0,
-    "lowestPriceTry": 7199.0,
-    "highestPriceTry": 8499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760421",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 7700.0,
-        "priceTry": 7700.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 7199.0,
-        "priceTry": 7199.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 7471.0,
-        "priceTry": 7471.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 7743.0,
-        "priceTry": 7743.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 7930.0,
-        "priceTry": 7930.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 8100.0,
-        "priceTry": 8100.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 7955.0,
-        "priceTry": 7955.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 8125.0,
-        "priceTry": 8125.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 8253.0,
-        "priceTry": 8253.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 8389.0,
-        "priceTry": 8389.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 8253.0,
-        "priceTry": 8253.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 8389.0,
-        "priceTry": 8389.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 8499.0,
-        "priceTry": 8499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 8499.0,
-        "url": "https://www.gaming.gen.tr/urun/871607/wd-green-sn3000-1tb-nvme-pcie-gen4-x4-okuma-5000mb-4200mb-m-2-ssd-wds100t4g0e/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/02/wd-green-sn3000-1tb-nvme-pcie-gen4-x4-okuma-5000mb-4200mb-m-2-ssd-wds100t4g0e-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "storage_wd_black_sn850x_2tb": {
     "productId": "storage_wd_black_sn850x_2tb",
@@ -10382,100 +8642,13 @@
   },
   "storage_lexar_nm790_1tb": {
     "productId": "storage_lexar_nm790_1tb",
-    "currentPriceTry": 11499.0,
-    "lowestPriceTry": 10062.0,
-    "highestPriceTry": 11499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760450",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/lexar_nm790_1tb.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 10384.0,
-        "priceTry": 10384.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 10062.0,
-        "priceTry": 10062.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 10073.0,
-        "priceTry": 10073.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 10441.0,
-        "priceTry": 10441.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 10694.0,
-        "priceTry": 10694.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 10924.0,
-        "priceTry": 10924.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 10729.0,
-        "priceTry": 10729.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 10959.0,
-        "priceTry": 10959.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 11131.0,
-        "priceTry": 11131.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 11315.0,
-        "priceTry": 11315.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 11131.0,
-        "priceTry": 11131.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 11315.0,
-        "priceTry": 11315.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 11499.0,
-        "priceTry": 11499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 11499.0,
-        "url": "https://www.gaming.gen.tr/urun/997452/lexar-play-2280-1tb-nvme-pcie-gen4-x4-okuma-7400mb-yazma-6500mb-ps5-uyumlu-sogutuculu-m-2-ssd-lnmply8001t-rnnng/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/10/lexar-play-2280-1tb-nvme-pcie-gen4-x4-okuma-7400mb-yazma-6500mb-ps5-uyumlu-sogutuculu-m-2-ssd-lnmply8001t-rnnng-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "storage_lexar_nm790_2tb": {
     "productId": "storage_lexar_nm790_2tb",
@@ -10499,100 +8672,13 @@
   },
   "storage_wd_black_sn770_500gb": {
     "productId": "storage_wd_black_sn770_500gb",
-    "currentPriceTry": 5499.0,
-    "lowestPriceTry": 4652.0,
-    "highestPriceTry": 5499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760480",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_500gb.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 4977.0,
-        "priceTry": 4977.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 4652.0,
-        "priceTry": 4652.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 4828.0,
-        "priceTry": 4828.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 5004.0,
-        "priceTry": 5004.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 5125.0,
-        "priceTry": 5125.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 5235.0,
-        "priceTry": 5235.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 5142.0,
-        "priceTry": 5142.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 5252.0,
-        "priceTry": 5252.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 5334.0,
-        "priceTry": 5334.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 5422.0,
-        "priceTry": 5422.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 5334.0,
-        "priceTry": 5334.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 5422.0,
-        "priceTry": 5422.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 5499.0,
-        "priceTry": 5499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 5499.0,
-        "url": "https://www.gaming.gen.tr/urun/961298/wd-blue-sn5100-500gb-nvme-pcie-gen4-x4-okuma-6600mb-yazma-5600mb-m-2-ssd-wds500g5b0e/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/08/wd-blue-sn5100-500gb-nvme-pcie-gen4-x4-okuma-6600mb-yazma-5600mb-m-2-ssd-wds500g5b0e-fc2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "storage_wd_black_sn770_2tb": {
     "productId": "storage_wd_black_sn770_2tb",
@@ -10910,100 +8996,13 @@
   },
   "storage_wd_blue_sn580_1tb": {
     "productId": "storage_wd_blue_sn580_1tb",
-    "currentPriceTry": 9499.0,
-    "lowestPriceTry": 8160.0,
-    "highestPriceTry": 9499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760599",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 8426.0,
-        "priceTry": 8426.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 8160.0,
-        "priceTry": 8160.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 8464.0,
-        "priceTry": 8464.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 8768.0,
-        "priceTry": 8768.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 8682.0,
-        "priceTry": 8682.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 8872.0,
-        "priceTry": 8872.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 9005.0,
-        "priceTry": 9005.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 9195.0,
-        "priceTry": 9195.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 9043.0,
-        "priceTry": 9043.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 9195.0,
-        "priceTry": 9195.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 9338.0,
-        "priceTry": 9338.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 9490.0,
-        "priceTry": 9490.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 9499.0,
-        "priceTry": 9499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 9499.0,
-        "url": "https://www.gaming.gen.tr/urun/871582/wd-blue-sn5100-1tb-nvme-pcie-gen4-x4-okuma-7100mb-yazma-6700mb-m-2-ssd-wds100t5b0e/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/02/wd-blue-sn5100-1tb-nvme-pcie-gen-4-0-okuma-7100mb-yazma-6700mb-m-2-ssd-wds100t5b0e-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "storage_wd_blue_sn580_2tb": {
     "productId": "storage_wd_blue_sn580_2tb",
@@ -11504,100 +9503,13 @@
   },
   "psu_cougar_ges_atx_3_1_850w": {
     "productId": "psu_cougar_ges_atx_3_1_850w",
-    "currentPriceTry": 7399.0,
-    "lowestPriceTry": 6378.0,
-    "highestPriceTry": 7414.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.760862",
     "imageUrl": "https://ironscalelabs.com/images/psu-auto/cougar-ges-atx-3-1-850w-2025-0/outside-v182.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 6585.0,
-        "priceTry": 6585.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 6378.0,
-        "priceTry": 6378.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 6615.0,
-        "priceTry": 6615.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 6622.0,
-        "priceTry": 6622.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 6785.0,
-        "priceTry": 6785.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 6933.0,
-        "priceTry": 6933.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 7036.0,
-        "priceTry": 7036.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 7184.0,
-        "priceTry": 7184.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 7066.0,
-        "priceTry": 7066.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 7184.0,
-        "priceTry": 7184.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 7295.0,
-        "priceTry": 7295.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 7414.0,
-        "priceTry": 7414.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 7399.0,
-        "priceTry": 7399.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 7399.0,
-        "url": "https://www.gaming.gen.tr/urun/866742/msi-mag-a850gls-pcie5-850w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a850gls-pcie5-850w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_cougar_atlas_atx_3_1_650w": {
     "productId": "psu_cougar_atlas_atx_3_1_650w",
@@ -12958,100 +10870,13 @@
   },
   "psu_msi_mag_a_pls_1200w": {
     "productId": "psu_msi_mag_a_pls_1200w",
-    "currentPriceTry": 14499.0,
-    "lowestPriceTry": 12382.0,
-    "highestPriceTry": 14499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.761587",
     "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-pls-1000w-2026-0/outside-v182.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 12788.0,
-        "priceTry": 12788.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 12382.0,
-        "priceTry": 12382.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 12846.0,
-        "priceTry": 12846.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 13310.0,
-        "priceTry": 13310.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 13629.0,
-        "priceTry": 13629.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 13470.0,
-        "priceTry": 13470.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 13673.0,
-        "priceTry": 13673.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 13963.0,
-        "priceTry": 13963.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 14180.0,
-        "priceTry": 14180.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 13963.0,
-        "priceTry": 13963.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 14180.0,
-        "priceTry": 14180.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 14412.0,
-        "priceTry": 14412.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 14499.0,
-        "priceTry": 14499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 14499.0,
-        "url": "https://www.gaming.gen.tr/urun/856359/msi-mag-a1200pls-pcie5-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1200pls-pcie5-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-fc2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_msi_mag_a_gls_750w": {
     "productId": "psu_msi_mag_a_gls_750w",
@@ -13675,100 +11500,13 @@
   },
   "psu_nzxt_c_gold_atx_3_1_2024_850w": {
     "productId": "psu_nzxt_c_gold_atx_3_1_2024_850w",
-    "currentPriceTry": 5499.0,
-    "lowestPriceTry": 4658.0,
-    "highestPriceTry": 5499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.761924",
     "imageUrl": "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-atx-3-1-2024-1200w-2024-0/outside-v182.png",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 4982.0,
-        "priceTry": 4982.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 4658.0,
-        "priceTry": 4658.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 4834.0,
-        "priceTry": 4834.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 5010.0,
-        "priceTry": 5010.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 5131.0,
-        "priceTry": 5131.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 5241.0,
-        "priceTry": 5241.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 5147.0,
-        "priceTry": 5147.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 5257.0,
-        "priceTry": 5257.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 5340.0,
-        "priceTry": 5340.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 5428.0,
-        "priceTry": 5428.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 5340.0,
-        "priceTry": 5340.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 5428.0,
-        "priceTry": 5428.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 5499.0,
-        "priceTry": 5499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 5499.0,
-        "url": "https://www.gaming.gen.tr/urun/867589/enermax-revolution-iii-850w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv850g-ahg-mac-2-yil-birebir-degisim-garantili/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-850w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv850g-ahg-mac-2-yil-birebir-degisim-garantili-2-64x64.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_lian_li_edge_1000w": {
     "productId": "psu_lian_li_edge_1000w",
@@ -13782,100 +11520,13 @@
   },
   "psu_asus_rog_strix_850w_gold_aura_edition": {
     "productId": "psu_asus_rog_strix_850w_gold_aura_edition",
-    "currentPriceTry": 12499.0,
-    "lowestPriceTry": 10724.0,
-    "highestPriceTry": 12499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.761951",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_850w_gold_aura_edition.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 11074.0,
-        "priceTry": 11074.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 10724.0,
-        "priceTry": 10724.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 11124.0,
-        "priceTry": 11124.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 11524.0,
-        "priceTry": 11524.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 11412.0,
-        "priceTry": 11412.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 11662.0,
-        "priceTry": 11662.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 11837.0,
-        "priceTry": 11837.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 12087.0,
-        "priceTry": 12087.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 11887.0,
-        "priceTry": 11887.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 12087.0,
-        "priceTry": 12087.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 12274.0,
-        "priceTry": 12274.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 12474.0,
-        "priceTry": 12474.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 12499.0,
-        "priceTry": 12499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 12499.0,
-        "url": "https://www.gaming.gen.tr/urun/574708/asus-rog-strix-850p-850w-80-platinum-full-moduler-fanli-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-rog-strix-850p-850w-80-platinum-full-moduler-fanli-guc-kaynagi-2-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_corsair_rmx_2024_atx_3_1_1000w": {
     "productId": "psu_corsair_rmx_2024_atx_3_1_1000w",
@@ -14163,100 +11814,13 @@
   },
   "psu_asus_rog_strix_gold_aura_edition_750w": {
     "productId": "psu_asus_rog_strix_gold_aura_edition_750w",
-    "currentPriceTry": 10799.0,
-    "lowestPriceTry": 9255.0,
-    "highestPriceTry": 10799.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.762060",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 9557.0,
-        "priceTry": 9557.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 9255.0,
-        "priceTry": 9255.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 9600.0,
-        "priceTry": 9600.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 9946.0,
-        "priceTry": 9946.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 9849.0,
-        "priceTry": 9849.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 10065.0,
-        "priceTry": 10065.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 10216.0,
-        "priceTry": 10216.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 10432.0,
-        "priceTry": 10432.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 10594.0,
-        "priceTry": 10594.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 10432.0,
-        "priceTry": 10432.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 10594.0,
-        "priceTry": 10594.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 10767.0,
-        "priceTry": 10767.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 10799.0,
-        "priceTry": 10799.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 10799.0,
-        "url": "https://www.gaming.gen.tr/urun/231451/asus-rog-strix-loki-sfx-l-750w-80-platinum-argb-full-moduler-psu-90ye00n4-b0na00/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-loki-sfx-l-750w-80-platinum-argb-full-moduler-psu-90ye00n4-b0na00-2-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_asus_rog_strix_gold_aura_edition_1000w_white": {
     "productId": "psu_asus_rog_strix_gold_aura_edition_1000w_white",
@@ -14644,197 +12208,23 @@
   },
   "psu_asus_rog_loki_1200t_sfx_l_1200w_80_titanium_full_mod_ler_120mm_fanl_g_kayna": {
     "productId": "psu_asus_rog_loki_1200t_sfx_l_1200w_80_titanium_full_mod_ler_120mm_fanl_g_kayna",
-    "currentPriceTry": 7999.0,
-    "lowestPriceTry": 6943.0,
-    "highestPriceTry": 7999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.762253",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_loki_1200t_sfx_l_1200w_80_titanium_full_mod_ler_120mm_fanl_g_kayna.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 7167.0,
-        "priceTry": 7167.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 6943.0,
-        "priceTry": 6943.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 7199.0,
-        "priceTry": 7199.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 7207.0,
-        "priceTry": 7207.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 7383.0,
-        "priceTry": 7383.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 7543.0,
-        "priceTry": 7543.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 7655.0,
-        "priceTry": 7655.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 7567.0,
-        "priceTry": 7567.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 7687.0,
-        "priceTry": 7687.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 7815.0,
-        "priceTry": 7815.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 7935.0,
-        "priceTry": 7935.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 7815.0,
-        "priceTry": 7815.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 7999.0,
-        "priceTry": 7999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 7999.0,
-        "url": "https://www.gaming.gen.tr/urun/867492/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-2-yil-birebir-degisim-garantili/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_antec_csk1000_pro_1000w_80_plus_atx3_1_bronze_yar_mod_ler_g": {
     "productId": "psu_antec_csk1000_pro_1000w_80_plus_atx3_1_bronze_yar_mod_ler_g",
-    "currentPriceTry": 5999.0,
-    "lowestPriceTry": 5141.0,
-    "highestPriceTry": 5999.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.762284",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/antec_csk1000_pro_1000w_80_plus_atx3_1_bronze_yar_mod_ler_g.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 5309.0,
-        "priceTry": 5309.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 5141.0,
-        "priceTry": 5141.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 5333.0,
-        "priceTry": 5333.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 5525.0,
-        "priceTry": 5525.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 5471.0,
-        "priceTry": 5471.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 5591.0,
-        "priceTry": 5591.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 5675.0,
-        "priceTry": 5675.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 5795.0,
-        "priceTry": 5795.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 5885.0,
-        "priceTry": 5885.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 5795.0,
-        "priceTry": 5795.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 5885.0,
-        "priceTry": 5885.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 5981.0,
-        "priceTry": 5981.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 5999.0,
-        "priceTry": 5999.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 5999.0,
-        "url": "https://www.gaming.gen.tr/urun/851245/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_gigabyte_gp_p650g_pg5_650w_80plus_gold_atx_3_1_pcie_gen_5_1g_kayna": {
     "productId": "psu_gigabyte_gp_p650g_pg5_650w_80plus_gold_atx_3_1_pcie_gen_5_1g_kayna",
@@ -14908,197 +12298,23 @@
   },
   "psu_zalman_gigamax_750w_80_plus_bronze_g_kayna": {
     "productId": "psu_zalman_gigamax_750w_80_plus_bronze_g_kayna",
-    "currentPriceTry": 4499.0,
-    "lowestPriceTry": 3901.0,
-    "highestPriceTry": 4530.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.762382",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/zalman_gigamax_750w_80_plus_bronze_g_kayna.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 4027.0,
-        "priceTry": 4027.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 3901.0,
-        "priceTry": 3901.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 4045.0,
-        "priceTry": 4045.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 4049.0,
-        "priceTry": 4049.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 4148.0,
-        "priceTry": 4148.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 4238.0,
-        "priceTry": 4238.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 4301.0,
-        "priceTry": 4301.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 4252.0,
-        "priceTry": 4252.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 4319.0,
-        "priceTry": 4319.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 4391.0,
-        "priceTry": 4391.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 4459.0,
-        "priceTry": 4459.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 4530.0,
-        "priceTry": 4530.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 4499.0,
-        "priceTry": 4499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 4499.0,
-        "url": "https://www.gaming.gen.tr/urun/948353/msi-mag-a750bn-pcie5-ii-750w-80-bronze-pcie-5-1-atx-3-1-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_asus_rog_thor_3000w_titanium_iii_edition_20_rog_equalizer_atx": {
     "productId": "psu_asus_rog_thor_3000w_titanium_iii_edition_20_rog_equalizer_atx",
-    "currentPriceTry": 48499.0,
-    "lowestPriceTry": 42437.0,
-    "highestPriceTry": 48499.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.762406",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_thor_3000w_titanium_iii_edition_20_rog_equalizer_atx.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 43795.0,
-        "priceTry": 43795.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 42437.0,
-        "priceTry": 42437.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 42485.0,
-        "priceTry": 42485.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 44037.0,
-        "priceTry": 44037.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 45104.0,
-        "priceTry": 45104.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 46074.0,
-        "priceTry": 46074.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 45250.0,
-        "priceTry": 45250.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 46220.0,
-        "priceTry": 46220.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 46947.0,
-        "priceTry": 46947.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 47723.0,
-        "priceTry": 47723.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 46947.0,
-        "priceTry": 46947.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 47723.0,
-        "priceTry": 47723.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 48499.0,
-        "priceTry": 48499.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 48499.0,
-        "url": "https://www.gaming.gen.tr/urun/757667/asus-pro-ws-3000w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-3000w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-2-1-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_gigabyte_gp_p650ss_ice_650w_80plus_silver_atx_3_1_beyaz_g_kayna": {
     "productId": "psu_gigabyte_gp_p650ss_ice_650w_80plus_silver_atx_3_1_beyaz_g_kayna",
@@ -16513,100 +13729,13 @@
   },
   "psu_fsp_hydro_g_pro_atx_3_x_850w": {
     "productId": "psu_fsp_hydro_g_pro_atx_3_x_850w",
-    "currentPriceTry": 5699.0,
-    "lowestPriceTry": 4913.0,
-    "highestPriceTry": 5710.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.763127",
     "imageUrl": "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-atx-3-x-1000w-2022-0/outside-v182.png",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 5072.0,
-        "priceTry": 5072.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 4913.0,
-        "priceTry": 4913.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 5095.0,
-        "priceTry": 5095.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 5101.0,
-        "priceTry": 5101.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 5226.0,
-        "priceTry": 5226.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 5340.0,
-        "priceTry": 5340.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 5420.0,
-        "priceTry": 5420.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 5534.0,
-        "priceTry": 5534.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 5443.0,
-        "priceTry": 5443.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 5534.0,
-        "priceTry": 5534.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 5619.0,
-        "priceTry": 5619.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 5710.0,
-        "priceTry": 5710.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 5699.0,
-        "priceTry": 5699.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 5699.0,
-        "url": "https://www.gaming.gen.tr/urun/650067/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "psu_fsp_hydro_g_pro_atx_3_x_1200w": {
     "productId": "psu_fsp_hydro_g_pro_atx_3_x_1200w",
@@ -18331,100 +15460,13 @@
   },
   "cooler_endorfy_fera_5_argb_120mm_4_is_borulu_intel_amd_uyumlu_hava_so_utucu_ey3a007": {
     "productId": "cooler_endorfy_fera_5_argb_120mm_4_is_borulu_intel_amd_uyumlu_hava_so_utucu_ey3a007",
-    "currentPriceTry": 929.0,
-    "lowestPriceTry": 788.0,
-    "highestPriceTry": 929.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.764018",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/endorfy_fera_5_argb_120mm_4_is_borulu_intel_amd_uyumlu_hava_so_utucu_ey3a007.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 843.0,
-        "priceTry": 843.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 788.0,
-        "priceTry": 788.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 818.0,
-        "priceTry": 818.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 847.0,
-        "priceTry": 847.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 868.0,
-        "priceTry": 868.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 857.0,
-        "priceTry": 857.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 870.0,
-        "priceTry": 870.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 889.0,
-        "priceTry": 889.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 903.0,
-        "priceTry": 903.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 918.0,
-        "priceTry": 918.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 903.0,
-        "priceTry": 903.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 918.0,
-        "priceTry": 918.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 929.0,
-        "priceTry": 929.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 929.0,
-        "url": "https://www.gaming.gen.tr/urun/564608/thermalright-assassin-x-90-se-argb-tl-p9-s-92mm-4-x-6mm-isi-borulu-intel-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/thermalright-assassin-x-90-se-argb-tl-p9-s-92mm-4-x-6mm-isi-borulu-intel-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "cooler_gigabyte_eagle_360i_argb_amd_intel_s_v_so_utucu": {
     "productId": "cooler_gigabyte_eagle_360i_argb_amd_intel_s_v_so_utucu",
@@ -18458,197 +15500,23 @@
   },
   "cooler_bitfenix_s7_digital_beyaz_argb_360mm_i_lemci_s_v_so_utucu": {
     "productId": "cooler_bitfenix_s7_digital_beyaz_argb_360mm_i_lemci_s_v_so_utucu",
-    "currentPriceTry": 2622.82,
-    "lowestPriceTry": 2258.0,
-    "highestPriceTry": 2625.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.764063",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/bitfenix_s7_digital_beyaz_argb_360mm_i_lemci_s_v_so_utucu.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 2332.0,
-        "priceTry": 2332.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 2258.0,
-        "priceTry": 2258.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 2342.0,
-        "priceTry": 2342.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 2426.0,
-        "priceTry": 2426.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 2403.0,
-        "priceTry": 2403.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 2455.0,
-        "priceTry": 2455.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 2492.0,
-        "priceTry": 2492.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 2544.0,
-        "priceTry": 2544.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 2502.0,
-        "priceTry": 2502.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 2544.0,
-        "priceTry": 2544.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 2583.0,
-        "priceTry": 2583.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 2625.0,
-        "priceTry": 2625.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 2622.82,
-        "priceTry": 2622.82,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 2622.82,
-        "url": "https://www.gaming.gen.tr/urun/560739/thermalright-aqua-elite-240-white-argb-v3-240mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-2-yil-birebir-degisim-garantili/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/thermalright-aqua-elite-240-white-argb-v3-240mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-2-yil-birebir-degisim-garantili-2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "cooler_corsair_nautilus_360_rs_lcd_360mm_siyah_i_lemci_s_v_so_utucu": {
     "productId": "cooler_corsair_nautilus_360_rs_lcd_360mm_siyah_i_lemci_s_v_so_utucu",
-    "currentPriceTry": 7199.0,
-    "lowestPriceTry": 6242.0,
-    "highestPriceTry": 7249.0,
+    "currentPriceTry": null,
+    "lowestPriceTry": null,
+    "highestPriceTry": null,
     "lastUpdated": "2026-10-15T07:53:47.764085",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/corsair_nautilus_360_rs_lcd_360mm_siyah_i_lemci_s_v_so_utucu.webp",
-    "priceHistory": [
-      {
-        "date": "2025-10-15",
-        "price": 6443.0,
-        "priceTry": 6443.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-11-15",
-        "price": 6242.0,
-        "priceTry": 6242.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2025-12-15",
-        "price": 6472.0,
-        "priceTry": 6472.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-01-15",
-        "price": 6479.0,
-        "priceTry": 6479.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-02-15",
-        "price": 6637.0,
-        "priceTry": 6637.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-03-15",
-        "price": 6781.0,
-        "priceTry": 6781.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-04-15",
-        "price": 6882.0,
-        "priceTry": 6882.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-05-15",
-        "price": 6803.0,
-        "priceTry": 6803.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-06-15",
-        "price": 6911.0,
-        "priceTry": 6911.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-07-15",
-        "price": 7026.0,
-        "priceTry": 7026.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-08-15",
-        "price": 7134.0,
-        "priceTry": 7134.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-09-15",
-        "price": 7249.0,
-        "priceTry": 7249.0,
-        "store": "Gaming.Gen.TR"
-      },
-      {
-        "date": "2026-10-14",
-        "price": 7199.0,
-        "priceTry": 7199.0,
-        "store": "Gaming.Gen.TR"
-      }
-    ],
-    "offers": [
-      {
-        "storeName": "Gaming.Gen.TR",
-        "priceTry": 7199.0,
-        "url": "https://www.gaming.gen.tr/urun/639955/corsair-icue-link-titan-240-rx-lcd-rgb-240-mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-cw-9061025-ww/",
-        "inStock": true,
-        "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-icue-link-titan-240-rx-lcd-rgb-240-mm-intel-amd-uyumlu-beyaz-islemci-sivi-sogutucu-cw-9061025-ww-t2-300x300.jpg"
-      }
-    ]
+    "priceHistory": [],
+    "offers": []
   },
   "cooler_fazeon_a5120tra_12cm_rgb_kule_tipi_siyah_i_lemci_so_utucu": {
     "productId": "cooler_fazeon_a5120tra_12cm_rgb_kule_tipi_siyah_i_lemci_so_utucu",
