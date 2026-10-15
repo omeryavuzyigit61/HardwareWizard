@@ -15,7 +15,25 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/JU6995590.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/cooler_master_masterliquid_360l_core_argb.webp"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Spectrum V3",
+    "price": 1992.12,
+    "type": "Air",
+    "size": 120,
+    "color": "Black",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 25.5,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 265,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/cooler_master_hyper_212_spectrum_v3.webp"
   },
   {
     "name": "Nzxt Kraken Elite 360 Rgb White",
@@ -33,7 +51,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/nzxt-kraken-360-white-rgb-aio-lcd-display-360-mm-uyumlu-sivi-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/nzxt_kraken_elite_360_rgb_white.webp"
   },
   {
     "name": "Arctic Freezer 36 A Rgb",
@@ -51,7 +69,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-acfre00124a-islemci-sogutucu-3.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/arctic_freezer_36_a_rgb.webp"
   },
   {
     "name": "Asus Prime Lc 240 Argb 240Mm Intel Amd Uyumlu I Lemci S V So Utucu",
@@ -69,7 +87,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202606/6a22aaedb86e83.90693596_mghkjqilnpefo_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/asus_prime_lc_240_argb_240mm_intel_amd_uyumlu_i_lemci_s_v_so_utucu.webp"
   },
   {
     "name": "Endorfy Fera 5 Argb 120Mm 4 Is Borulu Intel Amd Uyumlu Hava So Utucu Ey3A007",
@@ -87,7 +105,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202407/6683b43927ed57.16620611_foelmqnikpghj_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/endorfy_fera_5_argb_120mm_4_is_borulu_intel_amd_uyumlu_hava_so_utucu_ey3a007.webp"
   },
   {
     "name": "Gigabyte Eagle 360I Argb Amd Intel S V So Utucu",
@@ -105,7 +123,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/LRX-1-45a874.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/gigabyte_eagle_360i_argb_amd_intel_s_v_so_utucu.webp"
   },
   {
     "name": "Segotep K6 Se Siyah 120Mm Hava So Utucu Intel",
@@ -123,7 +141,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/68832644c082d7.06683430_glnqhkepjfiom_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/segotep_k6_se_siyah_120mm_hava_so_utucu_intel.webp"
   },
   {
     "name": "Fsp Ad36 Argb Aio 360Mm Dijital Is G Stergeli Beyaz I Lemci S V So Utucu",
@@ -141,7 +159,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-240mm-argb-aio-sivi-siyah-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/fsp_ad36_argb_aio_360mm_dijital_is_g_stergeli_beyaz_i_lemci_s_v_so_utucu.webp"
   },
   {
     "name": "Bitfenix S7 Digital Beyaz Argb 360Mm I Lemci S V So Utucu",
@@ -159,7 +177,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202509/68b7f0a0634dc5.98105824_njkmieohqlfpg_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/bitfenix_s7_digital_beyaz_argb_360mm_i_lemci_s_v_so_utucu.webp"
   },
   {
     "name": "Corsair Nautilus 360 Rs Lcd 360Mm Siyah I Lemci S V So Utucu",
@@ -177,7 +195,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4P8-image-11.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/corsair_nautilus_360_rs_lcd_360mm_siyah_i_lemci_s_v_so_utucu.webp"
   },
   {
     "name": "Fazeon A5120Tra 12Cm Rgb Kule Tipi Siyah I Lemci So Utucu",
@@ -195,7 +213,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202501/678669c504de84.94176214_hkqgfpinjoeml_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/fazeon_a5120tra_12cm_rgb_kule_tipi_siyah_i_lemci_so_utucu.webp"
   },
   {
     "name": "Fsp Np5 Siyah 12Cm Argb Hava So Utucu",
@@ -213,7 +231,25 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-siyah-hava-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/fsp_np5_siyah_12cm_argb_hava_so_utucu.webp"
+  },
+  {
+    "name": "Rampage Frosty Rm C200 Beyaz 120Mm Argb Kule Tipi Hava So Utucu",
+    "price": 1175.61,
+    "type": "Air",
+    "size": 120,
+    "color": "White",
+    "height": 155,
+    "fan_rpm": "500 - 2000 RPM",
+    "noise_level": 25.5,
+    "sockets": [
+      "AM5",
+      "AM4",
+      "LGA1700",
+      "LGA1851"
+    ],
+    "max_tdp": 265,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/rampage_frosty_rm_c200_beyaz_120mm_argb_kule_tipi_hava_so_utucu.webp"
   },
   {
     "name": "Antec Skeleton 360 Argb Fanl 360Mm S V I Lemci So Utucusu",
@@ -231,7 +267,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/antec-a30-92mm-mavi-led-fanli-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/antec_skeleton_360_argb_fanl_360mm_s_v_i_lemci_so_utucusu.webp"
   },
   {
     "name": "Cougar Poseidon Elite Argb 360 Aio Lga1700 1851 Am5 360Mm Beyaz S V I Lemci",
@@ -249,7 +285,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-acfre00125a-beyaz-islemci-hava-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/cougar_poseidon_elite_argb_360_aio_lga1700_1851_am5_360mm_beyaz_s_v_i_lemci.webp"
   },
   {
     "name": "Deepcool Lt520 2X120Mm Fanl 240Mm S V I Lemci So Utucu",
@@ -267,7 +303,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-iced120-rgb-2x120mm-rgb-fanli-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/deepcool_lt520_2x120mm_fanl_240mm_s_v_i_lemci_so_utucu.webp"
   },
   {
     "name": "Fsp Mp7 Wa 2X120Mm Argb Fanl Lga1700 1851 Am5 Beyaz I Lemci So Utucu",
@@ -285,7 +321,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/xigmatek-windpower-pro-2-x-120mm-argb-fanli-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/fsp_mp7_wa_2x120mm_argb_fanl_lga1700_1851_am5_beyaz_i_lemci_so_utucu.webp"
   },
   {
     "name": "Amd Wraith I Lemci So Utucusu 712 000046",
@@ -303,7 +339,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-wraith-islemci-sogutucusu-712-000046.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/amd_wraith_i_lemci_so_utucusu_712_000046.webp"
   },
   {
     "name": "Rampage Coolblade 120Mm Fanl I Lemci So Utucu",
@@ -321,7 +357,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/frisby-fcl-f1318c-120mm-rgb-fanli-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/rampage_coolblade_120mm_fanl_i_lemci_so_utucu.webp"
   },
   {
     "name": "Frisby P2S 90Mm Argb Fanl Lga1700 Am5 2Xbak R Borulu Hava So Utma",
@@ -339,7 +375,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-2xbakir-borulu-hava-sogutma.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/frisby_p2s_90mm_argb_fanl_lga1700_am5_2xbak_r_borulu_hava_so_utma.webp"
   },
   {
     "name": "Deepcool Ag300 Lga1700 1851 Am5 I Lemci Hava So Utma",
@@ -357,7 +393,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-islemci-hava-sogutma.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/deepcool_ag300_lga1700_1851_am5_i_lemci_hava_so_utma.webp"
   },
   {
     "name": "Deepcool Gammaxx Ag400 Led 120 Mm I Lemci So Utucu",
@@ -375,7 +411,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/deepcool-gammaxx-ag400-led-120-mm-islemci-sogutucu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/deepcool_gammaxx_ag400_led_120_mm_i_lemci_so_utucu.webp"
   },
   {
     "name": "Msi Gg Core Frozr L 120 Mm I Lemci Hava So Utucusu",
@@ -393,7 +429,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-core-frozr-s-120mm-islemci-hava-sogutucu-54.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/msi_gg_core_frozr_l_120_mm_i_lemci_hava_so_utucusu.webp"
   },
   {
     "name": "Corsair A500 Serisi Ift Fanl I Lemci So Utucusu",
@@ -411,7 +447,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-a500-serisi-cift-fanli-islemci-sogutucusu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/corsair_a500_serisi_ift_fanl_i_lemci_so_utucusu.webp"
   },
   {
     "name": "Ocypus Beta A10 124 Mm Intel 1700P 1851P Amd Uyumlu Hava So Utucu",
@@ -429,7 +465,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/ESL-18a2fef5a46d0a7c4d38142f1e0cfc5e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/ocypus_beta_a10_124_mm_intel_1700p_1851p_amd_uyumlu_hava_so_utucu.webp"
   },
   {
     "name": "Intel M 115 52 Copper 90 Mm Intel Uyumlu Hava So Utucu",
@@ -447,7 +483,7 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/69T-y3k2faninte9737910101.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/intel_m_115_52_copper_90_mm_intel_uyumlu_hava_so_utucu.webp"
   },
   {
     "name": "Msi Mpg Coreliquid D240 Lga Am5 1700 240Mm Aio 2 4 Ips",
@@ -465,7 +501,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mpg-coreliquid-d240-lga-am5-1700-240mm-aio-2-4-ips-ekranli-argb-sivi-islemci-sogutucusu.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/msi_mpg_coreliquid_d240_lga_am5_1700_240mm_aio_2_4_ips.webp"
   },
   {
     "name": "Corsair Icue Link Titan 360 Rx Rgb",
@@ -483,6 +519,6 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-icue-link-titan-240-rx-rgb-aio-beyaz-rx120-rgb-fanli-240mm-sivi-islemci-sogutucu-cw-9061020-ww.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/corsair_icue_link_titan_360_rx_rgb.webp"
   }
 ]

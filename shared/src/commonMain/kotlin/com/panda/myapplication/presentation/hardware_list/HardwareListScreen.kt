@@ -421,6 +421,7 @@ fun CategoryFilterChips(
         HardwareCategory.PSU to "PSU",
         HardwareCategory.STORAGE to "Depolama",
         HardwareCategory.COOLER to "Soğutucu",
+        HardwareCategory.CASE to "Kasa",
     )
 
     Row(

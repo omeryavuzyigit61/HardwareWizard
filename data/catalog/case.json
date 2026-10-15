@@ -9,7 +9,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202309/64f70ba8248c09.37083991_mogqfhijpekln_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp"
   },
   {
     "name": "Nzxt H7 Flow 2024",
@@ -21,7 +21,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202409/66d9a67954aa50.29635076_jlifpkegnqmho_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/nzxt_h7_flow_2024.webp"
   },
   {
     "name": "Lian Li O11 Dynamic Evo Rgb",
@@ -33,7 +33,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202405/6645f2ff02e538.93924465_ngfmqilpoejkh_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp"
   },
   {
     "name": "Lian Li O11 Dynamic Mini",
@@ -45,10 +45,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891dfb883e0d9.96940323_ejnfgpmhoiklq_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp"
   },
   {
-    "name": "Asus A21 Plus Argb Temperli Cam Usb 3 2 Matx Mesh Beyaz Mid Tower Gaming",
+    "name": "Asus A21 Plus Argb Temperli Cam Usb 3 2 Matx Mesh Beyaz Mid Tower Gaming Kasa",
     "price": 2545.0,
     "type": "ATX Mid Tower",
     "color": "White",
@@ -57,10 +57,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/5DS-q10258280.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_a21_plus_argb_temperli_cam_usb_3_2_matx_mesh_beyaz_mid_tower_gaming_kasa.webp"
   },
   {
-    "name": "Asus Proart Pa401 Wood Edition Metal Panel Siyah Usb 3 2 Mid Tower Atx Gaming",
+    "name": "Asus Proart Pa401 Wood Edition Metal Panel Siyah Usb 3 2 Mid Tower Atx Gaming Kasa",
     "price": 5099.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -69,10 +69,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/67640c9b7caae2.88971156_olkqnjifpeghm_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_proart_pa401_wood_edition_metal_panel_siyah_usb_3_2_mid_tower_atx_gaming_kasa.webp"
   },
   {
-    "name": "Cooler Master Masterframe 360 Panaroma Siyah Ayna Efektli Temperli Cam Usb 3 2 Mid Tower Atx Gaming",
+    "name": "Cooler Master Masterframe 360 Panaroma Siyah Ayna Efektli Temperli Cam Usb 3 2 Mid Tower Atx Gaming Kasa",
     "price": 4452.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -81,10 +81,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3H7-10.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/cooler_master_masterframe_360_panaroma_siyah_ayna_efektli_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp"
   },
   {
-    "name": "Havn Hs 420 Base Edition Black Temperli Cam Usb 3 2 Mid Tower Atx Gaming",
+    "name": "Havn Hs 420 Base Edition Black Temperli Cam Usb 3 2 Mid Tower Atx Gaming Kasa",
     "price": 2699.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -93,10 +93,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202003/5e7a05dd858355.69563996_pjqelfokgnhmi_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/havn_hs_420_base_edition_black_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp"
   },
   {
-    "name": "Antec Ax65 Argb 4X120Mm Fan Atx Siyah Mid Tower Gaming Oyuncu",
+    "name": "Antec Ax65 Argb 4X120Mm Fan Atx Siyah Mid Tower",
     "price": 2099.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -105,10 +105,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202602/6989b618b41399.27360196_qimogekpnflhj_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_ax65_argb_4x120mm_fan_atx_siyah_mid_tower.webp"
   },
   {
-    "name": "Msi Mag Forge 121A B75 Pcie5 750W Bronze 4X120Mm Auto Rgb Fan Tempered Glass Atx Gaming Oyuncu",
+    "name": "Msi Mag Forge 121A B75 Pcie5 750W Bronze 4X120Mm Auto Rgb Fan Tempered Glass Atx",
     "price": 3999.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -117,10 +117,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682eceb2804f43.85454243_fqomnlhikegjp_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_121a_b75_pcie5_750w_bronze_4x120mm_auto_rgb_fan_tempered_glass_atx.webp"
   },
   {
-    "name": "Bitfenix Sepii Black 750W Atx3 1 80 Bronze Psu 4X120Mm Frgb Fan Atx Temperli Cam Siyah Gaming Oyuncu",
+    "name": "Bitfenix Sepii Black 750W Atx3 1 80 Bronze Psu 4X120Mm Frgb Fan Atx Temperli Cam Siyah",
     "price": 4989.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -129,10 +129,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202602/699333e67ec9a9.67599105_gnqejikfholpm_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/bitfenix_sepii_black_750w_atx3_1_80_bronze_psu_4x120mm_frgb_fan_atx_temperli_cam_siyah.webp"
   },
   {
-    "name": "Msi Mag Forge 150A 650W 80 Bronze Atx",
+    "name": "Msi Mag Forge 150A 650W 80 Bronze Atx Kasa",
     "price": 4499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -141,10 +141,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202605/69fc72cdadf0a2.26697764_gpemohjinkqfl_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_150a_650w_80_bronze_atx_kasa.webp"
   },
   {
-    "name": "James Donkey Helix H800 4Xrainbow Fan Temperli Cam 550W 80 Bronze Atx Siyah Gaming Oyuncu",
+    "name": "James Donkey Helix H800 4Xrainbow Fan Temperli Cam 550W 80 Bronze Atx Siyah",
     "price": 2699.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -153,10 +153,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/684c11bdf06518.05179544_mgoqekinjplhf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/james_donkey_helix_h800_4xrainbow_fan_temperli_cam_550w_80_bronze_atx_siyah.webp"
   },
   {
-    "name": "Lian Li Vector V100R Beyaz Atx",
+    "name": "Lian Li Vector V100R Beyaz Atx Kasa G99 V100Rw 01",
     "price": 4399.0,
     "type": "ATX Mid Tower",
     "color": "White",
@@ -165,10 +165,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/694563e9bbda37.05350989_mkgqelojpihnf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_vector_v100r_beyaz_atx_kasa_g99_v100rw_01.webp"
   },
   {
-    "name": "Gamepower Warcry Pulse 4X12Cm Argb Fan Temperli Cam Atx 650W 80 Bronze Gaming",
+    "name": "Gamepower Warcry Pulse 4X12Cm Argb Fan Temperli Cam Atx 650W 80 Bronze Gaming Kasa",
     "price": 4599.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -177,10 +177,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202504/680770ba7e6352.98422240_enfqojmhpkilg_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/gamepower_warcry_pulse_4x12cm_argb_fan_temperli_cam_atx_650w_80_bronze_gaming_kasa.webp"
   },
   {
-    "name": "Segotep Endura Pro Siyah 750W 80 Bronze E Atx Pcie 5 1",
+    "name": "Segotep Endura Pro Siyah 750W 80 Bronze E Atx Pcie 5 1 Kasa 6Xargb Fan",
     "price": 5599.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -189,10 +189,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/68824779dde710.53069591_mfqoilekpnhjg_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/segotep_endura_pro_siyah_750w_80_bronze_e_atx_pcie_5_1_kasa_6xargb_fan.webp"
   },
   {
-    "name": "Msi Mag Pano 130R Pz 4 X Argb Fan Usb 3 2 Atx Tower Gaming Oyuncu",
+    "name": "Msi Mag Pano 130R Pz 4 X Argb Fan Usb 3 2 Atx Tower",
     "price": 2632.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -201,10 +201,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/J23-110a.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_pano_130r_pz_4_x_argb_fan_usb_3_2_atx_tower.webp"
   },
   {
-    "name": "Vento Vg4200S 750W 80 Tempered Glass Usb 3 0 Rgb Atx Mid Tower",
+    "name": "Vento Vg4200S 750W 80 Tempered Glass Usb 3 0 Rgb Atx Mid Tower Kasa",
     "price": 2499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -213,10 +213,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/MLG-1-1024x1024.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4200s_750w_80_tempered_glass_usb_3_0_rgb_atx_mid_tower_kasa.webp"
   },
   {
-    "name": "Thermaltake View 370 Tg 1000W 80 Gold Argb Usb 3 2 Siyah Atx Mid Tower",
+    "name": "Thermaltake View 370 Tg 1000W 80 Gold Argb Usb 3 2 Siyah Atx Mid Tower Kasa",
     "price": 7441.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -225,7 +225,31 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P4H-view380tgargbmidtowerchassismgimg01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/thermaltake_view_370_tg_1000w_80_gold_argb_usb_3_2_siyah_atx_mid_tower_kasa.webp"
+  },
+  {
+    "name": "Gamebooster M6001W 600W Seaview Tempered Glass Rainbow Beyaz Matx Kasa",
+    "price": 3457.76,
+    "type": "ATX Mid Tower",
+    "color": "White",
+    "side_panel": "Tempered Glass",
+    "max_gpu_length": 420,
+    "max_cpu_cooler_height": 175,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/gamebooster_m6001w_600w_seaview_tempered_glass_rainbow_beyaz_matx_kasa.webp"
+  },
+  {
+    "name": "Fsp M340 750W 80 Gold Tempered Glass Type C Argb Atx Mid Tower Kasa",
+    "price": 6345.18,
+    "type": "ATX Mid Tower",
+    "color": "Black",
+    "side_panel": "Tempered Glass",
+    "max_gpu_length": 420,
+    "max_cpu_cooler_height": 175,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5\" + 4x 2.5\"",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/fsp_m340_750w_80_gold_tempered_glass_type_c_argb_atx_mid_tower_kasa.webp"
   },
   {
     "name": "Antec Cx700 Argb White Temperli Caml Type C X1 Mid Tower Atx",
@@ -237,7 +261,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/antec-cx700-argb-white-temperli-camli-type-c-x1-mid-tower-atx-gaming-kasa-09.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx700_argb_white_temperli_caml_type_c_x1_mid_tower_atx.webp"
   },
   {
     "name": "Antec Cx500M Argb Black Temperli Caml 3X Argb Fanl Mini Tower",
@@ -249,7 +273,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/antec-cx500m-argb-black-temperli-camli-3x-argb-fanli-mini-tower-matx-gaming-kasa-4.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx500m_argb_black_temperli_caml_3x_argb_fanl_mini_tower.webp"
   },
   {
     "name": "Antec C8 Wood Temperli Caml Type C X1 Dual Chamber Full Tower",
@@ -261,10 +285,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/antec-c8-black-temperli-camli-usb-3-0x2-type-c-x1dual-chamber-full-tower-e-atx-gaming-kasa-6.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_c8_wood_temperli_caml_type_c_x1_dual_chamber_full_tower.webp"
   },
   {
-    "name": "Vento Vg4202Fl Rainbow Fanl Temperli Caml Atx Gaming",
+    "name": "Vento Vg4202Fl Rainbow Fanl Temperli Caml Atx Gaming Kasa",
     "price": 4752.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -273,10 +297,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/vento-vg4202fl-rgb-fanli-temperli-camli-atx-gaming-kasa-17.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4202fl_rainbow_fanl_temperli_caml_atx_gaming_kasa.webp"
   },
   {
-    "name": "Frisby Fc 8960G 400W 1X120Mm Rgb Fanl Mid Tower Gaming",
+    "name": "Frisby Fc 8960G 400W 1X120Mm Rgb Fanl Mid Tower Gaming Kasa",
     "price": 2935.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -285,7 +309,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/frisby-fc-2905b-400w-usb-3-0-mid-tower-kasa.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/frisby_fc_8960g_400w_1x120mm_rgb_fanl_mid_tower_gaming_kasa.webp"
   },
   {
     "name": "Rampage Arc X Rgb Ledli Siyah Akrilik Panel 120Mm Fanl Mid Tower Oyuncu",
@@ -297,7 +321,7 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-arc-x-rgb-ledli-siyah-akrilik-panel-120mm-fanli-mid-tower-oyuncu-kasasi.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/rampage_arc_x_rgb_ledli_siyah_akrilik_panel_120mm_fanl_mid_tower_oyuncu.webp"
   },
   {
     "name": "Msi Mag Forge 100R Temperli Caml 120Mm Argb Fanl Mid Tower",
@@ -309,10 +333,10 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mag-forge-100r-tempered-glass-120mm-argb-fanli-mid-tower-gaming-kasa.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_100r_temperli_caml_120mm_argb_fanl_mid_tower.webp"
   },
   {
-    "name": "Msi Pro Shield M100P 1X80Mm Fanl Matx Bilgisayar",
+    "name": "Msi Pro Shield M100P 1X80Mm Fanl Matx Bilgisayar Kasas",
     "price": 2166.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -321,6 +345,6 @@
     "max_cpu_cooler_height": 175,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-pro-shield-m100p-1x120mm-fan-matx-bilgisayar-kasasi-1776763623-7.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_pro_shield_m100p_1x80mm_fanl_matx_bilgisayar_kasas.webp"
   }
 ]

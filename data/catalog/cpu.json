@@ -16,7 +16,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/E7P-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9950x.webp"
   },
   {
     "name": "AMD Ryzen 9 9900X",
@@ -35,7 +35,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/676d1e54c4b6a1.34305080_nkhejpgqimflo_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9900x.webp"
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
@@ -54,7 +54,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/67583ce66022a8.23281091_qpohljnmefikg_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
   },
   {
     "name": "AMD Ryzen 7 9700X",
@@ -73,7 +73,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/676d1c7ed37873.68567322_ghlnofmkpjiqe_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9700x.webp"
   },
   {
     "name": "AMD Ryzen 5 9600X",
@@ -92,7 +92,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/676d1cdbb39794.03469848_jkplmogneqihf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_9600x.webp"
   },
   {
     "name": "AMD Ryzen 9 7950X3D",
@@ -111,7 +111,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-9-7950x3d-soket-am5-4-2-ghz-5nm-128mb-120w-tray-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x3d.webp"
   },
   {
     "name": "AMD Ryzen 9 7950X",
@@ -130,7 +130,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-9-7950x-soket-am5-4-5-ghz-64mb-170w-5nm-tray-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x.webp"
   },
   {
     "name": "AMD Ryzen 9 7900X3D",
@@ -149,7 +149,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-9-7900x3d-soket-am5-4-4ghz-128mb-120w-5nm-tray-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x3d.webp"
   },
   {
     "name": "AMD Ryzen 9 7900X",
@@ -168,7 +168,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/5-6ghz-64mb-170w-12-cekirdek-76mb-5nm-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x.webp"
   },
   {
     "name": "AMD Ryzen 7 7800X3D",
@@ -187,7 +187,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P47-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
   },
   {
     "name": "AMD Ryzen 7 7700X",
@@ -206,7 +206,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/AB8-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700x.webp"
   },
   {
     "name": "AMD Ryzen 7 7700",
@@ -224,8 +224,8 @@
     "process_node": "TSMC 5nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/5-3ghz-32mb-65w-5nm-tray-islemci-0.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700.webp"
   },
   {
     "name": "AMD Ryzen 5 7600X",
@@ -244,7 +244,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/676bfed8b95532.08552638_hoqenikmglfpj_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600x.webp"
   },
   {
     "name": "AMD Ryzen 5 7600",
@@ -262,8 +262,8 @@
     "process_node": "TSMC 5nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202301/63c17aef3c77f6.85347440_fkomnqgehpjil_cropped_288.webp"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600.webp"
   },
   {
     "name": "AMD Ryzen 5 7500F",
@@ -281,8 +281,8 @@
     "process_node": "TSMC 5nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202412/676c0278841d11.42259045_kqjfepigmohln_cropped_288.webp"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7500f.webp"
   },
   {
     "name": "AMD Ryzen 7 8700G",
@@ -300,8 +300,8 @@
     "process_node": "TSMC 4nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/5-1ghz-16mb-65w-4nm-tray-fansiz-islemci-1777035598-5.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_8700g.webp"
   },
   {
     "name": "AMD Ryzen 5 8600G",
@@ -319,8 +319,8 @@
     "process_node": "TSMC 4nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/5-0ghz-16mb-65w-4nm-mpk-kutusuz-fanli-islemci.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8600g.webp"
   },
   {
     "name": "AMD Ryzen 5 8500G",
@@ -338,8 +338,8 @@
     "process_node": "TSMC 4nm",
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-5-8500g-soket-am5-3-7ghz-4nm-16mb-onbellek-100-100000931mpk-amd-islemci-55.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8500g.webp"
   },
   {
     "name": "AMD Ryzen 9 5950X",
@@ -358,7 +358,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5950x.webp"
   },
   {
     "name": "AMD Ryzen 9 5900X",
@@ -377,7 +377,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5900x.webp"
   },
   {
     "name": "AMD Ryzen 7 5800X3D",
@@ -396,7 +396,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-7-5800x3d-soket-am4-3-4ghz-100mb-105w-7nm-islemci-9.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
   },
   {
     "name": "AMD Ryzen 7 5700X3D",
@@ -415,7 +415,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4-1ghz-96mb-105w-7nm-tray-kutusuz-fansiz-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x3d.webp"
   },
   {
     "name": "AMD Ryzen 7 5800X",
@@ -434,7 +434,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x.webp"
   },
   {
     "name": "AMD Ryzen 7 5700X",
@@ -453,7 +453,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-7-5700x-soket-am4-wraith-stealth-3-4ghz-36mb-65w-7nm-islemci-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x.webp"
   },
   {
     "name": "AMD Ryzen 7 5700G",
@@ -471,8 +471,8 @@
     "process_node": "TSMC 7nm",
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen7-5700g-soket-am4-4-6ghz-16mb-onbellek-65w-7nm-islemci-2.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700g.webp"
   },
   {
     "name": "AMD Ryzen 5 5600X",
@@ -491,7 +491,7 @@
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600x.webp"
   },
   {
     "name": "AMD Ryzen 5 5600",
@@ -509,8 +509,8 @@
     "process_node": "TSMC 7nm",
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600.webp"
   },
   {
     "name": "AMD Ryzen 5 5600G",
@@ -528,8 +528,8 @@
     "process_node": "TSMC 7nm",
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/ghz-65w-7nm-tray-kutusz-fansiz-islemci.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600g.webp"
   },
   {
     "name": "AMD Ryzen 5 5500",
@@ -547,8 +547,8 @@
     "process_node": "TSMC 7nm",
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/amd-ryzen-5-5500-soket-am4-3-6ghz-19mb-onbellek-65w-7nm-tray-kutusuz-fansiz-islemci.jpg"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5500.webp"
   },
   {
     "name": "AMD Ryzen 5 3600",
@@ -566,8 +566,8 @@
     "process_node": "TSMC 7nm",
     "pcie_version": "PCIe 4.0",
     "max_memory_speed": "DDR4",
-    "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/6891ec19077a16.73637953_hpqflgejkomni_cropped_288.webp"
+    "unlocked_multiplier": false,
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_3600.webp"
   },
   {
     "name": "Intel Core Ultra 9 285K",
@@ -586,7 +586,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
   },
   {
     "name": "Intel Core Ultra 7 265K",
@@ -605,7 +605,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/M7L-mh9-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265k.webp"
   },
   {
     "name": "Intel Core Ultra 7 265KF",
@@ -624,7 +624,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265kf.webp"
   },
   {
     "name": "Intel Core Ultra 5 245K",
@@ -643,7 +643,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/5-2ghz-15-nesil-intel-islemci-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245k.webp"
   },
   {
     "name": "Intel Core Ultra 5 245KF",
@@ -662,7 +662,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3ND-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245kf.webp"
   },
   {
     "name": "Intel Core i9-14900KS",
@@ -679,9 +679,9 @@
     "l3_cache": 36,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i9-14900ks-4-5-ghz-6-2-ghz-36mb-onbellek-14-nesil-bx8071514900ks-intel-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900ks.webp"
   },
   {
     "name": "Intel Core i9-14900K",
@@ -698,9 +698,9 @@
     "l3_cache": 36,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900k.webp"
   },
   {
     "name": "Intel Core i9-14900KF",
@@ -717,9 +717,9 @@
     "l3_cache": 36,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900kf.webp"
   },
   {
     "name": "Intel Core i7-14700K",
@@ -736,9 +736,9 @@
     "l3_cache": 33,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i7-14700k-14-nesil-33mb-l3-onbellek-intel-islemci-4.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
   },
   {
     "name": "Intel Core i7-14700KF",
@@ -755,9 +755,9 @@
     "l3_cache": 33,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/ULB-q2x-intel14th02.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700kf.webp"
   },
   {
     "name": "Intel Core i7-14700",
@@ -774,9 +774,9 @@
     "l3_cache": 33,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/ALP-tc7-81z-q2x-intel14th02.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700.webp"
   },
   {
     "name": "Intel Core i5-14600K",
@@ -793,9 +793,9 @@
     "l3_cache": 24,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i5-14600k-14-nesil-30mb-l3-onbellek-intel-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600k.webp"
   },
   {
     "name": "Intel Core i5-14600KF",
@@ -812,9 +812,9 @@
     "l3_cache": 24,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682ed5264cd4e3.40255706_hjikfploqengm_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600kf.webp"
   },
   {
     "name": "Intel Core i5-14400F",
@@ -831,9 +831,9 @@
     "l3_cache": 20,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/6826db868921c3.71864496_jmiegfqplkhon_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp"
   },
   {
     "name": "Intel Core i5-14400",
@@ -850,9 +850,9 @@
     "l3_cache": 20,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/426-81z-q2x-intel14th02.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
   },
   {
     "name": "Intel Core i3-14100F",
@@ -869,28 +869,9 @@
     "l3_cache": 12,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/6FS-n12-intel14th02.jpg"
-  },
-  {
-    "name": "Intel Core i3-14100",
-    "price": 9325.0,
-    "socket": "LGA1700",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.5,
-    "boost_clock": 4.7,
-    "tdp": 60,
-    "microarchitecture": "Raptor Lake Refresh",
-    "graphics": "Intel UHD 730",
-    "l2_cache": 5.0,
-    "l3_cache": 12,
-    "process_node": "Intel 7",
-    "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
-    "unlocked_multiplier": false,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i3-14100-14-nesil-12mb-l3-onbellek-intel-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_14100f.webp"
   },
   {
     "name": "Intel Core i9-13900K",
@@ -907,9 +888,9 @@
     "l3_cache": 36,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i9-13900k-soket-1700-3-0ghz-36mb-onbellek-10nm-13-nesil-intel-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_13900k.webp"
   },
   {
     "name": "Intel Core i7-13700K",
@@ -926,9 +907,9 @@
     "l3_cache": 30,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i7-13700k-13-nesil-soket-1700-3-4-ghz-30mb-l3-10nm-islemci-3.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_13700k.webp"
   },
   {
     "name": "Intel Core i5-13600K",
@@ -945,9 +926,9 @@
     "l3_cache": 24,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i5-13600k-13-nesil-soket-1700-3-5-ghz-20mb-l3-10nm-islemci-3.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13600k.webp"
   },
   {
     "name": "Intel Core i5-13400F",
@@ -964,9 +945,9 @@
     "l3_cache": 20,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i5-13400f-13-nesil-soket-1700-2-5ghz-18mb-l3-10nm-islemci-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13400f.webp"
   },
   {
     "name": "Intel Core i5-12400F",
@@ -983,9 +964,9 @@
     "l3_cache": 18,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i5-12400f-12-nesil-socket-1700-2-5ghz-18mb-onbellek-10nm-islemci.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_12400f.webp"
   },
   {
     "name": "Intel Core i3-12100F",
@@ -1002,46 +983,8 @@
     "l3_cache": 12,
     "process_node": "Intel 7",
     "pcie_version": "PCIe 5.0",
-    "max_memory_speed": "DDR5 / DDR4",
+    "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.tebilon.com/picture300x300/intel-core-i3-12100f-12-nesil-socket-1700-3-3ghz-12mb-onbellek-10nm-islemci-9.jpg"
-  },
-  {
-    "name": "Intel Core i5-10400F",
-    "price": null,
-    "socket": "LGA1200",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 2.9,
-    "boost_clock": 4.3,
-    "tdp": 65,
-    "microarchitecture": "Comet Lake",
-    "graphics": null,
-    "l2_cache": 1.5,
-    "l3_cache": 12,
-    "process_node": "14nm",
-    "pcie_version": "PCIe 4.0",
-    "max_memory_speed": "DDR4",
-    "unlocked_multiplier": false,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
-  },
-  {
-    "name": "Intel Core i3-10100F",
-    "price": null,
-    "socket": "LGA1200",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.6,
-    "boost_clock": 4.3,
-    "tdp": 65,
-    "microarchitecture": "Comet Lake",
-    "graphics": null,
-    "l2_cache": 1.0,
-    "l3_cache": 6,
-    "process_node": "14nm",
-    "pcie_version": "PCIe 4.0",
-    "max_memory_speed": "DDR4",
-    "unlocked_multiplier": false,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202505/682ed530efb1a8.02684698_mngjliepqhokf_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_12100f.webp"
   }
 ]

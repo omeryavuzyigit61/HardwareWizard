@@ -15,12 +15,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3060-ventus-2x-12g-oc-12gb-gddr6-192bit-nvidia-ekran-karti-6.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp"
   },
   {
     "name": "Msi Rtx 5060 Ti 16G Inspire 2X Oc",
     "price": 44390.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -33,15 +33,15 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-16gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-5.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_5060_ti_16g_inspire_2x_oc.webp"
   },
   {
     "name": "Msi Rtx 4090 Ventus 3X 24G Oc",
     "price": 129019.0,
     "chipset": "GeForce RTX 4090",
-    "memory": 12,
+    "memory": 24,
     "memory_type": "GDDR6X",
-    "bus_width": 192,
+    "bus_width": 256,
     "core_clock": 2200,
     "boost_clock": 2550,
     "tdp": 450,
@@ -51,15 +51,15 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-4090-ventus-3x-24g-oc-24gb-gddr6x-384bit-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_4090_ventus_3x_24g_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 5090 Suprim X",
     "price": 195445.0,
     "chipset": "GeForce RTX 5090",
-    "memory": 12,
+    "memory": 24,
     "memory_type": "GDDR7",
-    "bus_width": 192,
+    "bus_width": 256,
     "core_clock": 2200,
     "boost_clock": 2550,
     "tdp": 450,
@@ -69,15 +69,15 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_suprim_x.webp"
   },
   {
     "name": "Msi Geforce Rtx 5090 Gaming X Trio",
     "price": 201512.0,
     "chipset": "GeForce RTX 5090",
-    "memory": 12,
+    "memory": 24,
     "memory_type": "GDDR7",
-    "bus_width": 192,
+    "bus_width": 256,
     "core_clock": 2200,
     "boost_clock": 2550,
     "tdp": 450,
@@ -87,15 +87,15 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-5090-32g-gaming-trio-32gb-gddr7-dlss-4-512-bit-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_gaming_x_trio.webp"
   },
   {
     "name": "Msi Geforce Rtx 5090 Ventus 3X Oc",
     "price": 199596.0,
     "chipset": "GeForce RTX 5090",
-    "memory": 12,
+    "memory": 24,
     "memory_type": "GDDR7",
-    "bus_width": 192,
+    "bus_width": 256,
     "core_clock": 2200,
     "boost_clock": 2550,
     "tdp": 450,
@@ -105,7 +105,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-dlss-4-512bit-nvidia-ekran-karti-2.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_ventus_3x_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5080 Rog Strix Oc",
@@ -123,7 +123,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-astral-geforce-rtx-5080-hatsune-miku-oc-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5080_rog_strix_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 5080 Gaming X Trio",
@@ -141,7 +141,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5080-16g-gaming-trio16gb-gddr7-256bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_gaming_x_trio.webp"
   },
   {
     "name": "Msi Geforce Rtx 5080 Ventus 3X Oc",
@@ -159,7 +159,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-vga-geforce-rtx-5080-16g-inspire-3x-oc-rtx5080-16gb-gdrr7-256bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_ventus_3x_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5080 Aorus Master",
@@ -177,7 +177,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-aorus-geforce-rtx-5080-master-ice-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-98.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aorus_master.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5080 Aero Oc",
@@ -195,12 +195,12 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5080-aero-oc-sff-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-50.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aero_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5070 Ti Tuf Gaming Oc",
     "price": 96394.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -213,12 +213,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5070-ti-16gb-gddr7-btf-white-oc-edition-dlss-4-256bit-nvidia-ekran-karti-tuf-rtx5070ti-o16g-btf-white.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_tuf_gaming_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5070 Ti Proart Oc",
     "price": 103950.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -231,12 +231,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-proart-geforce-rtx-5070-ti-16gb-gddr7-oc-edition-256bit-dlss-4-nvidia-ekran-karti-6.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_proart_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 5070 Ti Suprim X",
     "price": 65787.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -249,12 +249,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-ti-16g-expert-gddr7-12gb-192bit-dlss-4-nvidia-ekran-karti-2.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_suprim_x.webp"
   },
   {
     "name": "Msi Geforce Rtx 5070 Ti Gaming X Trio",
     "price": 72493.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -267,12 +267,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-ti-16g-gaming-trio-white-16gb-gddr7-256-bit-dlss-4-nvidia-ekran-karti-3.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_gaming_x_trio.webp"
   },
   {
     "name": "Msi Geforce Rtx 5070 Ti Ventus 3X Oc",
     "price": 66106.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -285,12 +285,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-ti-16g-expert-oc-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_ventus_3x_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Ti Aorus Master",
     "price": 89999.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -303,12 +303,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202610/6acf86f8ccc368.44693825_igjhflpmkneqo_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aorus_master.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Ti Gaming Oc",
     "price": 93258.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -321,12 +321,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-gaming-oc-16g-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-7.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_gaming_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Ti Aero Oc",
     "price": 95040.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -339,12 +339,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-aero-oc-16g-gddr7-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-79.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aero_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Ti Windforce Oc",
     "price": 56430.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -357,12 +357,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-windforce-sff-16g-gddr7-16gb-256bit-dlss-4-nvidia-ekran-karti-gv-n507twf3-16gd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_windforce_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Ti Eagle Oc",
     "price": 92664.0,
-    "chipset": "GeForce RTX 5070 TI",
+    "chipset": "GeForce RTX 5070 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -375,7 +375,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-ti-eagle-oc-sff-16g-gddr7-rgb-16gb-256bit-dlss-4-nvidia-ekran-karti-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_eagle_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5070 Rog Strix Oc",
@@ -393,7 +393,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-strix-geforce-rtx-5070-12gb-gddr7-192bit-dlss-4-nvidia-ekran-karti-1775809616.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_rog_strix_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5070 Dual Oc",
@@ -411,7 +411,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5070-12gb-gddr7-192bit-dlss-3-nvidia-ekran-karti-dual-rtx5070-12g.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_dual_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 5070 Ventus 2X Oc",
@@ -429,7 +429,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5070-12g-ventus-2x-oc-gddr7-192-bit-dlss-4-nvidia-ekran-karti-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ventus_2x_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Gaming Oc",
@@ -447,7 +447,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-gaming-oc-12g-12g-gddr7-rgb-12gb-192bit-dlss-4-nvidia-ekran-karti-2.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_gaming_oc.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5070 Windforce Oc",
@@ -465,7 +465,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5070-windforce-oc-sff-12g-gddr7-12gb-192bit-dlss-4-nvidia-ekran-karti-gv-n5070wf3oc-12gd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_windforce_oc.webp"
   },
   {
     "name": "Asrock Radeon Rx 7600 Challenger Oc",
@@ -483,7 +483,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-amd-radeon-rx-7600-challenger-8gb-oc-128bit-fsr-3-amd-ekran-karti-rx7600-cl-8go.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_7600_challenger_oc.webp"
   },
   {
     "name": "Asrock Radeon Rx 9070 Xt Taichi Oc",
@@ -501,7 +501,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9070-xt-taichi-16gb-oc-gddr6-rgb-256bit-rdna-4-fsr-4-amd-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_taichi_oc.webp"
   },
   {
     "name": "Asrock Radeon Rx 9070 Xt Steel Legend Oc",
@@ -519,7 +519,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9070-xt-steel-legend-dark-16gb-rgb-256bit-rdna-4-fsr-4-amd-ekran-karti-rx9070xt-sld-16g-3.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_steel_legend_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 3050 Ventus 2X Oc",
@@ -537,7 +537,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-3050-ventus-2x-xs-8g-oc-8gb-gddr6-128bit-dx12-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_oc.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 6600 Eagle Oc",
@@ -555,7 +555,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-6600-eagle-8gb-128-bit-gddr6-amd-ekran-karti-56.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_6600_eagle_oc.webp"
   },
   {
     "name": "Asus Dual Geforce Rtx 5060 Oc 8Gb Gddr7 128 Bit Dlss 4 Ekran Kart",
@@ -573,12 +573,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/15Z-fwebp.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_5060_oc_8gb_gddr7_128_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Asus Dual Geforce Rtx 5060 Ti Oc 16Gb Gddr7 128 Bit Dlss 4 Ekran Kart",
     "price": 34113.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 16,
     "memory_type": "GDDR7",
     "bus_width": 128,
@@ -591,12 +591,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5060-ti-8gb-gddr7-white-oc-edition-128bit-dlss-4-nvidia-beyaz-ekran-karti-dual-rtx5060ti-o8g-white-2.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_5060_ti_oc_16gb_gddr7_128_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Asus Dual Radeon Rx 9060 8Gb Gddr6 128 Bit",
     "price": 8699.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060",
     "memory": 8,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -609,47 +609,11 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202405/664c92c1778c51.30284027_phleifknomgqj_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_radeon_rx_9060_8gb_gddr6_128_bit.webp"
   },
   {
-    "name": "Gigabyte Radeon Rx9060Xt Gaming Oc Gv R9060Xtgaming Oc 16Gd 16Gb Gddr6 128Bit",
-    "price": 33999.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 16,
-    "memory_type": "GDDR6",
-    "bus_width": 128,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/684048845c0441.79500834_folkjiqmnehpg_cropped_288.webp"
-  },
-  {
-    "name": "Gigabyte Radeon Rx9070Xt Gaming Oc Gv R9070Xtgaming Oc 16Gd 16Gb Gddr6 256Bit",
-    "price": 53999.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 16,
-    "memory_type": "GDDR6",
-    "bus_width": 256,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202504/67f635761ccbb3.55313385_jlphmoiegkfqn_cropped_288.webp"
-  },
-  {
-    "name": "Gigabyte Geforce Rtx 5060Ti Windforce Oc Gv N506Twf2Oc 8Gd Gddr7 8Gb 128Bit",
-    "price": 29699.0,
+    "name": "Gigabyte Geforce Rtx5060 Windforce Max Oc Gv N5060Wf2Max Oc 8Gd Gddr7 8Gb 128Bit",
+    "price": 26967.0,
     "chipset": "GeForce RTX 5060",
     "memory": 8,
     "memory_type": "GDDR7",
@@ -663,30 +627,48 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/68637d1cccf512.73393679_jomphekfqnilg_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx5060_windforce_max_oc_gv_n5060wf2max_oc_8gd_gddr7_8gb_128bit.webp"
   },
   {
-    "name": "Pny Geforce Rtx 5070Ti 16Gb Gddr7 Oc 256Bit Ekran Kart Vcg5070T16Tfxpb1 O",
-    "price": 80999.0,
-    "chipset": "GeForce RTX 5070",
+    "name": "Gigabyte Radeon Rx9060Xt Gaming Oc Gv R9060Xtgaming Oc 16Gd 16Gb Gddr6 128Bit",
+    "price": 33999.0,
+    "chipset": "Radeon RX 9060 XT",
     "memory": 16,
-    "memory_type": "GDDR7",
+    "memory_type": "GDDR6",
+    "bus_width": 128,
+    "core_clock": 2200,
+    "boost_clock": 2550,
+    "tdp": 220,
+    "recommended_psu": 750,
+    "power_connectors": "2x 8-Pin PCIe",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "length": 260.0,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx9060xt_gaming_oc_gv_r9060xtgaming_oc_16gd_16gb_gddr6_128bit.webp"
+  },
+  {
+    "name": "Gigabyte Radeon Rx9070Xt Gaming Oc Gv R9070Xtgaming Oc 16Gd 16Gb Gddr6 256Bit",
+    "price": 53999.0,
+    "chipset": "Radeon RX 9070 XT",
+    "memory": 16,
+    "memory_type": "GDDR6",
     "bus_width": 256,
     "core_clock": 2200,
     "boost_clock": 2550,
     "tdp": 220,
     "recommended_psu": 750,
-    "power_connectors": "1x 16-Pin 12V-2x6",
+    "power_connectors": "2x 8-Pin PCIe",
     "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202508/68934b7f358a83.44021094_khjnpmifgolqe_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx9070xt_gaming_oc_gv_r9070xtgaming_oc_16gd_16gb_gddr6_256bit.webp"
   },
   {
-    "name": "Gainward Geforce Rtx5060 Ti Ghost 8Gb Gddr7 128Bit Gaming Ekran Kart",
-    "price": 32599.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "name": "Gigabyte Geforce Rtx 5060Ti Windforce Oc Gv N506Twf2Oc 8Gd Gddr7 8Gb 128Bit",
+    "price": 29699.0,
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 8,
     "memory_type": "GDDR7",
     "bus_width": 128,
@@ -699,7 +681,61 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202504/67ffac466c0145.77779529_iqfpohnmklgej_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5060ti_windforce_oc_gv_n506twf2oc_8gd_gddr7_8gb_128bit.webp"
+  },
+  {
+    "name": "Pny Geforce Rtx 5070Ti 16Gb Gddr7 Oc 256Bit Ekran Kart Vcg5070T16Tfxpb1 O",
+    "price": 80999.0,
+    "chipset": "GeForce RTX 5070 Ti",
+    "memory": 16,
+    "memory_type": "GDDR7",
+    "bus_width": 256,
+    "core_clock": 2200,
+    "boost_clock": 2550,
+    "tdp": 220,
+    "recommended_psu": 750,
+    "power_connectors": "1x 16-Pin 12V-2x6",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "length": 260.0,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/pny_geforce_rtx_5070ti_16gb_gddr7_oc_256bit_ekran_kart_vcg5070t16tfxpb1_o.webp"
+  },
+  {
+    "name": "Asus Dual Geforce Rtx 5050 8Gb Oc Edition Dual Rtx5050 O8G Gddr7 128Bit",
+    "price": 25999.0,
+    "chipset": "GeForce RTX 5050",
+    "memory": 8,
+    "memory_type": "GDDR7",
+    "bus_width": 128,
+    "core_clock": 2200,
+    "boost_clock": 2550,
+    "tdp": 220,
+    "recommended_psu": 750,
+    "power_connectors": "1x 16-Pin 12V-2x6",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "length": 260.0,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_5050_8gb_oc_edition_dual_rtx5050_o8g_gddr7_128bit.webp"
+  },
+  {
+    "name": "Gainward Geforce Rtx5060 Ti Ghost 8Gb Gddr7 128Bit Gaming Ekran Kart",
+    "price": 32599.0,
+    "chipset": "GeForce RTX 5060 Ti",
+    "memory": 8,
+    "memory_type": "GDDR7",
+    "bus_width": 128,
+    "core_clock": 2200,
+    "boost_clock": 2550,
+    "tdp": 220,
+    "recommended_psu": 750,
+    "power_connectors": "1x 16-Pin 12V-2x6",
+    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+    "slot_width": "2.5 Slot",
+    "length": 260.0,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gainward_geforce_rtx5060_ti_ghost_8gb_gddr7_128bit_gaming_ekran_kart.webp"
   },
   {
     "name": "Asus Dual Geforce Rtx 3050 Oc 6Gb Gddr6 96 Bit Ekran Kart",
@@ -717,7 +753,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/S6G-dual-rtx3050-o6g-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_3050_oc_6gb_gddr6_96_bit_ekran_kart.webp"
   },
   {
     "name": "Asus Dual Geforce Rtx 5060 8Gb Oc Gddr7 White Edition 128Bit",
@@ -735,7 +771,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "White",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5060-8gb-gddr7-oc-edition-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_geforce_rtx_5060_8gb_oc_gddr7_white_edition_128bit.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5060 Eagle Oc 8G Gddr7 8Gb 128Bit Dlss",
@@ -753,7 +789,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5060-windforce-8g-gddr7-8gb-128bit-dlss-4-gv-n5060wf2-8gd-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5060_eagle_oc_8g_gddr7_8gb_128bit_dlss.webp"
   },
   {
     "name": "Msi Geforce Rtx 5050 8G Ventus 2X Oc 8Gb Gddr6 128Bit",
@@ -771,12 +807,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5050-8g-shadow-2x-oc-gddr6-8gb-dlss-4-128bit-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5050_8g_ventus_2x_oc_8gb_gddr6_128bit.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 9060 Xt Gaming Oc 16Gb Gddr6 128Bit Amd",
     "price": 21978.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 16,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -789,7 +825,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9060-xt-gaming-oc-8gb-gddr6-128bit-amd-ekran-karti-gv-r9060xtgaming-oc-8gd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9060_xt_gaming_oc_16gb_gddr6_128bit_amd.webp"
   },
   {
     "name": "Msi Geforcertx 5060 8G Ventus 2X Oc White 8Gb Dlss 4",
@@ -807,12 +843,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "White",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5060-8g-shadow-2x-8gb-dlss-4-128bit-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforcertx_5060_8g_ventus_2x_oc_white_8gb_dlss_4.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5060 Ti Eagle Oc Ice 8G Gddr7 8Gb",
     "price": 28575.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 8,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -825,7 +861,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "White",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5060-ti-windforce-8g-gddr7-8gb-128bit-dlss-4-gv-n506twf2-8gd-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5060_ti_eagle_oc_ice_8g_gddr7_8gb.webp"
   },
   {
     "name": "Asus Rog Astral Geforce Rtx 5090 32Gb Gddr7 Oc Edition 512Bit",
@@ -843,7 +879,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-matrix-platinum-geforce-geforce-rtx-5090-32gb-gddr7-512bit-dlss-4-nvidia-ekran-karti-rog-matrix-rtx5090-p32g-30th-59.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_rog_astral_geforce_rtx_5090_32gb_gddr7_oc_edition_512bit.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 9070 Xt Gaming Oc 16Gb Rgb Lighting 256Bit",
@@ -861,7 +897,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-xt-gaming-oc-16gb-rgb-lighting-256bit-amd-ekran-karti-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_xt_gaming_oc_16gb_rgb_lighting_256bit.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 9070 Gaming Oc 16Gb Rgb Lighting 256Bit Amd",
@@ -879,7 +915,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-gaming-oc-16gb-rgb-lighting-256bit-amd-ekran-karti-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_gaming_oc_16gb_rgb_lighting_256bit_amd.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 9070 Gre Gaming Oc 12Gb Rgb 192Bit Gddr6",
@@ -897,7 +933,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-rx-9070-gre-gaming-oc-12gb-rgb-lighting-192bit-gddr6-amd-ekran-karti-gv-r907gregaming-oc-12gd-1791901795-80.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_gre_gaming_oc_12gb_rgb_192bit_gddr6.webp"
   },
   {
     "name": "Asus Rog Strix Geforce Rtx 5070 12Gb Gddr7 Oc Edition 192Bit",
@@ -915,12 +951,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-strix-geforce-rtx-5070-12gb-gddr7-oc-edition-192bit-dlss-4-nvidia-ekran-karti-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_rog_strix_geforce_rtx_5070_12gb_gddr7_oc_edition_192bit.webp"
   },
   {
     "name": "Asus Dual Radeon Rx 9060 Xt Oc White Edition 16Gb Gddr6",
     "price": 26074.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 16,
     "memory_type": "GDDR6",
     "bus_width": 256,
@@ -933,7 +969,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "White",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-radeon-rx-9060-xt-oc-edition-8gb-gddr6-128bit-fsr-4-amd-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_radeon_rx_9060_xt_oc_white_edition_16gb_gddr6.webp"
   },
   {
     "name": "Asus Proart Geforce Rtx 5080 16Gb Gddr7 Oc Edition 256Bit Dlss",
@@ -951,7 +987,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256bit-dlss-4-nvidia-ekran-karti-proart-rtx5080-o16g.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_proart_geforce_rtx_5080_16gb_gddr7_oc_edition_256bit_dlss.webp"
   },
   {
     "name": "Asus Prime Geforce Rtx 5050 8Gb Gddr6 8Gb Dlss 4",
@@ -969,7 +1005,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5050-8gb-gddr6-8gb-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_prime_geforce_rtx_5050_8gb_gddr6_8gb_dlss_4.webp"
   },
   {
     "name": "Asus Asus Prime Geforce Rtx 5050 8Gb Gddr6 Oc Edition 8Gb",
@@ -987,12 +1023,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-asus-prime-geforce-rtx-5050-8gb-gddr6-oc-edition-8gb-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_asus_prime_geforce_rtx_5050_8gb_gddr6_oc_edition_8gb.webp"
   },
   {
     "name": "Sapphire Radeon Rx9060 Xt Pulse Gddr6 8Gb 128Bit Fsr 4 Amd",
     "price": 20255.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 8,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -1005,12 +1041,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/sapphire-radeon-rx9060-xt-pulse-gddr6-8gb-128bit-fsr-4-amd-ekran-karti-11350-04-20g.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/sapphire_radeon_rx9060_xt_pulse_gddr6_8gb_128bit_fsr_4_amd.webp"
   },
   {
     "name": "Asus Dual Radeon Rx9060Xt 8G Gddr6 128Bit Rdna 4 Amd Ekran",
     "price": 37556.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 12,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -1023,7 +1059,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-radeon-rx9060xt-8g-gddr6-128bit-rdna-4-amd-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_radeon_rx9060xt_8g_gddr6_128bit_rdna_4_amd_ekran.webp"
   },
   {
     "name": "Msi Geforce Rtx 3060 Ventus 2X 12G Oc 12Gb Gddr6 192 Bit Lhr Ekran Kart",
@@ -1041,7 +1077,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202102/603970ee699ff7.57370948_gilmfokhqpjen_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc_12gb_gddr6_192_bit_lhr_ekran_kart.webp"
   },
   {
     "name": "Gigabyte Radeon Rx 9070 Gre Gaming Oc 12G 12Gb Gddr6 192 Bit Ekran Kart",
@@ -1059,12 +1095,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/T84-radeon-rx-9070-gre-gaming-oc-12g01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_gre_gaming_oc_12g_12gb_gddr6_192_bit_ekran_kart.webp"
   },
   {
     "name": "Asus Geforce Rtx 5060 Ti Tuf Gaming Oc",
     "price": 40998.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -1077,12 +1113,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5060-ti-8gb-oc-edition-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5060_ti_tuf_gaming_oc.webp"
   },
   {
     "name": "Msi Geforce Rtx 5060 Ti Gaming X Trio",
     "price": 33532.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -1095,12 +1131,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5060-ti-8g-gaming-8gb-gddr7-dlss-4-128bit-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5060_ti_gaming_x_trio.webp"
   },
   {
     "name": "Msi Geforce Rtx 5060 Ti Ventus 2X Oc",
     "price": 27783.0,
-    "chipset": "GeForce RTX 5060 TI",
+    "chipset": "GeForce RTX 5060 Ti",
     "memory": 12,
     "memory_type": "GDDR7",
     "bus_width": 192,
@@ -1113,7 +1149,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-geforce-rtx-5060-ti-16g-shadow-2x-oc-plus-bulk-8gb-gddr7-128bit-dlss-4-nvidia-ekran-karti-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5060_ti_ventus_2x_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5060 Tuf Gaming Oc",
@@ -1131,7 +1167,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-geforce-rtx-5060-8gb-gddr7-oc-edition-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5060_tuf_gaming_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5060 Dual Oc",
@@ -1149,7 +1185,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-dual-geforce-rtx-5060-8gb-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5060_dual_oc.webp"
   },
   {
     "name": "Asus Geforce Rtx 5060 Prime",
@@ -1167,7 +1203,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-prime-geforce-rtx-5060-8gb-gddr7-128bit-dlss-4-nvidia-ekran-karti.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5060_prime.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5050 Windforce Oc",
@@ -1185,12 +1221,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-geforce-rtx-5050-windforce-oc-8g-gddr6-8gb-128bit-dlss-4-nvidia-ekran-karti-gv-n5050wf2oc-8gd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5050_windforce_oc.webp"
   },
   {
     "name": "Asrock Amd Radeon Rx9060 Xt Challenger 16Gb Oc Gddr6 128Bit",
     "price": 30999.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 16,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -1203,12 +1239,12 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/6841884e57b667.04307563_qplmjiknehgof_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_amd_radeon_rx9060_xt_challenger_16gb_oc_gddr6_128bit.webp"
   },
   {
     "name": "Asrock Radeon Rx 9060 Xt Challenger 16Gb Gddr6 128Bit Amd Ekran",
     "price": 25720.0,
-    "chipset": "GeForce RTX 4070 SUPER",
+    "chipset": "Radeon RX 9060 XT",
     "memory": 16,
     "memory_type": "GDDR6",
     "bus_width": 128,
@@ -1221,7 +1257,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asrock-radeon-rx-9060-xt-challenger-16gb-gddr6-128bit-amd-ekran-karti-gv-rx9060xt-cl-16go.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9060_xt_challenger_16gb_gddr6_128bit_amd_ekran.webp"
   },
   {
     "name": "Msi Geforce Rtx 5070 12G Shadow 2X Oc 12Gb Gddr7 192 Bit Dlss 4 Ekran Kart",
@@ -1239,7 +1275,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/7MN-geforcertx507012gshadow2xocboxcard.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_12g_shadow_2x_oc_12gb_gddr7_192_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Msi Geforce Rtx 5080 16G Gaming Trio Oc 16Gb Gddr7 256 Bit Dlss 4 Ekran Kart",
@@ -1257,7 +1293,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202502/msi-vga-geforce-rtx-5080-16g-ventus-3x-oc-rtx5080-16gb-gdrr7-256-b-dx12-pcie-5-0-x16-3xdp-1xhdmi-ekran-kartlari-214087_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_16g_gaming_trio_oc_16gb_gddr7_256_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Msi Geforce Rtx 5060 8G Gaming Oc 8Gb Gddr7 128 Bit Dlss 4 Ekran Kart",
@@ -1275,7 +1311,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/G2Y-geforcertx50608ggamingseriesboxcard.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5060_8g_gaming_oc_8gb_gddr7_128_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5080 Gaming Oc Gv N5080Gaming Oc 16Gd Gddr7 16G 256Bit",
@@ -1293,7 +1329,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/Q37-geforce-rtx-5080-windforce-oc-sff-16g-01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_gaming_oc_gv_n5080gaming_oc_16gd_gddr7_16g_256bit.webp"
   },
   {
     "name": "Inno3D Rtx 5070 Twin X2 Oc 12Gb N50702 12D7X 195064N Gddr7 192Bit",
@@ -1311,7 +1347,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202610/6ac683ccea7e09.50205750_ihkjopgeflmqn_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/inno3d_rtx_5070_twin_x2_oc_12gb_n50702_12d7x_195064n_gddr7_192bit.webp"
   },
   {
     "name": "Gigabyte Geforce Rtx 5050 Windforce Oc 8G Gddr6 Dlss 4 128 Bit Ekran Kart",
@@ -1329,61 +1365,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/33X-geforce-rtx-5050-windforce-oc-8g-01.jpg"
-  },
-  {
-    "name": "Asus Turbo Radeon Ai Pro R9700 32Gb Gddr6 256 Bit Yapay",
-    "price": 148500.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 32,
-    "memory_type": "GDDR6",
-    "bus_width": 256,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-turbo-radeon-ai-pro-r9700-32gb-gddr6-256-bit-yapay-zeka-is-istasyonu-ekran-karti-1791614445-8.jpg"
-  },
-  {
-    "name": "Gigabyte Radeon Ai Pro R9700 Ai Top 32Gb Gddr6 256Bit Amd",
-    "price": 178200.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 32,
-    "memory_type": "GDDR6",
-    "bus_width": 256,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-radeon-ai-pro-r9700-ai-top-32gb-gddr6-256bit-amd-yapay-zeka-destekli-ekran-karti-gv-r9700ai-top-32gd-1791901399-45.jpg"
-  },
-  {
-    "name": "Asus Geforce Gt 710 2Gb Gddr5 Evo Low Profie 64Bit Dx12",
-    "price": 4381.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 2,
-    "memory_type": "GDDR5",
-    "bus_width": 192,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-geforce-gt-710-2gb-gddr5-evo-low-profie-64bit-dx12-nvidia-ekran-karti-1776679550-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5050_windforce_oc_8g_gddr6_dlss_4_128_bit_ekran_kart.webp"
   },
   {
     "name": "Palit Geforce Rtx 5080 Infinity 3 16Gb Gddr7 256 Bit Dlss 4 Ekran Kart",
@@ -1401,7 +1383,7 @@
     "slot_width": "3.0 Slot",
     "length": 305.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/HXN-p05809bigimage71069fdb3f82b8d7.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/palit_geforce_rtx_5080_infinity_3_16gb_gddr7_256_bit_dlss_4_ekran_kart.webp"
   },
   {
     "name": "Msi Geforce Rtx 3050 Ventus 2X E Oc 6G 6Gb Gddr6 96 Bit Dlss 3 Ekran Kart",
@@ -1419,24 +1401,6 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/BRT-1024.jpg"
-  },
-  {
-    "name": "Powercolor Radeon Ai Pro R9700 32Gb Gddr6 256 Bit Ekran Kart",
-    "price": 149940.0,
-    "chipset": "GeForce RTX 4070 SUPER",
-    "memory": 32,
-    "memory_type": "GDDR6",
-    "bus_width": 256,
-    "core_clock": 2200,
-    "boost_clock": 2550,
-    "tdp": 220,
-    "recommended_psu": 750,
-    "power_connectors": "2x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
-    "slot_width": "2.5 Slot",
-    "length": 260.0,
-    "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4Y5-1.jpeg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_e_oc_6g_6gb_gddr6_96_bit_dlss_3_ekran_kart.webp"
   }
 ]

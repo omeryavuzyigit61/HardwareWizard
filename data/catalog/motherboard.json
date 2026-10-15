@@ -16,7 +16,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/687e208064c428.81552412_ihkjlqgnmepof_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b760_gaming_plus_wifi.webp"
   },
   {
     "name": "Gigabyte X870E Aorus Elite Wifi7",
@@ -35,7 +35,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/NMJ-x870e-aorus-elite-wifi7-01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870e_aorus_elite_wifi7.webp"
   },
   {
     "name": "Asus Prime B550M A Wifi Ii",
@@ -54,7 +54,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/9NG-prime-b550m-k-argb-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b550m_a_wifi_ii.webp"
   },
   {
     "name": "Gigabyte B650 Eagle Ax",
@@ -73,7 +73,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-atx-anakart-1777034715.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b650_eagle_ax.webp"
   },
   {
     "name": "Msi Mag X870 Tomahawk Wifi",
@@ -92,7 +92,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/SPU-msi-x870-gaming-plus-wifibox.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_mag_x870_tomahawk_wifi.webp"
   },
   {
     "name": "Asus B650E Max Gaming Wifi W",
@@ -111,7 +111,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wi-fi-6e-atx-anakart-75.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b650e_max_gaming_wifi_w.webp"
   },
   {
     "name": "Gigabyte B550M K",
@@ -130,7 +130,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/8UD-1000.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b550m_k.webp"
   },
   {
     "name": "Gigabyte X870 Eagle Wifi7",
@@ -149,7 +149,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-x870-eagle-wifi7-amd-x870-soket-am5-ddr5-8000mhz-oc-wifi-7-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870_eagle_wifi7.webp"
   },
   {
     "name": "Gigabyte X870 Aorus Elite Wifi7 Ice",
@@ -168,7 +168,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "White",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202410/671a98f40c0d74.89277204_igpjelqhkfmno_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870_aorus_elite_wifi7_ice.webp"
   },
   {
     "name": "Msi B550M Pro Vdh Wifi",
@@ -187,7 +187,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202101/5ff7ab0005e241.44016445_foekgnhmjlqpi_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b550m_pro_vdh_wifi.webp"
   },
   {
     "name": "Asus Tuf Gaming B650 E Wifi",
@@ -206,7 +206,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-b650-e-wifi-amd-b650-am5-ddr5-8000mhz-wifi-6e-bt-atx-anakart-1781075267.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_tuf_gaming_b650_e_wifi.webp"
   },
   {
     "name": "Msi Mpg B550 Gaming Plus",
@@ -225,7 +225,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202008/5f40d6b7817719.84176331_geokhqnljfmpi_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_mpg_b550_gaming_plus.webp"
   },
   {
     "name": "Msi Mpg X870E Carbon Wifi",
@@ -244,7 +244,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/FQ2-msi-x870e-gaming-plus-wifibox.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_mpg_x870e_carbon_wifi.webp"
   },
   {
     "name": "Asus Tuf Gaming X870 Plus Wifi",
@@ -263,7 +263,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/proart-rog-tuf-5-year-qr-300x300.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_tuf_gaming_x870_plus_wifi.webp"
   },
   {
     "name": "Msi B550 A Pro",
@@ -282,7 +282,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-b550-a-pro-amd-b550-soket-am4-ddr4-4400mhz-m-2-atx-anakart-5.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b550_a_pro.webp"
   },
   {
     "name": "Asus X870E Tuf Gaming Plus Wifi",
@@ -301,7 +301,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/MHD-tuf-gaming-x870e-plus-wifi7-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_x870e_tuf_gaming_plus_wifi.webp"
   },
   {
     "name": "Msi X870E Meg Ace",
@@ -320,7 +320,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-usb-40gbps-64mb-bios-wi-fi-7-rgb-anakart-1775479072-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_x870e_meg_ace.webp"
   },
   {
     "name": "Msi X870E Pro A Wifi",
@@ -339,7 +339,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-usb4-64mb-bios-wi-fi-7-atx-anakart-1775477656-7.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_x870e_pro_a_wifi.webp"
   },
   {
     "name": "Gigabyte X870E Aorus Master",
@@ -358,7 +358,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P1N-x870e-aorus-master-x3d-ice02.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870e_aorus_master.webp"
   },
   {
     "name": "Gigabyte X870E Aorus Elite Ax Ice",
@@ -377,7 +377,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "White",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/XLE-x870e-aorus-elite-wifi7-ice-01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870e_aorus_elite_ax_ice.webp"
   },
   {
     "name": "Gigabyte X870 Gaming X Ax",
@@ -396,7 +396,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202410/671a8f3732dcd0.03716773_oqnlmhjikfegp_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870_gaming_x_ax.webp"
   },
   {
     "name": "Asrock X870 Steel Legend Wifi",
@@ -415,7 +415,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/B9H-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asrock_x870_steel_legend_wifi.webp"
   },
   {
     "name": "Asus B650E Tuf Gaming Plus Wifi",
@@ -434,7 +434,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/ZKX-tuf-gaming-b650e-plus-wifi-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b650e_tuf_gaming_plus_wifi.webp"
   },
   {
     "name": "Asus A620 Prime Plus",
@@ -453,7 +453,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-usb3-2-matx-anakart-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_a620_prime_plus.webp"
   },
   {
     "name": "Gigabyte B550 Eagle Ax",
@@ -472,7 +472,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-m-2-atx-anakart-1788520067-6.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b550_eagle_ax.webp"
   },
   {
     "name": "Asus Z890 Rog Strix E Gaming",
@@ -491,7 +491,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-rog-strix-z890-e-gaming-wifi-wifi7-intel-z890-soket-1851-8800mhz-ddr5-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_z890_rog_strix_e_gaming.webp"
   },
   {
     "name": "Asus Z890 Tuf Gaming Plus Wifi",
@@ -510,7 +510,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-tuf-gaming-z890-pro-wifi-intel-z890-soket-1851-ddr5-7800mhz-oc-wi-fi-7-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_z890_tuf_gaming_plus_wifi.webp"
   },
   {
     "name": "Msi Z890 Meg Ace",
@@ -529,7 +529,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-meg-z890-ace-intel-z890-soket-1851-9200mhz-oc-ddr5-wi-fi-7-usb4-e-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_z890_meg_ace.webp"
   },
   {
     "name": "Msi Z890 Pro A Wifi",
@@ -548,7 +548,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-ddr5-wifi6e-atx-anakart-1788766607-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_z890_pro_a_wifi.webp"
   },
   {
     "name": "Gigabyte B860 Aorus Elite Ax Ice",
@@ -567,7 +567,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "White",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-b860-aorus-elite-wifi7-ice-intel-b860-soket-1851-9200mhz-ddr5-atx-anakart-30.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b860_aorus_elite_ax_ice.webp"
   },
   {
     "name": "Gigabyte B860 Eagle Ax",
@@ -586,7 +586,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wi-fi-6e-atx-anakart-5.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b860_eagle_ax.webp"
   },
   {
     "name": "Asrock B860 Steel Legend Wifi",
@@ -605,7 +605,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/UDF-b860-steel-legend-wifi-l1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asrock_b860_steel_legend_wifi.webp"
   },
   {
     "name": "Msi B760 Pro A Wifi",
@@ -624,7 +624,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-pro-b760-p-wifi-ddr4-soket-1700-5333mhz-oc-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b760_pro_a_wifi.webp"
   },
   {
     "name": "Gigabyte X870E Aorus Pro Ax",
@@ -643,10 +643,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/NLR-x870e-aorus-pro-x3d01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870e_aorus_pro_ax.webp"
   },
   {
-    "name": "Asus Prime A520M E Csm 5100Mhz Oc Ddr4 Soket Am4 M 2 Hdmi Matx",
+    "name": "Asus Prime A520M E Csm 5100Mhz Oc Ddr4 Soket Am4 M 2 Hdmi Matx Anakart",
     "price": 3199.0,
     "socket": "AM4",
     "chipset": "A520",
@@ -662,10 +662,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202407/66839831451d44.81593735_mjhlkoifgepnq_cropped_75.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_a520m_e_csm_5100mhz_oc_ddr4_soket_am4_m_2_hdmi_matx_anakart.webp"
   },
   {
-    "name": "Asus Ex B650M V7 8000Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Matx",
+    "name": "Asus Ex B650M V7 8000Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Matx Anakart",
     "price": 4887.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -681,10 +681,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/53G-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_ex_b650m_v7_8000mhz_oc_ddr5_soket_am5_m_2_hdmi_matx_anakart.webp"
   },
   {
-    "name": "Colorful Battle Ax B760M G Beyaz Wifi Ddr5 7200Mhz Matx Gaming Oyuncu",
+    "name": "Colorful Battle Ax B760M G Beyaz Wifi Ddr5 7200Mhz Matx",
     "price": 3499.0,
     "socket": "LGA1700",
     "chipset": "B760",
@@ -700,10 +700,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "White",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202605/6a0da2314992a4.57566573_niqempgjlhfko_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/colorful_battle_ax_b760m_g_beyaz_wifi_ddr5_7200mhz_matx.webp"
   },
   {
-    "name": "Asus Prime B840M K Am5 Soket Ddr5 8000 Oc Mhz Matx",
+    "name": "Asus Prime B840M K Am5 Soket Ddr5 8000 Oc Mhz Matx Anakart",
     "price": 5299.0,
     "socket": "LGA1700",
     "chipset": "B650",
@@ -719,10 +719,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202603/69b2ce4fd62999.08040184_gilqhjfmnoepk_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b840m_k_am5_soket_ddr5_8000_oc_mhz_matx_anakart.webp"
   },
   {
-    "name": "Gigabyte A520M K V2 1 0 Ddr4 Amd A520 Soket Am4 Ddr4 5100 Oc Mhz Matx Gaming Oyuncu",
+    "name": "Gigabyte A520M K V2 1 0 Ddr4 Amd A520 Soket Am4 Ddr4 5100 Oc Mhz Matx",
     "price": 2599.0,
     "socket": "AM4",
     "chipset": "A520",
@@ -738,10 +738,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202304/6447e80224d169.16146598_jmgfekhniqplo_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_a520m_k_v2_1_0_ddr4_amd_a520_soket_am4_ddr4_5100_oc_mhz_matx.webp"
   },
   {
-    "name": "Asus Prime B650M R Amd B650 Am5 Soket Ddr5 7200 Oc Mhz Matx",
+    "name": "Asus Prime B650M R Amd B650 Am5 Soket Ddr5 7200 Oc Mhz Matx Anakart",
     "price": 5899.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -757,10 +757,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202402/65c3831937af23.00739838_kmpnoglfiejhq_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b650m_r_amd_b650_am5_soket_ddr5_7200_oc_mhz_matx_anakart.webp"
   },
   {
-    "name": "Asus Prime B760M K Ddr4 Intel B760 Soket 1700 5333 Oc Mhz Matx",
+    "name": "Asus Prime B760M K Ddr4 Intel B760 Soket 1700 5333 Oc Mhz Matx Anakart",
     "price": 4199.0,
     "socket": "LGA1700",
     "chipset": "B760",
@@ -776,10 +776,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202502/67c03cd3c3f0e2.29305499_mjnogifpeqhkl_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b760m_k_ddr4_intel_b760_soket_1700_5333_oc_mhz_matx_anakart.webp"
   },
   {
-    "name": "Gigabyte B650M S2H Amd Ddr5 6400Mhz Oc M 2 Hdmi Dp Micro Atx",
+    "name": "Gigabyte B650M S2H Amd Ddr5 6400Mhz Oc M 2 Hdmi Dp Micro Atx Anakart",
     "price": 5433.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -795,7 +795,45 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/d-sub-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b650m_s2h_amd_ddr5_6400mhz_oc_m_2_hdmi_dp_micro_atx_anakart.webp"
+  },
+  {
+    "name": "Nzxt N9 Z890 8000Mhz Oc Ddr5 Soket Lga 1851 M 2 Wifi7 Hdmi Rgb Atx Anakart",
+    "price": 14457.05,
+    "socket": "LGA1851",
+    "chipset": "Z890",
+    "form_factor": "ATX",
+    "memory_type": "DDR5",
+    "memory_slots": 4,
+    "max_memory": 192,
+    "m2_slots": 3,
+    "pcie_slots": 3,
+    "sata_ports": 4,
+    "pcie_generation": "PCIe 5.0",
+    "vrm_phases": "12+2+1 Faz",
+    "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
+    "has_wifi": true,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/nzxt_n9_z890_8000mhz_oc_ddr5_soket_lga_1851_m_2_wifi7_hdmi_rgb_atx_anakart.webp"
+  },
+  {
+    "name": "Nzxt N9 X870E 8000Mhz Oc Ddr5 Soket Am5 Wifi7 M 2 Rgb Atx Anakart",
+    "price": 15489.77,
+    "socket": "AM5",
+    "chipset": "X870E",
+    "form_factor": "ATX",
+    "memory_type": "DDR5",
+    "memory_slots": 4,
+    "max_memory": 192,
+    "m2_slots": 4,
+    "pcie_slots": 3,
+    "sata_ports": 4,
+    "pcie_generation": "PCIe 5.0",
+    "vrm_phases": "14+2+1 Faz DrMOS",
+    "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
+    "has_wifi": true,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/nzxt_n9_x870e_8000mhz_oc_ddr5_soket_am5_wifi7_m_2_rgb_atx_anakart.webp"
   },
   {
     "name": "Gigabyte X870E Aero X3D Wood Gp Ud1000Gm Pg5 V2 1000W 80Plus Gold",
@@ -814,7 +852,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-x870e-aero-x3d-wood-gp-ud1000gm-pg5-v2-1000w-80plus-gold-psu-anakart-kit-1788869923.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_x870e_aero_x3d_wood_gp_ud1000gm_pg5_v2_1000w_80plus_gold.webp"
   },
   {
     "name": "Msi Pro B860M E Intel Core Ultra Lga 1851 Series 2",
@@ -833,7 +871,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-pro-h610m-e-ddr4-intel-h610-soket-1700-ddr4-3200-oc-hdmi-vga-m-2-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_pro_b860m_e_intel_core_ultra_lga_1851_series_2.webp"
   },
   {
     "name": "Asus Pro A620At Csm Amd A620A Soket Am5 Ddr5 Kurumsal",
@@ -852,7 +890,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-matx-anakart-1775822378-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_pro_a620at_csm_amd_a620a_soket_am5_ddr5_kurumsal.webp"
   },
   {
     "name": "Gigabyte B840M H Amd Ryzen B840 Am5 Soket 7200 Oc Mt S Matx",
@@ -871,7 +909,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202601/697b363dceb386.60056195_glnfimqjhkpoe_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b840m_h_amd_ryzen_b840_am5_soket_7200_oc_mt_s_matx.webp"
   },
   {
     "name": "Msi B840M Gaming Plus Wifi6E Amd Ryzen B840 Am5 Soket 8000Mt S",
@@ -890,10 +928,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/685bdcb4b9ce81.70951995_hpljkmgfnoqei_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b840m_gaming_plus_wifi6e_amd_ryzen_b840_am5_soket_8000mt_s.webp"
   },
   {
-    "name": "Msi Pro A620M B Amd A620 Am5 Ddr5 6800Mhz Matx",
+    "name": "Msi Pro A620M B Amd A620 Am5 Ddr5 6800Mhz Matx Anakart",
     "price": 4752.0,
     "socket": "AM5",
     "chipset": "A620",
@@ -909,7 +947,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-pro-a620m-e-amd-a620-am5-ddr5-6000mhz-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_pro_a620m_b_amd_a620_am5_ddr5_6800mhz_matx_anakart.webp"
   },
   {
     "name": "Asus Prime B860M A Wifi Intel Core Ultra Lga 1851 Soket 8666Mt S",
@@ -928,7 +966,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wifi-6e-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b860m_a_wifi_intel_core_ultra_lga_1851_soket_8666mt_s.webp"
   },
   {
     "name": "Gigabyte Z890 Ud Wifi6E Intel Z890 Soket 1851 8800Mhz Ddr5 Usb4",
@@ -947,10 +985,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-z890-ud-wifi6e-intel-z890-soket-1851-8800mhz-ddr5-usb4-wi-fi-6e-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_z890_ud_wifi6e_intel_z890_soket_1851_8800mhz_ddr5_usb4.webp"
   },
   {
-    "name": "Asus Ex B760M V5 Intel B760 Lga1700 Soket 8000Mhz Ddr5 Matx",
+    "name": "Asus Ex B760M V5 Intel B760 Lga1700 Soket 8000Mhz Ddr5 Matx Anakart",
     "price": 8137.0,
     "socket": "LGA1700",
     "chipset": "B760",
@@ -966,7 +1004,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-ex-b760m-v5-intel-b760-lga1700-soket-8000mhz-ddr5-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_ex_b760m_v5_intel_b760_lga1700_soket_8000mhz_ddr5_matx_anakart.webp"
   },
   {
     "name": "Asus Pro A620M Dash Csm Amd A620 Soket Am5 Ddr5 7200Mhz Pcie 4 0",
@@ -985,7 +1023,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/asus-prime-a620m-e-csm-amd-a620-soket-am5-ddr5-6400mhz-pcie-4-0-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_pro_a620m_dash_csm_amd_a620_soket_am5_ddr5_7200mhz_pcie_4_0.webp"
   },
   {
     "name": "Gigabyte B650M S2H Amd Soket Am5 Ddr5 7200Mhz Oc Micro Atx",
@@ -1004,7 +1042,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-b650m-s2h-amd-soket-am5-ddr5-6400mhz-oc-micro-atx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b650m_s2h_amd_soket_am5_ddr5_7200mhz_oc_micro_atx.webp"
   },
   {
     "name": "Gigabyte B760M H Ddr4 Intel B760 Lga1700 Soket 3200Mhz Oc Matx",
@@ -1023,10 +1061,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/gigabyte-h610m-h-v2-ddr5-5600mhz-soket-lga1700-intel-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b760m_h_ddr4_intel_b760_lga1700_soket_3200mhz_oc_matx.webp"
   },
   {
-    "name": "Gigabyte B840M H 7200Mhz Oc M 2 Am5 Matx",
+    "name": "Gigabyte B840M H 7200Mhz Oc M 2 Am5 Matx Anakart",
     "price": 4499.0,
     "socket": "LGA1700",
     "chipset": "B650",
@@ -1042,10 +1080,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/YGJ-b840m-h01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b840m_h_7200mhz_oc_m_2_am5_matx_anakart.webp"
   },
   {
-    "name": "Sapphire A520M E 4000Mhz Oc M 2 Am4 Matx",
+    "name": "Sapphire A520M E 4000Mhz Oc M 2 Am4 Matx Anakart",
     "price": 2800.0,
     "socket": "AM4",
     "chipset": "A520",
@@ -1061,10 +1099,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4NT-sapphirea520m-ec040126.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/sapphire_a520m_e_4000mhz_oc_m_2_am4_matx_anakart.webp"
   },
   {
-    "name": "Sapphire Pure X870A Wifi 7 8400Mhz Oc M 2 Am5 Atx",
+    "name": "Sapphire Pure X870A Wifi 7 8400Mhz Oc M 2 Am5 Atx Anakart",
     "price": 15617.0,
     "socket": "AM5",
     "chipset": "X870",
@@ -1080,10 +1118,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P94-purex870aboxphoto02397x319x87mm0126.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/sapphire_pure_x870a_wifi_7_8400mhz_oc_m_2_am5_atx_anakart.webp"
   },
   {
-    "name": "Gigabyte B760M Ds3H Gen5 7600Mhz Oc M 2 1700P Matx",
+    "name": "Gigabyte B760M Ds3H Gen5 7600Mhz Oc M 2 1700P Matx Anakart",
     "price": 6669.0,
     "socket": "LGA1700",
     "chipset": "B760",
@@ -1099,10 +1137,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/275-b760m-ds3h-gen501.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b760m_ds3h_gen5_7600mhz_oc_m_2_1700p_matx_anakart.webp"
   },
   {
-    "name": "Maxsun Challanger B650M K 6400Mhz Oc M 2 Am5 Matx",
+    "name": "Maxsun Challanger B650M K 6400Mhz Oc M 2 Am5 Matx Anakart",
     "price": 5100.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1118,7 +1156,26 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P9F-image.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/maxsun_challanger_b650m_k_6400mhz_oc_m_2_am5_matx_anakart.webp"
+  },
+  {
+    "name": "Colorful Igame Z890 Vulcan W V20 8800Mhz Oc M 2 1851P E Atx Anakart",
+    "price": 13534.0,
+    "socket": "LGA1851",
+    "chipset": "Z890",
+    "form_factor": "ATX",
+    "memory_type": "DDR5",
+    "memory_slots": 4,
+    "max_memory": 192,
+    "m2_slots": 3,
+    "pcie_slots": 3,
+    "sata_ports": 4,
+    "pcie_generation": "PCIe 5.0",
+    "vrm_phases": "12+2+1 Faz",
+    "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
+    "has_wifi": false,
+    "color": "Black",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/colorful_igame_z890_vulcan_w_v20_8800mhz_oc_m_2_1851p_e_atx_anakart.webp"
   },
   {
     "name": "Asus B850 Rog Strix A Gaming Wifi",
@@ -1137,7 +1194,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202606/6a428e1f318474.03245504_lopnqmjfeighk_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b850_rog_strix_a_gaming_wifi.webp"
   },
   {
     "name": "Asus B850 Tuf Gaming Plus Wifi",
@@ -1156,7 +1213,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/U68-tuf-gaming-b850-btf-wifi-w-0.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b850_tuf_gaming_plus_wifi.webp"
   },
   {
     "name": "Asus B850 Proart Creator",
@@ -1175,7 +1232,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-oc-wi-fi-7-atx-anakart-1775474819-4.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_b850_proart_creator.webp"
   },
   {
     "name": "Gigabyte B850 Gaming X Ax",
@@ -1194,7 +1251,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/1Q2-b850-gaming-x-wifi6e-01.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b850_gaming_x_ax.webp"
   },
   {
     "name": "Asus H610 Tuf Gaming Plus Wifi",
@@ -1213,7 +1270,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-oc-wifi-7-bt-aura-rgb-matx-anakart.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_h610_tuf_gaming_plus_wifi.webp"
   },
   {
     "name": "Msi H610 Mag Mortar Wifi",
@@ -1232,7 +1289,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-wi-fi-7-matx-anakart-19.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_h610_mag_mortar_wifi.webp"
   },
   {
     "name": "Msi H610 Pro A Wifi",
@@ -1251,7 +1308,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202009/5f6fd3cb7300c1.23305733_openiljgfqhkm_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_h610_pro_a_wifi.webp"
   },
   {
     "name": "Msi H610 Mpg Edge Wifi",
@@ -1270,10 +1327,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4J1-1024.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_h610_mpg_edge_wifi.webp"
   },
   {
-    "name": "Asus Prime B850M K 8400Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Matx",
+    "name": "Asus Prime B850M K 8400Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Matx Anakart",
     "price": 7799.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1289,10 +1346,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202510/68f8d475323498.51294453_nfplgheqjoikm_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_prime_b850m_k_8400mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_matx_anakart.webp"
   },
   {
-    "name": "Msi B850 Gaming Plus Wifi6E 8200Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Atx",
+    "name": "Msi B850 Gaming Plus Wifi6E 8200Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Atx Anakart",
     "price": 9999.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1308,10 +1365,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/6880a6b053ee39.49595887_jfglhkqnpmoie_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b850_gaming_plus_wifi6e_8200mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_atx_anakart.webp"
   },
   {
-    "name": "Msi B850M Gaming Plus Wifi6E 8200Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Matx",
+    "name": "Msi B850M Gaming Plus Wifi6E 8200Mhz Oc Ddr5 Soket Am5 M 2 Hdmi Dp Matx Anakart",
     "price": 3935.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1327,10 +1384,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/A6X-1024.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_b850m_gaming_plus_wifi6e_8200mhz_oc_ddr5_soket_am5_m_2_hdmi_dp_matx_anakart.webp"
   },
   {
-    "name": "Gigabyte B850M Force Wifi6E Am5 Ddr5 9600Mhz Oc Matx Gaming Oyuncu",
+    "name": "Gigabyte B850M Force Wifi6E Am5 Ddr5 9600Mhz Oc Matx",
     "price": 7799.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1346,7 +1403,7 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202602/698ad952864d37.09520090_hilpemgnjfqok_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_b850m_force_wifi6e_am5_ddr5_9600mhz_oc_matx.webp"
   },
   {
     "name": "Sapphire Pure B850A Wifi 7 Amd B850 Soket Am5 Ddr5 8000 Mt S",
@@ -1365,10 +1422,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/U65-nitrob850aboxcardphoto1125.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/sapphire_pure_b850a_wifi_7_amd_b850_soket_am5_ddr5_8000_mt_s.webp"
   },
   {
-    "name": "Gigabyte A620M Ds3H A620 Soket Am5 Ddr5 6400Mhz O C M 2 Matx",
+    "name": "Gigabyte A620M Ds3H A620 Soket Am5 Ddr5 6400Mhz O C M 2 Matx Anakart",
     "price": 3999.0,
     "socket": "AM5",
     "chipset": "A620",
@@ -1384,10 +1441,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/FER-1000.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_a620m_ds3h_a620_soket_am5_ddr5_6400mhz_o_c_m_2_matx_anakart.webp"
   },
   {
-    "name": "Sapphire Pulse B850M Wifi 7600Mhz Oc M 2 Am5 Matx",
+    "name": "Sapphire Pulse B850M Wifi 7600Mhz Oc M 2 Am5 Matx Anakart",
     "price": 7759.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1403,10 +1460,10 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": true,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/B3H-pulseb850mboxcardphoto1125.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/sapphire_pulse_b850m_wifi_7600mhz_oc_m_2_am5_matx_anakart.webp"
   },
   {
-    "name": "Asrock B850M Pro A 8000Mhz Oc M 2 Am5 Matx",
+    "name": "Asrock B850M Pro A 8000Mhz Oc M 2 Am5 Matx Anakart",
     "price": 10430.0,
     "socket": "AM5",
     "chipset": "B650",
@@ -1422,6 +1479,6 @@
     "interface_ports": "USB 3.2 Gen 2x2, 2.5G LAN",
     "has_wifi": false,
     "color": "Black",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/NMC-b850m-pro-a-l1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asrock_b850m_pro_a_8000mhz_oc_m_2_am5_matx_anakart.webp"
   }
 ]

@@ -11,7 +11,7 @@
     "seq_write": 12700,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/693ffd50baada9.16255706_meiqknjgplfoh_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/crucial_t705_1tb.webp"
   },
   {
     "name": "Corsair Mp700 Pro 1Tb",
@@ -25,7 +25,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/3500mb-gen-4-0-nvme-ssd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/corsair_mp700_pro_1tb.webp"
   },
   {
     "name": "Corsair Mp700 Pro 2Tb",
@@ -39,7 +39,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/corsair-mp600-nh-2tb-pcie-4-0-gen4-x4-nvme-m-2-ssd-cssd-f2000gbmp600enh-80.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/corsair_mp700_pro_2tb.webp"
   },
   {
     "name": "Corsair Mp700 Pro 4Tb",
@@ -53,7 +53,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/6D5-image-2.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/corsair_mp700_pro_4tb.webp"
   },
   {
     "name": "Samsung 990 Pro 1Tb",
@@ -67,7 +67,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-nvme-m-2-ssd-13.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_1tb.webp"
   },
   {
     "name": "Samsung 990 Pro 2Tb",
@@ -81,7 +81,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-nvme-m-2-ssd-mz-v9s2t0bw.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_2tb.webp"
   },
   {
     "name": "Samsung 990 Pro 4Tb",
@@ -95,7 +95,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/EGK-ekran-goruntusu-2023-12-12-155411photoaid-removed-background.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_4tb.webp"
   },
   {
     "name": "Kingston Kc3000 1Tb",
@@ -109,7 +109,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4H2-skc3000s1024g-067b40.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_1tb.webp"
   },
   {
     "name": "Kingston Kc3000 2Tb",
@@ -123,7 +123,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/5MA-ktc-product-ssd-kc3000-512gb-1-zm-lg.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_2tb.webp"
   },
   {
     "name": "Kingston Kc3000 4Tb",
@@ -137,7 +137,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-2800mb-4.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_4tb.webp"
   },
   {
     "name": "Kingston Fury Renegade 1Tb",
@@ -151,7 +151,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/ZBA-fsfsdf.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_fury_renegade_1tb.webp"
   },
   {
     "name": "Kingston Fury Renegade 2Tb",
@@ -165,7 +165,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/EPE-ktc-3d-ssd-renegade-g5-s.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_fury_renegade_2tb.webp"
   },
   {
     "name": "Kingston Fury Renegade 4Tb",
@@ -179,7 +179,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4000g-79.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_fury_renegade_4tb.webp"
   },
   {
     "name": "Wd Black Sn850X 1Tb",
@@ -193,7 +193,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-m-2-ssd-wds100t2x0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp"
   },
   {
     "name": "Wd Black Sn850X 2Tb",
@@ -207,7 +207,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-m-2-ssd-wds200t2x0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp"
   },
   {
     "name": "Wd Black Sn850X 4Tb",
@@ -221,7 +221,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-m-2-ssd-wds400t2x0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_4tb.webp"
   },
   {
     "name": "Lexar Nm790 1Tb",
@@ -235,7 +235,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-2600mb-sdd-lnm620x512g-rnnng.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/lexar_nm790_1tb.webp"
   },
   {
     "name": "Lexar Nm790 2Tb",
@@ -249,7 +249,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-pcie-gen4x4-m-2-nvme-ssd-6.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/lexar_nm790_2tb.webp"
   },
   {
     "name": "Xpg Gammix S70 Blade 2Tb",
@@ -263,7 +263,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-561.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/xpg_gammix_s70_blade_2tb.webp"
   },
   {
     "name": "Wd Black Sn770 500Gb",
@@ -277,7 +277,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4000mb-yazma-hizi-m-2-ssd-wds500g3x0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_500gb.webp"
   },
   {
     "name": "Wd Black Sn770 2Tb",
@@ -291,7 +291,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-m-2-ssd-wds200t3x0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp"
   },
   {
     "name": "Kingston Nv3 1Tb",
@@ -305,7 +305,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202408/66bb6a717f2b98.35242375_lekgfpijmhqon_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_nv3_1tb.webp"
   },
   {
     "name": "Kingston Nv2 500Gb",
@@ -319,7 +319,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-hizi-3900mb-ssd-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_nv2_500gb.webp"
   },
   {
     "name": "Samsung 870 Evo 500Gb",
@@ -333,7 +333,7 @@
     "seq_write": 530,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 300,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/5CZ-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_870_evo_500gb.webp"
   },
   {
     "name": "Samsung 870 Evo 1Tb",
@@ -347,7 +347,7 @@
     "seq_write": 530,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/MZG-x6f-screenshot1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_870_evo_1tb.webp"
   },
   {
     "name": "Samsung 870 Evo 2Tb",
@@ -361,7 +361,7 @@
     "seq_write": 530,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/B8M-583721.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_870_evo_2tb.webp"
   },
   {
     "name": "Msi Spatium M570 Pro 1Tb",
@@ -375,7 +375,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/1700mb-yazma-pcie-gen3x4-nvme-ssd-5.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m570_pro_1tb.webp"
   },
   {
     "name": "Msi Spatium M570 Pro 2Tb",
@@ -389,7 +389,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-4400mb-09.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m570_pro_2tb.webp"
   },
   {
     "name": "Msi Spatium M570 Pro 4Tb",
@@ -403,7 +403,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-hizi-4200mb-ssd-8.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m570_pro_4tb.webp"
   },
   {
     "name": "Kioxia Exceria Pro 1Tb",
@@ -417,7 +417,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/6943f396f250d7.96522405_plfojgenkhqmi_cropped_288.webp"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_pro_1tb.webp"
   },
   {
     "name": "Kioxia Exceria Pro 2Tb",
@@ -431,7 +431,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/sn-nvme-1-4-m-2-ssd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_pro_2tb.webp"
   },
   {
     "name": "Msi Spatium M480 Pro 1Tb",
@@ -445,7 +445,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-6000-mbs-7.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m480_pro_1tb.webp"
   },
   {
     "name": "Msi Spatium M480 Pro 2Tb",
@@ -459,7 +459,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-7000-mbs.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m480_pro_2tb.webp"
   },
   {
     "name": "Msi Spatium M480 Pro 4Tb",
@@ -473,7 +473,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-7000-pcie-gen4-ssd.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/msi_spatium_m480_pro_4tb.webp"
   },
   {
     "name": "Wd Blue Sn580 1Tb",
@@ -487,7 +487,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-4150mb.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp"
   },
   {
     "name": "Wd Blue Sn580 2Tb",
@@ -501,7 +501,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-4150mb-m-2-ssd-wds200t3b0e.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_2tb.webp"
   },
   {
     "name": "Kingston Nv3 500Gb",
@@ -515,7 +515,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 300,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/AA3-snv3s500gb-zm-lg.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_nv3_500gb.webp"
   },
   {
     "name": "Kingston Nv3 4Tb",
@@ -529,7 +529,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4000g-78.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_nv3_4tb.webp"
   },
   {
     "name": "Crucial P3 Plus 500Gb",
@@ -543,7 +543,7 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-pcie-gen-3-0-nvme-ssd-sdssda3n-500g-g26.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/crucial_p3_plus_500gb.webp"
   },
   {
     "name": "Samsung 970 Evo Plus 1Tb",
@@ -557,6 +557,6 @@
     "seq_write": 4200,
     "nand_type": "3D TLC NAND",
     "endurance_tbw": 600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/3JQ-uk-990-evo-plus-nvme-m2-ssd-mz-v9s1t0bw-544057505.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_970_evo_plus_1tb.webp"
   }
 ]
