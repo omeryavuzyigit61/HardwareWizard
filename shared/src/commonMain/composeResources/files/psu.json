@@ -3,10 +3,10 @@
     "name": "1st Player ACK 80 Plus 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -16,23 +16,23 @@
     "topology": "OEM: Helly | Topoloji: Double Forward | Kapasitör: Teapo 270uF 420V 105°C DG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/gigabyte_gp_gp750gm_750w_80_plus_gold_moduler_psu_g_kayna.webp"
   },
   {
     "name": "1st Player ACK Bronze 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Helly | Topoloji: Double Forward | Kapasitör: Teapo 560uF 420V 105°C TC 2.000h x1",
+    "topology": "OEM: Helly | Topoloji: Double Forward | Kapasitör: Teapo 680uF 400V 105°C TC 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -41,10 +41,10 @@
     "name": "1st Player ACK Silver 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "silver",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -98,7 +98,7 @@
     "name": "1st Player NGDP Platinum ATX 3.0 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -111,13 +111,13 @@
     "topology": "OEM: Helly | Topoloji: Full Bridge | Kapasitör: Nippon Chemi Con 680uF 400V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "1st Player NGDP Platinum ATX 3.1 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -130,16 +130,16 @@
     "topology": "OEM: Helly | Topoloji: Full Bridge | Kapasitör: Nippon Chemi Con 680uF 400V 105°C KMW 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/cooler_master_2000w_x_mighty_80_platinum_tam_mod_ler_2x_12v_2x6_kablo_atx_3_1_gen5_g_kayna.webp"
   },
   {
     "name": "ASUS Prime Bronze 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -149,7 +149,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Elite ***uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "ASUS Prime Gold 750W",
@@ -168,16 +168,16 @@
     "topology": "OEM: CWT | Topoloji: Full Bridge | Kapasitör: Elite 470uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
   },
   {
     "name": "ASUS Tuf Bronze 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C+",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -187,26 +187,26 @@
     "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Lelon 330uF 450V 105°C LSG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_650b_650w_80_bronze_g_kayna.webp"
   },
   {
     "name": "ASUS Tuf Bronze EVO 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Full",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Great Wall? | Topoloji: Half Bridge | Kapasitör: Unknown",
+    "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Lelon 330uF 450V 105°C LSG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_650b_650w_80_bronze_g_kayna.webp"
   },
   {
     "name": "ASUS Tuf Gold 750W",
@@ -215,7 +215,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -225,7 +225,7 @@
     "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 390uF 420V 105°C 2.000h KMW x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
   },
   {
     "name": "ASUS Tuf Gold EVO 750W",
@@ -234,17 +234,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Full",
+    "modular": "No",
     "tier": "Tier B",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Elite 560uF 450V 105°C PL 2.000h x1",
+    "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 390uF 420V 105°C 2.000h KMW x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
   },
   {
     "name": "AIGO GP 750W",
@@ -253,14 +253,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: GuangHaiDianZi | Topoloji: Double  Forward | Kapasitör: Ltec 390uF 420V 105°C HP 2.000h x1",
+    "topology": "OEM: GuangHaiDianZi | Topoloji: Double Forward | Kapasitör: ChengX 150uF 420v **°C CP x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -272,14 +272,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: GuangHaiDianZi | Topoloji: Double  Forward | Kapasitör: Teapo 330uF 420V 105°C DG 2.000h x1",
+    "topology": "OEM: GuangHaiDianZi | Topoloji: Double Forward | Kapasitör: Teapo 330uF 420V 105°C DG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -291,14 +291,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Double  Forward | Kapasitör: Unknown",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -310,14 +310,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Double  Forward | Kapasitör: Unknown",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -329,14 +329,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: GuangHaiDianZi | Topoloji: Double  Forward | Kapasitör: ChengX 330uF 420V 105°C LS 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -348,17 +348,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: GuangHaiDianZi | Topoloji: Double  Forward | Kapasitör: ChengX 330uF 420V 105°C LS 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/cooler_master_2000w_x_mighty_80_platinum_tam_mod_ler_2x_12v_2x6_kablo_atx_3_1_gen5_g_kayna.webp"
   },
   {
     "name": "Corsair CV 750W",
@@ -367,17 +367,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: HEC | Topoloji: Double Forward | Kapasitör: Teapo 270uF 400V 105°C LG 2.000h x1",
+    "topology": "OEM: HEC | Topoloji: Double Forward | Kapasitör: Teapo 330uF 400V 105°C LG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair VS Grey Label 750W",
@@ -396,7 +396,7 @@
     "topology": "OEM: HEC | Topoloji: Double Forward | Kapasitör: Teapo 270uF 400V 85°C LH 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair VS Orange Label 750W",
@@ -415,7 +415,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: CapXon 270uF 400V 85°C LP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair RM Orange Label (2013) 750W",
@@ -431,10 +431,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Chicony\nPower | Topoloji: Full Bridge | Kapasitör: Panasonic 560uF 420V 105°C GL 2.000h x1",
+    "topology": "OEM: Chicony Power | Topoloji: Full Bridge | Kapasitör: Panasonic 560uF 420V 105°C GL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair RM Black Label 750W",
@@ -453,7 +453,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Elite 390uF 400V 105°C PL 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair RM Black Label (2021) 750W",
@@ -472,7 +472,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Teapo 390uF 400V 105°C LG 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
   },
   {
     "name": "Corsair CX (Non-Modular) Green Label V1 (2013) 750W",
@@ -491,7 +491,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Panasonic 180uF 400V 85°C UQ x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_cp_9020251_eu_rm750x_shift_750w_80plus_gold_pcie_5_0_tam_modular.webp"
   },
   {
     "name": "Corsair CX (Non-Modular) Gray Label (2016) 750W",
@@ -510,7 +510,7 @@
     "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Rubycon 180uF 450V 105°C 3,000h MXH x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_cp_9020251_eu_rm750x_shift_750w_80plus_gold_pcie_5_0_tam_modular.webp"
   },
   {
     "name": "Corsair CX (Non-Modular) Black Label (2023) 750W",
@@ -529,7 +529,7 @@
     "topology": "OEM: HEC | Topoloji: Double Forward | Kapasitör: Teapo *uF *V 105°C ? ? x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_cp_9020251_eu_rm750x_shift_750w_80plus_gold_pcie_5_0_tam_modular.webp"
   },
   {
     "name": "Cougar GES ATX 3.1 750W",
@@ -538,7 +538,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -548,7 +548,7 @@
     "topology": "OEM: XinWeiYe | Topoloji: Half Bridge | Kapasitör: HEC 470uF 420V 105°C LT 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_vita_gm_atx_3_1_750w.webp"
   },
   {
     "name": "Cougar Atlas ATX 3.1 750W",
@@ -557,7 +557,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -567,7 +567,7 @@
     "topology": "OEM: CE-Link | Topoloji: Double Forward | Kapasitör: Ltec 220uF 400V 105°C HP 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_vita_gm_atx_3_1_750w.webp"
   },
   {
     "name": "Delta GPS 1000DB 750W",
@@ -595,7 +595,7 @@
     "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -633,7 +633,7 @@
     "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -671,7 +671,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -690,7 +690,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -706,10 +706,10 @@
     "name": "ENERMAX Maxpro III 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E+*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -735,7 +735,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Sanr | Topoloji: Half Bridge | Kapasitör: Rubycon 470uF 420V 105°C 3,000h MXE x2",
+    "topology": "OEM: Sanr | Topoloji: Half Bridge | Kapasitör: Nichicon 680uF 400V 105℃ GL 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -754,16 +754,16 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Rubycon 390uF 420V 105°C 3,000h MXH x1",
+    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Nippon Chemi Con 560uF 420V 105°C KHE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp"
   },
   {
     "name": "ENERMAX Revolution III S 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "platinum",
+    "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -773,10 +773,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Rubycon 420V 560uF 105°C 3,000h MXE x1",
+    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Nippon Chemi Con 560uF 420V 105°C KHE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp"
   },
   {
     "name": "ENERMAX EB-C 750W",
@@ -785,7 +785,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -823,7 +823,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -842,14 +842,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Helly | Topoloji: Double Forward | Kapasitör: Toshin Koygho 330uF 420V 105°C LFW 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Nippon Chemi Con 330uF 450V 105°C 2.000h KMR x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -861,14 +861,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Jiumeng | Topoloji: Double Forward | Kapasitör: Toshin Koygho 560uF 400V 105°C LW 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Nippon Chemi Con 330uF 450V 105°C 2.000h KMR x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -887,7 +887,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: AOJİE\n(SAMA) | Topoloji: Full Bridge | Kapasitör: Nichicon 400V 1000uF 105°C GG(M) 2.000h x1",
+    "topology": "OEM: AOJİE (SAMA) | Topoloji: Full Bridge | Kapasitör: Nichicon 400V 1000uF 105°C GG(M) 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -899,7 +899,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier F",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -928,13 +928,13 @@
     "topology": "OEM: Helly | Topoloji: Half Bridge | Kapasitör: TDK 820uF 420V 105°C EPCOS 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/lian_li_edge_eg_gold_1000w.webp"
   },
   {
     "name": "Lian Li Edge Platinum 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -947,7 +947,7 @@
     "topology": "OEM: Helly | Topoloji: Full Bridge | Kapasitör: Nichicon 470uF 400V 105°C GN 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/lian_li_edge_platinum_850w.webp"
   },
   {
     "name": "Lian Li RS-G 750W",
@@ -963,7 +963,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: TDK 7900uF 420V 105°C EPCOS 2.000h x1  TDK 420uF 420V 105°C EPCOS 2.000h x1",
+    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: TDK 7900uF 420V 105°C EPCOS 2.000h x1 TDK 420uF 420V 105°C EPCOS 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1001,10 +1001,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Helly | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 470uF 400V 105°C KMW 2.000h x1",
+    "topology": "OEM: Helly | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 550uF 105°C 3,000h MXK x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/lian_li_sp_gold_v2_850w.webp"
   },
   {
     "name": "Lian Li SP Gold V2 750W",
@@ -1023,7 +1023,7 @@
     "topology": "OEM: Helly | Topoloji: Half Bridge | Kapasitör: Rubycon 560uF 400V 85°C? 3,000h MXT x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/lian_li_sp_gold_v2_850w.webp"
   },
   {
     "name": "Lian Li SP P (Platinum) 750W",
@@ -1039,10 +1039,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Zhong Yuan\nPower | Topoloji: Half Bridge | Kapasitör: Rubycon 330uF 420V 105°C 3,000h MXK x1  Rubycon 270uF 400V 105°C 3,000h MXT x1",
+    "topology": "OEM: Zhong Yuan Power | Topoloji: Half Bridge | Kapasitör: Rubycon 330uF 420V 105°C 3,000h MXK x1 Rubycon 270uF 400V 105°C 3,000h MXT x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/lian_li_edge_platinum_850w.webp"
   },
   {
     "name": "Lian Li SX-P 750W",
@@ -1058,7 +1058,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Zhong Yuan\nPower | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 680uF 400V 105°C KMW 2.000h x1",
+    "topology": "OEM: Zhong Yuan Power | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 680uF 400V 105°C KMW 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1070,14 +1070,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Jiangsu Fala FOAİ 220uF 420V 85°C FGA 2.000h x1",
+    "topology": "OEM: FSP | Topoloji: Double Forward",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1089,14 +1089,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: -",
+    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Nippon Chemi Con 470uF 420V 105°C *** x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1115,10 +1115,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Toshin Koygho 560uF 450V 105°C LGWA 3.000h x1",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Toshin Koygho 680uF 450V 105°C LGWA 3.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_vita_gm_atx_3_1_750w.webp"
   },
   {
     "name": "FSP VİC BD 750W",
@@ -1127,14 +1127,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Zhong Yuan\nPower | Topoloji: Double Forward | Kapasitör: ChengX 330uF 420V 105°C LS x1",
+    "topology": "OEM: Zhong Yuan Power | Topoloji: Double Forward | Kapasitör: ChengX 330uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1146,14 +1146,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Zhong Yuan\nPower | Topoloji: Half Bridge | Kapasitör: ChengX 560uF 420V 105°C LS x1",
+    "topology": "OEM: Zhong Yuan Power | Topoloji: Half Bridge | Kapasitör: ChengX 560uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1175,23 +1175,23 @@
     "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Jiangsu Fala FOAİ 470uF 420V 85°C FGA 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_vita_gm_atx_3_1_750w.webp"
   },
   {
     "name": "FSP VİC WD 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Zhong Yuan\nPower | Topoloji: Double Forward | Kapasitör: ChengX 270uF 420V 105°C LS x1",
+    "topology": "OEM: Zhong Yuan Power | Topoloji: Double Forward | Kapasitör: ChengX 270uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1213,7 +1213,7 @@
     "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hydro G PRO 750W",
@@ -1229,10 +1229,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Hitachi 560uF 450V 105°C HU 4.000h x1",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.x 750W",
@@ -1248,10 +1248,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 680uF 450V 105°C KHS 3.000h x1",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_2500w_cannon_pro_80_platinum_tam_mod_ler_atx_3_1_pcie_gen_5_1_g_kayna.webp"
   },
   {
     "name": "FSP Hydro PTM 750W",
@@ -1286,7 +1286,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C ? x2",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 330uF 105°C 3,000h MXH x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1305,10 +1305,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con *uF *V 105°C ? x2",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 330uF 105°C 3,000h MXH x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hydro PTM PRO ATX 3.0 750W",
@@ -1324,10 +1324,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Full Bridge | Kapasitör: Hitachi 560uF 450V 105°C HU 4.000h x2",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 330uF 105°C 3,000h MXH x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "FSP Hydro K 750W",
@@ -1336,7 +1336,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1355,17 +1355,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: CapXon 330uF 420V ?°C ? 2.000h x1",
+    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: CapXon 270uF 420V 105°C HP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_2500w_cannon_pro_80_platinum_tam_mod_ler_atx_3_1_pcie_gen_5_1_g_kayna.webp"
   },
   {
     "name": "FSP Hydro K Pro ATX 3.x 750W",
@@ -1374,17 +1374,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: ?",
+    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: CapXon 270uF 420V 105°C HP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_2500w_cannon_pro_80_platinum_tam_mod_ler_atx_3_1_pcie_gen_5_1_g_kayna.webp"
   },
   {
     "name": "FSP Hydro M PRO 750W",
@@ -1403,7 +1403,7 @@
     "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Jiangsu Fala FOAİ 390uF 450V 105°C FGH 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hydro MX 750W",
@@ -1431,26 +1431,26 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "Full",
     "tier": "Tier B-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Rubycon 450V 470uF 105°C MXG 3,000h x1",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hydro S 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "silver",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1476,7 +1476,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Nichicon 420V 330uF 105°C GG 2.000h x1",
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1488,7 +1488,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1507,7 +1507,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1517,7 +1517,7 @@
     "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Jiangsu Fala FOAİ 390uF 450V 105°C FGH 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_hydro_g_pro_pcie_5_0_1200w.webp"
   },
   {
     "name": "FSP Hyper 80+ PRO 750W",
@@ -1526,7 +1526,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1536,7 +1536,7 @@
     "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: CapXon 330uF 450V 105°C HS 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_2500w_cannon_pro_80_platinum_tam_mod_ler_atx_3_1_pcie_gen_5_1_g_kayna.webp"
   },
   {
     "name": "FSP Hyper K 750W",
@@ -1545,7 +1545,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1564,7 +1564,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1583,7 +1583,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1602,14 +1602,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Rubycon 420V 220uF 105°C MXG 3,000h x1",
+    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Rubycon 420V 330uF 105°C 3,000h MXH x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1621,7 +1621,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1637,10 +1637,10 @@
     "name": "FSP Raider 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "silver",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1656,17 +1656,17 @@
     "name": "FSP Raider II 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "silver",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: FSP | Topoloji: Double Forward | Kapasitör: Nippon Chemi Con 270uF 420V 105°C KMQ 2.000h x1",
+    "topology": "OEM: FSP | Topoloji: ACRF | Kapasitör: Teapo 390uF 420V 85°C LH 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1678,14 +1678,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Xinghai\nElectronic? | Topoloji: Double Forward | Kapasitör: CapXon 330uF 420V 105°C HP 2.000h x1",
+    "topology": "OEM: Xinghai Electronic? | Topoloji: Double Forward | Kapasitör: CapXon 390uF 420V 105°C HP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1716,14 +1716,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Double Forward | Kapasitör: Teapo 470uF 420V 105°C TD 2.000h x1",
+    "topology": "OEM: High Power | Topoloji: Double Forward | Kapasitör: Teapo 330uF 420V 105°C TD 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1735,14 +1735,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Teapo 560uF 420V 105°C TD 2.000h x1",
+    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Teapo 680uF 420V 85°C LH 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1764,7 +1764,7 @@
     "topology": "OEM: KinPower | Topoloji: Double Forward | Kapasitör: Teapo 330uF 450V 105°C LE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/antec_csk1000_pro_1000w_80_plus_atx3_1_bronze_yar_mod_ler_g.webp"
   },
   {
     "name": "Gametech GTP 1000.0 750W",
@@ -1780,7 +1780,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Soeyi | Topoloji: Double Forward | Kapasitör: Unknown  x2",
+    "topology": "OEM: Soeyi | Topoloji: Double Forward | Kapasitör: Unknown x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1865,7 +1865,7 @@
     "name": "Green GP-B-OCDG (OCDG) 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "platinum",
+    "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -1884,10 +1884,10 @@
     "name": "Havit HV-B 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1906,14 +1906,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Jiumeng | Topoloji: Double Forward | Kapasitör: -",
+    "topology": "OEM: Jiumeng | Topoloji: Double Forward",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1925,14 +1925,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Soeyi | Topoloji: Double Forward | Kapasitör: SAMXON 330uF 400V 85°C LP 2.000h x1 ?",
+    "topology": "OEM: Soeyi | Topoloji: Double Forward | Kapasitör: SAMXON 420uF 400V 85°C LP 2.000h x1 ?",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -1954,7 +1954,7 @@
     "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 680uF 105°C 3,000h MXK x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "High Power Performance FS 750W",
@@ -1963,7 +1963,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B+",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -1982,7 +1982,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B+",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -1998,10 +1998,10 @@
     "name": "High Power Performance 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2020,7 +2020,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2058,14 +2058,14 @@
     "efficiency": "platinum",
     "wattage": 750,
     "color": "Black",
-    "modular": "Full",
+    "modular": "Semi",
     "tier": "Tier B+*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Japon",
+    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Panasonic 680uF 400V 105°C ** *.**** x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2103,7 +2103,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Nichicon 400V 680uF 105°C GG 2.000h x2",
+    "topology": "OEM: High Power | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 470uF 400V 105°C 2.000h KMR x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2153,14 +2153,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: High Power | Topoloji: Double Forward | Kapasitör: Teapo *uF *V 105°C ? ? x1",
+    "topology": "OEM: High Power | Topoloji: Double Forward | Kapasitör: Teapo 390uF 420V 105°C LE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2172,7 +2172,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2191,7 +2191,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -2229,7 +2229,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2248,7 +2248,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2264,7 +2264,7 @@
     "name": "High Power Absolute HP-G14C 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
     "modular": "Semi",
@@ -2286,7 +2286,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2296,7 +2296,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: CapXon 270uF 400V 85°C LP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI MAG A650BN 750W",
@@ -2305,7 +2305,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2315,7 +2315,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: ChengX 330uF 400V 85°C AP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a650bn_650w.webp"
   },
   {
     "name": "MSI MAG A-BN PCI-e 5.0 750W",
@@ -2324,7 +2324,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2334,7 +2334,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: ChengX 470uF 400V 85°C AP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_cp_9020251_eu_rm750x_shift_750w_80plus_gold_pcie_5_0_tam_modular.webp"
   },
   {
     "name": "MSI MAG A-BN II 750W",
@@ -2343,7 +2343,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2353,7 +2353,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: ChengX 330uF 400V 85°C AP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-BN III 750W",
@@ -2362,17 +2362,17 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Huntkey | Topoloji: Half Bridge | Kapasitör: SAMXON 470 μF 450V 105℃ HP 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: ChengX 330uF 400V 85°C AP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-BNL Full Range 750W",
@@ -2381,7 +2381,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2391,7 +2391,7 @@
     "topology": "OEM: Hedy | Topoloji: Double Forward | Kapasitör: Ltec 330 μF 420V 105℃ HP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-BNL 230V 750W",
@@ -2400,7 +2400,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier F*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2410,16 +2410,16 @@
     "topology": "OEM: Hedy | Topoloji: Double Forward | Kapasitör: ChengX 330uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-DN Full Range 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier F",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2429,16 +2429,16 @@
     "topology": "OEM: Hedy | Topoloji: Double Forward | Kapasitör: ChengX 270uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-DN 230V 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier F",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2448,7 +2448,7 @@
     "topology": "OEM: Hedy | Topoloji: Double Forward | Kapasitör: ChengX 220uF 420V 105°C LS x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-GL 750W",
@@ -2467,7 +2467,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Elite 390uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 750W",
@@ -2483,10 +2483,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Full Bridge | Kapasitör: CapXon 560uF 420V 105°C HP 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Elite 390uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 II 750W",
@@ -2502,10 +2502,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: CapXon 560uF 420V 105°C HP 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Elite 390uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI MAG A-PLS 750W",
@@ -2521,10 +2521,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Teapo 680uF 420V 105°C GG 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Teapo 1000uF 420V 105°C GG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MAG A-GLS 750W",
@@ -2540,10 +2540,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Huntkey | Topoloji: Half Bridge | Kapasitör: Elite 470uF 450V 105°C PL 2.000h x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Elite 390uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a_bnl_full_range_650w.webp"
   },
   {
     "name": "MSI MPG A-GS PCIE5 750W",
@@ -2559,10 +2559,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Rubycon 680uF 420V 105°C 3,000h MXE x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Rubycon 820uF 420V 105°C 3,000h MXE x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI PRO A-PL 750W",
@@ -2578,7 +2578,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Huntkey | Topoloji: Half Bridge | Kapasitör: AİSHİ 560uF 450V 105°C LH 2.000h x1",
+    "topology": "OEM: Huntkey | Topoloji: Half Bridge | Kapasitör: SAMXON 680uF 450V 105°C 2.000h HP x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2590,7 +2590,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2609,14 +2609,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C+",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 470uF 400V 105°C 2.000h KMW x1",
+    "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Nichicon 400V 330uF 105°C 2.000h GG(M) x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2625,17 +2625,17 @@
     "name": "Montech Alpha Bronze 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: XinWeiYe | Topoloji: Double Forward | Kapasitör: Unknown  Tayvan Teapo? SAMXON? CapXon?",
+    "topology": "OEM: XinWeiYe | Topoloji: Double Forward | Kapasitör: Unknown Tayvan Teapo? SAMXON? CapXon?",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2647,7 +2647,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -2666,14 +2666,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Nichicon 400V 270uF 105°C 2.000h GG(M) x1",
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Nippon Chemi Con ***uF ***V 105°C 2.000h KMR x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -2685,7 +2685,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier B-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2723,7 +2723,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2739,10 +2739,10 @@
     "name": "NZXT C Bronze V1 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C+",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2752,16 +2752,16 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Nichicon 400V 330uF 105°C GG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Bronze V2 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2771,16 +2771,16 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: CapXon 560uF 400V 105°C HP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Bronze V3 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "bronze",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -2790,7 +2790,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Elite 560uF 400V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Gold V1 750W",
@@ -2809,7 +2809,7 @@
     "topology": "OEM: Seasonic | Topoloji: Full Bridge | Kapasitör: Hitachi 470uF 450V 105°C HU 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Gold V2 (2022) 750W",
@@ -2828,7 +2828,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 820uF 420V 105°C KHE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Gold ATX 3.0 (2023) 750W",
@@ -2847,7 +2847,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 1150uF 420V 105°C KHE 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Gold ATX 3.1 (2024) 750W",
@@ -2866,7 +2866,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Rubycon 420V 680uF 105°C 3,000h MXE x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "NZXT C Gold Core 750W",
@@ -2885,7 +2885,7 @@
     "topology": "OEM: HEC | Topoloji: Half Bridge | Kapasitör: Teapo 470uF 400V 105°C TC 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/nzxt_c_series_gold_core_atx_3_1_750w.webp"
   },
   {
     "name": "Ocypus Delta P (P-BD) 750W",
@@ -2932,7 +2932,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D+*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -2996,7 +2996,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Andyson | Topoloji: Half Bridge | Kapasitör: Unknown",
+    "topology": "OEM: Andyson | Topoloji: Half Bridge",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3015,7 +3015,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Sanr | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 450V 105°C KMR 2.000h x2",
+    "topology": "OEM: Andyson | Topoloji: Half Bridge",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3034,7 +3034,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Sanr | Topoloji: Half Bridge | Kapasitör: Rubycon 470uF 420V 105°C 3,000h MXE x2",
+    "topology": "OEM: Sanr | Topoloji: Half Bridge",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3046,14 +3046,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "Full",
     "tier": "Tier B-*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Sanr | Topoloji: Half Bridge | Kapasitör: Toshin Koygho 680uF 420V 105°C ** *.***h x1",
+    "topology": "OEM: Sanr | Topoloji: Half Bridge",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3100,7 +3100,7 @@
     "name": "Rampage Forza (FTX-1) 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "platinum",
+    "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
     "modular": "Full",
@@ -3110,7 +3110,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: AOJİE\n(SAMA) | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con ***uF ***V ***°C *** *.***h x2",
+    "topology": "OEM: AOJİE (SAMA) | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con ***uF ***V ***°C *** *.***h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3122,7 +3122,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D+*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -3132,7 +3132,7 @@
     "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: Teapo 470uF 420V 105°C DG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "Segotep BN ATX 3.1 750W",
@@ -3141,7 +3141,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier D+*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -3151,7 +3151,7 @@
     "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: Teapo 470uF 420V 105°C DG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_vita_gm_atx_3_1_750w.webp"
   },
   {
     "name": "Segotep BN ATX 2.x 750W",
@@ -3160,14 +3160,14 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: ChengX 330uF 420V 105°C CP 2.000h x1",
+    "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: Teapo 390uF 420V 105°C DG 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3176,17 +3176,17 @@
     "name": "Segotep AN 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier E",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: ChengX 180uF 420V 105°C LS 2.000h x1",
+    "topology": "OEM: Segotep | Topoloji: Double Forward | Kapasitör: ChengX 220uF 420V 105°C LS 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3195,17 +3195,17 @@
     "name": "SAMA P (XPH-AP) 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "platinum",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Full",
+    "modular": "No",
     "tier": "Tier A",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Rubycon 420V 470uF 105°C 3,000h MXE x2",
+    "topology": "OEM: RSY? | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3214,17 +3214,17 @@
     "name": "SAMA G (HAT-yzB1G) 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Full",
+    "modular": "No",
     "tier": "Tier B+",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: RSY | Topoloji: Full Bridge | Kapasitör: Rubycon 400V 330uF 105°C 3,000h MXH x1",
+    "topology": "OEM: RSY? | Topoloji: Double Forward | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3252,10 +3252,10 @@
     "name": "SAMA H 750W",
     "price": null,
     "type": "ATX",
-    "efficiency": "gold",
+    "efficiency": "80 plus",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C-*",
     "atx_standard": "ATX 2.x",
     "pcie_12vhpwr": null,
@@ -3281,7 +3281,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "2x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": "OEM: Andyson | Topoloji: Full Bridge | Kapasitör: Nichicon 390uF 420V 105°C 2.000h GL x2",
+    "topology": "OEM: Andyson | Topoloji: Full Bridge",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3312,7 +3312,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -3322,7 +3322,7 @@
     "topology": "OEM: CWT | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 400V 470uF 105°C 2.000h KMW x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/xpg_core_reactor_ii_atx_3_1_750w.webp"
   },
   {
     "name": "Adata XPG Core Shift II VE 750W",
@@ -3331,7 +3331,7 @@
     "efficiency": "gold",
     "wattage": 750,
     "color": "Black",
-    "modular": "Semi",
+    "modular": "No",
     "tier": "Tier C*",
     "atx_standard": "ATX 3.x",
     "pcie_12vhpwr": null,
@@ -3341,7 +3341,7 @@
     "topology": "OEM: RSY | Topoloji: Half Bridge? | Kapasitör: Unknown",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/xpg_core_reactor_ii_atx_3_1_750w.webp"
   },
   {
     "name": "Corsair RM1000e (2023) ATX 3.0 1000W",
@@ -3357,10 +3357,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Corsair RM850e (2023) ATX 3.0 850W",
@@ -3376,10 +3376,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Corsair RM750e (2023) ATX 3.0 750W",
@@ -3395,10 +3395,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "Corsair RM850x Shift ATX 3.0 850W",
@@ -3414,10 +3414,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Corsair RM1000x Shift ATX 3.0 1000W",
@@ -3433,10 +3433,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Corsair RM1200x Shift ATX 3.0 1200W",
@@ -3452,10 +3452,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
@@ -3471,10 +3471,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_850w.webp"
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
@@ -3490,16 +3490,16 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_750w.webp"
   },
   {
     "name": "MSI MAG A650BN 650W",
     "price": null,
     "type": "ATX",
-    "efficiency": "bronze",
+    "efficiency": "gold",
     "wattage": 650,
     "color": "Black",
     "modular": "No",
@@ -3509,7 +3509,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: ChengX 330uF 400V 85°C AP 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_a650bn_650w.webp"
@@ -3528,10 +3528,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mag_gl_pcie5_850w.webp"
   },
   {
     "name": "MSI MPG A1000G PCIE5 1000W",
@@ -3547,10 +3547,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/msi_mpg_g_pcie5_1000w.webp"
   },
   {
     "name": "ASUS TUF Gaming 750G 750W",
@@ -3566,10 +3566,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_650b_650w_80_bronze_g_kayna.webp"
   },
   {
     "name": "ASUS TUF Gaming 850G 850W",
@@ -3585,10 +3585,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_650b_650w_80_bronze_g_kayna.webp"
   },
   {
     "name": "ASUS TUF Gaming 1000G 1000W",
@@ -3604,10 +3604,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
@@ -3623,10 +3623,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_thor_platinum_ii_850w.webp"
   },
   {
     "name": "ASUS ROG Thor 1200W Platinum II",
@@ -3642,10 +3642,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_thor_platinum_ii_850w.webp"
   },
   {
     "name": "ASUS ROG Thor 1600W Titanium",
@@ -3661,10 +3661,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_thor_3000w_titanium_iii_edition_20_rog_equalizer_atx.webp"
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
@@ -3680,10 +3680,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Seasonic Focus GX-850 ATX 3.0 850W",
@@ -3699,10 +3699,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "Seasonic Focus GX-1000 ATX 3.0 1000W",
@@ -3718,10 +3718,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
   },
   {
     "name": "DeepCool PN750M ATX 3.1 750W",
@@ -3737,10 +3737,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp"
   },
   {
     "name": "DeepCool PN850M ATX 3.1 850W",
@@ -3756,10 +3756,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 850W",
@@ -3775,10 +3775,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/fsp_2500w_cannon_pro_80_platinum_tam_mod_ler_atx_3_1_pcie_gen_5_1_g_kayna.webp"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 1000W",
@@ -3794,10 +3794,10 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "OEM: FSP | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 330uF 420V 105°C KMR 2.000h x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_1000w.webp"
   },
   {
     "name": "be quiet! Pure Power 12 M 750W",
@@ -3813,7 +3813,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null
@@ -3832,7 +3832,7 @@
     "eps_connectors": "2x 8-Pin (4+4) EPS CPU",
     "pcie_connectors": "4x 8-Pin PCIe",
     "sata_connectors": "8x SATA",
-    "topology": null,
+    "topology": "",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
     "imageUrl": null

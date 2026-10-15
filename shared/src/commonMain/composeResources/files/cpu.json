@@ -833,7 +833,7 @@
     "pcie_version": "PCIe 5.0",
     "max_memory_speed": "DDR4 / DDR5",
     "unlocked_multiplier": false,
-    "imageUrl": null
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14500.webp"
   },
   {
     "name": "Intel Core i5-14400F",
