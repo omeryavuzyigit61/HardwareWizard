@@ -965,48 +965,7 @@ object HardwareMapper {
                     "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
                 else -> null
             }
-            HardwareCategory.GPU -> when {
-                upper.contains("RADEON") || upper.contains("RX ") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/sapphire_nitro_radeon_rx_7800_xt_16_gb_video_card.webp"
-                upper.contains("ARC") || upper.contains("B580") || upper.contains("A770") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/intel_arc_a770_16_gb_video_card.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_dual_oc_geforce_rtx_4070_super_12_gb_video_card.webp"
-            }
-            HardwareCategory.MOTHERBOARD -> when {
-                upper.contains("AM5") || upper.contains("B650") || upper.contains("X870") || upper.contains("X670") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/asus_tuf_gaming_b650_plus_wifi_atx_am5_motherboard.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/msi_mag_b760_tomahawk_wifi_atx_lga1700_motherboard.webp"
-            }
-            HardwareCategory.RAM -> when {
-                upper.contains("DDR5") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/ram/corsair_vengeance_rgb_32_gb_2_x_16_gb_ddr5_6000_cl30_memory.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/ram/corsair_vengeance_lpx_16_gb_2_x_8_gb_ddr4_3200_cl16_memory.webp"
-            }
-            HardwareCategory.STORAGE -> when {
-                upper.contains("KIOXIA") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_pro_1tb.webp"
-                upper.contains("SAMSUNG") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_2_tb_m_2_2280_pcie_4_0_x4_nvme_solid_state_drive.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_1_024_tb_m_2_2280_pcie_4_0_x4_nvme_solid_state_drive.webp"
-            }
-            HardwareCategory.PSU ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/corsair_rmx_2024_atx_3_1_1000w.webp"
-            HardwareCategory.COOLER -> when {
-                upper.contains("360") || upper.contains("240") || upper.contains("AIO") || upper.contains("LIQUID") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/arctic_liquid_freezer_iii_360_56_3_cfm_liquid_cpu_cooler.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/thermalright_peerless_assassin_120_se_66_17_cfm_cpu_cooler.webp"
-            }
-            HardwareCategory.CASE -> when {
-                upper.contains("WHITE") || upper.contains("BEYAZ") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl_white.webp"
-                else ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp"
-            }
+            else -> null
         }
     }
 

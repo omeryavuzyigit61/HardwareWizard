@@ -231,6 +231,7 @@ fun HardwareDetailContent(
                             StoreOffersCard(
                                 offers = item.offers,
                                 currentPriceTry = item.currentPriceTry,
+                                productName = item.displayName,
                             )
                         }
 
@@ -1060,101 +1061,103 @@ private fun formatPrice(price: Money?): String {
     return "₺$major,$minor"
 }
 
+private data class StoreSearchTarget(
+    val name: String,
+    val searchUrlTemplate: String,
+)
+
+private val TR_STORE_SEARCH_TARGETS = listOf(
+    StoreSearchTarget("Akakçe", "https://www.akakce.com/arama/?q="),
+    StoreSearchTarget("İncehesap", "https://www.incehesap.com/arama/?q="),
+    StoreSearchTarget("Hepsiburada", "https://www.hepsiburada.com/ara?q="),
+    StoreSearchTarget("Amazon TR", "https://www.amazon.com.tr/s?k="),
+    StoreSearchTarget("Sinerji", "https://www.sinerji.gen.tr/arama?q="),
+    StoreSearchTarget("Tebilon", "https://www.tebilon.com/arama/?q="),
+    StoreSearchTarget("N11", "https://www.n11.com/arama?q="),
+    StoreSearchTarget("PttAVM", "https://www.pttavm.com/arama?q="),
+)
+
+private fun encodeSearchQuery(query: String): String {
+    val allowed = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~"
+    val sb = StringBuilder()
+    for (ch in query) {
+        if (ch in allowed) {
+            sb.append(ch)
+        } else if (ch == ' ') {
+            sb.append('+')
+        } else {
+            val bytes = ch.toString().encodeToByteArray()
+            for (b in bytes) {
+                sb.append('%')
+                val hex = (b.toInt() and 0xFF).toString(16).uppercase()
+                if (hex.length == 1) sb.append('0')
+                sb.append(hex)
+            }
+        }
+    }
+    return sb.toString()
+}
+
 @Composable
 private fun StoreOffersCard(
     offers: List<StoreOffer>,
     currentPriceTry: Double?,
+    productName: String,
     modifier: Modifier = Modifier,
 ) {
-    if (currentPriceTry == null && offers.isEmpty()) {
-        Card(
-            modifier = modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(Spacing.cardRadius),
-            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+    val uriHandler = LocalUriHandler.current
+
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(Spacing.medium),
         ) {
+            // Header
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(Spacing.medium),
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                Box(
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colorScheme.surfaceVariant),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(text = "⚠️", fontSize = 18.sp)
-                }
-                Spacer(modifier = Modifier.width(Spacing.medium))
-                Column {
-                    Text(
-                        text = "TR Piyasasında Stok / Fiyat Bulunamadı",
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        modifier = Modifier
+                            .size(8.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.primary),
                     )
-                    Spacer(modifier = Modifier.height(2.dp))
+                    Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "Bu donanım için Türkiye e-ticaret mağazalarında aktif stok veya fiyat listelemesi tespit edilemedi.",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        text = "MAĞAZA FİYATLARI & KARŞILAŞTIRMA",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Black,
+                        color = MaterialTheme.colorScheme.primary,
+                        letterSpacing = 1.sp,
+                    )
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)),
+                ) {
+                    Text(
+                        text = if (offers.isNotEmpty()) "${offers.size} Doğrulanmış" else "Canlı Arama",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                     )
                 }
             }
-        }
-    } else if (offers.isNotEmpty()) {
-        val uriHandler = LocalUriHandler.current
-        Card(
-            modifier = modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(Spacing.cardRadius),
-            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(Spacing.medium),
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(
-                            modifier = Modifier
-                                .size(8.dp)
-                                .clip(CircleShape)
-                                .background(MaterialTheme.colorScheme.primary),
-                        )
-                        Spacer(modifier = Modifier.width(Spacing.small))
-                        Text(
-                            text = "MAĞAZA FİYATLARI (CANLI TR PİYASASI)",
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.Black,
-                            color = MaterialTheme.colorScheme.primary,
-                            letterSpacing = 1.sp,
-                        )
-                    }
 
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
-                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)),
-                    ) {
-                        Text(
-                            text = "${offers.size} Mağaza",
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
-                        )
-                    }
-                }
-
+            // Verified Scraped Offers List (if present)
+            if (offers.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(Spacing.medium))
 
                 Column(
@@ -1200,15 +1203,15 @@ private fun StoreOffersCard(
                                         Spacer(modifier = Modifier.width(Spacing.small))
                                         Surface(
                                             shape = RoundedCornerShape(4.dp),
-                                            color = Color(0xFF10B981).copy(alpha = 0.2f),
-                                            border = BorderStroke(1.dp, Color(0xFF10B981)),
+                                            color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.2f),
+                                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary),
                                         ) {
                                             Text(
                                                 text = "EN UCUZ",
                                                 style = MaterialTheme.typography.labelSmall,
                                                 fontWeight = FontWeight.Black,
                                                 fontSize = 9.sp,
-                                                color = Color(0xFF10B981),
+                                                color = MaterialTheme.colorScheme.tertiary,
                                                 modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                                             )
                                         }
@@ -1222,7 +1225,7 @@ private fun StoreOffersCard(
                                         text = "₺${offer.priceTry.formatPrice()}",
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Black,
-                                        color = if (isCheapest) Color(0xFF10B981) else MaterialTheme.colorScheme.primary,
+                                        color = if (isCheapest) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.primary,
                                     )
                                     Spacer(modifier = Modifier.width(Spacing.small))
                                     Text(
@@ -1230,6 +1233,76 @@ private fun StoreOffersCard(
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.medium))
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f),
+            )
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
+            // 1-Tap Live Multi-Store Search Comparison
+            Text(
+                text = "TÜRKİYE MAĞAZALARINDA CANLI FİYAT ARA",
+                style = MaterialTheme.typography.labelSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                letterSpacing = 0.8.sp,
+            )
+            Spacer(modifier = Modifier.height(Spacing.extraSmall))
+            Text(
+                text = "Tek tıkla mağazada anlık stok ve fiyat aratın:",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
+            )
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            val cleanQuery = encodeSearchQuery(productName.ifBlank { "hardware" })
+            Column(
+                verticalArrangement = Arrangement.spacedBy(Spacing.small),
+            ) {
+                TR_STORE_SEARCH_TARGETS.chunked(2).forEach { rowTargets ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                    ) {
+                        rowTargets.forEach { target ->
+                            Surface(
+                                onClick = {
+                                    val fullUrl = "${target.searchUrlTemplate}$cleanQuery"
+                                    runCatching { uriHandler.openUri(fullUrl) }
+                                },
+                                shape = RoundedCornerShape(Spacing.small),
+                                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.35f)),
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = Spacing.medium, vertical = Spacing.small),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically,
+                                ) {
+                                    Text(
+                                        text = target.name,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                    Text(
+                                        text = "Ara ↗",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.primary,
                                     )
                                 }
                             }
