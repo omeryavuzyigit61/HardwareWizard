@@ -321,56 +321,59 @@ private fun HeroHeaderCard(
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(Spacing.medium),
+            modifier = Modifier.fillMaxWidth(),
         ) {
             HardwareDetailHeroImage(
                 imageUrl = item.effectiveImageUrl,
                 category = item.category,
                 displayName = item.displayName,
             )
-            Spacer(modifier = Modifier.height(Spacing.medium))
 
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(Spacing.medium),
             ) {
-                DetailBadge(
-                    text = item.category.displayName,
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    DetailBadge(
+                        text = item.category.displayName,
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                    )
+
+                    DetailBadge(
+                        text = item.brand.uppercase(),
+                        containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        contentColor = MaterialTheme.colorScheme.primary,
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(Spacing.small))
+
+                Text(
+                    text = item.displayName,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface,
                 )
 
-                DetailBadge(
-                    text = item.brand.uppercase(),
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                    contentColor = MaterialTheme.colorScheme.primary,
+                Spacer(modifier = Modifier.height(Spacing.extraSmall))
+
+                val modelSubtitle = if (item.spec is GpuSpec && !item.spec.partNumber.isNullOrBlank()) {
+                    "Model: ${item.model} • Parça No (SKU): ${item.spec.partNumber}"
+                } else {
+                    "Model: ${item.model}"
+                }
+                Text(
+                    text = modelSubtitle,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-
-            Spacer(modifier = Modifier.height(Spacing.small))
-
-            Text(
-                text = item.displayName,
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurface,
-            )
-
-            Spacer(modifier = Modifier.height(Spacing.extraSmall))
-
-            val modelSubtitle = if (item.spec is GpuSpec && !item.spec.partNumber.isNullOrBlank()) {
-                "Model: ${item.model} • Parça No (SKU): ${item.spec.partNumber}"
-            } else {
-                "Model: ${item.model}"
-            }
-            Text(
-                text = modelSubtitle,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
         }
     }
 }
@@ -1351,18 +1354,18 @@ fun HardwareDetailHeroImage(
     displayName: String,
     modifier: Modifier = Modifier,
 ) {
-    val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
+    val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
     val borderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f)
-    val shape = RoundedCornerShape(Spacing.cardRadius)
+    val shape = RoundedCornerShape(topStart = Spacing.cardRadius, topEnd = Spacing.cardRadius)
 
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(250.dp)
+            .height(340.dp)
             .clip(shape)
             .background(containerBg)
             .border(1.dp, borderColor, shape)
-            .padding(12.dp),
+            .padding(16.dp),
         contentAlignment = Alignment.Center,
     ) {
         if (!imageUrl.isNullOrBlank()) {
@@ -1374,7 +1377,7 @@ fun HardwareDetailHeroImage(
                 loading = {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(32.dp),
+                            modifier = Modifier.size(36.dp),
                             strokeWidth = 2.5.dp,
                             color = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
                         )
@@ -1405,20 +1408,29 @@ fun DetailPlaceholderHero(
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
     }
-    Box(
+    Column(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp))
             .background(badgeBg.copy(alpha = 0.35f))
-            .padding(horizontal = 24.dp, vertical = 16.dp),
-        contentAlignment = Alignment.Center,
+            .padding(horizontal = 24.dp, vertical = 20.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
     ) {
         Text(
             text = category.displayName,
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Black,
             color = badgeText,
         )
+        Spacer(modifier = Modifier.height(6.dp))
+        Text(
+            text = "Görsel Doğrulanıyor / Eşleştirilmedi",
+            style = MaterialTheme.typography.labelMedium,
+            fontWeight = FontWeight.Medium,
+            color = badgeText.copy(alpha = 0.8f),
+        )
     }
 }
+
 
 

@@ -10,7 +10,7 @@
     "seq_write": 1600,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria NVMe M.2 1TB",
@@ -23,7 +23,7 @@
     "seq_write": 1600,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 400,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria G2 NVMe M.2 1TB",
@@ -36,7 +36,7 @@
     "seq_write": 1700,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 400,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_g2_nvme_m_2_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
   },
   {
     "name": "Kioxia Exceria G2 NVMe M.2 2TB",
@@ -49,7 +49,7 @@
     "seq_write": 1700,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 800,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_g2_nvme_m_2_2tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 500GB",
@@ -62,7 +62,7 @@
     "seq_write": 2500,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 1TB",
@@ -75,7 +75,7 @@
     "seq_write": 3200,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 400,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Plus NVMe M.2 2TB",
@@ -88,7 +88,7 @@
     "seq_write": 3200,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 800,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Plus G3 NVMe M.2 1TB",
@@ -101,7 +101,7 @@
     "seq_write": 3900,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Plus G3 NVMe M.2 2TB",
@@ -114,7 +114,7 @@
     "seq_write": 3900,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Pro NVMe M.2 1TB",
@@ -127,7 +127,7 @@
     "seq_write": 6400,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 800,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_pro_nvme_m_2_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Pro NVMe M.2 2TB",
@@ -140,7 +140,7 @@
     "seq_write": 6400,
     "nand_type": "BiCS TLC (DRAM Cache)",
     "endurance_tbw": 1600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kioxia_exceria_pro_nvme_m_2_2tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
   },
   {
     "name": "Kioxia Exceria SATA 480GB",
@@ -153,7 +153,7 @@
     "seq_write": 540,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 120,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Kioxia Exceria SATA 960GB",
@@ -166,7 +166,7 @@
     "seq_write": 540,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 240,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
   },
   {
     "name": "Samsung 990 PRO 1TB",
@@ -179,7 +179,7 @@
     "seq_write": 6900,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
   },
   {
     "name": "Samsung 990 PRO 2TB",
@@ -192,7 +192,7 @@
     "seq_write": 6900,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 1200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_2tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
   },
   {
     "name": "Samsung 990 PRO 4TB",
@@ -205,7 +205,7 @@
     "seq_write": 6900,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 2400,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_990_pro_4tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg"
   },
   {
     "name": "Samsung 990 EVO 1TB",
@@ -218,7 +218,7 @@
     "seq_write": 4200,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg"
   },
   {
     "name": "Samsung 990 EVO 2TB",
@@ -231,7 +231,7 @@
     "seq_write": 4200,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg"
   },
   {
     "name": "Samsung 980 PRO 1TB",
@@ -244,7 +244,7 @@
     "seq_write": 5000,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
   },
   {
     "name": "Samsung 980 PRO 2TB",
@@ -257,7 +257,7 @@
     "seq_write": 5000,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
   },
   {
     "name": "Samsung 980 1TB",
@@ -270,7 +270,7 @@
     "seq_write": 3000,
     "nand_type": "V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
   },
   {
     "name": "Samsung 970 EVO Plus 1TB",
@@ -283,7 +283,7 @@
     "seq_write": 3300,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/samsung_970_evo_plus_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
   },
   {
     "name": "Samsung 970 EVO Plus 2TB",
@@ -296,7 +296,7 @@
     "seq_write": 3300,
     "nand_type": "V-NAND TLC (DRAM Cache)",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
   },
   {
     "name": "Kingston KC3000 1TB",
@@ -309,7 +309,7 @@
     "seq_write": 6000,
     "nand_type": "3D TLC (Phison E18 DRAM)",
     "endurance_tbw": 800,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_1tb.webp"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
   },
   {
     "name": "Kingston KC3000 2TB",
@@ -322,7 +322,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC (Phison E18 DRAM)",
     "endurance_tbw": 1600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_2tb.webp"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
   },
   {
     "name": "Kingston KC3000 4TB",
@@ -335,7 +335,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC (Phison E18 DRAM)",
     "endurance_tbw": 3200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_kc3000_4tb.webp"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
   },
   {
     "name": "Kingston Fury Renegade 1TB",
@@ -348,7 +348,7 @@
     "seq_write": 6000,
     "nand_type": "3D TLC (DRAM Cache)",
     "endurance_tbw": 1000,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_fury_renegade_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
   },
   {
     "name": "Kingston Fury Renegade 2TB",
@@ -361,7 +361,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC (DRAM Cache)",
     "endurance_tbw": 2000,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_fury_renegade_2tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
   },
   {
     "name": "Kingston NV3 1TB",
@@ -374,7 +374,7 @@
     "seq_write": 4000,
     "nand_type": "3D QLC/TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/kingston_nv3_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
   },
   {
     "name": "Kingston NV3 2TB",
@@ -387,7 +387,7 @@
     "seq_write": 5000,
     "nand_type": "3D QLC/TLC",
     "endurance_tbw": 640,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
   },
   {
     "name": "Kingston NV2 1TB",
@@ -400,7 +400,7 @@
     "seq_write": 2100,
     "nand_type": "3D TLC/QLC",
     "endurance_tbw": 320,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
   },
   {
     "name": "Kingston NV2 2TB",
@@ -413,7 +413,7 @@
     "seq_write": 2800,
     "nand_type": "3D TLC/QLC",
     "endurance_tbw": 640,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
   },
   {
     "name": "WD Black SN850X 1TB",
@@ -491,7 +491,7 @@
     "seq_write": 9500,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
   },
   {
     "name": "Crucial T700 2TB",
@@ -504,7 +504,7 @@
     "seq_write": 11800,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
   },
   {
     "name": "Crucial T500 1TB",
@@ -517,7 +517,7 @@
     "seq_write": 6800,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 600,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg"
   },
   {
     "name": "Crucial T500 2TB",
@@ -530,7 +530,7 @@
     "seq_write": 7000,
     "nand_type": "Micron 232L TLC (DRAM)",
     "endurance_tbw": 1200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg"
   },
   {
     "name": "Crucial P3 Plus 1TB",
@@ -543,7 +543,7 @@
     "seq_write": 3600,
     "nand_type": "Micron 176L QLC",
     "endurance_tbw": 220,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
   },
   {
     "name": "Crucial P3 Plus 2TB",
@@ -556,7 +556,7 @@
     "seq_write": 4200,
     "nand_type": "Micron 176L QLC",
     "endurance_tbw": 440,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
   },
   {
     "name": "Lexar NM790 1TB",
@@ -569,7 +569,7 @@
     "seq_write": 6500,
     "nand_type": "YMTC 232L TLC",
     "endurance_tbw": 1000,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/lexar_nm790_1tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
   },
   {
     "name": "Lexar NM790 2TB",
@@ -582,7 +582,7 @@
     "seq_write": 6500,
     "nand_type": "YMTC 232L TLC",
     "endurance_tbw": 1500,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/lexar_nm790_2tb.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
   },
   {
     "name": "Lexar NM790 4TB",
@@ -595,7 +595,7 @@
     "seq_write": 6500,
     "nand_type": "YMTC 232L TLC",
     "endurance_tbw": 3000,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg"
   },
   {
     "name": "Intel SSDPEDMD020T401",
@@ -609,7 +609,7 @@
     "seq_read": 3500,
     "seq_write": 3000,
     "nand_type": "3D TLC NAND",
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4ab3a8901725966b71c6806fc7f6a08b.1600.jpg"
   },
   {
     "name": "Crucial T705 1TB",
@@ -623,7 +623,7 @@
     "seq_write": 12700,
     "nand_type": "3D TLC Micron 232-Layer",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/693ffd50baada9.16255706_meiqknjgplfoh_cropped_288.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
   },
   {
     "name": "Crucial T705 2TB",
@@ -637,7 +637,7 @@
     "seq_write": 12700,
     "nand_type": "3D TLC Micron 232-Layer",
     "endurance_tbw": 4800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-t705-1tb-pcie-gen5-nvme-m-2-ssd-13600mb-okuma-10200mb-yazma-ct1000t705ssd3.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
   },
   {
     "name": "Crucial T705 4TB",
@@ -651,7 +651,7 @@
     "seq_write": 12700,
     "nand_type": "3D TLC Micron 232-Layer",
     "endurance_tbw": 9600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-t705-1tb-pcie-gen5-nvme-m-2-ssd-13600mb-okuma-10200mb-yazma-ct1000t705ssd3.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg"
   },
   {
     "name": "Crucial T700 4TB",
@@ -665,7 +665,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC Micron 232-Layer",
     "endurance_tbw": 4800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-t700-1tb-pcie-gen5-nvme-m-2-ssd-11700mb-okuma-9500mb-yazma-ct1000t700ssd3.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg"
   },
   {
     "name": "Corsair MP700 PRO 1TB",
@@ -679,7 +679,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC",
     "endurance_tbw": 1400,
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
   },
   {
     "name": "Corsair MP700 PRO 2TB",
@@ -693,7 +693,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC",
     "endurance_tbw": 2800,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
   },
   {
     "name": "Corsair MP700 PRO 4TB",
@@ -707,7 +707,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC",
     "endurance_tbw": 5600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/6D5-image-2.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg"
   },
   {
     "name": "Kingston Fury Renegade 4TB",
@@ -721,7 +721,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC Micron 176-Layer",
     "endurance_tbw": 8000,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4000g-79.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg"
   },
   {
     "name": "WD_BLACK SN850X 4TB",
@@ -763,7 +763,7 @@
     "seq_write": 4200,
     "nand_type": "3D QLC Micron",
     "endurance_tbw": 1760,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-p3-plus-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3600mb-yazma-ct1000p3pssd8.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
   },
   {
     "name": "Samsung 870 EVO 500GB",
@@ -777,7 +777,7 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/5CZ-screenshot1.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
   },
   {
     "name": "Samsung 870 EVO 1TB",
@@ -791,7 +791,7 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/MZG-x6f-screenshot1.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
   },
   {
     "name": "Samsung 870 EVO 2TB",
@@ -805,7 +805,7 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/B8M-583721.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
@@ -819,7 +819,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 1400,
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
@@ -833,7 +833,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 2800,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "MSI Spatium M570 PRO 4TB",
@@ -847,7 +847,7 @@
     "seq_write": 11800,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 5600,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "Samsung 980 PRO 500GB",
@@ -861,7 +861,7 @@
     "seq_write": 5100,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/samsung-980-pro-nvme-1tb-pcie-gen-4-0-x4-m-2-2280-ssd-7000mb-okuma-5000mb-yazma-mz-v8p1t0bw.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg"
   },
   {
     "name": "Kingston KC3000 512GB",
@@ -875,7 +875,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC Micron 176-Layer",
     "endurance_tbw": 800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-kc3000-1tb-nvme-pcie-4-0-m-2-ssd-7000mb-okuma-6000mb-yazma-skc3000s-1024g.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg"
   },
   {
     "name": "Kioxia Exceria Pro 1TB",
@@ -889,7 +889,7 @@
     "seq_write": 6400,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 800,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/6943f396f250d7.96522405_plfojgenkhqmi_cropped_288.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
   },
   {
     "name": "Kioxia Exceria Pro 2TB",
@@ -903,7 +903,7 @@
     "seq_write": 6400,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 1600,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202609/6aaaa96cb66d04.98864022_ilehofqpjkmgn_cropped_288.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg"
   },
   {
     "name": "MSI Spatium M480 PRO 1TB",
@@ -917,7 +917,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 1400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-6000-mbs-7.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "MSI Spatium M480 PRO 2TB",
@@ -931,7 +931,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 2800,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202401/659d45a497c187.95416257_qknpogfeimhjl_cropped_288.webp"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "MSI Spatium M480 PRO 4TB",
@@ -945,7 +945,7 @@
     "seq_write": 7000,
     "nand_type": "3D TLC",
     "endurance_tbw": 5600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/yazma-7000-pcie-gen4-ssd.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg"
   },
   {
     "name": "WD Blue SN580 500GB",
@@ -987,7 +987,7 @@
     "seq_write": 4200,
     "nand_type": "3D QLC Micron",
     "endurance_tbw": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-pcie-gen-3-0-nvme-ssd-sdssda3n-500g-g26.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg"
   },
   {
     "name": "Samsung 970 EVO Plus 500GB",
@@ -1001,7 +1001,7 @@
     "seq_write": 3300,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/samsung-970-evo-plus-nvme-1tb-pcie-gen-3-0-x4-m-2-2280-ssd-3500mb-okuma-3300mb-yazma.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg"
   },
   {
     "name": "Samsung 870 EVO 4TB",
@@ -1015,7 +1015,7 @@
     "seq_write": 530,
     "nand_type": "Samsung V-NAND TLC",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/samsung-870-evo-1tb-560mb-530mb-s-sata-2-5-ssd-mz-77e1t0bw.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg"
   },
   {
     "name": "Crucial MX500 500GB",
@@ -1029,7 +1029,7 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
   },
   {
     "name": "Crucial MX500 1TB",
@@ -1043,7 +1043,7 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 700,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
   },
   {
     "name": "Crucial MX500 2TB",
@@ -1057,7 +1057,7 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 1400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
   },
   {
     "name": "Crucial MX500 4TB",
@@ -1071,7 +1071,7 @@
     "seq_write": 510,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 2800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg"
   },
   {
     "name": "Seagate FireCuda 540 1TB",
@@ -1085,7 +1085,7 @@
     "seq_write": 10000,
     "nand_type": "3D TLC",
     "endurance_tbw": 2000,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg"
   },
   {
     "name": "Seagate FireCuda 540 2TB",
@@ -1099,7 +1099,7 @@
     "seq_write": 10000,
     "nand_type": "3D TLC",
     "endurance_tbw": 4000,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg"
   },
   {
     "name": "XPG Gammix S70 Blade 1TB",
@@ -1113,7 +1113,7 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 1480,
-    "imageUrl": null
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
   },
   {
     "name": "XPG Gammix S70 Blade 2TB",
@@ -1127,7 +1127,7 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 2960,
-    "imageUrl": null
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
   },
   {
     "name": "XPG Gammix S70 Blade 4TB",
@@ -1141,7 +1141,7 @@
     "seq_write": 6800,
     "nand_type": "3D TLC",
     "endurance_tbw": 5920,
-    "imageUrl": null
+    "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg"
   },
   {
     "name": "Seagate FireCuda 530 1TB",
@@ -1155,7 +1155,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 2550,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
   },
   {
     "name": "Seagate FireCuda 530 2TB",
@@ -1169,7 +1169,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 5100,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
   },
   {
     "name": "Seagate FireCuda 530 4TB",
@@ -1183,7 +1183,7 @@
     "seq_write": 6900,
     "nand_type": "3D TLC Micron",
     "endurance_tbw": 10200,
-    "imageUrl": null
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg"
   },
   {
     "name": "WD Blue SN5000 1TB",
@@ -1239,7 +1239,7 @@
     "seq_write": 4000,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-nv3-1tb-pcie-4-0-nvme-m-2-ssd-snv3s-1000g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
   },
   {
     "name": "Kingston NV3 4TB",
@@ -1253,7 +1253,7 @@
     "seq_write": 4000,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 2560,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-nv3-1tb-pcie-4-0-nvme-m-2-ssd-snv3s-1000g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg"
   },
   {
     "name": "Kingston NV2 500GB",
@@ -1267,7 +1267,7 @@
     "seq_write": 2800,
     "nand_type": "3D QLC / TLC",
     "endurance_tbw": 320,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-nv2-1tb-nvme-pcie-4-0-m-2-ssd-3500mb-okuma-2100mb-yazma-snv2s-1000g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg"
   },
   {
     "name": "Kioxia Exceria G2 500GB",
@@ -1281,7 +1281,7 @@
     "seq_write": 1700,
     "nand_type": "BiCS TLC (DRAM)",
     "endurance_tbw": 200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kioxia-exceria-plus-g3-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3900mb-yazma-lsd10z001tg8.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
   },
   {
     "name": "Kioxia Exceria G2 1TB",
@@ -1295,7 +1295,7 @@
     "seq_write": 1700,
     "nand_type": "BiCS TLC (DRAM)",
     "endurance_tbw": 400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kioxia-exceria-plus-g3-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3900mb-yazma-lsd10z001tg8.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
   },
   {
     "name": "Kioxia Exceria G2 2TB",
@@ -1309,7 +1309,7 @@
     "seq_write": 1700,
     "nand_type": "BiCS TLC (DRAM)",
     "endurance_tbw": 800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kioxia-exceria-plus-g3-1tb-pcie-gen4-nvme-m-2-ssd-5000mb-okuma-3900mb-yazma-lsd10z001tg8.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg"
   },
   {
     "name": "Kingston KC600 512GB",
@@ -1323,7 +1323,7 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 300,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-kc600-512gb-550mb-520mb-s-sata-2-5-ssd-skc600-512g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
   },
   {
     "name": "Kingston KC600 1TB",
@@ -1337,7 +1337,7 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 614,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-kc600-512gb-550mb-520mb-s-sata-2-5-ssd-skc600-512g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
   },
   {
     "name": "Kingston KC600 2TB",
@@ -1351,7 +1351,7 @@
     "seq_write": 520,
     "nand_type": "3D TLC",
     "endurance_tbw": 1228,
-    "imageUrl": "https://www.tebilon.com/picture300x300/kingston-kc600-512gb-550mb-520mb-s-sata-2-5-ssd-skc600-512g.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg"
   },
   {
     "name": "Crucial BX500 500GB",
@@ -1365,7 +1365,7 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 180,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
   },
   {
     "name": "Crucial BX500 1TB",
@@ -1379,7 +1379,7 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 360,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
   },
   {
     "name": "Crucial BX500 2TB",
@@ -1393,6 +1393,6 @@
     "seq_write": 500,
     "nand_type": "3D NAND",
     "endurance_tbw": 720,
-    "imageUrl": "https://www.tebilon.com/picture300x300/crucial-mx500-1tb-560mb-510mb-s-sata-2-5-ssd-ct1000mx500ssd1.jpg"
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg"
   }
 ]
