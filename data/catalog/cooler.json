@@ -701,7 +701,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "Thermalright Assassin X 120 Refined SE",
@@ -736,7 +736,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/JU6995590.jpg"
+    "imageUrl": null
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro A-RGB 360",
@@ -860,7 +860,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master Hyper 212 (2023)",
@@ -879,7 +879,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master Hyper 212 Spectrum V3",
@@ -898,7 +898,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "NZXT Kraken 240 RGB",
@@ -1236,7 +1236,7 @@
       "LGA1851"
     ],
     "max_tdp": 320,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "Thermalright Assassin X 120 Refined SE (White)",
@@ -1272,7 +1272,7 @@
       "LGA1851"
     ],
     "max_tdp": 180,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master Hyper 212 Halo (White)",
@@ -1290,7 +1290,7 @@
       "LGA1851"
     ],
     "max_tdp": 180,
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-hyper-212-halo-black-kule-tipi-islemci-sogutucu-rr-s4kk-20pa-r1.jpg"
+    "imageUrl": null
   },
   {
     "name": "ASUS Prime LC 240 ARGB 240mm Intel-AMD Uyumlu İşlemci Sıvı Soğutucu",
@@ -1362,7 +1362,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/685badbe89fd08.59483514_mhfigjnpkoleq_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "FSP AD36 ARGB AIO 360mm Dijital Isı Göstergeli Beyaz İşlemci Sıvı Soğutucu",
@@ -1380,7 +1380,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "Bitfenix S7 Digital Beyaz ARGB 360mm İşlemci Sıvı Soğutucu",
@@ -1434,7 +1434,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.incehesap.com/resim/urun/202608/6a95cb2a0dd9e6.71065540_omknpqgfejihl_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "FSP NP5 Siyah 12cm ARGB Hava Soğutucu",
@@ -1452,7 +1452,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "Rampage FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
@@ -1470,7 +1470,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "ANTEC Skeleton 360 ARGB Fanlı 360mm Sıvı işlemci Soğutucusu",
@@ -1578,7 +1578,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-siyah-islemci-sogutucu-34.jpg"
+    "imageUrl": null
   },
   {
     "name": "AMD Wraith  İşlemci Soğutucusu-712-000046",
@@ -1614,7 +1614,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-coolblade-120mm-fanli-islemci-sogutucu.jpg"
+    "imageUrl": null
   },
   {
     "name": "FRISBY P2S 90mm ARGB Fanlı LGA1700/AM5 2xBakır Borulu Hava Soğutma",
@@ -1632,7 +1632,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://www.tebilon.com/picture300x300/am5-2xbakir-borulu-hava-sogutma.jpg"
+    "imageUrl": null
   },
   {
     "name": "DEEPCOOL AG300 LGA1700/1851/AM5 işlemci Hava Soğutma",
@@ -1722,7 +1722,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/47A-05f65b0849b02a0c77a18de8d460db0d.jpg"
+    "imageUrl": null
   },
   {
     "name": "Intel M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
@@ -1740,7 +1740,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/69T-y3k2faninte9737910101.jpg"
+    "imageUrl": null
   },
   {
     "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm  AIO 2.4\" IPS",
@@ -1902,7 +1902,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li Galahad II Trinity 360 (White)",
@@ -1920,7 +1920,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li Galahad II Trinity 240",
@@ -1938,7 +1938,7 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li Galahad II Trinity 240 (White)",
@@ -1956,7 +1956,7 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-galahad-ii-trinity-360-siyah-argb-islemci-sivi-sogutucu-ga2t36b.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li HydroShift LCD 360",
@@ -1974,7 +1974,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li HydroShift LCD 360 (White)",
@@ -1992,7 +1992,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-hydroshift-lcd-360s-siyah-360mm-islemci-sivi-sogutucu-hslcd36sb.jpg"
+    "imageUrl": null
   },
   {
     "name": "DeepCool LT720 (White)",
@@ -2190,7 +2190,7 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+    "imageUrl": null
   },
   {
     "name": "Be Quiet! Pure Loop 2 240",
@@ -2208,7 +2208,7 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+    "imageUrl": null
   },
   {
     "name": "Noctua NH-U12A chromax.black",
@@ -2244,6 +2244,6 @@
       "LGA1851"
     ],
     "max_tdp": 150,
-    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-dark-rock-pro-5-sessiz-kule-tipi-islemci-sogutucu-bk036.jpg"
+    "imageUrl": null
   }
 ]

@@ -735,7 +735,7 @@
     "seq_write": 6600,
     "nand_type": "BiCS5 112-Layer TLC",
     "endurance_tbw": 4800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-sogutuculu-m-2-ssd-wds400t2xhe.jpg"
+    "imageUrl": null
   },
   {
     "name": "WD_BLACK SN770 500GB",
@@ -749,7 +749,7 @@
     "seq_write": 4900,
     "nand_type": "BiCS5 112-Layer TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://www.tebilon.com/picture300x300/4000mb-yazma-hizi-m-2-ssd-wds500g3x0e.jpg"
+    "imageUrl": null
   },
   {
     "name": "Crucial P3 Plus 4TB",
@@ -959,7 +959,7 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 450,
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": null
   },
   {
     "name": "WD Blue SN580 2TB",
@@ -973,7 +973,7 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 1800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/s-4150mb-m-2-ssd-wds200t3b0e.jpg"
+    "imageUrl": null
   },
   {
     "name": "Crucial P3 Plus 500GB",
@@ -1197,7 +1197,7 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
+    "imageUrl": null
   },
   {
     "name": "WD Blue SN5000 2TB",
@@ -1211,7 +1211,7 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 2400,
-    "imageUrl": "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
+    "imageUrl": null
   },
   {
     "name": "WD Blue SN5000 4TB",
@@ -1225,7 +1225,7 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 4800,
-    "imageUrl": "https://www.tebilon.com/picture300x300/wd-blue-sn580-1tb-pcie-gen4-nvme-m-2-ssd-4150mb-okuma-4150mb-yazma-wds100t3b0e.jpg"
+    "imageUrl": null
   },
   {
     "name": "Kingston NV3 500GB",

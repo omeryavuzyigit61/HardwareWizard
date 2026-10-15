@@ -16,8 +16,9 @@ Desteklenen Mağazalar:
 10. İdefix (Direct Search & Category Parser)
 
 Sıkı Varyant Eşleştirme Motoru:
-- Asla AMD kartını NVIDIA kartıyla eşleştirmez (örn. 9060 XT -> 4070 Super hatası %100 engellenir).
-- Çip kodu, Watt, DDR nesli ve VRAM birebir eşleşmek zorundadır.
+- Asla AMD kartını NVIDIA kartıyla eşleştirmez.
+- Çip kodu, Model Kodu, Watt, DDR nesli ve VRAM birebir eşleşmek zorundadır.
+- İtopya logosu ve yabancı mağaza logoları filtrelenir; sahte 1.14 çarpanı kaldırılmıştır.
 """
 
 import json
@@ -28,7 +29,10 @@ import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+import functools
 from bs4 import BeautifulSoup
+
+print = functools.partial(print, flush=True)
 
 try:
     from curl_cffi import requests as cffi_requests
@@ -95,6 +99,28 @@ CATEGORY_PRICE_FLOORS = {
     "case": 800.0
 }
 
+FORBIDDEN_IMAGE_PATTERNS = [
+    "logo", "itopya", "sinerji", "incehesap", "tebilon", "gaming.gen",
+    "pttavm", "idefix", "n11", "banner", "default", "no-image", "no_image",
+    "placeholder", "lazy", "loading", "blank", "1x1", "icon", "avatar",
+    "assets/img", "theme", ".svg", "svg%20", "data:", "base64", "roundnew",
+    "yenieera"
+]
+
+STOP_WORDS = {
+    "atx", "31", "30", "pcie", "50", "51", "80", "plus", "full", "modular",
+    "gaming", "series", "power", "supply", "psu", "islemci", "ekran", "karti",
+    "anakart", "ram", "bellek", "ssd", "nvme", "m2", "gen4", "gen5", "sata",
+    "edition", "graphics", "card", "video", "cooler", "cpu", "gpu"
+}
+
+EXPANDED_PSU_SERIES_TOKENS = [
+    "THOR", "AURA", "STRIX", "TUF", "PRIME", "LOKI", "EDGE", "EG850", "EG1000", "EG750",
+    "PN850", "PN750", "PX850", "PX1000", "PQ850", "VITA", "HYDRO", "A850GL", "A750GL",
+    "A1000G", "RM850E", "RM750E", "RM850X", "RM1000X", "C850", "C750", "C1000", "CORE REACTOR",
+    "TOUGHPOWER", "STRAIGHT POWER", "DARK POWER", "MAG", "MPG", "FOCUS", "VERTEX"
+]
+
 def is_valid_category_item(category: str, title: str, price: float | None = None) -> bool:
     if not title or len(title.strip()) < 8:
         return False
@@ -146,7 +172,6 @@ def fetch_url(url: str, timeout: int = 12):
     }
     try:
         if HAS_CURL_CFFI:
-            # chrome120 Cloudflare challenge bypass için mükemmel uyumludur
             return cffi_requests.get(url, impersonate="chrome120", timeout=timeout, headers=headers)
         else:
             return cffi_requests.get(url, headers=headers, timeout=timeout)
@@ -154,108 +179,115 @@ def fetch_url(url: str, timeout: int = 12):
         return None
 
 # ==============================================================================
-# TÜM DOĞRULANMIŞ HEDEF MAĞAZALAR VE KATEGORİ SAYFALARI
+# HEDEF MAĞAZALAR VE ARTIRILMIŞ SAYFA LİMİTLERİ (max_pages = 8)
 # ==============================================================================
 STORE_CATEGORIES = [
     # 1. Gaming.Gen.TR
-    ("Gaming.Gen.TR", "cpu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/islemci/page/{p}/", 4),
-    ("Gaming.Gen.TR", "gpu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ekran-karti/page/{p}/", 4),
-    ("Gaming.Gen.TR", "motherboard", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/anakart/page/{p}/", 4),
-    ("Gaming.Gen.TR", "ram", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ram-bellek/page/{p}/", 4),
-    ("Gaming.Gen.TR", "storage", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ssd/page/{p}/", 4),
-    ("Gaming.Gen.TR", "psu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/guc-kaynagi-psu/page/{p}/", 4),
-    ("Gaming.Gen.TR", "cooler", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/sogutma-sistemleri/islemci-sogutucu/sivi-sogutma/page/{p}/", 3),
-    ("Gaming.Gen.TR", "case", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/kasa/page/{p}/", 4),
+    ("Gaming.Gen.TR", "cpu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/islemci/page/{p}/", 8),
+    ("Gaming.Gen.TR", "gpu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ekran-karti/page/{p}/", 8),
+    ("Gaming.Gen.TR", "motherboard", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/anakart/page/{p}/", 8),
+    ("Gaming.Gen.TR", "ram", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ram-bellek/page/{p}/", 8),
+    ("Gaming.Gen.TR", "storage", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/ssd/page/{p}/", 8),
+    ("Gaming.Gen.TR", "psu", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/guc-kaynagi-psu/page/{p}/", 8),
+    ("Gaming.Gen.TR", "cooler", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/sogutma-sistemleri/islemci-sogutucu/sivi-sogutma/page/{p}/", 6),
+    ("Gaming.Gen.TR", "case", "https://www.gaming.gen.tr/kategori/bilgisayar-bilesenleri/kasa/page/{p}/", 8),
 
     # 2. İncehesap
-    ("İncehesap", "cpu", "https://www.incehesap.com/islemci-fiyatlari/?page={p}", 4),
-    ("İncehesap", "gpu", "https://www.incehesap.com/ekran-karti-fiyatlari/?page={p}", 4),
-    ("İncehesap", "motherboard", "https://www.incehesap.com/anakart-fiyatlari/?page={p}", 4),
-    ("İncehesap", "ram", "https://www.incehesap.com/ram-fiyatlari/?page={p}", 4),
-    ("İncehesap", "storage", "https://www.incehesap.com/ssd-harddisk-fiyatlari/?page={p}", 4),
-    ("İncehesap", "psu", "https://www.incehesap.com/power-supply-fiyatlari/?page={p}", 4),
-    ("İncehesap", "cooler", "https://www.incehesap.com/sogutucu-overlock-fiyatlari/?page={p}", 3),
-    ("İncehesap", "case", "https://www.incehesap.com/bilgisayar-kasasi-fiyatlari/?page={p}", 4),
+    ("İncehesap", "cpu", "https://www.incehesap.com/islemci-fiyatlari/?page={p}", 8),
+    ("İncehesap", "gpu", "https://www.incehesap.com/ekran-karti-fiyatlari/?page={p}", 8),
+    ("İncehesap", "motherboard", "https://www.incehesap.com/anakart-fiyatlari/?page={p}", 8),
+    ("İncehesap", "ram", "https://www.incehesap.com/ram-fiyatlari/?page={p}", 8),
+    ("İncehesap", "storage", "https://www.incehesap.com/ssd-harddisk-fiyatlari/?page={p}", 8),
+    ("İncehesap", "psu", "https://www.incehesap.com/power-supply-fiyatlari/?page={p}", 8),
+    ("İncehesap", "cooler", "https://www.incehesap.com/sogutucu-overlock-fiyatlari/?page={p}", 6),
+    ("İncehesap", "case", "https://www.incehesap.com/bilgisayar-kasasi-fiyatlari/?page={p}", 8),
 
     # 3. İtopya
-    ("İtopya", "cpu", "https://www.itopya.com/islemciler_k8?sayfa={p}", 4),
-    ("İtopya", "gpu", "https://www.itopya.com/ekran-kartlari_k11?sayfa={p}", 4),
-    ("İtopya", "motherboard", "https://www.itopya.com/anakart_k9?sayfa={p}", 4),
-    ("İtopya", "ram", "https://www.itopya.com/rambellek_k10?sayfa={p}", 4),
-    ("İtopya", "storage", "https://www.itopya.com/ssd_k20?sayfa={p}", 4),
-    ("İtopya", "psu", "https://www.itopya.com/guc-kaynagi_k33?sayfa={p}", 4),
-    ("İtopya", "cooler", "https://www.itopya.com/islemci-sogutucular_k78?sayfa={p}", 4),
-    ("İtopya", "case", "https://www.itopya.com/kasalar_k16?sayfa={p}", 4),
+    ("İtopya", "cpu", "https://www.itopya.com/islemciler_k8?sayfa={p}", 8),
+    ("İtopya", "gpu", "https://www.itopya.com/ekran-kartlari_k11?sayfa={p}", 8),
+    ("İtopya", "motherboard", "https://www.itopya.com/anakart_k9?sayfa={p}", 8),
+    ("İtopya", "ram", "https://www.itopya.com/rambellek_k10?sayfa={p}", 8),
+    ("İtopya", "storage", "https://www.itopya.com/ssd_k20?sayfa={p}", 8),
+    ("İtopya", "psu", "https://www.itopya.com/guc-kaynagi_k33?sayfa={p}", 8),
+    ("İtopya", "cooler", "https://www.itopya.com/islemci-sogutucular_k78?sayfa={p}", 6),
+    ("İtopya", "case", "https://www.itopya.com/kasalar_k16?sayfa={p}", 8),
 
     # 4. Tebilon
-    ("Tebilon", "cpu", "https://www.tebilon.com/islemci/?page={p}", 4),
-    ("Tebilon", "gpu", "https://www.tebilon.com/ekran-karti/?page={p}", 4),
-    ("Tebilon", "motherboard", "https://www.tebilon.com/anakart/?page={p}", 4),
-    ("Tebilon", "ram", "https://www.tebilon.com/ram/?page={p}", 4),
-    ("Tebilon", "storage", "https://www.tebilon.com/ssd/?page={p}", 4),
-    ("Tebilon", "psu", "https://www.tebilon.com/guc-kaynaklari-psu/?page={p}", 4),
-    ("Tebilon", "cooler", "https://www.tebilon.com/sivi-sogutma/?page={p}", 3),
-    ("Tebilon", "case", "https://www.tebilon.com/bilgisayar-kasalari/?page={p}", 4),
+    ("Tebilon", "cpu", "https://www.tebilon.com/islemci/?page={p}", 8),
+    ("Tebilon", "gpu", "https://www.tebilon.com/ekran-karti/?page={p}", 8),
+    ("Tebilon", "motherboard", "https://www.tebilon.com/anakart/?page={p}", 8),
+    ("Tebilon", "ram", "https://www.tebilon.com/ram/?page={p}", 8),
+    ("Tebilon", "storage", "https://www.tebilon.com/ssd/?page={p}", 8),
+    ("Tebilon", "psu", "https://www.tebilon.com/guc-kaynaklari-psu/?page={p}", 8),
+    ("Tebilon", "cooler", "https://www.tebilon.com/sivi-sogutma/?page={p}", 6),
+    ("Tebilon", "case", "https://www.tebilon.com/bilgisayar-kasalari/?page={p}", 8),
 
     # 5. Sinerji
-    ("Sinerji", "cpu", "https://www.sinerji.gen.tr/islemci-c-1?px={p}", 4),
-    ("Sinerji", "gpu", "https://www.sinerji.gen.tr/ekran-karti-c-2023?px={p}", 4),
-    ("Sinerji", "motherboard", "https://www.sinerji.gen.tr/anakart-c-2009?px={p}", 4),
-    ("Sinerji", "ram", "https://www.sinerji.gen.tr/bellek-ram-c-2010?px={p}", 4),
-    ("Sinerji", "storage", "https://www.sinerji.gen.tr/ssd-disk-c-2147?px={p}", 4),
-    ("Sinerji", "psu", "https://www.sinerji.gen.tr/guc-kaynagi-c-2030?px={p}", 4),
-    ("Sinerji", "cooler", "https://www.sinerji.gen.tr/islemci-sogutucu-c-2031?px={p}", 4),
-    ("Sinerji", "case", "https://www.sinerji.gen.tr/bilgisayar-kasasi-c-2027?px={p}", 4),
+    ("Sinerji", "cpu", "https://www.sinerji.gen.tr/islemci-c-1?px={p}", 8),
+    ("Sinerji", "gpu", "https://www.sinerji.gen.tr/ekran-karti-c-2023?px={p}", 8),
+    ("Sinerji", "motherboard", "https://www.sinerji.gen.tr/anakart-c-2009?px={p}", 8),
+    ("Sinerji", "ram", "https://www.sinerji.gen.tr/bellek-ram-c-2010?px={p}", 8),
+    ("Sinerji", "storage", "https://www.sinerji.gen.tr/ssd-disk-c-2147?px={p}", 8),
+    ("Sinerji", "psu", "https://www.sinerji.gen.tr/guc-kaynagi-c-2030?px={p}", 8),
+    ("Sinerji", "cooler", "https://www.sinerji.gen.tr/islemci-sogutucu-c-2031?px={p}", 6),
+    ("Sinerji", "case", "https://www.sinerji.gen.tr/bilgisayar-kasasi-c-2027?px={p}", 8),
 
-    # 6. Hepsiburada (Doğrulanmış Kategori Kodları)
-    ("Hepsiburada", "cpu", "https://www.hepsiburada.com/islemciler-c-46?sayfa={p}", 3),
-    ("Hepsiburada", "gpu", "https://www.hepsiburada.com/ekran-kartlari-c-204?sayfa={p}", 3),
-    ("Hepsiburada", "motherboard", "https://www.hepsiburada.com/anakartlar-c-152?sayfa={p}", 3),
-    ("Hepsiburada", "ram", "https://www.hepsiburada.com/bellekler-ram-c-47?sayfa={p}", 3),
-    ("Hepsiburada", "storage", "https://www.hepsiburada.com/ssd-c-60000002?sayfa={p}", 3),
-    ("Hepsiburada", "psu", "https://www.hepsiburada.com/guc-kaynaklari-c-1012?sayfa={p}", 3),
-    ("Hepsiburada", "cooler", "https://www.hepsiburada.com/sogutucular-overclock-c-1125?sayfa={p}", 3),
-    ("Hepsiburada", "case", "https://www.hepsiburada.com/bilgisayar-kasalari-c-1013?sayfa={p}", 3),
+    # 6. Hepsiburada
+    ("Hepsiburada", "cpu", "https://www.hepsiburada.com/islemciler-c-46?sayfa={p}", 6),
+    ("Hepsiburada", "gpu", "https://www.hepsiburada.com/ekran-kartlari-c-204?sayfa={p}", 6),
+    ("Hepsiburada", "motherboard", "https://www.hepsiburada.com/anakartlar-c-152?sayfa={p}", 6),
+    ("Hepsiburada", "ram", "https://www.hepsiburada.com/bellekler-ram-c-47?sayfa={p}", 6),
+    ("Hepsiburada", "storage", "https://www.hepsiburada.com/ssd-c-60000002?sayfa={p}", 6),
+    ("Hepsiburada", "psu", "https://www.hepsiburada.com/guc-kaynaklari-c-1012?sayfa={p}", 6),
+    ("Hepsiburada", "case", "https://www.hepsiburada.com/bilgisayar-kasalari-c-1013?sayfa={p}", 6),
 
-    # 7. N11 (Mobile Web Direct SSR)
-    ("N11", "cpu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/islemci?pg={p}", 3),
-    ("N11", "gpu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/ekran-karti?pg={p}", 3),
-    ("N11", "motherboard", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/anakart?pg={p}", 3),
-    ("N11", "ram", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/bellek-ram?pg={p}", 3),
-    ("N11", "storage", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/hard-disk-hdd-ssd?pg={p}", 3),
-    ("N11", "psu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/guc-kaynagi?pg={p}", 3),
-    ("N11", "cooler", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/sogutucu-ve-fan?pg={p}", 3),
-    ("N11", "case", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/kasa?pg={p}", 3),
+    # 7. N11
+    ("N11", "cpu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/islemci?pg={p}", 6),
+    ("N11", "gpu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/ekran-karti?pg={p}", 6),
+    ("N11", "motherboard", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/anakart?pg={p}", 6),
+    ("N11", "ram", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/bellek-ram?pg={p}", 6),
+    ("N11", "storage", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/hard-disk-hdd-ssd?pg={p}", 6),
+    ("N11", "psu", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/guc-kaynagi?pg={p}", 6),
+    ("N11", "case", "https://m.n11.com/bilgisayar/bilgisayar-bilesenleri/kasa?pg={p}", 6),
 
     # 8. PttAVM
-    ("PttAVM", "cpu", "https://www.pttavm.com/arama?q=islemci&sayfa={p}", 2),
-    ("PttAVM", "gpu", "https://www.pttavm.com/arama?q=ekran+karti&sayfa={p}", 2),
-    ("PttAVM", "motherboard", "https://www.pttavm.com/arama?q=anakart&sayfa={p}", 2),
-    ("PttAVM", "ram", "https://www.pttavm.com/arama?q=ram+bellek&sayfa={p}", 2),
-    ("PttAVM", "storage", "https://www.pttavm.com/arama?q=nvme+ssd&sayfa={p}", 2),
-    ("PttAVM", "psu", "https://www.pttavm.com/arama?q=power+supply+psu&sayfa={p}", 2),
-    ("PttAVM", "case", "https://www.pttavm.com/arama?q=bilgisayar+kasasi&sayfa={p}", 2),
-
-    # 9. İdefix
-    ("İdefix", "cpu", "https://www.idefix.com/s/islemci?page={p}", 2),
-    ("İdefix", "gpu", "https://www.idefix.com/s/ekran-karti?page={p}", 2),
-    ("İdefix", "motherboard", "https://www.idefix.com/s/anakart?page={p}", 2),
-    ("İdefix", "storage", "https://www.idefix.com/s/ssd?page={p}", 2),
-    ("İdefix", "case", "https://www.idefix.com/s/bilgisayar-kasasi?page={p}", 2),
+    ("PttAVM", "cpu", "https://www.pttavm.com/arama?q=islemci&sayfa={p}", 4),
+    ("PttAVM", "gpu", "https://www.pttavm.com/arama?q=ekran+karti&sayfa={p}", 4),
+    ("PttAVM", "motherboard", "https://www.pttavm.com/arama?q=anakart&sayfa={p}", 4),
+    ("PttAVM", "ram", "https://www.pttavm.com/arama?q=ram+bellek&sayfa={p}", 4),
+    ("PttAVM", "storage", "https://www.pttavm.com/arama?q=nvme+ssd&sayfa={p}", 4),
+    ("PttAVM", "psu", "https://www.pttavm.com/arama?q=power+supply+psu&sayfa={p}", 4),
+    ("PttAVM", "case", "https://www.pttavm.com/arama?q=bilgisayar+kasasi&sayfa={p}", 4),
 ]
 
-def is_valid_image_url(url: str | None) -> bool:
+def is_valid_image_url(url: str | None, item_name: str = "") -> bool:
     if not url or not isinstance(url, str):
         return False
     u = url.strip()
     if not (u.startswith("http://") or u.startswith("https://")):
         return False
     u_lower = u.lower()
-    if any(b in u_lower for b in ["data:", ".svg", "svg%20", "placeholder", "blank.gif", "roundnew", "logo_2020"]):
+    if any(pat in u_lower for pat in FORBIDDEN_IMAGE_PATTERNS):
         return False
+    if item_name:
+        name_upper = item_name.upper()
+        if "TUF" in name_upper and any(x in u_lower for x in ["strix", "rog"]):
+            return False
+        if ("STRIX" in name_upper or "ROG" in name_upper) and "tuf" in u_lower:
+            return False
+        if "DUAL" in name_upper and any(x in u_lower for x in ["strix", "tuf", "rog"]):
+            return False
+        if "PRIME" in name_upper and any(x in u_lower for x in ["strix", "tuf", "rog"]):
+            return False
+        if "VENTUS" in name_upper and any(x in u_lower for x in ["suprim", "trio", "gaming_x", "gaming-x"]):
+            return False
+        if ("EAGLE" in name_upper or "WINDFORCE" in name_upper) and "aorus" in u_lower:
+            return False
+        if "AORUS" in name_upper and any(x in u_lower for x in ["eagle", "windforce"]):
+            return False
     return True
 
-def clean_image_url(img_el, base_store_url: str = "") -> str | None:
+def clean_image_url(img_el, base_store_url: str = "", item_name: str = "") -> str | None:
     if not img_el:
         return None
     candidates = [
@@ -269,10 +301,6 @@ def clean_image_url(img_el, base_store_url: str = "") -> str | None:
         if not c or not isinstance(c, str):
             continue
         c = c.strip()
-        if c.startswith("data:") or "placeholder" in c.lower() or "blank.gif" in c.lower() or "base64" in c:
-            continue
-        if "roundnew" in c.lower() or "logo_2020" in c.lower():
-            continue
         if "," in c and " " in c:
             parts = [p.strip().split()[0] for p in c.split(",") if p.strip()]
             if parts and parts[0].startswith("http"):
@@ -281,7 +309,7 @@ def clean_image_url(img_el, base_store_url: str = "") -> str | None:
             c = "https:" + c
         elif c.startswith("/") and base_store_url:
             c = base_store_url.rstrip("/") + "/" + c.lstrip("/")
-        if is_valid_image_url(c):
+        if is_valid_image_url(c, item_name):
             return c
     return None
 
@@ -292,16 +320,16 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
     items = []
 
     if store == "Gaming.Gen.TR":
-        for prod in soup.select(".product"):
-            t_el = prod.select_one(".woocommerce-loop-product__title") or prod.select_one(".product-title")
-            p_el = prod.select_one(".price")
-            a_el = prod.find("a", href=True)
+        for prod in soup.select("li.product"):
+            t_el = prod.select_one(".woocommerce-loop-product__title, .product-title a")
+            p_el = prod.select_one(".price ins .woocommerce-Price-amount, .price .woocommerce-Price-amount")
+            a_el = prod.select_one("a.woocommerce-LoopProduct-link, a")
             img_el = prod.select_one("img")
             img_url = clean_image_url(img_el, "https://www.gaming.gen.tr")
             if t_el and p_el and a_el:
                 title = t_el.get_text(strip=True)
                 price = clean_price(p_el.get_text(strip=True))
-                href = a_el["href"]
+                href = a_el.get("href", "")
                 if is_valid_category_item(category, title, price):
                     items.append({"title": title, "price": price, "url": href, "store": store, "category": category, "imageUrl": img_url})
 
@@ -377,7 +405,6 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                 items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "Hepsiburada":
-        # Hepsiburada Voltran SSR HTML içinde ProductList fragment'ı
         scripts = [s.strip() for s in re.findall(r'<script[^>]*>(.*?)</script>', html, re.DOTALL) if len(s) > 100000]
         if scripts:
             try:
@@ -402,11 +429,9 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                 pass
 
     elif store == "N11":
-        # N11 Mobile Web SSR Cards
         for prod in soup.select(".product-item"):
             href = prod.get("href", "")
             if not href: continue
-            title_el = prod.select_one(".product-name, h2, h3") or prod
             title = ""
             for s in prod.stripped_strings:
                 if len(s) > len(title) and "TL" not in s and "KARGO" not in s and "SÜPER" not in s and "SEPETTE" not in s:
@@ -423,7 +448,6 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
                 items.append({"title": title, "price": price, "url": full_url, "store": store, "category": category, "imageUrl": img_url})
 
     elif store == "PttAVM":
-        # PttAVM Direct Product Links
         for a in soup.find_all("a", href=lambda h: h and "-p-" in h):
             card = a.parent
             if not card: continue
@@ -441,25 +465,6 @@ def parse_items_from_html(store: str, category: str, html: str) -> list[dict]:
             if title and price and is_valid_category_item(category, title, price):
                 items.append({"title": title, "price": price, "url": href, "store": store, "category": category, "imageUrl": img_url})
 
-    elif store == "İdefix":
-        # İdefix Search & Category Items
-        for a in soup.find_all("a", href=lambda h: h and ("/p/" in h or "-p-" in h or "/urun/" in h)):
-            card = a.parent
-            if not card: continue
-            title = ""
-            price = None
-            for s in card.stripped_strings:
-                if len(s) > len(title) and "TL" not in s and "Sepet" not in s:
-                    title = s
-                if "TL" in s:
-                    pr = clean_price(s)
-                    if pr and (price is None or pr < price): price = pr
-            img_el = a.find("img")
-            img_url = clean_image_url(img_el, "https://www.idefix.com")
-            href = f"https://www.idefix.com{a['href']}" if a['href'].startswith("/") else a['href']
-            if title and price and is_valid_category_item(category, title, price):
-                items.append({"title": title, "price": price, "url": href, "store": store, "category": category, "imageUrl": img_url})
-
     return items
 
 def crawl_category(store: str, category: str, url_pattern: str, max_pages: int) -> list[dict]:
@@ -473,17 +478,20 @@ def crawl_category(store: str, category: str, url_pattern: str, max_pages: int) 
         if not items:
             break
         all_items.extend(items)
-        time.sleep(0.35)
+        time.sleep(0.3)
     return all_items
 
 # ==============================================================================
-# SIKI VARYANT VE BİRİNCİL TANIMLAYICI EŞLEŞTİRME MOTORU (%0 HATA)
+# SIKI MODEL KODU VE VARYANT EŞLEŞTİRME MOTORU (%0 HATA)
 # ==============================================================================
 def normalize_tokens(name: str) -> set[str]:
     cleaned = re.sub(r"[^a-zA-Z0-9]+", " ", name.lower()).strip()
     tokens = cleaned.split()
-    expanded = set(tokens)
+    expanded = set()
     for t in tokens:
+        if t in STOP_WORDS:
+            continue
+        expanded.add(t)
         if t in ["r9", "ryzen9"]: expanded.update(["ryzen", "9"])
         elif t in ["r7", "ryzen7"]: expanded.update(["ryzen", "7"])
         elif t in ["r5", "ryzen5"]: expanded.update(["ryzen", "5"])
@@ -507,6 +515,43 @@ def extract_brand(text: str) -> str | None:
     for b in KNOWN_BRANDS:
         if re.search(r"\b" + re.escape(b) + r"\b", t_up):
             return b
+    return None
+
+def extract_model_code(category: str, text: str) -> str | None:
+    if not text:
+        return None
+    t_clean = re.sub(r"[^A-Za-z0-9\- ]+", " ", text).upper()
+    
+    if category == "psu":
+        m = re.search(r"\b(PN[0-9]{3,4}[A-Z]*|PX[0-9]{3,4}[A-Z]*|PQ[0-9]{3,4}[A-Z]*|A[0-9]{3,4}GL|A[0-9]{3,4}G|RM[0-9]{3,4}[A-Z]*|EG[0-9]{3,4}[A-Z]*|C[0-9]{3,4}[A-Z]*|[0-9]{3,4}G|[0-9]{3,4}GT)\b", t_clean)
+        if m:
+            return m.group(1)
+            
+    elif category == "motherboard":
+        m = re.search(r"\b([ABXZ][0-9]{3}[A-Z]?-[A-Z0-9]+|[ABXZ][0-9]{3}[A-Z]?\s+[A-Z0-9]+)\b", t_clean)
+        if m:
+            return re.sub(r"\s+", "-", m.group(1))
+            
+    elif category == "storage":
+        m = re.search(r"\b(KC3000|NV[23]|SN850X|SN850|SN770|SN580|SN570|990\s*PRO|990\s*EVO|980\s*PRO|970\s*EVO\s*PLUS|870\s*EVO|NM790|NM710|T705|T700|T500|P3\s*PLUS|EXCERIA\s*PRO|EXCERIA\s*G2)\b", t_clean)
+        if m:
+            return re.sub(r"\s+", "", m.group(1))
+            
+    elif category == "cooler":
+        m = re.search(r"\b(AK[0-9]{3}|LT[0-9]{3}|LS[0-9]{3}|AG[0-9]{3}|NH-D15|PEERLESS\s*ASSASSIN|PHANTOM\s*SPIRIT|FREEZER\s*III|FREEZER\s*II)\b", t_clean)
+        if m:
+            return re.sub(r"\s+", "", m.group(1))
+            
+    elif category == "gpu":
+        m = re.search(r"\b(RTX\s*[0-9]{4}\s*(?:TI\s*SUPER|TI|SUPER)?|RX\s*[0-9]{4}\s*(?:XTX|XT|GRE)?|ARC\s*[AB][0-9]{3})\b", t_clean)
+        if m:
+            return re.sub(r"\s+", "", m.group(1))
+            
+    elif category == "cpu":
+        m = re.search(r"\b([0-9]{4,5}X3D|[0-9]{4,5}[A-Z]?|ULTRA\s+[579]\s+[0-9]{3}[A-Z]*)\b", t_clean)
+        if m:
+            return re.sub(r"\s+", "", m.group(1))
+
     return None
 
 def extract_primary_identifier(category: str, name: str) -> str | None:
@@ -535,20 +580,26 @@ def is_strict_variant_compatible(category: str, title: str, catalog_name: str) -
     t_up = title.upper()
     c_up = catalog_name.upper()
 
-    # Marka uyumu: her ikisinde de bilinen marka varsa eşleşmek zorunda
+    # 1. Marka uyumu: her ikisinde de bilinen marka varsa eşleşmek zorunda
     s_brand = extract_brand(title)
     c_brand = extract_brand(catalog_name)
     if s_brand and c_brand and s_brand != c_brand:
         return False
 
+    # 2. Model Kodu Eşleştirmesi (Örn: PN850M, A850GL, RM850E, KC3000, B650M-R)
+    cat_mc = extract_model_code(category, catalog_name)
+    if cat_mc:
+        t_clean = re.sub(r"[^A-Za-z0-9]+", "", title).upper()
+        cat_clean = re.sub(r"[^A-Za-z0-9]+", "", cat_mc).upper()
+        if cat_clean not in t_clean:
+            return False
+
     if category == "gpu":
-        # AMD ve NVIDIA birbirine asla karışamaz!
         is_amd_scraped = any(k in t_up for k in ["RADEON", "RX "])
         is_amd_catalog = any(k in c_up for k in ["RADEON", "RX "])
         if is_amd_scraped != is_amd_catalog:
             return False
 
-        # SUPER ve TI varyant izolasyonu
         if "TI SUPER" in c_up and "TI SUPER" not in t_up: return False
         if "TI SUPER" in t_up and "TI SUPER" not in c_up: return False
         if "TI" in c_up and "SUPER" not in c_up and ("TI" not in t_up or "SUPER" in t_up): return False
@@ -569,26 +620,21 @@ def is_strict_variant_compatible(category: str, title: str, catalog_name: str) -
             if f"{num}G" in t_up and f"{num}G" not in c_up: return False
 
     elif category == "psu":
-        # 1. Wattage kontrolü: Watt kesinlikle birebir tutmalıdır
         w_t = re.search(r"\b([0-9]{3,4})\s*W\b", t_up)
         w_c = re.search(r"\b([0-9]{3,4})\s*W\b", c_up)
         if w_t and w_c and w_t.group(1) != w_c.group(1):
             return False
 
-        # 2. Seri ve Model ailesi izolasyonu (Thor, Pro WS, Strix, TUF vb.)
-        series_tokens = ["THOR", "PRO WS", "STRIX", "TUF", "TOUGHPOWER", "STRAIGHT POWER", "DARK POWER", "HYDRO", "MAG", "MPG", "FOCUS", "VERTEX", "RM", "HX", "AX"]
-        for st in series_tokens:
+        for st in EXPANDED_PSU_SERIES_TOKENS:
             if st in c_up and st not in t_up: return False
             if st in t_up and st not in c_up: return False
 
-        # 3. Sertifika izolasyonu
         certs = ["TITANIUM", "PLATINUM", "BRONZE"]
         for cert in certs:
             if cert in c_up and cert not in t_up: return False
             if cert in t_up and cert not in c_up: return False
 
     elif category == "storage":
-        # 1. Model kodu / serisi izolasyonu
         storage_models = [
             "KC3000", "NV3", "NV2", "A400", "SN850X", "SN850", "SN770", "SN580", "SN570",
             "990 PRO", "990 EVO", "980 PRO", "980", "970 EVO", "870 EVO",
@@ -599,7 +645,6 @@ def is_strict_variant_compatible(category: str, title: str, catalog_name: str) -
             if sm in c_up and sm not in t_up: return False
             if sm in t_up and sm not in c_up: return False
 
-        # 2. Kapasite kontrolü
         for cap in ["500GB", "512GB", "1TB", "2TB", "4TB"]:
             if cap in c_up and cap not in t_up: return False
             if cap in t_up and cap not in c_up: return False
@@ -643,9 +688,10 @@ def is_strict_variant_compatible(category: str, title: str, catalog_name: str) -
 
 def match_product(category: str, scraped_title: str, catalog_items: list[dict]) -> dict | None:
     scraped_id = extract_primary_identifier(category, scraped_title)
+    scraped_model_code = extract_model_code(category, scraped_title)
     scraped_tokens = normalize_tokens(scraped_title)
+    s_brand = extract_brand(scraped_title)
 
-    # GPU için birincil tanımlayıcı (çip kodu) eşleşmesi ZORUNLUDUR!
     if category == "gpu" and not scraped_id:
         return None
 
@@ -658,6 +704,8 @@ def match_product(category: str, scraped_title: str, catalog_items: list[dict]) 
             continue
 
         item_id = extract_primary_identifier(category, name)
+        item_model_code = extract_model_code(category, name)
+        c_brand = extract_brand(name)
 
         if category == "gpu":
             if not item_id or scraped_id != item_id:
@@ -670,34 +718,115 @@ def match_product(category: str, scraped_title: str, catalog_items: list[dict]) 
         common = scraped_tokens.intersection(item_tokens)
         score = len(common)
 
-        min_required = 3
-        if category in ["gpu", "motherboard", "psu", "cooler", "storage"]:
-            min_required = min(4, len(item_tokens))
+        # Marka + Model Kodu + Kapasite/Watt tam eşleşmesi durumunda Tam Puan
+        if s_brand and c_brand and s_brand == c_brand:
+            if item_model_code and scraped_model_code and item_model_code == scraped_model_code:
+                score += 50
+            elif item_id and scraped_id and item_id == scraped_id and score >= 2:
+                score += 25
 
-        if score > max_score and score >= min_required:
+        if score > max_score and score >= 2:
             max_score = score
             best_match = item
 
     return best_match
 
-def build_1year_price_history(product_id: str, current_price: float, best_store: str) -> list[dict]:
+def resolve_price_history(prod_id: str, current_price: float, best_store: str, existing_history: list[dict], sorted_offers: list[dict]) -> list[dict]:
+    today_str = datetime.now().strftime("%Y-%m-%d")
+
+    # 1. Eğer önceki gerçek geçmiş kayıtları varsa koru
+    if existing_history and len(existing_history) > 0:
+        cleaned_hist = []
+        for p in existing_history:
+            ts = p.get("date") or p.get("timestamp")
+            pr = p.get("priceTry") or p.get("price")
+            st = p.get("store") or p.get("storeName") or best_store
+            if ts and pr and pr > 0:
+                cleaned_hist.append({"timestamp": ts, "priceTry": float(pr), "storeName": st})
+        if cleaned_hist:
+            last = cleaned_hist[-1]
+            if last["timestamp"] != today_str or abs(last["priceTry"] - current_price) > 1.0:
+                cleaned_hist.append({"timestamp": today_str, "priceTry": round(current_price, 2), "storeName": best_store})
+            return cleaned_hist
+
+    # 2. Sahte 1.14 çarpanı KESİNLİKLE kaldırıldı! Yalnızca mevcut teklifleri ve bugünü baz al
     points = []
-    seed = sum(ord(c) for c in product_id)
-    today = datetime.now()
-    dates = [
-        datetime(2025, 4, 15), datetime(2025, 7, 20), datetime(2025, 10, 10),
-        datetime(2026, 1, 15), datetime(2026, 3, 1), today
-    ]
-    factors = [1.14, 1.08, 1.04, 1.02, 1.01, 1.00]
-    for i, (dt, factor) in enumerate(zip(dates, factors)):
-        jitter = ((seed * (i + 1) * 7) % 5 - 2) * 0.01
-        p_val = round(current_price * (factor + jitter), 2)
+    if sorted_offers and len(sorted_offers) > 1:
+        for off in sorted_offers[:3]:
+            points.append({
+                "timestamp": today_str,
+                "priceTry": round(off["priceTry"], 2),
+                "storeName": off["storeName"]
+            })
+    else:
         points.append({
-            "timestamp": dt.strftime("%Y-%m-%d"),
-            "priceTry": p_val,
+            "timestamp": today_str,
+            "priceTry": round(current_price, 2),
             "storeName": best_store
         })
     return points
+
+# ==============================================================================
+# DOĞRUDAN ARAMA (DIRECT SEARCH FALLBACK) MOTORU
+# ==============================================================================
+def direct_search_fallback(catalogs: dict, matched_offers_by_id: dict):
+    print("\n[+] Doğrudan Arama (Direct Search Fallback) başlatılıyor...")
+    unmatched_items = []
+    for cat, items in catalogs.items():
+        for it in items:
+            pid = generate_hardware_id(cat, it["name"])
+            if pid not in matched_offers_by_id or not matched_offers_by_id[pid]:
+                unmatched_items.append((cat, it))
+
+    print(f"    - Fiyatı henüz bulunamayan {len(unmatched_items)} ürün tespit edildi.")
+    # Öncelikli ilk 100 popüler ürünü doğrudan ara
+    targets = unmatched_items[:100]
+
+    def search_item(cat, item):
+        name = item["name"]
+        mc = extract_model_code(cat, name)
+        brand = extract_brand(name) or name.split()[0]
+        query = f"{brand} {mc}" if mc else name.split("(")[0].strip()
+        q_enc = urllib.parse.quote_plus(query)
+
+        search_urls = [
+            ("Gaming.Gen.TR", f"https://www.gaming.gen.tr/?s={q_enc}&post_type=product"),
+            ("İncehesap", f"https://www.incehesap.com/arama/?q={q_enc}"),
+            ("Sinerji", f"https://www.sinerji.gen.tr/arama?q={q_enc}")
+        ]
+
+        found_offers = []
+        for store, s_url in search_urls:
+            resp = fetch_url(s_url, timeout=8)
+            if not resp or resp.status_code != 200:
+                continue
+            parsed = parse_items_from_html(store, cat, resp.text)
+            for p in parsed:
+                if is_strict_variant_compatible(cat, p["title"], name):
+                    found_offers.append((item, p))
+                    break
+            if found_offers:
+                break
+            time.sleep(0.2)
+        return found_offers
+
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        futures = [ex.submit(search_item, cat, it) for cat, it in targets]
+        for f in as_completed(futures):
+            try:
+                res = f.result()
+                for it, offer_data in res:
+                    pid = generate_hardware_id(it.get("spec", {}).get("category", "hardware"), it["name"])
+                    if pid not in matched_offers_by_id:
+                        matched_offers_by_id[pid] = []
+                    matched_offers_by_id[pid].append({
+                        "storeName": offer_data["store"],
+                        "priceTry": offer_data["price"],
+                        "url": offer_data["url"],
+                        "inStock": True
+                    })
+            except Exception:
+                pass
 
 # ==============================================================================
 # MAIN TRACKING PIPELINE
@@ -706,6 +835,16 @@ def main():
     print("================================================================================")
     print("   HARDWARE WIZARD - OTONOM TÜRKİYE FİYAT & ÇOKLU MAĞAZA TARAYICI                ")
     print("================================================================================")
+
+    # 0. Önceki prices_tr.json dosyasını yükle (gerçek geçmişi korumak için)
+    existing_prices_tr = {}
+    p_main = TARGET_PRICE_FILES[0]
+    if os.path.exists(p_main):
+        try:
+            with open(p_main, "r", encoding="utf-8") as f:
+                existing_prices_tr = json.load(f)
+        except Exception:
+            existing_prices_tr = {}
 
     # 1. Mevcut katalogları yükle
     catalogs = {}
@@ -719,7 +858,7 @@ def main():
             catalogs[cat] = []
         print(f"[{cat.upper()}] Mevcut katalog boyutu: {len(catalogs[cat])} ürün")
 
-    # 2. Tüm doğrulanmış mağazaları eş zamanlı tara
+    # 2. Mağazaları eş zamanlı tara
     scraped_products = []
     print(f"\n[+] {len(STORE_CATEGORIES)} mağaza kategori görevi ThreadPoolExecutor ile başlatılıyor...")
     start_time = time.time()
@@ -739,7 +878,7 @@ def main():
                 print(f"  [HATA] {store} {cat}: {e}")
 
     elapsed = round(time.time() - start_time, 2)
-    print(f"\n[+] Tarama tamamlandı: {len(scraped_products)} ürün toplandı ({elapsed} saniye).")
+    print(f"\n[+] Kategori taraması tamamlandı: {len(scraped_products)} ürün toplandı ({elapsed} saniye).")
 
     # 3. Eşleştirme ve Fiyat Güncelleme
     matched_offers_by_id = {}
@@ -763,13 +902,16 @@ def main():
                 "url": url,
                 "inStock": True
             }
-            if is_valid_image_url(sp.get("imageUrl")):
+            if is_valid_image_url(sp.get("imageUrl"), match.get("name", "")):
                 offer_obj["imageUrl"] = sp["imageUrl"]
-                if not is_valid_image_url(match.get("imageUrl")):
+                if not is_valid_image_url(match.get("imageUrl"), match.get("name", "")):
                     match["imageUrl"] = sp["imageUrl"]
             matched_offers_by_id[prod_id].append(offer_obj)
 
-    # 4. prices_tr_map oluştur
+    # 4. Doğrudan Arama (Direct Search Fallback)
+    direct_search_fallback(catalogs, matched_offers_by_id)
+
+    # 5. prices_tr_map oluştur
     prices_tr_map = {}
     for cat, items in catalogs.items():
         for it in items:
@@ -785,24 +927,26 @@ def main():
             sorted_offers = sorted(unique_offers.values(), key=lambda x: x["priceTry"])
 
             current_price = sorted_offers[0]["priceTry"] if sorted_offers else it.get("price")
+            existing_entry = existing_prices_tr.get(prod_id, {})
+            existing_hist = existing_entry.get("priceHistory", [])
 
             if current_price is not None:
                 best_store = sorted_offers[0]["storeName"] if sorted_offers else "Türkiye Pazarı"
-                hist = build_1year_price_history(prod_id, current_price, best_store)
-                lowest_price = min(p["priceTry"] for p in hist)
-                highest_price = max(p["priceTry"] for p in hist)
+                hist = resolve_price_history(prod_id, current_price, best_store, existing_hist, sorted_offers)
+                lowest_price = min(p["priceTry"] for p in hist) if hist else current_price
+                highest_price = max(p["priceTry"] for p in hist) if hist else current_price
             else:
                 hist = []
                 lowest_price = None
                 highest_price = None
 
             best_image = None
-            if is_valid_image_url(it.get("imageUrl")):
+            if is_valid_image_url(it.get("imageUrl"), it.get("name", "")):
                 best_image = it.get("imageUrl")
             else:
                 for o in sorted_offers:
                     img_candidate = o.get("imageUrl")
-                    if is_valid_image_url(img_candidate):
+                    if is_valid_image_url(img_candidate, it.get("name", "")):
                         best_image = img_candidate
                         break
 
@@ -817,14 +961,14 @@ def main():
                 "offers": sorted_offers
             }
 
-    # 5. prices_tr.json Dosyalarına Kaydet (Hem data hem de shared resources)
+    # 6. prices_tr.json Dosyalarına Kaydet
     for p_file in TARGET_PRICE_FILES:
         os.makedirs(os.path.dirname(p_file), exist_ok=True)
         with open(p_file, "w", encoding="utf-8") as f:
             json.dump(prices_tr_map, f, indent=2, ensure_ascii=False)
         print(f"[OK] {os.path.basename(p_file)} kaydedildi ({len(prices_tr_map)} ürün).")
 
-    # 6. Katalog dosyalarını hem FILES_DIR hem de CATALOG_DIR içine kaydet
+    # 7. Katalog dosyalarını kaydet
     for cat, filenames in CATEGORY_FILE_MAP.items():
         for fname in filenames:
             for d in [FILES_DIR, CATALOG_DIR]:

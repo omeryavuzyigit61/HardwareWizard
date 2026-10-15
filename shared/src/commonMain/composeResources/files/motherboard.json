@@ -9592,7 +9592,7 @@
     "sata_ports": 4,
     "onboard_ethernet": "2.5 Gbps",
     "wi_fi": null,
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/4NT-sapphirea520m-ec040126.jpg"
+    "imageUrl": null
   },
   {
     "name": "Sapphire PURE X870A WIFI 7 8400mhz(OC) M.2 AM5 ATX Anakart",
@@ -9609,7 +9609,7 @@
     "sata_ports": 4,
     "onboard_ethernet": "2.5 Gbps",
     "wi_fi": "Wi-Fi 6E / Wi-Fi 7",
-    "imageUrl": "https://static.sinerji.gen.tr/Images/MD/P94-purex870aboxphoto02397x319x87mm0126.jpg"
+    "imageUrl": null
   },
   {
     "name": "Gigabyte B760M DS3H GEN5 7600Mhz(OC) M.2 1700p mATX Anakart",
@@ -9643,7 +9643,7 @@
     "sata_ports": 4,
     "onboard_ethernet": "2.5 Gbps",
     "wi_fi": null,
-    "imageUrl": "https://www.tebilon.com/picture300x300/msi-mb-pro-b650m-e-am5-ddr5-6800mhz-oc-hdmi-vga-m-2-usb3-2-2-5g-lan-matx.jpg"
+    "imageUrl": null
   },
   {
     "name": "Colorful iGame Z890 VULCAN W V20 8800mhz(OC) M.2 1851p E-ATX Anakart",

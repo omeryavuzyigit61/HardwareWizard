@@ -879,7 +879,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master MasterFrame 600 TG Siyah 3x140mm Fanlı Back-Connect Anakart Destekli Alüminyum Mid Tower ATX Gaming Kasa",
@@ -891,7 +891,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": null
   },
   {
     "name": "HAVN HS 420 Base Edition Black Temperli Cam USB 3.2 Mid Tower ATX Gaming Kasa",
@@ -903,7 +903,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+    "imageUrl": null
   },
   {
     "name": "Antec AX65 ARGB 4x120mm Fan ATX Siyah Mid Tower Gaming (Oyuncu) Kasası",
@@ -963,7 +963,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202506/684c11bdf06518.05179544_mgoqekinjplhf_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "Lian Li VECTOR V100R Beyaz ATX Kasa (G99.V100RW.01)",
@@ -975,7 +975,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202512/694563e9bbda37.05350989_mkgqelojpihnf_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "GamePower Warcry Pulse 4x12Cm ARGB Fan Temperli Cam ATX 650W 80+ Bronze Gaming Kasa",
@@ -987,7 +987,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202504/680770ba7e6352.98422240_enfqojmhpkilg_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "SEGOTEP Endura Pro+ Siyah 750W 80+ Bronze E-ATX PCIE 5.1 Kasa (6xARGB Fan)",
@@ -999,7 +999,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.incehesap.com/resim/urun/202507/6882491ab18fa5.93796385_peohmniqfkgjl_cropped_288.webp"
+    "imageUrl": null
   },
   {
     "name": "MSI MAG PANO 130R PZ 4 x ARGB Fan USB 3.2 ATX Tower Gaming (Oyuncu) Kasa",
@@ -1023,7 +1023,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "Thermaltake View 370 TG 1000W 80+ Gold ARGB USB 3.2 Siyah ATX Mid Tower Kasa",
@@ -1047,7 +1047,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "FSP M340 750W 80+ Gold Tempered Glass Type-C ARGB ATX Mid Tower Kasa",
@@ -1059,7 +1059,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://img.yenieera22.com/cdn/assets/images/logo_20200907180648-0709202018064815.png"
+    "imageUrl": null
   },
   {
     "name": "SilverStone Milo Serisi ML03B HTPC Siyah Kasa (SST-ML03B)...",
@@ -1167,7 +1167,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+    "imageUrl": null
   },
   {
     "name": "SilverStone CS383 NAS/Server Kasası - 420mm Radyatör Destekli, 8 Adet SA...",
@@ -1275,7 +1275,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/vento-vg4202fl-rgb-fanli-temperli-camli-atx-gaming-kasa-17.jpg"
+    "imageUrl": null
   },
   {
     "name": "ASUS A31 PLUS TG ARGB Temperli Camlı 1xType C Mid Tower",
@@ -1311,7 +1311,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/frisby-fc-8960g-400w-1x120mm-rgb-fanli-mid-tower-gaming-kasa.jpg"
+    "imageUrl": null
   },
   {
     "name": "Rampage ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower Oyuncu",
@@ -1323,7 +1323,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/rampage-arc-x-rgb-ledli-siyah-akrilik-panel-120mm-fanli-mid-tower-oyuncu-kasasi.jpg"
+    "imageUrl": null
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB Temperli Camlı  Mid-Tower ATX Beyaz Gaming",
@@ -1395,7 +1395,7 @@
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+    "imageUrl": null
   },
   {
     "name": "Lian Li Lancool 207 (White)",
@@ -1407,7 +1407,7 @@
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/lian-li-o11-dynamic-evo-rgb-siyah-e-atx-gaming-kasa-o11dergbx.jpg"
+    "imageUrl": null
   },
   {
     "name": "NZXT H9 Elite (White)",
@@ -1719,7 +1719,7 @@
     "max_cpu_cooler_height": 190,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 5x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-pure-base-500dx-siyah-argb-mid-tower-kasa-bgw37.jpg"
+    "imageUrl": null
   },
   {
     "name": "Be Quiet! Pure Base 500DX (White)",
@@ -1731,7 +1731,7 @@
     "max_cpu_cooler_height": 190,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 5x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/be-quiet-pure-base-500dx-siyah-argb-mid-tower-kasa-bgw37.jpg"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master MasterBox TD500 Mesh V2",
@@ -1743,7 +1743,7 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 3x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-masterbox-td500-mesh-v2-siyah-argb-mid-tower-kasa-td500v2-kgnn-s00.jpg"
+    "imageUrl": null
   },
   {
     "name": "Cooler Master MasterBox TD500 Mesh V2 (White)",
@@ -1755,6 +1755,6 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 3x 2.5\"",
-    "imageUrl": "https://www.tebilon.com/picture300x300/cooler-master-masterbox-td500-mesh-v2-siyah-argb-mid-tower-kasa-td500v2-kgnn-s00.jpg"
+    "imageUrl": null
   }
 ]

@@ -149,7 +149,7 @@
     "topology": "OEM: CWT | Topoloji: Double Forward | Kapasitör: Elite ***uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_tuf_gaming_gold_atx_3_0_1000w.webp"
+    "imageUrl": null
   },
   {
     "name": "ASUS Prime Gold 750W",
@@ -168,7 +168,7 @@
     "topology": "OEM: CWT | Topoloji: Full Bridge | Kapasitör: Elite 470uF 420V 105°C PL 2.000h x1",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
+    "imageUrl": null
   },
   {
     "name": "ASUS Tuf Bronze 750W",
@@ -225,7 +225,7 @@
     "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 390uF 420V 105°C 2.000h KMW x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
+    "imageUrl": null
   },
   {
     "name": "ASUS Tuf Gold EVO 750W",
@@ -244,7 +244,7 @@
     "topology": "OEM: Great Wall | Topoloji: Half Bridge | Kapasitör: Nippon Chemi Con 390uF 420V 105°C 2.000h KMW x2",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/asus_rog_strix_gold_aura_edition_750w.webp"
+    "imageUrl": null
   },
   {
     "name": "AIGO GP 750W",
