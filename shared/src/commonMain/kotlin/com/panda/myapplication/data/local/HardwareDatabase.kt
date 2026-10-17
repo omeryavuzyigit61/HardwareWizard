@@ -13,10 +13,17 @@ import com.panda.myapplication.data.local.entity.CoolerSpecEntity
 import com.panda.myapplication.data.local.entity.CpuSpecEntity
 import com.panda.myapplication.data.local.entity.GpuSpecEntity
 import com.panda.myapplication.data.local.entity.HardwareItemEntity
+import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
+import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
+import com.panda.myapplication.data.local.entity.LaptopSpecEntity
+import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
+import com.panda.myapplication.data.local.entity.MouseSpecEntity
+import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
+import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import kotlinx.coroutines.CoroutineDispatcher
 
 @Database(
@@ -30,8 +37,15 @@ import kotlinx.coroutines.CoroutineDispatcher
         StorageSpecEntity::class,
         CoolerSpecEntity::class,
         CaseSpecEntity::class,
+        PrebuiltSpecEntity::class,
+        LaptopSpecEntity::class,
+        MouseSpecEntity::class,
+        KeyboardSpecEntity::class,
+        HeadsetSpecEntity::class,
+        MonitorSpecEntity::class,
+        UserPriceOverrideEntity::class,
     ],
-    version = 19,
+    version = 27,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

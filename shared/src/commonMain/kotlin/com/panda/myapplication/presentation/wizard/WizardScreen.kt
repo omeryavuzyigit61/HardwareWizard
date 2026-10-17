@@ -12,13 +12,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -47,7 +51,9 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -79,16 +85,26 @@ import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.presentation.hardware_list.HardwareThumbnail
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.CardSurface
+import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.theme.CardSurfaceElevated
+import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
+import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import org.koin.compose.viewmodel.koinViewModel
@@ -102,6 +118,10 @@ private val WIZARD_SLOTS = listOf(
     HardwareCategory.COOLER,
     HardwareCategory.CASE,
     HardwareCategory.PSU,
+    HardwareCategory.MONITOR,
+    HardwareCategory.MOUSE,
+    HardwareCategory.KEYBOARD,
+    HardwareCategory.HEADSET,
 )
 
 @Composable
@@ -109,6 +129,7 @@ fun WizardRoute(
     onNavigateToCatalogWithCategory: (HardwareCategory) -> Unit,
     onNavigateToItemDetail: (HardwareItem) -> Unit,
     modifier: Modifier = Modifier,
+    onOpenDrawer: (() -> Unit)? = null,
     viewModel: WizardViewModel = koinViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -142,6 +163,7 @@ fun WizardRoute(
         onPickerSearchQueryChange = viewModel::onPickerSearchQueryChange,
         onSelectComponent = viewModel::onSelectComponent,
         onItemDetailClick = onNavigateToItemDetail,
+        onOpenDrawer = onOpenDrawer,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -164,12 +186,14 @@ fun WizardContent(
     onItemDetailClick: (HardwareItem) -> Unit,
     snackbarHostState: SnackbarHostState,
     modifier: Modifier = Modifier,
+    onOpenDrawer: (() -> Unit)? = null,
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
         containerColor = SlateDarkBackground,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { paddingValues ->
         LazyColumn(
@@ -184,6 +208,7 @@ fun WizardContent(
                 WizardHeader(
                     onClearBuild = onClearBuild,
                     onShareBuild = onOpenShareDialog,
+                    onOpenDrawer = onOpenDrawer,
                 )
             }
 
@@ -222,7 +247,10 @@ fun WizardContent(
                 )
             }
 
-            items(WIZARD_SLOTS) { category ->
+            items(
+                items = WIZARD_SLOTS,
+                key = { it.name },
+            ) { category ->
                 val currentItem = uiState.activeBuild.getSlot(category)
                 ComponentSlotCard(
                     category = category,
@@ -277,6 +305,7 @@ fun WizardContent(
 private fun WizardHeader(
     onClearBuild: () -> Unit,
     onShareBuild: () -> Unit,
+    onOpenDrawer: (() -> Unit)? = null,
 ) {
     Row(
         modifier = Modifier
@@ -286,29 +315,52 @@ private fun WizardHeader(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Column {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(
-                    modifier = Modifier
-                        .size(10.dp)
-                        .clip(CircleShape)
-                        .background(NeonCyan),
-                )
-                Spacer(modifier = Modifier.width(Spacing.small))
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            modifier = Modifier.weight(1f),
+        ) {
+            if (onOpenDrawer != null) {
+                Surface(
+                    onClick = onOpenDrawer,
+                    shape = RoundedCornerShape(10.dp),
+                    color = MaterialTheme.colorScheme.surface,
+                    border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
+                ) {
+                    Text(
+                        text = "☰",
+                        modifier = Modifier.padding(horizontal = 11.dp, vertical = 6.dp),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Black,
+                        color = NeonCyan,
+                    )
+                }
+            }
+
+            Column {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp)
+                            .clip(CircleShape)
+                            .background(NeonCyan),
+                    )
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Text(
+                        text = "DONANIM LABORATUVARI",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Black,
+                        color = NeonCyan,
+                        letterSpacing = 1.5.sp,
+                    )
+                }
                 Text(
-                    text = "DONANIM LABORATUVARI",
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.Black,
-                    color = NeonCyan,
-                    letterSpacing = 1.5.sp,
+                    text = "İnteraktif PC Toplama",
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onBackground,
                 )
             }
-            Text(
-                text = "İnteraktif PC Toplama",
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onBackground,
-            )
         }
 
         Row(horizontalArrangement = Arrangement.spacedBy(Spacing.small)) {
@@ -348,15 +400,18 @@ private fun LiveCockpitSection(
     platformStatus: PlatformStatusBadge,
     bottleneck: BottleneckAnalysis,
 ) {
-    Card(
+    val cockpitAccent = if (platformStatus.isCompatible) NeonCyan else NeonRose
+    val cockpitSecondary = if (platformStatus.isCompatible) NeonEmerald else NeonAmber
+
+    FluidOrganicCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = Spacing.medium),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurface),
-        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
+        accentColor = cockpitAccent,
+        secondaryColor = cockpitSecondary,
+        contentPadding = Spacing.medium,
     ) {
-        Column(modifier = Modifier.padding(Spacing.medium)) {
+        Column {
             // Platform Status Badge
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -529,18 +584,18 @@ private fun ClearanceRadarSection(
     radar: ClearanceRadarResult,
     isCaseSelected: Boolean,
 ) {
-    Card(
+    val radarAccent = if (radar.hasClearanceIssue) NeonRose else NeonCyan
+    val radarSecondary = if (radar.hasClearanceIssue) NeonAmber else ElectricBlue
+
+    FluidOrganicCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = Spacing.medium),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurface),
-        border = BorderStroke(
-            1.dp,
-            if (radar.hasClearanceIssue) NeonRose else MaterialTheme.colorScheme.outline,
-        ),
+        accentColor = radarAccent,
+        secondaryColor = radarSecondary,
+        contentPadding = Spacing.medium,
     ) {
-        Column(modifier = Modifier.padding(Spacing.medium)) {
+        Column {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -684,15 +739,15 @@ private fun GamingSimulationSection(
     selectedResolution: ResolutionOption,
     onResolutionChanged: (ResolutionOption) -> Unit,
 ) {
-    Card(
+    FluidOrganicCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = Spacing.medium),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        accentColor = NeonCyan,
+        secondaryColor = NeonPurple,
+        contentPadding = Spacing.medium,
     ) {
-        Column(modifier = Modifier.padding(Spacing.medium)) {
+        Column {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -834,13 +889,23 @@ private fun GameFpsCard(game: GameFpsEstimate) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Column {
-                Text(
-                    text = game.gameName,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface,
-                )
+            Column(modifier = Modifier.weight(1f)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = game.gameName,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = if (game.isEsports) "E-SPOR" else "AAA",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontSize = 9.sp,
+                        fontWeight = FontWeight.Black,
+                        color = if (game.isEsports) NeonCyan else NeonAmber,
+                    )
+                }
                 Text(
                     text = game.settings,
                     style = MaterialTheme.typography.labelSmall,
@@ -848,20 +913,28 @@ private fun GameFpsCard(game: GameFpsEstimate) {
                 )
             }
 
-            Row(verticalAlignment = Alignment.Bottom) {
+            Column(horizontalAlignment = Alignment.End) {
+                Row(verticalAlignment = Alignment.Bottom) {
+                    Text(
+                        text = "~${game.fps}",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Black,
+                        color = if (game.fps >= 60) NeonEmerald else NeonAmber,
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = "FPS",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(bottom = 3.dp),
+                    )
+                }
                 Text(
-                    text = "~${game.fps}",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Black,
-                    color = if (game.fps >= 60) NeonEmerald else NeonAmber,
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = "FPS",
+                    text = "%1 Low: ${game.low1PctFps} FPS",
                     style = MaterialTheme.typography.labelSmall,
-                    fontWeight = FontWeight.Bold,
+                    fontSize = 10.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(bottom = 3.dp),
                 )
             }
         }
@@ -921,6 +994,12 @@ private fun ComponentSlotCard(
         HardwareCategory.COOLER -> "❄️"
         HardwareCategory.CASE -> "🖥️"
         HardwareCategory.PSU -> "🔋"
+        HardwareCategory.PREBUILT_PC -> "🖥️"
+        HardwareCategory.LAPTOP -> "💻"
+        HardwareCategory.MONITOR -> "🖥️"
+        HardwareCategory.MOUSE -> "🖱️"
+        HardwareCategory.KEYBOARD -> "⌨️"
+        HardwareCategory.HEADSET -> "🎧"
     }
 
     val categoryTitle = when (category) {
@@ -932,6 +1011,12 @@ private fun ComponentSlotCard(
         HardwareCategory.COOLER -> "Soğutucu (Cooler)"
         HardwareCategory.CASE -> "Kasa (Chassis)"
         HardwareCategory.PSU -> "Güç Kaynağı (PSU)"
+        HardwareCategory.PREBUILT_PC -> "OEM Hazır Sistem"
+        HardwareCategory.LAPTOP -> "Gaming Laptop"
+        HardwareCategory.MONITOR -> "Oyuncu Monitörü (Monitor)"
+        HardwareCategory.MOUSE -> "Oyuncu Faresi (Mouse)"
+        HardwareCategory.KEYBOARD -> "Oyuncu Klavyesi (Keyboard)"
+        HardwareCategory.HEADSET -> "Oyuncu Kulaklığı (Headset)"
     }
 
     if (item == null) {
@@ -985,83 +1070,120 @@ private fun ComponentSlotCard(
             }
         }
     } else {
-        // Filled Slot Card
+        // Filled Slot Card — 3-Block Universal Responsive Card Topology
         Card(
             modifier = modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
             colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
-            border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.4f)),
+            border = BorderStroke(1.dp, if (item.isCustomPrice) NeonAmber.copy(alpha = 0.6f) else NeonCyan.copy(alpha = 0.4f)),
         ) {
             Column(modifier = Modifier.padding(Spacing.medium)) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.Top,
+                    verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Row(
-                        modifier = Modifier.weight(1f),
-                        verticalAlignment = Alignment.Top,
+                    // Sol Blok (Görsel): 72x72dp
+                    HardwareThumbnail(
+                        imageUrl = item.imageUrl,
+                        displayName = item.displayName,
+                        category = category,
+                    )
+
+                    // Orta Blok (İçerik): weight(1f), minWidth = 0dp, maxLines = 2 + Ellipsis
+                    Column(
+                        modifier = Modifier
+                            .weight(1f)
+                            .widthIn(min = 0.dp)
+                            .padding(horizontal = 8.dp),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
                     ) {
-                        Text(text = categoryIcon, fontSize = 22.sp)
-                        Spacer(modifier = Modifier.width(Spacing.medium))
-                        Column(modifier = Modifier.weight(1f)) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
                             Text(
                                 text = categoryTitle,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = NeonCyan,
                                 fontWeight = FontWeight.Bold,
-                            )
-                            Text(
-                                text = item.displayName,
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurface,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.clickable { onDetailClick() },
                             )
-                            val specSummary = formatSlotSpecSummary(item)
-                            if (specSummary.isNotBlank()) {
+                            if (item.isCustomPrice) {
                                 Text(
-                                    text = specSummary,
+                                    text = "🏷️ Özel Fiyat",
                                     style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    color = NeonAmber,
+                                    fontWeight = FontWeight.Bold,
                                     maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
-                            }
-                            val benchSummary = when {
-                                item.spec is CpuSpec -> {
-                                    val pts = item.benchmarkInfo?.effectiveMultiCore
-                                    if (pts != null) "⚡ Cinebench: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
-                                }
-                                item.spec is GpuSpec -> {
-                                    val pts = item.benchmarkInfo?.effectiveTimeSpy
-                                    if (pts != null) "🎮 3DMark Time Spy: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
-                                }
-                                else -> item.benchmarkScore?.let { "★ Skor: $it/100 • ${item.benchmarkTier ?: "Tier"}" }
-                            }
-                            if (benchSummary != null) {
-                                Text(
-                                    text = benchSummary,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = NeonCyan,
-                                    fontWeight = FontWeight.SemiBold,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis,
                                 )
                             }
                         }
+                        Text(
+                            text = item.displayName,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.clickable { onDetailClick() },
+                        )
+                        val specSummary = formatSlotSpecSummary(item)
+                        if (specSummary.isNotBlank()) {
+                            Text(
+                                text = specSummary,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                        val benchSummary = when {
+                            item.spec is CpuSpec -> {
+                                val pts = item.benchmarkInfo?.effectiveMultiCore
+                                if (pts != null) "⚡ Cinebench: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
+                            }
+                            item.spec is GpuSpec -> {
+                                val pts = item.benchmarkInfo?.effectiveTimeSpy
+                                if (pts != null) "🎮 3DMark Time Spy: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
+                            }
+                            else -> item.benchmarkScore?.let { "★ Skor: $it/100 • ${item.benchmarkTier ?: "Tier"}" }
+                        }
+                        if (benchSummary != null) {
+                            Text(
+                                text = benchSummary,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = NeonCyan,
+                                fontWeight = FontWeight.SemiBold,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
                     }
 
-                    val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
-                    Text(
-                        text = priceText,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        modifier = Modifier.padding(start = Spacing.small),
-                    )
+                    // Sağ Blok (Fiyat): minWidth = 96dp, maxLines = 1, softWrap = false
+                    Column(
+                        modifier = Modifier
+                            .widthIn(min = 96.dp)
+                            .wrapContentWidth(Alignment.End),
+                        horizontalAlignment = Alignment.End,
+                    ) {
+                        val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                        Text(
+                            text = priceText,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = when {
+                                item.isCustomPrice -> NeonAmber
+                                item.currentPriceTry != null -> NeonEmerald
+                                else -> MaterialTheme.colorScheme.onSurfaceVariant
+                            },
+                            softWrap = false,
+                            maxLines = 1,
+                            overflow = TextOverflow.Clip,
+                            textAlign = TextAlign.End,
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(Spacing.small))
@@ -1112,11 +1234,21 @@ private fun formatSlotSpecSummary(item: HardwareItem): String = when (val s = it
     is CpuSpec -> "${s.socket} • ${s.coreCount} Çekirdek • ${s.tdp.watts}W"
     is MotherboardSpec -> "${s.socket} • ${s.chipset} • ${s.memoryGeneration.name} • ${s.formFactor.name}"
     is RamSpec -> "${s.generation.name} • ${s.speed.mhz}MT/s • ${s.capacity.megabytes / 1024}GB"
-    is GpuSpec -> "${s.chipset} • ${s.vram.megabytes / 1024}GB • ${s.lengthMm}mm"
+    is GpuSpec -> listOfNotNull(s.chipset, "${s.vram.megabytes / 1024}GB", s.lengthMm?.let { "${it}mm" }).joinToString(" • ")
     is StorageSpec -> "${s.mediaType.name} • ${s.capacity.megabytes / 1024}GB • ${s.sequentialReadMbps}MB/s"
     is CoolerSpec -> "${s.type.name} • ${s.radiatorSizeMm?.let { "${it}mm" } ?: "Hava"}"
-    is CaseSpec -> "${s.type} • GPU: max ${s.maxGpuLengthMm}mm • Rad: ${s.maxRadiatorSizeMm}mm"
+    is CaseSpec -> listOfNotNull(
+        s.type ?: "ATX Kasa",
+        s.maxGpuLengthMm?.let { "GPU: max ${it}mm" },
+        s.maxRadiatorSizeMm?.let { "Rad: ${it}mm" },
+    ).joinToString(" • ")
     is PsuSpec -> "${s.wattage.watts}W • ${s.efficiency.name}"
+    is PrebuiltSpec -> "${s.cpuModel} • ${s.gpuModel} • ${s.storeName}"
+    is LaptopSpec -> "${s.gpuModel} (${s.gpuWattTgp}) • ${s.displaySpec}"
+    is MouseSpec -> "${s.sensor} • ${s.pollingRateHz}Hz • ${s.weightG}g"
+    is KeyboardSpec -> "${s.switchType} • ${s.minActuationMm}mm • ${s.layout}"
+    is HeadsetSpec -> "${s.driverType} (${s.driverSizeMm}mm) • ${s.impedanceOhm}Ω"
+    is MonitorSpec -> "${s.screenSizeInch}\" ${s.panelType} • ${s.resolution} • ${s.refreshRateHz}Hz"
 }
 
 // endregion
@@ -1138,6 +1270,7 @@ private fun SlotPickerBottomSheetContent(
         modifier = Modifier
             .fillMaxWidth()
             .height(540.dp)
+            .navigationBarsPadding()
             .padding(horizontal = Spacing.medium),
     ) {
         Row(
@@ -1191,10 +1324,15 @@ private fun SlotPickerBottomSheetContent(
 
         Spacer(modifier = Modifier.height(Spacing.small))
 
-        // Search Bar
+        // Search Bar with Local State for 120 FPS Typing
+        var localSearchQuery by remember(category) { mutableStateOf(searchQuery) }
+
         OutlinedTextField(
-            value = searchQuery,
-            onValueChange = onSearchChange,
+            value = localSearchQuery,
+            onValueChange = {
+                localSearchQuery = it
+                onSearchChange(it)
+            },
             modifier = Modifier.fillMaxWidth(),
             placeholder = { Text("Model veya marka ara...", style = MaterialTheme.typography.bodySmall) },
             singleLine = true,
@@ -1258,7 +1396,7 @@ private fun PickerItemCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onSelect() },
-        shape = RoundedCornerShape(10.dp),
+        shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
     ) {
@@ -1266,16 +1404,29 @@ private fun PickerItemCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(Spacing.medium),
-            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Column(modifier = Modifier.weight(1f)) {
+            // Sol Blok (Görsel): 72x72dp
+            HardwareThumbnail(
+                imageUrl = item.imageUrl,
+                displayName = item.displayName,
+                category = item.category,
+            )
+
+            // Orta Blok (İçerik): weight(1f), minWidth = 0dp, maxLines = 2 + Ellipsis
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .widthIn(min = 0.dp)
+                    .padding(horizontal = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
                 Text(
                     text = item.displayName,
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
-                    maxLines = 1,
+                    maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
@@ -1287,15 +1438,24 @@ private fun PickerItemCard(
                 )
             }
 
-            Spacer(modifier = Modifier.width(Spacing.small))
-
-            Column(horizontalAlignment = Alignment.End) {
+            // Sağ Blok (Fiyat ve Aksiyon): minWidth = 96dp, maxLines = 1, softWrap = false
+            Column(
+                modifier = Modifier
+                    .widthIn(min = 96.dp)
+                    .wrapContentWidth(Alignment.End),
+                horizontalAlignment = Alignment.End,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
                 val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
                 Text(
                     text = priceText,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.ExtraBold,
                     color = NeonCyan,
+                    softWrap = false,
+                    maxLines = 1,
+                    overflow = TextOverflow.Clip,
+                    textAlign = TextAlign.End,
                 )
                 Button(
                     onClick = onSelect,
@@ -1308,6 +1468,8 @@ private fun PickerItemCard(
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = SlateDarkBackground,
+                        maxLines = 1,
+                        softWrap = false,
                     )
                 }
             }

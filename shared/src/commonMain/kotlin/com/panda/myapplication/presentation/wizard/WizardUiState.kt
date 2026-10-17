@@ -1,5 +1,6 @@
 package com.panda.myapplication.presentation.wizard
 
+import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
 import com.panda.myapplication.domain.engine.ClearanceRadarResult
@@ -12,6 +13,7 @@ import com.panda.myapplication.domain.model.BuildCompatibilityReport
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 
+@Immutable
 data class WizardUiState(
     val activeBuild: ActiveBuild = ActiveBuild(),
     val cockpitInfo: WattageCockpitInfo = WattageCockpitInfo(0, 0, 0, null, true),

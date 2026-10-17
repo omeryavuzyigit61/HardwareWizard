@@ -38,7 +38,7 @@ val dataModule = module {
                 json(get())
             }
             install(Logging) {
-                level = LogLevel.INFO
+                level = LogLevel.NONE
             }
         }
     }
@@ -60,6 +60,9 @@ val dataModule = module {
     }
 
     single<ActiveBuildRepository> { ActiveBuildRepositoryImpl() }
+    single<com.panda.myapplication.domain.repository.VsArenaRepository> {
+        com.panda.myapplication.data.repository.VsArenaRepositoryImpl()
+    }
 
     factory { GetHardwareListUseCase(repository = get()) }
     factory { GetHardwareDetailUseCase(repository = get()) }

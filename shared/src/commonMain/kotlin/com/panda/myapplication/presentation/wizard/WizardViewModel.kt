@@ -13,14 +13,19 @@ import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase
 import com.panda.myapplication.domain.usecase.GetCompatibleHardwareForSlotUseCase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
@@ -38,6 +43,7 @@ private data class PickerParams(
     val query: String,
 )
 
+@OptIn(FlowPreview::class)
 class WizardViewModel(
     private val activeBuildRepository: ActiveBuildRepository,
     private val hardwareRepository: HardwareRepository,
@@ -54,6 +60,28 @@ class WizardViewModel(
     private val _pickerSearchQuery = MutableStateFlow("")
     private val _isPickerLoading = MutableStateFlow(false)
     private val _isShareDialogOpen = MutableStateFlow(false)
+
+    private val debouncedPickerSearchQuery = _pickerSearchQuery
+        .debounce(300L)
+        .distinctUntilChanged()
+        .flowOn(Dispatchers.Default)
+
+    init {
+        viewModelScope.launch {
+            hardwareRepository.observeHardwareItems().collect { result ->
+                if (result is DomainResult.Success) {
+                    val mapById = result.data.associateBy { it.id }
+                    val currentBuild = activeBuildRepository.activeBuild.value
+                    currentBuild.items.forEach { slotItem ->
+                        val updated = mapById[slotItem.id]
+                        if (updated != null && (updated.currentPriceTry != slotItem.currentPriceTry || updated.customPriceNote != slotItem.customPriceNote)) {
+                            activeBuildRepository.setComponent(updated)
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     private val buildAnalysisFlow = combine(
         activeBuildRepository.activeBuild,
@@ -76,12 +104,12 @@ class WizardViewModel(
             compatReport = compat,
             resolution = resolution,
         )
-    }
+    }.flowOn(Dispatchers.Default)
 
     private val pickerParamsFlow = combine(
         _isPickerOpen,
         _pickerCategory,
-        _pickerSearchQuery,
+        debouncedPickerSearchQuery,
     ) { isOpen, category, query ->
         PickerParams(isOpen, category, query)
     }
@@ -144,7 +172,7 @@ class WizardViewModel(
             isShareDialogOpen = isShareOpen,
             shareCardText = shareText,
         )
-    }.stateIn(
+    }.flowOn(Dispatchers.Default).stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000L),
         initialValue = WizardUiState(),

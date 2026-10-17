@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -35,14 +36,18 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -59,43 +64,56 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.compose.material3.CircularProgressIndicator
-import coil3.compose.AsyncImage
 import coil3.compose.SubcomposeAsyncImage
-import com.panda.myapplication.domain.model.StoreOffer
-import com.panda.myapplication.presentation.util.formatPrice
-import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.domain.engine.BenchmarkEngine
+import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
-import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CpuSpec
-import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.Frequency
+import com.panda.myapplication.domain.model.GameCategory
+import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
-import com.panda.myapplication.domain.model.MemorySize
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.Money
-import com.panda.myapplication.domain.model.MotherboardFormFactor
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
-import com.panda.myapplication.domain.model.StorageFormFactor
-import com.panda.myapplication.domain.model.StorageInterface
-import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.Wattage
+import com.panda.myapplication.presentation.components.FluidOrganicCard
+import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.hardware_list.Spacing
+import com.panda.myapplication.presentation.theme.CardSurface
+import com.panda.myapplication.presentation.theme.CardSurfaceElevated
+import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
+import com.panda.myapplication.presentation.theme.NeonAmber
+import com.panda.myapplication.presentation.theme.NeonCyan
+import com.panda.myapplication.presentation.theme.NeonEmerald
+import com.panda.myapplication.presentation.theme.NeonPurple
+import com.panda.myapplication.presentation.theme.NeonRose
+import com.panda.myapplication.presentation.util.formatPrice
+import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.openSafeStoreUrl
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun HardwareDetailRoute(
     itemId: String,
     onNavigateBack: () -> Unit,
+    onNavigateToVsArena: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: HardwareDetailViewModel = koinViewModel(),
 ) {
@@ -112,6 +130,16 @@ fun HardwareDetailRoute(
                 is HardwareDetailEffect.ShowToast -> {
                     snackbarHostState.showSnackbar(effect.message)
                 }
+                is HardwareDetailEffect.ShowVsAddedToast -> {
+                    val result = snackbarHostState.showSnackbar(
+                        message = effect.message,
+                        actionLabel = "Arenaya Git",
+                        duration = SnackbarDuration.Short,
+                    )
+                    if (result == SnackbarResult.ActionPerformed) {
+                        onNavigateToVsArena()
+                    }
+                }
             }
         }
     }
@@ -120,6 +148,9 @@ fun HardwareDetailRoute(
         uiState = uiState,
         onNavigateBack = onNavigateBack,
         onAddToBuildClick = viewModel::onAddToBuild,
+        onAddToVsArenaClick = viewModel::onAddToVsArena,
+        onSaveCustomPrice = viewModel::onSaveCustomPrice,
+        onClearCustomPrice = viewModel::onClearCustomPrice,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -130,27 +161,40 @@ fun HardwareDetailContent(
     uiState: HardwareDetailUiState,
     onNavigateBack: () -> Unit,
     onAddToBuildClick: () -> Unit,
+    onAddToVsArenaClick: () -> Unit = {},
+    onSaveCustomPrice: (Double, String?) -> Unit = { _, _ -> },
+    onClearCustomPrice: () -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     modifier: Modifier = Modifier,
 ) {
+    var showPriceDialog by remember { mutableStateOf(false) }
+
     Scaffold(
         modifier = modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background),
         containerColor = MaterialTheme.colorScheme.background,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             DetailTopBar(
                 title = uiState.item?.brand ?: "Donanım Detayı",
                 onNavigateBack = onNavigateBack,
+                onAddToVsArenaClick = if (uiState.item != null) onAddToVsArenaClick else null,
             )
         },
         bottomBar = {
             if (uiState.item != null) {
                 DetailBottomBar(
                     isAddedToBuild = uiState.isAddedToBuild,
+                    isPrebuilt = uiState.item.spec is PrebuiltSpec,
+                    isLaptop = uiState.item.spec is LaptopSpec,
+                    isCustomPrice = uiState.item.isCustomPrice,
+                    customPriceNote = uiState.item.customPriceNote,
                     priceText = uiState.item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok"),
                     onAddToBuildClick = onAddToBuildClick,
+                    onAddToVsArenaClick = onAddToVsArenaClick,
+                    onPriceOverrideClick = { showPriceDialog = true },
                 )
             }
         },
@@ -212,12 +256,47 @@ fun HardwareDetailContent(
                         verticalArrangement = Arrangement.spacedBy(Spacing.medium),
                     ) {
                         // Hero Header Card
-                        item {
-                            HeroHeaderCard(item = item)
+                        item(key = "hero_header") {
+                            HeroHeaderCard(
+                                item = item,
+                                onPriceOverrideClick = { showPriceDialog = true },
+                            )
+                        }
+
+                        // Special OEM Hazır Sistem Card & Profit Analyzer
+                        if (item.spec is PrebuiltSpec) {
+                            item(key = "prebuilt_details") {
+                                PrebuiltSystemDetailsCard(
+                                    item = item,
+                                    spec = item.spec,
+                                    onTransferToWizard = onAddToBuildClick,
+                                )
+                            }
+                        }
+
+                        // Special Gaming Laptop Hardware & TGP Highlights Card
+                        if (item.spec is LaptopSpec) {
+                            item(key = "laptop_details") {
+                                LaptopSpecialDetailsCard(
+                                    item = item,
+                                    spec = item.spec,
+                                )
+                            }
+                        }
+
+                        // 12-Game Real Benchmark & %1 Low FPS Simulation Matrix (GPU, CPU, OEM System, Laptop)
+                        if (item.category == HardwareCategory.GPU ||
+                            item.category == HardwareCategory.CPU ||
+                            item.category == HardwareCategory.PREBUILT_PC ||
+                            item.category == HardwareCategory.LAPTOP
+                        ) {
+                            item(key = "multi_game_fps_matrix") {
+                                MultiGameFpsSimulationCard(item = item)
+                            }
                         }
 
                         // Price History & Market Analysis (TL) Card
-                        item {
+                        item(key = "price_history") {
                             PriceHistoryCard(
                                 priceHistory = item.priceHistory,
                                 currentPriceTry = item.currentPriceTry,
@@ -227,7 +306,7 @@ fun HardwareDetailContent(
                         }
 
                         // Store Offers Comparison (Canlı TR Piyasası) Card
-                        item {
+                        item(key = "store_offers") {
                             StoreOffersCard(
                                 offers = item.offers,
                                 currentPriceTry = item.currentPriceTry,
@@ -237,7 +316,7 @@ fun HardwareDetailContent(
 
                         // Synthetic Multi-Benchmark Card - STRICTLY CpuSpec & GpuSpec
                         if ((item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU) && item.benchmarkInfo != null) {
-                            item {
+                            item(key = "synthetic_benchmark") {
                                 SyntheticBenchmarkCard(
                                     category = item.category,
                                     benchmarkInfo = item.benchmarkInfo,
@@ -245,15 +324,18 @@ fun HardwareDetailContent(
                             }
                         }
 
-                        // Performance & Power Progress Bars - STRICTLY CpuSpec & GpuSpec
-                        if (item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU) {
-                            item {
+                        // Performance & Power Progress Bars (CPU, GPU & Peripherals)
+                        if (item.category == HardwareCategory.CPU ||
+                            item.category == HardwareCategory.GPU ||
+                            item.category.isPeripheral
+                        ) {
+                            item(key = "perf_power_section") {
                                 PerformancePowerSection(item = item)
                             }
                         }
 
                         // Category-specific Polymorphic Technical Specifications Section
-                        item {
+                        item(key = "tech_specs") {
                             PolymorphicTechnicalSpecsSection(item = item)
                         }
                     }
@@ -261,12 +343,29 @@ fun HardwareDetailContent(
             }
         }
     }
+
+    if (showPriceDialog && uiState.item != null) {
+        val currentItem = uiState.item
+        PriceOverrideDialog(
+            item = currentItem,
+            onDismiss = { showPriceDialog = false },
+            onSaveCustomPrice = { customPrice, note ->
+                onSaveCustomPrice(customPrice, note)
+                showPriceDialog = false
+            },
+            onClearCustomPrice = {
+                onClearCustomPrice()
+                showPriceDialog = false
+            },
+        )
+    }
 }
 
 @Composable
 private fun DetailTopBar(
     title: String,
     onNavigateBack: () -> Unit,
+    onAddToVsArenaClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     Surface(
@@ -279,32 +378,57 @@ private fun DetailTopBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = Spacing.small, vertical = Spacing.small),
+            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            IconButton(
-                onClick = onNavigateBack,
-                modifier = Modifier.size(48.dp),
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.weight(1f),
             ) {
-                Box(
-                    modifier = Modifier
-                        .size(36.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colorScheme.surfaceVariant)
-                        .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape),
-                    contentAlignment = Alignment.Center,
+                IconButton(
+                    onClick = onNavigateBack,
+                    modifier = Modifier.size(48.dp),
                 ) {
-                    BackArrowCanvas(color = MaterialTheme.colorScheme.onSurface)
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.surfaceVariant)
+                            .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        BackArrowCanvas(color = MaterialTheme.colorScheme.onSurface)
+                    }
                 }
+
+                Spacer(modifier = Modifier.width(Spacing.small))
+
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
             }
 
-            Spacer(modifier = Modifier.width(Spacing.small))
-
-            Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurface,
-            )
+            if (onAddToVsArenaClick != null) {
+                Surface(
+                    onClick = onAddToVsArenaClick,
+                    shape = RoundedCornerShape(10.dp),
+                    color = NeonCyan.copy(alpha = 0.14f),
+                    border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.65f)),
+                ) {
+                    Text(
+                        text = "⚖️ VS Arenaya Ekle",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = NeonCyan,
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                    )
+                }
+            }
         }
     }
 }
@@ -312,13 +436,15 @@ private fun DetailTopBar(
 @Composable
 private fun HeroHeaderCard(
     item: HardwareItem,
+    onPriceOverrideClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
-    Card(
+    FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
+        accentColor = if (item.isCustomPrice) NeonAmber else ElectricBlue,
+        secondaryColor = if (item.isCustomPrice) NeonRose else NeonCyan,
         shape = RoundedCornerShape(Spacing.cardRadius),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        contentPadding = 0.dp,
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
@@ -339,11 +465,23 @@ private fun HeroHeaderCard(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    DetailBadge(
-                        text = item.category.displayName,
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    )
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        DetailBadge(
+                            text = item.category.displayName,
+                            containerColor = MaterialTheme.colorScheme.primaryContainer,
+                            contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                        )
+                        if (item.isCustomPrice) {
+                            DetailBadge(
+                                text = "🏷️ ÖZEL FİYAT",
+                                containerColor = NeonAmber.copy(alpha = 0.2f),
+                                contentColor = NeonAmber,
+                            )
+                        }
+                    }
 
                     DetailBadge(
                         text = item.brand.uppercase(),
@@ -373,6 +511,56 @@ private fun HeroHeaderCard(
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+
+                if (onPriceOverrideClick != null) {
+                    Spacer(modifier = Modifier.height(Spacing.small))
+                    Surface(
+                        onClick = onPriceOverrideClick,
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (item.isCustomPrice) NeonAmber.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                        border = BorderStroke(
+                            1.dp,
+                            if (item.isCustomPrice) NeonAmber.copy(alpha = 0.65f) else MaterialTheme.colorScheme.outline,
+                        ),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 12.dp, vertical = 10.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = if (item.isCustomPrice) {
+                                        "🏷️ Özel Fiyat Aktif: ${item.customPriceTry.formatPriceWithCurrency("")}"
+                                    } else {
+                                        "🏷️ Yerel Özel Fiyat Belirle"
+                                    },
+                                    style = MaterialTheme.typography.labelLarge,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.onSurface,
+                                )
+                                Text(
+                                    text = if (!item.customPriceNote.isNullOrBlank()) {
+                                        "Not: ${item.customPriceNote}"
+                                    } else {
+                                        "Kupon, indirim veya 2. el fiyatınızı girerek F/P ve bütçe hesabına dahil edin"
+                                    },
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                            Text(
+                                text = if (item.isCustomPrice) "Düzenle ✎" else "Fiyat Gir ✎",
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.ExtraBold,
+                                color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
+                            )
+                        }
+                    }
+                }
             }
         }
     }
@@ -632,6 +820,136 @@ private fun PerformancePowerSection(
                         )
                     }
                 }
+
+                is PrebuiltSpec -> {
+                    MetricProgressBar(
+                        title = "Oyun Performans Skoru",
+                        currentValue = "${s.gamingScore} / 100",
+                        fraction = (s.gamingScore / 100f).coerceIn(0f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "1080p: ${s.fps1080p} FPS • 1440p: ${s.fps1440p} FPS • 4K: ${s.fps4k} FPS",
+                    )
+                    val sepPrice = s.estimatedSeparatePriceTry
+                    if (sepPrice != null && sepPrice > 0) {
+                        val advantageFraction = (s.advantagePercent / 30.0).coerceIn(0.0, 1.0).toFloat()
+                        MetricProgressBar(
+                            title = "Hazır Sistem Avantaj Endeksi",
+                            currentValue = "%${s.advantagePercent.toInt()} Avantajlı",
+                            fraction = advantageFraction,
+                            accentColor = if (s.isAdvantageous) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
+                            subText = "Tek tek toplama (${sepPrice.toLong()} ₺) ile karşılaştırma",
+                        )
+                    }
+                }
+
+                is LaptopSpec -> {
+                    MetricProgressBar(
+                        title = "Gaming Benchmark Skoru",
+                        currentValue = "${s.gamingScore} / 100",
+                        fraction = (s.gamingScore / 100f).coerceIn(0f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "1080p: ${s.fps1080p} FPS • 1440p: ${s.fps1440p} FPS referans oyun ortalaması",
+                    )
+                    MetricProgressBar(
+                        title = "Grafik İşlemci Gücü (TGP)",
+                        currentValue = s.gpuWattTgp,
+                        fraction = 0.85f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.gpuModel} tam güç watt kapasitesi",
+                    )
+                    MetricProgressBar(
+                        title = "Batarya & Mobilite",
+                        currentValue = "${s.batteryWh} Wh • ${s.weightKg} kg",
+                        fraction = (s.batteryWh / 100f).coerceIn(0f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "Yüksek kapasiteli batarya hücresi",
+                    )
+                }
+
+                is MouseSpec -> {
+                    MetricProgressBar(
+                        title = "Raporlama Hızı (Polling Rate)",
+                        currentValue = "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz} ms)",
+                        fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "8000 Hz e-spor tepe standardına göre",
+                    )
+                    val lightnessScore = ((120f - s.weightG) / 85f).coerceIn(0.1f, 1f)
+                    MetricProgressBar(
+                        title = "Ultra Hafiflik Endeksi",
+                        currentValue = "${s.weightG} gram",
+                        fraction = lightnessScore,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "Düşük eylemsizlik ve hızlı flick kabiliyeti",
+                    )
+                    MetricProgressBar(
+                        title = "Sensör Çözünürlüğü",
+                        currentValue = "${s.maxDpi} DPI (${s.sensor})",
+                        fraction = (s.maxDpi / 44000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "Optik izleme hassasiyeti",
+                    )
+                }
+
+                is KeyboardSpec -> {
+                    val actuationEff = ((2.2f - s.minActuationMm.toFloat()) / 2.1f).coerceIn(0.15f, 1f)
+                    MetricProgressBar(
+                        title = "Tetikleme Mesafesi & Hızı",
+                        currentValue = "${s.minActuationMm} mm" + if (s.rapidTriggerSupported) " (Rapid Trigger)" else "",
+                        fraction = actuationEff,
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "0.1 mm Hall Effect manyetik referansına göre",
+                    )
+                    MetricProgressBar(
+                        title = "Raporlama Hızı (Polling Rate)",
+                        currentValue = "${s.pollingRateHz} Hz",
+                        fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)",
+                    )
+                }
+
+                is HeadsetSpec -> {
+                    MetricProgressBar(
+                        title = "Sürücü Çapı & Akustik Güç",
+                        currentValue = "${s.driverSizeMm} mm (${s.driverType})",
+                        fraction = (s.driverSizeMm / 53f).coerceIn(0.3f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "Sahne genişliği ve bas derinliği",
+                    )
+                    MetricProgressBar(
+                        title = "Empedans & Sürülebilirlik",
+                        currentValue = "${s.impedanceOhm} Ω",
+                        fraction = (s.impedanceOhm / 250f).coerceIn(0.12f, 1f),
+                        accentColor = if (s.dacAmpRequired) NeonAmber else MaterialTheme.colorScheme.secondary,
+                        subText = if (s.dacAmpRequired) "Harici DAC/Amfi önerilir (Stüdyo sınıfı)" else "Anakart / Dongle ile doğrudan tam güç",
+                    )
+                }
+
+                is MonitorSpec -> {
+                    MetricProgressBar(
+                        title = "Yenileme Hızı (Akıcılık)",
+                        currentValue = "${s.refreshRateHz} Hz",
+                        fraction = (s.refreshRateHz / 540f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "540 Hz e-spor tepe referansına göre",
+                    )
+                    val respScore = if (s.responseSpeedGtGMs <= 0.05) 1.0f else (1f - (s.responseSpeedGtGMs.toFloat() / 5f)).coerceIn(0.2f, 0.9f)
+                    MetricProgressBar(
+                        title = "Griden Griye Tepki Süresi (GtG)",
+                        currentValue = "${s.responseSpeedGtGMs} ms (${s.panelType})",
+                        fraction = respScore,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "Ghosting ve hareket bulanıklığı direnci",
+                    )
+                    MetricProgressBar(
+                        title = "Keskinlik & Piksel Yoğunluğu",
+                        currentValue = "${s.ppi} PPI (${s.resolution})",
+                        fraction = (s.ppi / 165f).coerceIn(0.3f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği",
+                    )
+                }
             }
         }
     }
@@ -692,11 +1010,211 @@ private fun MetricProgressBar(
     }
 }
 
-private data class EngineeringChipData(
-    val label: String,
-    val value: String,
-    val isHighlighted: Boolean = false,
-)
+@Composable
+private fun MultiGameFpsSimulationCard(
+    item: HardwareItem,
+    modifier: Modifier = Modifier,
+) {
+    val gameMatrix = remember(item.id) { BenchmarkEngine.resolveGameFpsForItem(item) } ?: return
+    var selectedResolution by remember { mutableStateOf(GamingResolution.P1080) }
+    var selectedCategoryFilter by remember { mutableStateOf<GameCategory?>(null) }
+
+    val allEntries = remember(gameMatrix) {
+        gameMatrix.toSimulationEntries()
+    }
+    val visibleEntries = remember(allEntries, selectedCategoryFilter) {
+        if (selectedCategoryFilter == null) allEntries else allEntries.filter { it.category == selectedCategoryFilter }
+    }
+
+    FluidOrganicCard(
+        modifier = modifier.fillMaxWidth(),
+        accentColor = NeonCyan,
+        secondaryColor = NeonPurple,
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        contentPadding = Spacing.medium,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(Spacing.small),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(text = "🎮", fontSize = 18.sp)
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Column {
+                        Text(
+                            text = "12 Oyun Canlı FPS & %1 Low Matrisi",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Text(
+                            text = "Rekabetçi E-Spor (5) ve Ağır AAA (7) Test Katsayıları",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+
+            // Resolution Switcher (1080p / 1440p / 4K)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                GamingResolution.entries.forEach { res ->
+                    val isSelected = selectedResolution == res
+                    Surface(
+                        onClick = { selectedResolution = res },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(8.dp),
+                        color = if (isSelected) NeonCyan.copy(alpha = 0.16f) else CardSurfaceElevated,
+                        border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(vertical = 6.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text(
+                                text = res.label,
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Black,
+                                color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
+                            )
+                            Text(
+                                text = res.subLabel,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontSize = 9.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                }
+            }
+
+            // Category Filter Pills (Tümü / E-Spor / AAA)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                val filterOptions: List<Pair<GameCategory?, String>> = listOf(
+                    null to "Tümü (12)",
+                    GameCategory.ESPORTS to "🎯 E-Spor (5)",
+                    GameCategory.AAA to "🔥 AAA Grafik (7)",
+                )
+                filterOptions.forEach { (cat, label) ->
+                    val isSelected = selectedCategoryFilter == cat
+                    Surface(
+                        onClick = { selectedCategoryFilter = cat },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(6.dp),
+                        color = if (isSelected) NeonEmerald.copy(alpha = 0.16f) else Color.Transparent,
+                        border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
+                    ) {
+                        Text(
+                            text = label,
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                            color = if (isSelected) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(vertical = 5.dp),
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                        )
+                    }
+                }
+            }
+
+            HorizontalDivider(color = MaterialTheme.colorScheme.outline, thickness = 1.dp)
+
+            visibleEntries.forEach { game ->
+                val avgFpsVal = game.fps.avgFps(selectedResolution)
+                val low1FpsVal = game.fps.low1PctFps(selectedResolution)
+                val fpsColor = when {
+                    avgFpsVal >= 120 -> NeonEmerald
+                    avgFpsVal >= 60 -> NeonCyan
+                    else -> NeonAmber
+                }
+                val barCeiling = if (game.category == GameCategory.ESPORTS) 540f else 180f
+                val progress = (avgFpsVal / barCeiling).coerceIn(0.06f, 1f)
+
+                Surface(
+                    shape = RoundedCornerShape(10.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.45f)),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(
+                                        text = game.title,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                    )
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = if (game.category == GameCategory.ESPORTS) "E-SPOR" else "AAA",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontSize = 9.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = if (game.category == GameCategory.ESPORTS) NeonCyan else NeonAmber,
+                                    )
+                                }
+                                Text(
+                                    text = "${selectedResolution.label} • ${game.presetSubtitle}",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 10.sp,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+
+                            Column(horizontalAlignment = Alignment.End) {
+                                Text(
+                                    text = "$avgFpsVal FPS",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Black,
+                                    color = fpsColor,
+                                )
+                                Text(
+                                    text = "%1 Low: $low1FpsVal FPS",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(4.dp))
+
+                        LinearProgressIndicator(
+                            progress = { progress },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(5.dp)
+                                .clip(RoundedCornerShape(3.dp)),
+                            color = fpsColor,
+                            trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun PolymorphicTechnicalSpecsSection(
@@ -775,6 +1293,8 @@ private fun PolymorphicTechnicalSpecsSection(
     }
 }
 
+private const val UNSPECIFIED_TEXT = "Belirtilmedi"
+
 private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, String>> {
     val rows = mutableListOf<Pair<String, String>>()
     rows.add("Marka" to item.brand)
@@ -782,128 +1302,205 @@ private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, Stri
 
     when (val s = item.spec) {
         is CpuSpec -> {
-            rows.add("Soket" to s.socket)
+            rows.add("Soket" to s.socket.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Çekirdek & İzlek Dizilimi" to (s.coreTopology ?: "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
-            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: "Veri Yok"
+            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: UNSPECIFIED_TEXT
             rows.add("Temel / Boost Frekans" to "${s.baseClock.mhz / 1000f} GHz / $boostText")
             val cacheText = listOfNotNull(s.l2CacheMb?.let { "${it} MB L2" }, s.l3CacheMb?.let { "${it} MB L3" }).joinToString(" • ")
-            rows.add("L2 ve L3 Önbellek" to cacheText.ifBlank { "Veri Yok" })
+            rows.add("L2 ve L3 Önbellek" to cacheText.ifBlank { UNSPECIFIED_TEXT })
             rows.add("TDP ve Güç Limitleri" to (s.powerLimits ?: "${s.tdp.watts} W TDP"))
-            rows.add("Mimari & Üretim Nodu" to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { "Veri Yok" })
-            rows.add("Bellek Kontrolcü Desteği" to (s.maxMemorySpeed ?: "DDR5 / DDR4"))
-            rows.add("PCIe Sürümü & Hat Sayısı" to (s.pcieVersion ?: "PCIe 5.0"))
+            rows.add("Mimari & Üretim Nodu" to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Bellek Kontrolcü Desteği" to (s.maxMemorySpeed ?: UNSPECIFIED_TEXT))
+            rows.add("PCIe Sürümü & Hat Sayısı" to (s.pcieVersion ?: UNSPECIFIED_TEXT))
             rows.add("Dahili Grafik (iGPU)" to (s.igpuModel ?: if (s.hasIntegratedGraphics) "Mevcut (Dahili Grafik)" else "Yok (Harici GPU Gerekli)"))
-            rows.add("Çarpan Kilidi (Overclock)" to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else "Belirtilmedi")
+            rows.add("Çarpan Kilidi (Overclock)" to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else UNSPECIFIED_TEXT)
         }
 
         is GpuSpec -> {
-            rows.add("Grafik İşlemci & Mimari" to listOfNotNull(s.chipset, s.architecture).joinToString(" • "))
-            rows.add("Üretim Teknolojisi & Transistör" to (s.processNode ?: "TSMC FinFET"))
+            rows.add("Grafik İşlemci & Mimari" to listOfNotNull(s.chipset, s.architecture).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Üretim Teknolojisi & Transistör" to (s.processNode ?: UNSPECIFIED_TEXT))
             val coresText = listOfNotNull(s.cudaCores?.let { "$it Çekirdek" }, s.rtCores?.let { "$it RT" }, s.tensorAiTops).joinToString(" • ")
-            rows.add("Gölgelendirici / RT / Tensor" to coresText.ifBlank { "Belirtilmedi" })
+            rows.add("Gölgelendirici / RT / Tensor" to coresText.ifBlank { UNSPECIFIED_TEXT })
             val vramSpeed = s.memorySpeedGbps?.let { " • $it Gbps" } ?: ""
             rows.add("VRAM Kapasitesi & Tipi" to "${s.vram.megabytes / 1024} GB ${s.memoryType}$vramSpeed")
             val busBw = listOfNotNull(s.busWidthBits?.let { "$it-Bit" }, s.bandwidthGbs?.let { "$it GB/s" }).joinToString(" • ")
-            rows.add("Bellek Veri Yolu & Bant Genişliği" to busBw.ifBlank { "Belirtilmedi" })
-            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: "-"
+            rows.add("Bellek Veri Yolu & Bant Genişliği" to busBw.ifBlank { UNSPECIFIED_TEXT })
+            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: UNSPECIFIED_TEXT
             rows.add("Çekirdek Frekansı (Temel/Boost)" to "${s.coreClock.mhz} MHz / $boostText")
             rows.add("TGP (TDP) / Önerilen PSU" to "${s.tdp.watts} W / ${s.recommendedPsu.watts} W PSU")
-            rows.add("Güç Girişleri" to (s.powerConnectors ?: "Belirtilmedi"))
-            rows.add("Kart Boyutları & Slot Kalınlığı" to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • ").ifBlank { "Belirtilmedi" })
-            rows.add("Görüntü Çıkışları" to (s.displayOutputs ?: "Belirtilmedi"))
+            rows.add("Güç Girişleri" to (s.powerConnectors ?: UNSPECIFIED_TEXT))
+            rows.add("Kart Boyutları & Slot Kalınlığı" to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Görüntü Çıkışları" to (s.displayOutputs ?: UNSPECIFIED_TEXT))
             rows.add("Parça Numarası (Part Number)" to (s.partNumber ?: item.model))
         }
 
         is MotherboardSpec -> {
             rows.add("Soket Tipi & Yonga Seti" to "${s.socket} • ${s.chipset}")
-            rows.add("VRM Güç Faz Dizilimi" to (s.vrmPhases ?: "16+2+2 Faz DrMOS"))
-            rows.add("PCB Katmanı & Bakır Standardı" to (s.pcbLayers ?: "8 Katman 2oz Bakır"))
+            rows.add("VRM Güç Faz Dizilimi" to (s.vrmPhases ?: UNSPECIFIED_TEXT))
+            rows.add("PCB Katmanı & Bakır Standardı" to (s.pcbLayers ?: UNSPECIFIED_TEXT))
             rows.add("Form Faktörü" to s.formFactor.displayName)
-            rows.add("Bellek Desteği & Hız Aşırtma" to (s.memorySpeedOc ?: "${s.memoryGeneration.displayName} (${s.ramSlots} Slot, Maks. ${s.maxMemoryGb ?: 192} GB)"))
-            rows.add("M.2 NVMe Yuva Detayı" to (s.m2SlotsDetail ?: (s.m2Slots?.let { "${it}x M.2 NVMe" } ?: "M.2 Gen5 / Gen4")))
+            val maxMemLabel = s.maxMemoryGb?.let { ", Maks. $it GB" } ?: ""
+            rows.add("Bellek Desteği & Hız Aşırtma" to (s.memorySpeedOc ?: "${s.memoryGeneration.displayName} (${s.ramSlots} Slot$maxMemLabel)"))
+            rows.add("M.2 NVMe Yuva Detayı" to (s.m2SlotsDetail ?: (s.m2Slots?.let { "${it}x M.2 NVMe" } ?: UNSPECIFIED_TEXT)))
             rows.add("PCIe x16 Gen Standardı" to s.pcieGeneration.displayName)
-            rows.add("Ağ & Kablosuz Bağlantı" to (s.network ?: if (s.hasWifi == true) "2.5G LAN + Wi-Fi 6E/7" else "2.5G LAN"))
-            rows.add("Ses Yonga Kodeği" to (s.audioCodec ?: "Realtek ALC4080 / ALC1220"))
-            rows.add("Arka Panel I/O Çıkışları" to (s.interfacePorts ?: "Belirtilmedi"))
-            rows.add("SATA Port Sayısı" to (s.sataPorts?.let { "${it}x SATA 3.0" } ?: "Belirtilmedi"))
+            val netFallback = when (s.hasWifi) {
+                true -> "Wi-Fi + Ethernet"
+                false -> "Ethernet (Wi-Fi Yok)"
+                null -> UNSPECIFIED_TEXT
+            }
+            rows.add("Ağ & Kablosuz Bağlantı" to (s.network ?: netFallback))
+            rows.add("Ses Yonga Kodeği" to (s.audioCodec ?: UNSPECIFIED_TEXT))
+            rows.add("Arka Panel I/O Çıkışları" to (s.interfacePorts ?: UNSPECIFIED_TEXT))
+            rows.add("SATA Port Sayısı" to (s.sataPorts?.let { "${it}x SATA 3.0" } ?: UNSPECIFIED_TEXT))
         }
 
         is RamSpec -> {
             val totalGb = s.capacity.megabytes / 1024
-            val perModGb = totalGb / s.moduleCount
+            val perModGb = totalGb / s.moduleCount.coerceAtLeast(1)
             rows.add("Bellek Standardı & Kapasite" to "${totalGb} GB (${s.moduleCount}x${perModGb} GB Kit) ${s.generation.displayName}")
-            rows.add("IC Bellek Yongası (Die Tipi)" to (s.dieType ?: "SK Hynix A-Die / M-Die"))
+            rows.add("IC Bellek Yongası (Die Tipi)" to (s.dieType ?: UNSPECIFIED_TEXT))
             rows.add("Frekans & CL Zamanlamaları" to "${s.speed.mhz} MHz • ${s.timings ?: "CL${s.casLatency}"}")
-            val latencyNs = s.firstWordLatencyNs ?: (2000.0 * s.casLatency / s.speed.mhz)
+            val latencyNs = s.firstWordLatencyNs ?: ((2000.0 * s.casLatency / s.speed.mhz.coerceAtLeast(1)) * 10.0).toInt() / 10.0
             rows.add("İlk Tepki Süresi (True Latency)" to "$latencyNs ns")
-            rows.add("Çalışma Voltajı" to "${s.voltage ?: 1.35} V")
-            rows.add("Hız Aşırtma Profili" to (s.profile ?: if (s.generation.name.contains("DDR5")) "AMD EXPO & Intel XMP 3.0" else "Intel XMP 2.0"))
+            rows.add("Çalışma Voltajı" to (s.voltage?.let { "$it V" } ?: UNSPECIFIED_TEXT))
+            rows.add("Hız Aşırtma Profili" to (s.profile ?: UNSPECIFIED_TEXT))
             val coolerRgb = listOfNotNull(
                 s.heatSpreader?.let { if (it) "Alüminyum Soğutucu Blok" else "Soğutucusuz" },
                 s.rgb?.let { if (it) "RGB Aydınlatma" else "RGB Yok" },
             ).joinToString(" • ")
-            rows.add("Soğutucu Blok / RGB" to coolerRgb.ifBlank { "Belirtilmedi" })
+            rows.add("Soğutucu Blok / RGB" to coolerRgb.ifBlank { UNSPECIFIED_TEXT })
         }
 
         is StorageSpec -> {
             val totalGb = s.capacity.megabytes / 1024
             rows.add("Depolama Kapasitesi" to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
-            rows.add("Kontrolcü Modeli" to (s.controller ?: "Phison / Samsung Yüksek Hızlı NVMe Kontrolcü"))
-            rows.add("DRAM Önbellek Yapısı" to (s.dramCache ?: (s.cacheMb?.let { "$it MB DRAM Cache" } ?: "HMB (DRAM-less)")))
-            rows.add("NAND Flaş Standardı" to (s.nandType ?: "3D TLC NAND"))
+            rows.add("Kontrolcü Modeli" to (s.controller ?: UNSPECIFIED_TEXT))
+            rows.add("DRAM Önbellek Yapısı" to (s.dramCache ?: (s.cacheMb?.let { "$it MB DRAM Cache" } ?: UNSPECIFIED_TEXT)))
+            rows.add("NAND Flaş Standardı" to (s.nandType ?: UNSPECIFIED_TEXT))
             rows.add("Sıralı Okuma / Yazma Hızı" to "${s.sequentialReadMbps} MB/sn Okuma • ${s.sequentialWriteMbps} MB/sn Yazma")
-            rows.add("Rastgele 4K IOPS" to (s.randomIops ?: "1000K / 1000K IOPS"))
-            rows.add("Arayüz & Protokol" to (s.pcieGeneration?.let { "PCIe Gen ${it.displayName} x4 NVMe" } ?: s.storageInterface.displayName))
+            rows.add("Rastgele 4K IOPS" to (s.randomIops ?: UNSPECIFIED_TEXT))
+            rows.add("Arayüz & Protokol" to (s.pcieGeneration?.let { "PCIe ${it.displayName} x4 NVMe" } ?: s.storageInterface.displayName))
             rows.add("Form Faktörü" to s.formFactor.displayName)
-            rows.add("Dayanıklılık Ömrü (TBW)" to "${s.enduranceTbw ?: 600} TBW")
+            rows.add("Dayanıklılık Ömrü (TBW)" to (s.enduranceTbw?.let { "$it TBW" } ?: UNSPECIFIED_TEXT))
         }
 
         is PsuSpec -> {
             rows.add("Çıkış Gücü Kapasitesi" to "${s.wattage.watts} Watt")
-            rows.add("Cultists PSU Tier List" to (s.tierRating ?: "Tier A (High-End)"))
+            rows.add("Cultists PSU Tier List" to (s.tierRating ?: UNSPECIFIED_TEXT))
             val effText = listOfNotNull(s.efficiency.displayName, s.cybeneticsCert).joinToString(" • ")
             rows.add("Cybenetics & 80 PLUS Sertifikası" to effText)
-            rows.add("Cybenetics Lambda Gürültü Derecesi" to (s.cybeneticsLambda ?: "Lambda A+ (<20 dBA)"))
-            rows.add("ATX Standardı & Geçici Yük" to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması)" else "ATX 3.0"))
-            rows.add("12V-2x6 / 12VHPWR (600W) Çıkış" to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "1x 16-Pin (600W Native)" else "Yok (Standart 8-Pin PCIe)"))
-            rows.add("İç Topoloji & Kapasitör Standardı" to (s.topology ?: s.capacitors ?: "Tam Köprü LLC + DC-DC / %100 Japon 105°C Kapasitör"))
-            rows.add("Güvenlik & Koruma Devreleri" to (s.protections ?: "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO"))
-            rows.add("Modülerlik Yapısı" to (s.modularity ?: "Tam Modüler"))
-            rows.add("Soğutma Fanı & Boyut" to (s.fanAndSize ?: "120mm / 135mm FDB Fan"))
+            rows.add("Cybenetics Lambda Gürültü Derecesi" to (s.cybeneticsLambda ?: UNSPECIFIED_TEXT))
+            rows.add("ATX Standardı & Geçici Yük" to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.0 / PCIe 5.0" else UNSPECIFIED_TEXT))
+            rows.add("12V-2x6 / 12VHPWR (600W) Çıkış" to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "Mevcut (12VHPWR / 12V-2x6)" else "Yok"))
+            rows.add("İç Topoloji & Kapasitör Standardı" to (s.topology ?: s.capacitors ?: UNSPECIFIED_TEXT))
+            rows.add("Güvenlik & Koruma Devreleri" to (s.protections ?: UNSPECIFIED_TEXT))
+            rows.add("Modülerlik Yapısı" to (s.modularity ?: UNSPECIFIED_TEXT))
+            rows.add("Soğutma Fanı & Boyut" to (s.fanAndSize ?: UNSPECIFIED_TEXT))
             val cables = listOfNotNull(s.epsConnectors, s.pcieConnectors, s.sataConnectors).joinToString(" • ")
-            rows.add("Kablo Çıkışları (EPS / PCIe / SATA)" to cables.ifBlank { "Belirtilmedi" })
+            rows.add("Kablo Çıkışları (EPS / PCIe / SATA)" to cables.ifBlank { UNSPECIFIED_TEXT })
         }
 
         is CoolerSpec -> {
             rows.add("Soğutma Tipi" to s.type.displayName)
             rows.add("Maksimum Soğutma Gücü (TDP)" to "${s.maxCoolingTdp.watts} W")
             val radOrHeight = s.radiatorDimensions ?: if (s.type == CoolerType.LIQUID) {
-                s.radiatorSizeMm?.let { "${it} mm Alüminyum Radyatör" } ?: "Belirtilmedi"
+                s.radiatorSizeMm?.let { "${it} mm Radyatör" } ?: UNSPECIFIED_TEXT
             } else {
-                s.heightMm?.let { "${it} mm Kule Tipi" } ?: "Belirtilmedi"
+                s.heightMm?.let { "${it} mm Kule Tipi" } ?: UNSPECIFIED_TEXT
             }
             rows.add("Radyatör / Kule Boyutları" to radOrHeight)
-            rows.add("Fan Dönüş Hızı (RPM)" to (s.fanRpm ?: "1800 - 2000 RPM"))
-            rows.add("Hava Akışı & Statik Basınç" to (s.fanAirflow ?: "56.3 CFM / 2.2 mmH2O"))
-            rows.add("Ses Seviyesi (Gürültü)" to (s.noiseDba?.let { "$it dBA" } ?: "22.5 dBA"))
-            rows.add("Desteklenen Soketler" to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else "Belirtilmedi"))
+            rows.add("Fan Dönüş Hızı (RPM)" to (s.fanRpm ?: UNSPECIFIED_TEXT))
+            rows.add("Hava Akışı & Statik Basınç" to (s.fanAirflow ?: UNSPECIFIED_TEXT))
+            rows.add("Ses Seviyesi (Gürültü)" to (s.noiseDba?.let { "$it dBA" } ?: UNSPECIFIED_TEXT))
+            rows.add("Desteklenen Soketler" to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else UNSPECIFIED_TEXT))
         }
 
         is CaseSpec -> {
-            rows.add("Kasa Tipi / Form Faktörü" to (s.type ?: "Mid Tower ATX"))
-            rows.add("Maksimum GPU Uzunluğu" to (s.maxGpuLengthMm?.let { "$it mm" } ?: "380 mm"))
-            rows.add("Maksimum CPU Soğutucu Yüksekliği" to (s.maxCpuCoolerHeightMm?.let { "$it mm" } ?: "165 mm"))
-            rows.add("Radyatör Desteği (Üst/Ön/Yan)" to (s.radiatorSupport ?: (s.maxRadiatorSizeMm?.let { "${it} mm" } ?: "360 mm")))
-            rows.add("Dahili Fan Dizilimi" to (s.includedFans ?: "4x ARGB PWM Fan"))
-            rows.add("Ön Panel Bağlantıları (Tip-C)" to (s.frontPanelUsb ?: "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0"))
+            rows.add("Kasa Tipi / Form Faktörü" to (s.type ?: UNSPECIFIED_TEXT))
+            rows.add("Maksimum GPU Uzunluğu" to (s.maxGpuLengthMm?.let { "$it mm" } ?: UNSPECIFIED_TEXT))
+            rows.add("Maksimum CPU Soğutucu Yüksekliği" to (s.maxCpuCoolerHeightMm?.let { "$it mm" } ?: UNSPECIFIED_TEXT))
+            rows.add("Radyatör Desteği (Üst/Ön/Yan)" to (s.radiatorSupport ?: (s.maxRadiatorSizeMm?.let { "${it} mm" } ?: UNSPECIFIED_TEXT)))
+            rows.add("Dahili Fan Dizilimi" to (s.includedFans ?: UNSPECIFIED_TEXT))
+            rows.add("Ön Panel Bağlantıları (Tip-C)" to (s.frontPanelUsb ?: UNSPECIFIED_TEXT))
             val sideDrive = listOfNotNull(s.sidePanel, s.driveBays).joinToString(" • ")
-            rows.add("Yan Panel & Disk Yuvaları" to sideDrive.ifBlank { "Belirtilmedi" })
+            rows.add("Yan Panel & Disk Yuvaları" to sideDrive.ifBlank { UNSPECIFIED_TEXT })
             val mbSupport = if (s.supportedMotherboardFormFactors.isNotEmpty()) {
                 s.supportedMotherboardFormFactors.joinToString(", ") { it.displayName }
             } else {
-                "E-ATX, ATX, Micro-ATX, Mini-ITX"
+                UNSPECIFIED_TEXT
             }
             rows.add("Desteklenen Anakart Tipleri" to mbSupport)
+        }
+
+        is PrebuiltSpec -> {
+            rows.add("Satıcı Mağaza" to s.storeName.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("İşlemci (CPU)" to s.cpuModel.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Ekran Kartı (GPU)" to s.gpuModel.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Anakart Modeli" to s.motherboardModel.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Sistem Belleği (RAM)" to s.ramSpec.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Depolama Birimi (SSD)" to s.storageSpec.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Parça Parça Toplama Fiyatı" to (s.estimatedSeparatePriceTry?.let { if (it > 0) "${it.formatPrice()} ₺" else null } ?: UNSPECIFIED_TEXT))
+            rows.add("Hazır Sistem Kâr/Avantaj Tutarı" to (s.priceAdvantageTry?.let { adv ->
+                val sign = if (adv > 0) "+" else ""
+                "$sign${adv.formatPrice()} ₺ (%${s.advantagePercent.toInt()})"
+            } ?: UNSPECIFIED_TEXT))
+            rows.add("1080p / 1440p / 4K Referans FPS" to "${s.fps1080p} FPS / ${s.fps1440p} FPS / ${s.fps4k} FPS")
+            rows.add("Gaming Performans Skoru" to "${s.gamingScore} / 100")
+        }
+
+        is LaptopSpec -> {
+            rows.add("Cihaz Markası" to s.brand.ifBlank { item.brand })
+            rows.add("Grafik Kartı & Gerçek TGP Gücü" to "${s.gpuModel} (${s.gpuWattTgp.ifBlank { UNSPECIFIED_TEXT }})")
+            rows.add("Grafik Anahtarı (MUX Switch)" to s.muxSwitch.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("İşlemci (CPU)" to s.cpuModel.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Ekran & Panel Standardı" to s.displaySpec.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Bellek Konfigürasyonu (RAM)" to s.ramSpec.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Yüksek Hızlı Depolama (SSD)" to s.storageSpec.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Batarya Kapasitesi" to if (s.batteryWh > 0) "${s.batteryWh} Wh" else UNSPECIFIED_TEXT)
+            rows.add("Gövde Ağırlığı" to if (s.weightKg > 0.0) "${s.weightKg} kg" else UNSPECIFIED_TEXT)
+            rows.add("Termal Soğutma Mimarisi" to s.coolingTech.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("1080p / 1440p Referans FPS" to "${s.fps1080p} FPS / ${s.fps1440p} FPS")
+            rows.add("Gaming Skoru" to "${s.gamingScore} / 100")
+        }
+
+        is MouseSpec -> {
+            rows.add("Optik Sensör" to s.sensor.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Maksimum Çözünürlük (DPI)" to "${s.maxDpi} DPI")
+            rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz.coerceAtLeast(1)} ms)")
+            rows.add("Anahtar (Switch) Tipi" to s.switchType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Gövde Ağırlığı" to "${s.weightG} gram")
+            rows.add("Bağlantı Teknolojisi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Batarya Kullanım Süresi" to (s.batteryHours?.let { "$it Saat" } ?: "Kablolu (Sınırsız)"))
+        }
+
+        is KeyboardSpec -> {
+            rows.add("Anahtar (Switch) Mimarisi" to s.switchType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Rapid Trigger Desteği" to if (s.rapidTriggerSupported) "Var (Dinamik Sıfırlama)" else "Standart Sabit Sıfırlama")
+            rows.add("Minimum Tetikleme Mesafesi" to "${s.minActuationMm} mm")
+            rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz")
+            rows.add("Tuş Dizilimi (Form Faktörü)" to s.layout.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Hot-Swap (Lehimsiz Değişim)" to if (s.hotSwap) "Destekleniyor" else "Sabit")
+            rows.add("Bağlantı Tipi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
+        }
+
+        is HeadsetSpec -> {
+            rows.add("Sürücü (Driver) Mimarisi" to s.driverType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Sürücü Çapı" to "${s.driverSizeMm} mm")
+            rows.add("Empedans (Direnç)" to "${s.impedanceOhm} Ω (Ohm)")
+            rows.add("Frekans Tepki Aralığı" to s.frequencyResponse.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Harici DAC / Amfi İhtiyacı" to if (s.dacAmpRequired) "Önerilir (Yüksek Empedans)" else "Gerekmez (Doğrudan Besleme)")
+            rows.add("Mikrofon Tipi" to s.micType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Ağırlık" to "${s.weightG} gram")
+        }
+
+        is MonitorSpec -> {
+            rows.add("Panel Teknolojisi" to s.panelType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Ekran Boyutu" to "${s.screenSizeInch} inç")
+            rows.add("Çözünürlük" to s.resolution.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Yenileme Hızı (Refresh Rate)" to "${s.refreshRateHz} Hz")
+            rows.add("Tepki Süresi (GtG)" to "${s.responseSpeedGtGMs} ms")
+            rows.add("Piksel Yoğunluğu (PPI)" to "${s.ppi} PPI")
+            rows.add("HDR Sertifikası" to s.hdrCertification.ifBlank { UNSPECIFIED_TEXT })
         }
     }
     return rows
@@ -914,6 +1511,12 @@ private fun DetailBottomBar(
     isAddedToBuild: Boolean,
     priceText: String,
     onAddToBuildClick: () -> Unit,
+    onAddToVsArenaClick: () -> Unit = {},
+    onPriceOverrideClick: () -> Unit = {},
+    isPrebuilt: Boolean = false,
+    isLaptop: Boolean = false,
+    isCustomPrice: Boolean = false,
+    customPriceNote: String? = null,
     modifier: Modifier = Modifier,
 ) {
     Surface(
@@ -930,50 +1533,458 @@ private fun DetailBottomBar(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Column {
-                Text(
-                    text = "Piyasa Fiyatı",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = onPriceOverrideClick),
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        text = if (isCustomPrice) "🏷️ Özel Fiyatınız" else "Piyasa Fiyatı",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = if (isCustomPrice) FontWeight.Bold else FontWeight.Normal,
+                        color = if (isCustomPrice) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = "✎",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = if (isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
+                    )
+                }
                 Text(
                     text = priceText,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.secondary,
+                    color = if (isCustomPrice) NeonAmber else MaterialTheme.colorScheme.secondary,
+                    softWrap = false,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                if (!customPriceNote.isNullOrBlank()) {
+                    Text(
+                        text = customPriceNote,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Surface(
+                    onClick = onAddToVsArenaClick,
+                    shape = RoundedCornerShape(Spacing.small),
+                    color = NeonCyan.copy(alpha = 0.14f),
+                    border = BorderStroke(1.dp, NeonCyan),
+                ) {
+                    Text(
+                        text = "⚖️ +VS",
+                        style = MaterialTheme.typography.labelLarge,
+                        fontWeight = FontWeight.Black,
+                        color = NeonCyan,
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                    )
+                }
+
+                if (!isLaptop) {
+                    val buttonContainerColor by animateColorAsState(
+                        targetValue = if (isAddedToBuild) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
+                    )
+
+                    Button(
+                        onClick = onAddToBuildClick,
+                        shape = RoundedCornerShape(Spacing.small),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = buttonContainerColor,
+                            contentColor = MaterialTheme.colorScheme.onPrimary,
+                        ),
+                        contentPadding = PaddingValues(horizontal = Spacing.medium, vertical = Spacing.small),
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (isAddedToBuild) {
+                                CheckMarkCanvas(color = MaterialTheme.colorScheme.onSecondary)
+                                Spacer(modifier = Modifier.width(Spacing.small))
+                                Text(
+                                    text = if (isPrebuilt) "Sisteme Aktarıldı ✓" else "Sihirbaza Eklendi ✓",
+                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.labelLarge,
+                                )
+                            } else {
+                                PlusIconCanvas(color = MaterialTheme.colorScheme.onPrimary)
+                                Spacer(modifier = Modifier.width(Spacing.small))
+                                Text(
+                                    text = if (isPrebuilt) "Sihirbaza Aktar" else "Sihirbaza Ekle",
+                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.labelLarge,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun PrebuiltSystemDetailsCard(
+    item: HardwareItem,
+    spec: PrebuiltSpec,
+    onTransferToWizard: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    FluidOrganicCard(
+        modifier = modifier.fillMaxWidth(),
+        accentColor = NeonCyan,
+        secondaryColor = NeonEmerald,
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        contentPadding = Spacing.medium,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(text = "🖥️", style = MaterialTheme.typography.titleMedium)
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Text(
+                        text = "OEM Hazır Sistem Mimarisi",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                }
+                DetailBadge(
+                    text = spec.storeName,
+                    containerColor = MaterialTheme.colorScheme.primaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
             }
 
-            val buttonContainerColor by animateColorAsState(
-                targetValue = if (isAddedToBuild) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
+            // Akıllı Kâr/Zarar & Avantaj Analizörü Kutusu
+            Surface(
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
+                border = BorderStroke(
+                    1.dp,
+                    if (spec.isAdvantageous) MaterialTheme.colorScheme.primary.copy(alpha = 0.5f) else MaterialTheme.colorScheme.outlineVariant,
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Column(modifier = Modifier.padding(Spacing.medium)) {
+                    Text(
+                        text = "AKILLI KÂR / ZARAR & TOPLAMA ANALİZİ",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Black,
+                        color = MaterialTheme.colorScheme.primary,
+                        letterSpacing = 1.sp,
+                    )
+                    Spacer(modifier = Modifier.height(Spacing.small))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Column {
+                            Text(
+                                text = "Parçaları Tek Tek Toplama Tutarı",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Text(
+                                text = "${spec.estimatedSeparatePriceTry?.toLong() ?: 0} ₺",
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+
+                        val isAdv = spec.isAdvantageous
+                        val badgeBg = if (isAdv) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.secondaryContainer
+                        val badgeTextColor = if (isAdv) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSecondaryContainer
+
+                        if (spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) {
+                            Box(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(badgeBg)
+                                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                            ) {
+                                Text(
+                                    text = "+${spec.priceAdvantageTry.toLong()} ₺ (%${spec.advantagePercent.toInt()} Kâr)",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Black,
+                                    color = badgeTextColor,
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(Spacing.small))
+
+                    val statusMsg = if (spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) {
+                        "✓ Bu hazır sistem, parçaların piyasa tekil satış fiyatına kıyasla ${spec.priceAdvantageTry.toLong()} ₺ daha uygundur."
+                    } else {
+                        "Bileşenlerin piyasa fiyatı hazır sistem tutarıyla dengeli durumdadır."
+                    }
+                    Text(
+                        text = statusMsg,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = if (spec.isAdvantageous) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
+            Text(
+                text = "İçindeki 6 Ana Donanım Bileşeni",
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            val components = listOf(
+                Triple("⚡", "İşlemci (CPU)", spec.cpuModel),
+                Triple("🎮", "Ekran Kartı (GPU)", spec.gpuModel),
+                Triple("🔌", "Anakart", spec.motherboardModel),
+                Triple("🧠", "Bellek (RAM)", spec.ramSpec),
+                Triple("💾", "Depolama (SSD)", spec.storageSpec),
+                Triple("🖥️", "Kasa & Güç Kaynağı", spec.psuCaseSpec),
             )
 
+            components.forEach { (icon, title, value) ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(32.dp)
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(MaterialTheme.colorScheme.surfaceVariant),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(text = icon, style = MaterialTheme.typography.bodyMedium)
+                    }
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = title,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Text(
+                            text = value,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
             Button(
-                onClick = onAddToBuildClick,
+                onClick = onTransferToWizard,
+                modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(Spacing.small),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = buttonContainerColor,
-                    contentColor = MaterialTheme.colorScheme.onPrimary,
-                ),
-                contentPadding = PaddingValues(horizontal = Spacing.medium, vertical = Spacing.small),
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+            ) {
+                Text(
+                    text = "Bu Sistemi Sihirbaza Aktar & Özelleştir",
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onPrimary,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun LaptopSpecialDetailsCard(
+    item: HardwareItem,
+    spec: LaptopSpec,
+    modifier: Modifier = Modifier,
+) {
+    FluidOrganicCard(
+        modifier = modifier.fillMaxWidth(),
+        accentColor = ElectricBlue,
+        secondaryColor = NeonPurple,
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        contentPadding = Spacing.medium,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    if (isAddedToBuild) {
-                        CheckMarkCanvas(color = MaterialTheme.colorScheme.onSecondary)
-                        Spacer(modifier = Modifier.width(Spacing.small))
+                    Text(text = "💻", style = MaterialTheme.typography.titleMedium)
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Text(
+                        text = "Gaming Laptop Mühendislik Detayı",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                }
+                DetailBadge(
+                    text = spec.brand.ifBlank { item.brand },
+                    containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
+                )
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
+            // Gerçek TGP Watt Değeri Banner (Çok Kritik)
+            Surface(
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.45f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f)),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Row(
+                    modifier = Modifier.padding(Spacing.medium),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(44.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(MaterialTheme.colorScheme.secondary),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text("⚡", style = MaterialTheme.typography.titleMedium)
+                    }
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Column {
                         Text(
-                            text = "Sihirbaza Eklendi ✓",
-                            fontWeight = FontWeight.Bold,
-                            style = MaterialTheme.typography.labelLarge,
+                            text = "GERÇEK GPU TGP GÜÇ DEĞERİ",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Black,
+                            color = MaterialTheme.colorScheme.secondary,
+                            letterSpacing = 1.sp,
                         )
-                    } else {
-                        PlusIconCanvas(color = MaterialTheme.colorScheme.onPrimary)
-                        Spacer(modifier = Modifier.width(Spacing.small))
                         Text(
-                            text = "Sihirbaza Ekle",
+                            text = "${spec.gpuModel} • ${spec.gpuWattTgp}",
+                            style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.onSurface,
                         )
+                        Text(
+                            text = "Kısıtlanmamış tam güç (Full Wattage) grafik yongası",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            // MUX Switch & Ekran Hz / Panel Kalitesi
+            Surface(
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.35f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary.copy(alpha = 0.3f)),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Column(modifier = Modifier.padding(Spacing.medium)) {
+                    Text(
+                        text = "MUX SWITCH & PANEL TEKNOLOJİSİ",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Black,
+                        color = MaterialTheme.colorScheme.tertiary,
+                        letterSpacing = 1.sp,
+                    )
+                    Spacer(modifier = Modifier.height(Spacing.small))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Grafik Anahtarı:",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Text(
+                                text = spec.muxSwitch,
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(Spacing.extraSmall))
+
+                    Column {
+                        Text(
+                            text = "Ekran & Panel:",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Text(
+                            text = spec.displaySpec,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            // Termal Soğutma & Batarya
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(10.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Column(modifier = Modifier.padding(Spacing.small)) {
+                        Text(text = "❄️ Soğutma", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(text = spec.coolingTech, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                    }
+                }
+                Surface(
+                    shape = RoundedCornerShape(10.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Column(modifier = Modifier.padding(Spacing.small)) {
+                        Text(text = "🔋 Batarya & Ağırlık", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(text = "${spec.batteryWh} Wh • ${spec.weightKg} kg", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
             }
@@ -1056,13 +2067,6 @@ private fun PlusIconCanvas(color: Color, modifier: Modifier = Modifier.size(16.d
     }
 }
 
-private fun formatPrice(price: Money?): String {
-    if (price == null) return "Stok / Fiyat Yok"
-    val major = price.amountMinor / 100
-    val minor = (price.amountMinor % 100).toString().padStart(2, '0')
-    return "₺$major,$minor"
-}
-
 private data class StoreSearchTarget(
     val name: String,
     val searchUrlTemplate: String,
@@ -1109,16 +2113,15 @@ private fun StoreOffersCard(
 ) {
     val uriHandler = LocalUriHandler.current
 
-    Card(
+    FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
+        accentColor = NeonCyan,
+        secondaryColor = NeonEmerald,
         shape = RoundedCornerShape(Spacing.cardRadius),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
+        contentPadding = Spacing.medium,
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(Spacing.medium),
+            modifier = Modifier.fillMaxWidth(),
         ) {
             // Header
             Row(
@@ -1169,10 +2172,7 @@ private fun StoreOffersCard(
                         val isCheapest = index == 0
                         Surface(
                             onClick = {
-                                val trimmedUrl = offer.url.trim()
-                                if (trimmedUrl.startsWith("https://", ignoreCase = true) || trimmedUrl.startsWith("http://", ignoreCase = true)) {
-                                    runCatching { uriHandler.openUri(trimmedUrl) }
-                                }
+                                uriHandler.openSafeStoreUrl(offer.url)
                             },
                             shape = RoundedCornerShape(Spacing.small),
                             color = if (isCheapest) MaterialTheme.colorScheme.primary.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
@@ -1228,6 +2228,9 @@ private fun StoreOffersCard(
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Black,
                                         color = if (isCheapest) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.primary,
+                                        softWrap = false,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
                                     )
                                     Spacer(modifier = Modifier.width(Spacing.small))
                                     Text(
@@ -1278,7 +2281,7 @@ private fun StoreOffersCard(
                             Surface(
                                 onClick = {
                                     val fullUrl = "${target.searchUrlTemplate}$cleanQuery"
-                                    runCatching { uriHandler.openUri(fullUrl) }
+                                    uriHandler.openSafeStoreUrl(fullUrl)
                                 },
                                 shape = RoundedCornerShape(Spacing.small),
                                 color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
@@ -1406,6 +2409,12 @@ fun DetailPlaceholderHero(
         HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.PREBUILT_PC -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.LAPTOP -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MOUSE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
     Column(
         modifier = modifier

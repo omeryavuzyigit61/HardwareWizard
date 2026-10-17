@@ -22,4 +22,8 @@ interface HardwareRepository {
     fun observeBrands(category: HardwareCategory? = null): Flow<DomainResult<List<String>>>
 
     suspend fun refreshHardwareItems(): DomainResult<Unit>
+
+    suspend fun setCustomPrice(id: HardwareId, customPriceTry: Double, note: String? = null): DomainResult<Unit>
+
+    suspend fun clearCustomPrice(id: HardwareId): DomainResult<Unit>
 }

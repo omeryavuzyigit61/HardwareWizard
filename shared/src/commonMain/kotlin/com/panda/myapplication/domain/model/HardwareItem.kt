@@ -1,6 +1,9 @@
 package com.panda.myapplication.domain.model
 
+import androidx.compose.runtime.Immutable
+
 /** Core domain entity representing a single purchasable hardware component. */
+@Immutable
 data class HardwareItem(
     val id: HardwareId,
     val brand: String,
@@ -10,11 +13,15 @@ data class HardwareItem(
     val priceInfo: ProductPriceInfo? = null,
     val benchmarkInfo: HardwareBenchmarkInfo? = null,
     val imageUrl: String? = null,
+    val customPriceTry: Double? = null,
+    val customPriceNote: String? = null,
 ) {
     val category: HardwareCategory get() = spec.category
 
     val effectiveImageUrl: String? get() = imageUrl ?: priceInfo?.imageUrl
-    val currentPriceTry: Double? get() = priceInfo?.currentPriceTry
+    val storePriceTry: Double? get() = priceInfo?.currentPriceTry
+    val currentPriceTry: Double? get() = customPriceTry ?: priceInfo?.currentPriceTry
+    val isCustomPrice: Boolean get() = customPriceTry != null
     val lowestPriceTry: Double? get() = priceInfo?.lowestPriceTry
     val highestPriceTry: Double? get() = priceInfo?.highestPriceTry
     val offers: List<StoreOffer> get() = priceInfo?.offers.orEmpty()

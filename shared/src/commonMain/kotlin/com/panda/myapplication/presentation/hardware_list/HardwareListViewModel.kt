@@ -9,12 +9,21 @@ import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.repository.HardwareRepository
+import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareListUseCase
+import com.panda.myapplication.domain.util.SecurityUtils
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.Channel
@@ -27,6 +36,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
@@ -36,8 +46,10 @@ import kotlinx.coroutines.launch
 class HardwareListViewModel(
     private val getHardwareListUseCase: GetHardwareListUseCase,
     private val repository: HardwareRepository,
+    private val vsArenaRepository: VsArenaRepository,
 ) : ViewModel() {
 
+    private val segmentMode = MutableStateFlow(CatalogSegmentMode.INDIVIDUAL)
     private val selectedCategory = MutableStateFlow<HardwareCategory?>(null)
     private val rawSearchQuery = MutableStateFlow("")
     private val filterOptions = MutableStateFlow(HardwareFilterOptions())
@@ -52,19 +64,45 @@ class HardwareListViewModel(
     val effects = effectChannel.receiveAsFlow()
 
     private val debouncedSearchQuery: Flow<String> = rawSearchQuery
-        .debounce { query -> if (query.isBlank()) 0L else 300L }
+        .debounce(300L)
         .distinctUntilChanged()
+        .flowOn(Dispatchers.Default)
 
-    private val hardwareItemsFlow: Flow<DomainResult<List<HardwareItem>>> = selectedCategory.flatMapLatest { category ->
-        getHardwareListUseCase(category)
+    private val hardwareItemsFlow: Flow<DomainResult<List<HardwareItem>>> = combine(
+        segmentMode,
+        selectedCategory,
+    ) { mode, category ->
+        mode to category
+    }.flatMapLatest { (mode, category) ->
+        if (category != null) {
+            getHardwareListUseCase(category)
+        } else {
+            val categories = when (mode) {
+                CatalogSegmentMode.INDIVIDUAL -> INDIVIDUAL_CATEGORIES.toList()
+                CatalogSegmentMode.PERIPHERALS -> PERIPHERAL_CATEGORIES.toList()
+                CatalogSegmentMode.PREBUILT -> listOf(HardwareCategory.PREBUILT_PC)
+                CatalogSegmentMode.LAPTOP -> listOf(HardwareCategory.LAPTOP)
+            }
+            combine(categories.map { getHardwareListUseCase(it) }) { results ->
+                val all = mutableListOf<HardwareItem>()
+                for (res in results) {
+                    if (res is DomainResult.Success) {
+                        all.addAll(res.data)
+                    }
+                }
+                DomainResult.Success(all) as DomainResult<List<HardwareItem>>
+            }
+        }
     }
 
-    private val availableBrandsFlow: Flow<List<String>> = selectedCategory.flatMapLatest { category ->
-        repository.observeBrands(category).map { result ->
-            when (result) {
-                is DomainResult.Success -> result.data
-                is DomainResult.Failure -> emptyList()
-            }
+    private val availableBrandsFlow: Flow<List<String>> = hardwareItemsFlow.map { result ->
+        when (result) {
+            is DomainResult.Success -> result.data
+                .map { it.brand.trim() }
+                .filter { it.isNotBlank() }
+                .distinct()
+                .sorted()
+            is DomainResult.Failure -> emptyList()
         }
     }
 
@@ -82,19 +120,62 @@ class HardwareListViewModel(
     }
 
     fun onSearchQueryChange(newQuery: String) {
-        _uiState.update { it.copy(searchQuery = newQuery) }
         rawSearchQuery.value = newQuery
     }
 
     fun onEvent(event: HardwareListUiEvent) {
         when (event) {
-            is HardwareListUiEvent.OnCategorySelected -> {
-                selectedCategory.value = event.category
-                val validSorts = HardwareSortOption.optionsForCategory(event.category)
-                if (!validSorts.contains(filterOptions.value.sortOption)) {
-                    filterOptions.value = filterOptions.value.copy(sortOption = HardwareSortOption.DEFAULT)
+            is HardwareListUiEvent.OnSegmentModeSelected -> {
+                segmentMode.value = event.mode
+                val nextCategory = when (event.mode) {
+                    CatalogSegmentMode.INDIVIDUAL -> null
+                    CatalogSegmentMode.PERIPHERALS -> null
+                    CatalogSegmentMode.PREBUILT -> HardwareCategory.PREBUILT_PC
+                    CatalogSegmentMode.LAPTOP -> HardwareCategory.LAPTOP
                 }
-                _uiState.update { it.copy(selectedCategory = event.category) }
+                selectedCategory.value = nextCategory
+                filterOptions.value = filterOptions.value.copy(
+                    selectedBrands = emptySet(),
+                    sortOption = HardwareSortOption.DEFAULT,
+                )
+                _uiState.update {
+                    it.copy(
+                        segmentMode = event.mode,
+                        selectedCategory = nextCategory,
+                        filters = filterOptions.value,
+                    )
+                }
+            }
+            is HardwareListUiEvent.OnCategorySelected -> {
+                val targetCategory = event.category
+                val inferredMode = when {
+                    targetCategory == null -> segmentMode.value.let { current ->
+                        if (current == CatalogSegmentMode.PERIPHERALS) CatalogSegmentMode.PERIPHERALS else CatalogSegmentMode.INDIVIDUAL
+                    }
+                    targetCategory.isPeripheral -> CatalogSegmentMode.PERIPHERALS
+                    targetCategory == HardwareCategory.PREBUILT_PC -> CatalogSegmentMode.PREBUILT
+                    targetCategory == HardwareCategory.LAPTOP -> CatalogSegmentMode.LAPTOP
+                    else -> CatalogSegmentMode.INDIVIDUAL
+                }
+                segmentMode.value = inferredMode
+                selectedCategory.value = targetCategory
+                val validSorts = HardwareSortOption.optionsForCategory(targetCategory)
+                val nextSort = if (validSorts.contains(filterOptions.value.sortOption)) {
+                    filterOptions.value.sortOption
+                } else {
+                    HardwareSortOption.DEFAULT
+                }
+                filterOptions.value = filterOptions.value.copy(
+                    selectedBrands = emptySet(),
+                    sortOption = nextSort,
+                )
+                _uiState.update {
+                    it.copy(
+                        segmentMode = inferredMode,
+                        selectedCategory = targetCategory,
+                        filters = filterOptions.value,
+                    )
+                }
             }
             is HardwareListUiEvent.OnSearchQueryChanged -> {
                 onSearchQueryChange(event.query)
@@ -102,6 +183,24 @@ class HardwareListViewModel(
             is HardwareListUiEvent.OnHardwareItemClicked -> {
                 viewModelScope.launch {
                     effectChannel.send(HardwareListEffect.NavigateToDetail(event.item))
+                }
+            }
+            is HardwareListUiEvent.OnAddToVsArena -> {
+                val msg = vsArenaRepository.addQuickItem(event.item)
+                viewModelScope.launch {
+                    effectChannel.send(HardwareListEffect.ShowVsAddedToast(msg))
+                }
+            }
+            is HardwareListUiEvent.OnSaveCustomPrice -> {
+                viewModelScope.launch {
+                    repository.setCustomPrice(event.itemId, event.customPriceTry, event.note)
+                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat kaydedildi."))
+                }
+            }
+            is HardwareListUiEvent.OnClearCustomPrice -> {
+                viewModelScope.launch {
+                    repository.clearCustomPrice(event.itemId)
+                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat sıfırlandı."))
                 }
             }
             HardwareListUiEvent.OnToggleFilterSheet -> {
@@ -130,44 +229,56 @@ class HardwareListViewModel(
                 debouncedSearchQuery,
                 filterStateFlow,
                 isRefreshing,
-            ) { result, query, (filters, brands, sheetVisible), refreshing ->
+            ) { result, query, (filters, brands, sheetVisible), _ ->
                 when (result) {
                     is DomainResult.Success -> {
                         val total = result.data.size
                         val filtered = filterItems(result.data, query, filters)
                         val sorted = sortItems(filtered, filters.sortOption, query)
-
+                        Triple(true, sorted to total, Triple(query, filters, brands to sheetVisible))
+                    }
+                    is DomainResult.Failure -> {
+                        Triple(false, emptyList<HardwareItem>() to 0, Triple(query, filters, brands to sheetVisible))
+                    }
+                }
+            }
+                .flowOn(Dispatchers.Default)
+                .collect { (isSuccess, itemsAndTotal, meta) ->
+                    val (items, total) = itemsAndTotal
+                    val (query, filters, brandsAndSheet) = meta
+                    val (brands, sheetVisible) = brandsAndSheet
+                    if (isSuccess) {
                         _uiState.update { current ->
                             current.copy(
                                 isLoading = false,
-                                items = sorted,
+                                items = items,
                                 totalCount = total,
+                                segmentMode = segmentMode.value,
                                 selectedCategory = selectedCategory.value,
+                                searchQuery = query,
                                 filters = filters,
                                 availableBrands = brands,
                                 isFilterSheetVisible = sheetVisible,
                                 errorMessage = null,
                             )
                         }
-                    }
-                    is DomainResult.Failure -> {
-                        if (_uiState.value.items.isEmpty()) {
-                            _uiState.update { current ->
-                                current.copy(
-                                    isLoading = false,
-                                    items = emptyList(),
-                                    totalCount = 0,
-                                    selectedCategory = selectedCategory.value,
-                                    filters = filters,
-                                    availableBrands = brands,
-                                    isFilterSheetVisible = sheetVisible,
-                                    errorMessage = "Donanım parçaları yüklenemedi.",
-                                )
-                            }
+                    } else if (_uiState.value.items.isEmpty()) {
+                        _uiState.update { current ->
+                            current.copy(
+                                isLoading = false,
+                                items = emptyList(),
+                                totalCount = 0,
+                                segmentMode = segmentMode.value,
+                                selectedCategory = selectedCategory.value,
+                                searchQuery = query,
+                                filters = filters,
+                                availableBrands = brands,
+                                isFilterSheetVisible = sheetVisible,
+                                errorMessage = "Donanım parçaları yüklenemedi.",
+                            )
                         }
                     }
                 }
-            }.collect()
         }
     }
 
@@ -222,7 +333,8 @@ class HardwareListViewModel(
                     if (filters.requireAtx3 && !s.isAtx3Compliant) return@filter false
                     if (filters.requirePcie5 && !s.supportsPcie5Power) return@filter false
                 }
-                is CoolerSpec, is CaseSpec -> Unit
+                is CoolerSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
+                is MouseSpec, is KeyboardSpec, is HeadsetSpec, is MonitorSpec -> Unit
             }
             true
         }
@@ -238,11 +350,17 @@ class HardwareListViewModel(
                 if (query.isNotBlank()) {
                     items.sortedByDescending { com.panda.myapplication.domain.engine.HardwareSearchEngine.calculateScore(it, query) }
                 } else {
-                    items
+                    items.sortedWith(
+                        compareBy<HardwareItem> { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: Double.MAX_VALUE }
+                            .thenBy { it.displayName.lowercase() },
+                    )
                 }
             }
-            HardwareSortOption.PRICE_ASC -> items.sortedBy { it.price?.amountMinor ?: Long.MAX_VALUE }
-            HardwareSortOption.PRICE_DESC -> items.sortedByDescending { it.price?.amountMinor ?: 0L }
+            HardwareSortOption.PRICE_ASC -> items.sortedWith(
+                compareBy<HardwareItem> { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: Double.MAX_VALUE }
+                    .thenBy { it.displayName.lowercase() },
+            )
+            HardwareSortOption.PRICE_DESC -> items.sortedByDescending { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: -1.0 }
             HardwareSortOption.NAME_ASC -> items.sortedBy { it.displayName }
 
             // CPU
@@ -291,5 +409,25 @@ class HardwareListViewModel(
                 }
             }
         }
+    }
+
+    companion object {
+        val INDIVIDUAL_CATEGORIES = setOf(
+            HardwareCategory.CPU,
+            HardwareCategory.GPU,
+            HardwareCategory.RAM,
+            HardwareCategory.MOTHERBOARD,
+            HardwareCategory.STORAGE,
+            HardwareCategory.PSU,
+            HardwareCategory.COOLER,
+            HardwareCategory.CASE,
+        )
+
+        val PERIPHERAL_CATEGORIES = setOf(
+            HardwareCategory.MOUSE,
+            HardwareCategory.KEYBOARD,
+            HardwareCategory.HEADSET,
+            HardwareCategory.MONITOR,
+        )
     }
 }

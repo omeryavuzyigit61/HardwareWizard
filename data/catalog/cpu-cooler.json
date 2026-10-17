@@ -1,6 +1,6 @@
 [
   {
-    "name": "Arctic Liquid Freezer III 240",
+    "name": "ARCTIC Liquid Freezer III 240",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 240,
@@ -16,10 +16,11 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2fc6853c4556dfb16bb10580c1a9cbb1.1600.jpg",
     "radiator_dimensions": "240mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 240"
   },
   {
-    "name": "Arctic Liquid Freezer III 240 A-RGB",
+    "name": "ARCTIC Liquid Freezer III 240 A-RGB",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 240,
@@ -35,10 +36,11 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg",
     "radiator_dimensions": "240mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 240 A-RGB"
   },
   {
-    "name": "Arctic Liquid Freezer III 240 A-RGB White",
+    "name": "ARCTIC Liquid Freezer III 240 A-RGB White",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 240,
@@ -54,10 +56,11 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg",
     "radiator_dimensions": "240mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 240 A-RGB White"
   },
   {
-    "name": "Arctic Liquid Freezer III 280",
+    "name": "ARCTIC Liquid Freezer III 280",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 280,
@@ -73,10 +76,11 @@
     "max_tdp": 280,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8ed355fe9c6060ea33f9d50757e15be1.1600.jpg",
     "radiator_dimensions": "280mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 280"
   },
   {
-    "name": "Arctic Liquid Freezer III 360",
+    "name": "ARCTIC Liquid Freezer III 360",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -92,10 +96,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
     "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 360"
   },
   {
-    "name": "Arctic Liquid Freezer III 360 A-RGB",
+    "name": "ARCTIC Liquid Freezer III 360 A-RGB",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -111,10 +116,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
     "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 360 A-RGB"
   },
   {
-    "name": "Arctic Liquid Freezer III 360 A-RGB White",
+    "name": "ARCTIC Liquid Freezer III 360 A-RGB White",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -130,10 +136,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
     "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 360 A-RGB White"
   },
   {
-    "name": "Arctic Liquid Freezer III 420 A-RGB",
+    "name": "ARCTIC Liquid Freezer III 420 A-RGB",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 420,
@@ -149,10 +156,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1b6a3ca1e23ed67ab4b6a40866a9cfd7.1600.jpg",
     "radiator_dimensions": "420mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 420 A-RGB"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 SE",
+    "name": "THERMALRIGHT Peerless Assassin 120 SE",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -168,10 +176,11 @@
     "max_tdp": 265,
     "imageUrl": "https://m.media-amazon.com/images/I/41hFTmi5aUL.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 SE"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 SE ARGB",
+    "name": "THERMALRIGHT Peerless Assassin 120 SE ARGB",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -187,10 +196,11 @@
     "max_tdp": 265,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1e057960fccae4328fbdc13bb45bf42c.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 SE ARGB"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 SE ARGB White",
+    "name": "THERMALRIGHT Peerless Assassin 120 SE ARGB White",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -206,10 +216,11 @@
     "max_tdp": 265,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 SE ARGB White"
   },
   {
-    "name": "Thermalright Phantom Spirit 120 SE",
+    "name": "THERMALRIGHT Phantom Spirit 120 SE",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -225,10 +236,11 @@
     "max_tdp": 265,
     "imageUrl": "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Phantom Spirit 120 SE"
   },
   {
-    "name": "Thermalright Phantom Spirit 120 SE ARGB",
+    "name": "THERMALRIGHT Phantom Spirit 120 SE ARGB",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -244,10 +256,11 @@
     "max_tdp": 265,
     "imageUrl": "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Phantom Spirit 120 SE ARGB"
   },
   {
-    "name": "Thermalright Phantom Spirit 120 EVO",
+    "name": "THERMALRIGHT Phantom Spirit 120 EVO",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -263,11 +276,12 @@
     "max_tdp": 265,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/609dd9aca53bc830731d088d9c7ed292.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Phantom Spirit 120 EVO"
   },
   {
-    "name": "Thermalright Frozen Prism 360 ARGB",
-    "price": null,
+    "name": "THERMALRIGHT Frozen Prism 360 ARGB",
+    "price": 3265.57,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -282,11 +296,12 @@
     "max_tdp": 300,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Prism 360 ARGB"
   },
   {
-    "name": "Thermalright Frozen Prism 360 ARGB White",
-    "price": null,
+    "name": "THERMALRIGHT Frozen Prism 360 ARGB White",
+    "price": 2999.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
@@ -301,11 +316,12 @@
     "max_tdp": 300,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Prism 360 ARGB White"
   },
   {
-    "name": "Thermalright Aqua Elite 360 V3 ARGB",
-    "price": null,
+    "name": "THERMALRIGHT Aqua Elite 360 V3 ARGB",
+    "price": 6016.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -320,10 +336,11 @@
     "max_tdp": 280,
     "imageUrl": "https://m.media-amazon.com/images/I/318f4Q17BeL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Aqua Elite 360 V3 ARGB"
   },
   {
-    "name": "DeepCool AK400",
+    "name": "DEEPCOOL AK400",
     "price": null,
     "type": "Tower Air Cooler",
     "size": null,
@@ -339,10 +356,11 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f11e54d5a812379d28e34bc51143332b.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "AK400"
   },
   {
-    "name": "DeepCool AK400 Digital",
+    "name": "DEEPCOOL AK400 Digital",
     "price": null,
     "type": "Tower Air Cooler",
     "size": null,
@@ -358,10 +376,11 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/cdd47d524615ffee254da2f4010c0562.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "AK400 Digital"
   },
   {
-    "name": "DeepCool AK620",
+    "name": "DEEPCOOL AK620",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -377,10 +396,11 @@
     "max_tdp": 260,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/048ee8d7e1ab67674cc0aac0e4e0e281.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "AK620"
   },
   {
-    "name": "DeepCool AK620 Digital",
+    "name": "DEEPCOOL AK620 Digital",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -396,10 +416,11 @@
     "max_tdp": 260,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e0f646f05ca57372374cf39b3b34a1c3.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "AK620 Digital"
   },
   {
-    "name": "DeepCool LT720",
+    "name": "DEEPCOOL LT720",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -415,10 +436,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6836eb2d379fa4b51adaa3ef0d08c2a9.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LT720"
   },
   {
-    "name": "DeepCool LT720 WH",
+    "name": "DEEPCOOL LT720 WH",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -434,10 +456,11 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/861b8df9d997376de670ad86c23143bb.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LT720 WH"
   },
   {
-    "name": "DeepCool LS720 SE",
+    "name": "DEEPCOOL LS720 SE",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -453,11 +476,12 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/876374634dcac9c71c8f9f585d6e4767.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LS720 SE"
   },
   {
     "name": "NZXT Kraken 240",
-    "price": null,
+    "price": 4330.0,
     "type": "AIO Liquid Cooler",
     "size": 240,
     "color": "Black",
@@ -472,11 +496,12 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/157afeba59d05304fe181106745e6177.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken 240"
   },
   {
     "name": "NZXT Kraken 360",
-    "price": null,
+    "price": 6383.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -491,7 +516,8 @@
     "max_tdp": 290,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken 360"
   },
   {
     "name": "NZXT Kraken 360 RGB",
@@ -510,7 +536,8 @@
     "max_tdp": 290,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken 360 RGB"
   },
   {
     "name": "NZXT Kraken 360 RGB (White)",
@@ -529,11 +556,12 @@
     "max_tdp": 290,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken 360 RGB (White)"
   },
   {
     "name": "NZXT Kraken Elite 360 RGB",
-    "price": null,
+    "price": 18949.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -548,7 +576,8 @@
     "max_tdp": 290,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 360 RGB"
   },
   {
     "name": "NZXT Kraken Elite 360 RGB (White)",
@@ -567,10 +596,11 @@
     "max_tdp": 290,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 360 RGB (White)"
   },
   {
-    "name": "Noctua NH-D15 chromax.black",
+    "name": "NOCTUA NH-D15 chromax.black",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -586,10 +616,11 @@
     "max_tdp": 250,
     "imageUrl": "https://m.media-amazon.com/images/I/51kgqhkUNuL.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "NH-D15 chromax.black"
   },
   {
-    "name": "Noctua NH-D15 G2",
+    "name": "NOCTUA NH-D15 G2",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -605,10 +636,11 @@
     "max_tdp": 280,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3cbf3ee92fcdc68aa1049b28ccbdb850.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "NH-D15 G2"
   },
   {
-    "name": "Noctua NH-U12S chromax.black",
+    "name": "NOCTUA NH-U12S chromax.black",
     "price": null,
     "type": "Tower Air Cooler",
     "size": null,
@@ -624,10 +656,11 @@
     "max_tdp": 180,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/03d2c7690b9a62e9131a8514ea3c0dfa.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "NH-U12S chromax.black"
   },
   {
-    "name": "be quiet! Dark Rock Pro 5",
+    "name": "BE QUIET! Dark Rock Pro 5",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
@@ -641,13 +674,14 @@
       "LGA1700"
     ],
     "max_tdp": 270,
-    "imageUrl": null,
+    "imageUrl": "https://pcper.com/wp-content/uploads/2023/10/be-quiet-dark-rock-pro-5-with-box.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Dark Rock Pro 5"
   },
   {
-    "name": "Corsair iCUE LINK Titan 360 RX RGB",
-    "price": null,
+    "name": "CORSAIR iCUE LINK Titan 360 RX RGB",
+    "price": 10800.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -662,10 +696,11 @@
     "max_tdp": 320,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "iCUE LINK Titan 360 RX RGB"
   },
   {
-    "name": "Corsair iCUE LINK Titan 360 RX RGB White",
+    "name": "CORSAIR iCUE LINK Titan 360 RX RGB White",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -681,10 +716,11 @@
     "max_tdp": 320,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "iCUE LINK Titan 360 RX RGB White"
   },
   {
-    "name": "Corsair iCUE H150i ELITE CAPELLIX XT",
+    "name": "CORSAIR iCUE H150i ELITE CAPELLIX XT",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
@@ -700,11 +736,12 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/12bfecb3325a384ef35e38ada6b8bca3.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "iCUE H150i ELITE CAPELLIX XT"
   },
   {
     "name": "MSI MAG CoreLiquid M360",
-    "price": null,
+    "price": 5399.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -719,11 +756,12 @@
     "max_tdp": 280,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1941845aab8181cf519db787c405fded.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MAG CoreLiquid M360"
   },
   {
     "name": "ASUS ROG Ryujin III 360 ARGB",
-    "price": null,
+    "price": 14999.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -738,11 +776,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "ROG Ryujin III 360 ARGB"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro 360",
-    "price": 84.99,
+    "price": null,
     "rpm": [
       600,
       3000
@@ -760,11 +799,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
     "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
     "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III Pro 360"
   },
   {
-    "name": "Cooler Master Hyper 212 Black Edition",
-    "price": 25.99,
+    "name": "COOLER MASTER Hyper 212 Black Edition",
+    "price": 1431.0,
     "rpm": [
       650,
       2000
@@ -782,14 +822,15 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://gnd-tech.com/content/2018/10/cooler-master-hyper-212-black-edition-cpu-cooler-review-01.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Hyper 212 Black Edition"
   },
   {
-    "name": "Thermalright Assassin X 120 Refined SE",
-    "price": 17.89,
+    "name": "THERMALRIGHT Assassin X 120 Refined SE",
+    "price": null,
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black / Silver",
@@ -804,11 +845,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin X 120 Refined SE"
   },
   {
-    "name": "Cooler Master MasterLiquid 360L Core ARGB",
-    "price": 74.98,
+    "name": "COOLER MASTER MasterLiquid 360L Core ARGB",
+    "price": 6042.0,
     "rpm": [
       350,
       1750
@@ -823,14 +865,15 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://files.coolermaster.com/og-image/ml-360l-core-argb-1200x630.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
     "fan_rpm": "800 - 2000 RPM (PWM)",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MasterLiquid 360L Core ARGB"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro A-RGB 360",
-    "price": 93.99,
+    "price": null,
     "rpm": [
       600,
       3000
@@ -848,11 +891,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
     "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
     "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III Pro A-RGB 360"
   },
   {
     "name": "ARCTIC Freezer 36",
-    "price": 44.19,
+    "price": null,
     "rpm": [
       200,
       1800
@@ -870,11 +914,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41LLTGkmTRL.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Freezer 36"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 SE WHITE ARGB",
-    "price": 36.9,
+    "name": "THERMALRIGHT Peerless Assassin 120 SE WHITE ARGB",
+    "price": null,
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
@@ -889,11 +934,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
     "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 SE WHITE ARGB"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro",
-    "price": 70.98,
+    "price": null,
     "rpm": [
       600,
       3000
@@ -911,11 +957,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
     "radiator_dimensions": "240mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
     "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III Pro"
   },
   {
-    "name": "Thermalright Assassin King SE ARGB",
-    "price": 19.09,
+    "name": "THERMALRIGHT Assassin King SE ARGB",
+    "price": null,
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
@@ -930,11 +977,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41oLozsjh1L.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin King SE ARGB"
   },
   {
-    "name": "Thermalright Assassin X SE",
-    "price": 16.89,
+    "name": "THERMALRIGHT Assassin X SE",
+    "price": null,
     "rpm": 2200,
     "noise_level": 23.85,
     "color": "Black / Silver",
@@ -949,11 +997,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin X SE"
   },
   {
-    "name": "Cooler Master MasterLiquid 240L Core ARGB",
-    "price": 84.99,
+    "name": "COOLER MASTER MasterLiquid 240L Core ARGB",
+    "price": 4976.0,
     "rpm": [
       350,
       1750
@@ -968,14 +1017,15 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://files.coolermaster.com/og-image/ml-240l-core-argb-1200x630.jpg",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
     "fan_rpm": "800 - 2000 RPM (PWM)",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MasterLiquid 240L Core ARGB"
   },
   {
-    "name": "Cooler Master Hyper 212 (2023)",
-    "price": 25.99,
+    "name": "COOLER MASTER Hyper 212 (2023)",
+    "price": null,
     "rpm": [
       690,
       2500
@@ -990,14 +1040,15 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361-1024x576.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Hyper 212 (2023)"
   },
   {
-    "name": "Cooler Master Hyper 212 Spectrum V3",
-    "price": 16.98,
+    "name": "COOLER MASTER Hyper 212 Spectrum V3",
+    "price": 1992.12,
     "rpm": [
       650,
       1750
@@ -1012,14 +1063,15 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://www.geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Hyper 212 Spectrum V3"
   },
   {
     "name": "NZXT Kraken 240 RGB",
-    "price": 114.99,
+    "price": null,
     "rpm": [
       500,
       1800
@@ -1037,11 +1089,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bfab77ca83ef76771001024cf039d47f.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken 240 RGB"
   },
   {
     "name": "NZXT Kraken Elite 360 RGB (2024)",
-    "price": 289.99,
+    "price": null,
     "rpm": [
       500,
       2400
@@ -1059,11 +1112,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 360 RGB (2024)"
   },
   {
-    "name": "Thermalright Assassin Spirit 120 EVO",
-    "price": 25.39,
+    "name": "THERMALRIGHT Assassin Spirit 120 EVO",
+    "price": null,
     "rpm": 2000,
     "noise_level": 28.2,
     "color": "Black",
@@ -1078,11 +1132,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41595fJKAOL.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin Spirit 120 EVO"
   },
   {
-    "name": "Thermalright Assassin Spirit 120 EVO DARK",
-    "price": 25.9,
+    "name": "THERMALRIGHT Assassin Spirit 120 EVO DARK",
+    "price": null,
     "rpm": 1850,
     "noise_level": 27,
     "color": "Black",
@@ -1097,11 +1152,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41e3ob6-J3L.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin Spirit 120 EVO DARK"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 Black",
-    "price": 48.69,
+    "name": "THERMALRIGHT Peerless Assassin 120 Black",
+    "price": null,
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "Black",
@@ -1116,11 +1172,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41TOck4ZY5L.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
     "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 Black"
   },
   {
-    "name": "Thermalright Assassin X 120 R Digital ARGB",
-    "price": 24.9,
+    "name": "THERMALRIGHT Assassin X 120 R Digital ARGB",
+    "price": null,
     "rpm": 2000,
     "noise_level": 29.8,
     "color": "Black",
@@ -1135,11 +1192,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41-Cw6pz6eL.jpg",
     "radiator_dimensions": "155mm Kule Tipi (Isı Borulu Bakır Taban)",
     "fan_rpm": "600 - 1800 RPM (PWM)",
-    "fan_airflow": "58.2 CFM / 1.8 mmH2O"
+    "fan_airflow": "58.2 CFM / 1.8 mmH2O",
+    "model": "Assassin X 120 R Digital ARGB"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 White",
-    "price": 47.59,
+    "name": "THERMALRIGHT Peerless Assassin 120 White",
+    "price": null,
     "rpm": 1550,
     "noise_level": 25.6,
     "color": "White",
@@ -1154,11 +1212,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
     "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 White"
   },
   {
     "name": "NZXT Kraken Elite 360 (2024)",
-    "price": 269.99,
+    "price": null,
     "rpm": [
       500,
       2000
@@ -1176,11 +1235,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 360 (2024)"
   },
   {
     "name": "NZXT Kraken Elite 240 RGB",
-    "price": 147.0,
+    "price": 6599.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -1196,11 +1256,12 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/05cf771db8a1775508de32990b32bc5d.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 240 RGB"
   },
   {
     "name": "NZXT Kraken Elite 240 RGB (White)",
-    "price": 147.0,
+    "price": null,
     "type": "Liquid",
     "size": 240,
     "color": "White",
@@ -1216,11 +1277,12 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/05cf771db8a1775508de32990b32bc5d.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 240 RGB (White)"
   },
   {
-    "name": "Thermalright Peerless Assassin 120 SE (White)",
-    "price": 71.0,
+    "name": "THERMALRIGHT Peerless Assassin 120 SE (White)",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1236,11 +1298,12 @@
     "max_tdp": 265,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Peerless Assassin 120 SE (White)"
   },
   {
-    "name": "Arctic Freezer 36 A-RGB",
-    "price": 71.0,
+    "name": "ARCTIC Freezer 36 A-RGB",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1256,11 +1319,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a235e743b917c12fce63af9acc490b88.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Freezer 36 A-RGB"
   },
   {
-    "name": "Arctic Freezer 36 A-RGB (White)",
-    "price": 71.0,
+    "name": "ARCTIC Freezer 36 A-RGB (White)",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1276,11 +1340,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a235e743b917c12fce63af9acc490b88.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Freezer 36 A-RGB (White)"
   },
   {
-    "name": "Arctic Liquid Freezer III 420 A-RGB (White)",
-    "price": 161.0,
+    "name": "ARCTIC Liquid Freezer III 420 A-RGB (White)",
+    "price": null,
     "type": "Liquid",
     "size": 420,
     "color": "White",
@@ -1296,11 +1361,12 @@
     "max_tdp": 300,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1b6a3ca1e23ed67ab4b6a40866a9cfd7.1600.jpg",
     "radiator_dimensions": "420mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 420 A-RGB (White)"
   },
   {
-    "name": "Arctic Liquid Freezer III 280 A-RGB",
-    "price": 119.0,
+    "name": "ARCTIC Liquid Freezer III 280 A-RGB",
+    "price": null,
     "type": "Liquid",
     "size": 280,
     "color": "Black",
@@ -1316,11 +1382,12 @@
     "max_tdp": 280,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8ed355fe9c6060ea33f9d50757e15be1.1600.jpg",
     "radiator_dimensions": "280mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 280 A-RGB"
   },
   {
-    "name": "Arctic Liquid Freezer III 280 A-RGB (White)",
-    "price": 119.0,
+    "name": "ARCTIC Liquid Freezer III 280 A-RGB (White)",
+    "price": null,
     "type": "Liquid",
     "size": 280,
     "color": "White",
@@ -1336,11 +1403,12 @@
     "max_tdp": 280,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8ed355fe9c6060ea33f9d50757e15be1.1600.jpg",
     "radiator_dimensions": "280mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
-    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)"
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
+    "model": "Liquid Freezer III 280 A-RGB (White)"
   },
   {
     "name": "NZXT Kraken Elite 280 RGB",
-    "price": 164.0,
+    "price": null,
     "type": "Liquid",
     "size": 280,
     "color": "Black",
@@ -1356,11 +1424,12 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7f66d7e0adf075d5c5c172d1538b032c.1600.jpg",
     "radiator_dimensions": "280mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 280 RGB"
   },
   {
     "name": "NZXT Kraken Elite 280 RGB (White)",
-    "price": 164.0,
+    "price": null,
     "type": "Liquid",
     "size": 280,
     "color": "White",
@@ -1376,11 +1445,12 @@
     "max_tdp": 250,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7f66d7e0adf075d5c5c172d1538b032c.1600.jpg",
     "radiator_dimensions": "280mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
-    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç"
+    "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
+    "model": "Kraken Elite 280 RGB (White)"
   },
   {
-    "name": "Cooler Master MasterLiquid 360L Core ARGB (White)",
-    "price": 143.0,
+    "name": "COOLER MASTER MasterLiquid 360L Core ARGB (White)",
+    "price": null,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -1394,13 +1464,14 @@
       "LGA1851"
     ],
     "max_tdp": 320,
-    "imageUrl": null,
+    "imageUrl": "https://files.coolermaster.com/og-image/ml-360l-core-argb-white-1200x630.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MasterLiquid 360L Core ARGB (White)"
   },
   {
-    "name": "Thermalright Assassin X 120 Refined SE (White)",
-    "price": 71.0,
+    "name": "THERMALRIGHT Assassin X 120 Refined SE (White)",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1416,11 +1487,12 @@
     "max_tdp": 200,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Assassin X 120 Refined SE (White)"
   },
   {
-    "name": "Cooler Master Hyper 212 Halo",
-    "price": 71.0,
+    "name": "COOLER MASTER Hyper 212 Halo",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1434,13 +1506,14 @@
       "LGA1851"
     ],
     "max_tdp": 180,
-    "imageUrl": null,
+    "imageUrl": "https://files.coolermaster.com/og-image/hyper-212-halo-black-1200x630.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Hyper 212 Halo"
   },
   {
-    "name": "Cooler Master Hyper 212 Halo (White)",
-    "price": 71.0,
+    "name": "COOLER MASTER Hyper 212 Halo (White)",
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1454,13 +1527,14 @@
       "LGA1851"
     ],
     "max_tdp": 180,
-    "imageUrl": null,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/03/69/LD0006036982.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Hyper 212 Halo (White)"
   },
   {
-    "name": "ASUS Prime LC 240 ARGB 240mm Intel-AMD Uyumlu İşlemci Sıvı Soğutucu",
-    "price": null,
+    "name": "ASUS Prime LC 240 ARGB",
+    "price": 2399.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -1476,11 +1550,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5e5db6673cb3e7cd5e1f4a104444a1d7.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Prime LC 240 ARGB"
   },
   {
     "name": "Endorfy Fera 5 ARGB 120mm 4 Isı Borulu Intel-AMD Uyumlu Hava Soğutucu (EY3A007)",
-    "price": null,
+    "price": 799.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1496,11 +1571,12 @@
     "max_tdp": 220,
     "imageUrl": "https://m.media-amazon.com/images/I/41X8C+UUakL.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Fera 5 ARGB 120mm 4 Isı Borulu Intel-AMD Uyumlu Hava Soğutucu (EY3A007)"
   },
   {
-    "name": "Gigabyte Eagle 360I ARGB AMD/Intel Sıvı Soğutucu",
-    "price": null,
+    "name": "GIGABYTE Eagle 360I ARGB AMD/Intel",
+    "price": 2499.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -1516,11 +1592,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b81eb434a9e7934e019b45da342d1325.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Eagle 360I ARGB AMD/Intel"
   },
   {
     "name": "SEGOTEP K6 SE Siyah 120mm Hava Soğutucu (INTEL)",
-    "price": null,
+    "price": 479.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1534,12 +1611,13 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://www.oksid.com.tr/resim/urun/202510/6883263e3da4f0.47698497_mhgoqpfenilkj_212.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "K6 SE Siyah 120mm Hava Soğutucu (INTEL)"
   },
   {
-    "name": "FSP AD36 ARGB AIO 360mm Dijital Isı Göstergeli Beyaz İşlemci Sıvı Soğutucu",
+    "name": "FSP AD36 ARGB AIO",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -1554,13 +1632,14 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://cdn.mwave.com.au/images/400/fsp_ae24_240mm_argb_aio_liquid_cpu_cooler_black_ac87249_21954.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "AD36 ARGB AIO"
   },
   {
-    "name": "Bitfenix S7 Digital Beyaz ARGB 360mm İşlemci Sıvı Soğutucu",
-    "price": null,
+    "name": "BITFENIX S7 Digital Beyaz ARGB 360mm",
+    "price": 2799.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -1576,11 +1655,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b41f432b9793485fd845e2e5bd9a6312.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "S7 Digital Beyaz ARGB 360mm"
   },
   {
-    "name": "CORSAIR NAUTILUS 360 RS LCD 360mm Siyah İşlemci Sıvı Soğutucu",
-    "price": null,
+    "name": "CORSAIR NAUTILUS 360 RS LCD",
+    "price": 6421.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -1596,10 +1676,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6f29e592f8d32dc9571c6b5f8965a5cb.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "NAUTILUS 360 RS LCD"
   },
   {
-    "name": "FAZEON A5120TRA 12cm RGB Kule Tipi Siyah İşlemci Soğutucu",
+    "name": "FAZEON A5120TRA",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1614,13 +1695,14 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/fazeon/thumb/158716-4_small.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "A5120TRA"
   },
   {
     "name": "FSP NP5 Siyah 12cm ARGB Hava Soğutucu",
-    "price": null,
+    "price": 1354.59,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1634,13 +1716,14 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://www.fsplifestyle.com/upload/product/PIC24900000000012666.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "NP5 Siyah 12cm ARGB Hava Soğutucu"
   },
   {
-    "name": "Rampage FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
-    "price": null,
+    "name": "RAMPAGE FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu",
+    "price": 1126.44,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1656,11 +1739,12 @@
     "max_tdp": 220,
     "imageUrl": null,
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi Hava Soğutucu"
   },
   {
-    "name": "ANTEC Skeleton 360 ARGB Fanlı 360mm Sıvı işlemci Soğutucusu",
-    "price": null,
+    "name": "ANTEC Skeleton 360 ARGB Fanlı",
+    "price": 4499.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -1676,11 +1760,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ee53c6842b0870314574b2530aa2b266.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Skeleton 360 ARGB Fanlı"
   },
   {
-    "name": "COUGAR POSEIDON ELITE ARGB 360 AIO LGA1700/1851/AM5 360mm Beyaz Sıvı İşlemci",
-    "price": null,
+    "name": "COUGAR POSEIDON ELITE ARGB 360",
+    "price": 6600.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -1696,11 +1781,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/295bafe98312bd906735f47eb217dcfe.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "POSEIDON ELITE ARGB 360"
   },
   {
-    "name": "ASUS PRIME LC 360 ARGB AURA SYNC 360MM LGA1700/1851/AM5 Sıvı Soğutma",
-    "price": null,
+    "name": "ASUS PRIME LC 360 ARGB",
+    "price": 4999.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -1716,10 +1802,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3eb22b5faebddcd9dfe5f8e5913ffa68.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "PRIME LC 360 ARGB"
   },
   {
-    "name": "DeepCool LT520 2x120mm Fanlı 240mm Sıvı İşlemci Soğutucu",
+    "name": "DEEPCOOL LT520 2x120mm Fanlı",
     "price": null,
     "type": "Liquid",
     "size": 240,
@@ -1736,7 +1823,8 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/63b8a5ceb8bc7dfc0a6f9108a6203d8b.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LT520 2x120mm Fanlı"
   },
   {
     "name": "ASUS MAX GAMING LC360 ARGB LCD 2.4” IPS Ekranlı ARGB AIO",
@@ -1756,11 +1844,12 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ce4d3e24f2aa2d6fd8bb303edbc9ea2f.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MAX GAMING LC360 ARGB LCD 2.4” IPS Ekranlı ARGB AIO"
   },
   {
-    "name": "FSP MP7 WA 2x120mm ARGB Fanlı LGA1700/1851/AM5 Beyaz işlemci Soğutucu",
-    "price": null,
+    "name": "FSP MP7 WA 2x120mm ARGB Fanlı",
+    "price": 899.0,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -1774,12 +1863,13 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://productimages.hepsiburada.net/s/777/424-600/110001603415790.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MP7 WA 2x120mm ARGB Fanlı"
   },
   {
-    "name": "AMD Wraith  İşlemci Soğutucusu-712-000046",
+    "name": "AMD Wraith",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1796,10 +1886,11 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/00979205bfe0f63cf50f396392775b9f.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Wraith"
   },
   {
-    "name": "RAMPAGE COOLBLADE 120mm Fanlı İşlemci Soğutucu",
+    "name": "RAMPAGE COOLBLADE 120mm Fanlı",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1814,12 +1905,13 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://www.segment.com.tr/images/productimages/RM-C03_05.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "COOLBLADE 120mm Fanlı"
   },
   {
-    "name": "FRISBY P2S 90mm ARGB Fanlı LGA1700/AM5 2xBakır Borulu Hava Soğutma",
+    "name": "FRISBY P2S 90mm ARGB Fanlı",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1834,12 +1926,13 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://cdn.dsmcdn.com/ty1786/prod/QC_PREP/20251105/14/3a4e5263-f604-307b-88ff-67c4a121ff41/1_org_zoom.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "P2S 90mm ARGB Fanlı"
   },
   {
-    "name": "DEEPCOOL AG300 LGA1700/1851/AM5 işlemci Hava Soğutma",
+    "name": "DEEPCOOL AG300",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1856,11 +1949,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f081af159c0c28a944da061775f784a5.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "AG300"
   },
   {
-    "name": "DeepCool GAMMAXX AG400 LED 120 mm İşlemci Soğutucu",
-    "price": null,
+    "name": "DEEPCOOL GAMMAXX AG400 LED 120 mm",
+    "price": 1272.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1876,11 +1970,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9464a59a8e91c8203397a01ab96d0ec7.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "GAMMAXX AG400 LED 120 mm"
   },
   {
-    "name": "MSI GG CORE FROZR L 120 MM İşlemci Hava Soğutucusu",
-    "price": null,
+    "name": "MSI GG CORE FROZR L 120 MM Hava Soğutucusu",
+    "price": 1699.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1896,10 +1991,11 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ebe0611d68a0ee6820c9212a19e54e70.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "GG CORE FROZR L 120 MM Hava Soğutucusu"
   },
   {
-    "name": "CORSAIR A500 Serisi Çift Fanlı İşlemci Soğutucusu",
+    "name": "CORSAIR A500 Serisi Çift Fanlı",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -1916,11 +2012,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4696bab6763250c2a8379c835691fb2c.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "A500 Serisi Çift Fanlı"
   },
   {
     "name": "Ocypus Beta A10 124 mm Intel(1700p/1851p)-AMD Uyumlu Hava Soğutucu",
-    "price": null,
+    "price": 540.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1936,11 +2033,12 @@
     "max_tdp": 220,
     "imageUrl": null,
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Beta A10 124 mm Intel(1700p/1851p)-AMD Uyumlu Hava Soğutucu"
   },
   {
-    "name": "Intel M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
-    "price": null,
+    "name": "INTEL M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu",
+    "price": 458.0,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -1954,13 +2052,14 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": null,
+    "imageUrl": "https://www.barclays.lk/mmBC/Images/CFHI0001.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "M-115-52 Copper 90 mm Intel Uyumlu Hava Soğutucu"
   },
   {
-    "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm  AIO 2.4\" IPS",
-    "price": null,
+    "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm AIO 2.4\" IPS",
+    "price": 1999.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -1976,10 +2075,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/104ca9a1a3e9d9ca8e7f850cc825d2c4.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MPG CORELIQUID D240 LGA AM5&1700 240mm AIO 2.4\" IPS"
   },
   {
-    "name": "Thermalright Frozen Notte 360 ARGB",
+    "name": "THERMALRIGHT Frozen Notte 360 ARGB",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -1996,10 +2096,11 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Notte 360 ARGB"
   },
   {
-    "name": "Thermalright Frozen Notte 360 ARGB (White)",
+    "name": "THERMALRIGHT Frozen Notte 360 ARGB (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2016,11 +2117,12 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Notte 360 ARGB (White)"
   },
   {
     "name": "MSI MAG CoreLiquid E360",
-    "price": null,
+    "price": 7062.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2036,11 +2138,12 @@
     "max_tdp": 320,
     "imageUrl": "https://m.media-amazon.com/images/I/41B7ItL+zKL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MAG CoreLiquid E360"
   },
   {
     "name": "MSI MAG CoreLiquid E360 (White)",
-    "price": null,
+    "price": 5857.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2056,10 +2159,11 @@
     "max_tdp": 320,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/eaef12e213bf77e4060efce016b9f6ed.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "MAG CoreLiquid E360 (White)"
   },
   {
-    "name": "Thermalright Phantom Spirit 120 SE (White)",
+    "name": "THERMALRIGHT Phantom Spirit 120 SE (White)",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -2076,10 +2180,11 @@
     "max_tdp": 265,
     "imageUrl": "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
     "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
-    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç"
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
+    "model": "Phantom Spirit 120 SE (White)"
   },
   {
-    "name": "DeepCool AK620 Digital (White)",
+    "name": "DEEPCOOL AK620 Digital (White)",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -2096,10 +2201,11 @@
     "max_tdp": 260,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e0f646f05ca57372374cf39b3b34a1c3.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "AK620 Digital (White)"
   },
   {
-    "name": "DeepCool AK400 Digital (White)",
+    "name": "DEEPCOOL AK400 Digital (White)",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -2116,11 +2222,12 @@
     "max_tdp": 220,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/cdd47d524615ffee254da2f4010c0562.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "AK400 Digital (White)"
   },
   {
-    "name": "Lian Li Galahad II Trinity 360",
-    "price": null,
+    "name": "LIAN LI Galahad II Trinity 360",
+    "price": 7999.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2134,12 +2241,13 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://m.media-amazon.com/images/I/717-NilSKVL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Galahad II Trinity 360"
   },
   {
-    "name": "Lian Li Galahad II Trinity 360 (White)",
+    "name": "LIAN LI Galahad II Trinity 360 (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2154,12 +2262,13 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://assets.msy.com.au/newsite/images/202307/source_img/CPU-Cooling-Lian-Li-Galahad-II-TRINITY-SL-INF-360-Closed-Loop-ARGB-AIO-LIQUID-CPU-Cooler-White-8.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Galahad II Trinity 360 (White)"
   },
   {
-    "name": "Lian Li Galahad II Trinity 240",
+    "name": "LIAN LI Galahad II Trinity 240",
     "price": null,
     "type": "Liquid",
     "size": 240,
@@ -2174,12 +2283,13 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": null,
+    "imageUrl": "https://img.terabyteshop.com.br/produto/g/water-cooler-lian-li-galahad-ii-trinity-sl-inf-rgb-240mm-intel-amd-white-compativel-com-lga-1700-ga2t24inw_182042.png",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Galahad II Trinity 240"
   },
   {
-    "name": "Lian Li Galahad II Trinity 240 (White)",
+    "name": "LIAN LI Galahad II Trinity 240 (White)",
     "price": null,
     "type": "Liquid",
     "size": 240,
@@ -2194,12 +2304,13 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": null,
+    "imageUrl": "https://img.terabyteshop.com.br/produto/g/water-cooler-lian-li-galahad-ii-trinity-sl-inf-rgb-240mm-intel-amd-white-compativel-com-lga-1700-ga2t24inw_182042.png",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Galahad II Trinity 240 (White)"
   },
   {
-    "name": "Lian Li HydroShift LCD 360",
+    "name": "LIAN LI HydroShift LCD 360",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2214,12 +2325,13 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://i.ebayimg.com/images/g/FnEAAeSwMXhqzNjV/s-l1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "HydroShift LCD 360"
   },
   {
-    "name": "Lian Li HydroShift LCD 360 (White)",
+    "name": "LIAN LI HydroShift LCD 360 (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2234,12 +2346,13 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://lian-li.com/wp-content/uploads/2025/05/HS2_m_001.webp",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "HydroShift LCD 360 (White)"
   },
   {
-    "name": "DeepCool LT720 (White)",
+    "name": "DEEPCOOL LT720 (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2256,10 +2369,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6836eb2d379fa4b51adaa3ef0d08c2a9.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LT720 (White)"
   },
   {
-    "name": "DeepCool LS720 SE (White)",
+    "name": "DEEPCOOL LS720 SE (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2276,10 +2390,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/876374634dcac9c71c8f9f585d6e4767.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "LS720 SE (White)"
   },
   {
-    "name": "Thermalright Aqua Elite 360 V3",
+    "name": "THERMALRIGHT Aqua Elite 360 V3",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2296,10 +2411,11 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/318f4Q17BeL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Aqua Elite 360 V3"
   },
   {
-    "name": "Thermalright Aqua Elite 360 V3 (White)",
+    "name": "THERMALRIGHT Aqua Elite 360 V3 (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2316,10 +2432,11 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/318f4Q17BeL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Aqua Elite 360 V3 (White)"
   },
   {
-    "name": "Thermalright Frozen Prism 360",
+    "name": "THERMALRIGHT Frozen Prism 360",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2336,10 +2453,11 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Prism 360"
   },
   {
-    "name": "Thermalright Frozen Prism 360 (White)",
+    "name": "THERMALRIGHT Frozen Prism 360 (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2356,10 +2474,11 @@
     "max_tdp": 350,
     "imageUrl": "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Frozen Prism 360 (White)"
   },
   {
-    "name": "Corsair iCUE H150i ELITE LCD XT",
+    "name": "CORSAIR iCUE H150i ELITE LCD XT",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2376,10 +2495,11 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3ec80850afc7392a6dad4b82ef95c424.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "iCUE H150i ELITE LCD XT"
   },
   {
-    "name": "Corsair iCUE H150i ELITE LCD XT (White)",
+    "name": "CORSAIR iCUE H150i ELITE LCD XT (White)",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2396,7 +2516,8 @@
     "max_tdp": 350,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3ec80850afc7392a6dad4b82ef95c424.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "iCUE H150i ELITE LCD XT (White)"
   },
   {
     "name": "ASUS ROG Ryujin III 360 ARGB (White)",
@@ -2416,7 +2537,8 @@
     "max_tdp": 360,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "ROG Ryujin III 360 ARGB (White)"
   },
   {
     "name": "ASUS TUF Gaming LC II 360 ARGB",
@@ -2436,10 +2558,11 @@
     "max_tdp": 320,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4bad804e8e2be5c04ab0ca7b67a54d6b.1600.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "TUF Gaming LC II 360 ARGB"
   },
   {
-    "name": "Be Quiet! Silent Loop 2 360",
+    "name": "BE QUIET! Silent Loop 2 360",
     "price": null,
     "type": "Liquid",
     "size": 360,
@@ -2454,12 +2577,13 @@
       "LGA1851"
     ],
     "max_tdp": 350,
-    "imageUrl": null,
+    "imageUrl": "https://www.kitguru.net/wp-content/uploads/2021/03/01_Silent_Loop_2_360er.jpg",
     "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Silent Loop 2 360"
   },
   {
-    "name": "Be Quiet! Pure Loop 2 240",
+    "name": "BE QUIET! Pure Loop 2 240",
     "price": null,
     "type": "Liquid",
     "size": 240,
@@ -2474,12 +2598,13 @@
       "LGA1851"
     ],
     "max_tdp": 280,
-    "imageUrl": null,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/98/67/LD0005986757.jpg",
     "radiator_dimensions": "240mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Pure Loop 2 240"
   },
   {
-    "name": "Noctua NH-U12A chromax.black",
+    "name": "NOCTUA NH-U12A chromax.black",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -2496,10 +2621,11 @@
     "max_tdp": 240,
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3a24ca834f2b252f719640f8b8448b6c.1600.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "NH-U12A chromax.black"
   },
   {
-    "name": "Be Quiet! Pure Rock 2 FX",
+    "name": "BE QUIET! Pure Rock 2 FX",
     "price": null,
     "type": "Air",
     "size": 120,
@@ -2514,8 +2640,9 @@
       "LGA1851"
     ],
     "max_tdp": 150,
-    "imageUrl": null,
+    "imageUrl": "https://hwbusters.com/wp-content/uploads/2022/08/01_Pure_Rock_2_FX_Shopbild.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç"
+    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "model": "Pure Rock 2 FX"
   }
 ]

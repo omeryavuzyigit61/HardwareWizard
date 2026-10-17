@@ -177,7 +177,14 @@ class GetCompatibleHardwareForSlotUseCase {
                 }
             }
 
-            HardwareCategory.STORAGE, HardwareCategory.PSU -> candidates
+            HardwareCategory.STORAGE,
+            HardwareCategory.PSU,
+            HardwareCategory.PREBUILT_PC,
+            HardwareCategory.LAPTOP,
+            HardwareCategory.MOUSE,
+            HardwareCategory.KEYBOARD,
+            HardwareCategory.HEADSET,
+            HardwareCategory.MONITOR -> candidates
         }
 
         return CompatibleSlotResult(

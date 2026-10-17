@@ -1,6 +1,6 @@
 [
   {
-    "name": "Kioxia Exceria NVMe M.2 500GB",
+    "name": "KIOXIA Exceria NVMe M.2 500GB",
     "price": null,
     "capacity": 500,
     "type": "SSD",
@@ -13,11 +13,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria NVMe M.2 500GB"
   },
   {
-    "name": "Kioxia Exceria NVMe M.2 1TB",
-    "price": null,
+    "name": "KIOXIA Exceria NVMe M.2 1TB",
+    "price": 8799.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -29,11 +30,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria NVMe M.2 1TB"
   },
   {
-    "name": "Kioxia Exceria G2 NVMe M.2 1TB",
-    "price": null,
+    "name": "KIOXIA Exceria G2 NVMe M.2 1TB",
+    "price": 2465.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -45,10 +47,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria G2 NVMe M.2 1TB"
   },
   {
-    "name": "Kioxia Exceria G2 NVMe M.2 2TB",
+    "name": "KIOXIA Exceria G2 NVMe M.2 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -61,10 +64,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria G2 NVMe M.2 2TB"
   },
   {
-    "name": "Kioxia Exceria Plus NVMe M.2 500GB",
+    "name": "KIOXIA Exceria Plus NVMe M.2 500GB",
     "price": null,
     "capacity": 500,
     "type": "SSD",
@@ -77,11 +81,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria Plus NVMe M.2 500GB"
   },
   {
-    "name": "Kioxia Exceria Plus NVMe M.2 1TB",
-    "price": null,
+    "name": "KIOXIA Exceria Plus NVMe M.2 1TB",
+    "price": 4860.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -93,11 +98,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria Plus NVMe M.2 1TB"
   },
   {
-    "name": "Kioxia Exceria Plus NVMe M.2 2TB",
-    "price": null,
+    "name": "KIOXIA Exceria Plus NVMe M.2 2TB",
+    "price": 6720.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -109,10 +115,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria Plus NVMe M.2 2TB"
   },
   {
-    "name": "Kioxia Exceria Plus G3 NVMe M.2 1TB",
+    "name": "KIOXIA Exceria Plus G3 NVMe M.2 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -125,10 +132,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria Plus G3 NVMe M.2 1TB"
   },
   {
-    "name": "Kioxia Exceria Plus G3 NVMe M.2 2TB",
+    "name": "KIOXIA Exceria Plus G3 NVMe M.2 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -141,11 +149,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria Plus G3 NVMe M.2 2TB"
   },
   {
-    "name": "Kioxia Exceria Pro NVMe M.2 1TB",
-    "price": null,
+    "name": "KIOXIA Exceria Pro NVMe M.2 1TB",
+    "price": 12600.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -157,11 +166,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria Pro NVMe M.2 1TB"
   },
   {
-    "name": "Kioxia Exceria Pro NVMe M.2 2TB",
-    "price": null,
+    "name": "KIOXIA Exceria Pro NVMe M.2 2TB",
+    "price": 22799.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -173,10 +183,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria Pro NVMe M.2 2TB"
   },
   {
-    "name": "Kioxia Exceria SATA 480GB",
+    "name": "KIOXIA Exceria SATA 480GB",
     "price": null,
     "capacity": 480,
     "type": "SSD",
@@ -189,10 +200,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria SATA 480GB"
   },
   {
-    "name": "Kioxia Exceria SATA 960GB",
+    "name": "KIOXIA Exceria SATA 960GB",
     "price": null,
     "capacity": 960,
     "type": "SSD",
@@ -205,11 +217,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria SATA 960GB"
   },
   {
-    "name": "Samsung 990 PRO 1TB",
-    "price": 14999.0,
+    "name": "SAMSUNG 990 PRO 1TB",
+    "price": 12300.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -221,11 +234,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "1GB Samsung LPDDR4 DRAM Cache",
-    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
+    "model": "990 PRO 1TB"
   },
   {
-    "name": "Samsung 990 PRO 2TB",
-    "price": 29599.01,
+    "name": "SAMSUNG 990 PRO 2TB",
+    "price": 18000.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -237,11 +251,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "2GB Samsung LPDDR4 DRAM Cache",
-    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
+    "model": "990 PRO 2TB"
   },
   {
-    "name": "Samsung 990 PRO 4TB",
-    "price": null,
+    "name": "SAMSUNG 990 PRO 4TB",
+    "price": 58410.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -253,11 +268,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "4GB Samsung LPDDR4 DRAM Cache",
-    "random_iops": "1400K / 1550K IOPS (Tepe Hız)"
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
+    "model": "990 PRO 4TB"
   },
   {
-    "name": "Samsung 990 EVO 1TB",
-    "price": null,
+    "name": "SAMSUNG 990 EVO 1TB",
+    "price": 8322.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -269,11 +285,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "990 EVO 1TB"
   },
   {
-    "name": "Samsung 990 EVO 2TB",
-    "price": null,
+    "name": "SAMSUNG 990 EVO 2TB",
+    "price": 10163.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -285,11 +302,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "990 EVO 2TB"
   },
   {
-    "name": "Samsung 980 PRO 1TB",
-    "price": null,
+    "name": "SAMSUNG 980 PRO 1TB",
+    "price": 6516.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -301,11 +319,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "980 PRO 1TB"
   },
   {
-    "name": "Samsung 980 PRO 2TB",
-    "price": null,
+    "name": "SAMSUNG 980 PRO 2TB",
+    "price": 10709.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -317,11 +336,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "980 PRO 2TB"
   },
   {
-    "name": "Samsung 980 1TB",
-    "price": null,
+    "name": "SAMSUNG 980 1TB",
+    "price": 5258.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -333,11 +353,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "980 1TB"
   },
   {
-    "name": "Samsung 970 EVO Plus 1TB",
-    "price": null,
+    "name": "SAMSUNG 970 EVO Plus 1TB",
+    "price": 4500.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -349,10 +370,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "970 EVO Plus 1TB"
   },
   {
-    "name": "Samsung 970 EVO Plus 2TB",
+    "name": "SAMSUNG 970 EVO Plus 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -365,11 +387,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "970 EVO Plus 2TB"
   },
   {
-    "name": "Kingston KC3000 1TB",
-    "price": 12399.0,
+    "name": "KINGSTON KC3000 1TB",
+    "price": 12299.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -381,11 +404,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "KC3000 1TB"
   },
   {
-    "name": "Kingston KC3000 2TB",
-    "price": null,
+    "name": "KINGSTON KC3000 2TB",
+    "price": 20899.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -397,11 +421,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "KC3000 2TB"
   },
   {
-    "name": "Kingston KC3000 4TB",
-    "price": null,
+    "name": "KINGSTON KC3000 4TB",
+    "price": 46350.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -413,11 +438,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "KC3000 4TB"
   },
   {
-    "name": "Kingston Fury Renegade 1TB",
-    "price": null,
+    "name": "KINGSTON Fury Renegade 1TB",
+    "price": 4680.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -429,11 +455,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "Fury Renegade 1TB"
   },
   {
-    "name": "Kingston Fury Renegade 2TB",
-    "price": null,
+    "name": "KINGSTON Fury Renegade 2TB",
+    "price": 25999.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -445,11 +472,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "Fury Renegade 2TB"
   },
   {
-    "name": "Kingston NV3 1TB",
-    "price": 8699.0,
+    "name": "KINGSTON NV3 1TB",
+    "price": 8599.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -461,11 +489,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV3 1TB"
   },
   {
-    "name": "Kingston NV3 2TB",
-    "price": null,
+    "name": "KINGSTON NV3 2TB",
+    "price": 15399.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -477,11 +506,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV3 2TB"
   },
   {
-    "name": "Kingston NV2 1TB",
-    "price": null,
+    "name": "KINGSTON NV2 1TB",
+    "price": 3586.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -493,11 +523,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV2 1TB"
   },
   {
-    "name": "Kingston NV2 2TB",
-    "price": null,
+    "name": "KINGSTON NV2 2TB",
+    "price": 7108.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -509,11 +540,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV2 2TB"
   },
   {
     "name": "WD Black SN850X 1TB",
-    "price": null,
+    "price": 6600.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -525,11 +557,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "1GB DDR4 DRAM Cache",
-    "random_iops": "1200K / 1100K IOPS"
+    "random_iops": "1200K / 1100K IOPS",
+    "model": "Black SN850X 1TB"
   },
   {
     "name": "WD Black SN850X 2TB",
-    "price": null,
+    "price": 11400.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -541,11 +574,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1200K / 1100K IOPS"
+    "random_iops": "1200K / 1100K IOPS",
+    "model": "Black SN850X 2TB"
   },
   {
     "name": "WD Black SN770 1TB",
-    "price": null,
+    "price": 4702.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -554,14 +588,15 @@
     "seq_write": 4900,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 600,
-    "imageUrl": null,
+    "imageUrl": "https://m.media-amazon.com/images/I/71Sr1zjPhwL._SL1500_.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Black SN770 1TB"
   },
   {
     "name": "WD Black SN770 2TB",
-    "price": null,
+    "price": 9120.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -573,11 +608,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Black SN770 2TB"
   },
   {
     "name": "WD Blue SN580 1TB",
-    "price": null,
+    "price": 3525.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -589,10 +625,11 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN580 1TB"
   },
   {
-    "name": "Crucial T700 1TB",
+    "name": "CRUCIAL T700 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -605,10 +642,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T700 1TB"
   },
   {
-    "name": "Crucial T700 2TB",
+    "name": "CRUCIAL T700 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -621,10 +659,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T700 2TB"
   },
   {
-    "name": "Crucial T500 1TB",
+    "name": "CRUCIAL T500 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -637,10 +676,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "T500 1TB"
   },
   {
-    "name": "Crucial T500 2TB",
+    "name": "CRUCIAL T500 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -653,10 +693,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "T500 2TB"
   },
   {
-    "name": "Crucial P3 Plus 1TB",
+    "name": "CRUCIAL P3 Plus 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -669,10 +710,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "P3 Plus 1TB"
   },
   {
-    "name": "Crucial P3 Plus 2TB",
+    "name": "CRUCIAL P3 Plus 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -685,11 +727,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "P3 Plus 2TB"
   },
   {
-    "name": "Lexar NM790 1TB",
-    "price": null,
+    "name": "LEXAR NM790 1TB",
+    "price": 5400.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -701,11 +744,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
-    "random_iops": "1000K / 900K IOPS"
+    "random_iops": "1000K / 900K IOPS",
+    "model": "NM790 1TB"
   },
   {
-    "name": "Lexar NM790 2TB",
-    "price": null,
+    "name": "LEXAR NM790 2TB",
+    "price": 8700.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -717,10 +761,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
-    "random_iops": "1000K / 900K IOPS"
+    "random_iops": "1000K / 900K IOPS",
+    "model": "NM790 2TB"
   },
   {
-    "name": "Lexar NM790 4TB",
+    "name": "LEXAR NM790 4TB",
     "price": null,
     "capacity": 4000,
     "type": "SSD",
@@ -733,11 +778,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
-    "random_iops": "1000K / 900K IOPS"
+    "random_iops": "1000K / 900K IOPS",
+    "model": "NM790 4TB"
   },
   {
-    "name": "Intel SSDPEDMD020T401",
-    "price": 3937,
+    "name": "INTEL SSDPEDMD020T401",
+    "price": null,
     "capacity": 2000,
     "price_per_gb": 1.968,
     "type": "SSD",
@@ -751,11 +797,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "endurance_tbw": 1200
+    "endurance_tbw": 1200,
+    "model": "SSDPEDMD020T401"
   },
   {
-    "name": "Crucial T705 1TB",
-    "price": 90.0,
+    "name": "CRUCIAL T705 1TB",
+    "price": null,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -768,11 +815,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T705 1TB"
   },
   {
-    "name": "Crucial T705 2TB",
-    "price": 180.0,
+    "name": "CRUCIAL T705 2TB",
+    "price": null,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -785,11 +833,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T705 2TB"
   },
   {
-    "name": "Crucial T705 4TB",
-    "price": 360.0,
+    "name": "CRUCIAL T705 4TB",
+    "price": null,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -802,11 +851,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T705 4TB"
   },
   {
-    "name": "Crucial T700 4TB",
-    "price": 360.0,
+    "name": "CRUCIAL T700 4TB",
+    "price": null,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -819,11 +869,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "T700 4TB"
   },
   {
-    "name": "Corsair MP700 PRO 1TB",
-    "price": 90.0,
+    "name": "CORSAIR MP700 PRO 1TB",
+    "price": 3933.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -836,11 +887,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "MP700 PRO 1TB"
   },
   {
-    "name": "Corsair MP700 PRO 2TB",
-    "price": 180.0,
+    "name": "CORSAIR MP700 PRO 2TB",
+    "price": 9326.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -853,11 +905,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "MP700 PRO 2TB"
   },
   {
-    "name": "Corsair MP700 PRO 4TB",
-    "price": 360.0,
+    "name": "CORSAIR MP700 PRO 4TB",
+    "price": 39913.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -870,11 +923,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "MP700 PRO 4TB"
   },
   {
-    "name": "Kingston Fury Renegade 4TB",
-    "price": 240.0,
+    "name": "KINGSTON Fury Renegade 4TB",
+    "price": 22760.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -887,11 +941,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "Fury Renegade 4TB"
   },
   {
     "name": "WD_BLACK SN850X 4TB",
-    "price": 240.0,
+    "price": 20700.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -901,14 +956,15 @@
     "seq_write": 6600,
     "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
     "endurance_tbw": 2400,
-    "imageUrl": null,
+    "imageUrl": "https://www.flashtrend.com.au/assets/full/Leader-HBWD-SN850-4TB.jpg?20250422103801",
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "2GB DDR4 DRAM Cache",
-    "random_iops": "1200K / 1100K IOPS"
+    "random_iops": "1200K / 1100K IOPS",
+    "model": "SN850X 4TB"
   },
   {
     "name": "WD_BLACK SN770 500GB",
-    "price": 22.5,
+    "price": null,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -918,14 +974,15 @@
     "seq_write": 4900,
     "nand_type": "BiCS5 112-Layer TLC",
     "endurance_tbw": 600,
-    "imageUrl": null,
+    "imageUrl": "https://m.media-amazon.com/images/I/71Sr1zjPhwL._AC_.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "SN770 500GB"
   },
   {
-    "name": "Crucial P3 Plus 4TB",
-    "price": 180.0,
+    "name": "CRUCIAL P3 Plus 4TB",
+    "price": null,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -938,11 +995,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "P3 Plus 4TB"
   },
   {
-    "name": "Samsung 870 EVO 500GB",
-    "price": 22.5,
+    "name": "SAMSUNG 870 EVO 500GB",
+    "price": 14124.0,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -955,11 +1013,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "870 EVO 500GB"
   },
   {
-    "name": "Samsung 870 EVO 1TB",
-    "price": 45.0,
+    "name": "SAMSUNG 870 EVO 1TB",
+    "price": 18084.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -972,11 +1031,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "870 EVO 1TB"
   },
   {
-    "name": "Samsung 870 EVO 2TB",
-    "price": 90.0,
+    "name": "SAMSUNG 870 EVO 2TB",
+    "price": 56034.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -989,11 +1049,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "870 EVO 2TB"
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
-    "price": 90.0,
+    "price": 3180.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1006,11 +1067,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "Spatium M570 PRO 1TB"
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
-    "price": 180.0,
+    "price": 9638.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1023,11 +1085,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "Spatium M570 PRO 2TB"
   },
   {
     "name": "MSI Spatium M570 PRO 4TB",
-    "price": 360.0,
+    "price": 18238.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1040,11 +1103,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "Spatium M570 PRO 4TB"
   },
   {
-    "name": "Samsung 980 PRO 500GB",
-    "price": 30.0,
+    "name": "SAMSUNG 980 PRO 500GB",
+    "price": null,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1057,11 +1121,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "980 PRO 500GB"
   },
   {
-    "name": "Kingston KC3000 512GB",
-    "price": 30.72,
+    "name": "KINGSTON KC3000 512GB",
+    "price": 8896.0,
     "capacity": 512,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1074,11 +1139,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
-    "random_iops": "1000K / 1000K IOPS"
+    "random_iops": "1000K / 1000K IOPS",
+    "model": "KC3000 512GB"
   },
   {
-    "name": "Kioxia Exceria Pro 1TB",
-    "price": 60.0,
+    "name": "KIOXIA Exceria Pro 1TB",
+    "price": null,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1091,11 +1157,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria Pro 1TB"
   },
   {
-    "name": "Kioxia Exceria Pro 2TB",
-    "price": 120.0,
+    "name": "KIOXIA Exceria Pro 2TB",
+    "price": null,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1108,11 +1175,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
-    "random_iops": "350K / 350K IOPS"
+    "random_iops": "350K / 350K IOPS",
+    "model": "Exceria Pro 2TB"
   },
   {
     "name": "MSI Spatium M480 PRO 1TB",
-    "price": 60.0,
+    "price": null,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1125,11 +1193,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Spatium M480 PRO 1TB"
   },
   {
     "name": "MSI Spatium M480 PRO 2TB",
-    "price": 120.0,
+    "price": null,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1142,11 +1211,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Spatium M480 PRO 2TB"
   },
   {
     "name": "MSI Spatium M480 PRO 4TB",
-    "price": 240.0,
+    "price": null,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1159,11 +1229,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Spatium M480 PRO 4TB"
   },
   {
     "name": "WD Blue SN580 500GB",
-    "price": 22.5,
+    "price": null,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1173,14 +1244,15 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 450,
-    "imageUrl": null,
+    "imageUrl": "https://gland.vn/media/product/14617_46768_238290_img1.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN580 500GB"
   },
   {
     "name": "WD Blue SN580 2TB",
-    "price": 90.0,
+    "price": 8100.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1190,14 +1262,15 @@
     "seq_write": 4150,
     "nand_type": "BiCS5 TLC",
     "endurance_tbw": 1800,
-    "imageUrl": null,
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558801cv1d.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN580 2TB"
   },
   {
-    "name": "Crucial P3 Plus 500GB",
-    "price": 22.5,
+    "name": "CRUCIAL P3 Plus 500GB",
+    "price": null,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1210,11 +1283,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "P3 Plus 500GB"
   },
   {
-    "name": "Samsung 970 EVO Plus 500GB",
-    "price": 22.5,
+    "name": "SAMSUNG 970 EVO Plus 500GB",
+    "price": 2700.0,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1227,11 +1301,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "970 EVO Plus 500GB"
   },
   {
-    "name": "Samsung 870 EVO 4TB",
-    "price": 180.0,
+    "name": "SAMSUNG 870 EVO 4TB",
+    "price": 31454.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -1244,11 +1319,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "870 EVO 4TB"
   },
   {
-    "name": "Crucial MX500 500GB",
-    "price": 22.5,
+    "name": "CRUCIAL MX500 500GB",
+    "price": null,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -1261,11 +1337,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "MX500 500GB"
   },
   {
-    "name": "Crucial MX500 1TB",
-    "price": 45.0,
+    "name": "CRUCIAL MX500 1TB",
+    "price": 7899.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -1278,11 +1355,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "MX500 1TB"
   },
   {
-    "name": "Crucial MX500 2TB",
-    "price": 90.0,
+    "name": "CRUCIAL MX500 2TB",
+    "price": null,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -1295,11 +1373,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "MX500 2TB"
   },
   {
-    "name": "Crucial MX500 4TB",
-    "price": 180.0,
+    "name": "CRUCIAL MX500 4TB",
+    "price": null,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "2.5\"",
@@ -1312,7 +1391,8 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "MX500 4TB"
   },
   {
     "name": "Seagate FireCuda 540 1TB",
@@ -1329,7 +1409,8 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "FireCuda 540 1TB"
   },
   {
     "name": "Seagate FireCuda 540 2TB",
@@ -1346,11 +1427,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
-    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)"
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "model": "FireCuda 540 2TB"
   },
   {
     "name": "XPG Gammix S70 Blade 1TB",
-    "price": null,
+    "price": 5940.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1363,11 +1445,12 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Gammix S70 Blade 1TB"
   },
   {
     "name": "XPG Gammix S70 Blade 2TB",
-    "price": null,
+    "price": 7433.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1380,7 +1463,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Gammix S70 Blade 2TB"
   },
   {
     "name": "XPG Gammix S70 Blade 4TB",
@@ -1397,7 +1481,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Gammix S70 Blade 4TB"
   },
   {
     "name": "Seagate FireCuda 530 1TB",
@@ -1414,7 +1499,8 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "FireCuda 530 1TB"
   },
   {
     "name": "Seagate FireCuda 530 2TB",
@@ -1431,7 +1517,8 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "FireCuda 530 2TB"
   },
   {
     "name": "Seagate FireCuda 530 4TB",
@@ -1448,11 +1535,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "FireCuda 530 4TB"
   },
   {
     "name": "WD Blue SN5000 1TB",
-    "price": null,
+    "price": 3294.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1462,14 +1550,15 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 1200,
-    "imageUrl": null,
+    "imageUrl": "https://down-th.img.susercontent.com/file/th-11134208-7rasf-m5co1c23qghj01",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN5000 1TB"
   },
   {
     "name": "WD Blue SN5000 2TB",
-    "price": null,
+    "price": 8021.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1479,10 +1568,11 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 2400,
-    "imageUrl": null,
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/b83936f4-c813-4981-859e-e82e3048f601.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN5000 2TB"
   },
   {
     "name": "WD Blue SN5000 4TB",
@@ -1496,14 +1586,15 @@
     "seq_write": 5000,
     "nand_type": "BiCS6 TLC",
     "endurance_tbw": 4800,
-    "imageUrl": null,
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6588/6588587_sd.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "Blue SN5000 4TB"
   },
   {
-    "name": "Kingston NV3 500GB",
-    "price": null,
+    "name": "KINGSTON NV3 500GB",
+    "price": 5499.0,
     "capacity": 500,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1516,11 +1607,12 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV3 500GB"
   },
   {
-    "name": "Kingston NV3 4TB",
-    "price": null,
+    "name": "KINGSTON NV3 4TB",
+    "price": 36487.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1533,10 +1625,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV3 4TB"
   },
   {
-    "name": "Kingston NV2 500GB",
+    "name": "KINGSTON NV2 500GB",
     "price": null,
     "capacity": 500,
     "type": "SSD",
@@ -1550,10 +1643,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "NV2 500GB"
   },
   {
-    "name": "Kioxia Exceria G2 500GB",
+    "name": "KIOXIA Exceria G2 500GB",
     "price": null,
     "capacity": 500,
     "type": "SSD",
@@ -1567,10 +1661,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria G2 500GB"
   },
   {
-    "name": "Kioxia Exceria G2 1TB",
+    "name": "KIOXIA Exceria G2 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -1584,10 +1679,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria G2 1TB"
   },
   {
-    "name": "Kioxia Exceria G2 2TB",
+    "name": "KIOXIA Exceria G2 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -1601,10 +1697,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
-    "random_iops": "400K / 400K IOPS"
+    "random_iops": "400K / 400K IOPS",
+    "model": "Exceria G2 2TB"
   },
   {
-    "name": "Kingston KC600 512GB",
+    "name": "KINGSTON KC600 512GB",
     "price": null,
     "capacity": 512,
     "type": "SSD",
@@ -1618,10 +1715,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "KC600 512GB"
   },
   {
-    "name": "Kingston KC600 1TB",
+    "name": "KINGSTON KC600 1TB",
     "price": null,
     "capacity": 1024,
     "type": "SSD",
@@ -1635,10 +1733,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "KC600 1TB"
   },
   {
-    "name": "Kingston KC600 2TB",
+    "name": "KINGSTON KC600 2TB",
     "price": null,
     "capacity": 2048,
     "type": "SSD",
@@ -1652,10 +1751,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "KC600 2TB"
   },
   {
-    "name": "Crucial BX500 500GB",
+    "name": "CRUCIAL BX500 500GB",
     "price": null,
     "capacity": 500,
     "type": "SSD",
@@ -1669,10 +1769,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "BX500 500GB"
   },
   {
-    "name": "Crucial BX500 1TB",
+    "name": "CRUCIAL BX500 1TB",
     "price": null,
     "capacity": 1000,
     "type": "SSD",
@@ -1686,10 +1787,11 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "BX500 1TB"
   },
   {
-    "name": "Crucial BX500 2TB",
+    "name": "CRUCIAL BX500 2TB",
     "price": null,
     "capacity": 2000,
     "type": "SSD",
@@ -1703,6 +1805,7 @@
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
-    "random_iops": "750K / 650K IOPS"
+    "random_iops": "750K / 650K IOPS",
+    "model": "BX500 2TB"
   }
 ]

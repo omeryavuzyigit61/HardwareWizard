@@ -4,11 +4,19 @@ import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 
+enum class CatalogSegmentMode {
+    INDIVIDUAL,
+    PERIPHERALS,
+    PREBUILT,
+    LAPTOP,
+}
+
 @Immutable
 data class HardwareListUiState(
     val isLoading: Boolean = false,
     val items: List<HardwareItem> = emptyList(),
     val totalCount: Int = 0,
+    val segmentMode: CatalogSegmentMode = CatalogSegmentMode.INDIVIDUAL,
     val selectedCategory: HardwareCategory? = null,
     val searchQuery: String = "",
     val filters: HardwareFilterOptions = HardwareFilterOptions(),

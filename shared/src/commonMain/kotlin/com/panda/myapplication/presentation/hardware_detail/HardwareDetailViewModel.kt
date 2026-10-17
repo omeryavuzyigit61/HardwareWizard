@@ -6,6 +6,7 @@ import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
+import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareDetailUseCase
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,11 +18,13 @@ import kotlinx.coroutines.launch
 
 sealed interface HardwareDetailEffect {
     data class ShowToast(val message: String) : HardwareDetailEffect
+    data class ShowVsAddedToast(val message: String) : HardwareDetailEffect
 }
 
 class HardwareDetailViewModel(
     private val getHardwareDetailUseCase: GetHardwareDetailUseCase,
     private val activeBuildRepository: ActiveBuildRepository,
+    private val vsArenaRepository: VsArenaRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HardwareDetailUiState())
@@ -81,6 +84,30 @@ class HardwareDetailViewModel(
         val message = if (isNowAdded) "$name sihirbaza eklendi!" else "$name sihirbazdan çıkarıldı."
         viewModelScope.launch {
             effectChannel.send(HardwareDetailEffect.ShowToast(message))
+        }
+    }
+
+    fun onAddToVsArena() {
+        val item = _uiState.value.item ?: return
+        val statusMessage = vsArenaRepository.addItemToComparison(item)
+        viewModelScope.launch {
+            effectChannel.send(HardwareDetailEffect.ShowVsAddedToast(statusMessage))
+        }
+    }
+
+    fun onSaveCustomPrice(customPriceTry: Double, note: String?) {
+        val item = _uiState.value.item ?: return
+        viewModelScope.launch {
+            getHardwareDetailUseCase.setCustomPrice(item.id, customPriceTry, note)
+            effectChannel.send(HardwareDetailEffect.ShowToast("🏷️ Özel fiyat kaydedildi."))
+        }
+    }
+
+    fun onClearCustomPrice() {
+        val item = _uiState.value.item ?: return
+        viewModelScope.launch {
+            getHardwareDetailUseCase.clearCustomPrice(item.id)
+            effectChannel.send(HardwareDetailEffect.ShowToast("Özel fiyat kaldırıldı."))
         }
     }
 }

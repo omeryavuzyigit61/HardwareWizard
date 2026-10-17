@@ -205,3 +205,48 @@ data class CaseSpecEntity(
     @ColumnInfo(name = "included_fans") val includedFans: String? = null,
     @ColumnInfo(name = "front_panel_usb") val frontPanelUsb: String? = null,
 )
+
+@Entity(
+    tableName = "prebuilt_specs",
+    foreignKeys = [ForeignKey(HardwareItemEntity::class, [PARENT_ID], [ITEM_ID], onDelete = ForeignKey.CASCADE)],
+)
+data class PrebuiltSpecEntity(
+    @PrimaryKey @ColumnInfo(name = ITEM_ID) val itemId: String,
+    @ColumnInfo(name = "store_name") val storeName: String,
+    @ColumnInfo(name = "cpu_model") val cpuModel: String,
+    @ColumnInfo(name = "gpu_model") val gpuModel: String,
+    @ColumnInfo(name = "motherboard_model") val motherboardModel: String,
+    @ColumnInfo(name = "ram_spec") val ramSpec: String,
+    @ColumnInfo(name = "storage_spec") val storageSpec: String,
+    @ColumnInfo(name = "psu_case_spec") val psuCaseSpec: String,
+    @ColumnInfo(name = "estimated_separate_price_try") val estimatedSeparatePriceTry: Double? = null,
+    @ColumnInfo(name = "price_advantage_try") val priceAdvantageTry: Double? = null,
+    @ColumnInfo(name = "fps_1080p") val fps1080p: Int = 0,
+    @ColumnInfo(name = "fps_1440p") val fps1440p: Int = 0,
+    @ColumnInfo(name = "fps_4k") val fps4k: Int = 0,
+    @ColumnInfo(name = "gaming_score") val gamingScore: Int = 0,
+    @ColumnInfo(name = "cpu_id") val cpuId: String? = null,
+    @ColumnInfo(name = "gpu_id") val gpuId: String? = null,
+)
+
+@Entity(
+    tableName = "laptop_specs",
+    foreignKeys = [ForeignKey(HardwareItemEntity::class, [PARENT_ID], [ITEM_ID], onDelete = ForeignKey.CASCADE)],
+)
+data class LaptopSpecEntity(
+    @PrimaryKey @ColumnInfo(name = ITEM_ID) val itemId: String,
+    @ColumnInfo(name = "cpu_model") val cpuModel: String,
+    @ColumnInfo(name = "gpu_model") val gpuModel: String,
+    @ColumnInfo(name = "gpu_watt_tgp") val gpuWattTgp: String,
+    @ColumnInfo(name = "mux_switch") val muxSwitch: String,
+    @ColumnInfo(name = "ram_spec") val ramSpec: String,
+    @ColumnInfo(name = "storage_spec") val storageSpec: String,
+    @ColumnInfo(name = "display_spec") val displaySpec: String,
+    @ColumnInfo(name = "battery_wh") val batteryWh: Int,
+    @ColumnInfo(name = "weight_kg") val weightKg: Double,
+    @ColumnInfo(name = "cooling_tech") val coolingTech: String,
+    @ColumnInfo(name = "gaming_score") val gamingScore: Int,
+    @ColumnInfo(name = "fps_1080p") val fps1080p: Int = 0,
+    @ColumnInfo(name = "fps_1440p") val fps1440p: Int = 0,
+)
+

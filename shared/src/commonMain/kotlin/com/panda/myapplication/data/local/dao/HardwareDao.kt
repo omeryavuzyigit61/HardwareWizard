@@ -18,6 +18,14 @@ import com.panda.myapplication.domain.model.HardwareCategory
 import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
 
+import com.panda.myapplication.data.local.entity.CaseSpecEntity
+import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
+import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
+import com.panda.myapplication.data.local.entity.LaptopSpecEntity
+import com.panda.myapplication.data.local.entity.MonitorSpecEntity
+import com.panda.myapplication.data.local.entity.MouseSpecEntity
+import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
+
 @Dao
 abstract class HardwareDao {
 
@@ -28,8 +36,56 @@ abstract class HardwareDao {
     abstract fun observeAll(): Flow<List<HardwareItemWithSpec>>
 
     @Transaction
-    @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY brand, model")
+    @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
     abstract fun observeByCategory(category: HardwareCategory): Flow<List<HardwareItemWithSpec>>
+
+    @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
+    abstract fun observeItemEntitiesByCategory(category: HardwareCategory): Flow<List<HardwareItemEntity>>
+
+    @Query("SELECT * FROM hardware_items ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
+    abstract fun observeAllItemEntities(): Flow<List<HardwareItemEntity>>
+
+    @Query("SELECT * FROM cpu_specs")
+    abstract fun observeAllCpuSpecs(): Flow<List<CpuSpecEntity>>
+
+    @Query("SELECT * FROM gpu_specs")
+    abstract fun observeAllGpuSpecs(): Flow<List<GpuSpecEntity>>
+
+    @Query("SELECT * FROM ram_specs")
+    abstract fun observeAllRamSpecs(): Flow<List<RamSpecEntity>>
+
+    @Query("SELECT * FROM motherboard_specs")
+    abstract fun observeAllMotherboardSpecs(): Flow<List<MotherboardSpecEntity>>
+
+    @Query("SELECT * FROM psu_specs")
+    abstract fun observeAllPsuSpecs(): Flow<List<PsuSpecEntity>>
+
+    @Query("SELECT * FROM storage_specs")
+    abstract fun observeAllStorageSpecs(): Flow<List<StorageSpecEntity>>
+
+    @Query("SELECT * FROM cooler_specs")
+    abstract fun observeAllCoolerSpecs(): Flow<List<CoolerSpecEntity>>
+
+    @Query("SELECT * FROM case_specs")
+    abstract fun observeAllCaseSpecs(): Flow<List<CaseSpecEntity>>
+
+    @Query("SELECT * FROM prebuilt_specs")
+    abstract fun observeAllPrebuiltSpecs(): Flow<List<PrebuiltSpecEntity>>
+
+    @Query("SELECT * FROM laptop_specs")
+    abstract fun observeAllLaptopSpecs(): Flow<List<LaptopSpecEntity>>
+
+    @Query("SELECT * FROM mouse_specs")
+    abstract fun observeAllMouseSpecs(): Flow<List<MouseSpecEntity>>
+
+    @Query("SELECT * FROM keyboard_specs")
+    abstract fun observeAllKeyboardSpecs(): Flow<List<KeyboardSpecEntity>>
+
+    @Query("SELECT * FROM headset_specs")
+    abstract fun observeAllHeadsetSpecs(): Flow<List<HeadsetSpecEntity>>
+
+    @Query("SELECT * FROM monitor_specs")
+    abstract fun observeAllMonitorSpecs(): Flow<List<MonitorSpecEntity>>
 
     @Transaction
     @Query("SELECT * FROM hardware_items WHERE id = :id")
@@ -78,6 +134,37 @@ abstract class HardwareDao {
     @Upsert
     protected abstract suspend fun upsertCaseSpecs(specs: List<com.panda.myapplication.data.local.entity.CaseSpecEntity>)
 
+    @Upsert
+    protected abstract suspend fun upsertPrebuiltSpecs(specs: List<com.panda.myapplication.data.local.entity.PrebuiltSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertLaptopSpecs(specs: List<com.panda.myapplication.data.local.entity.LaptopSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertMouseSpecs(specs: List<com.panda.myapplication.data.local.entity.MouseSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertKeyboardSpecs(specs: List<com.panda.myapplication.data.local.entity.KeyboardSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertHeadsetSpecs(specs: List<com.panda.myapplication.data.local.entity.HeadsetSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertMonitorSpecs(specs: List<com.panda.myapplication.data.local.entity.MonitorSpecEntity>)
+
+    // region User Price Overrides (BÖLÜM 2)
+
+    @Query("SELECT * FROM user_price_overrides")
+    abstract fun observeAllPriceOverrides(): Flow<List<com.panda.myapplication.data.local.entity.UserPriceOverrideEntity>>
+
+    @Upsert
+    abstract suspend fun upsertPriceOverride(overrideEntity: com.panda.myapplication.data.local.entity.UserPriceOverrideEntity)
+
+    @Query("DELETE FROM user_price_overrides WHERE hardware_id = :hardwareId")
+    abstract suspend fun deletePriceOverride(hardwareId: String)
+
+    // endregion
+
     /** Spec rows are removed via `ON DELETE CASCADE`. */
     @Query("DELETE FROM hardware_items WHERE cached_at < :threshold")
     protected abstract suspend fun deleteItemsCachedBefore(threshold: Instant)
@@ -98,6 +185,12 @@ abstract class HardwareDao {
         snapshot.storages.chunked(chunkSize).forEach { upsertStorageSpecs(it) }
         snapshot.coolers.chunked(chunkSize).forEach { upsertCoolerSpecs(it) }
         snapshot.cases.chunked(chunkSize).forEach { upsertCaseSpecs(it) }
+        snapshot.prebuilts.chunked(chunkSize).forEach { upsertPrebuiltSpecs(it) }
+        snapshot.laptops.chunked(chunkSize).forEach { upsertLaptopSpecs(it) }
+        snapshot.mice.chunked(chunkSize).forEach { upsertMouseSpecs(it) }
+        snapshot.keyboards.chunked(chunkSize).forEach { upsertKeyboardSpecs(it) }
+        snapshot.headsets.chunked(chunkSize).forEach { upsertHeadsetSpecs(it) }
+        snapshot.monitors.chunked(chunkSize).forEach { upsertMonitorSpecs(it) }
         deleteItemsCachedBefore(syncedAt)
     }
 

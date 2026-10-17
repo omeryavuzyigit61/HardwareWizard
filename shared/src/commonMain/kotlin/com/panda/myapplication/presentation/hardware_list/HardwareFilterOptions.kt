@@ -56,6 +56,12 @@ enum class HardwareSortOption(val displayName: String) {
                 HardwareCategory.PSU -> common + listOf(PSU_WATTAGE_DESC)
                 HardwareCategory.COOLER -> common
                 HardwareCategory.CASE -> common
+                HardwareCategory.PREBUILT_PC -> common
+                HardwareCategory.LAPTOP -> common
+                HardwareCategory.MOUSE -> common
+                HardwareCategory.KEYBOARD -> common
+                HardwareCategory.HEADSET -> common
+                HardwareCategory.MONITOR -> common
             }
         }
     }

@@ -7,7 +7,13 @@ import com.panda.myapplication.data.local.entity.GpuSpecEntity
 import com.panda.myapplication.data.local.entity.HardwareCatalogSnapshot
 import com.panda.myapplication.data.local.entity.HardwareItemEntity
 import com.panda.myapplication.data.local.entity.HardwareItemWithSpec
+import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
+import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
+import com.panda.myapplication.data.local.entity.LaptopSpecEntity
+import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
+import com.panda.myapplication.data.local.entity.MouseSpecEntity
+import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
@@ -15,7 +21,10 @@ import com.panda.myapplication.data.model.dto.CaseRawDto
 import com.panda.myapplication.data.model.dto.CoolerRawDto
 import com.panda.myapplication.data.model.dto.CpuRawDto
 import com.panda.myapplication.data.model.dto.GpuRawDto
+import com.panda.myapplication.data.model.dto.LaptopRawDto
 import com.panda.myapplication.data.model.dto.MotherboardRawDto
+import com.panda.myapplication.data.model.dto.PeripheralRawDto
+import com.panda.myapplication.data.model.dto.PrebuiltRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
@@ -29,11 +38,17 @@ import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MemorySize
 import com.panda.myapplication.domain.model.Money
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -45,6 +60,7 @@ import com.panda.myapplication.domain.model.StorageFormFactor
 import com.panda.myapplication.domain.model.StorageInterface
 import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.Wattage
 import kotlin.time.Instant
 
@@ -219,6 +235,93 @@ object HardwareMapper {
                     frontPanelUsb = cs.frontPanelUsb,
                 )
             }
+            itemWithSpec.prebuilt != null -> {
+                val pb = itemWithSpec.prebuilt
+                PrebuiltSpec(
+                    storeName = pb.storeName,
+                    cpuModel = pb.cpuModel,
+                    gpuModel = pb.gpuModel,
+                    motherboardModel = pb.motherboardModel,
+                    ramSpec = pb.ramSpec,
+                    storageSpec = pb.storageSpec,
+                    psuCaseSpec = pb.psuCaseSpec,
+                    estimatedSeparatePriceTry = pb.estimatedSeparatePriceTry,
+                    priceAdvantageTry = pb.priceAdvantageTry,
+                    fps1080p = pb.fps1080p,
+                    fps1440p = pb.fps1440p,
+                    fps4k = pb.fps4k,
+                    gamingScore = pb.gamingScore,
+                    cpuId = pb.cpuId,
+                    gpuId = pb.gpuId,
+                )
+            }
+            itemWithSpec.laptop != null -> {
+                val lp = itemWithSpec.laptop
+                LaptopSpec(
+                    brand = entity.brand,
+                    cpuModel = lp.cpuModel,
+                    gpuModel = lp.gpuModel,
+                    gpuWattTgp = lp.gpuWattTgp,
+                    muxSwitch = lp.muxSwitch,
+                    ramSpec = lp.ramSpec,
+                    storageSpec = lp.storageSpec,
+                    displaySpec = lp.displaySpec,
+                    batteryWh = lp.batteryWh,
+                    weightKg = lp.weightKg,
+                    coolingTech = lp.coolingTech,
+                    gamingScore = lp.gamingScore,
+                    fps1080p = lp.fps1080p,
+                    fps1440p = lp.fps1440p,
+                )
+            }
+            itemWithSpec.mouse != null -> {
+                val ms = itemWithSpec.mouse
+                MouseSpec(
+                    sensor = ms.sensor,
+                    maxDpi = ms.maxDpi,
+                    pollingRateHz = ms.pollingRateHz,
+                    switchType = ms.switchType,
+                    weightG = ms.weightG,
+                    connectivity = ms.connectivity,
+                    batteryHours = ms.batteryHours,
+                )
+            }
+            itemWithSpec.keyboard != null -> {
+                val kb = itemWithSpec.keyboard
+                KeyboardSpec(
+                    switchType = kb.switchType,
+                    rapidTriggerSupported = kb.rapidTriggerSupported,
+                    minActuationMm = kb.minActuationMm,
+                    pollingRateHz = kb.pollingRateHz,
+                    layout = kb.layout,
+                    hotSwap = kb.hotSwap,
+                    connectivity = kb.connectivity,
+                )
+            }
+            itemWithSpec.headset != null -> {
+                val hs = itemWithSpec.headset
+                HeadsetSpec(
+                    driverType = hs.driverType,
+                    driverSizeMm = hs.driverSizeMm,
+                    impedanceOhm = hs.impedanceOhm,
+                    frequencyResponse = hs.frequencyResponse,
+                    dacAmpRequired = hs.dacAmpRequired,
+                    micType = hs.micType,
+                    weightG = hs.weightG,
+                )
+            }
+            itemWithSpec.monitor != null -> {
+                val mn = itemWithSpec.monitor
+                MonitorSpec(
+                    panelType = mn.panelType,
+                    screenSizeInch = mn.screenSizeInch,
+                    resolution = mn.resolution,
+                    refreshRateHz = mn.refreshRateHz,
+                    responseSpeedGtGMs = mn.responseSpeedGtGMs,
+                    ppi = mn.ppi,
+                    hdrCertification = mn.hdrCertification,
+                )
+            }
             else -> return@runCatching null
         }
 
@@ -226,15 +329,29 @@ object HardwareMapper {
             Money(amountMinor = entity.priceMinor, currencyCode = entity.currencyCode)
         } else null
 
-        val priceInfo = if (entity.currentPriceTry != null || !entity.offers.isNullOrEmpty() || !entity.priceHistory.isNullOrEmpty() || entity.imageUrl != null) {
+        val cleanCurrentPrice = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(entity.currentPriceTry)
+        val cleanLowestPrice = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(entity.lowestPriceTry) ?: cleanCurrentPrice
+        val cleanHighestPrice = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(entity.highestPriceTry) ?: cleanCurrentPrice
+        val cleanOffers = entity.offers.orEmpty().mapNotNull { offer ->
+            val validPrice = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(offer.priceTry) ?: return@mapNotNull null
+            val safeUrl = com.panda.myapplication.domain.util.SecurityUtils.validateStoreUrl(offer.url) ?: ""
+            offer.copy(priceTry = validPrice, url = safeUrl)
+        }.sortedBy { it.priceTry }
+        val cleanHistory = entity.priceHistory.orEmpty()
+            .filter { com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(it.effectivePrice) != null }
+            .distinctBy { it.date.take(10) }
+            .sortedBy { it.date }
+        val cleanImage = com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(entity.imageUrl)
+
+        val priceInfo = if (cleanCurrentPrice != null || cleanOffers.isNotEmpty() || cleanHistory.isNotEmpty() || cleanImage != null) {
             ProductPriceInfo(
-                currentPriceTry = entity.currentPriceTry,
-                lowestPriceTry = entity.lowestPriceTry ?: entity.currentPriceTry,
-                highestPriceTry = entity.highestPriceTry ?: entity.currentPriceTry,
+                currentPriceTry = cleanCurrentPrice ?: cleanOffers.firstOrNull()?.priceTry,
+                lowestPriceTry = cleanLowestPrice,
+                highestPriceTry = cleanHighestPrice,
                 currency = "TRY",
-                imageUrl = entity.imageUrl,
-                offers = entity.offers.orEmpty(),
-                priceHistory = entity.priceHistory.orEmpty(),
+                imageUrl = cleanImage,
+                offers = cleanOffers,
+                priceHistory = cleanHistory,
             )
         } else {
             null
@@ -248,26 +365,42 @@ object HardwareMapper {
             spec = spec,
             priceInfo = priceInfo,
             benchmarkInfo = null,
-            imageUrl = entity.imageUrl,
+            imageUrl = cleanImage,
         )
 
         val isCpuOrGpu = entity.category == HardwareCategory.CPU || entity.category == HardwareCategory.GPU
         val benchmarkInfo = if (isCpuOrGpu) {
             if (entity.benchmarkScore != null) {
+                val relPct = (entity.benchmarkGamingIndex ?: entity.benchmarkScore).toDouble()
+                val enrichedGames = com.panda.myapplication.domain.engine.BenchmarkEngine.buildFull12GameMatrix(
+                    ratio = relPct / 100.0,
+                    isCpu = entity.category == HardwareCategory.CPU,
+                    isX3d = entity.model.contains("X3D", ignoreCase = true),
+                    existing = entity.gameFps,
+                )
                 HardwareBenchmarkInfo(
                     score = entity.benchmarkScore,
                     tier = entity.benchmarkTier ?: "A-Tier",
                     gamingIndex = entity.benchmarkGamingIndex,
                     testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
-                    relativePerformanceIndex = entity.benchmarkGamingIndex?.toDouble() ?: entity.benchmarkScore.toDouble(),
+                    relativePerformanceIndex = relPct,
                     cpuSynthetic = entity.cpuSynthetic,
                     gpuSynthetic = entity.gpuSynthetic,
-                    gameFps = entity.gameFps,
+                    gameFps = enrichedGames,
                     dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
                 )
             } else {
                 com.panda.myapplication.domain.engine.BenchmarkEngine.simulateBenchmark(intermediateItem)
             }
+        } else if (entity.benchmarkScore != null) {
+            HardwareBenchmarkInfo(
+                score = entity.benchmarkScore,
+                tier = entity.benchmarkTier ?: "S-Tier",
+                gamingIndex = entity.benchmarkGamingIndex ?: entity.benchmarkScore,
+                testSuite = entity.benchmarkTestSuite ?: "Çevre Birimleri Mühendislik Laboratuvarı",
+                relativePerformanceIndex = entity.benchmarkScore.toDouble(),
+                dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
+            )
         } else {
             null
         }
@@ -340,7 +473,7 @@ object HardwareMapper {
             upper.contains("13900") || upper.contains("13700") || upper.contains("13600") || upper.contains("13400") -> "Intel 7 (10nm)"
             upper.contains("12900") || upper.contains("12700") || upper.contains("12600") || upper.contains("12400") || upper.contains("12100") -> "Intel 7 (10nm)"
             upper.contains("5950") || upper.contains("5900") || upper.contains("5800") || upper.contains("5700") || upper.contains("5600") || upper.contains("5500") -> "TSMC 7nm FinFET"
-            else -> "7nm / 10nm"
+            else -> null
         }
 
         val pcieVersion = dto.pcieVersion ?: when {
@@ -348,7 +481,7 @@ object HardwareMapper {
             socket.contains("1851", ignoreCase = true) -> "PCIe 5.0 (24 Hattı / Lanes)"
             socket.contains("1700", ignoreCase = true) -> "PCIe 5.0 (x16) + PCIe 4.0 (x4)"
             socket.contains("AM4", ignoreCase = true) -> if (upper.contains("5500") || upper.contains("G")) "PCIe 3.0" else "PCIe 4.0 (24 Hattı)"
-            else -> "PCIe 4.0 / 3.0"
+            else -> null
         }
 
         val maxMemorySpeed = dto.maxMemorySpeed ?: when {
@@ -356,7 +489,7 @@ object HardwareMapper {
             socket.contains("1851", ignoreCase = true) -> "DDR5-6400 MT/s • XMP 3.0"
             socket.contains("1700", ignoreCase = true) -> "DDR5-5600 / DDR4-3200 MT/s"
             socket.contains("AM4", ignoreCase = true) -> "DDR4-3200 MT/s"
-            else -> "DDR4 / DDR5"
+            else -> null
         }
 
         val unlockedMultiplier = dto.unlockedMultiplier ?: when {
@@ -711,7 +844,7 @@ object HardwareMapper {
             supportsPcie5Power = isAtx3,
             modularity = modularity,
             formFactor = dto.type ?: "ATX",
-            outputs = dto.outputs ?: if (isAtx3) "$pcie12Vhpwr • $epsConnectors • $pcieConnectors" else "$epsConnectors • $pcieConnectors",
+            outputs = dto.outputs ?: listOfNotNull(pcie12Vhpwr, epsConnectors, pcieConnectors).takeIf { it.isNotEmpty() }?.joinToString(" • "),
             tierRating = tierRating,
             capacitors = dto.capacitors ?: topology,
             atxStandard = atxStandard,
@@ -834,29 +967,7 @@ object HardwareMapper {
         val (brand, model) = extractBrandAndModel(rawName)
         val id = generateHardwareId(HardwareCategory.CASE, rawName)
         val priceMinor = dto.price?.let { (it * 100).toLong().coerceAtLeast(0L) }
-        val type = dto.type?.trim()
-
-        val maxGpu = when {
-            type?.contains("Full Tower", ignoreCase = true) == true -> 420
-            type?.contains("Mid Tower", ignoreCase = true) == true -> 380
-            type?.contains("Mini Tower", ignoreCase = true) == true -> 330
-            type?.contains("Mini ITX", ignoreCase = true) == true || type?.contains("Desktop", ignoreCase = true) == true -> 310
-            else -> 360
-        }
-        val maxCooler = when {
-            type?.contains("Full Tower", ignoreCase = true) == true -> 185
-            type?.contains("Mid Tower", ignoreCase = true) == true -> 165
-            type?.contains("Mini Tower", ignoreCase = true) == true -> 155
-            type?.contains("Mini ITX", ignoreCase = true) == true || type?.contains("Desktop", ignoreCase = true) == true -> 140
-            else -> 160
-        }
-        val maxRad = when {
-            type?.contains("Full Tower", ignoreCase = true) == true -> 420
-            type?.contains("Mid Tower", ignoreCase = true) == true -> 360
-            type?.contains("Mini Tower", ignoreCase = true) == true -> 240
-            type?.contains("Mini ITX", ignoreCase = true) == true -> 240
-            else -> 280
-        }
+        val type = dto.type?.trim()?.ifBlank { null }
 
         val item = HardwareItemEntity(
             id = id,
@@ -871,14 +982,96 @@ object HardwareMapper {
         val spec = CaseSpecEntity(
             itemId = id,
             type = type,
-            maxGpuLengthMm = dto.maxGpuLengthMm ?: maxGpu,
-            maxCpuCoolerHeightMm = dto.maxCpuCoolerHeightMm ?: maxCooler,
-            maxRadiatorSizeMm = dto.maxRadiatorSizeMm ?: maxRad,
+            maxGpuLengthMm = dto.maxGpuLengthMm,
+            maxCpuCoolerHeightMm = dto.maxCpuCoolerHeightMm,
+            maxRadiatorSizeMm = dto.maxRadiatorSizeMm,
             sidePanel = dto.sidePanel,
             driveBays = dto.driveBays,
             radiatorSupport = dto.radiatorSupport,
             includedFans = dto.includedFans,
             frontPanelUsb = dto.frontPanelUsb,
+        )
+        return item to spec
+    }
+
+    fun prebuiltDtoToEntity(dto: PrebuiltRawDto, cachedAt: Instant): Pair<HardwareItemEntity, PrebuiltSpecEntity> {
+        val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Prebuilt id must not be blank" }
+        val name = dto.name ?: "OEM Hazır Sistem"
+        val brand = dto.brand ?: dto.storeName ?: "OEM"
+        val model = name
+        val priceMinor = dto.price?.let { (it * 100).toLong() }
+
+        val item = HardwareItemEntity(
+            id = id,
+            brand = brand,
+            model = model,
+            category = HardwareCategory.PREBUILT_PC,
+            priceMinor = priceMinor,
+            currencyCode = if (priceMinor != null) "TRY" else null,
+            cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
+            currentPriceTry = dto.priceTry,
+            lowestPriceTry = dto.priceTry,
+            highestPriceTry = dto.priceTry,
+            benchmarkGamingIndex = dto.gamingScore,
+        )
+        val spec = PrebuiltSpecEntity(
+            itemId = id,
+            storeName = dto.storeName ?: "Mağaza",
+            cpuModel = dto.cpuModel ?: "",
+            gpuModel = dto.gpuModel ?: "",
+            motherboardModel = dto.motherboardModel ?: "",
+            ramSpec = dto.ramSpec ?: "",
+            storageSpec = dto.storageSpec ?: "",
+            psuCaseSpec = dto.psuCaseSpec ?: "",
+            estimatedSeparatePriceTry = dto.estimatedSeparatePriceTry,
+            priceAdvantageTry = dto.priceAdvantageTry,
+            fps1080p = dto.fps1080p ?: 0,
+            fps1440p = dto.fps1440p ?: 0,
+            fps4k = dto.fps4k ?: 0,
+            gamingScore = dto.gamingScore ?: 0,
+            cpuId = dto.cpuId,
+            gpuId = dto.gpuId,
+        )
+        return item to spec
+    }
+
+    fun laptopDtoToEntity(dto: LaptopRawDto, cachedAt: Instant): Pair<HardwareItemEntity, LaptopSpecEntity> {
+        val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Laptop id must not be blank" }
+        val name = dto.name ?: "Gaming Laptop"
+        val brand = dto.brand ?: "Laptop"
+        val model = name
+        val priceMinor = dto.price?.let { (it * 100).toLong() }
+
+        val item = HardwareItemEntity(
+            id = id,
+            brand = brand,
+            model = model,
+            category = HardwareCategory.LAPTOP,
+            priceMinor = priceMinor,
+            currencyCode = if (priceMinor != null) "TRY" else null,
+            cachedAt = cachedAt,
+            imageUrl = dto.imageUrl,
+            currentPriceTry = dto.priceTry,
+            lowestPriceTry = dto.priceTry,
+            highestPriceTry = dto.priceTry,
+            benchmarkGamingIndex = dto.gamingScore,
+        )
+        val spec = LaptopSpecEntity(
+            itemId = id,
+            cpuModel = dto.cpuModel ?: "",
+            gpuModel = dto.gpuModel ?: "",
+            gpuWattTgp = dto.gpuWattTgp ?: "",
+            muxSwitch = dto.muxSwitch ?: "",
+            ramSpec = dto.ramSpec ?: "",
+            storageSpec = dto.storageSpec ?: "",
+            displaySpec = dto.displaySpec ?: "",
+            batteryWh = dto.batteryWh ?: 0,
+            weightKg = dto.weightKg ?: 0.0,
+            coolingTech = dto.coolingTech ?: "",
+            gamingScore = dto.gamingScore ?: 0,
+            fps1080p = dto.fps1080p ?: 0,
+            fps1440p = dto.fps1440p ?: 0,
         )
         return item to spec
     }
@@ -892,6 +1085,9 @@ object HardwareMapper {
         storages: List<StorageRawDto> = emptyList(),
         coolers: List<CoolerRawDto> = emptyList(),
         cases: List<CaseRawDto> = emptyList(),
+        prebuilts: List<PrebuiltRawDto> = emptyList(),
+        laptops: List<LaptopRawDto> = emptyList(),
+        peripherals: List<PeripheralRawDto> = emptyList(),
         pricesTr: Map<String, ProductPriceInfo> = emptyMap(),
         benchmarks: Map<String, HardwareBenchmarkInfo> = emptyMap(),
         existingImages: Map<String, String?> = emptyMap(),
@@ -905,6 +1101,97 @@ object HardwareMapper {
         val storagePairs = storages.mapNotNull { runCatching { storageDtoToEntity(it, syncedAt) }.getOrNull() }
         val coolerPairs = coolers.mapNotNull { runCatching { coolerDtoToEntity(it, syncedAt) }.getOrNull() }
         val casePairs = cases.mapNotNull { runCatching { caseDtoToEntity(it, syncedAt) }.getOrNull() }
+        val prebuiltPairs = prebuilts.mapNotNull { runCatching { prebuiltDtoToEntity(it, syncedAt) }.getOrNull() }
+        val laptopPairs = laptops.mapNotNull { runCatching { laptopDtoToEntity(it, syncedAt) }.getOrNull() }
+
+        val mousePairs = mutableListOf<Pair<HardwareItemEntity, MouseSpecEntity>>()
+        val keyboardPairs = mutableListOf<Pair<HardwareItemEntity, KeyboardSpecEntity>>()
+        val headsetPairs = mutableListOf<Pair<HardwareItemEntity, HeadsetSpecEntity>>()
+        val monitorPairs = mutableListOf<Pair<HardwareItemEntity, MonitorSpecEntity>>()
+
+        peripherals.forEach { dto ->
+            runCatching {
+                val category = HardwareCategory.valueOf(dto.category.uppercase())
+                val id = dto.id.trim().ifBlank { generateHardwareId(category, dto.name) }
+                val offerList = if (dto.currentPriceTry != null && !dto.storeName.isNullOrBlank()) {
+                    listOf(
+                        StoreOffer(
+                            storeName = dto.storeName,
+                            priceTry = dto.currentPriceTry,
+                            url = dto.storeUrl ?: "",
+                        ),
+                    )
+                } else null
+                val itemEntity = HardwareItemEntity(
+                    id = id,
+                    brand = dto.brand.trim().ifBlank { "Çevre Birimi" },
+                    model = dto.model.trim().ifBlank { dto.name.trim() },
+                    category = category,
+                    priceMinor = dto.currentPriceTry?.let { (it * 100).toLong() },
+                    currencyCode = if (dto.currentPriceTry != null) "TRY" else null,
+                    cachedAt = syncedAt,
+                    imageUrl = dto.imageUrl,
+                    currentPriceTry = dto.currentPriceTry,
+                    lowestPriceTry = dto.lowestPriceTry ?: dto.currentPriceTry,
+                    highestPriceTry = dto.highestPriceTry ?: dto.currentPriceTry,
+                    offers = offerList,
+                    benchmarkScore = dto.benchmarkScore,
+                    benchmarkTier = dto.benchmarkTier,
+                    benchmarkGamingIndex = dto.benchmarkScore,
+                )
+                when (category) {
+                    HardwareCategory.MOUSE -> {
+                        mousePairs += itemEntity to MouseSpecEntity(
+                            hardwareId = id,
+                            sensor = dto.sensor ?: "PixArt PAW3395",
+                            maxDpi = dto.maxDpi ?: 26000,
+                            pollingRateHz = dto.pollingRateHz ?: 1000,
+                            switchType = dto.switchType ?: "Optik Switch",
+                            weightG = dto.weightG ?: 60,
+                            connectivity = dto.connectivity ?: "2.4GHz / USB-C",
+                            batteryHours = dto.batteryHours,
+                        )
+                    }
+                    HardwareCategory.KEYBOARD -> {
+                        keyboardPairs += itemEntity to KeyboardSpecEntity(
+                            hardwareId = id,
+                            switchType = dto.switchType ?: "Mekanik Switch",
+                            rapidTriggerSupported = dto.rapidTriggerSupported ?: false,
+                            minActuationMm = dto.minActuationMm ?: 1.8,
+                            pollingRateHz = dto.pollingRateHz ?: 1000,
+                            layout = dto.layout ?: "TKL",
+                            hotSwap = dto.hotSwap ?: true,
+                            connectivity = dto.connectivity ?: "Kablolu USB-C",
+                        )
+                    }
+                    HardwareCategory.HEADSET -> {
+                        headsetPairs += itemEntity to HeadsetSpecEntity(
+                            hardwareId = id,
+                            driverType = dto.driverType ?: "Dinamik Neodimyum",
+                            driverSizeMm = dto.driverSizeMm ?: 50,
+                            impedanceOhm = dto.impedanceOhm ?: 32,
+                            frequencyResponse = dto.frequencyResponse ?: "20Hz - 20kHz",
+                            dacAmpRequired = dto.dacAmpRequired ?: false,
+                            micType = dto.micType ?: "Çıkarılabilir Kardioid",
+                            weightG = dto.weightG ?: 300,
+                        )
+                    }
+                    HardwareCategory.MONITOR -> {
+                        monitorPairs += itemEntity to MonitorSpecEntity(
+                            hardwareId = id,
+                            panelType = dto.panelType ?: "Fast IPS",
+                            screenSizeInch = dto.screenSizeInch ?: 27.0,
+                            resolution = dto.resolution ?: "1440p",
+                            refreshRateHz = dto.refreshRateHz ?: 240,
+                            responseSpeedGtGMs = dto.responseSpeedGtGMs ?: 1.0,
+                            ppi = dto.ppi ?: 109,
+                            hdrCertification = dto.hdrCertification ?: "HDR400",
+                        )
+                    }
+                    else -> Unit
+                }
+            }
+        }
 
         val rawItems = (cpuPairs.map { it.first } +
                 gpuPairs.map { it.first } +
@@ -913,7 +1200,13 @@ object HardwareMapper {
                 psuPairs.map { it.first } +
                 storagePairs.map { it.first } +
                 coolerPairs.map { it.first } +
-                casePairs.map { it.first })
+                casePairs.map { it.first } +
+                prebuiltPairs.map { it.first } +
+                laptopPairs.map { it.first } +
+                mousePairs.map { it.first } +
+                keyboardPairs.map { it.first } +
+                headsetPairs.map { it.first } +
+                monitorPairs.map { it.first })
             .distinctBy { it.id }
 
         val enrichedItems = rawItems.map { item ->
@@ -933,18 +1226,39 @@ object HardwareMapper {
                 ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
                 ?: existingImages[item.id]?.let { sanitizeImageUrl(it) }
 
+            val cleanCurrentTry = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(
+                priceData?.currentPriceTry ?: item.currentPriceTry
+            )
+            val cleanLowestTry = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(
+                priceData?.lowestPriceTry ?: item.lowestPriceTry
+            ) ?: cleanCurrentTry
+            val cleanHighestTry = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(
+                priceData?.highestPriceTry ?: item.highestPriceTry
+            ) ?: cleanCurrentTry
+            val cleanOffers = (priceData?.offers ?: item.offers)
+                ?.mapNotNull { offer ->
+                    val validPrice = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(offer.priceTry) ?: return@mapNotNull null
+                    val safeUrl = com.panda.myapplication.domain.util.SecurityUtils.validateStoreUrl(offer.url) ?: ""
+                    offer.copy(priceTry = validPrice, url = safeUrl)
+                }
+                ?.sortedBy { it.priceTry }
+            val cleanHistory = (priceData?.priceHistory ?: item.priceHistory)
+                ?.filter { com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(it.effectivePrice) != null }
+                ?.distinctBy { it.date.take(10) }
+                ?.sortedBy { it.date }
+
             item.copy(
                 cachedAt = syncedAt,
                 imageUrl = resolvedImage,
-                currentPriceTry = priceData?.currentPriceTry,
-                lowestPriceTry = priceData?.lowestPriceTry,
-                highestPriceTry = priceData?.highestPriceTry,
-                offers = priceData?.offers,
-                priceHistory = priceData?.priceHistory,
-                benchmarkScore = benchData?.score,
-                benchmarkTier = benchData?.tier,
-                benchmarkTestSuite = benchData?.testSuite,
-                benchmarkGamingIndex = benchData?.gamingIndex,
+                currentPriceTry = cleanCurrentTry ?: cleanOffers?.firstOrNull()?.priceTry,
+                lowestPriceTry = cleanLowestTry,
+                highestPriceTry = cleanHighestTry,
+                offers = cleanOffers,
+                priceHistory = cleanHistory,
+                benchmarkScore = benchData?.score ?: item.benchmarkScore,
+                benchmarkTier = benchData?.tier ?: item.benchmarkTier,
+                benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
+                benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
                 cpuSynthetic = benchData?.cpuSynthetic,
                 gpuSynthetic = benchData?.gpuSynthetic,
                 gameFps = benchData?.gameFps,
@@ -961,6 +1275,12 @@ object HardwareMapper {
             storages = storagePairs.map { it.second }.distinctBy { it.itemId },
             coolers = coolerPairs.map { it.second }.distinctBy { it.itemId },
             cases = casePairs.map { it.second }.distinctBy { it.itemId },
+            prebuilts = prebuiltPairs.map { it.second }.distinctBy { it.itemId },
+            laptops = laptopPairs.map { it.second }.distinctBy { it.itemId },
+            mice = mousePairs.map { it.second }.distinctBy { it.hardwareId },
+            keyboards = keyboardPairs.map { it.second }.distinctBy { it.hardwareId },
+            headsets = headsetPairs.map { it.second }.distinctBy { it.hardwareId },
+            monitors = monitorPairs.map { it.second }.distinctBy { it.hardwareId },
         )
     }
 
@@ -988,16 +1308,8 @@ object HardwareMapper {
         )
     }
 
-    fun sanitizeImageUrl(url: String?): String? {
-        if (url.isNullOrBlank()) return null
-        val trimmed = url.trim()
-        if (trimmed.startsWith("data:", ignoreCase = true)) return null
-        if (trimmed.contains(".svg", ignoreCase = true) || trimmed.contains("svg%20", ignoreCase = true)) return null
-        if (trimmed.contains("placeholder", ignoreCase = true) || trimmed.contains("blank.gif", ignoreCase = true)) return null
-        if (trimmed.contains("roundNew", ignoreCase = true) || trimmed.contains("logo_2020", ignoreCase = true)) return null
-        if (!trimmed.startsWith("http://") && !trimmed.startsWith("https://")) return null
-        return trimmed
-    }
+    fun sanitizeImageUrl(url: String?): String? =
+        com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(url)
 
     fun resolveDefaultHardwareImage(category: HardwareCategory, model: String, brand: String): String? {
         val upper = "${brand.uppercase()} ${model.uppercase()}"

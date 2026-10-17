@@ -13,7 +13,13 @@ import kotlin.time.Instant
 
 @Entity(
     tableName = "hardware_items",
-    indices = [Index(value = ["category"]), Index(value = ["cached_at"])],
+    indices = [
+        Index(value = ["category"]),
+        Index(value = ["brand"]),
+        Index(value = ["current_price_try"]),
+        Index(value = ["model"]),
+        Index(value = ["cached_at"]),
+    ],
 )
 data class HardwareItemEntity(
     @PrimaryKey val id: String,

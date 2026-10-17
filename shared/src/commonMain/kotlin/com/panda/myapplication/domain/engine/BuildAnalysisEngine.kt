@@ -1,11 +1,14 @@
 package com.panda.myapplication.domain.engine
 
+import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.BuildCompatibilityReport
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.GameCategory
+import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.PsuSpec
@@ -25,6 +28,7 @@ enum class BottleneckType {
     GPU_BOTTLENECK,
 }
 
+@Immutable
 data class WattageCockpitInfo(
     val componentTdpSum: Int,
     val peakTdpWithTolerance: Int,
@@ -33,18 +37,21 @@ data class WattageCockpitInfo(
     val isSufficient: Boolean,
 )
 
+@Immutable
 data class PlatformStatusBadge(
     val platformName: String,
     val isCompatible: Boolean,
     val statusText: String,
 )
 
+@Immutable
 data class BottleneckAnalysis(
     val percentage: Int,
     val type: BottleneckType,
     val message: String,
 )
 
+@Immutable
 data class ClearanceRadarResult(
     val gpuClearanceMm: Int?,
     val maxGpuLengthMm: Int?,
@@ -59,18 +66,23 @@ data class ClearanceRadarResult(
     val issueMessage: String?,
 )
 
+@Immutable
 data class GameFpsEstimate(
     val gameName: String,
     val fps: Int,
+    val low1PctFps: Int = (fps * 0.76).roundToInt(),
     val settings: String,
+    val isEsports: Boolean = false,
 )
 
+@Immutable
 data class SyntheticBenchmarkEstimate(
     val name: String,
     val score: Int,
     val unit: String,
 )
 
+@Immutable
 data class GamingSimulationResult(
     val resolution: ResolutionOption,
     val isReady: Boolean,
@@ -78,6 +90,7 @@ data class GamingSimulationResult(
     val synthetics: List<SyntheticBenchmarkEstimate>,
 )
 
+@Immutable
 data class AnalysisState(
     val build: ActiveBuild,
     val cockpitInfo: WattageCockpitInfo,
@@ -277,10 +290,12 @@ object BuildAnalysisEngine {
         build: ActiveBuild,
         resolution: ResolutionOption = ResolutionOption.P1440,
     ): GamingSimulationResult {
-        val cpu = build.cpu?.spec as? CpuSpec
-        val gpu = build.gpu?.spec as? GpuSpec
+        val cpuItem = build.cpu
+        val gpuItem = build.gpu
+        val cpu = cpuItem?.spec as? CpuSpec
+        val gpu = gpuItem?.spec as? GpuSpec
 
-        if (cpu == null || gpu == null) {
+        if (cpu == null || gpu == null || cpuItem == null || gpuItem == null) {
             return GamingSimulationResult(
                 resolution = resolution,
                 isReady = false,
@@ -289,47 +304,51 @@ object BuildAnalysisEngine {
             )
         }
 
-        // Base GPU power indexing (score normalized to 100)
+        // Base GPU power indexing
         val gpuTdp = gpu.tdp.watts.toDouble().coerceAtLeast(50.0)
         val gpuVramGb = (gpu.vram.megabytes.toDouble() / 1024.0).coerceAtLeast(4.0)
         val gpuClock = (gpu.boostClock?.mhz ?: gpu.coreClock.mhz).toDouble().coerceAtLeast(1200.0)
 
-        // Time Spy Graphics index roughly ~4000 to ~36000
-        val timeSpyScore = ((gpuTdp * 58.0) + (gpuVramGb * 850.0) + (gpuClock * 2.8)).roundToInt().coerceIn(3500, 39500)
+        val timeSpyScore = gpuItem.benchmarkInfo?.effectiveTimeSpy
+            ?: ((gpuTdp * 58.0) + (gpuVramGb * 850.0) + (gpuClock * 2.8)).roundToInt().coerceIn(3500, 39500)
 
-        // Cinebench R23 Multi-Core roughly ~5000 to ~40000
         val cpuClock = (cpu.boostClock?.mhz ?: cpu.baseClock.mhz).toDouble().coerceAtLeast(2000.0)
-        val cinebenchScore = (cpu.coreCount * (cpuClock / 1000.0) * 440.0).roundToInt().coerceIn(4000, 42000)
+        val cinebenchScore = cpuItem.benchmarkInfo?.effectiveMultiCore
+            ?: (cpu.coreCount * (cpuClock / 1000.0) * 440.0).roundToInt().coerceIn(4000, 42000)
 
-        // Resolution scaling multipliers for FPS
-        val (resMultiplierCyberpunk, resMultiplierWarzone, resMultiplierCs2) = when (resolution) {
-            ResolutionOption.P1080 -> Triple(1.00, 1.00, 1.00)
-            ResolutionOption.P1440 -> Triple(0.72, 0.76, 0.85)
-            ResolutionOption.P2160 -> Triple(0.42, 0.48, 0.62)
+        val gamingRes = when (resolution) {
+            ResolutionOption.P1080 -> GamingResolution.P1080
+            ResolutionOption.P1440 -> GamingResolution.P1440
+            ResolutionOption.P2160 -> GamingResolution.P4K
         }
 
-        // Estimated FPS at 1080p Ultra
-        val baseCyberpunkFps = ((timeSpyScore / 185.0) + (cpu.coreCount * 2.2)).coerceIn(28.0, 165.0)
-        val baseWarzoneFps = ((timeSpyScore / 145.0) + (cpu.coreCount * 3.5)).coerceIn(45.0, 240.0)
-        val baseCs2Fps = ((timeSpyScore / 95.0) + (cpu.coreCount * 12.0) + (cpuClock / 40.0)).coerceIn(120.0, 520.0)
+        // CPU influence factor (X3D cache / high clock boost particularly at 1080p & E-Sports)
+        val cpuScore = (cpuItem.benchmarkScore ?: 75).coerceIn(35, 100)
+        val x3dBonus = if ((cpu.l3CacheMb ?: 0) >= 64) 1.10 else 1.0
+        val cpuEsportsFactor = (((cpuScore / 82.0) * x3dBonus)).coerceIn(0.78, 1.18)
+        val cpuAaaFactor = (((cpuScore / 85.0) * (if (x3dBonus > 1.0) 1.04 else 1.0))).coerceIn(0.84, 1.10)
 
-        val games = listOf(
+        val gpuMatrix = BenchmarkEngine.resolveGameFpsForItem(gpuItem)
+            ?: BenchmarkEngine.buildFull12GameMatrix(ratio = (gpuItem.benchmarkScore ?: 75) / 100.0, isCpu = false)
+
+        val entries = gpuMatrix.toSimulationEntries()
+        val games = entries.map { entry ->
+            val factor = if (entry.category == GameCategory.ESPORTS) cpuEsportsFactor else cpuAaaFactor
+            val resDampenedFactor = when (resolution) {
+                ResolutionOption.P1080 -> factor
+                ResolutionOption.P1440 -> 1.0 + (factor - 1.0) * 0.65
+                ResolutionOption.P2160 -> 1.0 + (factor - 1.0) * 0.30
+            }
+            val avg = (entry.fps.avgFps(gamingRes) * resDampenedFactor).roundToInt().coerceAtLeast(18)
+            val low1 = (entry.fps.low1PctFps(gamingRes, x3dBonus > 1.0) * resDampenedFactor).roundToInt().coerceIn(12, avg - 2)
             GameFpsEstimate(
-                gameName = "Cyberpunk 2077",
-                fps = (baseCyberpunkFps * resMultiplierCyberpunk).roundToInt(),
-                settings = "Ultra + Ray Tracing",
-            ),
-            GameFpsEstimate(
-                gameName = "Call of Duty: Warzone",
-                fps = (baseWarzoneFps * resMultiplierWarzone).roundToInt(),
-                settings = "Competitive Max",
-            ),
-            GameFpsEstimate(
-                gameName = "Counter-Strike 2",
-                fps = (baseCs2Fps * resMultiplierCs2).roundToInt(),
-                settings = "Very High",
-            ),
-        )
+                gameName = entry.title,
+                fps = avg,
+                low1PctFps = low1,
+                settings = entry.presetSubtitle,
+                isEsports = entry.category == GameCategory.ESPORTS,
+            )
+        }
 
         val synthetics = listOf(
             SyntheticBenchmarkEstimate(

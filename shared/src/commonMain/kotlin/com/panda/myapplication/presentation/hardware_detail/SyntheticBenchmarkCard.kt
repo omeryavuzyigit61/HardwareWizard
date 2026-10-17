@@ -41,8 +41,12 @@ import com.panda.myapplication.domain.model.CpuSyntheticBenchmark
 import com.panda.myapplication.domain.model.GpuSyntheticBenchmark
 import com.panda.myapplication.domain.model.HardwareBenchmarkInfo
 import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
+import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
+import com.panda.myapplication.presentation.theme.NeonPurple
+import com.panda.myapplication.presentation.theme.NeonRose
 
 /**
  * Modern synthetic benchmark card adhering to CPU-Monkey / 3DMark standards.
@@ -68,16 +72,15 @@ fun SyntheticBenchmarkCard(
 
     var selectedCpuTab by remember { mutableIntStateOf(0) }
 
-    Card(
+    FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
+        accentColor = if (isCpu) ElectricBlue else NeonRose,
+        secondaryColor = NeonPurple,
         shape = RoundedCornerShape(Spacing.cardRadius),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        contentPadding = Spacing.medium,
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(Spacing.medium),
+            modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(Spacing.medium),
         ) {
             // Header Row: Dot Indicator + Title & Badges

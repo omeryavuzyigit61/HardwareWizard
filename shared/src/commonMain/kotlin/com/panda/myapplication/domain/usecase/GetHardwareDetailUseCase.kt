@@ -11,4 +11,12 @@ class GetHardwareDetailUseCase(
 ) {
     operator fun invoke(id: HardwareId): Flow<DomainResult<HardwareItem>> =
         repository.observeHardwareItem(id)
+
+    suspend fun setCustomPrice(id: HardwareId, customPriceTry: Double, note: String?) {
+        repository.setCustomPrice(id, customPriceTry, note)
+    }
+
+    suspend fun clearCustomPrice(id: HardwareId) {
+        repository.clearCustomPrice(id)
+    }
 }

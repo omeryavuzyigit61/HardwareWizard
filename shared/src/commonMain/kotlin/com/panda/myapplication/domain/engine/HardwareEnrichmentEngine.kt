@@ -7,8 +7,10 @@ import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.PcieGeneration
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -187,8 +189,71 @@ object HardwareEnrichmentEngine {
                 }
                 s.sidePanel?.let { badges.add(EngineeringBadge("Yan Panel", it)) }
             }
+
+            is PrebuiltSpec -> {
+                badges.add(EngineeringBadge("Satıcı / Mağaza", s.storeName, isHighlighted = true))
+                badges.add(EngineeringBadge("İşlemci", s.cpuModel))
+                badges.add(EngineeringBadge("Ekran Kartı", s.gpuModel, isHighlighted = true))
+                badges.add(EngineeringBadge("Anakart", s.motherboardModel))
+                badges.add(EngineeringBadge("Bellek (RAM)", s.ramSpec))
+                badges.add(EngineeringBadge("Depolama", s.storageSpec))
+                badges.add(EngineeringBadge("Kasa & Güç Kaynağı", s.psuCaseSpec))
+                if (s.priceAdvantageTry != null && s.priceAdvantageTry > 0.0) {
+                    badges.add(EngineeringBadge("Kâr / Fiyat Avantajı", "+${s.priceAdvantageTry.toLong()} ₺ (%${s.advantagePercent.toInt()})", isHighlighted = true))
+                }
+            }
+
+            is LaptopSpec -> {
+                badges.add(EngineeringBadge("Ekran Kartı TGP Gücü", s.gpuWattTgp, isHighlighted = true))
+                badges.add(EngineeringBadge("MUX & Optimus", s.muxSwitch, isHighlighted = true))
+                badges.add(EngineeringBadge("İşlemci", s.cpuModel))
+                badges.add(EngineeringBadge("Ekran Kartı", s.gpuModel))
+                badges.add(EngineeringBadge("Panel & Ekran", s.displaySpec, isHighlighted = true))
+                badges.add(EngineeringBadge("Bellek (RAM)", s.ramSpec))
+                badges.add(EngineeringBadge("Depolama", s.storageSpec))
+                badges.add(EngineeringBadge("Batarya", "${s.batteryWh} Wh"))
+                badges.add(EngineeringBadge("Ağırlık", "${s.weightGOrKgText()}"))
+                if (s.coolingTech.isNotBlank()) {
+                    badges.add(EngineeringBadge("Soğutma Mimarisi", s.coolingTech))
+                }
+            }
+
+            is com.panda.myapplication.domain.model.MouseSpec -> {
+                badges.add(EngineeringBadge("Optik Sensör", s.sensor, isHighlighted = true))
+                badges.add(EngineeringBadge("Raporlama Hızı", "${s.pollingRateHz} Hz", isHighlighted = s.pollingRateHz >= 4000))
+                badges.add(EngineeringBadge("Ağırlık", "${s.weightG}g Ultra-Hafif", isHighlighted = s.weightG <= 60))
+                badges.add(EngineeringBadge("Anahtar (Switch)", s.switchType))
+                badges.add(EngineeringBadge("Maks. Çözünürlük", "${s.maxDpi} DPI"))
+                badges.add(EngineeringBadge("Bağlantı", s.connectivity))
+            }
+
+            is com.panda.myapplication.domain.model.KeyboardSpec -> {
+                badges.add(EngineeringBadge("Anahtar Mimarisi", s.switchType, isHighlighted = true))
+                badges.add(EngineeringBadge("Rapid Trigger", if (s.rapidTriggerSupported) "Destekleniyor (${s.minActuationMm} mm)" else "Standart (${s.minActuationMm} mm)", isHighlighted = s.rapidTriggerSupported))
+                badges.add(EngineeringBadge("Raporlama Hızı", "${s.pollingRateHz} Hz"))
+                badges.add(EngineeringBadge("Form Faktörü", s.layout))
+                badges.add(EngineeringBadge("Hot-Swap", if (s.hotSwap) "Var" else "Sabit"))
+            }
+
+            is com.panda.myapplication.domain.model.HeadsetSpec -> {
+                badges.add(EngineeringBadge("Sürücü Mimarisi", "${s.driverSizeMm}mm ${s.driverType}", isHighlighted = true))
+                badges.add(EngineeringBadge("Empedans", "${s.impedanceOhm} Ω", isHighlighted = s.impedanceOhm >= 80))
+                badges.add(EngineeringBadge("DAC / Amfi", if (s.dacAmpRequired) "Harici DAC/Amfi Önerilir" else "Doğrudan Besleme", isHighlighted = s.dacAmpRequired))
+                badges.add(EngineeringBadge("Frekans Aralığı", s.frequencyResponse))
+                badges.add(EngineeringBadge("Ağırlık", "${s.weightG}g"))
+            }
+
+            is com.panda.myapplication.domain.model.MonitorSpec -> {
+                badges.add(EngineeringBadge("Panel Teknolojisi", s.panelType, isHighlighted = true))
+                badges.add(EngineeringBadge("Çözünürlük & Yenileme", "${s.resolution} @ ${s.refreshRateHz}Hz", isHighlighted = true))
+                badges.add(EngineeringBadge("Tepki Süresi", "${s.responseSpeedGtGMs} ms GtG"))
+                badges.add(EngineeringBadge("Piksel Yoğunluğu", "${s.ppi} PPI (${s.screenSizeInch}\")"))
+                badges.add(EngineeringBadge("HDR Standardı", s.hdrCertification))
+            }
         }
 
         return badges
     }
+
+    private fun LaptopSpec.weightGOrKgText(): String = "${weightKg} kg"
 }

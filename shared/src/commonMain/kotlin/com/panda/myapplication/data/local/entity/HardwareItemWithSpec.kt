@@ -14,6 +14,12 @@ data class HardwareItemWithSpec(
     @Relation(parentColumn = "id", entityColumn = "item_id") val storage: StorageSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "item_id") val cooler: CoolerSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "item_id") val case: CaseSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "item_id") val prebuilt: PrebuiltSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "item_id") val laptop: LaptopSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val mouse: MouseSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val keyboard: KeyboardSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val headset: HeadsetSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val monitor: MonitorSpecEntity? = null,
 )
 
 /** Write model for an atomic catalog sync. */
@@ -27,4 +33,10 @@ data class HardwareCatalogSnapshot(
     val storages: List<StorageSpecEntity> = emptyList(),
     val coolers: List<CoolerSpecEntity> = emptyList(),
     val cases: List<CaseSpecEntity> = emptyList(),
+    val prebuilts: List<PrebuiltSpecEntity> = emptyList(),
+    val laptops: List<LaptopSpecEntity> = emptyList(),
+    val mice: List<MouseSpecEntity> = emptyList(),
+    val keyboards: List<KeyboardSpecEntity> = emptyList(),
+    val headsets: List<HeadsetSpecEntity> = emptyList(),
+    val monitors: List<MonitorSpecEntity> = emptyList(),
 )

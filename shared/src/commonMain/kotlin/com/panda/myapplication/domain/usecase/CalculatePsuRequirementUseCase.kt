@@ -6,10 +6,12 @@ import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.PsuCalculationPolicy
 import com.panda.myapplication.domain.model.PsuRequirement
 import com.panda.myapplication.domain.model.PsuSpec
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
@@ -56,12 +58,22 @@ class CalculatePsuRequirementUseCase(
             CoolerType.AIR -> policy.airCoolerDraw.watts
             CoolerType.LIQUID -> policy.liquidCoolerDraw.watts
         }
-        is MotherboardSpec, is PsuSpec, is CaseSpec -> 0
+        is MotherboardSpec, is PsuSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
+        is com.panda.myapplication.domain.model.MouseSpec,
+        is com.panda.myapplication.domain.model.KeyboardSpec,
+        is com.panda.myapplication.domain.model.HeadsetSpec,
+        is com.panda.myapplication.domain.model.MonitorSpec,
+        -> 0
     }
 
     private fun HardwareItem.vendorRecommendedPsuWatts(): Int = when (val s = spec) {
         is GpuSpec -> s.recommendedPsu.watts
-        is CpuSpec, is RamSpec, is MotherboardSpec, is PsuSpec, is StorageSpec, is CoolerSpec, is CaseSpec -> 0
+        is CpuSpec, is RamSpec, is MotherboardSpec, is PsuSpec, is StorageSpec, is CoolerSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
+        is com.panda.myapplication.domain.model.MouseSpec,
+        is com.panda.myapplication.domain.model.KeyboardSpec,
+        is com.panda.myapplication.domain.model.HeadsetSpec,
+        is com.panda.myapplication.domain.model.MonitorSpec,
+        -> 0
     }
 
     private fun ceilDiv(value: Int, divisor: Int): Int = (value + divisor - 1) / divisor

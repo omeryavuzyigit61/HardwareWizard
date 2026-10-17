@@ -4,7 +4,11 @@ import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
@@ -142,6 +146,39 @@ object HardwareSearchEngine {
                 parts.add(s.type.displayName)
                 s.radiatorSizeMm?.let { parts.add("${it}mm") }
                 parts.addAll(s.supportedSockets)
+            }
+            is MouseSpec -> {
+                parts.add(s.sensor)
+                parts.add("${s.maxDpi}dpi")
+                parts.add("${s.pollingRateHz}hz")
+                parts.add("${s.weightG}g")
+                parts.add(s.switchType)
+                parts.add(s.connectivity)
+            }
+            is KeyboardSpec -> {
+                parts.add(s.switchType)
+                if (s.rapidTriggerSupported) parts.add("rapid trigger hall effect manyetik")
+                parts.add("${s.minActuationMm}mm")
+                parts.add("${s.pollingRateHz}hz")
+                parts.add(s.layout)
+                parts.add(s.connectivity)
+            }
+            is HeadsetSpec -> {
+                parts.add(s.driverType)
+                parts.add("${s.driverSizeMm}mm")
+                parts.add("${s.impedanceOhm}ohm")
+                parts.add(s.frequencyResponse)
+                parts.add(s.micType)
+                parts.add("${s.weightG}g")
+            }
+            is MonitorSpec -> {
+                parts.add(s.panelType)
+                parts.add("${s.screenSizeInch}inc")
+                parts.add(s.resolution)
+                parts.add("${s.refreshRateHz}hz")
+                parts.add("${s.responseSpeedGtGMs}ms")
+                parts.add("${s.ppi}ppi")
+                parts.add(s.hdrCertification)
             }
             else -> Unit
         }

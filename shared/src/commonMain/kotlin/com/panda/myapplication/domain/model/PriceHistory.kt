@@ -13,10 +13,13 @@ data class StoreOffer(
 
 @Serializable
 data class PricePoint(
-    val date: String,
+    val date: String = "",
+    val timestamp: String? = null,
     val price: Double = 0.0,
     val priceTry: Double? = null,
+    val storeName: String? = null,
 ) {
+    val effectiveDate: String get() = date.ifBlank { timestamp.orEmpty() }
     val effectivePrice: Double get() = if (price > 0.0) price else (priceTry ?: 0.0)
 }
 

@@ -13,17 +13,23 @@ import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -56,7 +62,9 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -84,11 +92,17 @@ import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HardwareSpec
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MemorySize
 import com.panda.myapplication.domain.model.Money
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
+import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -96,7 +110,10 @@ import com.panda.myapplication.domain.model.StorageInterface
 import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.Wattage
+import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
+import com.panda.myapplication.presentation.theme.NeonAmber
+import com.panda.myapplication.presentation.theme.NeonCyan
 import org.koin.compose.viewmodel.koinViewModel
 
 object Spacing {
@@ -113,8 +130,11 @@ fun HardwareListRoute(
     initialCategory: HardwareCategory? = null,
     viewModel: HardwareListViewModel = koinViewModel(),
     onItemClick: ((HardwareItem) -> Unit)? = null,
+    onNavigateToVsArena: (() -> Unit)? = null,
+    onOpenDrawer: (() -> Unit)? = null,
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val snackbarHostState = remember { androidx.compose.material3.SnackbarHostState() }
 
     LaunchedEffect(initialCategory) {
         if (initialCategory != null) {
@@ -129,7 +149,17 @@ fun HardwareListRoute(
                     onItemClick?.invoke(effect.item)
                 }
                 is HardwareListEffect.ShowToast -> {
-                    // One-off effect
+                    snackbarHostState.showSnackbar(message = effect.message)
+                }
+                is HardwareListEffect.ShowVsAddedToast -> {
+                    val result = snackbarHostState.showSnackbar(
+                        message = effect.message,
+                        actionLabel = if (onNavigateToVsArena != null) "Arenaya Git" else null,
+                        duration = androidx.compose.material3.SnackbarDuration.Short,
+                    )
+                    if (result == androidx.compose.material3.SnackbarResult.ActionPerformed) {
+                        onNavigateToVsArena?.invoke()
+                    }
                 }
             }
         }
@@ -140,6 +170,8 @@ fun HardwareListRoute(
         uiState = uiState,
         onEvent = viewModel::onEvent,
         onSearchQueryChange = viewModel::onSearchQueryChange,
+        onOpenDrawer = onOpenDrawer,
+        snackbarHostState = snackbarHostState,
     )
 }
 
@@ -150,8 +182,11 @@ fun HardwareListContent(
     onEvent: (HardwareListUiEvent) -> Unit,
     modifier: Modifier = Modifier,
     onSearchQueryChange: (String) -> Unit = { onEvent(HardwareListUiEvent.OnSearchQueryChanged(it)) },
+    onOpenDrawer: (() -> Unit)? = null,
+    snackbarHostState: androidx.compose.material3.SnackbarHostState = remember { androidx.compose.material3.SnackbarHostState() },
 ) {
     val listState = rememberLazyListState()
+    var priceDialogItem by remember { mutableStateOf<HardwareItem?>(null) }
 
     Scaffold(
         modifier = modifier
@@ -159,6 +194,10 @@ fun HardwareListContent(
             .imePadding()
             .background(MaterialTheme.colorScheme.background),
         containerColor = MaterialTheme.colorScheme.background,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
+        snackbarHost = {
+            androidx.compose.material3.SnackbarHost(hostState = snackbarHostState)
+        },
         topBar = {
             Column(
                 modifier = Modifier
@@ -171,25 +210,47 @@ fun HardwareListContent(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Column {
-                        Text(
-                            text = "HARDWARE WIZARD",
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Black,
-                            color = MaterialTheme.colorScheme.primary,
-                        )
-                        val subtitleText = when {
-                            uiState.isLoading && uiState.items.isEmpty() -> "Donanım kataloğu hazırlanıyor..."
-                            uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor"
-                            uiState.totalCount > 0 -> "${uiState.totalCount} donanım parçası listeleniyor"
-                            uiState.errorMessage != null -> "Katalog yüklenemedi"
-                            else -> "Donanım parçası bulunamadı"
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    ) {
+                        if (onOpenDrawer != null) {
+                            Surface(
+                                onClick = onOpenDrawer,
+                                shape = RoundedCornerShape(10.dp),
+                                color = MaterialTheme.colorScheme.surface,
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
+                            ) {
+                                Text(
+                                    text = "☰",
+                                    modifier = Modifier.padding(horizontal = 11.dp, vertical = 6.dp),
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Black,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                            }
                         }
-                        Text(
-                            text = subtitleText,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+
+                        Column {
+                            Text(
+                                text = "HARDWARE WIZARD",
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Black,
+                                color = MaterialTheme.colorScheme.primary,
+                            )
+                            val subtitleText = when {
+                                uiState.isLoading && uiState.items.isEmpty() -> "Donanım kataloğu hazırlanıyor..."
+                                uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor"
+                                uiState.totalCount > 0 -> "${uiState.totalCount} donanım parçası listeleniyor"
+                                uiState.errorMessage != null -> "Katalog yüklenemedi"
+                                else -> "Donanım parçası bulunamadı"
+                            }
+                            Text(
+                                text = subtitleText,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
                     }
 
                     if (uiState.isLoading) {
@@ -203,9 +264,19 @@ fun HardwareListContent(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
 
+                var localSearchQuery by remember { mutableStateOf(uiState.searchQuery) }
+                LaunchedEffect(uiState.searchQuery) {
+                    if (uiState.searchQuery.isEmpty() && localSearchQuery.isNotEmpty()) {
+                        localSearchQuery = ""
+                    }
+                }
+
                 OutlinedTextField(
-                    value = uiState.searchQuery,
-                    onValueChange = onSearchQueryChange,
+                    value = localSearchQuery,
+                    onValueChange = {
+                        localSearchQuery = it
+                        onSearchQueryChange(it)
+                    },
                     modifier = Modifier.fillMaxWidth(),
                     placeholder = {
                         Text(
@@ -227,6 +298,50 @@ fun HardwareListContent(
                 )
 
                 Spacer(modifier = Modifier.height(Spacing.small))
+
+                // Segmented Tab: [ Bireysel | Çevre Birimi | OEM Sistem | Laptop ]
+                val currentMode = uiState.segmentMode
+                Surface(
+                    shape = RoundedCornerShape(Spacing.small),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = Spacing.small),
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(3.dp),
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        val tabs = listOf(
+                            CatalogSegmentMode.INDIVIDUAL to "Bireysel",
+                            CatalogSegmentMode.PERIPHERALS to "Çevre Birimi",
+                            CatalogSegmentMode.PREBUILT to "OEM Sistem",
+                            CatalogSegmentMode.LAPTOP to "Laptop",
+                        )
+                        tabs.forEach { (mode, title) ->
+                            val isSelected = currentMode == mode
+                            Surface(
+                                onClick = {
+                                    onEvent(HardwareListUiEvent.OnSegmentModeSelected(mode))
+                                },
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isSelected) MaterialTheme.colorScheme.primary else Color.Transparent,
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Text(
+                                    text = title,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(vertical = 8.dp, horizontal = 2.dp),
+                                    maxLines = 1,
+                                    softWrap = false,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+                        }
+                    }
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -262,12 +377,35 @@ fun HardwareListContent(
                         }
                     }
 
-                    // Category Chips
-                    CategoryFilterChips(
-                        selectedCategory = uiState.selectedCategory,
-                        onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
-                        modifier = Modifier.weight(1f),
-                    )
+                    // Category Chips (in Bireysel or Çevre Birimi mode) or Brand/Store Chips (in OEM / Laptop mode)
+                    when (currentMode) {
+                        CatalogSegmentMode.INDIVIDUAL -> CategoryFilterChips(
+                            selectedCategory = uiState.selectedCategory,
+                            onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
+                            modifier = Modifier.weight(1f),
+                        )
+                        CatalogSegmentMode.PERIPHERALS -> PeripheralCategoryChips(
+                            selectedCategory = uiState.selectedCategory,
+                            onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
+                            modifier = Modifier.weight(1f),
+                        )
+                        CatalogSegmentMode.PREBUILT, CatalogSegmentMode.LAPTOP -> BrandFilterChips(
+                            availableBrands = uiState.availableBrands,
+                            selectedBrands = uiState.filters.selectedBrands,
+                            onBrandToggled = { brand ->
+                                val updated = if (uiState.filters.selectedBrands.contains(brand)) {
+                                    uiState.filters.selectedBrands - brand
+                                } else {
+                                    uiState.filters.selectedBrands + brand
+                                }
+                                onEvent(HardwareListUiEvent.OnFiltersChanged(uiState.filters.copy(selectedBrands = updated)))
+                            },
+                            onClearBrands = {
+                                onEvent(HardwareListUiEvent.OnFiltersChanged(uiState.filters.copy(selectedBrands = emptySet())))
+                            },
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
                 }
             }
         },
@@ -386,12 +524,29 @@ fun HardwareListContent(
                             HardwareCard(
                                 item = item,
                                 onClick = { onEvent(HardwareListUiEvent.OnHardwareItemClicked(item)) },
+                                onAddToVsClick = { onEvent(HardwareListUiEvent.OnAddToVsArena(item)) },
+                                onPriceOverrideClick = { priceDialogItem = item },
                             )
                         }
                     }
                 }
             }
         }
+    }
+
+    priceDialogItem?.let { dialogItem ->
+        PriceOverrideDialog(
+            item = dialogItem,
+            onDismiss = { priceDialogItem = null },
+            onSaveCustomPrice = { customPrice, note ->
+                onEvent(HardwareListUiEvent.OnSaveCustomPrice(dialogItem.id, customPrice, note))
+                priceDialogItem = null
+            },
+            onClearCustomPrice = {
+                onEvent(HardwareListUiEvent.OnClearCustomPrice(dialogItem.id))
+                priceDialogItem = null
+            },
+        )
     }
 
     if (uiState.isFilterSheetVisible) {
@@ -451,10 +606,105 @@ fun CategoryFilterChips(
 }
 
 @Composable
+fun PeripheralCategoryChips(
+    selectedCategory: HardwareCategory?,
+    onCategorySelected: (HardwareCategory?) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val categories: List<Pair<HardwareCategory?, String>> = listOf(
+        null to "Tümü",
+        HardwareCategory.MONITOR to "🖥️ Monitör",
+        HardwareCategory.MOUSE to "🖱️ Mouse",
+        HardwareCategory.KEYBOARD to "⌨️ Klavye",
+        HardwareCategory.HEADSET to "🎧 Kulaklık",
+    )
+
+    Row(
+        modifier = modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+    ) {
+        categories.forEach { (cat, label) ->
+            val isSelected = selectedCategory == cat
+            FilterChip(
+                selected = isSelected,
+                onClick = { onCategorySelected(cat) },
+                label = { Text(text = label, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold) },
+                shape = RoundedCornerShape(Spacing.small),
+                colors = FilterChipDefaults.filterChipColors(
+                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                ),
+                border = BorderStroke(
+                    1.dp,
+                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                ),
+            )
+        }
+    }
+}
+
+@Composable
+fun BrandFilterChips(
+    availableBrands: List<String>,
+    selectedBrands: Set<String>,
+    onBrandToggled: (String) -> Unit,
+    onClearBrands: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+    ) {
+        val isAllSelected = selectedBrands.isEmpty()
+        FilterChip(
+            selected = isAllSelected,
+            onClick = onClearBrands,
+            label = { Text(text = "Tümü", style = MaterialTheme.typography.labelMedium) },
+            shape = RoundedCornerShape(Spacing.small),
+            colors = FilterChipDefaults.filterChipColors(
+                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                containerColor = MaterialTheme.colorScheme.surface,
+                labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            ),
+            border = BorderStroke(
+                1.dp,
+                if (isAllSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+            ),
+        )
+
+        availableBrands.forEach { brand ->
+            val isSelected = selectedBrands.contains(brand)
+            FilterChip(
+                selected = isSelected,
+                onClick = { onBrandToggled(brand) },
+                label = { Text(text = brand, style = MaterialTheme.typography.labelMedium) },
+                shape = RoundedCornerShape(Spacing.small),
+                colors = FilterChipDefaults.filterChipColors(
+                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                ),
+                border = BorderStroke(
+                    1.dp,
+                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                ),
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
 fun HardwareCard(
     item: HardwareItem,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    onAddToVsClick: (() -> Unit)? = null,
+    onPriceOverrideClick: (() -> Unit)? = null,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
@@ -468,69 +718,282 @@ fun HardwareCard(
             .scale(scale),
         shape = RoundedCornerShape(Spacing.cardRadius),
         color = MaterialTheme.colorScheme.surface,
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        border = BorderStroke(
+            1.dp,
+            if (item.isCustomPrice) NeonAmber.copy(alpha = 0.65f) else MaterialTheme.colorScheme.outline,
+        ),
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(Spacing.medium),
+                .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
+            // 1. SOL BLOK (Görsel - 72x72dp Sabit)
             HardwareThumbnail(
                 imageUrl = item.effectiveImageUrl,
                 category = item.category,
                 displayName = item.displayName,
             )
-            Spacer(modifier = Modifier.width(Spacing.medium))
 
+            // 2. ORTA BLOK (Esnek Başlık, Rozetler & Alt Detay - weight(1f), minWidth: 0dp)
             Column(
-                modifier = Modifier.weight(1f),
+                modifier = Modifier
+                    .weight(1f)
+                    .widthIn(min = 0.dp)
+                    .padding(horizontal = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        CategoryBadge(category = item.category)
-                        Spacer(modifier = Modifier.width(Spacing.small))
-                        Text(
-                            text = item.brand,
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+                    CategoryBadge(category = item.category)
+                    if (item.isCustomPrice) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(4.dp))
+                                .background(NeonAmber.copy(alpha = 0.2f))
+                                .padding(horizontal = 5.dp, vertical = 1.dp),
+                        ) {
+                            Text(
+                                text = "Özel Fiyat",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonAmber,
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
                     }
-
-                    val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
                     Text(
-                        text = priceText,
-                        style = if (item.currentPriceTry != null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelSmall,
-                        fontWeight = if (item.currentPriceTry != null) FontWeight.Black else FontWeight.Normal,
-                        color = if (item.currentPriceTry != null) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                        text = item.brand,
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        softWrap = false,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f, fill = false),
                     )
                 }
 
-                Spacer(modifier = Modifier.height(Spacing.small))
-
                 Text(
                     text = item.displayName,
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-
-                Spacer(modifier = Modifier.height(Spacing.extraSmall))
-
-                Text(
-                    text = formatSpecSummary(item.spec),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
+
+                when (val spec = item.spec) {
+                    is PrebuiltSpec -> {
+                        if ((spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) ||
+                            (spec.estimatedSeparatePriceTry != null && spec.estimatedSeparatePriceTry > 0.0)
+                        ) {
+                            FlowRow(
+                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                verticalArrangement = Arrangement.spacedBy(4.dp),
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                if (spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) {
+                                    val isAdv = spec.isAdvantageous
+                                    val pillBg = if (isAdv) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.secondaryContainer
+                                    val pillText = if (isAdv) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSecondaryContainer
+                                    Box(
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(6.dp))
+                                            .background(pillBg)
+                                            .padding(horizontal = 6.dp, vertical = 2.dp),
+                                    ) {
+                                        Text(
+                                            text = "+${spec.priceAdvantageTry.toLong()} ₺ Kâr",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontWeight = FontWeight.Black,
+                                            color = pillText,
+                                            softWrap = false,
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis,
+                                        )
+                                    }
+                                }
+                                if (spec.estimatedSeparatePriceTry != null && spec.estimatedSeparatePriceTry > 0.0) {
+                                    Text(
+                                        text = "Ayrı: ${spec.estimatedSeparatePriceTry.toLong()} ₺",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        softWrap = false,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                }
+                            }
+                        }
+                        Text(
+                            text = "${spec.cpuModel} • ${spec.gpuModel} • ${spec.ramSpec}",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                    is LaptopSpec -> {
+                        FlowRow(
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            verticalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            if (spec.gpuWattTgp.isNotBlank()) {
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(6.dp))
+                                        .background(MaterialTheme.colorScheme.tertiaryContainer)
+                                        .padding(horizontal = 6.dp, vertical = 2.dp),
+                                ) {
+                                    Text(
+                                        text = spec.gpuWattTgp,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onTertiaryContainer,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                }
+                            }
+                            if (spec.muxSwitch.isNotBlank()) {
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(6.dp))
+                                        .background(MaterialTheme.colorScheme.secondaryContainer)
+                                        .padding(horizontal = 6.dp, vertical = 2.dp),
+                                ) {
+                                    Text(
+                                        text = spec.muxSwitch,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontWeight = FontWeight.Medium,
+                                        color = MaterialTheme.colorScheme.onSecondaryContainer,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                }
+                            }
+                        }
+                        Text(
+                            text = "${spec.cpuModel} • ${spec.displaySpec}",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                    else -> {
+                        Text(
+                            text = formatSpecSummary(item.spec),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+            }
+
+            // 3. SAĞ BLOK (Fiyat ve Aksiyon - minWidth: 96dp, wrapContentWidth(Alignment.End))
+            Column(
+                modifier = Modifier
+                    .widthIn(min = 96.dp)
+                    .wrapContentWidth(Alignment.End),
+                horizontalAlignment = Alignment.End,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                if (item.currentPriceTry != null) {
+                    val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                    Text(
+                        text = priceText,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Black,
+                        color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
+                        softWrap = false,
+                        maxLines = 1,
+                        overflow = TextOverflow.Clip,
+                        textAlign = TextAlign.End,
+                    )
+                } else if (onPriceOverrideClick != null) {
+                    Surface(
+                        onClick = onPriceOverrideClick,
+                        shape = RoundedCornerShape(6.dp),
+                        color = NeonAmber.copy(alpha = 0.16f),
+                        border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.65f)),
+                    ) {
+                        Text(
+                            text = "🏷️ Fiyat Gir",
+                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonAmber,
+                            maxLines = 1,
+                            softWrap = false,
+                        )
+                    }
+                } else {
+                    Text(
+                        text = "Fiyat Yok",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        softWrap = false,
+                        maxLines = 1,
+                        overflow = TextOverflow.Clip,
+                        textAlign = TextAlign.End,
+                    )
+                }
+
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    if (onPriceOverrideClick != null && item.currentPriceTry != null) {
+                        Surface(
+                            onClick = onPriceOverrideClick,
+                            shape = RoundedCornerShape(6.dp),
+                            color = if (item.isCustomPrice) NeonAmber.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.65f),
+                            border = BorderStroke(
+                                1.dp,
+                                if (item.isCustomPrice) NeonAmber.copy(alpha = 0.7f) else MaterialTheme.colorScheme.outlineVariant,
+                            ),
+                        ) {
+                            Text(
+                                text = "✎",
+                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 3.dp),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
+                    }
+
+                    if (onAddToVsClick != null) {
+                        Surface(
+                            onClick = onAddToVsClick,
+                            shape = RoundedCornerShape(6.dp),
+                            color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.75f),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.55f)),
+                        ) {
+                            Text(
+                                text = "+ VS",
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.ExtraBold,
+                                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
+                    }
+                }
             }
         }
     }
@@ -545,11 +1008,11 @@ fun HardwareThumbnail(
 ) {
     val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
     val borderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
-    val shape = RoundedCornerShape(12.dp)
+    val shape = RoundedCornerShape(8.dp)
 
     Box(
         modifier = modifier
-            .size(76.dp)
+            .size(72.dp)
             .clip(shape)
             .background(containerBg)
             .border(1.dp, borderColor, shape)
@@ -595,6 +1058,12 @@ fun HardwarePlaceholderBadge(
         HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.PREBUILT_PC -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.LAPTOP -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MOUSE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
     Box(
         modifier = modifier
@@ -604,7 +1073,15 @@ fun HardwarePlaceholderBadge(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = category.name,
+            text = when (category) {
+                HardwareCategory.PREBUILT_PC -> "OEM PC"
+                HardwareCategory.LAPTOP -> "LAPTOP"
+                HardwareCategory.MOUSE -> "MOUSE"
+                HardwareCategory.KEYBOARD -> "KLAVYE"
+                HardwareCategory.HEADSET -> "KULAKLIK"
+                HardwareCategory.MONITOR -> "MONİTÖR"
+                else -> category.name
+            },
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Black,
             color = badgeText,
@@ -624,6 +1101,12 @@ fun CategoryBadge(category: HardwareCategory) {
         HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.PREBUILT_PC -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.LAPTOP -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MOUSE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
 
     Box(
@@ -633,7 +1116,15 @@ fun CategoryBadge(category: HardwareCategory) {
             .padding(horizontal = 6.dp, vertical = 2.dp),
     ) {
         Text(
-            text = category.name,
+            text = when (category) {
+                HardwareCategory.PREBUILT_PC -> "OEM Sistem"
+                HardwareCategory.LAPTOP -> "Laptop"
+                HardwareCategory.MOUSE -> "Mouse"
+                HardwareCategory.KEYBOARD -> "Klavye"
+                HardwareCategory.HEADSET -> "Kulaklık"
+                HardwareCategory.MONITOR -> "Monitör"
+                else -> category.name
+            },
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Bold,
             color = badgeText,
@@ -663,6 +1154,7 @@ fun HardwareFilterBottomSheet(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .navigationBarsPadding()
                 .padding(horizontal = Spacing.medium, vertical = Spacing.small)
                 .verticalScroll(rememberScrollState()),
         ) {
@@ -1187,8 +1679,19 @@ private fun formatSpecSummary(spec: HardwareSpec): String = when (spec) {
     is MotherboardSpec -> "${spec.socket} • ${spec.chipset} • ${spec.formFactor.name} • ${spec.memoryGeneration}"
     is PsuSpec -> "${spec.wattage.watts}W • ${spec.efficiency.name} • ${if (spec.isAtx3Compliant) "ATX 3.0" else "ATX"}"
     is StorageSpec -> "${spec.mediaType.name} • ${spec.capacity.megabytes / 1024}GB • ${spec.sequentialReadMbps}MB/s Okuma"
-    is CoolerSpec -> "${spec.type.name} • Max TDP: ${spec.maxCoolingTdp.watts}W"
-    is CaseSpec -> "${spec.type} • GPU: ${spec.maxGpuLengthMm}mm • Radyatör: ${spec.maxRadiatorSizeMm}mm"
+    is CoolerSpec -> "${spec.type.displayName} • Max TDP: ${spec.maxCoolingTdp.watts}W"
+    is CaseSpec -> listOfNotNull(
+        spec.type ?: "Mid Tower",
+        spec.maxGpuLengthMm?.let { "GPU: ${it}mm" },
+        spec.maxRadiatorSizeMm?.let { "Radyatör: ${it}mm" },
+        spec.sidePanel,
+    ).joinToString(" • ")
+    is PrebuiltSpec -> "${spec.cpuModel} • ${spec.gpuModel} • ${spec.ramSpec} • ${spec.storageSpec}"
+    is LaptopSpec -> "${spec.gpuModel} (${spec.gpuWattTgp}) • ${spec.muxSwitch} • ${spec.displaySpec}"
+    is MouseSpec -> "${spec.sensor} • ${spec.pollingRateHz}Hz • ${spec.weightG}g • ${spec.switchType}"
+    is KeyboardSpec -> "${spec.switchType} • ${if (spec.rapidTriggerSupported) "Rapid Trigger (${spec.minActuationMm}mm)" else "${spec.minActuationMm}mm"} • ${spec.layout}"
+    is HeadsetSpec -> "${spec.driverType} (${spec.driverSizeMm}mm) • ${spec.impedanceOhm}Ω • ${spec.weightG}g"
+    is MonitorSpec -> "${spec.screenSizeInch}\" ${spec.panelType} • ${spec.resolution} • ${spec.refreshRateHz}Hz (${spec.responseSpeedGtGMs}ms)"
 }
 
 // region Previews

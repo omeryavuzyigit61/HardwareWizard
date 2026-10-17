@@ -1,21 +1,55 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# ==============================================================================
+# HardwareWizard — Production R8 / ProGuard Configuration
+# ==============================================================================
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Kotlinx Serialization
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.AnnotationsKt
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepclassmembers class kotlinx.serialization.json.** {
+    *** Companion;
+}
+-keepclasseswithmembers class kotlinx.serialization.json.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-keep,includedescriptorclasses class com.panda.myapplication.**$$serializer { *; }
+-keepclassmembers class com.panda.myapplication.** {
+    *** Companion;
+}
+-keepclasseswithmembers class com.panda.myapplication.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
+
+# Keep DTOs and Domain serializable models intact for kotlinx.serialization
+-keep @kotlinx.serialization.Serializable class com.panda.myapplication.** { *; }
+
+# Room Database & SQLite Bundled Driver
+-keep class * extends androidx.room.RoomDatabase { *; }
+-keep @androidx.room.Entity class com.panda.myapplication.** { *; }
+-keep @androidx.room.Dao interface com.panda.myapplication.** { *; }
+-keep class com.panda.myapplication.data.local.**_Impl { *; }
+-keep class androidx.sqlite.driver.bundled.** { *; }
+-dontwarn androidx.sqlite.driver.bundled.**
+
+# Ktor Client & OkHttp Engine
+-keep class io.ktor.** { *; }
+-dontwarn io.ktor.**
+-dontwarn okhttp3.**
+-dontwarn okio.**
+
+# Koin DI
+-keep class org.koin.** { *; }
+-dontwarn org.koin.**
+
+# Coil 3 Image Loader
+-dontwarn coil3.**
+
+# Kotlin Coroutines
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-dontwarn kotlinx.coroutines.**
+
+# Preserve source file names and line numbers for crash stacktraces without leaking paths
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable

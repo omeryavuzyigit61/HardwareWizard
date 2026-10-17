@@ -14,4 +14,13 @@ enum class HardwareCategory(val displayName: String) {
     STORAGE("Depolama (SSD/HDD)"),
     COOLER("İşlemci Soğutucu"),
     CASE("Kasa"),
+    PREBUILT_PC("OEM Hazır Sistem"),
+    LAPTOP("Gaming Laptop"),
+    MOUSE("Oyuncu Faresi"),
+    KEYBOARD("Oyuncu Klavyesi"),
+    HEADSET("Oyuncu Kulaklığı"),
+    MONITOR("Oyuncu Monitörü");
+
+    val isPeripheral: Boolean
+        get() = this == MOUSE || this == KEYBOARD || this == HEADSET || this == MONITOR
 }

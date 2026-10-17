@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.model.PricePoint
+import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.CardSurface
 import com.panda.myapplication.presentation.theme.CardSurfaceElevated
@@ -60,6 +61,7 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.theme.SlateDarkBackground
+import com.panda.myapplication.presentation.util.formatPrice
 import kotlin.math.roundToInt
 
 enum class PriceChartRange(val label: String, val maxPoints: Int) {
@@ -79,35 +81,54 @@ fun PriceHistoryCard(
 ) {
     var selectedRange by remember { mutableStateOf(PriceChartRange.ALL) }
 
-    val filteredPoints = remember(priceHistory, selectedRange) {
-        if (priceHistory.isEmpty()) {
-            emptyList()
+    val effectivePoints = remember(priceHistory, currentPriceTry) {
+        if (priceHistory.isNotEmpty()) {
+            priceHistory
+        } else if (currentPriceTry != null && currentPriceTry > 0) {
+            listOf(
+                PricePoint(
+                    date = "Bugün",
+                    timestamp = "Bugün",
+                    price = currentPriceTry,
+                    priceTry = currentPriceTry,
+                    storeName = "En Ucuz",
+                ),
+            )
         } else {
-            val count = selectedRange.maxPoints.coerceAtLeast(2)
-            if (priceHistory.size <= count) priceHistory else priceHistory.takeLast(count)
+            emptyList()
         }
     }
 
-    val current = currentPriceTry ?: filteredPoints.lastOrNull()?.price ?: 0.0
-    val lowest = lowestPriceTry ?: filteredPoints.minOfOrNull { it.price } ?: current
-    val highest = highestPriceTry ?: filteredPoints.maxOfOrNull { it.price } ?: current
+    val filteredPoints = remember(effectivePoints, selectedRange) {
+        if (effectivePoints.isEmpty()) {
+            emptyList()
+        } else {
+            val count = selectedRange.maxPoints.coerceAtLeast(1)
+            if (effectivePoints.size <= count) effectivePoints else effectivePoints.takeLast(count)
+        }
+    }
+
+    val current = currentPriceTry ?: filteredPoints.lastOrNull()?.effectivePrice ?: 0.0
+    val lowest = lowestPriceTry ?: filteredPoints.minOfOrNull { it.effectivePrice } ?: current
+    val highest = highestPriceTry ?: filteredPoints.maxOfOrNull { it.effectivePrice } ?: current
 
     // Calculate percentage change over the selected range
     val changePercent = remember(filteredPoints) {
         if (filteredPoints.size >= 2) {
-            val first = filteredPoints.first().price
-            val last = filteredPoints.last().price
+            val first = filteredPoints.first().effectivePrice
+            val last = filteredPoints.last().effectivePrice
             if (first > 0) ((last - first) / first) * 100.0 else 0.0
         } else 0.0
     }
 
-    Card(
+    val trendColor = if (changePercent <= 0) NeonEmerald else NeonRose
+    FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurface),
-        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
+        accentColor = NeonCyan,
+        secondaryColor = trendColor,
+        contentPadding = Spacing.medium,
     ) {
-        Column(modifier = Modifier.padding(Spacing.medium)) {
+        Column {
             // Header: Title and Market Analysis Badge
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -131,11 +152,23 @@ fun PriceHistoryCard(
                     )
                 }
 
-                val isPriceDown = changePercent <= 0
-                val badgeColor = if (isPriceDown) NeonEmerald else NeonRose
+                val badgeColor = when {
+                    changePercent < -0.01 -> NeonEmerald
+                    changePercent > 0.01 -> NeonRose
+                    else -> NeonCyan
+                }
                 val badgeBg = badgeColor.copy(alpha = 0.12f)
-                val sign = if (changePercent > 0) "+" else ""
-                val trendText = if (isPriceDown) "Düşüşte" else "Yükselişte"
+                val trendText = when {
+                    changePercent < -0.01 -> "Düşüşte"
+                    changePercent > 0.01 -> "Yükselişte"
+                    else -> "Referans Fiyat"
+                }
+                val sign = if (changePercent > 0.01) "+" else ""
+                val badgeText = if (filteredPoints.size >= 2) {
+                    "$sign${changePercent.formatOneDecimal()}% ($trendText)"
+                } else {
+                    "En Düşük: ₺${current.formatPrice()}"
+                }
 
                 Surface(
                     shape = RoundedCornerShape(12.dp),
@@ -143,7 +176,7 @@ fun PriceHistoryCard(
                     border = BorderStroke(1.dp, badgeColor),
                 ) {
                     Text(
-                        text = "$sign${changePercent.formatOneDecimal()}% ($trendText)",
+                        text = badgeText,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = badgeColor,
@@ -242,7 +275,7 @@ fun PriceHistoryCard(
             Spacer(modifier = Modifier.height(Spacing.medium))
 
             // Neon Chart Canvas
-            if (filteredPoints.size < 2) {
+            if (filteredPoints.isEmpty()) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -293,8 +326,8 @@ fun PriceHistoryChart(
         )
     }
 
-    val minPrice = remember(points) { points.minOf { it.price } }
-    val maxPrice = remember(points) { points.maxOf { it.price } }
+    val minPrice = remember(points) { points.minOf { it.effectivePrice } }
+    val maxPrice = remember(points) { points.maxOf { it.effectivePrice } }
     val priceDelta = remember(minPrice, maxPrice) { (maxPrice - minPrice).coerceAtLeast(100.0) }
 
     Box(modifier = modifier) {
@@ -303,19 +336,27 @@ fun PriceHistoryChart(
                 .matchParentSize()
                 .pointerInput(points) {
                     detectTapGestures { offset ->
-                        val stepX = (size.width - 40.dp.toPx()) / (points.size - 1).coerceAtLeast(1)
-                        val touchX = (offset.x - 20.dp.toPx()).coerceIn(0f, size.width - 40.dp.toPx())
-                        val index = (touchX / stepX).roundToInt().coerceIn(0, points.lastIndex)
-                        selectedIndex = index
+                        if (points.size > 1) {
+                            val stepX = (size.width - 40.dp.toPx()) / (points.size - 1)
+                            val touchX = (offset.x - 20.dp.toPx()).coerceIn(0f, size.width - 40.dp.toPx())
+                            val index = (touchX / stepX).roundToInt().coerceIn(0, points.lastIndex)
+                            selectedIndex = index
+                        } else {
+                            selectedIndex = 0
+                        }
                     }
                 }
                 .pointerInput(points) {
                     detectDragGestures { change, _ ->
                         change.consume()
-                        val stepX = (size.width - 40.dp.toPx()) / (points.size - 1).coerceAtLeast(1)
-                        val touchX = (change.position.x - 20.dp.toPx()).coerceIn(0f, size.width - 40.dp.toPx())
-                        val index = (touchX / stepX).roundToInt().coerceIn(0, points.lastIndex)
-                        selectedIndex = index
+                        if (points.size > 1) {
+                            val stepX = (size.width - 40.dp.toPx()) / (points.size - 1)
+                            val touchX = (change.position.x - 20.dp.toPx()).coerceIn(0f, size.width - 40.dp.toPx())
+                            val index = (touchX / stepX).roundToInt().coerceIn(0, points.lastIndex)
+                            selectedIndex = index
+                        } else {
+                            selectedIndex = 0
+                        }
                     }
                 },
         ) {
@@ -342,21 +383,61 @@ fun PriceHistoryChart(
             }
 
             // 2. Compute Point Coordinates
-            val stepX = usableWidth / (points.size - 1).coerceAtLeast(1)
+            val isSinglePoint = points.size == 1
+            val stepX = if (isSinglePoint) 0f else usableWidth / (points.size - 1)
             val currentProgress = animProgress.value
 
-            val coords = points.mapIndexed { index, point ->
-                val normY = ((point.price - minPrice) / priceDelta).toFloat()
-                val targetY = height - padBottom - (normY * usableHeight)
-                // Animate Y position rising from baseline
+            val coords = if (isSinglePoint) {
+                val targetY = padTop + (usableHeight / 2f)
                 val animatedY = height - padBottom - ((height - padBottom - targetY) * currentProgress)
-                Offset(
-                    x = padX + (index * stepX),
-                    y = animatedY,
-                )
+                listOf(Offset(width / 2f, animatedY))
+            } else {
+                points.mapIndexed { index, point ->
+                    val normY = if (maxPrice > minPrice) {
+                        ((point.effectivePrice - minPrice) / priceDelta).toFloat()
+                    } else {
+                        0.5f
+                    }
+                    val targetY = height - padBottom - (normY * usableHeight)
+                    val animatedY = height - padBottom - ((height - padBottom - targetY) * currentProgress)
+                    Offset(
+                        x = padX + (index * stepX),
+                        y = animatedY,
+                    )
+                }
             }
 
-            if (coords.size >= 2) {
+            if (isSinglePoint) {
+                val pointY = coords[0].y
+                // Gradient Fill Under Reference Line
+                val fillPath = Path().apply {
+                    moveTo(padX, pointY)
+                    lineTo(width - padX, pointY)
+                    lineTo(width - padX, height - padBottom)
+                    lineTo(padX, height - padBottom)
+                    close()
+                }
+                drawPath(
+                    path = fillPath,
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            NeonCyan.copy(alpha = 0.28f),
+                            NeonCyan.copy(alpha = 0.06f),
+                            Color.Transparent,
+                        ),
+                        startY = pointY,
+                        endY = height - padBottom,
+                    ),
+                )
+                // Clean Straight Neon Reference Line
+                drawLine(
+                    color = NeonCyan,
+                    start = Offset(padX, pointY),
+                    end = Offset(width - padX, pointY),
+                    strokeWidth = 3.dp.toPx(),
+                    cap = StrokeCap.Round,
+                )
+            } else if (coords.size >= 2) {
                 // 3. Smooth Cubic Spline Path
                 val strokePath = Path()
                 val fillPath = Path()
@@ -469,14 +550,22 @@ fun PriceHistoryChart(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = activePoint.date,
+                            text = activePoint.effectiveDate.ifBlank { activePoint.date },
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontWeight = FontWeight.Normal,
                         )
+                        if (!activePoint.storeName.isNullOrBlank()) {
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(
+                                text = "• ${activePoint.storeName}",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
+                            )
+                        }
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = "₺${activePoint.price.formatPrice()}",
+                            text = "₺${activePoint.effectivePrice.formatPrice()}",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -485,18 +574,6 @@ fun PriceHistoryChart(
                 }
             }
         }
-    }
-}
-
-private fun Double.formatPrice(): String {
-    val rounded = this.roundToInt()
-    val str = rounded.toString()
-    return if (str.length > 3) {
-        val thousands = str.dropLast(3)
-        val remainder = str.takeLast(3)
-        "$thousands,$remainder"
-    } else {
-        str
     }
 }
 

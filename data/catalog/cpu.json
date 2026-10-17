@@ -1,7 +1,7 @@
 [
   {
     "name": "AMD Ryzen 9 9950X",
-    "price": 31499.0,
+    "price": 26362.86,
     "socket": "AM5",
     "core_count": 16,
     "threads": 32,
@@ -19,11 +19,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9950x.webp",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 9950X"
   },
   {
     "name": "AMD Ryzen 9 9900X",
-    "price": null,
+    "price": 21999.0,
     "socket": "AM5",
     "core_count": 12,
     "threads": 24,
@@ -41,11 +42,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9900x.webp",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "120W TDP / 162W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 9900X"
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
-    "price": 28299.0,
+    "price": 21999.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -63,11 +65,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (2. Nesil 3D V-Cache)",
     "power_limits": "120W TDP / 162W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 7 9800X3D"
   },
   {
     "name": "AMD Ryzen 7 9700X",
-    "price": 17599.0,
+    "price": 14490.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -85,11 +88,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9700x.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 7 9700X"
   },
   {
     "name": "AMD Ryzen 5 9600X",
-    "price": 13399.0,
+    "price": 9299.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -107,11 +111,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_9600x.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 5 9600X"
   },
   {
     "name": "AMD Ryzen 9 7950X3D",
-    "price": null,
+    "price": 32400.0,
     "socket": "AM5",
     "core_count": 16,
     "threads": 32,
@@ -129,11 +134,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x3d.webp",
     "core_topology": "16 Çekirdek / 32 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 7950X3D"
   },
   {
     "name": "AMD Ryzen 9 7950X",
-    "price": null,
+    "price": 27548.0,
     "socket": "AM5",
     "core_count": 16,
     "threads": 32,
@@ -151,11 +157,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x.webp",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 7950X"
   },
   {
     "name": "AMD Ryzen 9 7900X3D",
-    "price": null,
+    "price": 31800.0,
     "socket": "AM5",
     "core_count": 12,
     "threads": 24,
@@ -173,11 +180,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x3d.webp",
     "core_topology": "12 Çekirdek / 24 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 7900X3D"
   },
   {
     "name": "AMD Ryzen 9 7900X",
-    "price": null,
+    "price": 17939.08,
     "socket": "AM5",
     "core_count": 12,
     "threads": 24,
@@ -195,11 +203,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x.webp",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 9 7900X"
   },
   {
     "name": "AMD Ryzen 7 7800X3D",
-    "price": 20799.0,
+    "price": 16040.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -217,11 +226,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Tek CCD)",
     "power_limits": "120W TDP / 162W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 7 7800X3D"
   },
   {
     "name": "AMD Ryzen 7 7700X",
-    "price": null,
+    "price": 11633.69,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -239,11 +249,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700x.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 7 7700X"
   },
   {
     "name": "AMD Ryzen 7 7700",
-    "price": null,
+    "price": 4990.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -261,11 +272,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 7 7700"
   },
   {
     "name": "AMD Ryzen 5 7600X",
-    "price": 11699.0,
+    "price": 8899.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -283,11 +295,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600x.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 5 7600X"
   },
   {
     "name": "AMD Ryzen 5 7600",
-    "price": 10299.0,
+    "price": 7399.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -305,11 +318,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)"
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "model": "Ryzen 5 7600"
   },
   {
     "name": "AMD Ryzen 5 7500F",
-    "price": 9199.0,
+    "price": 6895.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -327,11 +341,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7500f.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 5 7500F"
   },
   {
     "name": "AMD Ryzen 7 8700G",
-    "price": null,
+    "price": 15677.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -349,11 +364,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_8700g.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon 780M (12 CU RDNA 3, 2.9 GHz)"
+    "igpu_model": "AMD Radeon 780M (12 CU RDNA 3, 2.9 GHz)",
+    "model": "Ryzen 7 8700G"
   },
   {
     "name": "AMD Ryzen 5 8600G",
-    "price": null,
+    "price": 11400.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -371,11 +387,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8600g.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon 760M (8 CU RDNA 3, 2.8 GHz)"
+    "igpu_model": "AMD Radeon 760M (8 CU RDNA 3, 2.8 GHz)",
+    "model": "Ryzen 5 8600G"
   },
   {
     "name": "AMD Ryzen 5 8500G",
-    "price": null,
+    "price": 7920.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -393,11 +410,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8500g.webp",
     "core_topology": "2 Zen 4 + 4 Zen 4c (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon 740M (4 CU RDNA 3, 2.7 GHz)"
+    "igpu_model": "AMD Radeon 740M (4 CU RDNA 3, 2.7 GHz)",
+    "model": "Ryzen 5 8500G"
   },
   {
     "name": "AMD Ryzen 9 5950X",
-    "price": null,
+    "price": 19225.0,
     "socket": "AM4",
     "core_count": 16,
     "threads": 32,
@@ -415,11 +433,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5950x.webp",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 9 5950X"
   },
   {
     "name": "AMD Ryzen 9 5900X",
-    "price": null,
+    "price": 15032.0,
     "socket": "AM4",
     "core_count": 12,
     "threads": 24,
@@ -437,11 +456,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5900x.webp",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 9 5900X"
   },
   {
     "name": "AMD Ryzen 7 5800X3D",
-    "price": 23299.0,
+    "price": 19548.0,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -459,11 +479,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 7 5800X3D"
   },
   {
     "name": "AMD Ryzen 7 5700X3D",
-    "price": null,
+    "price": 12900.0,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -481,11 +502,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x3d.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 7 5700X3D"
   },
   {
     "name": "AMD Ryzen 7 5800X",
-    "price": null,
+    "price": 9600.0,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -503,11 +525,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 7 5800X"
   },
   {
     "name": "AMD Ryzen 7 5700X",
-    "price": null,
+    "price": 8600.0,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -525,11 +548,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 7 5700X"
   },
   {
     "name": "AMD Ryzen 7 5700G",
-    "price": null,
+    "price": 12501.88,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -547,11 +571,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700g.webp",
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon Vega 8 (8 CU, 2.0 GHz)"
+    "igpu_model": "AMD Radeon Vega 8 (8 CU, 2.0 GHz)",
+    "model": "Ryzen 7 5700G"
   },
   {
     "name": "AMD Ryzen 5 5600X",
-    "price": 7899.0,
+    "price": 7175.91,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -569,11 +594,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600x.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 5 5600X"
   },
   {
     "name": "AMD Ryzen 5 5600",
-    "price": 7299.0,
+    "price": 6444.9,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -591,11 +617,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 5 5600"
   },
   {
     "name": "AMD Ryzen 5 5600G",
-    "price": null,
+    "price": 8064.0,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -613,11 +640,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600g.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "AMD Radeon Vega 7 (7 CU, 1.9 GHz)"
+    "igpu_model": "AMD Radeon Vega 7 (7 CU, 1.9 GHz)",
+    "model": "Ryzen 5 5600G"
   },
   {
     "name": "AMD Ryzen 5 5500",
-    "price": 5699.0,
+    "price": 4020.0,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -635,11 +663,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5500.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 5 5500"
   },
   {
     "name": "AMD Ryzen 5 3600",
-    "price": null,
+    "price": 4324.0,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -657,11 +686,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_3600.webp",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 2)",
     "power_limits": "65W TDP / 88W PPT",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Ryzen 5 3600"
   },
   {
-    "name": "Intel Core Ultra 9 285K",
-    "price": 33499.0,
+    "name": "INTEL Core Ultra 9 285K",
+    "price": 29459.92,
     "socket": "LGA1851",
     "core_count": 24,
     "threads": 24,
@@ -679,11 +709,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp",
     "core_topology": "8P + 16E (24 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
-    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)"
+    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+    "model": "Core Ultra 9 285K"
   },
   {
-    "name": "Intel Core Ultra 7 265K",
-    "price": 20899.0,
+    "name": "INTEL Core Ultra 7 265K",
+    "price": 17572.0,
     "socket": "LGA1851",
     "core_count": 20,
     "threads": 20,
@@ -701,11 +732,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265k.webp",
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
-    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)"
+    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+    "model": "Core Ultra 7 265K"
   },
   {
-    "name": "Intel Core Ultra 7 265KF",
-    "price": 17998.99,
+    "name": "INTEL Core Ultra 7 265KF",
+    "price": 17499.0,
     "socket": "LGA1851",
     "core_count": 20,
     "threads": 20,
@@ -723,11 +755,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265kf.webp",
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core Ultra 7 265KF"
   },
   {
-    "name": "Intel Core Ultra 5 245K",
-    "price": null,
+    "name": "INTEL Core Ultra 5 245K",
+    "price": 12235.08,
     "socket": "LGA1851",
     "core_count": 14,
     "threads": 14,
@@ -745,11 +778,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245k.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
-    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)"
+    "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+    "model": "Core Ultra 5 245K"
   },
   {
-    "name": "Intel Core Ultra 5 245KF",
-    "price": 11799.0,
+    "name": "INTEL Core Ultra 5 245KF",
+    "price": 9015.08,
     "socket": "LGA1851",
     "core_count": 14,
     "threads": 14,
@@ -767,11 +801,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245kf.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core Ultra 5 245KF"
   },
   {
-    "name": "Intel Core i9-14900KS",
-    "price": null,
+    "name": "INTEL Core i9-14900KS",
+    "price": 20599.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -789,11 +824,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900ks.webp",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "150W PBP / 320W Extreme MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i9-14900KS"
   },
   {
-    "name": "Intel Core i9-14900K",
-    "price": null,
+    "name": "INTEL Core i9-14900K",
+    "price": 22999.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -811,11 +847,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900k.webp",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i9-14900K"
   },
   {
-    "name": "Intel Core i9-14900KF",
-    "price": 25499.0,
+    "name": "INTEL Core i9-14900KF",
+    "price": 22699.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -833,11 +870,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900kf.webp",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i9-14900KF"
   },
   {
-    "name": "Intel Core i7-14700K",
-    "price": 22699.0,
+    "name": "INTEL Core i7-14700K",
+    "price": 20099.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -855,11 +893,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i7-14700K"
   },
   {
-    "name": "Intel Core i7-14700KF",
-    "price": null,
+    "name": "INTEL Core i7-14700KF",
+    "price": 17899.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -877,11 +916,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700kf.webp",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i7-14700KF"
   },
   {
-    "name": "Intel Core i7-14700",
-    "price": null,
+    "name": "INTEL Core i7-14700",
+    "price": 18799.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -899,11 +939,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700.webp",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "65W PBP / 219W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i7-14700"
   },
   {
-    "name": "Intel Core i5-14600K",
-    "price": null,
+    "name": "INTEL Core i5-14600K",
+    "price": 12780.0,
     "socket": "LGA1700",
     "core_count": 14,
     "threads": 20,
@@ -921,11 +962,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600k.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i5-14600K"
   },
   {
-    "name": "Intel Core i5-14600KF",
-    "price": 14999.0,
+    "name": "INTEL Core i5-14600KF",
+    "price": 12799.0,
     "socket": "LGA1700",
     "core_count": 14,
     "threads": 20,
@@ -943,10 +985,11 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600kf.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i5-14600KF"
   },
   {
-    "name": "Intel Core i5-14500",
+    "name": "INTEL Core i5-14500",
     "price": null,
     "socket": "LGA1700",
     "core_count": 14,
@@ -965,11 +1008,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14500.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "65W PBP / 154W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i5-14500"
   },
   {
-    "name": "Intel Core i5-14400F",
-    "price": 9799.01,
+    "name": "INTEL Core i5-14400F",
+    "price": 7751.75,
     "socket": "LGA1700",
     "core_count": 10,
     "threads": 16,
@@ -987,11 +1031,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i5-14400F"
   },
   {
-    "name": "Intel Core i5-14400",
-    "price": null,
+    "name": "INTEL Core i5-14400",
+    "price": 9828.0,
     "socket": "LGA1700",
     "core_count": 10,
     "threads": 16,
@@ -1009,11 +1054,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
-    "igpu_model": "Intel UHD Graphics 730 (24 EU)"
+    "igpu_model": "Intel UHD Graphics 730 (24 EU)",
+    "model": "Core i5-14400"
   },
   {
-    "name": "Intel Core i3-14100F",
-    "price": null,
+    "name": "INTEL Core i3-14100F",
+    "price": 5299.0,
     "socket": "LGA1700",
     "core_count": 4,
     "threads": 8,
@@ -1031,11 +1077,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_14100f.webp",
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 110W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i3-14100F"
   },
   {
-    "name": "Intel Core i9-13900K",
-    "price": null,
+    "name": "INTEL Core i9-13900K",
+    "price": 41120.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -1053,11 +1100,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_13900k.webp",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i9-13900K"
   },
   {
-    "name": "Intel Core i7-13700K",
-    "price": null,
+    "name": "INTEL Core i7-13700K",
+    "price": 26700.0,
     "socket": "LGA1700",
     "core_count": 16,
     "threads": 24,
@@ -1075,11 +1123,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_13700k.webp",
     "core_topology": "8P + 8E (16 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i7-13700K"
   },
   {
-    "name": "Intel Core i5-13600K",
-    "price": null,
+    "name": "INTEL Core i5-13600K",
+    "price": 18056.0,
     "socket": "LGA1700",
     "core_count": 14,
     "threads": 20,
@@ -1097,11 +1146,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13600k.webp",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
-    "igpu_model": "Intel UHD Graphics 770 (32 EU)"
+    "igpu_model": "Intel UHD Graphics 770 (32 EU)",
+    "model": "Core i5-13600K"
   },
   {
-    "name": "Intel Core i5-13400F",
-    "price": null,
+    "name": "INTEL Core i5-13400F",
+    "price": 9600.0,
     "socket": "LGA1700",
     "core_count": 10,
     "threads": 16,
@@ -1119,11 +1169,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13400f.webp",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i5-13400F"
   },
   {
-    "name": "Intel Core i5-12400F",
-    "price": null,
+    "name": "INTEL Core i5-12400F",
+    "price": 6799.0,
     "socket": "LGA1700",
     "core_count": 6,
     "threads": 12,
@@ -1141,11 +1192,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_12400f.webp",
     "core_topology": "6P Çekirdek (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W PBP / 117W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i5-12400F"
   },
   {
-    "name": "Intel Core i3-12100F",
-    "price": null,
+    "name": "INTEL Core i3-12100F",
+    "price": 3540.0,
     "socket": "LGA1700",
     "core_count": 4,
     "threads": 8,
@@ -1163,6 +1215,7 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_12100f.webp",
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 89W MTP",
-    "igpu_model": "Yok (Harici GPU Gerekir)"
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "model": "Core i3-12100F"
   }
 ]

@@ -1,0 +1,799 @@
+[
+  {
+    "id": "connector_12v_2x6",
+    "term": "12V-2x6 Güç Konnektörü (PCIe CEM 5.1)",
+    "category": "Anakart & Güç",
+    "shortDescription": "Ekran kartlarına tek kablo üzerinden 600W güç taşıyan 16-pinli soketin erime riskine karşı Sense pinleri kısaltılmış güvenli revizyonudur.",
+    "detailedExplanation": "Eski 12VHPWR soketlerinde kablo tam oturmadığında temas direnci artarak plastik gövdenin erimesine sebep olabiliyordu. Yeni 12V-2x6 standardında güç pinleri 0.25mm uzatılırken, 4 adet algılama (Sense) pini 1.5mm içeri çekildi. Soket yerine %100 oturup kilitlenmezse Sense pinleri temas etmez ve GPU yüksek güç çekmeyi reddederek yangın riskini sıfırlar.",
+    "keyMetrics": "Maksimum Güç: 600W • 16-Pin (12 Güç + 4 Sinyal) • Geriye Çekilmiş Sense Pinleri",
+    "relatedTerms": [
+      "ATX 3.1 Standardı",
+      "Coil Whine",
+      "GPU Sag"
+    ]
+  },
+  {
+    "id": "atx31_transient_spikes",
+    "term": "ATX 3.1 Standardı & Transient Spike Dayanımı",
+    "category": "Anakart & Güç",
+    "shortDescription": "Modern GPU'ların mikrosaniyelik ani tepe güç çekimlerini (TDP'nin 2 katı) güç kaynağını kapatmadan absorbe edebilme standardıdır.",
+    "detailedExplanation": "Eski ATX 2.4 güç kaynakları ekran kartının ani güç sıçramasını (örneğin 350W'lık kartın 100 mikrosaniye 700W çekmesini) kısa devre sanarak sistemi kapatırdı. ATX 3.1 standardı, PSU'nun toplam nominal gücünün %200'üne, PCIe GPU hattının ise %300'üne 100µs boyunca kapanmadan dayanmasını şart koşar.",
+    "keyMetrics": "Pik Güç Toleransı: %200 Toplam, %300 GPU • 100µs Tepki • 12V-2x6 Soket Güvenliği",
+    "relatedTerms": [
+      "12V-2x6 Konnektörü",
+      "PSU 80 Plus",
+      "Saf Sinüs UPS"
+    ]
+  },
+  {
+    "id": "form_factors_atx_matx_itx",
+    "term": "Anakart Form Faktörleri (ATX, Micro-ATX, Mini-ITX)",
+    "category": "Anakart & Güç",
+    "shortDescription": "Anakartların fiziksel boyut standartları, vida delik yerleşimleri ve sundukları genişleme yuvası (PCIe/RAM) kapasiteleridir.",
+    "detailedExplanation": "Standart ATX (305x244 mm) 4 RAM slotu ve çoklu PCIe sunarken, Micro-ATX (244x244 mm) fiyat/performans odaklı kompakt kasalar için idealdir. Mini-ITX (170x170 mm) ise SFF (Small Form Factor) mini kasalar içindir; yalnızca 1 PCIe ve 2 RAM yuvası sunar, montaj ve hava akışı hassasiyet gerektirir.",
+    "keyMetrics": "ATX: 305x244mm (7 slot) • mATX: 244x244mm (4 slot) • ITX: 170x170mm (1 slot)",
+    "relatedTerms": [
+      "Kasa Uyumluluğu",
+      "PCIe Hatları"
+    ]
+  },
+  {
+    "id": "chipset_tiers",
+    "term": "Anakart Yonga Seti (Chipset) Sınıfları (A620/B650/X670 & B760/Z790)",
+    "category": "Anakart & Güç",
+    "shortDescription": "İşlemci dışındaki USB, SATA, ek PCIe hatları ve hız aşırtma (overclock) yeteneklerini yöneten entegre kontrolcü yongasıdır.",
+    "detailedExplanation": "AMD tarafında A620 giriş seviyesi olup CPU overclock desteklemez; B650 oyuncular için altın orandır (PBO & RAM OC destekler); X670/X870 ise çift yonga setiyle bol PCIe 5.0 ve USB4 sunar. Intel'de B760 RAM OC sunarken CPU çarpan kilidini açmaz; Z790/Z890 ise tam CPU + RAM overclock ve maksimum hat kapasitesi sağlar.",
+    "keyMetrics": "B Serisi: En dengeli F/P • Z/X Serisi: Maksimum Genişleme & Overclock • A/H Serisi: Bütçe odaklı",
+    "relatedTerms": [
+      "VRM & SPS",
+      "PBO2 Curve Optimizer",
+      "PCIe Hatları"
+    ]
+  },
+  {
+    "id": "bios_flashback_clear_cmos",
+    "term": "BIOS Flashback & Clear CMOS Düğmesi",
+    "category": "Anakart & Güç",
+    "shortDescription": "İşlemci, RAM veya ekran kartı takılı olmadan USB bellek ile BIOS güncellemeyi ve hatalı ayarlarda BIOS'u sıfırlamayı sağlayan kurtarma özellikleridir.",
+    "detailedExplanation": "Yeni nesil bir işlemci (Örn: Ryzen 9000 veya Intel 14. Nesil) eski stoklu bir anakarta takıldığında görüntü vermez. BIOS Flashback sayesinde anakarta sadece 24-pin güç kablosu takılıyken arka paneldeki düğmeyle en güncel BIOS yüklenebilir. Clear CMOS ise hatalı RAM zamanlaması veya overclock sonrası açılamayan sistemi fabrika ayarlarına döndürür.",
+    "keyMetrics": "FAT32 USB Bellek • CPU'suz Doğrudan Flash • Arka Panel Kurtarma Düğmesi",
+    "relatedTerms": [
+      "Anakart Yonga Seti",
+      "Q-LED Debug"
+    ]
+  },
+  {
+    "id": "psu_80plus_cybenetics",
+    "term": "Güç Kaynağı Verimliliği: 80 Plus & Cybenetics ETA/LAMBDA",
+    "category": "Anakart & Güç",
+    "shortDescription": "Prizden çekilen alternatif akımın (AC) bileşenlere aktarılırken ne kadarının ısıya dönüşmeden verimli iletildiğini ve fan gürültüsünü derecelendiren bağımsız sertifikalardır.",
+    "detailedExplanation": "80 Plus yalnızca 23°C oda sıcaklığında verimliliği ölçerken, yeni nesil Cybenetics sertifikası 30°C+ ortamda binlerce yük kombinasyonunu, bekleme gücünü, ripple değerini (ETA) ve gerçek desibel gürültüsünü (LAMBDA) test eder. 80+ Gold sertifikalı bir PSU %50 yükte minimum %90 verimlilik sunarak elektrik faturasını ve kasa içi sıcaklığı düşürür.",
+    "keyMetrics": "Gold: ≥ %90 verimlilik • Platinum: ≥ %92 • Cybenetics LAMBDA A++: < 15 dBA sessizlik",
+    "relatedTerms": [
+      "ATX 3.1 & 12V-2x6",
+      "Transient Spike",
+      "LLC Rezonans Topolojisi"
+    ]
+  },
+  {
+    "id": "mosfet_choke",
+    "term": "MOSFET & Boğucu Bobin (Choke)",
+    "category": "Anakart & Güç",
+    "shortDescription": "Anakart ve ekran kartında yüksek hızlı anahtarlama yaparak voltajı kırpan transistörler (MOSFET) ve akımı filtreleyen bobinlerdir (Choke).",
+    "detailedExplanation": "Düşük kaliteli MOSFET'ler yüksek iç dirence (Rds-on) sahip olduğu için aşırı ısınır ve VRM termal kısmasına (VRM Throttling) yol açar. Kaliteli alaşımlı bobinler (Alloy Chokes) ise yüksek akımda doyum noktasına ulaşmayarak bobin cızırtısını (Coil Whine) en aza indirir.",
+    "keyMetrics": "Rds(on) Direnci: < 1.5 mΩ • Çalışma Sıcaklığı: < 85°C • Doyum Akımı: 60A+",
+    "relatedTerms": [
+      "VRM & SPS",
+      "Coil Whine",
+      "Katı Kapasitörler"
+    ]
+  },
+  {
+    "id": "pcie_lanes_bifurcation",
+    "term": "PCIe Hatları (Lanes) & Bifurcation (Hat Bölünmesi)",
+    "category": "Anakart & Güç",
+    "shortDescription": "İşlemci ve yonga setinden çıkan yüksek hızlı veri yolları ve bu yolların yuvalar arasında x16, x8/x8 veya x8/x4/x4 olarak paylaştırılmasıdır.",
+    "detailedExplanation": "Masaüstü işlemcilerde doğrudan CPU'ya bağlı hat sayısı sınırlıdır (Genellikle 24–28 hat). Bazı anakartlarda ikinci veya üçüncü M.2 SSD takıldığında ekran kartının x16 yuvası otomatik olarak x8 hızına düşer (Bifurcation). Sistem toplarken hangi M.2 yuvasının GPU hattını çaldığına anakart kılavuzundan dikkat edilmelidir.",
+    "keyMetrics": "PCIe 4.0 x16: 31.5 GB/s • PCIe 5.0 x16: 63 GB/s • PCIe 5.0 x4 M.2: ~15 GB/s",
+    "relatedTerms": [
+      "M.2 NVMe SSD",
+      "Yonga Seti (Chipset)",
+      "ReBAR"
+    ]
+  },
+  {
+    "id": "qled_debug_code",
+    "term": "Q-LED / Debug Hata Teşhis Işıkları",
+    "category": "Anakart & Güç",
+    "shortDescription": "Bilgisayar açılışında (POST) donanım bileşenlerini sırasıyla test eden ve arıza anında sabit yanan 4 renkli LED veya 2 haneli dijital kod ekranıdır.",
+    "detailedExplanation": "Bilgisayar açılırken anakart CPU, DRAM, VGA (Ekran Kartı) ve BOOT (Depolama) sırasını izler. Hangi aşamada sorun çıkarsa o LED yanık kalarak sorunun işlemcide mi, RAM'de mi yoksa ekran kartında mı olduğunu saniyeler içinde gösterir; sistemi körleme açıp kapatma zahmetini bitirir.",
+    "keyMetrics": "Kırmızı: CPU • Sarı/Turuncu: DRAM • Beyaz: GPU/VGA • Yeşil: Boot/OS",
+    "relatedTerms": [
+      "BIOS Flashback",
+      "POST Süreci"
+    ]
+  },
+  {
+    "id": "rebar_sam",
+    "term": "Resizable BAR & AMD Smart Access Memory (SAM)",
+    "category": "Anakart & Güç",
+    "shortDescription": "İşlemcinin ekran kartı belleğine (VRAM) 256 MB'lık küçük bloklar yerine tüm VRAM kapasitesine tek seferde doğrudan erişmesini sağlayan PCIe özelliğidir.",
+    "detailedExplanation": "Klasik sistemlerde 32-bit kısıtlaması nedeniyle CPU bir seferde yalnızca 256 MB GPU belleği okuyabilir. ReBAR aktif edildiğinde CPU tüm VRAM'e (Örn: 16 GB) aynı anda erişerek doku ve geometri aktarım kuyruğunu ortadan kaldırır. Oyunlarda ortalama %5 ila %15 arasında bedava FPS artışı ve daha pürüzsüz kare süreleri sağlar.",
+    "keyMetrics": "FPS Kazancı: +%5–%15 • Gereksinim: UEFI Boot, CSM Kapalı, 4G Decoding Açık",
+    "relatedTerms": [
+      "VRAM Bant Genişliği",
+      "%1 Low FPS",
+      "PCIe Hatları"
+    ]
+  },
+  {
+    "id": "pure_sine_ups",
+    "term": "Saf Sinüs (Pure Sine Wave) UPS & Aktif PFC",
+    "category": "Anakart & Güç",
+    "shortDescription": "Elektrik kesintisinde şebeke elektriğiyle birebir aynı pürüzsüz dalga formu üreten kesintisiz güç kaynağı teknolojisidir.",
+    "detailedExplanation": "Modern 80+ güç kaynaklarındaki Aktif PFC devresi, ucuz UPS'lerin ürettiği köşeli basamaklı dalgaları (Simulated Sine Wave) ani faz hatası algılayarak sistemi kapatabilir veya bobinlerden aşırı vızıltı çıkarabilir. 650W ve üzeri oyuncu bilgisayarlarında kesintide kapanma yaşamamak için mutlaka Gerçek/Saf Sinüs UPS tercih edilmelidir.",
+    "keyMetrics": "Dalga Formu: Saf Sinüs (THD < %3) • Geçiş Süresi: < 6-8 ms • Aktif PFC %100 Uyum",
+    "relatedTerms": [
+      "ATX 3.1 Standardı",
+      "Güç Faktörü (PF)"
+    ]
+  },
+  {
+    "id": "modular_psu_cables",
+    "term": "Tam Modüler vs Yarı Modüler vs Standart PSU",
+    "category": "Anakart & Güç",
+    "shortDescription": "Güç kaynağı kablolarının gövdeden tamamen ayrılabilir, kısmen ayrılabilir veya sabit lehimli olma mimarisidir.",
+    "detailedExplanation": "Tam Modüler (Full-Modular) PSU'larda yalnızca kullanılan kablolar takılır; boşta kalan SATA veya Molex kabloları takılmayarak kasa arkasında temiz bir kablolama ve ferah hava akışı sağlanır. Standart (Non-modular) PSU'larda ise tüm kablo demeti gövdeye sabittir ve kasa tabanında yer işgal eder.",
+    "keyMetrics": "Tam Modüler: Kolay Kablolama & Custom Örgü Kablo Uyumu • Yarı Modüler: 24-Pin ve CPU Sabit",
+    "relatedTerms": [
+      "Kasa Hava Akışı",
+      "PSU Shroud"
+    ]
+  },
+  {
+    "id": "vrm_sps",
+    "term": "VRM & SPS (Smart Power Stage) Faz Mimarisi",
+    "category": "Anakart & Güç",
+    "shortDescription": "PSU'dan gelen 12V doğru akımı işlemcinin ihtiyaç duyduğu 1.1V–1.35V seviyesine yüksek verimlilikle düşüren voltaj regülatör modülüdür.",
+    "detailedExplanation": "İşlemcinin kararlı çalışması ve hız aşırtma (overclock) potansiyeli doğrudan VRM kalitesine bağlıdır. SPS (Smart Power Stage) entegreleri, MOSFET ve sürücüyü tek pakette toplayarak parazitik direnci azaltır ve faz başına sıcaklık/akım telemetrisini anlık raporlar. 14+2+1 gibi bir dizilimde 14 faz doğrudan CPU çekirdeklerini besler.",
+    "keyMetrics": "Faz Sayısı: 12–16+ faz • SPS Akımı: Faz başına 60A–90A • VRM Soğutucu Blok Ağırlığı",
+    "relatedTerms": [
+      "Transient Spike",
+      "MOSFET & Choke",
+      "LLC Rezonans Topolojisi"
+    ]
+  },
+  {
+    "id": "cas_latency_true_latency",
+    "term": "CAS Latency (CL) & True Latency (Gerçek Nanosaniye)",
+    "category": "Bellek & RAM",
+    "shortDescription": "Bellek kontrolcüsünün RAM hücresine erişim emri vermesi ile verinin hatta iletilmesi arasındaki gecikme döngüsü ve fiziksel süresidir.",
+    "detailedExplanation": "Yalnızca CL değerine bakmak yanıltıcıdır; çünkü frekans arttıkça her bir saat döngüsünün süresi kısalır. DDR4-3200 CL16 ile DDR5-6000 CL30 aynı 10.0 nanosaniye ilk kelime gecikmesine (First Word Latency) sahiptir; üstelik DDR5 iki kat bant genişliği sunar. Denklem: True Latency (ns) = (CL × 2000) / Frekans (MT/s).",
+    "keyMetrics": "Altın Standart: 10.0 ns (6000 MT/s CL30) • E-Spor Hedefi: ≤ 10.0 ns",
+    "relatedTerms": [
+      "XMP 3.0 & EXPO",
+      "Çift Kanal (Dual Channel)",
+      "Sub-timings"
+    ]
+  },
+  {
+    "id": "hynix_adie_mdie",
+    "term": "Hynix A-Die / M-Die Silikon Tipleri",
+    "category": "Bellek & RAM",
+    "shortDescription": "DDR5 bellek modüllerinde kullanılan ve yüksek saat hızı ile sıkı zamanlama potansiyelinde dünya lideri kabul edilen bellek yongası üreticisi sınıfıdır.",
+    "detailedExplanation": "DDR5 pazarında Samsung, Micron ve SK Hynix yongaları bulunur. Micron düşük hızlarda kalırken, Samsung yüksek voltaj toleransında zorlanır. SK Hynix A-Die yongaları ise hem 6000 CL30 gibi tatlı noktalarda en düşük tRFC değerlerine iner hem de 8000+ MT/s hız aşırtma rekorlarına imza atar. Bellek tutkunları satın alırken yonganın Hynix A-Die olmasına özellikle dikkat eder.",
+    "keyMetrics": "Overclock Şampiyonu: SK Hynix A-Die • Düşük tRFC & Yüksek Frekans Toleransı",
+    "relatedTerms": [
+      "Sub-timings",
+      "XMP 3.0 & EXPO",
+      "True Latency"
+    ]
+  },
+  {
+    "id": "xmp_expo_profiles",
+    "term": "Intel XMP 3.0 & AMD EXPO Bellek Profilleri",
+    "category": "Bellek & RAM",
+    "shortDescription": "RAM'lerin fabrikasyon test edilmiş yüksek frekans, voltaj ve zamanlama ayarlarını BIOS üzerinden tek tıkla aktif eden hız aşırtma profilidir.",
+    "detailedExplanation": "Satın aldığınız 6000 MT/s veya 6400 MT/s bir RAM sisteme ilk takıldığında standart JEDEC güvenlik hızında (Örn: 4800 MT/s CL40) açılır. BIOS'a girip AMD EXPO veya Intel XMP profilini aktif etmezseniz bellek vadettiği hızın ve gecikmenin çok gerisinde çalışır.",
+    "keyMetrics": "JEDEC Tabanı: 4800 MT/s CL40 • EXPO/XMP: 6000 MT/s CL30 (Tek Tıkla Aktif)",
+    "relatedTerms": [
+      "CAS Latency",
+      "Infinity Fabric (FCLK)",
+      "Voltaj Ayarı (VDD/VDDIO)"
+    ]
+  },
+  {
+    "id": "single_rank_dual_rank",
+    "term": "Single Rank (1R) vs Dual Rank (2R) Bellekler",
+    "category": "Bellek & RAM",
+    "shortDescription": "Bellek modülü üzerindeki bellek yongalarının tek bir yüzeyde (1R) veya modülün her iki yüzeyinde (2R) gruplanması mimarisidir.",
+    "detailedExplanation": "Dual Rank bellekler Rank Interleaving özelliği sayesinde bir rank veri yazarken diğer rank'tan okuma yapabilir ve aynı saat hızında %3–%5 daha yüksek CPU verimliliği sağlar. Ancak bellek kontrolcüsüne daha fazla yük bindirdiği için 4 modül Dual Rank RAM ile çok yüksek frekanslara (Örn: 6400+ MT/s) çıkmak daha zordur.",
+    "keyMetrics": "Rank Interleaving Kazancı: +%3–%5 • 16GB Modüller: Genellikle 1R • 32GB Modüller: Genellikle 2R",
+    "relatedTerms": [
+      "Çift Kanal Bellek",
+      "CAS Latency",
+      "Gear Mode"
+    ]
+  },
+  {
+    "id": "dual_channel_memory",
+    "term": "Çift Kanal (Dual Channel) vs Tek Kanal Bellek",
+    "category": "Bellek & RAM",
+    "shortDescription": "İki ayrı bellek modülünün iki bağımsız 64-bit veri yolu üzerinden işlemciyle eşzamanlı haberleşerek bant genişliğini ikiye katlamasıdır.",
+    "detailedExplanation": "Tek bir 16 GB bellek takmak yerine iki adet 8 GB veya iki adet 16 GB bellek (anakartın 2. ve 4. yuvalarına) takıldığında teorik veri aktarım hızı ikiye katlanır (Örn: DDR5'te tek kanal 48 GB/s iken çift kanal 96 GB/s). Tek kanal bellek kullanımı oyunlarda %15–%30 arası FPS kaybına ve ani takılmalara (stutter) yol açar.",
+    "keyMetrics": "Bant Genişliği: 2x Katlama • Yuva Dizilimi: A2 & B2 (2. ve 4. Slotlar)",
+    "relatedTerms": [
+      "Single Rank vs Dual Rank",
+      "%1 Low FPS",
+      "Bant Genişliği"
+    ]
+  },
+  {
+    "id": "subtimings_trfc_trefi",
+    "term": "İkincil Zamanlamalar: tRFC & tREFI",
+    "category": "Bellek & RAM",
+    "shortDescription": "RAM hücrelerinin yükünü tazelemek (Refresh) için harcanan bekleme süreleri ve tazeleme aralığını belirleyen derin zamanlama parametreleridir.",
+    "detailedExplanation": "Bellek hücreleri kondansatörlerden oluştuğu için elektrik yükü sürekli sızar ve tazelenmek zorundadır. tRFC (Refresh Cycle Time) ne kadar küçük ve tREFI (Refresh Interval) ne kadar büyük olursa bellek hücreleri tazelemeyle o kadar az vakit kaybeder. İkincil zamanlamaları sıkılaştırmak oyunlardaki %1 Low FPS değerini birincil CL değerinden bile daha fazla artırabilir.",
+    "keyMetrics": "Hynix A-Die / M-Die: Düşük tRFC toleransı • %1 Low FPS Artışı: +%10–%20",
+    "relatedTerms": [
+      "CAS Latency",
+      "AMD EXPO",
+      "Hynix A-Die"
+    ]
+  },
+  {
+    "id": "dramless_ssd_hmb",
+    "term": "DRAM-less SSD & HMB (Host Memory Buffer)",
+    "category": "Depolama (SSD)",
+    "shortDescription": "Üzerinde dahili DDR önbellek çipi bulunmayan ekonomik SSD'lerin, harita tablosu için sistem RAM'inden küçük bir pay ödünç almasıdır.",
+    "detailedExplanation": "DRAM önbelleğe sahip SSD'ler (Örn: 990 Pro, KC3000) dosya konum tablosunu kendi hızlı DDR4/LPDDR4 çipinde tutar. DRAM-less SSD'ler (Örn: WD SN580, Kingston NV2/NV3) maliyeti düşürmek için bu çipi çıkarır ve HMB protokolüyle sistem RAM'inden 64 MB pay kullanır. Günlük kullanım ve oyunlarda HMB gayet başarılıdır; ancak kesintisiz 100 GB+ dosya kopyalamada yazma hızı aniden 100-200 MB/s seviyesine çakılabilir.",
+    "keyMetrics": "HMB: 64 MB Sistem RAM'i Kullanımı • Yoğun Yazmada Hız Düşüşü Riski",
+    "relatedTerms": [
+      "SLC Cache",
+      "TBW Ömrü",
+      "M.2 NVMe"
+    ]
+  },
+  {
+    "id": "nvme_pcie_generations",
+    "term": "M.2 NVMe SSD: PCIe Gen3 vs Gen4 vs Gen5",
+    "category": "Depolama (SSD)",
+    "shortDescription": "Doğrudan PCIe veri yoluna bağlanan M.2 SSD'lerin nesillerine göre sıralı okuma ve yazma hız tavanlarıdır.",
+    "detailedExplanation": "Gen3 SSD'ler maksimum 3500 MB/s hız sunarken; Gen4 SSD'ler (Örn: Samsung 990 Pro, Kingston KC3000) 7400 MB/s hıza ulaşır. Gen5 SSD'ler ise 14.500 MB/s hız sunar ancak aşırı ısındıkları için kalın pasif soğutucu blok veya küçük fan gerektirirler. Oyun yükleme sürelerinde Gen4 ile Gen5 arasındaki fark milisaniyeler düzeyindedir; oyuncular için en dengeli tercih Gen4 NVMe'dir.",
+    "keyMetrics": "Gen3: ~3500 MB/s • Gen4: ~7400 MB/s • Gen5: ~14.500 MB/s (Soğutucu Şart)",
+    "relatedTerms": [
+      "DRAM-less & HMB",
+      "TBW Ömrü",
+      "PCIe Hatları"
+    ]
+  },
+  {
+    "id": "slc_cache_nand",
+    "term": "SLC Cache (Dinamik Yazma Önbelleği)",
+    "category": "Depolama (SSD)",
+    "shortDescription": "TLC/QLC yongaların boş alanlarının geçici olarak süper hızlı tek bitlik (SLC) modunda çalıştırılarak ani yazma hızının yüksek tutulmasıdır.",
+    "detailedExplanation": "Normalde hücre başına 3 bit yazmak (TLC) yavaştır (~300 MB/s). SSD boş alanının bir kısmını SLC gibi (hücre başına 1 bit) kullanarak ilk 50–150 GB'lık veriyi 5000–7000 MB/s hızla yazar. Ancak bu dinamik SLC önbellek dolduğunda SSD arka planda hücreleri sıkıştırmak zorunda kalır ve hız saf TLC hızına düşer. SSD kapasitesi %90 dolduğunda SLC önbellek küçülür ve disk yavaşlar.",
+    "keyMetrics": "Tavsiye: SSD'nin minimum %15–%20'lik alanını daima boş bırakın",
+    "relatedTerms": [
+      "DRAM-less & HMB",
+      "TBW Ömrü"
+    ]
+  },
+  {
+    "id": "tbw_ssd_endurance",
+    "term": "TBW (Terabytes Written - Toplam Yazma Ömrü)",
+    "category": "Depolama (SSD)",
+    "shortDescription": "Bir SSD'nin garanti kapsamı boyunca flaş bellek hücrelerine bozulmadan yazılabileceği taahhüt edilen toplam veri miktarıdır.",
+    "detailedExplanation": "SSD'lerdeki NAND flaş hücreleri her yazma-silme döngüsünde mikroskobik aşınmaya uğrar. Örneğin 1 TB kapasiteli kaliteli bir Gen4 SSD genellikle 600 TBW ile 1200 TBW arasında ömür sunar. Günlük standart 50 GB veri yazan bir kullanıcı için 600 TBW ömür yaklaşık 30 yıldan fazla dayanım anlamına gelir.",
+    "keyMetrics": "1 TB Kaliteli SSD: 600–1200 TBW • Garanti: 5 Yıl veya TBW Sınırı",
+    "relatedTerms": [
+      "NAND Flaş Tipleri",
+      "DRAM-less & HMB"
+    ]
+  },
+  {
+    "id": "coil_whine_noise",
+    "term": "Bobin Cızırtısı (Coil Whine)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Ekran kartı veya güç kaynağındaki indüktör bobinlerinin içinden geçen yüksek frekanslı akımın rezonans titreşimiyle çıkardığı tiz cızırtı sesidir.",
+    "detailedExplanation": "Coil Whine donanıma fiziksel zarar vermez veya ömrünü kısaltmaz; tamamen mekanik-akustik bir durumdur. Özellikle oyun menülerinde FPS 500–1000 seviyelerine fırladığında veya kart tam TGP yükü çektiğinde belirginleşir. FPS'i monitörün yenileme hızına sabitlemek (G-Sync/V-Sync) veya kaliteli Tier-A bir PSU kullanmak bobin titreşimini ciddi oranda azaltır.",
+    "keyMetrics": "Zararsızdır • Çözüm: FPS Sabitleme (Cap) & Yüksek Kaliteli PSU",
+    "relatedTerms": [
+      "MOSFET & Choke",
+      "ATX 3.1 Standardı",
+      "12V Ripple"
+    ]
+  },
+  {
+    "id": "dlss_fsr_xess",
+    "term": "DLSS vs FSR vs XeSS (Yapay Zeka Çözünürlük Ölçekleme)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Oyunu dahili olarak düşük çözünürlükte (Örn: 1080p) işleyip yapay zeka tensör çekirdekleri veya algoritmalarla monitör çözünürlüğüne (Örn: 4K) netleştiren teknolojilerdir.",
+    "detailedExplanation": "NVIDIA DLSS (Deep Learning Super Sampling) kart üzerindeki özel Tensor çekirdeklerini kullanarak piksel doğruluğunda liderdir. AMD FSR (FidelityFX Super Resolution) açık kaynaklı olup tüm kartlarda çalışır ancak ince detaylarda parıldama (shimmering) yapabilir. Intel XeSS ise DP4a ve XMX motorlarıyla dengeli bir alternatif sunar. Kalite modunda %30–%60 bedava FPS artışı sağlarlar.",
+    "keyMetrics": "Kalite Modu: ~1.5x FPS • Dengeli: ~1.8x FPS • Performans: ~2.2x FPS",
+    "relatedTerms": [
+      "Frame Generation",
+      "Ray Tracing",
+      "VRAM Bant Genişliği"
+    ]
+  },
+  {
+    "id": "frame_generation_latency",
+    "term": "Frame Generation (Kare Oluşturma) & Reflex Gecikmesi",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "GPU'nun gerçekte işlenen iki kare arasına yapay zeka ile ara bir 'sahte' kare üreterek görüntü akışkanlığını katlaması ve gecikme bedelidir.",
+    "detailedExplanation": "DLSS 3 ve FSR 3 ile gelen Frame Generation, FPS sayacını 60'tan 110'a çıkarabilir. Ancak bu üretilen kareler kullanıcının fare tıklamasına tepki vermez; yalnızca görsel akışkanlık sağlar. Ayrıca kare kuyruğa alındığı için sistem gecikmesi (Input Lag) artar. NVIDIA Reflex veya AMD Anti-Lag 2 bu gecikmeyi telafi etmek için zorunlu olarak aktif edilir. Taban FPS 50-60'ın altındayken Frame Gen açılması gecikme hissini bozabilir.",
+    "keyMetrics": "Kural: Taban FPS ≥ 50-60 FPS olmalıdır • E-Spor Rekabetçi Oyunlarda Kapatılmalıdır",
+    "relatedTerms": [
+      "DLSS & FSR",
+      "NVIDIA Reflex",
+      "G-Sync"
+    ]
+  },
+  {
+    "id": "gpu_sag_support",
+    "term": "GPU Sag (Ekran Kartı Sarkması & Destek Braketi)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Ağır 3 fanlı soğutma bloklarına sahip modern ekran kartlarının kendi ağırlığıyla kasanın sağ alt köşesine doğru eğilerek PCIe yuvasına yük bindirmesidir.",
+    "detailedExplanation": "Modern RTX 4080/4090 veya RX 7900 XTX gibi kartlar 2 ile 2.5 kg ağırlığa ve 3-4 slot kalınlığa ulaşabilmektedir. Zamanla kartın sarkması PCIe yuvasının plastik tırnaklarını kırabilir veya GPU PCB'sinde kılcal lehim çatlaklarına (özellikle VRAM ve çekirdek altında) sebep olarak kartı kalıcı bozabilir. Ağır kartlarda mutlaka kasa içi GPU destek çubuğu (Sag Holder) kullanılmalıdır.",
+    "keyMetrics": "Risk: PCB Çatlağı & VRAM Kopması • Çözüm: Kutu İçinden Çıkan Destek Ayağı",
+    "relatedTerms": [
+      "PCIe Hatları",
+      "Kasa Uyumluluğu"
+    ]
+  },
+  {
+    "id": "ray_tracing_path_tracing",
+    "term": "Ray Tracing (Işın İzleme) vs Path Tracing (Tam Yol İzleme)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Işık ışınlarının kameradan sanal sahneye fiziksel olarak fırlatılarak yansıma, kırılma ve gölgelerin gerçek dünyadaki gibi simüle edilmesidir.",
+    "detailedExplanation": "Klasik rasterizasyon oyunlarda sahte gölge ve yansıma haritaları kullanır. Hibrit Ray Tracing sadece belirli yansımaları hesaplarken; Path Tracing (Tam Işın İzleme - Cyberpunk 2077 & Alan Wake 2) sahnedeki her bir fotonun fiziksel sekmesini simüle eder. Donanıma binen devasa hesaplama yükü nedeniyle RT çekirdekleri ve DLSS/FSR kullanımı zorunludur.",
+    "keyMetrics": "Rasterizasyon = Hızlı & Sahte • Ray Tracing = Fiziksel Işık • Path Tracing = Sinematik Gerçekçilik",
+    "relatedTerms": [
+      "DLSS & FSR",
+      "VRAM Bant Genişliği",
+      "TGP Güç Tüketimi"
+    ]
+  },
+  {
+    "id": "tgp_tbp_tdp_gpu",
+    "term": "TGP vs TBP vs TDP (Ekran Kartı Güç Tüketimi)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Yalnızca GPU yongasının harcadığı güç (TDP) ile fanlar, VRAM ve VRM devreleri dahil tüm kartın prizden çektiği toplam güç (TGP/TBP) arasındaki farktır.",
+    "detailedExplanation": "NVIDIA TGP (Total Graphics Power), AMD ise TBP (Total Board Power) terimini kullanır. Bu değer ekran kartının çekeceği nihai maksimum elektrik miktarını belirtir. Özellikle oyuncu laptoplarında aynı RTX 4060 modeli 45W TGP ile çalıştırıldığında, 140W tam TGP ile çalışan RTX 4060'a kıyasla %40'a yakın daha düşük oyun performansı verir. Laptop alırken TGP değeri hayati önem taşır.",
+    "keyMetrics": "Masaüstü: Gerçek Güç = TGP/TBP • Laptop: 45W–140W TGP Aralığına Dikkat!",
+    "relatedTerms": [
+      "ATX 3.1 Standardı",
+      "Transient Spike",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "vram_bus_bandwidth",
+    "term": "VRAM Veri Yolu (Bus Width) & Bant Genişliği (GB/s)",
+    "category": "Ekran Kartı & Grafik",
+    "shortDescription": "Grafik işlemci ile VRAM arasındaki yol genişliği (128-bit, 256-bit, 384-bit) ve saniyede taşınabilen toplam grafik verisi miktarıdır.",
+    "detailedExplanation": "VRAM'in sadece kaç GB olduğuna bakmak büyük bir tuzaktır. 128-bit veri yoluna sahip 16 GB bir kart (Örn: RTX 4060 Ti 16GB ~288 GB/s), 256-bit veya 384-bit veri yoluna sahip bir karta kıyasla (Örn: RTX 4080 ~717 GB/s) 2K ve 4K çözünürlükte yüksek çözünürlüklü dokuları taşırken bant genişliği darboğazına takılır. Denklem: Bant Genişliği = (Veri Yolu × Bellek Hızı) / 8.",
+    "keyMetrics": "1080p: ≥ 128-bit • 2K (1440p): ≥ 192-bit / 256-bit • 4K: ≥ 256-bit / 384-bit (500+ GB/s)",
+    "relatedTerms": [
+      "ReBAR",
+      "DLSS & FSR",
+      "VRAM Kapasitesi"
+    ]
+  },
+  {
+    "id": "percent_one_low_fps",
+    "term": "%1 Low ve %0.1 Low FPS (Mikro Takılmalar / Stutter)",
+    "category": "Genel & Teşhis",
+    "shortDescription": "Test süresince kaydedilen en kötü %1 ve %0.1'lik karelerin hızını ifade eden ve oyundaki gerçek akıcılığı/takılmaları gösteren metriktir.",
+    "detailedExplanation": "Ortalama FPS 120 gösterse bile %1 Low FPS 35 seviyesine çakılıyorsa oyuncu sürekli mikro takılmalar (stutter/jank) hisseder ve nişan alamaz. Yüksek ortalama FPS sadece GPU gücünü yansıtırken; %1 Low FPS değeri işlemcinin tek çekirdek gücüne, L3 önbellek büyüklüğüne (X3D) ve RAM gecikmesine (True Latency) doğrudan bağlıdır.",
+    "keyMetrics": "İdeal Oran: %1 Low FPS ≥ Ortalama FPS'in %70'i • Akıcılık Göstergesi",
+    "relatedTerms": [
+      "AMD 3D V-Cache",
+      "True Latency",
+      "Darboğaz"
+    ]
+  },
+  {
+    "id": "bottleneck_darbogaz",
+    "term": "Darboğaz (Bottleneck: CPU vs GPU Darboğazı)",
+    "category": "Genel & Teşhis",
+    "shortDescription": "Sistemdeki bileşenlerden birinin hız limitine ulaşarak daha güçlü olan diğer bileşenin tam kapasite çalışmasını engellemesi durumudur.",
+    "detailedExplanation": "En yaygın darboğaz CPU darboğazıdır: Güçsüz bir işlemciye (Örn: i3-10100) çok güçlü bir ekran kartı (RTX 4080) takıldığında işlemci kareleri GPU'ya yetiştiremez; GPU kullanımı %60-%70'lerde sürünür ve ani FPS düşüşleri yaşanır. GPU kullanımının %97-%99 seviyesinde olması sistemin dengeli olduğunu gösterir. Çözüm çözünürlüğü 1080p'den 2K/4K'ya çekerek yükü GPU'ya yıkmak veya CPU'yu güncellemektir.",
+    "keyMetrics": "İdeal Durum: GPU Kullanımı ≥ %97 • CPU Darboğazı = Düşük GPU Kullanımı & Stutter",
+    "relatedTerms": [
+      "%1 Low FPS",
+      "TDP vs PPT",
+      "VRAM Bant Genişliği"
+    ]
+  },
+  {
+    "id": "frame_time_consistency",
+    "term": "Kare Süresi (Frame Time - ms) Kararlılığı",
+    "category": "Genel & Teşhis",
+    "shortDescription": "Her bir karenin ekrana çizilmesi için harcanan sürenin (Örn: 60 FPS = 16.6 ms, 144 FPS = 6.9 ms) milisaniye cinsinden tekdüzeliğidir.",
+    "detailedExplanation": "Kare süresi grafiği düz bir çizgi olmalıdır. Grafikteki ani yukarı doğru sivri dikenler (spike), o karede bir dokunun yüklenemediğini, CPU'nun RAM'i beklediğini veya arka plan işleminin CPU'yu kilitlediğini gösterir. FPS 100 olsa dahi kare süresi 10ms'den aniden 50ms'ye fırlarsa kullanıcı ekranda can sıkıcı bir takılma hisseder.",
+    "keyMetrics": "144 FPS = 6.94 ms • 240 FPS = 4.16 ms • Grafikte Diken = Mikro Takılma (Stutter)",
+    "relatedTerms": [
+      "%1 Low FPS",
+      "VRR (G-Sync)",
+      "True Latency"
+    ]
+  },
+  {
+    "id": "power_throttling_edp",
+    "term": "Power Throttling & EDP Limit (Akım ve Güç Kısması)",
+    "category": "Genel & Teşhis",
+    "shortDescription": "İşlemcinin sıcaklığı normal olsa dahi anakartın VRM akım limitine (EDC/TDC) veya Intel PL1/PL2 güç tavanına çarpıp saat hızını kısmasıdır.",
+    "detailedExplanation": "Giriş seviyesi zayıf bir anakarta (Örn: H610 veya A620) yüksek güç çeken bir i7 veya Ryzen 9 işlemci takıldığında anakartın VRM devreleri aşırı ısınır veya BIOS güç sınırını kilitler. Sıcaklık 70°C olsa bile işlemci 65W tavanına çakılarak frekans düşürür. Bu durum 'sıcaklık düşük ama neden FPS düşük?' sorusunun en büyük yanıtıdır.",
+    "keyMetrics": "Tetikleyici: VRM Aşırı Isınması veya Düşük PL1/PPT Limiti • Çözüm: Güçlü VRM Anakart",
+    "relatedTerms": [
+      "VRM & SPS",
+      "TDP vs PPT",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "thermal_throttling_cpu_gpu",
+    "term": "Thermal Throttling (Termal Frekans Kısma)",
+    "category": "Genel & Teşhis",
+    "shortDescription": "İşlemci veya ekran kartının TjMax sıcaklık sınırına çarptığında hasar görmemek için voltaj ve çekirdek saat hızını otomatik olarak düşürmesidir.",
+    "detailedExplanation": "Soğutucu montajı hatalıysa veya yetersizse bileşen tavan sıcaklığa (Örn: Intel'de 100°C) ulaşır ulaşmaz saat hızını 5.0 GHz'den 3.0 GHz veya daha altına çeker. Sıcaklık düşer ancak oyunlarda anlık devasa FPS düşüşleri ve kasmalar meydana gelir. HWInfo veya AIDA64 programlarında 'Thermal Throttling: YES' uyarısı görülürse termal macun veya soğutucu acilen yenilenmelidir.",
+    "keyMetrics": "Gösterge: Anlık Saat Hızı Düşüşü & Ani FPS Çakılması • Çözüm: Soğutma & Macun Yenileme",
+    "relatedTerms": [
+      "TjMax Sıcaklık Sınırı",
+      "AIO Sıvı Soğutma",
+      "Power Throttling"
+    ]
+  },
+  {
+    "id": "backlight_strobing_dyac",
+    "term": "Backlight Strobing (BenQ DyAc+ / ASUS ELMB / PureXP)",
+    "category": "Monitör & Panel",
+    "shortDescription": "Her kare çizimi arasında arka aydınlatmayı mikrosaniyelik kapatıp açarak gözdeki hareket bulanıklığını (Motion Blur) sıfırlayan e-spor teknolojisidir.",
+    "detailedExplanation": "İnsan gözü ekrandaki pikseller bir sonraki kareye kadar açık kaldığında (Sample-and-Hold) retinada hareket bulanıklığı algılar. DyAc veya ULMB gibi teknolojiler CRT tüplü monitörler gibi iki kare arasında arka ışığı söndürerek retina izini siler. CS2, Valorant gibi oyunlarda hızlı sağ-sol (flick) atarken düşman kafası cam gibi net görünür; ancak ekran parlaklığı biraz düşer.",
+    "keyMetrics": "Hareket Netliği: CRT Seviyesinde Keskinlik • E-Spor Odaklı (CS2/Valorant)",
+    "relatedTerms": [
+      "GtG vs MPRT",
+      "Yenileme Hızı (Hz)"
+    ]
+  },
+  {
+    "id": "overdrive_inverse_ghosting",
+    "term": "Monitör Overdrive & Inverse Ghosting (Overshoot)",
+    "category": "Monitör & Panel",
+    "shortDescription": "Piksellerin daha hızlı renk değiştirmesi için voltaj verilmesi ve aşırı voltajda nesnelerin arkasında parlak hale (ters hayaletleme) oluşmasıdır.",
+    "detailedExplanation": "Monitör OSD menüsündeki Overdrive (Tepki Süresi) ayarı 'En Yüksek / Extreme' yapıldığında piksellere gereğinden fazla voltaj pompalanır. Piksel hedef renge ulaşırken hedefi ıskalar (Overshoot) ve hareket eden nesnelerin arkasında parıldayan beyaz/yeşilimsi gölgeler (Inverse Ghosting) belirir. En iyi ayar genellikle 'Normal' veya 'Hızlı' (Fast) kademesidir; Extreme asla açılmamalıdır.",
+    "keyMetrics": "İdeal Overdrive: Minimum Ghosting & Sıfır Overshoot (Kılavuz: Normal/Fast)",
+    "relatedTerms": [
+      "GtG vs MPRT",
+      "Yenileme Hızı (Hz)"
+    ]
+  },
+  {
+    "id": "panel_types_ips_va_oled",
+    "term": "Monitör Panel Tipleri: Fast IPS vs VA vs OLED vs QD-OLED",
+    "category": "Monitör & Panel",
+    "shortDescription": "Ekranın piksel oluşturma teknolojisine göre renk doğruluğu, kontrast oranı ve piksel tepki süresi farklılıklarıdır.",
+    "detailedExplanation": "Fast IPS geniş görüş açısı ve 1ms GtG ile rekabetçi oyunlarda en popüler paneldir (Kontrast ~1000:1). VA paneller derin siyahlar sunar (~3000:1 - 5000:1) ancak koyu sahnelerde pikseller geç renk değiştirdiği için siyah bulaşması (Black Smearing) yapabilir. OLED ve QD-OLED panellerde her piksel kendi ışığını yakıp söndürdüğü için sonsuz kontrast ve anlık 0.03ms tepki süresi sunar.",
+    "keyMetrics": "IPS: Renk Doğruluğu & Hız • VA: Derin Kontrast • OLED: 0.03ms Tepki & Kusursuz Siyah",
+    "relatedTerms": [
+      "GtG vs MPRT",
+      "QD-OLED vs WOLED",
+      "G-Sync"
+    ]
+  },
+  {
+    "id": "ppi_pixel_density",
+    "term": "Piksel Yoğunluğu (PPI - Pixels Per Inch)",
+    "category": "Monitör & Panel",
+    "shortDescription": "Ekranın bir inçlik alanına düşen fiziksel piksel sayısı ve görüntünün keskinlik / piksellerin görünmeme derecesidir.",
+    "detailedExplanation": "Ekran boyutu büyüdükçe çözünürlük aynı kalırsa PPI düşer ve görüntü pikselli görünür. Örneğin 27 inç ekranda 1080p çözünürlük 81 PPI verir ve yakından bakıldığında pikseller sayılabilir. 27 inçte 2K (1440p) çözünürlük 109 PPI vererek masaüstü için 'Altın Oran' keskinliği sağlar. 4K 27 inç ise 163 PPI ile Retina seviyesinde keskinlik sunar.",
+    "keyMetrics": "Altın Oran: 105–110 PPI (27\" 1440p) • Retina Eşiği: 140+ PPI • Düşük: < 85 PPI",
+    "relatedTerms": [
+      "Panel Tipleri",
+      "GPU Yükü"
+    ]
+  },
+  {
+    "id": "gtg_vs_mprt",
+    "term": "Tepki Süresi: GtG (Griden Griye) vs MPRT (Hareketli Resim Tepkisi)",
+    "category": "Monitör & Panel",
+    "shortDescription": "Fiziksel piksel kristalinin renk değiştirme süresi (GtG) ile pikselin insan gözünde retinada kalma süresidir (MPRT).",
+    "detailedExplanation": "Kutularda yazan '0.5 ms' veya '1 ms MPRT' ibaresi genellikle yanıltıcı bir pazarlamadır; bu değer pikselin gerçek hızı değil, araya siyah kare ekleme (Backlight Strobing) teknolojisi açıldığında ölçülen değerdir. Asıl bakılması gereken değer Gerçek GtG (Griden Griye) süresidir. IPS panellerde gerçek GtG 2-4ms, OLED panellerde ise 0.03ms seviyesindedir.",
+    "keyMetrics": "Gerçek Ölçüt: GtG (OLED 0.03ms / Fast IPS 1-3ms) • MPRT = Strobing Ölçütü",
+    "relatedTerms": [
+      "Overdrive & Overshoot",
+      "Backlight Strobing (DyAc)"
+    ]
+  },
+  {
+    "id": "gsync_freesync_vrr",
+    "term": "VRR (Değişken Yenileme Hızı): G-Sync vs FreeSync",
+    "category": "Monitör & Panel",
+    "shortDescription": "Monitörün yenileme hızını (Hz) ekran kartının o an ürettiği anlık FPS değerine dinamik olarak eşitleyerek yırtılmayı (Tearing) yok eden teknolojidir.",
+    "detailedExplanation": "Klasik monitör sabit 144 Hz tazelerken oyun 92 FPS verirse ekran taraması yarım kalır ve ekranda yatay kırılmalar (Screen Tearing) oluşur. G-Sync ve FreeSync sayesinde ekran kartı 92 FPS ürettiğinde monitör de tam o anda 92 Hz'e iner; FPS 135'e çıktığında monitör de 135 Hz'e çıkar. Görüntü daima kusursuz akıcı kalır ve V-Sync gecikmesi yaşanmaz.",
+    "keyMetrics": "G-Sync Compatible / FreeSync Premium • VRR Aralığı: Genellikle 48 Hz – Maksimum Hz",
+    "relatedTerms": [
+      "Yenileme Hızı (Hz)",
+      "%1 Low FPS",
+      "V-Sync"
+    ]
+  },
+  {
+    "id": "aio_vs_air_cooling",
+    "term": "AIO Sıvı Soğutma vs Kule Tipi Hava Soğutma",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "İşlemci ısısını bakır borular ve fanla doğrudan dağıtan kule soğutucular ile sıvıyla radyatöre taşıyıp dışarı atan kapalı devre sistemlerdir.",
+    "detailedExplanation": "Çift kule tipi hava soğutucular (Örn: Peerless Assassin 120, Noctua D15) pompa arızası veya sıvı sızdırma riski taşımayan, ömürlük ve 200W-230W TDP'ye kadar mükemmel çözümlerdir. 360mm AIO sıvı soğutmalar ise 250W+ çeken tepe işlemcilerde (Örn: i9-14900K veya tam yük R9 7950X) daha yüksek ısı sığası (Thermal Mass) sunarak ani ısı sıçramalarını yumuşatır.",
+    "keyMetrics": "Hava Soğutma: Sıfır Pompa Riski, 200-230W Max • 360mm AIO: 300W+ Isı Dağıtımı",
+    "relatedTerms": [
+      "Statik Basınç vs Hava Akışı",
+      "TjMax Sıcaklık",
+      "Termal Macun"
+    ]
+  },
+  {
+    "id": "argb_vs_rgb",
+    "term": "ARGB (5V 3-Pin) vs RGB (12V 4-Pin) Aydınlatma",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "Her bir LED'in bağımsız renkte yandığı dijital adreslenebilir ışıklandırma (ARGB) ile tüm LED'lerin tek renk yandığı analog ışıklandırmadır (RGB).",
+    "detailedExplanation": "DİKKAT: 12V 4-pin RGB başlığına 5V 3-pin ARGB fan takılırsa (veya zorlanırsa) yüksek voltaj LED çiplerini anında yakar! 5V ARGB (Addressable RGB) başlığında bir pin boştur (3-pinli koruma); her bir LED ayrı adreslendiği için gökkuşağı, kayan sıvı ve nefes alma efektleri üretilebilir.",
+    "keyMetrics": "5V ARGB (3-Pin): Adreslenebilir Çoklu Renk • 12V RGB (4-Pin): Tek Renk Sabit",
+    "relatedTerms": [
+      "PWM Fan Kontrolü",
+      "Daisy Chain"
+    ]
+  },
+  {
+    "id": "static_pressure_vs_airflow",
+    "term": "Fan Dinamiği: Statik Basınç (mmH2O) vs Hava Akışı (CFM)",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "Fanın havanın karşısındaki engelleri (radyatör, toz filtresi) delip geçme gücü (Basınç) ile açık alanda üflediği toplam hava hacmidir (CFM).",
+    "detailedExplanation": "Sıvı soğutma radyatörleri ve sık petekli hava soğutma kuleleri havanın geçişine direnç gösterir. Buralarda geniş ve kıvrımlı kanatlı Yüksek Statik Basınçlı fanlar (≥ 2.0 mmH2O) kullanılmalıdır. Kasa egzoz fanlarında ise hava dirençle karşılaşmadığı için yüksek CFM (Hava Akışı) değerli fanlar tercih edilmelidir.",
+    "keyMetrics": "Radyatör Fanı: ≥ 2.0–3.0 mmH2O • Kasa Fanı: ≥ 60–75 CFM",
+    "relatedTerms": [
+      "Pozitif/Negatif Kasa Basıncı",
+      "PWM Fan Kontrolü"
+    ]
+  },
+  {
+    "id": "pwm_vs_dc_fan",
+    "term": "PWM (4-Pin) vs DC (3-Pin) Fan Kontrolü",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "Fan hızının sabit 12V üzerinde yüksek frekanslı sinyal darbeleriyle (PWM) mi yoksa voltajın düşürülüp yükseltilmesiyle mi (DC) kontrol edildiğidir.",
+    "detailedExplanation": "3-pinli DC fanlarda hız voltaj 12V'tan 7V veya 5V'a çekilerek düşürülür; bu da düşük devirlerde fan motorunun bayılmasına veya sesli vınlamasına yol açabilir. 4-pinli PWM (Pulse Width Modulation) fanlarda ise motora daima tam 12V gider, hız 4. pinden gelen mikro saniyelik sinyallerle %20 ila %100 arasında pürüzsüzce ayarlanır; düşük devirde sessizlik garanti edilir.",
+    "keyMetrics": "4-Pin PWM: %20–%100 Hassas Kontrol • 3-Pin DC: Kısıtlı Devir Aralığı",
+    "relatedTerms": [
+      "Statik Basınç vs Hava Akışı",
+      "ARGB vs RGB"
+    ]
+  },
+  {
+    "id": "positive_negative_case_pressure",
+    "term": "Pozitif vs Negatif Kasa İçi Hava Basıncı",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "Kasaya fanlarla içeri üflenen filtrelenmiş hava miktarının, egzoz fanlarıyla dışarı atılan hava miktarından fazla (Pozitif) veya az (Negatif) olması dengesidir.",
+    "detailedExplanation": "Pozitif basınçta içeri giren hava fazla olduğu için hava kasanın tüm delik ve boşluklarından dışarı doğru üfler; böylece filtrelenmemiş tozların içeri girmesi engellenir (Tozsuz kasa). Negatif basınçta ise içeride vakum oluşur ve kasanın tüm deliklerinden kontrolsüz toz çekilir. İdeal kural: İçeri üfleyen fan sayısı/debisi, dışarı atan egzozdan her zaman bir tık fazla olmalıdır.",
+    "keyMetrics": "Altın Kural: Giriş Fanı CFM > Egzoz Fanı CFM (Hafif Pozitif Basınç)",
+    "relatedTerms": [
+      "Statik Basınç vs Hava Akışı",
+      "Kasa Uyumluluğu"
+    ]
+  },
+  {
+    "id": "thermal_paste_ptm7950",
+    "term": "Termal Macun vs Faz Değişimli Termal Ped (Honeywell PTM7950)",
+    "category": "Soğutma & Kasa",
+    "shortDescription": "İşlemci kapağı ile soğutucu tabanı arasındaki mikroskobik hava boşluklarını doldurarak ısı transferini sağlayan termal arayüz malzemeleridir.",
+    "detailedExplanation": "Klasik silikon macunlar zamanla ısıyla kurur veya 'pump-out' etkisiyle silikonun merkezinden dışarı doğru taşarak performans kaybeder (her yıl yenileme ister). Honeywell PTM7950 gibi faz değişimli pedler oda sıcaklığında katı iken 45°C üzerinde sıvılaşarak mikroskobik pürüzleri tamamen doldurur; asla kuruma veya akma yapmaz, laptop ve masaüstünde yıllarca performansını korur.",
+    "keyMetrics": "Termal İletkenlik: Kaliteli Macun 8–14 W/mK • PTM7950: Pump-out Yapmaz, Ömürlük",
+    "relatedTerms": [
+      "Delid & Sıvı Metal",
+      "TjMax Sıcaklık Sınırı"
+    ]
+  },
+  {
+    "id": "debounce_delay",
+    "term": "Debounce Delay (Tuş Sekme Filtreleme Gecikmesi)",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Mekanik switchlerde metal plakaların birbirine çarparken oluşturduğu mikro titreşimleri çift tıklama sanmamak için konulan gecikme filtresidir.",
+    "detailedExplanation": "Geleneksel fare ve klavyelerde metal yapraklar temas ettiğinde 2-10 milisaniye boyunca elektriksel sekme (bouncing) yapar. Yazılım bu süreyi beklemek zorunda kalır; bu da tıklama gecikmesi (Click Latency) yaratır. Manyetik Hall Effect ve Optik switchlerde ise fiziksel metal teması olmadığı için sekme süresi sıfırdır (0 ms debounce) ve tıklamalar ışık hızında iletilir.",
+    "keyMetrics": "Mekanik: 4–12 ms debounce gecikmesi • Optik & Hall Effect: 0 ms gecikme",
+    "relatedTerms": [
+      "Hall Effect & Rapid Trigger",
+      "Optik Sensör PAW"
+    ]
+  },
+  {
+    "id": "mouse_polling_rate_8k",
+    "term": "Fare Polling Rate (1000Hz vs 4000Hz vs 8000Hz)",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Farenin imleç konumu ve tıklama verilerini saniyede kaç kez bilgisayara raporladığını gösteren frekans değeridir.",
+    "detailedExplanation": "Standart bir oyuncu faresi 1000Hz hızda her 1 milisaniyede bir rapor gönderir. 4000Hz (0.25ms) ve 8000Hz (0.125ms) fareler ise saniyede 8 bin kez donanım kesmesi (Interrupt) oluşturur. 240Hz+ yüksek yenilemeli monitörlerde imleç hareketi çok daha akıcı hissedilir; ancak 8000Hz modunda işlemciye binen arka plan yükü nedeniyle eski işlemcilerde oyun içi FPS düşüşü yaşanabilir.",
+    "keyMetrics": "1000Hz: 1.0 ms gecikme • 4000Hz: 0.25 ms • 8000Hz: 0.125 ms (Güçlü CPU Önerilir)",
+    "relatedTerms": [
+      "Optik Sensör PAW",
+      "Yenileme Hızı (Hz)",
+      "DPC Latency"
+    ]
+  },
+  {
+    "id": "headphone_impedance_dac_amp",
+    "term": "Kulaklık Empedansı (Ohm) & DAC / AMP Gereksinimi",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Kulaklık sürücüsünün elektrik akımına gösterdiği direnç (Empedans - Ω) ve yeterli ses seviyesi için harici kulaklık amfisi gereksinimidir.",
+    "detailedExplanation": "16Ω ile 32Ω arasındaki kulaklıklar (HyperX Cloud III, standart oyuncu kulaklıkları) anakart ses kartıyla veya telefonla rahatça tam ses seviyesine ulaşır. Ancak 80Ω, 250Ω veya 600Ω stüdyo kulaklıkları (Örn: Beyerdynamic DT 990 Pro 250Ω) anakarttan beslenirse ses çok cılız, baslar güçsüz ve detaysız kalır. Bu kulaklıkları sürmek için yüksek çıkış voltajı veren bir Kulaklık Amfisi (AMP) ve temiz ses için harici DAC şarttır.",
+    "keyMetrics": "≤ 32Ω: Amfi Gerekmez • 80Ω–250Ω+: Özel DAC/AMP Şart • Temiz Dinamik Aralık",
+    "relatedTerms": [
+      "Planar Manyetik Kulaklık",
+      "Soundstage"
+    ]
+  },
+  {
+    "id": "hall_effect_rapid_trigger",
+    "term": "Manyetik Hall Effect Switch & Rapid Trigger",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Klavyede metal kontak yerine mıknatıs ve manyetik sensör kullanarak tuşun basılma ve bırakılma noktasını 0.1 mm hassasiyetle anlık algılayan teknolojidir.",
+    "detailedExplanation": "Klasik mekanik klavyelerde bir tuşu tekrar basabilmek için tuşun yayla sıfırlama noktasının (Reset Point) üstüne çıkması beklenir. Hall Effect klavyelerde (Wooting, Apex Pro, DrunkDeer) Rapid Trigger özelliği tuşun bırakıldığı milimetreyi (Örn: 0.1 mm) anında algılar ve parmağınızı milimetrik kaldırdığınız an tuşu bırakır. Valorant ve CS2'de karşı yöne basarak anında durma (Counter-Strafing) hareketini kusursuzlaştırır.",
+    "keyMetrics": "Tetikleme Aralığı: 0.1 mm – 4.0 mm • Rapid Trigger Hassasiyeti: 0.1 mm • Sıfır Mekanik Aşınma",
+    "relatedTerms": [
+      "Debounce Delay",
+      "Optik Switch",
+      "Hot-Swap"
+    ]
+  },
+  {
+    "id": "optical_sensor_paw",
+    "term": "Optik Sensör Mimarisi (PixArt PAW3395 / PAW3950 & HERO 25K)",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Farenin altındaki zeminin saniyede on binlerce fotoğrafını çekerek hareketi piksel hassasiyetinde dijital koda döken yüksek hızlı kamera çipidir.",
+    "detailedExplanation": "Giriş seviyesi sensörler yüksek hızda fare savurulduğunda takılır veya yön şaşırır (Spin-out). PixArt PAW3395 ve PAW3950 gibi amiral gemisi sensörler 750 IPS (saniyede 19 metre) hız ve 50G ivmelenmeye kadar kusursuz takip sağlar; cam yüzey dahil her zeminde çalışabilir ve Motion Sync teknolojisiyle veriyi PC'nin polling döngüsüyle tam senkronize eder.",
+    "keyMetrics": "Hız: 650–750 IPS • İvme: 50G • Takip Hatası: < %0.5 • Motion Sync Desteği",
+    "relatedTerms": [
+      "Mouse Polling Rate",
+      "LOD (Lift-off Distance)"
+    ]
+  },
+  {
+    "id": "planar_magnetic_vs_dynamic",
+    "term": "Planar Manyetik vs Dinamik Kulaklık Sürücüsü",
+    "category": "Çevre Birimleri",
+    "shortDescription": "Ses üreten diyaframın konik bir bobinle merkezden mi (Dinamik) yoksa iki mıknatıs arasında asılı mikrofilm bir zarla tüm yüzeyden mi (Planar) titreştirildiğidir.",
+    "detailedExplanation": "Standart kulaklıklarda konik diyafram merkezden itildiği için yüksek frekanslarda yüzey bükülmesi (harmonik distorsiyon) yaşanır. Planar Manyetik sürücülerde (Örn: Audeze Maxwell, Hifiman) nano kalınlıktaki tüm film yüzeyi manyetik alanda eşzamanlı hareket eder. Bu sayede sıfıra yakın distorsiyon, inanılmaz hızlı bas tepkisi ve oyunlarda ayak seslerinin yönünü milimetrik ayıran muazzam bir sahne genişliği (Soundstage) sunar.",
+    "keyMetrics": "Planar: Sıfır Distorsiyon & Kusursuz Ses Ayrımı • Dinamik: Güçlü Bas & Hafiflik",
+    "relatedTerms": [
+      "Kulaklık Empedansı",
+      "Soundstage"
+    ]
+  },
+  {
+    "id": "x3d_vcache_gaming",
+    "term": "AMD 3D V-Cache (X3D Mimarisi)",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "İşlemci çekirdek zarının üzerine doğrudan 64 MB ek L3 önbellek istiflenerek toplam önbelleğin 96 MB'a çıkarıldığı oyun odaklı mimaridir.",
+    "detailedExplanation": "Oyun motorları sürekli RAM'den veri talep eder; RAM gecikmesi ise silikon içine göre çok yavaştır (~60ns vs ~10ns). 96 MB devasa L3 önbellek sayesinde oyun verilerinin ezici çoğunluğu doğrudan CPU zarı içinde tutulur. Bu da oyunlarda ortalama FPS'ten ziyade takılmaları engelleyen %1 Low ve %0.1 Low kare sürelerinde devrimsel artış sağlar.",
+    "keyMetrics": "Toplam L3: 96 MB (Tek CCD) • Gecikme: ~11 ns • %1 Low FPS Artışı: +%20–%45",
+    "relatedTerms": [
+      "True Latency (ns)",
+      "%1 Low FPS",
+      "TjMax Sıcaklık Sınırı"
+    ]
+  },
+  {
+    "id": "infinity_fabric_fclk",
+    "term": "AMD Infinity Fabric (FCLK) & UCLK / MCLK Senkronu",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "AMD işlemcilerde çekirdekler (CCD), giriş/çıkış zarı (IOD) ve bellek kontrolcüsü arasındaki dahili veri yolu iletişim frekansıdır.",
+    "detailedExplanation": "Ryzen sistemlerde RAM frekansı ile dahili kontrolcü hızının 1:1 senkron çalışması kritiktir. AM5 platformunda FCLK 2000 MHz, UCLK=MCLK ise 3000 MHz (DDR5-6000) olduğunda tam senkron tatlı nokta (Sweet Spot) yakalanır. Daha yüksek hızlı bir RAM takıldığında (Örn: 7200 MT/s) kontrolcü 1:2 moduna düşerse gecikme artar ve oyun performansı gerileyebilir.",
+    "keyMetrics": "AM5 Sweet Spot: 6000 MT/s CL30 (FCLK 2000, UCLK=MCLK 3000 MHz)",
+    "relatedTerms": [
+      "True Latency (ns)",
+      "EXPO & XMP",
+      "DDR5 Frekansı"
+    ]
+  },
+  {
+    "id": "delid_liquid_metal",
+    "term": "Delid (İşlemci Kapağını Açma) & Sıvı Metal",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "İşlemcinin metal ısı dağıtıcı kapağını (IHS) sökerek çekirdek zarı üzerine standart macun yerine galyum alaşımlı sıvı metal uygulanmasıdır.",
+    "detailedExplanation": "Fabrikasyon lehim veya termal macun belirli bir termal dirence sahiptir. Delid işlemiyle aradaki mesafe ve direnç sıfırlanır; sıvı metal (73 W/mK) uygulanarak doğrudan soğutucu bloğa temas sağlanır (Direct Die). Bu işlem çekirdek sıcaklıklarını 15°C–25°C düşürür ancak işlemciyi garanti dışı bırakır ve elektrik iletkenliği nedeniyle uzmanlık gerektirir.",
+    "keyMetrics": "Termal İletkenlik: Standart Macun 8–14 W/mK vs Sıvı Metal 73 W/mK • 15–20°C Sıcaklık Düşüşü",
+    "relatedTerms": [
+      "TjMax Sıcaklık Sınırı",
+      "Termal Macun",
+      "AIO Sıvı Soğutma"
+    ]
+  },
+  {
+    "id": "ipc_instructions_per_cycle",
+    "term": "IPC (Instructions Per Cycle - Döngü Başına Komut)",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "Bir işlemci mimarisinin 1 MHz saat frekansında kaç adet makine talimatı işleyebildiğini gösteren saf mimari verimlilik ölçütüdür.",
+    "detailedExplanation": "Sadece saat hızına (GHz) bakarak iki farklı nesil işlemci kıyaslanamaz. Örneğin 4.5 GHz hızında çalışan yeni mimarili bir işlemci, daha yüksek IPC değeri sayesinde 5.0 GHz hızında çalışan eski nesil bir işlemciden oyunlarda çok daha yüksek FPS verebilir. Gerçek CPU performansı = Saat Hızı (GHz) × IPC formülüdür.",
+    "keyMetrics": "Her Nesilde Hedeflenen IPC Artışı: +%10–%18 • Mimari Saf Güç Göstergesi",
+    "relatedTerms": [
+      "Çekirdek & İzlek",
+      "AMD 3D V-Cache",
+      "Saat Hızı (Clock Speed)"
+    ]
+  },
+  {
+    "id": "p_core_e_core",
+    "term": "P-Core (Performans) & E-Core (Verimlilik) Çekirdekleri",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "İşlemci zarında ağır oyun yüklerini üstlenen büyük çekirdekler ile arka plan görevlerini üstlenen küçük çekirdeklerin hibrit mimarisidir.",
+    "detailedExplanation": "Intel 12.-14. Nesil ve Core Ultra işlemcilerde kullanılan mimaride P-Core'lar yüksek saat hızları ve Hyper-Threading ile oyun ve 3D render gibi öncelikli işleri yapar. E-Core'lar ise Discord, OBS yayını, antivirüs taraması ve Windows arka plan süreçlerini üstlenerek P-Core'ların oyun performansından ödün vermesini engeller.",
+    "keyMetrics": "P-Core: Yüksek IPC & Saat Hızı • E-Core: Yüksek Enerji Verimliliği & Çoklu İş Parçacığı",
+    "relatedTerms": [
+      "Çekirdek & İzlek",
+      "TDP vs PPT",
+      "IPC"
+    ]
+  },
+  {
+    "id": "pbo_curve_optimizer",
+    "term": "PBO2 (Precision Boost Overdrive) & Curve Optimizer",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "AMD işlemcilerde çekirdeklerin voltaj/frekans eğrisini negatif kaydırarak hem sıcaklığı düşüren hem de saat hızını artıran akıllı undervolt sistemidir.",
+    "detailedExplanation": "Klasik sabit voltaj overclock yerine Curve Optimizer, her çekirdeğe özel negatif ofset (Örn: -20 veya -30 birim) uygular. Çekirdek aynı saat hızına 70–100 mV daha düşük voltajla ulaştığı için daha az ısınır; termal tavana çarpmadığı için algoritmik olarak daha yüksek boost frekanslarını daha uzun süre korur.",
+    "keyMetrics": "Stabil Aralık: Negatif 15–30 adım • ~8°C Sıcaklık Düşüşü & +150–200 MHz Boost",
+    "relatedTerms": [
+      "TjMax Sıcaklık Sınırı",
+      "TDP vs PPT",
+      "Silicon Lottery"
+    ]
+  },
+  {
+    "id": "silicon_lottery_sp",
+    "term": "Silikon Piyangosu (Silicon Lottery) & SP Skoru",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "Aynı model iki işlemcinin üretim bandındaki mikroskobik silikon saflığı farkı nedeniyle farklı voltaj ve saat hızlarında kararlı çalışması durumudur.",
+    "detailedExplanation": "Örneğin iki adet Ryzen 7 7800X3D veya Core i9-14900K satın aldığınızda biri 1.20V ile 5.5 GHz görebilirken, diğeri aynı frekans için 1.28V voltaja ihtiyaç duyabilir ve çok daha fazla ısınır. ASUS anakartlardaki 'SP (Silicon Prediction) Skoru' bu kaliteyi ölçer; yüksek SP skorlu işlemciler daha düşük voltajla daha serin çalışır.",
+    "keyMetrics": "Yüksek SP Skoru: Düşük Voltaj, Yüksek Boost, Mükemmel Undervolt Kapasitesi",
+    "relatedTerms": [
+      "PBO2 Curve Optimizer",
+      "Delid & Sıvı Metal"
+    ]
+  },
+  {
+    "id": "tdp_ppt_mtp",
+    "term": "TDP vs PPT vs MTP (Kağıt TDP vs Gerçek Güç)",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "Kutuda yazan baz termal tasarım gücü (TDP) ile işlemcinin tam yükte prizden çektiği gerçek tepe güç sınırları (PPT/MTP) arasındaki farktır.",
+    "detailedExplanation": "Bir işlemcinin kutusunda '65W TDP' veya '125W TDP' yazması o işlemcinin 65W/125W soğutucuyla tam performans çalışacağı anlamına gelmez. AMD'de PPT (Package Power Tracking) 105W TDP işlemcide 142W'a, 170W TDP işlemcide 230W'a çıkar. Intel'de ise 125W baz TDP'li bir i7/i9 tam yükte MTP (Maximum Turbo Power) sınırında 253W–300W çeker. Soğutucu seçimi baz TDP'ye değil, daima PPT/MTP değerine göre yapılmalıdır.",
+    "keyMetrics": "AMD PPT: 65W TDP -> 88W | 105W TDP -> 142W | 170W TDP -> 230W • Intel MTP: 253W+",
+    "relatedTerms": [
+      "TjMax Sıcaklık Sınırı",
+      "Termal Throttling",
+      "AIO Sıvı Soğutma"
+    ]
+  },
+  {
+    "id": "tjmax_temperature",
+    "term": "TjMax (Tjunction Max - Termal Eşik Sıcaklığı)",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "İşlemci silikonunun kalıcı hasar görmeden güvenle çalışabileceği fabrikasyon maksimum çekirdek sıcaklık tavanıdır.",
+    "detailedExplanation": "TjMax bir arıza sıcaklığı değil, koruma eşiğidir. İşlemci bu sıcaklığa ulaştığında (Örn: Ryzen 7000'de 95°C, Ryzen X3D'de 89°C, Intel 13/14. Nesilde 100°C) voltajını ve saat frekansını anında kısarak sıcaklığı bu sınırda sabit tutar (Thermal Throttling). Bu sınır aşılamaz, ancak sınırda çalışmak boost frekansının düşmesine sebep olur.",
+    "keyMetrics": "Ryzen X3D: 89°C • Ryzen Standart: 95°C • Intel Core i7/i9: 100°C",
+    "relatedTerms": [
+      "TDP vs PPT",
+      "Termal Throttling",
+      "Delid & Sıvı Metal"
+    ]
+  },
+  {
+    "id": "core_thread_smt",
+    "term": "Çekirdek (Core) & İzlek (Thread / SMT / Hyper-Threading)",
+    "category": "İşlemci & Çiplet",
+    "shortDescription": "İşlemcinin fiziksel hesaplama birimleri (Çekirdek) ile her bir fiziksel çekirdeğin aynı anda iki işi yürütmesini sağlayan sanal hatlardır (İzlek).",
+    "detailedExplanation": "8 Çekirdek / 16 İzlek bir işlemcide SMT (AMD) veya Hyper-Threading (Intel) sayesinde bir çekirdek bellekten veri beklerken bekleme yapmaz, ikinci izlek üzerinden diğer komutları çalıştırmaya devam eder. Bu da render ve video kurgu gibi çok çekirdekli işlerde %25–%35 performans artışı sağlar.",
+    "keyMetrics": "SMT/HT Kazancı: Çoklu Çekirdekte +%25–%35 • Fiziksel Çekirdek = Saf Güç",
+    "relatedTerms": [
+      "P-Core & E-Core",
+      "IPC",
+      "Cinebench"
+    ]
+  }
+]

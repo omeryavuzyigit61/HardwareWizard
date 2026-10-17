@@ -2,6 +2,7 @@ package com.panda.myapplication.data.repository
 
 import com.panda.myapplication.data.local.HardwareLocalDataSource
 import com.panda.myapplication.data.local.dao.HardwareDao
+import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.mapper.HardwareMapper
 import com.panda.myapplication.data.remote.HardwareRemoteDataSource
 import com.panda.myapplication.domain.common.DomainError
@@ -14,6 +15,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -38,9 +40,25 @@ class HardwareRepositoryImpl(
         if (isSeeded) return
         seedMutex.withLock {
             if (isSeeded) return
-            localDataSource.seedDatabaseIfEmpty()
+            val existing = hardwareDao.getAllHardwareItems()
+            val hasCpus = existing.any { it.category == HardwareCategory.CPU }
+            val hasGpus = existing.any { it.category == HardwareCategory.GPU }
+            val hasPrebuilts = existing.any { it.category == HardwareCategory.PREBUILT_PC }
+            val hasLaptops = existing.any { it.category == HardwareCategory.LAPTOP }
+            val peripheralCount = existing.count { it.category.isPeripheral }
+            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts || !hasLaptops || peripheralCount < 40) {
+                localDataSource.seedDatabaseIfEmpty()
+            }
             isSeeded = true
         }
+    }
+
+    private fun HardwareItem.applyOverride(overrideMap: Map<String, UserPriceOverrideEntity>): HardwareItem {
+        val ov = overrideMap[id.value] ?: return this
+        return copy(
+            customPriceTry = ov.customPriceTry,
+            customPriceNote = ov.note,
+        )
     }
 
     override fun observeHardwareItems(): Flow<DomainResult<List<HardwareItem>>> = flow {
@@ -52,19 +70,23 @@ class HardwareRepositoryImpl(
         }
         // 2. Ensure database is fully seeded before querying Room
         ensureSeeded()
-        // 3. Observe Room updates
-        emitAll(
-            hardwareDao.observeAll()
-                .map { list ->
-                    val items = list.mapNotNull { HardwareMapper.toDomain(it) }
-                    memoryCache.value = items
-                    DomainResult.Success(items) as DomainResult<List<HardwareItem>>
+        // 3. Observe all categories by combining their robust, direct spec streams
+        val allFlow = combine(
+            HardwareCategory.entries.map { cat -> observeHardwareItemsByCategory(cat) }
+        ) { categoryResults ->
+            val allItems = mutableListOf<HardwareItem>()
+            for (res in categoryResults) {
+                if (res is DomainResult.Success) {
+                    allItems.addAll(res.data)
                 }
-                .catch {
-                    val fallback = memoryCache.value ?: emptyList()
-                    emit(DomainResult.Success(fallback))
-                }
-        )
+            }
+            memoryCache.value = allItems
+            DomainResult.Success(allItems) as DomainResult<List<HardwareItem>>
+        }.catch {
+            val fallback = memoryCache.value ?: emptyList()
+            emit(DomainResult.Success(fallback))
+        }
+        emitAll(allFlow)
     }.flowOn(ioDispatcher)
 
     override fun observeHardwareItemsByCategory(category: HardwareCategory): Flow<DomainResult<List<HardwareItem>>> = flow {
@@ -77,13 +99,236 @@ class HardwareRepositoryImpl(
         }
         // 2. Ensure database is fully seeded before querying Room
         ensureSeeded()
-        // 3. Observe Room updates
-        emitAll(
-            hardwareDao.observeByCategory(category)
-                .map { list ->
-                    val items = list.mapNotNull { HardwareMapper.toDomain(it) }
-                    DomainResult.Success(items) as DomainResult<List<HardwareItem>>
+        // 3. Observe Room updates without multi-table @Relation to prevent SQLite 999 bind parameter limits
+        val domainItemsFlow: Flow<List<HardwareItem>> = when (category) {
+            HardwareCategory.CPU -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllCpuSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            cpu = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
                 }
+            }
+            HardwareCategory.GPU -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllGpuSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            gpu = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.RAM -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllRamSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            ram = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.MOTHERBOARD -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllMotherboardSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            motherboard = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.PSU -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllPsuSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            psu = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.STORAGE -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllStorageSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            storage = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.COOLER -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllCoolerSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            cooler = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.CASE -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllCaseSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            case = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.PREBUILT_PC -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllPrebuiltSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            prebuilt = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.LAPTOP -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllLaptopSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            laptop = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.MOUSE -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllMouseSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            mouse = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.KEYBOARD -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllKeyboardSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            keyboard = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.HEADSET -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllHeadsetSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            headset = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.MONITOR -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllMonitorSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            monitor = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+        }
+        emitAll(
+            domainItemsFlow
+                .map { DomainResult.Success(it) as DomainResult<List<HardwareItem>> }
                 .catch {
                     val fallback = memoryCache.value?.filter { it.category == category } ?: emptyList()
                     emit(DomainResult.Success(fallback))
@@ -94,22 +339,24 @@ class HardwareRepositoryImpl(
     override fun observeHardwareItem(id: HardwareId): Flow<DomainResult<HardwareItem>> = flow {
         ensureSeeded()
         emitAll(
-            hardwareDao.observeById(id.value)
-                .map { itemWithSpec ->
-                    if (itemWithSpec == null) {
-                        DomainResult.Failure(DomainError.NotFound)
+            combine(
+                hardwareDao.observeById(id.value),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { itemWithSpec, overrides ->
+                if (itemWithSpec == null) {
+                    DomainResult.Failure(DomainError.NotFound)
+                } else {
+                    val overrideMap = overrides.associateBy { it.hardwareId }
+                    val domainItem = HardwareMapper.toDomain(itemWithSpec)?.applyOverride(overrideMap)
+                    if (domainItem != null) {
+                        DomainResult.Success(domainItem)
                     } else {
-                        val domainItem = HardwareMapper.toDomain(itemWithSpec)
-                        if (domainItem != null) {
-                            DomainResult.Success(domainItem)
-                        } else {
-                            DomainResult.Failure(DomainError.NotFound)
-                        }
+                        DomainResult.Failure(DomainError.NotFound)
                     }
                 }
-                .catch {
-                    emit(DomainResult.Failure(DomainError.Storage))
-                }
+            }.catch {
+                emit(DomainResult.Failure(DomainError.Storage))
+            }
         )
     }.flowOn(ioDispatcher)
 
@@ -128,6 +375,36 @@ class HardwareRepositoryImpl(
             }
         )
     }.flowOn(ioDispatcher)
+
+    override suspend fun setCustomPrice(
+        id: HardwareId,
+        customPriceTry: Double,
+        note: String?,
+    ): DomainResult<Unit> = withContext(ioDispatcher) {
+        runCatching {
+            val sanitized = customPriceTry.coerceIn(1.0, 9_999_999.0)
+            hardwareDao.upsertPriceOverride(
+                UserPriceOverrideEntity(
+                    hardwareId = id.value,
+                    customPriceTry = sanitized,
+                    note = note?.trim()?.takeIf { it.isNotBlank() },
+                    updatedAt = Clock.System.now().toEpochMilliseconds(),
+                ),
+            )
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            DomainResult.Failure(DomainError.Storage)
+        }
+    }
+
+    override suspend fun clearCustomPrice(id: HardwareId): DomainResult<Unit> = withContext(ioDispatcher) {
+        runCatching {
+            hardwareDao.deletePriceOverride(id.value)
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            DomainResult.Failure(DomainError.Storage)
+        }
+    }
 
     override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
         ensureSeeded()
@@ -160,14 +437,17 @@ class HardwareRepositoryImpl(
             if (catalogResult.isSuccess) {
                 val catalog = catalogResult.getOrThrow()
                 val snapshot = HardwareMapper.buildCatalogSnapshot(
-                    cpus = catalog.cpus,
-                    gpus = catalog.gpus,
-                    rams = catalog.rams,
-                    motherboards = catalog.motherboards,
-                    psus = catalog.psus,
-                    storages = catalog.storages,
-                    coolers = catalog.coolers,
-                    cases = catalog.cases,
+                    cpus = catalog.cpus.ifEmpty { localDataSource.loadLocalCpus() },
+                    gpus = catalog.gpus.ifEmpty { localDataSource.loadLocalGpus() },
+                    rams = catalog.rams.ifEmpty { localDataSource.loadLocalRams() },
+                    motherboards = catalog.motherboards.ifEmpty { localDataSource.loadLocalMotherboards() },
+                    psus = catalog.psus.ifEmpty { localDataSource.loadLocalPsus() },
+                    storages = catalog.storages.ifEmpty { localDataSource.loadLocalStorages() },
+                    coolers = catalog.coolers.ifEmpty { localDataSource.loadLocalCoolers() },
+                    cases = catalog.cases.ifEmpty { localDataSource.loadLocalCases() },
+                    prebuilts = catalog.prebuilts.ifEmpty { localDataSource.loadLocalPrebuilts() },
+                    laptops = catalog.laptops.ifEmpty { localDataSource.loadLocalLaptops() },
+                    peripherals = catalog.peripherals.ifEmpty { localDataSource.loadLocalPeripherals() },
                     pricesTr = allPrices,
                     benchmarks = allBenchmarks,
                     existingImages = existingImages,
