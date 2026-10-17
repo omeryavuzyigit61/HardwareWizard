@@ -34,6 +34,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Badge
@@ -110,10 +111,26 @@ import com.panda.myapplication.domain.model.StorageInterface
 import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.Wattage
+import androidx.compose.animation.core.tween
+import androidx.compose.material3.IconButton
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
+import com.panda.myapplication.presentation.theme.CardSurface
+import com.panda.myapplication.presentation.theme.CardSurfaceElevated
+import com.panda.myapplication.presentation.theme.ElectricBlue
+import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
+import com.panda.myapplication.presentation.theme.NavyCard
+import com.panda.myapplication.presentation.theme.NavyElevated
+import com.panda.myapplication.presentation.theme.NavySurface
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
+import com.panda.myapplication.presentation.theme.NeonEmerald
+import com.panda.myapplication.presentation.theme.NeonPurple
+import com.panda.myapplication.presentation.theme.NeonRose
+import com.panda.myapplication.presentation.theme.ObsidianDeep
+import com.panda.myapplication.presentation.theme.TextMuted
+import com.panda.myapplication.presentation.theme.TextPrimary
+import com.panda.myapplication.presentation.theme.TextSecondary
 import org.koin.compose.viewmodel.koinViewModel
 
 object Spacing {
@@ -280,64 +297,111 @@ fun HardwareListContent(
                     modifier = Modifier.fillMaxWidth(),
                     placeholder = {
                         Text(
-                            text = "Parça adı, marka (AMD, RTX 4070, DDR5...)",
+                            text = "Parça adı, model, marka (AMD, RTX 4070, DDR5...)",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            color = TextMuted,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
                         )
                     },
+                    leadingIcon = {
+                        Text(text = "🔍", fontSize = 15.sp)
+                    },
+                    trailingIcon = {
+                        if (localSearchQuery.isNotEmpty()) {
+                            IconButton(
+                                onClick = {
+                                    localSearchQuery = ""
+                                    onSearchQueryChange("")
+                                },
+                                modifier = Modifier.size(28.dp),
+                            ) {
+                                Text(
+                                    text = "✕",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = TextMuted,
+                                )
+                            }
+                        }
+                    },
                     singleLine = true,
-                    shape = RoundedCornerShape(Spacing.cardRadius),
+                    shape = RoundedCornerShape(14.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = MaterialTheme.colorScheme.surface,
-                        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                        focusedBorderColor = MaterialTheme.colorScheme.primary,
-                        unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                        focusedTextColor = MaterialTheme.colorScheme.onSurface,
-                        unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                        focusedContainerColor = NavyCard,
+                        unfocusedContainerColor = NavyCard,
+                        focusedBorderColor = NeonCyan,
+                        unfocusedBorderColor = GlassBorder,
+                        focusedTextColor = TextPrimary,
+                        unfocusedTextColor = TextPrimary,
+                        cursorColor = NeonCyan,
                     ),
                 )
 
                 Spacer(modifier = Modifier.height(Spacing.small))
 
-                // Segmented Tab: [ Bireysel | Çevre Birimi | OEM Sistem | Laptop ]
+                // Fluid Organic Segmented Tab: [ 🧩 Bireysel | 🖱️ Çevre | 🖥️ Hazır Sistem | 💻 Laptop ]
                 val currentMode = uiState.segmentMode
                 Surface(
-                    shape = RoundedCornerShape(Spacing.small),
-                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)),
+                    shape = RoundedCornerShape(12.dp),
+                    color = ObsidianDeep.copy(alpha = 0.85f),
+                    border = BorderStroke(1.dp, GlassBorder),
                     modifier = Modifier.fillMaxWidth().padding(bottom = Spacing.small),
                 ) {
                     Row(
-                        modifier = Modifier.fillMaxWidth().padding(3.dp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(4.dp),
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
                         val tabs = listOf(
-                            CatalogSegmentMode.INDIVIDUAL to "Bireysel",
-                            CatalogSegmentMode.PERIPHERALS to "Çevre Birimi",
-                            CatalogSegmentMode.PREBUILT to "OEM Sistem",
-                            CatalogSegmentMode.LAPTOP to "Laptop",
+                            CatalogSegmentMode.INDIVIDUAL to ("🧩" to "Bireysel"),
+                            CatalogSegmentMode.PERIPHERALS to ("🖱️" to "Çevre"),
+                            CatalogSegmentMode.PREBUILT to ("🖥️" to "Hazır Sistem"),
+                            CatalogSegmentMode.LAPTOP to ("💻" to "Laptop"),
                         )
-                        tabs.forEach { (mode, title) ->
+                        tabs.forEach { (mode, pair) ->
+                            val (emoji, title) = pair
                             val isSelected = currentMode == mode
+                            val animatedBg by animateColorAsState(
+                                if (isSelected) NeonCyan.copy(alpha = 0.22f) else Color.Transparent,
+                                animationSpec = tween(durationMillis = 200),
+                            )
+                            val animatedBorderColor by animateColorAsState(
+                                if (isSelected) NeonCyan.copy(alpha = 0.85f) else Color.Transparent,
+                                animationSpec = tween(durationMillis = 200),
+                            )
+
                             Surface(
                                 onClick = {
                                     onEvent(HardwareListUiEvent.OnSegmentModeSelected(mode))
                                 },
-                                shape = RoundedCornerShape(8.dp),
-                                color = if (isSelected) MaterialTheme.colorScheme.primary else Color.Transparent,
+                                shape = RoundedCornerShape(9.dp),
+                                color = animatedBg,
+                                border = BorderStroke(
+                                    1.dp,
+                                    if (isSelected) animatedBorderColor else Color.Transparent,
+                                ),
                                 modifier = Modifier.weight(1f),
                             ) {
-                                Text(
-                                    text = title,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
-                                    textAlign = TextAlign.Center,
+                                Row(
                                     modifier = Modifier.padding(vertical = 8.dp, horizontal = 2.dp),
-                                    maxLines = 1,
-                                    softWrap = false,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.Center,
+                                ) {
+                                    Text(text = emoji, fontSize = 11.sp)
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text(
+                                        text = title,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Medium,
+                                        color = if (isSelected) NeonCyan else TextSecondary,
+                                        textAlign = TextAlign.Center,
+                                        maxLines = 1,
+                                        softWrap = false,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                }
                             }
                         }
                     }
@@ -348,30 +412,35 @@ fun HardwareListContent(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     // Filter Sheet Trigger Button
+                    val isFilterActive = uiState.filters.isActive
                     Surface(
                         onClick = { onEvent(HardwareListUiEvent.OnToggleFilterSheet) },
-                        shape = RoundedCornerShape(Spacing.small),
-                        color = if (uiState.filters.isActive) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface,
-                        border = BorderStroke(1.dp, if (uiState.filters.isActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline),
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (isFilterActive) NeonCyan.copy(alpha = 0.18f) else NavyCard,
+                        border = BorderStroke(
+                            if (isFilterActive) 1.2.dp else 1.dp,
+                            if (isFilterActive) NeonCyan else GlassBorder,
+                        ),
                         modifier = Modifier.padding(end = Spacing.small),
                     ) {
                         Row(
-                            modifier = Modifier.padding(horizontal = Spacing.small, vertical = 6.dp),
+                            modifier = Modifier.padding(horizontal = 11.dp, vertical = 7.dp),
                             verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(5.dp),
                         ) {
+                            Text(text = "🎛️", fontSize = 12.sp)
                             Text(
                                 text = "Filtreler",
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = if (uiState.filters.isActive) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface,
+                                color = if (isFilterActive) NeonCyan else TextPrimary,
                             )
-                            if (uiState.filters.isActive) {
-                                Spacer(modifier = Modifier.width(Spacing.extraSmall))
+                            if (isFilterActive) {
                                 Box(
                                     modifier = Modifier
                                         .size(6.dp)
-                                        .clip(RoundedCornerShape(3.dp))
-                                        .background(MaterialTheme.colorScheme.secondary),
+                                        .clip(CircleShape)
+                                        .background(NeonEmerald),
                                 )
                             }
                         }
@@ -562,44 +631,84 @@ fun HardwareListContent(
 }
 
 @Composable
+fun FluidFilterChip(
+    selected: Boolean,
+    onClick: () -> Unit,
+    label: String,
+    modifier: Modifier = Modifier,
+    icon: String? = null,
+    accentColor: Color = NeonCyan,
+) {
+    val animatedBg by animateColorAsState(
+        if (selected) accentColor.copy(alpha = 0.22f) else NavyCard,
+        animationSpec = tween(durationMillis = 200),
+    )
+    val animatedBorderColor by animateColorAsState(
+        if (selected) accentColor.copy(alpha = 0.85f) else GlassBorder,
+        animationSpec = tween(durationMillis = 200),
+    )
+
+    Surface(
+        onClick = onClick,
+        shape = RoundedCornerShape(10.dp),
+        color = animatedBg,
+        border = BorderStroke(
+            if (selected) 1.2.dp else 1.dp,
+            animatedBorderColor,
+        ),
+        modifier = modifier,
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 11.dp, vertical = 7.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(5.dp),
+        ) {
+            if (icon != null) {
+                Text(text = icon, fontSize = 12.sp)
+            }
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
+                color = if (selected) accentColor else TextSecondary,
+                maxLines = 1,
+                softWrap = false,
+            )
+        }
+    }
+}
+
+@Composable
 fun CategoryFilterChips(
     selectedCategory: HardwareCategory?,
     onCategorySelected: (HardwareCategory?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val categories = listOf(
-        null to "Tümü",
-        HardwareCategory.CPU to "CPU",
-        HardwareCategory.GPU to "GPU",
-        HardwareCategory.RAM to "RAM",
-        HardwareCategory.MOTHERBOARD to "Anakart",
-        HardwareCategory.PSU to "PSU",
-        HardwareCategory.STORAGE to "Depolama",
-        HardwareCategory.COOLER to "Soğutucu",
-        HardwareCategory.CASE to "Kasa",
+        null to ("✨" to "Tümü"),
+        HardwareCategory.CPU to ("⚡" to "CPU"),
+        HardwareCategory.GPU to ("🎮" to "GPU"),
+        HardwareCategory.RAM to ("🧠" to "RAM"),
+        HardwareCategory.MOTHERBOARD to ("🖲️" to "Anakart"),
+        HardwareCategory.PSU to ("🔌" to "PSU"),
+        HardwareCategory.STORAGE to ("💾" to "Depolama"),
+        HardwareCategory.COOLER to ("❄️" to "Soğutucu"),
+        HardwareCategory.CASE to ("📦" to "Kasa"),
     )
 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
     ) {
-        categories.forEach { (cat, label) ->
+        categories.forEach { (cat, pair) ->
+            val (icon, label) = pair
             val isSelected = selectedCategory == cat
-            FilterChip(
+            FluidFilterChip(
                 selected = isSelected,
                 onClick = { onCategorySelected(cat) },
-                label = { Text(text = label, style = MaterialTheme.typography.labelMedium) },
-                shape = RoundedCornerShape(Spacing.small),
-                colors = FilterChipDefaults.filterChipColors(
-                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                ),
-                border = BorderStroke(
-                    1.dp,
-                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                ),
+                label = label,
+                icon = icon,
+                accentColor = NeonCyan,
             )
         }
     }
@@ -611,35 +720,27 @@ fun PeripheralCategoryChips(
     onCategorySelected: (HardwareCategory?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val categories: List<Pair<HardwareCategory?, String>> = listOf(
-        null to "Tümü",
-        HardwareCategory.MONITOR to "🖥️ Monitör",
-        HardwareCategory.MOUSE to "🖱️ Mouse",
-        HardwareCategory.KEYBOARD to "⌨️ Klavye",
-        HardwareCategory.HEADSET to "🎧 Kulaklık",
+    val categories: List<Pair<HardwareCategory?, Pair<String, String>>> = listOf(
+        null to ("✨" to "Tümü"),
+        HardwareCategory.MONITOR to ("🖥️" to "Monitör"),
+        HardwareCategory.MOUSE to ("🖱️" to "Mouse"),
+        HardwareCategory.KEYBOARD to ("⌨️" to "Klavye"),
+        HardwareCategory.HEADSET to ("🎧" to "Kulaklık"),
     )
 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
     ) {
-        categories.forEach { (cat, label) ->
+        categories.forEach { (cat, pair) ->
+            val (icon, label) = pair
             val isSelected = selectedCategory == cat
-            FilterChip(
+            FluidFilterChip(
                 selected = isSelected,
                 onClick = { onCategorySelected(cat) },
-                label = { Text(text = label, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold) },
-                shape = RoundedCornerShape(Spacing.small),
-                colors = FilterChipDefaults.filterChipColors(
-                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                ),
-                border = BorderStroke(
-                    1.dp,
-                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                ),
+                label = label,
+                icon = icon,
+                accentColor = NeonCyan,
             )
         }
     }
@@ -658,40 +759,21 @@ fun BrandFilterChips(
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
     ) {
         val isAllSelected = selectedBrands.isEmpty()
-        FilterChip(
+        FluidFilterChip(
             selected = isAllSelected,
             onClick = onClearBrands,
-            label = { Text(text = "Tümü", style = MaterialTheme.typography.labelMedium) },
-            shape = RoundedCornerShape(Spacing.small),
-            colors = FilterChipDefaults.filterChipColors(
-                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                containerColor = MaterialTheme.colorScheme.surface,
-                labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
-            ),
-            border = BorderStroke(
-                1.dp,
-                if (isAllSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-            ),
+            label = "Tümü",
+            icon = "✨",
+            accentColor = NeonCyan,
         )
 
         availableBrands.forEach { brand ->
             val isSelected = selectedBrands.contains(brand)
-            FilterChip(
+            FluidFilterChip(
                 selected = isSelected,
                 onClick = { onBrandToggled(brand) },
-                label = { Text(text = brand, style = MaterialTheme.typography.labelMedium) },
-                shape = RoundedCornerShape(Spacing.small),
-                colors = FilterChipDefaults.filterChipColors(
-                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                ),
-                border = BorderStroke(
-                    1.dp,
-                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                ),
+                label = brand,
+                accentColor = NeonCyan,
             )
         }
     }
