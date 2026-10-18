@@ -18,7 +18,22 @@
     "coolingTech": "Tri-Fan Teknolojisi + Sıvı Metal Termal İletken (Conductonaut)",
     "gamingScore": 95,
     "fps1080p": 175,
-    "fps1440p": 135
+    "fps1440p": 135,
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408_2.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408_3.jpg"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "ROG Nebula Fast IPS (3ms)",
+    "colorGamut": "%100 DCI-P3 Profesyonel Sinema Gamutu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 330
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16irx9h",
@@ -39,7 +54,22 @@
     "coolingTech": "Legion Coldfront 5.0 Buhar Odası (Vapor Chamber) + Çift Fanlı Sıvı Kristal Polimer",
     "gamingScore": 99,
     "fps1080p": 210,
-    "fps1440p": 168
+    "fps1440p": 168,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-183de3.png",
+      "https://img.yenieera22.com/cdn/1000/1-183de3_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-183de3_ports.png"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 DCI-P3 Profesyonel Sinema Gamutu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 330
   },
   {
     "id": "laptop_asus_tuf_a15_fa507uv",
@@ -60,7 +90,22 @@
     "coolingTech": "84 Bıçaklı Arc Flow Fanlar + 5 Isı Borulu Çift Egzos",
     "gamingScore": 84,
     "fps1080p": 118,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "images": [
+      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca.jpg?preset=dvn1",
+      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca_2.jpg?preset=dvn1",
+      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca_3.jpg?preset=dvn1"
+    ],
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_lenovo_loq_15irx9",
@@ -81,7 +126,22 @@
     "coolingTech": "Hyperchamber Soğutma Mimarisi + İçe Üfleyen Çift Fan",
     "gamingScore": 81,
     "fps1080p": 105,
-    "fps1440p": 68
+    "fps1440p": 68,
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld_2.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_acer_nitro_16_an16_41",
@@ -102,7 +162,22 @@
     "coolingTech": "Sıvı Metal Termal Macun + Çift Fanlı 4 Çıkışlı NitroSense Soğutma",
     "gamingScore": 85,
     "fps1080p": 122,
-    "fps1440p": 80
+    "fps1440p": 80,
+    "images": [
+      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook.jpg",
+      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook_2.jpg",
+      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook_3.jpg"
+    ],
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_msi_raider_ge68_hx_14vgg",
@@ -123,7 +198,22 @@
     "coolingTech": "Cooler Boost 5 (2 Fan, 6 Geniş Isı Borusu)",
     "gamingScore": 91,
     "fps1080p": 155,
-    "fps1440p": 115
+    "fps1440p": 115,
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399_2.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399_3.jpg"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 DCI-P3 Profesyonel Sinema Gamutu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hp_victus_16_r1000",
@@ -144,7 +234,22 @@
     "coolingTech": "OMEN Tempest Cooling Termal Çözümü",
     "gamingScore": 83,
     "fps1080p": 112,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "images": [
+      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg",
+      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1_2.jpg",
+      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_asus_tuf_f16_5060",
@@ -165,7 +270,22 @@
     "coolingTech": "Arc Flow Fanlar 2.0 + Sıvı Metal Termal Arabirim",
     "gamingScore": 88,
     "fps1080p": 138,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874_2.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_asus_rog_strix_scar_18_5090",
@@ -186,7 +306,22 @@
     "coolingTech": "Tri-Fan + Tam Boy Radyatör + Conductonaut Extreme Sıvı Metal",
     "gamingScore": 100,
     "fps1080p": 240,
-    "fps1440p": 195
+    "fps1440p": 195,
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Mini-LED (1100 Nit Tepe Parlaklık)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 330
   },
   {
     "id": "laptop_gaminggen_297dbfac",
@@ -207,7 +342,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_148efd58",
@@ -228,7 +378,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_579d04d5",
@@ -249,7 +414,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_3e31a173",
@@ -270,7 +450,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300_3.jpg"
+    ],
+    "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
+    "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_253caecb",
@@ -291,7 +486,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 17.3,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_ccc83988",
@@ -312,7 +522,22 @@
     "coolingTech": "Tri-Fan + Sıvı Metal Termal İletken",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_438c20c3",
@@ -333,7 +558,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_1e538883",
@@ -354,7 +594,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_7111920b",
@@ -375,7 +630,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_c9a4aa48",
@@ -396,7 +666,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_074bdd1e",
@@ -417,7 +702,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_5b5f1766",
@@ -438,7 +738,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_c00d841e",
@@ -459,7 +774,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_855cd0a7",
@@ -480,7 +810,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_25fbcd04",
@@ -501,7 +846,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_d2406a2a",
@@ -522,7 +882,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_2cdedf95",
@@ -543,7 +918,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_e49da852",
@@ -564,7 +954,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_9e8afc4a",
@@ -585,7 +990,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_3ea0e7c9",
@@ -606,7 +1026,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_bb14a8a6",
@@ -627,7 +1062,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_b570de68",
@@ -648,7 +1098,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_c7a0f4ee",
@@ -669,7 +1134,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_3789f25b",
@@ -690,7 +1170,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_56cee2d6",
@@ -711,7 +1206,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_4c4ed747",
@@ -732,7 +1242,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_25625956",
@@ -753,7 +1278,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_592d29e2",
@@ -774,7 +1314,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_8b971bfc",
@@ -795,7 +1350,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_f025819f",
@@ -816,7 +1386,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_0508834f",
@@ -837,7 +1422,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_c90df2ba",
@@ -858,7 +1458,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_gaminggen_46a2089a",
@@ -879,7 +1494,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_itopya_4985dfe0",
@@ -900,7 +1530,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4.png",
+      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4_angle.png",
+      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4_ports.png"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_3ab2556a",
@@ -921,7 +1566,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449.jpg",
+      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449_2.jpg",
+      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_1034728c",
@@ -942,7 +1602,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg",
+      "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg",
+      "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_481c7344",
@@ -963,7 +1638,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659_2.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_854d2bd0",
@@ -984,7 +1674,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_itopya_bdcdbdfc",
@@ -1005,7 +1710,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-60b165.png",
+      "https://img.yenieera22.com/cdn/1000/1-60b165_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-60b165_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_40db90a3",
@@ -1026,7 +1746,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 95,
     "fps1080p": 171,
-    "fps1440p": 128
+    "fps1440p": 128,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-daaf4b.png",
+      "https://img.yenieera22.com/cdn/1000/5-daaf4b_angle.png",
+      "https://img.yenieera22.com/cdn/1000/5-daaf4b_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 330
   },
   {
     "id": "laptop_itopya_410257cb",
@@ -1047,7 +1782,22 @@
     "coolingTech": "Legion Coldfront 5.0 Buhar Odası",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-0830d8.png",
+      "https://img.yenieera22.com/cdn/1000/5-0830d8_angle.png",
+      "https://img.yenieera22.com/cdn/1000/5-0830d8_ports.png"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_itopya_348d5550",
@@ -1068,7 +1818,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-787240.png",
+      "https://img.yenieera22.com/cdn/1000/5-787240_angle.png",
+      "https://img.yenieera22.com/cdn/1000/5-787240_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_588a3a85",
@@ -1089,7 +1854,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-431ee8.png",
+      "https://img.yenieera22.com/cdn/1000/5-431ee8_angle.png",
+      "https://img.yenieera22.com/cdn/1000/5-431ee8_ports.png"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_a13a7696",
@@ -1110,7 +1890,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-759627.png",
+      "https://img.yenieera22.com/cdn/1000/1-759627_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-759627_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_70ad677c",
@@ -1131,7 +1926,22 @@
     "coolingTech": "Tri-Fan + Sıvı Metal Termal İletken",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-fce08c.png",
+      "https://img.yenieera22.com/cdn/1000/1-fce08c_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-fce08c_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "LPDDR5X Lehimli (Yüksek Bant Genişliği)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_b7d31287",
@@ -1152,7 +1962,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-536e34.png",
+      "https://img.yenieera22.com/cdn/1000/5-536e34_angle.png",
+      "https://img.yenieera22.com/cdn/1000/5-536e34_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_597254df",
@@ -1173,7 +1998,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-86a570.png",
+      "https://img.yenieera22.com/cdn/1000/1-86a570_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-86a570_ports.png"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_itopya_fe97d098",
@@ -1194,7 +2034,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 95,
     "fps1080p": 171,
-    "fps1440p": 128
+    "fps1440p": 128,
+    "images": [
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large.jpg",
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large_2.jpg",
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 330
   },
   {
     "id": "laptop_itopya_77d17023",
@@ -1215,7 +2070,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-17a0ed.png",
+      "https://img.yenieera22.com/cdn/1000/1-17a0ed_angle.png",
+      "https://img.yenieera22.com/cdn/1000/1-17a0ed_ports.png"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_da42a8f5",
@@ -1236,7 +2106,22 @@
     "coolingTech": "NitroSense 4 Çıkışlı Çift Fan",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195_2.jpg",
+      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_62051bd2",
@@ -1257,7 +2142,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom_2.jpg",
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_de4f7b17",
@@ -1278,7 +2178,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/",
+      "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/",
+      "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_b276cffe",
@@ -1299,7 +2214,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp",
+      "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp",
+      "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_eb1a1be4",
@@ -1320,7 +2250,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp",
+      "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp",
+      "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_4b9cd74a",
@@ -1341,7 +2286,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45",
+      "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45",
+      "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_0bee04b9",
@@ -1362,7 +2322,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf.jpg",
+      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf_2.jpg",
+      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_6b52416c",
@@ -1383,7 +2358,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6.jpg",
+      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6_2.jpg",
+      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_7e04fec0",
@@ -1404,7 +2394,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-.jpg",
+      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-_2.jpg",
+      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_f6f16b08",
@@ -1425,7 +2430,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://storage-asset.msi.com/global/picture/apluscontent/feature/1746432677.jpeg",
+      "https://storage-asset.msi.com/global/picture/apluscontent/feature/1746432677.jpeg",
+      "https://storage-asset.msi.com/global/picture/apluscontent/feature/1746432677.jpeg"
+    ],
+    "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
+    "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_05f6e1a8",
@@ -1446,7 +2466,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1.jpg",
+      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1_2.jpg",
+      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_5dfab7da",
@@ -1467,7 +2502,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_6b540de9",
@@ -1488,7 +2538,22 @@
     "coolingTech": "NitroSense 4 Çıkışlı Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp",
+      "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp",
+      "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_769eda28",
@@ -1509,7 +2574,22 @@
     "coolingTech": "NitroSense 4 Çıkışlı Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_.jpg",
+      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC__2.jpg",
+      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC__3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_69826651",
@@ -1530,7 +2610,22 @@
     "coolingTech": "OMEN Tempest Cooling Termal Çözüm",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW.jpg",
+      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW_2.jpg",
+      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_36d714bf",
@@ -1551,7 +2646,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1.jpg",
+      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1_2.jpg",
+      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 18.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_98b65c4f",
@@ -1572,7 +2682,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02.png",
+      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02_angle.png",
+      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02_ports.png"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 17.3,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_c7213fdb",
@@ -1593,7 +2718,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro.jpg",
+      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro_2.jpg",
+      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_52b2b5fd",
@@ -1614,7 +2754,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178_2.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_6ebd1fef",
@@ -1635,7 +2790,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_2.jpg?$formatz$",
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_3.jpg?$formatz$"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 17.3,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_dc821379",
@@ -1656,7 +2826,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp",
+      "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp",
+      "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp"
+    ],
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_8f789c23",
@@ -1677,7 +2862,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024_2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_af579ef9",
@@ -1698,7 +2898,22 @@
     "coolingTech": "OMEN Tempest Cooling Termal Çözüm",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom_2.jpg",
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_09deb32c",
@@ -1719,7 +2934,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 163,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "images": [
+      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500__2.jpg",
+      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500__3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_60e7a486",
@@ -1740,7 +2970,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071.jpg",
+      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071_2.jpg",
+      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_be1059d8",
@@ -1761,7 +3006,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768_2.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_8028a4d8",
@@ -1782,7 +3042,22 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225_2.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 165,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_a0720b1a",
@@ -1803,7 +3078,22 @@
     "coolingTech": "Arc Flow Fanlar + Çift Egzos",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500__2.jpg",
+      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500__3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_6b45a596",
@@ -1824,7 +3114,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE.jpg",
+      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE_2.jpg",
+      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1440 (2K QHD 16:9)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 17.3,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_0dce7ab7",
@@ -1845,7 +3150,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768.jpg",
+      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768_2.jpg",
+      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_6ca00c74",
@@ -1866,7 +3186,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld_2.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld_3.jpg"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_c8777f39",
@@ -1887,7 +3222,22 @@
     "coolingTech": "Hyperchamber Çift Fanlı Soğutma",
     "gamingScore": 78,
     "fps1080p": 140,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "images": [
+      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869_2.jpg",
+      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869_3.jpg"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 240
   },
   {
     "id": "laptop_hb_e1b9198e",
@@ -1908,7 +3258,22 @@
     "coolingTech": "OMEN Tempest Cooling Termal Çözüm",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp",
+      "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp",
+      "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp"
+    ],
+    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 14.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_4959b309",
@@ -1929,7 +3294,22 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_2.jpg?$formatz$",
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_3.jpg?$formatz$"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "1920x1080 (FHD 16:9)",
+    "refreshRateHz": 144,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 17.3,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   },
   {
     "id": "laptop_hb_4c6fba45",
@@ -1950,6 +3330,21 @@
     "coolingTech": "Gelişmiş Çift Turbo Fanlı Termal Mimari",
     "gamingScore": 84,
     "fps1080p": 151,
-    "fps1440p": 113
+    "fps1440p": 113,
+    "images": [
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
+    ],
+    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
+    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "screenResolution": "2560x1600 (WQXGA 16:10)",
+    "refreshRateHz": 240,
+    "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
+    "colorGamut": "%100 sRGB Canlı Renk Doğruluğu",
+    "screenSizeInch": 16.0,
+    "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
+    "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
+    "chargerWatt": 200
   }
 ]

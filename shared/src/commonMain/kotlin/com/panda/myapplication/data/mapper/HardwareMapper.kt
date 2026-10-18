@@ -272,6 +272,16 @@ object HardwareMapper {
                     gamingScore = lp.gamingScore,
                     fps1080p = lp.fps1080p,
                     fps1440p = lp.fps1440p,
+                    cpuCores = lp.cpuCores,
+                    cpuClockGhz = lp.cpuClockGhz,
+                    screenResolution = lp.screenResolution,
+                    refreshRateHz = lp.refreshRateHz,
+                    panelTech = lp.panelTech,
+                    colorGamut = lp.colorGamut,
+                    screenSizeInch = lp.screenSizeInch,
+                    ramSlots = lp.ramSlots,
+                    storageSlots = lp.storageSlots,
+                    chargerWatt = lp.chargerWatt,
                 )
             }
             itemWithSpec.mouse != null -> {
@@ -284,6 +294,9 @@ object HardwareMapper {
                     weightG = ms.weightG,
                     connectivity = ms.connectivity,
                     batteryHours = ms.batteryHours,
+                    mcu = ms.mcu,
+                    clickLatencyMs = ms.clickLatencyMs,
+                    shapeType = ms.shapeType,
                 )
             }
             itemWithSpec.keyboard != null -> {
@@ -296,6 +309,9 @@ object HardwareMapper {
                     layout = kb.layout,
                     hotSwap = kb.hotSwap,
                     connectivity = kb.connectivity,
+                    maxActuationMm = kb.maxActuationMm,
+                    caseMaterial = kb.caseMaterial,
+                    isHallEffect = kb.isHallEffect,
                 )
             }
             itemWithSpec.headset != null -> {
@@ -308,6 +324,8 @@ object HardwareMapper {
                     dacAmpRequired = hs.dacAmpRequired,
                     micType = hs.micType,
                     weightG = hs.weightG,
+                    connectivity = hs.connectivity,
+                    soundIsolation = hs.soundIsolation,
                 )
             }
             itemWithSpec.monitor != null -> {
@@ -320,6 +338,12 @@ object HardwareMapper {
                     responseSpeedGtGMs = mn.responseSpeedGtGMs,
                     ppi = mn.ppi,
                     hdrCertification = mn.hdrCertification,
+                    bitDepth = mn.bitDepth,
+                    responseMprtMs = mn.responseMprtMs,
+                    brightnessSdrNit = mn.brightnessSdrNit,
+                    brightnessHdrNit = mn.brightnessHdrNit,
+                    colorGamut = mn.colorGamut,
+                    vrrSupport = mn.vrrSupport,
                 )
             }
             else -> return@runCatching null
@@ -366,6 +390,7 @@ object HardwareMapper {
             priceInfo = priceInfo,
             benchmarkInfo = null,
             imageUrl = cleanImage,
+            images = entity.images.orEmpty().mapNotNull { com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(it) },
         )
 
         val isCpuOrGpu = entity.category == HardwareCategory.CPU || entity.category == HardwareCategory.GPU
@@ -1010,6 +1035,7 @@ object HardwareMapper {
             currencyCode = if (priceMinor != null) "TRY" else null,
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl,
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
             currentPriceTry = dto.priceTry,
             lowestPriceTry = dto.priceTry,
             highestPriceTry = dto.priceTry,
@@ -1052,6 +1078,7 @@ object HardwareMapper {
             currencyCode = if (priceMinor != null) "TRY" else null,
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl,
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
             currentPriceTry = dto.priceTry,
             lowestPriceTry = dto.priceTry,
             highestPriceTry = dto.priceTry,
@@ -1072,6 +1099,16 @@ object HardwareMapper {
             gamingScore = dto.gamingScore ?: 0,
             fps1080p = dto.fps1080p ?: 0,
             fps1440p = dto.fps1440p ?: 0,
+            cpuCores = dto.cpuCores ?: "",
+            cpuClockGhz = dto.cpuClockGhz ?: "",
+            screenResolution = dto.screenResolution ?: "",
+            refreshRateHz = dto.refreshRateHz ?: 0,
+            panelTech = dto.panelTech ?: "",
+            colorGamut = dto.colorGamut ?: "",
+            screenSizeInch = dto.screenSizeInch ?: 0.0,
+            ramSlots = dto.ramSlots ?: "",
+            storageSlots = dto.storageSlots ?: "",
+            chargerWatt = dto.chargerWatt ?: 0,
         )
         return item to spec
     }
@@ -1131,6 +1168,7 @@ object HardwareMapper {
                     currencyCode = if (dto.currentPriceTry != null) "TRY" else null,
                     cachedAt = syncedAt,
                     imageUrl = dto.imageUrl,
+                    images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
                     currentPriceTry = dto.currentPriceTry,
                     lowestPriceTry = dto.lowestPriceTry ?: dto.currentPriceTry,
                     highestPriceTry = dto.highestPriceTry ?: dto.currentPriceTry,
@@ -1150,6 +1188,9 @@ object HardwareMapper {
                             weightG = dto.weightG ?: 60,
                             connectivity = dto.connectivity ?: "2.4GHz / USB-C",
                             batteryHours = dto.batteryHours,
+                            mcu = dto.mcu ?: "Nordic 52840",
+                            clickLatencyMs = dto.clickLatencyMs ?: 0.8,
+                            shapeType = dto.shapeType ?: "Simetrik",
                         )
                     }
                     HardwareCategory.KEYBOARD -> {
@@ -1162,6 +1203,9 @@ object HardwareMapper {
                             layout = dto.layout ?: "TKL",
                             hotSwap = dto.hotSwap ?: true,
                             connectivity = dto.connectivity ?: "Kablolu USB-C",
+                            maxActuationMm = dto.maxActuationMm ?: 4.0,
+                            caseMaterial = dto.caseMaterial ?: "Alüminyum CNC / ABS",
+                            isHallEffect = dto.isHallEffect ?: (dto.switchType?.contains("Hall Effect", ignoreCase = true) == true),
                         )
                     }
                     HardwareCategory.HEADSET -> {
@@ -1174,6 +1218,8 @@ object HardwareMapper {
                             dacAmpRequired = dto.dacAmpRequired ?: false,
                             micType = dto.micType ?: "Çıkarılabilir Kardioid",
                             weightG = dto.weightG ?: 300,
+                            connectivity = dto.connectivity ?: "2.4GHz / Bluetooth / 3.5mm",
+                            soundIsolation = dto.soundIsolation ?: "Pasif / ANC",
                         )
                     }
                     HardwareCategory.MONITOR -> {
@@ -1186,6 +1232,12 @@ object HardwareMapper {
                             responseSpeedGtGMs = dto.responseSpeedGtGMs ?: 1.0,
                             ppi = dto.ppi ?: 109,
                             hdrCertification = dto.hdrCertification ?: "HDR400",
+                            bitDepth = dto.bitDepth ?: "8-bit + FRC",
+                            responseMprtMs = dto.responseMprtMs ?: 0.5,
+                            brightnessSdrNit = dto.brightnessSdrNit ?: 350,
+                            brightnessHdrNit = dto.brightnessHdrNit ?: 400,
+                            colorGamut = dto.colorGamut ?: "%100 sRGB, %98 DCI-P3",
+                            vrrSupport = dto.vrrSupport ?: "G-Sync Compatible / FreeSync Premium Pro",
                         )
                     }
                     else -> Unit
@@ -1247,9 +1299,13 @@ object HardwareMapper {
                 ?.distinctBy { it.date.take(10) }
                 ?.sortedBy { it.date }
 
+            val effectiveImagesList = item.images?.takeIf { it.isNotEmpty() }
+                ?: listOfNotNull(resolvedImage)
+
             item.copy(
                 cachedAt = syncedAt,
                 imageUrl = resolvedImage,
+                images = effectiveImagesList,
                 currentPriceTry = cleanCurrentTry ?: cleanOffers?.firstOrNull()?.priceTry,
                 lowestPriceTry = cleanLowestTry,
                 highestPriceTry = cleanHighestTry,

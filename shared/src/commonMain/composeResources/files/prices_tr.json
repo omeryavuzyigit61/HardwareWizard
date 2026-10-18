@@ -63254,5 +63254,680 @@
         "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
       }
     ]
+  },
+  "mouse_logitech_g_pro_x_superlight_2": {
+    "productId": "mouse_logitech_g_pro_x_superlight_2",
+    "currentPriceTry": 5899.0,
+    "lowestPriceTry": 5499.0,
+    "highestPriceTry": 6499.0,
+    "lastUpdated": "2026-10-18T19:49:59.274517",
+    "imageUrl": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-1-pro-x-superlight-2-gaming-mouse-black.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5899.0,
+        "priceTry": 5899.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 5899.0,
+        "url": "https://www.itopya.com/logitech-g-pro-x-superlight-2-lightspeed-kablosuz-oyuncu-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_logitech_g_pro_x_superlight_2_dex": {
+    "productId": "mouse_logitech_g_pro_x_superlight_2_dex",
+    "currentPriceTry": 6499.0,
+    "lowestPriceTry": 6199.0,
+    "highestPriceTry": 6999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274528",
+    "imageUrl": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2-dex/gallery-1-pro-x-superlight-2-dex-black.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6499.0,
+        "priceTry": 6499.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 6499.0,
+        "url": "https://www.vatanbilgisayar.com/logitech-g-pro-x-superlight-2-dex-oyuncu-mouse.html",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_razer_viper_v3_pro": {
+    "productId": "mouse_razer_viper_v3_pro",
+    "currentPriceTry": 6899.0,
+    "lowestPriceTry": 6499.0,
+    "highestPriceTry": 7399.0,
+    "lastUpdated": "2026-10-18T19:49:59.274531",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/9da781c5a91448b1d9bf5b211f4d9c79/razer-viper-v3-pro-black-500x500.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6899.0,
+        "priceTry": 6899.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 6899.0,
+        "url": "https://www.tebilon.com/razer-viper-v3-pro-ultra-lightweight-wireless-esports-mouse-black/",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_razer_deathadder_v3_pro": {
+    "productId": "mouse_razer_deathadder_v3_pro",
+    "currentPriceTry": 5449.0,
+    "lowestPriceTry": 4999.0,
+    "highestPriceTry": 5999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274532",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/bb2662fb3b4a13dbbe94db2c3dc1b0e0/razer-deathadder-v3-pro-black-500x500.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5449.0,
+        "priceTry": 5449.0,
+        "storeName": "Sinerji"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Sinerji",
+        "priceTry": 5449.0,
+        "url": "https://www.sinerji.gen.tr/razer-deathadder-v3-pro-kablosuz-gaming-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_wlmouse_beast_x": {
+    "productId": "mouse_wlmouse_beast_x",
+    "currentPriceTry": 5299.0,
+    "lowestPriceTry": 4999.0,
+    "highestPriceTry": 5699.0,
+    "lastUpdated": "2026-10-18T19:49:59.274534",
+    "imageUrl": "https://www.wlmouse.com/cdn/shop/files/beastx_black_front.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5299.0,
+        "priceTry": 5299.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 5299.0,
+        "url": "https://wraithesports.com/products/wlmouse-beast-x-wireless-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_lamzu_maya_4k": {
+    "productId": "mouse_lamzu_maya_4k",
+    "currentPriceTry": 3999.0,
+    "lowestPriceTry": 3799.0,
+    "highestPriceTry": 4299.0,
+    "lastUpdated": "2026-10-18T19:49:59.274536",
+    "imageUrl": "https://lamzu.com/cdn/shop/files/maya_black_01.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3999.0,
+        "priceTry": 3999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3999.0,
+        "url": "https://wraithesports.com/products/lamzu-maya-4k-wireless-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_sora_v2_wireless": {
+    "productId": "mouse_sora_v2_wireless",
+    "currentPriceTry": 4199.0,
+    "lowestPriceTry": 3999.0,
+    "highestPriceTry": 4499.0,
+    "lastUpdated": "2026-10-18T19:49:59.274537",
+    "imageUrl": "https://ninjutso.com/cdn/shop/files/sora_v2_black_01.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4199.0,
+        "priceTry": 4199.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4199.0,
+        "url": "https://wraithesports.com/products/ninjutso-sora-v2-wireless-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_wooting_60he_plus": {
+    "productId": "keyboard_wooting_60he_plus",
+    "currentPriceTry": 7999.0,
+    "lowestPriceTry": 7499.0,
+    "highestPriceTry": 8499.0,
+    "lastUpdated": "2026-10-18T19:49:59.274538",
+    "imageUrl": "https://wooting.io/assets/images/60he/60he_hero.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 7999.0,
+        "priceTry": 7999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 7999.0,
+        "url": "https://wraithesports.com/products/wooting-60he-plus-keyboard",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_razer_huntsman_v3_pro_tkl": {
+    "productId": "keyboard_razer_huntsman_v3_pro_tkl",
+    "currentPriceTry": 8299.0,
+    "lowestPriceTry": 7899.0,
+    "highestPriceTry": 8999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274539",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/958be27fa1136b643a6d2df26e8ad14a/razer-huntsman-v3-pro-tkl-black-500x500.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8299.0,
+        "priceTry": 8299.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 8299.0,
+        "url": "https://www.itopya.com/razer-huntsman-v3-pro-tkl-analog-optik-gaming-klavye",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_steelseries_apex_pro_tkl_gen3": {
+    "productId": "keyboard_steelseries_apex_pro_tkl_gen3",
+    "currentPriceTry": 9499.0,
+    "lowestPriceTry": 8999.0,
+    "highestPriceTry": 9999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274540",
+    "imageUrl": "https://media.steelseriescdn.com/thumbs/catalogue/products/01268-apex-pro-tkl-gen3/8a42e568478446ff9d9bb7513ff6eb46.png.500x400_q100_crop-scale_optimize.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 9499.0,
+        "priceTry": 9499.0,
+        "storeName": "MediaMarkt"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "MediaMarkt",
+        "priceTry": 9499.0,
+        "url": "https://www.mediamarkt.com.tr/tr/product/_steelseries-apex-pro-tkl-gen3-manyetik-klavye.html",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_keychron_q1_he": {
+    "productId": "keyboard_keychron_q1_he",
+    "currentPriceTry": 8499.0,
+    "lowestPriceTry": 7999.0,
+    "highestPriceTry": 8999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274541",
+    "imageUrl": "https://www.keychron.com/cdn/shop/files/Keychron-Q1-HE-wireless-custom-keyboard-carbon-black-fully-assembled_1800x1800.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8499.0,
+        "priceTry": 8499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 8499.0,
+        "url": "https://wraithesports.com/products/keychron-q1-he-keyboard",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_audeze_maxwell": {
+    "productId": "headset_audeze_maxwell",
+    "currentPriceTry": 14999.0,
+    "lowestPriceTry": 13999.0,
+    "highestPriceTry": 15999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274542",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0173/8004/products/Maxwell_Front_34_Web.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14999.0,
+        "priceTry": 14999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 14999.0,
+        "url": "https://www.hepsiburada.com/audeze-maxwell-planar-manyetik-kablosuz-kulaklik",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_sennheiser_hd_600": {
+    "productId": "headset_sennheiser_hd_600",
+    "currentPriceTry": 13499.0,
+    "lowestPriceTry": 12499.0,
+    "highestPriceTry": 14299.0,
+    "lastUpdated": "2026-10-18T19:49:59.274543",
+    "imageUrl": "https://assets.sennheiser.com/img/1865/hd600_01_sq.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 13499.0,
+        "priceTry": 13499.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 13499.0,
+        "url": "https://www.hepsiburada.com/sennheiser-hd-600-kulakustu-kulaklik-pm-bd850550",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_beyerdynamic_dt_990_pro": {
+    "productId": "headset_beyerdynamic_dt_990_pro",
+    "currentPriceTry": 6299.0,
+    "lowestPriceTry": 5899.0,
+    "highestPriceTry": 6799.0,
+    "lastUpdated": "2026-10-18T19:49:59.274544",
+    "imageUrl": "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt990pro_perspective_transparent.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6299.0,
+        "priceTry": 6299.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 6299.0,
+        "url": "https://www.amazon.com.tr/Beyerdynamic-DT-990-Kulakl%C4%B1k-St%C3%BCdyo/dp/B0011UB9CQ",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_steelseries_arctis_nova_pro_wireless": {
+    "productId": "headset_steelseries_arctis_nova_pro_wireless",
+    "currentPriceTry": 14999.0,
+    "lowestPriceTry": 13999.0,
+    "highestPriceTry": 15999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274547",
+    "imageUrl": "https://media.steelseriescdn.com/thumbs/catalogue/products/01185-arctis-nova-pro-wireless/f7466144e5df4698ae2d326f2f01f8d8.png.500x400_q100_crop-scale_optimize.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14999.0,
+        "priceTry": 14999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 14999.0,
+        "url": "https://www.itopya.com/steelseries-arctis-nova-pro-wireless-kablosuz-kulaklik",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_pg27aqdp": {
+    "productId": "monitor_asus_rog_swift_pg27aqdp",
+    "currentPriceTry": 46999.0,
+    "lowestPriceTry": 43999.0,
+    "highestPriceTry": 49999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274549",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/9B9F3628-DC7F-4B80-9FA0-18DCE636D25F/w800",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 46999.0,
+        "priceTry": 46999.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 46999.0,
+        "url": "https://www.tebilon.com/asus-rog-swift-oled-pg27aqdp-265-480hz-003ms-qhd-oled-gaming-monitor/",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_dell_alienware_aw2725df": {
+    "productId": "monitor_dell_alienware_aw2725df",
+    "currentPriceTry": 35999.0,
+    "lowestPriceTry": 33999.0,
+    "highestPriceTry": 38999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274550",
+    "imageUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-aw2725df-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=800&wid=800",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 35999.0,
+        "priceTry": 35999.0,
+        "storeName": "Gaming.Gen.TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Gaming.Gen.TR",
+        "priceTry": 35999.0,
+        "url": "https://www.gaming.gen.tr/urun/dell-alienware-aw2725df-26-7-inc-360hz-0-03ms-qhd-qd-oled-gaming-monitor/",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_benq_zowie_xl2586x": {
+    "productId": "monitor_benq_zowie_xl2586x",
+    "currentPriceTry": 39999.0,
+    "lowestPriceTry": 38499.0,
+    "highestPriceTry": 42999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274552",
+    "imageUrl": "https://image.benq.com/is/image/benqco/xl2586x-front-angle-left?$ResponsivePreset$&fmt=png-alpha",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 39999.0,
+        "priceTry": 39999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 39999.0,
+        "url": "https://www.itopya.com/benq-zowie-xl2586x-241-fast-tn-540hz-dyac2-espor-gaming-monitor",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_lg_ultragear_32gs95ue": {
+    "productId": "monitor_lg_ultragear_32gs95ue",
+    "currentPriceTry": 54999.0,
+    "lowestPriceTry": 51999.0,
+    "highestPriceTry": 58999.0,
+    "lastUpdated": "2026-10-18T19:49:59.274553",
+    "imageUrl": "https://www.lg.com/content/dam/channel/wcms/tr/images/monitor/32gs95ue-b_atr_eeuk_tr_c/gallery/medium01.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 54999.0,
+        "priceTry": 54999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 54999.0,
+        "url": "https://www.hepsiburada.com/lg-ultragear-32gs95ue-b-31-5-dual-mode-4k-240hz-fhd-480hz-oled-monitor",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_oled_g9": {
+    "productId": "monitor_samsung_odyssey_oled_g9",
+    "currentPriceTry": 52999.0,
+    "lowestPriceTry": 49999.0,
+    "highestPriceTry": 56999.0,
+    "lastUpdated": "2026-10-18T19:59:49.177740",
+    "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/tr/ls49cg954suxuf/gallery/tr-odyssey-oled-g9-g95sc-ls49cg954suxuf-536830588?$650_519_PNG$",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 52999.0,
+        "priceTry": 52999.0,
+        "storeName": "Samsung TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Samsung TR",
+        "priceTry": 52999.0,
+        "url": "https://www.samsung.com/tr/monitors/gaming/odyssey-oled-g9-g95sc-49-inch-240hz-curved-dual-qhd-ls49cg954suxuf/",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_oled_g8": {
+    "productId": "monitor_samsung_odyssey_oled_g8",
+    "currentPriceTry": 41999.0,
+    "lowestPriceTry": 39999.0,
+    "highestPriceTry": 44999.0,
+    "lastUpdated": "2026-10-18T19:59:49.177747",
+    "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/tr/ls32dg802suxuf/gallery/tr-odyssey-oled-g8-g80sd-ls32dg802suxuf-541819586?$650_519_PNG$",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 41999.0,
+        "priceTry": 41999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 41999.0,
+        "url": "https://www.hepsiburada.com/samsung-odyssey-oled-g8-g80sd-32-4k-240hz-oled-gaming-monitor",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_pulsar_x2_v2": {
+    "productId": "mouse_pulsar_x2_v2",
+    "currentPriceTry": 3799.0,
+    "lowestPriceTry": 3599.0,
+    "highestPriceTry": 4099.0,
+    "lastUpdated": "2026-10-18T19:59:49.177749",
+    "imageUrl": "https://www.pulsar.gg/cdn/shop/files/x2v2_black_01.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3799.0,
+        "priceTry": 3799.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3799.0,
+        "url": "https://wraithesports.com/products/pulsar-x2-v2-wireless-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_endgame_gear_op1_8k": {
+    "productId": "mouse_endgame_gear_op1_8k",
+    "currentPriceTry": 3499.0,
+    "lowestPriceTry": 3299.0,
+    "highestPriceTry": 3799.0,
+    "lastUpdated": "2026-10-18T19:59:49.177751",
+    "imageUrl": "https://www.endgamegear.com/media/image/24/ec/3b/op1-8k-black-01.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3499.0,
+        "priceTry": 3499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3499.0,
+        "url": "https://wraithesports.com/products/endgame-gear-op1-8k-gaming-mouse",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_drunkdeer_g65_he": {
+    "productId": "keyboard_drunkdeer_g65_he",
+    "currentPriceTry": 4699.0,
+    "lowestPriceTry": 4399.0,
+    "highestPriceTry": 4999.0,
+    "lastUpdated": "2026-10-18T19:59:49.177753",
+    "imageUrl": "https://drunkdeer.com/cdn/shop/files/G65_black_01.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4699.0,
+        "priceTry": 4699.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4699.0,
+        "url": "https://wraithesports.com/products/drunkdeer-g65-keyboard",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_asus_rog_azoth_extreme": {
+    "productId": "keyboard_asus_rog_azoth_extreme",
+    "currentPriceTry": 21999.0,
+    "lowestPriceTry": 20499.0,
+    "highestPriceTry": 23499.0,
+    "lastUpdated": "2026-10-18T19:59:49.177754",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/4BDE9B2A-6A32-4919-A3D8-8ED8E5C49DE9/w800",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 21999.0,
+        "priceTry": 21999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 21999.0,
+        "url": "https://www.itopya.com/asus-rog-azoth-extreme-oled-kablosuz-mekanik-klavye",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_beyerdynamic_dt_770_pro_x": {
+    "productId": "headset_beyerdynamic_dt_770_pro_x",
+    "currentPriceTry": 7999.0,
+    "lowestPriceTry": 7499.0,
+    "highestPriceTry": 8499.0,
+    "lastUpdated": "2026-10-18T19:59:49.177755",
+    "imageUrl": "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt770prox_perspective.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 7999.0,
+        "priceTry": 7999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 7999.0,
+        "url": "https://www.amazon.com.tr/Beyerdynamic-Limited-Edition-St%C3%BCdyo-Kulakl%C4%B1%C4%9F%C4%B1/dp/B0CXFMSHQY",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_logitech_g_pro_x_2_lightspeed": {
+    "productId": "headset_logitech_g_pro_x_2_lightspeed",
+    "currentPriceTry": 8999.0,
+    "lowestPriceTry": 8499.0,
+    "highestPriceTry": 9699.0,
+    "lastUpdated": "2026-10-18T19:59:49.177756",
+    "imageUrl": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8999.0,
+        "priceTry": 8999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 8999.0,
+        "url": "https://www.itopya.com/logitech-g-pro-x-2-lightspeed-grafen-suruculu-kablosuz-oyuncu-kulakligi",
+        "inStock": true
+      }
+    ]
   }
 }

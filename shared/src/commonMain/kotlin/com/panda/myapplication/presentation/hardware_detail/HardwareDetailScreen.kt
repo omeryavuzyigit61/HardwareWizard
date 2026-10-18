@@ -24,6 +24,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -450,6 +452,7 @@ private fun HeroHeaderCard(
             modifier = Modifier.fillMaxWidth(),
         ) {
             HardwareDetailHeroImage(
+                images = item.effectiveImages,
                 imageUrl = item.effectiveImageUrl,
                 category = item.category,
                 displayName = item.displayName,
@@ -1464,22 +1467,26 @@ private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, Stri
         }
 
         is MouseSpec -> {
-            rows.add("Optik Sensör" to s.sensor.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Optik Sensör Kodu" to s.sensor.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Maksimum Çözünürlük (DPI)" to "${s.maxDpi} DPI")
             rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz.coerceAtLeast(1)} ms)")
             rows.add("Anahtar (Switch) Tipi" to s.switchType.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Gövde Ağırlığı" to "${s.weightG} gram")
+            rows.add("MCU / Kablosuz Denetleyici" to s.mcu.ifBlank { "Nordic 52840" })
+            rows.add("Tıklama Gecikmesi (Click Latency)" to "${s.clickLatencyMs} ms")
+            rows.add("Ergonomi / Kasa Formu" to s.shapeType.ifBlank { "Simetrik" })
             rows.add("Bağlantı Teknolojisi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Batarya Kullanım Süresi" to (s.batteryHours?.let { "$it Saat" } ?: "Kablolu (Sınırsız)"))
         }
 
         is KeyboardSpec -> {
-            rows.add("Anahtar (Switch) Mimarisi" to s.switchType.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Rapid Trigger Desteği" to if (s.rapidTriggerSupported) "Var (Dinamik Sıfırlama)" else "Standart Sabit Sıfırlama")
-            rows.add("Minimum Tetikleme Mesafesi" to "${s.minActuationMm} mm")
+            rows.add("Anahtar (Switch) Mimarisi" to "${s.switchType}${if (s.isHallEffect) " (Manyetik Hall Effect)" else ""}")
+            rows.add("Rapid Trigger Desteği" to if (s.rapidTriggerSupported) "Var (Dinamik Hızlı Tetikleme)" else "Standart Sabit Sıfırlama")
+            rows.add("Tetikleme Ayar Aralığı" to "${s.minActuationMm} mm - ${s.maxActuationMm} mm")
             rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz")
             rows.add("Tuş Dizilimi (Form Faktörü)" to s.layout.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Hot-Swap (Lehimsiz Değişim)" to if (s.hotSwap) "Destekleniyor" else "Sabit")
+            rows.add("Kasa & Plaka Materyali" to s.caseMaterial.ifBlank { "Alüminyum CNC / ABS" })
             rows.add("Bağlantı Tipi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
         }
 
@@ -1491,14 +1498,20 @@ private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, Stri
             rows.add("Harici DAC / Amfi İhtiyacı" to if (s.dacAmpRequired) "Önerilir (Yüksek Empedans)" else "Gerekmez (Doğrudan Besleme)")
             rows.add("Mikrofon Tipi" to s.micType.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Ağırlık" to "${s.weightG} gram")
+            rows.add("Bağlantı Seçenekleri" to s.connectivity.ifBlank { "2.4GHz / Bluetooth / 3.5mm" })
+            rows.add("Akustik İzolasyon" to s.soundIsolation.ifBlank { "Pasif İzolasyon" })
         }
 
         is MonitorSpec -> {
             rows.add("Panel Teknolojisi" to s.panelType.ifBlank { UNSPECIFIED_TEXT })
+            rows.add("Gerçek Panel Bit Derinliği" to s.bitDepth.ifBlank { "8-bit + FRC" })
             rows.add("Ekran Boyutu" to "${s.screenSizeInch} inç")
             rows.add("Çözünürlük" to s.resolution.ifBlank { UNSPECIFIED_TEXT })
             rows.add("Yenileme Hızı (Refresh Rate)" to "${s.refreshRateHz} Hz")
-            rows.add("Tepki Süresi (GtG)" to "${s.responseSpeedGtGMs} ms")
+            rows.add("Tepki Süresi" to "${s.responseSpeedGtGMs} ms (GtG) • ${s.responseMprtMs ?: 0.5} ms (MPRT)")
+            rows.add("Parlaklık Düzeyi (SDR / HDR)" to "${s.brightnessSdrNit} Nit / ${s.brightnessHdrNit} Nit")
+            rows.add("Renk Gamutu Kapsamı" to s.colorGamut.ifBlank { "%100 sRGB" })
+            rows.add("Değişken Tazeleme Hızı (VRR)" to s.vrrSupport.ifBlank { "G-Sync Compatible / FreeSync Premium" })
             rows.add("Piksel Yoğunluğu (PPI)" to "${s.ppi} PPI")
             rows.add("HDR Sertifikası" to s.hdrCertification.ifBlank { UNSPECIFIED_TEXT })
         }
@@ -1836,6 +1849,7 @@ private fun LaptopSpecialDetailsCard(
         Column(
             modifier = Modifier.fillMaxWidth(),
         ) {
+            // Header
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -1896,7 +1910,7 @@ private fun LaptopSpecialDetailsCard(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Kısıtlanmamış tam güç (Full Wattage) grafik yongası",
+                            text = "Kısıtlanmamış tam güç (Full Wattage) grafik yongası • ${spec.muxSwitch}",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -1904,93 +1918,115 @@ private fun LaptopSpecialDetailsCard(
                 }
             }
 
+            Spacer(modifier = Modifier.height(Spacing.medium))
+
+            // İçindeki 6 Ana Donanım Bileşeni (OEM Hazır Sistem Mimarisinde)
+            Text(
+                text = "İçindeki 6 Ana Donanım Bileşeni",
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
             Spacer(modifier = Modifier.height(Spacing.small))
 
-            // MUX Switch & Ekran Hz / Panel Kalitesi
-            Surface(
-                shape = RoundedCornerShape(12.dp),
-                color = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.35f),
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary.copy(alpha = 0.3f)),
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Column(modifier = Modifier.padding(Spacing.medium)) {
-                    Text(
-                        text = "MUX SWITCH & PANEL TEKNOLOJİSİ",
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Black,
-                        color = MaterialTheme.colorScheme.tertiary,
-                        letterSpacing = 1.sp,
-                    )
-                    Spacer(modifier = Modifier.height(Spacing.small))
+            val laptopComponents = listOf(
+                LaptopComponentItem(
+                    icon = "⚡",
+                    title = "İşlemci (CPU)",
+                    mainText = spec.cpuModel,
+                    subText = "${spec.effectiveCpuCores} • ${spec.effectiveCpuClockGhz}",
+                ),
+                LaptopComponentItem(
+                    icon = "🎮",
+                    title = "Ekran Kartı (GPU & Güç)",
+                    mainText = "${spec.gpuModel} (${spec.gpuWattTgp})",
+                    subText = "${spec.muxSwitch} Desteği",
+                ),
+                LaptopComponentItem(
+                    icon = "🖥️",
+                    title = "Ekran (Panel)",
+                    mainText = spec.effectivePanelDetails,
+                    subText = "Yüksek Yenileme Hızı & Düşük Gecikmeli Espor Paneli",
+                ),
+                LaptopComponentItem(
+                    icon = "🧠",
+                    title = "Bellek (RAM)",
+                    mainText = spec.ramSpec,
+                    subText = spec.effectiveRamSlots,
+                ),
+                LaptopComponentItem(
+                    icon = "💾",
+                    title = "Depolama (SSD)",
+                    mainText = spec.storageSpec,
+                    subText = spec.effectiveStorageSlots,
+                ),
+                LaptopComponentItem(
+                    icon = "🔋",
+                    title = "Gövde, Pil & Soğutma",
+                    mainText = "${spec.batteryWh} Wh Batarya • ${spec.effectiveChargerWatt} • ${spec.weightKg} kg",
+                    subText = spec.coolingTech,
+                ),
+            )
 
-                    Row(
+            Column(
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                laptopComponents.forEach { comp ->
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.25f)),
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
                     ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Grafik Anahtarı:",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                            Text(
-                                text = spec.muxSwitch,
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurface,
-                            )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(Spacing.medium),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .size(38.dp)
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(MaterialTheme.colorScheme.surfaceVariant),
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                Text(text = comp.icon, style = MaterialTheme.typography.titleMedium)
+                            }
+                            Spacer(modifier = Modifier.width(Spacing.small))
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = comp.title,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                                Text(
+                                    text = comp.mainText,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                )
+                                Text(
+                                    text = comp.subText,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
                         }
-                    }
-
-                    Spacer(modifier = Modifier.height(Spacing.extraSmall))
-
-                    Column {
-                        Text(
-                            text = "Ekran & Panel:",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        Text(
-                            text = spec.displaySpec,
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Medium,
-                            color = MaterialTheme.colorScheme.onSurface,
-                        )
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(Spacing.small))
-
-            // Termal Soğutma & Batarya
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(Spacing.small),
-            ) {
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant,
-                    modifier = Modifier.weight(1f),
-                ) {
-                    Column(modifier = Modifier.padding(Spacing.small)) {
-                        Text(text = "❄️ Soğutma", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        Text(text = spec.coolingTech, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
-                    }
-                }
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant,
-                    modifier = Modifier.weight(1f),
-                ) {
-                    Column(modifier = Modifier.padding(Spacing.small)) {
-                        Text(text = "🔋 Batarya & Ağırlık", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        Text(text = "${spec.batteryWh} Wh • ${spec.weightKg} kg", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
             }
         }
     }
 }
+
+private data class LaptopComponentItem(
+    val icon: String,
+    val title: String,
+    val mainText: String,
+    val subText: String,
+)
 
 @Composable
 private fun DetailBadge(
@@ -2351,11 +2387,17 @@ private fun HardwareDetailContentPreview() {
 
 @Composable
 fun HardwareDetailHeroImage(
-    imageUrl: String?,
+    images: List<String> = emptyList(),
+    imageUrl: String? = null,
     category: HardwareCategory,
     displayName: String,
     modifier: Modifier = Modifier,
 ) {
+    val effectiveList = remember(images, imageUrl) {
+        val list = images.filter { it.isNotBlank() }
+        if (list.isNotEmpty()) list else listOfNotNull(imageUrl?.takeIf { it.isNotBlank() })
+    }
+
     val containerBg = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
     val borderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f)
     val shape = RoundedCornerShape(topStart = Spacing.cardRadius, topEnd = Spacing.cardRadius)
@@ -2366,16 +2408,19 @@ fun HardwareDetailHeroImage(
             .height(340.dp)
             .clip(shape)
             .background(containerBg)
-            .border(1.dp, borderColor, shape)
-            .padding(16.dp),
+            .border(1.dp, borderColor, shape),
         contentAlignment = Alignment.Center,
     ) {
-        if (!imageUrl.isNullOrBlank()) {
+        if (effectiveList.isEmpty()) {
+            DetailPlaceholderHero(category = category)
+        } else if (effectiveList.size == 1) {
             SubcomposeAsyncImage(
-                model = imageUrl,
+                model = effectiveList.first(),
                 contentDescription = displayName,
                 contentScale = ContentScale.Fit,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
                 loading = {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator(
@@ -2390,7 +2435,91 @@ fun HardwareDetailHeroImage(
                 },
             )
         } else {
-            DetailPlaceholderHero(category = category)
+            val pagerState = rememberPagerState(pageCount = { effectiveList.size })
+
+            HorizontalPager(
+                state = pagerState,
+                modifier = Modifier.fillMaxSize(),
+            ) { page ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = 16.dp, vertical = 20.dp),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    SubcomposeAsyncImage(
+                        model = effectiveList[page],
+                        contentDescription = "$displayName - Açı ${page + 1}",
+                        contentScale = ContentScale.Fit,
+                        modifier = Modifier.fillMaxSize(),
+                        loading = {
+                            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(36.dp),
+                                    strokeWidth = 2.5.dp,
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
+                                )
+                            }
+                        },
+                        error = {
+                            DetailPlaceholderHero(category = category)
+                        },
+                    )
+                }
+            }
+
+            // Top-right angle index badge (e.g. 1 / 4)
+            Surface(
+                shape = RoundedCornerShape(8.dp),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.4f)),
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .padding(12.dp),
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = "📷 ${pagerState.currentPage + 1} / ${effectiveList.size}",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                }
+            }
+
+            // Bottom-center modern animated dot/pill indicator
+            Row(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 12.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.75f))
+                    .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.25f), RoundedCornerShape(12.dp))
+                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                effectiveList.indices.forEach { index ->
+                    val isSelected = pagerState.currentPage == index
+                    val width by animateFloatAsState(
+                        targetValue = if (isSelected) 22f else 6f,
+                        animationSpec = tween(durationMillis = 300),
+                    )
+                    Box(
+                        modifier = Modifier
+                            .height(6.dp)
+                            .width(width.dp)
+                            .clip(CircleShape)
+                            .background(
+                                if (isSelected) MaterialTheme.colorScheme.primary
+                                else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.35f)
+                            ),
+                    )
+                }
+            }
         }
     }
 }

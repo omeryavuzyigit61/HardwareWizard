@@ -12,6 +12,7 @@ data class PrebuiltRawDto(
     val priceTry: Double? = null,
     val url: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
     val cpuModel: String? = null,
     val gpuModel: String? = null,
     val motherboardModel: String? = null,

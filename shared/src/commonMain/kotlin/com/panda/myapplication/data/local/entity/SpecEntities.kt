@@ -248,5 +248,15 @@ data class LaptopSpecEntity(
     @ColumnInfo(name = "gaming_score") val gamingScore: Int,
     @ColumnInfo(name = "fps_1080p") val fps1080p: Int = 0,
     @ColumnInfo(name = "fps_1440p") val fps1440p: Int = 0,
+    @ColumnInfo(name = "cpu_cores") val cpuCores: String = "",
+    @ColumnInfo(name = "cpu_clock_ghz") val cpuClockGhz: String = "",
+    @ColumnInfo(name = "screen_resolution") val screenResolution: String = "",
+    @ColumnInfo(name = "refresh_rate_hz") val refreshRateHz: Int = 0,
+    @ColumnInfo(name = "panel_tech") val panelTech: String = "",
+    @ColumnInfo(name = "color_gamut") val colorGamut: String = "",
+    @ColumnInfo(name = "screen_size_inch") val screenSizeInch: Double = 0.0,
+    @ColumnInfo(name = "ram_slots") val ramSlots: String = "",
+    @ColumnInfo(name = "storage_slots") val storageSlots: String = "",
+    @ColumnInfo(name = "charger_watt") val chargerWatt: Int = 0,
 )
 

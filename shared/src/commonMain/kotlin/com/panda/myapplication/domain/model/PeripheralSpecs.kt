@@ -19,6 +19,9 @@ data class MouseSpec(
     val weightG: Int,
     val connectivity: String,
     val batteryHours: Int? = null,
+    val mcu: String = "Nordic 52840",
+    val clickLatencyMs: Double = 0.8,
+    val shapeType: String = "Simetrik",
 ) : HardwareSpec {
     override val category: HardwareCategory = HardwareCategory.MOUSE
 }
@@ -32,6 +35,9 @@ data class KeyboardSpec(
     val layout: String,
     val hotSwap: Boolean,
     val connectivity: String,
+    val maxActuationMm: Double = 4.0,
+    val caseMaterial: String = "Alüminyum CNC / ABS",
+    val isHallEffect: Boolean = false,
 ) : HardwareSpec {
     override val category: HardwareCategory = HardwareCategory.KEYBOARD
 }
@@ -45,6 +51,8 @@ data class HeadsetSpec(
     val dacAmpRequired: Boolean,
     val micType: String,
     val weightG: Int,
+    val connectivity: String = "2.4GHz / Bluetooth / 3.5mm",
+    val soundIsolation: String = "Pasif / ANC",
 ) : HardwareSpec {
     override val category: HardwareCategory = HardwareCategory.HEADSET
 }
@@ -58,6 +66,13 @@ data class MonitorSpec(
     val responseSpeedGtGMs: Double,
     val ppi: Int,
     val hdrCertification: String,
+    val bitDepth: String = "8-bit + FRC",
+    val responseMprtMs: Double? = 0.5,
+    val brightnessSdrNit: Int = 350,
+    val brightnessHdrNit: Int = 400,
+    val colorGamut: String = "%100 sRGB, %98 DCI-P3",
+    val vrrSupport: String = "G-Sync Compatible / FreeSync Premium Pro",
 ) : HardwareSpec {
     override val category: HardwareCategory = HardwareCategory.MONITOR
 }
+

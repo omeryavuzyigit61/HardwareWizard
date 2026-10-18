@@ -1,0 +1,64 @@
+name: Autonomous Daily Hardware Catalog & TR Price Sync
+
+on:
+  schedule:
+    # Her gün Türkiye saatiyle 03:00 (UTC 00:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-hardware-sync
+  cancel-in-progress: false
+
+jobs:
+  autonomous-daily-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 curl_cffi
+
+      - name: 1. Sync Global Technical Catalog & Multi-Angle Peripherals
+        run: |
+          python scripts/sync_global_catalog.py
+
+      - name: 2. Check TR Store Price Changes & Stock Status
+        run: |
+          python scripts/update_prices.py
+
+      - name: 3. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
+        run: |
+          python scripts/sync_systems_and_laptops.py
+
+      - name: 4. Final Dual Directory Catalog Verification
+        run: |
+          python scripts/sync_global_catalog.py
+
+      - name: Commit and push only if real data changes exist
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff -I '"lastUpdated":' --quiet data/ shared/src/commonMain/composeResources/files/; then
+            echo "Gerçek veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
+            git checkout -- data/ shared/src/commonMain/composeResources/files/
+          else
+            git add data/catalog/ shared/src/commonMain/composeResources/files/
+            git commit -m "chore(catalog): autonomous daily hardware catalog & TR prices sync [skip ci]"
+            git push
+          fi

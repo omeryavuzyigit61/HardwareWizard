@@ -18,10 +18,14 @@ class HardwareTypeConverters {
     fun epochMillisToInstant(value: Long): Instant = Instant.fromEpochMilliseconds(value)
 
     @TypeConverter
-    fun stringListToJson(value: List<String>): String = json.encodeToString(stringListSerializer, value)
+    fun stringListToJson(value: List<String>?): String? = value?.let {
+        json.encodeToString(stringListSerializer, it)
+    }
 
     @TypeConverter
-    fun jsonToStringList(value: String): List<String> = json.decodeFromString(stringListSerializer, value)
+    fun jsonToStringList(value: String?): List<String>? = value?.let {
+        runCatching { json.decodeFromString(stringListSerializer, it) }.getOrNull()
+    }
 
     @TypeConverter
     fun pricePointListToJson(value: List<PricePoint>?): String? = value?.let {

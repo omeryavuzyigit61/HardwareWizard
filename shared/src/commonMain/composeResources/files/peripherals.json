@@ -6,6 +6,12 @@
     "brand": "Logitech",
     "model": "G PRO X SUPERLIGHT 2",
     "image_url": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-1-pro-x-superlight-2-gaming-mouse-black.png",
+    "images": [
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-1-pro-x-superlight-2-gaming-mouse-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-2-pro-x-superlight-2-gaming-mouse-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-3-pro-x-superlight-2-gaming-mouse-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-4-pro-x-superlight-2-gaming-mouse-black.png"
+    ],
     "current_price_try": 5899.0,
     "lowest_price_try": 5499.0,
     "highest_price_try": 6499.0,
@@ -18,16 +24,24 @@
     "polling_rate_hz": 8000,
     "switch_type": "LIGHTFORCE Hibrit Optik-Mekanik",
     "weight_g": 60,
-    "connectivity": "2.4GHz LIGHTSPEED / USB-C Kablolu",
-    "battery_hours": 95
+    "connectivity": "2.4GHz LIGHTSPEED 8K / USB-C Kablolu",
+    "battery_hours": 95,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.4,
+    "shape_type": "Simetrik (Ambidextrous)"
   },
   {
     "id": "mouse_logitech_g_pro_x_superlight_2_dex",
     "category": "MOUSE",
-    "name": "Logitech G PRO X SUPERLIGHT 2 DEX Asimetrik Ergonomik 8K Oyuncu Faresi",
+    "name": "Logitech G PRO X SUPERLIGHT 2 DEX Asimetrik Ergonomik 8K Faresi",
     "brand": "Logitech",
     "model": "G PRO X SUPERLIGHT 2 DEX",
-    "image_url": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/gallery-1-pro-x-superlight-2-gaming-mouse-black.png",
+    "image_url": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2-dex/gallery-1-pro-x-superlight-2-dex-black.png",
+    "images": [
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2-dex/gallery-1-pro-x-superlight-2-dex-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2-dex/gallery-2-pro-x-superlight-2-dex-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2-dex/gallery-3-pro-x-superlight-2-dex-black.png"
+    ],
     "current_price_try": 6499.0,
     "lowest_price_try": 6199.0,
     "highest_price_try": 6999.0,
@@ -41,15 +55,23 @@
     "switch_type": "LIGHTFORCE Hibrit Optik-Mekanik",
     "weight_g": 60,
     "connectivity": "2.4GHz LIGHTSPEED 8K / USB-C",
-    "battery_hours": 95
+    "battery_hours": 95,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.4,
+    "shape_type": "Ergonomik (Sağ El DEX)"
   },
   {
     "id": "mouse_razer_deathadder_v3_pro",
     "category": "MOUSE",
-    "name": "Razer DeathAdder V3 Pro HyperSpeed Ergonomik Kablosuz Oyuncu Faresi",
+    "name": "Razer DeathAdder V3 Pro Ergonomik Kablosuz Oyuncu Faresi",
     "brand": "Razer",
     "model": "DeathAdder V3 Pro",
     "image_url": "https://assets2.razerzone.com/images/pnx.assets/bb2662fb3b4a13dbbe94db2c3dc1b0e0/razer-deathadder-v3-pro-black-500x500.png",
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/bb2662fb3b4a13dbbe94db2c3dc1b0e0/razer-deathadder-v3-pro-black-500x500.png",
+      "https://assets2.razerzone.com/images/pnx.assets/bb2662fb3b4a13dbbe94db2c3dc1b0e0/gallery-da-v3-pro-02.png",
+      "https://assets2.razerzone.com/images/pnx.assets/bb2662fb3b4a13dbbe94db2c3dc1b0e0/gallery-da-v3-pro-03.png"
+    ],
     "current_price_try": 5449.0,
     "lowest_price_try": 4999.0,
     "highest_price_try": 5999.0,
@@ -59,33 +81,44 @@
     "benchmark_tier": "S+",
     "sensor": "Focus Pro 30K (PixArt PAW3950)",
     "max_dpi": 30000,
-    "polling_rate_hz": 8000,
-    "switch_type": "Razer Gen-3 Optik (90M Tıklama)",
+    "polling_rate_hz": 4000,
+    "switch_type": "Razer Optik Mouse Switch Gen-3",
     "weight_g": 63,
-    "connectivity": "2.4GHz HyperSpeed / Speedflex USB-C",
-    "battery_hours": 90
+    "connectivity": "2.4GHz HyperSpeed / USB-C",
+    "battery_hours": 90,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.5,
+    "shape_type": "Ergonomik Sağ El Avuç İçi"
   },
   {
     "id": "mouse_razer_viper_v3_pro",
     "category": "MOUSE",
-    "name": "Razer Viper V3 Pro 8000Hz HyperPolling Simetrik E-Spor Oyuncu Faresi",
+    "name": "Razer Viper V3 Pro Ultra Hafif Kablosuz 8K Espor Faresi",
     "brand": "Razer",
     "model": "Viper V3 Pro",
-    "image_url": "https://assets2.razerzone.com/images/pnx.assets/7946f6a9155d6fa68a8fa26067c32bc0/razer-viper-v3-pro-black-500x500.png",
-    "current_price_try": 6799.0,
-    "lowest_price_try": 6399.0,
-    "highest_price_try": 7299.0,
-    "store_name": "İtopya",
-    "store_url": "https://www.itopya.com/razer-viper-v3-pro-kablosuz-oyuncu-mouse",
-    "benchmark_score": 99,
+    "image_url": "https://assets2.razerzone.com/images/pnx.assets/9da781c5a91448b1d9bf5b211f4d9c79/razer-viper-v3-pro-black-500x500.png",
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/9da781c5a91448b1d9bf5b211f4d9c79/razer-viper-v3-pro-black-500x500.png",
+      "https://assets2.razerzone.com/images/pnx.assets/9da781c5a91448b1d9bf5b211f4d9c79/gallery-viper-v3-pro-black-02.png",
+      "https://assets2.razerzone.com/images/pnx.assets/9da781c5a91448b1d9bf5b211f4d9c79/gallery-viper-v3-pro-black-03.png"
+    ],
+    "current_price_try": 6899.0,
+    "lowest_price_try": 6499.0,
+    "highest_price_try": 7399.0,
+    "store_name": "Tebilon",
+    "store_url": "https://www.tebilon.com/razer-viper-v3-pro-ultra-lightweight-wireless-esports-mouse-black/",
+    "benchmark_score": 98,
     "benchmark_tier": "S+",
-    "sensor": "Focus Pro 35K Gen-2 Optik",
+    "sensor": "Focus Pro 35K Gen-2 (PixArt PAW3950)",
     "max_dpi": 35000,
     "polling_rate_hz": 8000,
-    "switch_type": "Razer Gen-3 Optik (90M)",
+    "switch_type": "Razer Optik Mouse Switch Gen-3 (90M Tık)",
     "weight_g": 54,
-    "connectivity": "2.4GHz HyperPolling 8K Dongle Dahil / USB-C",
-    "battery_hours": 95
+    "connectivity": "2.4GHz HyperPolling 8000Hz / USB-C",
+    "battery_hours": 95,
+    "mcu": "Nordic nRF52840 Yüksek Performans",
+    "click_latency_ms": 0.2,
+    "shape_type": "Simetrik Düşük Profil"
   },
   {
     "id": "mouse_lamzu_maya_x_8k",
@@ -107,7 +140,13 @@
     "switch_type": "Omron Optik Switch",
     "weight_g": 47,
     "connectivity": "2.4GHz 8K / USB-C Kablolu",
-    "battery_hours": 80
+    "battery_hours": 80,
+    "images": [
+      "https://lamzu.com/cdn/shop/files/MAYA_X_Black_1.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_ninjutso_sora_v2",
@@ -129,7 +168,13 @@
     "switch_type": "Omron Optik",
     "weight_g": 39,
     "connectivity": "2.4GHz SnappyFire / USB-C",
-    "battery_hours": 80
+    "battery_hours": 80,
+    "images": [
+      "https://ninjutso.com/cdn/shop/files/sora-v2-black.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_atk_blazing_sky_f1_ultimate",
@@ -151,7 +196,13 @@
     "switch_type": "Omron Optik (70M)",
     "weight_g": 38,
     "connectivity": "2.4GHz 8K Nano / USB-C Kablolu",
-    "battery_hours": 75
+    "battery_hours": 75,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0651/0503/5497/files/ATK_F1_Black.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_zowie_ec2_cw",
@@ -173,7 +224,13 @@
     "switch_type": "Huano Black Shell White Dot Mekanik",
     "weight_g": 77,
     "connectivity": "2.4GHz Enhanced Receiver Dock / USB-C",
-    "battery_hours": 70
+    "battery_hours": 70,
+    "images": [
+      "https://image.benq.com/is/image/benqco/ec2-cw-top?$ResponsivePreset$"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_glorious_model_o_2_wireless",
@@ -195,7 +252,13 @@
     "switch_type": "Glorious 80M Mekanik",
     "weight_g": 68,
     "connectivity": "2.4GHz / Bluetooth 5.2 / USB-C",
-    "battery_hours": 110
+    "battery_hours": 110,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0549/2681/products/glorious_gaming_model_o_2_wireless_matte_black_front.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_scyrox_v8_8k",
@@ -217,7 +280,13 @@
     "switch_type": "Omron Optik",
     "weight_g": 36,
     "connectivity": "2.4GHz 8K Dongle Dahil / USB-C",
-    "battery_hours": 65
+    "battery_hours": 65,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0651/0503/5497/files/ATK_F1_Black.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_pulsar_x2v2_wireless",
@@ -239,7 +308,13 @@
     "switch_type": "Raesha Optik Switch",
     "weight_g": 53,
     "connectivity": "2.4GHz Lag-Free / USB-C",
-    "battery_hours": 100
+    "battery_hours": 100,
+    "images": [
+      "https://ninjutso.com/cdn/shop/files/sora-v2-black.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "mouse_vxe_r1_pro_max",
@@ -261,51 +336,76 @@
     "switch_type": "Kailh White Blade (100M Mekanik)",
     "weight_g": 54,
     "connectivity": "2.4GHz SmartSpeed X / USB-C",
-    "battery_hours": 150
+    "battery_hours": 150,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0651/0503/5497/files/ATK_F1_Black.png"
+    ],
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.8,
+    "shape_type": "Simetrik"
   },
   {
     "id": "keyboard_wooting_60he_plus",
     "category": "KEYBOARD",
-    "name": "Wooting 60HE+ Lekker L60 Manyetik Hall Effect Rapid Trigger %60 Klavye",
+    "name": "Wooting 60HE+ Manyetik Hall Effect Analog Oyuncu Klavyesi",
     "brand": "Wooting",
-    "model": "60HE+ Magnetic",
-    "image_url": "https://wooting-website.ams3.cdn.digitaloceanspaces.com/60HE/Wooting-60HE-product-image.png",
-    "current_price_try": 9499.0,
-    "lowest_price_try": 8999.0,
-    "highest_price_try": 10499.0,
+    "model": "60HE+",
+    "image_url": "https://wooting.io/assets/images/60he/60he_hero.png",
+    "images": [
+      "https://wooting.io/assets/images/60he/60he_hero.png",
+      "https://wooting.io/assets/images/60he/60he_angle.png",
+      "https://wooting.io/assets/images/60he/60he_top.png",
+      "https://wooting.io/assets/images/60he/60he_switch_detail.png"
+    ],
+    "current_price_try": 7999.0,
+    "lowest_price_try": 7499.0,
+    "highest_price_try": 8499.0,
     "store_name": "Wraith Esports",
-    "store_url": "https://wraithesports.com/products/wooting-60he-plus",
+    "store_url": "https://wraithesports.com/products/wooting-60he-plus-keyboard",
     "benchmark_score": 99,
     "benchmark_tier": "S+",
-    "switch_type": "Manyetik Hall Effect (Lekker L60 V2)",
+    "switch_type": "Lekker Switch V2 (Manyetik Hall Effect)",
     "rapid_trigger_supported": true,
     "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
     "polling_rate_hz": 1000,
-    "layout": "%60 Kompakt E-Spor",
+    "layout": "%60 Kompakt ANSI",
+    "hotSwap": true,
     "hot_swap": true,
-    "connectivity": "USB-C Kablolu (Tachyon Mode 0.125ms)"
+    "connectivity": "Kablolu Çıkarılabilir USB-C (Tachyon Modu)",
+    "case_material": "Çift Katmanlı Poron Yalıtımlı Çelik Plaka / Alüminyum Mod Uyumlu",
+    "is_hall_effect": true
   },
   {
     "id": "keyboard_wooting_80he",
     "category": "KEYBOARD",
-    "name": "Wooting 80HE True 8000Hz Lekker V2 Manyetik Hall Effect Rapid Trigger %80 Klavye",
+    "name": "Wooting 80HE Gerçek 8K Polling Manyetik Hall Effect Klavye",
     "brand": "Wooting",
-    "model": "80HE 8K Magnetic",
-    "image_url": "https://wooting-website.ams3.cdn.digitaloceanspaces.com/60HE/Wooting-60HE-product-image.png",
-    "current_price_try": 11999.0,
-    "lowest_price_try": 11499.0,
-    "highest_price_try": 12999.0,
-    "store_name": "Wraith Esports",
-    "store_url": "https://wraithesports.com/products/wooting-80he",
+    "model": "80HE",
+    "image_url": "https://wooting.io/assets/images/80he/80he_hero_ghost.png",
+    "images": [
+      "https://wooting.io/assets/images/80he/80he_hero_ghost.png",
+      "https://wooting.io/assets/images/80he/80he_angle.png",
+      "https://wooting.io/assets/images/80he/80he_back_led.png"
+    ],
+    "current_price_try": null,
+    "lowest_price_try": null,
+    "highest_price_try": null,
+    "store_name": null,
+    "store_url": null,
     "benchmark_score": 100,
     "benchmark_tier": "S+",
-    "switch_type": "Manyetik Hall Effect (Lekker L45/L60 V2)",
+    "switch_type": "Lekker L60 V2 Manyetik Linear",
     "rapid_trigger_supported": true,
     "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
     "polling_rate_hz": 8000,
-    "layout": "%80 TKL Gasket Mount",
+    "layout": "%80 TKL",
+    "hotSwap": true,
     "hot_swap": true,
-    "connectivity": "USB-C Kablolu (Gerçek 8000Hz Tachyon)"
+    "connectivity": "Kablolu USB-C 8000Hz (0.125ms Tarama)",
+    "case_material": "CNC İşlenmiş Ağır Alüminyum Gövde & PCR Plaka",
+    "is_hall_effect": true
   },
   {
     "id": "keyboard_drunkdeer_a75_pro",
@@ -327,29 +427,44 @@
     "polling_rate_hz": 1000,
     "layout": "%75 Ses Tekerlekli",
     "hot_swap": true,
-    "connectivity": "USB-C Kablolu (Şok Emici Silicone Gasket)"
+    "connectivity": "USB-C Kablolu (Şok Emici Silicone Gasket)",
+    "images": [
+      "https://drunkdeer.com/cdn/shop/files/A75-Pro-Black-1.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": true
   },
   {
     "id": "keyboard_razer_huntsman_v3_pro_tkl",
     "category": "KEYBOARD",
-    "name": "Razer Huntsman V3 Pro TKL Gen-2 Analog Optik Rapid Trigger E-Spor Klavyesi",
+    "name": "Razer Huntsman V3 Pro TKL Analog Optik Espor Klavyesi",
     "brand": "Razer",
     "model": "Huntsman V3 Pro TKL",
-    "image_url": "https://assets2.razerzone.com/images/pnx.assets/cd196c3e2a740e34b671f37113b8681f/razer-huntsman-v3-pro-tkl-500x500.png",
+    "image_url": "https://assets2.razerzone.com/images/pnx.assets/958be27fa1136b643a6d2df26e8ad14a/razer-huntsman-v3-pro-tkl-black-500x500.png",
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/958be27fa1136b643a6d2df26e8ad14a/razer-huntsman-v3-pro-tkl-black-500x500.png",
+      "https://assets2.razerzone.com/images/pnx.assets/958be27fa1136b643a6d2df26e8ad14a/gallery-huntsman-v3-pro-tkl-02.png",
+      "https://assets2.razerzone.com/images/pnx.assets/958be27fa1136b643a6d2df26e8ad14a/gallery-huntsman-v3-pro-tkl-03.png"
+    ],
     "current_price_try": 8299.0,
-    "lowest_price_try": 7799.0,
+    "lowest_price_try": 7899.0,
     "highest_price_try": 8999.0,
     "store_name": "İtopya",
-    "store_url": "https://www.itopya.com/razer-huntsman-v3-pro-tkl-analog-optik-oyuncu-klavyesi",
+    "store_url": "https://www.itopya.com/razer-huntsman-v3-pro-tkl-analog-optik-gaming-klavye",
     "benchmark_score": 96,
     "benchmark_tier": "S+",
-    "switch_type": "Razer Gen-2 Analog Optik (Snap Tap + Rapid Trigger)",
+    "switch_type": "Razer Analog Optik Gen-2 Switch",
     "rapid_trigger_supported": true,
     "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
     "polling_rate_hz": 1000,
-    "layout": "TKL (%80)",
+    "layout": "TKL (%80) Tuşsuz",
+    "hotSwap": false,
     "hot_swap": false,
-    "connectivity": "USB-C Çıkarılabilir Kablolu"
+    "connectivity": "Çıkarılabilir Örgülü Type-C",
+    "case_material": "Fırçalanmış 5052 Havacılık Sınıfı Alüminyum Üst Plaka",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_steelseries_apex_pro_tkl_2023",
@@ -371,7 +486,13 @@
     "polling_rate_hz": 1000,
     "layout": "TKL (%80)",
     "hot_swap": false,
-    "connectivity": "USB-C Kablolu"
+    "connectivity": "USB-C Kablolu",
+    "images": [
+      "https://media.steelseriescdn.com/thumbs/catalog/items/64856/13f05ca94b3b4c47a3f66e222e722d97.png.500x400_q100_crop-fit_optimize.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": true
   },
   {
     "id": "keyboard_asus_rog_azoth",
@@ -393,7 +514,13 @@
     "polling_rate_hz": 1000,
     "layout": "%75 Custom Gasket Mount",
     "hot_swap": true,
-    "connectivity": "2.4GHz SpeedNova / Bluetooth 5.1 / USB-C"
+    "connectivity": "2.4GHz SpeedNova / Bluetooth 5.1 / USB-C",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/8E54E709-7D4D-45B2-9A67-7C9E6C0B7C54/w717/h525"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_epomaker_rt100",
@@ -415,7 +542,13 @@
     "polling_rate_hz": 1000,
     "layout": "%96 Numpad'li Kompakt",
     "hot_swap": true,
-    "connectivity": "2.4GHz / Bluetooth 5.0 / USB-C (5000mAh)"
+    "connectivity": "2.4GHz / Bluetooth 5.0 / USB-C (5000mAh)",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/8E54E709-7D4D-45B2-9A67-7C9E6C0B7C54/w717/h525"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_keychron_q1_pro",
@@ -437,7 +570,13 @@
     "polling_rate_hz": 1000,
     "layout": "%75 CNC 6063 Alüminyum Double-Gasket",
     "hot_swap": true,
-    "connectivity": "Bluetooth 5.1 / USB-C Kablolu (1000Hz)"
+    "connectivity": "Bluetooth 5.1 / USB-C Kablolu (1000Hz)",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/8E54E709-7D4D-45B2-9A67-7C9E6C0B7C54/w717/h525"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_dareu_ek75_pro",
@@ -459,7 +598,13 @@
     "polling_rate_hz": 1000,
     "layout": "%75 Ses Tekerlekli",
     "hot_swap": true,
-    "connectivity": "2.4GHz / Bluetooth 5.1 / USB-C"
+    "connectivity": "2.4GHz / Bluetooth 5.1 / USB-C",
+    "images": [
+      "https://drunkdeer.com/cdn/shop/files/A75-Pro-Black-1.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_aula_f75",
@@ -481,7 +626,13 @@
     "polling_rate_hz": 1000,
     "layout": "%75 Gasket Mount",
     "hot_swap": true,
-    "connectivity": "2.4GHz / Bluetooth / USB-C (4000mAh)"
+    "connectivity": "2.4GHz / Bluetooth / USB-C (4000mAh)",
+    "images": [
+      "https://drunkdeer.com/cdn/shop/files/A75-Pro-Black-1.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": false
   },
   {
     "id": "keyboard_akko_monsgeek_m1w_v3_he",
@@ -503,7 +654,13 @@
     "polling_rate_hz": 8000,
     "layout": "%75 CNC Alüminyum Gövde",
     "hot_swap": true,
-    "connectivity": "2.4GHz / Bluetooth / USB-C 8000Hz"
+    "connectivity": "2.4GHz / Bluetooth / USB-C 8000Hz",
+    "images": [
+      "https://wooting-website.ams3.cdn.digitaloceanspaces.com/60HE/Wooting-60HE-product-image.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": true
   },
   {
     "id": "keyboard_corsair_k70_max_magnetic",
@@ -525,7 +682,13 @@
     "polling_rate_hz": 8000,
     "layout": "%100 Tam Boy (Numpad + Medya Silindiri)",
     "hot_swap": false,
-    "connectivity": "USB-C Kablolu (AXON 8000Hz Hyper-Processing)"
+    "connectivity": "USB-C Kablolu (AXON 8000Hz Hyper-Processing)",
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/cd196c3e2a740e34b671f37113b8681f/razer-huntsman-v3-pro-tkl-500x500.png"
+    ],
+    "max_actuation_mm": 4.0,
+    "case_material": "Alüminyum CNC / ABS",
+    "is_hall_effect": true
   },
   {
     "id": "headset_hyperx_cloud_iii_wireless",
@@ -547,7 +710,12 @@
     "frequency_response": "10Hz - 21kHz",
     "dac_amp_required": false,
     "mic_type": "10mm Ultra-Clear Çıkarılabilir LED Göstergeli",
-    "weight_g": 330
+    "weight_g": 330,
+    "images": [
+      "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_1_main.jpg"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_hyperx_cloud_iii_wired",
@@ -569,7 +737,12 @@
     "frequency_response": "10Hz - 21kHz",
     "dac_amp_required": false,
     "mic_type": "10mm Gürültü Önleyici Kondenser (USB Dongle DAC Dahil)",
-    "weight_g": 308
+    "weight_g": 308,
+    "images": [
+      "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_1_main.jpg"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_beyerdynamic_dt_990_pro_250",
@@ -591,7 +764,12 @@
     "frequency_response": "5Hz - 35kHz",
     "dac_amp_required": true,
     "mic_type": "Yok (Harici Stüdyo Mikrofonu Gerekir)",
-    "weight_g": 250
+    "weight_g": 250,
+    "images": [
+      "https://global.beyerdynamic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/t/dt990pro_34l_gris_1.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_beyerdynamic_dt_770_pro_80",
@@ -613,29 +791,41 @@
     "frequency_response": "5Hz - 35kHz",
     "dac_amp_required": true,
     "mic_type": "Yok (Harici Mikrofon Önerilir)",
-    "weight_g": 270
+    "weight_g": 270,
+    "images": [
+      "https://global.beyerdynamic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/t/dt770pro_34l_gris.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_steelseries_arctis_nova_pro_wireless",
     "category": "HEADSET",
-    "name": "SteelSeries Arctis Nova Pro Wireless ANC + Çift Batarya + GameDAC İstasyonlu Kulaklık",
+    "name": "SteelSeries Arctis Nova Pro Wireless Aktif Gürültü Önleyici Kulaklık",
     "brand": "SteelSeries",
     "model": "Arctis Nova Pro Wireless",
-    "image_url": "https://media.steelseriescdn.com/thumbs/catalog/items/61520/2636f1c5a4f44482a23f8d726561cf71.png.500x400_q100_crop-fit_optimize.png",
-    "current_price_try": 13499.0,
-    "lowest_price_try": 12799.0,
-    "highest_price_try": 14499.0,
+    "image_url": "https://media.steelseriescdn.com/thumbs/catalogue/products/01185-arctis-nova-pro-wireless/f7466144e5df4698ae2d326f2f01f8d8.png.500x400_q100_crop-scale_optimize.png",
+    "images": [
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01185-arctis-nova-pro-wireless/f7466144e5df4698ae2d326f2f01f8d8.png.500x400_q100_crop-scale_optimize.png",
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01185-arctis-nova-pro-wireless/angle_view.png",
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01185-arctis-nova-pro-wireless/base_station_detail.png"
+    ],
+    "current_price_try": 14999.0,
+    "lowest_price_try": 13999.0,
+    "highest_price_try": 15999.0,
     "store_name": "İtopya",
-    "store_url": "https://www.itopya.com/steelseries-arctis-nova-pro-wireless-kablosuz-oyuncu-kulakligi",
-    "benchmark_score": 98,
+    "store_url": "https://www.itopya.com/steelseries-arctis-nova-pro-wireless-kablosuz-kulaklik",
+    "benchmark_score": 96,
     "benchmark_tier": "S+",
-    "driver_type": "Premium High Fidelity Neodimyum + Aktif ANC",
+    "driver_type": "Yüksek Çözünürlüklü Özel Neodimyum Manyetik",
     "driver_size_mm": 40,
     "impedance_ohm": 38,
-    "frequency_response": "10Hz - 40kHz (Hi-Res Audio)",
+    "frequency_response": "10Hz - 40.000Hz (Hi-Res Kablosuz)",
     "dac_amp_required": false,
-    "mic_type": "ClearCast Gen 2 AI Gürültü Engellemeli Gizlenebilir",
-    "weight_g": 338
+    "mic_type": "ClearCast Gen 2 Tamamen Gizlenebilir Çift Yönlü Mikrofon",
+    "weight_g": 338,
+    "connectivity": "Çift USB Portlu OLED Baz İstasyonu / 2.4GHz / Bluetooth 5.0 / 3.5mm",
+    "sound_isolation": "4 Mikrofonlu Hibrit Aktif Gürültü Engelleme (ANC) & Şeffaflık Modu"
   },
   {
     "id": "headset_steelseries_arctis_nova_7_wireless",
@@ -657,7 +847,12 @@
     "frequency_response": "20Hz - 22kHz",
     "dac_amp_required": false,
     "mic_type": "ClearCast Gen 2 Çift Yönlü Gizlenebilir",
-    "weight_g": 325
+    "weight_g": 325,
+    "images": [
+      "https://media.steelseriescdn.com/thumbs/catalog/items/61520/2636f1c5a4f44482a23f8d726561cf71.png.500x400_q100_crop-fit_optimize.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_razer_blackshark_v2_pro_2023",
@@ -679,7 +874,12 @@
     "frequency_response": "12Hz - 28kHz",
     "dac_amp_required": false,
     "mic_type": "HyperClear Super Wideband (32kHz Stüdyo Kalitesinde)",
-    "weight_g": 320
+    "weight_g": 320,
+    "images": [
+      "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_1_main.jpg"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_sennheiser_hd_560s",
@@ -701,7 +901,12 @@
     "frequency_response": "6Hz - 38kHz (0.05% THD)",
     "dac_amp_required": true,
     "mic_type": "Yok (Harici Mikrofon Gerekir)",
-    "weight_g": 240
+    "weight_g": 240,
+    "images": [
+      "https://global.beyerdynamic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/t/dt990pro_34l_gris_1.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_audio_technica_ath_m50x",
@@ -723,29 +928,40 @@
     "frequency_response": "15Hz - 28kHz",
     "dac_amp_required": false,
     "mic_type": "Yok (3 Adet Çıkarılabilir Stüdyo Kablosu Dahil)",
-    "weight_g": 285
+    "weight_g": 285,
+    "images": [
+      "https://global.beyerdynamic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/t/dt770pro_34l_gris.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_logitech_g_pro_x_2_lightspeed",
     "category": "HEADSET",
-    "name": "Logitech G PRO X 2 LIGHTSPEED 50mm Grafen Sürücülü E-Spor Kablosuz Kulaklık",
+    "name": "Logitech G PRO X 2 LIGHTSPEED 50mm Grafen Sürücülü Espor Kulaklığı",
     "brand": "Logitech",
     "model": "G PRO X 2 LIGHTSPEED",
-    "image_url": "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_1_main.jpg",
-    "current_price_try": 8899.0,
-    "lowest_price_try": 8299.0,
-    "highest_price_try": 9499.0,
-    "store_name": "Vatan Bilgisayar",
-    "store_url": "https://www.vatanbilgisayar.com/logitech-g-pro-x-2-lightspeed-oyuncu-kulakligi.html",
+    "image_url": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png",
+    "images": [
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png",
+      "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery-2-pro-x-2-lightspeed-gaming-headset-black.png"
+    ],
+    "current_price_try": 8999.0,
+    "lowest_price_try": 8499.0,
+    "highest_price_try": 9699.0,
+    "store_name": "İtopya",
+    "store_url": "https://www.itopya.com/logitech-g-pro-x-2-lightspeed-grafen-suruculu-kablosuz-oyuncu-kulakligi",
     "benchmark_score": 96,
     "benchmark_tier": "S+",
-    "driver_type": "PRO-G Graphene (Saf Grafen Diyafram)",
+    "driver_type": "PRO-G 50mm Grafen Diyafram (Sıfır Distorsiyon)",
     "driver_size_mm": 50,
     "impedance_ohm": 38,
-    "frequency_response": "20Hz - 20kHz",
+    "frequency_response": "20Hz - 20.000Hz",
     "dac_amp_required": false,
-    "mic_type": "6mm Kardioid Blue VO!CE Filtreli Çıkarılabilir",
-    "weight_g": 345
+    "mic_type": "6mm Çıkarılabilir Kardioid BLUE VO!CE Filtreli",
+    "weight_g": 345,
+    "connectivity": "2.4GHz LIGHTSPEED / Bluetooth / 3.5mm Kablolu",
+    "sound_isolation": "Dönen Menteşeli Alüminyum & Çelik Kasa Pasif İzolasyon"
   },
   {
     "id": "headset_asus_rog_delta_s_wireless",
@@ -767,7 +983,12 @@
     "frequency_response": "20Hz - 20kHz",
     "dac_amp_required": false,
     "mic_type": "Gizli AI Beamforming Gürültü Engellemeli",
-    "weight_g": 318
+    "weight_g": 318,
+    "images": [
+      "https://media.steelseriescdn.com/thumbs/catalog/items/61520/2636f1c5a4f44482a23f8d726561cf71.png.500x400_q100_crop-fit_optimize.png"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "headset_fifine_ampligame_h9",
@@ -789,7 +1010,12 @@
     "frequency_response": "20Hz - 20kHz",
     "dac_amp_required": false,
     "mic_type": "Omnidirectional Broadcast Kondenser Çıkarılabilir",
-    "weight_g": 260
+    "weight_g": 260,
+    "images": [
+      "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_1_main.jpg"
+    ],
+    "connectivity": "2.4GHz / Bluetooth / 3.5mm",
+    "sound_isolation": "Pasif Akustik Yalıtım"
   },
   {
     "id": "monitor_asus_rog_swift_oled_pg27aqdm",
@@ -811,29 +1037,49 @@
     "refresh_rate_hz": 240,
     "response_speed_gtg_ms": 0.03,
     "ppi": 110,
-    "hdr_certification": "HDR10 / 1000 Nit Tepe Parlaklık (%99 DCI-P3)"
+    "hdr_certification": "HDR10 / 1000 Nit Tepe Parlaklık (%99 DCI-P3)",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/F4C98B92-3E92-454F-A82E-25891C731D98/w717/h525"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_dell_alienware_aw2725df",
     "category": "MONITOR",
-    "name": "Dell Alienware AW2725DF 27\" 360Hz 0.03ms 2K QHD Gen-3 QD-OLED Oyuncu Monitörü",
-    "brand": "Dell Alienware",
-    "model": "AW2725DF QD-OLED",
-    "image_url": "https://images.samsung.com/is/image/samsung/p6pim/tr/ls27dg602suxuf/gallery/tr-odyssey-oled-g6-g60sd-ls27dg602suxuf-541878122?$650_519_PNG$",
-    "current_price_try": 36499.0,
-    "lowest_price_try": 34499.0,
+    "name": "Dell Alienware AW2725DF 27 inç 360Hz 0.03ms QD-OLED QHD Monitör",
+    "brand": "Dell",
+    "model": "Alienware AW2725DF",
+    "image_url": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-aw2725df-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=800&wid=800",
+    "images": [
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-aw2725df-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=800&wid=800",
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-aw2725df-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=800&wid=800",
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-aw2725df-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=800&wid=800"
+    ],
+    "current_price_try": 35999.0,
+    "lowest_price_try": 33999.0,
     "highest_price_try": 38999.0,
-    "store_name": "İtopya",
-    "store_url": "https://www.itopya.com/alienware-27-aw2725df-360hz-003ms-2k-qd-oled-gaming-monitor",
-    "benchmark_score": 99,
+    "store_name": "Gaming.Gen.TR",
+    "store_url": "https://www.gaming.gen.tr/urun/dell-alienware-aw2725df-26-7-inc-360hz-0-03ms-qhd-qd-oled-gaming-monitor/",
+    "benchmark_score": 98,
     "benchmark_tier": "S+",
-    "panel_type": "3. Nesil QD-OLED (Quantum Dot OLED)",
+    "panel_type": "QD-OLED (Samsung Display 3. Nesil Kuantum Nokta)",
+    "bit_depth": "10-bit (1.07 Milyar Gerçek Renk)",
     "screen_size_inch": 26.7,
-    "resolution": "1440p (2560x1440 QHD)",
+    "resolution": "2560x1440 (2K QHD)",
     "refresh_rate_hz": 360,
     "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
     "ppi": 110,
-    "hdr_certification": "VESA DisplayHDR True Black 400 (%99.3 DCI-P3)"
+    "hdr_certification": "VESA DisplayHDR True Black 400 (Peak 1000 Nit)",
+    "brightness_sdr_nit": 250,
+    "brightness_hdr_nit": 1000,
+    "color_gamut": "%99.3 DCI-P3, %148 sRGB Fabrika Kalibrasyonlu",
+    "vrr_support": "AMD FreeSync Premium Pro / VESA AdaptiveSync 360Hz"
   },
   {
     "id": "monitor_samsung_odyssey_oled_g6_g60sd",
@@ -855,7 +1101,16 @@
     "refresh_rate_hz": 360,
     "response_speed_gtg_ms": 0.03,
     "ppi": 109,
-    "hdr_certification": "HDR10+ Gaming / True Black 400"
+    "hdr_certification": "HDR10+ Gaming / True Black 400",
+    "images": [
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls27dg602suxuf/gallery/tr-odyssey-oled-g6-g60sd-ls27dg602suxuf-541878122?$650_519_PNG$"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_samsung_odyssey_neo_g7_32",
@@ -877,7 +1132,16 @@
     "refresh_rate_hz": 165,
     "response_speed_gtg_ms": 1.0,
     "ppi": 138,
-    "hdr_certification": "Quantum HDR 2000 (1000R Kavisli)"
+    "hdr_certification": "Quantum HDR 2000 (1000R Kavisli)",
+    "images": [
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls27dg602suxuf/gallery/tr-odyssey-oled-g6-g60sd-ls27dg602suxuf-541878122?$650_519_PNG$"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_samsung_odyssey_oled_g9_49",
@@ -899,7 +1163,16 @@
     "refresh_rate_hz": 240,
     "response_speed_gtg_ms": 0.03,
     "ppi": 109,
-    "hdr_certification": "VESA DisplayHDR True Black 400"
+    "hdr_certification": "VESA DisplayHDR True Black 400",
+    "images": [
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls27dg602suxuf/gallery/tr-odyssey-oled-g6-g60sd-ls27dg602suxuf-541878122?$650_519_PNG$"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_lg_ultragear_27gr95qe",
@@ -921,7 +1194,16 @@
     "refresh_rate_hz": 240,
     "response_speed_gtg_ms": 0.03,
     "ppi": 110,
-    "hdr_certification": "HDR10 (%98.5 DCI-P3 / HDMI 2.1 + DP 1.4)"
+    "hdr_certification": "HDR10 (%98.5 DCI-P3 / HDMI 2.1 + DP 1.4)",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/F4C98B92-3E92-454F-A82E-25891C731D98/w717/h525"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_viewsonic_xg2431_240hz",
@@ -943,7 +1225,16 @@
     "refresh_rate_hz": 240,
     "response_speed_gtg_ms": 0.5,
     "ppi": 93,
-    "hdr_certification": "VESA DisplayHDR 400"
+    "hdr_certification": "VESA DisplayHDR 400",
+    "images": [
+      "https://asset.msi.com/resize/image/global/product/product_17043525270341796574c7785b02458e2b20b05e9a.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_asus_rog_swift_pro_pg248qp_540hz",
@@ -965,7 +1256,16 @@
     "refresh_rate_hz": 540,
     "response_speed_gtg_ms": 0.2,
     "ppi": 91,
-    "hdr_certification": "VESA DisplayHDR 400 (G-Sync Reflex Analyzer)"
+    "hdr_certification": "VESA DisplayHDR 400 (G-Sync Reflex Analyzer)",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/F4C98B92-3E92-454F-A82E-25891C731D98/w717/h525"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_aoc_24g2sp",
@@ -987,7 +1287,16 @@
     "refresh_rate_hz": 165,
     "response_speed_gtg_ms": 1.0,
     "ppi": 93,
-    "hdr_certification": "HDR Mode (Ergonomik Pivot Stand)"
+    "hdr_certification": "HDR Mode (Ergonomik Pivot Stand)",
+    "images": [
+      "https://asset.msi.com/resize/image/global/product/product_17043525270341796574c7785b02458e2b20b05e9a.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_benq_zowie_xl2546k",
@@ -1009,7 +1318,16 @@
     "refresh_rate_hz": 240,
     "response_speed_gtg_ms": 0.5,
     "ppi": 90,
-    "hdr_certification": "Black eQualizer / Color Vibrance / S-Switch"
+    "hdr_certification": "Black eQualizer / Color Vibrance / S-Switch",
+    "images": [
+      "https://image.benq.com/is/image/benqco/xl2566k-front?$ResponsivePreset$"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_benq_zowie_xl2566k",
@@ -1031,7 +1349,16 @@
     "refresh_rate_hz": 360,
     "response_speed_gtg_ms": 0.5,
     "ppi": 90,
-    "hdr_certification": "SDR E-Spor Kalibrasyonlu (S-Switch + Shield Dahil)"
+    "hdr_certification": "SDR E-Spor Kalibrasyonlu (S-Switch + Shield Dahil)",
+    "images": [
+      "https://image.benq.com/is/image/benqco/xl2566k-front?$ResponsivePreset$"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
   },
   {
     "id": "monitor_msi_mag_274qrf_qd_e2",
@@ -1053,6 +1380,626 @@
     "refresh_rate_hz": 180,
     "response_speed_gtg_ms": 1.0,
     "ppi": 109,
-    "hdr_certification": "VESA DisplayHDR 400 + 65W USB-C KVM"
+    "hdr_certification": "VESA DisplayHDR 400 + 65W USB-C KVM",
+    "images": [
+      "https://asset.msi.com/resize/image/global/product/product_17043525270341796574c7785b02458e2b20b05e9a.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
+    ],
+    "bit_depth": "8-bit + FRC",
+    "response_mprt_ms": 0.5,
+    "brightness_sdr_nit": 350,
+    "brightness_hdr_nit": 400,
+    "color_gamut": "%100 sRGB, %98 DCI-P3",
+    "vrr_support": "G-Sync Compatible / FreeSync Premium Pro"
+  },
+  {
+    "id": "mouse_finalmouse_ultralightx",
+    "category": "MOUSE",
+    "name": "Finalmouse UltralightX Karbon Kompozit 29g 8K Kablosuz Fare",
+    "brand": "Finalmouse",
+    "model": "UltralightX (ULX)",
+    "image_url": "https://finalmouse.com/cdn/shop/files/ulx_lion_front_800x.png",
+    "images": [
+      "https://finalmouse.com/cdn/shop/files/ulx_lion_front_800x.png",
+      "https://finalmouse.com/cdn/shop/files/ulx_lion_angle_800x.png",
+      "https://finalmouse.com/cdn/shop/files/ulx_lion_side_800x.png"
+    ],
+    "current_price_try": null,
+    "lowest_price_try": null,
+    "highest_price_try": null,
+    "store_name": null,
+    "store_url": null,
+    "benchmark_score": 99,
+    "benchmark_tier": "S+",
+    "sensor": "PixArt PAW3395 Finalmouse Pro",
+    "max_dpi": 26000,
+    "polling_rate_hz": 8000,
+    "switch_type": "Omron D2FP Optik Switch",
+    "weight_g": 31,
+    "connectivity": "2.4GHz Ultra-Low Latency / USB-C",
+    "battery_hours": 70,
+    "mcu": "Nordic nRF52840 Yüksek Frekans",
+    "click_latency_ms": 0.25,
+    "shape_type": "Simetrik Karbon Kompozit Şasi"
+  },
+  {
+    "id": "mouse_wlmouse_beast_x",
+    "category": "MOUSE",
+    "name": "WLmouse Beast X Magnezyum Alaşım 8K Kablosuz Oyuncu Faresi",
+    "brand": "WLmouse",
+    "model": "Beast X",
+    "image_url": "https://www.wlmouse.com/cdn/shop/files/beastx_black_front.png",
+    "images": [
+      "https://www.wlmouse.com/cdn/shop/files/beastx_black_front.png",
+      "https://www.wlmouse.com/cdn/shop/files/beastx_black_angle.png",
+      "https://www.wlmouse.com/cdn/shop/files/beastx_black_top.png"
+    ],
+    "current_price_try": 5299.0,
+    "lowest_price_try": 4999.0,
+    "highest_price_try": 5699.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/wlmouse-beast-x-wireless-mouse",
+    "benchmark_score": 96,
+    "benchmark_tier": "S+",
+    "sensor": "PixArt PAW3395 (High-Speed Tracking)",
+    "max_dpi": 26000,
+    "polling_rate_hz": 8000,
+    "switch_type": "TTC Dustproof Gold / Huano Blue Pink Dot",
+    "weight_g": 39,
+    "connectivity": "2.4GHz Dongle 8K / USB-C",
+    "battery_hours": 65,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.35,
+    "shape_type": "Magnezyum İskelet Simetrik"
+  },
+  {
+    "id": "mouse_lamzu_maya_4k",
+    "category": "MOUSE",
+    "name": "Lamzu Maya 4K Ultra Hafif Simetrik Kablosuz Oyuncu Faresi",
+    "brand": "Lamzu",
+    "model": "Maya 4K",
+    "image_url": "https://lamzu.com/cdn/shop/files/maya_black_01.png",
+    "images": [
+      "https://lamzu.com/cdn/shop/files/maya_black_01.png",
+      "https://lamzu.com/cdn/shop/files/maya_black_02.png",
+      "https://lamzu.com/cdn/shop/files/maya_black_03.png"
+    ],
+    "current_price_try": 3999.0,
+    "lowest_price_try": 3799.0,
+    "highest_price_try": 4299.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/lamzu-maya-4k-wireless-mouse",
+    "benchmark_score": 94,
+    "benchmark_tier": "S",
+    "sensor": "PixArt PAW3395",
+    "max_dpi": 26000,
+    "polling_rate_hz": 4000,
+    "switch_type": "Huano Transparent Blue Shell Pink Dot (80M)",
+    "weight_g": 45,
+    "connectivity": "2.4GHz 4K / USB-C",
+    "battery_hours": 80,
+    "mcu": "Nordic 52840",
+    "click_latency_ms": 0.6,
+    "shape_type": "Simetrik Claw/Fingertip"
+  },
+  {
+    "id": "mouse_sora_v2_wireless",
+    "category": "MOUSE",
+    "name": "Ninjutso Sora V2 Deliksiz 39g Kablosuz Espor Faresi",
+    "brand": "Ninjutso",
+    "model": "Sora V2",
+    "image_url": "https://ninjutso.com/cdn/shop/files/sora_v2_black_01.png",
+    "images": [
+      "https://ninjutso.com/cdn/shop/files/sora_v2_black_01.png",
+      "https://ninjutso.com/cdn/shop/files/sora_v2_black_02.png",
+      "https://ninjutso.com/cdn/shop/files/sora_v2_black_03.png"
+    ],
+    "current_price_try": 4199.0,
+    "lowest_price_try": 3999.0,
+    "highest_price_try": 4499.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/ninjutso-sora-v2-wireless-mouse",
+    "benchmark_score": 95,
+    "benchmark_tier": "S+",
+    "sensor": "PixArt PAW3395",
+    "max_dpi": 26000,
+    "polling_rate_hz": 8000,
+    "switch_type": "Omron Optik Switch",
+    "weight_g": 39,
+    "connectivity": "2.4GHz SnappyFire 8K / USB-C",
+    "battery_hours": 80,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.3,
+    "shape_type": "Deliksiz Kompakt Claw"
+  },
+  {
+    "id": "keyboard_steelseries_apex_pro_tkl_gen3",
+    "category": "KEYBOARD",
+    "name": "SteelSeries Apex Pro TKL (Gen 3) OmniPoint 3.0 Manyetik Klavye",
+    "brand": "SteelSeries",
+    "model": "Apex Pro TKL (Gen 3)",
+    "image_url": "https://media.steelseriescdn.com/thumbs/catalogue/products/01268-apex-pro-tkl-gen3/8a42e568478446ff9d9bb7513ff6eb46.png.500x400_q100_crop-scale_optimize.png",
+    "images": [
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01268-apex-pro-tkl-gen3/8a42e568478446ff9d9bb7513ff6eb46.png.500x400_q100_crop-scale_optimize.png",
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01268-apex-pro-tkl-gen3/angle_apex_pro_gen3.png",
+      "https://media.steelseriescdn.com/thumbs/catalogue/products/01268-apex-pro-tkl-gen3/oled_screen_detail.png"
+    ],
+    "current_price_try": 9499.0,
+    "lowest_price_try": 8999.0,
+    "highest_price_try": 9999.0,
+    "store_name": "MediaMarkt",
+    "store_url": "https://www.mediamarkt.com.tr/tr/product/_steelseries-apex-pro-tkl-gen3-manyetik-klavye.html",
+    "benchmark_score": 97,
+    "benchmark_tier": "S+",
+    "switch_type": "OmniPoint 3.0 Ayarlanabilir Manyetik Hall Effect",
+    "rapid_trigger_supported": true,
+    "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
+    "polling_rate_hz": 1000,
+    "layout": "TKL (%80) + Akıllı OLED Ekran",
+    "hotSwap": false,
+    "hot_swap": false,
+    "connectivity": "USB-C Çıkarılabilir Kablo",
+    "case_material": "Seri 5000 Uçak Sınıfı Alüminyum Gövde & 3 Katmanlı Sönümleme",
+    "is_hall_effect": true
+  },
+  {
+    "id": "keyboard_keychron_q1_he",
+    "category": "KEYBOARD",
+    "name": "Keychron Q1 HE Tam CNC Alüminyum Manyetik Kablosuz Klavye",
+    "brand": "Keychron",
+    "model": "Q1 HE",
+    "image_url": "https://www.keychron.com/cdn/shop/files/Keychron-Q1-HE-wireless-custom-keyboard-carbon-black-fully-assembled_1800x1800.jpg",
+    "images": [
+      "https://www.keychron.com/cdn/shop/files/Keychron-Q1-HE-wireless-custom-keyboard-carbon-black-fully-assembled_1800x1800.jpg",
+      "https://www.keychron.com/cdn/shop/files/Keychron-Q1-HE-side-view.jpg",
+      "https://www.keychron.com/cdn/shop/files/Keychron-Q1-HE-switch.jpg"
+    ],
+    "current_price_try": 8499.0,
+    "lowest_price_try": 7999.0,
+    "highest_price_try": 8999.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/keychron-q1-he-keyboard",
+    "benchmark_score": 96,
+    "benchmark_tier": "S+",
+    "switch_type": "Gateron Manyetik Nebula / Hall Effect",
+    "rapid_trigger_supported": true,
+    "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
+    "polling_rate_hz": 1000,
+    "layout": "%75 Kompakt Döner Düğmeli (Rotary Knob)",
+    "hotSwap": true,
+    "hot_swap": true,
+    "connectivity": "2.4GHz Kablosuz / Bluetooth 5.1 / USB-C",
+    "case_material": "6063 Tam CNC İşlenmiş Katı Alüminyum Gövde (2.1 kg)",
+    "is_hall_effect": true
+  },
+  {
+    "id": "headset_audeze_maxwell",
+    "category": "HEADSET",
+    "name": "Audeze Maxwell 90mm Planar Manyetik Kablosuz Kulaklık",
+    "brand": "Audeze",
+    "model": "Maxwell",
+    "image_url": "https://cdn.shopify.com/s/files/1/0173/8004/products/Maxwell_Front_34_Web.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0173/8004/products/Maxwell_Front_34_Web.png",
+      "https://cdn.shopify.com/s/files/1/0173/8004/products/Maxwell_Side_Web.png",
+      "https://cdn.shopify.com/s/files/1/0173/8004/products/Maxwell_Flat_Web.png"
+    ],
+    "current_price_try": 14999.0,
+    "lowest_price_try": 13999.0,
+    "highest_price_try": 15999.0,
+    "store_name": "Hepsiburada",
+    "store_url": "https://www.hepsiburada.com/audeze-maxwell-planar-manyetik-kablosuz-kulaklik",
+    "benchmark_score": 99,
+    "benchmark_tier": "S+",
+    "driver_type": "90mm Planar Manyetik (Fazor Teknolojisi)",
+    "driver_size_mm": 90,
+    "impedance_ohm": 16,
+    "frequency_response": "10Hz - 50.000Hz (Hi-Res Audio)",
+    "dac_amp_required": false,
+    "mic_type": "Çıkarılabilir Hypercardioid Mikrofon + Donanımsal AI Gürültü Filtresi",
+    "weight_g": 490,
+    "connectivity": "2.4GHz Ultra-Düşük Gecikmeli Dongle / Bluetooth 5.3 LDAC / 3.5mm / 24-bit 96kHz USB DAC",
+    "sound_isolation": "Akustik Güçlendirilmiş Pasif Yalıtım & Çift Odacıklı Kupa"
+  },
+  {
+    "id": "headset_sennheiser_hd_600",
+    "category": "HEADSET",
+    "name": "Sennheiser HD 600 Referans Açık Akustik Stüdyo Kulaklığı",
+    "brand": "Sennheiser",
+    "model": "HD 600",
+    "image_url": "https://assets.sennheiser.com/img/1865/hd600_01_sq.png",
+    "images": [
+      "https://assets.sennheiser.com/img/1865/hd600_01_sq.png",
+      "https://assets.sennheiser.com/img/1865/hd600_angle.png",
+      "https://assets.sennheiser.com/img/1865/hd600_earcup.png"
+    ],
+    "current_price_try": 13499.0,
+    "lowest_price_try": 12499.0,
+    "highest_price_try": 14299.0,
+    "store_name": "Hepsiburada",
+    "store_url": "https://www.hepsiburada.com/sennheiser-hd-600-kulakustu-kulaklik-pm-bd850550",
+    "benchmark_score": 98,
+    "benchmark_tier": "S+",
+    "driver_type": "Açık Dinamik Alüminyum Ses Bobinli Neodimyum",
+    "driver_size_mm": 42,
+    "impedance_ohm": 300,
+    "frequency_response": "12Hz - 40.500Hz",
+    "dac_amp_required": true,
+    "mic_type": "Mikrofonsuz Saf Odiofil / Stüdyo Referans",
+    "weight_g": 260,
+    "connectivity": "3.5mm Altın Kaplama Jack & 6.35mm Adaptör (Kablolu)",
+    "sound_isolation": "Açık Akustik (Geniş Sahne & Doğal Uzamsal Ses)"
+  },
+  {
+    "id": "headset_beyerdynamic_dt_990_pro",
+    "category": "HEADSET",
+    "name": "Beyerdynamic DT 990 PRO 250 Ohm Stüdyo & Espor Kulaklığı",
+    "brand": "Beyerdynamic",
+    "model": "DT 990 PRO (250 Ohm)",
+    "image_url": "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt990pro_perspective_transparent.png",
+    "images": [
+      "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt990pro_perspective_transparent.png",
+      "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt990pro_side.png",
+      "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt990pro_front.png"
+    ],
+    "current_price_try": 6299.0,
+    "lowest_price_try": 5899.0,
+    "highest_price_try": 6799.0,
+    "store_name": "Amazon TR",
+    "store_url": "https://www.amazon.com.tr/Beyerdynamic-DT-990-Kulakl%C4%B1k-St%C3%BCdyo/dp/B0011UB9CQ",
+    "benchmark_score": 95,
+    "benchmark_tier": "S+",
+    "driver_type": "Açık Arkalı Dinamik Neodimyum",
+    "driver_size_mm": 45,
+    "impedance_ohm": 250,
+    "frequency_response": "5Hz - 35.000Hz",
+    "dac_amp_required": true,
+    "mic_type": "Mikrofonsuz Açık Espor & Ses Mühendisliği",
+    "weight_g": 250,
+    "connectivity": "3.5mm Spiral Kablo + 6.35mm Vidalı Jak",
+    "sound_isolation": "Açık Akustik Kadife Kulak Yastıkları"
+  },
+  {
+    "id": "monitor_asus_rog_swift_pg27aqdp",
+    "category": "MONITOR",
+    "name": "ASUS ROG Swift OLED PG27AQDP 27 inç 480Hz 0.03ms WOLED QHD",
+    "brand": "ASUS",
+    "model": "ROG Swift OLED PG27AQDP",
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/9B9F3628-DC7F-4B80-9FA0-18DCE636D25F/w800",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/9B9F3628-DC7F-4B80-9FA0-18DCE636D25F/w800",
+      "https://dlcdnwebimgs.asus.com/gain/E44318E2-261B-4E7B-B418-E0C7C4EE70AE/w800",
+      "https://dlcdnwebimgs.asus.com/gain/A7D2C044-6EB7-463E-A4FB-C119114D6D24/w800"
+    ],
+    "current_price_try": 46999.0,
+    "lowest_price_try": 43999.0,
+    "highest_price_try": 49999.0,
+    "store_name": "Tebilon",
+    "store_url": "https://www.tebilon.com/asus-rog-swift-oled-pg27aqdp-265-480hz-003ms-qhd-oled-gaming-monitor/",
+    "benchmark_score": 100,
+    "benchmark_tier": "S+",
+    "panel_type": "WOLED (3. Nesil LG MLA+ Panel)",
+    "bit_depth": "10-bit (1.07 Milyar Renk)",
+    "screen_size_inch": 26.5,
+    "resolution": "2560x1440 (2K QHD)",
+    "refresh_rate_hz": 480,
+    "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
+    "ppi": 110,
+    "hdr_certification": "HDR10 / VESA DisplayHDR True Black 400",
+    "brightness_sdr_nit": 275,
+    "brightness_hdr_nit": 1300,
+    "color_gamut": "%99 DCI-P3, %135 sRGB Delta E < 1.5",
+    "vrr_support": "NVIDIA G-Sync Compatible / AMD FreeSync Premium Pro / VESA AdaptiveSync"
+  },
+  {
+    "id": "monitor_benq_zowie_xl2586x",
+    "category": "MONITOR",
+    "name": "BenQ ZOWIE XL2586X 24.1 inç 540Hz DyAc 2 Fast TN Espor Monitörü",
+    "brand": "BenQ",
+    "model": "ZOWIE XL2586X",
+    "image_url": "https://image.benq.com/is/image/benqco/xl2586x-front-angle-left?$ResponsivePreset$&fmt=png-alpha",
+    "images": [
+      "https://image.benq.com/is/image/benqco/xl2586x-front-angle-left?$ResponsivePreset$&fmt=png-alpha",
+      "https://image.benq.com/is/image/benqco/xl2586x-front?$ResponsivePreset$&fmt=png-alpha",
+      "https://image.benq.com/is/image/benqco/xl2586x-shield-detail?$ResponsivePreset$&fmt=png-alpha"
+    ],
+    "current_price_try": 39999.0,
+    "lowest_price_try": 38499.0,
+    "highest_price_try": 42999.0,
+    "store_name": "İtopya",
+    "store_url": "https://www.itopya.com/benq-zowie-xl2586x-241-fast-tn-540hz-dyac2-espor-gaming-monitor",
+    "benchmark_score": 97,
+    "benchmark_tier": "S+",
+    "panel_type": "Fast TN (Özel Espor Sıfır Hareket Bulanıklığı)",
+    "bit_depth": "8-bit Gerçek Panel",
+    "screen_size_inch": 24.1,
+    "resolution": "1920x1080 (FHD Espor Standardı)",
+    "refresh_rate_hz": 540,
+    "response_speed_gtg_ms": 0.5,
+    "response_mprt_ms": 0.2,
+    "ppi": 92,
+    "hdr_certification": "HDR Desteği Yok (Saf Espor Kontrastı)",
+    "brightness_sdr_nit": 320,
+    "brightness_hdr_nit": 320,
+    "color_gamut": "%98 sRGB Espor Optimize Renk Motoru",
+    "vrr_support": "DyAc 2 Çift Arka Aydınlatma Senkronizasyonu"
+  },
+  {
+    "id": "monitor_lg_ultragear_32gs95ue",
+    "category": "MONITOR",
+    "name": "LG UltraGear 32GS95UE 32 inç 4K 240Hz / FHD 480Hz Dual-Mode OLED",
+    "brand": "LG",
+    "model": "UltraGear 32GS95UE",
+    "image_url": "https://www.lg.com/content/dam/channel/wcms/tr/images/monitor/32gs95ue-b_atr_eeuk_tr_c/gallery/medium01.jpg",
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/tr/images/monitor/32gs95ue-b_atr_eeuk_tr_c/gallery/medium01.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/tr/images/monitor/32gs95ue-b_atr_eeuk_tr_c/gallery/medium02.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/tr/images/monitor/32gs95ue-b_atr_eeuk_tr_c/gallery/medium03.jpg"
+    ],
+    "current_price_try": 54999.0,
+    "lowest_price_try": 51999.0,
+    "highest_price_try": 58999.0,
+    "store_name": "Hepsiburada",
+    "store_url": "https://www.hepsiburada.com/lg-ultragear-32gs95ue-b-31-5-dual-mode-4k-240hz-fhd-480hz-oled-monitor",
+    "benchmark_score": 100,
+    "benchmark_tier": "S+",
+    "panel_type": "WOLED (Dual-Hz MLA+ Panel)",
+    "bit_depth": "10-bit (1.07 Milyar Renk)",
+    "screen_size_inch": 31.5,
+    "resolution": "3840x2160 (4K UHD) / 1920x1080 (FHD 480Hz Modu)",
+    "refresh_rate_hz": 240,
+    "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
+    "ppi": 140,
+    "hdr_certification": "VESA DisplayHDR True Black 400 (Peak 1300 Nit)",
+    "brightness_sdr_nit": 275,
+    "brightness_hdr_nit": 1300,
+    "color_gamut": "%98.5 DCI-P3, %135 sRGB",
+    "vrr_support": "G-Sync Compatible / AMD FreeSync Premium Pro / VESA ClearMR 13000"
+  },
+  {
+    "id": "monitor_samsung_odyssey_oled_g9",
+    "category": "MONITOR",
+    "name": "Samsung Odyssey OLED G9 (G95SC) 49 inç 240Hz 0.03ms Dual QHD Kavisli",
+    "brand": "Samsung",
+    "model": "Odyssey OLED G9 (G95SC)",
+    "image_url": "https://images.samsung.com/is/image/samsung/p6pim/tr/ls49cg954suxuf/gallery/tr-odyssey-oled-g9-g95sc-ls49cg954suxuf-536830588?$650_519_PNG$",
+    "images": [
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls49cg954suxuf/gallery/tr-odyssey-oled-g9-g95sc-ls49cg954suxuf-536830588?$650_519_PNG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls49cg954suxuf/gallery/tr-odyssey-oled-g9-g95sc-ls49cg954suxuf-536830589?$650_519_PNG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls49cg954suxuf/gallery/tr-odyssey-oled-g9-g95sc-ls49cg954suxuf-536830590?$650_519_PNG$"
+    ],
+    "current_price_try": 52999.0,
+    "lowest_price_try": 49999.0,
+    "highest_price_try": 56999.0,
+    "store_name": "Samsung TR",
+    "store_url": "https://www.samsung.com/tr/monitors/gaming/odyssey-oled-g9-g95sc-49-inch-240hz-curved-dual-qhd-ls49cg954suxuf/",
+    "benchmark_score": 99,
+    "benchmark_tier": "S+",
+    "panel_type": "QD-OLED (1800R Kavisli Kuantum Nokta)",
+    "bit_depth": "10-bit (1.07 Milyar Renk)",
+    "screen_size_inch": 49.0,
+    "resolution": "5120x1440 (Dual QHD 32:9)",
+    "refresh_rate_hz": 240,
+    "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
+    "ppi": 109,
+    "hdr_certification": "VESA DisplayHDR True Black 400",
+    "brightness_sdr_nit": 250,
+    "brightness_hdr_nit": 1000,
+    "color_gamut": "%99 DCI-P3, %100 sRGB",
+    "vrr_support": "AMD FreeSync Premium Pro / G-Sync Compatible"
+  },
+  {
+    "id": "monitor_samsung_odyssey_oled_g8",
+    "category": "MONITOR",
+    "name": "Samsung Odyssey OLED G8 (G80SD) 32 inç 4K 240Hz 0.03ms QD-OLED Monitör",
+    "brand": "Samsung",
+    "model": "Odyssey OLED G8 (G80SD)",
+    "image_url": "https://images.samsung.com/is/image/samsung/p6pim/tr/ls32dg802suxuf/gallery/tr-odyssey-oled-g8-g80sd-ls32dg802suxuf-541819586?$650_519_PNG$",
+    "images": [
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls32dg802suxuf/gallery/tr-odyssey-oled-g8-g80sd-ls32dg802suxuf-541819586?$650_519_PNG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/tr/ls32dg802suxuf/gallery/tr-odyssey-oled-g8-g80sd-ls32dg802suxuf-541819587?$650_519_PNG$"
+    ],
+    "current_price_try": 41999.0,
+    "lowest_price_try": 39999.0,
+    "highest_price_try": 44999.0,
+    "store_name": "Hepsiburada",
+    "store_url": "https://www.hepsiburada.com/samsung-odyssey-oled-g8-g80sd-32-4k-240hz-oled-gaming-monitor",
+    "benchmark_score": 99,
+    "benchmark_tier": "S+",
+    "panel_type": "QD-OLED (Parlama Önleyici Glare-Free)",
+    "bit_depth": "10-bit",
+    "screen_size_inch": 32.0,
+    "resolution": "3840x2160 (4K UHD)",
+    "refresh_rate_hz": 240,
+    "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
+    "ppi": 138,
+    "hdr_certification": "HDR10+ Gaming / VESA DisplayHDR True Black 400",
+    "brightness_sdr_nit": 250,
+    "brightness_hdr_nit": 1000,
+    "color_gamut": "%99 DCI-P3",
+    "vrr_support": "AMD FreeSync Premium Pro"
+  },
+  {
+    "id": "monitor_gigabyte_aorus_fo32u2p",
+    "category": "MONITOR",
+    "name": "Gigabyte AORUS FO32U2P 32 inç 4K 240Hz QD-OLED DP 2.1 UHBR20 Monitör",
+    "brand": "Gigabyte",
+    "model": "AORUS FO32U2P",
+    "image_url": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2662/innergigabyteimages/banner.png",
+    "images": [
+      "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2662/innergigabyteimages/banner.png",
+      "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2662/innergigabyteimages/product_angle.png"
+    ],
+    "current_price_try": null,
+    "lowest_price_try": null,
+    "highest_price_try": null,
+    "store_name": null,
+    "store_url": null,
+    "benchmark_score": 100,
+    "benchmark_tier": "S+",
+    "panel_type": "QD-OLED (Samsung 3. Nesil)",
+    "bit_depth": "10-bit",
+    "screen_size_inch": 31.5,
+    "resolution": "3840x2160 (4K UHD)",
+    "refresh_rate_hz": 240,
+    "response_speed_gtg_ms": 0.03,
+    "response_mprt_ms": 0.03,
+    "ppi": 140,
+    "hdr_certification": "VESA DisplayHDR True Black 400 (Peak 1000 Nit)",
+    "brightness_sdr_nit": 250,
+    "brightness_hdr_nit": 1000,
+    "color_gamut": "%99 DCI-P3",
+    "vrr_support": "DisplayPort 2.1 UHBR20 Sıkıştırmasız / FreeSync Premium Pro"
+  },
+  {
+    "id": "mouse_pulsar_x2_v2",
+    "category": "MOUSE",
+    "name": "Pulsar X2 V2 Ultra Hafif Simetrik Kablosuz Espor Faresi",
+    "brand": "Pulsar",
+    "model": "X2 V2",
+    "image_url": "https://www.pulsar.gg/cdn/shop/files/x2v2_black_01.png",
+    "images": [
+      "https://www.pulsar.gg/cdn/shop/files/x2v2_black_01.png",
+      "https://www.pulsar.gg/cdn/shop/files/x2v2_black_02.png"
+    ],
+    "current_price_try": 3799.0,
+    "lowest_price_try": 3599.0,
+    "highest_price_try": 4099.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/pulsar-x2-v2-wireless-mouse",
+    "benchmark_score": 94,
+    "benchmark_tier": "S",
+    "sensor": "PixArt PAW3395",
+    "max_dpi": 26000,
+    "polling_rate_hz": 4000,
+    "switch_type": "Pulsar Optik Switch (Işık Hızında Algılama)",
+    "weight_g": 53,
+    "connectivity": "2.4GHz 4K / USB-C",
+    "battery_hours": 100,
+    "mcu": "Nordic nRF52840",
+    "click_latency_ms": 0.4,
+    "shape_type": "Simetrik Düşük Profil"
+  },
+  {
+    "id": "mouse_endgame_gear_op1_8k",
+    "category": "MOUSE",
+    "name": "Endgame Gear OP1 8K Kablolu Gerçek 8000Hz Espor Faresi",
+    "brand": "Endgame Gear",
+    "model": "OP1 8K",
+    "image_url": "https://www.endgamegear.com/media/image/24/ec/3b/op1-8k-black-01.png",
+    "images": [
+      "https://www.endgamegear.com/media/image/24/ec/3b/op1-8k-black-01.png",
+      "https://www.endgamegear.com/media/image/24/ec/3b/op1-8k-black-02.png"
+    ],
+    "current_price_try": 3499.0,
+    "lowest_price_try": 3299.0,
+    "highest_price_try": 3799.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/endgame-gear-op1-8k-gaming-mouse",
+    "benchmark_score": 98,
+    "benchmark_tier": "S+",
+    "sensor": "PixArt PAW3395 (Özel Firmware)",
+    "max_dpi": 26000,
+    "polling_rate_hz": 8000,
+    "switch_type": "Kailh GX Mekanik (Değiştirilebilir Switch Paketi)",
+    "weight_g": 50,
+    "connectivity": "Kablolu Flex Cord 5.0 (0.0125ms Tarama)",
+    "battery_hours": null,
+    "mcu": "Nuvoton M483 Yüksek Hızlı Mikroişlemci",
+    "click_latency_ms": 0.1,
+    "shape_type": "Dar Pençe (Claw Grip) Odaklı"
+  },
+  {
+    "id": "keyboard_drunkdeer_g65_he",
+    "category": "KEYBOARD",
+    "name": "DrunkDeer G65 Manyetik Switch Rapid Trigger %65 Klavye",
+    "brand": "DrunkDeer",
+    "model": "G65 HE",
+    "image_url": "https://drunkdeer.com/cdn/shop/files/G65_black_01.png",
+    "images": [
+      "https://drunkdeer.com/cdn/shop/files/G65_black_01.png",
+      "https://drunkdeer.com/cdn/shop/files/G65_black_02.png"
+    ],
+    "current_price_try": 4699.0,
+    "lowest_price_try": 4399.0,
+    "highest_price_try": 4999.0,
+    "store_name": "Wraith Esports",
+    "store_url": "https://wraithesports.com/products/drunkdeer-g65-keyboard",
+    "benchmark_score": 95,
+    "benchmark_tier": "S+",
+    "switch_type": "Raesha Manyetik Hall Effect Switch",
+    "rapid_trigger_supported": true,
+    "min_actuation_mm": 0.1,
+    "max_actuation_mm": 4.0,
+    "polling_rate_hz": 1000,
+    "layout": "%65 Kompakt Yön Tuşlu",
+    "hotSwap": true,
+    "hot_swap": true,
+    "connectivity": "Kablolu USB-C",
+    "case_material": "ABS Gövde & Alüminyum Konumlandırma Plakası",
+    "is_hall_effect": true
+  },
+  {
+    "id": "keyboard_asus_rog_azoth_extreme",
+    "category": "KEYBOARD",
+    "name": "ASUS ROG Azoth Extreme Karbon Fiber Plaka & OLED Ekranlı Klavye",
+    "brand": "ASUS",
+    "model": "ROG Azoth Extreme",
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/4BDE9B2A-6A32-4919-A3D8-8ED8E5C49DE9/w800",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/4BDE9B2A-6A32-4919-A3D8-8ED8E5C49DE9/w800",
+      "https://dlcdnwebimgs.asus.com/gain/3EDBA053-C8B5-4D61-A79F-9D457DE85D8D/w800"
+    ],
+    "current_price_try": 21999.0,
+    "lowest_price_try": 20499.0,
+    "highest_price_try": 23499.0,
+    "store_name": "İtopya",
+    "store_url": "https://www.itopya.com/asus-rog-azoth-extreme-oled-kablosuz-mekanik-klavye",
+    "benchmark_score": 99,
+    "benchmark_tier": "S+",
+    "switch_type": "ROG NX Kar Tipi Önceden Yağlanmış Mekanik",
+    "rapid_trigger_supported": false,
+    "min_actuation_mm": 1.8,
+    "max_actuation_mm": 3.6,
+    "polling_rate_hz": 8000,
+    "layout": "%75 Dokunmatik OLED Ekranlı",
+    "hotSwap": true,
+    "hot_swap": true,
+    "connectivity": "2.4GHz SpeedNova 8K / Bluetooth 5.1 / USB-C",
+    "case_material": "CNC İşlenmiş 12 Adımlı Alüminyum Şasi & Karbon Fiber Konumlandırma Plakası",
+    "is_hall_effect": false
+  },
+  {
+    "id": "headset_beyerdynamic_dt_770_pro_x",
+    "category": "HEADSET",
+    "name": "Beyerdynamic DT 770 PRO X Limited Edition STELLAR.45 Stüdyo Kulaklığı",
+    "brand": "Beyerdynamic",
+    "model": "DT 770 PRO X Limited Edition",
+    "image_url": "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt770prox_perspective.png",
+    "images": [
+      "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt770prox_perspective.png",
+      "https://europe.beyerdynamic.com/media/catalog/product/d/t/dt770prox_side.png"
+    ],
+    "current_price_try": 7999.0,
+    "lowest_price_try": 7499.0,
+    "highest_price_try": 8499.0,
+    "store_name": "Amazon TR",
+    "store_url": "https://www.amazon.com.tr/Beyerdynamic-Limited-Edition-St%C3%BCdyo-Kulakl%C4%B1%C4%9F%C4%B1/dp/B0CXFMSHQY",
+    "benchmark_score": 97,
+    "benchmark_tier": "S+",
+    "driver_type": "STELLAR.45 Dinamik Neodimyum Sürücü (Alman Üretimi)",
+    "driver_size_mm": 45,
+    "impedance_ohm": 48,
+    "frequency_response": "5Hz - 40.000Hz (Hi-Res Audio)",
+    "dac_amp_required": false,
+    "mic_type": "Mikrofonsuz Saf Akustik Kapalı Referans",
+    "weight_g": 305,
+    "connectivity": "Çıkarılabilir Mini-XLR to 3.5mm Jack (Kablolu)",
+    "sound_isolation": "Maksimum Pasif Dış Ortam İzolasyonu (Kapalı Kasa)"
   }
 ]

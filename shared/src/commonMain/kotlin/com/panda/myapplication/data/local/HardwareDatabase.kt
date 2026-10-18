@@ -45,7 +45,7 @@ import kotlinx.coroutines.CoroutineDispatcher
         MonitorSpecEntity::class,
         UserPriceOverrideEntity::class,
     ],
-    version = 27,
+    version = 28,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

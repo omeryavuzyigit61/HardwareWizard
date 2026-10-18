@@ -25,6 +25,9 @@ data class MouseSpecEntity(
     @ColumnInfo(name = "weight_g") val weightG: Int,
     @ColumnInfo(name = "connectivity") val connectivity: String,
     @ColumnInfo(name = "battery_hours") val batteryHours: Int?,
+    @ColumnInfo(name = "mcu") val mcu: String = "Nordic 52840",
+    @ColumnInfo(name = "click_latency_ms") val clickLatencyMs: Double = 0.8,
+    @ColumnInfo(name = "shape_type") val shapeType: String = "Simetrik",
 )
 
 @Entity(
@@ -47,6 +50,9 @@ data class KeyboardSpecEntity(
     @ColumnInfo(name = "layout") val layout: String,
     @ColumnInfo(name = "hot_swap") val hotSwap: Boolean,
     @ColumnInfo(name = "connectivity") val connectivity: String,
+    @ColumnInfo(name = "max_actuation_mm") val maxActuationMm: Double = 4.0,
+    @ColumnInfo(name = "case_material") val caseMaterial: String = "Alüminyum CNC / ABS",
+    @ColumnInfo(name = "is_hall_effect") val isHallEffect: Boolean = false,
 )
 
 @Entity(
@@ -69,6 +75,8 @@ data class HeadsetSpecEntity(
     @ColumnInfo(name = "dac_amp_required") val dacAmpRequired: Boolean,
     @ColumnInfo(name = "mic_type") val micType: String,
     @ColumnInfo(name = "weight_g") val weightG: Int,
+    @ColumnInfo(name = "connectivity") val connectivity: String = "2.4GHz / Bluetooth / 3.5mm",
+    @ColumnInfo(name = "sound_isolation") val soundIsolation: String = "Pasif / ANC",
 )
 
 @Entity(
@@ -91,4 +99,10 @@ data class MonitorSpecEntity(
     @ColumnInfo(name = "response_speed_gtg_ms") val responseSpeedGtGMs: Double,
     @ColumnInfo(name = "ppi") val ppi: Int,
     @ColumnInfo(name = "hdr_certification") val hdrCertification: String,
+    @ColumnInfo(name = "bit_depth") val bitDepth: String = "8-bit + FRC",
+    @ColumnInfo(name = "response_mprt_ms") val responseMprtMs: Double? = 0.5,
+    @ColumnInfo(name = "brightness_sdr_nit") val brightnessSdrNit: Int = 350,
+    @ColumnInfo(name = "brightness_hdr_nit") val brightnessHdrNit: Int = 400,
+    @ColumnInfo(name = "color_gamut") val colorGamut: String = "%100 sRGB, %98 DCI-P3",
+    @ColumnInfo(name = "vrr_support") val vrrSupport: String = "G-Sync Compatible / FreeSync Premium Pro",
 )

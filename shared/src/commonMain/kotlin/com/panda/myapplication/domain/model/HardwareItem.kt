@@ -13,12 +13,14 @@ data class HardwareItem(
     val priceInfo: ProductPriceInfo? = null,
     val benchmarkInfo: HardwareBenchmarkInfo? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
     val customPriceTry: Double? = null,
     val customPriceNote: String? = null,
 ) {
     val category: HardwareCategory get() = spec.category
 
-    val effectiveImageUrl: String? get() = imageUrl ?: priceInfo?.imageUrl
+    val effectiveImageUrl: String? get() = imageUrl ?: priceInfo?.imageUrl ?: images.firstOrNull()
+    val effectiveImages: List<String> get() = if (images.isNotEmpty()) images else listOfNotNull(effectiveImageUrl)
     val storePriceTry: Double? get() = priceInfo?.currentPriceTry
     val currentPriceTry: Double? get() = customPriceTry ?: priceInfo?.currentPriceTry
     val isCustomPrice: Boolean get() = customPriceTry != null
