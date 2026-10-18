@@ -6,7 +6,7 @@
     "priceTry": 78999.0,
     "url": "https://www.hepsiburada.com/asus-rog-strix-g16-g614jir-n4003-intel-core-i9-14900hx-32gb-1tb-ssd-rtx4080-freedos-16-240hz-tasinabilir-bilgisayar-pm-HBC00005V189Y",
     "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
-    "cpuModel": "Intel Core i9-14900HX (24 Çekirdek, 5.80 GHz)",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 4080 Laptop 12GB GDDR6",
     "gpuWattTgp": "175W Full Power (150W + 25W Dynamic Boost)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -20,9 +20,7 @@
     "fps1080p": 175,
     "fps1440p": 135,
     "images": [
-      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408_2.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408_3.jpg"
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
     ],
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -42,7 +40,7 @@
     "priceTry": 114999.0,
     "url": "https://www.hepsiburada.com/lenovo-legion-pro-7-intel-core-i9-14900hx-32gb-2tb-ssd-rtx4090-freedos-16-wqxga-tasinabilir-bilgisayar-83de001ctr-pm-HBC000063R89Q",
     "imageUrl": "https://img.yenieera22.com/cdn/1000/1-183de3.png",
-    "cpuModel": "Intel Core i9-14900HX (24 Çekirdek / 32 İzlek)",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 4090 Laptop 16GB GDDR6",
     "gpuWattTgp": "175W Full Power (Maksimum Grafik Gücü)",
     "muxSwitch": "MUX Switch + Advanced Optimus (Lenovo AI Engine+)",
@@ -56,9 +54,7 @@
     "fps1080p": 210,
     "fps1440p": 168,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-183de3.png",
-      "https://img.yenieera22.com/cdn/1000/1-183de3_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-183de3_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-183de3.png"
     ],
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -78,7 +74,7 @@
     "priceTry": 39499.0,
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-a15-fa507uv-lp014-amd-ryzen-7-8845hs-16gb-512gb-ssd-rtx4060-freedos-15-6-fhd-tasinabilir-bilgisayar-pm-HBC000062G12A",
     "imageUrl": "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca.jpg?preset=dvn1",
-    "cpuModel": "AMD Ryzen 7 8845HS (8 Çekirdek, Ryzen AI NPU)",
+    "cpuModel": "AMD Ryzen 7 8845HS",
     "gpuModel": "NVIDIA GeForce RTX 4060 Laptop 8GB GDDR6",
     "gpuWattTgp": "140W Dynamic Boost (115W + 25W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -92,11 +88,9 @@
     "fps1080p": 118,
     "fps1440p": 78,
     "images": [
-      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca.jpg?preset=dvn1",
-      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca_2.jpg?preset=dvn1",
-      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca_3.jpg?preset=dvn1"
+      "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca.jpg?preset=dvn1"
     ],
-    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Ryzen AI)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
@@ -114,7 +108,7 @@
     "priceTry": 32999.0,
     "url": "https://www.hepsiburada.com/lenovo-loq-15irx9-intel-core-i5-13450hx-16gb-512gb-ssd-rtx4060-freedos-15-6-fhd-tasinabilir-bilgisayar-83dv00httr-pm-HBC000068809B",
     "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg",
-    "cpuModel": "Intel Core i5-13450HX (10 Çekirdek, 4.60 GHz)",
+    "cpuModel": "Intel Core i5-13450HX",
     "gpuModel": "NVIDIA GeForce RTX 4060 Laptop 8GB GDDR6",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + Advanced Optimus",
@@ -128,12 +122,10 @@
     "fps1080p": 105,
     "fps1440p": 68,
     "images": [
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld_2.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld_3.jpg"
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -150,7 +142,7 @@
     "priceTry": 37499.0,
     "url": "https://www.hepsiburada.com/acer-nitro-16-an16-41-amd-ryzen-7-7840hs-16gb-512gb-ssd-rtx4060-freedos-16-wuxga-165hz-tasinabilir-bilgisayar-nh-qlkey-001-pm-HBC00004QNBD4",
     "imageUrl": "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook.jpg",
-    "cpuModel": "AMD Ryzen 7 7840HS (8 Çekirdek, 5.10 GHz)",
+    "cpuModel": "AMD Ryzen 7 7840HS",
     "gpuModel": "NVIDIA GeForce RTX 4060 Laptop 8GB GDDR6",
     "gpuWattTgp": "140W Full Power (Maksimum 140W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -164,11 +156,9 @@
     "fps1080p": 122,
     "fps1440p": 80,
     "images": [
-      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook.jpg",
-      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook_2.jpg",
-      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook_3.jpg"
+      "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook.jpg"
     ],
-    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
@@ -186,7 +176,7 @@
     "priceTry": 89999.0,
     "url": "https://www.hepsiburada.com/msi-raider-ge68-hx-14vgg-258tr-intel-core-i9-14900hx-32gb-1tb-ssd-rtx4070-windows-11-home-16-qhd-tasinabilir-bilgisayar-pm-HBC00005S3A8B",
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg",
-    "cpuModel": "Intel Core i9-14900HX (24 Çekirdek / 32 İzlek)",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 4070 Laptop 8GB GDDR6",
     "gpuWattTgp": "140W Full Power Dynamic Boost",
     "muxSwitch": "MUX Switch (MSI Discrete Graphics Mode)",
@@ -200,9 +190,7 @@
     "fps1080p": 155,
     "fps1440p": 115,
     "images": [
-      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399_2.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399_3.jpg"
+      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg"
     ],
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -222,7 +210,7 @@
     "priceTry": 36999.0,
     "url": "https://www.hepsiburada.com/hp-victus-16-r1000nt-intel-core-i7-14650hx-16gb-1tb-ssd-rtx4060-freedos-16-1-fhd-tasinabilir-bilgisayar-9j218ea-pm-HBC000062P7Y4",
     "imageUrl": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg",
-    "cpuModel": "Intel Core i7-14650HX (16 Çekirdek, 5.20 GHz)",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 4060 Laptop 8GB GDDR6",
     "gpuWattTgp": "120W Dynamic Boost",
     "muxSwitch": "MUX Switch (OMEN Gaming Hub)",
@@ -236,12 +224,10 @@
     "fps1080p": 112,
     "fps1440p": 72,
     "images": [
-      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg",
-      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1_2.jpg",
-      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1_3.jpg"
+      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -258,7 +244,7 @@
     "priceTry": 45999.0,
     "url": "https://www.gaming.gen.tr/urun/812040/asus-tuf-gaming-f16-intel-core-i7-14650hx-16gb-1tb-ssd-rtx5060-16-inc-165hz-gaming-laptop/",
     "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874.jpg",
-    "cpuModel": "Intel Core i7-14650HX (16 Çekirdek, 5.20 GHz)",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop 8GB GDDR7",
     "gpuWattTgp": "115W Dynamic Boost (Blackwell Mimarisi)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -272,12 +258,10 @@
     "fps1080p": 138,
     "fps1440p": 94,
     "images": [
-      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874_2.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874_3.jpg"
+      "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -294,7 +278,7 @@
     "priceTry": 149999.0,
     "url": "https://www.itopya.com/asus-rog-strix-scar-18-intel-core-i9-14900hx-64gb-4tb-ssd-rtx5090-18-inc-240hz-mini-led_u38990",
     "imageUrl": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
-    "cpuModel": "Intel Core i9-14900HX (24 Çekirdek / 32 İzlek, 5.80 GHz)",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 5090 Laptop 24GB GDDR7",
     "gpuWattTgp": "175W Full Power (150W + 25W Dynamic Boost)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -344,12 +328,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -366,7 +348,7 @@
     "url": "https://www.gaming.gen.tr/urun/745120/dell-alienware-16-aurora-intel-core-7-240h-geforce-rtx-5060-8gb-16gb-ddr5-1tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 7 240H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -380,12 +362,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -416,12 +396,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -452,9 +430,7 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300.jpg"
     ],
     "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
@@ -488,12 +464,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -524,12 +498,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -546,7 +518,7 @@
     "url": "https://www.gaming.gen.tr/urun/865137/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300.jpg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 170",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "105W Dynamic Boost (75W + 30W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -560,12 +532,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Rembrandt Refresh)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.75 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -582,7 +552,7 @@
     "url": "https://www.gaming.gen.tr/urun/768125/dell-alienware-16-aurora-intel-core-7-240h-geforce-rtx-5060-8gb-32gb-ddr5-1tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 7 240H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -596,12 +566,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -618,7 +586,7 @@
     "url": "https://www.gaming.gen.tr/urun/768140/dell-alienware-16-aurora-intel-core-7-240h-geforce-rtx-5060-8gb-32gb-ddr5-2tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv2-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 7 240H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -632,12 +600,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -654,7 +620,7 @@
     "url": "https://www.gaming.gen.tr/urun/768278/dell-alienware-16-aurora-intel-core-9-270h-geforce-rtx-5070-8gb-115w-64gb-ddr5-1tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157wv2-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 9 270H",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -668,12 +634,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.80 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -690,7 +654,7 @@
     "url": "https://www.gaming.gen.tr/urun/745181/dell-alienware-16-aurora-intel-core-9-270h-geforce-rtx-5070-8gb-115w-32gb-ddr5-1tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 9 270H",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -704,12 +668,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.80 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -726,7 +688,7 @@
     "url": "https://www.gaming.gen.tr/urun/768295/dell-alienware-16-aurora-intel-core-9-270h-geforce-rtx-5070-8gb-115w-64gb-ddr5-2tb-ssd-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157wv3-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 9 270H",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -740,12 +702,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-2tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-3-2-300x300.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.80 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -762,7 +722,7 @@
     "url": "https://www.gaming.gen.tr/urun/768322/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-geforce-rtx-5070-8gb-155w-64gb-ddr5-1tb-ssd-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157wv2-2-yil-yerinde-servis-garanti/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "intel core ultra 9 275hx",
+    "cpuModel": "Intel Core Ultra 9 275HX",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "155W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -776,12 +736,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -798,7 +756,7 @@
     "url": "https://www.gaming.gen.tr/urun/768340/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-geforce-rtx-5070-8gb-155w-64gb-ddr5-2tb-ssd-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157wv3-2-yil-yerinde-servis-garanti/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "intel core ultra 9 275hx",
+    "cpuModel": "Intel Core Ultra 9 275HX",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "155W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -812,12 +770,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -834,7 +790,7 @@
     "url": "https://www.gaming.gen.tr/urun/745231/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-geforce-rtx5070-8gb-155w-32gb-ddr5-1tb-ssd-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-yil-yerinde-servis-garantisi/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300.jpg",
     "brand": "Dell",
-    "cpuModel": "intel core ultra 9 275hx",
+    "cpuModel": "Intel Core Ultra 9 275HX",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "155W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -848,12 +804,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -870,7 +824,7 @@
     "url": "https://www.gaming.gen.tr/urun/834025/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-180hz-w11-home-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -884,12 +838,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -906,7 +858,7 @@
     "url": "https://www.gaming.gen.tr/urun/800762/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -920,12 +872,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -942,7 +892,7 @@
     "url": "https://www.gaming.gen.tr/urun/800783/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-2tb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -956,12 +906,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -978,7 +926,7 @@
     "url": "https://www.gaming.gen.tr/urun/834028/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-2tb-ssd-16-inc-2-5k-qhd-180hz-w11-home-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -992,12 +940,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1014,7 +960,7 @@
     "url": "https://www.gaming.gen.tr/urun/962355/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1028,12 +974,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1050,7 +994,7 @@
     "url": "https://www.gaming.gen.tr/urun/800786/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-32gb-ddr5-2tb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1064,12 +1008,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1086,7 +1028,7 @@
     "url": "https://www.gaming.gen.tr/urun/834035/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-32gb-ddr5-2tb-ssd-16-inc-2-5k-qhd-180hz-w11-home-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1100,12 +1042,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1122,7 +1062,7 @@
     "url": "https://www.gaming.gen.tr/urun/800787/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-64gb-ddr5-2tb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1136,12 +1076,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1158,7 +1096,7 @@
     "url": "https://www.gaming.gen.tr/urun/800791/gameraider-flux-gr16-amd-ryzen-9-8940hx-geforce-rtx-5060-8gb-115w-64gb-ddr5-4tb-ssd-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-canta-hediyeli/",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300.jpg",
     "brand": "Laptop",
-    "cpuModel": "amd ryzen 9 8940hx",
+    "cpuModel": "AMD Ryzen 9 8940HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1172,12 +1110,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1208,12 +1144,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-6-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1244,12 +1178,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1280,12 +1212,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-2-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1316,12 +1246,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1352,12 +1280,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-2-5-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1388,12 +1314,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-7-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1424,12 +1348,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1460,12 +1382,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1496,12 +1416,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-300x300.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1518,7 +1436,7 @@
     "url": "https://www.itopya.com/msi-crosshair-16-hx-e14wgk-046xtr-core-i9-14900hx-16gb-ddr5-rtx5070-gddr7-8gb-1tb-ssd-16-qhd-240hz_u35661",
     "imageUrl": "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4.png",
     "brand": "MSI",
-    "cpuModel": "Intel Core i9 14900HX",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "140W Full Power Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1532,9 +1450,7 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4.png",
-      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4_angle.png",
-      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4_ports.png"
+      "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4.png"
     ],
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1554,7 +1470,7 @@
     "url": "https://www.itopya.com/lenovo-loq-essential-15arp11-ryzen-5-150-16gb-ddr5-rtx5050-8gb-gddr7-512gb-ssd-156-fhd-144hz-w11h-_u35532",
     "imageUrl": "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 5 150",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1568,12 +1484,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449.jpg",
-      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449_2.jpg",
-      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449_3.jpg"
+      "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "6 Çekirdek / 12 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.30 GHz Taban / 4.50 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1590,7 +1504,7 @@
     "url": "https://www.itopya.com/asus-tuf-gaming-a16-ryzen-7-260-16gb-ddr5-rtx-5050-8gb-gddr7-512gb-ssd-16-wuxga-144hz-gaming-notebo_u35492",
     "imageUrl": "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 260",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1608,8 +1522,8 @@
       "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg",
       "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Hawk Point Refresh)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1626,7 +1540,7 @@
     "url": "https://www.itopya.com/asus-tuf-gaming-a16-ryzen-7-260-16gb-ddr5-rtx-5070-8gb-gddr7-1tb-ssd-16-wuxga-165hz-gaming-notebook_u35491",
     "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659.jpg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 260",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "140W Full Power Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1640,12 +1554,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659_2.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659_3.jpg"
+      "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Hawk Point Refresh)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1662,7 +1574,7 @@
     "url": "https://www.itopya.com/asus-tuf-gaming-f16-core-5-210h-16gb8gbx2-ddr5-rtx-3050-6gb-gddr6-512gb-ssd-16-wuxga-144hz-gaming_u33810",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 5 210H",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "75W TGP",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1676,12 +1588,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 4.80 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1712,12 +1622,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-60b165.png",
-      "https://img.yenieera22.com/cdn/1000/1-60b165_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-60b165_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-60b165.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1748,12 +1656,10 @@
     "fps1080p": 171,
     "fps1440p": 128,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/5-daaf4b.png",
-      "https://img.yenieera22.com/cdn/1000/5-daaf4b_angle.png",
-      "https://img.yenieera22.com/cdn/1000/5-daaf4b_ports.png"
+      "https://img.yenieera22.com/cdn/1000/5-daaf4b.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1784,12 +1690,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/5-0830d8.png",
-      "https://img.yenieera22.com/cdn/1000/5-0830d8_angle.png",
-      "https://img.yenieera22.com/cdn/1000/5-0830d8_ports.png"
+      "https://img.yenieera22.com/cdn/1000/5-0830d8.png"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1820,12 +1724,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/5-787240.png",
-      "https://img.yenieera22.com/cdn/1000/5-787240_angle.png",
-      "https://img.yenieera22.com/cdn/1000/5-787240_ports.png"
+      "https://img.yenieera22.com/cdn/1000/5-787240.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1842,7 +1744,7 @@
     "url": "https://www.itopya.com/msi-raider-16-hx-b2wh-091tr-ultra-9-275hx-16gb-ddr5-rtx5070ti-gddr7-12gb-1tb-ssd-16-qhd-240hz-w11h-_u33496",
     "imageUrl": "https://img.yenieera22.com/cdn/1000/5-431ee8.png",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core Ultra 9 275HX",
     "gpuModel": "NVIDIA GeForce RTX 5070TI Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -1856,12 +1758,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/5-431ee8.png",
-      "https://img.yenieera22.com/cdn/1000/5-431ee8_angle.png",
-      "https://img.yenieera22.com/cdn/1000/5-431ee8_ports.png"
+      "https://img.yenieera22.com/cdn/1000/5-431ee8.png"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1892,12 +1792,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-759627.png",
-      "https://img.yenieera22.com/cdn/1000/1-759627_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-759627_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-759627.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1928,12 +1826,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-fce08c.png",
-      "https://img.yenieera22.com/cdn/1000/1-fce08c_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-fce08c_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-fce08c.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 22 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 5.00 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -1964,12 +1860,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/5-536e34.png",
-      "https://img.yenieera22.com/cdn/1000/5-536e34_angle.png",
-      "https://img.yenieera22.com/cdn/1000/5-536e34_ports.png"
+      "https://img.yenieera22.com/cdn/1000/5-536e34.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2000,12 +1894,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-86a570.png",
-      "https://img.yenieera22.com/cdn/1000/1-86a570_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-86a570_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-86a570.png"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 22 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 5.00 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2036,12 +1928,10 @@
     "fps1080p": 171,
     "fps1440p": 128,
     "images": [
-      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large.jpg",
-      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large_2.jpg",
-      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large_3.jpg"
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 22 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 5.00 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2058,7 +1948,7 @@
     "url": "https://www.itopya.com/lenovo-loq-15irx10-i5-14500hx-16gb-ddr5-rtx5060-gddr7-8gb-512gb-ssd-156-ips-144hz-w11-notebook_u33077",
     "imageUrl": "https://img.yenieera22.com/cdn/1000/1-17a0ed.png",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core i5-14500HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2072,12 +1962,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://img.yenieera22.com/cdn/1000/1-17a0ed.png",
-      "https://img.yenieera22.com/cdn/1000/1-17a0ed_angle.png",
-      "https://img.yenieera22.com/cdn/1000/1-17a0ed_ports.png"
+      "https://img.yenieera22.com/cdn/1000/1-17a0ed.png"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2094,7 +1982,7 @@
     "url": "https://www.hepsiburada.com/acer-nitro-anv15-52-intel-core-i5-13420h-16gb-1tb-ssd-rtx5050-freedos-15-6-165hz-tasinabilir-bilgisayar-nh-qz7ey-004-p-HBCV0000ELZI58",
     "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195.jpg",
     "brand": "Acer",
-    "cpuModel": "Intel Core i5 13420H",
+    "cpuModel": "Intel Core i5-13420H",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2108,12 +1996,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195_2.jpg",
-      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195_3.jpg"
+      "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.10 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2130,7 +2016,7 @@
     "url": "https://www.hepsiburada.com/msi-cyborg-15-a13uc-2087xtr-intel-core-i5-13420h-16gb-512gb-ssd-rtx3050-freedos-15-6-fhd-144hz-tasinabilir-bilgisayar-p-HBCV0000AHHOFE",
     "imageUrl": "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom.jpg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i5 13420H",
+    "cpuModel": "Intel Core i5-13420H",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "75W TGP",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2144,12 +2030,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom.jpg",
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom_2.jpg",
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom_3.jpg"
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.10 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2166,7 +2050,7 @@
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-f16-fx608jhi-tu231-intel-core-i5-14450hx-16gb-512gb-ssd-rtx5050-freedos-16-144hz-tasinabilir-bilgisayar-p-HBCV0000G0KYA1",
     "imageUrl": "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i5 14450HX",
+    "cpuModel": "Intel Core i5-14450HX",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2184,8 +2068,8 @@
       "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/",
       "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.80 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2202,7 +2086,7 @@
     "url": "https://www.hepsiburada.com/casper-excalibur-g870-intel-core-i7-13620h-16gb-1tb-ssd-rtx5050-freedos-15-6-165hz-tasinabilir-bilgisayar-g870-1362-bf50x-c-p-HBCV00009I2H2L",
     "imageUrl": "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp",
     "brand": "Laptop",
-    "cpuModel": "Intel Core i7 13620H",
+    "cpuModel": "Intel Core i7-13620H",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2220,8 +2104,8 @@
       "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp",
       "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2238,7 +2122,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loq-amd-ryzen-7-250-16gb-512gb-ssd-rtx5050-freedos-15-6-fhd-tasinabilir-bilgisayar-83jg008vtr-p-HBCV0000FHFKV0",
     "imageUrl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 250",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2256,8 +2140,8 @@
       "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp",
       "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Hawk Point Refresh)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2274,7 +2158,7 @@
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-a16-fa607nuq-rl071-6gb-geforce-rtx4050-rtx4050-90w-ryzen-7-170-16gb-ram-512gb-ssd-16-inc-fhd-144hz-freedos-tasinabilir-bilgisayar-pm-HBC0000EZ6LV8",
     "imageUrl": "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 170",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "90W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2292,8 +2176,8 @@
       "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45",
       "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Rembrandt Refresh)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.75 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2310,7 +2194,7 @@
     "url": "https://www.hepsiburada.com/msi-cyborg-15-a13ve-2268xtrnn-intel-core-i5-13420h-16gb-512gb-ssd-rtx4050-freedos-15-6-fhd-tasinabilir-bilgisayar-p-HBCV0000C10IBJ",
     "imageUrl": "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf.jpg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i5 13420H",
+    "cpuModel": "Intel Core i5-13420H",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "105W Dynamic Boost (75W + 30W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2324,12 +2208,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf.jpg",
-      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf_2.jpg",
-      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf_3.jpg"
+      "https://img.pzrmcdn.com/mnresize/1180/1182/asset/4711377420679/images/msicyborg15a13ve2268xtrnnintelcorei513420h16gb512gbssdrtx4050freedos156fhd-1ac186529-feae-4c4d-a103-d626fd5d3acf.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.10 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2346,7 +2228,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loq-intel-core-i7-13645hx-16gb-1tb-ssd-rtx5060-freedos-15-6-fhd-144hz-tasinabilir-bilgisayar-83je01betr-pm-HBC0000FHFNL1",
     "imageUrl": "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7 13645HX",
+    "cpuModel": "Intel Core i7-13645HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2360,12 +2242,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6.jpg",
-      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6_2.jpg",
-      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6_3.jpg"
+      "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek / 20 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 5.00 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2382,7 +2262,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loq-83jg00bjtr-ryzen-7-250-32gb-1tb-ssd-8gb-rtx5060-100w-15-6-fhd-144hz-freedos-pm-HBC0000DV0XF0",
     "imageUrl": "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 250",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "100W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2396,12 +2276,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-.jpg",
-      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-_2.jpg",
-      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-_3.jpg"
+      "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Hawk Point Refresh)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2418,7 +2296,7 @@
     "url": "https://www.hepsiburada.com/msi-katana-15-hx-b14wfk-450xtr-intel-core-i9-14900hx-32gb-1tb-ssd-rtx5060-freedos-tasinabilir-bilgisayar-15-6-qhd-165hz-tasinabilir-bilgisayar-pm-HBC00009C7JV5",
     "imageUrl": "https://storage-asset.msi.com/global/picture/apluscontent/feature/1746432677.jpeg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i9 14900HX",
+    "cpuModel": "Intel Core i9-14900HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2454,7 +2332,7 @@
     "url": "https://www.hepsiburada.com/msi-nb-cyborg-15-a13ve-2270xtrnn-intel-core-i5-13420h-16gb-1tb-ssd-rtx4050-freedos-15-6-fhd-tasinabilir-bilgisayar-p-HBCV0000DOGEYP",
     "imageUrl": "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1.jpg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i5 13420H",
+    "cpuModel": "Intel Core i5-13420H",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "105W Dynamic Boost (75W + 30W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2468,12 +2346,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1.jpg",
-      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1_2.jpg",
-      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1_3.jpg"
+      "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.10 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2490,7 +2366,7 @@
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-16gb-512gb-ssd-rtx-3050-6gb-65w-16-fhd-wuxga-144hz-ips-panel-tasinabilir-bilgisayar-p-HBCV000093SVM0",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 5 210H",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "65W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2504,12 +2380,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 4.80 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2526,7 +2400,7 @@
     "url": "https://www.hepsiburada.com/acer-nitro-18-amd-ryzen-ai-9-365-32gb-1tb-ssd-rtx5070-freedos-18-165hz-tasinabilir-bilgisayar-nh-qyjey-002-pm-HBC0000BEMR91",
     "imageUrl": "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp",
     "brand": "Acer",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen AI 9 365",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "140W Full Power Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2544,8 +2418,8 @@
       "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp",
       "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (4 Zen 5 + 6 Zen 5c) / 20 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 5.00 GHz Tepe (Ryzen AI 50 NPU TOPS)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2562,7 +2436,7 @@
     "url": "https://www.hepsiburada.com/acer-nitro-v-16-anv16-71-751z-intel-core-i7-14650hx-16gb-512gb-ssd-rtx4060-windows-11-home-16-tasinabilir-bilgisayar-nh-qtmey-001-pm-HBC0000AP4KED",
     "imageUrl": "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_.jpg",
     "brand": "Acer",
-    "cpuModel": "Intel Core i7 14650HX",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 4060 Laptop",
     "gpuWattTgp": "140W Full Power (115W + 25W Dynamic Boost)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2576,12 +2450,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_.jpg",
-      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC__2.jpg",
-      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC__3.jpg"
+      "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2598,7 +2470,7 @@
     "url": "https://www.hepsiburada.com/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-15-6-inc-fhd-144hz-freedos-tasinabilir-bilgisayar-p-HBCV0000AQ3RE2",
     "imageUrl": "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW.jpg",
     "brand": "HP",
-    "cpuModel": "Amd Ryzen 7 7445H",
+    "cpuModel": "AMD Ryzen 7 7445H",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "105W Dynamic Boost (75W + 30W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2612,12 +2484,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW.jpg",
-      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW_2.jpg",
-      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW_3.jpg"
+      "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2634,7 +2504,7 @@
     "url": "https://www.hepsiburada.com/game-garaj-slayer-x7t-5060-c7-intel-core-i7-14650hx-16gb-ram-1tb-ssd-rtx5060-16-qhd-180hz-ips-freedos-gaming-laptop-p-HBCV0000AQIKKS",
     "imageUrl": "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1.jpg",
     "brand": "Laptop",
-    "cpuModel": "Intel Core I7 14650HX",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2648,12 +2518,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1.jpg",
-      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1_2.jpg",
-      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1_3.jpg"
+      "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2670,7 +2538,7 @@
     "url": "https://www.hepsiburada.com/msi-katana-17-hx-b14wfk-248xtr-intel-core-i7-14650hx-8gb-1tb-ssd-rtx5060-freedos-17-3-qhd-tasinabilir-bilgisayar-pm-HBC0000AI3PDG",
     "imageUrl": "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02.png",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7 14650HX",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2684,12 +2552,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02.png",
-      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02_angle.png",
-      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02_ports.png"
+      "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02.png"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2706,7 +2572,7 @@
     "url": "https://www.hepsiburada.com/lenovo-thinkbook-16p-21r0001ltx-ultra-7-255hx-32gb-1tb-ssd-rtx-5060-8gb-240hz-16-2560x1600-freedos-dizustu-bilgisayar-pm-HBC0000DPVGJ4",
     "imageUrl": "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core Ultra 9 255HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2720,12 +2586,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro.jpg",
-      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro_2.jpg",
-      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro_3.jpg"
+      "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Arrow Lake)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2742,7 +2606,7 @@
     "url": "https://www.hepsiburada.com/monster-abra-a7-v15-6-4-intel-core-7-250h-16-gb-ram-1-tb-ssd-4-gb-rtx-3050-freedos-17-3-144-hz-oyun-bilgisayari-pm-HBC0000D7E9V2",
     "imageUrl": "https://productimages.hepsiburada.net/s/777/424-600/110001559749178.jpg",
     "brand": "Monster",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 7 250H",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "75W TGP",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2756,12 +2620,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178_2.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178_3.jpg"
+      "https://productimages.hepsiburada.net/s/777/424-600/110001559749178.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 5.40 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2778,7 +2640,7 @@
     "url": "https://www.hepsiburada.com/msi-cyborg-17-b13wfkg-091xtr-intel-core-i7-13620h-16gb-1tb-ssd-rtx5060-freedos-17-3-fhd-144hz-tasinabilir-bilgisayar-p-HBCV0000AHITKG",
     "imageUrl": "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7 13620H",
+    "cpuModel": "Intel Core i7-13620H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2792,12 +2654,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_2.jpg?$formatz$",
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_3.jpg?$formatz$"
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2832,8 +2692,8 @@
       "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp",
       "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp"
     ],
-    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.75 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2850,7 +2710,7 @@
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-16gb-512gb-ssd-rtx-3050-6gb-16-fhd-1920-x-1200-wuxga-144hz-ips-panel-freedos-tasinabilir-bilgisayar-p-HBCV0000CWEX8Z",
     "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024.jpg",
     "brand": "ASUS",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 5 210H",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "75W TGP",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2864,12 +2724,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024_2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024_3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-f16-fx607vjb-rl136-gaming-intel-core-5-210h-geforce-rtx-3050-6gb-gddr6-16gb-ddr5-512gb-ssd-16-inc-wuxga-144hz-3ms-ips-level-freedos-gaming-laptop-fc1-1024x1024.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 4.80 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2900,12 +2758,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom.jpg",
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom_2.jpg",
-      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom_3.jpg"
+      "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.70 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2922,7 +2778,7 @@
     "url": "https://www.hepsiburada.com/msi-katana-15-hx-b14wgk-889xtr-intel-core-i7-14650hx-16gb-1tb-ssd-rtx5070-freedos-15-6-qhd-tasinabilir-bilgisayar-pm-HBC0000CSFK9G",
     "imageUrl": "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500_.jpg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7 14650HX",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 5070 Laptop",
     "gpuWattTgp": "140W Full Power Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -2936,12 +2792,10 @@
     "fps1080p": 163,
     "fps1440p": 122,
     "images": [
-      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500__2.jpg",
-      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500__3.jpg"
+      "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500_.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2972,12 +2826,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071.jpg",
-      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071_2.jpg",
-      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071_3.jpg"
+      "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.70 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -2994,7 +2846,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loq-15ahp10-ai-amd-ryzen-7-250-24gb-512gb-ssd-rtx5060-freedos-15-6-fhd-144hz-tasinabilir-bilgisayar-83jg006ftr-pm-HBC0000AQ61MB",
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 250",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3008,12 +2860,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768_2.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768_3.jpg"
+      "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Hawk Point Refresh)",
+    "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3030,7 +2880,7 @@
     "url": "https://www.hepsiburada.com/game-garaj-slayer-x5t-5050-c7-intel-core-i5-13500hx-16gb-ram-1tb-ssd-rtx5050-16-wuxga-165hz-ips-freedos-oyuncu-laptop-p-HBCV0000APUILW",
     "imageUrl": "https://productimages.hepsiburada.net/s/777/424-600/110001431384225.jpg",
     "brand": "Laptop",
-    "cpuModel": "Intel Core I5 13500HX",
+    "cpuModel": "Intel Core i5-13500HX",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3044,12 +2894,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225_2.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225_3.jpg"
+      "https://productimages.hepsiburada.net/s/777/424-600/110001431384225.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.50 GHz Taban / 4.70 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3066,7 +2914,7 @@
     "url": "https://www.hepsiburada.com/asus-tuf-gaming-a15-fa506ncg-hn267-amd-ryzen-7-7445hs-16gb-512gb-ssd-rtx3050-4gb-75w-freedos-15-6-fhd-144hz-tasinabilir-bilgisayar-p-HBCV0000AWDJXY",
     "imageUrl": "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg",
     "brand": "ASUS",
-    "cpuModel": "Amd Ryzen 7 7445HS",
+    "cpuModel": "AMD Ryzen 7 7445HS",
     "gpuModel": "NVIDIA GeForce RTX 3050 Laptop",
     "gpuWattTgp": "75W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3080,12 +2928,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500__2.jpg",
-      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500__3.jpg"
+      "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.70 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3102,7 +2948,7 @@
     "url": "https://www.hepsiburada.com/msi-katana-17-hx-b14wfk-252xtr-intel-core-i7-14650hx-32gb-8gb-1tb-ssd-rtx5060-freedos-17-3-qhd-240hz-tasinabilir-bilgisayar-pm-HBC0000AI3AYP",
     "imageUrl": "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE.jpg",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7 14650HX",
+    "cpuModel": "Intel Core i7-14650HX",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3116,12 +2962,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE.jpg",
-      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE_2.jpg",
-      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE_3.jpg"
+      "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE.jpg"
     ],
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3138,7 +2982,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loqe-15arp10-amd-ryzen-7-170-16gb-ddr5-1tb-ssd-rtx-5050-8gb-15-6-inc-full-hd-144hz-ips-freedos-gaming-laptop-83s000dxtr-pm-HBC0000GAB17J",
     "imageUrl": "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "AMD Ryzen 7 170",
     "gpuModel": "NVIDIA GeForce RTX 4050 Laptop",
     "gpuWattTgp": "105W Dynamic Boost (75W + 30W)",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3152,12 +2996,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768.jpg",
-      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768_2.jpg",
-      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768_3.jpg"
+      "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Rembrandt Refresh)",
+    "cpuClockGhz": "3.20 GHz Taban / 4.75 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3188,12 +3030,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld_2.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld_3.jpg"
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
+    "cpuClockGhz": "3.10 GHz Taban / 4.50 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3210,7 +3050,7 @@
     "url": "https://www.hepsiburada.com/lenovo-loq-intel-core-i5-14500hx-16gb-512gb-ssd-rtx5050-freedos-15-6-tasinabilir-bilgisayar-83je0128tr-pm-HBC0000D9H8YS",
     "imageUrl": "https://productimages.hepsiburada.net/s/777/424-600/110001597736869.jpg",
     "brand": "Lenovo",
-    "cpuModel": "Intel Core i5 14500HX",
+    "cpuModel": "Intel Core i5-14500HX",
     "gpuModel": "NVIDIA GeForce RTX 5050 Laptop",
     "gpuWattTgp": "140W Full Power",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3224,12 +3064,10 @@
     "fps1080p": 140,
     "fps1440p": 105,
     "images": [
-      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869_2.jpg",
-      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869_3.jpg"
+      "https://productimages.hepsiburada.net/s/777/424-600/110001597736869.jpg"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
+    "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3246,7 +3084,7 @@
     "url": "https://www.hepsiburada.com/hp-victus-gaming-intel-core-5-210h-16gb-1tb-ssd-rtx5060-freedos-15-6-fhd-tasinabilir-bilgisayar-c21sgea-p-HBCV0000BD1HRY",
     "imageUrl": "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp",
     "brand": "HP",
-    "cpuModel": "Intel Core i7-14650HX",
+    "cpuModel": "Intel Core 5 210H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3264,8 +3102,8 @@
       "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp",
       "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp"
     ],
-    "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "8 Çekirdek (4P + 4E) / 12 İzlek",
+    "cpuClockGhz": "2.00 GHz Taban / 4.80 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3282,7 +3120,7 @@
     "url": "https://www.hepsiburada.com/msi-cyborg-17-b13wfkg-210xtr-intel-core-i7-13620h-32gb-1tb-ssd-rtx5060-freedos-17-3-fhd-144hz-tasinabilir-bilgisayar-pm-HBC0000AI3NTN",
     "imageUrl": "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
     "brand": "MSI",
-    "cpuModel": "Intel Core i7 13620H",
+    "cpuModel": "Intel Core i7-13620H",
     "gpuModel": "NVIDIA GeForce RTX 5060 Laptop",
     "gpuWattTgp": "115W Dynamic Boost",
     "muxSwitch": "MUX Switch + NVIDIA Advanced Optimus",
@@ -3296,12 +3134,10 @@
     "fps1080p": 151,
     "fps1440p": 113,
     "images": [
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$",
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_2.jpg?$formatz$",
-      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd_3.jpg?$formatz$"
+      "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
+    "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",
@@ -3336,8 +3172,8 @@
       "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
     ],
-    "cpuCores": "14 Çekirdek / 20 İzlek Yüksek Performans",
-    "cpuClockGhz": "2.60 GHz Taban / 5.00 GHz Tepe (Boost)",
+    "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
+    "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
     "refreshRateHz": 240,
     "panelTech": "Fast IPS (Geniş Görüş Açılı Espor Paneli)",

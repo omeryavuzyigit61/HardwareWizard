@@ -63929,5 +63929,2405 @@
         "inStock": true
       }
     ]
+  },
+  "headset_audeze_maxwell_wireless": {
+    "productId": "headset_audeze_maxwell_wireless",
+    "currentPriceTry": 14999.0,
+    "lowestPriceTry": 14999.0,
+    "highestPriceTry": 14999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880351",
+    "imageUrl": "https://cdn.ecoustics.com/db0/wblob/17BA35E873D594/3306/4560A/pASPyEVcujq89U0ZfweNFt2neGrmMe9pPo0iDeTDd7k/audeze-maxwell-headphones-front-facing-flat.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14999.0,
+        "priceTry": 14999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 14999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_beyerdynamic_mmx_300_pro": {
+    "productId": "headset_beyerdynamic_mmx_300_pro",
+    "currentPriceTry": 12999.0,
+    "lowestPriceTry": 12999.0,
+    "highestPriceTry": 12999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880362",
+    "imageUrl": "https://cdn.cgmagonline.com/wp-content/uploads/2024/07/beyerdynamic-launches-the-mmx-300-pro-2024-06-28-221748.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 12999.0,
+        "priceTry": 12999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 12999.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_logitech_g_astro_a50_x": {
+    "productId": "headset_logitech_g_astro_a50_x",
+    "currentPriceTry": 15999.0,
+    "lowestPriceTry": 15999.0,
+    "highestPriceTry": 15999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880365",
+    "imageUrl": "https://resource.logitechg.com/d_transparent.gif/content/dam/gaming/en/products/astro-a50-x/product-gallery/astro-a50-x-black-gallery-1.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 15999.0,
+        "priceTry": 15999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 15999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_sennheiser_hd_650": {
+    "productId": "headset_sennheiser_hd_650",
+    "currentPriceTry": 14999.0,
+    "lowestPriceTry": 14999.0,
+    "highestPriceTry": 14999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880366",
+    "imageUrl": "https://img.ricardostatic.ch/images/8b87bf17-f237-48d8-8dcd-60fa1e496cb9/t_1800x1350/sennheiser-hd-650-kopfhorer-audio-hifi-studio-over-ear",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14999.0,
+        "priceTry": 14999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 14999.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_razer_blackshark_v2_pro_2023": {
+    "productId": "headset_razer_blackshark_v2_pro_2023",
+    "currentPriceTry": 7499.0,
+    "lowestPriceTry": 7499.0,
+    "highestPriceTry": 7499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880368",
+    "imageUrl": "https://www.custompc.com/wp-content/sites/custompc/2023/04/Razer-Blackshark-V2-Pro-2023-01.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 7499.0,
+        "priceTry": 7499.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 7499.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_sennheiser_hd_560s": {
+    "productId": "headset_sennheiser_hd_560s",
+    "currentPriceTry": 6799.0,
+    "lowestPriceTry": 6799.0,
+    "highestPriceTry": 6799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880370",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6433/6433188_sd.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6799.0,
+        "priceTry": 6799.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 6799.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_hyperx_cloud_alpha_wireless": {
+    "productId": "headset_hyperx_cloud_alpha_wireless",
+    "currentPriceTry": 6799.0,
+    "lowestPriceTry": 6799.0,
+    "highestPriceTry": 6799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880372",
+    "imageUrl": "https://m.media-amazon.com/images/I/71pFeJFdJQL._AC_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6799.0,
+        "priceTry": 6799.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 6799.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_hyperx_cloud_iii_wireless": {
+    "productId": "headset_hyperx_cloud_iii_wireless",
+    "currentPriceTry": 5499.0,
+    "lowestPriceTry": 5499.0,
+    "highestPriceTry": 5499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880373",
+    "imageUrl": "https://m.media-amazon.com/images/I/71pFeJFdJQL._AC_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5499.0,
+        "priceTry": 5499.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 5499.0,
+        "url": "https://www.vatanbilgisayar.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_audio_technica_ath_m50xbt2": {
+    "productId": "headset_audio_technica_ath_m50xbt2",
+    "currentPriceTry": 7899.0,
+    "lowestPriceTry": 7899.0,
+    "highestPriceTry": 7899.0,
+    "lastUpdated": "2026-10-18T23:19:24.880374",
+    "imageUrl": "https://atokes.com/wp-content/uploads/2026/06/Audio-Technica-ATH-M50xBT2.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 7899.0,
+        "priceTry": 7899.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 7899.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_steelseries_arctis_nova_7_wireless": {
+    "productId": "headset_steelseries_arctis_nova_7_wireless",
+    "currentPriceTry": 6999.0,
+    "lowestPriceTry": 6999.0,
+    "highestPriceTry": 6999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880376",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/99/99/LD0005999904.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6999.0,
+        "priceTry": 6999.0,
+        "storeName": "MediaMarkt"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "MediaMarkt",
+        "priceTry": 6999.0,
+        "url": "https://www.mediamarkt.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_sony_inzone_h9": {
+    "productId": "headset_sony_inzone_h9",
+    "currentPriceTry": 8499.0,
+    "lowestPriceTry": 8499.0,
+    "highestPriceTry": 8499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880377",
+    "imageUrl": "https://gizmodo.com/app/uploads/2025/08/Sony-Inzone-H9-II-gaming-headphones-PC-and-PS5-10-1600x1067.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8499.0,
+        "priceTry": 8499.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 8499.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "headset_corsair_hs80_max": {
+    "productId": "headset_corsair_hs80_max",
+    "currentPriceTry": 6299.0,
+    "lowestPriceTry": 6299.0,
+    "highestPriceTry": 6299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880378",
+    "imageUrl": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Headsets/hs80-max-wireless/steel-grey/HS80_MAX_WIRELESS_STEEL_GRAY_01.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6299.0,
+        "priceTry": 6299.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 6299.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_wooting_80he": {
+    "productId": "keyboard_wooting_80he",
+    "currentPriceTry": 9999.0,
+    "lowestPriceTry": 9999.0,
+    "highestPriceTry": 9999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880379",
+    "imageUrl": "https://www.overclockers.ua/content/reviews/peripheral/wooting-80he/01-wooting-80he.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 9999.0,
+        "priceTry": 9999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 9999.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_razer_huntsman_v3_pro": {
+    "productId": "keyboard_razer_huntsman_v3_pro",
+    "currentPriceTry": 8999.0,
+    "lowestPriceTry": 8999.0,
+    "highestPriceTry": 8999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880380",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/f2ba430b48cc45a90075a905e0eac073/razer-huntsman-v3-pro-ogimage-1200x630-v2.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8999.0,
+        "priceTry": 8999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 8999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_steelseries_apex_pro_gen3": {
+    "productId": "keyboard_steelseries_apex_pro_gen3",
+    "currentPriceTry": 9999.0,
+    "lowestPriceTry": 9999.0,
+    "highestPriceTry": 9999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880382",
+    "imageUrl": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2024/09/steelseries-apex-pro-gen-3-featured.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 9999.0,
+        "priceTry": 9999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 9999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_akko_monsgeek_m1w_v3_he": {
+    "productId": "keyboard_akko_monsgeek_m1w_v3_he",
+    "currentPriceTry": 5999.0,
+    "lowestPriceTry": 5999.0,
+    "highestPriceTry": 5999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880383",
+    "imageUrl": "https://file.hstatic.net/200000722513/file/earvn-ban-phim-monsgeek-m1-qmk-black-akko-switch-v3-cream-yellow-pro-1_8d215907a3294af3b6bc659202c5684d_1024x1024.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5999.0,
+        "priceTry": 5999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 5999.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_corsair_k70_max_magnetic": {
+    "productId": "keyboard_corsair_k70_max_magnetic",
+    "currentPriceTry": 8799.0,
+    "lowestPriceTry": 8799.0,
+    "highestPriceTry": 8799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880384",
+    "imageUrl": "https://www.mechanical-keyboard.org/wp-content/uploads/2023/08/Corsair-K70-MAX.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8799.0,
+        "priceTry": 8799.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 8799.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_drunkdeer_a75_pro": {
+    "productId": "keyboard_drunkdeer_a75_pro",
+    "currentPriceTry": 5299.0,
+    "lowestPriceTry": 5299.0,
+    "highestPriceTry": 5299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880386",
+    "imageUrl": "https://ae01.alicdn.com/kf/S5782b365e5134837a5a6df1cd2a2699fS/DrunkDeer-A75-Pro-Magnetic-Switch-Gaming-Keyboard-Rapid-Trigger-Wired-RGB-Mechanical-Keyboard-Hot-Swap-Gasket.jpg_.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5299.0,
+        "priceTry": 5299.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 5299.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_asus_rog_azoth": {
+    "productId": "keyboard_asus_rog_azoth",
+    "currentPriceTry": 9499.0,
+    "lowestPriceTry": 9499.0,
+    "highestPriceTry": 9499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880387",
+    "imageUrl": "https://thinkcomputers.org/wp-content/uploads/2024/06/asus-rog-azoth-1.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 9499.0,
+        "priceTry": 9499.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 9499.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_drunkdeer_g65": {
+    "productId": "keyboard_drunkdeer_g65",
+    "currentPriceTry": 4499.0,
+    "lowestPriceTry": 4499.0,
+    "highestPriceTry": 4499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880389",
+    "imageUrl": "https://i.ytimg.com/vi/p6ZCF2cObb4/maxresdefault.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4499.0,
+        "priceTry": 4499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4499.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_aula_f75": {
+    "productId": "keyboard_aula_f75",
+    "currentPriceTry": 2899.0,
+    "lowestPriceTry": 2899.0,
+    "highestPriceTry": 2899.0,
+    "lastUpdated": "2026-10-18T23:19:24.880390",
+    "imageUrl": "https://mechanical-keyboard.com/wp-content/uploads/2026/04/Aula-F75-Pro-Gaming-Review-1024x683.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2899.0,
+        "priceTry": 2899.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 2899.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_nuphy_air75_v2": {
+    "productId": "keyboard_nuphy_air75_v2",
+    "currentPriceTry": 5499.0,
+    "lowestPriceTry": 5499.0,
+    "highestPriceTry": 5499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880391",
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/xHTYUjJavCV9JmVYSBtB9U.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5499.0,
+        "priceTry": 5499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 5499.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_razer_blackwidow_v4_pro": {
+    "productId": "keyboard_razer_blackwidow_v4_pro",
+    "currentPriceTry": 8499.0,
+    "lowestPriceTry": 8499.0,
+    "highestPriceTry": 8499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880392",
+    "imageUrl": "https://www.mechanical-keyboard.org/wp-content/uploads/2023/04/Razer-BlackWidow-V4-Pro.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8499.0,
+        "priceTry": 8499.0,
+        "storeName": "MediaMarkt"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "MediaMarkt",
+        "priceTry": 8499.0,
+        "url": "https://www.mediamarkt.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_logitech_g_pro_x_tkl": {
+    "productId": "keyboard_logitech_g_pro_x_tkl",
+    "currentPriceTry": 6799.0,
+    "lowestPriceTry": 6799.0,
+    "highestPriceTry": 6799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880393",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/06/13/LD0006061306.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6799.0,
+        "priceTry": 6799.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 6799.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "keyboard_epomaker_rt100": {
+    "productId": "keyboard_epomaker_rt100",
+    "currentPriceTry": 4799.0,
+    "lowestPriceTry": 4799.0,
+    "highestPriceTry": 4799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880394",
+    "imageUrl": "https://www.smartworld.it/images/2023/02/01/recensione-epomaker-rt100_1200x675.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4799.0,
+        "priceTry": 4799.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 4799.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_oled_pg27aqdp": {
+    "productId": "monitor_asus_rog_swift_oled_pg27aqdp",
+    "currentPriceTry": 46999.0,
+    "lowestPriceTry": 46999.0,
+    "highestPriceTry": 46999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880395",
+    "imageUrl": "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc4/asus-480-hz-1440p-new.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 46999.0,
+        "priceTry": 46999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 46999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_gigabyte_aorus_fo32u2p": {
+    "productId": "monitor_gigabyte_aorus_fo32u2p",
+    "currentPriceTry": 54999.0,
+    "lowestPriceTry": 54999.0,
+    "highestPriceTry": 54999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880397",
+    "imageUrl": "https://cdn.3dnews.ru/assets/external/illustrations/2024/11/21/1114395/photo03.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 54999.0,
+        "priceTry": 54999.0,
+        "storeName": "Sinerji"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Sinerji",
+        "priceTry": 54999.0,
+        "url": "https://www.sinerji.gen.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_oled_pg32ucdm": {
+    "productId": "monitor_asus_rog_swift_oled_pg32ucdm",
+    "currentPriceTry": 54999.0,
+    "lowestPriceTry": 54999.0,
+    "highestPriceTry": 54999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880398",
+    "imageUrl": "https://en.shiftdelete.net/wp-content/uploads/2025/12/asus-rog-swift-oled-pg32ucdm-2.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 54999.0,
+        "priceTry": 54999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 54999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_dell_alienware_aw3225qf": {
+    "productId": "monitor_dell_alienware_aw3225qf",
+    "currentPriceTry": 52999.0,
+    "lowestPriceTry": 52999.0,
+    "highestPriceTry": 52999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880399",
+    "imageUrl": "https://platincdn.com/4188/pictures/EEJGLSTUKF116202413618_monitor-alienware-aw3225qf-white-gallery-11.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 52999.0,
+        "priceTry": 52999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 52999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_neo_g9_57": {
+    "productId": "monitor_samsung_odyssey_neo_g9_57",
+    "currentPriceTry": 82999.0,
+    "lowestPriceTry": 82999.0,
+    "highestPriceTry": 82999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880400",
+    "imageUrl": "https://m.media-amazon.com/images/I/71uFd8TSejL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 82999.0,
+        "priceTry": 82999.0,
+        "storeName": "Samsung Türkiye"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Samsung Türkiye",
+        "priceTry": 82999.0,
+        "url": "https://www.samsung.com/tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_oled_g8_g80sd": {
+    "productId": "monitor_samsung_odyssey_oled_g8_g80sd",
+    "currentPriceTry": 44999.0,
+    "lowestPriceTry": 44999.0,
+    "highestPriceTry": 44999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880401",
+    "imageUrl": "https://img.global.news.samsung.com/au/wp-content/uploads/2023/02/OLED-G8_DL_1.png.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 44999.0,
+        "priceTry": 44999.0,
+        "storeName": "Samsung Türkiye"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Samsung Türkiye",
+        "priceTry": 44999.0,
+        "url": "https://www.samsung.com/tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_oled_g9_g95sc": {
+    "productId": "monitor_samsung_odyssey_oled_g9_g95sc",
+    "currentPriceTry": 54999.0,
+    "lowestPriceTry": 54999.0,
+    "highestPriceTry": 54999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880403",
+    "imageUrl": "https://img.global.news.samsung.com/de/wp-content/uploads/2023/06/OdysseyOLEDG91.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 54999.0,
+        "priceTry": 54999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 54999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_msi_mpg_321urx_qd_oled": {
+    "productId": "monitor_msi_mpg_321urx_qd_oled",
+    "currentPriceTry": 49999.0,
+    "lowestPriceTry": 49999.0,
+    "highestPriceTry": 49999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880403",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/monitor/MPG-321URX-QD-OLED/images/mpg-321-urx-mnt-screen.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 49999.0,
+        "priceTry": 49999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 49999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_oled_g6_g60sd": {
+    "productId": "monitor_samsung_odyssey_oled_g6_g60sd",
+    "currentPriceTry": 28999.0,
+    "lowestPriceTry": 28999.0,
+    "highestPriceTry": 28999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880405",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6573/6573684_sd.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 28999.0,
+        "priceTry": 28999.0,
+        "storeName": "Samsung Türkiye"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Samsung Türkiye",
+        "priceTry": 28999.0,
+        "url": "https://www.samsung.com/tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_msi_mpg_271qrx_qd_oled": {
+    "productId": "monitor_msi_mpg_271qrx_qd_oled",
+    "currentPriceTry": 35999.0,
+    "lowestPriceTry": 35999.0,
+    "highestPriceTry": 35999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880406",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/monitor/MPG-271QRX-QD-OLED/mnt-screen.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 35999.0,
+        "priceTry": 35999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 35999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_gigabyte_aorus_fo27q3": {
+    "productId": "monitor_gigabyte_aorus_fo27q3",
+    "currentPriceTry": 36999.0,
+    "lowestPriceTry": 36999.0,
+    "highestPriceTry": 36999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880407",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/1b9d2288ef08fb4a99e6b6aa124f32eb/Product/45043",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 36999.0,
+        "priceTry": 36999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 36999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_oled_pg27aqdm": {
+    "productId": "monitor_asus_rog_swift_oled_pg27aqdm",
+    "currentPriceTry": 35999.0,
+    "lowestPriceTry": 35999.0,
+    "highestPriceTry": 35999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880408",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/0FC65822-E16E-414C-A35C-A1B5F36B2550/v1/img/kv/pd.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 35999.0,
+        "priceTry": 35999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 35999.0,
+        "url": "https://www.itopya.com/asus-rog-swift-oled-pg27aqdm",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_oled_pg34wcdm": {
+    "productId": "monitor_asus_rog_swift_oled_pg34wcdm",
+    "currentPriceTry": 49999.0,
+    "lowestPriceTry": 49999.0,
+    "highestPriceTry": 49999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880409",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/A8364F73-9A31-4507-BE78-B84D3FCE5A2C/v1/img/kv/kv_cover.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 49999.0,
+        "priceTry": 49999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 49999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_lg_ultragear_45gs96qb": {
+    "productId": "monitor_lg_ultragear_45gs96qb",
+    "currentPriceTry": 59999.0,
+    "lowestPriceTry": 59999.0,
+    "highestPriceTry": 59999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880410",
+    "imageUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/ultragear45incholedheader.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 59999.0,
+        "priceTry": 59999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 59999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_msi_mag_321upx_qd_oled": {
+    "productId": "monitor_msi_mag_321upx_qd_oled",
+    "currentPriceTry": 41999.0,
+    "lowestPriceTry": 41999.0,
+    "highestPriceTry": 41999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880412",
+    "imageUrl": "https://cdn.evkur.com.tr/c/Product/11_o6cms0.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 41999.0,
+        "priceTry": 41999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 41999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_strix_xg27aqdmg": {
+    "productId": "monitor_asus_rog_strix_xg27aqdmg",
+    "currentPriceTry": 31999.0,
+    "lowestPriceTry": 31999.0,
+    "highestPriceTry": 31999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880414",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/307D2CE1-016B-4A61-B78C-F8F174505AC5/w1000/h732",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 31999.0,
+        "priceTry": 31999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 31999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_pro_pg248qp_540hz": {
+    "productId": "monitor_asus_rog_swift_pro_pg248qp_540hz",
+    "currentPriceTry": 39999.0,
+    "lowestPriceTry": 39999.0,
+    "highestPriceTry": 39999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880415",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/2DDC8872-7B9F-4395-85FE-4D116C96FC75",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 39999.0,
+        "priceTry": 39999.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 39999.0,
+        "url": "https://www.tebilon.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_oled_pg49wcd": {
+    "productId": "monitor_asus_rog_swift_oled_pg49wcd",
+    "currentPriceTry": 59999.0,
+    "lowestPriceTry": 59999.0,
+    "highestPriceTry": 59999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880416",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/96968569-8BA4-4F7E-8948-AE952B5BA124/w1000/h732",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 59999.0,
+        "priceTry": 59999.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 59999.0,
+        "url": "https://www.vatanbilgisayar.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_lg_ultragear_27gs95qe": {
+    "productId": "monitor_lg_ultragear_27gs95qe",
+    "currentPriceTry": 29999.0,
+    "lowestPriceTry": 29999.0,
+    "highestPriceTry": 29999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880417",
+    "imageUrl": "https://media.us.lg.com/transform/ecomm-PDPGallery-1100x730/fe609118-7858-438c-9fd9-b6ce3d017714/Monitor_27GS95QE-B_gallery_01_5804x4354",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 29999.0,
+        "priceTry": 29999.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 29999.0,
+        "url": "https://www.vatanbilgisayar.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_aoc_agon_pro_ag276qzd": {
+    "productId": "monitor_aoc_agon_pro_ag276qzd",
+    "currentPriceTry": 28999.0,
+    "lowestPriceTry": 28999.0,
+    "highestPriceTry": 28999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880419",
+    "imageUrl": "https://m.media-amazon.com/images/I/81JZGBsFwSL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 28999.0,
+        "priceTry": 28999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 28999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_corsair_xeneon_27qhd240": {
+    "productId": "monitor_corsair_xeneon_27qhd240",
+    "currentPriceTry": 34999.0,
+    "lowestPriceTry": 34999.0,
+    "highestPriceTry": 34999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880420",
+    "imageUrl": "https://d1q3zw97enxzq2.cloudfront.net/images/XENEON_27QHD240_OLED_GAMING_MONI.width-1000.format-webp_7OcQf3W.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 34999.0,
+        "priceTry": 34999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 34999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_gigabyte_aorus_co49dq": {
+    "productId": "monitor_gigabyte_aorus_co49dq",
+    "currentPriceTry": 46999.0,
+    "lowestPriceTry": 46999.0,
+    "highestPriceTry": 46999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880421",
+    "imageUrl": "https://d2po40yubr0dlz.cloudfront.net/images/products/vuugo-gigabyte-AORUS_CO49DQ-2.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 46999.0,
+        "priceTry": 46999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 46999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_dell_alienware_aw3423dwf": {
+    "productId": "monitor_dell_alienware_aw3423dwf",
+    "currentPriceTry": 41999.0,
+    "lowestPriceTry": 41999.0,
+    "highestPriceTry": 41999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880422",
+    "imageUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/6ad59950_3dbd_11ed_bffe_63b3a7d4a883.cf15.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 41999.0,
+        "priceTry": 41999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 41999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_acer_predator_x27u": {
+    "productId": "monitor_acer_predator_x27u",
+    "currentPriceTry": 29999.0,
+    "lowestPriceTry": 29999.0,
+    "highestPriceTry": 29999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880424",
+    "imageUrl": "https://m.media-amazon.com/images/I/81VM6LxyOaL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 29999.0,
+        "priceTry": 29999.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 29999.0,
+        "url": "https://www.vatanbilgisayar.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_philips_evnia_34m2c8600": {
+    "productId": "monitor_philips_evnia_34m2c8600",
+    "currentPriceTry": 37999.0,
+    "lowestPriceTry": 37999.0,
+    "highestPriceTry": 37999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880426",
+    "imageUrl": "https://sm.pcmag.com/t/pcmag_uk/review/p/philips-ev/philips-evnia-34m2c8600-qd-oled-gaming-monitor_kz3r.1920.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 37999.0,
+        "priceTry": 37999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 37999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_dell_alienware_aw2524h_500hz": {
+    "productId": "monitor_dell_alienware_aw2524h_500hz",
+    "currentPriceTry": 32999.0,
+    "lowestPriceTry": 32999.0,
+    "highestPriceTry": 32999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880426",
+    "imageUrl": "https://cdn.wccftech.com/wp-content/uploads/2023/01/AW2524H_10-Custom.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 32999.0,
+        "priceTry": 32999.0,
+        "storeName": "Gaming.Gen.TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Gaming.Gen.TR",
+        "priceTry": 32999.0,
+        "url": "https://www.gaming.gen.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_neo_g8_32": {
+    "productId": "monitor_samsung_odyssey_neo_g8_32",
+    "currentPriceTry": 36999.0,
+    "lowestPriceTry": 36999.0,
+    "highestPriceTry": 36999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880427",
+    "imageUrl": "https://img.global.news.samsung.com/uk/wp-content/uploads/2022/06/Odyssey-Neo-G8_1-e1654601517325.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 36999.0,
+        "priceTry": 36999.0,
+        "storeName": "Vatan Bilgisayar"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Vatan Bilgisayar",
+        "priceTry": 36999.0,
+        "url": "https://www.vatanbilgisayar.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_benq_zowie_xl2566k": {
+    "productId": "monitor_benq_zowie_xl2566k",
+    "currentPriceTry": 26999.0,
+    "lowestPriceTry": 26999.0,
+    "highestPriceTry": 26999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880428",
+    "imageUrl": "https://image.benq.com/is/image/benqco/xl2566k-amazon-front-1?$ResponsivePreset$",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 26999.0,
+        "priceTry": 26999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 26999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_rog_swift_pg38uq": {
+    "productId": "monitor_asus_rog_swift_pg38uq",
+    "currentPriceTry": 37999.0,
+    "lowestPriceTry": 37999.0,
+    "highestPriceTry": 37999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880429",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/1E57A57F-335C-4C06-A6B9-CC544C63E791/websites/global/products/v56d9pw0cueiwzyg/images/bg-section3-m.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 37999.0,
+        "priceTry": 37999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 37999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_benq_mobiuz_ex270qm": {
+    "productId": "monitor_benq_mobiuz_ex270qm",
+    "currentPriceTry": 23999.0,
+    "lowestPriceTry": 23999.0,
+    "highestPriceTry": 23999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880430",
+    "imageUrl": "https://assets-prd.ignimgs.com/2022/11/03/objectj-1667515792276.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 23999.0,
+        "priceTry": 23999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 23999.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_dell_alienware_aw2724hf_360hz": {
+    "productId": "monitor_dell_alienware_aw2724hf_360hz",
+    "currentPriceTry": 18499.0,
+    "lowestPriceTry": 18499.0,
+    "highestPriceTry": 18499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880431",
+    "imageUrl": "https://tech-town.pl/585495-large_default/monitor-gamingowy-dell-alienware-aw2724hf-27-led-1920x1080-360hz.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 18499.0,
+        "priceTry": 18499.0,
+        "storeName": "Gaming.Gen.TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Gaming.Gen.TR",
+        "priceTry": 18499.0,
+        "url": "https://www.gaming.gen.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_acer_nitro_xv252qf_390hz": {
+    "productId": "monitor_acer_nitro_xv252qf_390hz",
+    "currentPriceTry": 17499.0,
+    "lowestPriceTry": 17499.0,
+    "highestPriceTry": 17499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880432",
+    "imageUrl": "https://www.acervietnam.com.vn/wp-content/uploads/2025/11/Gaming-Nitro-XV252Q-F-Nitro-XV2-Series-Acer-Viet-Nam-0.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 17499.0,
+        "priceTry": 17499.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 17499.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_lg_ultragear_27gr93u": {
+    "productId": "monitor_lg_ultragear_27gr93u",
+    "currentPriceTry": 18999.0,
+    "lowestPriceTry": 18999.0,
+    "highestPriceTry": 18999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880434",
+    "imageUrl": "https://m.media-amazon.com/images/I/91axHFvtsZL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 18999.0,
+        "priceTry": 18999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 18999.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_proart_pa279crv": {
+    "productId": "monitor_asus_proart_pa279crv",
+    "currentPriceTry": 18999.0,
+    "lowestPriceTry": 18999.0,
+    "highestPriceTry": 18999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880435",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/fb93a041-490f-4686-ac17-0ee6234fd66f/",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 18999.0,
+        "priceTry": 18999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_benq_zowie_xl2546k": {
+    "productId": "monitor_benq_zowie_xl2546k",
+    "currentPriceTry": 18999.0,
+    "lowestPriceTry": 18999.0,
+    "highestPriceTry": 18999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880436",
+    "imageUrl": "https://brain-images-ssl.cdn.dixons.com/4/9/10218894/u_10218894.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 18999.0,
+        "priceTry": 18999.0,
+        "storeName": "Gaming.Gen.TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Gaming.Gen.TR",
+        "priceTry": 18999.0,
+        "url": "https://www.gaming.gen.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_viewsonic_xg2431_240hz": {
+    "productId": "monitor_viewsonic_xg2431_240hz",
+    "currentPriceTry": 10999.0,
+    "lowestPriceTry": 10999.0,
+    "highestPriceTry": 10999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880437",
+    "imageUrl": "https://m.media-amazon.com/images/I/71FGKdEXy0L._AC_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 10999.0,
+        "priceTry": 10999.0,
+        "storeName": "Amazon TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 10999.0,
+        "url": "https://www.amazon.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_msi_mag_274qrf_qd_e2": {
+    "productId": "monitor_msi_mag_274qrf_qd_e2",
+    "currentPriceTry": 12999.0,
+    "lowestPriceTry": 12999.0,
+    "highestPriceTry": 12999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880438",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1698825055a998b04cad4f3a7146e1cbbd35fe08d1.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 12999.0,
+        "priceTry": 12999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 12999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_tuf_vg27aqml1a": {
+    "productId": "monitor_asus_tuf_vg27aqml1a",
+    "currentPriceTry": 13999.0,
+    "lowestPriceTry": 13999.0,
+    "highestPriceTry": 13999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880439",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/4f23e193-a298-461d-ada5-76c1526d6681/",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 13999.0,
+        "priceTry": 13999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 13999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_gigabyte_m27q_x": {
+    "productId": "monitor_gigabyte_m27q_x",
+    "currentPriceTry": 14999.0,
+    "lowestPriceTry": 14999.0,
+    "highestPriceTry": 14999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880440",
+    "imageUrl": "https://i5.walmartimages.com/seo/GIGABYTE-M27Q-X-27-IPS-Gaming-Monitor-QHD-2560x1440-240Hz-1ms-GTG-AMD-FreeSync-Premium-Type-C-KVM-HDMI-DP-Type-C-Height-Adjustable-Black_f3eb5f61-69ba-4e34-b036-cec12104f4ce.7073182e88b5c23aed1a2c2a254b8c81.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14999.0,
+        "priceTry": 14999.0,
+        "storeName": "İncehesap"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İncehesap",
+        "priceTry": 14999.0,
+        "url": "https://www.incehesap.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_aoc_agon_pro_ag275qzn": {
+    "productId": "monitor_aoc_agon_pro_ag275qzn",
+    "currentPriceTry": 14499.0,
+    "lowestPriceTry": 14499.0,
+    "highestPriceTry": 14499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880441",
+    "imageUrl": "https://www.testberichte.de/imgs/p_imgs_og/1806855.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 14499.0,
+        "priceTry": 14499.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 14499.0,
+        "url": "https://www.tebilon.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_lg_ultragear_27gp850p": {
+    "productId": "monitor_lg_ultragear_27gp850p",
+    "currentPriceTry": 11499.0,
+    "lowestPriceTry": 11499.0,
+    "highestPriceTry": 11499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880443",
+    "imageUrl": "https://www.lg.com/us/images/monitors/md06064916/gallery/zoom-02.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 11499.0,
+        "priceTry": 11499.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 11499.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_tuf_vg34vql3a": {
+    "productId": "monitor_asus_tuf_vg34vql3a",
+    "currentPriceTry": 15999.0,
+    "lowestPriceTry": 15999.0,
+    "highestPriceTry": 15999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880444",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/12/asus-tuf-gaming-vg34vql3a-34-inc-180hz-1ms-wqhd-adaptive-sync-va-pivot-gaming-monitor-1.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 15999.0,
+        "priceTry": 15999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 15999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_aoc_gaming_q27g4x": {
+    "productId": "monitor_aoc_gaming_q27g4x",
+    "currentPriceTry": 9899.0,
+    "lowestPriceTry": 9899.0,
+    "highestPriceTry": 9899.0,
+    "lastUpdated": "2026-10-18T23:19:24.880445",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/12/15/LD0006121576.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 9899.0,
+        "priceTry": 9899.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 9899.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_asus_tuf_vg249qm1a": {
+    "productId": "monitor_asus_tuf_vg249qm1a",
+    "currentPriceTry": 8499.0,
+    "lowestPriceTry": 8499.0,
+    "highestPriceTry": 8499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880446",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2022/10/asus-tuf-gaming-vg249qm1a-23-8-270hz-1ms-fast-ips-fhd-freesync-premium-g-sync-gaming-monitor-1-600x600.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8499.0,
+        "priceTry": 8499.0,
+        "storeName": "Gaming.Gen.TR"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Gaming.Gen.TR",
+        "priceTry": 8499.0,
+        "url": "https://www.gaming.gen.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_samsung_odyssey_g5_g50d": {
+    "productId": "monitor_samsung_odyssey_g5_g50d",
+    "currentPriceTry": 8799.0,
+    "lowestPriceTry": 8799.0,
+    "highestPriceTry": 8799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880447",
+    "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/sg/ls27dg502eexxs/gallery/sg-odyssey-g5-g50d-ls27dg502eexxs-540380035?$650_519_PNG$",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 8799.0,
+        "priceTry": 8799.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 8799.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_aoc_gaming_24g4": {
+    "productId": "monitor_aoc_gaming_24g4",
+    "currentPriceTry": 5299.0,
+    "lowestPriceTry": 5299.0,
+    "highestPriceTry": 5299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880448",
+    "imageUrl": "https://m.media-amazon.com/images/I/81J4utZ5bnL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5299.0,
+        "priceTry": 5299.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 5299.0,
+        "url": "https://www.tebilon.com",
+        "inStock": true
+      }
+    ]
+  },
+  "monitor_msi_g244f_e2": {
+    "productId": "monitor_msi_g244f_e2",
+    "currentPriceTry": 4799.0,
+    "lowestPriceTry": 4799.0,
+    "highestPriceTry": 4799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880449",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_16950225027023f9e0e5f86cdb7e4d8de73e468b1b.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4799.0,
+        "priceTry": 4799.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 4799.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_wlmouse_beast_x_max": {
+    "productId": "mouse_wlmouse_beast_x_max",
+    "currentPriceTry": 6299.0,
+    "lowestPriceTry": 6299.0,
+    "highestPriceTry": 6299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880451",
+    "imageUrl": "https://ae01.alicdn.com/kf/S48aea3465ab94e02a18a04a1a3f9a3a5L.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 6299.0,
+        "priceTry": 6299.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 6299.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_wlmouse_sword_x": {
+    "productId": "mouse_wlmouse_sword_x",
+    "currentPriceTry": 5999.0,
+    "lowestPriceTry": 5999.0,
+    "highestPriceTry": 5999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880452",
+    "imageUrl": "https://ir.ozone.ru/s3/multimedia-1-q/7456119974.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5999.0,
+        "priceTry": 5999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 5999.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_lamzu_maya_x_8k": {
+    "productId": "mouse_lamzu_maya_x_8k",
+    "currentPriceTry": 4299.0,
+    "lowestPriceTry": 4299.0,
+    "highestPriceTry": 4299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880453",
+    "imageUrl": "https://cdn.store-assets.com/s/824673/i/77805830.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4299.0,
+        "priceTry": 4299.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4299.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_ninjutso_sora_v2": {
+    "productId": "mouse_ninjutso_sora_v2",
+    "currentPriceTry": 4499.0,
+    "lowestPriceTry": 4499.0,
+    "highestPriceTry": 4499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880454",
+    "imageUrl": "https://cdn.dsmcdn.com/mnresize/420/620/ty1589/prod/QC/20241018/21/503c86ae-2cda-3f59-9931-597a5a7fe575/1_org_zoom.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4499.0,
+        "priceTry": 4499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4499.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_atk_blazing_sky_f1_ultimate": {
+    "productId": "mouse_atk_blazing_sky_f1_ultimate",
+    "currentPriceTry": 3799.0,
+    "lowestPriceTry": 3799.0,
+    "highestPriceTry": 3799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880455",
+    "imageUrl": "https://cdn.store-assets.com/s/824673/i/80078121.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3799.0,
+        "priceTry": 3799.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3799.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_scyrox_v8_8k": {
+    "productId": "mouse_scyrox_v8_8k",
+    "currentPriceTry": 3499.0,
+    "lowestPriceTry": 3499.0,
+    "highestPriceTry": 3499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880456",
+    "imageUrl": "https://ecimg.cafe24img.com/pg2672b13591662073/preflow/web/product/big/20260414/717731ba22eaed17c174f76a75b8db03.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3499.0,
+        "priceTry": 3499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3499.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_pulsar_xlite_v3_es": {
+    "productId": "mouse_pulsar_xlite_v3_es",
+    "currentPriceTry": 4699.0,
+    "lowestPriceTry": 4699.0,
+    "highestPriceTry": 4699.0,
+    "lastUpdated": "2026-10-18T23:19:24.880457",
+    "imageUrl": "https://www.enduins.com/wp-content/uploads/2024/12/Pulsar-Xlite-V3-eS-Gaming-Mouse-Review-img-1068x601.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4699.0,
+        "priceTry": 4699.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4699.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_vxe_mad_r_major": {
+    "productId": "mouse_vxe_mad_r_major",
+    "currentPriceTry": 2999.0,
+    "lowestPriceTry": 2999.0,
+    "highestPriceTry": 2999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880458",
+    "imageUrl": "https://ir.ozone.ru/s3/multimedia-1-x/c1000/8981846169.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2999.0,
+        "priceTry": 2999.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 2999.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_asus_rog_keris_ii_ace": {
+    "productId": "mouse_asus_rog_keris_ii_ace",
+    "currentPriceTry": 5699.0,
+    "lowestPriceTry": 5699.0,
+    "highestPriceTry": 5699.0,
+    "lastUpdated": "2026-10-18T23:19:24.880459",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/9B783ACB-999D-41F3-AC55-7859FB30C90B",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5699.0,
+        "priceTry": 5699.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 5699.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_lamzu_atlantis_og_v2_4k": {
+    "productId": "mouse_lamzu_atlantis_og_v2_4k",
+    "currentPriceTry": 3899.0,
+    "lowestPriceTry": 3899.0,
+    "highestPriceTry": 3899.0,
+    "lastUpdated": "2026-10-18T23:19:24.880460",
+    "imageUrl": "https://cdn.store-assets.com/s/824673/i/72911456.jpeg?width=1024",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3899.0,
+        "priceTry": 3899.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3899.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_lamzu_thorn_4k": {
+    "productId": "mouse_lamzu_thorn_4k",
+    "currentPriceTry": 4199.0,
+    "lowestPriceTry": 4199.0,
+    "highestPriceTry": 4199.0,
+    "lastUpdated": "2026-10-18T23:19:24.880462",
+    "imageUrl": "https://ae01.alicdn.com/kf/S8c93614f95214f73abee58f626427f50c/Lamzu-thorn-4K.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4199.0,
+        "priceTry": 4199.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 4199.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_lamzu_atlantis_mini_4k": {
+    "productId": "mouse_lamzu_atlantis_mini_4k",
+    "currentPriceTry": 3899.0,
+    "lowestPriceTry": 3899.0,
+    "highestPriceTry": 3899.0,
+    "lastUpdated": "2026-10-18T23:19:24.880463",
+    "imageUrl": "https://thx.bg/UserFiles/Product/gallery_1/lamzu_atlantis_mini_4k_06_wmtfwl.jpg?cache",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3899.0,
+        "priceTry": 3899.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3899.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_zowie_u2": {
+    "productId": "mouse_zowie_u2",
+    "currentPriceTry": 5799.0,
+    "lowestPriceTry": 5799.0,
+    "highestPriceTry": 5799.0,
+    "lastUpdated": "2026-10-18T23:19:24.880465",
+    "imageUrl": "https://congngheviet.com/wp-content/uploads/2024/05/zowie-launching-show-congngheviet-3079.webp",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5799.0,
+        "priceTry": 5799.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 5799.0,
+        "url": "https://www.tebilon.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_pulsar_x2h_wireless": {
+    "productId": "mouse_pulsar_x2h_wireless",
+    "currentPriceTry": 3599.0,
+    "lowestPriceTry": 3599.0,
+    "highestPriceTry": 3599.0,
+    "lastUpdated": "2026-10-18T23:19:24.880466",
+    "imageUrl": "https://product.hstatic.net/200000637319/product/image__1__49ad0ddab9694999b3f6765fc135a3f4_master.png",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3599.0,
+        "priceTry": 3599.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3599.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_asus_rog_harpe_ace": {
+    "productId": "mouse_asus_rog_harpe_ace",
+    "currentPriceTry": 4299.0,
+    "lowestPriceTry": 4299.0,
+    "highestPriceTry": 4299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880467",
+    "imageUrl": "https://www.well-played.com.au/wp-content/uploads/2024/01/ASUS-ROG-Harpe-Ace-Aim-Lab-Edition_01.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 4299.0,
+        "priceTry": 4299.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 4299.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_pulsar_x2v2_wireless": {
+    "productId": "mouse_pulsar_x2v2_wireless",
+    "currentPriceTry": 3499.0,
+    "lowestPriceTry": 3499.0,
+    "highestPriceTry": 3499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880468",
+    "imageUrl": "https://cdn.store-assets.com/s/824673/i/61271910.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3499.0,
+        "priceTry": 3499.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 3499.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_razer_basilisk_v3_pro": {
+    "productId": "mouse_razer_basilisk_v3_pro",
+    "currentPriceTry": 5999.0,
+    "lowestPriceTry": 5999.0,
+    "highestPriceTry": 5999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880469",
+    "imageUrl": "https://m.media-amazon.com/images/I/71QGU-U1u9L._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5999.0,
+        "priceTry": 5999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 5999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_vxe_r1_pro_max": {
+    "productId": "mouse_vxe_r1_pro_max",
+    "currentPriceTry": 2399.0,
+    "lowestPriceTry": 2399.0,
+    "highestPriceTry": 2399.0,
+    "lastUpdated": "2026-10-18T23:19:24.880470",
+    "imageUrl": "https://down-my.img.susercontent.com/file/cn-11134207-7r98o-lpharbu4uo2k12",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2399.0,
+        "priceTry": 2399.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 2399.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_zowie_ec2_cw": {
+    "productId": "mouse_zowie_ec2_cw",
+    "currentPriceTry": 5499.0,
+    "lowestPriceTry": 5499.0,
+    "highestPriceTry": 5499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880470",
+    "imageUrl": "https://m.media-amazon.com/images/I/61xzWJA9HOL._AC_SL1500_.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5499.0,
+        "priceTry": 5499.0,
+        "storeName": "Tebilon"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Tebilon",
+        "priceTry": 5499.0,
+        "url": "https://www.tebilon.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_darmoshark_m3_pro_4k": {
+    "productId": "mouse_darmoshark_m3_pro_4k",
+    "currentPriceTry": 2599.0,
+    "lowestPriceTry": 2599.0,
+    "highestPriceTry": 2599.0,
+    "lastUpdated": "2026-10-18T23:19:24.880471",
+    "imageUrl": "https://cdn.store-assets.com/s/824673/i/64471360.jpeg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2599.0,
+        "priceTry": 2599.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 2599.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_zaopin_z1_pro": {
+    "productId": "mouse_zaopin_z1_pro",
+    "currentPriceTry": 2299.0,
+    "lowestPriceTry": 2299.0,
+    "highestPriceTry": 2299.0,
+    "lastUpdated": "2026-10-18T23:19:24.880473",
+    "imageUrl": "https://zexron.com/uploads/images/202310/image_750x_653659855dc99.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2299.0,
+        "priceTry": 2299.0,
+        "storeName": "Wraith Esports"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Wraith Esports",
+        "priceTry": 2299.0,
+        "url": "https://wraithesports.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_logitech_g502_x_plus": {
+    "productId": "mouse_logitech_g502_x_plus",
+    "currentPriceTry": 5499.0,
+    "lowestPriceTry": 5499.0,
+    "highestPriceTry": 5499.0,
+    "lastUpdated": "2026-10-18T23:19:24.880474",
+    "imageUrl": "https://assets-prd.ignimgs.com/2023/02/07/photo-oct-10-2022-3-28-15-pm-1675728786761.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 5499.0,
+        "priceTry": 5499.0,
+        "storeName": "MediaMarkt"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "MediaMarkt",
+        "priceTry": 5499.0,
+        "url": "https://www.mediamarkt.com.tr",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_logitech_g303_shroud": {
+    "productId": "mouse_logitech_g303_shroud",
+    "currentPriceTry": 3999.0,
+    "lowestPriceTry": 3999.0,
+    "highestPriceTry": 3999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880475",
+    "imageUrl": "https://i.rtings.com/assets/products/8ASf7TFJ/logitech-g303-shroud-edition/design-large.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 3999.0,
+        "priceTry": 3999.0,
+        "storeName": "Hepsiburada"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 3999.0,
+        "url": "https://www.hepsiburada.com",
+        "inStock": true
+      }
+    ]
+  },
+  "mouse_glorious_model_o_2_wireless": {
+    "productId": "mouse_glorious_model_o_2_wireless",
+    "currentPriceTry": 2999.0,
+    "lowestPriceTry": 2999.0,
+    "highestPriceTry": 2999.0,
+    "lastUpdated": "2026-10-18T23:19:24.880477",
+    "imageUrl": "https://files.pccasegear.com/images/1667196814-GLO-MS-OWV2-MB-thb.jpg",
+    "priceHistory": [
+      {
+        "date": "2026-10-18",
+        "timestamp": "2026-10-18",
+        "price": 2999.0,
+        "priceTry": 2999.0,
+        "storeName": "İtopya"
+      }
+    ],
+    "offers": [
+      {
+        "storeName": "İtopya",
+        "priceTry": 2999.0,
+        "url": "https://www.itopya.com",
+        "inStock": true
+      }
+    ]
   }
 }
