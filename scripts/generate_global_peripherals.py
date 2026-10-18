@@ -20,7 +20,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CATALOG_DIR = os.path.join(ROOT_DIR, "data", "catalog")
 COMPOSE_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
 
-from fetch_web_images import search_bing_images, verify_image_url
+from fetch_web_images import search_bing_images, search_duckduckgo_images, verify_image_url
 from peripherals_db import MONITORS_DATA, MICE_DATA, KEYBOARDS_DATA, HEADSETS_DATA
 
 # Cache file for verified image URLs so repeat runs are instant
@@ -43,10 +43,12 @@ def save_img_cache():
 
 def fetch_verified_images(product_name: str, brand: str, category: str, fallback_urls: list[str]) -> list[str]:
     cache_key = f"{brand}_{product_name}".lower().strip()
-    if cache_key in IMG_CACHE and len(IMG_CACHE[cache_key]) >= 2:
-        # Verify first image is still valid
-        if verify_image_url(IMG_CACHE[cache_key][0]):
-            return IMG_CACHE[cache_key]
+    alt_key = f"{brand}_{product_name.replace(brand, '').strip()}".lower().strip()
+
+    for k in (cache_key, alt_key):
+        if k in IMG_CACHE and len(IMG_CACHE[k]) >= 2:
+            if verify_image_url(IMG_CACHE[k][0]):
+                return IMG_CACHE[k]
 
     valid_urls = []
     # Test fallbacks first
@@ -75,6 +77,17 @@ def fetch_verified_images(product_name: str, brand: str, category: str, fallback
                 pass
             if len(valid_urls) >= 4:
                 break
+
+    if len(valid_urls) < 2:
+        try:
+            ddg_found = search_duckduckgo_images(f"{brand} {product_name} product")
+            for u in ddg_found[:6]:
+                if u not in valid_urls and verify_image_url(u):
+                    valid_urls.append(u)
+                    if len(valid_urls) >= 3:
+                        break
+        except Exception:
+            pass
 
     if not valid_urls and fallback_urls:
         valid_urls = [fallback_urls[0]]
@@ -132,7 +145,7 @@ def main():
     print(f"Total items to process: {total}")
 
     processed_items = []
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=16) as executor:
         future_to_item = {
             executor.submit(process_item, item, cat): (item.get("id"), cat)
             for item, cat in all_tasks
