@@ -8,22 +8,33 @@ import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import io.ktor.client.HttpClient
+import io.ktor.client.request.get
 import io.ktor.client.request.headers
 import io.ktor.client.request.patch
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
+import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
+import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.contentOrNull
+import kotlinx.serialization.json.doubleOrNull
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
 class CommunityPriceRepositoryImpl(
@@ -34,6 +45,75 @@ class CommunityPriceRepositoryImpl(
 
     private val _deals = MutableStateFlow<List<CommunityDeal>>(createInitialSeedDeals())
     private val _isAdminLoggedIn = MutableStateFlow(false)
+
+    init {
+        CoroutineScope(ioDispatcher).launch {
+            fetchRemoteDealsFromSupabase()
+        }
+    }
+
+    private suspend fun fetchRemoteDealsFromSupabase() {
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_DEALS}?select=*&order=created_at_epoch_ms.desc"
+            val response = httpClient.get(url) {
+                headers {
+                    append("apikey", SupabaseConfig.supabaseAnonKey)
+                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                }
+            }
+            if (response.status == HttpStatusCode.OK) {
+                val jsonArray = json.parseToJsonElement(response.bodyAsText()).jsonArray
+                val remoteDeals = jsonArray.mapNotNull { element ->
+                    val obj = element.jsonObject
+                    val id = obj["id"]?.jsonPrimitive?.content ?: return@mapNotNull null
+                    val hardwareId = obj["hardware_id"]?.jsonPrimitive?.content ?: return@mapNotNull null
+                    val hardwareName = obj["hardware_name"]?.jsonPrimitive?.content ?: ""
+                    val priceTry = obj["price_try"]?.jsonPrimitive?.doubleOrNull ?: 0.0
+                    val dealTypeId = obj["deal_type"]?.jsonPrimitive?.content ?: "campaign"
+                    val dealType = when (dealTypeId) {
+                        "own_purchase" -> CommunityDealType.OWN_PURCHASE
+                        "second_hand" -> CommunityDealType.SECOND_HAND
+                        "foreign" -> CommunityDealType.FOREIGN_PURCHASE
+                        else -> CommunityDealType.DISCOUNT_CAMPAIGN
+                    }
+                    val note = obj["note"]?.jsonPrimitive?.contentOrNull
+                    val proofUrl = obj["proof_url"]?.jsonPrimitive?.contentOrNull
+                    val userDisplayName = obj["user_display_name"]?.jsonPrimitive?.content ?: "Topluluk Üyesi"
+                    val userEmail = obj["user_email"]?.jsonPrimitive?.contentOrNull
+                    val createdAtEpochMs = obj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L
+                    val statusStr = obj["status"]?.jsonPrimitive?.content ?: "PENDING"
+                    val status = when (statusStr) {
+                        "APPROVED" -> DealStatus.APPROVED
+                        "REJECTED" -> DealStatus.REJECTED
+                        else -> DealStatus.PENDING
+                    }
+                    val reviewNote = obj["review_note"]?.jsonPrimitive?.contentOrNull
+                    val reviewedBy = obj["reviewed_by"]?.jsonPrimitive?.contentOrNull
+                    val reviewedAtEpochMs = obj["reviewed_at_epoch_ms"]?.jsonPrimitive?.longOrNull
+
+                    CommunityDeal(
+                        id = id,
+                        hardwareId = hardwareId,
+                        hardwareName = hardwareName,
+                        priceTry = priceTry,
+                        dealType = dealType,
+                        note = note,
+                        proofUrl = proofUrl,
+                        userDisplayName = userDisplayName,
+                        userEmail = userEmail,
+                        createdAtEpochMs = createdAtEpochMs,
+                        status = status,
+                        reviewNote = reviewNote,
+                        reviewedBy = reviewedBy,
+                        reviewedAtEpochMs = reviewedAtEpochMs,
+                    )
+                }
+                if (remoteDeals.isNotEmpty()) {
+                    _deals.value = remoteDeals
+                }
+            }
+        }
+    }
 
     override val isAdminLoggedIn: StateFlow<Boolean> = _isAdminLoggedIn.asStateFlow()
 

@@ -7,10 +7,10 @@ package com.panda.myapplication.data.remote
  */
 object SupabaseConfig {
     // Supabase Proje URL'si (ör. https://xyzcompany.supabase.co)
-    var supabaseUrl: String = "https://hardwarewizard-community.supabase.co"
+    var supabaseUrl: String = "https://ejudokeppeuhgtxrjwbn.supabase.co"
 
     // Supabase Public Anon Key (İstemci kimlik doğrulayıcı)
-    var supabaseAnonKey: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.HardwareWizardCommunityKey"
+    var supabaseAnonKey: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVqdWRva2VwcGV1aGd0eHJqd2JuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0NDA4ODUsImV4cCI6MjEwODAxNjg4NX0.QNqaCpivJEccoXBB2av_PUmYkZ-CSVp4OaoFgjF8_Vo"
 
     // Topluluk fırsatları tablosu
     const val TABLE_COMMUNITY_DEALS = "community_deals"
