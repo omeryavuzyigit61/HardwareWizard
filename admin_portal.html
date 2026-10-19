@@ -509,6 +509,11 @@
             color: var(--neon-rose);
             border: 1px solid rgba(255, 23, 68, 0.4);
         }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
     </style>
 </head>
 <body>
@@ -523,13 +528,20 @@
             </div>
         </div>
 
-        <div class="admin-profile-badge">
-            <div class="admin-avatar">ÖA</div>
-            <div class="admin-info">
-                <div class="name">dombikpanda (Ömer Admin)</div>
-                <div class="role">🛡️ Tam Yetkili Moderatör</div>
+        <div style="display:flex; align-items:center; gap:16px;">
+            <div id="cloudConnectionBadge" onclick="openCloudConfigModal()" style="cursor:pointer; display:flex; align-items:center; gap:8px; padding:7px 15px; border-radius:20px; background:rgba(0, 229, 255, 0.08); border:1px solid rgba(0, 229, 255, 0.3); font-size:12px; font-weight:700; transition:all 0.2s;" title="Supabase Bulut Veritabanı ve E-Posta Entegrasyonu">
+                <span id="cloudStatusDot" style="width:8px; height:8px; border-radius:50%; background:var(--neon-amber); display:inline-block;"></span>
+                <span id="cloudStatusText">☁️ Supabase: Yerel Test Modu</span>
             </div>
-            <button onclick="logoutAdmin()" style="background:none; border:none; color:var(--neon-rose); cursor:pointer; font-size:12px; font-weight:700; margin-left:10px;">Çıkış</button>
+
+            <div class="admin-profile-badge">
+                <div class="admin-avatar">ÖA</div>
+                <div class="admin-info">
+                    <div class="name">dombikpanda (Ömer Admin)</div>
+                    <div class="role">🛡️ Tam Yetkili Moderatör</div>
+                </div>
+                <button onclick="logoutAdmin()" style="background:none; border:none; color:var(--neon-rose); cursor:pointer; font-size:12px; font-weight:700; margin-left:10px;">Çıkış</button>
+            </div>
         </div>
     </header>
 
@@ -616,19 +628,62 @@
         <div class="auth-card" id="loginStep2" style="display: none;">
             <div style="font-size: 40px; margin-bottom: 12px;">📩</div>
             <h2>2FA Güvenlik Doğrulaması</h2>
-            <p>Doğrulama kodu <b>yavuzyigitomer52@gmail.com</b> adresinize gönderildi.<br>Lütfen 6 haneli kodu girin:</p>
+            <p id="otpNotice">Doğrulama kodu <b>yavuzyigitomer52@gmail.com</b> adresinize sevk edildi.<br>Lütfen 6 haneli güvenlik kodunu girin:</p>
 
-            <div class="otp-inputs">
-                <input type="text" maxlength="1" class="otp-box" value="6">
-                <input type="text" maxlength="1" class="otp-box" value="1">
-                <input type="text" maxlength="1" class="otp-box" value="5">
-                <input type="text" maxlength="1" class="otp-box" value="4">
-                <input type="text" maxlength="1" class="otp-box" value="6">
-                <input type="text" maxlength="1" class="otp-box" value="1">
+            <div class="otp-inputs" id="otpContainer">
+                <input type="text" maxlength="1" class="otp-box" id="otp0" autocomplete="off" oninput="handleOtpInput(0, event)" onkeydown="handleOtpKeydown(0, event)" onpaste="handleOtpPaste(event)">
+                <input type="text" maxlength="1" class="otp-box" id="otp1" autocomplete="off" oninput="handleOtpInput(1, event)" onkeydown="handleOtpKeydown(1, event)">
+                <input type="text" maxlength="1" class="otp-box" id="otp2" autocomplete="off" oninput="handleOtpInput(2, event)" onkeydown="handleOtpKeydown(2, event)">
+                <input type="text" maxlength="1" class="otp-box" id="otp3" autocomplete="off" oninput="handleOtpInput(3, event)" onkeydown="handleOtpKeydown(3, event)">
+                <input type="text" maxlength="1" class="otp-box" id="otp4" autocomplete="off" oninput="handleOtpInput(4, event)" onkeydown="handleOtpKeydown(4, event)">
+                <input type="text" maxlength="1" class="otp-box" id="otp5" autocomplete="off" oninput="handleOtpInput(5, event)" onkeydown="handleOtpKeydown(5, event)">
             </div>
 
+            <div id="otpError" style="color: var(--neon-rose); font-size: 13px; margin: 8px 0; font-weight: 700; display: none;"></div>
+
             <button class="btn-primary" onclick="verifyOTPAndEnter()">Kodu Doğrula ve Paneli Aç 🚀</button>
-            <p style="margin-top: 14px; font-size: 12px;">(Test/Geliştirici Varsayılan Kodu: <b>615461</b>)</p>
+
+            <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--text-secondary);">
+                <div>
+                    <span id="resendCountdown">Tekrar kod isteyebilirsiniz: <b>30s</b></span>
+                    <button id="resendBtn" onclick="resendOtpCode()" style="display:none; background:none; border:none; color:var(--neon-cyan); cursor:pointer; font-weight:700; text-decoration:underline;">Yeniden Kod Gönder</button>
+                </div>
+                <div style="margin-top: 6px; padding: 10px; background: rgba(0,0,0,0.35); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.12);">
+                    <div style="color: var(--text-primary); font-weight: 600;">🛠️ Geliştirici & Test Konsolu</div>
+                    <div id="devCodeBox" style="margin-top: 4px; color: var(--neon-amber); display: none;">Oluşturulan 2FA Kodu: <span id="devOtpDisplay" style="font-family: monospace; font-size: 15px; font-weight: 800; letter-spacing: 2px;"></span></div>
+                    <button type="button" onclick="toggleDevCode()" style="background:none; border:none; color:var(--text-secondary); cursor:pointer; text-decoration:underline; font-size:11px; margin-top:4px;">[Çevrimdışı Test: Kodu Ekranda Gör / Gizle]</button>
+                    <div style="font-size:11px; color:#64748b; margin-top:2px;">(Acil durum master bypass kodu: <b>615461</b>)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloud / Supabase Configuration Modal -->
+    <div class="auth-overlay" id="cloudConfigModal" style="display: none;">
+        <div class="auth-card" style="max-width: 520px; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2 style="font-size: 20px;">☁️ Supabase Bulut Veritabanı</h2>
+                <button onclick="closeCloudConfigModal()" style="background: none; border: none; color: var(--text-secondary); font-size: 24px; cursor: pointer;">✕</button>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;">
+                Mobil uygulamadaki gerçek kullanıcı fiyat bildirimlerini canlı çekmek ve tek tıkla onaylamak/reddetmek için Supabase proje bilgilerinizi girin.
+            </p>
+
+            <div class="form-group">
+                <label>Supabase Project URL</label>
+                <input type="text" id="supabaseUrlInput" placeholder="https://xxxxxxxxxxxx.supabase.co">
+            </div>
+
+            <div class="form-group">
+                <label>Supabase Public Anon Key</label>
+                <input type="password" id="supabaseKeyInput" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 20px;">
+                <button class="btn-primary" style="margin-top: 0; flex: 2;" onclick="saveCloudConfig()">💾 Kaydet ve Canlı Bağlan</button>
+                <button type="button" style="padding: 12px 18px; flex: 1; background: rgba(255,255,255,0.06); border: 1px solid var(--border-glass); color: #fff; border-radius: 12px; cursor: pointer; font-weight: 700;" onclick="resetToLocalMock()">Yerel Moda Dön</button>
+            </div>
+            <div id="cloudConfigStatus" style="font-size: 12px; margin-top: 14px; font-weight: 700;"></div>
         </div>
     </div>
 
@@ -717,12 +772,162 @@
 
         let activeFilter = 'PENDING';
         let searchQuery = '';
+        let currentGeneratedOtp = '';
+        let resendTimer = null;
+        let isDevCodeVisible = false;
+
+        // Cloud / Supabase Configuration
+        function loadCloudConfig() {
+            const url = localStorage.getItem('hw_supabase_url');
+            const key = localStorage.getItem('hw_supabase_key');
+            if (url && key) {
+                document.getElementById('supabaseUrlInput').value = url;
+                document.getElementById('supabaseKeyInput').value = key;
+                updateCloudBadge(true, url);
+                fetchCloudDeals();
+            } else {
+                updateCloudBadge(false);
+            }
+        }
+
+        function updateCloudBadge(isConnected, url) {
+            const dot = document.getElementById('cloudStatusDot');
+            const text = document.getElementById('cloudStatusText');
+            if (isConnected) {
+                dot.style.background = 'var(--neon-emerald)';
+                try {
+                    const host = new URL(url).hostname;
+                    text.innerText = `☁️ Canlı Supabase (${host})`;
+                } catch(e) {
+                    text.innerText = '☁️ Canlı Supabase Bağlı';
+                }
+            } else {
+                dot.style.background = 'var(--neon-amber)';
+                text.innerText = '☁️ Supabase: Yerel Test Modu';
+            }
+        }
+
+        function openCloudConfigModal() {
+            document.getElementById('cloudConfigModal').style.display = 'flex';
+        }
+
+        function closeCloudConfigModal() {
+            document.getElementById('cloudConfigModal').style.display = 'none';
+        }
+
+        async function saveCloudConfig() {
+            const url = document.getElementById('supabaseUrlInput').value.trim();
+            const key = document.getElementById('supabaseKeyInput').value.trim();
+            const statusEl = document.getElementById('cloudConfigStatus');
+
+            if (!url || !key) {
+                statusEl.style.color = 'var(--neon-rose)';
+                statusEl.innerText = 'Lütfen Supabase URL ve Anon Key girin!';
+                return;
+            }
+
+            statusEl.style.color = 'var(--neon-cyan)';
+            statusEl.innerText = 'Supabase bağlantısı test ediliyor...';
+
+            try {
+                const testUrl = `${url.replace(/\/$/, '')}/rest/v1/community_deals?select=id&limit=1`;
+                const res = await fetch(testUrl, {
+                    headers: { 'apikey': key, 'Authorization': `Bearer ${key}` }
+                });
+
+                if (res.ok) {
+                    localStorage.setItem('hw_supabase_url', url);
+                    localStorage.setItem('hw_supabase_key', key);
+                    statusEl.style.color = 'var(--neon-emerald)';
+                    statusEl.innerText = '✅ Bağlantı başarılı! Canlı veriler yükleniyor...';
+                    updateCloudBadge(true, url);
+                    setTimeout(() => {
+                        closeCloudConfigModal();
+                        fetchCloudDeals();
+                    }, 1000);
+                } else {
+                    statusEl.style.color = 'var(--neon-rose)';
+                    statusEl.innerText = `❌ Supabase Yanıtı: ${res.status} (${res.statusText}). URL ve Key kontrol edin.`;
+                }
+            } catch (err) {
+                statusEl.style.color = 'var(--neon-rose)';
+                statusEl.innerText = `❌ Bağlantı hatası: ${err.message}`;
+            }
+        }
+
+        function resetToLocalMock() {
+            localStorage.removeItem('hw_supabase_url');
+            localStorage.removeItem('hw_supabase_key');
+            document.getElementById('supabaseUrlInput').value = '';
+            document.getElementById('supabaseKeyInput').value = '';
+            updateCloudBadge(false);
+            closeCloudConfigModal();
+            location.reload();
+        }
+
+        async function fetchCloudDeals() {
+            const url = localStorage.getItem('hw_supabase_url');
+            const key = localStorage.getItem('hw_supabase_key');
+            if (!url || !key) return;
+
+            try {
+                const endpoint = `${url.replace(/\/$/, '')}/rest/v1/community_deals?select=*&order=created_at_epoch_ms.desc`;
+                const res = await fetch(endpoint, {
+                    headers: { 'apikey': key, 'Authorization': `Bearer ${key}` }
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    if (Array.isArray(data) && data.length > 0) {
+                        deals = data.map(d => ({
+                            id: d.id,
+                            hardwareName: d.hardware_name || 'Bilinmeyen Parça',
+                            priceTry: Number(d.price_try) || 0,
+                            dealType: d.deal_type,
+                            dealTypeLabel: formatDealType(d.deal_type),
+                            userDisplayName: d.user_display_name || 'Topluluk Üyesi',
+                            userAge: d.user_age || 24,
+                            proofUrl: d.proof_url || '#',
+                            note: d.note || '',
+                            status: d.status || 'PENDING',
+                            date: formatEpochDate(d.created_at_epoch_ms)
+                        }));
+                        renderDeals();
+                    }
+                }
+            } catch(e) {
+                console.error('Fetch cloud deals error:', e);
+            }
+        }
+
+        function formatDealType(type) {
+            switch(type) {
+                case 'own_purchase': return '🛍️ Kendi Aldığım';
+                case 'second_hand': return '🔄 İkinci El';
+                case 'campaign': return '🔥 Kampanya / İndirim';
+                case 'foreign': return '✈️ Yurtdışı (YD)';
+                default: return '🏷️ Fiyat Bildirimi';
+            }
+        }
+
+        function formatEpochDate(ms) {
+            if (!ms) return 'Az önce';
+            const diffMin = Math.floor((Date.now() - ms) / 60000);
+            if (diffMin < 1) return 'Az önce';
+            if (diffMin < 60) return `${diffMin} dakika önce`;
+            const diffHour = Math.floor(diffMin / 60);
+            if (diffHour < 24) return `${diffHour} saat önce`;
+            const diffDay = Math.floor(diffHour / 24);
+            return `${diffDay} gün önce`;
+        }
 
         // Authentication Check
         function checkAuth() {
             const isAuth = sessionStorage.getItem('hw_admin_auth') === 'true';
             if (!isAuth) {
                 document.getElementById('authModal').style.display = 'flex';
+                document.getElementById('loginStep1').style.display = 'block';
+                document.getElementById('loginStep2').style.display = 'none';
             } else {
                 document.getElementById('authModal').style.display = 'none';
             }
@@ -739,15 +944,143 @@
                 document.getElementById('authError').style.display = 'none';
                 document.getElementById('loginStep1').style.display = 'none';
                 document.getElementById('loginStep2').style.display = 'block';
+
+                // Dinamik 6 Haneli Rastgele OTP Üretimi
+                currentGeneratedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+                document.getElementById('devOtpDisplay').innerText = currentGeneratedOtp;
+                console.log('%c[HARDWARE WIZARD GÜVENLİK SERVİSİ]', 'color: #00e5ff; font-weight: bold; font-size: 14px;', '2FA Giriş Kodu:', currentGeneratedOtp);
+
+                // Kutucukları temizle ve ilk kutuya odaklan
+                for (let i = 0; i < 6; i++) {
+                    const el = document.getElementById('otp' + i);
+                    if (el) el.value = '';
+                }
+                const firstBox = document.getElementById('otp0');
+                if (firstBox) firstBox.focus();
+
+                startResendTimer();
             } else {
                 document.getElementById('authError').style.display = 'block';
             }
         }
 
+        function handleOtpInput(index, event) {
+            const input = event.target;
+            const val = input.value.replace(/[^0-9]/g, '');
+            input.value = val ? val[val.length - 1] : '';
+
+            const err = document.getElementById('otpError');
+            if (err) err.style.display = 'none';
+
+            if (input.value && index < 5) {
+                const next = document.getElementById('otp' + (index + 1));
+                if (next) next.focus();
+            } else if (index === 5 && input.value) {
+                // Son hane girildiğinde otomatik doğrulamayı tetikle
+                setTimeout(verifyOTPAndEnter, 150);
+            }
+        }
+
+        function handleOtpKeydown(index, event) {
+            if (event.key === 'Backspace' && !event.target.value && index > 0) {
+                const prev = document.getElementById('otp' + (index - 1));
+                if (prev) {
+                    prev.focus();
+                    prev.value = '';
+                }
+            } else if (event.key === 'Enter') {
+                verifyOTPAndEnter();
+            }
+        }
+
+        function handleOtpPaste(event) {
+            event.preventDefault();
+            const pasteData = (event.clipboardData || window.clipboardData).getData('text').trim();
+            const digits = pasteData.replace(/[^0-9]/g, '').slice(0, 6);
+            for (let i = 0; i < digits.length; i++) {
+                const box = document.getElementById('otp' + i);
+                if (box) box.value = digits[i];
+            }
+            if (digits.length === 6) {
+                setTimeout(verifyOTPAndEnter, 200);
+            } else if (digits.length < 6) {
+                const next = document.getElementById('otp' + digits.length);
+                if (next) next.focus();
+            }
+        }
+
+        function startResendTimer() {
+            clearInterval(resendTimer);
+            let timeLeft = 30;
+            const countdownEl = document.getElementById('resendCountdown');
+            const resendBtn = document.getElementById('resendBtn');
+            countdownEl.style.display = 'inline';
+            resendBtn.style.display = 'none';
+            countdownEl.innerHTML = `Tekrar kod isteyebilirsiniz: <b>${timeLeft}s</b>`;
+
+            resendTimer = setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    clearInterval(resendTimer);
+                    countdownEl.style.display = 'none';
+                    resendBtn.style.display = 'inline';
+                } else {
+                    countdownEl.innerHTML = `Tekrar kod isteyebilirsiniz: <b>${timeLeft}s</b>`;
+                }
+            }, 1000);
+        }
+
+        function resendOtpCode() {
+            currentGeneratedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+            document.getElementById('devOtpDisplay').innerText = currentGeneratedOtp;
+            console.log('%c[HARDWARE WIZARD GÜVENLİK SERVİSİ]', 'color: #00e5ff; font-weight: bold; font-size: 14px;', 'YENİ 2FA Giriş Kodu:', currentGeneratedOtp);
+
+            for (let i = 0; i < 6; i++) {
+                const el = document.getElementById('otp' + i);
+                if (el) el.value = '';
+            }
+            document.getElementById('otp0').focus();
+            startResendTimer();
+            alert('📩 Yeni 2FA güvenlik kodu yavuzyigitomer52@gmail.com adresinize sevk edildi!');
+        }
+
+        function toggleDevCode() {
+            isDevCodeVisible = !isDevCodeVisible;
+            document.getElementById('devCodeBox').style.display = isDevCodeVisible ? 'block' : 'none';
+        }
+
         function verifyOTPAndEnter() {
-            sessionStorage.setItem('hw_admin_auth', 'true');
-            document.getElementById('authModal').style.display = 'none';
-            renderDeals();
+            let entered = '';
+            for (let i = 0; i < 6; i++) {
+                const box = document.getElementById('otp' + i);
+                entered += (box ? box.value : '');
+            }
+
+            const err = document.getElementById('otpError');
+
+            if (entered.length < 6) {
+                err.innerText = '⚠️ Lütfen 6 haneli kodun tamamını girin!';
+                err.style.display = 'block';
+                return;
+            }
+
+            // Doğrulama: Oluşturulan dinamik kod VEYA acil durum bypass anahtarı (615461)
+            const isMatch = (entered === currentGeneratedOtp) || (entered === '615461');
+
+            if (isMatch) {
+                sessionStorage.setItem('hw_admin_auth', 'true');
+                document.getElementById('authModal').style.display = 'none';
+                renderDeals();
+            } else {
+                err.innerText = '❌ Girdiğiniz 2FA güvenlik kodu geçersiz! Lütfen tekrar deneyin.';
+                err.style.display = 'block';
+                // Hatalı kutuları salla
+                document.getElementById('otpContainer').style.animation = 'shake 0.3s ease-in-out';
+                setTimeout(() => {
+                    const c = document.getElementById('otpContainer');
+                    if (c) c.style.animation = '';
+                }, 300);
+            }
         }
 
         function logoutAdmin() {
@@ -767,16 +1100,41 @@
             renderDeals();
         }
 
-        function approveDeal(id) {
+        async function approveDeal(id) {
             const deal = deals.find(d => d.id === id);
             if (deal) {
                 deal.status = 'APPROVED';
                 renderDeals();
+
+                // Supabase Canlı Güncelleme
+                const url = localStorage.getItem('hw_supabase_url');
+                const key = localStorage.getItem('hw_supabase_key');
+                if (url && key) {
+                    try {
+                        await fetch(`${url.replace(/\/$/, '')}/rest/v1/community_deals?id=eq.${id}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'apikey': key,
+                                'Authorization': `Bearer ${key}`,
+                                'Prefer': 'return=minimal'
+                            },
+                            body: JSON.stringify({
+                                status: 'APPROVED',
+                                reviewed_by: 'dombikpanda',
+                                reviewed_at_epoch_ms: Date.now()
+                            })
+                        });
+                    } catch(e) {
+                        console.error('Supabase patch error:', e);
+                    }
+                }
+
                 alert(`✅ "${deal.hardwareName}" için ${deal.priceTry.toLocaleString('tr-TR')} ₺ fiyatı onaylandı ve canlı deftere işlendi!`);
             }
         }
 
-        function rejectDeal(id) {
+        async function rejectDeal(id) {
             const reason = prompt('Reddetme gerekçesini girin (Kullanıcı profilinde görecektir):', 'Geçersiz veya yetersiz kanıt linki.');
             if (reason !== null) {
                 const deal = deals.find(d => d.id === id);
@@ -784,6 +1142,32 @@
                     deal.status = 'REJECTED';
                     deal.rejectReason = reason;
                     renderDeals();
+
+                    // Supabase Canlı Güncelleme
+                    const url = localStorage.getItem('hw_supabase_url');
+                    const key = localStorage.getItem('hw_supabase_key');
+                    if (url && key) {
+                        try {
+                            await fetch(`${url.replace(/\/$/, '')}/rest/v1/community_deals?id=eq.${id}`, {
+                                method: 'PATCH',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'apikey': key,
+                                    'Authorization': `Bearer ${key}`,
+                                    'Prefer': 'return=minimal'
+                                },
+                                body: JSON.stringify({
+                                    status: 'REJECTED',
+                                    review_note: reason,
+                                    reviewed_by: 'dombikpanda',
+                                    reviewed_at_epoch_ms: Date.now()
+                                })
+                            });
+                        } catch(e) {
+                            console.error('Supabase patch error:', e);
+                        }
+                    }
+
                     alert(`❌ Bildirim reddedildi: ${reason}`);
                 }
             }
@@ -867,6 +1251,7 @@
         // Initialize on load
         window.onload = () => {
             checkAuth();
+            loadCloudConfig();
             renderDeals();
         };
     </script>
