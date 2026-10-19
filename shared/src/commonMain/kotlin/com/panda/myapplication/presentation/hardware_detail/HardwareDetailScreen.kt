@@ -51,6 +51,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -111,6 +112,7 @@ import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
+import kotlinx.coroutines.launch
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -118,6 +120,7 @@ fun HardwareDetailRoute(
     itemId: String,
     onNavigateBack: () -> Unit,
     onNavigateToVsArena: () -> Unit = {},
+    onOpenAuthSheet: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: HardwareDetailViewModel = koinViewModel(),
 ) {
@@ -161,6 +164,7 @@ fun HardwareDetailRoute(
         onLoginAdmin = viewModel::loginAdmin,
         onLogoutAdmin = viewModel::logoutAdmin,
         onRefreshCommunityDeals = viewModel::onRefreshCommunityDeals,
+        onOpenAuthSheet = onOpenAuthSheet,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -180,9 +184,11 @@ fun HardwareDetailContent(
     onLoginAdmin: (String) -> Boolean = { false },
     onLogoutAdmin: () -> Unit = {},
     onRefreshCommunityDeals: () -> Unit = {},
+    onOpenAuthSheet: () -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     modifier: Modifier = Modifier,
 ) {
+    val coroutineScope = rememberCoroutineScope()
     var showPriceDialog by remember { mutableStateOf(false) }
     var showCommunitySubmitSheet by remember { mutableStateOf(false) }
     var selectedDealForDetail by remember { mutableStateOf<CommunityDeal?>(null) }
@@ -339,7 +345,19 @@ fun HardwareDetailContent(
                                 deals = uiState.communityDeals,
                                 isAdmin = uiState.isAdmin,
                                 onDealClick = { deal -> selectedDealForDetail = deal },
-                                onSubmitClick = { showCommunitySubmitSheet = true },
+                                onSubmitClick = {
+                                    if (!uiState.isLoggedIn) {
+                                        coroutineScope.launch {
+                                            snackbarHostState.showSnackbar(
+                                                message = "⚠️ Topluluk fiyatı veya fırsat bildirmek için lütfen önce giriş yapın.",
+                                                duration = SnackbarDuration.Short,
+                                            )
+                                        }
+                                        onOpenAuthSheet()
+                                    } else {
+                                        showCommunitySubmitSheet = true
+                                    }
+                                },
                                 onApproveDeal = onApproveCommunityDeal,
                                 onRejectDeal = { dealId -> onRejectCommunityDeal(dealId, null) },
                                 onAdminLoginClick = { showAdminLoginDialog = true },
@@ -397,6 +415,7 @@ fun HardwareDetailContent(
     if (showCommunitySubmitSheet && uiState.item != null) {
         SubmitCommunityDealSheet(
             hardwareName = uiState.item.displayName,
+            currentUser = uiState.currentUser,
             onDismiss = { showCommunitySubmitSheet = false },
             onSubmit = { price, type, note, proof, name ->
                 onSubmitCommunityDeal(price, type, note, proof, name)

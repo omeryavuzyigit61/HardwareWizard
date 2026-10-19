@@ -10,6 +10,7 @@ import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
+import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareDetailUseCase
 import kotlinx.coroutines.channels.Channel
@@ -32,6 +33,7 @@ class HardwareDetailViewModel(
     private val activeBuildRepository: ActiveBuildRepository,
     private val vsArenaRepository: VsArenaRepository,
     private val communityPriceRepository: CommunityPriceRepository,
+    private val userRepository: UserRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HardwareDetailUiState())
@@ -44,6 +46,12 @@ class HardwareDetailViewModel(
         viewModelScope.launch {
             communityPriceRepository.isAdminLoggedIn.collect { isAdmin ->
                 _uiState.update { it.copy(isAdmin = isAdmin) }
+            }
+        }
+
+        viewModelScope.launch {
+            userRepository.currentUser.collect { user ->
+                _uiState.update { it.copy(currentUser = user, isLoggedIn = user != null) }
             }
         }
     }
@@ -149,7 +157,7 @@ class HardwareDetailViewModel(
         }
     }
 
-    // Topluluk Fiyat Bildirimi (Supabase & Binance Ticker)
+    // Topluluk Fiyat Bildirimi (Supabase & Canlı Defter)
     fun onSubmitCommunityDeal(
         priceTry: Double,
         dealType: CommunityDealType,
@@ -157,9 +165,17 @@ class HardwareDetailViewModel(
         proofUrl: String?,
         userDisplayName: String,
     ) {
+        val user = userRepository.currentUser.value
+        if (user == null || !userRepository.isLoggedIn.value) {
+            viewModelScope.launch {
+                effectChannel.send(HardwareDetailEffect.ShowToast("⚠️ Fiyat talebi oluşturmak için lütfen önce giriş yapın!"))
+            }
+            return
+        }
+
         val item = _uiState.value.item ?: return
         val dealId = "deal-${item.id.value}-${kotlin.random.Random.nextInt(10000, 99999)}"
-        val now = 1713300000000L + kotlin.random.Random.nextLong(1000, 50000)
+        val now = kotlin.time.Clock.System.now().toEpochMilliseconds()
 
         val deal = CommunityDeal(
             id = dealId,
@@ -169,7 +185,8 @@ class HardwareDetailViewModel(
             dealType = dealType,
             note = note?.takeIf { it.isNotBlank() },
             proofUrl = proofUrl?.takeIf { it.isNotBlank() },
-            userDisplayName = userDisplayName.ifBlank { "Topluluk Üyesi" },
+            userDisplayName = "@${user.username}",
+            userEmail = user.email,
             createdAtEpochMs = now,
             status = DealStatus.PENDING,
         )
@@ -177,7 +194,7 @@ class HardwareDetailViewModel(
         viewModelScope.launch {
             communityPriceRepository.submitDeal(deal)
             effectChannel.send(
-                HardwareDetailEffect.ShowToast("🚀 Fiyat bildiriminiz gönderildi! Yönetici onayından sonra yayınlanacaktır.")
+                HardwareDetailEffect.ShowToast("🚀 Fiyat bildiriminiz (@${user.username}) gönderildi! Yönetici onayından sonra yayınlanacaktır.")
             )
         }
     }

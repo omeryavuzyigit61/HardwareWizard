@@ -55,6 +55,7 @@ import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
+import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.theme.CardSurface
 import com.panda.myapplication.presentation.theme.CardSurfaceElevated
@@ -655,6 +656,7 @@ fun CommunityDealDetailDialog(
 @Composable
 fun SubmitCommunityDealSheet(
     hardwareName: String,
+    currentUser: UserProfile? = null,
     onDismiss: () -> Unit,
     onSubmit: (priceTry: Double, dealType: CommunityDealType, note: String?, proofUrl: String?, userDisplayName: String) -> Unit,
     defaultUserDisplayName: String = "",
@@ -778,15 +780,41 @@ fun SubmitCommunityDealSheet(
                 maxLines = 3,
             )
 
-            // Submitter Nickname
-            OutlinedTextField(
-                value = userDisplayName,
-                onValueChange = { userDisplayName = it },
-                label = { Text("Rumuzunuz / Adınız") },
-                placeholder = { Text("Örn: DonanimSever") },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            // Authenticated Submitter Badge
+            if (currentUser != null) {
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = NeonCyan.copy(alpha = 0.12f),
+                    border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = Spacing.medium, vertical = Spacing.small),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "👤 Bildiren Üye: ",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Text(
+                            text = "@${currentUser.username}",
+                            style = MaterialTheme.typography.bodySmall,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonCyan,
+                        )
+                    }
+                }
+            } else {
+                OutlinedTextField(
+                    value = userDisplayName,
+                    onValueChange = { userDisplayName = it },
+                    label = { Text("Rumuzunuz / Adınız") },
+                    placeholder = { Text("Örn: DonanimSever") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
 
             if (errorMessage != null) {
                 Text(
@@ -812,12 +840,13 @@ fun SubmitCommunityDealSheet(
                         errorMessage = "Kanıt linki zorunludur! Lütfen geçerli bir web bağlantısı girin (https://...)."
                         return@Button
                     }
+                    val finalDisplayName = currentUser?.username?.let { "@$it" } ?: userDisplayName.ifBlank { "Topluluk Üyesi" }
                     onSubmit(
                         parsedPrice,
                         selectedType,
                         noteText.takeIf { it.isNotBlank() },
                         cleanProof,
-                        userDisplayName.ifBlank { "Topluluk Üyesi" },
+                        finalDisplayName,
                     )
                     onDismiss()
                 },

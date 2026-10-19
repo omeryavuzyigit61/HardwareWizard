@@ -388,6 +388,7 @@ fun App() {
                                     navController.popBackStack()
                                 },
                                 onNavigateToVsArena = navigateToVsArenaTab,
+                                onOpenAuthSheet = { showAuthSheet = true },
                             )
                         }
 

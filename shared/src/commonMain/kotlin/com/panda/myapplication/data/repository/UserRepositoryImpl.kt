@@ -1,5 +1,7 @@
 package com.panda.myapplication.data.repository
 
+import com.panda.myapplication.data.local.dao.HardwareDao
+import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.remote.SupabaseConfig
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
@@ -18,9 +20,11 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
@@ -33,10 +37,10 @@ import kotlinx.serialization.json.put
 class UserRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
+    private val hardwareDao: HardwareDao? = null,
     private val ioDispatcher: CoroutineDispatcher,
 ) : UserRepository {
 
-    // Başlangıçta misafir oturumu (otomatik yönetici açılışı yok, kullanıcı açıkça giriş yapar)
     private val _currentUser = MutableStateFlow<UserProfile?>(null)
     override val currentUser: StateFlow<UserProfile?> = _currentUser.asStateFlow()
 
@@ -49,6 +53,46 @@ class UserRepositoryImpl(
     )
 
     private val _registeredAccounts = mutableMapOf<String, AccountCredential>()
+
+    init {
+        // Cihaz yeniden başladığında veya uygulama açıldığında yerel oturumu geri yükle
+        if (hardwareDao != null) {
+            CoroutineScope(ioDispatcher).launch {
+                runCatching {
+                    val session = hardwareDao.getUserSession()
+                    if (session != null) {
+                        val profile = UserProfile(
+                            id = session.userId,
+                            email = session.email,
+                            username = session.username,
+                            birthDateIso = session.birthDateIso,
+                            gender = Gender.fromString(session.gender),
+                            spiritHardware = SpiritHardware.fromString(session.spiritHardware),
+                            createdAtEpochMs = session.createdAtEpochMs,
+                        )
+                        _currentUser.value = profile
+                        _isLoggedIn.value = true
+                    }
+                }
+            }
+        }
+    }
+
+    private suspend fun persistSession(profile: UserProfile) {
+        runCatching {
+            hardwareDao?.saveUserSession(
+                UserSessionEntity(
+                    userId = profile.id,
+                    email = profile.email,
+                    username = profile.username,
+                    birthDateIso = profile.birthDateIso,
+                    gender = profile.gender.name,
+                    spiritHardware = profile.spiritHardware.name,
+                    createdAtEpochMs = profile.createdAtEpochMs,
+                )
+            )
+        }
+    }
 
     override suspend fun signUp(
         email: String,
@@ -111,6 +155,7 @@ class UserRepositoryImpl(
 
         _currentUser.value = profile
         _isLoggedIn.value = true
+        persistSession(profile)
 
         DomainResult.Success(profile)
     }
@@ -136,6 +181,7 @@ class UserRepositoryImpl(
                 )
                 _currentUser.value = adminProfile
                 _isLoggedIn.value = true
+                persistSession(adminProfile)
                 return@withContext DomainResult.Success(adminProfile)
             } else {
                 return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
@@ -169,6 +215,7 @@ class UserRepositoryImpl(
                         )
                         _currentUser.value = profile
                         _isLoggedIn.value = true
+                        persistSession(profile)
                         return@withContext DomainResult.Success(profile)
                     } else {
                         return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
@@ -185,6 +232,7 @@ class UserRepositoryImpl(
             if (account.password == password) {
                 _currentUser.value = account.profile
                 _isLoggedIn.value = true
+                persistSession(account.profile)
                 return@withContext DomainResult.Success(account.profile)
             } else {
                 return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
@@ -195,13 +243,18 @@ class UserRepositoryImpl(
         DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
     }
 
-    override suspend fun logout() {
+    override suspend fun logout() = withContext(ioDispatcher) {
         _currentUser.value = null
         _isLoggedIn.value = false
+        runCatching {
+            hardwareDao?.clearUserSession()
+        }
+        Unit
     }
 
     override suspend fun updateProfile(profile: UserProfile): DomainResult<Unit> = withContext(ioDispatcher) {
         _currentUser.value = profile
+        persistSession(profile)
         runCatching {
             val url = "${SupabaseConfig.restApiUrl}/user_profiles?id=eq.${profile.id}"
             val body = buildJsonObject {

@@ -74,6 +74,7 @@ val dataModule = module {
         com.panda.myapplication.data.repository.UserRepositoryImpl(
             httpClient = get(),
             json = get(),
+            hardwareDao = get(),
             ioDispatcher = get(),
         )
     }

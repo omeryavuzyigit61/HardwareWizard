@@ -3,6 +3,7 @@ package com.panda.myapplication.presentation.hardware_detail
 import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.UserProfile
 
 @Immutable
 data class HardwareDetailUiState(
@@ -12,4 +13,6 @@ data class HardwareDetailUiState(
     val isAddedToBuild: Boolean = false,
     val communityDeals: List<CommunityDeal> = emptyList(),
     val isAdmin: Boolean = false,
+    val isLoggedIn: Boolean = false,
+    val currentUser: UserProfile? = null,
 )

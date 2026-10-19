@@ -14,10 +14,6 @@ import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
-import com.panda.myapplication.domain.model.HardwareCategory
-import kotlinx.coroutines.flow.Flow
-import kotlin.time.Instant
-
 import com.panda.myapplication.data.local.entity.CaseSpecEntity
 import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
 import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
@@ -25,6 +21,11 @@ import com.panda.myapplication.data.local.entity.LaptopSpecEntity
 import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
 import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
+import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
+import com.panda.myapplication.data.local.entity.UserSessionEntity
+import com.panda.myapplication.domain.model.HardwareCategory
+import kotlinx.coroutines.flow.Flow
+import kotlin.time.Instant
 
 @Dao
 abstract class HardwareDao {
@@ -132,36 +133,49 @@ abstract class HardwareDao {
     protected abstract suspend fun upsertCoolerSpecs(specs: List<CoolerSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertCaseSpecs(specs: List<com.panda.myapplication.data.local.entity.CaseSpecEntity>)
+    protected abstract suspend fun upsertCaseSpecs(specs: List<CaseSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertPrebuiltSpecs(specs: List<com.panda.myapplication.data.local.entity.PrebuiltSpecEntity>)
+    protected abstract suspend fun upsertPrebuiltSpecs(specs: List<PrebuiltSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertLaptopSpecs(specs: List<com.panda.myapplication.data.local.entity.LaptopSpecEntity>)
+    protected abstract suspend fun upsertLaptopSpecs(specs: List<LaptopSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertMouseSpecs(specs: List<com.panda.myapplication.data.local.entity.MouseSpecEntity>)
+    protected abstract suspend fun upsertMouseSpecs(specs: List<MouseSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertKeyboardSpecs(specs: List<com.panda.myapplication.data.local.entity.KeyboardSpecEntity>)
+    protected abstract suspend fun upsertKeyboardSpecs(specs: List<KeyboardSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertHeadsetSpecs(specs: List<com.panda.myapplication.data.local.entity.HeadsetSpecEntity>)
+    protected abstract suspend fun upsertHeadsetSpecs(specs: List<HeadsetSpecEntity>)
 
     @Upsert
-    protected abstract suspend fun upsertMonitorSpecs(specs: List<com.panda.myapplication.data.local.entity.MonitorSpecEntity>)
+    protected abstract suspend fun upsertMonitorSpecs(specs: List<MonitorSpecEntity>)
 
     // region User Price Overrides (BÖLÜM 2)
 
     @Query("SELECT * FROM user_price_overrides")
-    abstract fun observeAllPriceOverrides(): Flow<List<com.panda.myapplication.data.local.entity.UserPriceOverrideEntity>>
+    abstract fun observeAllPriceOverrides(): Flow<List<UserPriceOverrideEntity>>
 
     @Upsert
-    abstract suspend fun upsertPriceOverride(overrideEntity: com.panda.myapplication.data.local.entity.UserPriceOverrideEntity)
+    abstract suspend fun upsertPriceOverride(overrideEntity: UserPriceOverrideEntity)
 
     @Query("DELETE FROM user_price_overrides WHERE hardware_id = :hardwareId")
     abstract suspend fun deletePriceOverride(hardwareId: String)
+
+    // endregion
+
+    // region User Session (Local Persistence)
+
+    @Query("SELECT * FROM user_sessions WHERE id = :id LIMIT 1")
+    abstract suspend fun getUserSession(id: String = UserSessionEntity.ACTIVE_SESSION_ID): UserSessionEntity?
+
+    @Upsert
+    abstract suspend fun saveUserSession(session: UserSessionEntity)
+
+    @Query("DELETE FROM user_sessions WHERE id = :id")
+    abstract suspend fun clearUserSession(id: String = UserSessionEntity.ACTIVE_SESSION_ID)
 
     // endregion
 
