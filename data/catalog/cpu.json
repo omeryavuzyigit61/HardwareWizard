@@ -16,15 +16,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9950x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/71hZfMZNZuL._AC_SL1500_.jpg",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 9950X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9950x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/71hZfMZNZuL._AC_SL1500_.jpg",
+      "https://www.noticias3d.com/articulos/202408/amd-ryzen-9-9950X/imagenes/amd-ryzen-9-9950x-3-G.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3649-front.jpg"
     ]
   },
   {
@@ -44,15 +44,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9900x.webp",
+    "imageUrl": "https://static.wixstatic.com/media/81ec47_8470f2bab6584417935a2e6f569b77ed~mv2.jpg/v1/fill/w_1200,h_1200,al_c,q_85,enc_avif,quality_auto/81ec47_8470f2bab6584417935a2e6f569b77ed~mv2.jpg",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 9900X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9900x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://static.wixstatic.com/media/81ec47_8470f2bab6584417935a2e6f569b77ed~mv2.jpg/v1/fill/w_1200,h_1200,al_c,q_85,enc_avif,quality_auto/81ec47_8470f2bab6584417935a2e6f569b77ed~mv2.jpg",
+      "https://cdn.mos.cms.futurecdn.net/tVYgf5fXSEHs3yci9iXTqM.jpg",
+      "https://m.media-amazon.com/images/I/71hZfMZNZuL._AC_.jpg"
     ]
   },
   {
@@ -72,15 +72,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp",
+    "imageUrl": "https://edgecomputertech.com/wp-content/uploads/2024/12/RYZEN-7-9800X3D.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (2. Nesil 3D V-Cache)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 9800X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://edgecomputertech.com/wp-content/uploads/2024/12/RYZEN-7-9800X3D.jpg",
+      "https://www.amd.com/content/dam/amd/en/images/pr-feed/1301653.png",
+      "https://www.hwcooling.net/wp-content/uploads/2024/11/amd-ryzen-7-9800x3d-02.jpg"
     ]
   },
   {
@@ -100,15 +100,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9700x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 9700X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9700x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
+      "https://cdn.mos.cms.futurecdn.net/FeMqKmi3vJAwste8dj2QKg.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3651-front.jpg"
     ]
   },
   {
@@ -128,15 +128,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_9600x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 5 9600X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_9600x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
+      "https://cdn.mos.cms.futurecdn.net/T9EQrFS8Anhf5NRsBXGSe4.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3652-front.jpg"
     ]
   },
   {
@@ -156,15 +156,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x3d.webp",
+    "imageUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
     "core_topology": "16 Çekirdek / 32 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7950X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
+      "https://c8.alamy.com/comp/2RN1DRC/amd-ryzen-9-7950x3d-processor-close-up-studio-shot-2RN1DRC.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3024-back.jpg"
     ]
   },
   {
@@ -184,15 +184,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/5116zdA9uyL._AC_SL1200_.jpg",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7950X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/5116zdA9uyL._AC_SL1200_.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2023/01/amd-ryzen-9-7950x-01_.jpg",
+      "https://img.4gamers.com.tw/ckfinder/files/Elvis/Review/AMD-Ryzen-9-7950X/05.jpg"
     ]
   },
   {
@@ -212,15 +212,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x3d.webp",
+    "imageUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
     "core_topology": "12 Çekirdek / 24 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7900X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
+      "https://pics.computerbase.de/1/0/6/9/3/6-ec1bc4fec008442b/article-1280x720.167a15ee.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3023-front.jpg"
     ]
   },
   {
@@ -240,15 +240,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x.webp",
+    "imageUrl": "https://thumbs.dreamstime.com/z/close-up-amd-ryzen-processor-packaging-box-isolated-white-background-dnipro-ukraine-june-282214806.jpg",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7900X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://thumbs.dreamstime.com/z/close-up-amd-ryzen-processor-packaging-box-isolated-white-background-dnipro-ukraine-june-282214806.jpg",
+      "https://www.pcstudio.in/wp-content/uploads/2022/09/Amd-Ryzen-9-7950X-Desktop-Processor-1.jpg",
+      "https://cdn.wccftech.com/wp-content/uploads/2024/11/AMD-Ryzen-7-9800X3D-AM5-Socket-CPU-Burn-_Main.jpg"
     ]
   },
   {
@@ -268,15 +268,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp",
+    "imageUrl": "https://www.avadirect.com/Pictures/Big/15800212_1.png",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Tek CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7800X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.avadirect.com/Pictures/Big/15800212_1.png",
+      "https://www.pcstudio.in/wp-content/uploads/2023/01/Amd-Ryzen-7-7800X3D-Gaming-Processor-1.jpg",
+      "https://www.igorslab.de/wp-content/uploads/2023/03/CPU-Front-and-Back-2048x1002.jpg"
     ]
   },
   {
@@ -296,15 +296,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_SL1500_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7700X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_SL1500_.jpg",
+      "https://cdn.mos.cms.futurecdn.net/fY7kXQoDXUVjodncaB6bj7-1920-80.jpg",
+      "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/AMD_Ryzen_7_7700X_ryzen_5_7600X_cinebench_r23.jpg"
     ]
   },
   {
@@ -324,15 +324,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7700",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
+      "https://cdn.mos.cms.futurecdn.net/fY7kXQoDXUVjodncaB6bj7-1920-80.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2960-front.jpg"
     ]
   },
   {
@@ -352,15 +352,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600x.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 5 7600X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
+      "https://www.techspot.com/articles-info/2534/images/2022-09-25-image.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2022/09/amd_ryzen-5-7600x_01.jpg"
     ]
   },
   {
@@ -380,15 +380,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600.webp",
+    "imageUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/AMD/Ryzen_5_7600/ryzen_5_7600.png",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 5 7600",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.notebookcheck.net/fileadmin/Notebooks/AMD/Ryzen_5_7600/ryzen_5_7600.png",
+      "https://www.hwcooling.net/wp-content/uploads/2023/01/amd-ryzen-5-7600-01.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2959-back.jpg"
     ]
   },
   {
@@ -408,15 +408,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7500f.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 7500F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7500f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
+      "https://cdn.wccftech.com/wp-content/uploads/2023/07/AMD-Ryzen-5-7500F-Desktop-CPU.jpeg",
+      "https://tpucdn.com/cpu-specs/images/chips/3259-front.jpg"
     ]
   },
   {
@@ -436,15 +436,15 @@
     "pcie_version": "PCIe 4.0 (20 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6400+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_8700g.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 780M (12 CU RDNA 3, 2.9 GHz)",
     "model": "Ryzen 7 8700G",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_8700g.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-8700g.jpg",
+      "https://www.adrenaline.com.br/wp-content/uploads/2024/01/amd-ryzen-7-8700g-review-adrenaline-02-1200x900.jpg"
     ]
   },
   {
@@ -464,15 +464,15 @@
     "pcie_version": "PCIe 4.0 (20 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6400+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8600g.webp",
+    "imageUrl": "https://file.hstatic.net/200000722513/file/gearvn-bo-vi-xu-ly-amd-ryzen-5-8600g-2_5df889a04b2049d4b1d6fdc9cfea19bd.png",
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 760M (8 CU RDNA 3, 2.8 GHz)",
     "model": "Ryzen 5 8600G",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8600g.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://file.hstatic.net/200000722513/file/gearvn-bo-vi-xu-ly-amd-ryzen-5-8600g-2_5df889a04b2049d4b1d6fdc9cfea19bd.png",
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2198982-amd-ryzen-ai-pro-processor-product.jpg",
+      "https://m.media-amazon.com/images/I/71-LELChPkL._AC_SL1500_.jpg"
     ]
   },
   {
@@ -492,15 +492,15 @@
     "pcie_version": "PCIe 4.0 (14 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8500g.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61x2NkFzm9L._AC_.jpg",
     "core_topology": "2 Zen 4 + 4 Zen 4c (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 740M (4 CU RDNA 3, 2.7 GHz)",
     "model": "Ryzen 5 8500G",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8500g.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61x2NkFzm9L._AC_.jpg",
+      "https://m.media-amazon.com/images/I/61RDXIvWNML._AC_.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3436-installed.jpg"
     ]
   },
   {
@@ -520,15 +520,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5950x.webp",
+    "imageUrl": "https://media.karousell.com/media/photos/products/2026/2/27/amd_ryzen_9_5950x_desktop_proc_1772207560_49b57e46_progressive",
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 9 5950X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5950x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://media.karousell.com/media/photos/products/2026/2/27/amd_ryzen_9_5950x_desktop_proc_1772207560_49b57e46_progressive",
+      "https://i.pcmag.com/imagery/reviews/04WhihjI4VL8APGcfo39ny1-1.fit_lim.size_1200x630.v1608222496.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2021/07/amd-ryzen-9-5950x-01.jpg"
     ]
   },
   {
@@ -548,15 +548,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5900x.webp",
+    "imageUrl": "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-9-5900X-review.jpg",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 9 5900X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5900x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-9-5900X-review.jpg",
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-5900x-og.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2363-front.jpg"
     ]
   },
   {
@@ -576,15 +576,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp",
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/AN9X7rdZQtGdBDT2uRoDvL.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 7 5800X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://cdn.mos.cms.futurecdn.net/AN9X7rdZQtGdBDT2uRoDvL.jpg",
+      "https://cdn.wccftech.com/wp-content/uploads/2022/03/AMD-Ryzen-7-5800X3D-Desktop-CPU-1920x1080.png",
+      "https://www.hwcooling.net/wp-content/uploads/2022/08/amd_ryzen-7-5800x3d-01.jpg"
     ]
   },
   {
@@ -604,15 +604,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x3d.webp",
+    "imageUrl": "https://www.club386.com/wp-content/uploads/2024/09/amd-ryzen-7-7700x3d-product-photo.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 7 5700X3D",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x3d.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.club386.com/wp-content/uploads/2024/09/amd-ryzen-7-7700x3d-product-photo.jpg",
+      "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/amd-ryzen-7-5700x3d-mockup.jpg",
+      "https://cdn.mos.cms.futurecdn.net/9WKMCNYDHRUSMttqUSudUV.jpg"
     ]
   },
   {
@@ -632,15 +632,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x.webp",
+    "imageUrl": "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-7-5800X-review.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 7 5800X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-7-5800X-review.jpg",
+      "https://imageio.forbes.com/specials-images/imageserve/5fa3c646bdbeae1374ba01fa/0x0.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2362-back.jpg"
     ]
   },
   {
@@ -660,15 +660,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x.webp",
+    "imageUrl": "https://www.pcstudio.in/wp-content/uploads/2022/04/AMD-RYZEN-7-5700X-PROCESSOR-UPTO-4.6GHZ-36MB-CACHE-1.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 7 5700X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.pcstudio.in/wp-content/uploads/2022/04/AMD-RYZEN-7-5700X-PROCESSOR-UPTO-4.6GHZ-36MB-CACHE-1.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2022/04/amd_ryzen-7-5700x-01.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2755-back.jpg"
     ]
   },
   {
@@ -688,15 +688,15 @@
     "pcie_version": "PCIe 3.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700g.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Vega 8 (8 CU, 2.0 GHz)",
     "model": "Ryzen 7 5700G",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700g.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
+      "https://www.notebookcheck.net/fileadmin/Notebooks/Sonstiges/AMD/Ryzen/Ryzen_Desktop_5700G/5700G_5.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2472-back.jpg"
     ]
   },
   {
@@ -716,15 +716,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600x.webp",
+    "imageUrl": "https://images.pc-builds.com/images/components/9c7bd782c8737108dc7e6695c6452ff3/c15461b88975e00b0a274da5c3f950a2/c842fc1d9be07eb3f1549daffe22146b.png",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 5600X",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600x.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://images.pc-builds.com/images/components/9c7bd782c8737108dc7e6695c6452ff3/c15461b88975e00b0a274da5c3f950a2/c842fc1d9be07eb3f1549daffe22146b.png",
+      "https://techiezoid.com/wp-content/uploads/2022/09/amd-ryzen-5-5600x-01-scaled-1.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2365-back.jpg"
     ]
   },
   {
@@ -744,15 +744,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600.webp",
+    "imageUrl": "https://brain-images-ssl.cdn.dixons.com/9/3/10237839/u_10237839.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 5600",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://brain-images-ssl.cdn.dixons.com/9/3/10237839/u_10237839.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2022/04/amd_ryzen-5-5600-01.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2743-back.jpg"
     ]
   },
   {
@@ -772,15 +772,15 @@
     "pcie_version": "PCIe 3.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600g.webp",
+    "imageUrl": "https://npcgamer.com.br/wp-content/uploads/2025/02/edcbc8adc3.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Vega 7 (7 CU, 1.9 GHz)",
     "model": "Ryzen 5 5600G",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600g.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://npcgamer.com.br/wp-content/uploads/2025/02/edcbc8adc3.jpg",
+      "https://www.notebookcheck.net/fileadmin/Notebooks/AMD/ryzen_5_5600g.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2471-back.jpg"
     ]
   },
   {
@@ -800,15 +800,15 @@
     "pcie_version": "PCIe 3.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5500.webp",
+    "imageUrl": "https://www.alfrensia.com/wp-content/uploads/2022/08/AMD-RYZEN-5-5500-PROCESSOR-3.png",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 5500",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5500.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://www.alfrensia.com/wp-content/uploads/2022/08/AMD-RYZEN-5-5500-PROCESSOR-3.png",
+      "https://tpucdn.com/cpu-specs/images/chips/2756-front.jpg",
+      "https://brain-images-ssl.cdn.dixons.com/8/3/10237838/u_10237838.jpg"
     ]
   },
   {
@@ -828,15 +828,15 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_3600.webp",
+    "imageUrl": "https://watanimall.com/wp-content/uploads/2020/12/ryzen-5-3600-600x600.png",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 2)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 3600",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_3600.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+      "https://watanimall.com/wp-content/uploads/2020/12/ryzen-5-3600-600x600.png",
+      "https://www.techspot.com/articles-info/1871/images/ryzen-3600-1.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2132-front.jpg"
     ]
   },
   {
@@ -856,15 +856,15 @@
     "pcie_version": "PCIe 5.0 (24 Hat)",
     "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp",
+    "imageUrl": "https://static.nb.com.ar/i/nb_PROCESADOR-INTEL-(LGA1851)-CORE-ULTRA-9-285K_ver_c677a4e6b526db443d9326c7b1658a3f.jpg",
     "core_topology": "8P + 16E (24 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
     "model": "Core Ultra 9 285K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://static.nb.com.ar/i/nb_PROCESADOR-INTEL-(LGA1851)-CORE-ULTRA-9-285K_ver_c677a4e6b526db443d9326c7b1658a3f.jpg",
+      "https://cdn.mwave.com.au/images/400/intel_core_ultra_9_285k_24_core_up_to_57ghz_lga_1851_unlocked_cpu_processor_ac78460_33161.jpg",
+      "https://tech4gamers.com/wp-content/uploads/2024/10/Intel-Core-Ultra-9-285K-Processor-Back-696x637.jpg"
     ]
   },
   {
@@ -884,15 +884,15 @@
     "pcie_version": "PCIe 5.0 (24 Hat)",
     "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265k.webp",
+    "imageUrl": "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/thumbnail_C19087-265k.jpg",
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
     "model": "Core Ultra 7 265K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/thumbnail_C19087-265k.jpg",
+      "https://thanhcongcomputer.vn/wp-content/uploads/2024/11/CPU-Intel-Core-Ultra-7-265K-Up-5.5GHz-20-Nhan-20-Luong-Arrow-Lake-S.jpg",
+      "https://www.picclickimg.com/rNMAAeSwqY9pb~-y/Intel-Core-Ultra-7-265K-LGA1851.webp"
     ]
   },
   {
@@ -912,15 +912,15 @@
     "pcie_version": "PCIe 5.0 (24 Hat)",
     "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265kf.webp",
+    "imageUrl": "https://cdn.sotel.de/images/1001259685/intel-core-ultra-7-265kf-lga1851-30mb-cache-55ghz-retail-001.jpg",
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core Ultra 7 265KF",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265kf.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://cdn.sotel.de/images/1001259685/intel-core-ultra-7-265kf-lga1851-30mb-cache-55ghz-retail-001.jpg",
+      "https://nvs.tn-cdn.net/2025/03/cpu-intel-core-ultra-7-265kf-tray-new.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3778-front.jpg"
     ]
   },
   {
@@ -940,15 +940,15 @@
     "pcie_version": "PCIe 5.0 (24 Hat)",
     "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245k.webp",
+    "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-82251-mgkn8mluhbtaf8",
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
     "model": "Core Ultra 5 245K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://down-id.img.susercontent.com/file/id-11134207-82251-mgkn8mluhbtaf8",
+      "https://static.tweaktown.com/content/1/0/10887_888_intel-core-ultra-5-245k-cpu-review_full.jpg",
+      "https://thanhcongcomputer.vn/wp-content/uploads/2025/05/Intel-Core-Ultra-5-Processor-245KF-01.jpg"
     ]
   },
   {
@@ -968,15 +968,15 @@
     "pcie_version": "PCIe 5.0 (24 Hat)",
     "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245kf.webp",
+    "imageUrl": "https://thaher.tech/wp-content/uploads/2024/12/intel-5-.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core Ultra 5 245KF",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245kf.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://thaher.tech/wp-content/uploads/2024/12/intel-5-.jpg",
+      "https://alfrensia.com/wp-content/uploads/2024/12/Intel-Core-Ultra-5-245KF-Tray-Processor.jpg",
+      "https://gitec.ge/images/thumbs/0079295_ultra-245kf-box.jpeg"
     ]
   },
   {
@@ -996,15 +996,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900ks.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61ZCD4bL89L._AC_SL1440_.jpg",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "150W PBP / 320W Extreme MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i9-14900KS",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900ks.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61ZCD4bL89L._AC_SL1440_.jpg",
+      "https://img1.mydrivers.com/img/20240930/f45f7b8b-ced2-46de-a8c4-aa7e23934b29.jpg",
+      "https://cdn.mos.cms.futurecdn.net/d8Uh4fki8CmkomG5xKdSpF.jpg"
     ]
   },
   {
@@ -1024,15 +1024,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900k.webp",
+    "imageUrl": "https://www.tradeinn.com/f/14047/140472438/intel-core-i9-14900k-processor.jpg",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i9-14900K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://www.tradeinn.com/f/14047/140472438/intel-core-i9-14900k-processor.jpg",
+      "https://cdn.wccftech.com/wp-content/uploads/2023/09/Intel-Core-i9-14900K-Desktop-CPU.png",
+      "https://tpucdn.com/cpu-specs/images/chips/3269-back.jpg"
     ]
   },
   {
@@ -1052,15 +1052,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900kf.webp",
+    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i9-14900KF-Core-i9-14th-Gen-24-Core-8P-16E-LGA-1700-125W-None-Integrated-Graphics-Processor-Boxed-BX8071514900KF_b64278bd-c6f9-4261-84c4-98b9bbef8c6e.da96bc5e8bc7d3725c763f8c2290da5e.jpeg",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i9-14900KF",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900kf.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://i5.walmartimages.com/seo/Intel-Core-i9-14900KF-Core-i9-14th-Gen-24-Core-8P-16E-LGA-1700-125W-None-Integrated-Graphics-Processor-Boxed-BX8071514900KF_b64278bd-c6f9-4261-84c4-98b9bbef8c6e.da96bc5e8bc7d3725c763f8c2290da5e.jpeg",
+      "https://kccshop.vn/media/product/250-12983-cpu-intel-core-i9-14900kf-tray--3-20-ghz--up-to-6-0ghz--24-nh--n-32-lu---ng--36-mb-cache-_0_main.jpeg",
+      "https://image.made-in-china.com/2f0j00ICqoemDyGMkb/Intel-Core-I9-14900kf-Desktop-Processor-24-Cores-6-0-GHz-LGA1700-Computer-CPU.webp"
     ]
   },
   {
@@ -1080,15 +1080,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp",
+    "imageUrl": "https://rbtechngames.com/wp-content/uploads/2023/11/rbtech_intel_core_i7_14700K_3.jpeg",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i7-14700K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://rbtechngames.com/wp-content/uploads/2023/11/rbtech_intel_core_i7_14700K_3.jpeg",
+      "https://cdn.mos.cms.futurecdn.net/iNEztQ5iPLdNPYtk9tFJ54-1200-80.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3268-front.jpg"
     ]
   },
   {
@@ -1108,15 +1108,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700kf.webp",
+    "imageUrl": "https://tech4gamers.com/wp-content/uploads/2024/04/20231103_144503-1320x1414.jpg",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i7-14700KF",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700kf.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://tech4gamers.com/wp-content/uploads/2024/04/20231103_144503-1320x1414.jpg",
+      "https://gitec.ge/images/thumbs/0070465_i7-14700kf.jpeg",
+      "https://parastech.pk/wp-content/uploads/2025/09/Intel-Core-i7-14700KF-3.4-GHz-14th-Gen-20-Core-LGA-1700-Processor-Tary-Price-in-Pakistan.jpg"
     ]
   },
   {
@@ -1136,15 +1136,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700.webp",
+    "imageUrl": "https://staticg.sportskeeda.com/editor/2024/01/56f13-17052559829935-1920.jpg",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "65W PBP / 219W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i7-14700",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://staticg.sportskeeda.com/editor/2024/01/56f13-17052559829935-1920.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3442-package.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3442-back.jpg"
     ]
   },
   {
@@ -1164,15 +1164,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600k.webp",
+    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i5-14600K-Core-i5-14th-Gen-14-Core-6P-8E-LGA-1700-125W-Intel-UHD-Graphics-770-Processor-Boxed-BX8071514600K_43a64fc7-d60c-4333-8879-fb46cc53b672.f9b1397f5f1a3f7de5d79e021f76f9ea.jpeg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-14600K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://i5.walmartimages.com/seo/Intel-Core-i5-14600K-Core-i5-14th-Gen-14-Core-6P-8E-LGA-1700-125W-Intel-UHD-Graphics-770-Processor-Boxed-BX8071514600K_43a64fc7-d60c-4333-8879-fb46cc53b672.f9b1397f5f1a3f7de5d79e021f76f9ea.jpeg",
+      "https://tpucdn.com/cpu-specs/images/chips/3266-front.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3266-installed.jpg"
     ]
   },
   {
@@ -1192,15 +1192,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600kf.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61DK+cQvKOL.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-14600KF",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600kf.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61DK+cQvKOL.jpg",
+      "https://halinhcomputer.vn/uploads/images/web-halinh-new/linh-kien-le/cpu-new/14600kf.png",
+      "https://gitec.ge/images/thumbs/0069876_i5-14600kf.jpeg"
     ]
   },
   {
@@ -1220,15 +1220,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14500.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "65W PBP / 154W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-14500",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14500.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3448-front.jpg",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luyhp6uyrsbp97"
     ]
   },
   {
@@ -1248,15 +1248,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-14400F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
+      "https://hoanglongcomputer.vn/media/lib/21-03-2024/intel-core-i5-3.jpg",
+      "https://a.allegroimg.com/original/11fcca/14e764254a6b81623b700b4158f5/PROCESOR-Intel-Core-i5-14400F-10-RDZENI-16-WATKOW-LGA1700-OEM"
     ]
   },
   {
@@ -1276,15 +1276,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp",
+    "imageUrl": "https://www.club386.com/wp-content/uploads/2024/03/intel-core-i5-14400F-product-image-1200x675.jpg",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Intel UHD Graphics 730 (24 EU)",
     "model": "Core i5-14400",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://www.club386.com/wp-content/uploads/2024/03/intel-core-i5-14400F-product-image-1200x675.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/3449-front.jpg",
+      "https://cdn.bodanius.com/media/1/0ec206978_intel-core-i5-14400-10-core-2.5ghz-4.7ghz_x.jpg"
     ]
   },
   {
@@ -1304,15 +1304,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_14100f.webp",
+    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i3-14100F-Core-i3-14th-Gen-Raptor-Lake-4-Core-4P-0E-LGA-1700-58W-None-Integrated-Graphics-Processor-BX8071514100F_8333b7b0-5fc9-46de-85d2-a4f670d0f522.f093e11ab48f3cc61122770c5fc1e101.jpeg",
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 110W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i3-14100F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_14100f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://i5.walmartimages.com/seo/Intel-Core-i3-14100F-Core-i3-14th-Gen-Raptor-Lake-4-Core-4P-0E-LGA-1700-58W-None-Integrated-Graphics-Processor-BX8071514100F_8333b7b0-5fc9-46de-85d2-a4f670d0f522.f093e11ab48f3cc61122770c5fc1e101.jpeg",
+      "https://www.hwcooling.net/wp-content/uploads/2024/02/intel-core-i3-14100f-01.jpg",
+      "https://itmag.kz/upload/iblock/40/14/product_image_91014_1248293.jpg"
     ]
   },
   {
@@ -1332,15 +1332,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_13900k.webp",
+    "imageUrl": "https://product.hstatic.net/200000722513/product/i9k-t2-special-box-07-1080x1080pixels_6c9ec1001cdf4e4998c13af4ac6c7581_114c47698e4a4984863c3b26e0619b65_master.png",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i9-13900K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_13900k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://product.hstatic.net/200000722513/product/i9k-t2-special-box-07-1080x1080pixels_6c9ec1001cdf4e4998c13af4ac6c7581_114c47698e4a4984863c3b26e0619b65_master.png",
+      "https://img.4gamers.com.tw/ckfinder/files/Elvis/Review/Intel-Core-i9-13900K-and-i5-13600K/09.jpg",
+      "https://www.pcstudio.in/wp-content/uploads/2022/10/Intel-Core-I9-13900K-Processor-1.jpg"
     ]
   },
   {
@@ -1360,15 +1360,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_13700k.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_.jpg",
     "core_topology": "8P + 8E (16 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i7-13700K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_13700k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_.jpg",
+      "https://halinhcomputer.vn/uploads/images/web-halinh-new/linh-kien-le/cpu-new/13700k.png",
+      "https://tpucdn.com/cpu-specs/images/chips/2850-back.jpg"
     ]
   },
   {
@@ -1388,15 +1388,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13600k.webp",
+    "imageUrl": "https://m.media-amazon.com/images/I/61lNEpDfdcL._AC_SL1500_.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-13600K",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13600k.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://m.media-amazon.com/images/I/61lNEpDfdcL._AC_SL1500_.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2829-front.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2829-back.jpg"
     ]
   },
   {
@@ -1416,15 +1416,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13400f.webp",
+    "imageUrl": "https://mcc-jo.com/wp-content/uploads/2023/01/Intel-Core-i5-13400F-10-Core-Processor-1.png",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-13400F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13400f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://mcc-jo.com/wp-content/uploads/2023/01/Intel-Core-i5-13400F-10-Core-Processor-1.png",
+      "https://www.notebookcheck.net/uploads/tx_nbc2/i5_13400F_1.jpg",
+      "https://www.notebookcheck.com/uploads/tx_nbc2/i5_13400F_1.jpg"
     ]
   },
   {
@@ -1444,15 +1444,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_12400f.webp",
+    "imageUrl": "https://barakacomputer.net/wp-content/uploads/2023/12/12400f.png",
     "core_topology": "6P Çekirdek (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W PBP / 117W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-12400F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_12400f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://barakacomputer.net/wp-content/uploads/2023/12/12400f.png",
+      "https://tpucdn.com/cpu-specs/images/chips/2550-front.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2550-back.jpg"
     ]
   },
   {
@@ -1472,15 +1472,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_12100f.webp",
+    "imageUrl": "https://product.hstatic.net/200000759019/product/12100f_d1288a9b0ad44706959a7afd955ccade_master.png",
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 89W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i3-12100F",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_12100f.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+      "https://product.hstatic.net/200000759019/product/12100f_d1288a9b0ad44706959a7afd955ccade_master.png",
+      "https://tpucdn.com/cpu-specs/images/chips/2543-front.jpg",
+      "https://tpucdn.com/cpu-specs/images/chips/2543-back.jpg"
     ]
   }
 ]

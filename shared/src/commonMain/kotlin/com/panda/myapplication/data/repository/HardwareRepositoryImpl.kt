@@ -48,7 +48,16 @@ class HardwareRepositoryImpl(
             val peripheralCount = existing.count { it.category.isPeripheral }
             val caseCount = existing.count { it.category == HardwareCategory.CASE }
             val coolerCount = existing.count { it.category == HardwareCategory.COOLER }
-            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts || laptopCount < 300 || peripheralCount < 400 || caseCount < 150 || coolerCount < 140) {
+            val moboCount = existing.count { it.category == HardwareCategory.MOTHERBOARD }
+            val hasBiostar = existing.any { it.brand.equals("BIOSTAR", ignoreCase = true) }
+            val hasEvga = existing.any { it.brand.equals("EVGA", ignoreCase = true) }
+            val hasGenericImages = existing.any { item ->
+                item.images?.any { img -> img.contains("reference.webp") } == true
+            }
+            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts ||
+                laptopCount < 300 || peripheralCount < 400 || caseCount < 150 || coolerCount < 140 ||
+                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages
+            ) {
                 localDataSource.seedDatabaseIfEmpty()
             }
             isSeeded = true

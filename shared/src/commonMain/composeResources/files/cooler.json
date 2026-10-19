@@ -19,7 +19,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 240",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2fc6853c4556dfb16bb10580c1a9cbb1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2fc6853c4556dfb16bb10580c1a9cbb1.1600.jpg",
+      "https://www.arctic.de/media/80/f6/23/1744093964/Liquid_Freezer_III_Pro_240_Black_g01.jpg",
+      "https://www.arctic.de/media/6c/78/d4/1707470128/Liquid_Freezer_III_360_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -42,7 +44,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 240 A-RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg",
+      "https://www.arctic.de/media/43/05/95/1707310431/Liquid_Freezer_III_240_ARGB_Black_Rainbow_G05_2.jpg",
+      "https://www.arctic.de/media/a3/38/4c/1706865106/Liquid_Freezer_III_240_ARGB_Black_Rainbow_G01.png"
     ]
   },
   {
@@ -65,7 +69,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 240 A-RGB White",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/790e8c1c5d6ac9554dbae1b88ab9d30e.1600.jpg",
+      "https://www.arctic.de/media/93/4f/e1/1706866108/Liquid_Freezer_III_240_ARGB_White_Rainbow_G01.png",
+      "https://www.arctic.de/media/5d/fb/de/1707396466/Liquid_Freezer_III_240_ARGB_White_Out-of_the-box.jpg"
     ]
   },
   {
@@ -88,7 +94,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 280",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/8ed355fe9c6060ea33f9d50757e15be1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8ed355fe9c6060ea33f9d50757e15be1.1600.jpg",
+      "https://www.arctic.de/media/b5/7b/e9/1707320870/Liquid_Freezer_III_280_Black_P-Fans.jpg",
+      "https://www.arctic.de/media/ce/5e/c2/1707404884/Liquid_Freezer_III_280_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -111,7 +119,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 360",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
+      "https://www.arctic.de/media/6c/78/d4/1707470128/Liquid_Freezer_III_360_Black_Out-of_the-box.jpg",
+      "https://www.arctic.de/media/3d/52/a7/1707472942/Liquid_Freezer_III_360_ARGB_White_Out-of_the-box.jpg"
     ]
   },
   {
@@ -134,7 +144,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 360 A-RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
+      "https://www.arctic.de/media/df/44/a5/1707472942/Liquid_Freezer_III_360_ARGB_Black_Out-of_the-box.jpg",
+      "https://www.arctic.de/media/6c/78/d4/1707470128/Liquid_Freezer_III_360_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -157,7 +169,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 360 A-RGB White",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
+      "https://www.arctic.de/media/eb/82/65/1707473361/Liquid_Freezer_III_360_ARGB_White_Rainbow_G01.png",
+      "https://www.arctic.de/media/3d/52/a7/1707472942/Liquid_Freezer_III_360_ARGB_White_Out-of_the-box.jpg"
     ]
   },
   {
@@ -180,7 +194,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III 420 A-RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1b6a3ca1e23ed67ab4b6a40866a9cfd7.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1b6a3ca1e23ed67ab4b6a40866a9cfd7.1600.jpg",
+      "https://www.arctic.de/media/58/80/92/1707473953/Liquid_Freezer_III_420_ARGB_Black_Out-of_the-box.jpg",
+      "https://www.arctic.de/media/64/ea/79/1707473784/Liquid_Freezer_III_420_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -203,7 +219,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 SE",
     "images": [
-      "https://m.media-amazon.com/images/I/41hFTmi5aUL.jpg"
+      "https://m.media-amazon.com/images/I/41hFTmi5aUL.jpg",
+      "https://m.media-amazon.com/images/I/81tBvL09Y4L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71KmumYGrXL._SL1500_.jpg"
     ]
   },
   {
@@ -226,7 +244,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 SE ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1e057960fccae4328fbdc13bb45bf42c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1e057960fccae4328fbdc13bb45bf42c.1600.jpg",
+      "https://m.media-amazon.com/images/I/81h9gYVHOuL._SL1500_.jpg",
+      "https://thermalright.com/wp-content/uploads/2024/12/9.jpg"
     ]
   },
   {
@@ -249,7 +269,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 SE ARGB White",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+      "https://www.thermalright.com/wp-content/uploads/2022/01/5-1.jpg",
+      "https://m.media-amazon.com/images/I/71f2bqIOwdS.jpg"
     ]
   },
   {
@@ -272,7 +294,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Phantom Spirit 120 SE",
     "images": [
-      "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg"
+      "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
+      "https://m.media-amazon.com/images/I/71AnMXLdNcL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dEBPYOzcL._SL1500_.jpg"
     ]
   },
   {
@@ -295,7 +319,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Phantom Spirit 120 SE ARGB",
     "images": [
-      "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg"
+      "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
+      "https://static.tandoanh.vn/wp-content/uploads/2023/04/Thermalright-Phantom-Spirit-120-SE-ARGB-H1.jpg",
+      "https://m.media-amazon.com/images/I/71dEBPYOzcL._SL1500_.jpg"
     ]
   },
   {
@@ -318,7 +344,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Phantom Spirit 120 EVO",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/609dd9aca53bc830731d088d9c7ed292.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/609dd9aca53bc830731d088d9c7ed292.1600.jpg",
+      "https://m.media-amazon.com/images/I/71dEBPYOzcL._SL1500_.jpg",
+      "https://media.pangoly.com/img/d/e/d/7/ded7d44d-c4a4-42d5-bef7-33682acb5f21.jpg"
     ]
   },
   {
@@ -341,7 +369,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "Frozen Prism 360 ARGB",
     "images": [
-      "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg"
+      "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
+      "https://m.media-amazon.com/images/I/61dXffEuFuL.jpg",
+      "https://down-ph.img.susercontent.com/file/ph-11134207-81ztl-mjf66r95fbba26"
     ]
   },
   {
@@ -364,7 +394,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "Frozen Prism 360 ARGB White",
     "images": [
-      "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg"
+      "https://m.media-amazon.com/images/I/41m0Oop3ddL.jpg",
+      "https://www.thermalright.com/wp-content/uploads/2023/03/4-2.jpg",
+      "https://img.terabyteshop.com.br/produto/g/water-cooler-thermalright-frozen-prism-360-white-360mm-argb-intelamd-branco_220359.jpg"
     ]
   },
   {
@@ -387,7 +419,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "Aqua Elite 360 V3 ARGB",
     "images": [
-      "https://m.media-amazon.com/images/I/318f4Q17BeL.jpg"
+      "https://m.media-amazon.com/images/I/318f4Q17BeL.jpg",
+      "https://m.media-amazon.com/images/I/71NoHJAMcWL._SL1500_.jpg",
+      "https://taipeicomputer.jo/image/cache/catalog/Products/Cooling/Liquid-Cooling/Aqua_Elite_360-1200x1200.jpg"
     ]
   },
   {
@@ -410,7 +444,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "AK400",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/f11e54d5a812379d28e34bc51143332b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f11e54d5a812379d28e34bc51143332b.1600.jpg",
+      "https://www.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK400_DIGITAL/Gallery/4000X4000/03.png",
+      "https://s13emagst.akamaized.net/products/117999/117998447/images/res_5081f9d389a7ec734fd82f1976c6d6d5.jpg"
     ]
   },
   {
@@ -433,7 +469,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "AK400 Digital",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/cdd47d524615ffee254da2f4010c0562.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cdd47d524615ffee254da2f4010c0562.1600.jpg",
+      "https://www.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK400_DIGITAL/Gallery/4000X4000/03.png",
+      "https://www.quadra.id/wp-content/uploads/2023/06/DeepCool-AK400-DIGITAL-CPU-COOLER.png"
     ]
   },
   {
@@ -456,7 +494,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "AK620",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/048ee8d7e1ab67674cc0aac0e4e0e281.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/048ee8d7e1ab67674cc0aac0e4e0e281.1600.jpg",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK620_ZERO_DARK/Overview/01_01.png",
+      "https://basic-tutorials.com/wp-content/uploads/2025/01/DeepCool_AK620_Digital_Pro-24-scaled.jpg"
     ]
   },
   {
@@ -479,7 +519,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "AK620 Digital",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e0f646f05ca57372374cf39b3b34a1c3.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e0f646f05ca57372374cf39b3b34a1c3.1600.jpg",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK620_ZERO_DARK/Overview/01_01.png",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK620_DIGITAL/Gallery/800X800/02.jpg"
     ]
   },
   {
@@ -502,7 +544,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "LT720",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/6836eb2d379fa4b51adaa3ef0d08c2a9.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6836eb2d379fa4b51adaa3ef0d08c2a9.1600.jpg",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LT720/Gallery/2500X2500/03.jpg",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LT720/Gallery/2500X2500/05.jpg"
     ]
   },
   {
@@ -525,7 +569,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "LT720 WH",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/861b8df9d997376de670ad86c23143bb.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/861b8df9d997376de670ad86c23143bb.1600.jpg",
+      "https://m.media-amazon.com/images/I/51TdjRwSvmL._SL500_.jpg",
+      "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LT720_WH/Overview/01.png?auto=format,compress"
     ]
   },
   {
@@ -548,7 +594,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "LS720 SE",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/876374634dcac9c71c8f9f585d6e4767.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/876374634dcac9c71c8f9f585d6e4767.1600.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/61gzkBOO3hL.jpg",
+      "http://cms2.deepcool.com:8080/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LS720_SE/Overview/01.png"
     ]
   },
   {
@@ -571,7 +619,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 240",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/157afeba59d05304fe181106745e6177.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/157afeba59d05304fe181106745e6177.1600.jpg",
+      "https://m.media-amazon.com/images/I/515UNgTSWJL.jpg",
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/05/nzxt-kraken-240-aio-hero-2.jpg"
     ]
   },
   {
@@ -594,7 +644,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 360",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/04/04/LD0006040499.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {
@@ -617,7 +669,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 360 RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://m.media-amazon.com/images/I/41Yat2-orIL._SL1000_.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {
@@ -640,7 +694,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 360 RGB (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://m.media-amazon.com/images/I/41K2nMA4QZL._SL1000_.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6541/6541442_sd.jpg"
     ]
   },
   {
@@ -663,7 +719,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken Elite 360 RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://m.media-amazon.com/images/I/41Yat2-orIL._SL1000_.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {
@@ -686,7 +744,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken Elite 360 RGB (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6541/6541442_sd.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {
@@ -709,7 +769,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "NH-D15 chromax.black",
     "images": [
-      "https://m.media-amazon.com/images/I/51kgqhkUNuL.jpg"
+      "https://m.media-amazon.com/images/I/51kgqhkUNuL.jpg",
+      "https://www.hwcooling.net/wp-content/uploads/2021/04/noctua-nh-d15s-chromax.black-01.jpg",
+      "https://www.nikktech.com/main/images/pics/reviews/noctua/nh_d15_chromax_black/noctua_nh_d15_chromax_black_review_13.jpg"
     ]
   },
   {
@@ -732,7 +794,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "NH-D15 G2",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3cbf3ee92fcdc68aa1049b28ccbdb850.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3cbf3ee92fcdc68aa1049b28ccbdb850.1600.jpg",
+      "https://cdn.mos.cms.futurecdn.net/4H8d9JYpYSaoYWBjR3GAfZ.jpg",
+      "https://m.media-amazon.com/images/I/81i9YOlnPEL._AC_.jpg"
     ]
   },
   {
@@ -755,7 +819,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "NH-U12S chromax.black",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/03d2c7690b9a62e9131a8514ea3c0dfa.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/03d2c7690b9a62e9131a8514ea3c0dfa.1600.jpg",
+      "https://c1.neweggimages.com/ProductImageCompressAll1280/AADYS211008A79A5.jpg",
+      "https://down-id.img.susercontent.com/file/sg-11134275-821d9-mh2qujwhv47i0e"
     ]
   },
   {
@@ -778,7 +844,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Dark Rock Pro 5",
     "images": [
-      "https://pcper.com/wp-content/uploads/2023/10/be-quiet-dark-rock-pro-5-with-box.jpg"
+      "https://pcper.com/wp-content/uploads/2023/10/be-quiet-dark-rock-pro-5-with-box.jpg",
+      "https://www.xpert.mt/images/thumbs/0012797_be-quiet-dark-rock-pro-5-heatsink-120135mm-fan-cpu-cooler-bk036.jpeg",
+      "https://basic-tutorials.com/wp-content/uploads/2023/11/20231031-IMG_5204.jpg"
     ]
   },
   {
@@ -801,7 +869,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "iCUE LINK Titan 360 RX RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/cee63c4c-470d-4cd6-8f05-00ce065df2f5.jpg",
+      "https://d1q3zw97enxzq2.cloudfront.net/images/Titan_Main_Hero.width-1000.bgcolor-000.format-jpeg.jpg"
     ]
   },
   {
@@ -824,7 +894,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "iCUE LINK Titan 360 RX RGB White",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6254fe41ae3b29682baddb5bc3088cab.1600.jpg",
+      "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Liquid-Cooling/titan-rx-rgb/Gallery/CW-9061021-WW/CW-9061021-WW_01.webp",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/cee63c4c-470d-4cd6-8f05-00ce065df2f5.jpg"
     ]
   },
   {
@@ -847,7 +919,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "iCUE H150i ELITE CAPELLIX XT",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/12bfecb3325a384ef35e38ada6b8bca3.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/12bfecb3325a384ef35e38ada6b8bca3.1600.jpg",
+      "https://bermorzone.com.ph/wp-content/uploads/2023/01/iCUE-H150i-ELITE-CAPELLIX-XT-360MM-BLACK-BTZ-2.jpg.webp",
+      "https://nexushub.co.za/images/products/00270/awxmod200625-2-ddf.jpg"
     ]
   },
   {
@@ -870,7 +944,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "MAG CoreLiquid M360",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1941845aab8181cf519db787c405fded.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1941845aab8181cf519db787c405fded.1600.jpg",
+      "https://m.media-amazon.com/images/I/81RZSNQ-U1L._SL1500_.jpg",
+      "https://storage-asset.msi.com/global/picture/image/feature/CoreLiquid/mag-coreliquid-m360/kv-m360.png"
     ]
   },
   {
@@ -893,7 +969,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "ROG Ryujin III 360 ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg",
+      "https://static.nb.com.ar/i/nb_WATER-COOLER-ASUS-ROG-RYUJIN-III-360-ARGB-EXTREME_export_8a547ab1b93ed328764c69a3da19902e.png",
+      "https://files.pccasegear.com/images/ROG-RYUJIN-III-360-ARGB-EXTREME-add6.jpg"
     ]
   },
   {
@@ -919,7 +997,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III Pro 360",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
+      "https://m.media-amazon.com/images/I/61NTew7Du+L._SL1500_.jpg",
+      "https://www.arctic.de/media/6c/78/d4/1707470128/Liquid_Freezer_III_360_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -948,7 +1028,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Hyper 212 Black Edition",
     "images": [
-      "https://gnd-tech.com/content/2018/10/cooler-master-hyper-212-black-edition-cpu-cooler-review-01.jpg"
+      "https://gnd-tech.com/content/2018/10/cooler-master-hyper-212-black-edition-cpu-cooler-review-01.jpg",
+      "https://a.storyblok.com/f/281110/72f38aa0b0/hyper-212-rgb-black-gallery-1.png/m/960x0/smart",
+      "https://gnd-tech.com/content/2018/10/cooler-master-hyper-212-black-edition-cpu-cooler-review-17.jpg"
     ]
   },
   {
@@ -971,7 +1053,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin X 120 Refined SE",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
+      "https://ecommerce.datablitz.com.ph/cdn/shop/files/71HUpJ75qEL._SL1500_1024x.jpg?v=1755228898",
+      "https://media.ldlc.com/r1600/ld/products/00/06/08/42/LD0006084245.jpg"
     ]
   },
   {
@@ -997,7 +1081,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "MasterLiquid 360L Core ARGB",
     "images": [
-      "https://files.coolermaster.com/og-image/ml-360l-core-argb-1200x630.jpg"
+      "https://files.coolermaster.com/og-image/ml-360l-core-argb-1200x630.jpg",
+      "https://a.storyblok.com/f/281110/1500x1500/9e5b7e59c8/masterliquid-360l-core-argb-01-gallery-02.png/m/960x0/smart",
+      "https://m.media-amazon.com/images/I/71hXLrXwBJL._SL1500_.jpg"
     ]
   },
   {
@@ -1023,7 +1109,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III Pro A-RGB 360",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
+      "https://www.arctic.de/media/9e/ed/6b/1742460214/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g05.jpg",
+      "https://www.arctic.de/media/df/44/a5/1707472942/Liquid_Freezer_III_360_ARGB_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -1049,7 +1137,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Freezer 36",
     "images": [
-      "https://m.media-amazon.com/images/I/41LLTGkmTRL.jpg"
+      "https://m.media-amazon.com/images/I/41LLTGkmTRL.jpg",
+      "https://www.arctic.de/media/3c/5b/0e/1706614993/Freezer_36_G00.png",
+      "https://www.club386.com/wp-content/uploads/2024/03/arctic-freezer-36-black-review-cooler-featured-2.jpg"
     ]
   },
   {
@@ -1072,7 +1162,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 SE WHITE ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+      "https://m.media-amazon.com/images/I/71f2bqIOwdS.jpg",
+      "https://www.thermalright.com/wp-content/uploads/2022/01/5-1.jpg"
     ]
   },
   {
@@ -1098,7 +1190,9 @@
     "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "model": "Liquid Freezer III Pro",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a0b2a92bb4ec2c95b5e492c9513b2c0b.1600.jpg",
+      "https://m.media-amazon.com/images/I/71YmfKozesL.jpg",
+      "https://www.arctic.de/media/6c/78/d4/1707470128/Liquid_Freezer_III_360_Black_Out-of_the-box.jpg"
     ]
   },
   {
@@ -1121,7 +1215,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin King SE ARGB",
     "images": [
-      "https://m.media-amazon.com/images/I/41oLozsjh1L.jpg"
+      "https://m.media-amazon.com/images/I/41oLozsjh1L.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81iqBIQ8eML.jpg",
+      "https://m.media-amazon.com/images/I/61brcJrcJzL._AC_.jpg"
     ]
   },
   {
@@ -1144,7 +1240,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin X SE",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
+      "https://ecommerce.datablitz.com.ph/cdn/shop/files/71HUpJ75qEL._SL1500_1024x.jpg?v=1755228898",
+      "https://m.media-amazon.com/images/I/71KmumYGrXL._SL1500_.jpg"
     ]
   },
   {
@@ -1170,7 +1268,9 @@
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "MasterLiquid 240L Core ARGB",
     "images": [
-      "https://files.coolermaster.com/og-image/ml-240l-core-argb-1200x630.jpg"
+      "https://files.coolermaster.com/og-image/ml-240l-core-argb-1200x630.jpg",
+      "https://a.storyblok.com/f/281110/1500x1500/1fd0fb7280/masterliquid-240l-core-argb-01-gallery-02.png/m/960x0/smart",
+      "https://down-th.img.susercontent.com/file/th-11134207-7qul4-lgxaq9hvhmusb0"
     ]
   },
   {
@@ -1196,7 +1296,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Hyper 212 (2023)",
     "images": [
-      "https://geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361-1024x576.jpg"
+      "https://geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361-1024x576.jpg",
+      "https://a.storyblok.com/f/281110/f9ef3cd9eb/hyper-212-evo_02.png/m/960x0/smart",
+      "https://m.media-amazon.com/images/I/719yas5sapL._AC_.jpg"
     ]
   },
   {
@@ -1222,7 +1324,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Hyper 212 Spectrum V3",
     "images": [
-      "https://www.geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361.jpg"
+      "https://www.geekawhat.com/wp-content/uploads/2023/02/Hyper-212-Spectrum-V3_361.jpg",
+      "https://a.storyblok.com/f/281110/1500x1500/94cd4cbddf/hyper-212-spectrum-v301-gallery-01-png.png/m/960x0/smart",
+      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/44901e30-09c3-4ae9-b53e-578e335b55ab.__CR0,0,970,600_PT0_SX970_V1___.jpg"
     ]
   },
   {
@@ -1248,7 +1352,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 240 RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/bfab77ca83ef76771001024cf039d47f.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bfab77ca83ef76771001024cf039d47f.1600.jpg",
+      "https://m.media-amazon.com/images/I/51WFKhfnDvL._SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/515UNgTSWJL._SL1000_.jpg"
     ]
   },
   {
@@ -1274,7 +1380,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken Elite 360 RGB (2024)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://www.hardwareluxx.de/images/cdn02/uploads/2024/Oct/slick_host_nx/nzxt_kraken_elite_360_rgb_v2_01_1920px.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {
@@ -1297,7 +1405,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin Spirit 120 EVO",
     "images": [
-      "https://m.media-amazon.com/images/I/41595fJKAOL.jpg"
+      "https://m.media-amazon.com/images/I/41595fJKAOL.jpg",
+      "https://m.media-amazon.com/images/I/71Mtg5ohk5L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71i29z576bL._SL1500_.jpg"
     ]
   },
   {
@@ -1320,7 +1430,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin Spirit 120 EVO DARK",
     "images": [
-      "https://m.media-amazon.com/images/I/41e3ob6-J3L.jpg"
+      "https://m.media-amazon.com/images/I/41e3ob6-J3L.jpg",
+      "https://m.media-amazon.com/images/I/71Mtg5ohk5L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71i29z576bL._SL1500_.jpg"
     ]
   },
   {
@@ -1343,7 +1455,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 Black",
     "images": [
-      "https://m.media-amazon.com/images/I/41TOck4ZY5L.jpg"
+      "https://m.media-amazon.com/images/I/41TOck4ZY5L.jpg",
+      "https://www.crox.com.au/wp-content/uploads/thermalright-pa120-bk-4.png",
+      "https://m.media-amazon.com/images/I/71KmumYGrXL._SL1500_.jpg"
     ]
   },
   {
@@ -1366,7 +1480,9 @@
     "fan_airflow": "58.2 CFM / 1.8 mmH2O",
     "model": "Assassin X 120 R Digital ARGB",
     "images": [
-      "https://m.media-amazon.com/images/I/41-Cw6pz6eL.jpg"
+      "https://m.media-amazon.com/images/I/41-Cw6pz6eL.jpg",
+      "https://www.thermalright.com/wp-content/uploads/2024/11/5-13-1024x1024.jpg",
+      "https://windnetpc.com/wp-content/uploads/2025/02/thermalright_assassin_x_r_120_digital_black_white_3.jpg"
     ]
   },
   {
@@ -1389,7 +1505,9 @@
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 White",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+      "https://m.media-amazon.com/images/I/71f2bqIOwdS._SL1500_.jpg",
+      "https://media.pangoly.com/img/1/f/7/e/1f7eb9f5-4af8-47ed-ac11-7802ba402a26.jpg"
     ]
   },
   {
@@ -1415,7 +1533,9 @@
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken Elite 360 (2024)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+      "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/06/nzxt-kraken-elite-360-rgb-review.jpg",
+      "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ]
   },
   {

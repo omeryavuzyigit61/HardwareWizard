@@ -17,8 +17,8 @@
     "model": "Exceria NVMe M.2 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://img.pccomponentes.com/articles/28/288171/2198-kioxia-exceria-500gb-ssd-nvme-m2-2280.jpg",
+      "https://m.media-amazon.com/images/I/813ZeS0W3DL.jpg"
     ]
   },
   {
@@ -39,8 +39,8 @@
     "model": "Exceria NVMe M.2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "http://tech-legend.com/wp-content/uploads/2022/01/1070741.jpg",
+      "https://nguyenvu-store-medias.tn-cdn.net/2024/01/o-cung-ssd-kioxia-exceria-plus-g3-1tb-1.jpg"
     ]
   },
   {
@@ -61,8 +61,8 @@
     "model": "Exceria G2 NVMe M.2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://acf.geeknetic.es/cpi/imgp/products/913/913-kioxia-exceria-g2-unidad-ssd-1tb-nvme-m2-2280-1709728604.png",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-plus-g2-nvme-ssd_img_prd002_en.png"
     ]
   },
   {
@@ -83,8 +83,8 @@
     "model": "Exceria G2 NVMe M.2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://kr.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-g2_img_prd002_en.png",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-plus-g2-nvme-ssd_img_prd002_en.png"
     ]
   },
   {
@@ -105,8 +105,8 @@
     "model": "Exceria Plus NVMe M.2 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://kr.kioxia.com/content/dam/kioxia/shared/personal/ssd/exceria-plus-g4/exceria_plus_g4_ssd_gallery_01.jpg",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/exceria-plus-g4/exceria_plus_g4_ssd_gallery_07.png"
     ]
   },
   {
@@ -127,8 +127,8 @@
     "model": "Exceria Plus NVMe M.2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://nguyenvu-store-medias.tn-cdn.net/2024/01/o-cung-ssd-kioxia-exceria-plus-g3-1tb-1.jpg",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/exceria-plus-g4/exceria_plus_g4_ssd_gallery_07.png"
     ]
   },
   {
@@ -149,8 +149,8 @@
     "model": "Exceria Plus NVMe M.2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://kr.kioxia.com/content/dam/kioxia/shared/personal/ssd/exceria-plus-g4/exceria_plus_g4_ssd_gallery_01.jpg",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/exceria-plus-g4/exceria_plus_g4_ssd_gallery_07.png"
     ]
   },
   {
@@ -171,8 +171,8 @@
     "model": "Exceria Plus G3 NVMe M.2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://nguyenvu-store-medias.tn-cdn.net/2024/01/o-cung-ssd-kioxia-exceria-plus-g3-1tb-1.jpg",
+      "https://img.4gamers.com.tw/ckfinder/images/Lee/02.jpg?versionId=uWiXsEHLPMa3Nzk8meW60AL8j_xkxgpz"
     ]
   },
   {
@@ -193,8 +193,8 @@
     "model": "Exceria Plus G3 NVMe M.2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-plus-g3-ssd-gallery-1.jpg",
+      "https://nvs.tn-cdn.net/2024/01/o-cung-ssd-kioxia-exceria-plus-g3-2tb-1.jpg"
     ]
   },
   {
@@ -215,8 +215,8 @@
     "model": "Exceria Pro NVMe M.2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://europe.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-pro_img_prd001.png",
+      "https://europe.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-pro_img_prd002_en.png"
     ]
   },
   {
@@ -237,8 +237,8 @@
     "model": "Exceria Pro NVMe M.2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://europe.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-pro_img_prd001.png",
+      "https://static.tandoanh.vn/wp-content/uploads/2025/03/KIOXIA-EXCERIA-with-Heatsink-H2.jpg"
     ]
   },
   {
@@ -259,8 +259,8 @@
     "model": "Exceria SATA 480GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/kioxia/thumb/117152-1_large.jpg",
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-sata-ssd_img_prd001.png"
     ]
   },
   {
@@ -281,8 +281,8 @@
     "model": "Exceria SATA 960GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://tuanphong.vn/pictures/full/2020/10/1602908082-150-o-cung-ssd-960gb-kioxia-exceria-25-inch-sata-iii-2.jpg",
+      "https://goughlui.com/wp-content/uploads/2021/12/2021120315390113.jpg"
     ]
   },
   {
@@ -303,8 +303,8 @@
     "model": "990 PRO 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://images.samsung.com/is/image/samsung/p6pim/ca/mz-v9p1t0b-am/gallery/ca-990pro-nvme-m2-ssd-mz-v9p1t0b-am-533750475?$650_519_PNG$",
+      "https://img.global.news.samsung.com/de/wp-content/uploads/2023/09/Samsung-Memory_990-PRO-Series_Product-image.jpg"
     ]
   },
   {
@@ -325,8 +325,8 @@
     "model": "990 PRO 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://files.pccasegear.com/images/MZ-V9P2T0BW-add1.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/04/10/LD0006041024_0006041043.jpg"
     ]
   },
   {
@@ -347,8 +347,8 @@
     "model": "990 PRO 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://img.pccomponentes.com/articles/1079/10791947/2983-samsung-990-pro-4tb-ssd-pcie-40-nvme-m2-comprar.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6559/6559271cv15d.jpg"
     ]
   },
   {
@@ -369,8 +369,8 @@
     "model": "990 EVO 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/71H3OVkHOGL._AC_.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6571/6571723cv14d.jpg"
     ]
   },
   {
@@ -391,8 +391,8 @@
     "model": "990 EVO 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdn.mos.cms.futurecdn.net/QszSQ2cc4o2npVvknNprGD.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6571/6571724cv16d.jpg"
     ]
   },
   {
@@ -413,8 +413,8 @@
     "model": "980 PRO 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://image-us.samsung.com/SamsungUS/home/computing/memory-and-storage/solid-state-drives/pdp/mz-v8p/1t0b-am/gallery/MZ-V8P1T0BW_001_Front_Black.jpg?$product-details-jpg$",
+      "https://image-us.samsung.com/SamsungUS/home/computing/memory-and-monitors/pdp/mz-v8p1t0cw/10212021/Smart_thermal_control_708xV.jpg?$feature-benefit-jpg$"
     ]
   },
   {
@@ -435,8 +435,8 @@
     "model": "980 PRO 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/71KeDAkw+0L._AC_.jpg",
+      "https://cdn.mos.cms.futurecdn.net/479wjFH6pG5FgdumncNKSh.jpg"
     ]
   },
   {
@@ -457,8 +457,8 @@
     "model": "980 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://img.global.news.samsung.com/it/wp-content/uploads/2021/03/Samsung-NVMe-SSD-980_L-Perspective_DL.jpg",
+      "https://images.samsung.com/is/image/samsung/uk-980-pro-nvme-m2-ssd-mz-v8p1t0bw-black-307022678?$L2-Thumbnail$"
     ]
   },
   {
@@ -479,8 +479,8 @@
     "model": "970 EVO Plus 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/71OYNmVRFhL.jpg",
+      "https://img.global.news.samsung.com/vn/wp-content/uploads/2019/01/SSD-970-EVO-Plus-_Package.jpg"
     ]
   },
   {
@@ -501,8 +501,8 @@
     "model": "970 EVO Plus 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://images.samsung.com/is/image/samsung/uk-970-evoplus-nvme-m2-ssd-mz-v7s2t0bw-frontblack-319090477?$650_519_PNG$",
+      "https://img.global.news.samsung.com/vn/wp-content/uploads/2019/01/SSD-970-EVO-Plus-_Package.jpg"
     ]
   },
   {
@@ -523,8 +523,8 @@
     "model": "KC3000 1TB",
     "images": [
       "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://thx.bg/UserFiles/Product/gallery_1/kc3000_1024gb_hr.png?cache",
+      "https://a.allegroimg.com/original/11daa7/80d05f70460daefce33f31fbf943/Dysk-SSD-Kingston-KC3000-1TB-M-2-NVMe-PCIe-4-0-TLC-do-laptopa-komputera-PS5"
     ]
   },
   {
@@ -545,8 +545,8 @@
     "model": "KC3000 2TB",
     "images": [
       "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://product.hstatic.net/200000722513/product/kc3000-1_f1a79688f39d450faafc844a40c72749_585f3d7bd11e43b5b3634cf0a4914665.jpg",
+      "https://cdnx.jumpseller.com/skyhightechnology/image/62445480/resize/893/893?1744600006"
     ]
   },
   {
@@ -567,8 +567,8 @@
     "model": "KC3000 4TB",
     "images": [
       "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://www.jpcomputers.co.uk/image/cache/catalog/SSD-2TBKIKC3000P-550x550.jpg",
+      "https://img.bazzar.cloud/g0eqTAM/rs:fit:500:500:1:1:ce/fn:kingston-4tb-m-2-nvme-skc3000d-4096g-ssd-kc3000-series/czM6Ly9kYXRhc3Rv/cmUuYmF6emFyLmhy/L2l1bGp6dXdham5q/ZzV5ajBrOGhxazAz/Z2g3ZXg"
     ]
   },
   {
@@ -589,8 +589,8 @@
     "model": "Fury Renegade 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdn2.cellphones.com.vn/x/media/catalog/product/o/-/o-cung-ssd-kingston-fury-renegade-g5-pcie-5-0-nvme-m-2-1tb_2_.png",
+      "https://lcdn.altex.ro/media/catalog/product/s/f/sfyrsk_1000g_03_8665611b.jpg"
     ]
   },
   {
@@ -611,8 +611,8 @@
     "model": "Fury Renegade 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://phisonblog.com/wp-content/uploads/2025/02/Kingston-Fury-Renegade-2TB.jpg",
+      "https://img.terabyteshop.com.br/produto/g/ssd-kingston-fury-renegade-2tb-m2-nvme-2280-leitura-7300mbs-e-gravacao-7000mbs-com-dissipador-sfyrdk2000g_155199.png"
     ]
   },
   {
@@ -633,8 +633,8 @@
     "model": "NV3 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://media.ldlc.com/r1600/ld/products/00/06/15/76/LD0006157668.jpg",
+      "https://informatics-dz.com/wp-content/uploads/2024/12/Kingston-NV3-1TB-PCIe-Gen-4.0-NVMe-SSD-1024x1024.webp"
     ]
   },
   {
@@ -655,8 +655,8 @@
     "model": "NV3 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://www.thessdreview.com/wp-content/uploads/2024/10/Kingston-NV3-Gen-4-2TB-SSD-4-2048x1152.jpg",
+      "https://cdn.mos.cms.futurecdn.net/sqEJWx8eKxHibih5RCposK.jpg"
     ]
   },
   {
@@ -677,8 +677,8 @@
     "model": "NV2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://www.kitguru.net/wp-content/uploads/2023/03/Kingston-NV2-1TB-SSD-Review-on-KitGuru-INTRODUCTION.jpg",
+      "https://images.kabum.com.br/produtos/fotos/sync_mirakl/400812/SSD-1TB-Kingston-Nv2-M-2-2280-PCIe-NVMe-Leitura-3500MB-s-Grava-o-2100MB-s-Snv2s-1000g_1730146919_gg.jpg"
     ]
   },
   {
@@ -699,8 +699,8 @@
     "model": "NV2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://image.citycenter.jo/cache/catalog/0102022/2TNV2-1200x1200.jpg",
+      "https://cdn.mos.cms.futurecdn.net/Ny3SWJwfTNUCiMrgaPDQUd.jpg"
     ]
   },
   {
@@ -721,8 +721,8 @@
     "model": "Black SN850X 1TB",
     "images": [
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
+      "https://cdn.mos.cms.futurecdn.net/XznGAj929i82MWrAHPH4Eo.jpg"
     ]
   },
   {
@@ -743,8 +743,8 @@
     "model": "Black SN850X 2TB",
     "images": [
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6512/6512128cv12d.jpg"
     ]
   },
   {
@@ -765,8 +765,8 @@
     "model": "Black SN770 1TB",
     "images": [
       "https://m.media-amazon.com/images/I/71Sr1zjPhwL._SL1500_.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/71Sr1zjPhwL._AC_.jpg",
+      "https://dongknows.com/wp-content/uploads/WD-Black-SN770-PCIe-Gen-4-NVMe-SSD-1.jpg"
     ]
   },
   {
@@ -787,8 +787,8 @@
     "model": "Black SN770 2TB",
     "images": [
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdn.mos.cms.futurecdn.net/qMuTBXAZy6dXpXgDbqBLRB.jpg",
+      "https://i5.walmartimages.com/seo/WD-BLACK-2TB-SN770-NVMe-PCIe-4-0-M-2-Internal-SSD-WDBBDL0020BNC-WRWM_b8147249-fcd8-4548-b73a-4e76619bdec6.e51d955ae0e1ddd5a2ccb44b2330ed02.png"
     ]
   },
   {
@@ -809,8 +809,8 @@
     "model": "Blue SN580 1TB",
     "images": [
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://i5.walmartimages.com/seo/WD-Blue-1TB-SN580-NVMe-Internal-SSD-WDBWMY0010BBL-WRWM_28933fdc-65d2-4eef-95f4-474478cfd226.51d02b302ea9785e967da33be118bf8b.jpeg",
+      "https://tpucdn.com/ssd-specs/images/d/1541-package.jpg"
     ]
   },
   {
@@ -831,8 +831,8 @@
     "model": "T700 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://media.ldlc.com/r1600/ld/products/00/06/04/14/LD0006041470.jpg",
+      "https://m.media-amazon.com/images/I/51LpPKFIPCL._AC_SL1000_.jpg"
     ]
   },
   {
@@ -853,8 +853,8 @@
     "model": "T700 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://www.servethehome.com/wp-content/uploads/2023/09/Crucial-T700-2TB-800x471.jpg",
+      "https://lagihitech.vn/wp-content/uploads/2025/03/SSD-Crucial-T700-With-Heatsink-2TB-M2-PCIe-Gen-5.0-CT2000T700SSD5-hinh-2.jpg"
     ]
   },
   {
@@ -875,8 +875,8 @@
     "model": "T500 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/51W5aZlKQeL._AC_SL1080_.jpg",
+      "https://m.media-amazon.com/images/I/51cl+g8zHpL.jpg"
     ]
   },
   {
