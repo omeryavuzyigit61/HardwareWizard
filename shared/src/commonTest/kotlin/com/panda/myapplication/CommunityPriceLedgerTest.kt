@@ -40,6 +40,7 @@ class CommunityPriceLedgerTest {
             httpClient = httpClient,
             json = json,
             ioDispatcher = Dispatchers.Default,
+            autoFetchRemote = false,
         )
     }
 

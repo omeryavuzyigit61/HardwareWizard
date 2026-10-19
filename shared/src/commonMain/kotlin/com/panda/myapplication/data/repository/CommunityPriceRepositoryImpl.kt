@@ -41,14 +41,17 @@ class CommunityPriceRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,
+    private val autoFetchRemote: Boolean = true,
 ) : CommunityPriceRepository {
 
     private val _deals = MutableStateFlow<List<CommunityDeal>>(createInitialSeedDeals())
     private val _isAdminLoggedIn = MutableStateFlow(false)
 
     init {
-        CoroutineScope(ioDispatcher).launch {
-            fetchRemoteDealsFromSupabase()
+        if (autoFetchRemote) {
+            CoroutineScope(ioDispatcher).launch {
+                fetchRemoteDealsFromSupabase()
+            }
         }
     }
 
@@ -109,7 +112,16 @@ class CommunityPriceRepositoryImpl(
                     )
                 }
                 if (remoteDeals.isNotEmpty()) {
-                    _deals.value = remoteDeals
+                    val current = _deals.value.toMutableList()
+                    for (remote in remoteDeals) {
+                        val idx = current.indexOfFirst { it.id == remote.id }
+                        if (idx != -1) {
+                            current[idx] = remote
+                        } else {
+                            current.add(0, remote)
+                        }
+                    }
+                    _deals.value = current
                 }
             }
         }
