@@ -27,4 +27,5 @@ data class PsuRawDto(
     @SerialName("cybenetics") val cybeneticsCert: String? = null,
     @SerialName("cybenetics_lambda") val cybeneticsLambda: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

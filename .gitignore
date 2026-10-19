@@ -20,3 +20,5 @@ node_modules/
 *.jsonl
 __pycache__/
 *.pyc
+admin_portal.html
+*admin*.html

@@ -22,6 +22,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
@@ -47,6 +48,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.common.DomainResult
@@ -79,11 +81,13 @@ fun AuthSheet(
     // Login Fields
     var loginIdentifier by remember { mutableStateOf("") }
     var loginPassword by remember { mutableStateOf("") }
+    var isLoginPasswordVisible by remember { mutableStateOf(false) }
 
     // Signup Fields
     var signupUsername by remember { mutableStateOf("") }
     var signupEmail by remember { mutableStateOf("") }
     var signupPassword by remember { mutableStateOf("") }
+    var isSignupPasswordVisible by remember { mutableStateOf(false) }
     var birthDateText by remember { mutableStateOf("2000-05-14") }
     var selectedGender by remember { mutableStateOf(Gender.MALE) }
     var selectedSpiritHardware by remember { mutableStateOf(SpiritHardware.OVERCLOCKED_CPU) }
@@ -196,7 +200,15 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("Şifre") },
-                    visualTransformation = PasswordVisualTransformation(),
+                    visualTransformation = if (isLoginPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+                    trailingIcon = {
+                        IconButton(onClick = { isLoginPasswordVisible = !isLoginPasswordVisible }) {
+                            Text(
+                                text = if (isLoginPasswordVisible) "🙈" else "👁️",
+                                style = MaterialTheme.typography.bodyLarge,
+                            )
+                        }
+                    },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
@@ -282,7 +294,15 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("Şifre (En az 6 karakter) *") },
-                    visualTransformation = PasswordVisualTransformation(),
+                    visualTransformation = if (isSignupPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+                    trailingIcon = {
+                        IconButton(onClick = { isSignupPasswordVisible = !isSignupPasswordVisible }) {
+                            Text(
+                                text = if (isSignupPasswordVisible) "🙈" else "👁️",
+                                style = MaterialTheme.typography.bodyLarge,
+                            )
+                        }
+                    },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),

@@ -531,7 +531,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = CpuSpecEntity(
             itemId = id,
@@ -615,7 +616,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = GpuSpecEntity(
             itemId = id,
@@ -678,7 +680,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = RamSpecEntity(
             itemId = id,
@@ -755,7 +758,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = MotherboardSpecEntity(
             itemId = id,
@@ -859,7 +863,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = PsuSpecEntity(
             itemId = id,
@@ -928,7 +933,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = StorageSpecEntity(
             itemId = id,

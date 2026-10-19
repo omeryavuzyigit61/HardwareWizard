@@ -27,4 +27,5 @@ data class MotherboardRawDto(
     val network: String? = null,
     @SerialName("audio_codec") val audioCodec: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

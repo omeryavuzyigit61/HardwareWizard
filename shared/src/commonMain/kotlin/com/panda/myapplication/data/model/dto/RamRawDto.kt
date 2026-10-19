@@ -24,4 +24,5 @@ data class RamRawDto(
     val timings: String? = null,
     val profile: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

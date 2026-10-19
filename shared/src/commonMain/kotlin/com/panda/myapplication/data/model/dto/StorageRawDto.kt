@@ -85,4 +85,5 @@ data class StorageRawDto(
     @SerialName("dram_cache") val dramCache: String? = null,
     @SerialName("random_iops") val randomIops: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

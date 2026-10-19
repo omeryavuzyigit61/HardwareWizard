@@ -35,4 +35,5 @@ data class GpuRawDto(
     @SerialName("memory_speed") val memorySpeedGbps: Double? = null,
     @SerialName("bandwidth_gbs") val bandwidthGbs: Double? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

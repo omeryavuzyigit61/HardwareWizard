@@ -25,4 +25,5 @@ data class CpuRawDto(
     @SerialName("power_limits") val powerLimits: String? = null,
     @SerialName("igpu_model") val igpuModel: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )
