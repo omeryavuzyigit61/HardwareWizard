@@ -18,6 +18,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 sealed interface HardwareDetailEffect {
@@ -90,6 +92,22 @@ class HardwareDetailViewModel(
             communityPriceRepository.observeDealsForHardware(id).collect { deals ->
                 _uiState.update { it.copy(communityDeals = deals) }
             }
+        }
+
+        // Canlı Arka Plan Senkronizasyonu: Desktop Admin veya Supabase'deki onayları anında yakala
+        viewModelScope.launch {
+            communityPriceRepository.refreshDeals()
+            while (isActive) {
+                delay(5000)
+                communityPriceRepository.refreshDeals()
+            }
+        }
+    }
+
+    fun onRefreshCommunityDeals() {
+        viewModelScope.launch {
+            communityPriceRepository.refreshDeals()
+            effectChannel.send(HardwareDetailEffect.ShowToast("🔄 Fiyat defteri güncellendi."))
         }
     }
 

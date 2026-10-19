@@ -34,6 +34,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -80,6 +81,10 @@ fun AdminModerationScreen(
     val isAdminLoggedIn by repository.isAdminLoggedIn.collectAsState()
     val allDeals by repository.observeAllDeals().collectAsState(initial = emptyList())
     val coroutineScope = rememberCoroutineScope()
+
+    LaunchedEffect(Unit) {
+        repository.refreshDeals()
+    }
 
     var selectedFilter by remember { mutableStateOf<DealStatus?>(DealStatus.PENDING) }
     var searchQuery by remember { mutableStateOf("") }
@@ -163,16 +168,33 @@ fun AdminModerationScreen(
                             )
                         }
 
-                        OutlinedButton(
-                            onClick = { repository.logoutAdmin() },
-                            shape = RoundedCornerShape(8.dp),
-                            border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.5f)),
-                        ) {
-                            Text(
-                                text = "Çıkış Yap",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = NeonRose,
-                            )
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            OutlinedButton(
+                                onClick = {
+                                    coroutineScope.launch {
+                                        repository.refreshDeals()
+                                    }
+                                },
+                                shape = RoundedCornerShape(8.dp),
+                                border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
+                            ) {
+                                Text(
+                                    text = "🔄 Yenile",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = NeonCyan,
+                                )
+                            }
+                            OutlinedButton(
+                                onClick = { repository.logoutAdmin() },
+                                shape = RoundedCornerShape(8.dp),
+                                border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.5f)),
+                            ) {
+                                Text(
+                                    text = "Çıkış Yap",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = NeonRose,
+                                )
+                            }
                         }
                     }
                 }

@@ -19,6 +19,9 @@ interface CommunityPriceRepository {
     /** Tüm geçmiş fırsatları (onaylanan, bekleyen, reddedilen) dinler. */
     fun observeAllDeals(): Flow<List<CommunityDeal>>
 
+    /** Bulut veritabanındaki en güncel fiyat fırsatlarını anında senkronize eder ve akışları günceller. */
+    suspend fun refreshDeals(): DomainResult<Unit>
+
     /** Yeni bir topluluk fiyat bildirimi gönderir. */
     suspend fun submitDeal(deal: CommunityDeal): DomainResult<Unit>
 

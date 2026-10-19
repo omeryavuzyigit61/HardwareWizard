@@ -51,7 +51,22 @@ class CommunityPriceRepositoryImpl(
         if (autoFetchRemote) {
             CoroutineScope(ioDispatcher).launch {
                 fetchRemoteDealsFromSupabase()
+                // Canlı arka plan senkronizasyonu: Desktop Admin veya diğer cihazlardan gelen onayları anında telefona çek
+                while (true) {
+                    kotlinx.coroutines.delay(6000)
+                    fetchRemoteDealsFromSupabase()
+                }
             }
+        }
+    }
+
+    override suspend fun refreshDeals(): DomainResult<Unit> = withContext(ioDispatcher) {
+        if (!autoFetchRemote) return@withContext DomainResult.Success(Unit)
+        runCatching {
+            fetchRemoteDealsFromSupabase()
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            DomainResult.Failure(DomainError.Unknown(it))
         }
     }
 
@@ -131,6 +146,11 @@ class CommunityPriceRepositoryImpl(
 
     override fun observeDealsForHardware(hardwareId: String): Flow<List<CommunityDeal>> {
         val targetNorm = normalizeHardwareId(hardwareId)
+        if (autoFetchRemote) {
+            CoroutineScope(ioDispatcher).launch {
+                fetchRemoteDealsFromSupabase()
+            }
+        }
         return _deals.map { allDeals ->
             allDeals
                 .filter { deal ->
@@ -153,6 +173,11 @@ class CommunityPriceRepositoryImpl(
     }
 
     override fun observeAllPendingDeals(): Flow<List<CommunityDeal>> {
+        if (autoFetchRemote) {
+            CoroutineScope(ioDispatcher).launch {
+                fetchRemoteDealsFromSupabase()
+            }
+        }
         return _deals.map { allDeals ->
             allDeals
                 .filter { it.status == DealStatus.PENDING }
@@ -161,6 +186,11 @@ class CommunityPriceRepositoryImpl(
     }
 
     override fun observeAllDeals(): Flow<List<CommunityDeal>> {
+        if (autoFetchRemote) {
+            CoroutineScope(ioDispatcher).launch {
+                fetchRemoteDealsFromSupabase()
+            }
+        }
         return _deals.map { it.sortedByDescending { deal -> deal.createdAtEpochMs } }
     }
 
@@ -199,6 +229,10 @@ class CommunityPriceRepositoryImpl(
                 }
             }
 
+            if (autoFetchRemote) {
+                fetchRemoteDealsFromSupabase()
+            }
+
             DomainResult.Success(Unit)
         } catch (e: Exception) {
             DomainResult.Failure(DomainError.Unknown(e))
@@ -207,7 +241,7 @@ class CommunityPriceRepositoryImpl(
 
     override suspend fun approveDeal(dealId: String, adminName: String): DomainResult<Unit> = withContext(ioDispatcher) {
         try {
-            val now = 1713000000000L // current epoch
+            val now = kotlin.time.Clock.System.now().toEpochMilliseconds()
             _deals.update { current ->
                 current.map { deal ->
                     if (deal.id == dealId) {
@@ -237,6 +271,10 @@ class CommunityPriceRepositoryImpl(
                     }
                     setBody(patchJson.toString())
                 }
+            }
+
+            if (autoFetchRemote) {
+                fetchRemoteDealsFromSupabase()
             }
 
             DomainResult.Success(Unit)
@@ -276,6 +314,10 @@ class CommunityPriceRepositoryImpl(
                     }
                     setBody(patchJson.toString())
                 }
+            }
+
+            if (autoFetchRemote) {
+                fetchRemoteDealsFromSupabase()
             }
 
             DomainResult.Success(Unit)

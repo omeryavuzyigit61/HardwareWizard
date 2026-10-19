@@ -160,6 +160,7 @@ fun HardwareDetailRoute(
         onRejectCommunityDeal = viewModel::onRejectCommunityDeal,
         onLoginAdmin = viewModel::loginAdmin,
         onLogoutAdmin = viewModel::logoutAdmin,
+        onRefreshCommunityDeals = viewModel::onRefreshCommunityDeals,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -178,6 +179,7 @@ fun HardwareDetailContent(
     onRejectCommunityDeal: (String, String?) -> Unit = { _, _ -> },
     onLoginAdmin: (String) -> Boolean = { false },
     onLogoutAdmin: () -> Unit = {},
+    onRefreshCommunityDeals: () -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     modifier: Modifier = Modifier,
 ) {
@@ -342,6 +344,7 @@ fun HardwareDetailContent(
                                 onRejectDeal = { dealId -> onRejectCommunityDeal(dealId, null) },
                                 onAdminLoginClick = { showAdminLoginDialog = true },
                                 onAdminLogoutClick = onLogoutAdmin,
+                                onRefreshClick = onRefreshCommunityDeals,
                             )
                         }
 

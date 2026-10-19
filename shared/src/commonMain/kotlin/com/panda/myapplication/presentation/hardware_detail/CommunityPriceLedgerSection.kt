@@ -80,6 +80,7 @@ fun CommunityPriceLedgerSection(
     onRejectDeal: (String) -> Unit,
     onAdminLoginClick: () -> Unit,
     onAdminLogoutClick: () -> Unit,
+    onRefreshClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val displayDeals = if (isAdmin) deals else deals.filter { it.status == DealStatus.APPROVED }
@@ -116,6 +117,30 @@ fun CommunityPriceLedgerSection(
                         color = NeonCyan,
                         letterSpacing = 0.8.sp,
                     )
+                    if (onRefreshClick != null) {
+                        Spacer(modifier = Modifier.width(Spacing.small))
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = NeonCyan.copy(alpha = 0.15f),
+                            border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.5f)),
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable { onRefreshClick() }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = "🔄 Yenile",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = NeonCyan,
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Bold,
+                                )
+                            }
+                        }
+                    }
                 }
 
                 if (isAdmin) {
