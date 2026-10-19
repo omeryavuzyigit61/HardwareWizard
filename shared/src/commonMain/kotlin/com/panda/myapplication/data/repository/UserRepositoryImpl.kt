@@ -8,12 +8,27 @@ import com.panda.myapplication.domain.model.SpiritHardware
 import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.UserRepository
 import io.ktor.client.HttpClient
+import io.ktor.client.request.get
+import io.ktor.client.request.headers
+import io.ktor.client.request.patch
+import io.ktor.client.request.post
+import io.ktor.client.request.setBody
+import io.ktor.client.statement.bodyAsText
+import io.ktor.http.ContentType
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.contentType
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.longOrNull
+import kotlinx.serialization.json.put
 
 class UserRepositoryImpl(
     private val httpClient: HttpClient,
@@ -66,6 +81,30 @@ class UserRepositoryImpl(
             createdAtEpochMs = 1713500000000L,
         )
 
+        // 1. Supabase Bulut Veritabanına kaydet
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/user_profiles"
+            val body = buildJsonObject {
+                put("id", profile.id)
+                put("username", profile.username)
+                put("email", profile.email)
+                put("password_hash", password)
+                put("birth_date_iso", profile.birthDateIso)
+                put("gender", profile.gender.name)
+                put("spirit_hardware", profile.spiritHardware.name)
+                put("created_at_epoch_ms", profile.createdAtEpochMs)
+            }
+            httpClient.post(url) {
+                contentType(ContentType.Application.Json)
+                headers {
+                    append("apikey", SupabaseConfig.supabaseAnonKey)
+                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                    append("Prefer", "return=minimal")
+                }
+                setBody(body.toString())
+            }
+        }
+
         val cred = AccountCredential(profile, password)
         _registeredAccounts[trimmedUsername.lowercase()] = cred
         _registeredAccounts[trimmedEmail.lowercase()] = cred
@@ -103,7 +142,44 @@ class UserRepositoryImpl(
             }
         }
 
-        // 2. Kayıtlı Kullanıcı Hesabı Doğrulaması
+        // 2. Canlı Supabase Bulut Veritabanından Kullanıcı Sorgulama
+        try {
+            val encodedInput = input.lowercase()
+            val url = "${SupabaseConfig.restApiUrl}/user_profiles?or=(username.ilike.$encodedInput,email.ilike.$encodedInput)&select=*"
+            val response = httpClient.get(url) {
+                headers {
+                    append("apikey", SupabaseConfig.supabaseAnonKey)
+                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                }
+            }
+            if (response.status == HttpStatusCode.OK) {
+                val array = json.parseToJsonElement(response.bodyAsText()).jsonArray
+                if (array.isNotEmpty()) {
+                    val userObj = array[0].jsonObject
+                    val storedPassword = userObj["password_hash"]?.jsonPrimitive?.content ?: ""
+                    if (storedPassword == password) {
+                        val profile = UserProfile(
+                            id = userObj["id"]?.jsonPrimitive?.content ?: "usr-0",
+                            email = userObj["email"]?.jsonPrimitive?.content ?: "",
+                            username = userObj["username"]?.jsonPrimitive?.content ?: "",
+                            birthDateIso = userObj["birth_date_iso"]?.jsonPrimitive?.content ?: "2000-01-01",
+                            gender = Gender.fromString(userObj["gender"]?.jsonPrimitive?.content),
+                            spiritHardware = SpiritHardware.fromString(userObj["spirit_hardware"]?.jsonPrimitive?.content),
+                            createdAtEpochMs = userObj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 1713500000000L,
+                        )
+                        _currentUser.value = profile
+                        _isLoggedIn.value = true
+                        return@withContext DomainResult.Success(profile)
+                    } else {
+                        return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
+                    }
+                }
+            }
+        } catch (_: Exception) {
+            // Ağ hatası veya çevrimdışı durumda yerel kontrol
+        }
+
+        // 3. Yerel Kayıtlı Kullanıcı Hesabı Doğrulaması
         val account = _registeredAccounts[input.lowercase()]
         if (account != null) {
             if (account.password == password) {
@@ -115,7 +191,7 @@ class UserRepositoryImpl(
             }
         }
 
-        // 3. Bulunamayan Kullanıcı Hatası
+        // 4. Bulunamayan Kullanıcı Hatası
         DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
     }
 
@@ -126,6 +202,22 @@ class UserRepositoryImpl(
 
     override suspend fun updateProfile(profile: UserProfile): DomainResult<Unit> = withContext(ioDispatcher) {
         _currentUser.value = profile
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/user_profiles?id=eq.${profile.id}"
+            val body = buildJsonObject {
+                put("birth_date_iso", profile.birthDateIso)
+                put("gender", profile.gender.name)
+                put("spirit_hardware", profile.spiritHardware.name)
+            }
+            httpClient.patch(url) {
+                contentType(ContentType.Application.Json)
+                headers {
+                    append("apikey", SupabaseConfig.supabaseAnonKey)
+                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                }
+                setBody(body.toString())
+            }
+        }
         DomainResult.Success(Unit)
     }
 }
