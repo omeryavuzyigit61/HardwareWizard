@@ -55,6 +55,8 @@ class WizardViewModel(
     val effects = effectChannel.receiveAsFlow()
 
     private val _selectedResolution = MutableStateFlow(ResolutionOption.P1440)
+    private val _selectedPreset = MutableStateFlow(com.panda.myapplication.domain.engine.QualityPreset.HIGH)
+    private val _selectedUpscaling = MutableStateFlow(com.panda.myapplication.domain.engine.UpscalingMode.OFF)
     private val _isPickerOpen = MutableStateFlow(false)
     private val _pickerCategory = MutableStateFlow<HardwareCategory?>(null)
     private val _pickerSearchQuery = MutableStateFlow("")
@@ -86,12 +88,15 @@ class WizardViewModel(
     private val buildAnalysisFlow = combine(
         activeBuildRepository.activeBuild,
         _selectedResolution,
-    ) { build, resolution ->
+        _selectedPreset,
+        _selectedUpscaling,
+    ) { build, resolution, preset, upscaling ->
         val cockpit = BuildAnalysisEngine.calculateWattageCockpit(build)
         val platform = BuildAnalysisEngine.calculatePlatformStatus(build)
-        val bottleneck = BuildAnalysisEngine.calculateBottleneck(build)
+        val bottleneck = BuildAnalysisEngine.calculateBottleneckForResolution(build, resolution)
         val clearance = BuildAnalysisEngine.calculateClearanceRadar(build)
-        val gaming = BuildAnalysisEngine.calculateGamingSimulation(build, resolution)
+        val gaming = BuildAnalysisEngine.calculateGamingSimulation(build, resolution, preset, upscaling)
+        val doctor = BuildAnalysisEngine.calculateBuildDoctor(build)
         val (_, compat) = checkBuildCompatibilityUseCase(build)
 
         AnalysisState(
@@ -101,6 +106,7 @@ class WizardViewModel(
             bottleneck = bottleneck,
             clearance = clearance,
             gamingSim = gaming,
+            buildDoctor = doctor,
             compatReport = compat,
             resolution = resolution,
         )
@@ -161,7 +167,10 @@ class WizardViewModel(
             bottleneckAnalysis = analysis.bottleneck,
             clearanceRadar = analysis.clearance,
             selectedResolution = analysis.resolution,
+            selectedPreset = analysis.gamingSim.preset,
+            selectedUpscaling = analysis.gamingSim.upscaling,
             gamingSimulation = analysis.gamingSim,
+            buildDoctor = analysis.buildDoctor,
             compatibilityReport = analysis.compatReport,
             isPickerOpen = isPickerOpen,
             pickerCategory = pickerCategory,
@@ -216,6 +225,14 @@ class WizardViewModel(
         _selectedResolution.value = resolution
     }
 
+    fun onPresetChanged(preset: com.panda.myapplication.domain.engine.QualityPreset) {
+        _selectedPreset.value = preset
+    }
+
+    fun onUpscalingChanged(upscaling: com.panda.myapplication.domain.engine.UpscalingMode) {
+        _selectedUpscaling.value = upscaling
+    }
+
     fun onOpenShareDialog() {
         _isShareDialogOpen.value = true
     }
@@ -239,6 +256,7 @@ class WizardViewModel(
                 bottleneck = uiState.value.bottleneckAnalysis,
                 clearance = uiState.value.clearanceRadar,
                 gamingSim = uiState.value.gamingSimulation,
+                buildDoctor = uiState.value.buildDoctor,
                 compatReport = uiState.value.compatibilityReport,
                 resolution = uiState.value.selectedResolution,
             )
@@ -257,6 +275,10 @@ class WizardViewModel(
             appendLine("═════════════════════════════════")
             appendLine("Platform: ${analysis.platformStatus.platformName}")
             appendLine("Durum: ${if (analysis.compatReport.isCompatible) "✅ %100 Uyumlu" else "⚠️ Uyumsuzluk Bildirimi"}")
+            appendLine("Sağlık Skoru: ${analysis.buildDoctor.healthScore}/100 (${analysis.buildDoctor.statusText})")
+            analysis.buildDoctor.weakestLinkComponent?.let {
+                appendLine("Zayıf Halka: $it")
+            }
             appendLine()
             appendLine("BİLEŞENLER:")
             appendLine("• CPU:       ${b.cpu?.displayName ?: "Seçilmedi"}")
@@ -273,13 +295,22 @@ class WizardViewModel(
             appendLine("• Darboğaz: ${analysis.bottleneck.message}")
             if (analysis.gamingSim.isReady) {
                 appendLine()
-                appendLine("OYUN PERFORMANSI (${analysis.gamingSim.resolution.label}):")
+                appendLine("OYUN PERFORMANSI (${analysis.gamingSim.resolution.label} • ${analysis.gamingSim.preset.label} • ${analysis.gamingSim.upscaling.label}):")
+                appendLine("• Ortalama FPS: ~${analysis.gamingSim.overallAvgFps} FPS (%1 Low: ~${analysis.gamingSim.overallLow1Fps} FPS)")
+                appendLine("• Tahmini VRAM: ${analysis.gamingSim.estimatedVramGb} GB")
                 analysis.gamingSim.games.forEach { g ->
-                    appendLine("• ${g.gameName}: ~${g.fps} FPS (${g.settings})")
+                    appendLine("• ${g.gameName}: ~${g.fps} FPS (%1 Low: ~${g.low1PctFps})")
                 }
                 appendLine("SENTETİK PUANLAR:")
                 analysis.gamingSim.synthetics.forEach { s ->
                     appendLine("• ${s.name}: ${s.score} ${s.unit}")
+                }
+            }
+            if (analysis.buildDoctor.upgradeRecommendations.isNotEmpty()) {
+                appendLine()
+                appendLine("ÖNERİLEN GELİŞTİRMELER:")
+                analysis.buildDoctor.upgradeRecommendations.take(2).forEach { rec ->
+                    appendLine("• ${rec.title}: ${rec.expectedGain} (F/P: ${rec.roiScore}/10)")
                 }
             }
             appendLine()

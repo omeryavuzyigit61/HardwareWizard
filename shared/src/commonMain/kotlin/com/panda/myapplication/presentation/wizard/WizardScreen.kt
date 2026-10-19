@@ -72,11 +72,15 @@ import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
+import com.panda.myapplication.domain.engine.BuildDoctorReport
 import com.panda.myapplication.domain.engine.ClearanceRadarResult
 import com.panda.myapplication.domain.engine.GameFpsEstimate
 import com.panda.myapplication.domain.engine.GamingSimulationResult
 import com.panda.myapplication.domain.engine.PlatformStatusBadge
+import com.panda.myapplication.domain.engine.QualityPreset
 import com.panda.myapplication.domain.engine.ResolutionOption
+import com.panda.myapplication.domain.engine.UpgradeRecommendation
+import com.panda.myapplication.domain.engine.UpscalingMode
 import com.panda.myapplication.domain.engine.WattageCockpitInfo
 import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.CaseSpec
@@ -156,6 +160,8 @@ fun WizardRoute(
         onRemoveSlot = viewModel::onRemoveSlot,
         onClearBuild = viewModel::onClearBuild,
         onResolutionChanged = viewModel::onResolutionChanged,
+        onPresetChanged = viewModel::onPresetChanged,
+        onUpscalingChanged = viewModel::onUpscalingChanged,
         onOpenShareDialog = viewModel::onOpenShareDialog,
         onDismissShareDialog = viewModel::onDismissShareDialog,
         onShareIntentRequested = viewModel::onShareIntentRequested,
@@ -177,6 +183,8 @@ fun WizardContent(
     onRemoveSlot: (HardwareCategory) -> Unit,
     onClearBuild: () -> Unit,
     onResolutionChanged: (ResolutionOption) -> Unit,
+    onPresetChanged: (QualityPreset) -> Unit,
+    onUpscalingChanged: (UpscalingMode) -> Unit,
     onOpenShareDialog: () -> Unit,
     onDismissShareDialog: () -> Unit,
     onShareIntentRequested: () -> Unit,
@@ -221,6 +229,13 @@ fun WizardContent(
                 )
             }
 
+            // AI Build Doctor Diagnostic Card
+            item {
+                BuildDoctorSection(
+                    report = uiState.buildDoctor,
+                )
+            }
+
             // Module 3: Physical Size & Case Clearance Radar
             item {
                 ClearanceRadarSection(
@@ -229,12 +244,16 @@ fun WizardContent(
                 )
             }
 
-            // Module 4: Simulated Gaming & Synthetic FPS Panel
+            // Module 4: Interactive Gaming Performance Lab & Synthetic Simulation
             item {
                 GamingSimulationSection(
                     simulation = uiState.gamingSimulation,
                     selectedResolution = uiState.selectedResolution,
+                    selectedPreset = uiState.selectedPreset,
+                    selectedUpscaling = uiState.selectedUpscaling,
                     onResolutionChanged = onResolutionChanged,
+                    onPresetChanged = onPresetChanged,
+                    onUpscalingChanged = onUpscalingChanged,
                 )
             }
 
@@ -731,13 +750,330 @@ private fun ClearanceMetricRow(
 
 // endregion
 
+// region Module: AI Build Doctor Section
+
+@Composable
+private fun BuildDoctorSection(
+    report: BuildDoctorReport,
+) {
+    var isExpanded by remember { mutableStateOf(true) }
+
+    val healthScoreColor = when {
+        report.healthScore >= 85 -> NeonEmerald
+        report.healthScore >= 60 -> NeonAmber
+        else -> NeonRose
+    }
+
+    FluidOrganicCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = Spacing.medium),
+        accentColor = healthScoreColor,
+        secondaryColor = NeonCyan,
+        contentPadding = Spacing.medium,
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
+            // Header Row
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(text = "🩺", style = MaterialTheme.typography.titleMedium)
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Text(
+                        text = "AI SİSTEM DOKTORU & SAĞLIK RAPORU",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = healthScoreColor,
+                    )
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = healthScoreColor.copy(alpha = 0.15f),
+                    border = BorderStroke(1.dp, healthScoreColor.copy(alpha = 0.5f)),
+                ) {
+                    Text(
+                        text = "${report.healthScore} / 100",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Black,
+                        color = healthScoreColor,
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                    )
+                }
+            }
+
+            // Health status description & Progress bar
+            LinearProgressIndicator(
+                progress = { (report.healthScore / 100f).coerceIn(0f, 1f) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(6.dp)
+                    .clip(RoundedCornerShape(3.dp)),
+                color = healthScoreColor,
+                trackColor = CardSurfaceElevated,
+            )
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = report.statusText,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Text(
+                    text = "Teşhis",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+
+            // Weakest Link Indicator Pill
+            report.weakestLinkComponent?.let { weakest ->
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = CardSurfaceElevated,
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(text = "⚠️", fontSize = 14.sp)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Column {
+                            Text(
+                                text = "ZAYIF HALKA (EN BÜYÜK LİMİTLEYİCİ)",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontSize = 9.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonAmber,
+                            )
+                            Text(
+                                text = weakest,
+                                style = MaterialTheme.typography.bodySmall,
+                                fontWeight = FontWeight.Medium,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+                }
+            }
+
+            // Resolution Bottleneck Matrix mini row
+            if (report.resolutionBottlenecks.isNotEmpty()) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    ResolutionOption.entries.forEach { res ->
+                        val b = report.resolutionBottlenecks[res]
+                        val badgeColor = when (b?.type) {
+                            BottleneckType.BALANCED -> NeonEmerald
+                            BottleneckType.CPU_BOTTLENECK -> NeonRose
+                            BottleneckType.GPU_BOTTLENECK -> NeonCyan
+                            null -> MaterialTheme.colorScheme.onSurfaceVariant
+                        }
+                        Surface(
+                            shape = RoundedCornerShape(6.dp),
+                            color = CardSurfaceElevated,
+                            border = BorderStroke(1.dp, badgeColor.copy(alpha = 0.4f)),
+                            modifier = Modifier.weight(1f),
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(vertical = 6.dp, horizontal = 4.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                                Text(
+                                    text = res.label,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    color = badgeColor,
+                                )
+                                Text(
+                                    text = if (b != null) "%${b.percentage} ${when(b.type){ BottleneckType.BALANCED -> "Denge"; BottleneckType.CPU_BOTTLENECK -> "CPU"; BottleneckType.GPU_BOTTLENECK -> "GPU" }}" else "-",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 9.sp,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Doctor diagnosis box
+            Surface(
+                shape = RoundedCornerShape(8.dp),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(
+                    text = report.doctorDiagnosis,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(10.dp),
+                )
+            }
+
+            // Actionable Upgrade Recommendations
+            if (report.upgradeRecommendations.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(2.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { isExpanded = !isExpanded },
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = "ÖNERİLEN GELİŞTİRMELER (${report.upgradeRecommendations.size})",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = NeonCyan,
+                    )
+                    Text(
+                        text = if (isExpanded) "▲ Gizle" else "▼ Göster",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = NeonCyan,
+                    )
+                }
+
+                if (isExpanded) {
+                    Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
+                        report.upgradeRecommendations.forEach { rec ->
+                            UpgradeRecommendationCard(rec = rec)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun UpgradeRecommendationCard(
+    rec: UpgradeRecommendation,
+) {
+    Surface(
+        shape = RoundedCornerShape(10.dp),
+        color = CardSurfaceElevated,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(modifier = Modifier.padding(Spacing.small)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Surface(
+                        shape = CircleShape,
+                        color = NeonCyan.copy(alpha = 0.2f),
+                        modifier = Modifier.size(20.dp),
+                    ) {
+                        Box(contentAlignment = Alignment.Center) {
+                            Text(
+                                text = "${rec.priority}",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonCyan,
+                            )
+                        }
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = rec.title,
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(6.dp),
+                    color = NeonEmerald.copy(alpha = 0.15f),
+                    border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.4f)),
+                ) {
+                    Text(
+                        text = "F/P: ${rec.roiScore}/10",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = NeonEmerald,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = rec.explanation,
+                style = MaterialTheme.typography.bodySmall,
+                fontSize = 11.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+
+            Spacer(modifier = Modifier.height(4.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(4.dp),
+                    color = NeonPurple.copy(alpha = 0.15f),
+                ) {
+                    Text(
+                        text = "Beklenen Kazanç: ${rec.expectedGain}",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = NeonPurple,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                    )
+                }
+            }
+
+            if (rec.suggestedModels.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "Tavsiye: ${rec.suggestedModels.joinToString(", ")}",
+                    style = MaterialTheme.typography.labelSmall,
+                    fontSize = 10.sp,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
+                )
+            }
+        }
+    }
+}
+
+// endregion
+
 // region Module 4: Simulated Gaming & Synthetic FPS Panel
 
 @Composable
 private fun GamingSimulationSection(
     simulation: GamingSimulationResult,
     selectedResolution: ResolutionOption,
+    selectedPreset: QualityPreset,
+    selectedUpscaling: UpscalingMode,
     onResolutionChanged: (ResolutionOption) -> Unit,
+    onPresetChanged: (QualityPreset) -> Unit,
+    onUpscalingChanged: (UpscalingMode) -> Unit,
 ) {
     FluidOrganicCard(
         modifier = Modifier
@@ -773,7 +1109,15 @@ private fun GamingSimulationSection(
 
             Spacer(modifier = Modifier.height(Spacing.small))
 
-            // Resolution Selector
+            // 1. Resolution Selector
+            Text(
+                text = "ÇÖZÜNÜRLÜK",
+                style = MaterialTheme.typography.labelSmall,
+                fontSize = 9.sp,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(Spacing.small),
@@ -789,7 +1133,7 @@ private fun GamingSimulationSection(
                         border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
                     ) {
                         Column(
-                            modifier = Modifier.padding(vertical = 8.dp),
+                            modifier = Modifier.padding(vertical = 6.dp),
                             horizontalAlignment = Alignment.CenterHorizontally,
                         ) {
                             Text(
@@ -803,6 +1147,88 @@ private fun GamingSimulationSection(
                                 style = MaterialTheme.typography.labelSmall,
                                 fontSize = 9.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            // 2. Graphics Preset Selector
+            Text(
+                text = "GRAFİK KALİTESİ",
+                style = MaterialTheme.typography.labelSmall,
+                fontSize = 9.sp,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                QualityPreset.entries.forEach { preset ->
+                    val isSelected = preset == selectedPreset
+                    Surface(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clickable { onPresetChanged(preset) },
+                        shape = RoundedCornerShape(8.dp),
+                        color = if (isSelected) NeonPurple.copy(alpha = 0.2f) else CardSurfaceElevated,
+                        border = BorderStroke(1.dp, if (isSelected) NeonPurple else MaterialTheme.colorScheme.outline),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(vertical = 6.dp, horizontal = 2.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text(
+                                text = preset.label,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (isSelected) FontWeight.Black else FontWeight.Normal,
+                                color = if (isSelected) NeonPurple else MaterialTheme.colorScheme.onSurface,
+                                maxLines = 1,
+                            )
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(Spacing.small))
+
+            // 3. Upscaling & Frame Gen Selector
+            Text(
+                text = "ÖLÇEKLENDİRME / FRAME GEN",
+                style = MaterialTheme.typography.labelSmall,
+                fontSize = 9.sp,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                UpscalingMode.entries.forEach { mode ->
+                    val isSelected = mode == selectedUpscaling
+                    Surface(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clickable { onUpscalingChanged(mode) },
+                        shape = RoundedCornerShape(8.dp),
+                        color = if (isSelected) NeonEmerald.copy(alpha = 0.2f) else CardSurfaceElevated,
+                        border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outline),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(vertical = 6.dp, horizontal = 2.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text(
+                                text = mode.label.split(" ").first(),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (isSelected) FontWeight.Black else FontWeight.Normal,
+                                color = if (isSelected) NeonEmerald else MaterialTheme.colorScheme.onSurface,
+                                maxLines = 1,
                             )
                         }
                     }
@@ -826,6 +1252,91 @@ private fun GamingSimulationSection(
                     )
                 }
             } else {
+                // Real-time aggregate telemetry HUD banner
+                Surface(
+                    shape = RoundedCornerShape(10.dp),
+                    color = CardSurfaceElevated,
+                    border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Column(modifier = Modifier.padding(Spacing.small)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column {
+                                Text(
+                                    text = "ORTALAMA OYUN PERFORMANSI",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 9.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                                Row(verticalAlignment = Alignment.Bottom) {
+                                    Text(
+                                        text = "${simulation.overallAvgFps}",
+                                        style = MaterialTheme.typography.headlineMedium,
+                                        fontWeight = FontWeight.Black,
+                                        color = NeonCyan,
+                                    )
+                                    Text(
+                                        text = " FPS",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = NeonCyan,
+                                        modifier = Modifier.padding(bottom = 3.dp),
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = "(%1 Low: ${simulation.overallLow1Fps} FPS)",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        fontSize = 11.sp,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.padding(bottom = 3.dp),
+                                    )
+                                }
+                            }
+
+                            Surface(
+                                shape = RoundedCornerShape(6.dp),
+                                color = if (simulation.vramWarning) NeonRose.copy(alpha = 0.15f) else NeonEmerald.copy(alpha = 0.15f),
+                                border = BorderStroke(1.dp, if (simulation.vramWarning) NeonRose else NeonEmerald),
+                            ) {
+                                Text(
+                                    text = "VRAM: ${simulation.estimatedVramGb} GB",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (simulation.vramWarning) NeonRose else NeonEmerald,
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 3.dp),
+                                )
+                            }
+                        }
+
+                        if (simulation.vramWarning) {
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = "⚠️ Uyarı: Tahmini VRAM tüketimi (${simulation.estimatedVramGb}GB), ekran kartınızın belleğini aşıyor. Takılmalar oluşabilir.",
+                                style = MaterialTheme.typography.bodySmall,
+                                fontSize = 10.sp,
+                                color = NeonRose,
+                            )
+                        }
+
+                        if (simulation.smoothnessRating.isNotBlank()) {
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = simulation.smoothnessRating,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.SemiBold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(Spacing.medium))
+
                 // Game FPS Cards
                 Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                     simulation.games.forEach { game ->

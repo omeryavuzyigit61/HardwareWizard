@@ -3,10 +3,13 @@ package com.panda.myapplication.presentation.wizard
 import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
+import com.panda.myapplication.domain.engine.BuildDoctorReport
 import com.panda.myapplication.domain.engine.ClearanceRadarResult
 import com.panda.myapplication.domain.engine.GamingSimulationResult
 import com.panda.myapplication.domain.engine.PlatformStatusBadge
+import com.panda.myapplication.domain.engine.QualityPreset
 import com.panda.myapplication.domain.engine.ResolutionOption
+import com.panda.myapplication.domain.engine.UpscalingMode
 import com.panda.myapplication.domain.engine.WattageCockpitInfo
 import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.BuildCompatibilityReport
@@ -41,11 +44,24 @@ data class WizardUiState(
         issueMessage = null,
     ),
     val selectedResolution: ResolutionOption = ResolutionOption.P1440,
+    val selectedPreset: QualityPreset = QualityPreset.HIGH,
+    val selectedUpscaling: UpscalingMode = UpscalingMode.OFF,
     val gamingSimulation: GamingSimulationResult = GamingSimulationResult(
         resolution = ResolutionOption.P1440,
+        preset = QualityPreset.HIGH,
+        upscaling = UpscalingMode.OFF,
         isReady = false,
         games = emptyList(),
         synthetics = emptyList(),
+    ),
+    val buildDoctor: BuildDoctorReport = BuildDoctorReport(
+        healthScore = 0,
+        statusText = "Sistem Boş",
+        weakestLinkComponent = null,
+        weakestLinkCategory = null,
+        resolutionBottlenecks = emptyMap(),
+        upgradeRecommendations = emptyList(),
+        doctorDiagnosis = "Sistem analizi için parça ekleyin.",
     ),
     val compatibilityReport: BuildCompatibilityReport = BuildCompatibilityReport(isCompatible = true),
 
