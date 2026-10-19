@@ -63,6 +63,13 @@ val dataModule = module {
     single<com.panda.myapplication.domain.repository.VsArenaRepository> {
         com.panda.myapplication.data.repository.VsArenaRepositoryImpl()
     }
+    single<com.panda.myapplication.domain.repository.CommunityPriceRepository> {
+        com.panda.myapplication.data.repository.CommunityPriceRepositoryImpl(
+            httpClient = get(),
+            json = get(),
+            ioDispatcher = get(),
+        )
+    }
 
     factory { GetHardwareListUseCase(repository = get()) }
     factory { GetHardwareDetailUseCase(repository = get()) }

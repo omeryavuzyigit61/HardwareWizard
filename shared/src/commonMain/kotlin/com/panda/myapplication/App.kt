@@ -87,6 +87,7 @@ import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
 import com.panda.myapplication.presentation.theme.NeonAmber
+import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import com.panda.myapplication.presentation.theme.TextSecondary
@@ -95,6 +96,8 @@ import com.panda.myapplication.presentation.tools.DeskSetupLabScreen
 import com.panda.myapplication.presentation.tools.HardwareGlossaryScreen
 import com.panda.myapplication.presentation.tools.RamLatencyLabScreen
 import com.panda.myapplication.presentation.tools.UpsCalculatorScreen
+import com.panda.myapplication.presentation.tools.UndervoltGuideScreen
+import com.panda.myapplication.presentation.tools.AdminModerationScreen
 import com.panda.myapplication.presentation.vs_arena.VsArenaRoute
 import com.panda.myapplication.presentation.wizard.WizardRoute
 import kotlinx.coroutines.launch
@@ -111,6 +114,8 @@ object Destinations {
     const val UPS_CALCULATOR = "ups_calculator"
     const val DESK_SETUP_LAB = "desk_setup_lab"
     const val HARDWARE_GLOSSARY = "hardware_glossary"
+    const val UNDERVOLT_GUIDE = "undervolt_guide"
+    const val ADMIN_MODERATION = "admin_moderation"
 }
 
 private sealed class BottomNavTab(
@@ -324,6 +329,20 @@ fun App() {
                             )
                         }
 
+                        composable(route = Destinations.UNDERVOLT_GUIDE) {
+                            UndervoltGuideScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                            )
+                        }
+
+                        composable(route = Destinations.ADMIN_MODERATION) {
+                            AdminModerationScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                            )
+                        }
+
                         composable(
                             route = "${Destinations.HARDWARE_DETAIL}/{itemId}",
                             arguments = listOf(
@@ -395,6 +414,22 @@ private fun HardwareEngineeringDrawerContent(
                 subtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED, Planar Manyetik sözlüğü",
                 badge = "KNOWLEDGE",
                 accentColor = NeonEmerald,
+            ),
+            EngineeringToolDrawerItem(
+                route = Destinations.UNDERVOLT_GUIDE,
+                icon = "⚡",
+                title = "Undervolt & Optimizasyon Rehberi",
+                subtitle = "Intel 13/14. Nesil Vmin, AMD PBO2 Curve Optimizer, GPU Frekans Eğrisi & RAM Bit-Rot",
+                badge = "TUNING LAB",
+                accentColor = NeonCyan,
+            ),
+            EngineeringToolDrawerItem(
+                route = Destinations.ADMIN_MODERATION,
+                icon = "🛡️",
+                title = "Yönetici Moderasyon Paneli",
+                subtitle = "Topluluk fiyat bildirimlerini incele, doğrula veya reddet (Admin PIN korumalı)",
+                badge = "ADMIN CONSOLE",
+                accentColor = NeonAmber,
             ),
         )
     }

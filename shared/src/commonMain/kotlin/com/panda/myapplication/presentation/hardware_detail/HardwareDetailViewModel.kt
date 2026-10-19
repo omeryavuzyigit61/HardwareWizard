@@ -4,8 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.model.CommunityDeal
+import com.panda.myapplication.domain.model.CommunityDealType
+import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
+import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareDetailUseCase
 import kotlinx.coroutines.channels.Channel
@@ -25,6 +29,7 @@ class HardwareDetailViewModel(
     private val getHardwareDetailUseCase: GetHardwareDetailUseCase,
     private val activeBuildRepository: ActiveBuildRepository,
     private val vsArenaRepository: VsArenaRepository,
+    private val communityPriceRepository: CommunityPriceRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HardwareDetailUiState())
@@ -32,6 +37,14 @@ class HardwareDetailViewModel(
 
     private val effectChannel = Channel<HardwareDetailEffect>(Channel.BUFFERED)
     val effects = effectChannel.receiveAsFlow()
+
+    init {
+        viewModelScope.launch {
+            communityPriceRepository.isAdminLoggedIn.collect { isAdmin ->
+                _uiState.update { it.copy(isAdmin = isAdmin) }
+            }
+        }
+    }
 
     fun loadItem(id: String) {
         if (id.isBlank()) {
@@ -71,6 +84,13 @@ class HardwareDetailViewModel(
                 }
             }
         }
+
+        // Topluluk Fırsat Akışını (Deals) Dinle
+        viewModelScope.launch {
+            communityPriceRepository.observeDealsForHardware(id).collect { deals ->
+                _uiState.update { it.copy(communityDeals = deals) }
+            }
+        }
     }
 
     fun onAddToBuild() {
@@ -99,7 +119,7 @@ class HardwareDetailViewModel(
         val item = _uiState.value.item ?: return
         viewModelScope.launch {
             getHardwareDetailUseCase.setCustomPrice(item.id, customPriceTry, note)
-            effectChannel.send(HardwareDetailEffect.ShowToast("🏷️ Özel fiyat kaydedildi."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("🏷️ Özel yerel fiyat kaydedildi."))
         }
     }
 
@@ -110,4 +130,58 @@ class HardwareDetailViewModel(
             effectChannel.send(HardwareDetailEffect.ShowToast("Özel fiyat kaldırıldı."))
         }
     }
+
+    // Topluluk Fiyat Bildirimi (Supabase & Binance Ticker)
+    fun onSubmitCommunityDeal(
+        priceTry: Double,
+        dealType: CommunityDealType,
+        note: String?,
+        proofUrl: String?,
+        userDisplayName: String,
+    ) {
+        val item = _uiState.value.item ?: return
+        val dealId = "deal-${item.id.value}-${kotlin.random.Random.nextInt(10000, 99999)}"
+        val now = 1713300000000L + kotlin.random.Random.nextLong(1000, 50000)
+
+        val deal = CommunityDeal(
+            id = dealId,
+            hardwareId = item.id.value,
+            hardwareName = item.displayName,
+            priceTry = priceTry,
+            dealType = dealType,
+            note = note?.takeIf { it.isNotBlank() },
+            proofUrl = proofUrl?.takeIf { it.isNotBlank() },
+            userDisplayName = userDisplayName.ifBlank { "Topluluk Üyesi" },
+            createdAtEpochMs = now,
+            status = DealStatus.PENDING,
+        )
+
+        viewModelScope.launch {
+            communityPriceRepository.submitDeal(deal)
+            effectChannel.send(
+                HardwareDetailEffect.ShowToast("🚀 Fiyat bildiriminiz gönderildi! Yönetici onayından sonra yayınlanacaktır.")
+            )
+        }
+    }
+
+    // Yönetici Hızlı Onaylama
+    fun onApproveCommunityDeal(dealId: String) {
+        viewModelScope.launch {
+            communityPriceRepository.approveDeal(dealId)
+            effectChannel.send(HardwareDetailEffect.ShowToast("✅ Fiyat bildirimi onaylandı ve deftere eklendi."))
+        }
+    }
+
+    // Yönetici Reddetme
+    fun onRejectCommunityDeal(dealId: String, reason: String? = null) {
+        viewModelScope.launch {
+            communityPriceRepository.rejectDeal(dealId, reason)
+            effectChannel.send(HardwareDetailEffect.ShowToast("❌ Fiyat bildirimi reddedildi."))
+        }
+    }
+
+    // Admin Giriş/Çıkış
+    fun loginAdmin(pin: String): Boolean = communityPriceRepository.loginAdmin(pin)
+
+    fun logoutAdmin() = communityPriceRepository.logoutAdmin()
 }

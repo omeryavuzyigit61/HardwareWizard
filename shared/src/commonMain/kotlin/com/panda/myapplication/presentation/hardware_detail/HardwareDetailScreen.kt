@@ -1,5 +1,7 @@
 package com.panda.myapplication.presentation.hardware_detail
 
+import com.panda.myapplication.domain.model.CommunityDeal
+import com.panda.myapplication.domain.model.CommunityDealType
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -153,6 +155,11 @@ fun HardwareDetailRoute(
         onAddToVsArenaClick = viewModel::onAddToVsArena,
         onSaveCustomPrice = viewModel::onSaveCustomPrice,
         onClearCustomPrice = viewModel::onClearCustomPrice,
+        onSubmitCommunityDeal = viewModel::onSubmitCommunityDeal,
+        onApproveCommunityDeal = viewModel::onApproveCommunityDeal,
+        onRejectCommunityDeal = viewModel::onRejectCommunityDeal,
+        onLoginAdmin = viewModel::loginAdmin,
+        onLogoutAdmin = viewModel::logoutAdmin,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -166,10 +173,18 @@ fun HardwareDetailContent(
     onAddToVsArenaClick: () -> Unit = {},
     onSaveCustomPrice: (Double, String?) -> Unit = { _, _ -> },
     onClearCustomPrice: () -> Unit = {},
+    onSubmitCommunityDeal: (Double, CommunityDealType, String?, String?, String) -> Unit = { _, _, _, _, _ -> },
+    onApproveCommunityDeal: (String) -> Unit = {},
+    onRejectCommunityDeal: (String, String?) -> Unit = { _, _ -> },
+    onLoginAdmin: (String) -> Boolean = { false },
+    onLogoutAdmin: () -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     modifier: Modifier = Modifier,
 ) {
     var showPriceDialog by remember { mutableStateOf(false) }
+    var showCommunitySubmitSheet by remember { mutableStateOf(false) }
+    var selectedDealForDetail by remember { mutableStateOf<CommunityDeal?>(null) }
+    var showAdminLoginDialog by remember { mutableStateOf(false) }
 
     Scaffold(
         modifier = modifier
@@ -316,6 +331,20 @@ fun HardwareDetailContent(
                             )
                         }
 
+                        // Binance-Style Community Price Ledger & Deal Feed ("⚡ CANLI TOPLULUK FİYAT DEFTERİ")
+                        item(key = "community_deals_ledger") {
+                            CommunityPriceLedgerSection(
+                                deals = uiState.communityDeals,
+                                isAdmin = uiState.isAdmin,
+                                onDealClick = { deal -> selectedDealForDetail = deal },
+                                onSubmitClick = { showCommunitySubmitSheet = true },
+                                onApproveDeal = onApproveCommunityDeal,
+                                onRejectDeal = { dealId -> onRejectCommunityDeal(dealId, null) },
+                                onAdminLoginClick = { showAdminLoginDialog = true },
+                                onAdminLogoutClick = onLogoutAdmin,
+                            )
+                        }
+
                         // Synthetic Multi-Benchmark Card - STRICTLY CpuSpec & GpuSpec
                         if ((item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU) && item.benchmarkInfo != null) {
                             item(key = "synthetic_benchmark") {
@@ -359,6 +388,40 @@ fun HardwareDetailContent(
                 onClearCustomPrice()
                 showPriceDialog = false
             },
+        )
+    }
+
+    if (showCommunitySubmitSheet && uiState.item != null) {
+        SubmitCommunityDealSheet(
+            hardwareName = uiState.item.displayName,
+            onDismiss = { showCommunitySubmitSheet = false },
+            onSubmit = { price, type, note, proof, name ->
+                onSubmitCommunityDeal(price, type, note, proof, name)
+            },
+        )
+    }
+
+    if (selectedDealForDetail != null) {
+        val currentDeal = selectedDealForDetail!!
+        CommunityDealDetailDialog(
+            deal = currentDeal,
+            isAdmin = uiState.isAdmin,
+            onDismiss = { selectedDealForDetail = null },
+            onApprove = {
+                onApproveCommunityDeal(currentDeal.id)
+                selectedDealForDetail = null
+            },
+            onReject = {
+                onRejectCommunityDeal(currentDeal.id, null)
+                selectedDealForDetail = null
+            },
+        )
+    }
+
+    if (showAdminLoginDialog) {
+        AdminLoginPinDialog(
+            onDismiss = { showAdminLoginDialog = false },
+            onLogin = onLoginAdmin,
         )
     }
 }
