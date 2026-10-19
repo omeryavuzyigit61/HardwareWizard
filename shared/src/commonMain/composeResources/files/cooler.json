@@ -3421,5 +3421,22 @@
       "https://www.idcooling.com/files/product/image/20191024104928_4058.jpg",
       "https://www.idcooling.com/files/product/image/20191024104928_4059.jpg"
     ]
+  },
+  {
+    "name": "Lian Li HydroShift LCD 360RGB",
+    "price": null,
+    "type": "360mm Gizli Hortum Tasarımlı LCD AIO",
+    "radiator_size": 360,
+    "color": "Black",
+    "fan_rpm": "2500 RPM",
+    "noise_level": "29.8 dBA",
+    "imageUrl": "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/cooler_infinity_mirror_pump_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cooler/cooler_radiator_fins_side_reference.webp"
+    ],
+    "model": "HydroShift LCD 360RGB",
+    "brand": "LIAN LI"
   }
 ]

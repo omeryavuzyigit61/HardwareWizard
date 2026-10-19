@@ -5642,5 +5642,83 @@
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
     ]
+  },
+  {
+    "name": "Seasonic Vertex GX-1000 ATX 3.0",
+    "price": 10499.0,
+    "wattage": 1000,
+    "type": "ATX 3.0 / PCIe 5.0 Full Modüler",
+    "efficiency": "80+ Gold",
+    "color": "Black",
+    "modular": "Full Modular",
+    "pcie_connectors": 5,
+    "sata_connectors": 16,
+    "eps_connectors": "2x 8-Pin EPS12V",
+    "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W)",
+    "fan_size": "135mm Akışkan Yataklı (FDB)",
+    "fan_bearing": "Fluid Dynamic Bearing",
+    "cybenetics_efficiency": "Platinum",
+    "cybenetics_noise": "A- (Sessiz Çalışma)",
+    "warranty_years": 10,
+    "imageUrl": "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ],
+    "model": "Vertex GX-1000",
+    "brand": "SEASONIC"
+  },
+  {
+    "name": "Corsair RM1000x SHIFT ATX 3.0",
+    "price": 9499.0,
+    "wattage": 1000,
+    "type": "Yan Panel Modüler ATX 3.0",
+    "efficiency": "80+ Gold",
+    "color": "Black",
+    "modular": "Full Modular (Side Interface)",
+    "pcie_connectors": 4,
+    "sata_connectors": 12,
+    "eps_connectors": "2x 8-Pin EPS12V",
+    "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W)",
+    "fan_size": "140mm FDB",
+    "fan_bearing": "Fluid Dynamic Bearing (Sıfır RPM)",
+    "cybenetics_efficiency": "Gold",
+    "cybenetics_noise": "A",
+    "warranty_years": 10,
+    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h67/h9a/9546700685342/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.png",
+    "images": [
+      "https://www.corsair.com/medias/sys_master/images/images/h67/h9a/9546700685342/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ],
+    "model": "RM1000x SHIFT",
+    "brand": "CORSAIR"
+  },
+  {
+    "name": "be quiet! Dark Power Pro 13 1300W",
+    "price": null,
+    "wattage": 1300,
+    "type": "Titanyum ATX 3.0 Full Modüler",
+    "efficiency": "80+ Titanium",
+    "color": "Black Anodized",
+    "modular": "Full Modular",
+    "pcie_connectors": 6,
+    "sata_connectors": 16,
+    "eps_connectors": "2x 8-Pin EPS12V",
+    "pcie_12vhpwr": "2x 16-Pin 12VHPWR (600W)",
+    "fan_size": "135mm Çerçevesiz Silent Wings",
+    "fan_bearing": "FDB",
+    "cybenetics_efficiency": "Titanium",
+    "cybenetics_noise": "A (Fısıltı Sessizliğinde)",
+    "warranty_years": 10,
+    "imageUrl": "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ],
+    "model": "Dark Power Pro 13 1300W",
+    "brand": "BE QUIET!"
   }
 ]

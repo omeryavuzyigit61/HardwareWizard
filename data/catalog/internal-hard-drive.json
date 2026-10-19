@@ -2322,5 +2322,93 @@
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
     ]
+  },
+  {
+    "name": "Crucial T705 NVMe PCIe 5.0 2TB",
+    "price": null,
+    "capacity": "2000 GB",
+    "type": "M.2-2280 NVMe SSD",
+    "cache": "4096 MB LPDDR4",
+    "interface": "PCIe 5.0 x4",
+    "read_speed": 14500,
+    "write_speed": 12700,
+    "tbw": 1200,
+    "nand_type": "Micron 232-Layer 3D TLC",
+    "controller": "Phison PS5026-E26",
+    "form_factor": "M.2 2280 (Çift Taraflı)",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ],
+    "model": "T705 2TB",
+    "brand": "CRUCIAL"
+  },
+  {
+    "name": "SK Hynix Platinum P41 NVMe 2TB",
+    "price": null,
+    "capacity": "2000 GB",
+    "type": "M.2-2280 NVMe SSD",
+    "cache": "2048 MB LPDDR4",
+    "interface": "PCIe 4.0 x4",
+    "read_speed": 7000,
+    "write_speed": 6500,
+    "tbw": 1200,
+    "nand_type": "SK hynix 176-Layer 3D TLC",
+    "controller": "SK hynix Aries",
+    "form_factor": "M.2 2280",
+    "imageUrl": "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ],
+    "model": "Platinum P41 2TB",
+    "brand": "SK HYNIX"
+  },
+  {
+    "name": "Samsung 990 PRO with Heatsink 4TB",
+    "price": 16999.0,
+    "capacity": "4000 GB",
+    "type": "M.2-2280 NVMe SSD",
+    "cache": "4096 MB LPDDR4",
+    "interface": "PCIe 4.0 x4",
+    "read_speed": 7450,
+    "write_speed": 6900,
+    "tbw": 2400,
+    "nand_type": "Samsung V-NAND 3-bit MLC (TLC)",
+    "controller": "Samsung Pascal",
+    "form_factor": "M.2 2280 Dahili Soğutuculu",
+    "imageUrl": "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ],
+    "model": "990 PRO Heatsink 4TB",
+    "brand": "SAMSUNG"
+  },
+  {
+    "name": "Sabrent Rocket 5 PCIe 5.0 2TB",
+    "price": null,
+    "capacity": "2000 GB",
+    "type": "M.2-2280 NVMe SSD",
+    "cache": "4096 MB LPDDR4",
+    "interface": "PCIe 5.0 x4",
+    "read_speed": 14000,
+    "write_speed": 12000,
+    "tbw": 1400,
+    "nand_type": "Micron 232-Layer B58R TLC",
+    "controller": "Phison PS5026-E26 Max",
+    "form_factor": "M.2 2280",
+    "imageUrl": "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ],
+    "model": "Rocket 5 2TB",
+    "brand": "SABRENT"
   }
 ]
