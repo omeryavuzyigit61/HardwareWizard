@@ -142,9 +142,9 @@ object SecurityUtils {
 
     /**
      * Validates and sanitizes a product image URL.
-     * - Upgrades `http://` to `https://` if from a trusted CDN, rejects all other schemes
-     * - Rejects SVG, data URIs, and known placeholder/logo filenames
-     * - Host must match [ALLOWED_IMAGE_DOMAINS]
+     * - Upgrades `http://` to `https://`
+     * - Rejects dangerous schemes, SVG, data URIs, and known placeholder filenames
+     * - Blocks loopback/private IPs (SSRF prevention) and non-FQDN hosts
      */
     fun sanitizeImageUrl(rawUrl: String?): String? {
         if (rawUrl.isNullOrBlank()) return null
@@ -154,7 +154,7 @@ object SecurityUtils {
 
         val lower = trimmed.lowercase()
         if (FORBIDDEN_SCHEMES.any { lower.startsWith(it) }) return null
-        if (lower.contains(".svg") || lower.contains("svg%20")) return null
+        if (lower.contains(".svg") || lower.contains("svg%20") || lower.contains("<svg")) return null
         if (lower.contains("placeholder") || lower.contains("blank.gif") || lower.contains("no-image") || lower.contains("no_image")) return null
         if (lower.contains("roundnew") || lower.contains("logo_2020")) return null
 
@@ -165,7 +165,10 @@ object SecurityUtils {
         }
 
         val host = extractHost(normalizedHttps) ?: return null
-        if (!isDomainAllowed(host, ALLOWED_IMAGE_DOMAINS)) return null
+        if (!host.contains('.')) return null
+        if (host == "localhost" || host.startsWith("127.") || host.startsWith("10.") || host.startsWith("192.168.") || host.startsWith("169.254.") || host.endsWith(".local") || host.endsWith(".internal")) {
+            return null
+        }
 
         return normalizedHttps
     }

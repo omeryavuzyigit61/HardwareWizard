@@ -115,8 +115,7 @@ def enrich_laptops():
         imgs = lp.get("images") or []
         if not imgs and main_img:
             imgs = [main_img]
-        # Remove any synthetic _2.jpg or _angle.png
-        clean_imgs = [i for i in imgs if i and not ("_2.jpg" in i or "_angle.png" in i or "_ports.png" in i or "_3.jpg" in i)]
+        clean_imgs = [i for i in imgs if i]
         if not clean_imgs and main_img:
             clean_imgs = [main_img]
         lp["images"] = clean_imgs

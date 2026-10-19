@@ -1492,8 +1492,18 @@ def main():
             all_prebuilts[p["id"]] = p
 
     all_laptops = {}
-    for lp in CURATED_LAPTOPS:
-        all_laptops[lp["id"]] = lp
+    existing_lp_path = os.path.join(CATALOG_DIR, "laptop.json")
+    if os.path.exists(existing_lp_path):
+        try:
+            with open(existing_lp_path, "r", encoding="utf-8") as f:
+                loaded = json.load(f)
+                for lp in loaded:
+                    all_laptops[lp["id"]] = lp
+        except Exception:
+            pass
+    if not all_laptops:
+        for lp in CURATED_LAPTOPS:
+            all_laptops[lp["id"]] = lp
     for lp in scraped_laptops:
         existing_key = None
         for k, v in all_laptops.items():
@@ -1502,6 +1512,11 @@ def main():
                 break
         if not existing_key:
             all_laptops[lp["id"]] = lp
+        else:
+            # Preserve existing multi-angle images
+            if all_laptops[existing_key].get("images"):
+                lp["images"] = all_laptops[existing_key]["images"]
+            all_laptops[existing_key].update(lp)
 
     print(f"\n[+] Toplam Birleştirilmiş Veri: {len(all_prebuilts)} Hazır Sistem, {len(all_laptops)} Gaming Laptop.")
 
