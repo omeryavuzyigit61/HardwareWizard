@@ -89,6 +89,7 @@ import com.panda.myapplication.presentation.theme.HardwareWizardTheme
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
+import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import com.panda.myapplication.presentation.theme.TextSecondary
 import com.panda.myapplication.presentation.tools.CoolingLabScreen
@@ -97,6 +98,16 @@ import com.panda.myapplication.presentation.tools.HardwareGlossaryScreen
 import com.panda.myapplication.presentation.tools.RamLatencyLabScreen
 import com.panda.myapplication.presentation.tools.UpsCalculatorScreen
 import com.panda.myapplication.presentation.tools.UndervoltGuideScreen
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import com.panda.myapplication.domain.model.UserProfile
+import com.panda.myapplication.domain.repository.UserRepository
+import com.panda.myapplication.presentation.profile.AuthSheet
+import com.panda.myapplication.presentation.profile.UserProfileScreen
+import com.panda.myapplication.presentation.tools.SecondHandValuationScreen
 import com.panda.myapplication.presentation.tools.AdminModerationScreen
 import com.panda.myapplication.presentation.vs_arena.VsArenaRoute
 import com.panda.myapplication.presentation.wizard.WizardRoute
@@ -116,6 +127,8 @@ object Destinations {
     const val HARDWARE_GLOSSARY = "hardware_glossary"
     const val UNDERVOLT_GUIDE = "undervolt_guide"
     const val ADMIN_MODERATION = "admin_moderation"
+    const val SECOND_HAND_VALUATOR = "second_hand_valuator"
+    const val USER_PROFILE = "user_profile"
 }
 
 private sealed class BottomNavTab(
@@ -159,10 +172,14 @@ fun App() {
             val currentRoute = navBackStackEntry?.destination?.route
             val vsArenaRepository: VsArenaRepository = koinInject()
             val activeBuildRepository: ActiveBuildRepository = koinInject()
+            val userRepository: UserRepository = koinInject()
             val vsSelection by vsArenaRepository.state.collectAsStateWithLifecycle()
             val activeBuild by activeBuildRepository.activeBuild.collectAsStateWithLifecycle()
+            val currentUser by userRepository.currentUser.collectAsStateWithLifecycle()
+            val isLoggedIn by userRepository.isLoggedIn.collectAsStateWithLifecycle()
             val vsFilledCount = (if (vsSelection.leftItem != null) 1 else 0) + (if (vsSelection.rightItem != null) 1 else 0)
 
+            var showAuthSheet by remember { mutableStateOf(false) }
             val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
             val coroutineScope = rememberCoroutineScope()
 
@@ -189,6 +206,8 @@ fun App() {
                 drawerContent = {
                     HardwareEngineeringDrawerContent(
                         currentRoute = currentRoute,
+                        currentUser = currentUser,
+                        isLoggedIn = isLoggedIn,
                         onNavigateToRoute = { route ->
                             coroutineScope.launch {
                                 drawerState.close()
@@ -204,6 +223,17 @@ fun App() {
                         onCloseDrawer = {
                             coroutineScope.launch {
                                 drawerState.close()
+                            }
+                        },
+                        onOpenAuthSheet = {
+                            coroutineScope.launch {
+                                drawerState.close()
+                            }
+                            showAuthSheet = true
+                        },
+                        onLogout = {
+                            coroutineScope.launch {
+                                userRepository.logout()
                             }
                         },
                     )
@@ -360,7 +390,42 @@ fun App() {
                                 onNavigateToVsArena = navigateToVsArenaTab,
                             )
                         }
+
+                        composable(route = Destinations.SECOND_HAND_VALUATOR) {
+                            SecondHandValuationScreen(
+                                activeBuildRepository = activeBuildRepository,
+                                communityPriceRepository = koinInject(),
+                                onNavigateBack = { navController.popBackStack() },
+                                onNavigateToWizard = {
+                                    navController.navigate(Destinations.WIZARD) {
+                                        popUpTo(navController.graph.findStartDestination().id) {
+                                            saveState = true
+                                        }
+                                        launchSingleTop = true
+                                        restoreState = true
+                                    }
+                                },
+                                onOpenDrawer = openDrawer,
+                            )
+                        }
+
+                        composable(route = Destinations.USER_PROFILE) {
+                            UserProfileScreen(
+                                userRepository = userRepository,
+                                communityPriceRepository = koinInject(),
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenAuthSheet = { showAuthSheet = true },
+                            )
+                        }
                     }
+                }
+
+                if (showAuthSheet) {
+                    AuthSheet(
+                        userRepository = userRepository,
+                        onDismiss = { showAuthSheet = false },
+                        onAuthSuccess = { showAuthSheet = false },
+                    )
                 }
             }
         }
@@ -370,8 +435,12 @@ fun App() {
 @Composable
 private fun HardwareEngineeringDrawerContent(
     currentRoute: String?,
+    currentUser: UserProfile?,
+    isLoggedIn: Boolean,
     onNavigateToRoute: (String) -> Unit,
     onCloseDrawer: () -> Unit,
+    onOpenAuthSheet: () -> Unit,
+    onLogout: () -> Unit,
 ) {
     val engineeringTools = remember {
         listOf(
@@ -424,12 +493,12 @@ private fun HardwareEngineeringDrawerContent(
                 accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
-                route = Destinations.ADMIN_MODERATION,
-                icon = "🛡️",
-                title = "Yönetici Moderasyon Paneli",
-                subtitle = "Topluluk fiyat bildirimlerini incele, doğrula veya reddet (Admin PIN korumalı)",
-                badge = "ADMIN CONSOLE",
-                accentColor = NeonAmber,
+                route = Destinations.SECOND_HAND_VALUATOR,
+                icon = "🔄",
+                title = "Sistemim 2. Elde Ne Kadar Eder?",
+                subtitle = "Doğrulanmış defter verileriyle sisteminizin hızlı nakit, gerçekçi pazar ve vitrin değerini hesaplar",
+                badge = "2ND HAND VALUATION",
+                accentColor = NeonEmerald,
             ),
         )
     }
@@ -510,6 +579,132 @@ private fun HardwareEngineeringDrawerContent(
                             fontWeight = FontWeight.Bold,
                             color = TextSecondary,
                         )
+                    }
+                }
+            }
+
+            // User Profile Drawer Card
+            Surface(
+                shape = RoundedCornerShape(14.dp),
+                color = CardSurfaceElevated,
+                border = BorderStroke(1.dp, if (currentUser != null) Color(currentUser.spiritHardware.colorHex).copy(alpha = 0.5f) else GlassBorder),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Column(
+                    modifier = Modifier.padding(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    if (currentUser != null && isLoggedIn) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Surface(
+                                shape = CircleShape,
+                                color = Color(currentUser.spiritHardware.colorHex).copy(alpha = 0.2f),
+                                border = BorderStroke(1.5.dp, Color(currentUser.spiritHardware.colorHex)),
+                                modifier = Modifier.size(44.dp),
+                            ) {
+                                Box(contentAlignment = Alignment.Center) {
+                                    Text(text = currentUser.spiritHardware.emoji, fontSize = 22.sp)
+                                }
+                            }
+                            Spacer(modifier = Modifier.width(10.dp))
+                            Column(modifier = Modifier.weight(1f)) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                ) {
+                                    Text(
+                                        text = currentUser.username,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                    )
+                                    Surface(
+                                        shape = RoundedCornerShape(6.dp),
+                                        color = NeonCyan.copy(alpha = 0.15f),
+                                        border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.4f)),
+                                    ) {
+                                        Text(
+                                            text = "Yaş: ${currentUser.age}",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontWeight = FontWeight.Bold,
+                                            color = NeonCyan,
+                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 1.dp),
+                                        )
+                                    }
+                                }
+                                Text(
+                                    text = currentUser.spiritHardware.title,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = Color(currentUser.spiritHardware.colorHex),
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Button(
+                                onClick = { onNavigateToRoute(Destinations.USER_PROFILE) },
+                                shape = RoundedCornerShape(8.dp),
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = NeonCyan.copy(alpha = 0.18f),
+                                    contentColor = NeonCyan,
+                                ),
+                                border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.5f)),
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Text("Profili Gör", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                            }
+                            OutlinedButton(
+                                onClick = onLogout,
+                                shape = RoundedCornerShape(8.dp),
+                                border = BorderStroke(0.5.dp, NeonRose.copy(alpha = 0.5f)),
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = NeonRose),
+                            ) {
+                                Text("Çıkış", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                            }
+                        }
+                    } else {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("👤", fontSize = 24.sp)
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Column {
+                                    Text(
+                                        text = "Misafir Kullanıcı",
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                    )
+                                    Text(
+                                        text = "Giriş yapılmadı",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = TextSecondary,
+                                    )
+                                }
+                            }
+                            Button(
+                                onClick = onOpenAuthSheet,
+                                shape = RoundedCornerShape(8.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
+                            ) {
+                                Text(
+                                    text = "Giriş Yap",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color.Black,
+                                )
+                            }
+                        }
                     }
                 }
             }

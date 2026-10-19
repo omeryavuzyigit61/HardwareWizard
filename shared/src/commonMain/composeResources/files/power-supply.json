@@ -20,7 +20,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player ACK 80 Plus 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ack-80-plus-650w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player ACK Bronze 750W",
@@ -43,7 +48,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player ACK Bronze 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 18.5ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 18.5ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ack-bronze-750w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player ACK Silver 750W",
@@ -66,7 +76,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player ACK Silver 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 18.2ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 18.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ack-silver-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player ACK Gold 750W",
@@ -89,7 +104,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player ACK Gold 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 20.7ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 20.7ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ack-gold-750w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player NGDP Gold 750W",
@@ -112,7 +132,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player NGDP Gold 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ngdp-gold-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player NGDP Platinum ATX 3.0 750W",
@@ -135,7 +160,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player NGDP Platinum ATX 3.0 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ngdp-gold-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "1st Player NGDP Platinum ATX 3.1 750W",
@@ -158,7 +188,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
     "model": "Player NGDP Platinum ATX 3.1 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/1st-player-ngdp-gold-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Prime Bronze 750W",
@@ -181,7 +216,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Prime Bronze 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-prime-bronze-750w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Prime Gold 750W",
@@ -204,7 +244,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Prime Gold 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-prime-gold-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Tuf Bronze 750W",
@@ -227,7 +272,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Bronze 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Tuf Bronze EVO 750W",
@@ -250,7 +300,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Bronze EVO 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Tuf Gold 750W",
@@ -273,7 +328,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Gold 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Tuf Gold EVO 750W",
@@ -296,7 +356,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Gold EVO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "AIGO GP 750W",
@@ -319,7 +384,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 15.5ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 15.5ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/aigo-gp-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "AIGO AT 750W",
@@ -342,7 +412,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "AT 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/aigo-at-650w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BITFENIX BPA 750W",
@@ -365,7 +440,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "BPA 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/bitfenix-bpa-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BITFENIX Bpab 750W",
@@ -388,7 +468,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Bpab 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/bitfenix-bpa-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BITFENIX Bpab N ATX 2.x 750W",
@@ -411,7 +496,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Bpab N ATX 2.x 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/bitfenix-bpab-n-atx-2-x-750w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BITFENIX Bpab N ATX 3.x 750W",
@@ -434,7 +524,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Bpab N ATX 3.x 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/bitfenix-bpab-n-atx-3-x-750w-2026-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR CV 750W",
@@ -457,7 +552,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "CV 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.2ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cv-550w-2019-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR VS Grey Label 750W",
@@ -480,7 +580,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VS Grey Label 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-green-label-v1-2013-430w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR VS Orange Label 750W",
@@ -503,7 +608,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VS Orange Label 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-green-label-v1-2013-430w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM Orange Label (2013) 750W",
@@ -526,7 +636,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM Orange Label (2013) 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-green-label-v1-2013-430w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM Black Label 750W",
@@ -549,7 +664,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM Black Label 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-black-label-2023-550w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM Black Label (2021) 750W",
@@ -572,7 +692,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM Black Label (2021) 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-black-label-2023-550w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR CX (Non-Modular) Green Label V1 (2013) 750W",
@@ -595,7 +720,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "CX (Non-Modular) Green Label V1 (2013) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 8.3ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 8.3ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-gray-label-2016-650w-2016-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR CX (Non-Modular) Gray Label (2016) 750W",
@@ -618,7 +748,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "CX (Non-Modular) Gray Label (2016) 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-green-label-v1-2013-430w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR CX (Non-Modular) Black Label (2023) 750W",
@@ -641,7 +776,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "CX (Non-Modular) Black Label (2023) 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-cx-non-modular-green-label-v1-2013-430w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "COUGAR GES ATX 3.1 750W",
@@ -664,7 +804,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GES ATX 3.1 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/cougar-ges-atx-3-1-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "COUGAR Atlas ATX 3.1 750W",
@@ -687,7 +832,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Atlas ATX 3.1 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/cougar-atlas-atx-3-1-650w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 1000DB 750W",
@@ -710,7 +860,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 1000DB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-1000db-1000w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 750FB 750W",
@@ -733,7 +888,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 750FB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 750HB 750W",
@@ -756,7 +916,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 750HB 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750hb-750w-2020/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 850LB 750W",
@@ -779,7 +944,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 850LB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 850HB 750W",
@@ -802,7 +972,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 850HB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 650JB 750W",
@@ -825,7 +1000,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 650JB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Delta GPS 550LB 750W",
@@ -848,7 +1028,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GPS 550LB 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Maxpro III 750W",
@@ -871,7 +1056,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Maxpro III 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-maxpro-iii-700w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Revolution D.F. X 750W",
@@ -894,7 +1084,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution D.F. X 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-revolution-d-f-x-1200w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Revolution III 750W",
@@ -917,7 +1112,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution III 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-revolution-iii-850w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Revolution III S 750W",
@@ -940,7 +1140,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution III S 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-revolution-iii-850w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX EB-C 750W",
@@ -963,7 +1168,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "EB-C 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-eb-c-650w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Platimax DF II 750W",
@@ -986,7 +1196,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Platimax DF II 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-platimax-df-ii-1200w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Cyberbron I 750W",
@@ -1009,7 +1224,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Cyberbron I 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-i-500w-2020-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Cyberbron II 750W",
@@ -1032,7 +1252,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Cyberbron II 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-i-500w-2020-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ENERMAX Cyberbron III 750W",
@@ -1055,7 +1280,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Cyberbron III 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-iii-850w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Endorfy Supremo Gold FM6 750W",
@@ -1078,7 +1308,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Supremo Gold FM6 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/endorfy-supremo-gold-lm6-1000w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Everest EPS 4900B 750W",
@@ -1101,7 +1336,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "EPS 4900B 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/everest-eps-4900b-300w-2013/outside-v184.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG - Gold 750W",
@@ -1124,7 +1364,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
     "model": "Edge EG - Gold 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-edge-eg-gold-1000w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge Platinum 750W",
@@ -1147,7 +1392,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
     "model": "Edge Platinum 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-edge-eg-gold-1000w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI RS-G 750W",
@@ -1170,7 +1420,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RS-G 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 24.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 24.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-rs-g-1200w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI BX-B / RB-B 750W",
@@ -1193,7 +1448,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "BX-B / RB-B 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-bx-b-rb-b-750w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI SP Gold V1 750W",
@@ -1216,7 +1476,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "SP Gold V1 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v1-750w-2021-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI SP Gold V2 750W",
@@ -1239,7 +1504,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "SP Gold V2 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v2-850w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI SP P (Platinum) 750W",
@@ -1262,7 +1532,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "SP P (Platinum) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v1-750w-2021-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "LIAN LI SX-P 750W",
@@ -1285,7 +1560,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "SX-P 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/lian-li-sx-p-850w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİTA BD 750W",
@@ -1308,7 +1588,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİTA BD 750W",
-    "capacitors": "85°C Katı/Elektrolitik Kapasitör • Hold-Up Time: >12ms"
+    "capacitors": "85°C Katı/Elektrolitik Kapasitör • Hold-Up Time: >12ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vita-bd-550w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİTA GD 750W",
@@ -1331,7 +1616,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİTA GD 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vita-gd-650w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİTA GM 750W",
@@ -1354,7 +1644,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİTA GM 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 17.7ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 17.7ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vita-gm-750w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİC BD 750W",
@@ -1377,7 +1672,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİC BD 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vic-bd-550w-2026-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİC GD 750W",
@@ -1400,7 +1700,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİC GD 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vic-gd-850w-2026-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİC GM 750W",
@@ -1423,7 +1728,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİC GM 750W",
-    "capacitors": "85°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "85°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vic-gm-850w-2026-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP VİC WD 750W",
@@ -1446,7 +1756,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "VİC WD 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-vic-wd-550w-2026-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro G 750W",
@@ -1469,7 +1784,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro G 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro G PRO 750W",
@@ -1492,7 +1812,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro G PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro G PRO ATX 3.x 750W",
@@ -1515,7 +1840,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro G PRO ATX 3.x 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro PTM 750W",
@@ -1538,7 +1868,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro PTM 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro PTM PLUS (+) 750W",
@@ -1561,7 +1896,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro PTM PLUS (+) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro PTM PRO 750W",
@@ -1584,7 +1924,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro PTM PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro PTM PRO ATX 3.0 750W",
@@ -1607,7 +1952,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro PTM PRO ATX 3.0 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro K 750W",
@@ -1630,7 +1980,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro K 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro K Pro ATX 2.x 750W",
@@ -1653,7 +2008,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro K Pro ATX 2.x 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro K Pro ATX 3.x 750W",
@@ -1676,7 +2036,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro K Pro ATX 3.x 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro M PRO 750W",
@@ -1699,7 +2064,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro M PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro MX 750W",
@@ -1722,7 +2092,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro MX 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro GSM LİTE PRO 750W",
@@ -1745,7 +2120,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro GSM LİTE PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro S 750W",
@@ -1768,7 +2148,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro S 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro GE 750W",
@@ -1791,7 +2176,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro GE 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro X 750W",
@@ -1814,7 +2204,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro X 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro PRO 750W",
@@ -1837,7 +2232,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hyper 80+ PRO 750W",
@@ -1860,7 +2260,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hyper 80+ PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-750w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hyper K 750W",
@@ -1883,7 +2288,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hyper K 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hyper-k-500w-2015-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP HEXA PLUS 750W",
@@ -1906,7 +2316,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HEXA PLUS 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-plus-750w-2018-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP HEXA 85+ 750W",
@@ -1929,7 +2344,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HEXA 85+ 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hexa-85-pro-450w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP HEXA 85+ PRO 750W",
@@ -1952,7 +2372,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HEXA 85+ PRO 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hexa-85-pro-450w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP HD 750W",
@@ -1975,7 +2400,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HD 750W",
-    "capacitors": "85°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "85°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hd-450w-2017-0/outside-v184.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Raider 750W",
@@ -1998,7 +2428,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Raider 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-raider-750w-2016-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Raider II 750W",
@@ -2021,7 +2456,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Raider II 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-raider-750w-2016-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Fazeon ATX 750W",
@@ -2044,7 +2484,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "ATX 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fazeon-atx-650w-2024-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Fazeon P1A-B 750W",
@@ -2067,7 +2512,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "P1A-B 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fazeon-p1a-b-850w-2026-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Gamdias Helios M2-B 750W",
@@ -2090,7 +2540,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Helios M2-B 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/gamdias-helios-m2-b-750w-2024-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Gamdias Helios P2-G 750W",
@@ -2113,7 +2568,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Helios P2-G 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/gamdias-helios-p1a-g-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Gametech GTP G Yarı Modüler 750W",
@@ -2136,7 +2596,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GTP G Yarı Modüler 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/gametech-gtp-g-yari-moduler-700w-2021-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Gametech GTP 1000.0 750W",
@@ -2159,7 +2624,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GTP 1000.0 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/gametech-gtp-g-yari-moduler-700w-2021-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Green GP-A-GED (GED) V2.3 750W",
@@ -2182,7 +2652,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP-A-GED (GED) V2.3 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/green-gp-a-ged-ged-v2-3-600w-2023-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Green GP-A-GED (GED) V3.1 750W",
@@ -2205,7 +2680,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP-A-GED (GED) V3.1 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/green-gp-a-ged-ged-v2-3-600w-2023-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Green GP-A-ECO (ECO) 750W",
@@ -2228,7 +2708,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP-A-ECO (ECO) 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/green-gp-a-eco-eco-350w-2021-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Green GP-B-HP EVO (EVO) 750W",
@@ -2251,7 +2736,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP-B-HP EVO (EVO) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/green-gp-b-hp-evo-evo-800w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Green GP-B-OCDG (OCDG) 750W",
@@ -2274,7 +2764,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "GP-B-OCDG (OCDG) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/green-gp-b-ocdg-ocdg-1200w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Havit HV-B 750W",
@@ -2297,7 +2792,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HV-B 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/havit-hv-t-750w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Havit HV-T 750W",
@@ -2320,7 +2820,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HV-T 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/havit-hv-t-750w-2025-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Hawk HP 750W",
@@ -2343,7 +2848,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "HP 750W",
-    "capacitors": "85°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "85°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://pcmag.vn/wp-content/uploads/nguon-may-tinh-dong-bo-hp-delta-dps-750ab-750w-2.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Performance GD ATX 3.0 750W",
@@ -2366,7 +2876,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Performance GD ATX 3.0 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Performance FS 750W",
@@ -2389,7 +2904,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Performance FS 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Performance GD 750W",
@@ -2412,7 +2932,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Performance GD 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-750w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Performance 750W",
@@ -2435,7 +2960,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Performance 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ECO HP1-J 750W",
@@ -2458,7 +2988,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ECO HP1-J 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-eco-hp1-j-600w-2019-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ASTRO PT 750W",
@@ -2481,7 +3016,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ASTRO PT 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-astro-pt-700w-2012-0/top-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ASTRO PT F 750W",
@@ -2504,7 +3044,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ASTRO PT F 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-astro-pt-700w-2012-0/top-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ASTRO GD 750W",
@@ -2527,7 +3072,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ASTRO GD 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ASTRO GD II 750W",
@@ -2550,7 +3100,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ASTRO GD II 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power ASTRO Lite 750W",
@@ -2573,7 +3128,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power ASTRO Lite 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-astro-lite-750w-2015-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Super GD 750W",
@@ -2596,7 +3156,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Super GD 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-super-gd-850w-2019-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Element GD-DD 750W",
@@ -2619,7 +3184,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Element GD-DD 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-element-gd-dd-750w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Element HP1-M BR 750W",
@@ -2642,7 +3212,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Element HP1-M BR 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-element-hp1-m-br-750w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Element Revo 750W",
@@ -2665,7 +3240,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Element Revo 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-element-revo-850w-2023-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Direct 12 BR II 750W",
@@ -2688,7 +3268,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Direct 12 BR II 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-element-hp1-m-br-750w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Elite 230V BR 750W",
@@ -2711,7 +3296,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Elite 230V BR 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-elite-230v-br-750w-2019-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power HPS-GD-F12S 750W",
@@ -2734,7 +3324,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power HPS-GD-F12S 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-hps-gd-f12s-850w-2017/fan.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "High Power Absolute HP-G14C 750W",
@@ -2757,7 +3352,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Power Absolute HP-G14C 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/high-power-absolute-hp-g14c-650w-2009-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A550BN 750W",
@@ -2780,7 +3380,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A550BN 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A650BN 750W",
@@ -2803,7 +3408,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A650BN 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-BN PCI-e 5.0 750W",
@@ -2826,7 +3436,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BN PCI-e 5.0 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-BN II 750W",
@@ -2849,7 +3464,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BN II 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-BN III 750W",
@@ -2872,7 +3492,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BN III 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-BNL Full Range 750W",
@@ -2895,7 +3520,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BNL Full Range 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-BNL 230V 750W",
@@ -2918,7 +3548,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BNL 230V 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-DN Full Range 750W",
@@ -2941,7 +3576,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-DN Full Range 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-DN 230V 750W",
@@ -2964,7 +3604,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-DN 230V 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-GL 750W",
@@ -2987,7 +3632,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-GL 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 750W",
@@ -3010,7 +3660,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-GL PCI-e 5.0 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-ii-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 II 750W",
@@ -3033,7 +3688,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-GL PCI-e 5.0 II 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-PLS 750W",
@@ -3056,7 +3716,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-PLS 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A-GLS 750W",
@@ -3079,7 +3744,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-GLS 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 15.8ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 15.8ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gls-750w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MPG A-GS PCIE5 750W",
@@ -3102,7 +3772,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MPG A-GS PCIE5 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI PRO A-PL 750W",
@@ -3125,7 +3800,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "PRO A-PL 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 20.7ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 20.7ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-pro-a-pl-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MONTECH Gamma 750W",
@@ -3148,7 +3828,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Gamma 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/montech-gamma-650w-2019-0/fan.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MONTECH Gamma II 750W",
@@ -3171,7 +3856,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Gamma II 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/montech-gamma-650w-2019-0/fan.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MONTECH Alpha Bronze 750W",
@@ -3194,7 +3884,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Alpha Bronze 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/montech-alpha-bronze-850w-2026-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MONTECH Beta 2.0 750W",
@@ -3217,7 +3912,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Beta 2.0 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/montech-beta-2-0-850w-2026-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MONTECH Beta 750W",
@@ -3240,7 +3940,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Beta 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/montech-beta-2-0-850w-2026-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Monster MON-TG 750W",
@@ -3263,7 +3968,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MON-TG 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://watanimall.com/wp-content/uploads/2024/06/PSU-THR-TR-TG-750-3.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Monster Model adı yok. Monster Tulpar TD3 V3.1.6 kasasında var. 750W",
@@ -3286,7 +3996,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Model adı yok. Monster Tulpar TD3 V3.1.6 kasasında var. 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://hwp.com.tr/wp-content/uploads/2025/01/tulpar-td3.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Monster Bpab 750W",
@@ -3309,7 +4024,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Bpab 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/monster-bpab-850w-2024-0/fan.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Bronze V1 750W",
@@ -3332,7 +4052,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Bronze V1 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v1-550w-2021-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Bronze V2 750W",
@@ -3355,7 +4080,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Bronze V2 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v2-750w-2023-0/outside-v184.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Bronze V3 750W",
@@ -3378,7 +4108,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Bronze V3 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 17ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 17ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v3-750w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Gold V1 750W",
@@ -3401,7 +4136,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Gold V1 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Gold V2 (2022) 750W",
@@ -3424,7 +4164,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Gold V2 (2022) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 31,2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 31,2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v2-2022-1000w-2022-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Gold ATX 3.0 (2023) 750W",
@@ -3447,7 +4192,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Gold ATX 3.0 (2023) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Gold ATX 3.1 (2024) 750W",
@@ -3470,7 +4220,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Gold ATX 3.1 (2024) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "NZXT C Gold Core 750W",
@@ -3493,7 +4248,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "C Gold Core 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.2ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-core-750w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Ocypus Delta P (P-BD) 750W",
@@ -3516,7 +4276,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Delta P (P-BD) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/ocypus-delta-p-p-bd-750w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Ocypus Delta P - S (PS-BD) 750W",
@@ -3539,7 +4304,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Delta P - S (PS-BD) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/ocypus-delta-p-p-bd-750w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Ocypus Gamma P-WD 750W",
@@ -3562,7 +4332,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Gamma P-WD 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/ocypus-gamma-p-wd-650w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Ocypus Lota P (P-GF) 750W",
@@ -3585,7 +4360,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Lota P (P-GF) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/ocypus-lota-p-p-gf-1000w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Ocypus Lota P - S (PS-GF) 750W",
@@ -3608,7 +4388,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Lota P - S (PS-GF) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/ocypus-lota-p-p-gf-1000w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Raijintek Ampere 750W",
@@ -3631,7 +4416,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Ampere 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/raijintek-ampere-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Raijintek Ampere II 750W",
@@ -3654,7 +4444,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Ampere II 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/raijintek-ampere-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Raijintek Cratos 750W",
@@ -3677,7 +4472,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Cratos 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/raijintek-cratos-1200w-2023-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Raijintek Cratos Lite 750W",
@@ -3700,7 +4500,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Cratos Lite 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/raijintek-cratos-1200w-2023-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "RAMPAGE RAGE P15 750W",
@@ -3723,7 +4528,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RAGE P15 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/rampage-rage-p15-1000w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "RAMPAGE RAGE P10 750W",
@@ -3746,7 +4556,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RAGE P10 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/rampage-rage-p10-850w-2025-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "RAMPAGE Forza (FTX-1) 750W",
@@ -3769,7 +4584,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Forza (FTX-1) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/rampage-forza-ftx-1-1200w-2018-0/outside.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEGOTEP BN ATX 3.0 750W",
@@ -3792,7 +4612,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "BN ATX 3.0 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-0-750w-2023-0/outside-v181.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEGOTEP BN ATX 3.1 750W",
@@ -3815,7 +4640,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "BN ATX 3.1 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-1-750w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEGOTEP BN ATX 2.x 750W",
@@ -3838,7 +4668,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "BN ATX 2.x 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-0-750w-2023-0/outside-v181.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEGOTEP AN 750W",
@@ -3861,7 +4696,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "AN 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/segotep-an-400w-2022-0/outside-v180.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SAMA P (XPH-AP) 750W",
@@ -3884,7 +4724,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "P (XPH-AP) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.1ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.1ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/sama-p-xph-ap-1200w-2025-0/outside-v183.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SAMA G (HAT-yzB1G) 750W",
@@ -3907,7 +4752,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "G (HAT-yzB1G) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 13ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 13ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/sama-g-hat-yzb1g-750w-2025-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SAMA B (EPS-1BA3) 750W",
@@ -3930,7 +4780,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "B (EPS-1BA3) 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.4ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/sama-b-eps-1ba3-750w-2026-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SAMA H 750W",
@@ -3952,7 +4807,12 @@
     "imageUrl": "https://www.dekada.com/images/htx_750_b4_01_5nKL9O.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "H 750W"
+    "model": "H 750W",
+    "images": [
+      "https://www.dekada.com/images/htx_750_b4_01_5nKL9O.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Sharkoon Rebel P20 Gold 750W",
@@ -3975,7 +4835,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Rebel P20 Gold 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/sharkoon-rebel-p20-gold-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Sharkoon Rebel P20 Platinum (ATX) 750W",
@@ -3998,7 +4863,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Rebel P20 Platinum (ATX) 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/sharkoon-rebel-p20-gold-850w-2024-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Adata XPG Pylon II 750W",
@@ -4021,7 +4891,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "XPG Pylon II 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/adata-xpg-pylon-ii-650w-2026-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "Adata XPG Core Shift II VE 750W",
@@ -4044,7 +4919,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "XPG Core Shift II VE 750W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/adata-xpg-pylon-ii-650w-2026-0/outside.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM1000e (2023) ATX 3.0 1000W",
@@ -4067,7 +4947,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A (<25 dBA)",
     "model": "RM1000e (2023) ATX 3.0 1000W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM850e (2023) ATX 3.0 850W",
@@ -4090,7 +4975,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM850e (2023) ATX 3.0 850W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM750e (2023) ATX 3.0 750W",
@@ -4113,7 +5003,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM750e (2023) ATX 3.0 750W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.5ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.5ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-siyah-etiket-2019-850w-2019-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM850x Shift ATX 3.0 850W",
@@ -4136,7 +5031,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A (<25 dBA)",
     "model": "RM850x Shift ATX 3.0 850W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM1000x Shift ATX 3.0 1000W",
@@ -4159,7 +5059,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A (<25 dBA)",
     "model": "RM1000x Shift ATX 3.0 1000W",
-    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms"
+    "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR RM1200x Shift ATX 3.0 1200W",
@@ -4181,7 +5086,12 @@
     "imageUrl": "https://os-jo.com/image/cache/catalog/products/power-supply/CP-9020254-UK/s-l1200-1200x1200.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "RM1200x Shift ATX 3.0 1200W"
+    "model": "RM1200x Shift ATX 3.0 1200W",
+    "images": [
+      "https://os-jo.com/image/cache/catalog/products/power-supply/CP-9020254-UK/s-l1200-1200x1200.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
@@ -4204,7 +5114,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A850GL PCIE5 850W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
@@ -4227,7 +5142,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A750GL PCIE5 750W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MAG A650BN 650W",
@@ -4250,7 +5170,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A650BN 650W",
-    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)"
+    "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-650-0-650w-2021-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MPG A850G PCIE5 850W",
@@ -4273,7 +5198,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MPG A850G PCIE5 850W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "MSI MPG A1000G PCIE5 1000W",
@@ -4296,7 +5226,12 @@
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MPG A1000G PCIE5 1000W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS TUF Gaming 750G 750W",
@@ -4319,7 +5254,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 750G 750W",
-    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms"
+    "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS TUF Gaming 850G 850W",
@@ -4342,7 +5282,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 850G 850W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS TUF Gaming 1000G 1000W",
@@ -4365,7 +5310,12 @@
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 1000G 1000W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
@@ -4387,7 +5337,12 @@
     "imageUrl": "https://dlcdnwebimgs.asus.com/gain/F40C3AEA-D458-41E6-BF27-045C0C8D5086",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
-    "model": "ROG Thor 1000W Platinum II"
+    "model": "ROG Thor 1000W Platinum II",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/F40C3AEA-D458-41E6-BF27-045C0C8D5086",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS ROG Thor 1200W Platinum II",
@@ -4409,7 +5364,12 @@
     "imageUrl": "https://pcboost.co.uk/wp-content/uploads/2022/11/ROG-THOR-1200W-Platinum-II-Fully-Modular-Power-Supply-From-ASUS.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
-    "model": "ROG Thor 1200W Platinum II"
+    "model": "ROG Thor 1200W Platinum II",
+    "images": [
+      "https://pcboost.co.uk/wp-content/uploads/2022/11/ROG-THOR-1200W-Platinum-II-Fully-Modular-Power-Supply-From-ASUS.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS ROG Thor 1600W Titanium",
@@ -4431,7 +5391,12 @@
     "imageUrl": "https://static.tweaktown.com/news/9/8/98665_22_asus-rog-thor-1600w-titanium-iii-psu-unveiled-2-12v-2x6-connectors-magnetic-oled-screen_full.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
-    "model": "ROG Thor 1600W Titanium"
+    "model": "ROG Thor 1600W Titanium",
+    "images": [
+      "https://static.tweaktown.com/news/9/8/98665_22_asus-rog-thor-1600w-titanium-iii-psu-unveiled-2-12v-2x6-connectors-magnetic-oled-screen_full.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
@@ -4453,7 +5418,12 @@
     "imageUrl": "https://www.cclonline.com/images/avante/ASUS-PRO-WS-3000P.png",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "Pro WS 3000W Platinum"
+    "model": "Pro WS 3000W Platinum",
+    "images": [
+      "https://www.cclonline.com/images/avante/ASUS-PRO-WS-3000P.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEASONIC Focus GX-850 ATX 3.0 850W",
@@ -4475,7 +5445,12 @@
     "imageUrl": "https://www.picclickimg.com/6JEAAOSwTK5mYaPL/Seasonic-FOCUS-GX-850-ATX-30-850W-Gold-PSU.webp",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "Focus GX-850 ATX 3.0 850W"
+    "model": "Focus GX-850 ATX 3.0 850W",
+    "images": [
+      "https://www.picclickimg.com/6JEAAOSwTK5mYaPL/Seasonic-FOCUS-GX-850-ATX-30-850W-Gold-PSU.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "SEASONIC Focus GX-1000 ATX 3.0 1000W",
@@ -4497,7 +5472,12 @@
     "imageUrl": "https://files.pccasegear.com/images/SSR-1000FX3-ATX-3-thumb.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "Focus GX-1000 ATX 3.0 1000W"
+    "model": "Focus GX-1000 ATX 3.0 1000W",
+    "images": [
+      "https://files.pccasegear.com/images/SSR-1000FX3-ATX-3-thumb.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "DEEPCOOL PN750M ATX 3.1 750W",
@@ -4519,7 +5499,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "PN750M ATX 3.1 750W"
+    "model": "PN750M ATX 3.1 750W",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "DEEPCOOL PN850M ATX 3.1 850W",
@@ -4541,7 +5526,12 @@
     "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "PN850M ATX 3.1 850W"
+    "model": "PN850M ATX 3.1 850W",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 850W",
@@ -4564,7 +5554,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro G PRO ATX 3.0 850W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-pro-atx-3-0-1200w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 1000W",
@@ -4587,7 +5582,12 @@
     "cybenetics": "Cybenetics Platinum / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hydro G PRO ATX 3.0 1000W",
-    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)"
+    "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
+    "images": [
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-pro-atx-3-0-1200w-2022-0/outside-v182.png",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BE QUIET! Pure Power 12 M 750W",
@@ -4609,7 +5609,12 @@
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/00/94/LD0006009438.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "Pure Power 12 M 750W"
+    "model": "Pure Power 12 M 750W",
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/06/00/94/LD0006009438.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   },
   {
     "name": "BE QUIET! Pure Power 12 M 850W",
@@ -4631,6 +5636,11 @@
     "imageUrl": "https://www.cclonline.com/images/avante/02_Pure_Power_12_M_850W.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
-    "model": "Pure Power 12 M 850W"
+    "model": "Pure Power 12 M 850W",
+    "images": [
+      "https://www.cclonline.com/images/avante/02_Pure_Power_12_M_850W.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+    ]
   }
 ]

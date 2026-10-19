@@ -20,7 +20,12 @@
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 9950X"
+    "model": "Ryzen 9 9950X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9950x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 9900X",
@@ -43,7 +48,12 @@
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 9900X"
+    "model": "Ryzen 9 9900X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_9900x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
@@ -66,7 +76,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (2. Nesil 3D V-Cache)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 7 9800X3D"
+    "model": "Ryzen 7 9800X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 9700X",
@@ -89,7 +104,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 7 9700X"
+    "model": "Ryzen 7 9700X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9700x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 9600X",
@@ -112,7 +132,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 5)",
     "power_limits": "65W TDP / 88W PPT (105W cTDP Modu)",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 5 9600X"
+    "model": "Ryzen 5 9600X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_9600x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 7950X3D",
@@ -135,7 +160,12 @@
     "core_topology": "16 Çekirdek / 32 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 7950X3D"
+    "model": "Ryzen 9 7950X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 7950X",
@@ -158,7 +188,12 @@
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 7950X"
+    "model": "Ryzen 9 7950X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7950x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 7900X3D",
@@ -181,7 +216,12 @@
     "core_topology": "12 Çekirdek / 24 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 7900X3D"
+    "model": "Ryzen 9 7900X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 7900X",
@@ -204,7 +244,12 @@
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 9 7900X"
+    "model": "Ryzen 9 7900X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_7900x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 7800X3D",
@@ -227,7 +272,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Tek CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 7 7800X3D"
+    "model": "Ryzen 7 7800X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 7700X",
@@ -250,7 +300,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 7 7700X"
+    "model": "Ryzen 7 7700X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 7700",
@@ -273,7 +328,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 7 7700"
+    "model": "Ryzen 7 7700",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7700.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 7600X",
@@ -296,7 +356,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 5 7600X"
+    "model": "Ryzen 5 7600X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 7600",
@@ -319,7 +384,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
-    "model": "Ryzen 5 7600"
+    "model": "Ryzen 5 7600",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7600.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 7500F",
@@ -342,7 +412,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 5 7500F"
+    "model": "Ryzen 5 7500F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_7500f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 8700G",
@@ -365,7 +440,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 780M (12 CU RDNA 3, 2.9 GHz)",
-    "model": "Ryzen 7 8700G"
+    "model": "Ryzen 7 8700G",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_8700g.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 8600G",
@@ -388,7 +468,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 760M (8 CU RDNA 3, 2.8 GHz)",
-    "model": "Ryzen 5 8600G"
+    "model": "Ryzen 5 8600G",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8600g.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 8500G",
@@ -411,7 +496,12 @@
     "core_topology": "2 Zen 4 + 4 Zen 4c (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 740M (4 CU RDNA 3, 2.7 GHz)",
-    "model": "Ryzen 5 8500G"
+    "model": "Ryzen 5 8500G",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_8500g.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 5950X",
@@ -434,7 +524,12 @@
     "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 9 5950X"
+    "model": "Ryzen 9 5950X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5950x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 9 5900X",
@@ -457,7 +552,12 @@
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 9 5900X"
+    "model": "Ryzen 9 5900X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_9_5900x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5800X3D",
@@ -480,7 +580,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 7 5800X3D"
+    "model": "Ryzen 7 5800X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5700X3D",
@@ -503,7 +608,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 7 5700X3D"
+    "model": "Ryzen 7 5700X3D",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x3d.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5800X",
@@ -526,7 +636,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 7 5800X"
+    "model": "Ryzen 7 5800X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5700X",
@@ -549,7 +664,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 7 5700X"
+    "model": "Ryzen 7 5700X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5700G",
@@ -572,7 +692,12 @@
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Vega 8 (8 CU, 2.0 GHz)",
-    "model": "Ryzen 7 5700G"
+    "model": "Ryzen 7 5700G",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5700g.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 5600X",
@@ -595,7 +720,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 5 5600X"
+    "model": "Ryzen 5 5600X",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600x.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 5600",
@@ -618,7 +748,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 5 5600"
+    "model": "Ryzen 5 5600",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 5600G",
@@ -641,7 +776,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Vega 7 (7 CU, 1.9 GHz)",
-    "model": "Ryzen 5 5600G"
+    "model": "Ryzen 5 5600G",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5600g.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 5500",
@@ -664,7 +804,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 3)",
     "power_limits": "65W TDP / 76W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 5 5500"
+    "model": "Ryzen 5 5500",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_5500.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "AMD Ryzen 5 3600",
@@ -687,7 +832,12 @@
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 2)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Ryzen 5 3600"
+    "model": "Ryzen 5 3600",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_5_3600.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_lga1718_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core Ultra 9 285K",
@@ -710,7 +860,12 @@
     "core_topology": "8P + 16E (24 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
-    "model": "Core Ultra 9 285K"
+    "model": "Core Ultra 9 285K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core Ultra 7 265K",
@@ -733,7 +888,12 @@
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
-    "model": "Core Ultra 7 265K"
+    "model": "Core Ultra 7 265K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core Ultra 7 265KF",
@@ -756,7 +916,12 @@
     "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 250W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core Ultra 7 265KF"
+    "model": "Core Ultra 7 265KF",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_7_265kf.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core Ultra 5 245K",
@@ -779,7 +944,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
     "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
-    "model": "Core Ultra 5 245K"
+    "model": "Core Ultra 5 245K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core Ultra 5 245KF",
@@ -802,7 +972,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
     "power_limits": "125W PBP / 159W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core Ultra 5 245KF"
+    "model": "Core Ultra 5 245KF",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_5_245kf.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i9-14900KS",
@@ -825,7 +1000,12 @@
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "150W PBP / 320W Extreme MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i9-14900KS"
+    "model": "Core i9-14900KS",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900ks.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i9-14900K",
@@ -848,7 +1028,12 @@
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i9-14900K"
+    "model": "Core i9-14900K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i9-14900KF",
@@ -871,7 +1056,12 @@
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i9-14900KF"
+    "model": "Core i9-14900KF",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_14900kf.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i7-14700K",
@@ -894,7 +1084,12 @@
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i7-14700K"
+    "model": "Core i7-14700K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i7-14700KF",
@@ -917,7 +1112,12 @@
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i7-14700KF"
+    "model": "Core i7-14700KF",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700kf.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i7-14700",
@@ -940,7 +1140,12 @@
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "65W PBP / 219W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i7-14700"
+    "model": "Core i7-14700",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-14600K",
@@ -963,7 +1168,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i5-14600K"
+    "model": "Core i5-14600K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-14600KF",
@@ -986,7 +1196,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i5-14600KF"
+    "model": "Core i5-14600KF",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14600kf.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-14500",
@@ -1009,7 +1224,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "65W PBP / 154W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i5-14500"
+    "model": "Core i5-14500",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14500.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-14400F",
@@ -1032,7 +1252,12 @@
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i5-14400F"
+    "model": "Core i5-14400F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-14400",
@@ -1055,7 +1280,12 @@
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Intel UHD Graphics 730 (24 EU)",
-    "model": "Core i5-14400"
+    "model": "Core i5-14400",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i3-14100F",
@@ -1078,7 +1308,12 @@
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 110W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i3-14100F"
+    "model": "Core i3-14100F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_14100f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i9-13900K",
@@ -1101,7 +1336,12 @@
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i9-13900K"
+    "model": "Core i9-13900K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i9_13900k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i7-13700K",
@@ -1124,7 +1364,12 @@
     "core_topology": "8P + 8E (16 Çekirdek / 24 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i7-13700K"
+    "model": "Core i7-13700K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_13700k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-13600K",
@@ -1147,7 +1392,12 @@
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
-    "model": "Core i5-13600K"
+    "model": "Core i5-13600K",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13600k.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-13400F",
@@ -1170,7 +1420,12 @@
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i5-13400F"
+    "model": "Core i5-13400F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_13400f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i5-12400F",
@@ -1193,7 +1448,12 @@
     "core_topology": "6P Çekirdek (6 Çekirdek / 12 İzlek)",
     "power_limits": "65W PBP / 117W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i5-12400F"
+    "model": "Core i5-12400F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_12400f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   },
   {
     "name": "INTEL Core i3-12100F",
@@ -1216,6 +1476,11 @@
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 89W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
-    "model": "Core i3-12100F"
+    "model": "Core i3-12100F",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i3_12100f.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_bottom.webp"
+    ]
   }
 ]

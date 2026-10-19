@@ -266,7 +266,7 @@ fun CommunityPriceLedgerSection(
 
             Spacer(modifier = Modifier.height(Spacing.medium))
 
-            // Bottom Actions: Submit Deal + Admin Mode Toggle
+            // Bottom Actions: Submit Deal (+ Admin Mode Logout if admin)
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -294,14 +294,6 @@ fun CommunityPriceLedgerSection(
                             text = "Admin Çıkışı",
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonRose,
-                        )
-                    }
-                } else {
-                    TextButton(onClick = onAdminLoginClick) {
-                        Text(
-                            text = "🛡️ Yönetici",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                         )
                     }
                 }
@@ -640,6 +632,7 @@ fun SubmitCommunityDealSheet(
     hardwareName: String,
     onDismiss: () -> Unit,
     onSubmit: (priceTry: Double, dealType: CommunityDealType, note: String?, proofUrl: String?, userDisplayName: String) -> Unit,
+    defaultUserDisplayName: String = "",
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -647,7 +640,7 @@ fun SubmitCommunityDealSheet(
     var selectedType by remember { mutableStateOf(CommunityDealType.OWN_PURCHASE) }
     var noteText by remember { mutableStateOf("") }
     var proofUrlText by remember { mutableStateOf("") }
-    var userDisplayName by remember { mutableStateOf("") }
+    var userDisplayName by remember { mutableStateOf(defaultUserDisplayName) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
     ModalBottomSheet(
@@ -677,7 +670,7 @@ fun SubmitCommunityDealSheet(
             )
 
             Text(
-                text = "Aldığınız fiyatı veya piyasada gördüğünüz bir fırsatı bildirin. Yönetici onayının ardından canlı deftere eklenecektir.",
+                text = "Aldığınız fiyatı veya piyasada gördüğünüz bir fırsatı bildirin. Güvenilirlik için kanıt linki (ilan/fatura) zorunludur. Yönetici onayının ardından canlı deftere eklenecektir.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -732,12 +725,15 @@ fun SubmitCommunityDealSheet(
                 }
             }
 
-            // Proof URL (Kanıt Linki)
+            // Proof URL (Kanıt Linki - ZORUNLU)
             OutlinedTextField(
                 value = proofUrlText,
-                onValueChange = { proofUrlText = it },
-                label = { Text("Kanıt Linki (İlan / Fatura / Kampanya)") },
-                placeholder = { Text("https://www.sahibinden.com/... veya mağaza linki") },
+                onValueChange = {
+                    proofUrlText = it
+                    errorMessage = null
+                },
+                label = { Text("Kanıt Linki (Zorunlu) *") },
+                placeholder = { Text("https://www.sahibinden.com/... veya e-fatura/mağaza linki") },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -762,7 +758,7 @@ fun SubmitCommunityDealSheet(
                 value = userDisplayName,
                 onValueChange = { userDisplayName = it },
                 label = { Text("Rumuzunuz / Adınız") },
-                placeholder = { Text("Örn: Mert K.") },
+                placeholder = { Text("Örn: dombikpanda") },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -786,11 +782,16 @@ fun SubmitCommunityDealSheet(
                         errorMessage = "Lütfen geçerli bir fiyat (TL) girin."
                         return@Button
                     }
+                    val cleanProof = proofUrlText.trim()
+                    if (cleanProof.isBlank() || (!cleanProof.startsWith("http://", ignoreCase = true) && !cleanProof.startsWith("https://", ignoreCase = true))) {
+                        errorMessage = "Kanıt linki zorunludur! Lütfen geçerli bir web bağlantısı girin (https://...)."
+                        return@Button
+                    }
                     onSubmit(
                         parsedPrice,
                         selectedType,
                         noteText.takeIf { it.isNotBlank() },
-                        proofUrlText.takeIf { it.isNotBlank() },
+                        cleanProof,
                         userDisplayName.ifBlank { "Topluluk Üyesi" },
                     )
                     onDismiss()

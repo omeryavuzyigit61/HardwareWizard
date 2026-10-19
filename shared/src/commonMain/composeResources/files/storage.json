@@ -14,7 +14,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria NVMe M.2 500GB"
+    "model": "Exceria NVMe M.2 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria NVMe M.2 1TB",
@@ -31,7 +36,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria NVMe M.2 1TB"
+    "model": "Exceria NVMe M.2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria G2 NVMe M.2 1TB",
@@ -48,7 +58,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria G2 NVMe M.2 1TB"
+    "model": "Exceria G2 NVMe M.2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria G2 NVMe M.2 2TB",
@@ -65,7 +80,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria G2 NVMe M.2 2TB"
+    "model": "Exceria G2 NVMe M.2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Plus NVMe M.2 500GB",
@@ -82,7 +102,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria Plus NVMe M.2 500GB"
+    "model": "Exceria Plus NVMe M.2 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Plus NVMe M.2 1TB",
@@ -99,7 +124,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria Plus NVMe M.2 1TB"
+    "model": "Exceria Plus NVMe M.2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Plus NVMe M.2 2TB",
@@ -116,7 +146,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria Plus NVMe M.2 2TB"
+    "model": "Exceria Plus NVMe M.2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Plus G3 NVMe M.2 1TB",
@@ -133,7 +168,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria Plus G3 NVMe M.2 1TB"
+    "model": "Exceria Plus G3 NVMe M.2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Plus G3 NVMe M.2 2TB",
@@ -150,7 +190,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria Plus G3 NVMe M.2 2TB"
+    "model": "Exceria Plus G3 NVMe M.2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Pro NVMe M.2 1TB",
@@ -167,7 +212,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria Pro NVMe M.2 1TB"
+    "model": "Exceria Pro NVMe M.2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Pro NVMe M.2 2TB",
@@ -184,7 +234,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria Pro NVMe M.2 2TB"
+    "model": "Exceria Pro NVMe M.2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria SATA 480GB",
@@ -201,7 +256,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria SATA 480GB"
+    "model": "Exceria SATA 480GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria SATA 960GB",
@@ -218,7 +278,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria SATA 960GB"
+    "model": "Exceria SATA 960GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 990 PRO 1TB",
@@ -235,7 +300,12 @@
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "1GB Samsung LPDDR4 DRAM Cache",
     "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
-    "model": "990 PRO 1TB"
+    "model": "990 PRO 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 990 PRO 2TB",
@@ -252,7 +322,12 @@
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "2GB Samsung LPDDR4 DRAM Cache",
     "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
-    "model": "990 PRO 2TB"
+    "model": "990 PRO 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 990 PRO 4TB",
@@ -269,7 +344,12 @@
     "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "dram_cache": "4GB Samsung LPDDR4 DRAM Cache",
     "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
-    "model": "990 PRO 4TB"
+    "model": "990 PRO 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/55fb148a837f9e33dfdb095188af8a74.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 990 EVO 1TB",
@@ -286,7 +366,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "990 EVO 1TB"
+    "model": "990 EVO 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 990 EVO 2TB",
@@ -303,7 +388,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "990 EVO 2TB"
+    "model": "990 EVO 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e04f7c7b9bb44e66f4518b2d99d5798d.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 980 PRO 1TB",
@@ -320,7 +410,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "980 PRO 1TB"
+    "model": "980 PRO 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 980 PRO 2TB",
@@ -337,7 +432,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "980 PRO 2TB"
+    "model": "980 PRO 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 980 1TB",
@@ -354,7 +454,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "980 1TB"
+    "model": "980 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 970 EVO Plus 1TB",
@@ -371,7 +476,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "970 EVO Plus 1TB"
+    "model": "970 EVO Plus 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 970 EVO Plus 2TB",
@@ -388,7 +498,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "970 EVO Plus 2TB"
+    "model": "970 EVO Plus 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC3000 1TB",
@@ -405,7 +520,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "KC3000 1TB"
+    "model": "KC3000 1TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC3000 2TB",
@@ -422,7 +542,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "KC3000 2TB"
+    "model": "KC3000 2TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC3000 4TB",
@@ -439,7 +564,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "KC3000 4TB"
+    "model": "KC3000 4TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON Fury Renegade 1TB",
@@ -456,7 +586,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "Fury Renegade 1TB"
+    "model": "Fury Renegade 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON Fury Renegade 2TB",
@@ -473,7 +608,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "Fury Renegade 2TB"
+    "model": "Fury Renegade 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV3 1TB",
@@ -490,7 +630,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV3 1TB"
+    "model": "NV3 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV3 2TB",
@@ -507,7 +652,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV3 2TB"
+    "model": "NV3 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV2 1TB",
@@ -524,7 +674,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV2 1TB"
+    "model": "NV2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV2 2TB",
@@ -541,7 +696,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV2 2TB"
+    "model": "NV2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Black SN850X 1TB",
@@ -558,7 +718,12 @@
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "1GB DDR4 DRAM Cache",
     "random_iops": "1200K / 1100K IOPS",
-    "model": "Black SN850X 1TB"
+    "model": "Black SN850X 1TB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Black SN850X 2TB",
@@ -575,7 +740,12 @@
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1200K / 1100K IOPS",
-    "model": "Black SN850X 2TB"
+    "model": "Black SN850X 2TB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Black SN770 1TB",
@@ -592,7 +762,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Black SN770 1TB"
+    "model": "Black SN770 1TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/71Sr1zjPhwL._SL1500_.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Black SN770 2TB",
@@ -609,7 +784,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Black SN770 2TB"
+    "model": "Black SN770 2TB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN580 1TB",
@@ -626,7 +806,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN580 1TB"
+    "model": "Blue SN580 1TB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T700 1TB",
@@ -643,7 +828,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T700 1TB"
+    "model": "T700 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T700 2TB",
@@ -660,7 +850,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T700 2TB"
+    "model": "T700 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T500 1TB",
@@ -677,7 +872,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "T500 1TB"
+    "model": "T500 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T500 2TB",
@@ -694,7 +894,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "T500 2TB"
+    "model": "T500 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL P3 Plus 1TB",
@@ -711,7 +916,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "P3 Plus 1TB"
+    "model": "P3 Plus 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL P3 Plus 2TB",
@@ -728,7 +938,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "P3 Plus 2TB"
+    "model": "P3 Plus 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "LEXAR NM790 1TB",
@@ -745,7 +960,12 @@
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
     "random_iops": "1000K / 900K IOPS",
-    "model": "NM790 1TB"
+    "model": "NM790 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "LEXAR NM790 2TB",
@@ -762,7 +982,12 @@
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
     "random_iops": "1000K / 900K IOPS",
-    "model": "NM790 2TB"
+    "model": "NM790 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "LEXAR NM790 4TB",
@@ -779,7 +1004,12 @@
     "controller": "Maxio MAP1602A (12nm DRAM-less)",
     "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
     "random_iops": "1000K / 900K IOPS",
-    "model": "NM790 4TB"
+    "model": "NM790 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "INTEL SSDPEDMD020T401",
@@ -798,7 +1028,12 @@
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
     "endurance_tbw": 1200,
-    "model": "SSDPEDMD020T401"
+    "model": "SSDPEDMD020T401",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ab3a8901725966b71c6806fc7f6a08b.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T705 1TB",
@@ -816,7 +1051,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T705 1TB"
+    "model": "T705 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T705 2TB",
@@ -834,7 +1074,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T705 2TB"
+    "model": "T705 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T705 4TB",
@@ -852,7 +1097,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T705 4TB"
+    "model": "T705 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL T700 4TB",
@@ -870,7 +1120,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "T700 4TB"
+    "model": "T700 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR MP700 PRO 1TB",
@@ -888,7 +1143,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "MP700 PRO 1TB"
+    "model": "MP700 PRO 1TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR MP700 PRO 2TB",
@@ -906,7 +1166,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "MP700 PRO 2TB"
+    "model": "MP700 PRO 2TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CORSAIR MP700 PRO 4TB",
@@ -924,7 +1189,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "MP700 PRO 4TB"
+    "model": "MP700 PRO 4TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON Fury Renegade 4TB",
@@ -942,7 +1212,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "Fury Renegade 4TB"
+    "model": "Fury Renegade 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD_BLACK SN850X 4TB",
@@ -960,7 +1235,12 @@
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1200K / 1100K IOPS",
-    "model": "SN850X 4TB"
+    "model": "SN850X 4TB",
+    "images": [
+      "https://www.flashtrend.com.au/assets/full/Leader-HBWD-SN850-4TB.jpg?20250422103801",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD_BLACK SN770 500GB",
@@ -978,7 +1258,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "SN770 500GB"
+    "model": "SN770 500GB",
+    "images": [
+      "https://m.media-amazon.com/images/I/71Sr1zjPhwL._AC_.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL P3 Plus 4TB",
@@ -996,7 +1281,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "P3 Plus 4TB"
+    "model": "P3 Plus 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 870 EVO 500GB",
@@ -1014,7 +1304,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "870 EVO 500GB"
+    "model": "870 EVO 500GB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 870 EVO 1TB",
@@ -1032,7 +1327,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "870 EVO 1TB"
+    "model": "870 EVO 1TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 870 EVO 2TB",
@@ -1050,7 +1350,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "870 EVO 2TB"
+    "model": "870 EVO 2TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
@@ -1068,7 +1373,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "Spatium M570 PRO 1TB"
+    "model": "Spatium M570 PRO 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
@@ -1086,7 +1396,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "Spatium M570 PRO 2TB"
+    "model": "Spatium M570 PRO 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M570 PRO 4TB",
@@ -1104,7 +1419,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "Spatium M570 PRO 4TB"
+    "model": "Spatium M570 PRO 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 980 PRO 500GB",
@@ -1122,7 +1442,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "980 PRO 500GB"
+    "model": "980 PRO 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC3000 512GB",
@@ -1140,7 +1465,12 @@
     "controller": "Phison PS5018-E18 (12nm TSMC Üç Çekirdek)",
     "dram_cache": "1GB DDR4 DRAM Cache",
     "random_iops": "1000K / 1000K IOPS",
-    "model": "KC3000 512GB"
+    "model": "KC3000 512GB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Pro 1TB",
@@ -1158,7 +1488,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria Pro 1TB"
+    "model": "Exceria Pro 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria Pro 2TB",
@@ -1176,7 +1511,12 @@
     "controller": "Phison PS5013-E13T",
     "dram_cache": "HMB (Host Memory Buffer - DRAM-less)",
     "random_iops": "350K / 350K IOPS",
-    "model": "Exceria Pro 2TB"
+    "model": "Exceria Pro 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M480 PRO 1TB",
@@ -1194,7 +1534,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Spatium M480 PRO 1TB"
+    "model": "Spatium M480 PRO 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M480 PRO 2TB",
@@ -1212,7 +1557,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Spatium M480 PRO 2TB"
+    "model": "Spatium M480 PRO 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "MSI Spatium M480 PRO 4TB",
@@ -1230,7 +1580,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Spatium M480 PRO 4TB"
+    "model": "Spatium M480 PRO 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN580 500GB",
@@ -1248,7 +1603,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN580 500GB"
+    "model": "Blue SN580 500GB",
+    "images": [
+      "https://gland.vn/media/product/14617_46768_238290_img1.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN580 2TB",
@@ -1266,7 +1626,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN580 2TB"
+    "model": "Blue SN580 2TB",
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558801cv1d.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL P3 Plus 500GB",
@@ -1284,7 +1649,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "P3 Plus 500GB"
+    "model": "P3 Plus 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 970 EVO Plus 500GB",
@@ -1302,7 +1672,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "970 EVO Plus 500GB"
+    "model": "970 EVO Plus 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "SAMSUNG 870 EVO 4TB",
@@ -1320,7 +1695,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "870 EVO 4TB"
+    "model": "870 EVO 4TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL MX500 500GB",
@@ -1338,7 +1718,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "MX500 500GB"
+    "model": "MX500 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL MX500 1TB",
@@ -1356,7 +1741,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "MX500 1TB"
+    "model": "MX500 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL MX500 2TB",
@@ -1374,7 +1764,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "MX500 2TB"
+    "model": "MX500 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL MX500 4TB",
@@ -1392,7 +1787,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "MX500 4TB"
+    "model": "MX500 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "Seagate FireCuda 540 1TB",
@@ -1410,7 +1810,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "2GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "FireCuda 540 1TB"
+    "model": "FireCuda 540 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "Seagate FireCuda 540 2TB",
@@ -1428,7 +1833,12 @@
     "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "model": "FireCuda 540 2TB"
+    "model": "FireCuda 540 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "XPG Gammix S70 Blade 1TB",
@@ -1446,7 +1856,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Gammix S70 Blade 1TB"
+    "model": "Gammix S70 Blade 1TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "XPG Gammix S70 Blade 2TB",
@@ -1464,7 +1879,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Gammix S70 Blade 2TB"
+    "model": "Gammix S70 Blade 2TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "XPG Gammix S70 Blade 4TB",
@@ -1482,7 +1902,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Gammix S70 Blade 4TB"
+    "model": "Gammix S70 Blade 4TB",
+    "images": [
+      "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "Seagate FireCuda 530 1TB",
@@ -1500,7 +1925,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "FireCuda 530 1TB"
+    "model": "FireCuda 530 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "Seagate FireCuda 530 2TB",
@@ -1518,7 +1948,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "FireCuda 530 2TB"
+    "model": "FireCuda 530 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "Seagate FireCuda 530 4TB",
@@ -1536,7 +1971,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "FireCuda 530 4TB"
+    "model": "FireCuda 530 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN5000 1TB",
@@ -1554,7 +1994,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN5000 1TB"
+    "model": "Blue SN5000 1TB",
+    "images": [
+      "https://down-th.img.susercontent.com/file/th-11134208-7rasf-m5co1c23qghj01",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN5000 2TB",
@@ -1572,7 +2017,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN5000 2TB"
+    "model": "Blue SN5000 2TB",
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/b83936f4-c813-4981-859e-e82e3048f601.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "WD Blue SN5000 4TB",
@@ -1590,7 +2040,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "Blue SN5000 4TB"
+    "model": "Blue SN5000 4TB",
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6588/6588587_sd.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV3 500GB",
@@ -1608,7 +2063,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV3 500GB"
+    "model": "NV3 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV3 4TB",
@@ -1626,7 +2086,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV3 4TB"
+    "model": "NV3 4TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON NV2 500GB",
@@ -1644,7 +2109,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "NV2 500GB"
+    "model": "NV2 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria G2 500GB",
@@ -1662,7 +2132,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria G2 500GB"
+    "model": "Exceria G2 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria G2 1TB",
@@ -1680,7 +2155,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria G2 1TB"
+    "model": "Exceria G2 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KIOXIA Exceria G2 2TB",
@@ -1698,7 +2178,12 @@
     "controller": "Kioxia TC58NC1202GST (Çift Çekirdek)",
     "dram_cache": "512MB - 1GB DDR4 DRAM Cache",
     "random_iops": "400K / 400K IOPS",
-    "model": "Exceria G2 2TB"
+    "model": "Exceria G2 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC600 512GB",
@@ -1716,7 +2201,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "KC600 512GB"
+    "model": "KC600 512GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC600 1TB",
@@ -1734,7 +2224,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "KC600 1TB"
+    "model": "KC600 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "KINGSTON KC600 2TB",
@@ -1752,7 +2247,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "KC600 2TB"
+    "model": "KC600 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL BX500 500GB",
@@ -1770,7 +2270,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "BX500 500GB"
+    "model": "BX500 500GB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL BX500 1TB",
@@ -1788,7 +2293,12 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "BX500 1TB"
+    "model": "BX500 1TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   },
   {
     "name": "CRUCIAL BX500 2TB",
@@ -1806,6 +2316,11 @@
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
-    "model": "BX500 2TB"
+    "model": "BX500 2TB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+    ]
   }
 ]
