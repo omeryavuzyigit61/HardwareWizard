@@ -130,11 +130,26 @@ class CommunityPriceRepositoryImpl(
     override val isAdminLoggedIn: StateFlow<Boolean> = _isAdminLoggedIn.asStateFlow()
 
     override fun observeDealsForHardware(hardwareId: String): Flow<List<CommunityDeal>> {
+        val targetNorm = normalizeHardwareId(hardwareId)
         return _deals.map { allDeals ->
             allDeals
-                .filter { it.hardwareId.equals(hardwareId, ignoreCase = true) }
+                .filter { deal ->
+                    deal.hardwareId.equals(hardwareId, ignoreCase = true) ||
+                    normalizeHardwareId(deal.hardwareId) == targetNorm
+                }
                 .sortedByDescending { it.createdAtEpochMs }
         }
+    }
+
+    private fun normalizeHardwareId(id: String): String {
+        return id.lowercase()
+            .replace("_", "")
+            .replace("-", "")
+            .replace("core", "")
+            .replace("geforce", "")
+            .replace("intel", "")
+            .replace("amd", "")
+            .trim()
     }
 
     override fun observeAllPendingDeals(): Flow<List<CommunityDeal>> {
@@ -364,7 +379,7 @@ class CommunityPriceRepositoryImpl(
                 ),
                 CommunityDeal(
                     id = "deal-pending-2",
-                    hardwareId = "cpu_intel_i7_14700k",
+                    hardwareId = "cpu_intel_core_i7_14700k",
                     hardwareName = "Intel Core i7-14700K",
                     priceTry = 14200.0,
                     dealType = CommunityDealType.SECOND_HAND,
