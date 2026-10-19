@@ -18,4 +18,5 @@ data class CoolerRawDto(
     @SerialName("radiator_dimensions") val radiatorDimensions: String? = null,
     @SerialName("fan_airflow") val fanAirflow: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

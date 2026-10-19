@@ -969,7 +969,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = CoolerSpecEntity(
             itemId = id,
@@ -1002,7 +1003,8 @@ object HardwareMapper {
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "USD" else null,
             cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
+            imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
+            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
         )
         val spec = CaseSpecEntity(
             itemId = id,

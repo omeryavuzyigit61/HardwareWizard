@@ -14,7 +14,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO"
+    "model": "O11 Dynamic EVO",
+    "images": [
+      "https://files.pccasegear.com/UserFiles/G99-O11DERGBW-00-prod5.jpg"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic EVO (White)",
@@ -31,7 +34,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO (White)"
+    "model": "O11 Dynamic EVO (White)",
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/05/95/54/LD0005955466.jpg"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic EVO XL",
@@ -48,7 +54,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO XL"
+    "model": "O11 Dynamic EVO XL",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic EVO XL (White)",
@@ -65,7 +74,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO XL (White)"
+    "model": "O11 Dynamic EVO XL (White)",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic EVO RGB",
@@ -82,7 +94,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO RGB"
+    "model": "O11 Dynamic EVO RGB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic EVO RGB (White)",
@@ -99,7 +114,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic EVO RGB (White)"
+    "model": "O11 Dynamic EVO RGB (White)",
+    "images": [
+      "https://files.pccasegear.com/UserFiles/G99-O11DERGBW-00-prod5.jpg"
+    ]
   },
   {
     "name": "LIAN LI O11 Vision",
@@ -116,7 +134,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "O11 Vision"
+    "model": "O11 Vision",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2023/11/O11_Vision_06.webp"
+    ]
   },
   {
     "name": "LIAN LI O11 Vision (White)",
@@ -133,7 +154,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "O11 Vision (White)"
+    "model": "O11 Vision (White)",
+    "images": [
+      "https://i5.walmartimages.com/seo/LIAN-LI-O11-Vision-White-Aluminum-Steel-Tempered-Glass-ATX-Mid-Tower-Computer-Case-O11VW_8a75551b-e1fb-4b80-8cd4-a1db5126b46a.8bf544a2a9b5dedc9213b95788327938.jpeg"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic Mini",
@@ -150,7 +174,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic Mini"
+    "model": "O11 Dynamic Mini",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp"
+    ]
   },
   {
     "name": "LIAN LI O11 Dynamic Mini (White)",
@@ -167,7 +194,10 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
-    "model": "O11 Dynamic Mini (White)"
+    "model": "O11 Dynamic Mini (White)",
+    "images": [
+      "https://m.media-amazon.com/images/I/71iwoMQEfoL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool 216 RGB",
@@ -184,7 +214,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool 216 RGB"
+    "model": "Lancool 216 RGB",
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool 216 RGB (White)",
@@ -201,7 +234,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool 216 RGB (White)"
+    "model": "Lancool 216 RGB (White)",
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool III RGB",
@@ -218,7 +254,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool III RGB"
+    "model": "Lancool III RGB",
+    "images": [
+      "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool III RGB (White)",
@@ -235,7 +274,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool III RGB (White)"
+    "model": "Lancool III RGB (White)",
+    "images": [
+      "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg"
+    ]
   },
   {
     "name": "LIAN LI A3-mATX",
@@ -252,7 +294,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "A3-mATX"
+    "model": "A3-mATX",
+    "images": [
+      "https://cdn.mos.cms.futurecdn.net/hABcUPYMSNN8SmVaduwqCi.jpg"
+    ]
   },
   {
     "name": "LIAN LI A3-mATX (White)",
@@ -269,7 +314,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "A3-mATX (White)"
+    "model": "A3-mATX (White)",
+    "images": [
+      "https://media.overclock3d.net/2024/05/IMG_0333-scaled.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow",
@@ -286,7 +334,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow"
+    "model": "H9 Flow",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow (White)",
@@ -303,7 +354,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow (White)"
+    "model": "H9 Flow (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Elite",
@@ -320,7 +374,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Elite"
+    "model": "H9 Elite",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H7 Flow (2024)",
@@ -337,7 +394,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H7 Flow (2024)"
+    "model": "H7 Flow (2024)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H7 Flow (2024) (White)",
@@ -354,7 +414,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H7 Flow (2024) (White)"
+    "model": "H7 Flow (2024) (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H6 Flow",
@@ -371,7 +434,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H6 Flow"
+    "model": "H6 Flow",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H6 Flow (White)",
@@ -388,7 +454,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H6 Flow (White)"
+    "model": "H6 Flow (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H6 Flow RGB",
@@ -405,7 +474,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H6 Flow RGB"
+    "model": "H6 Flow RGB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H6 Flow RGB (White)",
@@ -422,7 +494,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H6 Flow RGB (White)"
+    "model": "H6 Flow RGB (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H5 Flow (2024)",
@@ -439,7 +514,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H5 Flow (2024)"
+    "model": "H5 Flow (2024)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H5 Flow (2024) (White)",
@@ -456,7 +534,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H5 Flow (2024) (White)"
+    "model": "H5 Flow (2024) (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 5000D AIRFLOW",
@@ -473,7 +554,10 @@
     "radiator_support": "Üst: 280/360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "2x 120mm AirGuide / 3x 120mm RGB Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 1x USB 3.0",
-    "model": "5000D AIRFLOW"
+    "model": "5000D AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bdc5f23827be3a0b7b72fa424fd437e.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 5000D AIRFLOW (White)",
@@ -490,7 +574,10 @@
     "radiator_support": "Üst: 280/360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "2x 120mm AirGuide / 3x 120mm RGB Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 1x USB 3.0",
-    "model": "5000D AIRFLOW (White)"
+    "model": "5000D AIRFLOW (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bdc5f23827be3a0b7b72fa424fd437e.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 4000D AIRFLOW",
@@ -507,7 +594,10 @@
     "radiator_support": "Üst: 280/360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "2x 120mm AirGuide / 3x 120mm RGB Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 1x USB 3.0",
-    "model": "4000D AIRFLOW"
+    "model": "4000D AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bc6e987da3fe22c616898d1d7fa3d227.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 4000D AIRFLOW (White)",
@@ -524,7 +614,10 @@
     "radiator_support": "Üst: 280/360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "2x 120mm AirGuide / 3x 120mm RGB Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 1x USB 3.0",
-    "model": "4000D AIRFLOW (White)"
+    "model": "4000D AIRFLOW (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bc6e987da3fe22c616898d1d7fa3d227.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR",
@@ -541,7 +634,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": ""
+    "model": "",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a740f5cb83faa73c1d8a62945833056e.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR",
@@ -558,7 +654,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": ""
+    "model": "",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a740f5cb83faa73c1d8a62945833056e.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 6500X",
@@ -575,7 +674,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "6500X"
+    "model": "6500X",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    ]
   },
   {
     "name": "FRACTAL DESIGN North",
@@ -592,7 +694,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "North"
+    "model": "North",
+    "images": [
+      "https://m.media-amazon.com/images/I/71MSloBQcCL._AC_.jpg"
+    ]
   },
   {
     "name": "FRACTAL DESIGN North (Chalk White)",
@@ -609,7 +714,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "North (Chalk White)"
+    "model": "North (Chalk White)",
+    "images": [
+      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a152fb91-9133-4d62-9613-41a7fc33c5c9.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+    ]
   },
   {
     "name": "FRACTAL DESIGN North XL",
@@ -626,7 +734,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "North XL"
+    "model": "North XL",
+    "images": [
+      "https://m.media-amazon.com/images/I/71IyDaBF8RL.jpg"
+    ]
   },
   {
     "name": "FRACTAL DESIGN Pop Air RGB",
@@ -643,7 +754,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Pop Air RGB"
+    "model": "Pop Air RGB",
+    "images": [
+      "https://c1.neweggimages.com/ProductImageCompressAll1280/11-352-180-V12.jpg"
+    ]
   },
   {
     "name": "FRACTAL DESIGN Pop Air RGB (White)",
@@ -660,7 +774,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Pop Air RGB (White)"
+    "model": "Pop Air RGB (White)",
+    "images": [
+      "https://img.evetech.co.za/repository/ProductImages/fractal-design-pop-air-rgb-case-white-1800px-v2.webp"
+    ]
   },
   {
     "name": "MONTECH King 95 Pro",
@@ -677,7 +794,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "King 95 Pro"
+    "model": "King 95 Pro",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
+    ]
   },
   {
     "name": "MONTECH King 95 Pro (White)",
@@ -694,7 +814,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "King 95 Pro (White)"
+    "model": "King 95 Pro (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
+    ]
   },
   {
     "name": "MONTECH Sky Two",
@@ -711,7 +834,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Sky Two"
+    "model": "Sky Two",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dcba5154b41f5dcef594caf7d6649759.1600.jpg"
+    ]
   },
   {
     "name": "MONTECH Sky Two (White)",
@@ -728,7 +854,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Sky Two (White)"
+    "model": "Sky Two (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dcba5154b41f5dcef594caf7d6649759.1600.jpg"
+    ]
   },
   {
     "name": "MONTECH AIR 903 MAX",
@@ -745,7 +874,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "AIR 903 MAX"
+    "model": "AIR 903 MAX",
+    "images": [
+      "https://m.media-amazon.com/images/I/519WrOWiOhL.jpg"
+    ]
   },
   {
     "name": "ASUS TUF",
@@ -762,7 +894,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "TUF"
+    "model": "TUF",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5deeaf924f2581fd0676d61583a3246a.1600.jpg"
+    ]
   },
   {
     "name": "ASUS TUF",
@@ -779,7 +914,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "TUF"
+    "model": "TUF",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5deeaf924f2581fd0676d61583a3246a.1600.jpg"
+    ]
   },
   {
     "name": "ASUS TUF",
@@ -796,7 +934,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "TUF"
+    "model": "TUF",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+    ]
   },
   {
     "name": "ASUS TUF",
@@ -813,7 +954,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "TUF"
+    "model": "TUF",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG Pano M100R PZ",
@@ -830,7 +974,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG Pano M100R PZ"
+    "model": "MAG Pano M100R PZ",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4a680d36c4db64ef4bfe4d8d9493d3be.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG Pano M100R PZ (White)",
@@ -847,7 +994,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG Pano M100R PZ (White)"
+    "model": "MAG Pano M100R PZ (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4a680d36c4db64ef4bfe4d8d9493d3be.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG Forge 100R",
@@ -864,7 +1014,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG Forge 100R"
+    "model": "MAG Forge 100R",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG Forge 112R",
@@ -881,7 +1034,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG Forge 112R"
+    "model": "MAG Forge 112R",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aefeec218209f404108ca1fb06870d9a.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow (2023)",
@@ -899,7 +1055,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow (2023)"
+    "model": "H9 Flow (2023)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/61eb5534e35ce8af07f25ff28197862b.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H3 Flow",
@@ -917,7 +1076,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "H3 Flow"
+    "model": "H3 Flow",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5b23443767ef786094bc4b6add8112a8.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 3000D AIRFLOW",
@@ -935,7 +1097,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "3000D AIRFLOW"
+    "model": "3000D AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/586841ed9160739668a55d1321c9494e.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H5 Flow RGB (2024)",
@@ -953,7 +1118,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H5 Flow RGB (2024)"
+    "model": "H5 Flow RGB (2024)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8925e4a3aa61f5cea6249c6e18c54e9e.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow RGB+ (2025)",
@@ -971,7 +1139,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow RGB+ (2025)"
+    "model": "H9 Flow RGB+ (2025)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/791f157d26538e32901a4b24f6744af7.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 7000D AIRFLOW",
@@ -989,7 +1160,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "7000D AIRFLOW"
+    "model": "7000D AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aa86351c8df24a48c98e7a14f50631a3.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 9000D RGB AIRFLOW",
@@ -1007,7 +1181,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "9000D RGB AIRFLOW"
+    "model": "9000D RGB AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/31bfc270950571313482b67027c01cf2.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow (2024)",
@@ -1023,7 +1200,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow (2024)"
+    "model": "H9 Flow (2024)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Flow (2024) (White)",
@@ -1039,7 +1219,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Flow (2024) (White)"
+    "model": "H9 Flow (2024) (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 3000D Airflow (White)",
@@ -1055,7 +1238,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "3000D Airflow (White)"
+    "model": "3000D Airflow (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/586841ed9160739668a55d1321c9494e.1600.jpg"
+    ]
   },
   {
     "name": "ASUS A21 Plus ARGB",
@@ -1071,7 +1257,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "A21 Plus ARGB"
+    "model": "A21 Plus ARGB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+    ]
   },
   {
     "name": "ASUS ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
@@ -1087,7 +1276,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX"
+    "model": "ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36d3bc2037d3f7d7beacb17fa80f4b29.1600.jpg"
+    ]
   },
   {
     "name": "ASUS ROG Cronox GR801 ARGB Panaromik",
@@ -1103,7 +1295,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ROG Cronox GR801 ARGB Panaromik"
+    "model": "ROG Cronox GR801 ARGB Panaromik",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+    ]
   },
   {
     "name": "ASUS ROG Strix Hyperion GR701",
@@ -1119,7 +1314,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ROG Strix Hyperion GR701"
+    "model": "ROG Strix Hyperion GR701",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7fb0b865a88be851eb7fdac685bf373c.1600.jpg"
+    ]
   },
   {
     "name": "BITFENIX Grafi Black",
@@ -1135,7 +1333,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Grafi Black"
+    "model": "Grafi Black",
+    "images": [
+      "https://m.media-amazon.com/images/I/51A3tVPKUSL.jpg"
+    ]
   },
   {
     "name": "COOLER MASTER MasterFrame 360 Panaroma Siyah Ayna Efektli",
@@ -1151,7 +1352,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MasterFrame 360 Panaroma Siyah Ayna Efektli"
+    "model": "MasterFrame 360 Panaroma Siyah Ayna Efektli",
+    "images": [
+      "https://a.storyblok.com/f/281110/960x960/4563b62824/mf360s-preorder-gallery-2-3.png/m/960x0/smart"
+    ]
   },
   {
     "name": "COOLER MASTER MasterFrame 600 TG",
@@ -1167,7 +1371,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MasterFrame 600 TG"
+    "model": "MasterFrame 600 TG",
+    "images": [
+      "https://files.pccasegear.com/images/MF600-KGNN-S00-thumb.jpg"
+    ]
   },
   {
     "name": "HAVN HS 420 Base Edition Black",
@@ -1183,7 +1390,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "HS 420 Base Edition Black"
+    "model": "HS 420 Base Edition Black",
+    "images": [
+      "https://down-sg.img.susercontent.com/file/sg-11134207-7ra3p-m514q1x7tcvoef"
+    ]
   },
   {
     "name": "ANTEC AX65 ARGB",
@@ -1199,7 +1409,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "AX65 ARGB"
+    "model": "AX65 ARGB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+    ]
   },
   {
     "name": "LIAN LI VECTOR V100R Beyaz ATX",
@@ -1215,7 +1428,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "VECTOR V100R Beyaz ATX"
+    "model": "VECTOR V100R Beyaz ATX",
+    "images": [
+      "https://down-my.img.susercontent.com/file/my-11134207-820li-mgkonyova6toa6"
+    ]
   },
   {
     "name": "MSI MAG PANO 130R PZ",
@@ -1231,7 +1447,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG PANO 130R PZ"
+    "model": "MAG PANO 130R PZ",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d375812992642c61a6c38ec7a68f7a6e.1600.jpg"
+    ]
   },
   {
     "name": "VENTO VG4200S 750W 80+",
@@ -1247,7 +1466,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "VG4200S 750W 80+"
+    "model": "VG4200S 750W 80+",
+    "images": [
+      "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643"
+    ]
   },
   {
     "name": "GameBooster M6001W 600W SeaView",
@@ -1263,7 +1485,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "M6001W 600W SeaView"
+    "model": "M6001W 600W SeaView",
+    "images": [
+      "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg"
+    ]
   },
   {
     "name": "SilverStone Milo Serisi ML03B HTPC Siyah",
@@ -1279,7 +1504,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Milo Serisi ML03B HTPC Siyah"
+    "model": "Milo Serisi ML03B HTPC Siyah",
+    "images": [
+      "https://m.media-amazon.com/images/I/41Ly-yGe3ZL.jpg"
+    ]
   },
   {
     "name": "SilverStone Sugo SG13B-Q / Mini ITX Performans",
@@ -1295,7 +1523,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Sugo SG13B-Q / Mini ITX Performans"
+    "model": "Sugo SG13B-Q / Mini ITX Performans",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d36e4a71c2ad6cdcc6c9a3a6cf72407c.1600.jpg"
+    ]
   },
   {
     "name": "SilverStone RM400 4U ATX Server",
@@ -1311,7 +1542,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "RM400 4U ATX Server"
+    "model": "RM400 4U ATX Server",
+    "images": [
+      "https://m.media-amazon.com/images/I/41NThC1NN2L.jpg"
+    ]
   },
   {
     "name": "SilverStone CS381 Hot Swap Yüksek Performans NAS",
@@ -1327,7 +1561,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CS381 Hot Swap Yüksek Performans NAS"
+    "model": "CS381 Hot Swap Yüksek Performans NAS",
+    "images": [
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+    ]
   },
   {
     "name": "SilverStone RM22-308 8 Adet 3.5\" HDD Yuvalı ATX 2U Server",
@@ -1343,7 +1580,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "RM22-308 8 Adet 3.5\" HDD Yuvalı ATX 2U Server"
+    "model": "RM22-308 8 Adet 3.5\" HDD Yuvalı ATX 2U Server",
+    "images": [
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+    ]
   },
   {
     "name": "Aerocool CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim",
@@ -1359,7 +1599,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim"
+    "model": "CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim",
+    "images": [
+      "https://m.media-amazon.com/images/I/31lTmcSdc+L.jpg"
+    ]
   },
   {
     "name": "SilverStone GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC",
@@ -1375,7 +1618,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC"
+    "model": "GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC",
+    "images": [
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+    ]
   },
   {
     "name": "SilverStone ML04 Type-C Slim mATX Salon Medya",
@@ -1391,7 +1637,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ML04 Type-C Slim mATX Salon Medya"
+    "model": "ML04 Type-C Slim mATX Salon Medya",
+    "images": [
+      "https://m.media-amazon.com/images/I/31pYG+xJDOL.jpg"
+    ]
   },
   {
     "name": "RJK ATREUS BT4 Black",
@@ -1407,7 +1656,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ATREUS BT4 Black"
+    "model": "ATREUS BT4 Black",
+    "images": [
+      "https://images-na.ssl-images-amazon.com/images/I/81VdKkse6ML.jpg"
+    ]
   },
   {
     "name": "SilverStone CS383 NAS/Server",
@@ -1423,7 +1675,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CS383 NAS/Server"
+    "model": "CS383 NAS/Server",
+    "images": [
+      "https://m.media-amazon.com/images/I/41FoAhjDz7L.jpg"
+    ]
   },
   {
     "name": "HYTE Revolt 3 Black USB 3.2 Premium ITX Small Form Factor",
@@ -1439,7 +1694,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Revolt 3 Black USB 3.2 Premium ITX Small Form Factor"
+    "model": "Revolt 3 Black USB 3.2 Premium ITX Small Form Factor",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fc2a8d8cde52e2b72838865ac8d8b7cc.1600.jpg"
+    ]
   },
   {
     "name": "ANTEC CX700 ARGB WHITE",
@@ -1455,7 +1713,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CX700 ARGB WHITE"
+    "model": "CX700 ARGB WHITE",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+    ]
   },
   {
     "name": "ANTEC CX500M ARGB BLACK",
@@ -1471,7 +1732,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CX500M ARGB BLACK"
+    "model": "CX500M ARGB BLACK",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec8cc07183e95ffa42108f24f37360c.1600.jpg"
+    ]
   },
   {
     "name": "ANTEC C8 WOOD",
@@ -1487,7 +1751,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "C8 WOOD"
+    "model": "C8 WOOD",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG FORGE 340R AIRFLOW",
@@ -1503,7 +1770,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG FORGE 340R AIRFLOW"
+    "model": "MAG FORGE 340R AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG FORGE M120R AIRFLOW",
@@ -1519,7 +1789,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG FORGE M120R AIRFLOW"
+    "model": "MAG FORGE M120R AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg"
+    ]
   },
   {
     "name": "GIGABYTE C201 PANORAMIC",
@@ -1535,7 +1808,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "C201 PANORAMIC"
+    "model": "C201 PANORAMIC",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2b427280b03e9b92cea1762a60cb6fdb.1600.jpg"
+    ]
   },
   {
     "name": "Vento VG4202FL Rainbow Fanlı",
@@ -1551,7 +1827,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "VG4202FL Rainbow Fanlı"
+    "model": "VG4202FL Rainbow Fanlı",
+    "images": [
+      "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png"
+    ]
   },
   {
     "name": "ASUS A31 PLUS TG ARGB",
@@ -1567,7 +1846,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "A31 PLUS TG ARGB"
+    "model": "A31 PLUS TG ARGB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c1246bc17d9510f9967aef0b9837761.1600.jpg"
+    ]
   },
   {
     "name": "MSI MPG GUNGNIR 300R AIRFLOW",
@@ -1583,7 +1865,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MPG GUNGNIR 300R AIRFLOW"
+    "model": "MPG GUNGNIR 300R AIRFLOW",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3ebf0cd07038781294967b100f747488.1600.jpg"
+    ]
   },
   {
     "name": "FRISBY FC-8960G 400W",
@@ -1599,7 +1884,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "FC-8960G 400W"
+    "model": "FC-8960G 400W",
+    "images": [
+      "https://platincdn.com/3393/pictures/NJSUS19370_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg"
+    ]
   },
   {
     "name": "RAMPAGE ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower",
@@ -1615,7 +1903,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower"
+    "model": "ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower",
+    "images": [
+      "https://productimages.hepsiburada.net/s/133/424-600/110000084296827.jpg"
+    ]
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB",
@@ -1631,7 +1922,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "CC-9011213-WW 5000X RGB"
+    "model": "CC-9011213-WW 5000X RGB",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7066d38df09ac1a7db60c2ba253f482c.1600.jpg"
+    ]
   },
   {
     "name": "MSI MAG FORGE 100R",
@@ -1647,7 +1941,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MAG FORGE 100R"
+    "model": "MAG FORGE 100R",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg"
+    ]
   },
   {
     "name": "ASUS ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar",
@@ -1663,7 +1960,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar"
+    "model": "ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/611d62a2df028fc07df96f54d8219911.1600.jpg"
+    ]
   },
   {
     "name": "MSI PRO SHIELD M100P",
@@ -1679,7 +1979,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "PRO SHIELD M100P"
+    "model": "PRO SHIELD M100P",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3f987bc0dd827f7a9cb774024478dcea.1600.jpg"
+    ]
   },
   {
     "name": "ASUS ROG Strix Helios II GX601S",
@@ -1695,7 +1998,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "ROG Strix Helios II GX601S"
+    "model": "ROG Strix Helios II GX601S",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/538cba5e47717690bbbb34b221964c35.1600.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool 207",
@@ -1711,7 +2017,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool 207"
+    "model": "Lancool 207",
+    "images": [
+      "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_black_ac78734_43927.jpg"
+    ]
   },
   {
     "name": "LIAN LI Lancool 207 (White)",
@@ -1727,7 +2036,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Lancool 207 (White)"
+    "model": "Lancool 207 (White)",
+    "images": [
+      "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_white_ac78735_78707.jpg"
+    ]
   },
   {
     "name": "NZXT H9 Elite (White)",
@@ -1743,7 +2055,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "H9 Elite (White)"
+    "model": "H9 Elite (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg"
+    ]
   },
   {
     "name": "CORSAIR 6500X (White)",
@@ -1759,7 +2074,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "6500X (White)"
+    "model": "6500X (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks NV5",
@@ -1775,7 +2093,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "NV5"
+    "model": "NV5",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks NV5 (White)",
@@ -1791,7 +2112,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "NV5 (White)"
+    "model": "NV5 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks NV7",
@@ -1807,7 +2131,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "NV7"
+    "model": "NV7",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks NV7 (White)",
@@ -1823,7 +2150,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "NV7 (White)"
+    "model": "NV7 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks XT Pro Ultra",
@@ -1839,7 +2169,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "XT Pro Ultra"
+    "model": "XT Pro Ultra",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks XT Pro Ultra (White)",
@@ -1855,7 +2188,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "XT Pro Ultra (White)"
+    "model": "XT Pro Ultra (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks Eclipse G360A",
@@ -1871,7 +2207,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Eclipse G360A"
+    "model": "Eclipse G360A",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg"
+    ]
   },
   {
     "name": "Phanteks Eclipse G360A (White)",
@@ -1887,7 +2226,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Eclipse G360A (White)"
+    "model": "Eclipse G360A (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg"
+    ]
   },
   {
     "name": "MONTECH Air 903 Max (White)",
@@ -1903,7 +2245,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Air 903 Max (White)"
+    "model": "Air 903 Max (White)",
+    "images": [
+      "https://m.media-amazon.com/images/I/519WrOWiOhL.jpg"
+    ]
   },
   {
     "name": "Hyte Y70",
@@ -1919,7 +2264,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y70"
+    "model": "Y70",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y70 (White)",
@@ -1935,7 +2283,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y70 (White)"
+    "model": "Y70 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y70 (Red)",
@@ -1951,7 +2302,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y70 (Red)"
+    "model": "Y70 (Red)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y60",
@@ -1967,7 +2321,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y60"
+    "model": "Y60",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y60 (White)",
@@ -1983,7 +2340,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y60 (White)"
+    "model": "Y60 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/057519c92f6acc11679400bd763c86f5.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y60 (Red)",
@@ -1999,7 +2359,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y60 (Red)"
+    "model": "Y60 (Red)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y40",
@@ -2015,7 +2378,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y40"
+    "model": "Y40",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg"
+    ]
   },
   {
     "name": "Hyte Y40 (White)",
@@ -2031,7 +2397,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Y40 (White)"
+    "model": "Y40 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg"
+    ]
   },
   {
     "name": "DEEPCOOL CH560 Digital",
@@ -2047,7 +2416,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "CH560 Digital"
+    "model": "CH560 Digital",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+    ]
   },
   {
     "name": "DEEPCOOL CH560 Digital (White)",
@@ -2063,7 +2435,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "CH560 Digital (White)"
+    "model": "CH560 Digital (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+    ]
   },
   {
     "name": "DEEPCOOL CH510",
@@ -2079,7 +2454,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "CH510"
+    "model": "CH510",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg"
+    ]
   },
   {
     "name": "DEEPCOOL CH510 (White)",
@@ -2095,7 +2473,10 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "model": "CH510 (White)"
+    "model": "CH510 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg"
+    ]
   },
   {
     "name": "ASUS Prime AP201",
@@ -2111,7 +2492,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Prime AP201"
+    "model": "Prime AP201",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg"
+    ]
   },
   {
     "name": "ASUS Prime AP201 (White)",
@@ -2127,7 +2511,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Prime AP201 (White)"
+    "model": "Prime AP201 (White)",
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg"
+    ]
   },
   {
     "name": "BE QUIET! Pure Base 500DX",
@@ -2143,7 +2530,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Pure Base 500DX"
+    "model": "Pure Base 500DX",
+    "images": [
+      "https://files.pccasegear.com/images/1588909032-BGW37-thb.jpg"
+    ]
   },
   {
     "name": "BE QUIET! Pure Base 500DX (White)",
@@ -2159,7 +2549,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "Pure Base 500DX (White)"
+    "model": "Pure Base 500DX (White)",
+    "images": [
+      "https://files.pccasegear.com/images/1588909921-BGW38-thb.jpg"
+    ]
   },
   {
     "name": "COOLER MASTER MasterBox TD500 Mesh V2",
@@ -2175,7 +2568,10 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MasterBox TD500 Mesh V2"
+    "model": "MasterBox TD500 Mesh V2",
+    "images": [
+      "https://a.storyblok.com/f/281110/cc16aa2f9e/td500-mesh-v2-black-gallery-2-0110.png/m/960x0/smart"
+    ]
   },
   {
     "name": "COOLER MASTER MasterBox TD500 Mesh V2 (White)",
@@ -2191,6 +2587,387 @@
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "model": "MasterBox TD500 Mesh V2 (White)"
+    "model": "MasterBox TD500 Mesh V2 (White)",
+    "images": [
+      "https://os-jo.com/image/cache/catalog/products/cases/TD500MESH-WHITE/TD500ARGB1-1200x1200.JPEG"
+    ]
+  },
+  {
+    "name": "NZXT H9 Flow (2024 Dual Chamber)",
+    "price": 6499.0,
+    "type": "Dual Chamber ATX Mid Tower",
+    "color": "Black",
+    "side_panel": "Seamless Tempered Glass",
+    "external_volume": 66.8,
+    "max_gpu_length": 435,
+    "max_cpu_cooler_height": 165,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm",
+    "included_fans": "4x 120mm Quiet Airflow Fan",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1 Type-A, Audio Jack",
+    "imageUrl": "https://nzxt.com/assets/cms/34299/1672879555-h9-flow-black-primary.png",
+    "images": [
+      "https://nzxt.com/assets/cms/34299/1672879555-h9-flow-black-primary.png",
+      "https://nzxt.com/assets/cms/34299/1672879574-h9-flow-black-side.png",
+      "https://nzxt.com/assets/cms/34299/1672879590-h9-flow-black-open.png"
+    ]
+  },
+  {
+    "name": "Fractal Design Terra",
+    "price": 6899.0,
+    "type": "Mini ITX SFF Premium",
+    "color": "Jade Green / Walnut",
+    "side_panel": "Anodized CNC Aluminum Wings",
+    "external_volume": 10.4,
+    "max_gpu_length": 322,
+    "max_cpu_cooler_height": 77,
+    "max_radiator_size": 120,
+    "drive_bays": "2x 2.5 Inch SSD",
+    "radiator_support": "Alt: 120mm (Ayarlanabilir Akıllı Merkezi Omurga)",
+    "included_fans": "Dahili Fan Yok (Ultra Kompakt 10.4 Litre)",
+    "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 1x USB 3.0",
+    "imageUrl": "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_1-1000x1000.jpg",
+    "images": [
+      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_1-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_3-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_5-1000x1000.jpg"
+    ]
+  },
+  {
+    "name": "Corsair 3500X ARGB",
+    "price": 3999.0,
+    "type": "Panoramic Glass ATX Mid Tower",
+    "color": "Black",
+    "side_panel": "Seamless Tempered Glass",
+    "external_volume": 48.0,
+    "max_gpu_length": 410,
+    "max_cpu_cooler_height": 170,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 120mm (BTF / Project Zero Uyumlu)",
+    "included_fans": "3x RS120 ARGB PWM Fan",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Type-A, Audio",
+    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_01.png",
+    "images": [
+      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_01.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_02.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_03.png"
+    ]
+  },
+  {
+    "name": "Hyte Y70 Touch",
+    "price": 13999.0,
+    "type": "Panoramic Corner 4K Touchscreen ATX",
+    "color": "Snow White",
+    "side_panel": "3-Piece Panoramic Glass with Integrated 4K Touch Display",
+    "external_volume": 70.7,
+    "max_gpu_length": 422,
+    "max_cpu_cooler_height": 180,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 3x 120mm (Entegre 14.1 inç 4K 60Hz Dokunmatik Ekran)",
+    "included_fans": "Dahili Fan Yok (Dikey GPU PCIe 4.0 Riser Dahil)",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1, Audio Jack",
+    "imageUrl": "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-hero.png",
+    "images": [
+      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-hero.png",
+      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-front.png",
+      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-angle.png"
+    ]
+  },
+  {
+    "name": "be quiet! Shadow Base 800 FX",
+    "price": 7899.0,
+    "type": "Maximum Airflow E-ATX Full Tower",
+    "color": "Black",
+    "side_panel": "Tempered Glass",
+    "external_volume": 69.2,
+    "max_gpu_length": 430,
+    "max_cpu_cooler_height": 180,
+    "max_radiator_size": 420,
+    "drive_bays": "3x 3.5 Inch, 7x 2.5 Inch",
+    "radiator_support": "Ön: 420mm / Üst: 420mm (Maksimum 420mm Çift Radyatör Desteği)",
+    "included_fans": "4x Light Wings 140mm PWM Yüksek Hızlı ARGB Fan",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2, HD Audio",
+    "imageUrl": "https://www.bequiet.com/admin/ImageServer.php?ID=42211&ext=jpg",
+    "images": [
+      "https://www.bequiet.com/admin/ImageServer.php?ID=42211&ext=jpg",
+      "https://www.bequiet.com/admin/ImageServer.php?ID=42212&ext=jpg",
+      "https://www.bequiet.com/admin/ImageServer.php?ID=42213&ext=jpg"
+    ]
+  },
+  {
+    "name": "ASUS ROG Hyperion GR701",
+    "price": 18999.0,
+    "type": "Ultimate Flagship E-ATX Full Tower",
+    "color": "Anodized Black Aluminum",
+    "side_panel": "Dual Tool-Free Tempered Glass",
+    "external_volume": 120.0,
+    "max_gpu_length": 460,
+    "max_cpu_cooler_height": 190,
+    "max_radiator_size": 420,
+    "drive_bays": "2x 3.5 Inch, 5x 2.5 Inch",
+    "radiator_support": "Ön: 420mm / Üst: 420mm / Yan: 360mm (Entegre Alüminyum Taşıma Kolları)",
+    "included_fans": "4x 140mm PWM Kalın Ön & Arka Fan",
+    "front_panel_usb": "2x USB 3.2 Gen 2x2 Type-C (60W Hızlı Şarj Destekli), 4x USB 3.0",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/49C16D04-BDFF-464A-A427-4BEB436D2E0B/w1000/h732",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/49C16D04-BDFF-464A-A427-4BEB436D2E0B/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/85376B1C-E613-4BCE-B913-7FF74A7C5D17/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/5B859AE4-7541-48C0-8B35-2B4FF3F4F19E/w1000/h732"
+    ]
+  },
+  {
+    "name": "Thermaltake Tower 300",
+    "price": 4999.0,
+    "type": "Octagonal Prism Micro ATX Showcase",
+    "color": "Hydrangea Blue",
+    "side_panel": "3-Sided Tempered Glass",
+    "external_volume": 49.0,
+    "max_gpu_length": 400,
+    "max_cpu_cooler_height": 210,
+    "max_radiator_size": 420,
+    "drive_bays": "3x 3.5 Inch, 3x 2.5 Inch",
+    "radiator_support": "Sağ Yan: 420mm / 360mm (Yatay Stand Kiti Destekli)",
+    "included_fans": "2x CT140 140mm Üst Fan",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0, HD Audio",
+    "imageUrl": "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_01.jpg",
+    "images": [
+      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_01.jpg",
+      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_02.jpg",
+      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_03.jpg"
+    ]
+  },
+  {
+    "name": "Antec C8 Curve Wood",
+    "price": 5499.0,
+    "type": "Seamless Curved Glass E-ATX",
+    "color": "Walnut Black",
+    "side_panel": "Full Curve Panoramic Glass",
+    "external_volume": 62.0,
+    "max_gpu_length": 440,
+    "max_cpu_cooler_height": 175,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (0.8mm & 1.0mm Çelik Şasi)",
+    "included_fans": "Dahili Fan Yok (Geniş Termal Alan)",
+    "front_panel_usb": "1x Type-C 10Gbps, 2x USB 3.0, Mic/Audio",
+    "imageUrl": "https://www.antec.com/product/case/images/c8-curve-wood-1.png",
+    "images": [
+      "https://www.antec.com/product/case/images/c8-curve-wood-1.png",
+      "https://www.antec.com/product/case/images/c8-curve-wood-2.png",
+      "https://www.antec.com/product/case/images/c8-curve-wood-3.png"
+    ]
+  },
+  {
+    "name": "Corsair 6500X Dual Chamber",
+    "price": 7999.0,
+    "type": "Dual Chamber Panoramic ATX",
+    "color": "Black",
+    "side_panel": "Seamless Tempered Glass",
+    "external_volume": 72.0,
+    "max_gpu_length": 420,
+    "max_cpu_cooler_height": 190,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 3x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Ters Konnektör Anakart Uyumlu)",
+    "included_fans": "Dahili Fan Yok (iCUE LINK Uyumlu)",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 4x USB 3.0, Combo Audio",
+    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_01.png",
+    "images": [
+      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_01.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_02.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_03.png"
+    ]
+  },
+  {
+    "name": "Corsair 2500X Micro ATX Dual Chamber",
+    "price": 5799.0,
+    "type": "Micro ATX Dual Chamber",
+    "color": "White",
+    "side_panel": "Dual Tempered Glass",
+    "external_volume": 49.0,
+    "max_gpu_length": 400,
+    "max_cpu_cooler_height": 180,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Yan: 240mm / Alt: 360mm",
+    "included_fans": "Dahili Fan Yok",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
+    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_01.png",
+    "images": [
+      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_01.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_02.png",
+      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_03.png"
+    ]
+  },
+  {
+    "name": "Fractal Design Torrent",
+    "price": 7699.0,
+    "type": "High Airflow E-ATX Full Tower",
+    "color": "Black",
+    "side_panel": "Light Tint Tempered Glass",
+    "external_volume": 69.5,
+    "max_gpu_length": 423,
+    "max_cpu_cooler_height": 188,
+    "max_radiator_size": 420,
+    "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
+    "radiator_support": "Ön: 420mm / Alt: 420mm (Maksimum Pozitif Basınçlı Hava Akışı)",
+    "included_fans": "2x Dynamic GP-18 180mm PWM + 3x Dynamic GP-14 140mm PWM",
+    "front_panel_usb": "1x USB 3.1 Gen 2 Type-C, 2x USB 3.0, Audio",
+    "imageUrl": "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_1-1000x1000.jpg",
+    "images": [
+      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_1-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_2-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_3-1000x1000.jpg"
+    ]
+  },
+  {
+    "name": "Fractal Design Torrent Compact",
+    "price": 5499.0,
+    "type": "High Airflow ATX Mid Tower",
+    "color": "White",
+    "side_panel": "Clear Tempered Glass",
+    "external_volume": 46.7,
+    "max_gpu_length": 330,
+    "max_cpu_cooler_height": 174,
+    "max_radiator_size": 360,
+    "drive_bays": "1x 3.5 Inch, 3x 2.5 Inch",
+    "radiator_support": "Ön: 360mm / Alt: 280mm",
+    "included_fans": "2x Dynamic GP-18 180mm Dev Ön Fan",
+    "front_panel_usb": "1x USB 3.1 Type-C, 2x USB 3.0",
+    "imageUrl": "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_1-1000x1000.jpg",
+    "images": [
+      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_1-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_2-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_3-1000x1000.jpg"
+    ]
+  },
+  {
+    "name": "Fractal Design Ridge",
+    "price": 4999.0,
+    "type": "Console SFF Slim Mini ITX",
+    "color": "Black / Fabric",
+    "side_panel": "Perforated Steel & Kvadrat Kumaş Ön Yüzey",
+    "external_volume": 12.6,
+    "max_gpu_length": 335,
+    "max_cpu_cooler_height": 70,
+    "max_radiator_size": 280,
+    "drive_bays": "4x 2.5 Inch SSD",
+    "radiator_support": "Yan: 280mm (GPU takılmadığında)",
+    "included_fans": "2x Aspect 140mm PWM İnce Fan",
+    "front_panel_usb": "1x USB 3.1 Gen 2 Type-C, 2x USB 3.0, Audio",
+    "imageUrl": "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_1-1000x1000.jpg",
+    "images": [
+      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_1-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_2-1000x1000.jpg",
+      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_3-1000x1000.jpg"
+    ]
+  },
+  {
+    "name": "Lian Li DAN Cases A4-H2O",
+    "price": 5299.0,
+    "type": "Ultra SFF Mini ITX Liquid Ready",
+    "color": "Silver Aluminum",
+    "side_panel": "Fine Perforated Aluminum",
+    "external_volume": 11.0,
+    "max_gpu_length": 322,
+    "max_cpu_cooler_height": 55,
+    "max_radiator_size": 240,
+    "drive_bays": "1x 2.5 Inch SSD",
+    "radiator_support": "Üst: 240mm AIO Sıvı Soğutma (55mm toplam kalınlık)",
+    "included_fans": "Dahili Fan Yok (PCIe 4.0 Riser Dahil)",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 1x USB 3.0, Mic/Audio",
+    "imageUrl": "https://lian-li.com/wp-content/uploads/2022/02/A4-H2O-01.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2022/02/A4-H2O-01.webp",
+      "https://lian-li.com/wp-content/uploads/2022/02/A4-H2O-02.webp",
+      "https://lian-li.com/wp-content/uploads/2022/02/A4-H2O-03.webp"
+    ]
+  },
+  {
+    "name": "NZXT H7 Flow RGB (2024)",
+    "price": 5299.0,
+    "type": "High Airflow ATX Mid Tower",
+    "color": "White",
+    "side_panel": "Tempered Glass",
+    "external_volume": 54.4,
+    "max_gpu_length": 410,
+    "max_cpu_cooler_height": 185,
+    "max_radiator_size": 420,
+    "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
+    "radiator_support": "Ön: 420mm / Üst: 360mm",
+    "included_fans": "1x F360 RGB Core Tek Parça Ön Fan Kiti",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1, Audio",
+    "imageUrl": "https://nzxt.com/assets/cms/34299/1718137351-h7-flow-rgb-white-primary.png",
+    "images": [
+      "https://nzxt.com/assets/cms/34299/1718137351-h7-flow-rgb-white-primary.png",
+      "https://nzxt.com/assets/cms/34299/1718137367-h7-flow-rgb-white-angle.png",
+      "https://nzxt.com/assets/cms/34299/1718137384-h7-flow-rgb-white-open.png"
+    ]
+  },
+  {
+    "name": "ASUS TUF Gaming GT502",
+    "price": 5799.0,
+    "type": "Dual Chamber ATX Mid Tower",
+    "color": "Black",
+    "side_panel": "Tempered Glass & Dayanıklı Kumaş Taşıma Kolları",
+    "external_volume": 62.0,
+    "max_gpu_length": 400,
+    "max_cpu_cooler_height": 163,
+    "max_radiator_size": 360,
+    "drive_bays": "4x 3.5/2.5 Inch Combo",
+    "radiator_support": "Üst: 360mm / Yan: 360mm / Arka: 120mm",
+    "included_fans": "Dahili Fan Yok (Gelişmiş Çift Bölmeli Soğutma)",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0, LED Tuşu",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/49F44E72-D46C-4965-B474-9A4B3A8B3B5C/w1000/h732",
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/49F44E72-D46C-4965-B474-9A4B3A8B3B5C/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/B2A2EB55-3844-4BCF-8AE5-4A97ACBB89FF/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/E30F135A-F56D-4573-A3B4-846DC22EB746/w1000/h732"
+    ]
+  },
+  {
+    "name": "Cooler Master NR200P V2",
+    "price": 4299.0,
+    "type": "Compact Mini ITX SFF",
+    "color": "Black",
+    "side_panel": "Tempered Glass & Vented Panel (İkisi de Kutu İçinde)",
+    "external_volume": 18.2,
+    "max_gpu_length": 356,
+    "max_cpu_cooler_height": 67,
+    "max_radiator_size": 280,
+    "drive_bays": "1x 3.5 Inch, 2x 2.5 Inch",
+    "radiator_support": "Üst: 280mm / 240mm AIO Sıvı Soğutma Desteği",
+    "included_fans": "1x SickleFlow 120mm İnce Üst Fan + PCIe 4.0 Dikey Riser",
+    "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, Audio",
+    "imageUrl": "https://coolermaster.egnyte.com/dl/vJ857Tz7xP/NR200P_V2_Black_01.png",
+    "images": [
+      "https://coolermaster.egnyte.com/dl/vJ857Tz7xP/NR200P_V2_Black_01.png",
+      "https://coolermaster.egnyte.com/dl/4ZkL6bE0w1/NR200P_V2_Black_02.png",
+      "https://coolermaster.egnyte.com/dl/2n5v6j8m1L/NR200P_V2_Black_03.png"
+    ]
+  },
+  {
+    "name": "Jonsbo D31 MESH Screen",
+    "price": 4499.0,
+    "type": "Micro ATX with 8-inch HD LCD Screen",
+    "color": "Black",
+    "side_panel": "Tempered Glass & 8 inç 1280x800 Entegre Donanım Monitörü",
+    "external_volume": 31.3,
+    "max_gpu_length": 400,
+    "max_cpu_cooler_height": 168,
+    "max_radiator_size": 360,
+    "drive_bays": "2x 3.5 Inch, 3x 2.5 Inch",
+    "radiator_support": "Üst: 360mm / Alt: 360mm / Arka: 120mm",
+    "included_fans": "Dahili Fan Yok",
+    "front_panel_usb": "1x Type-C, 1x USB 3.0, Audio",
+    "imageUrl": "https://www.jonsbo.com/uploads/221124/1-22112411512N92.png",
+    "images": [
+      "https://www.jonsbo.com/uploads/221124/1-22112411512N92.png",
+      "https://www.jonsbo.com/uploads/221124/1-2211241151433E.png",
+      "https://www.jonsbo.com/uploads/221124/1-221124115201c8.png"
+    ]
   }
 ]

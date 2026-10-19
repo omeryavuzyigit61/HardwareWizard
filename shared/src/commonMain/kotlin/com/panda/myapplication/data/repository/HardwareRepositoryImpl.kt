@@ -46,7 +46,9 @@ class HardwareRepositoryImpl(
             val hasPrebuilts = existing.any { it.category == HardwareCategory.PREBUILT_PC }
             val laptopCount = existing.count { it.category == HardwareCategory.LAPTOP }
             val peripheralCount = existing.count { it.category.isPeripheral }
-            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts || laptopCount < 300 || peripheralCount < 400) {
+            val caseCount = existing.count { it.category == HardwareCategory.CASE }
+            val coolerCount = existing.count { it.category == HardwareCategory.COOLER }
+            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts || laptopCount < 300 || peripheralCount < 400 || caseCount < 150 || coolerCount < 140) {
                 localDataSource.seedDatabaseIfEmpty()
             }
             isSeeded = true

@@ -19,4 +19,5 @@ data class CaseRawDto(
     @SerialName("included_fans") val includedFans: String? = null,
     @SerialName("front_panel_usb") val frontPanelUsb: String? = null,
     val imageUrl: String? = null,
+    val images: List<String> = emptyList(),
 )

@@ -79,6 +79,9 @@ data class ClearanceRadarResult(
     val coolerRadiatorMm: Int?,
     val hasClearanceIssue: Boolean,
     val issueMessage: String?,
+    val radiatorSupportSummary: String? = null,
+    val ramClearanceStatus: String? = null,
+    val fanCapacitySummary: String? = null,
 )
 
 @Immutable
@@ -326,6 +329,19 @@ object BuildAnalysisEngine {
             issues.add("Radyatör ${cooler?.radiatorSizeMm}mm > Kasa ${case.maxRadiatorSizeMm}mm")
         }
 
+        val radSupportSummary = case.radiatorSupport?.takeIf { it.isNotBlank() }
+            ?: (if (case.maxRadiatorSizeMm != null) "Maksimum ${case.maxRadiatorSizeMm}mm radyatör desteği" else null)
+
+        val ramClearance = when {
+            cooler == null -> null
+            cooler.type == CoolerType.LIQUID -> "Sıvı Soğutma (AIO): RAM yuvaları tamamen açık (Sıfır çakışma)"
+            (estimatedAirHeight ?: 0) >= 155 -> "Büyük Kule Soğutucu: Yüksek RGB RAM'lerde fan konumu gerekebilir"
+            else -> "Kompakt Hava Soğutucu: RAM çakışması riski yok"
+        }
+
+        val fanSummary = case.includedFans?.takeIf { it.isNotBlank() }
+            ?: (if (case.type != null) "${case.type} Kasa" else null)
+
         return ClearanceRadarResult(
             gpuClearanceMm = gpuMargin,
             maxGpuLengthMm = case.maxGpuLengthMm,
@@ -338,6 +354,9 @@ object BuildAnalysisEngine {
             coolerRadiatorMm = cooler?.radiatorSizeMm,
             hasClearanceIssue = issues.isNotEmpty(),
             issueMessage = if (issues.isNotEmpty()) issues.joinToString(" | ") else null,
+            radiatorSupportSummary = radSupportSummary,
+            ramClearanceStatus = ramClearance,
+            fanCapacitySummary = fanSummary,
         )
     }
 
