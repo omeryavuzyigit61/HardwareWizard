@@ -758,7 +758,7 @@ fun SubmitCommunityDealSheet(
                 value = userDisplayName,
                 onValueChange = { userDisplayName = it },
                 label = { Text("Rumuzunuz / Adınız") },
-                placeholder = { Text("Örn: dombikpanda") },
+                placeholder = { Text("Örn: DonanimSever") },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
             )

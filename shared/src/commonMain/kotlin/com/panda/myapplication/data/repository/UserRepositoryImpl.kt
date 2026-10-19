@@ -21,22 +21,19 @@ class UserRepositoryImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : UserRepository {
 
-    // Başlangıçta aktif oturum (Varsayılan olarak dombikpanda veya misafir oturumu)
-    private val _currentUser = MutableStateFlow<UserProfile?>(
-        UserProfile(
-            id = "usr-dombik-61",
-            email = "yavuzyigitomer52@gmail.com",
-            username = "dombikpanda",
-            birthDateIso = "2000-05-14",
-            gender = Gender.MALE,
-            spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
-            createdAtEpochMs = 1713000000000L,
-        )
-    )
+    // Başlangıçta misafir oturumu (otomatik yönetici açılışı yok, kullanıcı açıkça giriş yapar)
+    private val _currentUser = MutableStateFlow<UserProfile?>(null)
     override val currentUser: StateFlow<UserProfile?> = _currentUser.asStateFlow()
 
-    private val _isLoggedIn = MutableStateFlow(true)
+    private val _isLoggedIn = MutableStateFlow(false)
     override val isLoggedIn: StateFlow<Boolean> = _isLoggedIn.asStateFlow()
+
+    private data class AccountCredential(
+        val profile: UserProfile,
+        val password: String,
+    )
+
+    private val _registeredAccounts = mutableMapOf<String, AccountCredential>()
 
     override suspend fun signUp(
         email: String,
@@ -69,6 +66,10 @@ class UserRepositoryImpl(
             createdAtEpochMs = 1713500000000L,
         )
 
+        val cred = AccountCredential(profile, password)
+        _registeredAccounts[trimmedUsername.lowercase()] = cred
+        _registeredAccounts[trimmedEmail.lowercase()] = cred
+
         _currentUser.value = profile
         _isLoggedIn.value = true
 
@@ -81,43 +82,41 @@ class UserRepositoryImpl(
     ): DomainResult<UserProfile> = withContext(ioDispatcher) {
         val input = emailOrUsername.trim().removePrefix("@")
 
-        // 1. Master Yönetici Girişi Kontrolü
-        val isMasterAdmin = (input.equals("dombikpanda", ignoreCase = true) || input.equals("yavuzyigitomer52@gmail.com", ignoreCase = true)) &&
-                password == "TS61trabzonspor54"
-
-        if (isMasterAdmin) {
-            val adminProfile = UserProfile(
-                id = "usr-dombik-61",
-                email = "yavuzyigitomer52@gmail.com",
-                username = "dombikpanda",
-                birthDateIso = "2000-05-14",
-                gender = Gender.MALE,
-                spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
-                createdAtEpochMs = 1713000000000L,
-            )
-            _currentUser.value = adminProfile
-            _isLoggedIn.value = true
-            return@withContext DomainResult.Success(adminProfile)
+        // 1. Yönetici Hesabı Doğrulaması
+        val isAdminIdentifier = input.equals("dombikpanda", ignoreCase = true) || input.equals("yavuzyigitomer52@gmail.com", ignoreCase = true)
+        if (isAdminIdentifier) {
+            if (password == "TS61trabzonspor54") {
+                val adminProfile = UserProfile(
+                    id = "usr-dombik-61",
+                    email = "yavuzyigitomer52@gmail.com",
+                    username = "dombikpanda",
+                    birthDateIso = "2000-05-14",
+                    gender = Gender.MALE,
+                    spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
+                    createdAtEpochMs = 1713000000000L,
+                )
+                _currentUser.value = adminProfile
+                _isLoggedIn.value = true
+                return@withContext DomainResult.Success(adminProfile)
+            } else {
+                return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
+            }
         }
 
-        // 2. Standart Kullanıcı Girişi
-        if (password.length < 6) {
-            return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Hatalı şifre veya kullanıcı adı.")))
+        // 2. Kayıtlı Kullanıcı Hesabı Doğrulaması
+        val account = _registeredAccounts[input.lowercase()]
+        if (account != null) {
+            if (account.password == password) {
+                _currentUser.value = account.profile
+                _isLoggedIn.value = true
+                return@withContext DomainResult.Success(account.profile)
+            } else {
+                return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
+            }
         }
 
-        val userProfile = UserProfile(
-            id = "usr-${input.hashCode().toString().takeLast(6)}",
-            email = if (input.contains("@")) input else "$input@hardwarewizard.community",
-            username = input,
-            birthDateIso = "2002-06-20",
-            gender = Gender.MALE,
-            spiritHardware = SpiritHardware.FLAGSHIP_GPU,
-            createdAtEpochMs = 1713500000000L,
-        )
-
-        _currentUser.value = userProfile
-        _isLoggedIn.value = true
-        DomainResult.Success(userProfile)
+        // 3. Bulunamayan Kullanıcı Hatası
+        DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
     }
 
     override suspend fun logout() {

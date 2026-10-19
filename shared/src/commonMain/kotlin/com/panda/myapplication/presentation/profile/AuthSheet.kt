@@ -51,6 +51,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.Gender
 import com.panda.myapplication.domain.model.SpiritHardware
@@ -88,7 +89,7 @@ fun AuthSheet(
     var signupEmail by remember { mutableStateOf("") }
     var signupPassword by remember { mutableStateOf("") }
     var isSignupPasswordVisible by remember { mutableStateOf(false) }
-    var birthDateText by remember { mutableStateOf("2000-05-14") }
+    var birthDateText by remember { mutableStateOf("") }
     var selectedGender by remember { mutableStateOf(Gender.MALE) }
     var selectedSpiritHardware by remember { mutableStateOf(SpiritHardware.OVERCLOCKED_CPU) }
 
@@ -184,7 +185,8 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("E-posta veya Kullanıcı Adı") },
-                    placeholder = { Text("Örn: dombikpanda veya yavuzyigitomer52@gmail.com") },
+                    placeholder = { Text("Kullanıcı adı veya e-posta") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -200,6 +202,7 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("Şifre") },
+                    placeholder = { Text("••••••••") },
                     visualTransformation = if (isLoginPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         IconButton(onClick = { isLoginPasswordVisible = !isLoginPasswordVisible }) {
@@ -209,7 +212,7 @@ fun AuthSheet(
                             )
                         }
                     },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrect = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -236,7 +239,8 @@ fun AuthSheet(
                                     onDismiss()
                                 }
                                 is DomainResult.Failure -> {
-                                    errorMessage = "Giriş başarısız! Lütfen bilgilerinizi kontrol edin."
+                                    errorMessage = (result.error as? DomainError.Unknown)?.cause?.message
+                                        ?: "❌ Kullanıcı bulunamadı veya şifre hatalı! Lütfen bilgilerinizi kontrol edin."
                                 }
                             }
                         }
@@ -261,7 +265,7 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("Kullanıcı Adı (Rumuz) *") },
-                    placeholder = { Text("Örn: dombikpanda") },
+                    placeholder = { Text("Kullanıcı adınız") },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -277,8 +281,8 @@ fun AuthSheet(
                         errorMessage = null
                     },
                     label = { Text("E-posta Adresi *") },
-                    placeholder = { Text("Örn: ornek@gmail.com") },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                    placeholder = { Text("eposta@domain.com") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, autoCorrect = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -303,7 +307,7 @@ fun AuthSheet(
                             )
                         }
                     },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrect = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -322,15 +326,18 @@ fun AuthSheet(
                         value = birthDateText,
                         onValueChange = { birthDateText = it },
                         label = { Text("Doğum Tarihi (YYYY-AA-GG) *") },
-                        placeholder = { Text("2000-05-14") },
+                        placeholder = { Text("2000-01-15") },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
                         singleLine = true,
                         modifier = Modifier.weight(1f),
                     )
 
                     // Otomatik Yaş Önizleme Rozeti
                     val previewAge = remember(birthDateText) {
-                        val birthYear = birthDateText.split("-").firstOrNull()?.toIntOrNull() ?: 2000
-                        (2026 - birthYear).coerceAtLeast(0)
+                        val birthYear = birthDateText.split("-").firstOrNull()?.toIntOrNull()
+                        if (birthYear != null && birthYear in 1940..2025) {
+                            (2026 - birthYear).coerceAtLeast(0)
+                        } else null
                     }
                     Surface(
                         shape = RoundedCornerShape(10.dp),
@@ -338,7 +345,7 @@ fun AuthSheet(
                         border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
                     ) {
                         Text(
-                            text = "Yaş: $previewAge",
+                            text = if (previewAge != null) "Yaş: $previewAge" else "Yaş: -",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = NeonCyan,

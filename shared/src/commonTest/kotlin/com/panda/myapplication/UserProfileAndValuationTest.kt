@@ -121,6 +121,21 @@ class UserProfileAndValuationTest {
     }
 
     @Test
+    fun testLoginWithInvalidCredentialsReturnsFailure() = runTest {
+        val repo = UserRepositoryImpl(
+            httpClient = HttpClient(),
+            json = Json { ignoreUnknownKeys = true },
+            ioDispatcher = Dispatchers.Unconfined,
+        )
+
+        val resultWrongPass = repo.login("dombikpanda", "WrongPassword123")
+        assertTrue(resultWrongPass is DomainResult.Failure)
+
+        val resultUnknownUser = repo.login("non_existent_user_999", "somePassword")
+        assertTrue(resultUnknownUser is DomainResult.Failure)
+    }
+
+    @Test
     fun testSecondHandValuationFormulaTiers() {
         val basePrice = 30000.0 // 30,000 TL sıfır GPU
         val retentionFactor = 0.74 // GPU retention
