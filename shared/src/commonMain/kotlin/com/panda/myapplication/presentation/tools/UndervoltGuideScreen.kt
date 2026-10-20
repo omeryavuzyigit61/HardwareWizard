@@ -1,6 +1,9 @@
 package com.panda.myapplication.presentation.tools
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -76,10 +79,13 @@ fun UndervoltGuideScreen(
         ) {
             Spacer(modifier = Modifier.height(Spacing.small))
 
-            // Tab Selector Chips
+            // Tab Selector Chips (Horizontally Scrollable)
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
                 UndervoltTab.entries.forEach { tab ->
                     val isSelected = selectedTab == tab
@@ -91,6 +97,8 @@ fun UndervoltGuideScreen(
                                 text = "${tab.emoji} ${tab.title}",
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                maxLines = 1,
+                                softWrap = false,
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(

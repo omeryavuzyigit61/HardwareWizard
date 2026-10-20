@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -265,7 +266,8 @@ fun App() {
                         startDestination = "${Destinations.HARDWARE_LIST}?category={category}",
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(bottom = innerPadding.calculateBottomPadding()),
+                            .padding(bottom = innerPadding.calculateBottomPadding())
+                            .imePadding(),
                     ) {
                         composable(
                             route = "${Destinations.HARDWARE_LIST}?category={category}",

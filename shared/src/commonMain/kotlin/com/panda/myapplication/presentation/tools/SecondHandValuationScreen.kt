@@ -291,17 +291,22 @@ private fun ValuationHeroHeader(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("🔄", fontSize = 22.sp)
-                    Spacer(modifier = Modifier.width(8.dp))
+                Row(
+                    modifier = Modifier.weight(1f, fill = false),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text("🔄", fontSize = 20.sp)
+                    Spacer(modifier = Modifier.width(6.dp))
                     Text(
                         text = "SİSTEMİM 2. ELDE NE KADAR EDER?",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonEmerald,
-                        letterSpacing = 0.8.sp,
+                        letterSpacing = 0.5.sp,
                     )
                 }
+
+                Spacer(modifier = Modifier.width(8.dp))
 
                 Surface(
                     shape = RoundedCornerShape(8.dp),
@@ -313,6 +318,8 @@ private fun ValuationHeroHeader(
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonEmerald,
+                        maxLines = 1,
+                        softWrap = false,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                     )
                 }
@@ -485,6 +492,8 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonEmerald,
+                        maxLines = 1,
+                        softWrap = false,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                     )
                 }

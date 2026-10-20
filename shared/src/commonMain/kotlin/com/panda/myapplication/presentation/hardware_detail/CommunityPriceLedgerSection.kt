@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
@@ -467,6 +471,7 @@ fun CommunityDealDetailDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
+        modifier = Modifier.imePadding(),
         title = {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -679,6 +684,8 @@ fun SubmitCommunityDealSheet(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = Spacing.medium, vertical = Spacing.small)
+                .imePadding()
+                .verticalScroll(rememberScrollState())
                 .padding(bottom = Spacing.large),
             verticalArrangement = Arrangement.spacedBy(Spacing.small),
         ) {
