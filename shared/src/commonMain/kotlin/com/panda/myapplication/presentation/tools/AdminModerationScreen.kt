@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -33,6 +34,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -59,10 +62,7 @@ import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
@@ -105,6 +105,7 @@ fun AdminModerationScreen(
     Scaffold(
         modifier = modifier.fillMaxSize(),
         containerColor = MaterialTheme.colorScheme.background,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
                 title = "Yönetici Moderasyon Paneli",
@@ -134,7 +135,7 @@ fun AdminModerationScreen(
                 // Admin Bar
                 Surface(
                     shape = RoundedCornerShape(12.dp),
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.5f)),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -496,7 +497,7 @@ private fun AdminAuthScreenContent(
     ) {
         Surface(
             shape = RoundedCornerShape(16.dp),
-            color = CardSurfaceElevated,
+            color = MaterialTheme.colorScheme.surfaceVariant,
             border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.5f)),
             modifier = Modifier
                 .fillMaxWidth(0.9f)

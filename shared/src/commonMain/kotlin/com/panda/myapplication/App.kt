@@ -473,61 +473,62 @@ private fun HardwareEngineeringDrawerContent(
     onOpenAuthSheet: () -> Unit,
     onLogout: () -> Unit,
 ) {
-    val engineeringTools = remember {
+    val strings = LocalAppStrings.current
+    val engineeringTools = remember(strings) {
         listOf(
             EngineeringToolDrawerItem(
                 route = Destinations.COOLING_LAB,
                 icon = "❄️",
-                title = "Termal & Soğutma Simülatörü",
-                subtitle = "TDP yükü, ortam sıcaklığı, kasa hava akışı ve AIO/Kule fan doygunluk analizi",
+                title = strings.drawerCoolingTitle,
+                subtitle = strings.drawerCoolingSubtitle,
                 badge = "THERMAL LAB",
                 accentColor = ElectricBlue,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.RAM_LATENCY_LAB,
                 icon = "⚡",
-                title = "RAM True Latency & Bant Genişliği",
-                subtitle = "CL × 2000 / MT/s gerçek nanosaniye gecikmesi, 1% Low FPS ve X3D önbellek etkisi",
+                title = strings.drawerRamTitle,
+                subtitle = strings.drawerRamSubtitle,
                 badge = "MEMORY LAB",
                 accentColor = NeonEmerald,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.UPS_CALCULATOR,
                 icon = "🔋",
-                title = "UPS & Akü Dayanma Boyutlandırıcı",
-                subtitle = "VA / Gerçek Watt kapasitesi, Saf Sinüs PFC uyumu ve kesintide çalışma süresi (dk)",
+                title = strings.drawerUpsTitle,
+                subtitle = strings.drawerUpsSubtitle,
                 badge = "POWER LAB",
                 accentColor = NeonAmber,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.DESK_SETUP_LAB,
                 icon = "🎯",
-                title = "Masa & Çevre Birimleri Laboratuvarı",
-                subtitle = "Monitör PPI, 8KHz Mouse CPU yükü, Klavye Rapid Trigger & Kulaklık Ohm/DAC eşleştirici",
+                title = strings.drawerDeskTitle,
+                subtitle = strings.drawerDeskSubtitle,
                 badge = "ESPORTS LAB",
                 accentColor = ElectricBlue,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.HARDWARE_GLOSSARY,
                 icon = "📚",
-                title = "Donanım & Mühendislik Kütüphanesi",
-                subtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED, Planar Manyetik sözlüğü",
+                title = strings.drawerGlossaryTitle,
+                subtitle = strings.drawerGlossarySubtitle,
                 badge = "KNOWLEDGE",
                 accentColor = NeonEmerald,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.UNDERVOLT_GUIDE,
                 icon = "⚡",
-                title = "Undervolt & Optimizasyon Rehberi",
-                subtitle = "Intel 13/14. Nesil Vmin, AMD PBO2 Curve Optimizer, GPU Frekans Eğrisi & RAM Bit-Rot",
+                title = strings.drawerUndervoltTitle,
+                subtitle = strings.drawerUndervoltSubtitle,
                 badge = "TUNING LAB",
                 accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.SECOND_HAND_VALUATOR,
                 icon = "🔄",
-                title = "Sistemim 2. Elde Ne Kadar Eder?",
-                subtitle = "Doğrulanmış defter verileriyle sisteminizin hızlı nakit, gerçekçi pazar ve vitrin değerini hesaplar",
+                title = strings.drawerValuationTitle,
+                subtitle = strings.drawerValuationSubtitle,
                 badge = "2ND HAND VALUATION",
                 accentColor = NeonEmerald,
             ),
@@ -742,7 +743,7 @@ private fun HardwareEngineeringDrawerContent(
 
             // Quick Navigation Section
             Text(
-                text = "ANA MODÜLLER",
+                text = strings.drawerMainModules,
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold,
@@ -754,19 +755,19 @@ private fun HardwareEngineeringDrawerContent(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 QuickDrawerTabChip(
-                    title = "Katalog",
+                    title = strings.drawerQuickCatalog,
                     isSelected = currentRoute?.startsWith(Destinations.HARDWARE_LIST) == true,
                     onClick = { onNavigateToRoute(Destinations.HARDWARE_LIST) },
                     modifier = Modifier.weight(1f),
                 )
                 QuickDrawerTabChip(
-                    title = "Sihirbaz",
+                    title = strings.drawerQuickWizard,
                     isSelected = currentRoute == Destinations.WIZARD,
                     onClick = { onNavigateToRoute(Destinations.WIZARD) },
                     modifier = Modifier.weight(1f),
                 )
                 QuickDrawerTabChip(
-                    title = "VS Arena",
+                    title = strings.drawerQuickVs,
                     isSelected = currentRoute == Destinations.VS_ARENA,
                     onClick = { onNavigateToRoute(Destinations.VS_ARENA) },
                     modifier = Modifier.weight(1f),
@@ -776,7 +777,7 @@ private fun HardwareEngineeringDrawerContent(
             HorizontalDivider(color = GlassBorder.copy(alpha = 0.6f))
 
             Text(
-                text = "5 İNTERAKTİF MÜHENDİSLİK ARACI",
+                text = "${engineeringTools.size} ${strings.drawerToolsHeader}",
                 style = MaterialTheme.typography.labelSmall,
                 color = NeonEmerald,
                 fontWeight = FontWeight.Black,

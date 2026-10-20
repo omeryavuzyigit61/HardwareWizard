@@ -138,6 +138,110 @@ val CyberpunkColorScheme = darkColorScheme(
     onError = Color(0xFF120526),
 )
 
+// 6. VALORANT / Radiant Protocol (Tactical Slate & Crimson)
+val ValorantColorScheme = darkColorScheme(
+    primary = Color(0xFFFF4655), // Radiant Red
+    onPrimary = Color(0xFF0F1923),
+    primaryContainer = Color(0xFF3E1117),
+    onPrimaryContainer = Color(0xFFFFD1D6),
+    secondary = Color(0xFFECE8E1), // Titanium Off-White
+    onSecondary = Color(0xFF0F1923),
+    secondaryContainer = Color(0xFF203244),
+    onSecondaryContainer = Color(0xFFECE8E1),
+    tertiary = Color(0xFF00E5FF), // Spike Teal
+    onTertiary = Color(0xFF0F1923),
+    tertiaryContainer = Color(0xFF063B42),
+    onTertiaryContainer = Color(0xFFBAE6FD),
+    background = Color(0xFF0F1923), // Tactical Dark Slate
+    onBackground = Color(0xFFECE8E1),
+    surface = Color(0xFF172431), // Agent Terminal
+    onSurface = Color(0xFFECE8E1),
+    surfaceVariant = Color(0xFF203244),
+    onSurfaceVariant = Color(0xFF9CA3AF),
+    outline = Color(0xFF33465C),
+    outlineVariant = Color(0xFF4B6482),
+    error = Color(0xFFFF4655),
+    onError = Color(0xFF0F1923),
+)
+
+// 7. COUNTER-STRIKE 2 (CS2) / Tactical Hazard (Hazard Gold & Carbon)
+val Cs2ColorScheme = darkColorScheme(
+    primary = Color(0xFFDE9B35), // Hazard Gold
+    onPrimary = Color(0xFF12151A),
+    primaryContainer = Color(0xFF3D270A),
+    onPrimaryContainer = Color(0xFFFDE68A),
+    secondary = Color(0xFF38BDF8), // CT Spec-Ops Blue
+    onSecondary = Color(0xFF12151A),
+    secondaryContainer = Color(0xFF0C2A44),
+    onSecondaryContainer = Color(0xFFBAE6FD),
+    tertiary = Color(0xFF10B981), // Defusal Green
+    onTertiary = Color(0xFF12151A),
+    tertiaryContainer = Color(0xFF064E3B),
+    onTertiaryContainer = Color(0xFFA7F3D0),
+    background = Color(0xFF12151A), // Tactical Carbon
+    onBackground = Color(0xFFF1F5F9),
+    surface = Color(0xFF1B2028), // Arsenal Vault
+    onSurface = Color(0xFFF1F5F9),
+    surfaceVariant = Color(0xFF262E3A),
+    onSurfaceVariant = Color(0xFF94A3B8),
+    outline = Color(0xFF374151),
+    outlineVariant = Color(0xFF4B5563),
+    error = Color(0xFFEF4444),
+    onError = Color(0xFF12151A),
+)
+
+// 8. GTA VI / Vice Neon Sunset (Miami Sunset Pink & Ocean Teal)
+val GtaViceColorScheme = darkColorScheme(
+    primary = Color(0xFFF43F5E), // Miami Sunset Pink
+    onPrimary = Color(0xFF140926),
+    primaryContainer = Color(0xFF4C0E1E),
+    onPrimaryContainer = Color(0xFFFECDD3),
+    secondary = Color(0xFF06B6D4), // Vice Turquoise
+    onSecondary = Color(0xFF140926),
+    secondaryContainer = Color(0xFF083344),
+    onSecondaryContainer = Color(0xFFBAE6FD),
+    tertiary = Color(0xFFFACC15), // Vice Neon Gold
+    onTertiary = Color(0xFF140926),
+    tertiaryContainer = Color(0xFF422006),
+    onTertiaryContainer = Color(0xFFFEF08A),
+    background = Color(0xFF140926), // Vice City Twilight
+    onBackground = Color(0xFFFDF4FF),
+    surface = Color(0xFF20103D), // Neon Palm Surface
+    onSurface = Color(0xFFFDF4FF),
+    surfaceVariant = Color(0xFF2E1854),
+    onSurfaceVariant = Color(0xFFE2E8F0),
+    outline = Color(0xFF6B21A8),
+    outlineVariant = Color(0xFF9333EA),
+    error = Color(0xFFF43F5E),
+    onError = Color(0xFF140926),
+)
+
+// 9. THE WITCHER / White Wolf (Kaer Morhen Granite & Igni Flame)
+val WitcherColorScheme = darkColorScheme(
+    primary = Color(0xFFDC2626), // Wolf Medallion Crimson
+    onPrimary = Color(0xFF121214),
+    primaryContainer = Color(0xFF450A0A),
+    onPrimaryContainer = Color(0xFFFECACA),
+    secondary = Color(0xFFD97706), // Igni Flame Amber
+    onSecondary = Color(0xFF121214),
+    secondaryContainer = Color(0xFF3B1D06),
+    onSecondaryContainer = Color(0xFFFDE68A),
+    tertiary = Color(0xFF9CA3AF), // Silver Sword Steel
+    onTertiary = Color(0xFF121214),
+    tertiaryContainer = Color(0xFF1F2937),
+    onTertiaryContainer = Color(0xFFF3F4F6),
+    background = Color(0xFF121214), // Kaer Morhen Granite
+    onBackground = Color(0xFFF3F4F6),
+    surface = Color(0xFF1C1C22), // Fortress Stone
+    onSurface = Color(0xFFF3F4F6),
+    surfaceVariant = Color(0xFF2B2B36),
+    onSurfaceVariant = Color(0xFF9CA3AF),
+    outline = Color(0xFF3F3F46),
+    outlineVariant = Color(0xFF52525B),
+    error = Color(0xFFEF4444),
+    onError = Color(0xFF121214),
+)
+
 @Composable
 fun HardwareWizardTheme(
     themeMode: ThemeMode = ThemeMode.DARK,
@@ -151,6 +255,10 @@ fun HardwareWizardTheme(
         ThemeMode.WOOD -> WoodColorScheme
         ThemeMode.OLED -> OledColorScheme
         ThemeMode.CYBERPUNK -> CyberpunkColorScheme
+        ThemeMode.VALORANT -> ValorantColorScheme
+        ThemeMode.CS2 -> Cs2ColorScheme
+        ThemeMode.GTA_VICE -> GtaViceColorScheme
+        ThemeMode.WITCHER -> WitcherColorScheme
     }
 
     MaterialTheme(

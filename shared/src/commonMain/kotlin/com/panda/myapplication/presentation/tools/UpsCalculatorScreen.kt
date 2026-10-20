@@ -28,6 +28,8 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -41,13 +43,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 
@@ -102,12 +101,12 @@ fun UpsCalculatorScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "UPS & Akü Boyutlandırıcı",
-                subtitle = "Güç Faktörü (PF 0.6) VA Hesabı & Kesinti Dayanma Süresi",
+                title = LocalAppStrings.current.drawerUpsTitle,
+                subtitle = LocalAppStrings.current.drawerUpsSubtitle,
                 icon = "🔋",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -127,7 +126,7 @@ fun UpsCalculatorScreen(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(Spacing.cardRadius),
-                    colors = CardDefaults.cardColors(containerColor = CardSurface),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 ) {
                     Column(modifier = Modifier.padding(Spacing.medium)) {
@@ -220,7 +219,7 @@ fun UpsCalculatorScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = NeonEmerald,
                     secondaryColor = NeonCyan,
-                    containerColor = CardSurfaceElevated,
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 ) {
                     Column(
                         modifier = Modifier.fillMaxWidth(),
@@ -322,7 +321,7 @@ fun UpsCalculatorScreen(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(Spacing.cardRadius),
-                    colors = CardDefaults.cardColors(containerColor = CardSurface),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 ) {
                     Column(
@@ -356,7 +355,7 @@ fun UpsCalculatorScreen(
                                 color = when {
                                     isOverloaded -> NeonRose.copy(alpha = 0.1f)
                                     isRecommended -> NeonEmerald.copy(alpha = 0.14f)
-                                    else -> CardSurfaceElevated
+                                    else -> MaterialTheme.colorScheme.surfaceVariant
                                 },
                                 border = BorderStroke(
                                     1.dp,

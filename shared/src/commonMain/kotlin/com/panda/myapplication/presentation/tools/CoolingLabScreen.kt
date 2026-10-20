@@ -50,6 +50,8 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -82,15 +84,12 @@ import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.presentation.components.FluidInteractiveSlider
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import kotlinx.coroutines.flow.map
 import org.koin.compose.koinInject
@@ -268,19 +267,19 @@ fun CoolingLabScreen(
         label = "statusColor",
     )
     val statusBadgeText = when {
-        isThrottling -> "🔥 THERMAL THROTTLING RİSKİ (FREKANS KISMA)"
-        saturationRatio > 0.85f -> "⚠️ SINIRDA SOĞUTMA (YÜKSEK FAN DEVRİ)"
-        else -> "❄️ TERMAL OLARAK GÜVENLİ & SESSİZ"
+        isThrottling -> LocalAppStrings.current.coolingThrottleStatus
+        saturationRatio > 0.85f -> LocalAppStrings.current.coolingWarningStatus
+        else -> LocalAppStrings.current.coolingSafeStatus
     }
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "Termal Doygunluk Simülatörü",
-                subtitle = "CPU PPT/MTP Gücü vs. Soğutucu Isı Dağıtım Analizi",
+                title = LocalAppStrings.current.drawerCoolingTitle,
+                subtitle = LocalAppStrings.current.drawerCoolingSubtitle,
                 icon = "🌡️",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -300,7 +299,7 @@ fun CoolingLabScreen(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(Spacing.cardRadius),
-                    colors = CardDefaults.cardColors(containerColor = CardSurface),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 ) {
                     Column(modifier = Modifier.padding(Spacing.medium)) {
@@ -323,7 +322,7 @@ fun CoolingLabScreen(
                                 contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
                             ) {
                                 Text(
-                                    text = "🔍 Kataloğumdan İşlemci Seç (${catalogCpus.size})",
+                                    text = "🔍 ${LocalAppStrings.current.selectCpuCatalog} (${catalogCpus.size})",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan,
@@ -364,7 +363,7 @@ fun CoolingLabScreen(
                                     Surface(
                                         onClick = { customCatalogCpu = null },
                                         shape = RoundedCornerShape(6.dp),
-                                        color = CardSurfaceElevated,
+                                        color = MaterialTheme.colorScheme.surfaceVariant,
                                     ) {
                                         Text(
                                             text = "Sıfırla",
@@ -437,7 +436,7 @@ fun CoolingLabScreen(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(Spacing.cardRadius),
-                    colors = CardDefaults.cardColors(containerColor = CardSurface),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 ) {
                     Column(modifier = Modifier.padding(Spacing.medium)) {
@@ -460,7 +459,7 @@ fun CoolingLabScreen(
                                 contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
                             ) {
                                 Text(
-                                    text = "🔍 Kataloğumdan Soğutucu Seç (${catalogCoolers.size})",
+                                    text = "🔍 ${LocalAppStrings.current.selectCoolerCatalog} (${catalogCoolers.size})",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan,
@@ -501,7 +500,7 @@ fun CoolingLabScreen(
                                     Surface(
                                         onClick = { customCatalogCooler = null },
                                         shape = RoundedCornerShape(6.dp),
-                                        color = CardSurfaceElevated,
+                                        color = MaterialTheme.colorScheme.surfaceVariant,
                                     ) {
                                         Text(
                                             text = "Sıfırla",
@@ -531,7 +530,7 @@ fun CoolingLabScreen(
                                         selectedCoolerIndex = index
                                     },
                                     shape = RoundedCornerShape(10.dp),
-                                    color = if (selected) NeonCyan.copy(alpha = 0.14f) else CardSurfaceElevated,
+                                    color = if (selected) NeonCyan.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                                     border = BorderStroke(
                                         1.dp,
                                         if (selected) NeonCyan else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
@@ -605,7 +604,7 @@ fun CoolingLabScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = statusColor,
                     secondaryColor = if (isThrottling) NeonRose else if (saturationRatio > 0.85f) NeonAmber else NeonCyan,
-                    containerColor = CardSurfaceElevated,
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 ) {
                     Surface(
                         shape = RoundedCornerShape(8.dp),
@@ -905,7 +904,7 @@ private fun CatalogCpuPickerSheet(
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = CardSurface,
+        containerColor = MaterialTheme.colorScheme.surface,
     ) {
         Column(
             modifier = Modifier
@@ -952,7 +951,7 @@ private fun CatalogCpuPickerSheet(
                     Surface(
                         onClick = { onSelectCpu(item, spec) },
                         shape = RoundedCornerShape(12.dp),
-                        color = CardSurfaceElevated,
+                        color = MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f)),
                         modifier = Modifier.fillMaxWidth(),
                     ) {
@@ -1011,7 +1010,7 @@ private fun CatalogCoolerPickerSheet(
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = CardSurface,
+        containerColor = MaterialTheme.colorScheme.surface,
     ) {
         Column(
             modifier = Modifier
@@ -1058,7 +1057,7 @@ private fun CatalogCoolerPickerSheet(
                     Surface(
                         onClick = { onSelectCooler(item, spec) },
                         shape = RoundedCornerShape(12.dp),
-                        color = CardSurfaceElevated,
+                        color = MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f)),
                         modifier = Modifier.fillMaxWidth(),
                     ) {
@@ -1110,7 +1109,7 @@ internal fun ToolTopBar(
     onOpenDrawer: () -> Unit,
 ) {
     Surface(
-        color = CardSurface,
+        color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -1130,8 +1129,8 @@ internal fun ToolTopBar(
                 Surface(
                     onClick = onOpenDrawer,
                     shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated,
-                    border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
+                    color = MaterialTheme.colorScheme.surfaceVariant,
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
                 ) {
                     Text(
                         text = "☰",
@@ -1174,7 +1173,7 @@ internal fun ToolTopBar(
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
             ) {
                 Text(
-                    text = "Kapat ✕",
+                    text = "${LocalAppStrings.current.closeButton} ✕",
                     modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,

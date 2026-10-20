@@ -28,6 +28,8 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -40,15 +42,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import kotlin.math.roundToInt
 import kotlin.math.sqrt
 
@@ -102,12 +101,12 @@ fun DeskSetupLabScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "Masa & Çevre Birimleri Lab",
-                subtitle = "Monitör PPI, 8KHz Mouse, Rapid Trigger & Ses Empedans Analizi",
+                title = LocalAppStrings.current.drawerDeskTitle,
+                subtitle = LocalAppStrings.current.drawerDeskSubtitle,
                 icon = "🖱️",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -128,7 +127,7 @@ fun DeskSetupLabScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = NeonCyan,
                     secondaryColor = NeonEmerald,
-                    containerColor = CardSurface,
+                    containerColor = MaterialTheme.colorScheme.surface,
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
@@ -234,7 +233,7 @@ fun DeskSetupLabScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = ElectricBlue,
                     secondaryColor = NeonPurple,
-                    containerColor = CardSurface,
+                    containerColor = MaterialTheme.colorScheme.surface,
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
@@ -253,7 +252,7 @@ fun DeskSetupLabScreen(
                                 Surface(
                                     onClick = { selectedPollingHz = hz },
                                     shape = RoundedCornerShape(8.dp),
-                                    color = if (selected) NeonCyan.copy(alpha = 0.2f) else CardSurfaceElevated,
+                                    color = if (selected) NeonCyan.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant,
                                     border = BorderStroke(1.dp, if (selected) NeonCyan else MaterialTheme.colorScheme.outline),
                                     modifier = Modifier.weight(1f),
                                 ) {
@@ -300,7 +299,7 @@ fun DeskSetupLabScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = NeonAmber,
                     secondaryColor = NeonRose,
-                    containerColor = CardSurface,
+                    containerColor = MaterialTheme.colorScheme.surface,
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
@@ -334,7 +333,7 @@ fun DeskSetupLabScreen(
                         ) {
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
-                                color = CardSurfaceElevated,
+                                color = MaterialTheme.colorScheme.surfaceVariant,
                                 border = BorderStroke(1.dp, if (mechActuated) NeonAmber else MaterialTheme.colorScheme.outline),
                                 modifier = Modifier.weight(1f),
                             ) {
@@ -356,7 +355,7 @@ fun DeskSetupLabScreen(
 
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
-                                color = CardSurfaceElevated,
+                                color = MaterialTheme.colorScheme.surfaceVariant,
                                 border = BorderStroke(1.dp, if (hallActuated) NeonEmerald else MaterialTheme.colorScheme.outline),
                                 modifier = Modifier.weight(1f),
                             ) {
@@ -386,7 +385,7 @@ fun DeskSetupLabScreen(
                     modifier = Modifier.fillMaxWidth(),
                     accentColor = NeonEmerald,
                     secondaryColor = NeonCyan,
-                    containerColor = CardSurface,
+                    containerColor = MaterialTheme.colorScheme.surface,
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
@@ -419,7 +418,7 @@ fun DeskSetupLabScreen(
                             Surface(
                                 onClick = { selectedCodecIdx = idx },
                                 shape = RoundedCornerShape(8.dp),
-                                color = if (selected) NeonCyan.copy(alpha = 0.14f) else CardSurfaceElevated,
+                                color = if (selected) NeonCyan.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                                 border = BorderStroke(1.dp, if (selected) NeonCyan else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
                                 modifier = Modifier.fillMaxWidth(),
                             ) {

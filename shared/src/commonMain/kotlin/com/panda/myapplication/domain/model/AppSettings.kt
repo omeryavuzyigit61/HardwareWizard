@@ -6,7 +6,11 @@ enum class ThemeMode {
     LIGHT,
     WOOD,
     OLED,
-    CYBERPUNK;
+    CYBERPUNK,
+    VALORANT,
+    CS2,
+    GTA_VICE,
+    WITCHER;
 
     companion object {
         fun fromString(value: String?): ThemeMode = entries.firstOrNull {

@@ -100,6 +100,80 @@ data class AppStrings(
     val wizardSubtitle: String,
     val totalBudget: String,
     val clearBuild: String,
+    // Extended Themes
+    val themeValorant: String,
+    val themeCs2: String,
+    val themeGtaVice: String,
+    val themeWitcher: String,
+
+    // Drawer & Tool Navigation
+    val drawerMainModules: String,
+    val drawerToolsHeader: String,
+    val drawerQuickCatalog: String,
+    val drawerQuickWizard: String,
+    val drawerQuickVs: String,
+    val closeButton: String,
+
+    // Cooling Lab
+    val drawerCoolingTitle: String,
+    val drawerCoolingSubtitle: String,
+    val selectCpuCatalog: String,
+    val selectCoolerCatalog: String,
+    val coolingSafeStatus: String,
+    val coolingWarningStatus: String,
+    val coolingThrottleStatus: String,
+
+    // RAM Latency Lab
+    val drawerRamTitle: String,
+    val drawerRamSubtitle: String,
+
+    // UPS Lab
+    val drawerUpsTitle: String,
+    val drawerUpsSubtitle: String,
+
+    // Desk Setup Lab
+    val drawerDeskTitle: String,
+    val drawerDeskSubtitle: String,
+
+    // Glossary
+    val drawerGlossaryTitle: String,
+    val drawerGlossarySubtitle: String,
+
+    // Undervolt Guide
+    val drawerUndervoltTitle: String,
+    val drawerUndervoltSubtitle: String,
+
+    // Second Hand Valuator
+    val drawerValuationTitle: String,
+    val drawerValuationSubtitle: String,
+
+    // Detail Screen Sections
+    val detailPerformancePower: String,
+    val detailMultiGameFps: String,
+    val detailTechSpecs: String,
+    val detailPrebuiltAnalysis: String,
+    val detailLaptopSpecs: String,
+    val detailStoreOffers: String,
+    val detailCommunityLedger: String,
+
+    // Second Hand Valuation Screen
+    val valuationHeroTitle: String,
+    val valuationHeroSubtitle: String,
+    val valuationNoSystem: String,
+    val valuationActiveParts: String,
+    val valuationTotalMarket: String,
+    val valuationNewTotal: String,
+    val valuationBreakdownTitle: String,
+    val valuationTipsTitle: String,
+    val valuationEmptyTitle: String,
+    val valuationEmptySubtitle: String,
+    val valuationGoToWizard: String,
+
+    // Undervolt Guide Tabs
+    val uvTabCpu: String,
+    val uvTabGpu: String,
+    val uvTabRam: String,
+    val uvTabCmos: String,
 )
 
 val StringsTR = AppStrings(
@@ -192,6 +266,67 @@ val StringsTR = AppStrings(
     wizardSubtitle = "Akıllı uyumluluk, darboğaz ve PSU güç analizi",
     totalBudget = "Toplam Sistem Tutarı",
     clearBuild = "Sistemi Sıfırla",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "The Witcher",
+
+    drawerMainModules = "ANA MODÜLLER",
+    drawerToolsHeader = "İNTERAKTİF MÜHENDİSLİK ARAÇLARI",
+    drawerQuickCatalog = "Katalog",
+    drawerQuickWizard = "Sihirbaz",
+    drawerQuickVs = "VS Arena",
+    closeButton = "Kapat",
+
+    drawerCoolingTitle = "Termal & Soğutma Simülatörü",
+    drawerCoolingSubtitle = "TDP yükü, ortam sıcaklığı, kasa hava akışı ve AIO/Kule doygunluk analizi",
+    selectCpuCatalog = "Kataloğumdan İşlemci Seç",
+    selectCoolerCatalog = "Kataloğumdan Soğutucu Seç",
+    coolingSafeStatus = "❄️ TERMAL OLARAK GÜVENLİ & SESSİZ",
+    coolingWarningStatus = "⚠️ SINIRDA SOĞUTMA (YÜKSEK FAN DEVRİ)",
+    coolingThrottleStatus = "🔥 THERMAL THROTTLING RİSKİ (FREKANS KISMA)",
+
+    drawerRamTitle = "RAM True Latency & Bant Genişliği",
+    drawerRamSubtitle = "CL × 2000 / MT/s nanosaniye gecikmesi, 1% Low FPS ve X3D etkisi",
+
+    drawerUpsTitle = "UPS & Akü Dayanma Boyutlandırıcı",
+    drawerUpsSubtitle = "VA / Gerçek Watt kapasitesi, Saf Sinüs PFC uyumu ve kesintide çalışma süresi",
+
+    drawerDeskTitle = "Masa & Çevre Birimleri Laboratuvarı",
+    drawerDeskSubtitle = "Monitör PPI, 8KHz Mouse CPU yükü, Klavye Rapid Trigger & DAC eşleştirici",
+
+    drawerGlossaryTitle = "Donanım & Mühendislik Kütüphanesi",
+    drawerGlossarySubtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED sözlüğü",
+
+    drawerUndervoltTitle = "Undervolt & Optimizasyon Rehberi",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, GPU Frekans Eğrisi & RAM Bit-Rot",
+
+    drawerValuationTitle = "Sistemim 2. Elde Ne Kadar Eder?",
+    drawerValuationSubtitle = "Doğrulanmış defter verileriyle hızlı nakit, gerçekçi pazar ve vitrin değeri",
+
+    detailPerformancePower = "PERFORMANS & GÜÇ PROFİLİ",
+    detailMultiGameFps = "12 OYUN CANLI FPS SİMÜLASYONU",
+    detailTechSpecs = "DETAYLI TEKNİK ÖZELLİKLER",
+    detailPrebuiltAnalysis = "HAZIR SİSTEM BİLEŞEN ANALİZİ",
+    detailLaptopSpecs = "GAMING LAPTOP ÖZEL DETAYLARI",
+    detailStoreOffers = "GÜVENLİ MAĞAZA VE FİYAT TEKLİFLERİ",
+    detailCommunityLedger = "TOPLULUK DOĞRULANMIŞ FİYAT DEFTERİ",
+
+    valuationHeroTitle = "SİSTEMİM 2. ELDE NE KADAR EDER?",
+    valuationHeroSubtitle = "Aktif PC Sihirbazı sisteminizdeki donanımları, doğrulanmış topluluk fiyat defteri ve amortisman algoritmasıyla 3 farklı piyasa kademesinde otomatik değerler.",
+    valuationNoSystem = "Sistem Seçilmedi",
+    valuationActiveParts = "%d Parça Aktif",
+    valuationTotalMarket = "SİSTEM TOPLAM 2. EL PİYASA DEĞERİ",
+    valuationNewTotal = "Sıfır Liste: %s",
+    valuationBreakdownTitle = "PARÇA BAZLI 2. EL DEĞER DAĞILIMI",
+    valuationTipsTitle = "2. EL SATIŞ TAKTİKLERİ & PÜF NOKTALARI",
+    valuationEmptyTitle = "Aktif Sistem Listeniz Boş",
+    valuationEmptySubtitle = "Sisteminizin 2. el değerini hesaplamak için PC Sihirbazı'ndan parçalarınızı seçin veya kataloğu gezin.",
+    valuationGoToWizard = "PC Sihirbazı'na Git ve Parça Ekle",
+    uvTabCpu = "İşlemci (CPU)",
+    uvTabGpu = "Ekran Kartı (GPU)",
+    uvTabRam = "Bellek (RAM)",
+    uvTabCmos = "Acil Kurtarma (CMOS)",
 )
 
 val StringsEN = AppStrings(
@@ -284,6 +419,67 @@ val StringsEN = AppStrings(
     wizardSubtitle = "Intelligent compatibility, bottleneck & PSU wattage analytics",
     totalBudget = "Total System Cost",
     clearBuild = "Reset Build",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "The Witcher",
+
+    drawerMainModules = "CORE MODULES",
+    drawerToolsHeader = "INTERACTIVE ENGINEERING TOOLS",
+    drawerQuickCatalog = "Catalog",
+    drawerQuickWizard = "PC Builder",
+    drawerQuickVs = "VS Arena",
+    closeButton = "Close",
+
+    drawerCoolingTitle = "Thermal & Cooling Simulator",
+    drawerCoolingSubtitle = "TDP load, ambient temp, case airflow and AIO thermal saturation",
+    selectCpuCatalog = "Select CPU from Catalog",
+    selectCoolerCatalog = "Select Cooler from Catalog",
+    coolingSafeStatus = "❄️ THERMALLY SAFE & SILENT",
+    coolingWarningStatus = "⚠️ NEAR LIMIT (HIGH FAN RPM)",
+    coolingThrottleStatus = "🔥 THERMAL THROTTLING RISK (CLOCK DROP)",
+
+    drawerRamTitle = "RAM True Latency & Bandwidth",
+    drawerRamSubtitle = "CL × 2000 / MT/s true nanosecond latency, 1% Low FPS and X3D impact",
+
+    drawerUpsTitle = "UPS & Battery Sizing Calculator",
+    drawerUpsSubtitle = "VA / True Watts rating, Pure Sine Wave active PFC and outage runtime",
+
+    drawerDeskTitle = "Desk & Peripherals Lab",
+    drawerDeskSubtitle = "Monitor PPI, 8KHz Mouse CPU IRQ load, Keyboard Rapid Trigger & DAC",
+
+    drawerGlossaryTitle = "Hardware & Engineering Glossary",
+    drawerGlossarySubtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED technical terms",
+
+    drawerUndervoltTitle = "Undervolt & Tuning Guide",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, GPU Voltage/Freq Curve & RAM Bit-Rot",
+
+    drawerValuationTitle = "Used PC Valuation Calculator",
+    drawerValuationSubtitle = "Quick cash, fair market, and listing price based on verified sales",
+
+    detailPerformancePower = "PERFORMANCE & POWER PROFILE",
+    detailMultiGameFps = "12-GAME LIVE FPS SIMULATION",
+    detailTechSpecs = "DETAILED TECHNICAL SPECIFICATIONS",
+    detailPrebuiltAnalysis = "PREBUILT COMPONENT BREAKDOWN",
+    detailLaptopSpecs = "GAMING LAPTOP SPECIFICATIONS",
+    detailStoreOffers = "VERIFIED STORE OFFERS & DEALS",
+    detailCommunityLedger = "COMMUNITY VERIFIED PRICE LEDGER",
+
+    valuationHeroTitle = "WHAT IS MY RIG WORTH USED?",
+    valuationHeroSubtitle = "Automatically calculates your PC Wizard build across 3 market tiers using verified community ledger data and depreciation models.",
+    valuationNoSystem = "No System Selected",
+    valuationActiveParts = "%d Active Parts",
+    valuationTotalMarket = "TOTAL USED MARKET VALUE",
+    valuationNewTotal = "MSRP New: %s",
+    valuationBreakdownTitle = "COMPONENT VALUE BREAKDOWN",
+    valuationTipsTitle = "USED MARKET SELLING TIPS & TRICKS",
+    valuationEmptyTitle = "Your Active Build is Empty",
+    valuationEmptySubtitle = "To estimate second-hand value, choose components in PC Wizard or explore the catalog.",
+    valuationGoToWizard = "Open PC Wizard & Add Parts",
+    uvTabCpu = "Processor (CPU)",
+    uvTabGpu = "Graphics Card (GPU)",
+    uvTabRam = "Memory (RAM)",
+    uvTabCmos = "Emergency Reset (CMOS)",
 )
 
 val StringsDE = AppStrings(
@@ -376,6 +572,67 @@ val StringsDE = AppStrings(
     wizardSubtitle = "Intelligente Kompatibilitäts- und Netzteil-Leistungsanalyse",
     totalBudget = "Gesamtpreis des Systems",
     clearBuild = "Konfiguration zurücksetzen",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "The Witcher",
+
+    drawerMainModules = "HAUPTMODULE",
+    drawerToolsHeader = "INTERAKTIVE INGENIEUR-TOOLS",
+    drawerQuickCatalog = "Katalog",
+    drawerQuickWizard = "PC-Konfigurator",
+    drawerQuickVs = "VS-Arena",
+    closeButton = "Schließen",
+
+    drawerCoolingTitle = "Thermik- & Kühlungs-Simulator",
+    drawerCoolingSubtitle = "TDP-Last, Umgebungstemperatur, Gehäuse-Airflow und AIO-Sättigung",
+    selectCpuCatalog = "CPU aus Katalog wählen",
+    selectCoolerCatalog = "Kühler aus Katalog wählen",
+    coolingSafeStatus = "❄️ THERMISCH SICHER & LEISE",
+    coolingWarningStatus = "⚠️ GRENZWERTIG (HOHE LÜFTERDREHZAHL)",
+    coolingThrottleStatus = "🔥 THERMISCHES THROTTLING-RISIKO",
+
+    drawerRamTitle = "RAM True Latency & Bandbreite",
+    drawerRamSubtitle = "CL × 2000 / MT/s Nanosekunden-Latenz, 1% Low FPS und X3D-Einfluss",
+
+    drawerUpsTitle = "USV- & Batterie-Laufzeitrechner",
+    drawerUpsSubtitle = "VA / Echte Watt-Kapazität, Reiner Sinus PFC und Überbrückungszeit",
+
+    drawerDeskTitle = "Schreibtisch- & Peripherie-Labor",
+    drawerDeskSubtitle = "Monitor-PPI, 8KHz-Maus-CPU-Last, Rapid Trigger & DAC-Anpassung",
+
+    drawerGlossaryTitle = "Hardware- & Ingenieur-Glossar",
+    drawerGlossarySubtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED Begriffe",
+
+    drawerUndervoltTitle = "Undervolting & Tuning-Leitfaden",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, GPU-Spannungskurve & RAM Bit-Rot",
+
+    drawerValuationTitle = "Gebraucht-PC Wertermittlung",
+    drawerValuationSubtitle = "Schneller Barwert, realistischer Marktwert und Angebotspreis",
+
+    detailPerformancePower = "LEISTUNGS- & STROMPROFIL",
+    detailMultiGameFps = "12-SPIELE LIVE-FPS-SIMULATION",
+    detailTechSpecs = "DETAILLIERTE TECHNISCHE DATEN",
+    detailPrebuiltAnalysis = "KOMPONENTEN-ANALYSE FERTIG-PC",
+    detailLaptopSpecs = "GAMING-LAPTOP SPEZIFIKATIONEN",
+    detailStoreOffers = "VERIFIZIERTE SHOP-ANGEBOTE",
+    detailCommunityLedger = "COMMUNITY-VERIFIZIERTES PREISBUCH",
+
+    valuationHeroTitle = "WAS IST MEIN PC GEBRAUCHT WERT?",
+    valuationHeroSubtitle = "Ermittelt automatisch den Wert Ihres PC-Konfigurator-Builds in 3 Marktstufen basierend auf verifizierten Verkäufen.",
+    valuationNoSystem = "Kein System ausgewählt",
+    valuationActiveParts = "%d Teile aktiv",
+    valuationTotalMarket = "GESAMTER GEBRAUCHTMARKTWERT",
+    valuationNewTotal = "Neupreis: %s",
+    valuationBreakdownTitle = "KOMPONENTEN-PREISAUFTEILUNG",
+    valuationTipsTitle = "TIPPS FÜR DEN GEBRAUCHTVERKAUF",
+    valuationEmptyTitle = "Ihre Systemliste ist leer",
+    valuationEmptySubtitle = "Wählen Sie Komponenten im PC-Konfigurator oder durchsuchen Sie den Katalog, um den Gebrauchtpreis zu ermitteln.",
+    valuationGoToWizard = "Zum PC-Konfigurator & Teile hinzufügen",
+    uvTabCpu = "Prozessor (CPU)",
+    uvTabGpu = "Grafikkarte (GPU)",
+    uvTabRam = "Arbeitsspeicher (RAM)",
+    uvTabCmos = "Notfall-Reset (CMOS)",
 )
 
 val StringsES = AppStrings(
@@ -468,6 +725,67 @@ val StringsES = AppStrings(
     wizardSubtitle = "Análisis inteligente de compatibilidad y fuente de alimentación",
     totalBudget = "Coste Total del Sistema",
     clearBuild = "Reiniciar Ensamble",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "The Witcher",
+
+    drawerMainModules = "MÓDULOS PRINCIPALES",
+    drawerToolsHeader = "HERRAMIENTAS DE INGENIERÍA",
+    drawerQuickCatalog = "Catálogo",
+    drawerQuickWizard = "Constructor PC",
+    drawerQuickVs = "VS Arena",
+    closeButton = "Cerrar",
+
+    drawerCoolingTitle = "Simulador Térmico y Refrigeración",
+    drawerCoolingSubtitle = "Carga TDP, temperatura ambiente, flujo de aire y análisis AIO",
+    selectCpuCatalog = "Elegir CPU del catálogo",
+    selectCoolerCatalog = "Elegir disipador del catálogo",
+    coolingSafeStatus = "❄️ TÉRMICAMENTE SEGURO Y SILENCIOSO",
+    coolingWarningStatus = "⚠️ AL LÍMITE (ALTAS RPM DE VENTILADOR)",
+    coolingThrottleStatus = "🔥 RIESGO DE ESTRANGULAMIENTO TÉRMICO",
+
+    drawerRamTitle = "Latencia Real y Ancho de Banda RAM",
+    drawerRamSubtitle = "Latencia en nanosegundos CL × 2000 / MT/s, 1% Low FPS e impacto X3D",
+
+    drawerUpsTitle = "Calculadora de Autonomía y SAI/UPS",
+    drawerUpsSubtitle = "VA / Vatios reales, compatibilidad Onda Sinusoidal Pura PFC y autonomía",
+
+    drawerDeskTitle = "Laboratorio de Periféricos y Escritorio",
+    drawerDeskSubtitle = "PPI de monitor, carga CPU ratón 8KHz, Rapid Trigger de teclado y DAC",
+
+    drawerGlossaryTitle = "Glosario de Hardware e Ingeniería",
+    drawerGlossarySubtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED términos técnicos",
+
+    drawerUndervoltTitle = "Guía de Undervolt y Optimización",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, curva de frecuencia GPU y Bit-Rot",
+
+    drawerValuationTitle = "¿Cuánto Vale mi PC Usado?",
+    drawerValuationSubtitle = "Efectivo rápido, mercado justo y precio de catálogo con datos verificados",
+
+    detailPerformancePower = "PERFIL DE RENDIMIENTO Y POTENCIA",
+    detailMultiGameFps = "SIMULACIÓN DE FPS EN 12 JUEGOS",
+    detailTechSpecs = "ESPECIFICACIONES TÉCNICAS DETALLADAS",
+    detailPrebuiltAnalysis = "ANÁLISIS DE PC PREMONTADO",
+    detailLaptopSpecs = "DETALLES DE PORTÁTIL GAMING",
+    detailStoreOffers = "OFERTAS DE TIENDAS VERIFICADAS",
+    detailCommunityLedger = "LIBRO DE PRECIOS DE LA COMUNIDAD",
+
+    valuationHeroTitle = "¿CUÁNTO VALE MI PC USADO?",
+    valuationHeroSubtitle = "Calcula automáticamente el valor de tu ensamble en 3 niveles de mercado usando transacciones verificadas y modelos de amortización.",
+    valuationNoSystem = "Ningún sistema seleccionado",
+    valuationActiveParts = "%d piezas activas",
+    valuationTotalMarket = "VALOR TOTAL EN EL MERCADO USADO",
+    valuationNewTotal = "Precio nuevo: %s",
+    valuationBreakdownTitle = "DESGLOSE DE VALOR POR COMPONENTE",
+    valuationTipsTitle = "CONSEJOS PARA VENDER DE SEGUNDA MANO",
+    valuationEmptyTitle = "Tu lista de sistema está vacía",
+    valuationEmptySubtitle = "Para calcular el valor usado, selecciona componentes en el Asistente PC o explora el catálogo.",
+    valuationGoToWizard = "Ir al Asistente PC y Añadir Piezas",
+    uvTabCpu = "Procesador (CPU)",
+    uvTabGpu = "Tarjeta Gráfica (GPU)",
+    uvTabRam = "Memoria (RAM)",
+    uvTabCmos = "Rescate de Emergencia (CMOS)",
 )
 
 val StringsFR = AppStrings(
@@ -560,6 +878,67 @@ val StringsFR = AppStrings(
     wizardSubtitle = "Analyse intelligente de compatibilité et de puissance requise",
     totalBudget = "Coût Total de la Config",
     clearBuild = "Réinitialiser la Config",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "The Witcher",
+
+    drawerMainModules = "MODULES PRINCIPAUX",
+    drawerToolsHeader = "OUTILS D'INGÉNIERIE INTERACTIFS",
+    drawerQuickCatalog = "Catalogue",
+    drawerQuickWizard = "Configurateur PC",
+    drawerQuickVs = "Arène VS",
+    closeButton = "Fermer",
+
+    drawerCoolingTitle = "Simulateur Thermique & Refroidissement",
+    drawerCoolingSubtitle = "Charge TDP, température ambiante, flux d'air et saturation AIO",
+    selectCpuCatalog = "Choisir CPU du catalogue",
+    selectCoolerCatalog = "Choisir AIO/Ventirad du catalogue",
+    coolingSafeStatus = "❄️ THERMIQUEMENT SÛR ET SILENCIEUX",
+    coolingWarningStatus = "⚠️ EN LIMITE (HAUTE VITESSE DU VENTILATEUR)",
+    coolingThrottleStatus = "🔥 RISQUE D'ÉTRANGLEMENT THERMIQUE",
+
+    drawerRamTitle = "Latence Réelle & Bande Passante RAM",
+    drawerRamSubtitle = "Latence en nanosecondes CL × 2000 / MT/s, FPS 1% Low et impact X3D",
+
+    drawerUpsTitle = "Dimensionnement Onduleur & Batterie",
+    drawerUpsSubtitle = "Puissance VA / Watts réels, onde sinusoïdale pure PFC et autonomie",
+
+    drawerDeskTitle = "Lab Bureau & Périphériques",
+    drawerDeskSubtitle = "PPI d'écran, charge CPU souris 8KHz, Rapid Trigger clavier & DAC",
+
+    drawerGlossaryTitle = "Glossaire Matériel & Ingénierie",
+    drawerGlossarySubtitle = "TGP vs TDP, 3D V-Cache, ATX 3.1, Hall Effect, QD-OLED termes techniques",
+
+    drawerUndervoltTitle = "Guide d'Undervolt & Optimisation",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, courbe tension/fréq GPU & Bit-Rot",
+
+    drawerValuationTitle = "Estimation PC d'Occasion",
+    drawerValuationSubtitle = "Vente rapide, valeur marché et prix vitrine basés sur données vérifiées",
+
+    detailPerformancePower = "PROFIL DE PERFORMANCE & CONSOMMATION",
+    detailMultiGameFps = "SIMULATION FPS EN DIRECT SUR 12 JEUX",
+    detailTechSpecs = "CARACTÉRISTIQUES TECHNIQUES DÉTAILLÉES",
+    detailPrebuiltAnalysis = "ANALYSE DES COMPOSANTS PC PRÉMONTÉ",
+    detailLaptopSpecs = "SPÉCIFICATIONS PC PORTABLE GAMER",
+    detailStoreOffers = "OFFRES BOUTIQUES VÉRIFIÉES",
+    detailCommunityLedger = "REGISTRE DES PRIX DE LA COMMUNAUTÉ",
+
+    valuationHeroTitle = "COMBIEN VAUT MON PC D'OCCASION ?",
+    valuationHeroSubtitle = "Évalue automatiquement votre configuration sur 3 niveaux du marché d'occasion grâce aux transactions communautaires vérifiées.",
+    valuationNoSystem = "Aucun système sélectionné",
+    valuationActiveParts = "%d composants actifs",
+    valuationTotalMarket = "VALEUR TOTALE D'OCCASION",
+    valuationNewTotal = "Prix neuf : %s",
+    valuationBreakdownTitle = "RÉPARTITION PAR COMPOSANT",
+    valuationTipsTitle = "CONSEILS POUR LA VENTE D'OCCASION",
+    valuationEmptyTitle = "Votre configuration est vide",
+    valuationEmptySubtitle = "Sélectionnez des pièces dans l'Assistant PC ou explorez le catalogue pour évaluer votre configuration d'occasion.",
+    valuationGoToWizard = "Ouvrir l'Assistant PC & Ajouter des pièces",
+    uvTabCpu = "Processeur (CPU)",
+    uvTabGpu = "Carte Graphique (GPU)",
+    uvTabRam = "Mémoire (RAM)",
+    uvTabCmos = "Réinitialisation d'Urgence (CMOS)",
 )
 
 val StringsRU = AppStrings(
@@ -652,6 +1031,67 @@ val StringsRU = AppStrings(
     wizardSubtitle = "Умная проверка совместимости и расчёт мощности БП",
     totalBudget = "Общая Стоимость Сборки",
     clearBuild = "Сбросить Сборку",
+    themeValorant = "Valorant",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA Vice",
+    themeWitcher = "Ведьмак",
+
+    drawerMainModules = "ОСНОВНЫЕ МОДУЛИ",
+    drawerToolsHeader = "ИНЖЕНЕРНЫЕ ИНСТРУМЕНТЫ",
+    drawerQuickCatalog = "Каталог",
+    drawerQuickWizard = "Конфигуратор",
+    drawerQuickVs = "VS Арена",
+    closeButton = "Закрыть",
+
+    drawerCoolingTitle = "Симулятор охлаждения и температур",
+    drawerCoolingSubtitle = "TDP нагрузка, температура среды, воздушный поток и насыщение СЖО",
+    selectCpuCatalog = "Выбрать процессор из каталога",
+    selectCoolerCatalog = "Выбрать кулер из каталога",
+    coolingSafeStatus = "❄️ ТЕРМИЧЕСКИ БЕЗОПАСНО И БЕСШУМНО",
+    coolingWarningStatus = "⚠️ НА ПРЕДЕЛЕ (ВЫСОКИЕ ОБОРОТЫ ВЕНТИЛЯТОРОВ)",
+    coolingThrottleStatus = "🔥 РИСК ТЕРМИЧЕСКОГО ТРОТТЛИНГА",
+
+    drawerRamTitle = "Истинная задержка и ПСП RAM",
+    drawerRamSubtitle = "Задержка в нс CL × 2000 / MT/s, 1% Low FPS и влияние кэша X3D",
+
+    drawerUpsTitle = "Калькулятор мощности и времени ИБП",
+    drawerUpsSubtitle = "ВА / Реальные Ватты, чистый синус PFC и время работы при отключении",
+
+    drawerDeskTitle = "Лаборатория периферии и рабочего места",
+    drawerDeskSubtitle = "PPI монитора, нагрузка 8КГц мыши на CPU, Rapid Trigger клавиатуры и ЦАП",
+
+    drawerGlossaryTitle = "Словарь аппаратного обеспечения и терминов",
+    drawerGlossarySubtitle = "TGP против TDP, 3D V-Cache, ATX 3.1, Hall Effect, термины QD-OLED",
+
+    drawerUndervoltTitle = "Руководство по андервольтингу и оптимизации",
+    drawerUndervoltSubtitle = "Intel Vmin, AMD Curve Optimizer, кривая GPU и деградация RAM",
+
+    drawerValuationTitle = "Оценка стоимости б/у ПК",
+    drawerValuationSubtitle = "Быстрый выкуп, справедливый рынок и цена на витрине по реальным данным",
+
+    detailPerformancePower = "ПРОФИЛЬ ПРОИЗВОДИТЕЛЬНОСТИ И ПИТАНИЯ",
+    detailMultiGameFps = "ЖИВАЯ СИМУЛЯЦИЯ FPS В 12 ИГРАХ",
+    detailTechSpecs = "ПОДРОБНЫЕ ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ",
+    detailPrebuiltAnalysis = "АНАЛИЗ КОМПЛЕКТУЮЩИХ ГОТОВОГО ПК",
+    detailLaptopSpecs = "СПЕЦИФИКАЦИИ ИГРОВОГО НОУТБУКА",
+    detailStoreOffers = "ПРОВЕРЕННЫЕ ПРЕДЛОЖЕНИЯ МАГАЗИНОВ",
+    detailCommunityLedger = "ПРОВЕРЕННЫЙ РЕЕСТР ЦЕН СООБЩЕСТВА",
+
+    valuationHeroTitle = "СКОЛЬКО СТОИТ МОЙ ПК Б/У?",
+    valuationHeroSubtitle = "Автоматическая оценка сборки ПК по 3 рыночным уровням на основе подтвержденных сделок сообщества.",
+    valuationNoSystem = "Система не выбрана",
+    valuationActiveParts = "%d дет. выбрано",
+    valuationTotalMarket = "РЫНОЧНАЯ СТОИМОСТЬ Б/У СИСТЕМЫ",
+    valuationNewTotal = "Новый: %s",
+    valuationBreakdownTitle = "ОЦЕНКА ПО КОМПОНЕНТАМ",
+    valuationTipsTitle = "СОВЕТЫ ПО ПРОДАЖЕ Б/У ЖЕЛЕЗА",
+    valuationEmptyTitle = "Список сборки пуст",
+    valuationEmptySubtitle = "Для оценки стоимости выберите детали в Мастере ПК или исследуйте каталог.",
+    valuationGoToWizard = "В Мастер ПК и добавить детали",
+    uvTabCpu = "Процессор (CPU)",
+    uvTabGpu = "Видеокарта (GPU)",
+    uvTabRam = "Память (RAM)",
+    uvTabCmos = "Сброс BIOS (CMOS)",
 )
 
 val StringsJA = AppStrings(
@@ -744,6 +1184,67 @@ val StringsJA = AppStrings(
     wizardSubtitle = "スマート互換性・ボトルネック・電源容量AI分析",
     totalBudget = "システム合計予算",
     clearBuild = "構成をリセット",
+    themeValorant = "ヴァロラント",
+    themeCs2 = "CS2",
+    themeGtaVice = "GTA ヴァイス",
+    themeWitcher = "ウィッチャー",
+
+    drawerMainModules = "メインモジュール",
+    drawerToolsHeader = "インタラクティブ・エンジニアリングツール",
+    drawerQuickCatalog = "カタログ",
+    drawerQuickWizard = "PCビルダー",
+    drawerQuickVs = "VSアリーナ",
+    closeButton = "閉じる",
+
+    drawerCoolingTitle = "サーマル＆冷却シミュレーター",
+    drawerCoolingSubtitle = "TDP負荷、室温、ケースエアフロー、AIO水冷熱飽和度分析",
+    selectCpuCatalog = "カタログからCPUを選択",
+    selectCoolerCatalog = "カタログからクーラーを選択",
+    coolingSafeStatus = "❄️ サーマル的に安全＆静音",
+    coolingWarningStatus = "⚠️ 限界付近（高ファン回転数）",
+    coolingThrottleStatus = "🔥 サーマルスロットリングの危険",
+
+    drawerRamTitle = "RAM実効レイテンシ＆帯域幅",
+    drawerRamSubtitle = "CL×2000/MT/s実効ナノ秒遅延、1% Low FPS、X3Dキャッシュ効果",
+
+    drawerUpsTitle = "UPS＆バッテリー持続時間計算機",
+    drawerUpsSubtitle = "VA/実効ワット容量、正弦波PFC適合性、停電時動作時間",
+
+    drawerDeskTitle = "デスク＆周辺機器ラボ",
+    drawerDeskSubtitle = "モニターPPI、8KHzマウスCPU負荷、キーボードRapid Trigger＆DAC",
+
+    drawerGlossaryTitle = "ハードウェア＆技術用語辞典",
+    drawerGlossarySubtitle = "TGP vs TDP、3D V-Cache、ATX 3.1、Hall Effect、QD-OLED用語集",
+
+    drawerUndervoltTitle = "アンダーボルト＆チューニングガイド",
+    drawerUndervoltSubtitle = "Intel Vmin、AMD Curve Optimizer、GPU電圧周波数曲線、Bit-Rot",
+
+    drawerValuationTitle = "中古PC査定シミュレーター",
+    drawerValuationSubtitle = "実売データに基づく即現金化・適正相場・出品想定価格",
+
+    detailPerformancePower = "性能＆消費電力プロファイル",
+    detailMultiGameFps = "12大ゲーム実測FPSシミュレーション",
+    detailTechSpecs = "詳細な技術仕様・スペック",
+    detailPrebuiltAnalysis = "完成品PCコンポーネント詳細分析",
+    detailLaptopSpecs = "ゲーミングノート特有スペック",
+    detailStoreOffers = "検証済みストアの価格・在庫一覧",
+    detailCommunityLedger = "コミュニティ検証済み実売台帳",
+
+    valuationHeroTitle = "マイPCの中古相場は？",
+    valuationHeroSubtitle = "検証済みのコミュニティ取引台帳と減価償却モデルに基づき、3つの市場ランクで構成パーツを自動査定します。",
+    valuationNoSystem = "システム未選択",
+    valuationActiveParts = "%d個のパーツ選択中",
+    valuationTotalMarket = "総中古市場相場",
+    valuationNewTotal = "新品定価: %s",
+    valuationBreakdownTitle = "パーツ別相場内訳",
+    valuationTipsTitle = "中古売却のコツと注意事項",
+    valuationEmptyTitle = "構成パーツが選択されていません",
+    valuationEmptySubtitle = "中古相場を算出するには、PCウィザードでパーツを選択するかカタログをご覧ください。",
+    valuationGoToWizard = "PCウィザードを開いてパーツを追加",
+    uvTabCpu = "プロセッサ (CPU)",
+    uvTabGpu = "グラフィックボード (GPU)",
+    uvTabRam = "メモリ (RAM)",
+    uvTabCmos = "緊急復旧 (CMOS)",
 )
 
 fun getAppStrings(language: AppLanguage): AppStrings = when (language) {

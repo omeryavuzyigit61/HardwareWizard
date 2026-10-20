@@ -33,6 +33,8 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -46,15 +48,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import hardwarewizard.shared.generated.resources.Res
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
@@ -182,12 +181,12 @@ fun HardwareGlossaryScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "Donanım & Mühendislik Sözlüğü",
-                subtitle = "Dinamik JSON Tabanlı (${allTerms.size} Teknik Terim & Metrik Rehberi)",
+                title = LocalAppStrings.current.drawerGlossaryTitle,
+                subtitle = "${LocalAppStrings.current.drawerGlossarySubtitle} (${allTerms.size})",
                 icon = "📚",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -303,7 +302,7 @@ fun HardwareGlossaryScreen(
                         FluidOrganicCard(
                             modifier = Modifier.fillMaxWidth(),
                             accentColor = categoryAccent,
-                            containerColor = CardSurface,
+                            containerColor = MaterialTheme.colorScheme.surface,
                         ) {
                             Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                                 Row(
@@ -372,7 +371,7 @@ fun HardwareGlossaryScreen(
                                                 entry.keyMetrics.forEach { metric ->
                                                     Surface(
                                                         shape = RoundedCornerShape(6.dp),
-                                                        color = CardSurfaceElevated,
+                                                        color = MaterialTheme.colorScheme.surfaceVariant,
                                                         border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.4f)),
                                                     ) {
                                                         Text(

@@ -110,6 +110,7 @@ fun SettingsScreen(
                         modifier = Modifier.fillMaxWidth(),
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
+                        // Stüdyo & Klasik
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -159,6 +160,45 @@ fun SettingsScreen(
                                 icon = "⚙️",
                                 isSelected = settings.themeMode == ThemeMode.SYSTEM,
                                 onClick = { viewModel.onThemeModeChanged(ThemeMode.SYSTEM) },
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                        // 🎮 Popüler Oyun Temaları
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            ThemeOptionChip(
+                                label = strings.themeValorant,
+                                icon = "🎯",
+                                isSelected = settings.themeMode == ThemeMode.VALORANT,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.VALORANT) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeCs2,
+                                icon = "💣",
+                                isSelected = settings.themeMode == ThemeMode.CS2,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.CS2) },
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            ThemeOptionChip(
+                                label = strings.themeGtaVice,
+                                icon = "🌴",
+                                isSelected = settings.themeMode == ThemeMode.GTA_VICE,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.GTA_VICE) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeWitcher,
+                                icon = "🐺",
+                                isSelected = settings.themeMode == ThemeMode.WITCHER,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.WITCHER) },
                                 modifier = Modifier.weight(1f),
                             )
                         }

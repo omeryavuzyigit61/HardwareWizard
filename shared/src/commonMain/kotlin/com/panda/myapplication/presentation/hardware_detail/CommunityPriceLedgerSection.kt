@@ -57,6 +57,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.model.CommunityDeal
+import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.UserProfile
@@ -116,7 +117,7 @@ fun CommunityPriceLedgerSection(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "CANLI TOPLULUK FİYAT DEFTERİ",
+                        text = LocalAppStrings.current.detailCommunityLedger,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,

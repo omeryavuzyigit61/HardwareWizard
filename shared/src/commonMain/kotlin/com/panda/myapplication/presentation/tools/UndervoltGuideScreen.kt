@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -22,6 +23,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.AppStrings
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -35,19 +39,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
 
-private enum class UndervoltTab(val title: String, val emoji: String) {
-    CPU("İşlemci (CPU)", "🔥"),
-    GPU("Ekran Kartı (GPU)", "🎮"),
-    RAM("Bellek (RAM)", "⚡"),
-    CLEAR_CMOS("Acil Kurtarma (CMOS)", "🚨"),
+private enum class UndervoltTab(val emoji: String) {
+    CPU("🔥"),
+    GPU("🎮"),
+    RAM("⚡"),
+    CLEAR_CMOS("🚨");
+
+    fun getTitle(strings: AppStrings): String = when (this) {
+        CPU -> strings.uvTabCpu
+        GPU -> strings.uvTabGpu
+        RAM -> strings.uvTabRam
+        CLEAR_CMOS -> strings.uvTabCmos
+    }
 }
 
 @Composable
@@ -61,10 +70,11 @@ fun UndervoltGuideScreen(
     Scaffold(
         modifier = modifier.fillMaxSize(),
         containerColor = MaterialTheme.colorScheme.background,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "Undervolt & Optimizasyon Rehberi",
-                subtitle = "CPU, GPU & RAM Nesil Bazlı Güvenli İnce Ayar",
+                title = LocalAppStrings.current.drawerUndervoltTitle,
+                subtitle = LocalAppStrings.current.drawerUndervoltSubtitle,
                 icon = "⚡",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -94,7 +104,7 @@ fun UndervoltGuideScreen(
                         onClick = { selectedTab = tab },
                         label = {
                             Text(
-                                text = "${tab.emoji} ${tab.title}",
+                                text = "${tab.emoji} ${tab.getTitle(LocalAppStrings.current)}",
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                 maxLines = 1,
@@ -314,8 +324,8 @@ private fun CpuAmdRyzenSection() {
 private fun CpuStressTestSection() {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurfaceElevated,
-        border = BorderStroke(1.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
@@ -457,8 +467,8 @@ private fun GpuAmdSection() {
 private fun GpuCrashRecoverySection() {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurfaceElevated,
-        border = BorderStroke(1.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
@@ -594,8 +604,8 @@ private fun RamSubtimingsSection() {
 private fun RamStabilityTestSection() {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurfaceElevated,
-        border = BorderStroke(1.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
@@ -700,8 +710,8 @@ private fun GuideStepCard(
 ) {
     Surface(
         shape = RoundedCornerShape(8.dp),
-        color = CardSurfaceElevated.copy(alpha = 0.5f),
-        border = BorderStroke(0.5.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+        border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(10.dp)) {

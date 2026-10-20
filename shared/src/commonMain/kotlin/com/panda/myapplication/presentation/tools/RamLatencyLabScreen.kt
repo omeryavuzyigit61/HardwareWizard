@@ -27,6 +27,8 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -39,12 +41,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import kotlin.math.roundToInt
 
 private data class RamPresetConfig(
@@ -83,12 +82,12 @@ fun RamLatencyLabScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "RAM True Latency & Bant Genişliği",
-                subtitle = "Nanosaniye (ns) Tepki Süresi & Dual-Channel GB/s Hesaplayıcı",
+                title = LocalAppStrings.current.drawerRamTitle,
+                subtitle = LocalAppStrings.current.drawerRamSubtitle,
                 icon = "⚡",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -136,7 +135,7 @@ fun RamLatencyLabScreen(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(Spacing.cardRadius),
-                    colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                     border = BorderStroke(1.5.dp, NeonCyan.copy(alpha = 0.7f)),
                 ) {
                     Column(
@@ -246,7 +245,7 @@ private fun RamKitConfiguratorCard(
     FluidOrganicCard(
         modifier = Modifier.fillMaxWidth(),
         accentColor = accentColor,
-        containerColor = CardSurface,
+        containerColor = MaterialTheme.colorScheme.surface,
     ) {
         Text(
             text = title,

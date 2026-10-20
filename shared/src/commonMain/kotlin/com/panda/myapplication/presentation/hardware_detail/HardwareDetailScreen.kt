@@ -624,9 +624,9 @@ private fun HeroHeaderCard(
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
                                     text = if (item.isCustomPrice) {
-                                        "🏷️ Özel Fiyat Aktif: ${item.customPriceTry.formatPriceWithCurrency("")}"
+                                        "🏷️ ${LocalAppStrings.current.localPriceOverride}: ${item.customPriceTry.formatPriceWithCurrency("")}"
                                     } else {
-                                        "🏷️ Yerel Özel Fiyat Belirle"
+                                        "🏷️ ${LocalAppStrings.current.localPriceOverride}"
                                     },
                                     style = MaterialTheme.typography.labelLarge,
                                     fontWeight = FontWeight.Bold,
@@ -636,7 +636,7 @@ private fun HeroHeaderCard(
                                     text = if (!item.customPriceNote.isNullOrBlank()) {
                                         "Not: ${item.customPriceNote}"
                                     } else {
-                                        "Kupon, indirim veya 2. el fiyatınızı girerek F/P ve bütçe hesabına dahil edin"
+                                        LocalAppStrings.current.localPriceDesc
                                     },
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -684,7 +684,7 @@ private fun PerformancePowerSection(
                 )
                 Spacer(modifier = Modifier.width(Spacing.small))
                 Text(
-                    text = "Performans & Güç Göstergeleri",
+                    text = LocalAppStrings.current.detailPerformancePower,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
@@ -1137,7 +1137,7 @@ private fun MultiGameFpsSimulationCard(
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
-                            text = "12 Oyun Canlı FPS & %1 Low Matrisi",
+                            text = LocalAppStrings.current.detailMultiGameFps,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
@@ -1339,7 +1339,7 @@ private fun PolymorphicTechnicalSpecsSection(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "Teknik Özellikler",
+                        text = LocalAppStrings.current.detailTechSpecs,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -1760,7 +1760,7 @@ private fun PrebuiltSystemDetailsCard(
                     Text(text = "🖥️", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "OEM Hazır Sistem Mimarisi",
+                        text = LocalAppStrings.current.detailPrebuiltAnalysis,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -1946,7 +1946,7 @@ private fun LaptopSpecialDetailsCard(
                     Text(text = "💻", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "Gaming Laptop Mühendislik Detayı",
+                        text = LocalAppStrings.current.detailLaptopSpecs,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -2261,7 +2261,7 @@ private fun StoreOffersCard(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "MAĞAZA FİYATLARI & KARŞILAŞTIRMA",
+                        text = LocalAppStrings.current.detailStoreOffers,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = MaterialTheme.colorScheme.primary,

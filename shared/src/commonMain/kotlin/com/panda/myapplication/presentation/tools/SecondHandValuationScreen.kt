@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,6 +29,8 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -48,10 +51,7 @@ import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
@@ -132,14 +132,18 @@ fun SecondHandValuationScreen(
     val totalShowcaseMint = valuationItems.sumOf { it.showcaseMintTry }
 
     Scaffold(
+        modifier = modifier.fillMaxSize(),
         containerColor = MaterialTheme.colorScheme.background,
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
-            SecondHandValuationTopBar(
+            ToolTopBar(
+                title = LocalAppStrings.current.drawerValuationTitle,
+                subtitle = LocalAppStrings.current.drawerValuationSubtitle,
+                icon = "🏷️",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
             )
         },
-        modifier = modifier.statusBarsPadding().navigationBarsPadding(),
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
@@ -175,7 +179,7 @@ fun SecondHandValuationScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = "PARÇA BAZLI 2. EL DEĞER DAĞILIMI",
+                            text = LocalAppStrings.current.valuationBreakdownTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -213,72 +217,11 @@ fun SecondHandValuationScreen(
 }
 
 @Composable
-private fun SecondHandValuationTopBar(
-    onNavigateBack: () -> Unit,
-    onOpenDrawer: () -> Unit,
-) {
-    Surface(
-        color = MaterialTheme.colorScheme.background,
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 14.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween,
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Surface(
-                    onClick = onOpenDrawer,
-                    shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated,
-                    border = BorderStroke(1.dp, GlassBorder),
-                ) {
-                    Text(
-                        text = "☰",
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                    )
-                }
-
-                Spacer(modifier = Modifier.width(10.dp))
-
-                Surface(
-                    onClick = onNavigateBack,
-                    shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated,
-                    border = BorderStroke(1.dp, GlassBorder),
-                ) {
-                    Text(
-                        text = "← Geri",
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                    )
-                }
-            }
-
-            Text(
-                text = "2. El Sistem Değerleme",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Black,
-                color = MaterialTheme.colorScheme.onSurface,
-            )
-
-            Box(modifier = Modifier.size(36.dp))
-        }
-    }
-}
-
-@Composable
 private fun ValuationHeroHeader(
     hasItems: Boolean,
     componentCount: Int,
 ) {
+    val strings = LocalAppStrings.current
     FluidOrganicCard(
         modifier = Modifier.fillMaxWidth(),
         accentColor = NeonEmerald,
@@ -292,17 +235,19 @@ private fun ValuationHeroHeader(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Row(
-                    modifier = Modifier.weight(1f, fill = false),
+                    modifier = Modifier.weight(1f),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text("🔄", fontSize = 20.sp)
+                    Text("🔄", fontSize = 18.sp)
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = "SİSTEMİM 2. ELDE NE KADAR EDER?",
+                        text = strings.valuationHeroTitle,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonEmerald,
                         letterSpacing = 0.5.sp,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     )
                 }
 
@@ -314,7 +259,7 @@ private fun ValuationHeroHeader(
                     border = BorderStroke(0.5.dp, NeonEmerald),
                 ) {
                     Text(
-                        text = if (hasItems) "$componentCount Parça Aktif" else "Sistem Seçilmedi",
+                        text = if (hasItems) strings.valuationActiveParts.replace("%d", componentCount.toString()) else strings.valuationNoSystem,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonEmerald,
@@ -328,7 +273,7 @@ private fun ValuationHeroHeader(
             Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = "Aktif PC Sihirbazı sisteminizdeki donanımları, doğrulanmış topluluk fiyat defteri ve amortisman algoritmasıyla 3 farklı piyasa kademesinde otomatik değerler.",
+                text = strings.valuationHeroSubtitle,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -345,7 +290,7 @@ private fun TotalValuationTiersCard(
 ) {
     Surface(
         shape = RoundedCornerShape(16.dp),
-        color = CardSurface,
+        color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.4f)),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -356,15 +301,15 @@ private fun TotalValuationTiersCard(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "SİSTEM TOPLAM 2. EL PİYASA DEĞERİ",
+                    text = LocalAppStrings.current.valuationTotalMarket,
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonCyan,
                 )
                 Text(
-                    text = "Sıfır Liste: ${formatTry(totalNew)}",
+                    text = LocalAppStrings.current.valuationNewTotal.replace("%s", formatTry(totalNew)),
                     style = MaterialTheme.typography.labelSmall,
-                    color = TextSecondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
 
@@ -418,8 +363,8 @@ private fun TierColumnBox(
 ) {
     Surface(
         shape = RoundedCornerShape(10.dp),
-        color = if (isPrimary) color.copy(alpha = 0.15f) else CardSurfaceElevated,
-        border = BorderStroke(if (isPrimary) 1.5.dp else 0.5.dp, if (isPrimary) color else GlassBorder),
+        color = if (isPrimary) color.copy(alpha = 0.15f) else MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(if (isPrimary) 1.5.dp else 0.5.dp, if (isPrimary) color else MaterialTheme.colorScheme.outlineVariant),
         modifier = modifier,
     ) {
         Column(
@@ -456,8 +401,8 @@ private fun TierColumnBox(
 private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurfaceElevated.copy(alpha = 0.5f),
-        border = BorderStroke(0.5.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+        border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
@@ -538,8 +483,8 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
 private fun SecondHandSellingTipsCard() {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurface,
-        border = BorderStroke(1.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surface,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
@@ -550,7 +495,7 @@ private fun SecondHandSellingTipsCard() {
                 Text("💡", fontSize = 18.sp)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = "2. EL SATIŞ TAKTİKLERİ & PÜF NOKTALARI",
+                    text = LocalAppStrings.current.valuationTipsTitle,
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Black,
                     color = NeonAmber,
@@ -602,8 +547,8 @@ private fun SellingTipRow(icon: String, title: String, description: String) {
 private fun EmptyBuildValuationPrompt(onNavigateToWizard: () -> Unit) {
     Surface(
         shape = RoundedCornerShape(16.dp),
-        color = CardSurfaceElevated,
-        border = BorderStroke(1.dp, GlassBorder),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
