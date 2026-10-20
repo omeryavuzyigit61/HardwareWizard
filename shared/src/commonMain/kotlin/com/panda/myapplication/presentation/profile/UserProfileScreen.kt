@@ -71,6 +71,7 @@ fun UserProfileScreen(
     communityPriceRepository: CommunityPriceRepository,
     onNavigateBack: () -> Unit,
     onOpenAuthSheet: () -> Unit,
+    onNavigateToSettings: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val coroutineScope = rememberCoroutineScope()
@@ -105,6 +106,7 @@ fun UserProfileScreen(
             ProfileTopBar(
                 isLoggedIn = isLoggedIn,
                 onNavigateBack = onNavigateBack,
+                onNavigateToSettings = onNavigateToSettings,
             )
         },
         modifier = modifier.statusBarsPadding().navigationBarsPadding(),
@@ -220,6 +222,47 @@ fun UserProfileScreen(
                     }
                 }
 
+                // Settings Navigation Card
+                item(key = "profile_settings_nav") {
+                    Surface(
+                        onClick = onNavigateToSettings,
+                        shape = RoundedCornerShape(14.dp),
+                        color = CardSurfaceElevated,
+                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(14.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("⚙️", fontSize = 22.sp)
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Column {
+                                    Text(
+                                        text = "Uygulama Ayarları",
+                                        style = MaterialTheme.typography.titleSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                    )
+                                    Text(
+                                        text = "Tema, 7 Dil, Para Birimi, Uzman Modu, Kaynakça",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = TextSecondary,
+                                    )
+                                }
+                            }
+                            Text(
+                                text = "›",
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonCyan,
+                            )
+                        }
+                    }
+                }
+
                 // 5. User Submission History Header
                 item(key = "history_header") {
                     Row(
@@ -303,6 +346,7 @@ fun UserProfileScreen(
 private fun ProfileTopBar(
     isLoggedIn: Boolean,
     onNavigateBack: () -> Unit,
+    onNavigateToSettings: () -> Unit = {},
 ) {
     Surface(
         color = MaterialTheme.colorScheme.background,
@@ -346,7 +390,18 @@ private fun ProfileTopBar(
                 color = MaterialTheme.colorScheme.onSurface,
             )
 
-            Box(modifier = Modifier.size(40.dp))
+            Surface(
+                onClick = onNavigateToSettings,
+                shape = RoundedCornerShape(10.dp),
+                color = CardSurfaceElevated,
+                border = BorderStroke(1.dp, GlassBorder),
+            ) {
+                Text(
+                    text = "⚙️",
+                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                    style = MaterialTheme.typography.titleMedium,
+                )
+            }
         }
     }
 }

@@ -25,6 +25,7 @@ import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
 import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
+import com.panda.myapplication.data.local.entity.AppSettingEntity
 import kotlinx.coroutines.CoroutineDispatcher
 
 @Database(
@@ -46,8 +47,9 @@ import kotlinx.coroutines.CoroutineDispatcher
         MonitorSpecEntity::class,
         UserPriceOverrideEntity::class,
         UserSessionEntity::class,
+        AppSettingEntity::class,
     ],
-    version = 29,
+    version = 30,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

@@ -23,6 +23,7 @@ import com.panda.myapplication.data.local.entity.MouseSpecEntity
 import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
+import com.panda.myapplication.data.local.entity.AppSettingEntity
 import com.panda.myapplication.domain.model.HardwareCategory
 import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
@@ -176,6 +177,22 @@ abstract class HardwareDao {
 
     @Query("DELETE FROM user_sessions WHERE id = :id")
     abstract suspend fun clearUserSession(id: String = UserSessionEntity.ACTIVE_SESSION_ID)
+
+    // endregion
+
+    // region App Settings
+
+    @Query("SELECT value FROM app_settings WHERE `key` = :key LIMIT 1")
+    abstract suspend fun getSetting(key: String): String?
+
+    @Upsert
+    abstract suspend fun saveSetting(setting: AppSettingEntity)
+
+    @Query("SELECT * FROM app_settings")
+    abstract suspend fun getAllSettings(): List<AppSettingEntity>
+
+    @Query("DELETE FROM app_settings WHERE `key` = :key")
+    abstract suspend fun deleteSetting(key: String)
 
     // endregion
 

@@ -78,6 +78,12 @@ val dataModule = module {
             ioDispatcher = get(),
         )
     }
+    single<com.panda.myapplication.domain.repository.SettingsRepository> {
+        com.panda.myapplication.data.repository.SettingsRepositoryImpl(
+            hardwareDao = get(),
+            ioDispatcher = get(),
+        )
+    }
 
     factory { GetHardwareListUseCase(repository = get()) }
     factory { GetHardwareDetailUseCase(repository = get()) }

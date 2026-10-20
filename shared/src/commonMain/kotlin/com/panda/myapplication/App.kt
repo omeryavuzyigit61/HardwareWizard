@@ -115,6 +115,10 @@ import com.panda.myapplication.presentation.wizard.WizardRoute
 import kotlinx.coroutines.launch
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
+import org.koin.compose.viewmodel.koinViewModel
+import com.panda.myapplication.domain.repository.SettingsRepository
+import com.panda.myapplication.presentation.settings.SettingsScreen
+import com.panda.myapplication.presentation.settings.SettingsViewModel
 
 object Destinations {
     const val HARDWARE_LIST = "hardware_list"
@@ -130,6 +134,7 @@ object Destinations {
     const val ADMIN_MODERATION = "admin_moderation"
     const val SECOND_HAND_VALUATOR = "second_hand_valuator"
     const val USER_PROFILE = "user_profile"
+    const val SETTINGS = "settings"
 }
 
 private sealed class BottomNavTab(
@@ -167,7 +172,10 @@ fun App() {
             modules(dataModule, platformDatabaseModule, presentationModule)
         },
     ) {
-        HardwareWizardTheme {
+        val settingsRepository: SettingsRepository = koinInject()
+        val appSettings by settingsRepository.settings.collectAsStateWithLifecycle()
+
+        HardwareWizardTheme(themeMode = appSettings.themeMode) {
             val navController = rememberNavController()
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route
@@ -418,6 +426,15 @@ fun App() {
                                 communityPriceRepository = koinInject(),
                                 onNavigateBack = { navController.popBackStack() },
                                 onOpenAuthSheet = { showAuthSheet = true },
+                                onNavigateToSettings = { navController.navigate(Destinations.SETTINGS) },
+                            )
+                        }
+
+                        composable(route = Destinations.SETTINGS) {
+                            val settingsViewModel: SettingsViewModel = koinViewModel()
+                            SettingsScreen(
+                                viewModel = settingsViewModel,
+                                onNavigateBack = { navController.popBackStack() },
                             )
                         }
                     }
@@ -834,6 +851,66 @@ private fun HardwareEngineeringDrawerContent(
                             )
                         }
                     }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(4.dp))
+
+            // Settings Navigation Drawer Tile
+            Surface(
+                shape = RoundedCornerShape(14.dp),
+                color = if (currentRoute == Destinations.SETTINGS) NeonCyan.copy(alpha = 0.14f) else CardSurface,
+                border = BorderStroke(
+                    width = if (currentRoute == Destinations.SETTINGS) 1.5.dp else 1.dp,
+                    color = if (currentRoute == Destinations.SETTINGS) NeonCyan else GlassBorder.copy(alpha = 0.7f),
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(14.dp))
+                    .clickable { onNavigateToRoute(Destinations.SETTINGS) },
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                ) {
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = NeonCyan.copy(alpha = 0.16f),
+                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.4f)),
+                        modifier = Modifier.size(40.dp),
+                    ) {
+                        Box(contentAlignment = Alignment.Center) {
+                            Text(text = "⚙️", fontSize = 18.sp)
+                        }
+                    }
+
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
+                    ) {
+                        Text(
+                            text = "Uygulama Ayarları",
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Text(
+                            text = "Tema, 7 Dil, Para Birimi, Uzman Modu",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextSecondary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+
+                    Text(
+                        text = "›",
+                        fontSize = 18.sp,
+                        color = TextSecondary,
+                    )
                 }
             }
 
