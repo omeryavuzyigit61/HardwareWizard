@@ -451,7 +451,7 @@ object BuildAnalysisEngine {
         // 4. Bottleneck check
         if (defaultBottleneck.type == BottleneckType.CPU_BOTTLENECK && defaultBottleneck.percentage >= 15) {
             healthScore -= (defaultBottleneck.percentage / 2).coerceAtMost(25)
-            weakestLink = "${build.cpu?.displayName ?: "CPU"} (%${defaultBottleneck.percentage} Darboğaz)"
+            weakestLink = "${build.cpu.displayName} (%${defaultBottleneck.percentage} Darboğaz)"
             weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.CPU
 
             val isAm4 = cpu?.socket?.contains("AM4", ignoreCase = true) == true
@@ -478,7 +478,7 @@ object BuildAnalysisEngine {
             )
         } else if (defaultBottleneck.type == BottleneckType.GPU_BOTTLENECK && defaultBottleneck.percentage >= 20) {
             healthScore -= 10
-            weakestLink = "${build.gpu?.displayName ?: "GPU"} (%${defaultBottleneck.percentage} GPU Limitli)"
+            weakestLink = "${build.gpu.displayName} (%${defaultBottleneck.percentage} GPU Limitli)"
             weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.GPU
             recommendations.add(
                 UpgradeRecommendation(
@@ -551,7 +551,7 @@ object BuildAnalysisEngine {
         val cpu = cpuItem?.spec as? CpuSpec
         val gpu = gpuItem?.spec as? GpuSpec
 
-        if (cpu == null || gpu == null || cpuItem == null || gpuItem == null) {
+        if (cpu == null || gpu == null) {
             return GamingSimulationResult(
                 resolution = resolution,
                 preset = preset,

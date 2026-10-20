@@ -7,6 +7,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -105,13 +107,17 @@ fun CommunityPriceLedgerSection(
         contentPadding = Spacing.medium,
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
-            // Header: Binance Ticker & Live Indicator
-            Row(
+            // Header: Binance Ticker & Live Indicator (Responsive FlowRow prevents squishing & letter-by-letter wrapping)
+            @OptIn(ExperimentalLayoutApi::class)
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(end = Spacing.small),
+                ) {
                     Box(
                         modifier = Modifier
                             .size(10.dp)
@@ -120,14 +126,19 @@ fun CommunityPriceLedgerSection(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = LocalAppStrings.current.detailCommunityLedger,
+                        text = strings.detailCommunityLedger,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
                         letterSpacing = 0.8.sp,
                     )
+                }
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
                     if (onRefreshClick != null) {
-                        Spacer(modifier = Modifier.width(Spacing.small))
                         Surface(
                             shape = RoundedCornerShape(8.dp),
                             color = NeonCyan.copy(alpha = 0.15f),
@@ -137,7 +148,7 @@ fun CommunityPriceLedgerSection(
                                 .clickable { onRefreshClick() }
                         ) {
                             Row(
-                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
@@ -146,37 +157,43 @@ fun CommunityPriceLedgerSection(
                                     color = NeonCyan,
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
+                                    maxLines = 1,
+                                    softWrap = false,
                                 )
                             }
                         }
                     }
-                }
 
-                if (isAdmin) {
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = NeonAmber.copy(alpha = 0.18f),
-                        border = BorderStroke(1.dp, NeonAmber),
-                    ) {
-                        Text(
-                            text = tr(isTr, "🛡️ YÖNETİCİ", "🛡️ ADMIN"),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = NeonAmber,
-                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
-                        )
-                    }
-                } else {
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-                    ) {
-                        Text(
-                            text = if (isTr) "${approvedDeals.size} Fırsat" else "${approvedDeals.size} Deals",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
-                        )
+                    if (isAdmin) {
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = NeonAmber.copy(alpha = 0.18f),
+                            border = BorderStroke(1.dp, NeonAmber),
+                        ) {
+                            Text(
+                                text = tr(isTr, "🛡️ YÖNETİCİ", "🛡️ ADMIN"),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonAmber,
+                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
+                    } else {
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                        ) {
+                            Text(
+                                text = if (isTr) "${approvedDeals.size} Fırsat" else "${approvedDeals.size} Deals",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
                     }
                 }
             }

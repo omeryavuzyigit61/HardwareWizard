@@ -360,8 +360,8 @@ private fun TierColumnBox(
     subtitle: String,
     price: Double,
     color: Color,
-    isPrimary: Boolean = false,
     modifier: Modifier = Modifier,
+    isPrimary: Boolean = false,
 ) {
     Surface(
         shape = RoundedCornerShape(10.dp),

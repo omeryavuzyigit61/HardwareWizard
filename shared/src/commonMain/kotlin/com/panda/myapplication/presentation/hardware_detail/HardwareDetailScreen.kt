@@ -122,9 +122,9 @@ import org.koin.compose.viewmodel.koinViewModel
 fun HardwareDetailRoute(
     itemId: String,
     onNavigateBack: () -> Unit,
+    modifier: Modifier = Modifier,
     onNavigateToVsArena: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
-    modifier: Modifier = Modifier,
     viewModel: HardwareDetailViewModel = koinViewModel(),
 ) {
     val strings = LocalAppStrings.current
@@ -183,6 +183,7 @@ fun HardwareDetailContent(
     uiState: HardwareDetailUiState,
     onNavigateBack: () -> Unit,
     onAddToBuildClick: () -> Unit,
+    modifier: Modifier = Modifier,
     onAddToVsArenaClick: () -> Unit = {},
     onSaveCustomPrice: (Double, String?) -> Unit = { _, _ -> },
     onClearCustomPrice: () -> Unit = {},
@@ -194,7 +195,6 @@ fun HardwareDetailContent(
     onRefreshCommunityDeals: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
-    modifier: Modifier = Modifier,
 ) {
     val coroutineScope = rememberCoroutineScope()
     var showPriceDialog by remember { mutableStateOf(false) }
@@ -265,8 +265,13 @@ fun HardwareDetailContent(
                             .padding(Spacing.medium),
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
+                        val errorMsg = if (isTr) {
+                            uiState.errorMessage.orEmpty()
+                        } else {
+                            (uiState.errorMessageEn ?: uiState.errorMessage).orEmpty()
+                        }
                         Text(
-                            text = if (isTr) uiState.errorMessage ?: "" else (uiState.errorMessageEn ?: uiState.errorMessage ?: ""),
+                            text = errorMsg,
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.error,
                         )
@@ -303,7 +308,6 @@ fun HardwareDetailContent(
                         if (item.spec is PrebuiltSpec) {
                             item(key = "prebuilt_details") {
                                 PrebuiltSystemDetailsCard(
-                                    item = item,
                                     spec = item.spec,
                                     onTransferToWizard = onAddToBuildClick,
                                 )
@@ -463,8 +467,8 @@ fun HardwareDetailContent(
 private fun DetailTopBar(
     title: String,
     onNavigateBack: () -> Unit,
-    onAddToVsArenaClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
+    onAddToVsArenaClick: (() -> Unit)? = null,
 ) {
     val strings = LocalAppStrings.current
     Surface(
@@ -535,8 +539,8 @@ private fun DetailTopBar(
 @Composable
 private fun HeroHeaderCard(
     item: HardwareItem,
-    onPriceOverrideClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
+    onPriceOverrideClick: (() -> Unit)? = null,
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -1475,7 +1479,7 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
             rows.add(tr(isTr, "Bellek Standardı & Kapasite", "Memory Standard & Capacity") to "${totalGb} GB (${s.moduleCount}x${perModGb} GB Kit) ${s.generation.displayName}")
             rows.add(tr(isTr, "IC Bellek Yongası (Die Tipi)", "IC Memory Die Type") to (s.dieType ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "Frekans & CL Zamanlamaları", "Frequency & Timings") to "${s.speed.mhz} MHz • ${s.timings ?: "CL${s.casLatency}"}")
-            val latencyNs = s.firstWordLatencyNs ?: ((2000.0 * s.casLatency / s.speed.mhz.coerceAtLeast(1)) * 10.0).toInt() / 10.0
+            val latencyNs = s.firstWordLatencyNs ?: ((((2000.0 * s.casLatency) / s.speed.mhz.coerceAtLeast(1)) * 10.0).toInt() / 10.0)
             rows.add(tr(isTr, "İlk Tepki Süresi (True Latency)", "First Word Latency") to "$latencyNs ns")
             rows.add(tr(isTr, "Çalışma Voltajı", "Operating Voltage") to (s.voltage?.let { "$it V" } ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "Hız Aşırtma Profili", "Overclock Profile") to (s.profile ?: getUnspecifiedText(isTr)))
@@ -1636,13 +1640,13 @@ private fun DetailBottomBar(
     isAddedToBuild: Boolean,
     priceText: String,
     onAddToBuildClick: () -> Unit,
+    modifier: Modifier = Modifier,
     onAddToVsArenaClick: () -> Unit = {},
     onPriceOverrideClick: () -> Unit = {},
     isPrebuilt: Boolean = false,
     isLaptop: Boolean = false,
     isCustomPrice: Boolean = false,
     customPriceNote: String? = null,
-    modifier: Modifier = Modifier,
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
@@ -1763,7 +1767,6 @@ private fun DetailBottomBar(
 
 @Composable
 private fun PrebuiltSystemDetailsCard(
-    item: HardwareItem,
     spec: PrebuiltSpec,
     onTransferToWizard: () -> Unit,
     modifier: Modifier = Modifier,
@@ -2182,8 +2185,8 @@ private fun DetailBadge(
 }
 
 @Composable
-private fun BackArrowCanvas(color: Color, modifier: Modifier = Modifier.size(16.dp)) {
-    Canvas(modifier = modifier) {
+private fun BackArrowCanvas(color: Color, modifier: Modifier = Modifier) {
+    Canvas(modifier = modifier.size(16.dp)) {
         val path = Path().apply {
             moveTo(size.width * 0.6f, size.height * 0.2f)
             lineTo(size.width * 0.3f, size.height * 0.5f)
@@ -2198,8 +2201,8 @@ private fun BackArrowCanvas(color: Color, modifier: Modifier = Modifier.size(16.
 }
 
 @Composable
-private fun CheckMarkCanvas(color: Color, modifier: Modifier = Modifier.size(16.dp)) {
-    Canvas(modifier = modifier) {
+private fun CheckMarkCanvas(color: Color, modifier: Modifier = Modifier) {
+    Canvas(modifier = modifier.size(16.dp)) {
         val path = Path().apply {
             moveTo(size.width * 0.2f, size.height * 0.5f)
             lineTo(size.width * 0.45f, size.height * 0.75f)
@@ -2214,8 +2217,8 @@ private fun CheckMarkCanvas(color: Color, modifier: Modifier = Modifier.size(16.
 }
 
 @Composable
-private fun PlusIconCanvas(color: Color, modifier: Modifier = Modifier.size(16.dp)) {
-    Canvas(modifier = modifier) {
+private fun PlusIconCanvas(color: Color, modifier: Modifier = Modifier) {
+    Canvas(modifier = modifier.size(16.dp)) {
         drawLine(
             color = color,
             start = Offset(size.width * 0.5f, size.height * 0.2f),

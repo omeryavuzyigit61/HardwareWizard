@@ -190,7 +190,7 @@ fun AuthSheet(
                     },
                     label = { Text(strings.authEmailOrUsername) },
                     placeholder = { Text(strings.authEmailOrUsername) },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrectEnabled = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -216,7 +216,7 @@ fun AuthSheet(
                             )
                         }
                     },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrect = false),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -286,7 +286,7 @@ fun AuthSheet(
                     },
                     label = { Text(strings.authEmailReq) },
                     placeholder = { Text("eposta@domain.com") },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, autoCorrect = false),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, autoCorrectEnabled = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -311,7 +311,7 @@ fun AuthSheet(
                             )
                         }
                     },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrect = false),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -331,7 +331,7 @@ fun AuthSheet(
                         onValueChange = { birthDateText = it },
                         label = { Text(tr(isTr, "Doğum Tarihi (YYYY-AA-GG) *", "Birth Date (YYYY-MM-DD) *")) },
                         placeholder = { Text("2000-01-15") },
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrectEnabled = false),
                         singleLine = true,
                         modifier = Modifier.weight(1f),
                     )

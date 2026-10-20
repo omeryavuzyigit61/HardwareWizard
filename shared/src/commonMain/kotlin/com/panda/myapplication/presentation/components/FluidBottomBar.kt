@@ -323,9 +323,9 @@ fun FluidBottomBar(
 private fun FluidCatalogIcon(
     isSelected: Boolean,
     color: Color,
-    modifier: Modifier = Modifier.size(24.dp),
+    modifier: Modifier = Modifier,
 ) {
-    Canvas(modifier = modifier) {
+    Canvas(modifier = modifier.size(24.dp)) {
         val w = size.width
         val h = size.height
         val strokeWidth = if (isSelected) 2.2.dp.toPx() else 1.8.dp.toPx()
@@ -362,9 +362,9 @@ private fun FluidCatalogIcon(
 private fun FluidWizardIcon(
     isSelected: Boolean,
     color: Color,
-    modifier: Modifier = Modifier.size(24.dp),
+    modifier: Modifier = Modifier,
 ) {
-    Canvas(modifier = modifier) {
+    Canvas(modifier = modifier.size(24.dp)) {
         val w = size.width
         val h = size.height
         val strokeWidth = if (isSelected) 2.2.dp.toPx() else 1.8.dp.toPx()
@@ -397,9 +397,9 @@ private fun FluidWizardIcon(
 private fun FluidVsArenaIcon(
     isSelected: Boolean,
     color: Color,
-    modifier: Modifier = Modifier.size(24.dp),
+    modifier: Modifier = Modifier,
 ) {
-    Canvas(modifier = modifier) {
+    Canvas(modifier = modifier.size(24.dp)) {
         val w = size.width
         val h = size.height
         val strokeWidth = if (isSelected) 2.2.dp.toPx() else 1.8.dp.toPx()
