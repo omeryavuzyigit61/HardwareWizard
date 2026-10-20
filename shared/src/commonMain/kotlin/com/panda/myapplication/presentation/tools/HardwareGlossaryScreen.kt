@@ -34,7 +34,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import com.panda.myapplication.presentation.util.LocalAppStrings
-import com.panda.myapplication.presentation.util.StringsTR
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -148,7 +147,7 @@ fun HardwareGlossaryScreen(
     }.collectAsState(initial = "")
 
     val strings = LocalAppStrings.current
-    val isTurkish = strings.catalogTitle == StringsTR.catalogTitle
+    val isTurkish = strings.isTurkish
 
     LaunchedEffect(isTurkish) {
         val loaded = withContext(Dispatchers.Default) {

@@ -6,6 +6,9 @@ import com.panda.myapplication.domain.model.AppLanguage
 import com.panda.myapplication.domain.model.HardwareCategory
 
 interface AppStrings {
+    val languageCode: String
+    val isTurkish: Boolean get() = languageCode == "tr"
+
     // Navigation Tabs
     val tabCatalog: String
     val tabWizard: String
@@ -400,6 +403,8 @@ interface AppStrings {
 
 
 private class AppStringsTR : AppStrings {
+    override val languageCode = "tr"
+
     override val tabCatalog = "Keşfet & Katalog"
     override val tabWizard = "PC Sihirbazı"
     override val tabVsArena = "VS Arena"
@@ -775,6 +780,8 @@ val StringsTR: AppStrings = AppStringsTR()
 
 
 private class AppStringsEN : AppStrings {
+    override val languageCode = "en"
+
     override val tabCatalog = "Explore & Catalog"
     override val tabWizard = "PC Builder"
     override val tabVsArena = "VS Arena"
@@ -1150,6 +1157,8 @@ val StringsEN: AppStrings = AppStringsEN()
 
 
 private class AppStringsDE : AppStrings {
+    override val languageCode = "de"
+
     override val tabCatalog = "Katalog & Entdecken"
     override val tabWizard = "PC-Konfigurator"
     override val tabVsArena = "VS Arena"
@@ -1525,6 +1534,8 @@ val StringsDE: AppStrings = AppStringsDE()
 
 
 private class AppStringsES : AppStrings {
+    override val languageCode = "es"
+
     override val tabCatalog = "Catálogo"
     override val tabWizard = "Configurador"
     override val tabVsArena = "VS Arena"
@@ -1900,6 +1911,8 @@ val StringsES: AppStrings = AppStringsES()
 
 
 private class AppStringsFR : AppStrings {
+    override val languageCode = "fr"
+
     override val tabCatalog = "Catalogue"
     override val tabWizard = "Configurateur"
     override val tabVsArena = "VS Arena"
@@ -2275,6 +2288,8 @@ val StringsFR: AppStrings = AppStringsFR()
 
 
 private class AppStringsRU : AppStrings {
+    override val languageCode = "ru"
+
     override val tabCatalog = "Каталог"
     override val tabWizard = "Конфигуратор"
     override val tabVsArena = "VS Арена"
@@ -2650,6 +2665,8 @@ val StringsRU: AppStrings = AppStringsRU()
 
 
 private class AppStringsJA : AppStrings {
+    override val languageCode = "ja"
+
     override val tabCatalog = "カタログ"
     override val tabWizard = "PC構成ビルダー"
     override val tabVsArena = "VS アリーナ"

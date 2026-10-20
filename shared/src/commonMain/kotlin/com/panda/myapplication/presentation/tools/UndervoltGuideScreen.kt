@@ -43,7 +43,6 @@ import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.AppStrings
 import com.panda.myapplication.presentation.util.LocalAppStrings
-import com.panda.myapplication.presentation.util.StringsTR
 
 private enum class UndervoltTab(val emoji: String) {
     CPU("🔥"),
@@ -67,7 +66,7 @@ fun UndervoltGuideScreen(
 ) {
     var selectedTab by remember { mutableStateOf(UndervoltTab.CPU) }
     val strings = LocalAppStrings.current
-    val isTurkish = strings.catalogTitle == StringsTR.catalogTitle
+    val isTurkish = strings.isTurkish
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
