@@ -73,21 +73,15 @@ import com.panda.myapplication.domain.repository.VsArenaMode
 import com.panda.myapplication.domain.repository.VsSlot
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.GoldAccent
-import com.panda.myapplication.presentation.theme.NavyCard
-import com.panda.myapplication.presentation.theme.NavyElevated
-import com.panda.myapplication.presentation.theme.NavySurface
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
-import com.panda.myapplication.presentation.theme.ObsidianDeep
-import com.panda.myapplication.presentation.theme.TextMuted
-import com.panda.myapplication.presentation.theme.TextPrimary
-import com.panda.myapplication.presentation.theme.TextSecondary
 import com.panda.myapplication.presentation.util.accentColor
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.util.iconEmoji
 import com.panda.myapplication.presentation.util.shortBadgeText
 import org.koin.compose.viewmodel.koinViewModel
@@ -117,7 +111,7 @@ fun VsArenaScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(ObsidianDeep),
+            .background(MaterialTheme.colorScheme.background),
     ) {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -202,7 +196,7 @@ fun VsArenaScreen(
                         Text(
                             text = "${report.rows.size} Kriter",
                             style = MaterialTheme.typography.labelSmall,
-                            color = TextMuted,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                         )
                     }
                 }
@@ -236,8 +230,8 @@ fun VsArenaScreen(
             ModalBottomSheet(
                 onDismissRequest = viewModel::closePicker,
                 sheetState = sheetState,
-                containerColor = NavySurface,
-                contentColor = TextPrimary,
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface,
             ) {
                 VsProductPickerSheetContent(
                     slot = state.activePickerSlot!!,
@@ -268,7 +262,7 @@ private fun VsArenaHeader(
             .fillMaxWidth()
             .background(
                 Brush.verticalGradient(
-                    colors = listOf(NavyElevated, ObsidianDeep),
+                    colors = listOf(MaterialTheme.colorScheme.surfaceVariant, MaterialTheme.colorScheme.background),
                 )
             )
             .statusBarsPadding()
@@ -291,8 +285,8 @@ private fun VsArenaHeader(
                     Surface(
                         onClick = onOpenDrawer,
                         shape = RoundedCornerShape(10.dp),
-                        color = NavyCard,
-                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
+                        color = MaterialTheme.colorScheme.surface,
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
                     ) {
                         Text(
                             text = "☰",
@@ -325,7 +319,7 @@ private fun VsArenaHeader(
                         Text(
                             text = "Kafa Kafaya Kıyaslama",
                             style = MaterialTheme.typography.titleMedium,
-                            color = TextPrimary,
+                            color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = FontWeight.ExtraBold,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
@@ -335,7 +329,7 @@ private fun VsArenaHeader(
                     Text(
                         text = mode.subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
@@ -347,14 +341,14 @@ private fun VsArenaHeader(
                     modifier = Modifier
                         .clip(RoundedCornerShape(10.dp))
                         .clickable(onClick = onClearAll),
-                    color = NavyCard,
-                    border = BorderStroke(1.dp, GlassBorder),
+                    color = MaterialTheme.colorScheme.surface,
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 ) {
                     Text(
                         text = "Sıfırla",
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
                         style = MaterialTheme.typography.labelMedium,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontWeight = FontWeight.SemiBold,
                     )
                 }
@@ -371,10 +365,10 @@ private fun VsArenaHeader(
             VsArenaMode.entries.forEach { entry ->
                 val isSelected = mode == entry
                 val bgColor by animateColorAsState(
-                    if (isSelected) ElectricBlue.copy(alpha = 0.22f) else NavyCard,
+                    if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surface,
                 )
                 val borderColor by animateColorAsState(
-                    if (isSelected) NeonCyan else GlassBorder,
+                    if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
                 )
                 val shortLabel = when (entry) {
                     VsArenaMode.COMPONENT_VS_COMPONENT -> "🧩 Bileşen vs Bileşen"
@@ -394,7 +388,7 @@ private fun VsArenaHeader(
                         text = shortLabel,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 10.dp),
                         style = MaterialTheme.typography.labelSmall,
-                        color = if (isSelected) TextPrimary else TextSecondary,
+                        color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
                         fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Medium,
                         textAlign = TextAlign.Center,
                         maxLines = 1,
@@ -420,11 +414,11 @@ private fun VsArenaHeader(
                         modifier = Modifier
                             .clip(RoundedCornerShape(10.dp))
                             .clickable { onComponentCategorySelected(cat) },
-                        color = if (selected) accent.copy(alpha = 0.22f) else NavyCard,
+                        color = if (selected) accent.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surface,
                         shape = RoundedCornerShape(10.dp),
                         border = BorderStroke(
                             width = if (selected) 1.5.dp else 1.dp,
-                            color = if (selected) accent else GlassBorder,
+                            color = if (selected) accent else MaterialTheme.colorScheme.outlineVariant,
                         ),
                     ) {
                         Row(
@@ -436,7 +430,7 @@ private fun VsArenaHeader(
                             Text(
                                 text = cat.shortBadgeText(),
                                 style = MaterialTheme.typography.labelMedium,
-                                color = if (selected) TextPrimary else TextSecondary,
+                                color = if (selected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
                             )
                         }
@@ -483,7 +477,7 @@ private fun VsFighterSlotsCard(
                 .size(40.dp)
                 .clip(CircleShape)
                 .clickable(enabled = leftItem != null || rightItem != null, onClick = onSwap),
-            color = NavyElevated,
+            color = MaterialTheme.colorScheme.surfaceVariant,
             shape = CircleShape,
             border = BorderStroke(1.5.dp, NeonPurple),
         ) {
@@ -526,8 +520,8 @@ private fun VsFighterCornerCard(
             .clip(RoundedCornerShape(16.dp))
             .clickable(onClick = onSelect),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = NavyCard),
-        border = BorderStroke(1.dp, if (item != null) cornerColor.copy(alpha = 0.6f) else GlassBorder),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, if (item != null) cornerColor.copy(alpha = 0.6f) else MaterialTheme.colorScheme.outlineVariant),
     ) {
         Column(
             modifier = Modifier
@@ -571,7 +565,7 @@ private fun VsFighterCornerCard(
                                 .clickable(onClick = onClear)
                                 .padding(horizontal = 4.dp, vertical = 2.dp),
                             style = MaterialTheme.typography.labelSmall,
-                            color = TextMuted,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                             fontWeight = FontWeight.Bold,
                         )
                     }
@@ -584,8 +578,8 @@ private fun VsFighterCornerCard(
                         .fillMaxWidth()
                         .height(110.dp)
                         .clip(RoundedCornerShape(12.dp))
-                        .background(NavyElevated.copy(alpha = 0.6f))
-                        .border(1.dp, GlassBorder, RoundedCornerShape(12.dp)),
+                        .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
+                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(12.dp)),
                     contentAlignment = Alignment.Center,
                 ) {
                     Column(
@@ -602,7 +596,7 @@ private fun VsFighterCornerCard(
                         Text(
                             text = "Listeden eklemek için dokun",
                             style = MaterialTheme.typography.labelSmall,
-                            color = TextMuted,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                             fontSize = 10.sp,
                         )
                     }
@@ -640,16 +634,16 @@ private fun VsFighterCornerCard(
                 Text(
                     text = item.model,
                     style = MaterialTheme.typography.bodySmall,
-                    color = TextPrimary,
+                    color = MaterialTheme.colorScheme.onSurface,
                     fontWeight = FontWeight.Bold,
                     minLines = 2,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
-                Text(
-                    text = item.currentPriceTry.formatPriceWithCurrency(),
+                    val arenaCurr = LocalAppCurrency.current
+                Text(text = item.currentPriceTry.formatPriceWithCurrency(arenaCurr),
                     style = MaterialTheme.typography.labelMedium,
-                    color = if (item.currentPriceTry != null) NeonEmerald else TextMuted,
+                    color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     fontWeight = FontWeight.ExtraBold,
                     softWrap = false,
                     maxLines = 1,
@@ -669,14 +663,14 @@ private fun VsChampionBannerCard(
     val winnerColor = when (summary.winner) {
         ComparisonWinner.LEFT, ComparisonWinner.RIGHT -> NeonEmerald
         ComparisonWinner.TIE -> NeonCyan
-        ComparisonWinner.NEUTRAL -> TextMuted
+        ComparisonWinner.NEUTRAL -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f)
     }
 
     FluidOrganicCard(
         modifier = Modifier.fillMaxWidth(),
         accentColor = accentColor,
         secondaryColor = winnerColor,
-        containerColor = NavyCard,
+        containerColor = MaterialTheme.colorScheme.surfaceVariant,
         contentPadding = 14.dp,
     ) {
         Column(
@@ -727,7 +721,7 @@ private fun VsChampionBannerCard(
             Text(
                 text = summary.winnerName,
                 style = MaterialTheme.typography.titleMedium,
-                color = TextPrimary,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.ExtraBold,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
@@ -736,10 +730,10 @@ private fun VsChampionBannerCard(
             Text(
                 text = summary.subtitle,
                 style = MaterialTheme.typography.labelSmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
 
-            HorizontalDivider(color = GlassBorder)
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -752,12 +746,12 @@ private fun VsChampionBannerCard(
                     Text(
                         text = "1. Köşe:",
                         style = MaterialTheme.typography.labelSmall,
-                        color = TextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     )
                     Text(
                         text = summary.leftMetricText,
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (summary.winner == ComparisonWinner.LEFT) NeonEmerald else TextPrimary,
+                        color = if (summary.winner == ComparisonWinner.LEFT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                     )
                 }
@@ -769,12 +763,12 @@ private fun VsChampionBannerCard(
                     Text(
                         text = "2. Köşe:",
                         style = MaterialTheme.typography.labelSmall,
-                        color = TextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     )
                     Text(
                         text = summary.rightMetricText,
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (summary.winner == ComparisonWinner.RIGHT) NeonEmerald else TextPrimary,
+                        color = if (summary.winner == ComparisonWinner.RIGHT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                     )
                 }
@@ -805,7 +799,7 @@ private fun VsGameFpsMatrixCard(
             .padding(horizontal = 16.dp),
         accentColor = NeonPurple,
         secondaryColor = NeonCyan,
-        containerColor = NavyCard,
+        containerColor = MaterialTheme.colorScheme.surfaceVariant,
         shape = RoundedCornerShape(18.dp),
         contentPadding = 16.dp,
     ) {
@@ -828,7 +822,7 @@ private fun VsGameFpsMatrixCard(
                     Text(
                         text = "Rekabetçi E-Spor (5) & AAA Ağır Grafik (7) gerçek katsayı kıyası",
                         style = MaterialTheme.typography.labelSmall,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
@@ -845,9 +839,9 @@ private fun VsGameFpsMatrixCard(
                             .weight(1f)
                             .clip(RoundedCornerShape(10.dp))
                             .clickable { onResolutionChange(res) },
-                        color = if (isSelected) ElectricBlue.copy(alpha = 0.25f) else NavyElevated,
+                        color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceVariant,
                         shape = RoundedCornerShape(10.dp),
-                        border = BorderStroke(1.dp, if (isSelected) NeonCyan else GlassBorder),
+                        border = BorderStroke(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant),
                     ) {
                         Column(
                             modifier = Modifier.padding(vertical = 7.dp),
@@ -856,13 +850,13 @@ private fun VsGameFpsMatrixCard(
                             Text(
                                 text = res.label,
                                 style = MaterialTheme.typography.labelMedium,
-                                color = if (isSelected) TextPrimary else TextSecondary,
+                                color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontWeight = FontWeight.ExtraBold,
                             )
                             Text(
                                 text = res.subtitle,
                                 style = MaterialTheme.typography.labelSmall,
-                                color = TextMuted,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                                 fontSize = 10.sp,
                             )
                         }
@@ -887,14 +881,14 @@ private fun VsGameFpsMatrixCard(
                             .weight(1f)
                             .clip(RoundedCornerShape(8.dp))
                             .clickable { onCategoryFilterChange(cat) },
-                        color = if (selected) NeonPurple.copy(alpha = 0.22f) else NavyElevated,
-                        border = BorderStroke(1.dp, if (selected) NeonPurple else GlassBorder),
+                        color = if (selected) MaterialTheme.colorScheme.secondary.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (selected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outlineVariant),
                     ) {
                         Text(
                             text = label,
                             modifier = Modifier.padding(vertical = 6.dp),
                             style = MaterialTheme.typography.labelSmall,
-                            color = if (selected) TextPrimary else TextSecondary,
+                            color = if (selected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
                             fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
                             textAlign = TextAlign.Center,
                         )
@@ -902,7 +896,7 @@ private fun VsGameFpsMatrixCard(
                 }
             }
 
-            HorizontalDivider(color = GlassBorder)
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
 
             visibleGames.forEach { game ->
                 val lAvg = game.leftFps.avgFps(selectedResolution)
@@ -914,9 +908,9 @@ private fun VsGameFpsMatrixCard(
                 val maxFps = maxOf(lAvg, rAvg, 60).toFloat()
 
                 Surface(
-                    color = NavyElevated.copy(alpha = 0.7f),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7f),
                     shape = RoundedCornerShape(12.dp),
-                    border = BorderStroke(1.dp, GlassBorder),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 ) {
                     Column(
                         modifier = Modifier
@@ -950,7 +944,7 @@ private fun VsGameFpsMatrixCard(
                                 Text(
                                     text = game.title,
                                     style = MaterialTheme.typography.labelMedium,
-                                    color = TextPrimary,
+                                    color = MaterialTheme.colorScheme.onSurface,
                                     fontWeight = FontWeight.Bold,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis,
@@ -1022,7 +1016,7 @@ private fun VsSingleFpsBarRow(
             Text(
                 text = "$cornerTag • $name",
                 style = MaterialTheme.typography.labelSmall,
-                color = if (isWinner) NeonEmerald else TextSecondary,
+                color = if (isWinner) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = if (isWinner) FontWeight.Bold else FontWeight.Normal,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -1032,7 +1026,7 @@ private fun VsSingleFpsBarRow(
             Text(
                 text = "$avgFps FPS  (%1 Low: $low1Fps)",
                 style = MaterialTheme.typography.labelSmall,
-                color = if (isWinner) NeonEmerald else TextPrimary,
+                color = if (isWinner) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.ExtraBold,
             )
         }
@@ -1041,7 +1035,7 @@ private fun VsSingleFpsBarRow(
                 .fillMaxWidth()
                 .height(6.dp)
                 .clip(RoundedCornerShape(3.dp))
-                .background(ObsidianDeep),
+                .background(MaterialTheme.colorScheme.background),
         ) {
             Box(
                 modifier = Modifier
@@ -1065,10 +1059,10 @@ private fun VsComparisonMetricRow(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = NavyCard),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(
             width = 1.dp,
-            color = if (row.isKeyMetric) GlassBorder.copy(alpha = 0.9f) else GlassBorder.copy(alpha = 0.5f),
+            color = if (row.isKeyMetric) MaterialTheme.colorScheme.outline else MaterialTheme.colorScheme.outlineVariant,
         ),
     ) {
         Column(
@@ -1085,7 +1079,7 @@ private fun VsComparisonMetricRow(
                 Text(
                     text = row.label,
                     style = MaterialTheme.typography.labelMedium,
-                    color = TextSecondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.weight(1f),
                 )
@@ -1115,11 +1109,11 @@ private fun VsComparisonMetricRow(
                 // Left Value Box
                 Surface(
                     modifier = Modifier.weight(1f),
-                    color = if (leftWin) NeonEmerald.copy(alpha = 0.14f) else NavyElevated,
+                    color = if (leftWin) NeonEmerald.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                     shape = RoundedCornerShape(10.dp),
                     border = BorderStroke(
                         width = if (leftWin) 1.5.dp else 1.dp,
-                        color = if (leftWin) NeonEmerald else GlassBorder,
+                        color = if (leftWin) NeonEmerald else MaterialTheme.colorScheme.outlineVariant,
                     ),
                 ) {
                     Row(
@@ -1130,7 +1124,7 @@ private fun VsComparisonMetricRow(
                         Text(
                             text = row.leftValue,
                             style = MaterialTheme.typography.bodySmall,
-                            color = if (leftWin) NeonEmerald else TextPrimary,
+                            color = if (leftWin) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                             fontWeight = if (leftWin) FontWeight.ExtraBold else FontWeight.Medium,
                             modifier = Modifier.weight(1f),
                         )
@@ -1149,11 +1143,11 @@ private fun VsComparisonMetricRow(
                 // Right Value Box
                 Surface(
                     modifier = Modifier.weight(1f),
-                    color = if (rightWin) NeonEmerald.copy(alpha = 0.14f) else NavyElevated,
+                    color = if (rightWin) NeonEmerald.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                     shape = RoundedCornerShape(10.dp),
                     border = BorderStroke(
                         width = if (rightWin) 1.5.dp else 1.dp,
-                        color = if (rightWin) NeonEmerald else GlassBorder,
+                        color = if (rightWin) NeonEmerald else MaterialTheme.colorScheme.outlineVariant,
                     ),
                 ) {
                     Row(
@@ -1164,7 +1158,7 @@ private fun VsComparisonMetricRow(
                         Text(
                             text = row.rightValue,
                             style = MaterialTheme.typography.bodySmall,
-                            color = if (rightWin) NeonEmerald else TextPrimary,
+                            color = if (rightWin) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                             fontWeight = if (rightWin) FontWeight.ExtraBold else FontWeight.Medium,
                             modifier = Modifier.weight(1f),
                         )
@@ -1198,8 +1192,8 @@ private fun VsEmptyArenaCard(
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = NavyCard),
-        border = BorderStroke(1.dp, GlassBorder),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
     ) {
         Column(
             modifier = Modifier
@@ -1212,14 +1206,14 @@ private fun VsEmptyArenaCard(
             Text(
                 text = "${activeCategory.displayName} Karşılaştırma Arenası",
                 style = MaterialTheme.typography.titleMedium,
-                color = TextPrimary,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.ExtraBold,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = "Yukarıdaki 1. Köşe ve 2. Köşe kutularına dokunarak veya Katalog ekranındaki ürün kartlarında yer alan 'VS' butonuyla iki ürünü kafa kafaya kıyaslayabilirsiniz.",
                 style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
 
@@ -1244,11 +1238,11 @@ private fun VsEmptyArenaCard(
             }
 
             if (suggestedPair != null) {
-                HorizontalDivider(color = GlassBorder)
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                 Text(
                     text = "Popüler Kapışma Önerisi: ${suggestedPair.first.model} vs ${suggestedPair.second.model}",
                     style = MaterialTheme.typography.labelSmall,
-                    color = TextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     textAlign = TextAlign.Center,
                     maxLines = 2,
                 )
@@ -1289,7 +1283,7 @@ private fun VsProductPickerSheetContent(
         Text(
             text = "${if (slot == VsSlot.LEFT) "1. Köşe" else "2. Köşe"} İçin ${category.displayName} Seçin (${items.size})",
             style = MaterialTheme.typography.titleMedium,
-            color = TextPrimary,
+            color = MaterialTheme.colorScheme.onSurface,
             fontWeight = FontWeight.ExtraBold,
         )
 
@@ -1305,18 +1299,18 @@ private fun VsProductPickerSheetContent(
             placeholder = {
                 Text(
                     text = "${category.displayName} model, marka veya özellik ara...",
-                    color = TextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                 )
             },
             singleLine = true,
             shape = RoundedCornerShape(12.dp),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = NeonCyan,
-                unfocusedBorderColor = GlassBorder,
-                focusedContainerColor = NavyCard,
-                unfocusedContainerColor = NavyCard,
-                focusedTextColor = TextPrimary,
-                unfocusedTextColor = TextPrimary,
+                focusedBorderColor = MaterialTheme.colorScheme.primary,
+                unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
             ),
         )
 
@@ -1335,9 +1329,9 @@ private fun VsProductPickerSheetContent(
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp))
                         .clickable { onSelectItem(item) },
-                    color = if (isSelected) ElectricBlue.copy(alpha = 0.2f) else NavyCard,
+                    color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surface,
                     shape = RoundedCornerShape(12.dp),
-                    border = BorderStroke(1.dp, if (isSelected) NeonCyan else GlassBorder),
+                    border = BorderStroke(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant),
                 ) {
                     Row(
                         modifier = Modifier
@@ -1351,7 +1345,7 @@ private fun VsProductPickerSheetContent(
                                 .size(72.dp)
                                 .clip(RoundedCornerShape(8.dp))
                                 .background(
-                                    if (!item.imageUrl.isNullOrBlank()) Color.White else NavyElevated,
+                                    if (!item.imageUrl.isNullOrBlank()) Color.White else MaterialTheme.colorScheme.surfaceVariant,
                                 ),
                             contentAlignment = Alignment.Center,
                         ) {
@@ -1388,7 +1382,7 @@ private fun VsProductPickerSheetContent(
                             Text(
                                 text = item.displayName,
                                 style = MaterialTheme.typography.titleSmall,
-                                color = TextPrimary,
+                                color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 2,
                                 overflow = TextOverflow.Ellipsis,
@@ -1406,7 +1400,7 @@ private fun VsProductPickerSheetContent(
                             Text(
                                 text = item.currentPriceTry.formatPriceWithCurrency("Fiyat Yok"),
                                 style = MaterialTheme.typography.titleSmall,
-                                color = if (item.currentPriceTry != null) NeonEmerald else TextMuted,
+                                color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                                 fontWeight = FontWeight.ExtraBold,
                                 softWrap = false,
                                 maxLines = 1,

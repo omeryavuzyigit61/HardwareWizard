@@ -3,7 +3,10 @@ package com.panda.myapplication.domain.model
 enum class ThemeMode {
     SYSTEM,
     DARK,
-    LIGHT;
+    LIGHT,
+    WOOD,
+    OLED,
+    CYBERPUNK;
 
     companion object {
         fun fromString(value: String?): ThemeMode = entries.firstOrNull {

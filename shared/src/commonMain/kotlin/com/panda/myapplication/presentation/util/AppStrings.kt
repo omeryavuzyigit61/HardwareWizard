@@ -1,13 +1,24 @@
 package com.panda.myapplication.presentation.util
 
+import androidx.compose.runtime.staticCompositionLocalOf
+import com.panda.myapplication.domain.model.AppCurrency
 import com.panda.myapplication.domain.model.AppLanguage
 
 data class AppStrings(
+    // Navigation Tabs
+    val tabCatalog: String,
+    val tabWizard: String,
+    val tabVsArena: String,
+
+    // Settings
     val settingsTitle: String,
     val appearanceSection: String,
     val appearanceSubtitle: String,
     val themeDark: String,
     val themeLight: String,
+    val themeWood: String,
+    val themeOled: String,
+    val themeCyberpunk: String,
     val themeSystem: String,
 
     val languageRegionSection: String,
@@ -50,14 +61,60 @@ data class AppStrings(
     val back: String,
     val selectLanguageTitle: String,
     val selectCurrencyTitle: String,
+
+    // Catalog Screen
+    val catalogTitle: String,
+    val searchPlaceholder: String,
+    val segmentIndividual: String,
+    val segmentPeripherals: String,
+    val segmentPrebuilt: String,
+    val segmentLaptop: String,
+    val filterButton: String,
+    val filterAll: String,
+    val marketPrice: String,
+    val addToVs: String,
+    val addToWizard: String,
+    val noPriceFallback: String,
+
+    // Detail Screen
+    val addToVsArena: String,
+    val fpsMatrixTitle: String,
+    val fpsMatrixSubtitle: String,
+    val localPriceOverride: String,
+    val localPriceDesc: String,
+    val enterPrice: String,
+
+    // VS Arena Screen
+    val vsArenaTitle: String,
+    val vsArenaSubtitle: String,
+    val corner1: String,
+    val corner2: String,
+    val selectPart: String,
+    val startSampleBattle: String,
+    val vsDescription: String,
+    val selectCorner1: String,
+    val selectCorner2: String,
+
+    // Wizard Screen
+    val wizardTitle: String,
+    val wizardSubtitle: String,
+    val totalBudget: String,
+    val clearBuild: String,
 )
 
 val StringsTR = AppStrings(
+    tabCatalog = "Keşfet & Katalog",
+    tabWizard = "PC Sihirbazı",
+    tabVsArena = "VS Arena",
+
     settingsTitle = "Ayarlar",
-    appearanceSection = "Görünüm & Tema",
-    appearanceSubtitle = "Koyu, açık veya sisteme duyarlı modern arayüz",
-    themeDark = "Karanlık",
-    themeLight = "Aydınlık",
+    appearanceSection = "Görünüm & Tema Paleti",
+    appearanceSubtitle = "Koyu, açık, ahşap veya saf OLED stüdyo temaları",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Ahşap",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "Sistem",
 
     languageRegionSection = "Dil & Bölge",
@@ -100,18 +157,60 @@ val StringsTR = AppStrings(
     back = "Geri",
     selectLanguageTitle = "Uygulama Dilini Seçin",
     selectCurrencyTitle = "Para Birimini Seçin",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Parça adı, model, marka (AMD, RTX 4070, DDR5...)",
+    segmentIndividual = "Bireysel",
+    segmentPeripherals = "Çevre",
+    segmentPrebuilt = "Hazır Sistem",
+    segmentLaptop = "Laptop",
+    filterButton = "Filtreler",
+    filterAll = "Tümü",
+    marketPrice = "Piyasa Fiyatı",
+    addToVs = "+ VS",
+    addToWizard = "+ Sihirbaza Ekle",
+    noPriceFallback = "Stok / Fiyat Yok",
+
+    addToVsArena = "VS Arenaya Ekle",
+    fpsMatrixTitle = "12 Oyun Canlı FPS & %1 Low Matrisi",
+    fpsMatrixSubtitle = "Rekabetçi E-Spor (5) ve Ağır AAA (7) Test Katsayıları",
+    localPriceOverride = "Yerel Özel Fiyat Belirle",
+    localPriceDesc = "Kupon, indirim veya 2. el fiyatınızı girerek F/P ve bütçe hesabına dahil edin",
+    enterPrice = "Fiyat Gir",
+
+    vsArenaTitle = "Kafa Kafaya Kıyaslama",
+    vsArenaSubtitle = "CPU, GPU, Anakart, RAM, SSD, PSU, Soğutucu, Kasa",
+    corner1 = "1. KÖŞE",
+    corner2 = "2. KÖŞE",
+    selectPart = "+ Parça Seç",
+    startSampleBattle = "Örnek Kapışmayı Hemen Başlat",
+    vsDescription = "Yukarıdaki kutulara dokunarak veya Katalogdan 'VS' butonuyla iki ürünü kafa kafaya kıyaslayabilirsiniz.",
+    selectCorner1 = "1. Köşeyi Seç",
+    selectCorner2 = "2. Köşeyi Seç",
+
+    wizardTitle = "PC Sihirbazı",
+    wizardSubtitle = "Akıllı uyumluluk, darboğaz ve PSU güç analizi",
+    totalBudget = "Toplam Sistem Tutarı",
+    clearBuild = "Sistemi Sıfırla",
 )
 
 val StringsEN = AppStrings(
+    tabCatalog = "Explore & Catalog",
+    tabWizard = "PC Builder",
+    tabVsArena = "VS Arena",
+
     settingsTitle = "Settings",
-    appearanceSection = "Appearance & Theme",
-    appearanceSubtitle = "Dark, light, or system-adaptive modern interface",
-    themeDark = "Dark",
-    themeLight = "Light",
+    appearanceSection = "Appearance & Theme Palette",
+    appearanceSubtitle = "Dark studio, crisp slate, cyber-wood, or OLED midnight themes",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Walnut",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "System",
 
     languageRegionSection = "Language & Region",
-    languageRegionSubtitle = "App language and localized currency formatting",
+    languageRegionSubtitle = "App interface language and localized currency formatting",
     languageLabel = "App Language",
     currencyLabel = "Currency",
 
@@ -150,14 +249,56 @@ val StringsEN = AppStrings(
     back = "Back",
     selectLanguageTitle = "Select Application Language",
     selectCurrencyTitle = "Select Preferred Currency",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Part name, model, brand (AMD, RTX 4070, DDR5...)",
+    segmentIndividual = "Components",
+    segmentPeripherals = "Peripherals",
+    segmentPrebuilt = "Prebuilts",
+    segmentLaptop = "Laptops",
+    filterButton = "Filters",
+    filterAll = "All",
+    marketPrice = "Market Price",
+    addToVs = "+ VS",
+    addToWizard = "+ Add to Build",
+    noPriceFallback = "Out of Stock / No Price",
+
+    addToVsArena = "Add to VS Arena",
+    fpsMatrixTitle = "12-Game Live FPS & 1% Low Matrix",
+    fpsMatrixSubtitle = "Competitive E-Sports (5) & Heavy AAA (7) Benchmark Multipliers",
+    localPriceOverride = "Set Custom Local Price",
+    localPriceDesc = "Include coupons, discounts, or 2nd-hand pricing in value & budget analytics",
+    enterPrice = "Enter Price",
+
+    vsArenaTitle = "Head-to-Head Comparison",
+    vsArenaSubtitle = "CPU, GPU, Motherboard, RAM, SSD, PSU, Cooler, Case",
+    corner1 = "CORNER 1",
+    corner2 = "CORNER 2",
+    selectPart = "+ Select Part",
+    startSampleBattle = "Launch Sample Matchup",
+    vsDescription = "Tap the corners above or click 'VS' from the catalog to compare two products side-by-side.",
+    selectCorner1 = "Select Corner 1",
+    selectCorner2 = "Select Corner 2",
+
+    wizardTitle = "PC Builder",
+    wizardSubtitle = "Intelligent compatibility, bottleneck & PSU wattage analytics",
+    totalBudget = "Total System Cost",
+    clearBuild = "Reset Build",
 )
 
 val StringsDE = AppStrings(
+    tabCatalog = "Katalog & Entdecken",
+    tabWizard = "PC-Konfigurator",
+    tabVsArena = "VS Arena",
+
     settingsTitle = "Einstellungen",
-    appearanceSection = "Erscheinungsbild & Design",
-    appearanceSubtitle = "Dunkles, helles oder systemweites modernes Layout",
-    themeDark = "Dunkel",
-    themeLight = "Hell",
+    appearanceSection = "Erscheinungsbild & Farbpalette",
+    appearanceSubtitle = "Dunkles Studio, klares Slate, Cyber-Wood oder reines OLED",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Walnuss",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "System",
 
     languageRegionSection = "Sprache & Region",
@@ -200,14 +341,56 @@ val StringsDE = AppStrings(
     back = "Zurück",
     selectLanguageTitle = "Sprache auswählen",
     selectCurrencyTitle = "Währung auswählen",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Bauteilname, Modell, Marke (AMD, RTX 4070...)",
+    segmentIndividual = "Komponenten",
+    segmentPeripherals = "Peripherie",
+    segmentPrebuilt = "Komplett-PCs",
+    segmentLaptop = "Laptops",
+    filterButton = "Filter",
+    filterAll = "Alle",
+    marketPrice = "Marktpreis",
+    addToVs = "+ VS",
+    addToWizard = "+ Zum Build hinzufügen",
+    noPriceFallback = "Nicht lieferbar / Kein Preis",
+
+    addToVsArena = "In VS Arena vergleichen",
+    fpsMatrixTitle = "12-Spiele Live FPS & 1% Low Matrix",
+    fpsMatrixSubtitle = "E-Sports (5) & AAA-Blockbuster (7) Benchmark-Koeffizienten",
+    localPriceOverride = "Eigenen Preis festlegen",
+    localPriceDesc = "Rabatte oder Gebrauchtpreise in Preis-Leistungs-Analysen einbeziehen",
+    enterPrice = "Preis eingeben",
+
+    vsArenaTitle = "Direktvergleich",
+    vsArenaSubtitle = "CPU, GPU, Mainboard, RAM, SSD, Netzteil, Kühler, Gehäuse",
+    corner1 = "ECKE 1",
+    corner2 = "ECKE 2",
+    selectPart = "+ Teil wählen",
+    startSampleBattle = "Beispielduell starten",
+    vsDescription = "Tippe auf die Ecken oder klicke 'VS' im Katalog, um zwei Produkte zu vergleichen.",
+    selectCorner1 = "Ecke 1 wählen",
+    selectCorner2 = "Ecke 2 wählen",
+
+    wizardTitle = "PC-Konfigurator",
+    wizardSubtitle = "Intelligente Kompatibilitäts- und Netzteil-Leistungsanalyse",
+    totalBudget = "Gesamtpreis des Systems",
+    clearBuild = "Konfiguration zurücksetzen",
 )
 
 val StringsES = AppStrings(
+    tabCatalog = "Catálogo",
+    tabWizard = "Configurador",
+    tabVsArena = "VS Arena",
+
     settingsTitle = "Ajustes",
-    appearanceSection = "Apariencia y Tema",
-    appearanceSubtitle = "Interfaz moderna oscura, clara o según el sistema",
-    themeDark = "Oscuro",
-    themeLight = "Claro",
+    appearanceSection = "Apariencia y Paleta",
+    appearanceSubtitle = "Temas oscuro estudio, slate claro, madera cyber o negro OLED puro",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Nogal",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "Sistema",
 
     languageRegionSection = "Idioma y Región",
@@ -250,14 +433,56 @@ val StringsES = AppStrings(
     back = "Volver",
     selectLanguageTitle = "Seleccionar Idioma",
     selectCurrencyTitle = "Seleccionar Moneda",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Nombre de pieza, modelo, marca (AMD, RTX 4070...)",
+    segmentIndividual = "Componentes",
+    segmentPeripherals = "Periféricos",
+    segmentPrebuilt = "Equipos OEM",
+    segmentLaptop = "Portátiles",
+    filterButton = "Filtros",
+    filterAll = "Todos",
+    marketPrice = "Precio de Mercado",
+    addToVs = "+ VS",
+    addToWizard = "+ Añadir al Build",
+    noPriceFallback = "Agotado / Sin Precio",
+
+    addToVsArena = "Añadir a VS Arena",
+    fpsMatrixTitle = "Matriz FPS y 1% Low en 12 Juegos",
+    fpsMatrixSubtitle = "Multiplicadores E-Sports (5) y Títulos AAA Pesados (7)",
+    localPriceOverride = "Definir Precio Local",
+    localPriceDesc = "Introduce cupones o precios de 2ª mano para el cálculo de coste y calidad",
+    enterPrice = "Introducir Precio",
+
+    vsArenaTitle = "Comparación Cara a Cara",
+    vsArenaSubtitle = "CPU, GPU, Placa Base, RAM, SSD, PSU, Disipador, Caja",
+    corner1 = "ESQUINA 1",
+    corner2 = "ESQUINA 2",
+    selectPart = "+ Seleccionar",
+    startSampleBattle = "Iniciar Duelo de Ejemplo",
+    vsDescription = "Toca las esquinas o pulsa 'VS' en el catálogo para comparar dos productos.",
+    selectCorner1 = "Elegir Esquina 1",
+    selectCorner2 = "Elegir Esquina 2",
+
+    wizardTitle = "Configurador PC",
+    wizardSubtitle = "Análisis inteligente de compatibilidad y fuente de alimentación",
+    totalBudget = "Coste Total del Sistema",
+    clearBuild = "Reiniciar Ensamble",
 )
 
 val StringsFR = AppStrings(
+    tabCatalog = "Catalogue",
+    tabWizard = "Configurateur",
+    tabVsArena = "VS Arena",
+
     settingsTitle = "Paramètres",
-    appearanceSection = "Apparence & Thème",
-    appearanceSubtitle = "Interface moderne sombre, claire ou adaptative",
-    themeDark = "Sombre",
-    themeLight = "Clair",
+    appearanceSection = "Apparence & Palette",
+    appearanceSubtitle = "Thèmes studio sombre, slate clair, cyber-bois ou noir OLED pur",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Noyer",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "Système",
 
     languageRegionSection = "Langue & Région",
@@ -300,14 +525,56 @@ val StringsFR = AppStrings(
     back = "Retour",
     selectLanguageTitle = "Choisir la Langue",
     selectCurrencyTitle = "Choisir la Devise",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Composant, modèle, marque (AMD, RTX 4070...)",
+    segmentIndividual = "Composants",
+    segmentPeripherals = "Périphériques",
+    segmentPrebuilt = "PC Fixes OEM",
+    segmentLaptop = "Portables",
+    filterButton = "Filtres",
+    filterAll = "Tous",
+    marketPrice = "Prix du Marché",
+    addToVs = "+ VS",
+    addToWizard = "+ Ajouter à la Config",
+    noPriceFallback = "Épuisé / Pas de Prix",
+
+    addToVsArena = "Ajouter à VS Arena",
+    fpsMatrixTitle = "Matrice FPS en Direct sur 12 Jeux",
+    fpsMatrixSubtitle = "Multiplicateurs E-Sports (5) et Gros Titres AAA (7)",
+    localPriceOverride = "Définir Prix Personnalisé",
+    localPriceDesc = "Inclure promotions ou prix d'occasion dans l'analyse de rapport qualité/prix",
+    enterPrice = "Entrer le Prix",
+
+    vsArenaTitle = "Face à Face",
+    vsArenaSubtitle = "CPU, GPU, Carte Mère, RAM, SSD, Alimentation, Ventirad, Boîtier",
+    corner1 = "COIN 1",
+    corner2 = "COIN 2",
+    selectPart = "+ Choisir",
+    startSampleBattle = "Lancer un Duel Type",
+    vsDescription = "Touchez les coins ou cliquez sur 'VS' dans le catalogue pour comparer deux produits.",
+    selectCorner1 = "Choisir Coin 1",
+    selectCorner2 = "Choisir Coin 2",
+
+    wizardTitle = "Configurateur PC",
+    wizardSubtitle = "Analyse intelligente de compatibilité et de puissance requise",
+    totalBudget = "Coût Total de la Config",
+    clearBuild = "Réinitialiser la Config",
 )
 
 val StringsRU = AppStrings(
+    tabCatalog = "Каталог",
+    tabWizard = "Конфигуратор",
+    tabVsArena = "VS Арена",
+
     settingsTitle = "Настройки",
-    appearanceSection = "Оформление и Тема",
-    appearanceSubtitle = "Тёмный, светлый или системный интерфейс",
-    themeDark = "Тёмная",
-    themeLight = "Светлая",
+    appearanceSection = "Оформление и Палитра",
+    appearanceSubtitle = "Тёмная студия, светлый slate, кибер-дерево или чистый OLED",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Орех",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "Системная",
 
     languageRegionSection = "Язык и Регион",
@@ -350,14 +617,56 @@ val StringsRU = AppStrings(
     back = "Назад",
     selectLanguageTitle = "Выберите Язык",
     selectCurrencyTitle = "Выберите Валюту",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "Деталь, модель, бренд (AMD, RTX 4070...)",
+    segmentIndividual = "Комплектующие",
+    segmentPeripherals = "Периферия",
+    segmentPrebuilt = "Готовые ПК",
+    segmentLaptop = "Ноутбуки",
+    filterButton = "Фильтры",
+    filterAll = "Все",
+    marketPrice = "Рыночная Цена",
+    addToVs = "+ VS",
+    addToWizard = "+ В Конфигуратор",
+    noPriceFallback = "Нет в наличии",
+
+    addToVsArena = "Сравнить в VS Арене",
+    fpsMatrixTitle = "Матрица 12 Игр: FPS и 1% Low",
+    fpsMatrixSubtitle = "Киберспорт (5) и Тяжёлые AAA-Проекты (7)",
+    localPriceOverride = "Указать Свою Цену",
+    localPriceDesc = "Учитывайте скидки, купоны или б/у цены для точного расчёта выгоды",
+    enterPrice = "Ввести Цену",
+
+    vsArenaTitle = "Прямое Сравнение",
+    vsArenaSubtitle = "Процессор, Видеокарта, Плата, ОЗУ, SSD, БП, Кулер, Корпус",
+    corner1 = "УГОЛ 1",
+    corner2 = "УГОЛ 2",
+    selectPart = "+ Выбрать",
+    startSampleBattle = "Запустить Тестовое Сравнение",
+    vsDescription = "Нажмите на углы сверху или выберите 'VS' в каталоге для прямого сравнения.",
+    selectCorner1 = "Выбрать Угол 1",
+    selectCorner2 = "Выбрать Угол 2",
+
+    wizardTitle = "Конфигуратор ПК",
+    wizardSubtitle = "Умная проверка совместимости и расчёт мощности БП",
+    totalBudget = "Общая Стоимость Сборки",
+    clearBuild = "Сбросить Сборку",
 )
 
 val StringsJA = AppStrings(
+    tabCatalog = "カタログ",
+    tabWizard = "PC構成ビルダー",
+    tabVsArena = "VS アリーナ",
+
     settingsTitle = "設定",
-    appearanceSection = "外観とテーマ",
-    appearanceSubtitle = "ダーク、ライト、またはシステム連動テーマ",
-    themeDark = "ダーク",
-    themeLight = "ライト",
+    appearanceSection = "外観とテーマパレット",
+    appearanceSubtitle = "ダークスタジオ、クリーンSlate、Cyber-Wood、または純粋OLED",
+    themeDark = "Obsidian",
+    themeLight = "Slate",
+    themeWood = "Walnut",
+    themeOled = "OLED",
+    themeCyberpunk = "Cyberpunk",
     themeSystem = "システム",
 
     languageRegionSection = "言語と地域",
@@ -400,6 +709,41 @@ val StringsJA = AppStrings(
     back = "戻る",
     selectLanguageTitle = "言語を選択してください",
     selectCurrencyTitle = "通貨を選択してください",
+
+    catalogTitle = "HARDWARE WIZARD",
+    searchPlaceholder = "パーツ名、型番、ブランド（AMD、RTX 4070...）",
+    segmentIndividual = "単体パーツ",
+    segmentPeripherals = "周辺機器",
+    segmentPrebuilt = "完成品PC",
+    segmentLaptop = "ノートPC",
+    filterButton = "フィルター",
+    filterAll = "すべて",
+    marketPrice = "市場価格",
+    addToVs = "+ VS",
+    addToWizard = "+ 構成に追加",
+    noPriceFallback = "在庫なし / 価格未定",
+
+    addToVsArena = "VSアリーナで比較",
+    fpsMatrixTitle = "12タイトル リアルタイムFPS＆1% Lowマトリックス",
+    fpsMatrixSubtitle = "競技Eスポーツ（5本）＆重量級AAA（7本）検証マルチプライヤー",
+    localPriceOverride = "カスタム価格を設定",
+    localPriceDesc = "クーポン、セール、または中古価格をコスパと予算計算に適用",
+    enterPrice = "価格を入力",
+
+    vsArenaTitle = "直接対決・比較",
+    vsArenaSubtitle = "CPU、GPU、マザーボード、RAM、SSD、電源、クーラー、ケース",
+    corner1 = "第1コーナー",
+    corner2 = "第2コーナー",
+    selectPart = "+ パーツを選択",
+    startSampleBattle = "サンプルマッチを即座に開始",
+    vsDescription = "上のコーナーをタップするか、カタログから「VS」を押して2製品を並べて比較します。",
+    selectCorner1 = "コーナー1を選択",
+    selectCorner2 = "コーナー2を選択",
+
+    wizardTitle = "PC構成ビルダー",
+    wizardSubtitle = "スマート互換性・ボトルネック・電源容量AI分析",
+    totalBudget = "システム合計予算",
+    clearBuild = "構成をリセット",
 )
 
 fun getAppStrings(language: AppLanguage): AppStrings = when (language) {
@@ -411,3 +755,6 @@ fun getAppStrings(language: AppLanguage): AppStrings = when (language) {
     AppLanguage.RU -> StringsRU
     AppLanguage.JA -> StringsJA
 }
+
+val LocalAppStrings = staticCompositionLocalOf { StringsTR }
+val LocalAppCurrency = staticCompositionLocalOf { AppCurrency.TRY }

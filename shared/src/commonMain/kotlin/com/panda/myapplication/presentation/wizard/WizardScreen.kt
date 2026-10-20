@@ -70,6 +70,8 @@ import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
 import com.panda.myapplication.domain.engine.BuildDoctorReport
@@ -101,16 +103,13 @@ import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.presentation.hardware_list.HardwareThumbnail
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
 import com.panda.myapplication.presentation.components.FluidOrganicCard
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import org.koin.compose.viewmodel.koinViewModel
 
 private val WIZARD_SLOTS = listOf(
@@ -200,7 +199,7 @@ fun WizardContent(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { paddingValues ->
@@ -288,7 +287,7 @@ fun WizardContent(
         ModalBottomSheet(
             onDismissRequest = onDismissPicker,
             sheetState = sheetState,
-            containerColor = CardSurface,
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
             scrimColor = MaterialTheme.colorScheme.scrim.copy(alpha = 0.65f),
         ) {
             SlotPickerBottomSheetContent(
@@ -402,7 +401,7 @@ private fun WizardHeader(
                     text = "⚡ Paylaş",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
-                    color = SlateDarkBackground,
+                    color = MaterialTheme.colorScheme.onPrimary,
                 )
             }
         }
@@ -897,7 +896,7 @@ private fun BuildDoctorSection(
                     .height(6.dp)
                     .clip(RoundedCornerShape(3.dp)),
                 color = healthScoreColor,
-                trackColor = CardSurfaceElevated,
+                trackColor = MaterialTheme.colorScheme.surfaceVariant,
             )
 
             Row(
@@ -922,7 +921,7 @@ private fun BuildDoctorSection(
             report.weakestLinkComponent?.let { weakest ->
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -967,7 +966,7 @@ private fun BuildDoctorSection(
                         }
                         Surface(
                             shape = RoundedCornerShape(6.dp),
-                            color = CardSurfaceElevated,
+                            color = MaterialTheme.colorScheme.surfaceVariant,
                             border = BorderStroke(1.dp, badgeColor.copy(alpha = 0.4f)),
                             modifier = Modifier.weight(1f),
                         ) {
@@ -1049,7 +1048,7 @@ private fun UpgradeRecommendationCard(
 ) {
     Surface(
         shape = RoundedCornerShape(10.dp),
-        color = CardSurfaceElevated,
+        color = MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -1213,7 +1212,7 @@ private fun GamingSimulationSection(
                             .weight(1f)
                             .clickable { onResolutionChanged(res) },
                         shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) NeonCyan.copy(alpha = 0.15f) else CardSurfaceElevated,
+                        color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.15f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
                     ) {
                         Column(
@@ -1259,7 +1258,7 @@ private fun GamingSimulationSection(
                             .weight(1f)
                             .clickable { onPresetChanged(preset) },
                         shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) NeonPurple.copy(alpha = 0.2f) else CardSurfaceElevated,
+                        color = if (isSelected) MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, if (isSelected) NeonPurple else MaterialTheme.colorScheme.outline),
                     ) {
                         Column(
@@ -1300,7 +1299,7 @@ private fun GamingSimulationSection(
                             .weight(1f)
                             .clickable { onUpscalingChanged(mode) },
                         shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) NeonEmerald.copy(alpha = 0.2f) else CardSurfaceElevated,
+                        color = if (isSelected) MaterialTheme.colorScheme.tertiary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outline),
                     ) {
                         Column(
@@ -1339,7 +1338,7 @@ private fun GamingSimulationSection(
                 // Real-time aggregate telemetry HUD banner
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -1441,7 +1440,7 @@ private fun GamingSimulationSection(
                         Card(
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(10.dp),
-                            colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                             border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                         ) {
                             Column(modifier = Modifier.padding(Spacing.small)) {
@@ -1476,7 +1475,7 @@ private fun GameFpsCard(game: GameFpsEstimate) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
-        color = CardSurfaceElevated,
+        color = MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
     ) {
         Row(
@@ -1561,12 +1560,13 @@ private fun SlotListHeader(
             letterSpacing = 1.sp,
         )
 
-        val priceText = if (totalPriceTry > 0) "₺${totalPriceTry.formatPrice()}" else "₺0"
+        val wizardCurrency = LocalAppCurrency.current
+        val priceText = totalPriceTry.formatPriceWithCurrency(wizardCurrency, "0")
         Text(
             text = "Toplam: $priceText",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = NeonCyan,
+            color = MaterialTheme.colorScheme.primary,
         )
     }
 }
@@ -1621,7 +1621,7 @@ private fun ComponentSlotCard(
                 .fillMaxWidth()
                 .clickable { onSlotClick() },
             shape = RoundedCornerShape(12.dp),
-            colors = CardDefaults.cardColors(containerColor = CardSurface.copy(alpha = 0.5f)),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f)),
             border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
         ) {
             Row(
@@ -1669,7 +1669,7 @@ private fun ComponentSlotCard(
         Card(
             modifier = modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
-            colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
             border = BorderStroke(1.dp, if (item.isCustomPrice) NeonAmber.copy(alpha = 0.6f) else NeonCyan.copy(alpha = 0.4f)),
         ) {
             Column(modifier = Modifier.padding(Spacing.medium)) {
@@ -1763,7 +1763,7 @@ private fun ComponentSlotCard(
                             .wrapContentWidth(Alignment.End),
                         horizontalAlignment = Alignment.End,
                     ) {
-                        val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                        val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
                         Text(
                             text = priceText,
                             style = MaterialTheme.typography.titleSmall,
@@ -1933,8 +1933,8 @@ private fun SlotPickerBottomSheetContent(
             singleLine = true,
             shape = RoundedCornerShape(10.dp),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = CardSurfaceElevated,
-                unfocusedContainerColor = CardSurfaceElevated,
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                 focusedBorderColor = NeonCyan,
                 unfocusedBorderColor = MaterialTheme.colorScheme.outline,
             ),
@@ -1992,7 +1992,7 @@ private fun PickerItemCard(
             .fillMaxWidth()
             .clickable { onSelect() },
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
     ) {
         Row(
@@ -2041,7 +2041,7 @@ private fun PickerItemCard(
                 horizontalAlignment = Alignment.End,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
                 Text(
                     text = priceText,
                     style = MaterialTheme.typography.titleSmall,
@@ -2062,7 +2062,7 @@ private fun PickerItemCard(
                         text = "Seç",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
-                        color = SlateDarkBackground,
+                        color = MaterialTheme.colorScheme.onPrimary,
                         maxLines = 1,
                         softWrap = false,
                     )
@@ -2091,7 +2091,7 @@ private fun SystemCardShareDialog(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(20.dp)),
-            color = SlateDarkBackground,
+            color = MaterialTheme.colorScheme.onPrimary,
             border = BorderStroke(2.dp, NeonCyan),
         ) {
             Column(modifier = Modifier.padding(Spacing.large)) {
@@ -2186,7 +2186,7 @@ private fun SystemCardShareDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    val priceText = if (build.totalPriceTry > 0) "₺${build.totalPriceTry.formatPrice()}" else "N/A"
+                    val priceText = build.totalPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, "N/A")
                     Column {
                         Text("TOPLAM BÜTÇE", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text(priceText, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Black, color = NeonCyan)
@@ -2223,7 +2223,7 @@ private fun SystemCardShareDialog(
                         shape = RoundedCornerShape(8.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
                     ) {
-                        Text("Panoya Kopyala", fontWeight = FontWeight.Bold, color = SlateDarkBackground)
+                        Text("Panoya Kopyala", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
                     }
                 }
             }

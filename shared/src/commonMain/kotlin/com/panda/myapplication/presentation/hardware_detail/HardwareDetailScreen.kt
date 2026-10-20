@@ -100,8 +100,6 @@ import com.panda.myapplication.domain.model.Wattage
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
 import com.panda.myapplication.presentation.theme.NeonAmber
@@ -111,6 +109,8 @@ import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
 import kotlinx.coroutines.launch
 import org.koin.compose.viewmodel.koinViewModel
@@ -193,6 +193,8 @@ fun HardwareDetailContent(
     var showCommunitySubmitSheet by remember { mutableStateOf(false) }
     var selectedDealForDetail by remember { mutableStateOf<CommunityDeal?>(null) }
     var showAdminLoginDialog by remember { mutableStateOf(false) }
+    val strings = LocalAppStrings.current
+    val currency = LocalAppCurrency.current
 
     Scaffold(
         modifier = modifier
@@ -216,7 +218,7 @@ fun HardwareDetailContent(
                     isLaptop = uiState.item.spec is LaptopSpec,
                     isCustomPrice = uiState.item.isCustomPrice,
                     customPriceNote = uiState.item.customPriceNote,
-                    priceText = uiState.item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok"),
+                    priceText = uiState.item.currentPriceTry.formatPriceWithCurrency(currency, strings.noPriceFallback),
                     onAddToBuildClick = onAddToBuildClick,
                     onAddToVsArenaClick = onAddToVsArenaClick,
                     onPriceOverrideClick = { showPriceDialog = true },
@@ -1160,7 +1162,7 @@ private fun MultiGameFpsSimulationCard(
                         onClick = { selectedResolution = res },
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) NeonCyan.copy(alpha = 0.16f) else CardSurfaceElevated,
+                        color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
                     ) {
                         Column(
@@ -1640,8 +1642,8 @@ private fun DetailBottomBar(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
-                    Text(
-                        text = if (isCustomPrice) "🏷️ Özel Fiyatınız" else "Piyasa Fiyatı",
+                        val barStrings = LocalAppStrings.current
+                    Text(text = if (isCustomPrice) "🏷️ ${barStrings.localPriceOverride}" else barStrings.marketPrice,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = if (isCustomPrice) FontWeight.Bold else FontWeight.Normal,
                         color = if (isCustomPrice) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,

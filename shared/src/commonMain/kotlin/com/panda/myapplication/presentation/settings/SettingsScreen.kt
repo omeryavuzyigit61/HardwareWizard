@@ -85,6 +85,7 @@ fun SettingsScreen(
         topBar = {
             SettingsTopBar(
                 title = strings.settingsTitle,
+                backText = strings.back,
                 onNavigateBack = onNavigateBack,
             )
         },
@@ -105,31 +106,62 @@ fun SettingsScreen(
                     title = strings.appearanceSection,
                     subtitle = strings.appearanceSubtitle,
                 ) {
-                    Row(
+                    Column(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
-                        ThemeOptionChip(
-                            label = strings.themeDark,
-                            icon = "🌙",
-                            isSelected = settings.themeMode == ThemeMode.DARK,
-                            onClick = { viewModel.onThemeModeChanged(ThemeMode.DARK) },
-                            modifier = Modifier.weight(1f),
-                        )
-                        ThemeOptionChip(
-                            label = strings.themeLight,
-                            icon = "☀️",
-                            isSelected = settings.themeMode == ThemeMode.LIGHT,
-                            onClick = { viewModel.onThemeModeChanged(ThemeMode.LIGHT) },
-                            modifier = Modifier.weight(1f),
-                        )
-                        ThemeOptionChip(
-                            label = strings.themeSystem,
-                            icon = "⚙️",
-                            isSelected = settings.themeMode == ThemeMode.SYSTEM,
-                            onClick = { viewModel.onThemeModeChanged(ThemeMode.SYSTEM) },
-                            modifier = Modifier.weight(1f),
-                        )
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            ThemeOptionChip(
+                                label = strings.themeDark,
+                                icon = "🌙",
+                                isSelected = settings.themeMode == ThemeMode.DARK,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.DARK) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeLight,
+                                icon = "☀️",
+                                isSelected = settings.themeMode == ThemeMode.LIGHT,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.LIGHT) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeWood,
+                                icon = "🪵",
+                                isSelected = settings.themeMode == ThemeMode.WOOD,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.WOOD) },
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            ThemeOptionChip(
+                                label = strings.themeOled,
+                                icon = "🖤",
+                                isSelected = settings.themeMode == ThemeMode.OLED,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.OLED) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeCyberpunk,
+                                icon = "⚡",
+                                isSelected = settings.themeMode == ThemeMode.CYBERPUNK,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.CYBERPUNK) },
+                                modifier = Modifier.weight(1f),
+                            )
+                            ThemeOptionChip(
+                                label = strings.themeSystem,
+                                icon = "⚙️",
+                                isSelected = settings.themeMode == ThemeMode.SYSTEM,
+                                onClick = { viewModel.onThemeModeChanged(ThemeMode.SYSTEM) },
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
                     }
                 }
             }
@@ -486,6 +518,7 @@ fun SettingsScreen(
 @Composable
 private fun SettingsTopBar(
     title: String,
+    backText: String,
     onNavigateBack: () -> Unit,
 ) {
     Surface(
@@ -503,7 +536,7 @@ private fun SettingsTopBar(
                 shape = CircleShape,
             ) {
                 Text(
-                    text = "← Geri",
+                    text = "← $backText",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,

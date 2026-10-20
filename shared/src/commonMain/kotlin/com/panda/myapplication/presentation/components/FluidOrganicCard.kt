@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,7 +52,7 @@ fun FluidOrganicCard(
     modifier: Modifier = Modifier,
     accentColor: Color = ElectricBlue,
     secondaryColor: Color? = null,
-    containerColor: Color = CardSurfaceElevated,
+    containerColor: Color = Color.Unspecified,
     shape: Shape = RoundedCornerShape(16.dp),
     borderWidth: Dp = 1.8.dp,
     contentPadding: Dp = 16.dp,
@@ -107,7 +108,7 @@ fun FluidOrganicCard(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = shape,
-        color = containerColor,
+        color = if (containerColor != Color.Unspecified) containerColor else MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(borderWidth, animatedBorderBrush),
     ) {
         Box(

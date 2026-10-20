@@ -2,6 +2,7 @@ package com.panda.myapplication.presentation.util
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.UriHandler
+import com.panda.myapplication.domain.model.AppCurrency
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.util.SecurityUtils
 import com.panda.myapplication.presentation.theme.ElectricBlue
@@ -15,14 +16,11 @@ import kotlin.math.abs
 import kotlin.math.roundToLong
 
 /**
- * Centralized CoreUtils & DesignSystem formatters (DRY Principle).
- *
- * Single source of truth for:
- * - Turkish Lira (₺) price formatting with dot thousands separator
- * - Price delta / F/P formatting
- * - Category accent colors, short badges, and emoji icons
- * - Strict HTTPS & Whitelist validated store link launching
+ * Currency conversion parities against Turkish Lira (TRY base).
  */
+private const val RATE_USD = 38.50
+private const val RATE_EUR = 42.00
+private const val RATE_GBP = 48.50
 
 /**
  * Formats a numeric value with dot thousands separator (e.g., `15431.0` -> `"15.431"`).
@@ -42,37 +40,62 @@ fun Double.formatPrice(): String {
 }
 
 /**
- * Formats a validated TRY price as `"15.431 ₺"` or returns `null` if missing or below realistic TRY threshold.
+ * Formats a validated price with dynamic currency conversion (TRY, USD, EUR, GBP).
  */
-fun Double?.formatTryOrNull(): String? {
+fun Double?.formatPriceWithCurrency(
+    currency: AppCurrency = AppCurrency.TRY,
+    fallback: String = "Stok / Fiyat Yok",
+): String {
+    val cleanTry = SecurityUtils.sanitizeTryPrice(this) ?: return fallback
+    return when (currency) {
+        AppCurrency.TRY -> "${cleanTry.formatPrice()} ₺"
+        AppCurrency.USD -> {
+            val usd = cleanTry / RATE_USD
+            "$ ${usd.formatPrice()}"
+        }
+        AppCurrency.EUR -> {
+            val eur = cleanTry / RATE_EUR
+            "€ ${eur.formatPrice()}"
+        }
+        AppCurrency.GBP -> {
+            val gbp = cleanTry / RATE_GBP
+            "£ ${gbp.formatPrice()}"
+        }
+    }
+}
+
+fun Double?.formatPriceWithCurrency(fallback: String): String = formatPriceWithCurrency(AppCurrency.TRY, fallback)
+
+/**
+ * Formats a validated price or returns `null` if missing or below realistic threshold.
+ */
+fun Double?.formatTryOrNull(currency: AppCurrency = AppCurrency.TRY): String? {
     val clean = SecurityUtils.sanitizeTryPrice(this) ?: return null
-    return "${clean.formatPrice()} ₺"
+    return clean.formatPriceWithCurrency(currency)
 }
 
 /**
- * Formats a nullable Double price as `"15.431 ₺"` or returns honest fallback text `"Stok / Fiyat Yok"`.
+ * Compact formatter for chart axes (e.g., `"34.5B ₺"` or `"$ 890"`).
  */
-fun Double?.formatPriceWithCurrency(fallback: String = "Stok / Fiyat Yok"): String {
-    val clean = SecurityUtils.sanitizeTryPrice(this) ?: return fallback
-    return "${clean.formatPrice()} ₺"
-}
-
-/**
- * Compact TRY formatter for chart axes (e.g., `"34.5B ₺"` or `"15.430 ₺"`).
- */
-fun formatTryCompact(price: Double): String {
-    val rounded = price.roundToLong()
+fun formatTryCompact(price: Double, currency: AppCurrency = AppCurrency.TRY): String {
+    val converted = when (currency) {
+        AppCurrency.TRY -> price
+        AppCurrency.USD -> price / RATE_USD
+        AppCurrency.EUR -> price / RATE_EUR
+        AppCurrency.GBP -> price / RATE_GBP
+    }
+    val rounded = converted.roundToLong()
+    val symbol = currency.symbol
     return if (rounded >= 10_000L) {
         val k = (rounded / 100.0).roundToLong() / 10.0
-        "${k}B ₺"
+        if (currency == AppCurrency.TRY) "${k}B ₺" else "$symbol ${k}k"
     } else {
-        "${price.formatPrice()} ₺"
+        if (currency == AppCurrency.TRY) "${converted.formatPrice()} ₺" else "$symbol ${converted.formatPrice()}"
     }
 }
 
 /**
  * Opens an external store URL ONLY if it passes [SecurityUtils.validateStoreUrl] (HTTPS + Whitelisted Domain).
- * Wraps the platform intent launch in `runCatching` so malformed or unsupported intents never crash the app.
  */
 fun UriHandler.openSafeStoreUrl(
     rawUrl: String?,

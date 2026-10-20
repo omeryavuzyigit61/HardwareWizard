@@ -80,6 +80,8 @@ fun FluidBottomBar(
     onTabSelected: (FluidBottomNavTabItem) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val themePrimary = MaterialTheme.colorScheme.primary
+    val themeSecondary = MaterialTheme.colorScheme.secondary
     val selectedIndex = remember(currentRoute, tabs) {
         val found = tabs.indexOfFirst { currentRoute?.startsWith(it.route) == true }
         if (found >= 0) found else 0
@@ -99,7 +101,7 @@ fun FluidBottomBar(
         modifier = modifier
             .fillMaxWidth()
             .navigationBarsPadding(),
-        color = Color(0xFF070B14).copy(alpha = 0.97f),
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.96f),
         tonalElevation = 8.dp,
     ) {
         BoxWithConstraints(
@@ -132,9 +134,9 @@ fun FluidBottomBar(
                     brush = Brush.horizontalGradient(
                         colors = listOf(
                             Color.Transparent,
-                            ElectricBlue.copy(alpha = 0.20f),
-                            NeonCyan.copy(alpha = 0.35f),
-                            ElectricBlue.copy(alpha = 0.20f),
+                            themeSecondary.copy(alpha = 0.20f),
+                            themePrimary.copy(alpha = 0.35f),
+                            themeSecondary.copy(alpha = 0.20f),
                             Color.Transparent,
                         ),
                     ),
@@ -148,8 +150,8 @@ fun FluidBottomBar(
                 drawCircle(
                     brush = Brush.radialGradient(
                         colors = listOf(
-                            NeonCyan.copy(alpha = 0.22f),
-                            ElectricBlue.copy(alpha = 0.10f),
+                            themePrimary.copy(alpha = 0.22f),
+                            themeSecondary.copy(alpha = 0.10f),
                             Color.Transparent,
                         ),
                         center = Offset(currentCenterXPx, h * 0.44f),
@@ -169,9 +171,9 @@ fun FluidBottomBar(
                 drawRoundRect(
                     brush = Brush.horizontalGradient(
                         colors = listOf(
-                            ElectricBlue.copy(alpha = 0.45f),
-                            NeonCyan.copy(alpha = 0.85f),
-                            ElectricBlue.copy(alpha = 0.45f),
+                            themeSecondary.copy(alpha = 0.45f),
+                            themePrimary.copy(alpha = 0.85f),
+                            themeSecondary.copy(alpha = 0.45f),
                         ),
                     ),
                     topLeft = Offset(currentCenterXPx - activeBeadWidth / 2f, 0f),
@@ -192,8 +194,8 @@ fun FluidBottomBar(
                 drawCircle(
                     brush = Brush.radialGradient(
                         colors = listOf(
-                            NeonCyan,
-                            NeonCyan.copy(alpha = 0.35f),
+                            themePrimary,
+                            themePrimary.copy(alpha = 0.35f),
                             Color.Transparent,
                         ),
                         center = Offset(currentCenterXPx, h - 5.dp.toPx()),
@@ -232,8 +234,8 @@ fun FluidBottomBar(
                         label = "tab_offset_y_$index",
                     )
 
-                    val activeColor = NeonCyan
-                    val inactiveColor = Color(0xFF64748B)
+                    val activeColor = themePrimary
+                    val inactiveColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.70f)
 
                     Box(
                         modifier = Modifier

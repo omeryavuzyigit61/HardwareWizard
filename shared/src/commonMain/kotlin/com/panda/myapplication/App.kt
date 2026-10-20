@@ -119,6 +119,10 @@ import org.koin.compose.viewmodel.koinViewModel
 import com.panda.myapplication.domain.repository.SettingsRepository
 import com.panda.myapplication.presentation.settings.SettingsScreen
 import com.panda.myapplication.presentation.settings.SettingsViewModel
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
+import com.panda.myapplication.presentation.util.getAppStrings
+import androidx.compose.runtime.CompositionLocalProvider
 
 object Destinations {
     const val HARDWARE_LIST = "hardware_list"
@@ -142,9 +146,9 @@ private sealed class BottomNavTab(
     val title: String,
     val iconType: FluidTabIconType,
 ) {
-    data object Catalog : BottomNavTab(Destinations.HARDWARE_LIST, "Keşfet & Katalog", FluidTabIconType.CATALOG)
-    data object Wizard : BottomNavTab(Destinations.WIZARD, "PC Sihirbazı", FluidTabIconType.WIZARD)
-    data object VsArena : BottomNavTab(Destinations.VS_ARENA, "VS Arena", FluidTabIconType.VS_ARENA)
+    class Catalog(title: String) : BottomNavTab(Destinations.HARDWARE_LIST, title, FluidTabIconType.CATALOG)
+    class Wizard(title: String) : BottomNavTab(Destinations.WIZARD, title, FluidTabIconType.WIZARD)
+    class VsArena(title: String) : BottomNavTab(Destinations.VS_ARENA, title, FluidTabIconType.VS_ARENA)
 }
 
 private data class EngineeringToolDrawerItem(
@@ -175,8 +179,14 @@ fun App() {
         val settingsRepository: SettingsRepository = koinInject()
         val appSettings by settingsRepository.settings.collectAsStateWithLifecycle()
 
+        val appStrings = remember(appSettings.language) { getAppStrings(appSettings.language) }
+
         HardwareWizardTheme(themeMode = appSettings.themeMode) {
-            val navController = rememberNavController()
+            CompositionLocalProvider(
+                LocalAppStrings provides appStrings,
+                LocalAppCurrency provides appSettings.currency,
+            ) {
+                val navController = rememberNavController()
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route
             val vsArenaRepository: VsArenaRepository = koinInject()
@@ -448,6 +458,7 @@ fun App() {
                     )
                 }
             }
+            }
         }
     }
 }
@@ -527,7 +538,7 @@ private fun HardwareEngineeringDrawerContent(
         modifier = Modifier
             .widthIn(min = 280.dp, max = 335.dp)
             .fillMaxHeight(),
-        drawerContainerColor = SlateDarkBackground,
+        drawerContainerColor = MaterialTheme.colorScheme.surface,
         drawerContentColor = MaterialTheme.colorScheme.onBackground,
     ) {
         Column(
@@ -542,7 +553,7 @@ private fun HardwareEngineeringDrawerContent(
             // Drawer Header
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = CardSurface,
+                color = MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(1.dp, ElectricBlue.copy(alpha = 0.35f)),
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -583,21 +594,21 @@ private fun HardwareEngineeringDrawerContent(
                         Text(
                             text = "Donanım fiziği, gecikme ve akustik simülatörleri",
                             style = MaterialTheme.typography.bodySmall,
-                            color = TextSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                     Surface(
                         onClick = onCloseDrawer,
                         shape = RoundedCornerShape(10.dp),
-                        color = CardSurfaceElevated,
-                        border = BorderStroke(1.dp, GlassBorder),
+                        color = MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     ) {
                         Text(
                             text = "✕",
                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = TextSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                 }
@@ -606,7 +617,7 @@ private fun HardwareEngineeringDrawerContent(
             // User Profile Drawer Card
             Surface(
                 shape = RoundedCornerShape(14.dp),
-                color = CardSurfaceElevated,
+                color = MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(1.dp, if (currentUser != null) Color(currentUser.spiritHardware.colorHex).copy(alpha = 0.5f) else GlassBorder),
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -708,7 +719,7 @@ private fun HardwareEngineeringDrawerContent(
                                     Text(
                                         text = "Giriş yapılmadı",
                                         style = MaterialTheme.typography.labelSmall,
-                                        color = TextSecondary,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }
                             }
@@ -733,7 +744,7 @@ private fun HardwareEngineeringDrawerContent(
             Text(
                 text = "ANA MODÜLLER",
                 style = MaterialTheme.typography.labelSmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(start = 4.dp),
             )
@@ -776,7 +787,7 @@ private fun HardwareEngineeringDrawerContent(
                 val isSelected = currentRoute == tool.route
                 Surface(
                     shape = RoundedCornerShape(14.dp),
-                    color = if (isSelected) tool.accentColor.copy(alpha = 0.14f) else CardSurface,
+                    color = if (isSelected) tool.accentColor.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(
                         width = if (isSelected) 1.5.dp else 1.dp,
                         color = if (isSelected) tool.accentColor else GlassBorder.copy(alpha = 0.7f),
@@ -844,7 +855,7 @@ private fun HardwareEngineeringDrawerContent(
                             Text(
                                 text = tool.subtitle,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = TextSecondary,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 maxLines = 2,
                                 overflow = TextOverflow.Ellipsis,
                                 lineHeight = 15.sp,
@@ -859,7 +870,7 @@ private fun HardwareEngineeringDrawerContent(
             // Settings Navigation Drawer Tile
             Surface(
                 shape = RoundedCornerShape(14.dp),
-                color = if (currentRoute == Destinations.SETTINGS) NeonCyan.copy(alpha = 0.14f) else CardSurface,
+                color = if (currentRoute == Destinations.SETTINGS) MaterialTheme.colorScheme.primary.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (currentRoute == Destinations.SETTINGS) 1.5.dp else 1.dp,
                     color = if (currentRoute == Destinations.SETTINGS) NeonCyan else GlassBorder.copy(alpha = 0.7f),
@@ -900,7 +911,7 @@ private fun HardwareEngineeringDrawerContent(
                         Text(
                             text = "Tema, 7 Dil, Para Birimi, Uzman Modu",
                             style = MaterialTheme.typography.bodySmall,
-                            color = TextSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                         )
@@ -909,7 +920,7 @@ private fun HardwareEngineeringDrawerContent(
                     Text(
                         text = "›",
                         fontSize = 18.sp,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
@@ -919,7 +930,7 @@ private fun HardwareEngineeringDrawerContent(
             // Footer Info Card
             Surface(
                 shape = RoundedCornerShape(12.dp),
-                color = CardSurfaceElevated.copy(alpha = 0.55f),
+                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
                 border = BorderStroke(1.dp, GlassBorder.copy(alpha = 0.6f)),
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -936,7 +947,7 @@ private fun HardwareEngineeringDrawerContent(
                     Text(
                         text = "Katalogdaki veya detay sayfasındaki herhangi bir ürünün fiyat rozetine dokunarak kendi bulduğunuz indirimli/ikinci el fiyatı girebilirsiniz.",
                         style = MaterialTheme.typography.bodySmall,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         lineHeight = 15.sp,
                     )
                 }
@@ -956,10 +967,10 @@ private fun QuickDrawerTabChip(
         onClick = onClick,
         modifier = modifier,
         shape = RoundedCornerShape(10.dp),
-        color = if (isSelected) ElectricBlue.copy(alpha = 0.18f) else CardSurface,
+        color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(
             width = 1.dp,
-            color = if (isSelected) ElectricBlue else GlassBorder.copy(alpha = 0.7f),
+            color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
         ),
     ) {
         Box(
@@ -985,15 +996,16 @@ private fun HardwareBottomBar(
     onTabSelected: (BottomNavTab) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val tabs = remember {
+    val strings = LocalAppStrings.current
+    val tabs = remember(strings) {
         listOf(
-            BottomNavTab.Catalog,
-            BottomNavTab.Wizard,
-            BottomNavTab.VsArena,
+            BottomNavTab.Catalog(strings.tabCatalog),
+            BottomNavTab.Wizard(strings.tabWizard),
+            BottomNavTab.VsArena(strings.tabVsArena),
         )
     }
 
-    val fluidTabs = remember {
+    val fluidTabs = remember(tabs) {
         tabs.map {
             FluidBottomNavTabItem(
                 route = it.route,

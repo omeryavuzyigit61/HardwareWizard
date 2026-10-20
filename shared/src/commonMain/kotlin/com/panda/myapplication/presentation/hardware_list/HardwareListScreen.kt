@@ -83,6 +83,8 @@ import androidx.compose.material3.CircularProgressIndicator
 import coil3.compose.AsyncImage
 import coil3.compose.SubcomposeAsyncImage
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
@@ -114,20 +116,13 @@ import com.panda.myapplication.domain.model.Wattage
 import androidx.compose.animation.core.tween
 import androidx.compose.material3.IconButton
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
-import com.panda.myapplication.presentation.theme.NavyCard
-import com.panda.myapplication.presentation.theme.NavyElevated
-import com.panda.myapplication.presentation.theme.NavySurface
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.ObsidianDeep
 import com.panda.myapplication.presentation.theme.TextMuted
 import com.panda.myapplication.presentation.theme.TextPrimary
 import com.panda.myapplication.presentation.theme.TextSecondary
@@ -204,6 +199,8 @@ fun HardwareListContent(
 ) {
     val listState = rememberLazyListState()
     var priceDialogItem by remember { mutableStateOf<HardwareItem?>(null) }
+    val strings = LocalAppStrings.current
+    val currency = LocalAppCurrency.current
 
     Scaffold(
         modifier = modifier
@@ -297,9 +294,9 @@ fun HardwareListContent(
                     modifier = Modifier.fillMaxWidth(),
                     placeholder = {
                         Text(
-                            text = "Parça adı, model, marka (AMD, RTX 4070, DDR5...)",
+                            text = strings.searchPlaceholder,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = TextMuted,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                         )
@@ -328,13 +325,13 @@ fun HardwareListContent(
                     singleLine = true,
                     shape = RoundedCornerShape(14.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = NavyCard,
-                        unfocusedContainerColor = NavyCard,
-                        focusedBorderColor = NeonCyan,
-                        unfocusedBorderColor = GlassBorder,
-                        focusedTextColor = TextPrimary,
-                        unfocusedTextColor = TextPrimary,
-                        cursorColor = NeonCyan,
+                        focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        focusedBorderColor = MaterialTheme.colorScheme.primary,
+                        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+                        focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                        cursorColor = MaterialTheme.colorScheme.primary,
                     ),
                 )
 
@@ -344,8 +341,8 @@ fun HardwareListContent(
                 val currentMode = uiState.segmentMode
                 Surface(
                     shape = RoundedCornerShape(12.dp),
-                    color = ObsidianDeep.copy(alpha = 0.85f),
-                    border = BorderStroke(1.dp, GlassBorder),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.65f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth().padding(bottom = Spacing.small),
                 ) {
                     Row(
@@ -355,20 +352,20 @@ fun HardwareListContent(
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
                         val tabs = listOf(
-                            CatalogSegmentMode.INDIVIDUAL to ("🧩" to "Bireysel"),
-                            CatalogSegmentMode.PERIPHERALS to ("🖱️" to "Çevre"),
-                            CatalogSegmentMode.PREBUILT to ("🖥️" to "Hazır Sistem"),
-                            CatalogSegmentMode.LAPTOP to ("💻" to "Laptop"),
+                            CatalogSegmentMode.INDIVIDUAL to ("🧩" to strings.segmentIndividual),
+                            CatalogSegmentMode.PERIPHERALS to ("🖱️" to strings.segmentPeripherals),
+                            CatalogSegmentMode.PREBUILT to ("🖥️" to strings.segmentPrebuilt),
+                            CatalogSegmentMode.LAPTOP to ("💻" to strings.segmentLaptop),
                         )
                         tabs.forEach { (mode, pair) ->
                             val (emoji, title) = pair
                             val isSelected = currentMode == mode
                             val animatedBg by animateColorAsState(
-                                if (isSelected) NeonCyan.copy(alpha = 0.22f) else Color.Transparent,
+                                if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f) else Color.Transparent,
                                 animationSpec = tween(durationMillis = 200),
                             )
                             val animatedBorderColor by animateColorAsState(
-                                if (isSelected) NeonCyan.copy(alpha = 0.85f) else Color.Transparent,
+                                if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.85f) else Color.Transparent,
                                 animationSpec = tween(durationMillis = 200),
                             )
 
@@ -395,7 +392,7 @@ fun HardwareListContent(
                                         text = title,
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Medium,
-                                        color = if (isSelected) NeonCyan else TextSecondary,
+                                        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
                                         textAlign = TextAlign.Center,
                                         maxLines = 1,
                                         softWrap = false,
@@ -416,10 +413,10 @@ fun HardwareListContent(
                     Surface(
                         onClick = { onEvent(HardwareListUiEvent.OnToggleFilterSheet) },
                         shape = RoundedCornerShape(10.dp),
-                        color = if (isFilterActive) NeonCyan.copy(alpha = 0.18f) else NavyCard,
+                        color = if (isFilterActive) MaterialTheme.colorScheme.primary.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(
                             if (isFilterActive) 1.2.dp else 1.dp,
-                            if (isFilterActive) NeonCyan else GlassBorder,
+                            if (isFilterActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
                         ),
                         modifier = Modifier.padding(end = Spacing.small),
                     ) {
@@ -430,10 +427,10 @@ fun HardwareListContent(
                         ) {
                             Text(text = "🎛️", fontSize = 12.sp)
                             Text(
-                                text = "Filtreler",
+                                text = strings.filterButton,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = if (isFilterActive) NeonCyan else TextPrimary,
+                                color = if (isFilterActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
                             )
                             if (isFilterActive) {
                                 Box(
@@ -640,11 +637,11 @@ fun FluidFilterChip(
     accentColor: Color = NeonCyan,
 ) {
     val animatedBg by animateColorAsState(
-        if (selected) accentColor.copy(alpha = 0.22f) else NavyCard,
+        if (selected) accentColor.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant,
         animationSpec = tween(durationMillis = 200),
     )
     val animatedBorderColor by animateColorAsState(
-        if (selected) accentColor.copy(alpha = 0.85f) else GlassBorder,
+        if (selected) accentColor.copy(alpha = 0.85f) else MaterialTheme.colorScheme.outlineVariant,
         animationSpec = tween(durationMillis = 200),
     )
 
@@ -670,7 +667,7 @@ fun FluidFilterChip(
                 text = label,
                 style = MaterialTheme.typography.labelMedium,
                 fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-                color = if (selected) accentColor else TextSecondary,
+                color = if (selected) accentColor else MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 softWrap = false,
             )
@@ -990,8 +987,10 @@ fun HardwareCard(
                 horizontalAlignment = Alignment.End,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
+                val cardCurrency = LocalAppCurrency.current
+                val cardStrings = LocalAppStrings.current
                 if (item.currentPriceTry != null) {
-                    val priceText = item.currentPriceTry.formatPriceWithCurrency("Stok / Fiyat Yok")
+                    val priceText = item.currentPriceTry.formatPriceWithCurrency(cardCurrency, cardStrings.noPriceFallback)
                     Text(
                         text = priceText,
                         style = MaterialTheme.typography.titleSmall,
@@ -1010,7 +1009,7 @@ fun HardwareCard(
                         border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.65f)),
                     ) {
                         Text(
-                            text = "🏷️ Fiyat Gir",
+                            text = "🏷️ ${cardStrings.enterPrice}",
                             modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
@@ -1021,7 +1020,7 @@ fun HardwareCard(
                     }
                 } else {
                     Text(
-                        text = "Fiyat Yok",
+                        text = cardStrings.noPriceFallback,
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         softWrap = false,
