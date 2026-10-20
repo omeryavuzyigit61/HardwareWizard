@@ -15,6 +15,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import com.panda.myapplication.presentation.util.localized
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -559,17 +562,18 @@ private fun HeroHeaderCard(
                     .fillMaxWidth()
                     .padding(Spacing.medium),
             ) {
-                Row(
+                @OptIn(ExperimentalLayoutApi::class)
+                FlowRow(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         DetailBadge(
-                            text = item.category.displayName,
+                            text = item.category.localized(strings),
                             containerColor = MaterialTheme.colorScheme.primaryContainer,
                             contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                         )
@@ -1340,12 +1344,16 @@ private fun PolymorphicTechnicalSpecsSection(
                 .padding(Spacing.medium),
             verticalArrangement = Arrangement.spacedBy(Spacing.small),
         ) {
-            Row(
+            @OptIn(ExperimentalLayoutApi::class)
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(end = Spacing.small),
+                ) {
                     Box(
                         modifier = Modifier
                             .size(8.dp)
@@ -1361,7 +1369,7 @@ private fun PolymorphicTechnicalSpecsSection(
                     )
                 }
                 DetailBadge(
-                    text = item.category.displayName,
+                    text = item.category.localized(LocalAppStrings.current),
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
@@ -1772,12 +1780,16 @@ private fun PrebuiltSystemDetailsCard(
         Column(
             modifier = Modifier.fillMaxWidth(),
         ) {
-            Row(
+            @OptIn(ExperimentalLayoutApi::class)
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(end = Spacing.small),
+                ) {
                     Text(text = "🖥️", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
@@ -1962,12 +1974,16 @@ private fun LaptopSpecialDetailsCard(
             modifier = Modifier.fillMaxWidth(),
         ) {
             // Header
-            Row(
+            @OptIn(ExperimentalLayoutApi::class)
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(end = Spacing.small),
+                ) {
                     Text(text = "💻", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
@@ -2158,6 +2174,8 @@ private fun DetailBadge(
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Bold,
             color = contentColor,
+            maxLines = 1,
+            softWrap = false,
             modifier = Modifier.padding(horizontal = Spacing.small, vertical = Spacing.extraSmall),
         )
     }
@@ -2681,7 +2699,7 @@ fun DetailPlaceholderHero(
         verticalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = category.displayName,
+            text = category.localized(strings),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Black,
             color = badgeText,
