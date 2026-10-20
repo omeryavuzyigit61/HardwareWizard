@@ -259,8 +259,8 @@
     "model": "Exceria SATA 480GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg",
-      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/kioxia/thumb/117152-1_large.jpg",
-      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-sata-ssd_img_prd001.png"
+      "https://apac.kioxia.com/content/dam/kioxia/shared/personal/ssd/img/exceria-sata-ssd_img_prd001.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10ba06eb52379d5e7dbfa7ab326acc74.1600.jpg"
     ]
   },
   {
@@ -612,7 +612,7 @@
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
       "https://phisonblog.com/wp-content/uploads/2025/02/Kingston-Fury-Renegade-2TB.jpg",
-      "https://img.terabyteshop.com.br/produto/g/ssd-kingston-fury-renegade-2tb-m2-nvme-2280-leitura-7300mbs-e-gravacao-7000mbs-com-dissipador-sfyrdk2000g_155199.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4086d776ab0debe42cb6473dab77e41d.1600.jpg"
     ]
   },
   {
@@ -714,15 +714,15 @@
     "seq_write": 6600,
     "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
+    "imageUrl": "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "1GB DDR4 DRAM Cache",
     "random_iops": "1200K / 1100K IOPS",
     "model": "Black SN850X 1TB",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_1tb.webp",
       "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
-      "https://cdn.mos.cms.futurecdn.net/XznGAj929i82MWrAHPH4Eo.jpg"
+      "https://cdn.mos.cms.futurecdn.net/XznGAj929i82MWrAHPH4Eo.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8e6dbae8a0f3c6572216c8758ce5a0b5.1600.jpg"
     ]
   },
   {
@@ -736,15 +736,15 @@
     "seq_write": 6600,
     "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
+    "imageUrl": "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
     "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
     "dram_cache": "2GB DDR4 DRAM Cache",
     "random_iops": "1200K / 1100K IOPS",
     "model": "Black SN850X 2TB",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn850x_2tb.webp",
       "https://pics.computerbase.de/1/0/5/0/0/1-d001ceec9cfc799f/12-1080.85401c32.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6512/6512128cv12d.jpg"
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6512/6512128cv12d.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8e6dbae8a0f3c6572216c8758ce5a0b5.1600.jpg"
     ]
   },
   {
@@ -780,15 +780,15 @@
     "seq_write": 4850,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 1200,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/qMuTBXAZy6dXpXgDbqBLRB.jpg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
     "model": "Black SN770 2TB",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_black_sn770_2tb.webp",
       "https://cdn.mos.cms.futurecdn.net/qMuTBXAZy6dXpXgDbqBLRB.jpg",
-      "https://i5.walmartimages.com/seo/WD-BLACK-2TB-SN770-NVMe-PCIe-4-0-M-2-Internal-SSD-WDBBDL0020BNC-WRWM_b8147249-fcd8-4548-b73a-4e76619bdec6.e51d955ae0e1ddd5a2ccb44b2330ed02.png"
+      "https://i5.walmartimages.com/seo/WD-BLACK-2TB-SN770-NVMe-PCIe-4-0-M-2-Internal-SSD-WDBBDL0020BNC-WRWM_b8147249-fcd8-4548-b73a-4e76619bdec6.e51d955ae0e1ddd5a2ccb44b2330ed02.png",
+      "https://m.media-amazon.com/images/I/71Sr1zjPhwL._SL1500_.jpg"
     ]
   },
   {
@@ -802,15 +802,15 @@
     "seq_write": 4150,
     "nand_type": "BiCS TLC",
     "endurance_tbw": 600,
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
+    "imageUrl": "https://i5.walmartimages.com/seo/WD-Blue-1TB-SN580-NVMe-Internal-SSD-WDBWMY0010BBL-WRWM_28933fdc-65d2-4eef-95f4-474478cfd226.51d02b302ea9785e967da33be118bf8b.jpeg",
     "controller": "Silicon Motion / Phison Yüksek Hızlı Kontrolcü",
     "dram_cache": "HMB (Host Memory Buffer) / Dinamik SLC Önbellek",
     "random_iops": "750K / 650K IOPS",
     "model": "Blue SN580 1TB",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/wd_blue_sn580_1tb.webp",
       "https://i5.walmartimages.com/seo/WD-Blue-1TB-SN580-NVMe-Internal-SSD-WDBWMY0010BBL-WRWM_28933fdc-65d2-4eef-95f4-474478cfd226.51d02b302ea9785e967da33be118bf8b.jpeg",
-      "https://tpucdn.com/ssd-specs/images/d/1541-package.jpg"
+      "https://tpucdn.com/ssd-specs/images/d/1541-package.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg"
     ]
   },
   {
@@ -897,8 +897,8 @@
     "model": "T500 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fd5aee2fd8854d15ef3c81dcd9599f5.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0ebbd9acb5f39d51d40baffde5a15a91.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d560931c58b12d087e0630e9283bfca0.1600.jpg"
     ]
   },
   {
@@ -919,8 +919,8 @@
     "model": "P3 Plus 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e28de633eafbdc136277c18fc2acc45f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9c5edf1af947acf48c1c55595977cde.1600.jpg"
     ]
   },
   {
@@ -941,8 +941,8 @@
     "model": "P3 Plus 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e28de633eafbdc136277c18fc2acc45f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9c5edf1af947acf48c1c55595977cde.1600.jpg"
     ]
   },
   {
@@ -963,8 +963,8 @@
     "model": "NM790 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/496a72c7b0963d48aff4970b5407c89f.1600.jpg",
+      "https://m.media-amazon.com/images/I/410m8y+8sIL.jpg"
     ]
   },
   {
@@ -985,8 +985,8 @@
     "model": "NM790 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/496a72c7b0963d48aff4970b5407c89f.1600.jpg",
+      "https://m.media-amazon.com/images/I/410m8y+8sIL.jpg"
     ]
   },
   {
@@ -1007,8 +1007,8 @@
     "model": "NM790 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fbe36d4153d010e46505b197701865a.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/496a72c7b0963d48aff4970b5407c89f.1600.jpg",
+      "https://m.media-amazon.com/images/I/410m8y+8sIL.jpg"
     ]
   },
   {
@@ -1031,8 +1031,8 @@
     "model": "SSDPEDMD020T401",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/4ab3a8901725966b71c6806fc7f6a08b.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdn.cmshardware.com/images/Images/Products/SSDPEDMD020T401-WH.webp",
+      "https://cdn11.bigcommerce.com/s-2mzfab8ce4/images/stencil/1280x1280/products/370067/353783/5787d15d534fdf315395bdba0574ba07__23537.1698769339.jpg?c=1"
     ]
   },
   {
@@ -1054,8 +1054,8 @@
     "model": "T705 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fd667dea54784b7840a47ef082c915dd.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8215929150a483462d126de1dc690138.1600.jpg"
     ]
   },
   {
@@ -1077,8 +1077,8 @@
     "model": "T705 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fd667dea54784b7840a47ef082c915dd.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8215929150a483462d126de1dc690138.1600.jpg"
     ]
   },
   {
@@ -1100,8 +1100,8 @@
     "model": "T705 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fd667dea54784b7840a47ef082c915dd.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8215929150a483462d126de1dc690138.1600.jpg"
     ]
   },
   {
@@ -1123,8 +1123,8 @@
     "model": "T700 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/aeb312f0e26355b4840393bd66b512cb.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/708ad07de98d1fb30d2435a7ef47b3ab.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/df4e2992d37f23922fb5d8d9ce743981.1600.jpg"
     ]
   },
   {
@@ -1146,8 +1146,8 @@
     "model": "MP700 PRO 1TB",
     "images": [
       "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c401b97d923a75384a1e52a2d593aef3.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07bb3490105ed54cd3caa3223a30ea49.1600.jpg"
     ]
   },
   {
@@ -1169,8 +1169,8 @@
     "model": "MP700 PRO 2TB",
     "images": [
       "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c401b97d923a75384a1e52a2d593aef3.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07bb3490105ed54cd3caa3223a30ea49.1600.jpg"
     ]
   },
   {
@@ -1192,8 +1192,8 @@
     "model": "MP700 PRO 4TB",
     "images": [
       "https://m.media-amazon.com/images/I/31faZictPOL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c401b97d923a75384a1e52a2d593aef3.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07bb3490105ed54cd3caa3223a30ea49.1600.jpg"
     ]
   },
   {
@@ -1215,8 +1215,8 @@
     "model": "Fury Renegade 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/c8443eac545855ab2ef3b11814140054.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4086d776ab0debe42cb6473dab77e41d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f53b8d7adbe5755ba2e272aa945f3517.1600.jpg"
     ]
   },
   {
@@ -1238,8 +1238,8 @@
     "model": "SN850X 4TB",
     "images": [
       "https://www.flashtrend.com.au/assets/full/Leader-HBWD-SN850-4TB.jpg?20250422103801",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6512/6512129cv12d.jpg",
+      "https://down-ph.img.susercontent.com/file/ph-11134207-81ztl-mjj9edgzpvr735"
     ]
   },
   {
@@ -1261,8 +1261,7 @@
     "model": "SN770 500GB",
     "images": [
       "https://m.media-amazon.com/images/I/71Sr1zjPhwL._AC_.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://tinhocthanhkhang.vn/media/product/324-o-cung-western-digital-black-sn770-500gb-m2-pcie-nvme-gen-4--4-wds500g3x0e.jpg"
     ]
   },
   {
@@ -1284,8 +1283,8 @@
     "model": "P3 Plus 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e28de633eafbdc136277c18fc2acc45f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9c5edf1af947acf48c1c55595977cde.1600.jpg"
     ]
   },
   {
@@ -1307,8 +1306,8 @@
     "model": "870 EVO 500GB",
     "images": [
       "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c576ecaedba7428ac231ac4f1e12a4d.1600.jpg",
+      "https://m.media-amazon.com/images/I/31eDiwg8cTL.jpg"
     ]
   },
   {
@@ -1330,8 +1329,8 @@
     "model": "870 EVO 1TB",
     "images": [
       "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c576ecaedba7428ac231ac4f1e12a4d.1600.jpg",
+      "https://m.media-amazon.com/images/I/31eDiwg8cTL.jpg"
     ]
   },
   {
@@ -1353,8 +1352,8 @@
     "model": "870 EVO 2TB",
     "images": [
       "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c576ecaedba7428ac231ac4f1e12a4d.1600.jpg",
+      "https://m.media-amazon.com/images/I/31eDiwg8cTL.jpg"
     ]
   },
   {
@@ -1376,8 +1375,8 @@
     "model": "Spatium M570 PRO 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/41Fk5WtZ3gL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ddcb212f422daa8a51cd0a4e243d0144.1600.jpg"
     ]
   },
   {
@@ -1399,8 +1398,8 @@
     "model": "Spatium M570 PRO 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/41Fk5WtZ3gL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ddcb212f422daa8a51cd0a4e243d0144.1600.jpg"
     ]
   },
   {
@@ -1422,8 +1421,8 @@
     "model": "Spatium M570 PRO 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/41Fk5WtZ3gL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ddcb212f422daa8a51cd0a4e243d0144.1600.jpg"
     ]
   },
   {
@@ -1445,8 +1444,8 @@
     "model": "980 PRO 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/4e02c24a00f7b79a56489db2acbe3a9b.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3b2a91588d1a28bfa1b0184fb7f1c0a1.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2412d4f6cdb883eafbc4a27afa07878.1600.jpg"
     ]
   },
   {
@@ -1468,8 +1467,8 @@
     "model": "KC3000 512GB",
     "images": [
       "https://m.media-amazon.com/images/I/31p3IUZV+ZL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e66fc9e6326af9ce97e3bd50268f61a2.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1e1b3efad45ddc8b52df665025755dce.1600.jpg"
     ]
   },
   {
@@ -1491,8 +1490,8 @@
     "model": "Exceria Pro 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/31uz+x+lKtL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
     ]
   },
   {
@@ -1514,8 +1513,8 @@
     "model": "Exceria Pro 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/ca89917e8f088c3ababd47c0a1e2c5f3.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/31uz+x+lKtL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9ab94b2c3ffb08f6c7db460684b15332.1600.jpg"
     ]
   },
   {
@@ -1537,8 +1536,8 @@
     "model": "Spatium M480 PRO 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5fcc7cb537de4fb7e30a21a60276f402.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07a3c2ab9c4d6fc23c1694c68f445cb4.1600.jpg"
     ]
   },
   {
@@ -1560,8 +1559,8 @@
     "model": "Spatium M480 PRO 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5fcc7cb537de4fb7e30a21a60276f402.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07a3c2ab9c4d6fc23c1694c68f445cb4.1600.jpg"
     ]
   },
   {
@@ -1583,8 +1582,8 @@
     "model": "Spatium M480 PRO 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/79e9b112c8f0b56337a519cf225c810c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5fcc7cb537de4fb7e30a21a60276f402.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/07a3c2ab9c4d6fc23c1694c68f445cb4.1600.jpg"
     ]
   },
   {
@@ -1606,8 +1605,8 @@
     "model": "Blue SN580 500GB",
     "images": [
       "https://gland.vn/media/product/14617_46768_238290_img1.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fcf73d393a43493ce7f07fd77e50ac5b.1600.jpg"
     ]
   },
   {
@@ -1629,8 +1628,8 @@
     "model": "Blue SN580 2TB",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558801cv1d.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fcf73d393a43493ce7f07fd77e50ac5b.1600.jpg"
     ]
   },
   {
@@ -1652,8 +1651,8 @@
     "model": "P3 Plus 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2830bf3ba317c794ccde742efe4304be.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e28de633eafbdc136277c18fc2acc45f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9c5edf1af947acf48c1c55595977cde.1600.jpg"
     ]
   },
   {
@@ -1675,8 +1674,8 @@
     "model": "970 EVO Plus 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/326881d073c1b667bd348893696c690e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/13eff9fb98909107806f62c493d3775f.1600.jpg"
     ]
   },
   {
@@ -1698,8 +1697,8 @@
     "model": "870 EVO 4TB",
     "images": [
       "https://m.media-amazon.com/images/I/31ITAX-GoIL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c576ecaedba7428ac231ac4f1e12a4d.1600.jpg",
+      "https://m.media-amazon.com/images/I/31eDiwg8cTL.jpg"
     ]
   },
   {
@@ -1721,8 +1720,8 @@
     "model": "MX500 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d9cccb47a1d6da491f3c6e74ad51e80b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24739d2c05e810fd8c8d6883e6ed10fe.1600.jpg"
     ]
   },
   {
@@ -1744,8 +1743,8 @@
     "model": "MX500 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d9cccb47a1d6da491f3c6e74ad51e80b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24739d2c05e810fd8c8d6883e6ed10fe.1600.jpg"
     ]
   },
   {
@@ -1767,8 +1766,8 @@
     "model": "MX500 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d9cccb47a1d6da491f3c6e74ad51e80b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24739d2c05e810fd8c8d6883e6ed10fe.1600.jpg"
     ]
   },
   {
@@ -1790,8 +1789,8 @@
     "model": "MX500 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2983fbcd487b315b31855399829b532c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d9cccb47a1d6da491f3c6e74ad51e80b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24739d2c05e810fd8c8d6883e6ed10fe.1600.jpg"
     ]
   },
   {
@@ -1813,8 +1812,8 @@
     "model": "FireCuda 540 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2af4ffe00c9ebc58372c6e59974b9bc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5fb19eb02f0baaa9ee8843195292b521.1600.jpg"
     ]
   },
   {
@@ -1836,8 +1835,8 @@
     "model": "FireCuda 540 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/f40cbd5c8d9acdb926d53cf83448bb4a.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2af4ffe00c9ebc58372c6e59974b9bc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5fb19eb02f0baaa9ee8843195292b521.1600.jpg"
     ]
   },
   {
@@ -1859,8 +1858,8 @@
     "model": "Gammix S70 Blade 1TB",
     "images": [
       "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5a1578f5dbff7c6c5b2a6a29663d3293.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d68868977b8e25a495b4ab90039f57e.1600.jpg"
     ]
   },
   {
@@ -1882,8 +1881,8 @@
     "model": "Gammix S70 Blade 2TB",
     "images": [
       "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5a1578f5dbff7c6c5b2a6a29663d3293.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d68868977b8e25a495b4ab90039f57e.1600.jpg"
     ]
   },
   {
@@ -1905,8 +1904,8 @@
     "model": "Gammix S70 Blade 4TB",
     "images": [
       "https://m.media-amazon.com/images/I/41zS1IyFr6L.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5a1578f5dbff7c6c5b2a6a29663d3293.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d68868977b8e25a495b4ab90039f57e.1600.jpg"
     ]
   },
   {
@@ -1928,8 +1927,8 @@
     "model": "FireCuda 530 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c4fb278d586a7cba42674087dd6496a4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fa89003543a0cc4295d8c6caf4195d3e.1600.jpg"
     ]
   },
   {
@@ -1951,8 +1950,8 @@
     "model": "FireCuda 530 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c4fb278d586a7cba42674087dd6496a4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fa89003543a0cc4295d8c6caf4195d3e.1600.jpg"
     ]
   },
   {
@@ -1974,8 +1973,8 @@
     "model": "FireCuda 530 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/a82a914921d63165f8a7b096089ff91f.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c4fb278d586a7cba42674087dd6496a4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fa89003543a0cc4295d8c6caf4195d3e.1600.jpg"
     ]
   },
   {
@@ -1997,8 +1996,8 @@
     "model": "Blue SN5000 1TB",
     "images": [
       "https://down-th.img.susercontent.com/file/th-11134208-7rasf-m5co1c23qghj01",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fcf73d393a43493ce7f07fd77e50ac5b.1600.jpg"
     ]
   },
   {
@@ -2020,8 +2019,8 @@
     "model": "Blue SN5000 2TB",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/b83936f4-c813-4981-859e-e82e3048f601.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fcf73d393a43493ce7f07fd77e50ac5b.1600.jpg"
     ]
   },
   {
@@ -2043,8 +2042,8 @@
     "model": "Blue SN5000 4TB",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6588/6588587_sd.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8b610f0ec032392a7b1007b5dbe0925d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fcf73d393a43493ce7f07fd77e50ac5b.1600.jpg"
     ]
   },
   {
@@ -2066,8 +2065,8 @@
     "model": "NV3 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ad646899fef008aa00b6b74bf72e646.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd209f6e731740b8c5f702e2fc673ad2.1600.jpg"
     ]
   },
   {
@@ -2089,8 +2088,8 @@
     "model": "NV3 4TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/0a0b12a29d901a2fef4cd49748f3cc54.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ad646899fef008aa00b6b74bf72e646.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd209f6e731740b8c5f702e2fc673ad2.1600.jpg"
     ]
   },
   {
@@ -2112,8 +2111,8 @@
     "model": "NV2 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/7aa3028d0fc04e0ee3323f474bd349bd.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b95d0c7234714c4d7bb0f246c23cd3b9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f1af66b97ac908b094775b859ce9d33e.1600.jpg"
     ]
   },
   {
@@ -2135,8 +2134,8 @@
     "model": "Exceria G2 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/31uz+x+lKtL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3f1519ba1df50f415e0e41dd05fac55d.1600.jpg"
     ]
   },
   {
@@ -2158,8 +2157,8 @@
     "model": "Exceria G2 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/31uz+x+lKtL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3f1519ba1df50f415e0e41dd05fac55d.1600.jpg"
     ]
   },
   {
@@ -2181,8 +2180,8 @@
     "model": "Exceria G2 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/539625d9936fcd327344ac9f701d188c.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/31uz+x+lKtL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3f1519ba1df50f415e0e41dd05fac55d.1600.jpg"
     ]
   },
   {
@@ -2204,8 +2203,8 @@
     "model": "KC600 512GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/88a1979f4fba1a249af862abc61e597c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/15db29c0e3577cf293e4aea635a7e612.1600.jpg"
     ]
   },
   {
@@ -2227,8 +2226,8 @@
     "model": "KC600 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/88a1979f4fba1a249af862abc61e597c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/15db29c0e3577cf293e4aea635a7e612.1600.jpg"
     ]
   },
   {
@@ -2250,8 +2249,8 @@
     "model": "KC600 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/2d941d002eeba10430595867b07350ad.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/88a1979f4fba1a249af862abc61e597c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/15db29c0e3577cf293e4aea635a7e612.1600.jpg"
     ]
   },
   {
@@ -2273,8 +2272,8 @@
     "model": "BX500 500GB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5199ded1c4bfb5c37bc41c5065650198.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3afe15397a6a774daf587156fad5adf4.1600.jpg"
     ]
   },
   {
@@ -2296,8 +2295,8 @@
     "model": "BX500 1TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5199ded1c4bfb5c37bc41c5065650198.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3afe15397a6a774daf587156fad5adf4.1600.jpg"
     ]
   },
   {
@@ -2319,8 +2318,8 @@
     "model": "BX500 2TB",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/fff84afccbfab3054a5a88963c4bb271.1600.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5199ded1c4bfb5c37bc41c5065650198.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3afe15397a6a774daf587156fad5adf4.1600.jpg"
     ]
   },
   {
@@ -2339,8 +2338,8 @@
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
     "images": [
       "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/26411ed56b8f23776f841818083ed115.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fd667dea54784b7840a47ef082c915dd.1600.jpg"
     ],
     "model": "T705 2TB",
     "brand": "CRUCIAL"
@@ -2361,8 +2360,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://m.media-amazon.com/images/I/71RGTZJJuqL._AC_SL1500_.jpg",
+      "https://static.tweaktown.com/content/1/0/10110_34_sk-hynix-platinum-p41-2tb-ssd-review-the-best-yet_full.jpg"
     ],
     "model": "Platinum P41 2TB",
     "brand": "SK HYNIX"
@@ -2383,8 +2382,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ee5dce8b58c4c1e8661c97a35289d2fb.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a2988cd0655c6c7d2dedf7cd4b84bf70.1600.jpg"
     ],
     "model": "990 PRO Heatsink 4TB",
     "brand": "SAMSUNG"
@@ -2405,8 +2404,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_pcie_controller_angle_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/storage/nvme_heatsink_installed_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c5191c0bb7213d7457c25871f043b7fb.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a221560d44f38ca9cf29eb842a2f5f19.1600.jpg"
     ],
     "model": "Rocket 5 2TB",
     "brand": "SABRENT"

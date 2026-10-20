@@ -1059,8 +1059,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://m.media-amazon.com/images/I/71zkjfIUhBL._UF1000,1000_QL80_.jpg",
-      "https://www.enermax.com/thumb/products/item/PSU/MAXPRO_IV/MAXPRO_IV_05_750W-XL.webp",
-      "https://m.media-amazon.com/images/I/61d2raCrjOL._AC_SL1500_.jpg"
+      "https://m.media-amazon.com/images/I/61d2raCrjOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
     ]
   },
   {
@@ -1108,15 +1108,15 @@
     "topology": "OEM: RSY (A0155) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://www.enermax.com/thumb/products/item/PSU/REVOLUTION_III/REVOLUTION_III_05-XL.webp",
+    "imageUrl": "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_III/REVOLUTION_III-02.webp",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution III 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
     "images": [
-      "https://www.enermax.com/thumb/products/item/PSU/REVOLUTION_III/REVOLUTION_III_05-XL.webp",
       "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_III/REVOLUTION_III-02.webp",
-      "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_DF12/REVOLUTION_DF_12_01_750.jpg"
+      "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_DF12/REVOLUTION_DF_12_01_750.jpg",
+      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
     ]
   },
   {
@@ -1143,8 +1143,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-revolution-iii-850w-2025-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
+      "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ]
   },
   {
@@ -1171,8 +1171,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-eb-c-650w-2025-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
+      "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ]
   },
   {
@@ -1199,8 +1199,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.8ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-platimax-df-ii-1200w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b8eec2ba376cbbd68178f2f48e719110.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ffb0dcaddaa0f2c84a734265b9bb2eb6.1600.jpg"
     ]
   },
   {
@@ -1227,8 +1227,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-i-500w-2020-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41nzAE4Z7rL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/394121af29fc8d3aca355d54a08f918b.1600.jpg"
     ]
   },
   {
@@ -1255,8 +1255,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-i-500w-2020-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41nzAE4Z7rL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/394121af29fc8d3aca355d54a08f918b.1600.jpg"
     ]
   },
   {
@@ -1283,8 +1283,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/enermax-cyberbron-iii-850w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
+      "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ]
   },
   {
@@ -1311,8 +1311,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/endorfy-supremo-gold-lm6-1000w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/089cae677a05ec17d24c85de9a616d6b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9e8071018c0f52bc1f130bb94020d7e5.1600.jpg"
     ]
   },
   {
@@ -1339,8 +1339,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/everest-eps-4900b-300w-2013/outside-v184.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.segment.com.tr/images/productimages/EPS_4900B_05.jpg",
+      "https://productimages.hepsiburada.net/s/33/424-600/10399106498610.jpg"
     ]
   },
   {
@@ -1367,8 +1367,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-edge-eg-gold-1000w-2024-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1395,8 +1395,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-edge-eg-gold-1000w-2024-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1423,8 +1423,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 24.8ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-rs-g-1200w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1451,8 +1451,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-bx-b-rb-b-750w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b82bb43d19813fb6086aafc365e65f36.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ce0fce15b9003416feff3e59026d60ba.1600.jpg"
     ]
   },
   {
@@ -1479,8 +1479,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v1-750w-2021-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1507,8 +1507,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v2-850w-2025-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1535,8 +1535,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-sp-gold-v1-750w-2021-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/74a8106f89be795fead502bce4a8af17.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5cef027c8804cb46a44f2257da85ccca.1600.jpg"
     ]
   },
   {
@@ -1563,8 +1563,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 23.8ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/lian-li-sx-p-850w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ]
   },
   {
@@ -1591,8 +1591,8 @@
     "capacitors": "85°C Katı/Elektrolitik Kapasitör • Hold-Up Time: >12ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vita-bd-550w-2024-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2afba437ec0566ad26c9a2cf5164e86.1600.jpg",
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg"
     ]
   },
   {
@@ -1619,8 +1619,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vita-gd-650w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ]
   },
   {
@@ -1647,8 +1647,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 17.7ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vita-gm-750w-2024-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d29304b577cb0ddc88b358a2803d1751.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9a489b703d7132a9dd1b92643f1d3e71.1600.jpg"
     ]
   },
   {
@@ -1675,8 +1675,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vic-bd-550w-2026-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2afba437ec0566ad26c9a2cf5164e86.1600.jpg",
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg"
     ]
   },
   {
@@ -1703,8 +1703,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vic-gd-850w-2026-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ]
   },
   {
@@ -1731,8 +1731,8 @@
     "capacitors": "85°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vic-gm-850w-2026-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d29304b577cb0ddc88b358a2803d1751.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9a489b703d7132a9dd1b92643f1d3e71.1600.jpg"
     ]
   },
   {
@@ -1759,8 +1759,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-vic-wd-550w-2026-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ]
   },
   {
@@ -1787,8 +1787,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
+      "https://m.media-amazon.com/images/I/41Ygmh0brES.jpg"
     ]
   },
   {
@@ -1815,8 +1815,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
+      "https://m.media-amazon.com/images/I/41Ygmh0brES.jpg"
     ]
   },
   {
@@ -1843,8 +1843,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg"
     ]
   },
   {
@@ -1871,8 +1871,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ]
   },
   {
@@ -1899,8 +1899,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ]
   },
   {
@@ -1927,8 +1927,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ]
   },
   {
@@ -1955,8 +1955,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ]
   },
   {
@@ -1983,8 +1983,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/05152e654808d05e4964f7051805118f.1600.jpg"
     ]
   },
   {
@@ -2011,8 +2011,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg"
     ]
   },
   {
@@ -2039,8 +2039,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg"
     ]
   },
   {
@@ -2067,8 +2067,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -2095,8 +2095,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -2123,8 +2123,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -2151,8 +2151,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -2179,8 +2179,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-fe.ssl-images-amazon.com/images/I/41RJGxgGotL.jpg",
+      "https://m.media-amazon.com/images/I/51y6y7uabjL.jpg"
     ]
   },
   {
@@ -2207,8 +2207,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ]
   },
   {
@@ -2235,8 +2235,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-750w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -2263,8 +2263,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-750w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51edzhvwa4L.jpg",
+      "https://m.media-amazon.com/images/I/41w90bTj8uL.jpg"
     ]
   },
   {
@@ -2291,8 +2291,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hyper-k-500w-2015-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51edzhvwa4L.jpg",
+      "https://m.media-amazon.com/images/I/41w90bTj8uL.jpg"
     ]
   },
   {
@@ -2319,8 +2319,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-plus-750w-2018-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
+      "https://m.media-amazon.com/images/I/51zt8YKPEtL.jpg"
     ]
   },
   {
@@ -2347,8 +2347,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hexa-85-pro-450w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e0bdf411849a97f3f9947c765f1c1b65.1600.jpg"
     ]
   },
   {
@@ -2375,8 +2375,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: %80\n>17ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hexa-85-pro-450w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e0bdf411849a97f3f9947c765f1c1b65.1600.jpg"
     ]
   },
   {
@@ -2403,8 +2403,8 @@
     "capacitors": "85°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hd-450w-2017-0/outside-v184.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ]
   },
   {
@@ -2431,8 +2431,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-raider-750w-2016-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/515bwuWMLdL.jpg",
+      "https://m.media-amazon.com/images/I/51x7dD4MQ+L.jpg"
     ]
   },
   {
@@ -2459,8 +2459,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-raider-750w-2016-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/515bwuWMLdL.jpg",
+      "https://m.media-amazon.com/images/I/51x7dD4MQ+L.jpg"
     ]
   },
   {
@@ -2487,8 +2487,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fazeon-atx-650w-2024-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://i0.shbdn.com/photos/35/49/96/x5_1283354996hgh.jpg",
+      "https://shopcdnpro.grainajz.com/category/373019/2354/b10364caeb9e75137f20b2664a0b89d7/image.png"
     ]
   },
   {
@@ -2515,8 +2515,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fazeon-p1a-b-850w-2026-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
+      "https://i0.shbdn.com/photos/35/49/96/x5_1283354996hgh.jpg"
     ]
   },
   {
@@ -2543,8 +2543,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/gamdias-helios-m2-b-750w-2024-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/414oSoHoABL.jpg",
+      "https://m.media-amazon.com/images/I/51Tkz1gZGfL.jpg"
     ]
   },
   {
@@ -2571,8 +2571,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/gamdias-helios-p1a-g-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/414oSoHoABL.jpg",
+      "https://m.media-amazon.com/images/I/51Tkz1gZGfL.jpg"
     ]
   },
   {
@@ -2599,8 +2599,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/gametech-gtp-g-yari-moduler-700w-2021-0/outside-v180.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.hesapliurunler.com/image/cache/catalog/urunres/ana-750w-min-jpg-900x900.jpg",
+      "https://cdn.dsmcdn.com/ty79/product/media/images/20210330/10/76192586/124869566/1/1_org_zoom.jpg"
     ]
   },
   {
@@ -2627,8 +2627,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/gametech-gtp-g-yari-moduler-700w-2021-0/outside-v180.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.idcmayoristas.com/wp-content/uploads/2025/03/gamemax-power-gp-750-pc-power-supply-unit-750w-gp-750-lal-1.png",
+      "https://percdn.com/f/944607/cG96YWFtNG0vcUp3ZUdFOVU1NG5hQT09/p/gametech-gtp-600-600w-80-plus-green-bronzepowersupply-5-98386186-sw1280sh1280.png"
     ]
   },
   {
@@ -2655,8 +2655,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/green-gp-a-ged-ged-v2-3-600w-2023-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ]
   },
   {
@@ -2683,8 +2683,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/green-gp-a-ged-ged-v2-3-600w-2023-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ]
   },
   {
@@ -2711,8 +2711,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/green-gp-a-eco-eco-350w-2021-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ]
   },
   {
@@ -2739,8 +2739,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/green-gp-b-hp-evo-evo-800w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ]
   },
   {
@@ -2767,8 +2767,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/green-gp-b-ocdg-ocdg-1200w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ]
   },
   {
@@ -2795,8 +2795,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/havit-hv-t-750w-2025-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-8b8c-9.jpg",
+      "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-7-bbf1.jpg"
     ]
   },
   {
@@ -2823,8 +2823,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/havit-hv-t-750w-2025-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-7-bbf1.jpg",
+      "https://bilmeliyiz.com/product-files/havit-gamenote-hv-t750w-750w-guc-kaynagi-sessiz-ve-serin-performans-yuksek-verimlilik/havit-gamenote-hv-t750w-750w-guc-kaynagi-sessiz-ve-serin-performans-yuksek-verimlilik_33.webp"
     ]
   },
   {
@@ -2851,8 +2851,8 @@
     "capacitors": "85°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://pcmag.vn/wp-content/uploads/nguon-may-tinh-dong-bo-hp-delta-dps-750ab-750w-2.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdn11.bigcommerce.com/s-qfzamxn9kz/images/stencil/original/products/344629/511753/L84096-003_5__29230.1707508292.jpg?c=2",
+      "https://www.vectordigitals.net/wp-content/uploads/2025/08/hp-750w-flex-slot-gold-hot-plug-power-supply-dubai.webp"
     ]
   },
   {
@@ -2879,8 +2879,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -2907,8 +2907,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -2935,8 +2935,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-750w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -2963,8 +2963,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -2991,8 +2991,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-eco-hp1-j-600w-2019-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3019,8 +3019,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-astro-pt-700w-2012-0/top-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3047,8 +3047,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-astro-pt-700w-2012-0/top-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3075,8 +3075,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3103,8 +3103,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-performance-gd-atx-3-0-750w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3131,8 +3131,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-astro-lite-750w-2015-0/outside-v180.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3159,8 +3159,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-super-gd-850w-2019-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3187,8 +3187,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-element-gd-dd-750w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3215,8 +3215,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-element-hp1-m-br-750w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3243,8 +3243,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-element-revo-850w-2023-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3271,8 +3271,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-element-hp1-m-br-750w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3299,8 +3299,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-elite-230v-br-750w-2019-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3327,8 +3327,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-hps-gd-f12s-850w-2017/fan.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3355,8 +3355,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/high-power-absolute-hp-g14c-650w-2009-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ]
   },
   {
@@ -3383,8 +3383,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51VZJ8DVX-L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3411,8 +3411,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ]
   },
   {
@@ -3439,8 +3439,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ]
   },
   {
@@ -3467,8 +3467,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ]
   },
   {
@@ -3495,8 +3495,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3523,8 +3523,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3551,8 +3551,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3579,8 +3579,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3607,8 +3607,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3635,8 +3635,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3663,8 +3663,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-ii-850w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ]
   },
   {
@@ -3691,8 +3691,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ]
   },
   {
@@ -3719,8 +3719,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3747,8 +3747,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 15.8ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gls-750w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3775,8 +3775,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
     ]
   },
   {
@@ -3803,8 +3803,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 20.7ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-pro-a-pl-850w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ]
   },
   {
@@ -3831,8 +3831,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/montech-gamma-650w-2019-0/fan.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
+      "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ]
   },
   {
@@ -3859,8 +3859,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/montech-gamma-650w-2019-0/fan.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
+      "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ]
   },
   {
@@ -3887,8 +3887,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/montech-alpha-bronze-850w-2026-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
+      "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ]
   },
   {
@@ -3915,8 +3915,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/montech-beta-2-0-850w-2026-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
+      "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ]
   },
   {
@@ -3943,8 +3943,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/montech-beta-2-0-850w-2026-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
+      "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ]
   },
   {
@@ -3971,8 +3971,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://watanimall.com/wp-content/uploads/2024/06/PSU-THR-TR-TG-750-3.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://admin.itti.com.np/storage/product/thermalright-tg-750w-80-gold-fully-moduler-power-supply-price-nepal/aef4001d-33f0-4580-b8fd-66f1cb61c7d3.webp",
+      "https://img.drz.lazcdn.com/static/np/p/ef1fc651dbf4dd90e23b826eaefe4e39.jpg_720x720q80.jpg"
     ]
   },
   {
@@ -3999,8 +3999,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://hwp.com.tr/wp-content/uploads/2025/01/tulpar-td3.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdn.monsternotebook.com.tr/mnresize/1600/-/monsternotebook-tr/UPLOAD/urun-gorselleri-yeni/Desktop/TD3V3/TD3V3.1.6-V3.1.7-V3.2.4/siyah/03.png",
+      "https://cdn.monsternotebook.com.tr/mnresize/1600/-/monsternotebook-tr/UPLOAD/urun-gorselleri-yeni/Desktop/TD3V3/TD3V3.1.3-V3.1.4-V3.1.5-V3.2.2-V3.2.3/siyah/04.png"
     ]
   },
   {
@@ -4027,8 +4027,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/monster-bpab-850w-2024-0/fan.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
+      "https://down-th.img.susercontent.com/file/th-11134201-7r990-lx5mxue91rjkb0"
     ]
   },
   {
@@ -4055,8 +4055,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v1-550w-2021-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ]
   },
   {
@@ -4083,8 +4083,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v2-750w-2023-0/outside-v184.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ]
   },
   {
@@ -4111,8 +4111,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 17ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-bronze-v3-750w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ]
   },
   {
@@ -4139,8 +4139,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ]
   },
   {
@@ -4167,8 +4167,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 31,2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v2-2022-1000w-2022-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41g6qApoNpL.jpg",
+      "https://m.media-amazon.com/images/I/41J-jng2DwL.jpg"
     ]
   },
   {
@@ -4195,8 +4195,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41T1P8UOZTL.jpg",
+      "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg"
     ]
   },
   {
@@ -4223,8 +4223,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.9ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-v1-2019-850w-2019-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c0060ae80a7b71686da1ca92324d0f68.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b4b18aa0b5be85db9ae15621bee38be7.1600.jpg"
     ]
   },
   {
@@ -4251,8 +4251,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/nzxt-c-gold-core-750w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/4151uu3pCpL.jpg",
+      "https://m.media-amazon.com/images/I/41n2LafaCzL.jpg"
     ]
   },
   {
@@ -4279,8 +4279,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/ocypus-delta-p-p-bd-750w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.jib.co.th/img_master/product/original/2025100715480580563_3.jpg",
+      "https://image.makewebeasy.net/makeweb/r_400x400/CHLreQe0A/PRODUCT/dd17f9564416a4c2305bd73269a830ec.png?v=202405291424"
     ]
   },
   {
@@ -4307,8 +4307,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 15ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/ocypus-delta-p-p-bd-750w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://image.makewebeasy.net/makeweb/r_400x400/CHLreQe0A/PRODUCT/dd17f9564416a4c2305bd73269a830ec.png?v=202405291424",
+      "https://www.ultratech.com.bd/image/cache/catalog/Ocypus/ocypus-delta-p750-750w-power-supply5-500x500.jpg"
     ]
   },
   {
@@ -4335,8 +4335,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/ocypus-gamma-p-wd-650w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://down-my.img.susercontent.com/file/my-11134207-7rasa-m8ej9ej4pjpcd5",
+      "https://bermorzone.com.ph/wp-content/uploads/2025/02/OCYPUS-GAMMA-850WATTS-80-PLUS-230V-4.webp-btzph.webp"
     ]
   },
   {
@@ -4363,8 +4363,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/ocypus-lota-p-p-gf-1000w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.ultratech.com.bd/image/cache/catalog/Ocypus/ocypus-iota-p750-750w-power-supply-1000x1000.jpg",
+      "https://www.jib.co.th/img_master/product/original/20260310164517_83819_477_1.jpg"
     ]
   },
   {
@@ -4391,8 +4391,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: >16ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/ocypus-lota-p-p-gf-1000w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://bermorzone.com.ph/wp-content/uploads/2025/02/OCYPUS-GAMMA-850WATTS-80-PLUS-230V-4.webp-btzph.webp",
+      "https://www.startech.com.bd/image/cache/catalog/power-supply/ocypus/iota-p750/iota-p750-01-500x500.webp"
     ]
   },
   {
@@ -4419,8 +4419,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/raijintek-ampere-850w-2024-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/61HKFxtb1GL.jpg",
+      "https://m.media-amazon.com/images/I/41998+pxBSL.jpg"
     ]
   },
   {
@@ -4447,8 +4447,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/raijintek-ampere-850w-2024-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/61HKFxtb1GL.jpg",
+      "https://m.media-amazon.com/images/I/41998+pxBSL.jpg"
     ]
   },
   {
@@ -4475,8 +4475,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/raijintek-cratos-1200w-2023-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/74d35ddaaca9377e0a0536d43435c8bc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/85b6773729f049607fc187d45361de4c.1600.jpg"
     ]
   },
   {
@@ -4503,8 +4503,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/raijintek-cratos-1200w-2023-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/74d35ddaaca9377e0a0536d43435c8bc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/85b6773729f049607fc187d45361de4c.1600.jpg"
     ]
   },
   {
@@ -4531,8 +4531,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/rampage-rage-p15-1000w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ]
   },
   {
@@ -4559,8 +4559,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/rampage-rage-p10-850w-2025-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ]
   },
   {
@@ -4587,8 +4587,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/rampage-forza-ftx-1-1200w-2018-0/outside.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ]
   },
   {
@@ -4615,8 +4615,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-0-750w-2023-0/outside-v181.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
+      "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ]
   },
   {
@@ -4643,8 +4643,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-1-750w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
+      "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ]
   },
   {
@@ -4671,8 +4671,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/segotep-bn-atx-3-0-750w-2023-0/outside-v181.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
+      "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ]
   },
   {
@@ -4699,8 +4699,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/segotep-an-400w-2022-0/outside-v180.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
+      "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ]
   },
   {
@@ -4727,8 +4727,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.1ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/sama-p-xph-ap-1200w-2025-0/outside-v183.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb47802058a490e59cdeadda81002086.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg"
     ]
   },
   {
@@ -4755,8 +4755,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 13ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/sama-g-hat-yzb1g-750w-2025-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ]
   },
   {
@@ -4783,8 +4783,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 19.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/sama-b-eps-1ba3-750w-2026-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ]
   },
   {
@@ -4810,8 +4810,8 @@
     "model": "H 750W",
     "images": [
       "https://www.dekada.com/images/htx_750_b4_01_5nKL9O.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ]
   },
   {
@@ -4838,8 +4838,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/sharkoon-rebel-p20-gold-850w-2024-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a469f53d39588d09c706ee356c02b458.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/156a6530abcf9ca190cf809d689662f7.1600.jpg"
     ]
   },
   {
@@ -4866,8 +4866,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.6ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/sharkoon-rebel-p20-gold-850w-2024-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a469f53d39588d09c706ee356c02b458.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/156a6530abcf9ca190cf809d689662f7.1600.jpg"
     ]
   },
   {
@@ -4894,8 +4894,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/adata-xpg-pylon-ii-650w-2026-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/acf5a2bebb7755b6c392d27a720ccc38.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/76460ae84caf54fbc17dbb87fa05a3dd.1600.jpg"
     ]
   },
   {
@@ -4922,8 +4922,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 20.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/adata-xpg-pylon-ii-650w-2026-0/outside.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9e9d7b460ca30ba78e9bba8a88fb4fe9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fb99406bb7791688169b588444541639.1600.jpg"
     ]
   },
   {
@@ -4950,8 +4950,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ce27e414f67e9e8786401e4260bb85fa.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e1a0bb0ca24bc0c2d95fea57a8c2019d.1600.jpg"
     ]
   },
   {
@@ -4978,8 +4978,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/74e6caafd69bcc53d6e5060a3249248d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fa3c80c1defc487364f6bdaf2670b1e.1600.jpg"
     ]
   },
   {
@@ -5006,8 +5006,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.5ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/corsair-rm-siyah-etiket-2019-850w-2019-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/336c7955df0312d04655dd3a13973c95.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8307e191cd38a81dc5dcf709432e21e0.1600.jpg"
     ]
   },
   {
@@ -5034,8 +5034,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7882f867747759b989aa762208c899ed.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a6cedc8c48e1ab371cc0c2f4aba3f76d.1600.jpg"
     ]
   },
   {
@@ -5062,8 +5062,8 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/38942a1637e7445c59b8a274492115a5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d03646603c57b9844719421c0543434c.1600.jpg"
     ]
   },
   {
@@ -5089,8 +5089,8 @@
     "model": "RM1200x Shift ATX 3.0 1200W",
     "images": [
       "https://os-jo.com/image/cache/catalog/products/power-supply/CP-9020254-UK/s-l1200-1200x1200.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6719e9fc9ce80bbf6c163bef40cb6e0b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2a2e1bba61ace8fdb63cfb7e7874572.1600.jpg"
     ]
   },
   {
@@ -5117,8 +5117,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/79be60ce3783b8918a1c0940d3e4ff19.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/eef1b2e0ab31f6cbcbe01d162f44b952.1600.jpg"
     ]
   },
   {
@@ -5145,8 +5145,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ]
   },
   {
@@ -5173,8 +5173,8 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-650-0-650w-2021-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ]
   },
   {
@@ -5201,8 +5201,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg"
     ]
   },
   {
@@ -5229,8 +5229,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
     ]
   },
   {
@@ -5257,8 +5257,8 @@
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/45c889b358290996d7737156b64146c0.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg"
     ]
   },
   {
@@ -5285,8 +5285,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg"
     ]
   },
   {
@@ -5313,8 +5313,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6f6f30fe3667a292aee80208a58acb28.1600.jpg"
     ]
   },
   {
@@ -5340,8 +5340,8 @@
     "model": "ROG Thor 1000W Platinum II",
     "images": [
       "https://dlcdnwebimgs.asus.com/gain/F40C3AEA-D458-41E6-BF27-045C0C8D5086",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ]
   },
   {
@@ -5367,8 +5367,8 @@
     "model": "ROG Thor 1200W Platinum II",
     "images": [
       "https://pcboost.co.uk/wp-content/uploads/2022/11/ROG-THOR-1200W-Platinum-II-Fully-Modular-Power-Supply-From-ASUS.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ]
   },
   {
@@ -5394,8 +5394,8 @@
     "model": "ROG Thor 1600W Titanium",
     "images": [
       "https://static.tweaktown.com/news/9/8/98665_22_asus-rog-thor-1600w-titanium-iii-psu-unveiled-2-12v-2x6-connectors-magnetic-oled-screen_full.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ]
   },
   {
@@ -5421,8 +5421,8 @@
     "model": "Pro WS 3000W Platinum",
     "images": [
       "https://www.cclonline.com/images/avante/ASUS-PRO-WS-3000P.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fb2d887e5a452db696692c8205dd369.1600.jpg"
     ]
   },
   {
@@ -5448,8 +5448,8 @@
     "model": "Focus GX-850 ATX 3.0 850W",
     "images": [
       "https://www.picclickimg.com/6JEAAOSwTK5mYaPL/Seasonic-FOCUS-GX-850-ATX-30-850W-Gold-PSU.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41VMMgjmT7L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0d00cd0365aac0b1e9c2f3bbc1b8a670.1600.jpg"
     ]
   },
   {
@@ -5475,8 +5475,8 @@
     "model": "Focus GX-1000 ATX 3.0 1000W",
     "images": [
       "https://files.pccasegear.com/images/SSR-1000FX3-ATX-3-thumb.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://m.media-amazon.com/images/I/41VMMgjmT7L.jpg",
+      "https://m.media-amazon.com/images/I/41zLhprxqXL.jpg"
     ]
   },
   {
@@ -5496,14 +5496,14 @@
     "topology": "Tam Köprü LLC + DC-DC / %100 Japon 105°C Kapasitörler",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ad777eac9eb84ed2bad84c8a824ce892.1600.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "PN750M ATX 3.1 750W",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/deepcool_px_g_atx_3_0_750w.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ad777eac9eb84ed2bad84c8a824ce892.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9917885147b180a843918ba760bd433c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0ccfb276c4b37497ed9c21ef0aca236a.1600.jpg"
     ]
   },
   {
@@ -5523,14 +5523,14 @@
     "topology": "Tam Köprü LLC + DC-DC / %100 Japon 105°C Kapasitörler",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ad777eac9eb84ed2bad84c8a824ce892.1600.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "PN850M ATX 3.1 850W",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/enermax_revolution_iii_850w_80_gold_pcie_5_1_full_mod_ler_atx_3_1_g_kayna_erv850g_ahg_mac_2_y_l_birebir_de_i_im_garantili.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ad777eac9eb84ed2bad84c8a824ce892.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f0ffed0b8e89c2af6cd731d3b3e495ec.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0ccfb276c4b37497ed9c21ef0aca236a.1600.jpg"
     ]
   },
   {
@@ -5557,8 +5557,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-pro-atx-3-0-1200w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/52e4516222c9b5bca3e053afded41848.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -5585,8 +5585,8 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fsp-hydro-ptm-pro-atx-3-0-1200w-2022-0/outside-v182.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/52e4516222c9b5bca3e053afded41848.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ]
   },
   {
@@ -5612,8 +5612,8 @@
     "model": "Pure Power 12 M 750W",
     "images": [
       "https://media.ldlc.com/r1600/ld/products/00/06/00/94/LD0006009438.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9423467940fb7db90ff47c5fa315a309.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/58f82e34238ad2132a69775300daa503.1600.jpg"
     ]
   },
   {
@@ -5639,8 +5639,8 @@
     "model": "Pure Power 12 M 850W",
     "images": [
       "https://www.cclonline.com/images/avante/02_Pure_Power_12_M_850W.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9423467940fb7db90ff47c5fa315a309.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/58f82e34238ad2132a69775300daa503.1600.jpg"
     ]
   },
   {
@@ -5663,8 +5663,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ed3235057508a33ff8605786994551f9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c17cdbd6418fa5750e7f4f517711717a.1600.jpg"
     ],
     "model": "Vertex GX-1000",
     "brand": "SEASONIC"
@@ -5686,11 +5686,11 @@
     "cybenetics_efficiency": "Gold",
     "cybenetics_noise": "A",
     "warranty_years": 10,
-    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h67/h9a/9546700685342/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/38942a1637e7445c59b8a274492115a5.1600.jpg",
     "images": [
-      "https://www.corsair.com/medias/sys_master/images/images/h67/h9a/9546700685342/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.png",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/38942a1637e7445c59b8a274492115a5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d03646603c57b9844719421c0543434c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8bc2cb01b2a5875aa983b4cc5be68221.1600.jpg"
     ],
     "model": "RM1000x SHIFT",
     "brand": "CORSAIR"
@@ -5715,8 +5715,8 @@
     "imageUrl": "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_modular_connectors_panel_reference.webp",
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/psu/psu_honeycomb_exhaust_switch_reference.webp"
+      "https://www.avadirect.com/Pictures/Big/16144734_2.png",
+      "https://media.ldlc.com/r1600/ld/products/00/06/03/66/LD0006036687_0006036700.jpg"
     ],
     "model": "Dark Power Pro 13 1300W",
     "brand": "BE QUIET!"

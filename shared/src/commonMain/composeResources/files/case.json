@@ -54,15 +54,15 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
+    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO XL",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
       "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
-      "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL.webp"
+      "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec7a3be51497aa3abf33c2afcdbf5d0.1600.jpg"
     ]
   },
   {
@@ -98,15 +98,15 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp",
+    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/12/O11D-EVO-RBG_09.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO RGB",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp",
       "https://lian-li.com/wp-content/uploads/2023/12/O11D-EVO-RBG_09.webp",
-      "https://www.createpcs.co.uk/wp-content/uploads/2022/05/lian-li-o11-dynamic-evo-i7-12700kf-rtx3050-white-custom-pc-27-Large.jpg"
+      "https://www.createpcs.co.uk/wp-content/uploads/2022/05/lian-li-o11-dynamic-evo-i7-12700kf-rtx3050-white-custom-pc-27-Large.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec7a3be51497aa3abf33c2afcdbf5d0.1600.jpg"
     ]
   },
   {
@@ -186,15 +186,15 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
+    "imageUrl": "https://assets.caseking.de/1753446338867_A-PDP-en-Lian-Li-O11D-MINI-V2-_1_.png",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic Mini",
     "images": [
-      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
       "https://assets.caseking.de/1753446338867_A-PDP-en-Lian-Li-O11D-MINI-V2-_1_.png",
-      "https://assets.caseking.de/1753183156648_o11mini_v2_012.jpg"
+      "https://assets.caseking.de/1753183156648_o11mini_v2_012.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bf613e9d7fc5e9975f3e2609d985d9d9.1600.jpg"
     ]
   },
   {
@@ -1341,7 +1341,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Flow (2024) (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7cf2496c391fed651c191c4c19dcd8df.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
     ]
   },
   {
@@ -1360,7 +1362,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "3000D Airflow (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/586841ed9160739668a55d1321c9494e.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/586841ed9160739668a55d1321c9494e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d7ae0e488baf194dc708e2f09b0e1c1d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c52df29e835b9b35eb4c374b32c268e2.1600.jpg"
     ]
   },
   {
@@ -1379,7 +1383,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "A21 Plus ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg",
+      "https://m.media-amazon.com/images/I/41lbPrFvudL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/96fc2692beedddf78aeb9009bf4bebaf.1600.jpg"
     ]
   },
   {
@@ -1398,7 +1404,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/36d3bc2037d3f7d7beacb17fa80f4b29.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36d3bc2037d3f7d7beacb17fa80f4b29.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dc6d83ac7f889106d9b4c310a10c9c36.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/99cbc623dd1fff1153b6e8e1914caefe.1600.jpg"
     ]
   },
   {
@@ -1417,7 +1425,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ROG Cronox GR801 ARGB Panaromik",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b0972cf958bfa894570afa43b6487b9c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7fb0b865a88be851eb7fdac685bf373c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/538cba5e47717690bbbb34b221964c35.1600.jpg"
     ]
   },
   {
@@ -1436,7 +1446,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ROG Strix Hyperion GR701",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/7fb0b865a88be851eb7fdac685bf373c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7fb0b865a88be851eb7fdac685bf373c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/538cba5e47717690bbbb34b221964c35.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ae25279c7dba5529370e50f23820c127.1600.jpg"
     ]
   },
   {
@@ -1455,7 +1467,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Grafi Black",
     "images": [
-      "https://m.media-amazon.com/images/I/51A3tVPKUSL.jpg"
+      "https://m.media-amazon.com/images/I/51A3tVPKUSL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5d37abde46573441b53d2e1e38730175.1600.jpg",
+      "https://m.media-amazon.com/images/I/51rUZ3DaGzL.jpg"
     ]
   },
   {
@@ -1474,7 +1488,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MasterFrame 360 Panaroma Siyah Ayna Efektli",
     "images": [
-      "https://a.storyblok.com/f/281110/960x960/4563b62824/mf360s-preorder-gallery-2-3.png/m/960x0/smart"
+      "https://a.storyblok.com/f/281110/960x960/4563b62824/mf360s-preorder-gallery-2-3.png/m/960x0/smart",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8691d0fba95122e2fd902ff4904c0f1f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/03a2b8a03099ff3103d981b0023a13d6.1600.jpg"
     ]
   },
   {
@@ -1493,7 +1509,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MasterFrame 600 TG",
     "images": [
-      "https://files.pccasegear.com/images/MF600-KGNN-S00-thumb.jpg"
+      "https://files.pccasegear.com/images/MF600-KGNN-S00-thumb.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8691d0fba95122e2fd902ff4904c0f1f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/03a2b8a03099ff3103d981b0023a13d6.1600.jpg"
     ]
   },
   {
@@ -1512,7 +1530,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "HS 420 Base Edition Black",
     "images": [
-      "https://down-sg.img.susercontent.com/file/sg-11134207-7ra3p-m514q1x7tcvoef"
+      "https://down-sg.img.susercontent.com/file/sg-11134207-7ra3p-m514q1x7tcvoef",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8ef4d01c7c9c0c94f1b6a841f37d905e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2550cc27bf90a9ca28d7ff9b94706d1a.1600.jpg"
     ]
   },
   {
@@ -1531,7 +1551,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "AX65 ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6a9bc88580323656f4d8355143380eda.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8cebb5a9e40823e02d08e30ba2fa7955.1600.jpg"
     ]
   },
   {
@@ -1550,7 +1572,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VECTOR V100R Beyaz ATX",
     "images": [
-      "https://down-my.img.susercontent.com/file/my-11134207-820li-mgkonyova6toa6"
+      "https://down-my.img.susercontent.com/file/my-11134207-820li-mgkonyova6toa6",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/33c1bd4bd2b68730e185a80a0b6e7750.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6de2a66396686e0d8ae87631e46fc6b4.1600.jpg"
     ]
   },
   {
@@ -1569,7 +1593,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG PANO 130R PZ",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d375812992642c61a6c38ec7a68f7a6e.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d375812992642c61a6c38ec7a68f7a6e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b79f7d2db172250486db6a25f8b76c2.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/33c7930a05f4bd1706e2908d6e6ce1ec.1600.jpg"
     ]
   },
   {
@@ -1588,7 +1614,8 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VG4200S 750W 80+",
     "images": [
-      "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643"
+      "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643",
+      "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/e030432b3eb14c11bfc62571c4599d4e.jpg?revision=1760019644"
     ]
   },
   {
@@ -1607,7 +1634,8 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "M6001W 600W SeaView",
     "images": [
-      "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg"
+      "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg",
+      "https://ncrgame.com/images/prod/7092.jpg"
     ]
   },
   {
@@ -1626,7 +1654,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Milo Serisi ML03B HTPC Siyah",
     "images": [
-      "https://m.media-amazon.com/images/I/41Ly-yGe3ZL.jpg"
+      "https://m.media-amazon.com/images/I/41Ly-yGe3ZL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bf552f68d0059e20e6812c1f1a2afa3c.1600.jpg",
+      "https://m.media-amazon.com/images/I/417Lw9WKvgL.jpg"
     ]
   },
   {
@@ -1645,7 +1675,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Sugo SG13B-Q / Mini ITX Performans",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d36e4a71c2ad6cdcc6c9a3a6cf72407c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d36e4a71c2ad6cdcc6c9a3a6cf72407c.1600.jpg",
+      "https://m.media-amazon.com/images/I/41WNKBNz1CL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ef83d082d135664ff32d4be6b3ee42a1.1600.jpg"
     ]
   },
   {
@@ -1664,7 +1696,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "RM400 4U ATX Server",
     "images": [
-      "https://m.media-amazon.com/images/I/41NThC1NN2L.jpg"
+      "https://m.media-amazon.com/images/I/41NThC1NN2L.jpg",
+      "https://m.media-amazon.com/images/I/41iiV2BV+YL.jpg",
+      "https://m.media-amazon.com/images/I/41GuamGnFsL.jpg"
     ]
   },
   {
@@ -1683,7 +1717,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CS381 Hot Swap Yüksek Performans NAS",
     "images": [
-      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg",
+      "https://m.media-amazon.com/images/I/41iiV2BV+YL.jpg",
+      "https://m.media-amazon.com/images/I/41GuamGnFsL.jpg"
     ]
   },
   {
@@ -1702,7 +1738,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "RM22-308 8 Adet 3.5\" HDD Yuvalı ATX 2U Server",
     "images": [
-      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg",
+      "https://m.media-amazon.com/images/I/51uaSDdDCTL.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/41mP7X6rtLL.jpg"
     ]
   },
   {
@@ -1721,7 +1759,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim",
     "images": [
-      "https://m.media-amazon.com/images/I/31lTmcSdc+L.jpg"
+      "https://m.media-amazon.com/images/I/31lTmcSdc+L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d7ab11f261193b21d7f5863a9340b348.1600.jpg",
+      "https://m.media-amazon.com/images/I/41HB3-Fl3eL.jpg"
     ]
   },
   {
@@ -1740,7 +1780,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC",
     "images": [
-      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+      "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg",
+      "https://m.media-amazon.com/images/I/51uaSDdDCTL.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/41mP7X6rtLL.jpg"
     ]
   },
   {
@@ -1759,7 +1801,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ML04 Type-C Slim mATX Salon Medya",
     "images": [
-      "https://m.media-amazon.com/images/I/31pYG+xJDOL.jpg"
+      "https://m.media-amazon.com/images/I/31pYG+xJDOL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/06b4ebd2e29ee3b6df5e78e3f68c3d3b.1600.jpg",
+      "https://m.media-amazon.com/images/I/41OnXCVCJRL.jpg"
     ]
   },
   {
@@ -1778,7 +1822,8 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ATREUS BT4 Black",
     "images": [
-      "https://images-na.ssl-images-amazon.com/images/I/81VdKkse6ML.jpg"
+      "https://images-na.ssl-images-amazon.com/images/I/81VdKkse6ML.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81R+gSdKZUL.jpg"
     ]
   },
   {
@@ -1797,7 +1842,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CS383 NAS/Server",
     "images": [
-      "https://m.media-amazon.com/images/I/41FoAhjDz7L.jpg"
+      "https://m.media-amazon.com/images/I/41FoAhjDz7L.jpg",
+      "https://m.media-amazon.com/images/I/41iiV2BV+YL.jpg",
+      "https://m.media-amazon.com/images/I/41GuamGnFsL.jpg"
     ]
   },
   {
@@ -1816,7 +1863,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Revolt 3 Black USB 3.2 Premium ITX Small Form Factor",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fc2a8d8cde52e2b72838865ac8d8b7cc.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fc2a8d8cde52e2b72838865ac8d8b7cc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3317203331bd2f20f9796641f40cc7fe.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6c85b3ec7012e97d0835e94b156dfa32.1600.jpg"
     ]
   },
   {
@@ -1835,7 +1884,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CX700 ARGB WHITE",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6a9bc88580323656f4d8355143380eda.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8cebb5a9e40823e02d08e30ba2fa7955.1600.jpg"
     ]
   },
   {
@@ -1854,7 +1905,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CX500M ARGB BLACK",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec8cc07183e95ffa42108f24f37360c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec8cc07183e95ffa42108f24f37360c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d81c07208b12f15f65dc0ad3bf9596e5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
     ]
   },
   {
@@ -1873,7 +1926,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "C8 WOOD",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg",
+      "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/116f3b98eda96c45ac039d7b9361102d.1600.jpg"
     ]
   },
   {
@@ -1892,7 +1947,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG FORGE 340R AIRFLOW",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/093453953d770cfdd2b0818450bb6089.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/03c70a3f991561dcce59b7fbe7f146bb.1600.jpg"
     ]
   },
   {
@@ -1911,7 +1968,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG FORGE M120R AIRFLOW",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/093453953d770cfdd2b0818450bb6089.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/03c70a3f991561dcce59b7fbe7f146bb.1600.jpg"
     ]
   },
   {
@@ -1930,11 +1989,13 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "C201 PANORAMIC",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2b427280b03e9b92cea1762a60cb6fdb.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2b427280b03e9b92cea1762a60cb6fdb.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fbed7ff8983f72f005c2d4b49ca1fd50.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5f8a02410ff274d7b5b2393be068ace9.1600.jpg"
     ]
   },
   {
-    "name": "Vento VG4202FL Rainbow Fanlı",
+    "name": "Vento VG4202FL Rainbow",
     "price": 4800.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -1949,7 +2010,8 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VG4202FL Rainbow Fanlı",
     "images": [
-      "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png"
+      "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png",
+      "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-1024x1024.png"
     ]
   },
   {
@@ -1968,7 +2030,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "A31 PLUS TG ARGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2c1246bc17d9510f9967aef0b9837761.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2c1246bc17d9510f9967aef0b9837761.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a0efe4b547ab386df3c4f25411a76766.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/81b2d6901dbd32e899c91ac89ffa5a65.1600.jpg"
     ]
   },
   {
@@ -1987,7 +2051,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MPG GUNGNIR 300R AIRFLOW",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3ebf0cd07038781294967b100f747488.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3ebf0cd07038781294967b100f747488.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8f0d62a25bd03382a60076f22ccca7d8.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/345ec5c596db7a96aeb18224acb5df5c.1600.jpg"
     ]
   },
   {
@@ -2006,11 +2072,13 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "FC-8960G 400W",
     "images": [
-      "https://platincdn.com/3393/pictures/NJSUS19370_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg"
+      "https://platincdn.com/3393/pictures/NJSUS19370_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg",
+      "https://platincdn.com/3393/pictures/UDNTB191012_frisby-fc-8960g-400w-1xrgb-led-serit-g.jpg",
+      "https://platincdn.com/3393/pictures/RKUTY19814_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg"
     ]
   },
   {
-    "name": "RAMPAGE ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower",
+    "name": "RAMPAGE ARC-X120mm",
     "price": 2280.0,
     "type": "ATX Mid Tower",
     "color": "Black",
@@ -2025,7 +2093,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ARC-X RGB Ledli Siyah Akrilik Panel 120mm Fanlı Mid-Tower",
     "images": [
-      "https://productimages.hepsiburada.net/s/133/424-600/110000084296827.jpg"
+      "https://productimages.hepsiburada.net/s/133/424-600/110000084296827.jpg",
+      "https://www.tebilon.com/picture/rampage-arc-x-rgb-ledli-siyah-akrilik-panel-120mm-fanli-mid-tower-oyuncu-kasasi-3.jpg",
+      "https://www.tebilon.com/picture/rampage-arc-x-rgb-ledli-siyah-akrilik-panel-120mm-fanli-mid-tower-oyuncu-kasasi-9.jpg"
     ]
   },
   {
@@ -2044,7 +2114,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CC-9011213-WW 5000X RGB",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/7066d38df09ac1a7db60c2ba253f482c.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7066d38df09ac1a7db60c2ba253f482c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d3664e21a16959085ca0644564d778f4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b630d3e8642df2ed4e9a4278d55ee88a.1600.jpg"
     ]
   },
   {
@@ -2063,7 +2135,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG FORGE 100R",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg",
+      "https://storage-asset.msi.com/global/picture/image/feature/PC-Components/MAG-FORGE100R/Stracture_1.png",
+      "https://storage-asset.msi.com/global/picture/image/feature/PC-Components/MAG-FORGE100R/100r_ready.png"
     ]
   },
   {
@@ -2082,7 +2156,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/611d62a2df028fc07df96f54d8219911.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/611d62a2df028fc07df96f54d8219911.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/21cb0185fb6ed9df0abc761ed9e764f7.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1937f6fcb0b4f6bc658299c0667f4562.1600.jpg"
     ]
   },
   {
@@ -2101,7 +2177,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "PRO SHIELD M100P",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3f987bc0dd827f7a9cb774024478dcea.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3f987bc0dd827f7a9cb774024478dcea.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/093453953d770cfdd2b0818450bb6089.1600.jpg"
     ]
   },
   {
@@ -2120,7 +2198,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ROG Strix Helios II GX601S",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/538cba5e47717690bbbb34b221964c35.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/538cba5e47717690bbbb34b221964c35.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ae25279c7dba5529370e50f23820c127.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f12565247ac931555820e2f9f250a41c.1600.jpg"
     ]
   },
   {
@@ -2139,7 +2219,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool 207",
     "images": [
-      "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_black_ac78734_43927.jpg"
+      "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_black_ac78734_43927.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a998adb9356bd111a22aec7d1745b0e9.1600.jpg"
     ]
   },
   {
@@ -2152,13 +2234,15 @@
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_white_ac78735_78707.jpg",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool 207 (White)",
     "images": [
-      "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_white_ac78735_78707.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a998adb9356bd111a22aec7d1745b0e9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1efda4d4b2c45a0a176bca7b6bef5145.1600.jpg"
     ]
   },
   {
@@ -2177,7 +2261,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Elite (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3343638ac7c51fa6e94ae27e5413fa37.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ef210e01af6191ab58a81a1fa721e9a0.1600.jpg"
     ]
   },
   {
@@ -2196,7 +2282,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "6500X (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/41f85b86c33bfecb1183322552496de9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/702d159174a4b6f8486abb76be833ff8.1600.jpg"
     ]
   },
   {
@@ -2215,7 +2303,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "NV5",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f3194c90540b264aed9286a85471ef48.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e623be8bb6ab09a820493e6b05ffab8b.1600.jpg"
     ]
   },
   {
@@ -2234,7 +2324,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "NV5 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb057fd182d7e583b21a15de58be50cc.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f3194c90540b264aed9286a85471ef48.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e623be8bb6ab09a820493e6b05ffab8b.1600.jpg"
     ]
   },
   {
@@ -2253,7 +2345,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "NV7",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a7a51db6936de8b14fc20a3fda6ba954.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4beb27272519c97f098ceab48df1e12c.1600.jpg"
     ]
   },
   {
@@ -2272,7 +2366,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "NV7 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb891f1a850c7c2f6f594f85c9d40e39.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a7a51db6936de8b14fc20a3fda6ba954.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4beb27272519c97f098ceab48df1e12c.1600.jpg"
     ]
   },
   {
@@ -2291,7 +2387,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "XT Pro Ultra",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ff0b4197cac3fcec5222722ec83622e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4beb27272519c97f098ceab48df1e12c.1600.jpg"
     ]
   },
   {
@@ -2310,7 +2408,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "XT Pro Ultra (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b799e3113602fc415370943709415190.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ff0b4197cac3fcec5222722ec83622e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4beb27272519c97f098ceab48df1e12c.1600.jpg"
     ]
   },
   {
@@ -2329,7 +2429,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Eclipse G360A",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/afb61ab33e4989c8e3a85111321467ec.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bbff08990bf49c7db84fbbd100460516.1600.jpg"
     ]
   },
   {
@@ -2348,7 +2450,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Eclipse G360A (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/afb61ab33e4989c8e3a85111321467ec.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bbff08990bf49c7db84fbbd100460516.1600.jpg"
     ]
   },
   {
@@ -2367,7 +2471,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Air 903 Max (White)",
     "images": [
-      "https://m.media-amazon.com/images/I/519WrOWiOhL.jpg"
+      "https://m.media-amazon.com/images/I/519WrOWiOhL.jpg",
+      "https://m.media-amazon.com/images/I/51n9PwnRsWL.jpg",
+      "https://m.media-amazon.com/images/I/51HK6wbkmnL.jpg"
     ]
   },
   {
@@ -2386,7 +2492,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y70",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6c34ad3e10021abab186c77e8fde0328.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6af31e169a3db76f5ddb2697518639d6.1600.jpg"
     ]
   },
   {
@@ -2405,7 +2513,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y70 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6c34ad3e10021abab186c77e8fde0328.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6af31e169a3db76f5ddb2697518639d6.1600.jpg"
     ]
   },
   {
@@ -2424,7 +2534,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y70 (Red)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6c34ad3e10021abab186c77e8fde0328.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6af31e169a3db76f5ddb2697518639d6.1600.jpg"
     ]
   },
   {
@@ -2443,7 +2555,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y60",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/057519c92f6acc11679400bd763c86f5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/662f5e77558aa8614da981050beff94b.1600.jpg"
     ]
   },
   {
@@ -2462,7 +2576,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y60 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/057519c92f6acc11679400bd763c86f5.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/057519c92f6acc11679400bd763c86f5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/662f5e77558aa8614da981050beff94b.1600.jpg"
     ]
   },
   {
@@ -2481,7 +2597,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y60 (Red)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aba78f3e5e8c4fbe22c28f66c5d9c60b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/057519c92f6acc11679400bd763c86f5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/662f5e77558aa8614da981050beff94b.1600.jpg"
     ]
   },
   {
@@ -2500,7 +2618,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y40",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb6d152b7ecc66262a7f50424834fae0.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4c3b69572a72cf391e18049cbad99140.1600.jpg"
     ]
   },
   {
@@ -2519,7 +2639,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Y40 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/18e87f5d604e66bf832d63b0b8f074c4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cb6d152b7ecc66262a7f50424834fae0.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4c3b69572a72cf391e18049cbad99140.1600.jpg"
     ]
   },
   {
@@ -2538,7 +2660,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "CH560 Digital",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/443bc7f159a1a2f90984e0f8f569b77d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1e97473cc9d74cace17356c4037ac66a.1600.jpg"
     ]
   },
   {
@@ -2557,7 +2681,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "CH560 Digital (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/443bc7f159a1a2f90984e0f8f569b77d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1e97473cc9d74cace17356c4037ac66a.1600.jpg"
     ]
   },
   {
@@ -2576,7 +2702,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "CH510",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d3dd660d3a2fdb5cc52941df0cac85ac.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c064a530018e1c8113ff6f601bc038c4.1600.jpg"
     ]
   },
   {
@@ -2595,7 +2723,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "CH510 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd29d75a0109160516cb58231ad067bb.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d3dd660d3a2fdb5cc52941df0cac85ac.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c064a530018e1c8113ff6f601bc038c4.1600.jpg"
     ]
   },
   {
@@ -2614,7 +2744,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Prime AP201",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2d02589e75ecfdb273903f5cd607b0e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/338a79373c466a21f2c6411ff52e0381.1600.jpg"
     ]
   },
   {
@@ -2633,7 +2765,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Prime AP201 (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e40d8d2f2651fa6faca4e0a4552f8545.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b2d02589e75ecfdb273903f5cd607b0e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/338a79373c466a21f2c6411ff52e0381.1600.jpg"
     ]
   },
   {
@@ -2652,7 +2786,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Pure Base 500DX",
     "images": [
-      "https://files.pccasegear.com/images/1588909032-BGW37-thb.jpg"
+      "https://files.pccasegear.com/images/1588909032-BGW37-thb.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f0f421e3fc3867493483981e8171cdc6.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d0088af61ff05d2f1e8ec07eeb4f7aee.1600.jpg"
     ]
   },
   {
@@ -2671,7 +2807,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Pure Base 500DX (White)",
     "images": [
-      "https://files.pccasegear.com/images/1588909921-BGW38-thb.jpg"
+      "https://files.pccasegear.com/images/1588909921-BGW38-thb.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f0f421e3fc3867493483981e8171cdc6.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d0088af61ff05d2f1e8ec07eeb4f7aee.1600.jpg"
     ]
   },
   {
@@ -2690,7 +2828,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MasterBox TD500 Mesh V2",
     "images": [
-      "https://a.storyblok.com/f/281110/cc16aa2f9e/td500-mesh-v2-black-gallery-2-0110.png/m/960x0/smart"
+      "https://a.storyblok.com/f/281110/cc16aa2f9e/td500-mesh-v2-black-gallery-2-0110.png/m/960x0/smart",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a504fae7c99570b6f3e6c9601d2e1a80.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fa3fba4c04fcd1ecc9ac9db6e298c10.1600.jpg"
     ]
   },
   {
@@ -2709,7 +2849,9 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MasterBox TD500 Mesh V2 (White)",
     "images": [
-      "https://os-jo.com/image/cache/catalog/products/cases/TD500MESH-WHITE/TD500ARGB1-1200x1200.JPEG"
+      "https://os-jo.com/image/cache/catalog/products/cases/TD500MESH-WHITE/TD500ARGB1-1200x1200.JPEG",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a504fae7c99570b6f3e6c9601d2e1a80.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3fa3fba4c04fcd1ecc9ac9db6e298c10.1600.jpg"
     ]
   },
   {
@@ -2726,11 +2868,11 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm",
     "included_fans": "4x 120mm Quiet Airflow Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1 Type-A, Audio Jack",
-    "imageUrl": "https://nzxt.com/assets/cms/34299/1672879555-h9-flow-black-primary.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg",
     "images": [
-      "https://nzxt.com/assets/cms/34299/1672879555-h9-flow-black-primary.png",
-      "https://nzxt.com/assets/cms/34299/1672879574-h9-flow-black-side.png",
-      "https://nzxt.com/assets/cms/34299/1672879590-h9-flow-black-open.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7cf2496c391fed651c191c4c19dcd8df.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
     ]
   },
   {
@@ -2747,11 +2889,11 @@
     "radiator_support": "Alt: 120mm (Ayarlanabilir Akıllı Merkezi Omurga)",
     "included_fans": "Dahili Fan Yok (Ultra Kompakt 10.4 Litre)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 1x USB 3.0",
-    "imageUrl": "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_1-1000x1000.jpg",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/93603f04dde2fe42335d278e66b80c4d.1600.jpg",
     "images": [
-      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_1-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_3-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2023/05/Terra_Jade_5-1000x1000.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/93603f04dde2fe42335d278e66b80c4d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/46f3b3672c252def1f9cc56db0a11b61.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/45f93e757b99ed190cc286efeb777c1b.1600.jpg"
     ]
   },
   {
@@ -2768,11 +2910,11 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 120mm (BTF / Project Zero Uyumlu)",
     "included_fans": "3x RS120 ARGB PWM Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Type-A, Audio",
-    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_01.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a740f5cb83faa73c1d8a62945833056e.1600.jpg",
     "images": [
-      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_01.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_02.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h60/h57/10574762967070/CC-9011276-WW/Gallery/3500X_ARGB_BLACK_03.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a740f5cb83faa73c1d8a62945833056e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/30802f7748080837c9135baf9b27f69c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f488ef9e12f2c763481fa0a720647dfd.1600.jpg"
     ]
   },
   {
@@ -2789,11 +2931,11 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 3x 120mm (Entegre 14.1 inç 4K 60Hz Dokunmatik Ekran)",
     "included_fans": "Dahili Fan Yok (Dikey GPU PCIe 4.0 Riser Dahil)",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1, Audio Jack",
-    "imageUrl": "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-hero.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg",
     "images": [
-      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-hero.png",
-      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-front.png",
-      "https://hyte.com/media/catalog/product/y/7/y70-touch-snow-white-angle.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/48cf06b9156aa9e1b662b35af8eb2a3b.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6c34ad3e10021abab186c77e8fde0328.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/706e7c9c052ed83d530cb408798ac755.1600.jpg"
     ]
   },
   {
@@ -2810,11 +2952,11 @@
     "radiator_support": "Ön: 420mm / Üst: 420mm (Maksimum 420mm Çift Radyatör Desteği)",
     "included_fans": "4x Light Wings 140mm PWM Yüksek Hızlı ARGB Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2, HD Audio",
-    "imageUrl": "https://www.bequiet.com/admin/ImageServer.php?ID=42211&ext=jpg",
+    "imageUrl": "https://www.bequiet.com/admin/ImageServer.php?ID=42212&ext=jpg",
     "images": [
-      "https://www.bequiet.com/admin/ImageServer.php?ID=42211&ext=jpg",
       "https://www.bequiet.com/admin/ImageServer.php?ID=42212&ext=jpg",
-      "https://www.bequiet.com/admin/ImageServer.php?ID=42213&ext=jpg"
+      "https://www.bequiet.com/admin/ImageServer.php?ID=42213&ext=jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3ea6c6adfa1830018755b3930cf0a80d.1600.jpg"
     ]
   },
   {
@@ -2852,11 +2994,11 @@
     "radiator_support": "Sağ Yan: 420mm / 360mm (Yatay Stand Kiti Destekli)",
     "included_fans": "2x CT140 140mm Üst Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0, HD Audio",
-    "imageUrl": "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_01.jpg",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/19b7bb3f150197acc9dd2ca8652c6837.1600.jpg",
     "images": [
-      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_01.jpg",
-      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_02.jpg",
-      "https://www.thermaltake.com/media/catalog/product/cache/6b3b27670c5240c4274c10cb39d4fae7/t/o/tower300_blue_03.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/19b7bb3f150197acc9dd2ca8652c6837.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6dfe24fe97dc0e814e4b82c52d872a66.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2ec08b1c63fb9b56bcf80e6c4981d652.1600.jpg"
     ]
   },
   {
@@ -2873,11 +3015,11 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (0.8mm & 1.0mm Çelik Şasi)",
     "included_fans": "Dahili Fan Yok (Geniş Termal Alan)",
     "front_panel_usb": "1x Type-C 10Gbps, 2x USB 3.0, Mic/Audio",
-    "imageUrl": "https://www.antec.com/product/case/images/c8-curve-wood-1.png",
+    "imageUrl": "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
     "images": [
-      "https://www.antec.com/product/case/images/c8-curve-wood-1.png",
-      "https://www.antec.com/product/case/images/c8-curve-wood-2.png",
-      "https://www.antec.com/product/case/images/c8-curve-wood-3.png"
+      "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2a8206d7453adc8fd0dc0c9e848fd2d6.1600.jpg"
     ]
   },
   {
@@ -2894,11 +3036,11 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Ters Konnektör Anakart Uyumlu)",
     "included_fans": "Dahili Fan Yok (iCUE LINK Uyumlu)",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 4x USB 3.0, Combo Audio",
-    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_01.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg",
     "images": [
-      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_01.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_02.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h31/h57/10542385102878/CC-9011257-WW/Gallery/6500X_BLACK_03.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/41f85b86c33bfecb1183322552496de9.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/702d159174a4b6f8486abb76be833ff8.1600.jpg"
     ]
   },
   {
@@ -2915,11 +3057,11 @@
     "radiator_support": "Üst: 360mm / Yan: 240mm / Alt: 360mm",
     "included_fans": "Dahili Fan Yok",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "imageUrl": "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_01.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/189e62900f9bc7e485321e6b8a2f0a6e.1600.jpg",
     "images": [
-      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_01.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_02.png",
-      "https://www.corsair.com/medias/sys_master/images/images/h12/h42/10542386085918/CC-9011266-WW/Gallery/2500X_WHITE_03.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/189e62900f9bc7e485321e6b8a2f0a6e.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d1ff95214b2c41cfa6f412128813248d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1cb7c330bdcb404a35cf602551f60e94.1600.jpg"
     ]
   },
   {
@@ -2936,11 +3078,11 @@
     "radiator_support": "Ön: 420mm / Alt: 420mm (Maksimum Pozitif Basınçlı Hava Akışı)",
     "included_fans": "2x Dynamic GP-18 180mm PWM + 3x Dynamic GP-14 140mm PWM",
     "front_panel_usb": "1x USB 3.1 Gen 2 Type-C, 2x USB 3.0, Audio",
-    "imageUrl": "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_1-1000x1000.jpg",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6ed0eafe090016aba2869fcd8aa5debf.1600.jpg",
     "images": [
-      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_1-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_2-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2021/07/Torrent_Black_TG_Light_3-1000x1000.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6ed0eafe090016aba2869fcd8aa5debf.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e6446516ac165189f9f086ae54522e77.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/52d91129eae095121c33f90f3018394e.1600.jpg"
     ]
   },
   {
@@ -2957,11 +3099,11 @@
     "radiator_support": "Ön: 360mm / Alt: 280mm",
     "included_fans": "2x Dynamic GP-18 180mm Dev Ön Fan",
     "front_panel_usb": "1x USB 3.1 Type-C, 2x USB 3.0",
-    "imageUrl": "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_1-1000x1000.jpg",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/858f5392beba15d3b137d162840dbf20.1600.jpg",
     "images": [
-      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_1-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_2-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2022/01/Torrent_Compact_White_TG_3-1000x1000.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/858f5392beba15d3b137d162840dbf20.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c8f12657df15772729edf855933bc90f.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f74e8b055b0575b46d29d2a65ef10aec.1600.jpg"
     ]
   },
   {
@@ -2978,11 +3120,11 @@
     "radiator_support": "Yan: 280mm (GPU takılmadığında)",
     "included_fans": "2x Aspect 140mm PWM İnce Fan",
     "front_panel_usb": "1x USB 3.1 Gen 2 Type-C, 2x USB 3.0, Audio",
-    "imageUrl": "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_1-1000x1000.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31bjjZkjSOL.jpg",
     "images": [
-      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_1-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_2-1000x1000.jpg",
-      "https://www.fractal-design.com/app/uploads/2022/10/Ridge_Black_3-1000x1000.jpg"
+      "https://m.media-amazon.com/images/I/31bjjZkjSOL.jpg",
+      "https://m.media-amazon.com/images/I/41LNNhTD36L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bdfe51793699c9f08ce3363430bd0a35.1600.jpg"
     ]
   },
   {
@@ -3020,11 +3162,11 @@
     "radiator_support": "Ön: 420mm / Üst: 360mm",
     "included_fans": "1x F360 RGB Core Tek Parça Ön Fan Kiti",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1, Audio",
-    "imageUrl": "https://nzxt.com/assets/cms/34299/1718137351-h7-flow-rgb-white-primary.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
     "images": [
-      "https://nzxt.com/assets/cms/34299/1718137351-h7-flow-rgb-white-primary.png",
-      "https://nzxt.com/assets/cms/34299/1718137367-h7-flow-rgb-white-angle.png",
-      "https://nzxt.com/assets/cms/34299/1718137384-h7-flow-rgb-white-open.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c4c8b6dc19a005ed0da00b161cec7c1c.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
     ]
   },
   {
@@ -3062,11 +3204,11 @@
     "radiator_support": "Üst: 280mm / 240mm AIO Sıvı Soğutma Desteği",
     "included_fans": "1x SickleFlow 120mm İnce Üst Fan + PCIe 4.0 Dikey Riser",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, Audio",
-    "imageUrl": "https://coolermaster.egnyte.com/dl/vJ857Tz7xP/NR200P_V2_Black_01.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bf0023fb357f037c354139e56a95aa4d.1600.jpg",
     "images": [
-      "https://coolermaster.egnyte.com/dl/vJ857Tz7xP/NR200P_V2_Black_01.png",
-      "https://coolermaster.egnyte.com/dl/4ZkL6bE0w1/NR200P_V2_Black_02.png",
-      "https://coolermaster.egnyte.com/dl/2n5v6j8m1L/NR200P_V2_Black_03.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bf0023fb357f037c354139e56a95aa4d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b50071bdfbedcd886fb3b435ba9bb498.1600.jpg",
+      "https://m.media-amazon.com/images/I/31vDqtmRI9L.jpg"
     ]
   },
   {
@@ -3083,11 +3225,11 @@
     "radiator_support": "Üst: 360mm / Alt: 360mm / Arka: 120mm",
     "included_fans": "Dahili Fan Yok",
     "front_panel_usb": "1x Type-C, 1x USB 3.0, Audio",
-    "imageUrl": "https://www.jonsbo.com/uploads/221124/1-22112411512N92.png",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c1cacedacb12ba9f58e2cecadf6fb732.1600.jpg",
     "images": [
-      "https://www.jonsbo.com/uploads/221124/1-22112411512N92.png",
-      "https://www.jonsbo.com/uploads/221124/1-2211241151433E.png",
-      "https://www.jonsbo.com/uploads/221124/1-221124115201c8.png"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c1cacedacb12ba9f58e2cecadf6fb732.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/353cab550f9db3b59469acc1c68335ce.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/560da778f87c2b20e164180102f9f65b.1600.jpg"
     ]
   }
 ]

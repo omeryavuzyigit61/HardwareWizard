@@ -2547,7 +2547,17 @@ fun HardwareDetailHeroImage(
                             }
                         },
                         error = {
-                            DetailPlaceholderHero(category = category)
+                            if (page > 0 && effectiveList.isNotEmpty()) {
+                                SubcomposeAsyncImage(
+                                    model = effectiveList[0],
+                                    contentDescription = displayName,
+                                    contentScale = ContentScale.Fit,
+                                    modifier = Modifier.fillMaxSize(),
+                                    error = { DetailPlaceholderHero(category = category) },
+                                )
+                            } else {
+                                DetailPlaceholderHero(category = category)
+                            }
                         },
                     )
                 }
