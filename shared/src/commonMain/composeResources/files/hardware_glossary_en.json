@@ -1,0 +1,818 @@
+[
+  {
+    "id": "connector_12v_2x6",
+    "term": "12V-2x6 Power Connector (PCIe CEM 5.1)",
+    "category": "Motherboard & Power",
+    "shortDescription": "A safe revision of the 16-pin connector carrying up to 600W to GPUs via a single cable, with recessed Sense pins to prevent melting.",
+    "detailedExplanation": "Older 12VHPWR sockets could suffer thermal runaway and melt plastic housings when cables weren't fully inserted due to high contact resistance. In the 12V-2x6 specification, power pins are extended by 0.25mm while the 4 sense pins are recessed by 1.5mm. If not completely locked in place, the sense pins fail to make contact, causing the GPU to refuse high wattage draw and completely eliminating fire risks.",
+    "keyMetrics": "Maximum Power: 600W • 16-Pin (12 Power + 4 Sense) • Recessed Sense Pins",
+    "relatedTerms": [
+      "ATX 3.1 Standard",
+      "Coil Whine",
+      "GPU Sag"
+    ]
+  },
+  {
+    "id": "atx31_transient_spikes",
+    "term": "ATX 3.1 Standard & Transient Spike Tolerance",
+    "category": "Motherboard & Power",
+    "shortDescription": "The power supply standard designed to absorb microsecond GPU power excursion spikes (up to 2x TDP) without triggering safety shutdowns.",
+    "detailedExplanation": "Older ATX 2.4 power supplies often mistook instantaneous millisecond GPU power spikes (e.g. a 350W card briefly pulling 700W for 100 microseconds) for a short circuit, causing sudden system blackouts. The ATX 3.1 standard mandates that PSUs must sustain excursions up to 200% of their rated wattage and 300% on the PCIe GPU rail for 100µs.",
+    "keyMetrics": "Peak Power Tolerance: 200% Total, 300% GPU • 100µs Response • 12V-2x6 Safety",
+    "relatedTerms": [
+      "12V-2x6 Power Connector",
+      "PSU 80 Plus",
+      "Pure Sine Wave UPS"
+    ]
+  },
+  {
+    "id": "form_factors_atx_matx_itx",
+    "term": "Motherboard Form Factors (ATX, Micro-ATX, Mini-ITX)",
+    "category": "Motherboard & Power",
+    "shortDescription": "Physical motherboard dimension standards, screw mounting patterns, and expansion slot (PCIe / DIMM) capacities.",
+    "detailedExplanation": "Standard ATX (305x244 mm) delivers 4 DIMM slots and multi-PCIe lanes. Micro-ATX (244x244 mm) offers optimal price-to-performance for compact mid-towers. Mini-ITX (170x170 mm) is engineered for Small Form Factor (SFF) builds, providing 1 PCIe slot and 2 DIMM slots, requiring careful thermal planning.",
+    "keyMetrics": "ATX: 305x244mm (7 slots) • mATX: 244x244mm (4 slots) • ITX: 170x170mm (1 slot)",
+    "relatedTerms": [
+      "Chassis Compatibility",
+      "PCIe Lanes"
+    ]
+  },
+  {
+    "id": "chipset_tiers",
+    "term": "Motherboard Chipset Tiers (A620/B650/X670 & B760/Z790)",
+    "category": "Motherboard & Power",
+    "shortDescription": "Platform controller hub chips governing PCIe lanes, USB connectivity, SATA ports, and CPU/RAM overclocking capabilities.",
+    "detailedExplanation": "On AMD platforms, A620 is budget entry-level without CPU OC; B650 is the enthusiast sweet spot supporting PBO and memory EXPO; X670/X870 dual-chipset provides maximum PCIe 5.0 and USB4 connectivity. On Intel, B760 supports RAM OC but locks CPU multiplier; Z790/Z890 provides unrestricted CPU multiplier and memory overclocking with maximum DMI throughput.",
+    "keyMetrics": "B-Series: Best Price/Perf • Z/X-Series: Full OC & Lanes • A/H-Series: Budget Focus",
+    "relatedTerms": [
+      "VRM & SPS",
+      "PBO2 Curve Optimizer",
+      "PCIe Lanes"
+    ]
+  },
+  {
+    "id": "bios_flashback_clear_cmos",
+    "term": "BIOS Flashback & Clear CMOS Button",
+    "category": "Motherboard & Power",
+    "shortDescription": "Hardware recovery mechanisms allowing BIOS updates without CPU/RAM installed, and one-touch factory reset for unstable settings.",
+    "detailedExplanation": "When installing a newer-generation processor into an older motherboard, the system cannot POST without updated firmware. BIOS Flashback allows flashing the latest BIOS directly from a FAT32 USB drive with only the 24-pin ATX power connected. Clear CMOS safely resets NVRAM to factory defaults when unstable memory sub-timings cause black screens.",
+    "keyMetrics": "FAT32 USB Drive • Direct CPU-less Flash • Rear I/O Recovery Button",
+    "relatedTerms": [
+      "Q-LED Debug Lights",
+      "PBO2 Curve Optimizer",
+      "Memory Sub-timings"
+    ]
+  },
+  {
+    "id": "psu_80plus_cybenetics",
+    "term": "Power Supply Efficiency: 80 Plus & Cybenetics ETA/LAMBDA",
+    "category": "Motherboard & Power",
+    "shortDescription": "Independent testing certifications verifying electrical efficiency, power factor correction, and acoustic noise levels.",
+    "detailedExplanation": "While legacy 80 Plus only tests at 3 load points at 23°C room temperature, modern Cybenetics ETA tests across thousands of operating points with comprehensive vampire power and 5VSB efficiency testing. Cybenetics LAMBDA certifies acoustic dB(A) noise levels from standard to ultra-quiet A++ rating.",
+    "keyMetrics": "80 Plus Bronze/Gold/Plat/Titanium • Cybenetics ETA (Efficiency) & LAMBDA (Acoustics)",
+    "relatedTerms": [
+      "ATX 3.1 Standard",
+      "Pure Sine Wave UPS",
+      "Full Modular PSU"
+    ]
+  },
+  {
+    "id": "mosfet_choke",
+    "term": "MOSFET & Ferrite Choke",
+    "category": "Motherboard & Power",
+    "shortDescription": "Solid-state electrical switching components and inductors that step down and clean high-voltage 12V rail power into clean sub-1.4V core voltage.",
+    "detailedExplanation": "MOSFETs (Metal-Oxide-Semiconductor Field-Effect Transistors) switch on and off hundreds of thousands of times per second to step down high 12V voltage into precise sub-1.4V core power. Ferrite chokes filter high-frequency switching noise to provide ripple-free current.",
+    "keyMetrics": "Switching Frequency (kHz) • Rds(on) Internal Resistance • Saturation Current",
+    "relatedTerms": [
+      "VRM & SPS",
+      "Thermal Throttling",
+      "Transient Spike"
+    ]
+  },
+  {
+    "id": "pcie_lanes_bifurcation",
+    "term": "PCIe Lanes & Lane Bifurcation",
+    "category": "Motherboard & Power",
+    "shortDescription": "High-speed point-to-point serial communication pathways and the ability to split an x16 slot into multiple x8/x4 interfaces.",
+    "detailedExplanation": "Modern CPUs provide 20 to 28 dedicated PCIe lanes for the primary graphics card and M.2 NVMe SSDs. Lane bifurcation allows dividing a physical x16 slot into x8/x8 or x4/x4/x4/x4 in BIOS for multi-NVMe riser cards or capture cards without reducing link reliability.",
+    "keyMetrics": "PCIe 5.0 (32 GT/s per lane) • PCIe 4.0 (16 GT/s) • x16/x8/x4 Link Width",
+    "relatedTerms": [
+      "M.2 NVMe SSD",
+      "Resizable BAR",
+      "Chipset Tiers"
+    ]
+  },
+  {
+    "id": "qled_debug_code",
+    "term": "Q-LED & 7-Segment Debug Post Display",
+    "category": "Motherboard & Power",
+    "shortDescription": "On-board diagnostic LEDs and alphanumeric hex code displays that identify the exact component causing POST failure.",
+    "detailedExplanation": "During startup, motherboard UEFI cycles through hardware initialization. 4 discrete Q-LEDs indicate whether failure occurred at CPU (Red), DRAM (Yellow/Orange), VGA (White), or BOOT drive (Green). High-end boards feature a 2-digit 7-segment hex display showing specific debug codes like 00 (CPU dead), 55 (RAM unseated), or dE.",
+    "keyMetrics": "4-Color LED Matrix • 2-Digit Hex Code • Instant POST Diagnostics",
+    "relatedTerms": [
+      "BIOS Flashback",
+      "Clear CMOS",
+      "True Latency"
+    ]
+  },
+  {
+    "id": "rebar_sam",
+    "term": "Resizable BAR & AMD Smart Access Memory (SAM)",
+    "category": "Motherboard & Power",
+    "shortDescription": "PCIe interface feature allowing the CPU full access to the entire GPU VRAM buffer simultaneously rather than in 256MB chunks.",
+    "detailedExplanation": "In legacy 32-bit Windows memory mapping, CPU requests to GPU memory were limited to a tiny 256MB aperture. Resizable BAR (and AMD's branded SAM) removes this restriction, granting the processor direct simultaneous access to the full 16GB or 24GB VRAM framebuffer. This boosts 1% Low gaming FPS by 5% to 15%.",
+    "keyMetrics": "PCIe Base Address Register • Zero Overhead • Up to +15% 1% Low FPS",
+    "relatedTerms": [
+      "PCIe Lanes",
+      "1% Low FPS",
+      "VRAM Bus Width"
+    ]
+  },
+  {
+    "id": "pure_sine_ups",
+    "term": "Pure Sine Wave UPS & Active PFC",
+    "category": "Motherboard & Power",
+    "shortDescription": "Uninterruptible power supplies delivering clean AC sine waves identical to grid power, essential for modern Active PFC supplies.",
+    "detailedExplanation": "Cheap simulated/stepped sine wave backup units produce square electrical waves with high harmonic distortion. When power drops, modern 80+ Gold and Platinum PSUs with Active PFC circuits often shut down instantly or buzz loudly. A Pure Sine Wave UPS guarantees seamless sub-8ms transfer.",
+    "keyMetrics": "Total Harmonic Distortion (THD < 3%) • Active PFC Compatibility • 4-8ms Transfer",
+    "relatedTerms": [
+      "ATX 3.1 Standard",
+      "PSU 80 Plus",
+      "Transient Spike"
+    ]
+  },
+  {
+    "id": "modular_psu_cables",
+    "term": "Full Modular vs Semi-Modular vs Non-Modular PSU",
+    "category": "Motherboard & Power",
+    "shortDescription": "Power supply cable connection architectures determining chassis airflow, cable management cleanliness, and ease of custom sleeving.",
+    "detailedExplanation": "Fully modular power supplies feature detachable sockets for every cable, including the 24-pin ATX and EPS cables, enabling builders to connect only required lines and use custom individually sleeved cables. Semi-modular supplies hardwire essential motherboard lines while modularizing SATA and PCIe.",
+    "keyMetrics": "Detachable Cabling • Clean Airflow • Custom 12V-2x6 Sleeving",
+    "relatedTerms": [
+      "12V-2x6 Power Connector",
+      "Chassis Airflow",
+      "PSU Efficiency"
+    ]
+  },
+  {
+    "id": "vrm_sps",
+    "term": "VRM & Smart Power Stage (SPS) Phase Architecture",
+    "category": "Motherboard & Power",
+    "shortDescription": "Voltage Regulator Modules and integrated DrMOS/SPS power stages delivering high current to power-hungry CPUs without thermal throttling.",
+    "detailedExplanation": "Modern flagship processors draw upwards of 250A to 350A under full multi-threaded load. An 18+2+1 phase VRM with 90A or 110A Smart Power Stages distributes current load across multiple stages. Each integrated SPS incorporates high-side and low-side MOSFETs plus driver and thermal sensing for cool, reliable delivery.",
+    "keyMetrics": "Phase Count (e.g. 16+1+1) • Current Rating (60A to 110A SPS) • VRM Heatsink Fins",
+    "relatedTerms": [
+      "MOSFET & Choke",
+      "Power Throttling",
+      "TjMax Temperature"
+    ]
+  },
+  {
+    "id": "cas_latency_true_latency",
+    "term": "CAS Latency (CL) & True Latency (Nanoseconds)",
+    "category": "Memory & RAM",
+    "shortDescription": "Clock cycle delay before data access begins versus true real-time nanosecond access latency.",
+    "detailedExplanation": "CAS Latency measures delay in clock cycles, not time. The actual time delay in nanoseconds is calculated as: True Latency (ns) = (CL x 2000) / Frequency (MT/s). For example, DDR4-3200 CL16 has 10.0ns latency, identical to DDR5-6000 CL30 (10.0ns), while DDR5-6000 provides over double the raw memory bandwidth.",
+    "keyMetrics": "Formula: (CL x 2000) / MT/s • Sweet Spot: <= 10.0ns • Real-time Access Time",
+    "relatedTerms": [
+      "Dual Channel Memory",
+      "Secondary Timings",
+      "1% Low FPS"
+    ]
+  },
+  {
+    "id": "hynix_adie_mdie",
+    "term": "SK Hynix A-Die & M-Die Silicon Types",
+    "category": "Memory & RAM",
+    "shortDescription": "Top-tier DDR5 memory DRAM die silicon revisions renowned for extreme frequency headroom and tight timing tolerances.",
+    "detailedExplanation": "Memory sticks are assembled using DRAM ICs from Samsung, Micron, or SK Hynix. SK Hynix A-Die is the industry gold standard for DDR5, easily achieving 7200 to 8400+ MT/s and tight primary/secondary timings. Hynix M-Die offers tightest tRFC and tREFI timings at 6000-6400 MT/s.",
+    "keyMetrics": "A-Die: High Frequency (8000+ MT/s) • M-Die: Tight Timings (6000 CL28) • Micron: Budget",
+    "relatedTerms": [
+      "CAS Latency",
+      "Secondary Timings",
+      "Intel XMP 3.0 & EXPO"
+    ]
+  },
+  {
+    "id": "xmp_expo_profiles",
+    "term": "Intel XMP 3.0 & AMD EXPO Memory Profiles",
+    "category": "Memory & RAM",
+    "shortDescription": "One-click factory overclocking profiles stored on memory modules tested for instant frequency and timing activation in BIOS.",
+    "detailedExplanation": "By default, all DDR5 modules boot at conservative JEDEC speeds (4800 or 5600 MT/s) to ensure universal POST compatibility. Enabling Intel XMP 3.0 or AMD EXPO in BIOS applies manufacturer-validated voltage (e.g. 1.35V or 1.40V), frequency (e.g. 6000 MT/s), and tested primary timings in a single click.",
+    "keyMetrics": "One-Click BIOS Activation • JEDEC Fallback • Tested Frequency & Voltage",
+    "relatedTerms": [
+      "CAS Latency",
+      "Dual Channel Memory",
+      "Infinity Fabric"
+    ]
+  },
+  {
+    "id": "single_rank_dual_rank",
+    "term": "Single Rank (1R) vs Dual Rank (2R) Memory",
+    "category": "Memory & RAM",
+    "shortDescription": "Physical DRAM IC memory layout on the PCB affecting memory controller load, frequency limits, and rank interleaving throughput.",
+    "detailedExplanation": "Single-rank modules (1R) feature memory chips on one side of the DIMM, placing lower electrical strain on the CPU memory controller for higher frequencies (8000+ MT/s). Dual-rank modules (2R, common on 32GB sticks) enable rank interleaving, improving IPC by 3-5% at equivalent clocks.",
+    "keyMetrics": "1R (Single-sided, Higher MHz) • 2R (Dual-sided, Rank Interleaving IPC boost)",
+    "relatedTerms": [
+      "Dual Channel Memory",
+      "CAS Latency",
+      "Memory Controller"
+    ]
+  },
+  {
+    "id": "dual_channel_memory",
+    "term": "Dual Channel vs Single Channel Memory",
+    "category": "Memory & RAM",
+    "shortDescription": "Operating two memory channels simultaneously to double theoretical data bus bandwidth from 64-bit to 128-bit.",
+    "detailedExplanation": "Running a single RAM stick bottlenecks memory bandwidth to a 64-bit bus. Installing two identical modules in slots 2 and 4 activates Dual Channel mode, doubling data throughput (e.g. from 48 GB/s to 96 GB/s), dramatically eliminating micro-stutters and lifting 1% Low gaming framerates.",
+    "keyMetrics": "Bus Width: 64-bit -> 128-bit • Slots 2 & 4 (A2/B2) • Up to 2x Bandwidth",
+    "relatedTerms": [
+      "CAS Latency",
+      "1% Low FPS",
+      "Bottleneck"
+    ]
+  },
+  {
+    "id": "subtimings_trfc_trefi",
+    "term": "Secondary Memory Timings: tRFC & tREFI",
+    "category": "Memory & RAM",
+    "shortDescription": "Advanced memory refresh and row cycle timings that deliver the largest real-world boost to gaming 1% Low framerates.",
+    "detailedExplanation": "While enthusiasts focus on primary CAS Latency, secondary sub-timings govern DRAM refresh cycles. tRFC sets row refresh cycle time, while tREFI sets refresh interval time. Extending tREFI and lowering tRFC prevents memory banks from pausing operations, boosting 1% Low FPS by up to 20% in memory-sensitive games.",
+    "keyMetrics": "tREFI (Refresh Interval) • tRFC (Refresh Cycle Time) • Dramatic 1% Low boost",
+    "relatedTerms": [
+      "CAS Latency",
+      "1% Low FPS",
+      "SK Hynix A-Die"
+    ]
+  },
+  {
+    "id": "dramless_ssd_hmb",
+    "term": "DRAM-less SSD & HMB (Host Memory Buffer)",
+    "category": "Storage (SSD)",
+    "shortDescription": "Solid-state drives lacking dedicated onboard DRAM cache that utilize system RAM via PCIe to cache mapping tables.",
+    "detailedExplanation": "Budget SSDs omit onboard DRAM chips to reduce manufacturing costs. With NVMe 1.2+ Host Memory Buffer (HMB), the drive allocates 32MB to 64MB of host PC system RAM over the PCIe bus to hold lookup tables, preventing severe read/write slowdowns during sustained transfers.",
+    "keyMetrics": "Cost-Effective Architecture • 32-64MB System RAM Allocation • Fast Casual Storage",
+    "relatedTerms": [
+      "M.2 NVMe SSD",
+      "SLC Cache",
+      "TBW Endurance"
+    ]
+  },
+  {
+    "id": "nvme_pcie_generations",
+    "term": "M.2 NVMe SSD: PCIe Gen3 vs Gen4 vs Gen5",
+    "category": "Storage (SSD)",
+    "shortDescription": "Generational bandwidth advances in the Non-Volatile Memory Express protocol driving transfer speeds from 3,500 MB/s to over 14,000 MB/s.",
+    "detailedExplanation": "PCIe Gen3 peaked around 3,500 MB/s sequential speeds. PCIe Gen4 doubled this ceiling to 7,400 MB/s (standard in PS5 and modern gaming PCs). PCIe Gen5 doubles throughput again up to 14,000 MB/s, utilizing specialized controllers requiring heavy passive or active cooling heatsinks.",
+    "keyMetrics": "Gen3: ~3,500 MB/s • Gen4: ~7,400 MB/s • Gen5: ~14,000 MB/s • DirectStorage",
+    "relatedTerms": [
+      "SLC Cache",
+      "TBW Endurance",
+      "Heatsink Cooling"
+    ]
+  },
+  {
+    "id": "slc_cache_nand",
+    "term": "SLC Cache (Dynamic Write Acceleration)",
+    "category": "Storage (SSD)",
+    "shortDescription": "High-speed write buffer where multi-level NAND cells temporarily operate as single-bit SLC to maintain burst speeds.",
+    "detailedExplanation": "Modern consumer SSDs use 3-bit TLC or 4-bit QLC NAND flash, which inherently writes slower than 1-bit SLC. Drives designate a dynamic portion of free capacity as an SLC cache, absorbing initial file bursts at full speeds (e.g. 7000 MB/s) before dropping to native TLC speeds once the cache exhausts.",
+    "keyMetrics": "Dynamic Buffer Allocation • High Burst Speeds • Buffer Recovery Time",
+    "relatedTerms": [
+      "M.2 NVMe SSD",
+      "TBW Endurance",
+      "DRAM-less SSD"
+    ]
+  },
+  {
+    "id": "tbw_ssd_endurance",
+    "term": "TBW (Terabytes Written - Total Endurance Rating)",
+    "category": "Storage (SSD)",
+    "shortDescription": "The manufacturer-guaranteed total volume of cumulative data that can be written to the flash cells before warranty expiration.",
+    "detailedExplanation": "Flash NAND memory cells wear out over repeated electrical write/erase cycles. TBW indicates the guaranteed lifetime write endurance. A standard 1TB TLC drive typically offers 600 TBW, meaning you would have to write over 300GB of new data every single day for 5 straight years to reach the rating.",
+    "keyMetrics": "600 TBW per 1TB TLC • DWPD (Drive Writes Per Day) • Wear Leveling",
+    "relatedTerms": [
+      "M.2 NVMe SSD",
+      "SLC Cache",
+      "DRAM-less SSD"
+    ]
+  },
+  {
+    "id": "coil_whine_noise",
+    "term": "Inductor Whine (Coil Whine)",
+    "category": "GPU & Graphics",
+    "shortDescription": "High-frequency electromagnetic acoustic vibration emanating from graphics card or power supply inductors under heavy electrical load.",
+    "detailedExplanation": "When high current cycles rapidly through copper wire windings inside ferrite chokes, magnetic fields cause the physical windings to vibrate against their housing. This creates an audible buzz or high-pitched squeal. Coil whine is harmless to hardware and can often be mitigated by capping framerates or undervolting.",
+    "keyMetrics": "Electromagnetic Acoustic Vibration • 100% Harmless • Reduced by FPS Capping",
+    "relatedTerms": [
+      "MOSFET & Choke",
+      "ATX 3.1 Standard",
+      "Undervolt Tuning"
+    ]
+  },
+  {
+    "id": "dlss_fsr_xess",
+    "term": "DLSS vs FSR vs XeSS (AI Image Upscaling)",
+    "category": "GPU & Graphics",
+    "shortDescription": "Advanced temporal and machine-learning upscaling algorithms that render frames at lower internal resolutions and reconstruct native detail.",
+    "detailedExplanation": "Rendering games at native 4K places immense computational strain on shaders. NVIDIA DLSS uses dedicated Tensor Core AI models; Intel XeSS uses XMX/DP4a matrix instructions; AMD FSR uses spatial/temporal lanczos filtering. Upscaling from 1080p or 1440p to 4K provides massive 50-90% framerate gains with minimal image fidelity loss.",
+    "keyMetrics": "Quality / Balanced / Performance Modes • Tensor Core AI • 50-90% FPS Uplift",
+    "relatedTerms": [
+      "Frame Generation",
+      "Ray Tracing",
+      "1% Low FPS"
+    ]
+  },
+  {
+    "id": "frame_generation_latency",
+    "term": "Frame Generation & Reflex Latency Reduction",
+    "category": "GPU & Graphics",
+    "shortDescription": "Optical flow technology interpolating AI-generated frames between traditional rendered frames, paired with Reflex to control input lag.",
+    "detailedExplanation": "Frame Generation analyzes consecutive real frames with optical flow vectors to insert an AI intermediate frame, doubling visual motion smoothness from 60 to 120 FPS. Because display buffering introduces slight input latency, low-latency technologies (NVIDIA Reflex / AMD Anti-Lag) are mandatory to synchronize CPU-GPU queues.",
+    "keyMetrics": "Optical Flow Accelerators • 2x Visual Smoothness • NVIDIA Reflex Integration",
+    "relatedTerms": [
+      "DLSS & FSR",
+      "1% Low FPS",
+      "Frame Time Consistency"
+    ]
+  },
+  {
+    "id": "gpu_sag_support",
+    "term": "GPU Sag & Anti-Sag Support Brackets",
+    "category": "GPU & Graphics",
+    "shortDescription": "Physical bending of massive graphics card coolers over time that risks tearing PCIe traces or cracking fragile PCB silicon substrates.",
+    "detailedExplanation": "Modern high-end graphics cards with triple-slot vapor chambers frequently weigh between 1.8kg and 2.5kg. Unsupported, gravity causes the PCB to bend over months of thermal cycles, risking solder ball micro-fractures under the VRAM/GPU die or tearing the PCIe x16 slot. An anti-sag support bracket prevents mechanical strain.",
+    "keyMetrics": "Heavy Triple-Slot Heatsinks (1.8kg+) • PCIe Slot Protection • Structural Integrity",
+    "relatedTerms": [
+      "12V-2x6 Power Connector",
+      "Chassis Airflow",
+      "PCIe Lanes"
+    ]
+  },
+  {
+    "id": "ray_tracing_path_tracing",
+    "term": "Ray Tracing vs Path Tracing (Full Illumination)",
+    "category": "GPU & Graphics",
+    "shortDescription": "Physical simulation of optical light rays tracing reflections, shadows, and ambient bounce lighting in real time.",
+    "detailedExplanation": "Traditional rasterization approximates lighting using pre-baked textures and screen-space tricks. Ray Tracing fires individual light rays per pixel to compute physically accurate reflections and shadows. Path Tracing (Full Ray Tracing) simulates complete global illumination, bouncing rays dozens of times per pixel for photorealistic fidelity.",
+    "keyMetrics": "Dedicated RT Cores • Bounding Volume Hierarchy (BVH) • Denoising AI",
+    "relatedTerms": [
+      "DLSS & FSR",
+      "Frame Generation",
+      "TGP Power Draw"
+    ]
+  },
+  {
+    "id": "tgp_tbp_tdp_gpu",
+    "term": "TGP vs TBP vs TDP (GPU Power Consumption)",
+    "category": "GPU & Graphics",
+    "shortDescription": "Precise metrics distinguishing between core GPU silicon draw (TDP), total board power (TGP), and complete system supply draw (TBP).",
+    "detailedExplanation": "Manufacturers define graphics card power differently. TDP typically represents thermal heat dissipation of the GPU die alone. TGP (Total Graphics Power) covers the GPU die, VRAM chips, MOSFETs, and RGB lighting. TBP (Total Board Power) represents the actual electrical power pulled directly from PCIe slots and 8-pin/12V cables.",
+    "keyMetrics": "TGP (Board Power) • TDP (Thermal Heat) • Transient Headroom Required",
+    "relatedTerms": [
+      "ATX 3.1 Standard",
+      "12V-2x6 Power Connector",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "vram_bus_bandwidth",
+    "term": "VRAM Bus Width & Memory Bandwidth (GB/s)",
+    "category": "GPU & Graphics",
+    "shortDescription": "The memory interface bus width and memory clock that determine total theoretical graphics memory bandwidth.",
+    "detailedExplanation": "Total GPU memory bandwidth is calculated as: Bandwidth (GB/s) = (Bus Width in bits x Memory Clock in Gbps) / 8. A 256-bit bus with 20 Gbps GDDR6X delivers 640 GB/s throughput. Narrower 128-bit buses struggle at high 1440p and 4K resolutions without large L2 or L3 on-die cache architectures.",
+    "keyMetrics": "Bus Width: 128/192/256/384-bit • GDDR6/6X/7 • Bandwidth: 500-1500+ GB/s",
+    "relatedTerms": [
+      "Ray Tracing",
+      "1% Low FPS",
+      "Monitor PPI"
+    ]
+  },
+  {
+    "id": "percent_one_low_fps",
+    "term": "1% Low & 0.1% Low FPS (Micro-Stutters)",
+    "category": "General & Diagnostics",
+    "shortDescription": "The average framerate of the worst 1% of frame delivery times, highlighting real micro-stutters far better than average FPS.",
+    "detailedExplanation": "Average FPS can be deceiving: a game averaging 120 FPS can feel sluggish and choppy if its 1% Low is only 35 FPS due to frequent stutters. 1% Low measures the bottom 1st percentile of slowest frames, directly reflecting gameplay fluidity, asset streaming smoothness, and RAM latency efficiency.",
+    "keyMetrics": "Bottom 1st Percentile • Direct Measure of Smoothness • RAM Latency Sensitivity",
+    "relatedTerms": [
+      "Frame Time Consistency",
+      "Dual Channel Memory",
+      "True Latency"
+    ]
+  },
+  {
+    "id": "bottleneck_darbogaz",
+    "term": "Hardware Bottleneck (CPU vs GPU Imbalance)",
+    "category": "General & Diagnostics",
+    "shortDescription": "Component performance imbalance where a slower component limits overall system throughput while faster components idle.",
+    "detailedExplanation": "A gaming system is only as fast as its slowest link. A CPU bottleneck occurs when the processor cannot dispatch draw calls fast enough, leaving the GPU at sub-95% utilization. A GPU bottleneck occurs when the graphics card sits pegged at 99-100%, which is ideal for maximum visual fidelity in heavy AAA titles.",
+    "keyMetrics": "Ideal: 98-99% GPU Utilization • Resolution Scaling • Draw Call Processing",
+    "relatedTerms": [
+      "1% Low FPS",
+      "Frame Time Consistency",
+      "CPU & Chiplet"
+    ]
+  },
+  {
+    "id": "frame_time_consistency",
+    "term": "Frame Time Consistency (Milliseconds Graph)",
+    "category": "General & Diagnostics",
+    "shortDescription": "The real-time millisecond duration required to render and present each individual frame on the display.",
+    "detailedExplanation": "At 60 FPS, every frame should ideally arrive exactly every 16.6 milliseconds. At 144 FPS, every 6.94 ms. When frame times fluctuate erratically (e.g. jumping from 7ms to 45ms), the eye perceives noticeable micro-stuttering even if overall framerate counters appear high. A flat horizontal frame time line is the gold standard.",
+    "keyMetrics": "60 FPS = 16.6ms • 144 FPS = 6.94ms • 240 FPS = 4.16ms • Flat Line Graph",
+    "relatedTerms": [
+      "1% Low FPS",
+      "Bottleneck",
+      "VRR & G-Sync"
+    ]
+  },
+  {
+    "id": "power_throttling_edp",
+    "term": "Power Throttling & EDP Limit (Electrical Throttling)",
+    "category": "General & Diagnostics",
+    "shortDescription": "Automatic clock reduction triggered when processor electrical current (ICCMax) or power draw exceeds safe motherboard VRM limits.",
+    "detailedExplanation": "Unlike thermal throttling caused by high heat, Electrical Design Point (EDP) and Power Throttling occur when the processor requests more electrical current (Amperes) than motherboard VRMs or BIOS limits permit. Clocks drop instantaneously to keep VRMs and socket traces within safe electrical limits.",
+    "keyMetrics": "PL1 / PL2 Limits • ICCMax Current Cap • VRM Temperature Monitoring",
+    "relatedTerms": [
+      "VRM & SPS",
+      "Thermal Throttling",
+      "Undervolt Tuning"
+    ]
+  },
+  {
+    "id": "thermal_throttling_cpu_gpu",
+    "term": "Thermal Throttling (Heat Protection)",
+    "category": "General & Diagnostics",
+    "shortDescription": "Automatic internal clock and voltage throttling that prevents silicon damage when temperatures approach TjMax limits.",
+    "detailedExplanation": "Modern CPUs and GPUs feature hundreds of internal thermal sensors. When junction temperatures reach safe thresholds (e.g. 100°C for Intel, 95°C for AMD Ryzen, 83°C for NVIDIA GPUs), internal thermal logic dynamically reduces clocks and voltages to prevent physical silicon degradation.",
+    "keyMetrics": "TjMax Ceiling (95-100°C) • Clock Frequency Reduction • Cooler Requirement",
+    "relatedTerms": [
+      "TjMax Temperature",
+      "AIO Liquid Cooling",
+      "Thermal Paste"
+    ]
+  },
+  {
+    "id": "backlight_strobing_dyac",
+    "term": "Backlight Strobing (BenQ DyAc+ / ASUS ELMB)",
+    "category": "Monitor & Display",
+    "shortDescription": "High-speed backlight pulse synchronization that inserts black frames between refreshes to eliminate LCD motion blur.",
+    "detailedExplanation": "Human eyes track moving objects across sample-and-hold LCD panels, creating perceived retinal blur. Backlight strobing turns off the monitor backlight while LCD liquid crystals transition, pulsing light only when the pixel color has settled. This produces CRT-like crystal motion clarity in fast competitive esports.",
+    "keyMetrics": "Black Frame Insertion • CRT-Like Clarity • Requires High Sustained FPS",
+    "relatedTerms": [
+      "Response Time GtG",
+      "Monitor Overdrive",
+      "Monitor PPI"
+    ]
+  },
+  {
+    "id": "overdrive_inverse_ghosting",
+    "term": "Monitor Overdrive & Inverse Ghosting (Overshoot)",
+    "category": "Monitor & Display",
+    "shortDescription": "Voltage boosting applied to LCD liquid crystals to accelerate color transitions, balancing responsiveness against halo overshoot artifacts.",
+    "detailedExplanation": "LCD crystals naturally take time to twist and align to change color. Overdrive applies higher voltage pulses to force faster alignment, cutting ghosting trails. If overdrive is pushed excessively, pixels overshoot their target color value, producing inverse ghosting trails with bright glowing halos behind moving objects.",
+    "keyMetrics": "Voltage Acceleration • Overshoot Prevention • Tuning Balance",
+    "relatedTerms": [
+      "Response Time GtG",
+      "Backlight Strobing",
+      "VRR & G-Sync"
+    ]
+  },
+  {
+    "id": "panel_types_ips_va_oled",
+    "term": "Monitor Panel Types: Fast IPS vs VA vs OLED vs QD-OLED",
+    "category": "Monitor & Display",
+    "shortDescription": "Underlying display technologies determining static contrast ratio, color accuracy, viewing angles, and pixel response speeds.",
+    "detailedExplanation": "Fast IPS offers superior color fidelity and wide viewing angles with rapid 1ms transitions. VA delivers deep 3000:1+ contrast but can suffer from dark smearing. OLED and QD-OLED feature per-pixel self-lit emitters with infinite contrast, true 0.03ms pixel response times, and zero motion blur.",
+    "keyMetrics": "IPS: 1000:1 Contrast • VA: 3000:1 Contrast • OLED: Infinite:1 & 0.03ms",
+    "relatedTerms": [
+      "Monitor PPI",
+      "Response Time GtG",
+      "Backlight Strobing"
+    ]
+  },
+  {
+    "id": "ppi_pixel_density",
+    "term": "Pixel Density (PPI - Pixels Per Inch)",
+    "category": "Monitor & Display",
+    "shortDescription": "The physical concentration of pixels per square inch, dictating font sharpness and visual fidelity at specific viewing distances.",
+    "detailedExplanation": "Resolution alone doesn't dictate clarity; screen size matters equally. 1080p on 24 inches yields 92 PPI (acceptable). 1440p on 27 inches delivers the desktop golden ratio of 109 PPI (sharp text and balanced GPU demand). 4K on 32 inches reaches 138 PPI, providing razor-sharp retina clarity requiring substantial GPU horsepower.",
+    "keyMetrics": "Formula: sqrt(w^2 + h^2) / diagonal • Sweet Spot: 109 PPI • Retina Clarity",
+    "relatedTerms": [
+      "Monitor Panel Types",
+      "GPU VRAM Bandwidth",
+      "DLSS & FSR"
+    ]
+  },
+  {
+    "id": "gtg_vs_mprt",
+    "term": "Response Time: GtG vs MPRT",
+    "category": "Monitor & Display",
+    "shortDescription": "The difference between physical pixel color transition time (Gray-to-Gray) and human-perceived image persistence time.",
+    "detailedExplanation": "GtG (Gray-to-Gray) measures the time in milliseconds for a sub-pixel to transition between two gray shades (typically 1ms on Fast IPS, 0.03ms on OLED). MPRT (Moving Picture Response Time) measures how long an image remains continuously visible on the retina, governed primarily by monitor refresh rate and strobing.",
+    "keyMetrics": "GtG (Pixel Speed) • MPRT (Motion Persistence) • OLED Instant Response",
+    "relatedTerms": [
+      "Backlight Strobing",
+      "Monitor Overdrive",
+      "Monitor Panel Types"
+    ]
+  },
+  {
+    "id": "gsync_freesync_vrr",
+    "term": "Variable Refresh Rate (VRR): G-Sync vs FreeSync",
+    "category": "Monitor & Display",
+    "shortDescription": "Adaptive synchronization technology matching monitor refresh rate dynamically to GPU output to eliminate screen tearing.",
+    "detailedExplanation": "Without VRR, displays refresh at fixed intervals (e.g. 60Hz or 144Hz). If the GPU outputs a frame out of sync, the screen displays portions of two different frames simultaneously, causing horizontal tearing. VRR synchronizes display refresh cycles on the fly with GPU framerates without V-Sync input lag.",
+    "keyMetrics": "Adaptive Sync Range (48-240Hz) • Zero Screen Tearing • Lowest Input Lag",
+    "relatedTerms": [
+      "Frame Time Consistency",
+      "1% Low FPS",
+      "Monitor Panel Types"
+    ]
+  },
+  {
+    "id": "aio_vs_air_cooling",
+    "term": "AIO Liquid Cooling vs Dual-Tower Air Cooling",
+    "category": "Cooling & Chassis",
+    "shortDescription": "Closed-loop liquid radiator systems versus massive fin-stack air coolers for CPU thermal dissipation.",
+    "detailedExplanation": "Top dual-tower air coolers (e.g. Thermalright Phantom Spirit, Noctua NH-D15) handle up to 250W TDP with zero pump noise and near-zero failure points. AIO liquid coolers (240mm, 360mm, 420mm) provide higher thermal buffer capacity, absorbing heavy multi-core heat spikes before liquid temperature saturates.",
+    "keyMetrics": "Air: High Reliability • AIO: High Thermal Capacity & Clean Aesthetics",
+    "relatedTerms": [
+      "Thermal Paste & PTM7950",
+      "Static Pressure vs Airflow",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "argb_vs_rgb",
+    "term": "ARGB (5V 3-Pin) vs RGB (12V 4-Pin) Lighting",
+    "category": "Cooling & Chassis",
+    "shortDescription": "Digital addressable individually controllable LED illumination versus legacy analog uniform single-color lighting.",
+    "detailedExplanation": "Legacy 12V 4-pin RGB operates on a single analog rail where all LEDs on the strip display the same uniform color simultaneously. Modern 5V 3-pin ARGB (Addressable RGB) integrates digital microchips, allowing motherboards to program every individual LED independently for fluid rainbow, wave, and sync patterns.",
+    "keyMetrics": "ARGB: 5V 3-Pin (Digital per-LED) • RGB: 12V 4-Pin (Analog Uniform)",
+    "relatedTerms": [
+      "PWM Fan Control",
+      "Full Modular PSU",
+      "Chassis Airflow"
+    ]
+  },
+  {
+    "id": "static_pressure_vs_airflow",
+    "term": "Fan Dynamics: Static Pressure (mmH2O) vs Airflow (CFM)",
+    "category": "Cooling & Chassis",
+    "shortDescription": "The distinction between fan pushing force against dense radiators/mesh versus raw uninhibited volumetric air movement.",
+    "detailedExplanation": "Static Pressure (measured in mmH2O) represents a fan blade's ability to force air through dense obstacles like water-cooling radiators, fin-stacks, and fine dust filters. Airflow (measured in CFM - Cubic Feet per Minute) measures raw air volume moved through open, unrestricted chassis vents.",
+    "keyMetrics": "Static Pressure: > 2.0 mmH2O (Coolers) • Airflow: > 60 CFM (Chassis Exhaust)",
+    "relatedTerms": [
+      "PWM Fan Control",
+      "Positive vs Negative Case Pressure",
+      "AIO Liquid Cooling"
+    ]
+  },
+  {
+    "id": "pwm_vs_dc_fan",
+    "term": "PWM (4-Pin) vs DC (3-Pin) Fan Control",
+    "category": "Cooling & Chassis",
+    "shortDescription": "Pulse-width modulation duty cycle fan speed control versus analog voltage regulation.",
+    "detailedExplanation": "Legacy 3-pin DC fans adjust speed by reducing input voltage from 12V down to 7V or 5V, risking fan stalling at low RPMs. Modern 4-pin PWM fans maintain constant 12V power while the 4th pin sends high-speed digital on/off square pulses (duty cycle), allowing precise whisper-quiet control from 200 to 2000+ RPM.",
+    "keyMetrics": "4-Pin PWM: Digital Duty Cycle • 3-Pin DC: Voltage Regulation • Zero Stall Risk",
+    "relatedTerms": [
+      "Static Pressure vs Airflow",
+      "Chassis Airflow",
+      "AIO Liquid Cooling"
+    ]
+  },
+  {
+    "id": "positive_negative_case_pressure",
+    "term": "Positive vs Negative Internal Case Air Pressure",
+    "category": "Cooling & Chassis",
+    "shortDescription": "Chassis fan intake volume versus exhaust volume determining dust accumulation patterns and GPU temperature efficiency.",
+    "detailedExplanation": "Positive pressure occurs when intake fan CFM exceeds exhaust CFM, forcing air outward through unfiltered case seams and completely preventing dust buildup. Negative pressure occurs when exhaust exceeds intake, pulling in cool air through every seam but sucking in unfiltered room dust.",
+    "keyMetrics": "Positive: Intake > Exhaust (Dust-Free) • Negative: Exhaust > Intake",
+    "relatedTerms": [
+      "Static Pressure vs Airflow",
+      "PWM Fan Control",
+      "Chassis Airflow"
+    ]
+  },
+  {
+    "id": "thermal_paste_ptm7950",
+    "term": "Thermal Compound vs Phase Change Pad (Honeywell PTM7950)",
+    "category": "Cooling & Chassis",
+    "shortDescription": "Microscopic gap-filling thermal interface materials transferring heat from CPU/GPU silicon heatspreaders to cooler coldplates.",
+    "detailedExplanation": "Standard silicon/metal oxide pastes can pump out and dry up over hundreds of thermal cycles, particularly on high-TDP laptop dies. Honeywell PTM7950 is a polymer phase-change material that transitions from solid to liquid above 45°C, providing extreme thermal conductivity without pump-out or degradation for years.",
+    "keyMetrics": "Thermal Conductivity (W/mK) • Phase Change at 45°C • Zero Pump-Out",
+    "relatedTerms": [
+      "Delid & Liquid Metal",
+      "Thermal Throttling",
+      "AIO Liquid Cooling"
+    ]
+  },
+  {
+    "id": "debounce_delay",
+    "term": "Debounce Delay (Switch Chatter Filtering)",
+    "category": "Peripherals",
+    "shortDescription": "Firmware delay algorithms applied to mechanical keyboard and mouse switches to prevent physical metallic contact chatter from registering double-clicks.",
+    "detailedExplanation": "Mechanical switch contacts bounce microscopically when pressed, which firmware can mistake for multiple clicks. A debounce algorithm delays registration by 4 to 12 milliseconds to filter chatter. Optical switches and magnetic Hall Effect switches use light or magnetic fields, eliminating mechanical bounce and allowing true 0ms delay.",
+    "keyMetrics": "Mechanical: 4-12ms Debounce • Optical & Hall Effect: 0ms Instant Response",
+    "relatedTerms": [
+      "Hall Effect & Rapid Trigger",
+      "Mouse Polling Rate",
+      "Response Time"
+    ]
+  },
+  {
+    "id": "mouse_polling_rate_8k",
+    "term": "Mouse Polling Rate (1000Hz vs 4000Hz vs 8000Hz)",
+    "category": "Peripherals",
+    "shortDescription": "The frequency per second at which mouse sensor position reports are sent to the operating system over USB.",
+    "detailedExplanation": "Standard gaming mice poll at 1000Hz (1 report every 1.0ms). High-performance esports mice poll at 4000Hz (0.25ms) or 8000Hz (0.125ms), delivering silky cursor tracking on 240Hz+ monitors. However, 8K polling generates high CPU interrupt (IRQ) loads, requiring modern 6-core+ CPUs to avoid frametime drops.",
+    "keyMetrics": "1000Hz = 1.0ms • 4000Hz = 0.25ms • 8000Hz = 0.125ms • CPU IRQ Load",
+    "relatedTerms": [
+      "Debounce Delay",
+      "Frame Time Consistency",
+      "Optical Sensors"
+    ]
+  },
+  {
+    "id": "headphone_impedance_dac_amp",
+    "term": "Headphone Impedance (Ohms) & DAC / AMP Matching",
+    "category": "Peripherals",
+    "shortDescription": "Electrical resistance (Ohms) and sensitivity (dB/mW) dictating whether an external headphone amplifier or DAC is required for full dynamics.",
+    "detailedExplanation": "Consumer gaming headsets (16 to 32 Ohms) run easily on standard motherboard Realtek audio codecs (1.0Vrms). High-end audiophile headphones (250 to 600 Ohms, such as Beyerdynamic DT 990 Pro) demand higher voltage swing (2.0Vrms+) and clean digital-to-analog conversion to prevent thin, distorted audio.",
+    "keyMetrics": "Low Impedance: <= 32 Ohms • High Impedance: >= 250 Ohms • Dedicated DAC/AMP",
+    "relatedTerms": [
+      "Planar Magnetic vs Dynamic",
+      "Peripherals Lab"
+    ]
+  },
+  {
+    "id": "hall_effect_rapid_trigger",
+    "term": "Magnetic Hall Effect Switches & Rapid Trigger",
+    "category": "Peripherals",
+    "shortDescription": "Analog keyboard switches measuring magnetic flux distance, enabling dynamic actuation and instant key resets without fixed travel points.",
+    "detailedExplanation": "Traditional mechanical switches require pressing down 2.0mm to actuate and releasing up 1.8mm to reset. Magnetic Hall Effect switches use an analog sensor measuring magnetic field strength. Rapid Trigger resets the switch the instant the key moves upward by just 0.1mm, allowing lightning-fast counter-strafing in games like Valorant and CS2.",
+    "keyMetrics": "0.1mm - 4.0mm Adjustable Actuation • 0.1mm Rapid Trigger • Zero Mechanical Wear",
+    "relatedTerms": [
+      "Debounce Delay",
+      "Mouse Polling Rate",
+      "Response Time"
+    ]
+  },
+  {
+    "id": "optical_sensor_paw",
+    "term": "Optical Sensor Architecture (PixArt PAW3395 / PAW3950)",
+    "category": "Peripherals",
+    "shortDescription": "High-framerate optical imaging sensors capturing mousepad surface micro-textures with zero hardware acceleration or smoothing.",
+    "detailedExplanation": "Flagship optical sensors (PixArt PAW3395, PAW3950, and Logitech HERO) take thousands of high-resolution digital surface snapshots per second to calculate tracking vectors. They deliver 26,000 to 30,000+ DPI, 650+ IPS tracking speeds, and 50G acceleration with sub-1.0mm lift-off distance (LOD).",
+    "keyMetrics": "Tracking Speed: 650+ IPS • Acceleration: 50G • Motion Sync Alignment",
+    "relatedTerms": [
+      "Mouse Polling Rate",
+      "Debounce Delay",
+      "Peripherals Lab"
+    ]
+  },
+  {
+    "id": "planar_magnetic_vs_dynamic",
+    "term": "Planar Magnetic vs Dynamic Headphone Drivers",
+    "category": "Peripherals",
+    "shortDescription": "Ultra-thin planar conductor membranes suspended between magnets versus traditional voice-coil cone drivers for audio response.",
+    "detailedExplanation": "Dynamic drivers use a traditional cone driven by a centered voice-coil, which can warp under high excursions and cause harmonic distortion. Planar Magnetic drivers (Audeze, Hifiman) suspend an ultra-thin conductive film across an entire magnetic field, moving the entire surface uniformly for fast bass and low distortion.",
+    "keyMetrics": "Planar: Ultra-Low Distortion (<0.1% THD) • Dynamic: High Impact Bass",
+    "relatedTerms": [
+      "Headphone Impedance",
+      "Peripherals Lab"
+    ]
+  },
+  {
+    "id": "x3d_vcache_gaming",
+    "term": "AMD 3D V-Cache (X3D Architecture)",
+    "category": "CPU & Chiplet",
+    "shortDescription": "Vertical 3D silicon stacking technology that bonds 64MB of additional L3 cache directly onto the CPU compute die for gaming dominancy.",
+    "detailedExplanation": "Memory access latency to external system RAM takes roughly 60-70ns, whereas on-die L3 cache access takes only ~10-12ns. By 3D-stacking an additional 64MB SRAM cache die directly atop the CPU CCD with Through-Silicon Vias (TSVs), processors like the Ryzen 7 7800X3D and 9800X3D retain game world data in cache, boosting gaming 1% Lows by up to 30%.",
+    "keyMetrics": "96MB Total L3 Cache • 3D Silicon Stacking • Unrivaled 1% Low Gaming FPS",
+    "relatedTerms": [
+      "Infinity Fabric",
+      "CAS Latency",
+      "1% Low FPS"
+    ]
+  },
+  {
+    "id": "infinity_fabric_fclk",
+    "term": "AMD Infinity Fabric (FCLK) & UCLK / MCLK 1:1 Ratio",
+    "category": "CPU & Chiplet",
+    "shortDescription": "The high-speed interconnect bus routing data between CPU cores, memory controller (UCLK), and DRAM memory modules (MCLK).",
+    "detailedExplanation": "On AMD Ryzen processors, maintaining a synchronous 1:1 ratio between the memory clock (MCLK) and memory controller clock (UCLK) is essential for lowest latency. On AM5, DDR5-6000 operates at 3000MHz MCLK with a 1:1 UCLK and optimal 2000MHz FCLK, providing minimum memory latency and highest performance.",
+    "keyMetrics": "AM5 Sweet Spot: 6000 MT/s (1:1 UCLK/MCLK) • FCLK: 2000-2133 MHz",
+    "relatedTerms": [
+      "AMD 3D V-Cache",
+      "CAS Latency",
+      "Dual Channel Memory"
+    ]
+  },
+  {
+    "id": "delid_liquid_metal",
+    "term": "Delidding & Liquid Metal Thermal Compound",
+    "category": "CPU & Chiplet",
+    "shortDescription": "Removing the factory integrated heatspreader (IHS) to replace internal solder/paste with high-conductivity gallium liquid metal.",
+    "detailedExplanation": "Enthusiasts use specialized delid tools to separate the nickel-plated copper heatspreader (IHS) from the raw CPU silicon die. Applying gallium-indium liquid metal (73+ W/mK) directly onto the bare silicon die drops peak core temperatures by 15°C to 25°C under extreme overclocks.",
+    "keyMetrics": "73+ W/mK Thermal Conductivity • 15-25°C Temperature Drop • Conductive Risk",
+    "relatedTerms": [
+      "TjMax Temperature",
+      "AIO Liquid Cooling",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "ipc_instructions_per_cycle",
+    "term": "IPC (Instructions Per Cycle)",
+    "category": "CPU & Chiplet",
+    "shortDescription": "The architectural efficiency measuring how many computational instructions a processor executes in a single clock cycle.",
+    "detailedExplanation": "Processor performance is not solely dictated by clock speed (Gigahertz): Total Performance = Clock Speed x IPC. A newer architecture at 4.5 GHz with a 20% IPC improvement will decisively outperform an older processor running at 5.0 GHz while consuming less energy.",
+    "keyMetrics": "Total Performance = GHz x IPC • Generational Architecture Efficiency",
+    "relatedTerms": [
+      "P-Core & E-Core",
+      "AMD 3D V-Cache",
+      "Bottleneck"
+    ]
+  },
+  {
+    "id": "p_core_e_core",
+    "term": "P-Core (Performance) & E-Core (Efficient) Architecture",
+    "category": "CPU & Chiplet",
+    "shortDescription": "Hybrid processor architecture combining large high-clocked execution cores with compact multi-threaded efficiency cores.",
+    "detailedExplanation": "Modern hybrid processors (Intel 12th-14th Gen / Core Ultra, AMD Zen 4c/5c) combine big Performance Cores (P-Cores) featuring high clock speeds for active gaming and single-thread work, with compact Efficient Cores (E-Cores) to handle background tasks, rendering, and Discord encoding efficiently.",
+    "keyMetrics": "P-Cores: Maximum Single-Thread • E-Cores: Multi-Threaded Throughput",
+    "relatedTerms": [
+      "IPC (Instructions Per Cycle)",
+      "Power Throttling",
+      "TjMax Temperature"
+    ]
+  },
+  {
+    "id": "pbo_curve_optimizer",
+    "term": "PBO2 (Precision Boost Overdrive) & Curve Optimizer",
+    "category": "CPU & Chiplet",
+    "shortDescription": "AMD's intelligent opportunistic boosting algorithm and per-core voltage-frequency curve undervolting tool.",
+    "detailedExplanation": "Instead of applying crude fixed voltages, PBO2 Curve Optimizer applies negative voltage offsets across the entire dynamic voltage-frequency curve. Setting Curve Optimizer to negative (-20 to -30) allows cores to request less voltage for any given frequency, generating less heat and enabling the CPU to sustain maximum boost clocks longer.",
+    "keyMetrics": "Adaptive Dynamic V/F Curve • Negative Magnitude (0 to -30) • 10-15°C Cooler",
+    "relatedTerms": [
+      "AMD 3D V-Cache",
+      "Silicon Lottery",
+      "Thermal Throttling"
+    ]
+  },
+  {
+    "id": "silicon_lottery_sp",
+    "term": "Silicon Lottery & SP (Silicon Prediction) Quality Score",
+    "category": "CPU & Chiplet",
+    "shortDescription": "Microscopic manufacturing variations between semiconductor wafers dictating individual voltage efficiency and overclocking headroom.",
+    "detailedExplanation": "Due to microscopic variances during photolithography, no two silicon dies are completely identical. High-quality silicon chips (golden samples) can run at higher clock speeds with less voltage. ASUS motherboard BIOS software evaluates the V/F curve to calculate an SP (Silicon Prediction) score from 50 to 120+.",
+    "keyMetrics": "ASUS SP Score Rating • Voltage Efficiency Curve • Golden Sample Overclocking",
+    "relatedTerms": [
+      "PBO2 Curve Optimizer",
+      "TjMax Temperature",
+      "MOSFET & Choke"
+    ]
+  },
+  {
+    "id": "tdp_ppt_mtp",
+    "term": "TDP vs PPT vs MTP (Rated TDP vs Real Power Draw)",
+    "category": "CPU & Chiplet",
+    "shortDescription": "The difference between nominal marketing thermal specifications and true maximum package power limits.",
+    "detailedExplanation": "A processor advertised as '65W TDP' or '125W TDP' often pulls significantly more power under boost. AMD processors define PPT (Package Power Tracking), where a 65W chip can pull up to 88W and a 105W chip pulls 142W. Intel defines Maximum Turbo Power (MTP), where a 125W rated 14700K draws up to 253W under full multi-core load.",
+    "keyMetrics": "AMD PPT = TDP x 1.35 • Intel MTP (PL2) up to 253W+ • Power Sizing",
+    "relatedTerms": [
+      "ATX 3.1 Standard",
+      "VRM & SPS",
+      "AIO Liquid Cooling"
+    ]
+  },
+  {
+    "id": "tjmax_temperature",
+    "term": "TjMax (Tjunction Maximum Temperature)",
+    "category": "CPU & Chiplet",
+    "shortDescription": "The absolute maximum thermal junction limit at which internal silicon safeguards engage to throttle clock speeds.",
+    "detailedExplanation": "TjMax is the factory maximum operating temperature of the silicon die (typically 100°C for Intel, 95°C for AMD Ryzen, 89°C for Ryzen X3D). Modern boost algorithms are designed to push clocks until either power limits, frequency limits, or TjMax are reached, making proper cooler selection paramount.",
+    "keyMetrics": "Intel TjMax: 100°C • AMD Ryzen: 95°C • Ryzen X3D: 89°C • Internal Cutoff",
+    "relatedTerms": [
+      "Thermal Throttling",
+      "AIO Liquid Cooling",
+      "Delid & Liquid Metal"
+    ]
+  },
+  {
+    "id": "core_thread_smt",
+    "term": "Cores & Threads (SMT / Hyper-Threading)",
+    "category": "CPU & Chiplet",
+    "shortDescription": "Physical independent hardware execution units versus virtual logical threads executing parallel computing tasks.",
+    "detailedExplanation": "A physical CPU core is an independent processor with its own ALUs, registers, and L1/L2 cache. Simultaneous Multithreading (SMT / Hyper-Threading) duplicates pipeline registers, allowing a single physical core to execute two logical software instruction threads simultaneously, improving parallel workflow throughput by 20% to 30%.",
+    "keyMetrics": "Physical Cores vs Logical Threads • SMT / Hyper-Threading (1 Core = 2 Threads)",
+    "relatedTerms": [
+      "P-Core & E-Core",
+      "IPC (Instructions Per Cycle)",
+      "Bottleneck"
+    ]
+  }
+]

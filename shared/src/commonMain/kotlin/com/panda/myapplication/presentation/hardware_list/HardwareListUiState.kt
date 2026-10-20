@@ -23,4 +23,5 @@ data class HardwareListUiState(
     val availableBrands: List<String> = emptyList(),
     val isFilterSheetVisible: Boolean = false,
     val errorMessage: String? = null,
+    val errorMessageEn: String? = null,
 )

@@ -68,15 +68,18 @@ private data class UpsTierClass(
     val realWattCapacity: Int,
     val batteryConfig: String,
     val totalBatteryWh: Int,
-    val topology: String,
-)
+    val topologyTr: String,
+    val topologyEn: String,
+) {
+    fun localizedTopology(isTr: Boolean): String = if (isTr) topologyTr else topologyEn
+}
 
 private val UPS_TIERS = listOf(
-    UpsTierClass(850, 480, "1x 12V 9Ah", 108, "Line-Interactive (Simüle Sinüs)"),
-    UpsTierClass(1000, 600, "2x 12V 7Ah", 168, "Line-Interactive"),
-    UpsTierClass(1500, 900, "2x 12V 9Ah", 216, "Line-Interactive / Tam Sinüs"),
-    UpsTierClass(2000, 1200, "4x 12V 9Ah", 432, "Online Tam Sinüs (Double Conversion)"),
-    UpsTierClass(3000, 1800, "6x 12V 9Ah", 648, "Online Tam Sinüs (Server/Workstation)"),
+    UpsTierClass(850, 480, "1x 12V 9Ah", 108, "Line-Interactive (Simüle Sinüs)", "Line-Interactive (Simulated Sine)"),
+    UpsTierClass(1000, 600, "2x 12V 7Ah", 168, "Line-Interactive", "Line-Interactive"),
+    UpsTierClass(1500, 900, "2x 12V 9Ah", 216, "Line-Interactive / Tam Sinüs", "Line-Interactive / Pure Sine Wave"),
+    UpsTierClass(2000, 1200, "4x 12V 9Ah", 432, "Online Tam Sinüs (Double Conversion)", "Online Pure Sine (Double Conversion)"),
+    UpsTierClass(3000, 1800, "6x 12V 9Ah", 648, "Online Tam Sinüs (Server/Workstation)", "Online Pure Sine (Server/Workstation)"),
 )
 
 @Composable
@@ -86,6 +89,8 @@ fun UpsCalculatorScreen(
     onOpenDrawer: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var pcWatts by remember { mutableIntStateOf(initialBuildWatts.coerceIn(180, 1100)) }
     var monitorWatts by remember { mutableIntStateOf(45) }
 
@@ -131,7 +136,7 @@ fun UpsCalculatorScreen(
                 ) {
                     Column(modifier = Modifier.padding(Spacing.medium)) {
                         Text(
-                            text = "1. SİSTEM & MONİTÖR GÜÇ TÜKETİMİ (WATT)",
+                            text = strings.upsSectionWatts,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -169,7 +174,7 @@ fun UpsCalculatorScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Text(
-                                text = "Kasa Oyun Yükü Güç Çekimi",
+                                text = strings.upsPcWatts,
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -192,7 +197,7 @@ fun UpsCalculatorScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Text(
-                                text = "Monitör + Modem / Çevre Birimi Tüketimi",
+                                text = strings.upsMonitorWatts,
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -232,7 +237,7 @@ fun UpsCalculatorScreen(
                         ) {
                             Column {
                                 Text(
-                                    text = "ÖNERİLEN MİNİMUM UPS SINIFI",
+                                    text = strings.upsRecommendedTier,
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Black,
                                     color = NeonEmerald,
@@ -245,7 +250,7 @@ fun UpsCalculatorScreen(
                                     color = MaterialTheme.colorScheme.onSurface,
                                 )
                                 Text(
-                                    text = "${recommendedTier.topology} • Akü: ${recommendedTier.batteryConfig}",
+                                    text = "${recommendedTier.localizedTopology(isTr)} • ${if (isTr) "Akü" else "Battery"}: ${recommendedTier.batteryConfig}",
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -259,8 +264,7 @@ fun UpsCalculatorScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Column {
-                                Text(
-                                    text = "Toplam Tam Yük",
+                                Text(text = strings.upsTotalLoad,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -272,8 +276,7 @@ fun UpsCalculatorScreen(
                                 )
                             }
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text(
-                                    text = "Ham VA (W / 0.6)",
+                                Text(text = strings.upsRawVa,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -285,8 +288,7 @@ fun UpsCalculatorScreen(
                                 )
                             }
                             Column(horizontalAlignment = Alignment.End) {
-                                Text(
-                                    text = "+%20 Güvenlik Paylı",
+                                Text(text = strings.upsSafetyMargin,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -306,7 +308,11 @@ fun UpsCalculatorScreen(
                             modifier = Modifier.fillMaxWidth(),
                         ) {
                             Text(
-                                text = "⚡ Aktif PFC Güç Kaynağı Notu: Modern 80+ Gold / ATX 3.0 güç kaynaklarında elektrik kesildiği an röle geçişinde (4-8ms) kapanma yaşanmaması için 650W üstü sistemlerde Saf Sinüs (Pure Sine Wave) veya Online UPS tercih edilmesi önerilir.",
+                                text = if (isTr) {
+                                    "⚡ Aktif PFC Güç Kaynağı Notu: Modern 80+ Gold / ATX 3.0 güç kaynaklarında elektrik kesildiği an röle geçişinde (4-8ms) kapanma yaşanmaması için 650W üstü sistemlerde Saf Sinüs (Pure Sine Wave) veya Online UPS tercih edilmesi önerilir."
+                                } else {
+                                    "⚡ Active PFC Power Supply Note: For modern 80+ Gold / ATX 3.0 PSUs, Pure Sine Wave or Online UPS is strongly recommended above 650W to prevent shutdown during the 4-8ms transfer relay switch."
+                                },
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurface,
                                 modifier = Modifier.padding(12.dp),
@@ -329,14 +335,14 @@ fun UpsCalculatorScreen(
                         verticalArrangement = Arrangement.spacedBy(Spacing.small),
                     ) {
                         Text(
-                            text = "⏱️ ELEKTRİK KESİNTİSİNDE TAHMİNİ AKÜ SÜRELERİ",
+                            text = "⏱️ " + strings.upsRuntimeSection,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
                             letterSpacing = 1.sp,
                         )
                         Text(
-                            text = "İnverter verimliliği (%82) ve Peukert kurşun-asit deşarj eğrisine göre hesaplanmıştır:",
+                            text = if (isTr) "İnverter verimliliği (%82) ve Peukert kurşun-asit deşarj eğrisine göre hesaplanmıştır:" else "Calculated based on 82% inverter efficiency and Peukert battery curve:",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -381,9 +387,9 @@ fun UpsCalculatorScreen(
                                         )
                                         Text(
                                             text = when {
-                                                isOverloaded -> "AŞIRI YÜK (YETERSİZ)"
-                                                isRecommended -> "★ ÖNERİLEN"
-                                                else -> "UYGUN"
+                                                isOverloaded -> if (isTr) "AŞIRI YÜK (YETERSİZ)" else "OVERLOAD (INSUFFICIENT)"
+                                                isRecommended -> if (isTr) "★ ÖNERİLEN" else "★ RECOMMENDED"
+                                                else -> if (isTr) "UYGUN" else "COMPATIBLE"
                                             },
                                             style = MaterialTheme.typography.labelSmall,
                                             fontWeight = FontWeight.Black,
@@ -397,9 +403,11 @@ fun UpsCalculatorScreen(
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Text(
                                         text = if (isOverloaded) {
-                                            "Oyun yükünde (${totalLoadWatts}W) UPS kapasitesi (${tier.realWattCapacity}W) aşılır ve aşırı yük koruması devreye girer."
+                                            if (isTr) "Oyun yükünde (${totalLoadWatts}W) UPS kapasitesi (${tier.realWattCapacity}W) aşılır ve aşırı yük koruması devreye girer."
+                                            else "At gaming load (${totalLoadWatts}W), UPS capacity (${tier.realWattCapacity}W) is exceeded and overload protection trips."
                                         } else {
-                                            "🎮 Oyun Yükünde (${totalLoadWatts}W): ~$gamingMinutes dk  •  🖥️ Masaüstü Boşta (${idleTotalWatts}W): ~$idleMinutes dk"
+                                            if (isTr) "🎮 Oyun Yükünde (${totalLoadWatts}W): ~$gamingMinutes dk  •  🖥️ Masaüstü Boşta (${idleTotalWatts}W): ~$idleMinutes dk"
+                                            else "🎮 Gaming Load (${totalLoadWatts}W): ~$gamingMinutes min  •  🖥️ Desktop Idle (${idleTotalWatts}W): ~$idleMinutes min"
                                         },
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,

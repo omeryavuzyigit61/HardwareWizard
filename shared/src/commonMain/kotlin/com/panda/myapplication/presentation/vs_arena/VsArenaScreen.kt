@@ -1,5 +1,7 @@
 package com.panda.myapplication.presentation.vs_arena
 
+import com.panda.myapplication.presentation.util.localized
+
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -106,6 +108,9 @@ fun VsArenaScreen(
     onOpenDrawer: (() -> Unit)? = null,
     viewModel: VsArenaViewModel = koinViewModel(),
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val state by viewModel.uiState.collectAsStateWithLifecycle()
 
     Box(
@@ -187,14 +192,14 @@ fun VsArenaScreen(
                         horizontalArrangement = Arrangement.SpaceBetween,
                     ) {
                         Text(
-                            text = "⚔️ KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA",
+                            text = tr(isTr, "⚔️ KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA", "⚔️ HEAD-TO-HEAD BENCHMARK COMPARISON"),
                             style = MaterialTheme.typography.labelLarge,
                             color = NeonCyan,
                             fontWeight = FontWeight.ExtraBold,
                             letterSpacing = 0.8.sp,
                         )
                         Text(
-                            text = "${report.rows.size} Kriter",
+                            text = "${report.rows.size} ${tr(isTr, "Kriter", "Metrics")}",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                         )
@@ -257,6 +262,9 @@ private fun VsArenaHeader(
     onClearAll: () -> Unit,
     onOpenDrawer: (() -> Unit)? = null,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -317,7 +325,7 @@ private fun VsArenaHeader(
                             )
                         }
                         Text(
-                            text = "Kafa Kafaya Kıyaslama",
+                            text = tr(isTr, "Kafa Kafaya Kıyaslama", "Head-to-Head Comparison"),
                             style = MaterialTheme.typography.titleMedium,
                             color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = FontWeight.ExtraBold,
@@ -327,7 +335,7 @@ private fun VsArenaHeader(
                     }
                     Spacer(Modifier.height(2.dp))
                     Text(
-                        text = mode.subtitle,
+                        text = mode.localizedSubtitle(isTr),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
@@ -345,7 +353,7 @@ private fun VsArenaHeader(
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 ) {
                     Text(
-                        text = "Sıfırla",
+                        text = tr(isTr, "Sıfırla", "Reset"),
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -371,9 +379,9 @@ private fun VsArenaHeader(
                     if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
                 )
                 val shortLabel = when (entry) {
-                    VsArenaMode.COMPONENT_VS_COMPONENT -> "🧩 Bileşen vs Bileşen"
-                    VsArenaMode.PREBUILT_VS_PREBUILT -> "🖥️ OEM Sistem"
-                    VsArenaMode.LAPTOP_VS_LAPTOP -> "💻 Gaming Laptop"
+                    VsArenaMode.COMPONENT_VS_COMPONENT -> strings.vsCompMode
+                    VsArenaMode.PREBUILT_VS_PREBUILT -> strings.vsPrebuiltMode
+                    VsArenaMode.LAPTOP_VS_LAPTOP -> strings.vsLaptopMode
                 }
                 Surface(
                     modifier = Modifier
@@ -453,6 +461,9 @@ private fun VsFighterSlotsCard(
     onSwap: () -> Unit,
     onItemDetail: (HardwareId) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -462,7 +473,7 @@ private fun VsFighterSlotsCard(
     ) {
         VsFighterCornerCard(
             modifier = Modifier.weight(1f),
-            cornerLabel = "1. KÖŞE",
+            cornerLabel = tr(isTr, "1. KÖŞE", "CORNER 1"),
             cornerColor = ElectricBlue,
             item = leftItem,
             category = activeCategory,
@@ -493,7 +504,7 @@ private fun VsFighterSlotsCard(
 
         VsFighterCornerCard(
             modifier = Modifier.weight(1f),
-            cornerLabel = "2. KÖŞE",
+            cornerLabel = tr(isTr, "2. KÖŞE", "CORNER 2"),
             cornerColor = NeonPurple,
             item = rightItem,
             category = activeCategory,
@@ -515,6 +526,9 @@ private fun VsFighterCornerCard(
     onClear: () -> Unit,
     onDetail: (HardwareId) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Card(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp))
@@ -588,13 +602,13 @@ private fun VsFighterCornerCard(
                     ) {
                         Text(text = category.iconEmoji(), fontSize = 24.sp)
                         Text(
-                            text = "+ ${category.shortBadgeText()} Seç",
+                            text = "+ ${category.shortBadgeText()} ${strings.wizardSelect}",
                             style = MaterialTheme.typography.labelMedium,
                             color = NeonCyan,
                             fontWeight = FontWeight.Bold,
                         )
                         Text(
-                            text = "Listeden eklemek için dokun",
+                            text = tr(isTr, "Listeden eklemek için dokun", "Tap to add from list"),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                             fontSize = 10.sp,
@@ -660,7 +674,10 @@ private fun VsChampionBannerCard(
     accentColor: Color,
     icon: String,
 ) {
-    val winnerColor = when (summary.winner) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val localized = if (isTr) summary else localizeChampionSummary(summary)
+    val winnerColor = when (localized.winner) {
         ComparisonWinner.LEFT, ComparisonWinner.RIGHT -> NeonEmerald
         ComparisonWinner.TIE -> NeonCyan
         ComparisonWinner.NEUTRAL -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f)
@@ -689,7 +706,7 @@ private fun VsChampionBannerCard(
                 ) {
                     Text(text = icon, fontSize = 16.sp)
                     Text(
-                        text = summary.title,
+                        text = localized.title,
                         style = MaterialTheme.typography.labelMedium,
                         color = accentColor,
                         fontWeight = FontWeight.ExtraBold,
@@ -707,7 +724,7 @@ private fun VsChampionBannerCard(
                     border = BorderStroke(1.dp, winnerColor.copy(alpha = 0.5f)),
                 ) {
                     Text(
-                        text = summary.badgeText,
+                        text = localized.badgeText,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                         style = MaterialTheme.typography.labelSmall,
                         color = winnerColor,
@@ -719,7 +736,7 @@ private fun VsChampionBannerCard(
             }
 
             Text(
-                text = summary.winnerName,
+                text = localized.winnerName,
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.ExtraBold,
@@ -728,7 +745,7 @@ private fun VsChampionBannerCard(
             )
 
             Text(
-                text = summary.subtitle,
+                text = localized.subtitle,
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -744,14 +761,14 @@ private fun VsChampionBannerCard(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     Text(
-                        text = "1. Köşe:",
+                        text = tr(isTr, "1. Köşe:", "Corner 1:"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     )
                     Text(
-                        text = summary.leftMetricText,
+                        text = localized.leftMetricText,
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (summary.winner == ComparisonWinner.LEFT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
+                        color = if (localized.winner == ComparisonWinner.LEFT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                     )
                 }
@@ -761,14 +778,14 @@ private fun VsChampionBannerCard(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     Text(
-                        text = "2. Köşe:",
+                        text = tr(isTr, "2. Köşe:", "Corner 2:"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     )
                     Text(
-                        text = summary.rightMetricText,
+                        text = localized.rightMetricText,
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (summary.winner == ComparisonWinner.RIGHT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
+                        color = if (localized.winner == ComparisonWinner.RIGHT) NeonEmerald else MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                     )
                 }
@@ -787,6 +804,8 @@ private fun VsGameFpsMatrixCard(
     selectedCategoryFilter: GameCategory?,
     onCategoryFilterChange: (GameCategory?) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val visibleGames = if (selectedCategoryFilter == null) {
         gameRows
     } else {
@@ -814,13 +833,13 @@ private fun VsGameFpsMatrixCard(
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = "🎮 12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ",
+                        text = tr(isTr, "🎮 12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ", "🎮 12-GAME FPS & 1% LOW SIMULATION MATRIX"),
                         style = MaterialTheme.typography.labelLarge,
                         color = NeonCyan,
                         fontWeight = FontWeight.ExtraBold,
                     )
                     Text(
-                        text = "Rekabetçi E-Spor (5) & AAA Ağır Grafik (7) gerçek katsayı kıyası",
+                        text = tr(isTr, "Rekabetçi E-Spor (5) & AAA Ağır Grafik (7) gerçek katsayı kıyası", "Competitive Esports (5) & AAA Graphics (7) verified benchmark delta"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -870,9 +889,9 @@ private fun VsGameFpsMatrixCard(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 val filters: List<Pair<GameCategory?, String>> = listOf(
-                    null to "Tümü (${gameRows.size})",
-                    GameCategory.ESPORTS to "🎯 E-Spor (5)",
-                    GameCategory.AAA to "🔥 AAA Grafik (7)",
+                    null to "${tr(isTr, "Tümü", "All")} (${gameRows.size})",
+                    GameCategory.ESPORTS to "${tr(isTr, "🎯 E-Spor", "🎯 Esports")} (5)",
+                    GameCategory.AAA to "${tr(isTr, "🔥 AAA Grafik", "🔥 AAA Graphics")} (7)",
                 )
                 filters.forEach { (cat, label) ->
                     val selected = selectedCategoryFilter == cat
@@ -1187,6 +1206,9 @@ private fun VsEmptyArenaCard(
     onPickLeft: () -> Unit,
     onPickRight: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -1204,14 +1226,14 @@ private fun VsEmptyArenaCard(
         ) {
             Text(text = "⚔️", fontSize = 36.sp)
             Text(
-                text = "${activeCategory.displayName} Karşılaştırma Arenası",
+                text = strings.vsArenaTitleFormat.replace("%s", activeCategory.localized(strings)),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.ExtraBold,
                 textAlign = TextAlign.Center,
             )
             Text(
-                text = "Yukarıdaki 1. Köşe ve 2. Köşe kutularına dokunarak veya Katalog ekranındaki ürün kartlarında yer alan 'VS' butonuyla iki ürünü kafa kafaya kıyaslayabilirsiniz.",
+                text = tr(isTr, "Yukarıdaki 1. Köşe ve 2. Köşe kutularına dokunarak veya Katalog ekranındaki ürün kartlarında yer alan 'VS' butonuyla iki ürünü kafa kafaya kıyaslayabilirsiniz.", "Tap Corner 1 and Corner 2 boxes or use the 'VS' button on catalog cards to compare hardware head-to-head."),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
@@ -1226,21 +1248,21 @@ private fun VsEmptyArenaCard(
                     modifier = Modifier.weight(1f),
                     border = BorderStroke(1.dp, ElectricBlue),
                 ) {
-                    Text("1. Köşeyi Seç", color = ElectricBlue, fontWeight = FontWeight.Bold)
+                    Text(strings.vsCorner1, color = ElectricBlue, fontWeight = FontWeight.Bold)
                 }
                 OutlinedButton(
                     onClick = onPickRight,
                     modifier = Modifier.weight(1f),
                     border = BorderStroke(1.dp, NeonPurple),
                 ) {
-                    Text("2. Köşeyi Seç", color = NeonCyan, fontWeight = FontWeight.Bold)
+                    Text(strings.vsCorner2, color = NeonCyan, fontWeight = FontWeight.Bold)
                 }
             }
 
             if (suggestedPair != null) {
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                 Text(
-                    text = "Popüler Kapışma Önerisi: ${suggestedPair.first.model} vs ${suggestedPair.second.model}",
+                    text = "${tr(isTr, "Popüler Kapışma Önerisi", "Popular Matchup")}: ${suggestedPair.first.model} vs ${suggestedPair.second.model}",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                     textAlign = TextAlign.Center,
@@ -1252,7 +1274,7 @@ private fun VsEmptyArenaCard(
                     shape = RoundedCornerShape(12.dp),
                 ) {
                     Text(
-                        text = "⚡ Örnek Kapışmayı Hemen Başlat",
+                        text = tr(isTr, "⚡ Örnek Kapışmayı Hemen Başlat", "⚡ Launch Sample Showdown"),
                         color = Color.White,
                         fontWeight = FontWeight.Bold,
                     )
@@ -1272,6 +1294,8 @@ private fun VsProductPickerSheetContent(
     selectedId: HardwareId?,
     onSelectItem: (HardwareItem) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -1281,7 +1305,7 @@ private fun VsProductPickerSheetContent(
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         Text(
-            text = "${if (slot == VsSlot.LEFT) "1. Köşe" else "2. Köşe"} İçin ${category.displayName} Seçin (${items.size})",
+            text = "${if (slot == VsSlot.LEFT) strings.vsCorner1 else strings.vsCorner2}: ${category.localized(strings)} (${items.size})",
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurface,
             fontWeight = FontWeight.ExtraBold,
@@ -1298,7 +1322,7 @@ private fun VsProductPickerSheetContent(
             modifier = Modifier.fillMaxWidth(),
             placeholder = {
                 Text(
-                    text = "${category.displayName} model, marka veya özellik ara...",
+                    text = "${category.localized(strings)} ${tr(isTr, "model, marka veya özellik ara...", "search model, brand or specs...")}",
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                 )
             },
@@ -1398,7 +1422,7 @@ private fun VsProductPickerSheetContent(
                             verticalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
                             Text(
-                                text = item.currentPriceTry.formatPriceWithCurrency("Fiyat Yok"),
+                                text = item.currentPriceTry.formatPriceWithCurrency(strings.customPriceOutOfStock),
                                 style = MaterialTheme.typography.titleSmall,
                                 color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
                                 fontWeight = FontWeight.ExtraBold,
@@ -1414,7 +1438,7 @@ private fun VsProductPickerSheetContent(
                                 border = BorderStroke(1.dp, if (isSelected) NeonCyan else ElectricBlue.copy(alpha = 0.5f)),
                             ) {
                                 Text(
-                                    text = if (isSelected) "Seçili" else "Seç",
+                                    text = if (isSelected) strings.wizardSelected else strings.wizardSelect,
                                     modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonCyan,
@@ -1430,3 +1454,51 @@ private fun VsProductPickerSheetContent(
         }
     }
 }
+
+private fun localizeChampionSummary(s: VsChampionSummary): VsChampionSummary {
+    val locTitle = when (s.title) {
+        "SAF PERFORMANS KAZANANI" -> "RAW PERFORMANCE WINNER"
+        "FİYAT / PERFORMANS ŞAMPİYONU" -> "PRICE / PERFORMANCE CHAMPION"
+        "MODERN MİMARİ & VERİMLİLİK LİDERİ" -> "MODERN ARCHITECTURE & EFFICIENCY LEADER"
+        else -> s.title
+    }
+    val locBadge = when {
+        s.badgeText.contains("Daha Güçlü") -> s.badgeText.replace("Daha Güçlü", "Faster")
+        s.badgeText.contains("Daha Avantajlı") -> s.badgeText.replace("Daha Avantajlı", "Better Value")
+        s.badgeText.contains("Fark (Eşit)") -> s.badgeText.replace("Fark (Eşit)", "Delta (Tie)")
+        s.badgeText.contains("Nesil / Teknoloji Farkı") -> "Gen / Tech Delta"
+        else -> s.badgeText
+    }
+    val locWinner = when (s.winnerName) {
+        "Baş Başa Performans (Eşit)" -> "Head-to-Head Parity (Tie)"
+        "Eşit F/P Oranı" -> "Equal Value Ratio"
+        "Benzer Mimari & Verimlilik" -> "Similar Architecture & Efficiency"
+        else -> s.winnerName
+    }
+    val locSubtitle = when (s.subtitle) {
+        "Performans Endeksi" -> "Performance Index"
+        "Güç & Tier Endeksi" -> "Power & Tier Index"
+        "Bellek Hız/Gecikme Endeksi" -> "Memory Speed/Latency Index"
+        "NVMe G/Ç Endeksi" -> "NVMe I/O Index"
+        "Platform & Genişleme Endeksi" -> "Platform & Expansion Index"
+        "Termal Kapasite Endeksi" -> "Thermal Capacity Index"
+        "Hava Akışı & Hacim Endeksi" -> "Airflow & Volume Index"
+        "Sensör & E-Spor Tepki Endeksi" -> "Sensor & Esports Response Index"
+        "Switch & Rapid Trigger Endeksi" -> "Switch & Rapid Trigger Index"
+        "Akustik Sürücü & Sahne Endeksi" -> "Acoustic Driver & Soundstage Index"
+        "Panel Hızı & Görüntü Endeksi" -> "Panel Speed & Display Index"
+        else -> s.subtitle
+    }
+    val locLeft = s.leftMetricText.replace("Puan", "Pts")
+    val locRight = s.rightMetricText.replace("Puan", "Pts")
+    return s.copy(
+        title = locTitle,
+        badgeText = locBadge,
+        winnerName = locWinner,
+        subtitle = locSubtitle,
+        leftMetricText = locLeft,
+        rightMetricText = locRight,
+    )
+}
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

@@ -79,6 +79,7 @@ fun SecondHandValuationScreen(
     onOpenDrawer: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
     val activeBuild by activeBuildRepository.activeBuild.collectAsState()
     val allDeals by communityPriceRepository.observeAllDeals().collectAsState(initial = emptyList())
 
@@ -186,7 +187,7 @@ fun SecondHandValuationScreen(
                             letterSpacing = 0.8.sp,
                         )
                         Text(
-                            text = "${valuationItems.size} Bileşen",
+                            text = strings.valComponentsCountFormat.replace("%d", valuationItems.size.toString()),
                             style = MaterialTheme.typography.labelSmall,
                             color = TextSecondary,
                         )
@@ -288,6 +289,7 @@ private fun TotalValuationTiersCard(
     marketMedian: Double,
     showcaseMint: Double,
 ) {
+    val strings = LocalAppStrings.current
     Surface(
         shape = RoundedCornerShape(16.dp),
         color = MaterialTheme.colorScheme.surface,
@@ -322,8 +324,8 @@ private fun TotalValuationTiersCard(
             ) {
                 // 1. Hızlı Nakit (Acil Satış)
                 TierColumnBox(
-                    title = "⚡ Hızlı Nakit",
-                    subtitle = "24-48 Saat İçi",
+                    title = "⚡ " + strings.valQuickCash,
+                    subtitle = strings.valQuickCashDesc,
                     price = quickSell,
                     color = NeonAmber,
                     modifier = Modifier.weight(1f),
@@ -331,7 +333,7 @@ private fun TotalValuationTiersCard(
 
                 // 2. Gerçekçi Piyasa Medyanı (Önerilen)
                 TierColumnBox(
-                    title = "🎯 Gerçekçi Pazar",
+                    title = "🎯 " + strings.valMarketValue,
                     subtitle = "Dengeli Piyasa",
                     price = marketMedian,
                     color = NeonEmerald,
@@ -399,6 +401,7 @@ private fun TierColumnBox(
 
 @Composable
 private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
+    val strings = LocalAppStrings.current
     Surface(
         shape = RoundedCornerShape(12.dp),
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
@@ -421,7 +424,7 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                         overflow = TextOverflow.Ellipsis,
                     )
                     Text(
-                        text = "${valItem.item.category.displayName} • Sıfır Fiyatı: ${formatTry(valItem.newPriceTry)}",
+                        text = "${valItem.item.category.displayName} • " + strings.valNewPriceLabel.replace("%s", formatTry(valItem.newPriceTry)),
                         style = MaterialTheme.typography.labelSmall,
                         color = TextSecondary,
                     )
@@ -453,11 +456,11 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column {
-                    Text("Hızlı Nakit", style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
+                    Text(strings.valQuickCash, style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
                     Text(formatTry(valItem.quickSellTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = NeonAmber)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("Piyasa Değeri", style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
+                    Text(strings.valMarketValue, style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
                     Text(formatTry(valItem.marketMedianTry), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Black, color = NeonEmerald)
                 }
                 Column(horizontalAlignment = Alignment.End) {
@@ -469,7 +472,7 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
             if (valItem.verifiedCommunityDealsCount > 0) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "✓ ${valItem.verifiedCommunityDealsCount} doğrulanmış 2. el topluluk işlemi baz alındı",
+                    text = strings.valVerifiedDealsFormat.replace("%d", valItem.verifiedCommunityDealsCount.toString()),
                     style = MaterialTheme.typography.labelSmall,
                     color = NeonCyan,
                     fontSize = 10.sp,
@@ -481,6 +484,7 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
 
 @Composable
 private fun SecondHandSellingTipsCard() {
+    val strings = LocalAppStrings.current
     Surface(
         shape = RoundedCornerShape(12.dp),
         color = MaterialTheme.colorScheme.surface,
@@ -505,19 +509,19 @@ private fun SecondHandSellingTipsCard() {
             SellingTipRow(
                 icon = "📦",
                 title = "Kutu & Fatura Etkisi (+%10-15)",
-                description = "Kutusu, faturası ve TR distribütör garantisi bulunan donanımlar hem çok daha hızlı satılır hem de vitrin değerinde alıcı bulur.",
+                description = strings.valTip1Desc,
             )
 
             SellingTipRow(
                 icon = "📊",
-                title = "Stres Testi Ekran Görüntüleri",
-                description = "İlanınıza 15 dakikalık FurMark, Cinebench R23 ve CrystalDiskInfo SSD sağlık ekran görüntülerini eklemek alıcı güvenini 3 katına çıkarır.",
+                title = strings.valTip2Title,
+                description = strings.valTip2Desc,
             )
 
             SellingTipRow(
                 icon = "✨",
                 title = "Temizlik ve Termal Macun",
-                description = "Kasa içi kablolaması düzenli, tozları temizlenmiş ve yeni termal macun uygulanmış sistemler fotoğraflarda anında fark yaratır.",
+                description = strings.valTip3Desc,
             )
         }
     }
@@ -559,16 +563,16 @@ private fun EmptyBuildValuationPrompt(onNavigateToWizard: () -> Unit) {
             Text(text = "🖥️", fontSize = 48.sp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = "Aktif Sistem Listeniz Boş",
+                text = LocalAppStrings.current.valuationEmptyTitle,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Black,
                 color = MaterialTheme.colorScheme.onSurface,
             )
             Spacer(modifier = Modifier.height(6.dp))
             Text(
-                text = "Sisteminizin 2. el değerini hesaplamak için PC Sihirbazı'ndan parçalarınızı seçin veya kataloğu gezin.",
+                text = LocalAppStrings.current.valuationEmptySubtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
             )
             Spacer(modifier = Modifier.height(16.dp))
@@ -578,7 +582,7 @@ private fun EmptyBuildValuationPrompt(onNavigateToWizard: () -> Unit) {
                 colors = ButtonDefaults.buttonColors(containerColor = NeonEmerald),
             ) {
                 Text(
-                    text = "PC Sihirbazı'na Git ve Parça Ekle",
+                    text = LocalAppStrings.current.valuationGoToWizard,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
                 )

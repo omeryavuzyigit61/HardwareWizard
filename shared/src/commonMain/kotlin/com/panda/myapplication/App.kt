@@ -587,13 +587,13 @@ private fun HardwareEngineeringDrawerContent(
                             }
                         }
                         Text(
-                            text = "Mühendislik Araçları & Lab",
+                            text = strings.drawerToolsHeader,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Black,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Donanım fiziği, gecikme ve akustik simülatörleri",
+                            text = strings.drawerToolsSubtitle,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -659,7 +659,7 @@ private fun HardwareEngineeringDrawerContent(
                                         border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.4f)),
                                     ) {
                                         Text(
-                                            text = "Yaş: ${currentUser.age}",
+                                            text = "${strings.userAgeLabel}: ${currentUser.age}",
                                             style = MaterialTheme.typography.labelSmall,
                                             fontWeight = FontWeight.Bold,
                                             color = NeonCyan,
@@ -690,7 +690,7 @@ private fun HardwareEngineeringDrawerContent(
                                 border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.5f)),
                                 modifier = Modifier.weight(1f),
                             ) {
-                                Text("Profili Gör", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                Text(strings.userViewProfile, style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                             }
                             OutlinedButton(
                                 onClick = onLogout,
@@ -698,7 +698,7 @@ private fun HardwareEngineeringDrawerContent(
                                 border = BorderStroke(0.5.dp, NeonRose.copy(alpha = 0.5f)),
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = NeonRose),
                             ) {
-                                Text("Çıkış", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                Text(strings.userLogout, style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                             }
                         }
                     } else {
@@ -712,13 +712,13 @@ private fun HardwareEngineeringDrawerContent(
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Column {
                                     Text(
-                                        text = "Misafir Kullanıcı",
+                                        text = strings.userGuest,
                                         style = MaterialTheme.typography.bodyMedium,
                                         fontWeight = FontWeight.Bold,
                                         color = MaterialTheme.colorScheme.onSurface,
                                     )
                                     Text(
-                                        text = "Giriş yapılmadı",
+                                        text = strings.userNotLoggedIn,
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
@@ -730,7 +730,7 @@ private fun HardwareEngineeringDrawerContent(
                                 colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
                             ) {
                                 Text(
-                                    text = "Giriş Yap",
+                                    text = strings.userLogin,
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = Color.Black,
@@ -837,7 +837,7 @@ private fun HardwareEngineeringDrawerContent(
                                 )
                                 if (isSelected) {
                                     Text(
-                                        text = "AKTİF",
+                                        text = strings.activeStatusBadge,
                                         style = MaterialTheme.typography.labelSmall,
                                         color = NeonEmerald,
                                         fontWeight = FontWeight.Black,
@@ -904,13 +904,13 @@ private fun HardwareEngineeringDrawerContent(
                         verticalArrangement = Arrangement.spacedBy(2.dp),
                     ) {
                         Text(
-                            text = "Uygulama Ayarları",
+                            text = strings.settingsTitle,
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Tema, 7 Dil, Para Birimi, Uzman Modu",
+                            text = strings.drawerSettingsSubtitle,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
@@ -940,13 +940,13 @@ private fun HardwareEngineeringDrawerContent(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     Text(
-                        text = "💡 Özel Fiyat Motoru (Local Price Override)",
+                        text = strings.drawerCustomPriceTitle,
                         style = MaterialTheme.typography.labelMedium,
                         color = NeonAmber,
                         fontWeight = FontWeight.Bold,
                     )
                     Text(
-                        text = "Katalogdaki veya detay sayfasındaki herhangi bir ürünün fiyat rozetine dokunarak kendi bulduğunuz indirimli/ikinci el fiyatı girebilirsiniz.",
+                        text = strings.drawerCustomPriceDesc,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         lineHeight = 15.sp,

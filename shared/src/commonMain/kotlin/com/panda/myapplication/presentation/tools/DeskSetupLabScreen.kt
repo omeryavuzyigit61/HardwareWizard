@@ -68,16 +68,18 @@ private val RESOLUTIONS = listOf(
 private val SCREEN_SIZES_INCH = listOf(24.0, 24.5, 27.0, 31.5, 34.0)
 
 private data class AudioCodecOption(
-    val name: String,
+    val nameTr: String,
+    val nameEn: String,
     val maxCleanImpedanceOhm: Int,
     val vrmsOutput: String,
-    val desc: String,
-)
+) {
+    fun localizedName(isTr: Boolean): String = if (isTr) nameTr else nameEn
+}
 
 private val AUDIO_CODECS = listOf(
-    AudioCodecOption("Realtek ALC897 (Giriş/Orta Anakart)", 60, "1.1 Vrms", "Standart giriş seviyesi kodek; 80Ω üstü stüdyo kulaklıklarda ses kısık ve cansız kalır."),
-    AudioCodecOption("Realtek ALC1220 (Üst Segment Anakart)", 120, "2.0 Vrms", "Akıllı kulaklık amfisi içerir; 80Ω kulaklıkları rahat sürer, 250Ω için sınırda kalır."),
-    AudioCodecOption("ALC4080 + Savitech SV3H712 (Amiral Gemisi)", 250, "2.8 Vrms", "Dahili ESS/Savitech DAC-Amfi yongası sayesinde 250Ω stüdyo kulaklıkları bile doğrudan besler."),
+    AudioCodecOption("Realtek ALC897 (Giriş/Orta Anakart)", "Realtek ALC897 (Mainstream Motherboard)", 60, "1.1 Vrms"),
+    AudioCodecOption("Realtek ALC1220 (Üst Segment Anakart)", "Realtek ALC1220 (Premium Motherboard)", 120, "2.0 Vrms"),
+    AudioCodecOption("ALC4080 + Savitech SV3H712 (Amiral Gemisi)", "ALC4080 + Savitech SV3H712 (Flagship DAC)", 250, "2.8 Vrms"),
 )
 
 @Composable
@@ -86,6 +88,8 @@ fun DeskSetupLabScreen(
     onOpenDrawer: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var selectedScreenSizeIdx by remember { mutableIntStateOf(2) } // 27"
     var selectedResIdx by remember { mutableIntStateOf(1) } // 1440p
     var selectedPollingHz by remember { mutableIntStateOf(4000) }
@@ -131,7 +135,7 @@ fun DeskSetupLabScreen(
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
-                            text = "1. MONİTÖR PPI KESKİNLİK & GPU YÜK ÇARPANI",
+                            text = strings.deskMonitorTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -147,7 +151,7 @@ fun DeskSetupLabScreen(
                                 FilterChip(
                                     selected = idx == selectedScreenSizeIdx,
                                     onClick = { selectedScreenSizeIdx = idx },
-                                    label = { Text("${inch}\" Ekran") },
+                                    label = { Text("${inch}\" " + strings.deskScreenSuffix) },
                                     colors = FilterChipDefaults.filterChipColors(
                                         selectedContainerColor = NeonCyan.copy(alpha = 0.2f),
                                         selectedLabelColor = NeonCyan,
@@ -182,7 +186,7 @@ fun DeskSetupLabScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Column {
-                                Text("Piksel Yoğunluğu", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                Text(strings.deskPixelDensity, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 Text(
                                     text = "$ppi PPI",
                                     style = MaterialTheme.typography.titleLarge,
@@ -195,7 +199,7 @@ fun DeskSetupLabScreen(
                                 )
                             }
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text("İdeal Bakış Mesafesi", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                Text(strings.deskViewingDistance, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 Text(
                                     text = "~$idealDistanceCm cm",
                                     style = MaterialTheme.typography.titleLarge,
@@ -204,7 +208,7 @@ fun DeskSetupLabScreen(
                                 )
                             }
                             Column(horizontalAlignment = Alignment.End) {
-                                Text("GPU Piksel Yükü", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                Text(strings.deskGpuPixelLoad, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 Text(
                                     text = "%${res.gpuLoadPercent}",
                                     style = MaterialTheme.typography.titleLarge,
@@ -216,9 +220,9 @@ fun DeskSetupLabScreen(
 
                         Text(
                             text = when {
-                                ppi >= 135 -> "✅ Retina Seviyesi Keskinlik ($ppi PPI): Pikseller çıplak gözle seçilemez, ancak GPU üzerinde 1080p'ye kıyasla %${res.gpuLoadPercent} piksel işleme yükü oluşturur."
-                                ppi >= 100 -> "✅ Altın Oran ($ppi PPI): Hem metin netliği hem de oyun FPS verimliliği için en dengeli masaüstü yoğunluğu."
-                                else -> "⚠️ Düşük Yoğunluk ($ppi PPI): ${screenInch}\" boyutta ${res.label} yakından bakıldığında pikselli görünebilir (en az $idealDistanceCm cm mesafeden bakılmalıdır)."
+                                ppi >= 135 -> strings.deskPpiRetina.replace("%d", ppi.toString()).replace("%%d", res.gpuLoadPercent.toString())
+                                ppi >= 100 -> strings.deskPpiBalanced.replace("%d", ppi.toString())
+                                else -> strings.deskPpiLow.replace("%d", ppi.toString()).replace("%s", "${screenInch}\"").replace("%s", res.label).replace("%d", idealDistanceCm.toString())
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -237,7 +241,7 @@ fun DeskSetupLabScreen(
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
-                            text = "2. MOUSE POLLING RATE (1000Hz – 8000Hz) ANALİZÖRÜ",
+                            text = strings.deskMouseTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = ElectricBlue,
@@ -278,14 +282,14 @@ fun DeskSetupLabScreen(
 
                         val intervalMs = 1000.0 / selectedPollingHz
                         val cpuOverheadText = when (selectedPollingHz) {
-                            1000 -> "Düşük CPU Yükü (~%1) • Tüm işlemciler ve 144Hz+ monitörlerle tam uyumlu."
-                            2000 -> "Dengeli E-Spor Modu (~%2.5 CPU IRQ yükü) • Kablosuz batarya ömrü ve akıcılık dengesi."
-                            4000 -> "Yüksek CPU Kesme (IRQ) Yükü (~%5-8) • En az Ryzen 5 7500F / i5-13600K ve 240Hz+ monitör önerilir."
-                            else -> "⚠️ Ekstrem 8000Hz (0.125ms): Saniyede 8.000 USB kesmesi üretir! Eski işlemcilerde FPS drop yapabilir; Ryzen 7 7800X3D/9800X3D ve 360Hz+ monitörle gerçek farkını gösterir."
+                            1000 -> strings.deskMouse1k
+                            2000 -> strings.deskMouse2k
+                            4000 -> strings.deskMouse4k
+                            else -> strings.deskMouse8k
                         }
 
                         Text(
-                            text = "Raporlama Aralığı: $intervalMs ms  •  $cpuOverheadText",
+                            text = "${strings.deskReportInterval.replace("%s", intervalMs.toString())}  •  $cpuOverheadText",
                             style = MaterialTheme.typography.bodySmall,
                             color = if (selectedPollingHz >= 4000) NeonAmber else NeonEmerald,
                         )
@@ -303,7 +307,7 @@ fun DeskSetupLabScreen(
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
-                            text = "3. KLAVYE RAPID TRIGGER (HALL EFFECT) SİMÜLATÖRÜ",
+                            text = strings.deskKeyboardTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonAmber,
@@ -311,7 +315,7 @@ fun DeskSetupLabScreen(
 
                         val pressDepthMm = rapidTriggerTravelMmTenths / 10.0
                         Text(
-                            text = "Simüle Edilen Tuş Basım Derinliği: $pressDepthMm mm / 4.0 mm",
+                            text = strings.deskKeyDepth.replace("%s", pressDepthMm.toString()),
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
@@ -338,15 +342,15 @@ fun DeskSetupLabScreen(
                                 modifier = Modifier.weight(1f),
                             ) {
                                 Column(modifier = Modifier.padding(10.dp)) {
-                                    Text("Mekanik Switch", style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = NeonAmber)
+                                    Text(strings.deskMechSwitch, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = NeonAmber)
                                     Text(
-                                        text = if (mechActuated) "BASILI (2.0mm Geçildi)" else "TETİKLENMEDİ (<2.0mm)",
+                                        text = if (mechActuated) strings.deskMechActuated else strings.deskMechNotActuated,
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = FontWeight.Black,
                                         color = if (mechActuated) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                     Text(
-                                        text = "Durmak için parmağınızı $mechResetDistMm mm yukarı (1.8mm noktasına) kaldırmalısınız (~32ms gecikme).",
+                                        text = strings.deskMechResetDelay.replace("%s", mechResetDistMm.toString()),
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
@@ -360,15 +364,15 @@ fun DeskSetupLabScreen(
                                 modifier = Modifier.weight(1f),
                             ) {
                                 Column(modifier = Modifier.padding(10.dp)) {
-                                    Text("Manyetik Hall Effect", style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = NeonEmerald)
+                                    Text(strings.deskHallSwitch, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = NeonEmerald)
                                     Text(
-                                        text = if (hallActuated) "AKTİF (0.1mm Rapid Trigger)" else "HAZIR",
+                                        text = if (hallActuated) strings.deskHallActuated else strings.deskHallReady,
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = FontWeight.Black,
                                         color = NeonEmerald,
                                     )
                                     Text(
-                                        text = "Parmağınızı sadece 0.1 mm yukarı oynattığınız anda (~2ms) tuş sıfırlanır ve karakter anında durur!",
+                                        text = strings.deskHallResetSpeed,
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
@@ -389,7 +393,7 @@ fun DeskSetupLabScreen(
                 ) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         Text(
-                            text = "4. KULAKLIK EMPEDANS (Ω) & SES KARTI EŞLEŞTİRİCİ",
+                            text = strings.deskAudioTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonEmerald,
@@ -430,7 +434,7 @@ fun DeskSetupLabScreen(
                                     verticalAlignment = Alignment.CenterVertically,
                                 ) {
                                     Text(
-                                        text = codec.name,
+                                        text = codec.localizedName(isTr),
                                         style = MaterialTheme.typography.bodySmall,
                                         fontWeight = FontWeight.Bold,
                                         color = if (selected) NeonCyan else MaterialTheme.colorScheme.onSurface,
@@ -447,6 +451,7 @@ fun DeskSetupLabScreen(
 
                         val activeCodec = AUDIO_CODECS[selectedCodecIdx]
                         val needsDac = selectedImpedanceOhm > activeCodec.maxCleanImpedanceOhm
+                        val activeCodecName = activeCodec.localizedName(isTr)
 
                         Surface(
                             shape = RoundedCornerShape(10.dp),
@@ -457,9 +462,9 @@ fun DeskSetupLabScreen(
                             Column(modifier = Modifier.padding(12.dp)) {
                                 Text(
                                     text = if (needsDac) {
-                                        "⚠️ Harici DAC / Amfi Şart! ($selectedImpedanceOhm Ω vs ${activeCodec.name})"
+                                        strings.deskAudioDacNeeded.replace("%d", selectedImpedanceOhm.toString()).replace("%s", activeCodecName)
                                     } else {
-                                        "✅ Doğrudan Tam Güçle Sürülebilir ($selectedImpedanceOhm Ω)"
+                                        strings.deskAudioDacOk.replace("%d", selectedImpedanceOhm.toString())
                                     },
                                     style = MaterialTheme.typography.labelLarge,
                                     fontWeight = FontWeight.Black,
@@ -467,9 +472,9 @@ fun DeskSetupLabScreen(
                                 )
                                 Text(
                                     text = if (needsDac) {
-                                        "${activeCodec.name} (${activeCodec.vrmsOutput}) $selectedImpedanceOhm Ω empedanslı kulaklıkta yeterli voltaj salınımı üretemez; baslar zayıflar ve maksimum ses seviyesi düşük kalır. Harici USB DAC/Amfi (Örn: FiiO K5/K7, SoundBlaster G6) kullanılmalıdır."
+                                        strings.deskAudioDacNeededDesc.replace("%s", activeCodecName).replace("%s", activeCodec.vrmsOutput).replace("%d", selectedImpedanceOhm.toString())
                                     } else {
-                                        "${activeCodec.name} (${activeCodec.vrmsOutput}), $selectedImpedanceOhm Ω kulaklığı harici amfiye ihtiyaç duymadan tam dinamik aralıkta besleyebilir."
+                                        strings.deskAudioDacOkDesc.replace("%s", activeCodecName).replace("%s", activeCodec.vrmsOutput).replace("%d", selectedImpedanceOhm.toString())
                                     },
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurface,

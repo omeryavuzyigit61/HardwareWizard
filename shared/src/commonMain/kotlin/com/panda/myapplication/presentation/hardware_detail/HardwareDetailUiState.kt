@@ -10,6 +10,7 @@ data class HardwareDetailUiState(
     val isLoading: Boolean = true,
     val item: HardwareItem? = null,
     val errorMessage: String? = null,
+    val errorMessageEn: String? = null,
     val isAddedToBuild: Boolean = false,
     val communityDeals: List<CommunityDeal> = emptyList(),
     val isAdmin: Boolean = false,

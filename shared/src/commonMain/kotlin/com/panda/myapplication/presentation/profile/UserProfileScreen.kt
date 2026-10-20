@@ -74,6 +74,8 @@ fun UserProfileScreen(
     onNavigateToSettings: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val coroutineScope = rememberCoroutineScope()
     val uriHandler = LocalUriHandler.current
 
@@ -133,14 +135,14 @@ fun UserProfileScreen(
                 }
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = "Henüz Giriş Yapmadınız",
+                    text = strings.profileNotLoggedIn,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Black,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Fiyat bildirimlerinizi takip etmek, onay/ret istatistiklerinizi görmek ve donanım ruhunuzu belirlemek için giriş yapın veya kayıt olun.",
+                    text = tr(isTr, "Fiyat bildirimlerinizi takip etmek, onay/ret istatistiklerinizi görmek ve donanım ruhunuzu belirlemek için giriş yapın veya kayıt olun.", "Sign in or register to track price reports, view approval stats, and customize your hardware profile."),
                     style = MaterialTheme.typography.bodyMedium,
                     color = TextSecondary,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -153,7 +155,7 @@ fun UserProfileScreen(
                     modifier = Modifier.fillMaxWidth(0.8f),
                 ) {
                     Text(
-                        text = "⚡ Giriş Yap / Kayıt Ol",
+                        text = strings.profileLoginBtn,
                         fontWeight = FontWeight.Bold,
                         color = Color.Black,
                     )
@@ -205,7 +207,7 @@ fun UserProfileScreen(
                                     Text("🛡️", fontSize = 20.sp)
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Text(
-                                        text = "Yönetici Portalı Bilgilendirmesi",
+                                        text = tr(isTr, "Yönetici Portalı Bilgilendirmesi", "Administrator Portal Notice"),
                                         style = MaterialTheme.typography.labelLarge,
                                         fontWeight = FontWeight.Black,
                                         color = NeonAmber,
@@ -213,7 +215,7 @@ fun UserProfileScreen(
                                 }
                                 Spacer(modifier = Modifier.height(6.dp))
                                 Text(
-                                    text = "Yönetici onay ve ret işlemleri, mobil uygulamayı sade ve güvenli tutmak adına PC Web Portalı üzerinden yürütülmektedir.\nTarayıcınızdan 'admin_portal.html' dosyasını açarak 2FA korumalı yönetici panelinize erişebilirsiniz.",
+                                    text = tr(isTr, "Yönetici onay ve ret işlemleri, mobil uygulamayı sade ve güvenli tutmak adına PC Web Portalı üzerinden yürütülmektedir.\nTarayıcınızdan 'admin_portal.html' dosyasını açarak 2FA korumalı yönetici panelinize erişebilirsiniz.", "Admin review and approval operations are managed via the PC Web Portal to keep the mobile experience streamlined and secure.\nOpen 'admin_portal.html' in your browser to access the 2FA-secured dashboard."),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurface,
                                 )
@@ -241,13 +243,13 @@ fun UserProfileScreen(
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Column {
                                     Text(
-                                        text = "Uygulama Ayarları",
+                                        text = tr(isTr, "Uygulama Ayarları", "Application Settings"),
                                         style = MaterialTheme.typography.titleSmall,
                                         fontWeight = FontWeight.Bold,
                                         color = MaterialTheme.colorScheme.onSurface,
                                     )
                                     Text(
-                                        text = "Tema, 7 Dil, Para Birimi, Uzman Modu, Kaynakça",
+                                        text = tr(isTr, "Tema, 7 Dil, Para Birimi, Uzman Modu, Kaynakça", "Theme, 7 Languages, Currency, Expert Mode, Sources"),
                                         style = MaterialTheme.typography.bodySmall,
                                         color = TextSecondary,
                                     )
@@ -271,7 +273,7 @@ fun UserProfileScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = "FİYAT BİLDİRİM GEÇMİŞİM (${userDeals.size})",
+                            text = "${tr(isTr, "FİYAT BİLDİRİM GEÇMİŞİM", "MY PRICE SUBMISSION HISTORY")} (${userDeals.size})",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -296,12 +298,12 @@ fun UserProfileScreen(
                                 Text("🏷️", fontSize = 32.sp)
                                 Spacer(modifier = Modifier.height(6.dp))
                                 Text(
-                                    text = "Henüz fiyat bildiriminde bulunmadınız.",
+                                    text = tr(isTr, "Henüz fiyat bildiriminde bulunmadınız.", "You have not submitted any price reports yet."),
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = TextSecondary,
                                 )
                                 Text(
-                                    text = "Ürün detay sayfalarındaki 'Fiyat Bildir' butonunu kullanarak ilk fırsatınızı paylaşabilirsiniz.",
+                                    text = tr(isTr, "Ürün detay sayfalarındaki 'Fiyat Bildir' butonunu kullanarak ilk fırsatınızı paylaşabilirsiniz.", "Use the 'Report Price' button on product detail pages to share your first deal."),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = NeonCyan,
                                 )
@@ -331,7 +333,7 @@ fun UserProfileScreen(
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         Text(
-                            text = "🚪 Hesaptan Çıkış Yap",
+                            text = strings.profileLogoutBtn,
                             fontWeight = FontWeight.Bold,
                         )
                     }
@@ -348,6 +350,8 @@ private fun ProfileTopBar(
     onNavigateBack: () -> Unit,
     onNavigateToSettings: () -> Unit = {},
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Surface(
         color = MaterialTheme.colorScheme.background,
         modifier = Modifier.fillMaxWidth(),
@@ -376,7 +380,7 @@ private fun ProfileTopBar(
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = "Geri",
+                        text = tr(isTr, "Geri", "Back"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                     )
@@ -384,7 +388,7 @@ private fun ProfileTopBar(
             }
 
             Text(
-                text = "Kullanıcı Profili",
+                text = strings.profileTitle,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Black,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -411,6 +415,8 @@ private fun ProfileHeroCard(
     user: UserProfile,
     isMasterAdmin: Boolean,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     FluidOrganicCard(
         modifier = Modifier.fillMaxWidth(),
         accentColor = if (isMasterAdmin) NeonAmber else Color(user.spiritHardware.colorHex),
@@ -457,7 +463,7 @@ private fun ProfileHeroCard(
                                 border = BorderStroke(0.5.dp, NeonAmber),
                             ) {
                                 Text(
-                                    text = "🛡️ YÖNETİCİ",
+                                    text = tr(isTr, "🛡️ YÖNETİCİ", "🛡️ ADMIN"),
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonAmber,
@@ -489,7 +495,7 @@ private fun ProfileHeroCard(
                             border = BorderStroke(0.5.dp, NeonCyan.copy(alpha = 0.4f)),
                         ) {
                             Text(
-                                text = "Yaş: ${user.age}",
+                                text = "${tr(isTr, "Yaş", "Age")}: ${user.age}",
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
@@ -519,6 +525,8 @@ private fun ProfileHeroCard(
 
 @Composable
 private fun SpiritHardwareShowcaseCard(user: UserProfile) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val spirit = user.spiritHardware
     val spiritColor = Color(spirit.colorHex)
 
@@ -535,7 +543,7 @@ private fun SpiritHardwareShowcaseCard(user: UserProfile) {
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "RUH DONANIMIN",
+                    text = tr(isTr, "RUH DONANIMIN", "YOUR SPIRIT HARDWARE"),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = spiritColor,
@@ -570,6 +578,8 @@ private fun CommunityStatsSection(
     pendingCount: Int,
     rejectedCount: Int,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Surface(
         shape = RoundedCornerShape(12.dp),
         color = CardSurface,
@@ -578,7 +588,7 @@ private fun CommunityStatsSection(
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
             Text(
-                text = "FİYAT BİLDİRİM İSTATİSTİKLERİ",
+                text = tr(isTr, "FİYAT BİLDİRİM İSTATİSTİKLERİ", "PRICE SUBMISSION STATISTICS"),
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Black,
                 color = NeonCyan,
@@ -590,22 +600,22 @@ private fun CommunityStatsSection(
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
                 StatMetricColumn(
-                    title = "Toplam",
+                    title = strings.wizardTotalPrefix,
                     count = totalCount.toString(),
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 StatMetricColumn(
-                    title = "✓ Onaylanan",
+                    title = tr(isTr, "✓ Onaylanan", "✓ Approved"),
                     count = approvedCount.toString(),
                     color = NeonEmerald,
                 )
                 StatMetricColumn(
-                    title = "⏳ İncelemede",
+                    title = tr(isTr, "⏳ İncelemede", "⏳ In Review"),
                     count = pendingCount.toString(),
                     color = NeonAmber,
                 )
                 StatMetricColumn(
-                    title = "✕ Reddedilen",
+                    title = tr(isTr, "✕ Reddedilen", "✕ Rejected"),
                     count = rejectedCount.toString(),
                     color = NeonRose,
                 )
@@ -640,10 +650,12 @@ private fun UserDealItemCard(
     deal: CommunityDeal,
     onOpenUrl: (String) -> Unit,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val (statusColor, statusText) = when (deal.status) {
-        DealStatus.APPROVED -> NeonEmerald to "✓ Onaylandı"
-        DealStatus.PENDING -> NeonAmber to "⏳ İncelemede"
-        DealStatus.REJECTED -> NeonRose to "✕ Reddedildi"
+        DealStatus.APPROVED -> NeonEmerald to tr(isTr, "✓ Onaylandı", "✓ Approved")
+        DealStatus.PENDING -> NeonAmber to tr(isTr, "⏳ İncelemede", "⏳ In Review")
+        DealStatus.REJECTED -> NeonRose to tr(isTr, "✕ Reddedildi", "✕ Rejected")
     }
 
     Surface(
@@ -690,7 +702,7 @@ private fun UserDealItemCard(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "${deal.dealType.emoji} ${deal.dealType.title}",
+                    text = "${deal.dealType.emoji} ${deal.dealType.localizedTitle(isTr)}",
                     style = MaterialTheme.typography.bodySmall,
                     color = TextSecondary,
                 )
@@ -705,7 +717,7 @@ private fun UserDealItemCard(
             if (!deal.note.isNullOrBlank()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Not: ${deal.note}",
+                    text = "${tr(isTr, "Not", "Note")}: ${deal.note}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -714,7 +726,7 @@ private fun UserDealItemCard(
             if (!deal.proofUrl.isNullOrBlank()) {
                 Spacer(modifier = Modifier.height(6.dp))
                 Text(
-                    text = "🔗 Kanıt Linkini Aç",
+                    text = tr(isTr, "🔗 Kanıt Linkini Aç", "🔗 Open Proof Link"),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = ElectricBlue,
@@ -731,7 +743,7 @@ private fun UserDealItemCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Text(
-                        text = "Reddetme Nedeni: ${deal.reviewNote}",
+                        text = "${tr(isTr, "Reddetme Nedeni", "Rejection Reason")}: ${deal.reviewNote}",
                         style = MaterialTheme.typography.labelSmall,
                         color = NeonRose,
                         modifier = Modifier.padding(6.dp),
@@ -741,3 +753,5 @@ private fun UserDealItemCard(
         }
     }
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

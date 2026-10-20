@@ -92,6 +92,9 @@ fun CommunityPriceLedgerSection(
     val displayDeals = if (isAdmin) deals else deals.filter { it.status == DealStatus.APPROVED }
     val approvedDeals = deals.filter { it.status == DealStatus.APPROVED }
 
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val minPrice = approvedDeals.minOfOrNull { it.priceTry }
     val avgPrice = if (approvedDeals.isNotEmpty()) approvedDeals.map { it.priceTry }.average() else null
 
@@ -138,7 +141,7 @@ fun CommunityPriceLedgerSection(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    text = "🔄 Yenile",
+                                    text = strings.ledgerRefresh,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonCyan,
                                     fontSize = 10.sp,
@@ -156,7 +159,7 @@ fun CommunityPriceLedgerSection(
                         border = BorderStroke(1.dp, NeonAmber),
                     ) {
                         Text(
-                            text = "🛡️ YÖNETİCİ",
+                            text = tr(isTr, "🛡️ YÖNETİCİ", "🛡️ ADMIN"),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = NeonAmber,
@@ -169,7 +172,7 @@ fun CommunityPriceLedgerSection(
                         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
                     ) {
                         Text(
-                            text = "${approvedDeals.size} Fırsat",
+                            text = if (isTr) "${approvedDeals.size} Fırsat" else "${approvedDeals.size} Deals",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
@@ -181,7 +184,7 @@ fun CommunityPriceLedgerSection(
             Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = "Kullanıcıların kendi aldıkları, 2. el, yurtdışı veya mağaza kampanyalarında yakaladıkları fiyat kayıtları.",
+                text = tr(isTr, "Kullanıcıların kendi aldıkları, 2. el, yurtdışı veya mağaza kampanyalarında yakaladıkları fiyat kayıtları.", "Community records of user purchase prices, second-hand deals, imports, or retail discounts."),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -204,7 +207,7 @@ fun CommunityPriceLedgerSection(
                     ) {
                         Column {
                             Text(
-                                text = "En İyi Fırsat",
+                                text = tr(isTr, "En İyi Fırsat", "Best Deal"),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -218,7 +221,7 @@ fun CommunityPriceLedgerSection(
 
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = "Topluluk Ort.",
+                                text = tr(isTr, "Topluluk Ort.", "Community Avg."),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -232,12 +235,12 @@ fun CommunityPriceLedgerSection(
 
                         Column(horizontalAlignment = Alignment.End) {
                             Text(
-                                text = "Bildirim Sayısı",
+                                text = tr(isTr, "Bildirim Sayısı", "Reports Count"),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                             Text(
-                                text = "${approvedDeals.size} Doğrulanmış",
+                                text = "${approvedDeals.size} ${tr(isTr, "Doğrulanmış", "Verified")}",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onSurface,
@@ -266,13 +269,13 @@ fun CommunityPriceLedgerSection(
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = "Henüz onaylanmış topluluk fiyatı bildirilmedi.",
+                            text = tr(isTr, "Henüz onaylanmış topluluk fiyatı bildirilmedi.", "No approved community price reported yet."),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(modifier = Modifier.height(6.dp))
                         Text(
-                            text = "Bu ürünü kaça aldığınızı veya gördüğünüz fırsatı ilk siz paylaşın!",
+                            text = tr(isTr, "Bu ürünü kaça aldığınızı veya gördüğünüz fırsatı ilk siz paylaşın!", "Share what you paid or report a discount deal you spotted!"),
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonCyan,
                         )
@@ -313,7 +316,7 @@ fun CommunityPriceLedgerSection(
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
                 ) {
                     Text(
-                        text = "+ Fiyat Bildir / Fırsat Paylaş",
+                        text = strings.ledgerSubmitDealBtn,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                     )
@@ -322,7 +325,7 @@ fun CommunityPriceLedgerSection(
                 if (isAdmin) {
                     TextButton(onClick = onAdminLogoutClick) {
                         Text(
-                            text = "Admin Çıkışı",
+                            text = strings.ledgerAdminLogout,
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonRose,
                         )
@@ -344,6 +347,8 @@ private fun CommunityDealTickerRow(
     onApprove: () -> Unit,
     onReject: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val (typeColor, typeEmoji) = when (deal.dealType) {
         CommunityDealType.OWN_PURCHASE -> ElectricBlue to "🛍️"
         CommunityDealType.SECOND_HAND -> NeonRose to "🔄"
@@ -377,7 +382,7 @@ private fun CommunityDealTickerRow(
                     border = BorderStroke(0.5.dp, typeColor.copy(alpha = 0.5f)),
                 ) {
                     Text(
-                        text = "$typeEmoji ${deal.dealType.badgeLabel}",
+                        text = "$typeEmoji ${deal.dealType.localizedBadgeLabel(isTr)}",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = typeColor,
@@ -398,7 +403,7 @@ private fun CommunityDealTickerRow(
                     )
                     if (deal.proofUrl != null) {
                         Text(
-                            text = "🔗 Kanıt Mevcut",
+                            text = tr(isTr, "🔗 Kanıt Mevcut", "🔗 Proof Available"),
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonCyan.copy(alpha = 0.8f),
                             fontSize = 10.sp,
@@ -418,7 +423,7 @@ private fun CommunityDealTickerRow(
                     )
                     if (deal.status == DealStatus.PENDING) {
                         Text(
-                            text = "⏳ Onay Bekliyor",
+                            text = tr(isTr, "⏳ Onay Bekliyor", "⏳ Awaiting Review"),
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonAmber,
                             fontSize = 10.sp,
@@ -467,6 +472,9 @@ fun CommunityDealDetailDialog(
     onApprove: () -> Unit,
     onReject: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val uriHandler = LocalUriHandler.current
     val clipboardManager = LocalClipboardManager.current
 
@@ -480,7 +488,7 @@ fun CommunityDealDetailDialog(
             ) {
                 Text(deal.dealType.emoji)
                 Text(
-                    text = "Topluluk Fiyat Bildirimi",
+                    text = tr(isTr, "Topluluk Fiyat Bildirimi", "Community Price Submission"),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                 )
@@ -515,7 +523,7 @@ fun CommunityDealDetailDialog(
                     ) {
                         Column {
                             Text(
-                                text = "Bildirilen Fiyat",
+                                text = strings.ledgerReportedPrice,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -548,15 +556,15 @@ fun CommunityDealDetailDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
                     Text(
-                        text = "Paylaşan: ${deal.userDisplayName}",
+                        text = "${tr(isTr, "Paylaşan", "Reported by")}: ${deal.userDisplayName}",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Text(
                         text = when (deal.status) {
-                            DealStatus.APPROVED -> "✓ Doğrulandı"
-                            DealStatus.PENDING -> "⏳ İncelemede"
-                            DealStatus.REJECTED -> "✕ Reddedildi"
+                            DealStatus.APPROVED -> tr(isTr, "✓ Doğrulandı", "✓ Verified")
+                            DealStatus.PENDING -> tr(isTr, "⏳ İncelemede", "⏳ In Review")
+                            DealStatus.REJECTED -> tr(isTr, "✕ Reddedildi", "✕ Rejected")
                         },
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
@@ -577,7 +585,7 @@ fun CommunityDealDetailDialog(
                     ) {
                         Column(modifier = Modifier.padding(10.dp)) {
                             Text(
-                                text = "💬 Kullanıcı Notu:",
+                                text = strings.ledgerUserNotePrefix,
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
@@ -607,7 +615,7 @@ fun CommunityDealDetailDialog(
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         Text(
-                            text = "🔗 Kanıt Linkini İncele / Aç",
+                            text = strings.ledgerProofLinkBtn,
                             style = MaterialTheme.typography.labelMedium,
                             color = ElectricBlue,
                         )
@@ -618,7 +626,7 @@ fun CommunityDealDetailDialog(
                 if (isAdmin) {
                     Spacer(modifier = Modifier.height(Spacing.small))
                     Text(
-                        text = "🛡️ Yönetici Moderasyon Kararı:",
+                        text = tr(isTr, "🛡️ Yönetici Moderasyon Kararı:", "🛡️ Admin Moderation Decision:"),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonAmber,
@@ -633,7 +641,7 @@ fun CommunityDealDetailDialog(
                             shape = RoundedCornerShape(8.dp),
                             modifier = Modifier.weight(1f),
                         ) {
-                            Text("✓ Onayla", fontWeight = FontWeight.Bold)
+                            Text(tr(isTr, "✓ Onayla", "✓ Approve"), fontWeight = FontWeight.Bold)
                         }
                         Button(
                             onClick = onReject,
@@ -641,7 +649,7 @@ fun CommunityDealDetailDialog(
                             shape = RoundedCornerShape(8.dp),
                             modifier = Modifier.weight(1f),
                         ) {
-                            Text("✕ Reddet", fontWeight = FontWeight.Bold)
+                            Text(tr(isTr, "✕ Reddet", "✕ Reject"), fontWeight = FontWeight.Bold)
                         }
                     }
                 }
@@ -649,7 +657,7 @@ fun CommunityDealDetailDialog(
         },
         confirmButton = {
             TextButton(onClick = onDismiss) {
-                Text("Kapat")
+                Text(if (isTr) "Kapat" else "Close")
             }
         },
     )
@@ -667,6 +675,8 @@ fun SubmitCommunityDealSheet(
     onSubmit: (priceTry: Double, dealType: CommunityDealType, note: String?, proofUrl: String?, userDisplayName: String) -> Unit,
     defaultUserDisplayName: String = "",
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     var priceText by remember { mutableStateOf("") }
@@ -691,7 +701,7 @@ fun SubmitCommunityDealSheet(
             verticalArrangement = Arrangement.spacedBy(Spacing.small),
         ) {
             Text(
-                text = "⚡ Topluluk Fiyatı / Fırsatı Bildir",
+                text = strings.ledgerSubmitSheetTitle,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Black,
                 color = NeonCyan,
@@ -705,7 +715,7 @@ fun SubmitCommunityDealSheet(
             )
 
             Text(
-                text = "Aldığınız fiyatı veya piyasada gördüğünüz bir fırsatı bildirin. Güvenilirlik için kanıt linki (ilan/fatura) zorunludur. Yönetici onayının ardından canlı deftere eklenecektir.",
+                text = tr(isTr, "Aldığınız fiyatı veya piyasada gördüğünüz bir fırsatı bildirin. Güvenilirlik için kanıt linki (ilan/fatura) zorunludur. Yönetici onayının ardından canlı deftere eklenecektir.", "Submit your purchase price or a found deal. A proof link (receipt/listing) is mandatory. Approved entries appear in the live ledger."),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -719,8 +729,8 @@ fun SubmitCommunityDealSheet(
                     priceText = it.filter { char -> char.isDigit() || char == '.' || char == ',' }
                     errorMessage = null
                 },
-                label = { Text("Fiyat (TL) *") },
-                placeholder = { Text("Örn: 24999") },
+                label = { Text(strings.ledgerPriceLabel) },
+                placeholder = { Text(tr(isTr, "Örn: 24999", "e.g. 24999")) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -732,7 +742,7 @@ fun SubmitCommunityDealSheet(
 
             // 4 Deal Types
             Text(
-                text = "İşlem Türü Seçin *",
+                text = strings.ledgerDealTypeSelect,
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -767,8 +777,8 @@ fun SubmitCommunityDealSheet(
                     proofUrlText = it
                     errorMessage = null
                 },
-                label = { Text("Kanıt Linki (Zorunlu) *") },
-                placeholder = { Text("https://www.sahibinden.com/... veya e-fatura/mağaza linki") },
+                label = { Text(strings.ledgerProofUrlLabel) },
+                placeholder = { Text(tr(isTr, "https://www.sahibinden.com/... veya fatura/mağaza linki", "https://... proof link, receipt or listing URL")) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -782,8 +792,8 @@ fun SubmitCommunityDealSheet(
             OutlinedTextField(
                 value = noteText,
                 onValueChange = { noteText = it },
-                label = { Text("Açıklama / Deneyim Notu") },
-                placeholder = { Text("Örn: Sarı siteden kutulu garantili alındı...") },
+                label = { Text(strings.ledgerNoteFieldLabel) },
+                placeholder = { Text(tr(isTr, "Örn: İkinci elden kutulu garantili alındı...", "e.g. Bought second-hand with box & warranty...")) },
                 modifier = Modifier.fillMaxWidth(),
                 maxLines = 3,
             )
@@ -801,7 +811,7 @@ fun SubmitCommunityDealSheet(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = "👤 Bildiren Üye: ",
+                            text = tr(isTr, "👤 Bildiren Üye: ", "👤 Submitter: "),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -817,8 +827,8 @@ fun SubmitCommunityDealSheet(
                 OutlinedTextField(
                     value = userDisplayName,
                     onValueChange = { userDisplayName = it },
-                    label = { Text("Rumuzunuz / Adınız") },
-                    placeholder = { Text("Örn: DonanimSever") },
+                    label = { Text(tr(isTr, "Rumuzunuz / Adınız", "Nickname / Name")) },
+                    placeholder = { Text(tr(isTr, "Örn: DonanimSever", "e.g. TechEnthusiast")) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
@@ -840,15 +850,15 @@ fun SubmitCommunityDealSheet(
                 onClick = {
                     val parsedPrice = priceText.replace(',', '.').toDoubleOrNull()
                     if (parsedPrice == null || parsedPrice <= 0) {
-                        errorMessage = "Lütfen geçerli bir fiyat (TL) girin."
+                        errorMessage = tr(isTr, "Lütfen geçerli bir fiyat (TL) girin.", "Please enter a valid price.")
                         return@Button
                     }
                     val cleanProof = proofUrlText.trim()
                     if (cleanProof.isBlank() || (!cleanProof.startsWith("http://", ignoreCase = true) && !cleanProof.startsWith("https://", ignoreCase = true))) {
-                        errorMessage = "Kanıt linki zorunludur! Lütfen geçerli bir web bağlantısı girin (https://...)."
+                        errorMessage = tr(isTr, "Kanıt linki zorunludur! Lütfen geçerli bir web bağlantısı girin (https://...).", "Proof link is required! Please enter a valid URL (https://...).")
                         return@Button
                     }
-                    val finalDisplayName = currentUser?.username?.let { "@$it" } ?: userDisplayName.ifBlank { "Topluluk Üyesi" }
+                    val finalDisplayName = currentUser?.username?.let { "@$it" } ?: userDisplayName.ifBlank { tr(isTr, "Topluluk Üyesi", "Community Member") }
                     onSubmit(
                         parsedPrice,
                         selectedType,
@@ -863,7 +873,7 @@ fun SubmitCommunityDealSheet(
                 colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
             ) {
                 Text(
-                    text = "🚀 Fiyatı Bildir (Yönetici Onayına Sun)",
+                    text = strings.ledgerSubmitAction,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
                 )
@@ -880,6 +890,8 @@ fun AdminLoginPinDialog(
     onDismiss: () -> Unit,
     onLogin: (pin: String) -> Boolean,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     var pinText by remember { mutableStateOf("") }
     var isError by remember { mutableStateOf(false) }
 
@@ -887,14 +899,14 @@ fun AdminLoginPinDialog(
         onDismissRequest = onDismiss,
         title = {
             Text(
-                text = "🛡️ Yönetici Girişi",
+                text = tr(isTr, "🛡️ Yönetici Girişi", "🛡️ Admin Authentication"),
                 fontWeight = FontWeight.Bold,
             )
         },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                 Text(
-                    text = "Topluluk fiyat bildirimlerini doğrudan onaylamak veya reddetmek için yönetici PIN kodunuzu girin.",
+                    text = tr(isTr, "Topluluk fiyat bildirimlerini doğrudan onaylamak veya reddetmek için yönetici PIN kodunuzu girin.", "Enter your admin PIN to moderate community deal submissions directly."),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -904,7 +916,7 @@ fun AdminLoginPinDialog(
                         pinText = it
                         isError = false
                     },
-                    label = { Text("Yönetici PIN") },
+                    label = { Text(tr(isTr, "Yönetici PIN", "Admin PIN")) },
                     visualTransformation = PasswordVisualTransformation(),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
                     singleLine = true,
@@ -913,7 +925,7 @@ fun AdminLoginPinDialog(
                 )
                 if (isError) {
                     Text(
-                        text = "Geçersiz PIN kodu! (Varsayılan: 1923)",
+                        text = tr(isTr, "Geçersiz PIN kodu! (Varsayılan: 1923)", "Invalid PIN code! (Default: 1923)"),
                         style = MaterialTheme.typography.bodySmall,
                         color = NeonRose,
                     )
@@ -932,12 +944,12 @@ fun AdminLoginPinDialog(
                 },
                 colors = ButtonDefaults.buttonColors(containerColor = NeonAmber),
             ) {
-                Text("Giriş Yap", fontWeight = FontWeight.Bold)
+                Text(strings.authTabLogin, fontWeight = FontWeight.Bold)
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("İptal")
+                Text(if (isTr) "İptal" else "Cancel")
             }
         },
     )
@@ -948,3 +960,5 @@ private fun formatTry(amount: Double): String {
     val formatted = rounded.toString().reversed().chunked(3).joinToString(".").reversed()
     return "$formatted ₺"
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

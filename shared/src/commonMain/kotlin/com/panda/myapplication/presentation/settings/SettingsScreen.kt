@@ -69,6 +69,7 @@ fun SettingsScreen(
 ) {
     val settings by viewModel.settings.collectAsState()
     val strings = remember(settings.language) { getAppStrings(settings.language) }
+    val isTr = settings.language == com.panda.myapplication.domain.model.AppLanguage.TR
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
@@ -459,8 +460,8 @@ fun SettingsScreen(
                     subtitle = strings.sourcesSubtitle,
                 ) {
                     SettingsNavigationRow(
-                        label = "Detaylı Kaynakça & Veritabanı Dökümü",
-                        value = "Görüntüle",
+                        label = tr(isTr, "Detaylı Kaynakça & Veritabanı Dökümü", "Detailed Sources & Database Index"),
+                        value = tr(isTr, "Görüntüle", "View"),
                         onClick = { showSourcesDialog = true },
                     )
                 }
@@ -511,7 +512,7 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Text(
-                        text = "Açık Kaynak: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase GoTrue.",
+                        text = tr(isTr, "Açık Kaynak: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase GoTrue.", "Open Source: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase GoTrue."),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                     )
@@ -550,6 +551,7 @@ fun SettingsScreen(
     if (showSourcesDialog) {
         SourcesDetailsDialog(
             strings = strings,
+            isTr = isTr,
             onDismiss = { showSourcesDialog = false },
         )
     }
@@ -863,6 +865,7 @@ private fun CurrencySelectionDialog(
 @Composable
 private fun SourcesDetailsDialog(
     strings: com.panda.myapplication.presentation.util.AppStrings,
+    isTr: Boolean,
     onDismiss: () -> Unit,
 ) {
     androidx.compose.material3.AlertDialog(
@@ -879,11 +882,11 @@ private fun SourcesDetailsDialog(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                SourceItemTile("🎮 GPU (Ekran Kartı)", strings.sourcesGpuDesc)
-                SourceItemTile("⚡ CPU (İşlemci)", strings.sourcesCpuDesc)
-                SourceItemTile("🔋 PSU (Güç Kaynağı)", strings.sourcesPsuDesc)
-                SourceItemTile("📸 Ürün Stüdyo Görselleri", strings.sourcesImagesDesc)
-                SourceItemTile("💰 Piyasa & Fiyat Listeleme", strings.sourcesPricesDesc)
+                SourceItemTile("🎮 ${strings.catGpu}", strings.sourcesGpuDesc)
+                SourceItemTile("⚡ ${strings.catCpu}", strings.sourcesCpuDesc)
+                SourceItemTile("🔋 ${strings.catPsu}", strings.sourcesPsuDesc)
+                SourceItemTile("📸 ${tr(isTr, "Ürün Stüdyo Görselleri", "Product Studio Imagery")}", strings.sourcesImagesDesc)
+                SourceItemTile("💰 ${tr(isTr, "Piyasa & Fiyat Listeleme", "Market & Price Aggregators")}", strings.sourcesPricesDesc)
             }
         },
         confirmButton = {
@@ -918,3 +921,5 @@ private fun SourceItemTile(title: String, desc: String) {
         }
     }
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

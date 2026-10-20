@@ -75,6 +75,8 @@ fun AuthSheet(
     onDismiss: () -> Unit,
     onAuthSuccess: () -> Unit,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val coroutineScope = rememberCoroutineScope()
 
@@ -120,16 +122,16 @@ fun AuthSheet(
             ) {
                 Column {
                     Text(
-                        text = if (selectedTabIndex == 0) "⚡ Giriş Yap" else "🚀 Topluluğa Katıl & Kayıt Ol",
+                        text = if (selectedTabIndex == 0) strings.authLoginTitle else strings.authRegisterTitle,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
                     )
                     Text(
                         text = if (selectedTabIndex == 0)
-                            "Hesabınızla giriş yapın, fırsat bildirin ve sisteminizi değerlendirin."
+                            tr(isTr, "Hesabınızla giriş yapın, fırsat bildirin ve sisteminizi değerlendirin.", "Sign in to submit deals, track builds, and participate in community discussions.")
                         else
-                            "Kendi donanım ruhunuzu seçin ve Hardware Wizard topluluğuna katılın.",
+                            tr(isTr, "Kendi donanım ruhunuzu seçin ve Hardware Wizard topluluğuna katılın.", "Choose your hardware persona and join the Hardware Wizard community."),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -156,7 +158,7 @@ fun AuthSheet(
                     },
                     text = {
                         Text(
-                            text = "Giriş Yap",
+                            text = strings.authTabLogin,
                             fontWeight = if (selectedTabIndex == 0) FontWeight.Bold else FontWeight.Normal,
                             color = if (selectedTabIndex == 0) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -170,7 +172,7 @@ fun AuthSheet(
                     },
                     text = {
                         Text(
-                            text = "Kayıt Ol",
+                            text = strings.authTabRegister,
                             fontWeight = if (selectedTabIndex == 1) FontWeight.Bold else FontWeight.Normal,
                             color = if (selectedTabIndex == 1) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -186,8 +188,8 @@ fun AuthSheet(
                         loginIdentifier = it
                         errorMessage = null
                     },
-                    label = { Text("E-posta veya Kullanıcı Adı") },
-                    placeholder = { Text("Kullanıcı adı veya e-posta") },
+                    label = { Text(strings.authEmailOrUsername) },
+                    placeholder = { Text(strings.authEmailOrUsername) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
@@ -203,7 +205,7 @@ fun AuthSheet(
                         loginPassword = it
                         errorMessage = null
                     },
-                    label = { Text("Şifre") },
+                    label = { Text(strings.authPassword) },
                     placeholder = { Text("••••••••") },
                     visualTransformation = if (isLoginPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
@@ -226,7 +228,7 @@ fun AuthSheet(
                 Button(
                     onClick = {
                         if (loginIdentifier.isBlank() || loginPassword.isBlank()) {
-                            errorMessage = "Lütfen kullanıcı adı / e-posta ve şifrenizi girin."
+                            errorMessage = tr(isTr, "Lütfen kullanıcı adı / e-posta ve şifrenizi girin.", "Please enter your username / email and password.")
                             return@Button
                         }
                         isLoading = true
@@ -236,13 +238,13 @@ fun AuthSheet(
                             isLoading = false
                             when (result) {
                                 is DomainResult.Success -> {
-                                    successMessage = "Hoş geldiniz, ${result.data.username}!"
+                                    successMessage = tr(isTr, "Hoş geldiniz, ${result.data.username}!", "Welcome, ${result.data.username}!")
                                     onAuthSuccess()
                                     onDismiss()
                                 }
                                 is DomainResult.Failure -> {
                                     errorMessage = (result.error as? DomainError.Unknown)?.cause?.message
-                                        ?: "❌ Kullanıcı bulunamadı veya şifre hatalı! Lütfen bilgilerinizi kontrol edin."
+                                        ?: strings.authLoginFailed
                                 }
                             }
                         }
@@ -253,7 +255,7 @@ fun AuthSheet(
                     colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
                 ) {
                     Text(
-                        text = if (isLoading) "Giriş Yapılıyor..." else "⚡ Giriş Yap",
+                        text = if (isLoading) strings.authLoggingIn else strings.authLoginTitle,
                         fontWeight = FontWeight.Bold,
                         color = Color.Black,
                     )
@@ -266,8 +268,8 @@ fun AuthSheet(
                         signupUsername = it
                         errorMessage = null
                     },
-                    label = { Text("Kullanıcı Adı (Rumuz) *") },
-                    placeholder = { Text("Kullanıcı adınız") },
+                    label = { Text(strings.authUsernameReq) },
+                    placeholder = { Text(tr(isTr, "Kullanıcı adınız", "Your username")) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -282,7 +284,7 @@ fun AuthSheet(
                         signupEmail = it
                         errorMessage = null
                     },
-                    label = { Text("E-posta Adresi *") },
+                    label = { Text(strings.authEmailReq) },
                     placeholder = { Text("eposta@domain.com") },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, autoCorrect = false),
                     singleLine = true,
@@ -299,7 +301,7 @@ fun AuthSheet(
                         signupPassword = it
                         errorMessage = null
                     },
-                    label = { Text("Şifre (En az 6 karakter) *") },
+                    label = { Text(strings.authPasswordReq) },
                     visualTransformation = if (isSignupPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         IconButton(onClick = { isSignupPasswordVisible = !isSignupPasswordVisible }) {
@@ -327,7 +329,7 @@ fun AuthSheet(
                     OutlinedTextField(
                         value = birthDateText,
                         onValueChange = { birthDateText = it },
-                        label = { Text("Doğum Tarihi (YYYY-AA-GG) *") },
+                        label = { Text(tr(isTr, "Doğum Tarihi (YYYY-AA-GG) *", "Birth Date (YYYY-MM-DD) *")) },
                         placeholder = { Text("2000-01-15") },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, autoCorrect = false),
                         singleLine = true,
@@ -347,7 +349,7 @@ fun AuthSheet(
                         border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
                     ) {
                         Text(
-                            text = if (previewAge != null) "Yaş: $previewAge" else "Yaş: -",
+                            text = if (previewAge != null) "${tr(isTr, "Yaş", "Age")}: $previewAge" else "${tr(isTr, "Yaş", "Age")}: -",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = NeonCyan,
@@ -358,7 +360,7 @@ fun AuthSheet(
 
                 // Cinsiyet Seçimi
                 Text(
-                    text = "Cinsiyet *",
+                    text = tr(isTr, "Cinsiyet *", "Gender *"),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -385,7 +387,7 @@ fun AuthSheet(
 
                 // "Kendini Hangi Donanım Parçası Olarak Görüyorsun?"
                 Text(
-                    text = "Kendini Hangi Donanım Parçası Olarak Görüyorsun? *",
+                    text = tr(isTr, "Kendini Hangi Donanım Parçası Olarak Görüyorsun? *", "Which Hardware Component Represents Your Spirit? *"),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonAmber,
@@ -446,11 +448,11 @@ fun AuthSheet(
                 Button(
                     onClick = {
                         if (signupUsername.isBlank() || signupEmail.isBlank() || signupPassword.isBlank()) {
-                            errorMessage = "Lütfen tüm zorunlu alanları doldurun."
+                            errorMessage = tr(isTr, "Lütfen tüm zorunlu alanları doldurun.", "Please fill in all required fields.")
                             return@Button
                         }
                         if (signupPassword.length < 6) {
-                            errorMessage = "Şifre en az 6 karakter olmalıdır."
+                            errorMessage = strings.authPasswordMinError
                             return@Button
                         }
                         isLoading = true
@@ -467,12 +469,12 @@ fun AuthSheet(
                             isLoading = false
                             when (result) {
                                 is DomainResult.Success -> {
-                                    successMessage = "Kayıt başarılı! Hoş geldiniz, ${result.data.username}!"
+                                    successMessage = strings.authRegisterSuccess.replace("%s", result.data.username)
                                     onAuthSuccess()
                                     onDismiss()
                                 }
                                 is DomainResult.Failure -> {
-                                    errorMessage = "Kayıt oluşturulamadı. Lütfen bilgilerinizi kontrol edin."
+                                    errorMessage = strings.authRegisterFailed
                                 }
                             }
                         }
@@ -483,7 +485,7 @@ fun AuthSheet(
                     colors = ButtonDefaults.buttonColors(containerColor = NeonEmerald),
                 ) {
                     Text(
-                        text = if (isLoading) "Hesap Oluşturuluyor..." else "🚀 Kayıt Ol ve Topluluğa Katıl",
+                        text = if (isLoading) strings.authRegistering else strings.authRegisterTitle,
                         fontWeight = FontWeight.Bold,
                         color = Color.Black,
                     )
@@ -527,3 +529,5 @@ fun AuthSheet(
         }
     }
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

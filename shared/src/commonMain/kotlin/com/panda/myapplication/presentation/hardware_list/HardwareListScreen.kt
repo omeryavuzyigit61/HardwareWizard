@@ -1,5 +1,7 @@
 package com.panda.myapplication.presentation.hardware_list
 
+import com.panda.myapplication.presentation.util.localized
+
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
@@ -145,6 +147,9 @@ fun HardwareListRoute(
     onNavigateToVsArena: (() -> Unit)? = null,
     onOpenDrawer: (() -> Unit)? = null,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val snackbarHostState = remember { androidx.compose.material3.SnackbarHostState() }
 
@@ -161,12 +166,14 @@ fun HardwareListRoute(
                     onItemClick?.invoke(effect.item)
                 }
                 is HardwareListEffect.ShowToast -> {
-                    snackbarHostState.showSnackbar(message = effect.message)
+                    val msg = if (isTr) effect.message else (effect.messageEn ?: effect.message)
+                    snackbarHostState.showSnackbar(message = msg)
                 }
                 is HardwareListEffect.ShowVsAddedToast -> {
+                    val msg = if (isTr) effect.message else (effect.messageEn ?: effect.message)
                     val result = snackbarHostState.showSnackbar(
-                        message = effect.message,
-                        actionLabel = if (onNavigateToVsArena != null) "Arenaya Git" else null,
+                        message = msg,
+                        actionLabel = if (onNavigateToVsArena != null) (if (isTr) "Arenaya Git" else "Go to Arena") else null,
                         duration = androidx.compose.material3.SnackbarDuration.Short,
                     )
                     if (result == androidx.compose.material3.SnackbarResult.ActionPerformed) {
@@ -200,6 +207,7 @@ fun HardwareListContent(
     val listState = rememberLazyListState()
     var priceDialogItem by remember { mutableStateOf<HardwareItem?>(null) }
     val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val currency = LocalAppCurrency.current
 
     Scaffold(
@@ -253,11 +261,11 @@ fun HardwareListContent(
                                 color = MaterialTheme.colorScheme.primary,
                             )
                             val subtitleText = when {
-                                uiState.isLoading && uiState.items.isEmpty() -> "Donanım kataloğu hazırlanıyor..."
-                                uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor"
-                                uiState.totalCount > 0 -> "${uiState.totalCount} donanım parçası listeleniyor"
-                                uiState.errorMessage != null -> "Katalog yüklenemedi"
-                                else -> "Donanım parçası bulunamadı"
+                                uiState.isLoading && uiState.items.isEmpty() -> if (isTr) "Donanım kataloğu hazırlanıyor..." else "Preparing hardware catalog..."
+                                uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> if (isTr) "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor" else "Showing ${uiState.items.size} / ${uiState.totalCount} components"
+                                uiState.totalCount > 0 -> if (isTr) "${uiState.totalCount} donanım parçası listeleniyor" else "Showing ${uiState.totalCount} components"
+                                uiState.errorMessage != null -> if (isTr) "Katalog yüklenemedi" else "Catalog could not be loaded"
+                                else -> if (isTr) "Donanım parçası bulunamadı" else "No hardware found"
                             }
                             Text(
                                 text = subtitleText,
@@ -513,7 +521,7 @@ fun HardwareListContent(
                             )
                             Spacer(modifier = Modifier.height(Spacing.small))
                             Text(
-                                text = "Donanım kataloğu ve canlı TR mağaza verileri hazırlanıyor...",
+                                text = if (isTr) "Donanım kataloğu ve canlı TR mağaza verileri hazırlanıyor..." else "Preparing hardware catalog and store feeds...",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onSurface,
@@ -538,7 +546,7 @@ fun HardwareListContent(
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = uiState.errorMessage,
+                            text = if (isTr) uiState.errorMessage.orEmpty() else (uiState.errorMessageEn ?: uiState.errorMessage.orEmpty()),
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.error,
                         )
@@ -547,7 +555,7 @@ fun HardwareListContent(
                             onClick = { onEvent(HardwareListUiEvent.OnRefresh) },
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                         ) {
-                            Text("Tekrar Dene", color = MaterialTheme.colorScheme.onPrimary)
+                            Text(if (isTr) "Tekrar Dene" else "Retry", color = MaterialTheme.colorScheme.onPrimary)
                         }
                     }
                 }
@@ -559,14 +567,14 @@ fun HardwareListContent(
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = "Kriterlere uygun donanım bulunamadı.",
+                            text = tr(isTr, "Kriterlere uygun donanım bulunamadı.", "No hardware found matching criteria."),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         if (uiState.filters.isActive) {
                             Spacer(modifier = Modifier.height(Spacing.small))
                             TextButton(onClick = { onEvent(HardwareListUiEvent.OnResetFilters) }) {
-                                Text("Filtreleri Temizle", color = MaterialTheme.colorScheme.primary)
+                                Text(if (isTr) "Sıfırla" else "Reset", color = MaterialTheme.colorScheme.primary)
                             }
                         }
                     }
@@ -681,16 +689,18 @@ fun CategoryFilterChips(
     onCategorySelected: (HardwareCategory?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val categories = listOf(
-        null to ("✨" to "Tümü"),
+        null to ("✨" to strings.filterAll),
         HardwareCategory.CPU to ("⚡" to "CPU"),
         HardwareCategory.GPU to ("🎮" to "GPU"),
         HardwareCategory.RAM to ("🧠" to "RAM"),
-        HardwareCategory.MOTHERBOARD to ("🖲️" to "Anakart"),
+        HardwareCategory.MOTHERBOARD to ("🖲️" to strings.catMotherboard),
         HardwareCategory.PSU to ("🔌" to "PSU"),
-        HardwareCategory.STORAGE to ("💾" to "Depolama"),
-        HardwareCategory.COOLER to ("❄️" to "Soğutucu"),
-        HardwareCategory.CASE to ("📦" to "Kasa"),
+        HardwareCategory.STORAGE to ("💾" to strings.catStorage),
+        HardwareCategory.COOLER to ("❄️" to strings.catCooler),
+        HardwareCategory.CASE to ("📦" to strings.catCase),
     )
 
     Row(
@@ -717,12 +727,14 @@ fun PeripheralCategoryChips(
     onCategorySelected: (HardwareCategory?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val categories: List<Pair<HardwareCategory?, Pair<String, String>>> = listOf(
-        null to ("✨" to "Tümü"),
-        HardwareCategory.MONITOR to ("🖥️" to "Monitör"),
-        HardwareCategory.MOUSE to ("🖱️" to "Mouse"),
-        HardwareCategory.KEYBOARD to ("⌨️" to "Klavye"),
-        HardwareCategory.HEADSET to ("🎧" to "Kulaklık"),
+        null to ("✨" to strings.filterAll),
+        HardwareCategory.MONITOR to ("🖥️" to strings.catMonitor),
+        HardwareCategory.MOUSE to ("🖱️" to strings.catMouse),
+        HardwareCategory.KEYBOARD to ("⌨️" to strings.catKeyboard),
+        HardwareCategory.HEADSET to ("🎧" to strings.catHeadset),
     )
 
     Row(
@@ -751,6 +763,8 @@ fun BrandFilterChips(
     onClearBrands: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
@@ -759,7 +773,7 @@ fun BrandFilterChips(
         FluidFilterChip(
             selected = isAllSelected,
             onClick = onClearBrands,
-            label = "Tümü",
+            label = strings.filterAll,
             icon = "✨",
             accentColor = NeonCyan,
         )
@@ -785,6 +799,8 @@ fun HardwareCard(
     onAddToVsClick: (() -> Unit)? = null,
     onPriceOverrideClick: (() -> Unit)? = null,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
     val scale by animateFloatAsState(if (isPressed) 0.98f else 1f)
@@ -837,7 +853,7 @@ fun HardwareCard(
                                 .padding(horizontal = 5.dp, vertical = 1.dp),
                         ) {
                             Text(
-                                text = "Özel Fiyat",
+                                text = strings.detailCustomPriceTag,
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonAmber,
@@ -900,7 +916,7 @@ fun HardwareCard(
                                 }
                                 if (spec.estimatedSeparatePriceTry != null && spec.estimatedSeparatePriceTry > 0.0) {
                                     Text(
-                                        text = "Ayrı: ${spec.estimatedSeparatePriceTry.toLong()} ₺",
+                                        text = "${if (isTr) "Ayrı" else "Separate"}: ${spec.estimatedSeparatePriceTry.toLong()} ₺",
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         softWrap = false,
@@ -969,7 +985,7 @@ fun HardwareCard(
                     }
                     else -> {
                         Text(
-                            text = formatSpecSummary(item.spec),
+                            text = formatSpecSummary(item.spec, isTr),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
@@ -1153,16 +1169,9 @@ fun HardwarePlaceholderBadge(
             .padding(horizontal = 6.dp, vertical = 4.dp),
         contentAlignment = Alignment.Center,
     ) {
+        val strings = LocalAppStrings.current
         Text(
-            text = when (category) {
-                HardwareCategory.PREBUILT_PC -> "OEM PC"
-                HardwareCategory.LAPTOP -> "LAPTOP"
-                HardwareCategory.MOUSE -> "MOUSE"
-                HardwareCategory.KEYBOARD -> "KLAVYE"
-                HardwareCategory.HEADSET -> "KULAKLIK"
-                HardwareCategory.MONITOR -> "MONİTÖR"
-                else -> category.name
-            },
+            text = category.localized(strings).uppercase(),
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Black,
             color = badgeText,
@@ -1196,16 +1205,9 @@ fun CategoryBadge(category: HardwareCategory) {
             .background(badgeBg)
             .padding(horizontal = 6.dp, vertical = 2.dp),
     ) {
+        val strings = LocalAppStrings.current
         Text(
-            text = when (category) {
-                HardwareCategory.PREBUILT_PC -> "OEM Sistem"
-                HardwareCategory.LAPTOP -> "Laptop"
-                HardwareCategory.MOUSE -> "Mouse"
-                HardwareCategory.KEYBOARD -> "Klavye"
-                HardwareCategory.HEADSET -> "Kulaklık"
-                HardwareCategory.MONITOR -> "Monitör"
-                else -> category.name
-            },
+            text = category.localized(strings),
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Bold,
             color = badgeText,
@@ -1223,6 +1225,9 @@ fun HardwareFilterBottomSheet(
     onFiltersChanged: (HardwareFilterOptions) -> Unit,
     onResetFilters: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     ModalBottomSheet(
@@ -1245,13 +1250,13 @@ fun HardwareFilterBottomSheet(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "Detaylı Filtreler",
+                    text = strings.filterButton,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 TextButton(onClick = onResetFilters) {
-                    Text("Sıfırla", color = MaterialTheme.colorScheme.tertiary)
+                    Text(if (isTr) "Sıfırla" else "Reset", color = MaterialTheme.colorScheme.tertiary)
                 }
             }
 
@@ -1260,7 +1265,7 @@ fun HardwareFilterBottomSheet(
             // 1. Marka Filtresi (Tüm Kategoriler İçin Çoklu Seçim)
             if (availableBrands.isNotEmpty()) {
                 Text(
-                    text = "MARKA",
+                    text = tr(isTr, "MARKA", "BRAND"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1300,7 +1305,7 @@ fun HardwareFilterBottomSheet(
 
             // 2. Kategoriye Özel Dinamik Sıralama
             Text(
-                text = "SIRALAMA",
+                text = tr(isTr, "SIRALAMA", "SORTING"),
                 style = MaterialTheme.typography.labelMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary,
@@ -1317,7 +1322,7 @@ fun HardwareFilterBottomSheet(
                     FilterChip(
                         selected = isSelected,
                         onClick = { onFiltersChanged(filters.copy(sortOption = sort)) },
-                        label = { Text(sort.displayName) },
+                        label = { Text(sort.localizedName(isTr)) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
                             selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1333,7 +1338,7 @@ fun HardwareFilterBottomSheet(
             // CPU Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.CPU) {
                 Text(
-                    text = "CPU: SOKET",
+                    text = tr(isTr, "CPU: SOKET", "CPU: SOCKET"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1343,7 +1348,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", "AM5" to "AM5", "AM4" to "AM4", "LGA1700" to "LGA1700", "LGA1851" to "LGA1851").forEach { (sock, label) ->
+                    listOf(null to strings.filterAll, "AM5" to "AM5", "AM4" to "AM4", "LGA1700" to "LGA1700", "LGA1851" to "LGA1851").forEach { (sock, label) ->
                         val isSelected = filters.cpuSocket == sock
                         FilterChip(
                             selected = isSelected,
@@ -1355,7 +1360,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "CPU: MİNİMUM ÇEKİRDEK",
+                    text = tr(isTr, "CPU: MİNİMUM ÇEKİRDEK", "CPU: MIN CORES"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1365,7 +1370,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 6 to "6+ Çekirdek", 8 to "8+ Çekirdek", 12 to "12+ Çekirdek", 16 to "16+ Çekirdek").forEach { (cores, label) ->
+                    listOf(null to strings.filterAll, 6 to if (isTr) "6+ Çekirdek" else "6+ Cores", 8 to if (isTr) "8+ Çekirdek" else "8+ Cores", 12 to if (isTr) "12+ Çekirdek" else "12+ Cores", 16 to if (isTr) "16+ Çekirdek" else "16+ Cores").forEach { (cores, label) ->
                         val isSelected = filters.minCoreCount == cores
                         FilterChip(
                             selected = isSelected,
@@ -1377,7 +1382,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "CPU: MAKSİMUM TDP",
+                    text = tr(isTr, "CPU: MAKSİMUM TDP", "CPU: MAX TDP"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1387,7 +1392,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 65 to "≤ 65W", 105 to "≤ 105W", 125 to "≤ 125W", 170 to "≤ 170W", 250 to "≤ 250W").forEach { (tdp, label) ->
+                    listOf(null to strings.filterAll, 65 to "≤ 65W", 105 to "≤ 105W", 125 to "≤ 125W", 170 to "≤ 170W", 250 to "≤ 250W").forEach { (tdp, label) ->
                         val isSelected = filters.maxTdpWatts == tdp
                         FilterChip(
                             selected = isSelected,
@@ -1402,7 +1407,7 @@ fun HardwareFilterBottomSheet(
             // GPU Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.GPU) {
                 Text(
-                    text = "GPU: MİNİMUM VRAM",
+                    text = tr(isTr, "GPU: MİNİMUM VRAM", "GPU: MIN VRAM"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1412,7 +1417,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 8 to "8 GB+", 12 to "12 GB+", 16 to "16 GB+", 24 to "24 GB+").forEach { (vram, label) ->
+                    listOf(null to strings.filterAll, 8 to "8 GB+", 12 to "12 GB+", 16 to "16 GB+", 24 to "24 GB+").forEach { (vram, label) ->
                         val isSelected = filters.minVramGb == vram
                         FilterChip(
                             selected = isSelected,
@@ -1424,7 +1429,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "GPU: MARKA / ÜRETİCİ",
+                    text = tr(isTr, "GPU: MARKA / ÜRETİCİ", "GPU: BRAND / OEM"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1434,7 +1439,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", "NVIDIA" to "NVIDIA GeForce", "AMD" to "AMD Radeon", "Intel" to "Intel Arc").forEach { (brand, label) ->
+                    listOf(null to strings.filterAll, "NVIDIA" to "NVIDIA GeForce", "AMD" to "AMD Radeon", "Intel" to "Intel Arc").forEach { (brand, label) ->
                         val isSelected = filters.gpuBrand == brand
                         FilterChip(
                             selected = isSelected,
@@ -1446,7 +1451,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "GPU: MAKSİMUM KART UZUNLUĞU",
+                    text = tr(isTr, "GPU: MAKSİMUM KART UZUNLUĞU", "GPU: MAX CARD LENGTH"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1456,7 +1461,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 240 to "≤ 240mm (ITX)", 285 to "≤ 285mm", 320 to "≤ 320mm", 360 to "≤ 360mm").forEach { (len, label) ->
+                    listOf(null to strings.filterAll, 240 to "≤ 240mm (ITX)", 285 to "≤ 285mm", 320 to "≤ 320mm", 360 to "≤ 360mm").forEach { (len, label) ->
                         val isSelected = filters.maxGpuLengthMm == len
                         FilterChip(
                             selected = isSelected,
@@ -1471,7 +1476,7 @@ fun HardwareFilterBottomSheet(
             // RAM Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.RAM) {
                 Text(
-                    text = "RAM: BELLEK TİPİ",
+                    text = tr(isTr, "RAM: BELLEK TİPİ", "RAM: MEMORY TYPE"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1481,7 +1486,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", DdrGeneration.DDR5 to "DDR5", DdrGeneration.DDR4 to "DDR4").forEach { (gen, label) ->
+                    listOf(null to strings.filterAll, DdrGeneration.DDR5 to "DDR5", DdrGeneration.DDR4 to "DDR4").forEach { (gen, label) ->
                         val isSelected = filters.ramGeneration == gen
                         FilterChip(
                             selected = isSelected,
@@ -1493,7 +1498,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "RAM: MİNİMUM FREKANS",
+                    text = tr(isTr, "RAM: MİNİMUM FREKANS", "RAM: MIN SPEED"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1503,7 +1508,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 3200 to "3200 MT/s+", 3600 to "3600 MT/s+", 5600 to "5600 MT/s+", 6000 to "6000 MT/s+", 6400 to "6400 MT/s+").forEach { (spd, label) ->
+                    listOf(null to strings.filterAll, 3200 to "3200 MT/s+", 3600 to "3600 MT/s+", 5600 to "5600 MT/s+", 6000 to "6000 MT/s+", 6400 to "6400 MT/s+").forEach { (spd, label) ->
                         val isSelected = filters.minRamSpeedMts == spd
                         FilterChip(
                             selected = isSelected,
@@ -1518,7 +1523,7 @@ fun HardwareFilterBottomSheet(
             // Storage Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.STORAGE) {
                 Text(
-                    text = "DEPOLAMA: ARAYÜZ & FORM",
+                    text = tr(isTr, "DEPOLAMA: ARAYÜZ & FORM", "STORAGE: INTERFACE & FORM"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1528,7 +1533,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", StorageInterface.NVME to "M.2 NVMe", StorageInterface.SATA to "2.5\" SATA").forEach { (iface, label) ->
+                    listOf(null to strings.filterAll, StorageInterface.NVME to "M.2 NVMe", StorageInterface.SATA to "2.5\" SATA").forEach { (iface, label) ->
                         val isSelected = filters.storageInterface == iface
                         FilterChip(
                             selected = isSelected,
@@ -1540,7 +1545,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "DEPOLAMA: PCIE NESLİ (NVMe)",
+                    text = tr(isTr, "DEPOLAMA: PCIE NESLİ (NVMe)", "STORAGE: PCIE GEN (NVMe)"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1550,7 +1555,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", PcieGeneration.GEN3 to "PCIe 3.0", PcieGeneration.GEN4 to "PCIe 4.0", PcieGeneration.GEN5 to "PCIe 5.0").forEach { (pgen, label) ->
+                    listOf(null to strings.filterAll, PcieGeneration.GEN3 to "PCIe 3.0", PcieGeneration.GEN4 to "PCIe 4.0", PcieGeneration.GEN5 to "PCIe 5.0").forEach { (pgen, label) ->
                         val isSelected = filters.storagePcieGen == pgen
                         FilterChip(
                             selected = isSelected,
@@ -1562,7 +1567,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "DEPOLAMA: MİNİMUM KAPASİTE",
+                    text = tr(isTr, "DEPOLAMA: MİNİMUM KAPASİTE", "STORAGE: MIN CAPACITY"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -1572,7 +1577,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 500 to "500 GB+", 1000 to "1 TB+", 2000 to "2 TB+", 4000 to "4 TB+").forEach { (cap, label) ->
+                    listOf(null to strings.filterAll, 500 to "500 GB+", 1000 to "1 TB+", 2000 to "2 TB+", 4000 to "4 TB+").forEach { (cap, label) ->
                         val isSelected = filters.minStorageCapacityGb == cap
                         FilterChip(
                             selected = isSelected,
@@ -1587,7 +1592,7 @@ fun HardwareFilterBottomSheet(
             // Motherboard Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.MOTHERBOARD) {
                 Text(
-                    text = "ANAKART: SOKET",
+                    text = tr(isTr, "ANAKART: SOKET", "MOTHERBOARD: SOCKET"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1597,7 +1602,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", "AM5" to "AM5", "AM4" to "AM4", "LGA1700" to "LGA1700", "LGA1851" to "LGA1851").forEach { (sock, label) ->
+                    listOf(null to strings.filterAll, "AM5" to "AM5", "AM4" to "AM4", "LGA1700" to "LGA1700", "LGA1851" to "LGA1851").forEach { (sock, label) ->
                         val isSelected = filters.motherboardSocket == sock
                         FilterChip(
                             selected = isSelected,
@@ -1609,7 +1614,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "ANAKART: FORM FAKTÖRÜ",
+                    text = tr(isTr, "ANAKART: FORM FAKTÖRÜ", "MOTHERBOARD: FORM FACTOR"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1620,7 +1625,7 @@ fun HardwareFilterBottomSheet(
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
                     listOf(
-                        null to "Tümü",
+                        null to strings.filterAll,
                         MotherboardFormFactor.ATX to "ATX",
                         MotherboardFormFactor.MICRO_ATX to "Micro-ATX",
                         MotherboardFormFactor.MINI_ITX to "Mini-ITX",
@@ -1637,7 +1642,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "ANAKART: MİNİMUM M.2 YUVASI",
+                    text = tr(isTr, "ANAKART: MİNİMUM M.2 YUVASI", "MOTHERBOARD: MIN M.2 SLOTS"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1647,7 +1652,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 1 to "1+ Yuva", 2 to "2+ Yuva", 3 to "3+ Yuva", 4 to "4+ Yuva").forEach { (m2, label) ->
+                    listOf(null to strings.filterAll, 1 to if (isTr) "1+ Yuva" else "1+ Slots", 2 to if (isTr) "2+ Yuva" else "2+ Slots", 3 to if (isTr) "3+ Yuva" else "3+ Slots", 4 to if (isTr) "4+ Yuva" else "4+ Slots").forEach { (m2, label) ->
                         val isSelected = filters.minM2Slots == m2
                         FilterChip(
                             selected = isSelected,
@@ -1662,7 +1667,7 @@ fun HardwareFilterBottomSheet(
             // PSU Filters
             if (selectedCategory == null || selectedCategory == HardwareCategory.PSU) {
                 Text(
-                    text = "PSU: MİNİMUM GÜÇ KAPASİTESİ",
+                    text = tr(isTr, "PSU: MİNİMUM GÜÇ KAPASİTESİ", "PSU: MIN WATTAGE"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1672,7 +1677,7 @@ fun HardwareFilterBottomSheet(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    listOf(null to "Tümü", 550 to "550W+", 650 to "650W+", 750 to "750W+", 850 to "850W+", 1000 to "1000W+").forEach { (watt, label) ->
+                    listOf(null to strings.filterAll, 550 to "550W+", 650 to "650W+", 750 to "750W+", 850 to "850W+", 1000 to "1000W+").forEach { (watt, label) ->
                         val isSelected = filters.minPsuWattage == watt
                         FilterChip(
                             selected = isSelected,
@@ -1684,7 +1689,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "PSU: VERİMLİLİK SERTİFİKASI",
+                    text = tr(isTr, "PSU: VERİMLİLİK SERTİFİKASI", "PSU: EFFICIENCY CERT"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1695,7 +1700,7 @@ fun HardwareFilterBottomSheet(
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
                     listOf(
-                        null to "Tümü",
+                        null to strings.filterAll,
                         PsuEfficiencyRating.BRONZE to "80+ Bronze",
                         PsuEfficiencyRating.GOLD to "80+ Gold",
                         PsuEfficiencyRating.PLATINUM to "80+ Platinum",
@@ -1712,7 +1717,7 @@ fun HardwareFilterBottomSheet(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Text(
-                    text = "PSU: MODERN STANDARTLAR",
+                    text = tr(isTr, "PSU: MODERN STANDARTLAR", "PSU: MODERN STANDARDS"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.tertiary,
@@ -1725,7 +1730,7 @@ fun HardwareFilterBottomSheet(
                     FilterChip(
                         selected = filters.requireAtx3,
                         onClick = { onFiltersChanged(filters.copy(requireAtx3 = !filters.requireAtx3)) },
-                        label = { Text("ATX 3.0 Standardı") },
+                        label = { Text(tr(isTr, "ATX 3.0 Standardı", "ATX 3.0 Standard")) },
                     )
                     FilterChip(
                         selected = filters.requirePcie5,
@@ -1742,7 +1747,7 @@ fun HardwareFilterBottomSheet(
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                 shape = RoundedCornerShape(Spacing.small),
             ) {
-                Text("Uygula & Kapat", color = MaterialTheme.colorScheme.onPrimary, fontWeight = FontWeight.Bold)
+                Text(tr(isTr, "Uygula & Kapat", "Apply & Close"), color = MaterialTheme.colorScheme.onPrimary, fontWeight = FontWeight.Bold)
             }
 
             Spacer(modifier = Modifier.height(Spacing.large))
@@ -1750,21 +1755,21 @@ fun HardwareFilterBottomSheet(
     }
 }
 
-private fun formatSpecSummary(spec: HardwareSpec): String = when (spec) {
+private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String = when (spec) {
     is CpuSpec -> "${spec.socket} • ${spec.coreCount}C/${spec.threadCount}T • ${spec.baseClock.mhz}MHz • ${spec.tdp.watts}W TDP"
     is GpuSpec -> {
         val skuSuffix = if (!spec.partNumber.isNullOrBlank()) " • SKU: ${spec.partNumber}" else ""
         "${spec.vram.megabytes / 1024}GB ${spec.memoryType} • ${spec.tdp.watts}W TDP$skuSuffix"
     }
-    is RamSpec -> "${spec.generation} • ${spec.speed.mhz}MT/s • CL${spec.casLatency} • ${spec.capacity.megabytes / 1024}GB (${spec.moduleCount} modül)"
+    is RamSpec -> "${spec.generation} • ${spec.speed.mhz}MT/s • CL${spec.casLatency} • ${spec.capacity.megabytes / 1024}GB (${spec.moduleCount} ${if (isTr) "modül" else "modules"})"
     is MotherboardSpec -> "${spec.socket} • ${spec.chipset} • ${spec.formFactor.name} • ${spec.memoryGeneration}"
     is PsuSpec -> "${spec.wattage.watts}W • ${spec.efficiency.name} • ${if (spec.isAtx3Compliant) "ATX 3.0" else "ATX"}"
-    is StorageSpec -> "${spec.mediaType.name} • ${spec.capacity.megabytes / 1024}GB • ${spec.sequentialReadMbps}MB/s Okuma"
+    is StorageSpec -> "${spec.mediaType.name} • ${spec.capacity.megabytes / 1024}GB • ${spec.sequentialReadMbps}MB/s ${if (isTr) "Okuma" else "Read"}"
     is CoolerSpec -> "${spec.type.displayName} • Max TDP: ${spec.maxCoolingTdp.watts}W"
     is CaseSpec -> listOfNotNull(
         spec.type ?: "Mid Tower",
         spec.maxGpuLengthMm?.let { "GPU: ${it}mm" },
-        spec.maxRadiatorSizeMm?.let { "Radyatör: ${it}mm" },
+        spec.maxRadiatorSizeMm?.let { "${if (isTr) "Radyatör" else "Radiator"}: ${it}mm" },
         spec.sidePanel,
     ).joinToString(" • ")
     is PrebuiltSpec -> "${spec.cpuModel} • ${spec.gpuModel} • ${spec.ramSpec} • ${spec.storageSpec}"
@@ -1828,3 +1833,5 @@ fun HardwareListContentDarkPreview() {
 }
 
 // endregion
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

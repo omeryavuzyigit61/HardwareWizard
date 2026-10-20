@@ -68,7 +68,14 @@ enum class PriceChartRange(val label: String, val maxPoints: Int) {
     ONE_MONTH("1 Ay", 2),
     SIX_MONTHS("6 Ay", 5),
     ONE_YEAR("1 Yıl", 8),
-    ALL("Tümü", 100),
+    ALL("Tümü", 100);
+
+    fun localizedLabel(isTr: Boolean = true): String = if (isTr) label else when (this) {
+        ONE_MONTH -> "1 Mo"
+        SIX_MONTHS -> "6 Mo"
+        ONE_YEAR -> "1 Yr"
+        ALL -> "All"
+    }
 }
 
 @Composable
@@ -79,6 +86,8 @@ fun PriceHistoryCard(
     highestPriceTry: Double?,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     var selectedRange by remember { mutableStateOf(PriceChartRange.ALL) }
 
     val effectivePoints = remember(priceHistory, currentPriceTry) {
@@ -87,11 +96,11 @@ fun PriceHistoryCard(
         } else if (currentPriceTry != null && currentPriceTry > 0) {
             listOf(
                 PricePoint(
-                    date = "Bugün",
-                    timestamp = "Bugün",
+                    date = if (isTr) "Bugün" else "Today",
+                    timestamp = if (isTr) "Bugün" else "Today",
                     price = currentPriceTry,
                     priceTry = currentPriceTry,
-                    storeName = "En Ucuz",
+                    storeName = if (isTr) "En Ucuz" else "Lowest",
                 ),
             )
         } else {
@@ -144,7 +153,7 @@ fun PriceHistoryCard(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "FİYAT GEÇMİŞİ & PİYASA ANALİZİ (TL)",
+                        text = tr(isTr, "FİYAT GEÇMİŞİ & PİYASA ANALİZİ (TL)", "PRICE HISTORY & MARKET TREND"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
@@ -159,15 +168,15 @@ fun PriceHistoryCard(
                 }
                 val badgeBg = badgeColor.copy(alpha = 0.12f)
                 val trendText = when {
-                    changePercent < -0.01 -> "Düşüşte"
-                    changePercent > 0.01 -> "Yükselişte"
-                    else -> "Referans Fiyat"
+                    changePercent < -0.01 -> tr(isTr, "Düşüşte", "Dropping")
+                    changePercent > 0.01 -> tr(isTr, "Yükselişte", "Rising")
+                    else -> tr(isTr, "Referans Fiyat", "Reference Price")
                 }
                 val sign = if (changePercent > 0.01) "+" else ""
                 val badgeText = if (filteredPoints.size >= 2) {
                     "$sign${changePercent.formatOneDecimal()}% ($trendText)"
                 } else {
-                    "En Düşük: ₺${current.formatPrice()}"
+                    "${tr(isTr, "En Düşük", "Lowest")}: ₺${current.formatPrice()}"
                 }
 
                 Surface(
@@ -195,12 +204,12 @@ fun PriceHistoryCard(
             ) {
                 Column {
                     Text(
-                        text = "GÜNCEL PİYASA FİYATI",
+                        text = tr(isTr, "GÜNCEL PİYASA FİYATI", "CURRENT MARKET PRICE"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Text(
-                        text = if (current > 0) "₺${current.formatPrice()}" else "Stok / Fiyat Yok",
+                        text = if (current > 0) "₺${current.formatPrice()}" else tr(isTr, "Stok / Fiyat Yok", "Out of Stock / No Price"),
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
@@ -211,7 +220,7 @@ fun PriceHistoryCard(
                     Row(horizontalArrangement = Arrangement.spacedBy(Spacing.medium)) {
                         Column(horizontalAlignment = Alignment.End) {
                             Text(
-                                text = "EN DÜŞÜK",
+                                text = tr(isTr, "EN DÜŞÜK", "LOWEST"),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -225,7 +234,7 @@ fun PriceHistoryCard(
 
                         Column(horizontalAlignment = Alignment.End) {
                             Text(
-                                text = "EN YÜKSEK",
+                                text = tr(isTr, "EN YÜKSEK", "HIGHEST"),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -261,7 +270,7 @@ fun PriceHistoryCard(
                         ),
                     ) {
                         Text(
-                            text = range.label,
+                            text = range.localizedLabel(isTr),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = if (isSelected) FontWeight.Black else FontWeight.Normal,
                             color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
@@ -283,7 +292,7 @@ fun PriceHistoryCard(
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        text = "Fiyat geçmişi verisi hazırlanıyor...",
+                        text = tr(isTr, "Fiyat geçmişi verisi hazırlanıyor...", "Price history data is loading..."),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -301,7 +310,7 @@ fun PriceHistoryCard(
 
             // Footnote
             Text(
-                text = "💡 Fiyat noktalarına dokunarak geçmiş tarih ve fiyat detaylarını inceleyebilirsiniz.",
+                text = tr(isTr, "💡 Fiyat noktalarına dokunarak geçmiş tarih ve fiyat detaylarını inceleyebilirsiniz.", "💡 Tap chart points to view historical dates and pricing records."),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
                 fontSize = 10.sp,
@@ -583,3 +592,5 @@ private fun Double.formatOneDecimal(): String {
     val fracPart = ((absVal - intPart) * 10).toInt()
     return "$intPart.$fracPart"
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

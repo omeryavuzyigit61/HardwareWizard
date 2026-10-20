@@ -33,8 +33,8 @@ import kotlinx.coroutines.launch
 import com.panda.myapplication.presentation.util.formatPrice
 
 sealed interface WizardEffect {
-    data class ShowToast(val message: String) : WizardEffect
-    data class ShareBuild(val text: String) : WizardEffect
+    data class ShowToast(val message: String, val messageEn: String? = null) : WizardEffect
+    data class ShareBuild(val text: String, val textEn: String? = null) : WizardEffect
 }
 
 private data class PickerParams(
@@ -203,21 +203,21 @@ class WizardViewModel(
         _pickerCategory.value = null
         _pickerSearchQuery.value = ""
         viewModelScope.launch {
-            effectChannel.send(WizardEffect.ShowToast("${item.displayName} sisteme eklendi."))
+            effectChannel.send(WizardEffect.ShowToast("${item.displayName} sisteme eklendi.", "${item.displayName} added to build."))
         }
     }
 
     fun onRemoveSlot(category: HardwareCategory) {
         activeBuildRepository.removeComponent(category)
         viewModelScope.launch {
-            effectChannel.send(WizardEffect.ShowToast("${category.name} sistemden çıkarıldı."))
+            effectChannel.send(WizardEffect.ShowToast("${category.localizedName()} sistemden çıkarıldı.", "${category.englishName} removed from build."))
         }
     }
 
     fun onClearBuild() {
         activeBuildRepository.clearBuild()
         viewModelScope.launch {
-            effectChannel.send(WizardEffect.ShowToast("Tüm parçalar sıfırlandı."))
+            effectChannel.send(WizardEffect.ShowToast("Tüm parçalar sıfırlandı.", "All components reset."))
         }
     }
 
@@ -248,73 +248,74 @@ class WizardViewModel(
     }
 
     fun onShareIntentRequested() {
-        val text = generateShareSummary(
-            AnalysisState(
-                build = uiState.value.activeBuild,
-                cockpitInfo = uiState.value.cockpitInfo,
-                platformStatus = uiState.value.platformStatus,
-                bottleneck = uiState.value.bottleneckAnalysis,
-                clearance = uiState.value.clearanceRadar,
-                gamingSim = uiState.value.gamingSimulation,
-                buildDoctor = uiState.value.buildDoctor,
-                compatReport = uiState.value.compatibilityReport,
-                resolution = uiState.value.selectedResolution,
-            )
+        val analysis = AnalysisState(
+            build = uiState.value.activeBuild,
+            cockpitInfo = uiState.value.cockpitInfo,
+            platformStatus = uiState.value.platformStatus,
+            bottleneck = uiState.value.bottleneckAnalysis,
+            clearance = uiState.value.clearanceRadar,
+            gamingSim = uiState.value.gamingSimulation,
+            buildDoctor = uiState.value.buildDoctor,
+            compatReport = uiState.value.compatibilityReport,
+            resolution = uiState.value.selectedResolution,
         )
+        val textTr = generateShareSummary(analysis, isTr = true)
+        val textEn = generateShareSummary(analysis, isTr = false)
         viewModelScope.launch {
-            effectChannel.send(WizardEffect.ShareBuild(text))
+            effectChannel.send(WizardEffect.ShareBuild(textTr, textEn))
         }
     }
 
-    private fun generateShareSummary(analysis: AnalysisState): String {
+    private fun generateShareSummary(analysis: AnalysisState, isTr: Boolean = true): String {
         val b = analysis.build
         val priceFormatted = if (b.totalPriceTry > 0) "₺${b.totalPriceTry.formatPrice()}" else "N/A"
+        val notSelected = if (isTr) "Seçilmedi" else "Not Selected"
         return buildString {
             appendLine("═════════════════════════════════")
             appendLine("⚡ HARDWARE WIZARD // SYSTEM BUILD")
             appendLine("═════════════════════════════════")
-            appendLine("Platform: ${analysis.platformStatus.platformName}")
-            appendLine("Durum: ${if (analysis.compatReport.isCompatible) "✅ %100 Uyumlu" else "⚠️ Uyumsuzluk Bildirimi"}")
-            appendLine("Sağlık Skoru: ${analysis.buildDoctor.healthScore}/100 (${analysis.buildDoctor.statusText})")
+            appendLine("${if (isTr) "Platform" else "Platform"}: ${analysis.platformStatus.platformName}")
+            appendLine("${if (isTr) "Durum" else "Status"}: ${if (analysis.compatReport.isCompatible) (if (isTr) "✅ %100 Uyumlu" else "✅ 100% Compatible") else (if (isTr) "⚠️ Uyumsuzluk Bildirimi" else "⚠️ Incompatibility Detected")}")
+            appendLine("${if (isTr) "Sağlık Skoru" else "Health Score"}: ${analysis.buildDoctor.healthScore}/100 (${analysis.buildDoctor.statusText})")
             analysis.buildDoctor.weakestLinkComponent?.let {
-                appendLine("Zayıf Halka: $it")
+                appendLine("${if (isTr) "Zayıf Halka" else "Weakest Link"}: $it")
             }
             appendLine()
-            appendLine("BİLEŞENLER:")
-            appendLine("• CPU:       ${b.cpu?.displayName ?: "Seçilmedi"}")
-            appendLine("• Anakart:   ${b.motherboard?.displayName ?: "Seçilmedi"}")
-            appendLine("• RAM:       ${b.ram?.displayName ?: "Seçilmedi"}")
-            appendLine("• GPU:       ${b.gpu?.displayName ?: "Seçilmedi"}")
-            appendLine("• Depolama:  ${b.storage?.displayName ?: "Seçilmedi"}")
-            appendLine("• Soğutucu:  ${b.cooler?.displayName ?: "Seçilmedi"}")
-            appendLine("• Kasa:      ${b.case?.displayName ?: "Seçilmedi"}")
-            appendLine("• PSU:       ${b.psu?.displayName ?: "Seçilmedi"}")
+            appendLine(if (isTr) "BİLEŞENLER:" else "COMPONENTS:")
+            appendLine("• CPU:       ${b.cpu?.displayName ?: notSelected}")
+            appendLine("• ${if (isTr) "Anakart" else "Motherboard"}:   ${b.motherboard?.displayName ?: notSelected}")
+            appendLine("• RAM:       ${b.ram?.displayName ?: notSelected}")
+            appendLine("• GPU:       ${b.gpu?.displayName ?: notSelected}")
+            appendLine("• ${if (isTr) "Depolama" else "Storage"}:  ${b.storage?.displayName ?: notSelected}")
+            appendLine("• ${if (isTr) "Soğutucu" else "Cooler"}:  ${b.cooler?.displayName ?: notSelected}")
+            appendLine("• ${if (isTr) "Kasa" else "Case"}:      ${b.case?.displayName ?: notSelected}")
+            appendLine("• PSU:       ${b.psu?.displayName ?: notSelected}")
             appendLine()
-            appendLine("KOKPİT GÖSTERGELERİ:")
-            appendLine("• Güç: ${analysis.cockpitInfo.componentTdpSum}W TDP (Tepe: ${analysis.cockpitInfo.peakTdpWithTolerance}W) | Önerilen PSU: ${analysis.cockpitInfo.recommendedPsuWattage}W")
-            appendLine("• Darboğaz: ${analysis.bottleneck.message}")
+            appendLine(if (isTr) "KOKPİT GÖSTERGELERİ:" else "COCKPIT METRICS:")
+            appendLine("• ${if (isTr) "Güç" else "Power"}: ${analysis.cockpitInfo.componentTdpSum}W TDP (${if (isTr) "Tepe" else "Peak"}: ${analysis.cockpitInfo.peakTdpWithTolerance}W) | ${if (isTr) "Önerilen PSU" else "Recommended PSU"}: ${analysis.cockpitInfo.recommendedPsuWattage}W")
+            appendLine("• ${if (isTr) "Darboğaz" else "Bottleneck"}: ${analysis.bottleneck.message}")
             if (analysis.gamingSim.isReady) {
                 appendLine()
-                appendLine("OYUN PERFORMANSI (${analysis.gamingSim.resolution.label} • ${analysis.gamingSim.preset.label} • ${analysis.gamingSim.upscaling.label}):")
-                appendLine("• Ortalama FPS: ~${analysis.gamingSim.overallAvgFps} FPS (%1 Low: ~${analysis.gamingSim.overallLow1Fps} FPS)")
-                appendLine("• Tahmini VRAM: ${analysis.gamingSim.estimatedVramGb} GB")
+                appendLine("${if (isTr) "OYUN PERFORMANSI" else "GAMING PERFORMANCE"} (${analysis.gamingSim.resolution.label} • ${analysis.gamingSim.preset.label} • ${analysis.gamingSim.upscaling.label}):")
+                appendLine("• ${if (isTr) "Ortalama FPS" else "Average FPS"}: ~${analysis.gamingSim.overallAvgFps} FPS (%1 Low: ~${analysis.gamingSim.overallLow1Fps} FPS)")
+                appendLine("• ${if (isTr) "Tahmini VRAM" else "Estimated VRAM"}: ${analysis.gamingSim.estimatedVramGb} GB")
                 analysis.gamingSim.games.forEach { g ->
                     appendLine("• ${g.gameName}: ~${g.fps} FPS (%1 Low: ~${g.low1PctFps})")
                 }
-                appendLine("SENTETİK PUANLAR:")
+                appendLine(if (isTr) "SENTETİK PUANLAR:" else "SYNTHETIC BENCHMARKS:")
                 analysis.gamingSim.synthetics.forEach { s ->
                     appendLine("• ${s.name}: ${s.score} ${s.unit}")
                 }
             }
             if (analysis.buildDoctor.upgradeRecommendations.isNotEmpty()) {
                 appendLine()
-                appendLine("ÖNERİLEN GELİŞTİRMELER:")
+                appendLine(if (isTr) "ÖNERİLEN GELİŞTİRMELER:" else "RECOMMENDED UPGRADES:")
                 analysis.buildDoctor.upgradeRecommendations.take(2).forEach { rec ->
-                    appendLine("• ${rec.title}: ${rec.expectedGain} (F/P: ${rec.roiScore}/10)")
+                    appendLine("• ${rec.title}: ${rec.expectedGain} (${if (isTr) "F/P" else "ROI"}: ${rec.roiScore}/10)")
                 }
             }
             appendLine()
-            appendLine("Toplam Maliyet: $priceFormatted")
+            appendLine("${if (isTr) "Toplam Maliyet" else "Total Cost"}: $priceFormatted")
             appendLine("═════════════════════════════════")
             appendLine("Built with Hardware Wizard 🛠️")
         }

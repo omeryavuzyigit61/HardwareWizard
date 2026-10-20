@@ -34,6 +34,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.StringsTR
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -146,10 +147,14 @@ fun HardwareGlossaryScreen(
             .flowOn(Dispatchers.Default)
     }.collectAsState(initial = "")
 
-    LaunchedEffect(Unit) {
+    val strings = LocalAppStrings.current
+    val isTurkish = strings.catalogTitle == StringsTR.catalogTitle
+
+    LaunchedEffect(isTurkish) {
         val loaded = withContext(Dispatchers.Default) {
             runCatching {
-                val bytes = Res.readBytes("files/hardware_glossary.json")
+                val fileName = if (isTurkish) "files/hardware_glossary.json" else "files/hardware_glossary_en.json"
+                val bytes = Res.readBytes(fileName)
                 glossaryJson.decodeFromString<List<GlossaryTermDto>>(bytes.decodeToString())
             }.onFailure { err ->
                 println("GLOSSARY PARSE ERROR: $err")
@@ -160,9 +165,9 @@ fun HardwareGlossaryScreen(
         isLoading = false
     }
 
-    val categories = remember(allTerms) {
+    val categories = remember(allTerms, strings) {
         val dynamic = allTerms.map { it.category }.distinct()
-        listOf(null to "Tümü") + dynamic.map { it to it }
+        listOf(null to strings.glossaryCategoryAll) + dynamic.map { it to it }
     }
 
     val filteredEntries = remember(allTerms, debouncedQuery, selectedCategory) {
@@ -210,7 +215,7 @@ fun HardwareGlossaryScreen(
                         searchQueryText = it
                         searchQueryFlow.value = it
                     },
-                    placeholder = { Text("Terim veya metrik ara (DrMOS, 12V-2x6, QD-OLED, Rapid Trigger, X3D...)") },
+                    placeholder = { Text(strings.glossarySearchPlaceholder) },
                     trailingIcon = {
                         if (searchQueryText.isNotEmpty()) {
                             Text(
@@ -273,7 +278,7 @@ fun HardwareGlossaryScreen(
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        text = "Aradığınız kriterlere uygun mühendislik terimi bulunamadı.",
+                        text = strings.glossaryEmpty,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -289,14 +294,14 @@ fun HardwareGlossaryScreen(
                         key = { it.id },
                     ) { entry ->
                         val categoryAccent = when (entry.category) {
-                            "Anakart & Güç", "VRM & Güç" -> NeonAmber
-                            "İşlemci & Çiplet", "İşlemci & Bellek" -> ElectricBlue
-                            "Bellek & RAM" -> NeonPurple
-                            "Ekran Kartı & Grafik" -> NeonRose
-                            "Depolama (SSD)" -> NeonCyan
-                            "Soğutma & Kasa", "Soğutma" -> NeonCyan
-                            "Monitör & Panel", "Ekran & Panel" -> ElectricBlue
-                            "Çevre Birimleri" -> NeonEmerald
+                            "Anakart & Güç", "VRM & Güç", "Motherboard & Power", "VRM & Power" -> NeonAmber
+                            "İşlemci & Çiplet", "İşlemci & Bellek", "CPU & Architecture", "CPU & Memory" -> ElectricBlue
+                            "Bellek & RAM", "RAM & Memory" -> NeonPurple
+                            "Ekran Kartı & Grafik", "GPU & Graphics" -> NeonRose
+                            "Depolama (SSD)", "Storage (SSD/NVMe)" -> NeonCyan
+                            "Soğutma & Kasa", "Soğutma", "Cooling & Chassis", "Thermal Solutions" -> NeonCyan
+                            "Monitör & Panel", "Ekran & Panel", "Display & Panel" -> ElectricBlue
+                            "Çevre Birimleri", "Peripherals & Input" -> NeonEmerald
                             else -> NeonCyan
                         }
                         FluidOrganicCard(
@@ -359,7 +364,7 @@ fun HardwareGlossaryScreen(
                                             verticalArrangement = Arrangement.spacedBy(6.dp),
                                         ) {
                                             Text(
-                                                text = "📐 Kritik Mühendislik Metrikleri",
+                                                text = "📐 ${strings.glossaryCriticalMetrics}",
                                                 style = MaterialTheme.typography.labelSmall,
                                                 fontWeight = FontWeight.ExtraBold,
                                                 color = NeonEmerald,
@@ -397,7 +402,7 @@ fun HardwareGlossaryScreen(
                                         verticalAlignment = Alignment.CenterVertically,
                                     ) {
                                         Text(
-                                            text = "İlgili:",
+                                            text = strings.glossaryRelated,
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         )

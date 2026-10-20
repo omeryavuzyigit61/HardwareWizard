@@ -99,18 +99,19 @@ fun formatTryCompact(price: Double, currency: AppCurrency = AppCurrency.TRY): St
  */
 fun UriHandler.openSafeStoreUrl(
     rawUrl: String?,
+    isTr: Boolean = true,
     onBlocked: ((String) -> Unit)? = null,
 ): Boolean {
     val safeUrl = SecurityUtils.validateStoreUrl(rawUrl)
     if (safeUrl == null) {
-        onBlocked?.invoke("Güvenlik duvarı: Doğrulanmamış veya güvenli olmayan mağaza bağlantısı engellendi.")
+        onBlocked?.invoke(if (isTr) "Güvenlik duvarı: Doğrulanmamış veya güvenli olmayan mağaza bağlantısı engellendi." else "Firewall: Blocked unverified or unsafe store link.")
         return false
     }
     return runCatching {
         this.openUri(safeUrl)
         true
     }.getOrElse {
-        onBlocked?.invoke("Tarayıcı açılamadı.")
+        onBlocked?.invoke(if (isTr) "Tarayıcı açılamadı." else "Could not open web browser.")
         false
     }
 }
@@ -138,7 +139,7 @@ fun HardwareCategory.accentColor(): Color = when (this) {
 /**
  * Centralized short badge text for hardware categories.
  */
-fun HardwareCategory.shortBadgeText(): String = when (this) {
+fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) when (this) {
     HardwareCategory.PREBUILT_PC -> "OEM SİSTEM"
     HardwareCategory.LAPTOP -> "LAPTOP"
     HardwareCategory.CPU -> "CPU"
@@ -153,6 +154,21 @@ fun HardwareCategory.shortBadgeText(): String = when (this) {
     HardwareCategory.KEYBOARD -> "KLAVYE"
     HardwareCategory.HEADSET -> "KULAKLIK"
     HardwareCategory.MONITOR -> "MONİTÖR"
+} else when (this) {
+    HardwareCategory.PREBUILT_PC -> "PREBUILT PC"
+    HardwareCategory.LAPTOP -> "LAPTOP"
+    HardwareCategory.CPU -> "CPU"
+    HardwareCategory.GPU -> "GPU"
+    HardwareCategory.RAM -> "RAM"
+    HardwareCategory.MOTHERBOARD -> "MOTHERBOARD"
+    HardwareCategory.PSU -> "PSU"
+    HardwareCategory.STORAGE -> "SSD"
+    HardwareCategory.COOLER -> "COOLER"
+    HardwareCategory.CASE -> "CASE"
+    HardwareCategory.MOUSE -> "MOUSE"
+    HardwareCategory.KEYBOARD -> "KEYBOARD"
+    HardwareCategory.HEADSET -> "HEADSET"
+    HardwareCategory.MONITOR -> "MONITOR"
 }
 
 /**

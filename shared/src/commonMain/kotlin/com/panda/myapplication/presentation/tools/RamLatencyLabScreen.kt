@@ -68,6 +68,7 @@ fun RamLatencyLabScreen(
     onOpenDrawer: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
     var freqA by remember { mutableIntStateOf(6000) }
     var clA by remember { mutableIntStateOf(30) }
 
@@ -105,7 +106,7 @@ fun RamLatencyLabScreen(
             // Kit A Card
             item {
                 RamKitConfiguratorCard(
-                    title = "1. BELLEK KİTİ (KİT A)",
+                    title = strings.ramKitA,
                     accentColor = NeonCyan,
                     freqMts = freqA,
                     casLatency = clA,
@@ -119,7 +120,7 @@ fun RamLatencyLabScreen(
             // Kit B Card
             item {
                 RamKitConfiguratorCard(
-                    title = "2. KARŞILAŞTIRMA KİTİ (KİT B)",
+                    title = strings.ramKitB,
                     accentColor = NeonEmerald,
                     freqMts = freqB,
                     casLatency = clB,
@@ -143,7 +144,7 @@ fun RamLatencyLabScreen(
                         verticalArrangement = Arrangement.spacedBy(Spacing.small),
                     ) {
                         Text(
-                            text = "⚖️ MÜHENDİSLİK KIYASLAMASI & PLATFORM REHBERİ",
+                            text = "⚖️ " + strings.ramGuideTitle,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -151,25 +152,25 @@ fun RamLatencyLabScreen(
                         )
 
                         val latencyWinner = when {
-                            trueLatencyA < trueLatencyB -> "Kit A (${trueLatencyA} ns) ilk kelime tepki süresinde ${((trueLatencyB - trueLatencyA) * 100).roundToInt() / 100.0} ns daha hızlı!"
-                            trueLatencyB < trueLatencyA -> "Kit B (${trueLatencyB} ns) ilk kelime tepki süresinde ${((trueLatencyA - trueLatencyB) * 100).roundToInt() / 100.0} ns daha hızlı!"
-                            else -> "Her iki kitin de True Latency tepki süresi birebir eşit (${trueLatencyA} ns)!"
+                            trueLatencyA < trueLatencyB -> strings.ramLatencyWinnerA.replace("%s", trueLatencyA.toString()).replace("%s", (((trueLatencyB - trueLatencyA) * 100).roundToInt() / 100.0).toString())
+                            trueLatencyB < trueLatencyA -> strings.ramLatencyWinnerB.replace("%s", trueLatencyB.toString()).replace("%s", (((trueLatencyA - trueLatencyB) * 100).roundToInt() / 100.0).toString())
+                            else -> strings.ramLatencyEqual.replace("%s", trueLatencyA.toString())
                         }
 
                         val bwWinner = when {
-                            bandwidthA > bandwidthB -> "Kit A (${bandwidthA} GB/s) teorik bant genişliğinde +${((bandwidthA - bandwidthB) * 10).roundToInt() / 10.0} GB/s önde."
-                            bandwidthB > bandwidthA -> "Kit B (${bandwidthB} GB/s) teorik bant genişliğinde +${((bandwidthB - bandwidthA) * 10).roundToInt() / 10.0} GB/s önde."
-                            else -> "Her iki kit de eşit Dual-Channel bant genişliği (${bandwidthA} GB/s) sunuyor."
+                            bandwidthA > bandwidthB -> strings.ramBwWinnerA.replace("%s", bandwidthA.toString()).replace("%s", (((bandwidthA - bandwidthB) * 10).roundToInt() / 10.0).toString())
+                            bandwidthB > bandwidthA -> strings.ramBwWinnerB.replace("%s", bandwidthB.toString()).replace("%s", (((bandwidthB - bandwidthA) * 10).roundToInt() / 10.0).toString())
+                            else -> strings.ramBwEqual.replace("%s", bandwidthA.toString())
                         }
 
                         Text(
-                            text = "• Gecikme Galibi: $latencyWinner",
+                            text = "• ${strings.ramLatencyWinner} $latencyWinner",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "• Bant Genişliği Galibi: $bwWinner",
+                            text = "• ${strings.ramBwWinner} $bwWinner",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -186,18 +187,14 @@ fun RamLatencyLabScreen(
                         ) {
                             Column(modifier = Modifier.padding(12.dp)) {
                                 Text(
-                                    text = "🧠 AMD Zen 4 & Zen 5 (AM5) UCLK Kuralı",
+                                    text = "🧠 " + strings.ramZenRuleTitle,
                                     style = MaterialTheme.typography.labelLarge,
                                     fontWeight = FontWeight.Black,
                                     color = NeonAmber,
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
-                                    text = if (hasAbove6000) {
-                                        "Dikkat: Seçtiğiniz kitlerden biri 6000 MT/s üzerinde (${maxOf(freqA, freqB)} MT/s). AMD Ryzen 7000/9000 işlemcilerde bellek kontrolcüsü (UCLK) 6000 MT/s üstünde genellikle 1:1 senkron modundan 1:2 moduna düşer ve oyunlarda ~8-12 ns ekstra gecikme cezası yaratır. AM5 için altın oran 6000 MT/s CL30 (10.0 ns) değeridir!"
-                                    } else {
-                                        "Mükemmel: 6000 MT/s CL30 (10.0 ns), AMD Ryzen 7000/9000 (Zen 4 / Zen 5) işlemcilerde Infinity Fabric (FCLK) ve Bellek Kontrolcüsünün (UCLK = MEMCLK) 1:1 tam senkron çalıştığı en stabil Sweet-Spot noktasıdır."
-                                    },
+                                    text = strings.ramZenRuleDesc,
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurface,
                                 )
@@ -212,13 +209,13 @@ fun RamLatencyLabScreen(
                         ) {
                             Column(modifier = Modifier.padding(12.dp)) {
                                 Text(
-                                    text = "📘 Matematiksel Formül Referansı",
+                                    text = "📘 " + strings.ramFormulaTitle,
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan,
                                 )
                                 Text(
-                                    text = "True Latency (ns) = (CL × 2000) / Frekans (MT/s)\nDual-Channel Bant Genişliği (GB/s) = (Frekans × 16) / 1000",
+                                    text = "True Latency (ns) = (CL × 2000) / Frequency (MT/s)\nDual-Channel Bandwidth (GB/s) = (Frequency × 16) / 1000",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -242,6 +239,7 @@ private fun RamKitConfiguratorCard(
     onFreqChange: (Int) -> Unit,
     onClChange: (Int) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
     FluidOrganicCard(
         modifier = Modifier.fillMaxWidth(),
         accentColor = accentColor,
@@ -287,7 +285,7 @@ private fun RamKitConfiguratorCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
                 Text(
-                    text = "Frekans: $freqMts MT/s",
+                    text = strings.ramFreqLabel.replace("%d", freqMts.toString()),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
@@ -311,7 +309,7 @@ private fun RamKitConfiguratorCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
                 Text(
-                    text = "CAS Gecikmesi: CL$casLatency",
+                    text = strings.ramCasLabel.replace("%d", casLatency.toString()),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
@@ -334,7 +332,7 @@ private fun RamKitConfiguratorCard(
             ) {
                 Column {
                     Text(
-                        text = "Gerçek Gecikme (True Latency)",
+                        text = strings.ramTrueLatency,
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -347,7 +345,7 @@ private fun RamKitConfiguratorCard(
                 }
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
-                        text = "Çift Kanal Bant Genişliği",
+                        text = strings.ramBandwidth,
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )

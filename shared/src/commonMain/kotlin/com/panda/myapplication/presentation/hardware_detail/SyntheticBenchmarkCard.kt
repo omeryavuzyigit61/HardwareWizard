@@ -59,6 +59,8 @@ fun SyntheticBenchmarkCard(
     benchmarkInfo: HardwareBenchmarkInfo?,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     if (benchmarkInfo == null && category != HardwareCategory.CPU && category != HardwareCategory.GPU) {
         return
     }
@@ -102,13 +104,13 @@ fun SyntheticBenchmarkCard(
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
-                            text = if (isCpu) "Sentetik CPU Benchmark (CPU-Monkey)" else "3DMark Sentetik Grafik Benchmark",
+                            text = if (isCpu) tr(isTr, "Sentetik CPU Benchmark (CPU-Monkey)", "Synthetic CPU Benchmarks (CPU-Monkey)") else tr(isTr, "3DMark Sentetik Grafik Benchmark", "3DMark Synthetic Graphics Benchmarks"),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = benchmarkInfo?.testSuite ?: "Donanım Benchmark Laboratuvarı",
+                            text = benchmarkInfo?.testSuite ?: tr(isTr, "Donanım Benchmark Laboratuvarı", "Hardware Benchmark Lab"),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -123,7 +125,7 @@ fun SyntheticBenchmarkCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     val isVerified = benchmarkInfo?.isVerified == true
-                    val sourceText = if (isVerified) "Doğrulanmış Test" else "Simülasyon"
+                    val sourceText = if (isVerified) tr(isTr, "Doğrulanmış Test", "Verified Benchmark") else tr(isTr, "Simülasyon", "Simulation")
                     val sourceContainer = if (isVerified) {
                         MaterialTheme.colorScheme.primaryContainer
                     } else {
@@ -187,7 +189,7 @@ fun SyntheticBenchmarkCard(
                         onClick = { selectedCpuTab = 0 },
                         text = {
                             Text(
-                                text = "Tek Çekirdek (Single-Core)",
+                                text = tr(isTr, "Tek Çekirdek (Single-Core)", "Single-Core"),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = if (selectedCpuTab == 0) FontWeight.Bold else FontWeight.Normal,
                             )
@@ -198,7 +200,7 @@ fun SyntheticBenchmarkCard(
                         onClick = { selectedCpuTab = 1 },
                         text = {
                             Text(
-                                text = "Çok Çekirdek (Multi-Core)",
+                                text = tr(isTr, "Çok Çekirdek (Multi-Core)", "Multi-Core"),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = if (selectedCpuTab == 1) FontWeight.Bold else FontWeight.Normal,
                             )
@@ -215,21 +217,21 @@ fun SyntheticBenchmarkCard(
                         score = cpuData?.cinebench2024Single,
                         referenceCeiling = 180,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "180 pts referans tepe tek çekirdek performansı",
+                        subText = tr(isTr, "180 pts referans tepe tek çekirdek performansı", "180 pts reference peak single-core performance"),
                     )
                     SyntheticMetricRow(
                         testName = "Cinebench R23 (Single-Core)",
                         score = cpuData?.cinebenchR23Single,
                         referenceCeiling = 2500,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "2,500 pts masaüstü tek çekirdek referansı",
+                        subText = tr(isTr, "2,500 pts masaüstü tek çekirdek referansı", "2,500 pts desktop single-core reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Geekbench 6 (Single-Core)",
                         score = cpuData?.geekbench6Single,
                         referenceCeiling = 3800,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "3,800 pts referans modern mimari skoru",
+                        subText = tr(isTr, "3,800 pts referans modern mimari skoru", "3,800 pts modern architecture reference score"),
                     )
                 } else {
                     // Multi-Core Test Items
@@ -238,28 +240,28 @@ fun SyntheticBenchmarkCard(
                         score = cpuData?.cinebench2024Multi,
                         referenceCeiling = 3000,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "3,000 pts tepe iş istasyonu render referansı",
+                        subText = tr(isTr, "3,000 pts tepe iş istasyonu render referansı", "3,000 pts peak workstation render reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Cinebench R23 (Multi-Core)",
                         score = cpuData?.cinebenchR23Multi,
                         referenceCeiling = 45000,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "45,000 pts çoklu çekirdek tepe referansı",
+                        subText = tr(isTr, "45,000 pts çoklu çekirdek tepe referansı", "45,000 pts multi-core peak ceiling reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Geekbench 6 (Multi-Core)",
                         score = cpuData?.geekbench6Multi,
                         referenceCeiling = 25000,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "25,000 pts genel işlem kapasitesi referansı",
+                        subText = tr(isTr, "25,000 pts genel işlem kapasitesi referansı", "25,000 pts general compute capacity reference"),
                     )
                     SyntheticMetricRow(
                         testName = "PassMark CPU Mark",
                         score = cpuData?.passmarkScore,
                         referenceCeiling = 70000,
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "70,000 pts global sentetik işlemci skoru",
+                        subText = tr(isTr, "70,000 pts global sentetik işlemci skoru", "70,000 pts global synthetic compute ceiling"),
                     )
                 }
             } else if (isGpu) {
@@ -270,21 +272,21 @@ fun SyntheticBenchmarkCard(
                     score = gpuData?.timeSpyGraphics,
                     referenceCeiling = 38000,
                     accentColor = MaterialTheme.colorScheme.primary,
-                    subText = "DirectX 12 1440p (38,000 pts tepe grafik gücü referansı)",
+                    subText = tr(isTr, "DirectX 12 1440p (38,000 pts tepe grafik gücü referansı)", "DirectX 12 1440p (38,000 pts peak graphics reference)"),
                 )
                 SyntheticMetricRow(
                     testName = "3DMark Time Spy Extreme",
                     score = gpuData?.timeSpyExtreme,
                     referenceCeiling = 20000,
                     accentColor = MaterialTheme.colorScheme.secondary,
-                    subText = "DirectX 12 4K UHD (20,000 pts tepe çözünürlük referansı)",
+                    subText = tr(isTr, "DirectX 12 4K UHD (20,000 pts tepe çözünürlük referansı)", "DirectX 12 4K UHD (20,000 pts peak 4K resolution reference)"),
                 )
                 SyntheticMetricRow(
                     testName = "3DMark Steel Nomad",
                     score = gpuData?.steelNomad,
                     referenceCeiling = 10000,
                     accentColor = MaterialTheme.colorScheme.tertiary,
-                    subText = "Modern Cross-Platform Non-Raytracing saf raster skoru",
+                    subText = tr(isTr, "Modern Cross-Platform Non-Raytracing saf raster skoru", "Modern cross-platform pure raster benchmark"),
                 )
             }
         }
@@ -304,6 +306,8 @@ private fun SyntheticMetricRow(
     subText: String,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val fraction = if (score != null) {
         (score.toFloat() / referenceCeiling.toFloat()).coerceIn(0f, 1f)
     } else {
@@ -344,7 +348,7 @@ private fun SyntheticMetricRow(
                         .padding(horizontal = Spacing.small, vertical = 2.dp),
                 ) {
                     Text(
-                        text = "Test Verisi Bulunamadı",
+                        text = tr(isTr, "Test Verisi Bulunamadı", "No Benchmark Data Available"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -380,7 +384,7 @@ private fun SyntheticMetricRow(
             )
             Spacer(modifier = Modifier.height(Spacing.extraSmall))
             Text(
-                text = "Bu benchmark için doğrulanmış ölçüm henüz katalogda bulunmuyor.",
+                text = tr(isTr, "Bu benchmark için doğrulanmış ölçüm henüz katalogda bulunmuyor.", "Verified measurements for this benchmark are not yet available in catalog."),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -410,7 +414,7 @@ private fun SyntheticBenchmarkCardCpuPreview() {
                     geekbench6Multi = 20450,
                     passmarkScore = 54200,
                 ),
-                testSuite = "CPU-Monkey & Cinebench Laboratuvarı",
+                testSuite = "CPU-Monkey & Cinebench Lab",
             ),
         )
     }
@@ -458,3 +462,5 @@ private fun SyntheticBenchmarkCardGpuPreview() {
         )
     }
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

@@ -43,6 +43,28 @@ enum class HardwareSortOption(val displayName: String) {
     // PSU
     PSU_WATTAGE_DESC("Güç Kapasitesi: En Yüksek");
 
+    fun localizedName(isTr: Boolean = true): String = if (isTr) displayName else when (this) {
+        DEFAULT -> "Default"
+        PRICE_ASC -> "Price: Low to High"
+        PRICE_DESC -> "Price: High to Low"
+        NAME_ASC -> "Name: A-Z"
+        CPU_CORES_DESC -> "Cores: High to Low"
+        CPU_CLOCK_DESC -> "Clock Speed: Highest"
+        CPU_TDP_ASC -> "TDP: Lowest"
+        CPU_TDP_DESC -> "TDP: Highest"
+        GPU_VRAM_DESC -> "VRAM: Highest"
+        GPU_TDP_ASC -> "Power Draw: Lowest"
+        GPU_TDP_DESC -> "Power Draw: Highest"
+        RAM_SPEED_DESC -> "Speed: Highest"
+        RAM_CL_ASC -> "CAS Latency (CL): Lowest"
+        RAM_CAPACITY_DESC -> "Capacity: Highest"
+        STORAGE_CAPACITY_DESC -> "Capacity: Highest"
+        STORAGE_READ_SPEED_DESC -> "Read Speed: Highest"
+        MOTHERBOARD_M2_SLOTS_DESC -> "M.2 Slots: Most"
+        MOTHERBOARD_RAM_SLOTS_DESC -> "RAM Slots: Most"
+        PSU_WATTAGE_DESC -> "Wattage: Highest"
+    }
+
     companion object {
         fun optionsForCategory(category: HardwareCategory?): List<HardwareSortOption> {
             val common = listOf(DEFAULT, PRICE_ASC, PRICE_DESC, NAME_ASC)

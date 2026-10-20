@@ -20,6 +20,6 @@ sealed interface HardwareListUiEvent {
 
 sealed interface HardwareListEffect {
     data class NavigateToDetail(val item: HardwareItem) : HardwareListEffect
-    data class ShowToast(val message: String) : HardwareListEffect
-    data class ShowVsAddedToast(val message: String) : HardwareListEffect
+    data class ShowToast(val message: String, val messageEn: String? = null) : HardwareListEffect
+    data class ShowVsAddedToast(val message: String, val messageEn: String? = null) : HardwareListEffect
 }

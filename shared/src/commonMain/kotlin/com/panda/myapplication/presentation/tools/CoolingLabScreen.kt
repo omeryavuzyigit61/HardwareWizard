@@ -107,9 +107,12 @@ private data class CpuThermalPreset(
     val baseTdpWatts: Int,
     val peakPptMtpWatts: Int,
     val tjMaxCelsius: Int,
-    val notes: String,
+    val notesTr: String,
+    val notesEn: String,
     val isFromCatalog: Boolean = false,
-)
+) {
+    fun localizedNotes(isTr: Boolean): String = if (isTr) notesTr else notesEn
+}
 
 private data class CoolerThermalPreset(
     val id: String,
@@ -121,24 +124,24 @@ private data class CoolerThermalPreset(
 )
 
 private val CPU_PRESETS = listOf(
-    CpuThermalPreset("preset_7500f", "AMD Ryzen 5 7500F", "AM5", 65, 88, 95, "6 Çekirdek • Düşük PPT, stok veya tek kule soğutucu ile serin çalışır."),
-    CpuThermalPreset("preset_7800x3d", "AMD Ryzen 7 7800X3D", "AM5", 120, 162, 89, "3D V-Cache katmanı nedeniyle ısı yoğunluğu yüksektir (TjMax 89°C)."),
-    CpuThermalPreset("preset_9800x3d", "AMD Ryzen 7 9800X3D", "AM5", 120, 162, 95, "2. Nesil V-Cache altta konumlandığı için 7800X3D'den ~6°C daha serindir."),
-    CpuThermalPreset("preset_9950x", "AMD Ryzen 9 9950X", "AM5", 170, 230, 95, "16 Çekirdek • Ağır render yükünde 230W PPT çeker, 360mm AIO önerilir."),
-    CpuThermalPreset("preset_14600k", "Intel Core i5-14600K", "LGA1700", 125, 181, 100, "PL2 tam yükte 181W MTP çeker; çift kule hava veya 240mm sıvı soğutma şarttır."),
-    CpuThermalPreset("preset_14700k", "Intel Core i7-14700K", "LGA1700", 125, 253, 100, "20 Çekirdek • PL2 253W MTP sınırında hava soğutucuları doygunluğa ulaştırır."),
-    CpuThermalPreset("preset_14900k", "Intel Core i9-14900K", "LGA1700", 125, 285, 100, "Ekstrem termal yoğunluk • 360mm/420mm üst sınıf AIO olmadan Thermal Throttling kaçınılmazdır."),
-    CpuThermalPreset("preset_285k", "Intel Core Ultra 9 285K", "LGA1851", 125, 250, 105, "Arrow Lake TSMC N3B • 14900K'ya kıyasla daha verimli, 360mm AIO ile tam stabil."),
+    CpuThermalPreset("preset_7500f", "AMD Ryzen 5 7500F", "AM5", 65, 88, 95, "6 Çekirdek • Düşük PPT, stok veya tek kule soğutucu ile serin çalışır.", "6 Cores • Low PPT, runs cool with stock or single-tower cooler."),
+    CpuThermalPreset("preset_7800x3d", "AMD Ryzen 7 7800X3D", "AM5", 120, 162, 89, "3D V-Cache katmanı nedeniyle ısı yoğunluğu yüksektir (TjMax 89°C).", "High thermal density due to stacked 3D V-Cache layer (TjMax 89°C)."),
+    CpuThermalPreset("preset_9800x3d", "AMD Ryzen 7 9800X3D", "AM5", 120, 162, 95, "2. Nesil V-Cache altta konumlandığı için 7800X3D'den ~6°C daha serindir.", "2nd Gen 3D V-Cache under CCD runs ~6°C cooler than 7800X3D."),
+    CpuThermalPreset("preset_9950x", "AMD Ryzen 9 9950X", "AM5", 170, 230, 95, "16 Çekirdek • Ağır render yükünde 230W PPT çeker, 360mm AIO önerilir.", "16 Cores • Heavy render pulls 230W PPT, 360mm AIO recommended."),
+    CpuThermalPreset("preset_14600k", "Intel Core i5-14600K", "LGA1700", 125, 181, 100, "PL2 tam yükte 181W MTP çeker; çift kule hava veya 240mm sıvı soğutma şarttır.", "PL2 full load pulls 181W MTP; dual-tower air or 240mm AIO required."),
+    CpuThermalPreset("preset_14700k", "Intel Core i7-14700K", "LGA1700", 125, 253, 100, "20 Çekirdek • PL2 253W MTP sınırında hava soğutucuları doygunluğa ulaştırır.", "20 Cores • 253W MTP pushes air coolers to thermal saturation."),
+    CpuThermalPreset("preset_14900k", "Intel Core i9-14900K", "LGA1700", 125, 285, 100, "Ekstrem termal yoğunluk • 360mm/420mm üst sınıf AIO olmadan Thermal Throttling kaçınılmazdır.", "Extreme thermal density • Throttling without premium 360mm/420mm AIO."),
+    CpuThermalPreset("preset_285k", "Intel Core Ultra 9 285K", "LGA1851", 125, 250, 105, "Arrow Lake TSMC N3B • 14900K'ya kıyasla daha verimli, 360mm AIO ile tam stabil.", "Arrow Lake TSMC N3B • More efficient than 14900K, stable with 360mm AIO."),
 )
 
 private val COOLER_PRESETS = listOf(
-    CoolerThermalPreset("preset_stock", "Stok Fan (Wraith Stealth / Laminar)", "Stok Hava", 95, 36.5),
-    CoolerThermalPreset("preset_ak120", "Thermalright Assassin King 120 SE", "Tek Kule Hava (120mm)", 180, 25.6),
-    CoolerThermalPreset("preset_pa120", "Thermalright Peerless Assassin 120 SE", "Çift Kule Hava (6 Isı Borusu)", 235, 26.5),
-    CoolerThermalPreset("preset_nhd15", "Noctua NH-D15 G2", "Amiral Gemisi Çift Kule", 260, 24.8),
-    CoolerThermalPreset("preset_lf240", "Arctic Liquid Freezer III 240", "240mm Sıvı Soğutma (AIO)", 250, 27.0),
-    CoolerThermalPreset("preset_lf360", "Arctic Liquid Freezer III 360", "360mm Sıvı Soğutma (38mm Radyatör)", 310, 28.5),
-    CoolerThermalPreset("preset_lf420", "Arctic Liquid Freezer III 420", "420mm Ekstrem AIO", 350, 29.0),
+    CoolerThermalPreset("preset_stock", "Stock Cooler (Wraith Stealth / Laminar)", "Stock Air Cooler", 95, 36.5),
+    CoolerThermalPreset("preset_ak120", "Thermalright Assassin King 120 SE", "120mm Single Tower Air", 180, 25.6),
+    CoolerThermalPreset("preset_pa120", "Thermalright Peerless Assassin 120 SE", "Dual Tower (6 Heatpipes)", 235, 26.5),
+    CoolerThermalPreset("preset_nhd15", "Noctua NH-D15 G2", "Flagship Dual Tower Air", 260, 24.8),
+    CoolerThermalPreset("preset_lf240", "Arctic Liquid Freezer III 240", "240mm Liquid Cooler (AIO)", 250, 27.0),
+    CoolerThermalPreset("preset_lf360", "Arctic Liquid Freezer III 360", "360mm Liquid (38mm Radiator)", 310, 28.5),
+    CoolerThermalPreset("preset_lf420", "Arctic Liquid Freezer III 420", "420mm Extreme Liquid AIO", 350, 29.0),
 )
 
 private fun mapCatalogCpuToThermalPreset(item: HardwareItem, spec: CpuSpec): CpuThermalPreset {
@@ -163,7 +166,7 @@ private fun mapCatalogCpuToThermalPreset(item: HardwareItem, spec: CpuSpec): Cpu
         else -> 100
     }
 
-    val cacheNote = spec.l3CacheMb?.let { "${it}MB L3 Önbellek • " } ?: ""
+    val cacheNote = spec.l3CacheMb?.let { "${it}MB L3 • " } ?: ""
     return CpuThermalPreset(
         id = item.id.value,
         name = item.displayName,
@@ -171,7 +174,8 @@ private fun mapCatalogCpuToThermalPreset(item: HardwareItem, spec: CpuSpec): Cpu
         baseTdpWatts = baseTdp,
         peakPptMtpWatts = peakPpt,
         tjMaxCelsius = tjMax,
-        notes = "Katalogdan Seçildi • ${spec.coreCount} Çekirdek / ${spec.threadCount} İzlek • ${cacheNote}Gerçek PPT/MTP: ${peakPpt}W",
+        notesTr = "Katalogdan Seçildi • ${spec.coreCount} Çekirdek / ${spec.threadCount} İzlek • ${cacheNote}Gerçek PPT/MTP: ${peakPpt}W",
+        notesEn = "Selected from Catalog • ${spec.coreCount}C / ${spec.threadCount}T • ${cacheNote}Actual PPT/MTP: ${peakPpt}W",
         isFromCatalog = true,
     )
 }
@@ -187,9 +191,9 @@ private fun mapCatalogCoolerToThermalPreset(item: HardwareItem, spec: CoolerSpec
         else -> 195
     }
     val typeLabel = if (spec.type == CoolerType.LIQUID) {
-        "${spec.radiatorSizeMm ?: 240}mm Sıvı Soğutma (AIO)"
+        "${spec.radiatorSizeMm ?: 240}mm Liquid Cooler (AIO)"
     } else {
-        "Hava Soğutma (${spec.heightMm ?: 155}mm)"
+        "Air Cooler (${spec.heightMm ?: 155}mm)"
     }
     return CoolerThermalPreset(
         id = item.id.value,
@@ -209,6 +213,8 @@ fun CoolingLabScreen(
     modifier: Modifier = Modifier,
 ) {
     val repository: HardwareRepository = koinInject()
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
     val catalogCpus by remember {
         repository.observeHardwareItemsByCategory(HardwareCategory.CPU).map { res ->
@@ -309,7 +315,7 @@ fun CoolingLabScreen(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "1. İŞLEMCİ (CPU) SEÇİMİ",
+                                text = strings.coolingSection1,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
@@ -347,7 +353,7 @@ fun CoolingLabScreen(
                                 ) {
                                     Column(modifier = Modifier.weight(1f)) {
                                         Text(
-                                            text = "ÖZEL SEÇİM (KATALOG): ${cpu.name}",
+                                            text = strings.coolingSelectedCpu.replace("%s", cpu.name),
                                             style = MaterialTheme.typography.labelMedium,
                                             fontWeight = FontWeight.Black,
                                             color = NeonEmerald,
@@ -355,7 +361,7 @@ fun CoolingLabScreen(
                                             overflow = TextOverflow.Ellipsis,
                                         )
                                         Text(
-                                            text = "TDP: ${cpu.baseTdpWatts}W • Gerçek PPT/MTP: ${cpu.peakPptMtpWatts}W",
+                                            text = strings.coolingCpuSpecsFormat.replace("%dW", "${cpu.baseTdpWatts}W").replace("%dW", "${cpu.peakPptMtpWatts}W"),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurface,
                                         )
@@ -366,7 +372,7 @@ fun CoolingLabScreen(
                                         color = MaterialTheme.colorScheme.surfaceVariant,
                                     ) {
                                         Text(
-                                            text = "Sıfırla",
+                                            text = strings.coolingReset,
                                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = NeonAmber,
@@ -379,7 +385,7 @@ fun CoolingLabScreen(
 
                         Spacer(modifier = Modifier.height(Spacing.small))
                         Text(
-                            text = "Önerilen Referans İşlemciler:",
+                            text = strings.coolingRecommendedCpu,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -417,13 +423,13 @@ fun CoolingLabScreen(
                         }
                         Spacer(modifier = Modifier.height(Spacing.small))
                         Text(
-                            text = "${cpu.socket} • Kağıt TDP: ${cpu.baseTdpWatts}W • Gerçek Tepe Güç (PPT/MTP): ${cpu.peakPptMtpWatts}W • TjMax: ${cpu.tjMaxCelsius}°C",
+                            text = if (isTr) "${cpu.socket} • Kağıt TDP: ${cpu.baseTdpWatts}W • Gerçek Tepe Güç (PPT/MTP): ${cpu.peakPptMtpWatts}W • TjMax: ${cpu.tjMaxCelsius}°C" else "${cpu.socket} • Rated TDP: ${cpu.baseTdpWatts}W • Peak Power (PPT/MTP): ${cpu.peakPptMtpWatts}W • TjMax: ${cpu.tjMaxCelsius}°C",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = cpu.notes,
+                            text = cpu.localizedNotes(isTr),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -446,7 +452,7 @@ fun CoolingLabScreen(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "2. SOĞUTUCU (COOLER) SEÇİMİ",
+                                text = strings.coolingCoolerArch,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
@@ -484,7 +490,7 @@ fun CoolingLabScreen(
                                 ) {
                                     Column(modifier = Modifier.weight(1f)) {
                                         Text(
-                                            text = "ÖZEL SOĞUTUCU: ${cooler.name}",
+                                            text = strings.coolingSelectedCooler.replace("%s", cooler.name),
                                             style = MaterialTheme.typography.labelMedium,
                                             fontWeight = FontWeight.Black,
                                             color = NeonEmerald,
@@ -503,7 +509,7 @@ fun CoolingLabScreen(
                                         color = MaterialTheme.colorScheme.surfaceVariant,
                                     ) {
                                         Text(
-                                            text = "Sıfırla",
+                                            text = strings.coolingReset,
                                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = NeonAmber,
@@ -516,7 +522,7 @@ fun CoolingLabScreen(
 
                         Spacer(modifier = Modifier.height(Spacing.small))
                         Text(
-                            text = "Önerilen Referans Soğutucular:",
+                            text = strings.coolingRecommendedCooler,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -554,7 +560,7 @@ fun CoolingLabScreen(
                                                 overflow = TextOverflow.Ellipsis,
                                             )
                                             Text(
-                                                text = "${item.typeLabel} • Gürültü: ${item.noiseDba} dBA",
+                                                text = "${item.typeLabel} • ${if (isTr) "Gürültü" else "Noise"}: ${item.noiseDba} dBA",
                                                 style = MaterialTheme.typography.labelSmall,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                             )
@@ -577,7 +583,7 @@ fun CoolingLabScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Text(
-                                text = "Oda / Kasa İçi Ortam Sıcaklığı",
+                                text = strings.coolingRoomTemp,
                                 style = MaterialTheme.typography.labelMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -629,7 +635,7 @@ fun CoolingLabScreen(
                     ) {
                         Column {
                             Text(
-                                text = "CPU Tepe Isı Yükü (PPT/MTP)",
+                                text = strings.coolingCpuTdp,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -642,7 +648,7 @@ fun CoolingLabScreen(
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = "Soğutucu Kapasitesi",
+                                text = if (isTr) "Soğutucu Kapasitesi" else "Cooler Capacity",
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -674,19 +680,19 @@ fun CoolingLabScreen(
 
                     // Animated Temperature Bars with Heat Wave / Pulse Effect
                     ThermalTempRow(
-                        label = "Masaüstü Boşta (Idle)",
+                        label = strings.coolingIdleLoad,
                         tempCelsius = idleTemp,
                         tjMax = cpu.tjMaxCelsius,
                         powerWatts = 28,
                     )
                     ThermalTempRow(
-                        label = "Oyun Yükü (Gaming ~%60 PPT)",
+                        label = strings.coolingGamingLoad,
                         tempCelsius = gamingTemp,
                         tjMax = cpu.tjMaxCelsius,
                         powerWatts = gamingWatts,
                     )
                     ThermalTempRow(
-                        label = "Tam Yük Render / Cinebench (%100 PPT)",
+                        label = strings.coolingStressLoad,
                         tempCelsius = renderTemp,
                         tjMax = cpu.tjMaxCelsius,
                         powerWatts = cpu.peakPptMtpWatts,
@@ -696,9 +702,9 @@ fun CoolingLabScreen(
 
                     Text(
                         text = if (isThrottling) {
-                            "❗ Mühendislik Uyarısı: ${cpu.name} tam yükte ${cpu.peakPptMtpWatts}W ısı üretirken ${cooler.name} maksimum ${cooler.maxDissipationWatts}W dağıtabilir. İşlemci ${cpu.tjMaxCelsius}°C sınırına çarpıp saat hızını düşürecektir (Thermal Throttling)."
+                            strings.coolingWarningDesc.replace("%s", cpu.name).replace("%dW", "${cpu.peakPptMtpWatts}W").replace("%s", cooler.name).replace("%dW", "${cooler.maxDissipationWatts}W").replace("%d°C", "${cpu.tjMaxCelsius}°C")
                         } else {
-                            "✅ Mühendislik Onayı: ${cooler.name}, ${cpu.name} işlemcisinin ${cpu.peakPptMtpWatts}W PPT/MTP yükünü ${headroomWatts}W ekstra güvenlik payı ile rahatça sönümler."
+                            strings.coolingSafeDesc.replace("%s", cooler.name).replace("%s", cpu.name).replace("%dW", "${cpu.peakPptMtpWatts}W").replace("%dW", "${headroomWatts}W")
                         },
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -895,6 +901,8 @@ private fun CatalogCpuPickerSheet(
     onDismiss: () -> Unit,
     onSelectCpu: (HardwareItem, CpuSpec) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var searchQuery by remember { mutableStateOf("") }
     val filtered = remember(cpus, searchQuery) {
         cpus.filter { item ->
@@ -913,13 +921,13 @@ private fun CatalogCpuPickerSheet(
                 .padding(horizontal = Spacing.medium),
         ) {
             Text(
-                text = "🔍 Kataloğumdan İşlemci (CPU) Seç",
+                text = "🔍 " + strings.selectCpuCatalog,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Black,
                 color = NeonCyan,
             )
             Text(
-                text = "Seçilen işlemcinin gerçek TDP ve hesaplanan PPT/MTP tepe güç değeri simülatöre aktarılır.",
+                text = if (isTr) "Seçilen işlemcinin gerçek TDP ve hesaplanan PPT/MTP tepe güç değeri simülatöre aktarılır." else "Real TDP and calculated PPT/MTP peak power values of selected CPU are applied to the simulator.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -927,7 +935,7 @@ private fun CatalogCpuPickerSheet(
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
-                placeholder = { Text("İşlemci ara (7500F, 7800X3D, 9950X, 14700K, AM5...)") },
+                placeholder = { Text(if (isTr) "İşlemci ara (7500F, 7800X3D, 9950X, 14700K, AM5...)" else "Search CPU (7500F, 7800X3D, 9950X, 14700K, AM5...)") },
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth(),
@@ -980,7 +988,7 @@ private fun CatalogCpuPickerSheet(
                             }
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = item.currentPriceTry.formatPriceWithCurrency(fallback = "Seç"),
+                                text = item.currentPriceTry.formatPriceWithCurrency(fallback = if (isTr) "Seç" else "Select"),
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonEmerald,
@@ -1001,6 +1009,8 @@ private fun CatalogCoolerPickerSheet(
     onDismiss: () -> Unit,
     onSelectCooler: (HardwareItem, CoolerSpec) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var searchQuery by remember { mutableStateOf("") }
     val filtered = remember(coolers, searchQuery) {
         coolers.filter { item ->
@@ -1019,13 +1029,13 @@ private fun CatalogCoolerPickerSheet(
                 .padding(horizontal = Spacing.medium),
         ) {
             Text(
-                text = "🔍 Kataloğumdan Soğutucu (Cooler) Seç",
+                text = "🔍 " + strings.selectCoolerCatalog,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Black,
                 color = NeonCyan,
             )
             Text(
-                text = "Seçilen hava veya sıvı soğutucunun ısı dağıtma kapasitesi (W) simülatöre aktarılır.",
+                text = if (isTr) "Seçilen hava veya sıvı soğutucunun ısı dağıtma kapasitesi (W) simülatöre aktarılır." else "Heat dissipation capacity (W) of selected cooler is applied to the simulator.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -1033,7 +1043,7 @@ private fun CatalogCoolerPickerSheet(
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
-                placeholder = { Text("Soğutucu ara (Thermalright, Arctic, 240mm, 360mm, Noctua...)") },
+                placeholder = { Text(if (isTr) "Soğutucu ara (Thermalright, Arctic, 240mm, 360mm, Noctua...)" else "Search Cooler (Thermalright, Arctic, 240mm, 360mm, Noctua...)") },
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth(),

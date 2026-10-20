@@ -26,6 +26,20 @@ enum class CommunityDealType(
     @SerialName("foreign")
     FOREIGN_PURCHASE("foreign", "Yurtdışı Fiyatı (YD)", "✈️", "Yurtdışı");
 
+    fun localizedTitle(isTr: Boolean = true): String = if (isTr) title else when (this) {
+        OWN_PURCHASE -> "My Purchase Price"
+        SECOND_HAND -> "Used / Pre-owned"
+        DISCOUNT_CAMPAIGN -> "Deal / Promotion"
+        FOREIGN_PURCHASE -> "Import / Global Price"
+    }
+
+    fun localizedBadgeLabel(isTr: Boolean = true): String = if (isTr) badgeLabel else when (this) {
+        OWN_PURCHASE -> "Purchase"
+        SECOND_HAND -> "Used"
+        DISCOUNT_CAMPAIGN -> "Deal"
+        FOREIGN_PURCHASE -> "Import"
+    }
+
     companion object {
         fun fromId(id: String): CommunityDealType =
             entries.firstOrNull { it.id.equals(id, ignoreCase = true) } ?: OWN_PURCHASE

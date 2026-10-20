@@ -24,8 +24,8 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 sealed interface HardwareDetailEffect {
-    data class ShowToast(val message: String) : HardwareDetailEffect
-    data class ShowVsAddedToast(val message: String) : HardwareDetailEffect
+    data class ShowToast(val message: String, val messageEn: String? = null) : HardwareDetailEffect
+    data class ShowVsAddedToast(val message: String, val messageEn: String? = null) : HardwareDetailEffect
 }
 
 class HardwareDetailViewModel(
@@ -58,7 +58,7 @@ class HardwareDetailViewModel(
 
     fun loadItem(id: String) {
         if (id.isBlank()) {
-            _uiState.update { it.copy(isLoading = false, errorMessage = "Geçersiz donanım kimliği.") }
+            _uiState.update { it.copy(isLoading = false, errorMessage = "Geçersiz donanım kimliği.", errorMessageEn = "Invalid hardware ID.") }
             return
         }
 
@@ -78,16 +78,17 @@ class HardwareDetailViewModel(
                         }
                     }
                     is DomainResult.Failure -> {
-                        val message = when (val err = result.error) {
-                            DomainError.Network -> "Ağ bağlantı hatası: Donanım detayları alınamadı."
-                            DomainError.NotFound -> "Aradığınız donanım parçası bulunamadı."
-                            DomainError.Storage -> "Yerel veritabanı okuma hatası."
-                            is DomainError.Unknown -> err.cause.message ?: "Beklenmeyen bir hata oluştu."
+                        val (message, messageEn) = when (val err = result.error) {
+                            DomainError.Network -> "Ağ bağlantı hatası: Donanım detayları alınamadı." to "Network error: Hardware details could not be loaded."
+                            DomainError.NotFound -> "Aradığınız donanım parçası bulunamadı." to "The requested hardware component could not be found."
+                            DomainError.Storage -> "Yerel veritabanı okuma hatası." to "Local database read error."
+                            is DomainError.Unknown -> (err.cause.message ?: "Beklenmeyen bir hata oluştu.") to (err.cause.message ?: "An unexpected error occurred.")
                         }
                         _uiState.update {
                             it.copy(
                                 isLoading = false,
                                 errorMessage = message,
+                                errorMessageEn = messageEn,
                             )
                         }
                     }
@@ -115,7 +116,7 @@ class HardwareDetailViewModel(
     fun onRefreshCommunityDeals() {
         viewModelScope.launch {
             communityPriceRepository.refreshDeals()
-            effectChannel.send(HardwareDetailEffect.ShowToast("🔄 Fiyat defteri güncellendi."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("🔄 Fiyat defteri güncellendi.", "🔄 Price ledger refreshed."))
         }
     }
 
@@ -128,16 +129,17 @@ class HardwareDetailViewModel(
 
         val name = item.displayName
         val message = if (isNowAdded) "$name sihirbaza eklendi!" else "$name sihirbazdan çıkarıldı."
+        val messageEn = if (isNowAdded) "$name added to Wizard!" else "$name removed from Wizard."
         viewModelScope.launch {
-            effectChannel.send(HardwareDetailEffect.ShowToast(message))
+            effectChannel.send(HardwareDetailEffect.ShowToast(message, messageEn))
         }
     }
 
     fun onAddToVsArena() {
         val item = _uiState.value.item ?: return
-        val statusMessage = vsArenaRepository.addItemToComparison(item)
+        val feedback = vsArenaRepository.addQuickItemBilingual(item)
         viewModelScope.launch {
-            effectChannel.send(HardwareDetailEffect.ShowVsAddedToast(statusMessage))
+            effectChannel.send(HardwareDetailEffect.ShowVsAddedToast(feedback.messageTr, feedback.messageEn))
         }
     }
 
@@ -145,7 +147,7 @@ class HardwareDetailViewModel(
         val item = _uiState.value.item ?: return
         viewModelScope.launch {
             getHardwareDetailUseCase.setCustomPrice(item.id, customPriceTry, note)
-            effectChannel.send(HardwareDetailEffect.ShowToast("🏷️ Özel yerel fiyat kaydedildi."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("🏷️ Özel yerel fiyat kaydedildi.", "🏷️ Local custom price saved."))
         }
     }
 
@@ -153,7 +155,7 @@ class HardwareDetailViewModel(
         val item = _uiState.value.item ?: return
         viewModelScope.launch {
             getHardwareDetailUseCase.clearCustomPrice(item.id)
-            effectChannel.send(HardwareDetailEffect.ShowToast("Özel fiyat kaldırıldı."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("Özel fiyat kaldırıldı.", "Custom price cleared."))
         }
     }
 
@@ -168,7 +170,7 @@ class HardwareDetailViewModel(
         val user = userRepository.currentUser.value
         if (user == null || !userRepository.isLoggedIn.value) {
             viewModelScope.launch {
-                effectChannel.send(HardwareDetailEffect.ShowToast("⚠️ Fiyat talebi oluşturmak için lütfen önce giriş yapın!"))
+                effectChannel.send(HardwareDetailEffect.ShowToast("⚠️ Fiyat talebi oluşturmak için lütfen önce giriş yapın!", "⚠️ Please sign in first to submit a community deal!"))
             }
             return
         }
@@ -194,7 +196,7 @@ class HardwareDetailViewModel(
         viewModelScope.launch {
             communityPriceRepository.submitDeal(deal)
             effectChannel.send(
-                HardwareDetailEffect.ShowToast("🚀 Fiyat bildiriminiz (@${user.username}) gönderildi! Yönetici onayından sonra yayınlanacaktır.")
+                HardwareDetailEffect.ShowToast("🚀 Fiyat bildiriminiz (@${user.username}) gönderildi! Yönetici onayından sonra yayınlanacaktır.", "🚀 Your price deal submission was sent! It will appear after admin review.")
             )
         }
     }
@@ -203,7 +205,7 @@ class HardwareDetailViewModel(
     fun onApproveCommunityDeal(dealId: String) {
         viewModelScope.launch {
             communityPriceRepository.approveDeal(dealId)
-            effectChannel.send(HardwareDetailEffect.ShowToast("✅ Fiyat bildirimi onaylandı ve deftere eklendi."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("✅ Fiyat bildirimi onaylandı ve deftere eklendi.", "✅ Price submission approved and added to ledger."))
         }
     }
 
@@ -211,7 +213,7 @@ class HardwareDetailViewModel(
     fun onRejectCommunityDeal(dealId: String, reason: String? = null) {
         viewModelScope.launch {
             communityPriceRepository.rejectDeal(dealId, reason)
-            effectChannel.send(HardwareDetailEffect.ShowToast("❌ Fiyat bildirimi reddedildi."))
+            effectChannel.send(HardwareDetailEffect.ShowToast("❌ Fiyat bildirimi reddedildi.", "❌ Price submission rejected."))
         }
     }
 

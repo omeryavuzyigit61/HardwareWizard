@@ -68,8 +68,15 @@ fun PriceOverrideDialog(
     var priceText by remember(item.id) { mutableStateOf(initialPriceText) }
     var noteText by remember(item.id) { mutableStateOf(item.customPriceNote ?: "") }
     var hasError by remember { mutableStateOf(false) }
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
-    val notePresets = listOf("Kendi Aldığım Fiyat", "İkinci El", "Kampanya / İndirim", "Yurt Dışı")
+    val notePresets = listOf(
+        strings.customPricePresetOwn,
+        strings.customPricePresetUsed,
+        strings.customPricePresetSale,
+        strings.customPricePresetImport,
+    )
 
     Dialog(onDismissRequest = onDismiss) {
         Card(
@@ -93,7 +100,7 @@ fun PriceOverrideDialog(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = "🏷️ Yerel Özel Fiyat Belirle",
+                        text = strings.customPriceDialogTitle,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
@@ -105,7 +112,7 @@ fun PriceOverrideDialog(
                             border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.6f)),
                         ) {
                             Text(
-                                text = "Özel Fiyat Aktif",
+                                text = strings.detailCustomPriceTag,
                                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
@@ -138,12 +145,12 @@ fun PriceOverrideDialog(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = "Mağaza Referans Fiyatı:",
+                            text = strings.customPriceStoreRef,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Text(
-                            text = item.storePriceTry.formatPriceWithCurrency("Stok / Fiyat Yok"),
+                            text = item.storePriceTry.formatPriceWithCurrency(strings.customPriceOutOfStock),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = if (item.storePriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -159,8 +166,8 @@ fun PriceOverrideDialog(
                         hasError = false
                     },
                     modifier = Modifier.fillMaxWidth(),
-                    label = { Text("Özel Fiyatınız (₺ TL)") },
-                    placeholder = { Text("Örn: 14500") },
+                    label = { Text(strings.customPriceFieldLabel) },
+                    placeholder = { Text(strings.customPriceFieldPlaceholder) },
                     singleLine = true,
                     isError = hasError,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -175,7 +182,7 @@ fun PriceOverrideDialog(
 
                 if (hasError) {
                     Text(
-                        text = "Lütfen geçerli bir TL tutarı girin (Örn: 5499).",
+                        text = strings.customPriceErrorInvalid,
                         style = MaterialTheme.typography.labelSmall,
                         color = NeonRose,
                     )
@@ -185,8 +192,8 @@ fun PriceOverrideDialog(
                     value = noteText,
                     onValueChange = { noteText = it.take(40) },
                     modifier = Modifier.fillMaxWidth(),
-                    label = { Text("Not / Kaynak (İsteğe Bağlı)") },
-                    placeholder = { Text("Örn: İkinci El, Amazon İndirimi...") },
+                    label = { Text(strings.customPriceNoteLabel) },
+                    placeholder = { Text(strings.customPriceNotePlaceholder) },
                     singleLine = true,
                     shape = RoundedCornerShape(10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -222,7 +229,7 @@ fun PriceOverrideDialog(
                 }
 
                 Text(
-                    text = "Girilen özel fiyat Room veritabanına kaydedilir; hem Katalog hem VS Arena F/P hesabı hem de PC Sihirbazı toplam bütçesinde öncelikli olarak kullanılır.",
+                    text = strings.customPriceNotice,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -244,7 +251,7 @@ fun PriceOverrideDialog(
                             shape = RoundedCornerShape(10.dp),
                         ) {
                             Text(
-                                text = "Sıfırla",
+                                text = if (isTr) "Sıfırla" else "Reset",
                                 color = NeonRose,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Bold,
@@ -256,7 +263,7 @@ fun PriceOverrideDialog(
                         onClick = onDismiss,
                         modifier = Modifier.weight(1f),
                     ) {
-                        Text("İptal", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(if (isTr) "İptal" else "Cancel", color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
 
                     Button(
@@ -275,7 +282,7 @@ fun PriceOverrideDialog(
                         colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
                     ) {
                         Text(
-                            text = "Kaydet",
+                            text = if (isTr) "Kaydet" else "Save",
                             color = SlateDarkBackground,
                             fontWeight = FontWeight.ExtraBold,
                         )

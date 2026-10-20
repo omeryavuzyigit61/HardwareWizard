@@ -78,6 +78,8 @@ fun AdminModerationScreen(
     repository: CommunityPriceRepository = koinInject(),
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val isAdminLoggedIn by repository.isAdminLoggedIn.collectAsState()
     val allDeals by repository.observeAllDeals().collectAsState(initial = emptyList())
     val coroutineScope = rememberCoroutineScope()
@@ -108,8 +110,8 @@ fun AdminModerationScreen(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = "Yönetici Moderasyon Paneli",
-                subtitle = "Topluluk Fiyat Bildirimleri ($pendingCount Bekleyen)",
+                title = tr(isTr, "Yönetici Moderasyon Paneli", "Admin Moderation Panel"),
+                subtitle = "${tr(isTr, "Topluluk Fiyat Bildirimleri", "Community Price Submissions")} ($pendingCount ${tr(isTr, "Bekleyen", "Pending")})",
                 icon = "🛡️",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -156,7 +158,7 @@ fun AdminModerationScreen(
                                 )
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(
-                                    text = "SÜPER YÖNETİCİ: Ömer Admin",
+                                    text = tr(isTr, "SÜPER YÖNETİCİ: Ömer Admin", "SUPER ADMIN: Ömer Admin"),
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonAmber,
@@ -191,7 +193,7 @@ fun AdminModerationScreen(
                                 border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.5f)),
                             ) {
                                 Text(
-                                    text = "Çıkış Yap",
+                                    text = tr(isTr, "Çıkış Yap", "Sign Out"),
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonRose,
                                 )
@@ -206,7 +208,7 @@ fun AdminModerationScreen(
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
-                    placeholder = { Text("Donanım veya kullanıcı ara...") },
+                    placeholder = { Text(tr(isTr, "Donanım veya kullanıcı ara...", "Search hardware or user...")) },
                     leadingIcon = { Text("🔍", modifier = Modifier.padding(start = 8.dp)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
@@ -227,7 +229,7 @@ fun AdminModerationScreen(
                     FilterChip(
                         selected = selectedFilter == DealStatus.PENDING,
                         onClick = { selectedFilter = DealStatus.PENDING },
-                        label = { Text("⏳ Bekleyenler ($pendingCount)") },
+                        label = { Text("${tr(isTr, "⏳ Bekleyenler", "⏳ Pending")} ($pendingCount)") },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = NeonAmber.copy(alpha = 0.2f),
                             selectedLabelColor = NeonAmber,
@@ -236,7 +238,7 @@ fun AdminModerationScreen(
                     FilterChip(
                         selected = selectedFilter == DealStatus.APPROVED,
                         onClick = { selectedFilter = DealStatus.APPROVED },
-                        label = { Text("✓ Onaylı") },
+                        label = { Text(tr(isTr, "✓ Onaylı", "✓ Approved")) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = NeonEmerald.copy(alpha = 0.2f),
                             selectedLabelColor = NeonEmerald,
@@ -245,7 +247,7 @@ fun AdminModerationScreen(
                     FilterChip(
                         selected = selectedFilter == DealStatus.REJECTED,
                         onClick = { selectedFilter = DealStatus.REJECTED },
-                        label = { Text("✕ Reddedilen") },
+                        label = { Text(tr(isTr, "✕ Reddedilen", "✕ Rejected")) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = NeonRose.copy(alpha = 0.2f),
                             selectedLabelColor = NeonRose,
@@ -254,7 +256,7 @@ fun AdminModerationScreen(
                     FilterChip(
                         selected = selectedFilter == null,
                         onClick = { selectedFilter = null },
-                        label = { Text("Tümü (${allDeals.size})") },
+                        label = { Text("${tr(isTr, "Tümü", "All")} (${allDeals.size})") },
                     )
                 }
 
@@ -269,7 +271,7 @@ fun AdminModerationScreen(
                         contentAlignment = Alignment.Center,
                     ) {
                         Text(
-                            text = "Bu filtreye uygun bildirim bulunamadı.",
+                            text = tr(isTr, "Bu filtreye uygun bildirim bulunamadı.", "No submissions found for this filter."),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -292,7 +294,7 @@ fun AdminModerationScreen(
                                 },
                                 onReject = {
                                     coroutineScope.launch {
-                                        repository.rejectDeal(deal.id, "Geçersiz kanıt veya piyasa dışı bildirim.")
+                                        repository.rejectDeal(deal.id, tr(isTr, "Geçersiz kanıt veya piyasa dışı bildirim.", "Invalid proof or out-of-market submission."))
                                     }
                                 },
                                 onDelete = {
@@ -316,6 +318,9 @@ private fun AdminDealItemCard(
     onReject: () -> Unit,
     onDelete: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val uriHandler = LocalUriHandler.current
     val clipboardManager = LocalClipboardManager.current
 
@@ -428,7 +433,7 @@ private fun AdminDealItemCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = "Kanıt: ${deal.proofUrl}",
+                        text = "${tr(isTr, "Kanıt", "Proof")}: ${deal.proofUrl}",
                         style = MaterialTheme.typography.labelSmall,
                         color = NeonCyan,
                         maxLines = 1,
@@ -440,7 +445,7 @@ private fun AdminDealItemCard(
                                 .onFailure { clipboardManager.setText(AnnotatedString(deal.proofUrl)) }
                         },
                     ) {
-                        Text("Aç / Kopyala", style = MaterialTheme.typography.labelSmall, color = ElectricBlue)
+                        Text(tr(isTr, "Aç / Kopyala", "Open / Copy"), style = MaterialTheme.typography.labelSmall, color = ElectricBlue)
                     }
                 }
             }
@@ -476,7 +481,7 @@ private fun AdminDealItemCard(
                 TextButton(
                     onClick = onDelete,
                 ) {
-                    Text("🗑️ Sil", style = MaterialTheme.typography.labelSmall, color = NeonRose)
+                    Text(tr(isTr, "🗑️ Sil", "🗑️ Delete"), style = MaterialTheme.typography.labelSmall, color = NeonRose)
                 }
             }
         }
@@ -488,6 +493,9 @@ private fun AdminAuthScreenContent(
     onLogin: (pin: String) -> Boolean,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     var pinText by remember { mutableStateOf("") }
     var isError by remember { mutableStateOf(false) }
 
@@ -519,13 +527,13 @@ private fun AdminAuthScreenContent(
                 }
 
                 Text(
-                    text = "Yönetici Moderasyon Girişi",
+                    text = tr(isTr, "Yönetici Moderasyon Girişi", "Admin Moderation Login"),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                 )
 
                 Text(
-                    text = "Topluluk fiyat bildirimlerini incelemek, onaylamak veya reddetmek için yönetici PIN kodunuzu girin.",
+                    text = tr(isTr, "Topluluk fiyat bildirimlerini incelemek, onaylamak veya reddetmek için yönetici PIN kodunuzu girin.", "Enter your admin PIN to review, approve, or reject community price submissions."),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -536,7 +544,7 @@ private fun AdminAuthScreenContent(
                         pinText = it
                         isError = false
                     },
-                    label = { Text("Yönetici PIN Kodu") },
+                    label = { Text(tr(isTr, "Yönetici PIN Kodu", "Admin PIN Code")) },
                     visualTransformation = PasswordVisualTransformation(),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
                     singleLine = true,
@@ -546,7 +554,7 @@ private fun AdminAuthScreenContent(
 
                 if (isError) {
                     Text(
-                        text = "Hatalı PIN kodu! (Varsayılan PIN: 1923)",
+                        text = tr(isTr, "Hatalı PIN kodu! (Varsayılan PIN: 1923)", "Invalid PIN code! (Default PIN: 1923)"),
                         style = MaterialTheme.typography.bodySmall,
                         color = NeonRose,
                     )
@@ -563,8 +571,10 @@ private fun AdminAuthScreenContent(
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
+                    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+                    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
                     Text(
-                        text = "🛡️ Yönetici Olarak Giriş Yap",
+                        text = tr(isTr, "🛡️ Yönetici Olarak Giriş Yap", "🛡️ Sign In as Admin"),
                         fontWeight = FontWeight.Bold,
                         color = Color.Black,
                     )
@@ -579,3 +589,5 @@ private fun formatTry(amount: Double): String {
     val formatted = rounded.toString().reversed().chunked(3).joinToString(".").reversed()
     return "$formatted ₺"
 }
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText

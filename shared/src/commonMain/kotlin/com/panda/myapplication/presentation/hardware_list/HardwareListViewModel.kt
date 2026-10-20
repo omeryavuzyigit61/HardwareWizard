@@ -186,21 +186,21 @@ class HardwareListViewModel(
                 }
             }
             is HardwareListUiEvent.OnAddToVsArena -> {
-                val msg = vsArenaRepository.addQuickItem(event.item)
+                val feedback = vsArenaRepository.addQuickItemBilingual(event.item)
                 viewModelScope.launch {
-                    effectChannel.send(HardwareListEffect.ShowVsAddedToast(msg))
+                    effectChannel.send(HardwareListEffect.ShowVsAddedToast(feedback.messageTr, feedback.messageEn))
                 }
             }
             is HardwareListUiEvent.OnSaveCustomPrice -> {
                 viewModelScope.launch {
                     repository.setCustomPrice(event.itemId, event.customPriceTry, event.note)
-                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat kaydedildi."))
+                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat kaydedildi.", "🏷️ Custom price saved."))
                 }
             }
             is HardwareListUiEvent.OnClearCustomPrice -> {
                 viewModelScope.launch {
                     repository.clearCustomPrice(event.itemId)
-                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat sıfırlandı."))
+                    effectChannel.send(HardwareListEffect.ShowToast("🏷️ Özel fiyat sıfırlandı.", "🏷️ Custom price cleared."))
                 }
             }
             HardwareListUiEvent.OnToggleFilterSheet -> {
@@ -275,6 +275,7 @@ class HardwareListViewModel(
                                 availableBrands = brands,
                                 isFilterSheetVisible = sheetVisible,
                                 errorMessage = "Donanım parçaları yüklenemedi.",
+                                errorMessageEn = "Could not load hardware components.",
                             )
                         }
                     }
@@ -404,7 +405,7 @@ class HardwareListViewModel(
                     isRefreshing.value = false
                     if (isManual) {
                         errorMessage.value = "Veri senkronizasyonu başarısız oldu."
-                        effectChannel.send(HardwareListEffect.ShowToast("Veri senkronizasyonu başarısız oldu."))
+                        effectChannel.send(HardwareListEffect.ShowToast("Veri senkronizasyonu başarısız oldu.", "Data synchronization failed."))
                     }
                 }
             }

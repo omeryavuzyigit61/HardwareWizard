@@ -4,6 +4,7 @@ import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.VsArenaMode
 import com.panda.myapplication.domain.repository.VsArenaRepository
+import com.panda.myapplication.domain.repository.VsQuickAddFeedback
 import com.panda.myapplication.domain.repository.VsArenaSelectionState
 import com.panda.myapplication.domain.repository.VsSlot
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -72,8 +73,9 @@ class VsArenaRepositoryImpl : VsArenaRepository {
         }
     }
 
-    override fun addQuickItem(item: HardwareItem): String {
-        var feedback = ""
+    override fun addQuickItemBilingual(item: HardwareItem): VsQuickAddFeedback {
+        var feedbackTr = ""
+        var feedbackEn = ""
         _state.update { current ->
             val targetMode = when (item.category) {
                 HardwareCategory.PREBUILT_PC -> VsArenaMode.PREBUILT_VS_PREBUILT
@@ -91,7 +93,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
 
             when {
                 sameCategoryLeft?.id == item.id -> {
-                    feedback = "⚔️ ${item.displayName} zaten VS Arena 1. Köşede seçili."
+                    feedbackTr = "⚔️ ${item.displayName} zaten VS Arena 1. Köşede seçili."
+                    feedbackEn = "⚔️ ${item.displayName} is already selected in Corner 1."
                     current.copy(
                         mode = targetMode,
                         componentCategory = newComponentCategory,
@@ -100,7 +103,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                     )
                 }
                 sameCategoryRight?.id == item.id -> {
-                    feedback = "⚔️ ${item.displayName} zaten VS Arena 2. Köşede seçili."
+                    feedbackTr = "⚔️ ${item.displayName} zaten VS Arena 2. Köşede seçili."
+                    feedbackEn = "⚔️ ${item.displayName} is already selected in Corner 2."
                     current.copy(
                         mode = targetMode,
                         componentCategory = newComponentCategory,
@@ -109,7 +113,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                     )
                 }
                 sameCategoryLeft == null -> {
-                    feedback = "⚡ ${item.displayName} VS Arena 1. Köşeye eklendi! Karşılaştırmak için 2. ürünü seçin."
+                    feedbackTr = "⚡ ${item.displayName} VS Arena 1. Köşeye eklendi! Karşılaştırmak için 2. ürünü seçin."
+                    feedbackEn = "⚡ ${item.displayName} added to Corner 1! Select a 2nd product to compare."
                     current.copy(
                         mode = targetMode,
                         componentCategory = newComponentCategory,
@@ -118,7 +123,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                     )
                 }
                 sameCategoryRight == null -> {
-                    feedback = "🔥 ${item.displayName} VS Arena 2. Köşeye eklendi! Kafa kafaya kıyaslama hazır."
+                    feedbackTr = "🔥 ${item.displayName} VS Arena 2. Köşeye eklendi! Kafa kafaya kıyaslama hazır."
+                    feedbackEn = "🔥 ${item.displayName} added to Corner 2! Head-to-head comparison is ready."
                     current.copy(
                         mode = targetMode,
                         componentCategory = newComponentCategory,
@@ -127,7 +133,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                     )
                 }
                 else -> {
-                    feedback = "🔥 ${item.displayName} VS Arena 2. Köşeye alındı (${sameCategoryRight.model}1. Köşeye kaydırıldı)."
+                    feedbackTr = "🔥 ${item.displayName} VS Arena 2. Köşeye alındı (${sameCategoryRight.model} 1. Köşeye kaydırıldı)."
+                    feedbackEn = "🔥 ${item.displayName} moved to Corner 2 (${sameCategoryRight.model} shifted to Corner 1)."
                     current.copy(
                         mode = targetMode,
                         componentCategory = newComponentCategory,
@@ -137,6 +144,8 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                 }
             }
         }
-        return feedback
+        return VsQuickAddFeedback(feedbackTr, feedbackEn)
     }
+
+    override fun addQuickItem(item: HardwareItem): String = addQuickItemBilingual(item).messageTr
 }

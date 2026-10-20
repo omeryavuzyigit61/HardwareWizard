@@ -124,6 +124,9 @@ fun HardwareDetailRoute(
     modifier: Modifier = Modifier,
     viewModel: HardwareDetailViewModel = koinViewModel(),
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -135,12 +138,14 @@ fun HardwareDetailRoute(
         viewModel.effects.collect { effect ->
             when (effect) {
                 is HardwareDetailEffect.ShowToast -> {
-                    snackbarHostState.showSnackbar(effect.message)
+                    val msg = if (isTr) effect.message else (effect.messageEn ?: effect.message)
+                    snackbarHostState.showSnackbar(msg)
                 }
                 is HardwareDetailEffect.ShowVsAddedToast -> {
+                    val msg = if (isTr) effect.message else (effect.messageEn ?: effect.message)
                     val result = snackbarHostState.showSnackbar(
-                        message = effect.message,
-                        actionLabel = "Arenaya Git",
+                        message = msg,
+                        actionLabel = if (isTr) "Arenaya Git" else "Go to Arena",
                         duration = SnackbarDuration.Short,
                     )
                     if (result == SnackbarResult.ActionPerformed) {
@@ -195,6 +200,7 @@ fun HardwareDetailContent(
     var showAdminLoginDialog by remember { mutableStateOf(false) }
     val strings = LocalAppStrings.current
     val currency = LocalAppCurrency.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
     Scaffold(
         modifier = modifier
@@ -205,7 +211,7 @@ fun HardwareDetailContent(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             DetailTopBar(
-                title = uiState.item?.brand ?: "Donanım Detayı",
+                title = uiState.item?.brand ?: (if (isTr) "Donanım Detayı" else "Hardware Details"),
                 onNavigateBack = onNavigateBack,
                 onAddToVsArenaClick = if (uiState.item != null) onAddToVsArenaClick else null,
             )
@@ -243,7 +249,7 @@ fun HardwareDetailContent(
                         )
                         Spacer(modifier = Modifier.height(Spacing.medium))
                         Text(
-                            text = "Teknik özellikler yükleniyor...",
+                            text = strings.detailLoadingSpecs,
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -257,7 +263,7 @@ fun HardwareDetailContent(
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = uiState.errorMessage,
+                            text = if (isTr) uiState.errorMessage ?: "" else (uiState.errorMessageEn ?: uiState.errorMessage ?: ""),
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.error,
                         )
@@ -266,7 +272,7 @@ fun HardwareDetailContent(
                             onClick = onNavigateBack,
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                         ) {
-                            Text("Listeye Dön", color = MaterialTheme.colorScheme.onPrimary)
+                            Text(strings.detailReturnToList, color = MaterialTheme.colorScheme.onPrimary)
                         }
                     }
                 }
@@ -351,7 +357,7 @@ fun HardwareDetailContent(
                                     if (!uiState.isLoggedIn) {
                                         coroutineScope.launch {
                                             snackbarHostState.showSnackbar(
-                                                message = "⚠️ Topluluk fiyatı veya fırsat bildirmek için lütfen önce giriş yapın.",
+                                                message = strings.detailAuthRequiredPrice,
                                                 duration = SnackbarDuration.Short,
                                             )
                                         }
@@ -457,6 +463,7 @@ private fun DetailTopBar(
     onAddToVsArenaClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
     Surface(
         modifier = modifier
             .fillMaxWidth()
@@ -510,7 +517,7 @@ private fun DetailTopBar(
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.65f)),
                 ) {
                     Text(
-                        text = "⚖️ VS Arenaya Ekle",
+                        text = "⚖️ " + strings.addToVsArena,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.ExtraBold,
                         color = NeonCyan,
@@ -528,6 +535,8 @@ private fun HeroHeaderCard(
     onPriceOverrideClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
         accentColor = if (item.isCustomPrice) NeonAmber else ElectricBlue,
@@ -566,7 +575,7 @@ private fun HeroHeaderCard(
                         )
                         if (item.isCustomPrice) {
                             DetailBadge(
-                                text = "🏷️ ÖZEL FİYAT",
+                                text = strings.detailCustomPriceTag,
                                 containerColor = NeonAmber.copy(alpha = 0.2f),
                                 contentColor = NeonAmber,
                             )
@@ -592,9 +601,9 @@ private fun HeroHeaderCard(
                 Spacer(modifier = Modifier.height(Spacing.extraSmall))
 
                 val modelSubtitle = if (item.spec is GpuSpec && !item.spec.partNumber.isNullOrBlank()) {
-                    "Model: ${item.model} • Parça No (SKU): ${item.spec.partNumber}"
+                    "${if (isTr) "Model" else "Model"}: ${item.model} • ${if (isTr) "Parça No (SKU)" else "Part No (SKU)"}: ${item.spec.partNumber}"
                 } else {
-                    "Model: ${item.model}"
+                    "${if (isTr) "Model" else "Model"}: ${item.model}"
                 }
                 Text(
                     text = modelSubtitle,
@@ -643,7 +652,7 @@ private fun HeroHeaderCard(
                                 )
                             }
                             Text(
-                                text = if (item.isCustomPrice) "Düzenle ✎" else "Fiyat Gir ✎",
+                                text = if (item.isCustomPrice) strings.detailEditPrice else strings.detailEnterPrice,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.ExtraBold,
                                 color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
@@ -661,6 +670,8 @@ private fun PerformancePowerSection(
     item: HardwareItem,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(Spacing.cardRadius),
@@ -696,157 +707,157 @@ private fun PerformancePowerSection(
             when (val s = item.spec) {
                 is CpuSpec -> {
                     MetricProgressBar(
-                        title = "Çekirdek & İzlek Kapasitesi",
-                        currentValue = "${s.coreCount} Çekirdek / ${s.threadCount} İzlek",
+                        title = tr(isTr, "Çekirdek & İzlek Kapasitesi", "Core & Thread Capacity"),
+                        currentValue = if (isTr) "${s.coreCount} Çekirdek / ${s.threadCount} İzlek" else "${s.coreCount} Cores / ${s.threadCount} Threads",
                         fraction = (s.coreCount / 32f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Maksimum 32 Çekirdek referansına göre",
+                        subText = tr(isTr, "Maksimum 32 Çekirdek referansına göre", "Relative to 32-core flagship reference"),
                     )
 
                     val clockMhz = (s.boostClock ?: s.baseClock).mhz
                     MetricProgressBar(
-                        title = "Maksimum İşlemci Frekansı",
+                        title = tr(isTr, "Maksimum İşlemci Frekansı", "Maximum Boost Frequency"),
                         currentValue = "${clockMhz / 1000f} GHz",
                         fraction = (clockMhz / 6000f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "6.0 GHz tepe saat hızına oranla",
+                        subText = tr(isTr, "6.0 GHz tepe saat hızına oranla", "Relative to 6.0 GHz clock reference"),
                     )
 
                     MetricProgressBar(
-                        title = "TDP Güç Tüketimi",
+                        title = tr(isTr, "TDP Güç Tüketimi", "TDP Power Consumption"),
                         currentValue = "${s.tdp.watts} W",
                         fraction = (s.tdp.watts / 300f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Soğutucu gereksinim düzeyi",
+                        subText = tr(isTr, "Soğutucu gereksinim düzeyi", "Cooler requirement level"),
                     )
 
                     val multiCoreIndex = ((s.coreCount * 250f + clockMhz) / 14000f).coerceIn(0f, 1f)
                     MetricProgressBar(
-                        title = "Sentetik Performans İndeksi",
+                        title = tr(isTr, "Sentetik Performans İndeksi", "Synthetic Compute Index"),
                         currentValue = "${(multiCoreIndex * 100).toInt()}% Skoru",
                         fraction = multiCoreIndex,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Hesaplama ve render gücü tahmini",
+                        subText = tr(isTr, "Hesaplama ve render gücü tahmini", "Estimated render and compute power"),
                     )
                 }
 
                 is GpuSpec -> {
                     val vramGb = s.vram.megabytes / 1024
                     MetricProgressBar(
-                        title = "Video Bellek (VRAM)",
+                        title = "Video Memory (VRAM)",
                         currentValue = "$vramGb GB ${s.memoryType}",
                         fraction = (vramGb / 24f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "24 GB referans tepe VRAM",
+                        subText = tr(isTr, "24 GB referans tepe VRAM", "Relative to 24 GB flagship reference"),
                     )
 
                     val gpuClock = (s.boostClock ?: s.coreClock).mhz
                     MetricProgressBar(
-                        title = "Grafik Çekirdek Frekansı",
+                        title = tr(isTr, "Grafik Çekirdek Frekansı", "GPU Core Frequency"),
                         currentValue = "$gpuClock MHz",
                         fraction = (gpuClock / 3000f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "3000 MHz hedef frekansa göre",
+                        subText = tr(isTr, "3000 MHz hedef frekansa göre", "Relative to 3000 MHz target"),
                     )
 
                     MetricProgressBar(
-                        title = "TDP Güç Çekimi",
+                        title = tr(isTr, "TDP Güç Çekimi", "TDP Power Draw"),
                         currentValue = "${s.tdp.watts} W",
                         fraction = (s.tdp.watts / 450f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Kartın doğrudan çektiği güç",
+                        subText = tr(isTr, "Kartın doğrudan çektiği güç", "Direct board power consumption"),
                     )
 
                     MetricProgressBar(
-                        title = "Önerilen Güç Kaynağı (PSU)",
+                        title = tr(isTr, "Önerilen Güç Kaynağı (PSU)", "Recommended Power Supply (PSU)"),
                         currentValue = "${s.recommendedPsu.watts} W",
                         fraction = (s.recommendedPsu.watts / 1000f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Sistem geneli tavsiye edilen besleme",
+                        subText = tr(isTr, "Sistem geneli tavsiye edilen besleme", "Recommended system power delivery"),
                     )
                 }
 
                 is RamSpec -> {
                     val capGb = s.capacity.megabytes / 1024
                     MetricProgressBar(
-                        title = "Bellek Kapasitesi",
-                        currentValue = "$capGb GB (${s.moduleCount}x Modül)",
+                        title = tr(isTr, "Bellek Kapasitesi", "Memory Capacity"),
+                        currentValue = if (isTr) "$capGb GB (${s.moduleCount}x Modül)" else "$capGb GB (${s.moduleCount}x Modules)",
                         fraction = (capGb / 128f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "128 GB maksimum masaüstü sınırına göre",
+                        subText = tr(isTr, "128 GB maksimum masaüstü sınırına göre", "Relative to 128 GB desktop standard"),
                     )
 
                     MetricProgressBar(
-                        title = "Frekans Veri Hızı",
+                        title = tr(isTr, "Frekans Veri Hızı", "Frequency & Transfer Rate"),
                         currentValue = "${s.speed.mhz} MT/s",
                         fraction = (s.speed.mhz / 8400f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "JEDEC & XMP/EXPO maksimum profili",
+                        subText = tr(isTr, "JEDEC & XMP/EXPO maksimum profili", "JEDEC & XMP/EXPO max profile"),
                     )
 
                     val latencyEfficiency = (1f - ((s.casLatency - 14).coerceIn(0, 30) / 30f)).coerceIn(0.1f, 1f)
                     MetricProgressBar(
-                        title = "Gecikme Hızı (CAS Latency)",
+                        title = tr(isTr, "Gecikme Hızı (CAS Latency)", "CAS Latency"),
                         currentValue = "CL${s.casLatency}",
                         fraction = latencyEfficiency,
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Daha düşük gecikme = yüksek duyarlılık",
+                        subText = tr(isTr, "Daha düşük gecikme = yüksek duyarlılık", "Lower latency = higher responsiveness"),
                     )
                 }
 
                 is StorageSpec -> {
                     MetricProgressBar(
-                        title = "Sıralı Okuma Hızı",
+                        title = tr(isTr, "Sıralı Okuma Hızı", "Sequential Read Speed"),
                         currentValue = "${s.sequentialReadMbps} MB/sn",
                         fraction = (s.sequentialReadMbps / 14000f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "PCIe Gen 5 sınırına göre (14.000 MB/s)",
+                        subText = tr(isTr, "PCIe Gen 5 sınırına göre (14.000 MB/s)", "Relative to PCIe Gen 5 ceiling (14,000 MB/s)"),
                     )
 
                     MetricProgressBar(
-                        title = "Sıralı Yazma Hızı",
+                        title = tr(isTr, "Sıralı Yazma Hızı", "Sequential Write Speed"),
                         currentValue = "${s.sequentialWriteMbps} MB/sn",
                         fraction = (s.sequentialWriteMbps / 12000f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Dosya kaydetme ve kopyalama hızı",
+                        subText = tr(isTr, "Dosya kaydetme ve kopyalama hızı", "File write & copy throughput"),
                     )
 
                     val storageCapGb = s.capacity.megabytes / 1024
                     MetricProgressBar(
-                        title = "Depolama Alanı",
+                        title = tr(isTr, "Depolama Alanı", "Storage Capacity"),
                         currentValue = if (storageCapGb >= 1024) "${storageCapGb / 1024} TB" else "$storageCapGb GB",
                         fraction = (storageCapGb / 4096f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Maksimum 4 TB referans",
+                        subText = tr(isTr, "Maksimum 4 TB referans", "Relative to 4 TB flagship ceiling"),
                     )
                 }
 
                 is CoolerSpec -> {
                     MetricProgressBar(
-                        title = "Maksimum Isı Dağıtımı (TDP)",
+                        title = tr(isTr, "Maksimum Isı Dağıtımı (TDP)", "Maximum Heat Dissipation (TDP)"),
                         currentValue = "${s.maxCoolingTdp.watts} W",
                         fraction = (s.maxCoolingTdp.watts / 400f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Masaüstü tepe soğutma katsayısı",
+                        subText = tr(isTr, "Masaüstü tepe soğutma katsayısı", "Peak desktop thermal rating"),
                     )
 
                     val radiatorMm = s.radiatorSizeMm ?: 120
                     MetricProgressBar(
-                        title = "Radyatör / Fan Boyutu",
-                        currentValue = s.radiatorSizeMm?.let { "${it} mm" } ?: "Hava Soğutma Kulesi",
+                        title = tr(isTr, "Radyatör / Fan Boyutu", "Radiator / Fan Dimension"),
+                        currentValue = s.radiatorSizeMm?.let { "${it} mm" } ?: tr(isTr, "Hava Soğutma Kulesi", "Air Cooling Tower"),
                         fraction = (radiatorMm / 420f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = if (s.type == CoolerType.LIQUID) "Sıvı soğutma radyatör uzunluğu" else "Standart kule tipi montaj",
+                        subText = if (s.type == CoolerType.LIQUID) tr(isTr, "Sıvı soğutma radyatör uzunluğu", "Liquid cooling radiator length") else tr(isTr, "Standart kule tipi montaj", "Standard tower installation"),
                     )
                 }
 
                 is PsuSpec -> {
                     MetricProgressBar(
-                        title = "Çıkış Gücü Kapasitesi",
+                        title = tr(isTr, "Çıkış Gücü Kapasitesi", "Output Power Capacity"),
                         currentValue = "${s.wattage.watts} W",
                         fraction = (s.wattage.watts / 1600f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "1600 Watt tepe standardına göre",
+                        subText = tr(isTr, "1600 Watt tepe standardına göre", "Relative to 1600W flagship ceiling"),
                     )
 
                     val effFraction = when (s.efficiency) {
@@ -858,21 +869,21 @@ private fun PerformancePowerSection(
                         PsuEfficiencyRating.STANDARD -> 0.80f
                     }
                     MetricProgressBar(
-                        title = "Verimlilik Derecesi",
+                        title = tr(isTr, "Verimlilik Derecesi", "Efficiency Rating"),
                         currentValue = s.efficiency.displayName,
                         fraction = effFraction,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "80 PLUS enerji verimlilik sertifikası",
+                        subText = tr(isTr, "80 PLUS enerji verimlilik sertifikası", "80 PLUS energy efficiency standard"),
                     )
                 }
 
                 is MotherboardSpec -> {
                     MetricProgressBar(
-                        title = "Bellek Yuva Desteği",
-                        currentValue = "${s.ramSlots} RAM Slotu",
+                        title = tr(isTr, "Bellek Yuva Desteği", "Memory Slot Support"),
+                        currentValue = if (isTr) "${s.ramSlots} RAM Yuvası" else "${s.ramSlots} RAM Slots",
                         fraction = (s.ramSlots / 8f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Maksimum genişletilebilirlik",
+                        subText = tr(isTr, "Maksimum genişletilebilirlik", "Maximum memory expandability"),
                     )
 
                     val pcieFraction = when (s.pcieGeneration) {
@@ -882,38 +893,38 @@ private fun PerformancePowerSection(
                         PcieGeneration.GEN2 -> 0.4f
                     }
                     MetricProgressBar(
-                        title = "PCI Express Veri Yolu",
+                        title = tr(isTr, "PCI Express Veri Yolu", "PCI Express Bus Standard"),
                         currentValue = s.pcieGeneration.displayName,
                         fraction = pcieFraction,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Ekran kartı ve NVMe bant genişliği standardı",
+                        subText = tr(isTr, "Ekran kartı ve NVMe bant genişliği standardı", "GPU & NVMe bandwidth generation"),
                     )
                 }
 
                 is CaseSpec -> {
                     s.maxGpuLengthMm?.let { gpuLen ->
                         MetricProgressBar(
-                            title = "Maksimum GPU Uzunluğu",
+                            title = tr(isTr, "Maksimum GPU Uzunluğu", "Maximum GPU Clearance"),
                             currentValue = "$gpuLen mm",
                             fraction = (gpuLen / 450f).coerceIn(0f, 1f),
                             accentColor = MaterialTheme.colorScheme.primary,
-                            subText = "450 mm referans kasa derinliğine göre",
+                            subText = tr(isTr, "450 mm referans kasa derinliğine göre", "Relative to 450mm chassis depth"),
                         )
                     }
                     s.maxRadiatorSizeMm?.let { radSize ->
                         MetricProgressBar(
-                            title = "Maksimum Radyatör Desteği",
+                            title = tr(isTr, "Maksimum Radyatör Desteği", "Maximum Radiator Support"),
                             currentValue = "$radSize mm",
                             fraction = (radSize / 420f).coerceIn(0f, 1f),
                             accentColor = MaterialTheme.colorScheme.secondary,
-                            subText = "Sıvı soğutma radyatör montaj kapasitesi",
+                            subText = tr(isTr, "Sıvı soğutma radyatör montaj kapasitesi", "AIO liquid radiator mounting capacity"),
                         )
                     }
                 }
 
                 is PrebuiltSpec -> {
                     MetricProgressBar(
-                        title = "Oyun Performans Skoru",
+                        title = tr(isTr, "Oyun Performans Skoru", "Gaming Performance Score"),
                         currentValue = "${s.gamingScore} / 100",
                         fraction = (s.gamingScore / 100f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
@@ -923,121 +934,121 @@ private fun PerformancePowerSection(
                     if (sepPrice != null && sepPrice > 0) {
                         val advantageFraction = (s.advantagePercent / 30.0).coerceIn(0.0, 1.0).toFloat()
                         MetricProgressBar(
-                            title = "Hazır Sistem Avantaj Endeksi",
-                            currentValue = "%${s.advantagePercent.toInt()} Avantajlı",
+                            title = tr(isTr, "Hazır Sistem Avantaj Endeksi", "Prebuilt Value Advantage Index"),
+                            currentValue = if (isTr) "%${s.advantagePercent.toInt()} Avantajlı" else "${s.advantagePercent.toInt()}% Advantage",
                             fraction = advantageFraction,
                             accentColor = if (s.isAdvantageous) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
-                            subText = "Tek tek toplama (${sepPrice.toLong()} ₺) ile karşılaştırma",
+                            subText = if (isTr) "Tek tek toplama (${sepPrice.toLong()} ₺) ile karşılaştırma" else "Compared to individual parts purchase (${sepPrice.toLong()} ₺)",
                         )
                     }
                 }
 
                 is LaptopSpec -> {
                     MetricProgressBar(
-                        title = "Gaming Benchmark Skoru",
+                        title = tr(isTr, "Gaming Benchmark Skoru", "Gaming Benchmark Score"),
                         currentValue = "${s.gamingScore} / 100",
                         fraction = (s.gamingScore / 100f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "1080p: ${s.fps1080p} FPS • 1440p: ${s.fps1440p} FPS referans oyun ortalaması",
+                        subText = if (isTr) "1080p: ${s.fps1080p} FPS • 1440p: ${s.fps1440p} FPS referans oyun ortalaması" else "1080p: ${s.fps1080p} FPS • 1440p: ${s.fps1440p} FPS gaming average reference",
                     )
                     MetricProgressBar(
-                        title = "Grafik İşlemci Gücü (TGP)",
+                        title = tr(isTr, "Grafik İşlemci Gücü (TGP)", "Mobile GPU TGP"),
                         currentValue = s.gpuWattTgp,
                         fraction = 0.85f,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.gpuModel} tam güç watt kapasitesi",
+                        subText = tr(isTr, "${s.gpuModel} tam güç watt kapasitesi", "${s.gpuModel} full wattage capability"),
                     )
                     MetricProgressBar(
-                        title = "Batarya & Mobilite",
+                        title = tr(isTr, "Batarya & Mobilite", "Battery & Mobility"),
                         currentValue = "${s.batteryWh} Wh • ${s.weightKg} kg",
                         fraction = (s.batteryWh / 100f).coerceIn(0f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Yüksek kapasiteli batarya hücresi",
+                        subText = tr(isTr, "Yüksek kapasiteli batarya hücresi", "High capacity battery cell"),
                     )
                 }
 
                 is MouseSpec -> {
                     MetricProgressBar(
-                        title = "Raporlama Hızı (Polling Rate)",
+                        title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
                         currentValue = "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz} ms)",
                         fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "8000 Hz e-spor tepe standardına göre",
+                        subText = tr(isTr, "8000 Hz e-spor tepe standardına göre", "Relative to 8000 Hz esports ceiling"),
                     )
                     val lightnessScore = ((120f - s.weightG) / 85f).coerceIn(0.1f, 1f)
                     MetricProgressBar(
-                        title = "Ultra Hafiflik Endeksi",
+                        title = tr(isTr, "Ultra Hafiflik Endeksi", "Ultralight Ergonomics Index"),
                         currentValue = "${s.weightG} gram",
                         fraction = lightnessScore,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Düşük eylemsizlik ve hızlı flick kabiliyeti",
+                        subText = tr(isTr, "Düşük eylemsizlik ve hızlı flick kabiliyeti", "Low inertia and rapid flick agility"),
                     )
                     MetricProgressBar(
-                        title = "Sensör Çözünürlüğü",
+                        title = tr(isTr, "Sensör Çözünürlüğü", "Sensor Resolution"),
                         currentValue = "${s.maxDpi} DPI (${s.sensor})",
                         fraction = (s.maxDpi / 44000f).coerceIn(0.2f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "Optik izleme hassasiyeti",
+                        subText = tr(isTr, "Optik izleme hassasiyeti", "Optical tracking precision"),
                     )
                 }
 
                 is KeyboardSpec -> {
                     val actuationEff = ((2.2f - s.minActuationMm.toFloat()) / 2.1f).coerceIn(0.15f, 1f)
                     MetricProgressBar(
-                        title = "Tetikleme Mesafesi & Hızı",
+                        title = tr(isTr, "Tetikleme Mesafesi & Hızı", "Actuation Travel & Speed"),
                         currentValue = "${s.minActuationMm} mm" + if (s.rapidTriggerSupported) " (Rapid Trigger)" else "",
                         fraction = actuationEff,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "0.1 mm Hall Effect manyetik referansına göre",
+                        subText = tr(isTr, "0.1 mm Hall Effect manyetik referansına göre", "Relative to 0.1mm magnetic rapid trigger"),
                     )
                     MetricProgressBar(
-                        title = "Raporlama Hızı (Polling Rate)",
+                        title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
                         currentValue = "${s.pollingRateHz} Hz",
                         fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)",
+                        subText = if (isTr) "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)" else "Keystroke transmission latency (${1000.0 / s.pollingRateHz} ms)",
                     )
                 }
 
                 is HeadsetSpec -> {
                     MetricProgressBar(
-                        title = "Sürücü Çapı & Akustik Güç",
+                        title = tr(isTr, "Sürücü Çapı & Akustik Güç", "Driver Size & Acoustic Power"),
                         currentValue = "${s.driverSizeMm} mm (${s.driverType})",
                         fraction = (s.driverSizeMm / 53f).coerceIn(0.3f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Sahne genişliği ve bas derinliği",
+                        subText = tr(isTr, "Sahne genişliği ve bas derinliği", "Soundstage width and bass depth"),
                     )
                     MetricProgressBar(
-                        title = "Empedans & Sürülebilirlik",
+                        title = tr(isTr, "Empedans & Sürülebilirlik", "Impedance & Driveability"),
                         currentValue = "${s.impedanceOhm} Ω",
                         fraction = (s.impedanceOhm / 250f).coerceIn(0.12f, 1f),
                         accentColor = if (s.dacAmpRequired) NeonAmber else MaterialTheme.colorScheme.secondary,
-                        subText = if (s.dacAmpRequired) "Harici DAC/Amfi önerilir (Stüdyo sınıfı)" else "Anakart / Dongle ile doğrudan tam güç",
+                        subText = if (s.dacAmpRequired) tr(isTr, "Harici DAC/Amfi önerilir (Stüdyo sınıfı)", "Dedicated DAC/Amp recommended (Studio Grade)") else tr(isTr, "Anakart / Dongle ile doğrudan tam güç", "Easily driven directly by motherboard / dongle"),
                     )
                 }
 
                 is MonitorSpec -> {
                     MetricProgressBar(
-                        title = "Yenileme Hızı (Akıcılık)",
+                        title = tr(isTr, "Yenileme Hızı (Akıcılık)", "Refresh Rate (Smoothness)"),
                         currentValue = "${s.refreshRateHz} Hz",
                         fraction = (s.refreshRateHz / 540f).coerceIn(0.2f, 1f),
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "540 Hz e-spor tepe referansına göre",
+                        subText = tr(isTr, "540 Hz e-spor tepe referansına göre", "Relative to 540 Hz esports reference"),
                     )
                     val respScore = if (s.responseSpeedGtGMs <= 0.05) 1.0f else (1f - (s.responseSpeedGtGMs.toFloat() / 5f)).coerceIn(0.2f, 0.9f)
                     MetricProgressBar(
-                        title = "Griden Griye Tepki Süresi (GtG)",
+                        title = tr(isTr, "Griden Griye Tepki Süresi (GtG)", "Gray-to-Gray Response (GtG)"),
                         currentValue = "${s.responseSpeedGtGMs} ms (${s.panelType})",
                         fraction = respScore,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Ghosting ve hareket bulanıklığı direnci",
+                        subText = tr(isTr, "Ghosting ve hareket bulanıklığı direnci", "Resistance to ghosting and motion blur"),
                     )
                     MetricProgressBar(
-                        title = "Keskinlik & Piksel Yoğunluğu",
+                        title = tr(isTr, "Keskinlik & Piksel Yoğunluğu", "Pixel Density (PPI)"),
                         currentValue = "${s.ppi} PPI (${s.resolution})",
                         fraction = (s.ppi / 165f).coerceIn(0.3f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği",
+                        subText = tr(isTr, "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği", "Text and image clarity on ${s.screenSizeInch}\" display"),
                     )
                 }
             }
@@ -1105,6 +1116,8 @@ private fun MultiGameFpsSimulationCard(
     item: HardwareItem,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val gameMatrix = remember(item.id) { BenchmarkEngine.resolveGameFpsForItem(item) } ?: return
     var selectedResolution by remember { mutableStateOf(GamingResolution.P1080) }
     var selectedCategoryFilter by remember { mutableStateOf<GameCategory?>(null) }
@@ -1143,7 +1156,7 @@ private fun MultiGameFpsSimulationCard(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Rekabetçi E-Spor (5) ve Ağır AAA (7) Test Katsayıları",
+                            text = tr(isTr, "Rekabetçi E-Spor (5) ve Ağır AAA (7) Test Katsayıları", "Competitive Esports (5) & AAA Title (7) Benchmarks"),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -1192,7 +1205,7 @@ private fun MultiGameFpsSimulationCard(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
             ) {
                 val filterOptions: List<Pair<GameCategory?, String>> = listOf(
-                    null to "Tümü (12)",
+                    null to tr(isTr, "Tümü (12)", "All (12)"),
                     GameCategory.ESPORTS to "🎯 E-Spor (5)",
                     GameCategory.AAA to "🔥 AAA Grafik (7)",
                 )
@@ -1311,7 +1324,9 @@ private fun PolymorphicTechnicalSpecsSection(
     item: HardwareItem,
     modifier: Modifier = Modifier,
 ) {
-    val rows = buildPolymorphicSpecRows(item)
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val rows = buildPolymorphicSpecRows(item, isTr)
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -1374,7 +1389,7 @@ private fun PolymorphicTechnicalSpecsSection(
                         text = value,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = if (value == "Veri Bulunamadı" || value == "Belirtilmedi") MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurface,
+                        color = if (value == "Veri Bulunamadı" || value == "Belirtilmedi" || value == "Unspecified" || value == "Not Found") MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurface,
                         modifier = Modifier.weight(1.3f),
                     )
                 }
@@ -1383,224 +1398,226 @@ private fun PolymorphicTechnicalSpecsSection(
     }
 }
 
-private const val UNSPECIFIED_TEXT = "Belirtilmedi"
+private fun getUnspecifiedText(isTr: Boolean): String = if (isTr) "Belirtilmedi" else "Unspecified"
 
-private fun buildPolymorphicSpecRows(item: HardwareItem): List<Pair<String, String>> {
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
+
+private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): List<Pair<String, String>> {
     val rows = mutableListOf<Pair<String, String>>()
-    rows.add("Marka" to item.brand)
-    rows.add("Model Kodu" to item.model)
+    rows.add(tr(isTr, "Marka", "Brand") to item.brand)
+    rows.add(tr(isTr, "Model Kodu", "Model SKU") to item.model)
 
     when (val s = item.spec) {
         is CpuSpec -> {
-            rows.add("Soket" to s.socket.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Çekirdek & İzlek Dizilimi" to (s.coreTopology ?: "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
-            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: UNSPECIFIED_TEXT
-            rows.add("Temel / Boost Frekans" to "${s.baseClock.mhz / 1000f} GHz / $boostText")
+            rows.add(tr(isTr, "Soket", "Socket") to s.socket.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Çekirdek & İzlek Dizilimi", "Core & Thread Topology") to (s.coreTopology ?: "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
+            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: getUnspecifiedText(isTr)
+            rows.add(tr(isTr, "Temel / Boost Frekans", "Base / Boost Clocks") to "${s.baseClock.mhz / 1000f} GHz / $boostText")
             val cacheText = listOfNotNull(s.l2CacheMb?.let { "${it} MB L2" }, s.l3CacheMb?.let { "${it} MB L3" }).joinToString(" • ")
-            rows.add("L2 ve L3 Önbellek" to cacheText.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("TDP ve Güç Limitleri" to (s.powerLimits ?: "${s.tdp.watts} W TDP"))
-            rows.add("Mimari & Üretim Nodu" to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Bellek Kontrolcü Desteği" to (s.maxMemorySpeed ?: UNSPECIFIED_TEXT))
-            rows.add("PCIe Sürümü & Hat Sayısı" to (s.pcieVersion ?: UNSPECIFIED_TEXT))
-            rows.add("Dahili Grafik (iGPU)" to (s.igpuModel ?: if (s.hasIntegratedGraphics) "Mevcut (Dahili Grafik)" else "Yok (Harici GPU Gerekli)"))
-            rows.add("Çarpan Kilidi (Overclock)" to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else UNSPECIFIED_TEXT)
+            rows.add(tr(isTr, "L2 ve L3 Önbellek", "L2 & L3 Cache") to cacheText.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "TDP ve Güç Limitleri", "TDP & Power Limits") to (s.powerLimits ?: "${s.tdp.watts} W TDP"))
+            rows.add(tr(isTr, "Mimari & Üretim Nodu", "Architecture & Node") to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Bellek Kontrolcü Desteği", "Memory Controller Support") to (s.maxMemorySpeed ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "PCIe Sürümü & Hat Sayısı", "PCIe Version & Lanes") to (s.pcieVersion ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Dahili Grafik (iGPU)", "Integrated GPU (iGPU)") to (s.igpuModel ?: if (s.hasIntegratedGraphics) "Mevcut (Dahili Grafik)" else "Yok (Harici GPU Gerekli)"))
+            rows.add(tr(isTr, "Çarpan Kilidi (Overclock)", "Multiplier (Overclock)") to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else getUnspecifiedText(isTr))
         }
 
         is GpuSpec -> {
-            rows.add("Grafik İşlemci & Mimari" to listOfNotNull(s.chipset, s.architecture).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Üretim Teknolojisi & Transistör" to (s.processNode ?: UNSPECIFIED_TEXT))
-            val coresText = listOfNotNull(s.cudaCores?.let { "$it Çekirdek" }, s.rtCores?.let { "$it RT" }, s.tensorAiTops).joinToString(" • ")
-            rows.add("Gölgelendirici / RT / Tensor" to coresText.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Grafik İşlemci & Mimari", "GPU & Architecture") to listOfNotNull(s.chipset, s.architecture).joinToString(" • ").ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Üretim Teknolojisi & Transistör", "Process Node") to (s.processNode ?: getUnspecifiedText(isTr)))
+            val coresText = listOfNotNull(s.cudaCores?.let { if (isTr) "$it Çekirdek" else "$it Cores" }, s.rtCores?.let { "$it RT" }, s.tensorAiTops).joinToString(" • ")
+            rows.add(tr(isTr, "Gölgelendirici / RT / Tensor", "Shaders / RT / Tensor") to coresText.ifBlank { getUnspecifiedText(isTr) })
             val vramSpeed = s.memorySpeedGbps?.let { " • $it Gbps" } ?: ""
-            rows.add("VRAM Kapasitesi & Tipi" to "${s.vram.megabytes / 1024} GB ${s.memoryType}$vramSpeed")
+            rows.add(tr(isTr, "VRAM Kapasitesi & Tipi", "VRAM Capacity & Type") to "${s.vram.megabytes / 1024} GB ${s.memoryType}$vramSpeed")
             val busBw = listOfNotNull(s.busWidthBits?.let { "$it-Bit" }, s.bandwidthGbs?.let { "$it GB/s" }).joinToString(" • ")
-            rows.add("Bellek Veri Yolu & Bant Genişliği" to busBw.ifBlank { UNSPECIFIED_TEXT })
-            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: UNSPECIFIED_TEXT
-            rows.add("Çekirdek Frekansı (Temel/Boost)" to "${s.coreClock.mhz} MHz / $boostText")
-            rows.add("TGP (TDP) / Önerilen PSU" to "${s.tdp.watts} W / ${s.recommendedPsu.watts} W PSU")
-            rows.add("Güç Girişleri" to (s.powerConnectors ?: UNSPECIFIED_TEXT))
-            rows.add("Kart Boyutları & Slot Kalınlığı" to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • ").ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Görüntü Çıkışları" to (s.displayOutputs ?: UNSPECIFIED_TEXT))
-            rows.add("Parça Numarası (Part Number)" to (s.partNumber ?: item.model))
+            rows.add(tr(isTr, "Bellek Veri Yolu & Bant Genişliği", "Memory Bus & Bandwidth") to busBw.ifBlank { getUnspecifiedText(isTr) })
+            val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: getUnspecifiedText(isTr)
+            rows.add(tr(isTr, "Çekirdek Frekansı (Temel/Boost)", "Core Clocks (Base / Boost)") to "${s.coreClock.mhz} MHz / $boostText")
+            rows.add(tr(isTr, "TGP (TDP) / Önerilen PSU", "TGP (TDP) / Recommended PSU") to "${s.tdp.watts} W / ${s.recommendedPsu.watts} W PSU")
+            rows.add(tr(isTr, "Güç Girişleri", "Power Connectors") to (s.powerConnectors ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Kart Boyutları & Slot Kalınlığı", "Dimensions & Slot Thickness") to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • ").ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Görüntü Çıkışları", "Display Outputs") to (s.displayOutputs ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Parça Numarası (Part Number)", "Part Number (SKU)") to (s.partNumber ?: item.model))
         }
 
         is MotherboardSpec -> {
-            rows.add("Soket Tipi & Yonga Seti" to "${s.socket} • ${s.chipset}")
-            rows.add("VRM Güç Faz Dizilimi" to (s.vrmPhases ?: UNSPECIFIED_TEXT))
-            rows.add("PCB Katmanı & Bakır Standardı" to (s.pcbLayers ?: UNSPECIFIED_TEXT))
-            rows.add("Form Faktörü" to s.formFactor.displayName)
+            rows.add(tr(isTr, "Soket Tipi & Yonga Seti", "Socket Type & Chipset") to "${s.socket} • ${s.chipset}")
+            rows.add(tr(isTr, "VRM Güç Faz Dizilimi", "VRM Power Phases") to (s.vrmPhases ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "PCB Katmanı & Bakır Standardı", "PCB Layers & Copper Standard") to (s.pcbLayers ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Form Faktörü", "Form Factor") to s.formFactor.displayName)
             val maxMemLabel = s.maxMemoryGb?.let { ", Maks. $it GB" } ?: ""
-            rows.add("Bellek Desteği & Hız Aşırtma" to (s.memorySpeedOc ?: "${s.memoryGeneration.displayName} (${s.ramSlots} Slot$maxMemLabel)"))
-            rows.add("M.2 NVMe Yuva Detayı" to (s.m2SlotsDetail ?: (s.m2Slots?.let { "${it}x M.2 NVMe" } ?: UNSPECIFIED_TEXT)))
-            rows.add("PCIe x16 Gen Standardı" to s.pcieGeneration.displayName)
+            rows.add(tr(isTr, "Bellek Desteği & Hız Aşırtma", "Memory Support & OC") to (s.memorySpeedOc ?: "${s.memoryGeneration.displayName} (${s.ramSlots} Slot$maxMemLabel)"))
+            rows.add(tr(isTr, "M.2 NVMe Yuva Detayı", "M.2 NVMe Slot Layout") to (s.m2SlotsDetail ?: (s.m2Slots?.let { "${it}x M.2 NVMe" } ?: getUnspecifiedText(isTr))))
+            rows.add(tr(isTr, "PCIe x16 Gen Standardı", "PCIe x16 Generation") to s.pcieGeneration.displayName)
             val netFallback = when (s.hasWifi) {
                 true -> "Wi-Fi + Ethernet"
                 false -> "Ethernet (Wi-Fi Yok)"
-                null -> UNSPECIFIED_TEXT
+                null -> getUnspecifiedText(isTr)
             }
-            rows.add("Ağ & Kablosuz Bağlantı" to (s.network ?: netFallback))
-            rows.add("Ses Yonga Kodeği" to (s.audioCodec ?: UNSPECIFIED_TEXT))
-            rows.add("Arka Panel I/O Çıkışları" to (s.interfacePorts ?: UNSPECIFIED_TEXT))
-            rows.add("SATA Port Sayısı" to (s.sataPorts?.let { "${it}x SATA 3.0" } ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Ağ & Kablosuz Bağlantı", "Networking & Wireless") to (s.network ?: netFallback))
+            rows.add(tr(isTr, "Ses Yonga Kodeği", "Audio Codec") to (s.audioCodec ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Arka Panel I/O Çıkışları", "Rear Panel I/O") to (s.interfacePorts ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "SATA Port Sayısı", "SATA Ports") to (s.sataPorts?.let { "${it}x SATA 3.0" } ?: getUnspecifiedText(isTr)))
         }
 
         is RamSpec -> {
             val totalGb = s.capacity.megabytes / 1024
             val perModGb = totalGb / s.moduleCount.coerceAtLeast(1)
-            rows.add("Bellek Standardı & Kapasite" to "${totalGb} GB (${s.moduleCount}x${perModGb} GB Kit) ${s.generation.displayName}")
-            rows.add("IC Bellek Yongası (Die Tipi)" to (s.dieType ?: UNSPECIFIED_TEXT))
-            rows.add("Frekans & CL Zamanlamaları" to "${s.speed.mhz} MHz • ${s.timings ?: "CL${s.casLatency}"}")
+            rows.add(tr(isTr, "Bellek Standardı & Kapasite", "Memory Standard & Capacity") to "${totalGb} GB (${s.moduleCount}x${perModGb} GB Kit) ${s.generation.displayName}")
+            rows.add(tr(isTr, "IC Bellek Yongası (Die Tipi)", "IC Memory Die Type") to (s.dieType ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Frekans & CL Zamanlamaları", "Frequency & Timings") to "${s.speed.mhz} MHz • ${s.timings ?: "CL${s.casLatency}"}")
             val latencyNs = s.firstWordLatencyNs ?: ((2000.0 * s.casLatency / s.speed.mhz.coerceAtLeast(1)) * 10.0).toInt() / 10.0
-            rows.add("İlk Tepki Süresi (True Latency)" to "$latencyNs ns")
-            rows.add("Çalışma Voltajı" to (s.voltage?.let { "$it V" } ?: UNSPECIFIED_TEXT))
-            rows.add("Hız Aşırtma Profili" to (s.profile ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "İlk Tepki Süresi (True Latency)", "First Word Latency") to "$latencyNs ns")
+            rows.add(tr(isTr, "Çalışma Voltajı", "Operating Voltage") to (s.voltage?.let { "$it V" } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Hız Aşırtma Profili", "Overclock Profile") to (s.profile ?: getUnspecifiedText(isTr)))
             val coolerRgb = listOfNotNull(
-                s.heatSpreader?.let { if (it) "Alüminyum Soğutucu Blok" else "Soğutucusuz" },
-                s.rgb?.let { if (it) "RGB Aydınlatma" else "RGB Yok" },
+                s.heatSpreader?.let { if (it) tr(isTr, "Alüminyum Soğutucu Blok", "Aluminum Heat Spreader") else tr(isTr, "Soğutucusuz", "No Heat Spreader") },
+                s.rgb?.let { if (it) tr(isTr, "RGB Aydınlatma", "RGB Lighting") else tr(isTr, "RGB Yok", "No RGB") },
             ).joinToString(" • ")
-            rows.add("Soğutucu Blok / RGB" to coolerRgb.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Soğutucu Blok / RGB", "Heat Spreader / RGB") to coolerRgb.ifBlank { getUnspecifiedText(isTr) })
         }
 
         is StorageSpec -> {
             val totalGb = s.capacity.megabytes / 1024
-            rows.add("Depolama Kapasitesi" to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
-            rows.add("Kontrolcü Modeli" to (s.controller ?: UNSPECIFIED_TEXT))
-            rows.add("DRAM Önbellek Yapısı" to (s.dramCache ?: (s.cacheMb?.let { "$it MB DRAM Cache" } ?: UNSPECIFIED_TEXT)))
-            rows.add("NAND Flaş Standardı" to (s.nandType ?: UNSPECIFIED_TEXT))
-            rows.add("Sıralı Okuma / Yazma Hızı" to "${s.sequentialReadMbps} MB/sn Okuma • ${s.sequentialWriteMbps} MB/sn Yazma")
-            rows.add("Rastgele 4K IOPS" to (s.randomIops ?: UNSPECIFIED_TEXT))
-            rows.add("Arayüz & Protokol" to (s.pcieGeneration?.let { "PCIe ${it.displayName} x4 NVMe" } ?: s.storageInterface.displayName))
-            rows.add("Form Faktörü" to s.formFactor.displayName)
-            rows.add("Dayanıklılık Ömrü (TBW)" to (s.enduranceTbw?.let { "$it TBW" } ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Depolama Kapasitesi", "Storage Capacity") to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
+            rows.add(tr(isTr, "Kontrolcü Modeli", "Controller Model") to (s.controller ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "DRAM Önbellek Yapısı", "DRAM Cache Structure") to (s.dramCache ?: (s.cacheMb?.let { "$it MB DRAM Cache" } ?: getUnspecifiedText(isTr))))
+            rows.add(tr(isTr, "NAND Flaş Standardı", "NAND Flash Standard") to (s.nandType ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Sıralı Okuma / Yazma Hızı", "Sequential Read / Write") to if (isTr) "${s.sequentialReadMbps} MB/sn Okuma • ${s.sequentialWriteMbps} MB/sn Yazma" else "${s.sequentialReadMbps} MB/s Read • ${s.sequentialWriteMbps} MB/s Write")
+            rows.add(tr(isTr, "Rastgele 4K IOPS", "Random 4K IOPS") to (s.randomIops ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Arayüz & Protokol", "Interface & Protocol") to (s.pcieGeneration?.let { "PCIe ${it.displayName} x4 NVMe" } ?: s.storageInterface.displayName))
+            rows.add(tr(isTr, "Form Faktörü", "Form Factor") to s.formFactor.displayName)
+            rows.add(tr(isTr, "Dayanıklılık Ömrü (TBW)", "Endurance Rating (TBW)") to (s.enduranceTbw?.let { "$it TBW" } ?: getUnspecifiedText(isTr)))
         }
 
         is PsuSpec -> {
-            rows.add("Çıkış Gücü Kapasitesi" to "${s.wattage.watts} Watt")
-            rows.add("Cultists PSU Tier List" to (s.tierRating ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Çıkış Gücü Kapasitesi", "Output Power Capacity") to "${s.wattage.watts} Watt")
+            rows.add(tr(isTr, "Cultists PSU Tier List", "Cultists PSU Tier Rating") to (s.tierRating ?: getUnspecifiedText(isTr)))
             val effText = listOfNotNull(s.efficiency.displayName, s.cybeneticsCert).joinToString(" • ")
-            rows.add("Cybenetics & 80 PLUS Sertifikası" to effText)
-            rows.add("Cybenetics Lambda Gürültü Derecesi" to (s.cybeneticsLambda ?: UNSPECIFIED_TEXT))
-            rows.add("ATX Standardı & Geçici Yük" to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.0 / PCIe 5.0" else UNSPECIFIED_TEXT))
-            rows.add("12V-2x6 / 12VHPWR (600W) Çıkış" to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "Mevcut (12VHPWR / 12V-2x6)" else "Yok"))
-            rows.add("İç Topoloji & Kapasitör Standardı" to (s.topology ?: s.capacitors ?: UNSPECIFIED_TEXT))
-            rows.add("Güvenlik & Koruma Devreleri" to (s.protections ?: UNSPECIFIED_TEXT))
-            rows.add("Modülerlik Yapısı" to (s.modularity ?: UNSPECIFIED_TEXT))
-            rows.add("Soğutma Fanı & Boyut" to (s.fanAndSize ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Cybenetics & 80 PLUS Sertifikası", "Cybenetics & 80 PLUS Cert") to effText)
+            rows.add(tr(isTr, "Cybenetics Lambda Gürültü Derecesi", "Cybenetics Lambda Noise Rating") to (s.cybeneticsLambda ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "ATX Standardı & Geçici Yük", "ATX Standard & Excursions") to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.0 / PCIe 5.0" else getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "12V-2x6 / 12VHPWR (600W) Çıkış", "12V-2x6 / 12VHPWR (600W) Output") to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "Mevcut (12VHPWR / 12V-2x6)" else "Yok"))
+            rows.add(tr(isTr, "İç Topoloji & Kapasitör Standardı", "Internal Topology & Capacitors") to (s.topology ?: s.capacitors ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Güvenlik & Koruma Devreleri", "Protections & Safety Circuits") to (s.protections ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Modülerlik Yapısı", "Modularity") to (s.modularity ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Soğutma Fanı & Boyut", "Cooling Fan & Dimensions") to (s.fanAndSize ?: getUnspecifiedText(isTr)))
             val cables = listOfNotNull(s.epsConnectors, s.pcieConnectors, s.sataConnectors).joinToString(" • ")
-            rows.add("Kablo Çıkışları (EPS / PCIe / SATA)" to cables.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Kablo Çıkışları (EPS / PCIe / SATA)", "Cables (EPS / PCIe / SATA)") to cables.ifBlank { getUnspecifiedText(isTr) })
         }
 
         is CoolerSpec -> {
-            rows.add("Soğutma Tipi" to s.type.displayName)
-            rows.add("Maksimum Soğutma Gücü (TDP)" to "${s.maxCoolingTdp.watts} W")
+            rows.add(tr(isTr, "Soğutma Tipi", "Cooler Type") to s.type.displayName)
+            rows.add(tr(isTr, "Maksimum Soğutma Gücü (TDP)", "Max Heat Dissipation (TDP)") to "${s.maxCoolingTdp.watts} W")
             val radOrHeight = s.radiatorDimensions ?: if (s.type == CoolerType.LIQUID) {
-                s.radiatorSizeMm?.let { "${it} mm Radyatör" } ?: UNSPECIFIED_TEXT
+                s.radiatorSizeMm?.let { if (isTr) "${it} mm Radyatör" else "${it}mm Radiator" } ?: getUnspecifiedText(isTr)
             } else {
-                s.heightMm?.let { "${it} mm Kule Tipi" } ?: UNSPECIFIED_TEXT
+                s.heightMm?.let { if (isTr) "${it} mm Kule Tipi" else "${it}mm Tower" } ?: getUnspecifiedText(isTr)
             }
-            rows.add("Radyatör / Kule Boyutları" to radOrHeight)
-            rows.add("Fan Dönüş Hızı (RPM)" to (s.fanRpm ?: UNSPECIFIED_TEXT))
-            rows.add("Hava Akışı & Statik Basınç" to (s.fanAirflow ?: UNSPECIFIED_TEXT))
-            rows.add("Ses Seviyesi (Gürültü)" to (s.noiseDba?.let { "$it dBA" } ?: UNSPECIFIED_TEXT))
-            rows.add("Desteklenen Soketler" to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Radyatör / Kule Boyutları", "Radiator / Tower Dimensions") to radOrHeight)
+            rows.add(tr(isTr, "Fan Dönüş Hızı (RPM)", "Fan Speed (RPM)") to (s.fanRpm ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Hava Akışı & Statik Basınç", "Airflow & Static Pressure") to (s.fanAirflow ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Ses Seviyesi (Gürültü)", "Noise Level (dBA)") to (s.noiseDba?.let { "$it dBA" } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Desteklenen Soketler", "Socket Compatibility") to (if (s.supportedSockets.isNotEmpty()) s.supportedSockets.joinToString(", ") else getUnspecifiedText(isTr)))
         }
 
         is CaseSpec -> {
-            rows.add("Kasa Tipi / Form Faktörü" to (s.type ?: UNSPECIFIED_TEXT))
-            rows.add("Maksimum GPU Uzunluğu" to (s.maxGpuLengthMm?.let { "$it mm" } ?: UNSPECIFIED_TEXT))
-            rows.add("Maksimum CPU Soğutucu Yüksekliği" to (s.maxCpuCoolerHeightMm?.let { "$it mm" } ?: UNSPECIFIED_TEXT))
-            rows.add("Radyatör Desteği (Üst/Ön/Yan)" to (s.radiatorSupport ?: (s.maxRadiatorSizeMm?.let { "${it} mm" } ?: UNSPECIFIED_TEXT)))
-            rows.add("Dahili Fan Dizilimi" to (s.includedFans ?: UNSPECIFIED_TEXT))
-            rows.add("Ön Panel Bağlantıları (Tip-C)" to (s.frontPanelUsb ?: UNSPECIFIED_TEXT))
+            rows.add(tr(isTr, "Kasa Tipi / Form Faktörü", "Chassis Type / Form Factor") to (s.type ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Maksimum GPU Uzunluğu", "Max GPU Clearance") to (s.maxGpuLengthMm?.let { "$it mm" } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Maksimum CPU Soğutucu Yüksekliği", "Max CPU Cooler Height") to (s.maxCpuCoolerHeightMm?.let { "$it mm" } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Radyatör Desteği (Üst/Ön/Yan)", "Radiator Support (Top/Front/Side)") to (s.radiatorSupport ?: (s.maxRadiatorSizeMm?.let { "${it} mm" } ?: getUnspecifiedText(isTr))))
+            rows.add(tr(isTr, "Dahili Fan Dizilimi", "Included Fans") to (s.includedFans ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Ön Panel Bağlantıları (Tip-C)", "Front Panel Ports (Type-C)") to (s.frontPanelUsb ?: getUnspecifiedText(isTr)))
             val sideDrive = listOfNotNull(s.sidePanel, s.driveBays).joinToString(" • ")
-            rows.add("Yan Panel & Disk Yuvaları" to sideDrive.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Yan Panel & Disk Yuvaları", "Side Panel & Drive Bays") to sideDrive.ifBlank { getUnspecifiedText(isTr) })
             val mbSupport = if (s.supportedMotherboardFormFactors.isNotEmpty()) {
                 s.supportedMotherboardFormFactors.joinToString(", ") { it.displayName }
             } else {
-                UNSPECIFIED_TEXT
+                getUnspecifiedText(isTr)
             }
-            rows.add("Desteklenen Anakart Tipleri" to mbSupport)
+            rows.add(tr(isTr, "Desteklenen Anakart Tipleri", "Motherboard Support") to mbSupport)
         }
 
         is PrebuiltSpec -> {
-            rows.add("Satıcı Mağaza" to s.storeName.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("İşlemci (CPU)" to s.cpuModel.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Ekran Kartı (GPU)" to s.gpuModel.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Anakart Modeli" to s.motherboardModel.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Sistem Belleği (RAM)" to s.ramSpec.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Depolama Birimi (SSD)" to s.storageSpec.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Parça Parça Toplama Fiyatı" to (s.estimatedSeparatePriceTry?.let { if (it > 0) "${it.formatPrice()} ₺" else null } ?: UNSPECIFIED_TEXT))
-            rows.add("Hazır Sistem Kâr/Avantaj Tutarı" to (s.priceAdvantageTry?.let { adv ->
+            rows.add(tr(isTr, "Satıcı Mağaza", "Retail Store") to s.storeName.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "İşlemci (CPU)", "Processor (CPU)") to s.cpuModel.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Ekran Kartı (GPU)", "Graphics Card (GPU)") to s.gpuModel.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Anakart Modeli", "Motherboard Model") to s.motherboardModel.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Sistem Belleği (RAM)", "System Memory (RAM)") to s.ramSpec.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Depolama Birimi (SSD)", "Storage Drive (SSD)") to s.storageSpec.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Parça Parça Toplama Fiyatı", "Individual Parts Total") to (s.estimatedSeparatePriceTry?.let { if (it > 0) "${it.formatPrice()} ₺" else null } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "Hazır Sistem Kâr/Avantaj Tutarı", "Prebuilt Savings/Advantage") to (s.priceAdvantageTry?.let { adv ->
                 val sign = if (adv > 0) "+" else ""
                 "$sign${adv.formatPrice()} ₺ (%${s.advantagePercent.toInt()})"
-            } ?: UNSPECIFIED_TEXT))
-            rows.add("1080p / 1440p / 4K Referans FPS" to "${s.fps1080p} FPS / ${s.fps1440p} FPS / ${s.fps4k} FPS")
-            rows.add("Gaming Performans Skoru" to "${s.gamingScore} / 100")
+            } ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "1080p / 1440p / 4K Referans FPS", "1080p / 1440p / 4K Reference FPS") to "${s.fps1080p} FPS / ${s.fps1440p} FPS / ${s.fps4k} FPS")
+            rows.add(tr(isTr, "Gaming Performans Skoru", "Gaming Performance Score") to "${s.gamingScore} / 100")
         }
 
         is LaptopSpec -> {
-            rows.add("Cihaz Markası" to s.brand.ifBlank { item.brand })
-            rows.add("Grafik Kartı & Gerçek TGP Gücü" to "${s.gpuModel} (${s.gpuWattTgp.ifBlank { UNSPECIFIED_TEXT }})")
-            rows.add("Grafik Anahtarı (MUX Switch)" to s.muxSwitch.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("İşlemci (CPU)" to s.cpuModel.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Ekran & Panel Standardı" to s.displaySpec.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Bellek Konfigürasyonu (RAM)" to s.ramSpec.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Yüksek Hızlı Depolama (SSD)" to s.storageSpec.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Batarya Kapasitesi" to if (s.batteryWh > 0) "${s.batteryWh} Wh" else UNSPECIFIED_TEXT)
-            rows.add("Gövde Ağırlığı" to if (s.weightKg > 0.0) "${s.weightKg} kg" else UNSPECIFIED_TEXT)
-            rows.add("Termal Soğutma Mimarisi" to s.coolingTech.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("1080p / 1440p Referans FPS" to "${s.fps1080p} FPS / ${s.fps1440p} FPS")
-            rows.add("Gaming Skoru" to "${s.gamingScore} / 100")
+            rows.add(tr(isTr, "Cihaz Markası", "Device Brand") to s.brand.ifBlank { item.brand })
+            rows.add(tr(isTr, "Grafik Kartı & Gerçek TGP Gücü", "Graphics & Real TGP Power") to "${s.gpuModel} (${s.gpuWattTgp.ifBlank { getUnspecifiedText(isTr) }})")
+            rows.add(tr(isTr, "Grafik Anahtarı (MUX Switch)", "MUX Switch / Optimus") to s.muxSwitch.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "İşlemci (CPU)", "Processor (CPU)") to s.cpuModel.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Ekran & Panel Standardı", "Display & Panel Standard") to s.displaySpec.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Bellek Konfigürasyonu (RAM)", "Memory Configuration (RAM)") to s.ramSpec.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Yüksek Hızlı Depolama (SSD)", "High-Speed Storage (SSD)") to s.storageSpec.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Batarya Kapasitesi", "Battery Capacity") to if (s.batteryWh > 0) "${s.batteryWh} Wh" else getUnspecifiedText(isTr))
+            rows.add(tr(isTr, "Gövde Ağırlığı", "Chassis Weight") to if (s.weightKg > 0.0) "${s.weightKg} kg" else getUnspecifiedText(isTr))
+            rows.add(tr(isTr, "Termal Soğutma Mimarisi", "Thermal Architecture") to s.coolingTech.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "1080p / 1440p Referans FPS", "1080p / 1440p Reference FPS") to "${s.fps1080p} FPS / ${s.fps1440p} FPS")
+            rows.add(tr(isTr, "Gaming Skoru", "Gaming Score") to "${s.gamingScore} / 100")
         }
 
         is MouseSpec -> {
-            rows.add("Optik Sensör Kodu" to s.sensor.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Maksimum Çözünürlük (DPI)" to "${s.maxDpi} DPI")
-            rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz.coerceAtLeast(1)} ms)")
-            rows.add("Anahtar (Switch) Tipi" to s.switchType.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Gövde Ağırlığı" to "${s.weightG} gram")
-            rows.add("MCU / Kablosuz Denetleyici" to s.mcu.ifBlank { "Nordic 52840" })
-            rows.add("Tıklama Gecikmesi (Click Latency)" to "${s.clickLatencyMs} ms")
-            rows.add("Ergonomi / Kasa Formu" to s.shapeType.ifBlank { "Simetrik" })
-            rows.add("Bağlantı Teknolojisi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Batarya Kullanım Süresi" to (s.batteryHours?.let { "$it Saat" } ?: "Kablolu (Sınırsız)"))
+            rows.add(tr(isTr, "Optik Sensör Kodu", "Optical Sensor Model") to s.sensor.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Maksimum Çözünürlük (DPI)", "Max Resolution (DPI)") to "${s.maxDpi} DPI")
+            rows.add(tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate") to "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz.coerceAtLeast(1)} ms)")
+            rows.add(tr(isTr, "Anahtar (Switch) Tipi", "Switch Type") to s.switchType.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Gövde Ağırlığı", "Chassis Weight") to "${s.weightG} gram")
+            rows.add(tr(isTr, "MCU / Kablosuz Denetleyici", "MCU / Wireless Controller") to s.mcu.ifBlank { "Nordic 52840" })
+            rows.add(tr(isTr, "Tıklama Gecikmesi (Click Latency)", "Click Latency") to "${s.clickLatencyMs} ms")
+            rows.add(tr(isTr, "Ergonomi / Kasa Formu", "Ergonomics / Body Form") to s.shapeType.ifBlank { tr(isTr, "Simetrik", "Symmetrical") })
+            rows.add(tr(isTr, "Bağlantı Teknolojisi", "Connectivity") to s.connectivity.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Batarya Kullanım Süresi", "Battery Life") to (s.batteryHours?.let { if (isTr) "$it Saat" else "$it Hours" } ?: tr(isTr, "Kablolu (Sınırsız)", "Wired (Unlimited)")))
         }
 
         is KeyboardSpec -> {
-            rows.add("Anahtar (Switch) Mimarisi" to "${s.switchType}${if (s.isHallEffect) " (Manyetik Hall Effect)" else ""}")
-            rows.add("Rapid Trigger Desteği" to if (s.rapidTriggerSupported) "Var (Dinamik Hızlı Tetikleme)" else "Standart Sabit Sıfırlama")
-            rows.add("Tetikleme Ayar Aralığı" to "${s.minActuationMm} mm - ${s.maxActuationMm} mm")
-            rows.add("Raporlama Hızı (Polling Rate)" to "${s.pollingRateHz} Hz")
-            rows.add("Tuş Dizilimi (Form Faktörü)" to s.layout.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Hot-Swap (Lehimsiz Değişim)" to if (s.hotSwap) "Destekleniyor" else "Sabit")
-            rows.add("Kasa & Plaka Materyali" to s.caseMaterial.ifBlank { "Alüminyum CNC / ABS" })
-            rows.add("Bağlantı Tipi" to s.connectivity.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Anahtar (Switch) Mimarisi", "Switch Architecture") to "${s.switchType}${if (s.isHallEffect) " (Manyetik Hall Effect)" else ""}")
+            rows.add(tr(isTr, "Rapid Trigger Desteği", "Rapid Trigger Support") to if (s.rapidTriggerSupported) tr(isTr, "Var (Dinamik Hızlı Tetikleme)", "Yes (Dynamic Rapid Trigger)") else tr(isTr, "Standart Sabit Sıfırlama", "Standard Fixed Reset"))
+            rows.add(tr(isTr, "Tetikleme Ayar Aralığı", "Actuation Range") to "${s.minActuationMm} mm - ${s.maxActuationMm} mm")
+            rows.add(tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate") to "${s.pollingRateHz} Hz")
+            rows.add(tr(isTr, "Tuş Dizilimi (Form Faktörü)", "Layout (Form Factor)") to s.layout.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Hot-Swap (Lehimsiz Değişim)", "Hot-Swap Support") to if (s.hotSwap) tr(isTr, "Destekleniyor", "Supported") else tr(isTr, "Sabit", "Soldered"))
+            rows.add(tr(isTr, "Kasa & Plaka Materyali", "Case & Plate Material") to s.caseMaterial.ifBlank { tr(isTr, "Alüminyum CNC / ABS", "Aluminum CNC / ABS") })
+            rows.add(tr(isTr, "Bağlantı Tipi", "Connection Type") to s.connectivity.ifBlank { getUnspecifiedText(isTr) })
         }
 
         is HeadsetSpec -> {
-            rows.add("Sürücü (Driver) Mimarisi" to s.driverType.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Sürücü Çapı" to "${s.driverSizeMm} mm")
-            rows.add("Empedans (Direnç)" to "${s.impedanceOhm} Ω (Ohm)")
-            rows.add("Frekans Tepki Aralığı" to s.frequencyResponse.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Harici DAC / Amfi İhtiyacı" to if (s.dacAmpRequired) "Önerilir (Yüksek Empedans)" else "Gerekmez (Doğrudan Besleme)")
-            rows.add("Mikrofon Tipi" to s.micType.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Ağırlık" to "${s.weightG} gram")
-            rows.add("Bağlantı Seçenekleri" to s.connectivity.ifBlank { "2.4GHz / Bluetooth / 3.5mm" })
-            rows.add("Akustik İzolasyon" to s.soundIsolation.ifBlank { "Pasif İzolasyon" })
+            rows.add(tr(isTr, "Sürücü (Driver) Mimarisi", "Driver Architecture") to s.driverType.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Sürücü Çapı", "Driver Diameter") to "${s.driverSizeMm} mm")
+            rows.add(tr(isTr, "Empedans (Direnç)", "Impedance") to "${s.impedanceOhm} Ω (Ohm)")
+            rows.add(tr(isTr, "Frekans Tepki Aralığı", "Frequency Response") to s.frequencyResponse.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Harici DAC / Amfi İhtiyacı", "External DAC / Amp Requirement") to if (s.dacAmpRequired) "Önerilir (Yüksek Empedans)" else "Gerekmez (Doğrudan Besleme)")
+            rows.add(tr(isTr, "Mikrofon Tipi", "Microphone Type") to s.micType.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Ağırlık", "Weight") to "${s.weightG} gram")
+            rows.add(tr(isTr, "Bağlantı Seçenekleri", "Connection Options") to s.connectivity.ifBlank { "2.4GHz / Bluetooth / 3.5mm" })
+            rows.add(tr(isTr, "Akustik İzolasyon", "Acoustic Isolation") to s.soundIsolation.ifBlank { tr(isTr, "Pasif İzolasyon", "Passive Isolation") })
         }
 
         is MonitorSpec -> {
-            rows.add("Panel Teknolojisi" to s.panelType.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Gerçek Panel Bit Derinliği" to s.bitDepth.ifBlank { "8-bit + FRC" })
-            rows.add("Ekran Boyutu" to "${s.screenSizeInch} inç")
-            rows.add("Çözünürlük" to s.resolution.ifBlank { UNSPECIFIED_TEXT })
-            rows.add("Yenileme Hızı (Refresh Rate)" to "${s.refreshRateHz} Hz")
-            rows.add("Tepki Süresi" to "${s.responseSpeedGtGMs} ms (GtG) • ${s.responseMprtMs ?: 0.5} ms (MPRT)")
-            rows.add("Parlaklık Düzeyi (SDR / HDR)" to "${s.brightnessSdrNit} Nit / ${s.brightnessHdrNit} Nit")
-            rows.add("Renk Gamutu Kapsamı" to s.colorGamut.ifBlank { "%100 sRGB" })
-            rows.add("Değişken Tazeleme Hızı (VRR)" to s.vrrSupport.ifBlank { "G-Sync Compatible / FreeSync Premium" })
-            rows.add("Piksel Yoğunluğu (PPI)" to "${s.ppi} PPI")
-            rows.add("HDR Sertifikası" to s.hdrCertification.ifBlank { UNSPECIFIED_TEXT })
+            rows.add(tr(isTr, "Panel Teknolojisi", "Panel Technology") to s.panelType.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Gerçek Panel Bit Derinliği", "Panel Bit Depth") to s.bitDepth.ifBlank { "8-bit + FRC" })
+            rows.add(tr(isTr, "Ekran Boyutu", "Screen Size") to if (isTr) "${s.screenSizeInch} inç" else "${s.screenSizeInch} inches")
+            rows.add(tr(isTr, "Çözünürlük", "Resolution") to s.resolution.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(tr(isTr, "Yenileme Hızı (Refresh Rate)", "Refresh Rate") to "${s.refreshRateHz} Hz")
+            rows.add(tr(isTr, "Tepki Süresi", "Response Time") to "${s.responseSpeedGtGMs} ms (GtG) • ${s.responseMprtMs ?: 0.5} ms (MPRT)")
+            rows.add(tr(isTr, "Parlaklık Düzeyi (SDR / HDR)", "Brightness (SDR / HDR)") to "${s.brightnessSdrNit} Nit / ${s.brightnessHdrNit} Nit")
+            rows.add(tr(isTr, "Renk Gamutu Kapsamı", "Color Gamut Coverage") to s.colorGamut.ifBlank { "%100 sRGB" })
+            rows.add(tr(isTr, "Değişken Tazeleme Hızı (VRR)", "Variable Refresh Rate (VRR)") to s.vrrSupport.ifBlank { "G-Sync Compatible / FreeSync Premium" })
+            rows.add(tr(isTr, "Piksel Yoğunluğu (PPI)", "Pixel Density (PPI)") to "${s.ppi} PPI")
+            rows.add(tr(isTr, "HDR Sertifikası", "HDR Certification") to s.hdrCertification.ifBlank { getUnspecifiedText(isTr) })
         }
     }
     return rows
@@ -1619,6 +1636,8 @@ private fun DetailBottomBar(
     customPriceNote: String? = null,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Surface(
         modifier = modifier
             .fillMaxWidth()
@@ -1713,7 +1732,7 @@ private fun DetailBottomBar(
                                 CheckMarkCanvas(color = MaterialTheme.colorScheme.onSecondary)
                                 Spacer(modifier = Modifier.width(Spacing.small))
                                 Text(
-                                    text = if (isPrebuilt) "Sisteme Aktarıldı ✓" else "Sihirbaza Eklendi ✓",
+                                    text = if (isPrebuilt) strings.detailImportedSystem else strings.detailAddedToWizard,
                                     fontWeight = FontWeight.Bold,
                                     style = MaterialTheme.typography.labelLarge,
                                 )
@@ -1721,7 +1740,7 @@ private fun DetailBottomBar(
                                 PlusIconCanvas(color = MaterialTheme.colorScheme.onPrimary)
                                 Spacer(modifier = Modifier.width(Spacing.small))
                                 Text(
-                                    text = if (isPrebuilt) "Sihirbaza Aktar" else "Sihirbaza Ekle",
+                                    text = if (isPrebuilt) (if (isTr) "Sihirbaza Aktar" else "Import to Build") else strings.addToWizard,
                                     fontWeight = FontWeight.Bold,
                                     style = MaterialTheme.typography.labelLarge,
                                 )
@@ -1741,6 +1760,8 @@ private fun PrebuiltSystemDetailsCard(
     onTransferToWizard: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
         accentColor = NeonCyan,
@@ -1787,7 +1808,7 @@ private fun PrebuiltSystemDetailsCard(
             ) {
                 Column(modifier = Modifier.padding(Spacing.medium)) {
                     Text(
-                        text = "AKILLI KÂR / ZARAR & TOPLAMA ANALİZİ",
+                        text = strings.detailPrebuiltBreakdown,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
                         color = MaterialTheme.colorScheme.primary,
@@ -1802,7 +1823,7 @@ private fun PrebuiltSystemDetailsCard(
                     ) {
                         Column {
                             Text(
-                                text = "Parçaları Tek Tek Toplama Tutarı",
+                                text = strings.detailPrebuiltSeparatePrice,
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -1826,7 +1847,7 @@ private fun PrebuiltSystemDetailsCard(
                                     .padding(horizontal = 10.dp, vertical = 6.dp),
                             ) {
                                 Text(
-                                    text = "+${spec.priceAdvantageTry.toLong()} ₺ (%${spec.advantagePercent.toInt()} Kâr)",
+                                    text = if (isTr) "+${spec.priceAdvantageTry.toLong()} ₺ (%${spec.advantagePercent.toInt()} Kâr)" else "+${spec.priceAdvantageTry.toLong()} ₺ (+${spec.advantagePercent.toInt()}% Value)",
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Black,
                                     color = badgeTextColor,
@@ -1838,9 +1859,11 @@ private fun PrebuiltSystemDetailsCard(
                     Spacer(modifier = Modifier.height(Spacing.small))
 
                     val statusMsg = if (spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) {
-                        "✓ Bu hazır sistem, parçaların piyasa tekil satış fiyatına kıyasla ${spec.priceAdvantageTry.toLong()} ₺ daha uygundur."
+                        if (isTr) "✓ Bu hazır sistem, parçaların piyasa tekil satış fiyatına kıyasla ${spec.priceAdvantageTry.toLong()} ₺ daha uygundur."
+                        else "✓ This prebuilt is ${spec.priceAdvantageTry.toLong()} ₺ cheaper than individual retail parts combined."
                     } else {
-                        "Bileşenlerin piyasa fiyatı hazır sistem tutarıyla dengeli durumdadır."
+                        if (isTr) "Bileşenlerin piyasa fiyatı hazır sistem tutarıyla dengeli durumdadır."
+                        else "Individual component pricing closely matches this prebuilt package."
                     }
                     Text(
                         text = statusMsg,
@@ -1853,7 +1876,7 @@ private fun PrebuiltSystemDetailsCard(
             Spacer(modifier = Modifier.height(Spacing.medium))
 
             Text(
-                text = "İçindeki 6 Ana Donanım Bileşeni",
+                text = if (isTr) "İçindeki 6 Ana Donanım Bileşeni" else "6 Core Hardware Components Inside",
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -1861,12 +1884,12 @@ private fun PrebuiltSystemDetailsCard(
             Spacer(modifier = Modifier.height(Spacing.small))
 
             val components = listOf(
-                Triple("⚡", "İşlemci (CPU)", spec.cpuModel),
-                Triple("🎮", "Ekran Kartı (GPU)", spec.gpuModel),
-                Triple("🔌", "Anakart", spec.motherboardModel),
-                Triple("🧠", "Bellek (RAM)", spec.ramSpec),
-                Triple("💾", "Depolama (SSD)", spec.storageSpec),
-                Triple("🖥️", "Kasa & Güç Kaynağı", spec.psuCaseSpec),
+                Triple("⚡", if (isTr) "İşlemci (CPU)" else "Processor (CPU)", spec.cpuModel),
+                Triple("🎮", if (isTr) "Ekran Kartı (GPU)" else "Graphics Card (GPU)", spec.gpuModel),
+                Triple("🔌", if (isTr) "Anakart" else "Motherboard", spec.motherboardModel),
+                Triple("🧠", if (isTr) "Bellek (RAM)" else "Memory (RAM)", spec.ramSpec),
+                Triple("💾", if (isTr) "Depolama (SSD)" else "Storage (SSD)", spec.storageSpec),
+                Triple("🖥️", if (isTr) "Kasa & Güç Kaynağı" else "Case & Power Supply", spec.psuCaseSpec),
             )
 
             components.forEach { (icon, title, value) ->
@@ -1911,7 +1934,7 @@ private fun PrebuiltSystemDetailsCard(
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
             ) {
                 Text(
-                    text = "Bu Sistemi Sihirbaza Aktar & Özelleştir",
+                    text = strings.detailPrebuiltTransfer,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onPrimary,
                 )
@@ -1926,6 +1949,8 @@ private fun LaptopSpecialDetailsCard(
     spec: LaptopSpec,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
         accentColor = ElectricBlue,
@@ -1984,7 +2009,7 @@ private fun LaptopSpecialDetailsCard(
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
-                            text = "GERÇEK GPU TGP GÜÇ DEĞERİ",
+                            text = strings.detailGpuTgpTitle,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Black,
                             color = MaterialTheme.colorScheme.secondary,
@@ -1997,7 +2022,7 @@ private fun LaptopSpecialDetailsCard(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Kısıtlanmamış tam güç (Full Wattage) grafik yongası • ${spec.muxSwitch}",
+                            text = if (isTr) "Kısıtlanmamış tam güç (Full Wattage) grafik yongası • ${spec.muxSwitch}" else "Unrestricted Full-Wattage GPU • ${spec.muxSwitch}",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -2009,7 +2034,7 @@ private fun LaptopSpecialDetailsCard(
 
             // İçindeki 6 Ana Donanım Bileşeni (OEM Hazır Sistem Mimarisinde)
             Text(
-                text = "İçindeki 6 Ana Donanım Bileşeni",
+                text = if (isTr) "İçindeki 6 Ana Donanım Bileşeni" else "6 Core Hardware Components Inside",
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -2019,38 +2044,38 @@ private fun LaptopSpecialDetailsCard(
             val laptopComponents = listOf(
                 LaptopComponentItem(
                     icon = "⚡",
-                    title = "İşlemci (CPU)",
+                    title = if (isTr) "İşlemci (CPU)" else "Processor (CPU)",
                     mainText = spec.cpuModel,
                     subText = "${spec.effectiveCpuCores} • ${spec.effectiveCpuClockGhz}",
                 ),
                 LaptopComponentItem(
                     icon = "🎮",
-                    title = "Ekran Kartı (GPU & Güç)",
+                    title = if (isTr) "Ekran Kartı (GPU & Güç)" else "Graphics Card (GPU & Power)",
                     mainText = "${spec.gpuModel} (${spec.gpuWattTgp})",
-                    subText = "${spec.muxSwitch} Desteği",
+                    subText = "${spec.muxSwitch} " + if (isTr) "Desteği" else "Supported",
                 ),
                 LaptopComponentItem(
                     icon = "🖥️",
-                    title = "Ekran (Panel)",
+                    title = if (isTr) "Ekran (Panel)" else "Display (Panel)",
                     mainText = spec.effectivePanelDetails,
-                    subText = "Yüksek Yenileme Hızı & Düşük Gecikmeli Espor Paneli",
+                    subText = if (isTr) "Yüksek Yenileme Hızı & Düşük Gecikmeli Espor Paneli" else "High Refresh & Low Latency Esports Panel",
                 ),
                 LaptopComponentItem(
                     icon = "🧠",
-                    title = "Bellek (RAM)",
+                    title = if (isTr) "Bellek (RAM)" else "Memory (RAM)",
                     mainText = spec.ramSpec,
                     subText = spec.effectiveRamSlots,
                 ),
                 LaptopComponentItem(
                     icon = "💾",
-                    title = "Depolama (SSD)",
+                    title = if (isTr) "Depolama (SSD)" else "Storage (SSD)",
                     mainText = spec.storageSpec,
                     subText = spec.effectiveStorageSlots,
                 ),
                 LaptopComponentItem(
                     icon = "🔋",
-                    title = "Gövde, Pil & Soğutma",
-                    mainText = "${spec.batteryWh} Wh Batarya • ${spec.effectiveChargerWatt} • ${spec.weightKg} kg",
+                    title = if (isTr) "Gövde, Pil & Soğutma" else "Chassis, Battery & Cooling",
+                    mainText = "${spec.batteryWh} Wh " + (if (isTr) "Batarya" else "Battery") + " • ${spec.effectiveChargerWatt} • ${spec.weightKg} kg",
                     subText = spec.coolingTech,
                 ),
             )
@@ -2234,6 +2259,8 @@ private fun StoreOffersCard(
     productName: String,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val uriHandler = LocalUriHandler.current
 
     FluidOrganicCard(
@@ -2275,7 +2302,7 @@ private fun StoreOffersCard(
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)),
                 ) {
                     Text(
-                        text = if (offers.isNotEmpty()) "${offers.size} Doğrulanmış" else "Canlı Arama",
+                        text = if (offers.isNotEmpty()) strings.detailVerifiedStores.replace("%d", offers.size.toString()) else strings.detailLiveSearch,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
@@ -2377,7 +2404,7 @@ private fun StoreOffersCard(
 
             // 1-Tap Live Multi-Store Search Comparison
             Text(
-                text = "TÜRKİYE MAĞAZALARINDA CANLI FİYAT ARA",
+                text = strings.detailLiveStoreSearch,
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -2385,7 +2412,7 @@ private fun StoreOffersCard(
             )
             Spacer(modifier = Modifier.height(Spacing.extraSmall))
             Text(
-                text = "Tek tıkla mağazada anlık stok ve fiyat aratın:",
+                text = strings.detailLiveStoreSearchSub,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f),
             )
@@ -2427,7 +2454,7 @@ private fun StoreOffersCard(
                                         overflow = TextOverflow.Ellipsis,
                                     )
                                     Text(
-                                        text = "Ara ↗",
+                                        text = tr(isTr, "Ara ↗", "Search ↗"),
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = FontWeight.Bold,
                                         color = MaterialTheme.colorScheme.primary,
@@ -2480,6 +2507,8 @@ fun HardwareDetailHeroImage(
     displayName: String,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val effectiveList = remember(images, imageUrl) {
         val list = images.filter { it.isNotBlank() }
         if (list.isNotEmpty()) list else listOfNotNull(imageUrl?.takeIf { it.isNotBlank() })
@@ -2536,7 +2565,7 @@ fun HardwareDetailHeroImage(
                 ) {
                     SubcomposeAsyncImage(
                         model = effectiveList[page],
-                        contentDescription = "$displayName - Açı ${page + 1}",
+                        contentDescription = if (isTr) "$displayName - Açı ${page + 1}" else "$displayName - View ${page + 1}",
                         contentScale = ContentScale.Fit,
                         modifier = Modifier.fillMaxSize(),
                         loading = {
@@ -2626,6 +2655,7 @@ fun DetailPlaceholderHero(
     category: HardwareCategory,
     modifier: Modifier = Modifier,
 ) {
+    val strings = LocalAppStrings.current
     val (badgeBg, badgeText) = when (category) {
         HardwareCategory.CPU -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.GPU -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
@@ -2658,7 +2688,7 @@ fun DetailPlaceholderHero(
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = "Görsel Doğrulanıyor / Eşleştirilmedi",
+            text = strings.detailImageVerifying,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = FontWeight.Medium,
             color = badgeText.copy(alpha = 0.8f),

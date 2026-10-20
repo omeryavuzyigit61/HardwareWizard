@@ -23,4 +23,24 @@ enum class HardwareCategory(val displayName: String) {
 
     val isPeripheral: Boolean
         get() = this == MOUSE || this == KEYBOARD || this == HEADSET || this == MONITOR
+
+    val englishName: String
+        get() = when (this) {
+            CPU -> "Processor (CPU)"
+            GPU -> "Graphics Card (GPU)"
+            RAM -> "Memory (RAM)"
+            MOTHERBOARD -> "Motherboard"
+            PSU -> "Power Supply (PSU)"
+            STORAGE -> "Storage (SSD/HDD)"
+            COOLER -> "CPU Cooler"
+            CASE -> "Case"
+            PREBUILT_PC -> "Prebuilt PC"
+            LAPTOP -> "Gaming Laptop"
+            MOUSE -> "Gaming Mouse"
+            KEYBOARD -> "Gaming Keyboard"
+            HEADSET -> "Gaming Headset"
+            MONITOR -> "Gaming Monitor"
+        }
+
+    fun localizedName(isTr: Boolean = true): String = if (isTr) displayName else englishName
 }

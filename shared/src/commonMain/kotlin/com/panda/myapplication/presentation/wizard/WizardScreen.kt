@@ -1,5 +1,7 @@
 package com.panda.myapplication.presentation.wizard
 
+import com.panda.myapplication.presentation.util.localized
+
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.BorderStroke
@@ -136,6 +138,8 @@ fun WizardRoute(
     viewModel: WizardViewModel = koinViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val snackbarHostState = remember { SnackbarHostState() }
     val clipboardManager = LocalClipboardManager.current
 
@@ -143,11 +147,13 @@ fun WizardRoute(
         viewModel.effects.collect { effect ->
             when (effect) {
                 is WizardEffect.ShowToast -> {
-                    snackbarHostState.showSnackbar(effect.message)
+                    val msg = if (isTr) effect.message else (effect.messageEn ?: effect.message)
+                    snackbarHostState.showSnackbar(msg)
                 }
                 is WizardEffect.ShareBuild -> {
-                    clipboardManager.setText(AnnotatedString(effect.text))
-                    snackbarHostState.showSnackbar("⚡ Sistem Kartı panoya kopyalandı! Paylaşmaya hazır.")
+                    val shareText = if (isTr) effect.text else (effect.textEn ?: effect.text)
+                    clipboardManager.setText(AnnotatedString(shareText))
+                    snackbarHostState.showSnackbar(strings.wizardSystemCardCopied)
                 }
             }
         }
@@ -325,6 +331,9 @@ private fun WizardHeader(
     onShareBuild: () -> Unit,
     onOpenDrawer: (() -> Unit)? = null,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -365,7 +374,7 @@ private fun WizardHeader(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "DONANIM LABORATUVARI",
+                        text = tr(isTr, "DONANIM LABORATUVARI", "HARDWARE LAB"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
@@ -373,7 +382,7 @@ private fun WizardHeader(
                     )
                 }
                 Text(
-                    text = "İnteraktif PC Toplama",
+                    text = strings.wizardInteractiveTitle,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground,
@@ -388,7 +397,7 @@ private fun WizardHeader(
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
             ) {
-                Text("Sıfırla", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(tr(isTr, "Sıfırla", "Reset"), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
             Button(
@@ -398,7 +407,7 @@ private fun WizardHeader(
                 contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
             ) {
                 Text(
-                    text = "⚡ Paylaş",
+                    text = tr(isTr, "⚡ Paylaş", "⚡ Share"),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onPrimary,
@@ -418,6 +427,9 @@ private fun LiveCockpitSection(
     platformStatus: PlatformStatusBadge,
     bottleneck: BottleneckAnalysis,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val cockpitAccent = if (platformStatus.isCompatible) NeonCyan else NeonRose
     val cockpitSecondary = if (platformStatus.isCompatible) NeonEmerald else NeonAmber
 
@@ -457,7 +469,7 @@ private fun LiveCockpitSection(
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = platformStatus.statusText,
+                            text = localizedPlatformStatus(platformStatus, isTr),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = badgeTextColor,
@@ -466,7 +478,7 @@ private fun LiveCockpitSection(
                 }
 
                 Text(
-                    text = "KOKPİT HUD",
+                    text = tr(isTr, "KOKPİT HUD", "COCKPIT HUD"),
                     style = MaterialTheme.typography.labelSmall,
                     color = NeonCyan,
                     fontWeight = FontWeight.Black,
@@ -484,7 +496,7 @@ private fun LiveCockpitSection(
             ) {
                 Column {
                     Text(
-                        text = "CANLI GÜÇ TÜKETİMİ (TDP)",
+                        text = tr(isTr, "CANLI GÜÇ TÜKETİMİ (TDP)", "LIVE POWER DRAW (TDP)"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -497,7 +509,7 @@ private fun LiveCockpitSection(
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = "• Tepe: ${cockpitInfo.peakTdpWithTolerance}W (+%20)",
+                            text = "• ${tr(isTr, "Tepe", "Peak")}: ${cockpitInfo.peakTdpWithTolerance}W (+20%)",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(bottom = 4.dp),
@@ -507,7 +519,7 @@ private fun LiveCockpitSection(
 
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
-                        text = "ÖNERİLEN PSU",
+                        text = tr(isTr, "ÖNERİLEN PSU", "RECOMMENDED PSU"),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -538,7 +550,7 @@ private fun LiveCockpitSection(
             if (!cockpitInfo.isSufficient && cockpitInfo.currentPsuWattage != null) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "⚠️ Seçilen PSU (${cockpitInfo.currentPsuWattage}W), sistemin ${cockpitInfo.recommendedPsuWattage}W ihtiyacının altında!",
+                    text = if (isTr) "⚠️ Seçilen PSU (${cockpitInfo.currentPsuWattage}W), sistemin ${cockpitInfo.recommendedPsuWattage}W ihtiyacının altında!" else "⚠️ Selected PSU (${cockpitInfo.currentPsuWattage}W) is below system recommendation (${cockpitInfo.recommendedPsuWattage}W)!",
                     style = MaterialTheme.typography.labelSmall,
                     color = NeonRose,
                     fontWeight = FontWeight.Bold,
@@ -556,7 +568,7 @@ private fun LiveCockpitSection(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "DARBOĞAZ ANALİZİ",
+                    text = tr(isTr, "DARBOĞAZ ANALİZİ", "BOTTLENECK ANALYSIS"),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -565,8 +577,17 @@ private fun LiveCockpitSection(
                     BottleneckType.CPU_BOTTLENECK -> NeonRose
                     BottleneckType.GPU_BOTTLENECK -> NeonAmber
                 }
+                val bottleneckDisp = if (bottleneck.percentage == 0) {
+                    tr(isTr, "CPU ve GPU seçildiğinde hesaplanacak", "Calculated when CPU and GPU are selected")
+                } else {
+                    when (bottleneck.type) {
+                        BottleneckType.BALANCED -> tr(isTr, "%${bottleneck.percentage} - Mükemmel Denge", "${bottleneck.percentage}% - Balanced Match")
+                        BottleneckType.CPU_BOTTLENECK -> tr(isTr, "%${bottleneck.percentage} - CPU Darboğazı Riski", "${bottleneck.percentage}% - CPU Bottleneck Risk")
+                        BottleneckType.GPU_BOTTLENECK -> tr(isTr, "%${bottleneck.percentage} - GPU Limitli / Tam Yükte", "${bottleneck.percentage}% - GPU Bound / Full Load")
+                    }
+                }
                 Text(
-                    text = bottleneck.message,
+                    text = bottleneckDisp,
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = bottleneckColor,
@@ -602,6 +623,9 @@ private fun ClearanceRadarSection(
     radar: ClearanceRadarResult,
     isCaseSelected: Boolean,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     val radarAccent = if (radar.hasClearanceIssue) NeonRose else NeonCyan
     val radarSecondary = if (radar.hasClearanceIssue) NeonAmber else ElectricBlue
 
@@ -626,7 +650,7 @@ private fun ClearanceRadarSection(
                     )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "KASA SIĞMA RADARI (CLEARANCE)",
+                        text = tr(isTr, "KASA SIĞMA RADARI (CLEARANCE)", "CASE CLEARANCE RADAR"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                         color = if (radar.hasClearanceIssue) NeonRose else NeonCyan,
@@ -640,7 +664,7 @@ private fun ClearanceRadarSection(
                         border = BorderStroke(1.dp, NeonRose),
                     ) {
                         Text(
-                            text = "SIĞMA UYARISI!",
+                            text = tr(isTr, "SIĞMA UYARISI!", "CLEARANCE WARNING!"),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Black,
                             color = NeonRose,
@@ -654,16 +678,16 @@ private fun ClearanceRadarSection(
 
             if (!isCaseSelected) {
                 Text(
-                    text = "Kasa seçildiğinde GPU uzunluğu, soğutucu yüksekliği ve radyatör sığma marjı burada otomatik hesaplanacak.",
+                    text = tr(isTr, "Kasa seçildiğinde GPU uzunluğu, soğutucu yüksekliği ve radyatör sığma marjı burada otomatik hesaplanacak.", "When a case is selected, GPU length, cooler height, and radiator margins will be calculated automatically."),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             } else {
                 // GPU Clearance
                 ClearanceMetricRow(
-                    label = "Ekran Kartı Uzunluğu",
-                    currentValue = radar.gpuLengthMm?.let { "${it}mm" } ?: "GPU Yok",
-                    maxValue = "${radar.maxGpuLengthMm ?: 0}mm Destek",
+                    label = tr(isTr, "Ekran Kartı Uzunluğu", "GPU Length"),
+                    currentValue = radar.gpuLengthMm?.let { "${it}mm" } ?: tr(isTr, "GPU Yok", "No GPU"),
+                    maxValue = "${radar.maxGpuLengthMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.gpuClearanceMm,
                 )
 
@@ -671,9 +695,9 @@ private fun ClearanceRadarSection(
 
                 // Cooler Height Clearance
                 ClearanceMetricRow(
-                    label = "Hava Soğutucu Yüksekliği",
-                    currentValue = radar.coolerHeightMm?.let { "~${it}mm" } ?: "Hava Soğutma Yok",
-                    maxValue = "${radar.maxCoolerHeightMm ?: 0}mm Destek",
+                    label = tr(isTr, "Hava Soğutucu Yüksekliği", "Air Cooler Height"),
+                    currentValue = radar.coolerHeightMm?.let { "~${it}mm" } ?: tr(isTr, "Hava Soğutma Yok", "No Air Cooler"),
+                    maxValue = "${radar.maxCoolerHeightMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.coolerClearanceMm,
                 )
 
@@ -681,9 +705,9 @@ private fun ClearanceRadarSection(
 
                 // Radiator Clearance
                 ClearanceMetricRow(
-                    label = "Sıvı Soğutma Radyatörü",
-                    currentValue = radar.coolerRadiatorMm?.let { "${it}mm" } ?: "Sıvı Soğutma Yok",
-                    maxValue = "${radar.maxRadiatorMm ?: 0}mm Destek",
+                    label = tr(isTr, "Sıvı Soğutma Radyatörü", "Liquid Cooler Radiator"),
+                    currentValue = radar.coolerRadiatorMm?.let { "${it}mm" } ?: tr(isTr, "Sıvı Soğutma Yok", "No AIO Cooler"),
+                    maxValue = "${radar.maxRadiatorMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.radiatorClearanceMm,
                 )
 
@@ -701,7 +725,7 @@ private fun ClearanceRadarSection(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "🧠 RAM Boşluğu: ",
+                                text = tr(isTr, "🧠 RAM Boşluğu: ", "🧠 RAM Clearance: "),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
@@ -729,7 +753,7 @@ private fun ClearanceRadarSection(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "🌊 Radyatör Yuvası: ",
+                                text = tr(isTr, "🌊 Radyatör Yuvası: ", "🌊 Radiator Mount: "),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = ElectricBlue,
@@ -757,7 +781,7 @@ private fun ClearanceRadarSection(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "🌀 Kasa Fanı: ",
+                                text = tr(isTr, "🌀 Kasa Fanı: ", "🌀 Case Fans: "),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -792,6 +816,9 @@ private fun ClearanceMetricRow(
     maxValue: String,
     marginMm: Int?,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -820,7 +847,7 @@ private fun ClearanceMetricRow(
                 border = BorderStroke(1.dp, badgeColor),
             ) {
                 Text(
-                    text = if (isFit) "+${marginMm}mm Boşluk" else "${marginMm}mm Taşıyor!",
+                    text = if (isFit) "+${marginMm}mm ${tr(isTr, "Boşluk", "Clearance")}" else "${marginMm}mm ${tr(isTr, "Taşıyor!", "Exceeds!")}",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = badgeColor,
@@ -839,6 +866,9 @@ private fun ClearanceMetricRow(
 private fun BuildDoctorSection(
     report: BuildDoctorReport,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     var isExpanded by remember { mutableStateOf(true) }
 
     val healthScoreColor = when {
@@ -866,7 +896,7 @@ private fun BuildDoctorSection(
                     Text(text = "🩺", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "AI SİSTEM DOKTORU & SAĞLIK RAPORU",
+                        text = tr(isTr, "AI SİSTEM DOKTORU & SAĞLIK RAPORU", "AI SYSTEM DOCTOR & HEALTH REPORT"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                         color = healthScoreColor,
@@ -905,13 +935,13 @@ private fun BuildDoctorSection(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = report.statusText,
+                    text = localizedDoctorStatus(report.statusText, isTr),
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    text = "Teşhis",
+                    text = tr(isTr, "Teşhis", "Diagnosis"),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -933,7 +963,7 @@ private fun BuildDoctorSection(
                         Spacer(modifier = Modifier.width(8.dp))
                         Column {
                             Text(
-                                text = "ZAYIF HALKA (EN BÜYÜK LİMİTLEYİCİ)",
+                                text = tr(isTr, "ZAYIF HALKA (EN BÜYÜK LİMİTLEYİCİ)", "WEAKEST LINK (PRIMARY BOTTLENECK)"),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.Bold,
@@ -981,7 +1011,14 @@ private fun BuildDoctorSection(
                                     color = badgeColor,
                                 )
                                 Text(
-                                    text = if (b != null) "%${b.percentage} ${when(b.type){ BottleneckType.BALANCED -> "Denge"; BottleneckType.CPU_BOTTLENECK -> "CPU"; BottleneckType.GPU_BOTTLENECK -> "GPU" }}" else "-",
+                                    text = if (b != null) {
+                                        val bType = when(b.type) {
+                                            BottleneckType.BALANCED -> tr(isTr, "Denge", "Balanced")
+                                            BottleneckType.CPU_BOTTLENECK -> "CPU"
+                                            BottleneckType.GPU_BOTTLENECK -> "GPU"
+                                        }
+                                        if (isTr) "%${b.percentage} $bType" else "${b.percentage}% $bType"
+                                    } else "-",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontSize = 9.sp,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1000,7 +1037,7 @@ private fun BuildDoctorSection(
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 Text(
-                    text = report.doctorDiagnosis,
+                    text = localizedDoctorDiagnosis(report.doctorDiagnosis, isTr),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(10.dp),
@@ -1018,13 +1055,13 @@ private fun BuildDoctorSection(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = "ÖNERİLEN GELİŞTİRMELER (${report.upgradeRecommendations.size})",
+                        text = "${tr(isTr, "ÖNERİLEN GELİŞTİRMELER", "RECOMMENDED UPGRADES")} (${report.upgradeRecommendations.size})",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                         color = NeonCyan,
                     )
                     Text(
-                        text = if (isExpanded) "▲ Gizle" else "▼ Göster",
+                        text = if (isExpanded) tr(isTr, "▲ Gizle", "▲ Hide") else tr(isTr, "▼ Göster", "▼ Show"),
                         style = MaterialTheme.typography.labelSmall,
                         color = NeonCyan,
                     )
@@ -1046,6 +1083,9 @@ private fun BuildDoctorSection(
 private fun UpgradeRecommendationCard(
     rec: UpgradeRecommendation,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Surface(
         shape = RoundedCornerShape(10.dp),
         color = MaterialTheme.colorScheme.surfaceVariant,
@@ -1093,7 +1133,7 @@ private fun UpgradeRecommendationCard(
                     border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.4f)),
                 ) {
                     Text(
-                        text = "F/P: ${rec.roiScore}/10",
+                        text = "${tr(isTr, "F/P", "Value")}: ${rec.roiScore}/10",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonEmerald,
@@ -1121,7 +1161,7 @@ private fun UpgradeRecommendationCard(
                     color = NeonPurple.copy(alpha = 0.15f),
                 ) {
                     Text(
-                        text = "Beklenen Kazanç: ${rec.expectedGain}",
+                        text = "${tr(isTr, "Beklenen Kazanç", "Expected Gain")}: ${rec.expectedGain}",
                         style = MaterialTheme.typography.labelSmall,
                         fontSize = 10.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -1134,7 +1174,7 @@ private fun UpgradeRecommendationCard(
             if (rec.suggestedModels.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Tavsiye: ${rec.suggestedModels.joinToString(", ")}",
+                    text = "${if (isTr) "Tavsiye" else "Recommendation"}: ${rec.suggestedModels.joinToString(", ")}",
                     style = MaterialTheme.typography.labelSmall,
                     fontSize = 10.sp,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
@@ -1158,6 +1198,9 @@ private fun GamingSimulationSection(
     onPresetChanged: (QualityPreset) -> Unit,
     onUpscalingChanged: (UpscalingMode) -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     FluidOrganicCard(
         modifier = Modifier
             .fillMaxWidth()
@@ -1176,7 +1219,7 @@ private fun GamingSimulationSection(
                     Text(text = "🎮", style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "OYUN & SENTETİK FPS SİMÜLATÖRÜ",
+                        text = tr(isTr, "OYUN & SENTETİK FPS SİMÜLATÖRÜ", "GAMING & BENCHMARK FPS SIMULATOR"),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                         color = NeonCyan,
@@ -1184,7 +1227,7 @@ private fun GamingSimulationSection(
                 }
 
                 Text(
-                    text = "CANLI TAHMİN",
+                    text = tr(isTr, "CANLI TAHMİN", "LIVE PREDICTION"),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -1194,7 +1237,7 @@ private fun GamingSimulationSection(
 
             // 1. Resolution Selector
             Text(
-                text = "ÇÖZÜNÜRLÜK",
+                text = tr(isTr, "ÇÖZÜNÜRLÜK", "RESOLUTION"),
                 style = MaterialTheme.typography.labelSmall,
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Bold,
@@ -1240,7 +1283,7 @@ private fun GamingSimulationSection(
 
             // 2. Graphics Preset Selector
             Text(
-                text = "GRAFİK KALİTESİ",
+                text = tr(isTr, "GRAFİK KALİTESİ", "GRAPHICS QUALITY"),
                 style = MaterialTheme.typography.labelSmall,
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Bold,
@@ -1281,7 +1324,7 @@ private fun GamingSimulationSection(
 
             // 3. Upscaling & Frame Gen Selector
             Text(
-                text = "ÖLÇEKLENDİRME / FRAME GEN",
+                text = tr(isTr, "ÖLÇEKLENDİRME / FRAME GEN", "UPSCALING / FRAME GEN"),
                 style = MaterialTheme.typography.labelSmall,
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Bold,
@@ -1328,7 +1371,7 @@ private fun GamingSimulationSection(
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        text = "Oyun simülasyonu ve FPS değerlerini hesaplamak için CPU ve GPU ekleyin.",
+                        text = tr(isTr, "Oyun simülasyonu ve FPS değerlerini hesaplamak için CPU ve GPU ekleyin.", "Add CPU and GPU to calculate gaming simulation and FPS predictions."),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = TextAlign.Center,
@@ -1399,7 +1442,7 @@ private fun GamingSimulationSection(
                         if (simulation.vramWarning) {
                             Spacer(modifier = Modifier.height(4.dp))
                             Text(
-                                text = "⚠️ Uyarı: Tahmini VRAM tüketimi (${simulation.estimatedVramGb}GB), ekran kartınızın belleğini aşıyor. Takılmalar oluşabilir.",
+                                text = if (isTr) "⚠️ Uyarı: Tahmini VRAM tüketimi (${simulation.estimatedVramGb}GB), ekran kartınızın belleğini aşıyor. Takılmalar oluşabilir." else "⚠️ Warning: Estimated VRAM usage (${simulation.estimatedVramGb}GB) exceeds GPU capacity. Stuttering may occur.",
                                 style = MaterialTheme.typography.bodySmall,
                                 fontSize = 10.sp,
                                 color = NeonRose,
@@ -1472,6 +1515,9 @@ private fun GamingSimulationSection(
 
 @Composable
 private fun GameFpsCard(game: GameFpsEstimate) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
@@ -1493,7 +1539,7 @@ private fun GameFpsCard(game: GameFpsEstimate) {
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = if (game.isEsports) "E-SPOR" else "AAA",
+                        text = if (game.isEsports) (if (isTr) "E-SPOR" else "ESPORTS") else "AAA",
                         style = MaterialTheme.typography.labelSmall,
                         fontSize = 9.sp,
                         fontWeight = FontWeight.Black,
@@ -1545,6 +1591,9 @@ private fun SlotListHeader(
     totalCount: Int,
     totalPriceTry: Double,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -1553,7 +1602,7 @@ private fun SlotListHeader(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
-            text = "BİLEŞEN YUVALARI ($filledCount / $totalCount)",
+            text = "${tr(isTr, "BİLEŞEN YUVALARI", "COMPONENT SLOTS")} ($filledCount / $totalCount)",
             style = MaterialTheme.typography.labelMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1563,7 +1612,7 @@ private fun SlotListHeader(
         val wizardCurrency = LocalAppCurrency.current
         val priceText = totalPriceTry.formatPriceWithCurrency(wizardCurrency, "0")
         Text(
-            text = "Toplam: $priceText",
+            text = "${strings.wizardTotalPrefix}: $priceText",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.primary,
@@ -1580,6 +1629,8 @@ private fun ComponentSlotCard(
     onDetailClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val categoryIcon = when (category) {
         HardwareCategory.CPU -> "⚡"
         HardwareCategory.MOTHERBOARD -> "🔌"
@@ -1597,22 +1648,7 @@ private fun ComponentSlotCard(
         HardwareCategory.HEADSET -> "🎧"
     }
 
-    val categoryTitle = when (category) {
-        HardwareCategory.CPU -> "İşlemci (CPU)"
-        HardwareCategory.MOTHERBOARD -> "Anakart (Motherboard)"
-        HardwareCategory.RAM -> "Bellek (RAM)"
-        HardwareCategory.GPU -> "Ekran Kartı (GPU)"
-        HardwareCategory.STORAGE -> "Depolama (SSD/HDD)"
-        HardwareCategory.COOLER -> "Soğutucu (Cooler)"
-        HardwareCategory.CASE -> "Kasa (Chassis)"
-        HardwareCategory.PSU -> "Güç Kaynağı (PSU)"
-        HardwareCategory.PREBUILT_PC -> "OEM Hazır Sistem"
-        HardwareCategory.LAPTOP -> "Gaming Laptop"
-        HardwareCategory.MONITOR -> "Oyuncu Monitörü (Monitor)"
-        HardwareCategory.MOUSE -> "Oyuncu Faresi (Mouse)"
-        HardwareCategory.KEYBOARD -> "Oyuncu Klavyesi (Keyboard)"
-        HardwareCategory.HEADSET -> "Oyuncu Kulaklığı (Headset)"
-    }
+    val categoryTitle = category.localized(strings)
 
     if (item == null) {
         // Empty Slot Card
@@ -1642,7 +1678,7 @@ private fun ComponentSlotCard(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = "Parça seçilmedi",
+                            text = strings.wizardNoPartSelected,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -1655,7 +1691,7 @@ private fun ComponentSlotCard(
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
                 ) {
                     Text(
-                        text = "+ Parça Ekle",
+                        text = strings.wizardAddPart,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonCyan,
@@ -1706,7 +1742,7 @@ private fun ComponentSlotCard(
                             )
                             if (item.isCustomPrice) {
                                 Text(
-                                    text = "🏷️ Özel Fiyat",
+                                    text = "🏷️ ${tr(isTr, "Özel Fiyat", "Custom Price")}",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonAmber,
                                     fontWeight = FontWeight.Bold,
@@ -1723,7 +1759,7 @@ private fun ComponentSlotCard(
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.clickable { onDetailClick() },
                         )
-                        val specSummary = formatSlotSpecSummary(item)
+                        val specSummary = formatSlotSpecSummary(item, isTr)
                         if (specSummary.isNotBlank()) {
                             Text(
                                 text = specSummary,
@@ -1742,7 +1778,7 @@ private fun ComponentSlotCard(
                                 val pts = item.benchmarkInfo?.effectiveTimeSpy
                                 if (pts != null) "🎮 3DMark Time Spy: $pts pts • ${item.benchmarkTier ?: "Tier"}" else null
                             }
-                            else -> item.benchmarkScore?.let { "★ Skor: $it/100 • ${item.benchmarkTier ?: "Tier"}" }
+                            else -> item.benchmarkScore?.let { "★ ${tr(isTr, "Skor", "Score")}: $it/100 • ${item.benchmarkTier ?: "Tier"}" }
                         }
                         if (benchSummary != null) {
                             Text(
@@ -1795,7 +1831,7 @@ private fun ComponentSlotCard(
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                         contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
                     ) {
-                        Text("Detay & Benchmark", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurface)
+                        Text(tr(isTr, "Detay & Benchmark", "Detail & Benchmark"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurface)
                     }
 
                     Spacer(modifier = Modifier.width(Spacing.small))
@@ -1806,7 +1842,7 @@ private fun ComponentSlotCard(
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
                     ) {
-                        Text("Değiştir", style = MaterialTheme.typography.labelSmall, color = NeonCyan)
+                        Text(tr(isTr, "Değiştir", "Change"), style = MaterialTheme.typography.labelSmall, color = NeonCyan)
                     }
 
                     Spacer(modifier = Modifier.width(Spacing.small))
@@ -1817,7 +1853,7 @@ private fun ComponentSlotCard(
                         border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.5f)),
                         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
                     ) {
-                        Text("Kaldır", style = MaterialTheme.typography.labelSmall, color = NeonRose)
+                        Text(tr(isTr, "Kaldır", "Remove"), style = MaterialTheme.typography.labelSmall, color = NeonRose)
                     }
                 }
             }
@@ -1825,8 +1861,8 @@ private fun ComponentSlotCard(
     }
 }
 
-private fun formatSlotSpecSummary(item: HardwareItem): String = when (val s = item.spec) {
-    is CpuSpec -> "${s.socket} • ${s.coreCount} Çekirdek • ${s.tdp.watts}W"
+private fun formatSlotSpecSummary(item: HardwareItem, isTr: Boolean = true): String = when (val s = item.spec) {
+    is CpuSpec -> "${s.socket} • ${s.coreCount} ${if (isTr) "Çekirdek" else "Cores"} • ${s.tdp.watts}W"
     is MotherboardSpec -> "${s.socket} • ${s.chipset} • ${s.memoryGeneration.name} • ${s.formFactor.name}"
     is RamSpec -> "${s.generation.name} • ${s.speed.mhz}MT/s • ${s.capacity.megabytes / 1024}GB"
     is GpuSpec -> listOfNotNull(s.chipset, "${s.vram.megabytes / 1024}GB", s.lengthMm?.let { "${it}mm" }).joinToString(" • ")
@@ -1861,6 +1897,9 @@ private fun SlotPickerBottomSheetContent(
     onSelectItem: (HardwareItem) -> Unit,
     onDismiss: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -1875,13 +1914,13 @@ private fun SlotPickerBottomSheetContent(
         ) {
             Column {
                 Text(
-                    text = "${category.name} SEÇİMİ",
+                    text = "${category.localized(strings).uppercase()} ${tr(isTr, "SEÇİMİ", "SELECTION")}",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    text = "${items.size} uyumlu seçenek mevcut",
+                    text = "${items.size} ${tr(isTr, "uyumlu seçenek mevcut", "compatible options available")}",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -1908,7 +1947,7 @@ private fun SlotPickerBottomSheetContent(
                     Text("🔒", fontSize = 14.sp)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Text(
-                        text = "Çift Yönlü Filtre: $constraintDesc",
+                        text = "${tr(isTr, "Çift Yönlü Filtre", "Bidirectional Filter")}: $constraintDesc",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonCyan,
@@ -1929,7 +1968,7 @@ private fun SlotPickerBottomSheetContent(
                 onSearchChange(it)
             },
             modifier = Modifier.fillMaxWidth(),
-            placeholder = { Text("Model veya marka ara...", style = MaterialTheme.typography.bodySmall) },
+            placeholder = { Text(tr(isTr, "Model veya marka ara...", "Search model or brand..."), style = MaterialTheme.typography.bodySmall) },
             singleLine = true,
             shape = RoundedCornerShape(10.dp),
             colors = OutlinedTextFieldDefaults.colors(
@@ -1959,7 +1998,7 @@ private fun SlotPickerBottomSheetContent(
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
-                    text = "Bu kriterlere veya arama sorgusuna uygun parça bulunamadı.",
+                    text = tr(isTr, "Bu kriterlere veya arama sorgusuna uygun parça bulunamadı.", "No components match these criteria or search query."),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
@@ -1987,6 +2026,9 @@ private fun PickerItemCard(
     item: HardwareItem,
     onSelect: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -2025,7 +2067,7 @@ private fun PickerItemCard(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = formatSlotSpecSummary(item),
+                    text = formatSlotSpecSummary(item, isTr),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
@@ -2059,7 +2101,7 @@ private fun PickerItemCard(
                     contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
                 ) {
                     Text(
-                        text = "Seç",
+                        text = strings.wizardSelect,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onPrimary,
@@ -2086,6 +2128,9 @@ private fun SystemCardShareDialog(
     onDismiss: () -> Unit,
     onCopyAndShare: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
     Dialog(onDismissRequest = onDismiss) {
         Surface(
             modifier = Modifier
@@ -2110,7 +2155,7 @@ private fun SystemCardShareDialog(
                             letterSpacing = 1.5.sp,
                         )
                         Text(
-                            text = "SİSTEM KARTI",
+                            text = tr(isTr, "SİSTEM KARTI", "SYSTEM CARD"),
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Black,
                             color = MaterialTheme.colorScheme.onBackground,
@@ -2123,7 +2168,7 @@ private fun SystemCardShareDialog(
                         border = BorderStroke(1.dp, NeonEmerald),
                     ) {
                         Text(
-                            text = platformStatus.platformName,
+                            text = localizedPlatformName(platformStatus.platformName, isTr),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = NeonEmerald,
@@ -2138,14 +2183,14 @@ private fun SystemCardShareDialog(
 
                 // Parts Summary List
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    SharePartRow("CPU", build.cpu?.displayName)
-                    SharePartRow("Anakart", build.motherboard?.displayName)
-                    SharePartRow("RAM", build.ram?.displayName)
-                    SharePartRow("GPU", build.gpu?.displayName)
-                    SharePartRow("SSD", build.storage?.displayName)
-                    SharePartRow("Soğutucu", build.cooler?.displayName)
-                    SharePartRow("Kasa", build.case?.displayName)
-                    SharePartRow("PSU", build.psu?.displayName)
+                    SharePartRow(HardwareCategory.CPU.localized(strings), build.cpu?.displayName)
+                    SharePartRow(HardwareCategory.MOTHERBOARD.localized(strings), build.motherboard?.displayName)
+                    SharePartRow(HardwareCategory.RAM.localized(strings), build.ram?.displayName)
+                    SharePartRow(HardwareCategory.GPU.localized(strings), build.gpu?.displayName)
+                    SharePartRow(HardwareCategory.STORAGE.localized(strings), build.storage?.displayName)
+                    SharePartRow(HardwareCategory.COOLER.localized(strings), build.cooler?.displayName)
+                    SharePartRow(HardwareCategory.CASE.localized(strings), build.case?.displayName)
+                    SharePartRow(HardwareCategory.PSU.localized(strings), build.psu?.displayName)
                 }
 
                 Spacer(modifier = Modifier.height(Spacing.medium))
@@ -2158,18 +2203,18 @@ private fun SystemCardShareDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
                     Column {
-                        Text("GÜÇ TÜKETİMİ", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(tr(isTr, "GÜÇ TÜKETİMİ", "POWER DRAW"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text("${cockpitInfo.componentTdpSum}W TDP", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, color = NeonCyan)
                     }
                     Column {
-                        Text("DARBOĞAZ", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(tr(isTr, "DARBOĞAZ", "BOTTLENECK"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text(bottleneck.message, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, color = NeonEmerald)
                     }
                 }
 
                 if (gamingSim.isReady && gamingSim.games.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(Spacing.small))
-                    Text("OYUN PERFORMANSI (${gamingSim.resolution.label}):", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text("${tr(isTr, "OYUN PERFORMANSI", "GAMING PERFORMANCE")} (${gamingSim.resolution.label}):", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(
                         text = gamingSim.games.joinToString(" • ") { "${it.gameName.take(10)}: ~${it.fps} FPS" },
                         style = MaterialTheme.typography.labelSmall,
@@ -2188,7 +2233,7 @@ private fun SystemCardShareDialog(
                 ) {
                     val priceText = build.totalPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, "N/A")
                     Column {
-                        Text("TOPLAM BÜTÇE", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(tr(isTr, "TOPLAM BÜTÇE", "TOTAL BUDGET"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text(priceText, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Black, color = NeonCyan)
                     }
 
@@ -2214,7 +2259,7 @@ private fun SystemCardShareDialog(
                         shape = RoundedCornerShape(8.dp),
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                     ) {
-                        Text("Kapat", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(tr(isTr, "Kapat", "Close"), color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
 
                     Button(
@@ -2223,7 +2268,7 @@ private fun SystemCardShareDialog(
                         shape = RoundedCornerShape(8.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
                     ) {
-                        Text("Panoya Kopyala", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
+                        Text(tr(isTr, "Panoya Kopyala", "Copy to Clipboard"), fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
                     }
                 }
             }
@@ -2233,6 +2278,8 @@ private fun SystemCardShareDialog(
 
 @Composable
 private fun SharePartRow(category: String, name: String?) {
+    val strings = LocalAppStrings.current
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -2244,7 +2291,7 @@ private fun SharePartRow(category: String, name: String?) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         Text(
-            text = name ?: "Seçilmedi",
+            text = name ?: strings.wizardNotSelected,
             style = MaterialTheme.typography.labelSmall,
             color = if (name != null) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
             maxLines = 1,
@@ -2255,3 +2302,51 @@ private fun SharePartRow(category: String, name: String?) {
 }
 
 // endregion
+
+private fun localizedPlatformStatus(status: PlatformStatusBadge, isTr: Boolean): String {
+    if (isTr) return status.statusText
+    return when {
+        status.statusText == "CPU veya Anakart ekleyerek başlayın" -> "Start by adding a CPU or Motherboard"
+        status.statusText.contains("Soket Uyuşmazlığı") -> status.statusText.replace("Soket Uyuşmazlığı", "Socket Mismatch")
+        status.statusText.contains("Bellek Nesli Uyuşmazlığı") -> status.statusText.replace("Bellek Nesli Uyuşmazlığı", "Memory Generation Mismatch")
+        status.statusText.contains("Platformu - %100 Uyumlu") -> status.statusText.replace("Platformu - %100 Uyumlu", "Platform - 100% Compatible")
+        status.statusText.contains("Mimarisi - Soket Uyumlu") -> status.statusText.replace("Mimarisi - Soket Uyumlu", "Architecture - Socket Compatible")
+        status.statusText.contains("Altyapısı Aktif") -> status.statusText.replace("Altyapısı Aktif", "Platform Active")
+        else -> status.statusText
+    }
+}
+
+private fun localizedPlatformName(name: String, isTr: Boolean): String {
+    if (isTr) return name
+    if (name == "Platform Seçilmedi") return "Platform Not Selected"
+    return name
+}
+
+private fun localizedDoctorStatus(statusText: String, isTr: Boolean): String {
+    if (isTr) return statusText
+    return when {
+        statusText == "Sistem Boş" -> "System Empty"
+        statusText == "Mükemmel Denge & Yüksek Verim" -> "Excellent Balance & High Efficiency"
+        statusText == "İyi Durumda - Küçük İyileştirmeler Yapılabilir" -> "Good Condition - Minor Improvements Possible"
+        statusText == "Optimize Edilmeli - Belirgin Dengesizlik Var" -> "Needs Optimization - Noticeable Imbalance"
+        statusText == "Kritik Sorunlar Mevcut - Revizyon Gerekli" -> "Critical Issues Present - Revision Required"
+        statusText.contains("Mükemmel Denge") -> statusText.replace("Mükemmel Denge", "Excellent Balance")
+        statusText.contains("Dengeli") -> statusText.replace("Dengeli", "Balanced")
+        statusText.contains("Darboğaz") -> statusText.replace("Darboğaz", "Bottleneck")
+        else -> statusText
+    }
+}
+
+private fun localizedDoctorDiagnosis(diagnosis: String, isTr: Boolean): String {
+    if (isTr) return diagnosis
+    return when {
+        diagnosis == "Sistem analizi için parça ekleyin." -> "Add components to analyze system health."
+        diagnosis.contains("CPU ve GPU") -> "Select CPU and GPU components to begin health and bottleneck analysis."
+        diagnosis.contains("Bileşenleriniz birbiriyle son derece uyumlu") -> "Your components are excellently paired. Power, cooling, and bottleneck margins are at optimal levels."
+        diagnosis.contains("Sistem dengesi genel standartları karşılıyor") -> "System balance meets standard performance thresholds."
+        diagnosis.contains("Sistemden tam performans almak için") -> "To maximize system performance, consider upgrading the weakest component."
+        else -> diagnosis
+    }
+}
+
+private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
