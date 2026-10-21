@@ -13,6 +13,8 @@ data class VerifiedLabTestEntry(
     val avgFps: Double,
     val minFps: Double,
     val modelKeywords: List<String> = emptyList(),
+    val maxFps: Double? = null,
+    val low1PctFps: Double? = null,
 ) {
     fun matchesItem(item: HardwareItem): Boolean {
         val target = "${item.brand} ${item.model}".lowercase()

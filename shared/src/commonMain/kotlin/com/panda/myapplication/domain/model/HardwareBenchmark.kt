@@ -73,6 +73,18 @@ data class ResolutionFps(
     val low1Pct1440: Double? = null,
     @SerialName("low1_4k")
     val low1Pct4k: Double? = null,
+    @SerialName("max_1080p")
+    val max1080p: Double? = null,
+    @SerialName("max_1440p")
+    val max1440p: Double? = null,
+    @SerialName("max_4k")
+    val max4k: Double? = null,
+    @SerialName("min_1080p")
+    val min1080p: Double? = null,
+    @SerialName("min_1440p")
+    val min1440p: Double? = null,
+    @SerialName("min_4k")
+    val min4k: Double? = null,
 ) {
     fun avgFps(resolution: GamingResolution): Int = when (resolution) {
         GamingResolution.P1080 -> p1080.roundToInt().coerceAtLeast(1)
@@ -80,13 +92,33 @@ data class ResolutionFps(
         GamingResolution.P4K -> p4k.roundToInt().coerceAtLeast(1)
     }
 
+    fun maxFps(resolution: GamingResolution): Int {
+        val calculated = when (resolution) {
+            GamingResolution.P1080 -> max1080p ?: (p1080 * 1.32)
+            GamingResolution.P1440 -> max1440p ?: (p1440 * 1.28)
+            GamingResolution.P4K -> max4k ?: (p4k * 1.22)
+        }
+        return calculated.roundToInt().coerceAtLeast(avgFps(resolution))
+    }
+
     fun low1PctFps(resolution: GamingResolution, isHighCache: Boolean = false): Int {
         val ratio = if (isHighCache) 0.84 else 0.78
-        return when (resolution) {
-            GamingResolution.P1080 -> (low1Pct1080 ?: (p1080 * ratio)).roundToInt().coerceAtLeast(1)
-            GamingResolution.P1440 -> (low1Pct1440 ?: (p1440 * (ratio + 0.01))).roundToInt().coerceAtLeast(1)
-            GamingResolution.P4K -> (low1Pct4k ?: (p4k * (ratio + 0.02))).roundToInt().coerceAtLeast(1)
+        val calculated = when (resolution) {
+            GamingResolution.P1080 -> low1Pct1080 ?: (p1080 * ratio)
+            GamingResolution.P1440 -> low1Pct1440 ?: (p1440 * (ratio + 0.01))
+            GamingResolution.P4K -> low1Pct4k ?: (p4k * (ratio + 0.02))
         }
+        return calculated.roundToInt().coerceIn(1, avgFps(resolution))
+    }
+
+    fun minFps(resolution: GamingResolution, isHighCache: Boolean = false): Int {
+        val low1 = low1PctFps(resolution, isHighCache)
+        val calculated = when (resolution) {
+            GamingResolution.P1080 -> min1080p ?: (low1 * if (isHighCache) 0.88 else 0.80)
+            GamingResolution.P1440 -> min1440p ?: (low1 * if (isHighCache) 0.87 else 0.80)
+            GamingResolution.P4K -> min4k ?: (low1 * if (isHighCache) 0.86 else 0.79)
+        }
+        return calculated.roundToInt().coerceIn(1, low1)
     }
 }
 
@@ -104,9 +136,15 @@ data class GameSimulationEntry(
     val avg1080p: Int get() = fps.avgFps(GamingResolution.P1080)
     val avg1440p: Int get() = fps.avgFps(GamingResolution.P1440)
     val avg4k: Int get() = fps.avgFps(GamingResolution.P4K)
+    val max1080p: Int get() = fps.maxFps(GamingResolution.P1080)
+    val max1440p: Int get() = fps.maxFps(GamingResolution.P1440)
+    val max4k: Int get() = fps.maxFps(GamingResolution.P4K)
     val low1Fps1080p: Int get() = fps.low1PctFps(GamingResolution.P1080)
     val low1Fps1440p: Int get() = fps.low1PctFps(GamingResolution.P1440)
     val low1Fps4k: Int get() = fps.low1PctFps(GamingResolution.P4K)
+    val minFps1080p: Int get() = fps.minFps(GamingResolution.P1080)
+    val minFps1440p: Int get() = fps.minFps(GamingResolution.P1440)
+    val minFps4k: Int get() = fps.minFps(GamingResolution.P4K)
 }
 
 @Immutable

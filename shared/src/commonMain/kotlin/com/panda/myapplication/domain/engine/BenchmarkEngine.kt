@@ -128,23 +128,43 @@ object BenchmarkEngine {
         val lowRatioAaa = if (isCpu) (if (isX3d) 0.76 else 0.73) else (if (isX3d) 0.84 else 0.79)
 
         fun makeFps(base1080: Double, base1440: Double, base4k: Double, lowFactor: Double, override: ResolutionFps?): ResolutionFps {
+            val minF = if (isX3d) 0.86 else 0.80
+            val maxF = if (isCpu) (if (isX3d) 1.34 else 1.30) else 1.25
             if (override != null && override.p1080 > 0.0) {
+                val l1080 = override.low1Pct1080 ?: round1(override.p1080 * lowFactor)
+                val l1440 = override.low1Pct1440 ?: round1(override.p1440 * (lowFactor + 0.01))
+                val l4k = override.low1Pct4k ?: round1(override.p4k * (lowFactor + 0.02))
                 return override.copy(
-                    low1Pct1080 = override.low1Pct1080 ?: round1(override.p1080 * lowFactor),
-                    low1Pct1440 = override.low1Pct1440 ?: round1(override.p1440 * (lowFactor + 0.01)),
-                    low1Pct4k = override.low1Pct4k ?: round1(override.p4k * (lowFactor + 0.02)),
+                    low1Pct1080 = l1080,
+                    low1Pct1440 = l1440,
+                    low1Pct4k = l4k,
+                    max1080p = override.max1080p ?: round1(override.p1080 * maxF),
+                    max1440p = override.max1440p ?: round1(override.p1440 * (maxF - 0.03)),
+                    max4k = override.max4k ?: round1(override.p4k * (maxF - 0.06)),
+                    min1080p = override.min1080p ?: round1(l1080 * minF),
+                    min1440p = override.min1440p ?: round1(l1440 * minF),
+                    min4k = override.min4k ?: round1(l4k * (minF - 0.01)),
                 )
             }
             val p1080 = round1((base1080 * r).coerceAtLeast(18.0))
             val p1440 = round1((base1440 * r).coerceAtLeast(14.0))
             val p4k = round1((base4k * r).coerceAtLeast(10.0))
+            val l1080 = round1(p1080 * lowFactor)
+            val l1440 = round1(p1440 * (lowFactor + 0.01))
+            val l4k = round1(p4k * (lowFactor + 0.02))
             return ResolutionFps(
                 p1080 = p1080,
                 p1440 = p1440,
                 p4k = p4k,
-                low1Pct1080 = round1(p1080 * lowFactor),
-                low1Pct1440 = round1(p1440 * (lowFactor + 0.01)),
-                low1Pct4k = round1(p4k * (lowFactor + 0.02)),
+                low1Pct1080 = l1080,
+                low1Pct1440 = l1440,
+                low1Pct4k = l4k,
+                max1080p = round1(p1080 * maxF),
+                max1440p = round1(p1440 * (maxF - 0.03)),
+                max4k = round1(p4k * (maxF - 0.06)),
+                min1080p = round1(l1080 * minF),
+                min1440p = round1(l1440 * minF),
+                min4k = round1(l4k * (minF - 0.01)),
             )
         }
 
@@ -250,17 +270,28 @@ object BenchmarkEngine {
         isX3d: Boolean,
     ): GameFpsBenchmark {
         val lowFactor = if (isX3d) 0.84 else 0.78
+        val minF = if (isX3d) 0.86 else 0.80
+        val maxF = if (isX3d) 1.32 else 1.26
         fun make(b1080: Double, b1440: Double, b4k: Double, lf: Double = lowFactor): ResolutionFps {
             val p1080 = round1((b1080 * r1080).coerceAtLeast(18.0))
             val p1440 = round1((b1440 * r1440).coerceAtLeast(14.0))
             val p4k = round1((b4k * r4k).coerceAtLeast(10.0))
+            val l1080 = round1(p1080 * lf)
+            val l1440 = round1(p1440 * (lf + 0.01))
+            val l4k = round1(p4k * (lf + 0.02))
             return ResolutionFps(
                 p1080 = p1080,
                 p1440 = p1440,
                 p4k = p4k,
-                low1Pct1080 = round1(p1080 * lf),
-                low1Pct1440 = round1(p1440 * (lf + 0.01)),
-                low1Pct4k = round1(p4k * (lf + 0.02)),
+                low1Pct1080 = l1080,
+                low1Pct1440 = l1440,
+                low1Pct4k = l4k,
+                max1080p = round1(p1080 * maxF),
+                max1440p = round1(p1440 * (maxF - 0.03)),
+                max4k = round1(p4k * (maxF - 0.06)),
+                min1080p = round1(l1080 * minF),
+                min1440p = round1(l1440 * minF),
+                min4k = round1(l4k * (minF - 0.01)),
             )
         }
         return GameFpsBenchmark(

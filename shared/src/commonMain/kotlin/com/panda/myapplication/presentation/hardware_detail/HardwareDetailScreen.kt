@@ -1356,13 +1356,15 @@ private fun MultiGameFpsSimulationCard(
 
                 visibleEntries.forEach { game ->
                     val avgFpsVal = game.fps.avgFps(selectedResolution)
+                    val maxFpsVal = game.fps.maxFps(selectedResolution)
                     val low1FpsVal = game.fps.low1PctFps(selectedResolution)
+                    val minFpsVal = game.fps.minFps(selectedResolution)
                     val fpsColor = when {
                         avgFpsVal >= 120 -> NeonEmerald
                         avgFpsVal >= 60 -> NeonCyan
                         else -> NeonAmber
                     }
-                    val barCeiling = if (game.category == GameCategory.ESPORTS) 950f else 260f
+                    val barCeiling = if (game.category == GameCategory.ESPORTS) 1100f else 300f
                     val progress = (avgFpsVal / barCeiling).coerceIn(0.06f, 1f)
 
                     Surface(
@@ -1374,63 +1376,92 @@ private fun MultiGameFpsSimulationCard(
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 12.dp, vertical = 8.dp),
+                                .padding(horizontal = 10.dp, vertical = 8.dp),
                         ) {
+                            // Top Row: Game Title & Category Badge + Resolution Preset
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
-                                Column(modifier = Modifier.weight(1f)) {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Text(
-                                            text = game.title,
-                                            style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.Bold,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                        )
-                                        Spacer(modifier = Modifier.width(6.dp))
+                                Row(
+                                    modifier = Modifier.weight(1f),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                ) {
+                                    Text(
+                                        text = game.title,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Surface(
+                                        shape = RoundedCornerShape(4.dp),
+                                        color = (if (game.category == GameCategory.ESPORTS) NeonCyan else NeonAmber).copy(alpha = 0.15f),
+                                    ) {
                                         Text(
                                             text = if (game.category == GameCategory.ESPORTS) "E-SPOR" else "AAA",
                                             style = MaterialTheme.typography.labelSmall,
                                             fontSize = 9.sp,
                                             fontWeight = FontWeight.Black,
                                             color = if (game.category == GameCategory.ESPORTS) NeonCyan else NeonAmber,
+                                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp),
                                         )
                                     }
-                                    Text(
-                                        text = "${selectedResolution.label} • ${game.presetSubtitle}",
-                                        style = MaterialTheme.typography.labelSmall,
-                                        fontSize = 10.sp,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
                                 }
-
-                                Column(horizontalAlignment = Alignment.End) {
-                                    Text(
-                                        text = "$avgFpsVal FPS",
-                                        style = MaterialTheme.typography.titleMedium,
-                                        fontWeight = FontWeight.Black,
-                                        color = fpsColor,
-                                    )
-                                    Text(
-                                        text = "%1 Low: $low1FpsVal FPS",
-                                        style = MaterialTheme.typography.labelSmall,
-                                        fontSize = 10.sp,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
-                                }
+                                Text(
+                                    text = "${selectedResolution.label} • ${game.presetSubtitle}",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 10.sp,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    maxLines = 1,
+                                )
                             }
 
-                            Spacer(modifier = Modifier.height(4.dp))
+                            Spacer(modifier = Modifier.height(6.dp))
+
+                            // 4-Metric Data Strip: En Yüksek | Ortalama | %1 Low | En Düşük
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            ) {
+                                MetricStatBox(
+                                    modifier = Modifier.weight(1f),
+                                    label = tr(isTr, "En Yüksek", "Max FPS"),
+                                    value = "$maxFpsVal",
+                                    color = NeonPurple,
+                                )
+                                MetricStatBox(
+                                    modifier = Modifier.weight(1.05f),
+                                    label = tr(isTr, "Ortalama", "Average"),
+                                    value = "$avgFpsVal",
+                                    color = fpsColor,
+                                    isHighlighted = true,
+                                )
+                                MetricStatBox(
+                                    modifier = Modifier.weight(1f),
+                                    label = tr(isTr, "%1 Low", "1% Low"),
+                                    value = "$low1FpsVal",
+                                    color = NeonAmber,
+                                )
+                                MetricStatBox(
+                                    modifier = Modifier.weight(1f),
+                                    label = tr(isTr, "En Düşük", "Min FPS"),
+                                    value = "$minFpsVal",
+                                    color = NeonRose,
+                                )
+                            }
+
+                            Spacer(modifier = Modifier.height(6.dp))
 
                             LinearProgressIndicator(
                                 progress = { progress },
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(5.dp)
-                                    .clip(RoundedCornerShape(3.dp)),
+                                    .height(4.dp)
+                                    .clip(RoundedCornerShape(2.dp)),
                                 color = fpsColor,
                                 trackColor = MaterialTheme.colorScheme.surfaceVariant,
                             )
@@ -1499,8 +1530,9 @@ private fun MultiGameFpsSimulationCard(
                                     shape = RoundedCornerShape(4.dp),
                                     color = MaterialTheme.colorScheme.surfaceVariant,
                                 ) {
+                                    val hasMax = activeLabTest.entries.any { it.maxFps != null && it.maxFps > it.avgFps }
                                     Text(
-                                        text = strings.gameBenchAvgMinLabel,
+                                        text = if (hasMax) tr(isTr, "Max, Ortalama & Min FPS", "Max, Avg & Min FPS") else strings.gameBenchAvgMinLabel,
                                         style = MaterialTheme.typography.labelSmall,
                                         fontSize = 9.sp,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1587,11 +1619,33 @@ private fun MultiGameFpsSimulationCard(
 
                                     Spacer(modifier = Modifier.width(6.dp))
 
-                                    // Double Horizontal Bar: Top=Avg, Bottom=Min
+                                    // Triple or Double Horizontal Bar: Optional Top=Max, Mid=Avg, Bottom=Min
                                     Column(
                                         modifier = Modifier.weight(1f),
                                         verticalArrangement = Arrangement.spacedBy(2.dp),
                                     ) {
+                                        // Optional Max Bar if present in lab benchmark
+                                        if (entry.maxFps != null && entry.maxFps > entry.avgFps) {
+                                            val maxRatio = (entry.maxFps / maxAvgFps).toFloat().coerceIn(0.12f, 1f)
+                                            Box(
+                                                modifier = Modifier
+                                                    .fillMaxWidth(maxRatio)
+                                                    .height(10.dp)
+                                                    .clip(RoundedCornerShape(2.dp))
+                                                    .background(NeonPurple.copy(alpha = 0.85f)),
+                                                contentAlignment = Alignment.CenterEnd,
+                                            ) {
+                                                Text(
+                                                    text = "Max: ${entry.maxFps.toInt()}",
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    color = Color.White,
+                                                    fontWeight = FontWeight.Bold,
+                                                    fontSize = 8.sp,
+                                                    modifier = Modifier.padding(end = 3.dp),
+                                                )
+                                            }
+                                        }
+
                                         // Average Bar
                                         Box(
                                             modifier = Modifier
@@ -1666,6 +1720,64 @@ private fun MultiGameFpsSimulationCard(
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+private fun MetricStatBox(
+    modifier: Modifier = Modifier,
+    label: String,
+    value: String,
+    color: Color,
+    isHighlighted: Boolean = false,
+) {
+    Surface(
+        modifier = modifier,
+        shape = RoundedCornerShape(6.dp),
+        color = color.copy(alpha = if (isHighlighted) 0.16f else 0.08f),
+        border = BorderStroke(
+            width = if (isHighlighted) 1.dp else 0.5.dp,
+            color = color.copy(alpha = if (isHighlighted) 0.6f else 0.25f),
+        ),
+    ) {
+        Column(
+            modifier = Modifier.padding(horizontal = 2.dp, vertical = 4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelSmall,
+                fontSize = 8.5.sp,
+                fontWeight = if (isHighlighted) FontWeight.Bold else FontWeight.Medium,
+                color = color,
+                maxLines = 1,
+                softWrap = false,
+            )
+            Spacer(modifier = Modifier.height(1.dp))
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = value,
+                    style = MaterialTheme.typography.labelMedium,
+                    fontSize = if (isHighlighted) 12.sp else 11.sp,
+                    fontWeight = FontWeight.Black,
+                    color = color,
+                    maxLines = 1,
+                    softWrap = false,
+                )
+                Text(
+                    text = " FPS",
+                    style = MaterialTheme.typography.labelSmall,
+                    fontSize = 7.5.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = color.copy(alpha = 0.8f),
+                    maxLines = 1,
+                    softWrap = false,
+                )
             }
         }
     }
