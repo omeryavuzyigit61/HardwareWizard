@@ -124,6 +124,18 @@ class HardwareRemoteDataSource(
         json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(safeText)
     }.getOrDefault(emptyMap())
 
+    suspend fun fetchVerifiedLabBenchmarks(
+        url: String = DEFAULT_VERIFIED_BENCHMARKS_URL,
+    ): Result<List<com.panda.myapplication.domain.model.VerifiedLabGameTest>> = withContext(ioDispatcher) {
+        runCatching {
+            val list = fetchJsonList<com.panda.myapplication.domain.model.VerifiedLabGameTest>(url)
+            if (list.isNotEmpty()) {
+                com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(list)
+            }
+            list
+        }
+    }
+
     private suspend inline fun <reified T> fetchJsonList(url: String): List<T> = runCatching {
         val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
             httpClient.get(url).bodyAsText(),
@@ -143,5 +155,6 @@ class HardwareRemoteDataSource(
         const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/catalog"
         const val DEFAULT_PRICES_TR_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/prices_tr.json"
         const val DEFAULT_BENCHMARKS_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/hardware_benchmarks.json"
+        const val DEFAULT_VERIFIED_BENCHMARKS_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/verified_lab_benchmarks.json"
     }
 }

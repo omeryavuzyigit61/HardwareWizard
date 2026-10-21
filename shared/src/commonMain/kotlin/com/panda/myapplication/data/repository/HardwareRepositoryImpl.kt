@@ -423,6 +423,10 @@ class HardwareRepositoryImpl(
         runCatching {
             val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
             val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
+            val remoteVerified = remoteDataSource.fetchVerifiedLabBenchmarks().getOrDefault(emptyList())
+            if (remoteVerified.isNotEmpty()) {
+                com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
+            }
             val localPrices = localDataSource.loadLocalPricesTr()
             val localBenchmarks = localDataSource.loadLocalBenchmarks()
             val allPrices = localPrices.toMutableMap().apply {

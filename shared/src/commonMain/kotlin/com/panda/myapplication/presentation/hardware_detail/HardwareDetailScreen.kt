@@ -8,6 +8,8 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -1440,16 +1442,17 @@ private fun MultiGameFpsSimulationCard(
                 // SEKME 2: DOĞRULANMIŞ GERÇEK LABORATUVAR TESTLERİ (Nebi Akgün Tezgâhı)
                 // -------------------------------------------------------------
                 if (labTests.isNotEmpty()) {
-                    // Game Selector Pills (Counter-Strike 2, Cyberpunk 2077 vb.)
+                    // Game Selector Pills (Horizontal scrollable pills for all games)
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
                         labTests.forEachIndexed { idx, test ->
                             val isSelected = selectedLabTestIndex == idx
                             Surface(
                                 onClick = { selectedLabTestIndex = idx },
-                                modifier = Modifier.weight(1f),
                                 shape = RoundedCornerShape(8.dp),
                                 color = if (isSelected) NeonRose.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
                                 border = BorderStroke(1.dp, if (isSelected) NeonRose else MaterialTheme.colorScheme.outline),
@@ -1459,8 +1462,9 @@ private fun MultiGameFpsSimulationCard(
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                                     color = if (isSelected) NeonRose else MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.padding(vertical = 6.dp),
+                                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
                                     textAlign = TextAlign.Center,
+                                    maxLines = 1,
                                 )
                             }
                         }
@@ -1482,18 +1486,30 @@ private fun MultiGameFpsSimulationCard(
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
                                 Text(
-                                    text = "${activeLabTest.gameTitle} (${activeLabTest.resolutionSettings})",
+                                    text = "${activeLabTest.gameTitle} • ${activeLabTest.cleanSettings}",
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurface,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.weight(1f),
                                 )
-                                Text(
-                                    text = strings.gameBenchAvgMinLabel,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontSize = 10.sp,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    fontWeight = FontWeight.SemiBold,
-                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(4.dp),
+                                    color = MaterialTheme.colorScheme.surfaceVariant,
+                                ) {
+                                    Text(
+                                        text = strings.gameBenchAvgMinLabel,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontSize = 9.sp,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        fontWeight = FontWeight.SemiBold,
+                                        maxLines = 1,
+                                        softWrap = false,
+                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                    )
+                                }
                             }
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
@@ -1501,6 +1517,8 @@ private fun MultiGameFpsSimulationCard(
                                 style = MaterialTheme.typography.labelSmall,
                                 fontSize = 9.5.sp,
                                 color = NeonCyan,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
                         }
                     }
@@ -1514,8 +1532,20 @@ private fun MultiGameFpsSimulationCard(
                     ) {
                         activeLabTest.entries.forEach { entry ->
                             val isCurrent = entry.matchesItem(item)
-                            val mainBarColor = if (entry.isAmd) Color(0xFFEF4444) else Color(0xFF2563EB)
-                            val minBarColor = if (entry.isAmd) Color(0xFFB91C1C) else Color(0xFF1D4ED8)
+                            val isNvidia = entry.fullModelName.contains("NVIDIA", ignoreCase = true) || entry.modelName.startsWith("RTX", ignoreCase = true) || entry.modelName.startsWith("GTX", ignoreCase = true)
+                            val isIntel = entry.fullModelName.contains("Intel", ignoreCase = true) || entry.modelName.startsWith("Arc", ignoreCase = true) || entry.fullModelName.contains("Core", ignoreCase = true)
+                            val mainBarColor = when {
+                                entry.isAmd -> Color(0xFFEF4444)
+                                isIntel -> Color(0xFF2563EB)
+                                isNvidia -> Color(0xFF10B981)
+                                else -> Color(0xFF2563EB)
+                            }
+                            val minBarColor = when {
+                                entry.isAmd -> Color(0xFFB91C1C)
+                                isIntel -> Color(0xFF1D4ED8)
+                                isNvidia -> Color(0xFF047857)
+                                else -> Color(0xFF1D4ED8)
+                            }
 
                             val avgRatio = (entry.avgFps / maxAvgFps).toFloat().coerceIn(0.12f, 1f)
                             val minRatio = (entry.minFps / maxAvgFps).toFloat().coerceIn(0.08f, 1f)
