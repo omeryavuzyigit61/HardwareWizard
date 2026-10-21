@@ -160,6 +160,16 @@ interface AppStrings {
     val detailStoreOffers: String
     val detailCommunityLedger: String
 
+    // Game Benchmark Tabs & Reference Rig
+    val gameBenchTabSimulated: String
+    val gameBenchTabVerified: String
+    val gameBenchReferenceRigCpu: String
+    val gameBenchReferenceRigGpu: String
+    val gameBenchAvgMinLabel: String
+    val gameBenchCurrentHardware: String
+    val gameBenchNoVerifiedYet: String
+    val gameBenchSwitchToSim: String
+
     // Second Hand Valuation Screen
     val valuationHeroTitle: String
     val valuationHeroSubtitle: String
@@ -540,6 +550,15 @@ private class AppStringsTR : AppStrings {
     override val detailStoreOffers = "GÜVENLİ MAĞAZA VE FİYAT TEKLİFLERİ"
     override val detailCommunityLedger = "TOPLULUK DOĞRULANMIŞ FİYAT DEFTERİ"
 
+    override val gameBenchTabSimulated = "📊 Simüle Test (Model)"
+    override val gameBenchTabVerified = "🧪 Doğrulanmış Gerçek Test"
+    override val gameBenchReferenceRigCpu = "🔬 Referans GPU: RTX 5090 32GB (Sıfır Darboğaz)"
+    override val gameBenchReferenceRigGpu = "🔬 Referans CPU: Ryzen 7 9800X3D (Sıfır Darboğaz)"
+    override val gameBenchAvgMinLabel = "Ortalama ve Minimum FPS"
+    override val gameBenchCurrentHardware = "Mevcut Ürün"
+    override val gameBenchNoVerifiedYet = "Bu model için henüz doğrulanmış laboratuvar testi bulunmuyor."
+    override val gameBenchSwitchToSim = "Simüle Teste Geç"
+
     override val valuationHeroTitle = "SİSTEMİM 2. ELDE NE KADAR EDER?"
     override val valuationHeroSubtitle = "Aktif PC Sihirbazı sisteminizdeki donanımları, doğrulanmış topluluk fiyat defteri ve amortisman algoritmasıyla 3 farklı piyasa kademesinde otomatik değerler."
     override val valuationNoSystem = "Sistem Seçilmedi"
@@ -916,6 +935,15 @@ private class AppStringsEN : AppStrings {
     override val detailLaptopSpecs = "GAMING LAPTOP SPECIFICATIONS"
     override val detailStoreOffers = "VERIFIED STORE OFFERS & DEALS"
     override val detailCommunityLedger = "COMMUNITY VERIFIED PRICE LEDGER"
+
+    override val gameBenchTabSimulated = "📊 Simulated FPS (Model)"
+    override val gameBenchTabVerified = "🧪 Verified Real Benchmark"
+    override val gameBenchReferenceRigCpu = "🔬 Reference GPU: RTX 5090 32GB (Zero Bottleneck)"
+    override val gameBenchReferenceRigGpu = "🔬 Reference CPU: Ryzen 7 9800X3D (Zero Bottleneck)"
+    override val gameBenchAvgMinLabel = "Average & Minimum FPS"
+    override val gameBenchCurrentHardware = "Current Hardware"
+    override val gameBenchNoVerifiedYet = "No verified lab test available for this model yet."
+    override val gameBenchSwitchToSim = "Switch to Simulation"
 
     override val valuationHeroTitle = "WHAT IS MY RIG WORTH USED?"
     override val valuationHeroSubtitle = "Automatically calculates your PC Wizard build across 3 market tiers using verified community ledger data and depreciation models."
@@ -1294,6 +1322,15 @@ private class AppStringsDE : AppStrings {
     override val detailStoreOffers = "VERIFIZIERTE SHOP-ANGEBOTE"
     override val detailCommunityLedger = "COMMUNITY-VERIFIZIERTES PREISBUCH"
 
+    override val gameBenchTabSimulated = "📊 Simulierte FPS (Modell)"
+    override val gameBenchTabVerified = "🧪 Verifizierter Praxistest"
+    override val gameBenchReferenceRigCpu = "🔬 Referenz-GPU: RTX 5090 32GB (Kein Bottleneck)"
+    override val gameBenchReferenceRigGpu = "🔬 Referenz-CPU: Ryzen 7 9800X3D (Kein Bottleneck)"
+    override val gameBenchAvgMinLabel = "Durchschnittliche und Minimale FPS"
+    override val gameBenchCurrentHardware = "Aktuelles Modell"
+    override val gameBenchNoVerifiedYet = "Für dieses Modell liegt noch kein verifizierter Labortest vor."
+    override val gameBenchSwitchToSim = "Zur Simulation wechseln"
+
     override val valuationHeroTitle = "WAS IST MEIN PC GEBRAUCHT WERT?"
     override val valuationHeroSubtitle = "Ermittelt automatisch den Wert Ihres PC-Konfigurator-Builds in 3 Marktstufen basierend auf verifizierten Verkäufen."
     override val valuationNoSystem = "Kein System ausgewählt"
@@ -1670,6 +1707,15 @@ private class AppStringsES : AppStrings {
     override val detailLaptopSpecs = "DETALLES DE PORTÁTIL GAMING"
     override val detailStoreOffers = "OFERTAS DE TIENDAS VERIFICADAS"
     override val detailCommunityLedger = "LIBRO DE PRECIOS DE LA COMUNIDAD"
+
+    override val gameBenchTabSimulated = "📊 FPS Simulados (Modelo)"
+    override val gameBenchTabVerified = "🧪 Benchmark Real Verificado"
+    override val gameBenchReferenceRigCpu = "🔬 GPU de Referencia: RTX 5090 32GB (Cero Cuello de Botella)"
+    override val gameBenchReferenceRigGpu = "🔬 CPU de Referencia: Ryzen 7 9800X3D (Cero Cuello de Botella)"
+    override val gameBenchAvgMinLabel = "FPS Promedio y Mínimo"
+    override val gameBenchCurrentHardware = "Hardware Actual"
+    override val gameBenchNoVerifiedYet = "Aún no hay pruebas de laboratorio verificadas para este modelo."
+    override val gameBenchSwitchToSim = "Cambiar a Simulación"
 
     override val valuationHeroTitle = "¿CUÁNTO VALE MI PC USADO?"
     override val valuationHeroSubtitle = "Calcula automáticamente el valor de tu ensamble en 3 niveles de mercado usando transacciones verificadas y modelos de amortización."
@@ -2048,6 +2094,15 @@ private class AppStringsFR : AppStrings {
     override val detailStoreOffers = "OFFRES BOUTIQUES VÉRIFIÉES"
     override val detailCommunityLedger = "REGISTRE DES PRIX DE LA COMMUNAUTÉ"
 
+    override val gameBenchTabSimulated = "📊 FPS Simulés (Modèle)"
+    override val gameBenchTabVerified = "🧪 Benchmark Réel Vérifié"
+    override val gameBenchReferenceRigCpu = "🔬 GPU de Référence : RTX 5090 32GB (Zéro Goulot d'Étranglement)"
+    override val gameBenchReferenceRigGpu = "🔬 CPU de Référence : Ryzen 7 9800X3D (Zéro Goulot d'Étranglement)"
+    override val gameBenchAvgMinLabel = "FPS Moyen et Minimum"
+    override val gameBenchCurrentHardware = "Matériel Actuel"
+    override val gameBenchNoVerifiedYet = "Aucun test de laboratoire vérifié disponible pour ce modèle pour l'instant."
+    override val gameBenchSwitchToSim = "Passer à la Simulation"
+
     override val valuationHeroTitle = "COMBIEN VAUT MON PC D'OCCASION ?"
     override val valuationHeroSubtitle = "Évalue automatiquement votre configuration sur 3 niveaux du marché d'occasion grâce aux transactions communautaires vérifiées."
     override val valuationNoSystem = "Aucun système sélectionné"
@@ -2425,6 +2480,15 @@ private class AppStringsRU : AppStrings {
     override val detailStoreOffers = "ПРОВЕРЕННЫЕ ПРЕДЛОЖЕНИЯ МАГАЗИНОВ"
     override val detailCommunityLedger = "ПРОВЕРЕННЫЙ РЕЕСТР ЦЕН СООБЩЕСТВА"
 
+    override val gameBenchTabSimulated = "📊 Симулированный FPS (Модель)"
+    override val gameBenchTabVerified = "🧪 Проверенный Реальный Тест"
+    override val gameBenchReferenceRigCpu = "🔬 Эталонный GPU: RTX 5090 32GB (Без Узких Мест)"
+    override val gameBenchReferenceRigGpu = "🔬 Эталонный CPU: Ryzen 7 9800X3D (Без Узких Мест)"
+    override val gameBenchAvgMinLabel = "Средний и Минимальный FPS"
+    override val gameBenchCurrentHardware = "Текущая Модель"
+    override val gameBenchNoVerifiedYet = "Для этой модели пока нет подтвержденных лабораторных тестов."
+    override val gameBenchSwitchToSim = "Перейти к Симуляции"
+
     override val valuationHeroTitle = "СКОЛЬКО СТОИТ МОЙ ПК Б/У?"
     override val valuationHeroSubtitle = "Автоматическая оценка сборки ПК по 3 рыночным уровням на основе подтвержденных сделок сообщества."
     override val valuationNoSystem = "Система не выбрана"
@@ -2801,6 +2865,15 @@ private class AppStringsJA : AppStrings {
     override val detailLaptopSpecs = "ゲーミングノート特有スペック"
     override val detailStoreOffers = "検証済みストアの価格・在庫一覧"
     override val detailCommunityLedger = "コミュニティ検証済み実売台帳"
+
+    override val gameBenchTabSimulated = "📊 推定シミュレーション (モデル)"
+    override val gameBenchTabVerified = "🧪 検証済み実機ベンチマーク"
+    override val gameBenchReferenceRigCpu = "🔬 基準GPU: RTX 5090 32GB (ボトルネックなし)"
+    override val gameBenchReferenceRigGpu = "🔬 基準CPU: Ryzen 7 9800X3D (ボトルネックなし)"
+    override val gameBenchAvgMinLabel = "平均および最小FPS"
+    override val gameBenchCurrentHardware = "現在のハードウェア"
+    override val gameBenchNoVerifiedYet = "このモデルの検証済み実機テストはまだありません。"
+    override val gameBenchSwitchToSim = "シミュレーションに切り替え"
 
     override val valuationHeroTitle = "マイPCの中古相場は？"
     override val valuationHeroSubtitle = "検証済みのコミュニティ取引台帳と減価償却モデルに基づき、3つの市場ランクで構成パーツを自動査定します。"

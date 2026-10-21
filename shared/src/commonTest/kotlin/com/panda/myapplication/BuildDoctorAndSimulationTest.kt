@@ -22,6 +22,8 @@ import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.Wattage
+import com.panda.myapplication.domain.engine.BenchmarkEngine
+import com.panda.myapplication.domain.model.VerifiedLabBenchmarks
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -41,7 +43,11 @@ class BuildDoctorAndSimulationTest {
         brand = "AMD",
         model = name,
         price = Money(1650000L, "TRY"),
-        benchmarkInfo = HardwareBenchmarkInfo(score = score),
+        benchmarkInfo = HardwareBenchmarkInfo(
+            score = score,
+            relativePerformancePct = score / 100.0,
+            gamingRelativeIndex = score / 100.0,
+        ),
         spec = CpuSpec(
             socket = socket,
             coreCount = cores,
@@ -64,7 +70,11 @@ class BuildDoctorAndSimulationTest {
         brand = "NVIDIA",
         model = name,
         price = Money(2600000L, "TRY"),
-        benchmarkInfo = HardwareBenchmarkInfo(score = score),
+        benchmarkInfo = HardwareBenchmarkInfo(
+            score = score,
+            relativePerformancePct = score / 100.0,
+            gamingRelativeIndex = score / 100.0,
+        ),
         spec = GpuSpec(
             chipset = "AD104",
             vram = MemorySize(vramMb),
@@ -212,5 +222,60 @@ class BuildDoctorAndSimulationTest {
             upscaling = UpscalingMode.PERFORMANCE,
         )
         assertTrue(upscaledPerformance.overallAvgFps > highNative.overallAvgFps, "Upscaling Performance must yield higher FPS than Native")
+    }
+
+    @Test
+    fun x3dCacheAdvantageGivesSuperiorGamingFps() {
+        // Ryzen 7 9800X3D (8 cores, 5200MHz, 96MB L3 cache)
+        val x3dCpu = createTestCpu(
+            name = "Ryzen 7 9800X3D",
+            cores = 8,
+            boostMhz = 5200,
+            l3Mb = 96,
+            score = 96
+        )
+
+        // Ryzen 9 9950X (16 cores, 5700MHz, 64MB cache - more raw compute & clock, but no 3D V-Cache)
+        val standardComputeCpu = createTestCpu(
+            name = "Ryzen 9 9950X",
+            cores = 16,
+            boostMhz = 5700,
+            l3Mb = 64,
+            score = 99
+        )
+
+        val x3dFps = BenchmarkEngine.resolveGameFpsForItem(x3dCpu)
+        val standardFps = BenchmarkEngine.resolveGameFpsForItem(standardComputeCpu)
+
+        assertNotNull(x3dFps?.counterStrike2)
+        assertNotNull(standardFps?.counterStrike2)
+
+        val x3dCs2Avg = x3dFps.counterStrike2.p1080
+        val standardCs2Avg = standardFps.counterStrike2.p1080
+
+        // In CPU-bound competitive games like CS2 at 1080p, 9800X3D must beat the 9950X due to 3D V-Cache
+        assertTrue(
+            x3dCs2Avg > standardCs2Avg,
+            "Ryzen 7 9800X3D with 3D V-Cache ($x3dCs2Avg FPS) must outperform Ryzen 9 9950X ($standardCs2Avg FPS) in CS2 1080p"
+        )
+        // Calibrated baseline should be ~850+ FPS matching real lab tests
+        assertTrue(x3dCs2Avg >= 850.0, "Ryzen 7 9800X3D 1080p CS2 should simulate around real test result (~922 FPS)")
+    }
+
+    @Test
+    fun verifiedLabBenchmarksReturnsAccurateDataset() {
+        val cpu9800X3D = createTestCpu(name = "Ryzen 7 9800X3D")
+        val tests = VerifiedLabBenchmarks.getLabTestsForItem(cpu9800X3D)
+
+        assertTrue(tests.isNotEmpty(), "Verified tests for Ryzen 7 9800X3D must not be empty")
+        val cs2Test = tests.find { it.gameTitle == "Counter-Strike 2" }
+        assertNotNull(cs2Test)
+        assertEquals("NVIDIA GeForce RTX 5090 32GB", cs2Test.rigGpuOrCpu)
+
+        val topEntry = cs2Test.entries.first()
+        assertTrue(topEntry.fullModelName.contains("9800X3D"), "Top entry in CS2 test must be Ryzen 7 9800X3D")
+        assertEquals(926.0, topEntry.avgFps)
+        assertEquals(318.0, topEntry.minFps)
+        assertTrue(topEntry.isAmd)
     }
 }

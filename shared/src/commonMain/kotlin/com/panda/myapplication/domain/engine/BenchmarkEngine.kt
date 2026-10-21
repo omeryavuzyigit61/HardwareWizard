@@ -122,9 +122,10 @@ object BenchmarkEngine {
         existing: GameFpsBenchmark? = null,
     ): GameFpsBenchmark {
         val r = ratio.coerceIn(0.15, 1.40)
-        val x3dEsportsBoost = if (isX3d) 1.08 else 1.0
-        val lowRatioEsports = if (isX3d) 0.85 else 0.78
-        val lowRatioAaa = if (isX3d) 0.84 else 0.79
+        val x3dEsportsBoost = if (isX3d) 1.28 else 1.0
+        val x3dAaaBoost = if (isX3d) 1.18 else 1.0
+        val lowRatioEsports = if (isCpu) (if (isX3d) 0.345 else 0.310) else (if (isX3d) 0.85 else 0.78)
+        val lowRatioAaa = if (isCpu) (if (isX3d) 0.76 else 0.73) else (if (isX3d) 0.84 else 0.79)
 
         fun makeFps(base1080: Double, base1440: Double, base4k: Double, lowFactor: Double, override: ResolutionFps?): ResolutionFps {
             if (override != null && override.p1080 > 0.0) {
@@ -148,39 +149,42 @@ object BenchmarkEngine {
         }
 
         val cpuScale4k = if (isCpu) 1.12 else 1.0
+        val cs2Base1080 = if (isCpu) 720.0 else 540.0
+        val valorantBase1080 = if (isCpu) 820.0 else 640.0
+        val cyberpunkBase1080 = if (isCpu) 205.0 else 155.0
 
         return GameFpsBenchmark(
             // 5 E-Spor / Rekabetçi Oyun
             counterStrike2 = makeFps(
-                base1080 = 540.0 * x3dEsportsBoost,
-                base1440 = 430.0 * x3dEsportsBoost,
+                base1080 = cs2Base1080 * x3dEsportsBoost,
+                base1440 = (cs2Base1080 * 0.78) * if (isX3d) 1.15 else 1.0,
                 base4k = 270.0 * cpuScale4k,
                 lowFactor = lowRatioEsports,
                 override = existing?.counterStrike2,
             ),
             valorant = makeFps(
-                base1080 = 640.0 * x3dEsportsBoost,
-                base1440 = 520.0 * x3dEsportsBoost,
+                base1080 = valorantBase1080 * x3dEsportsBoost,
+                base1440 = (valorantBase1080 * 0.78) * if (isX3d) 1.15 else 1.0,
                 base4k = 360.0 * cpuScale4k,
                 lowFactor = lowRatioEsports,
                 override = existing?.valorant,
             ),
             apexLegends = makeFps(
-                base1080 = 295.0 * x3dEsportsBoost,
+                base1080 = (if (isCpu) 360.0 else 295.0) * if (isX3d) 1.16 else 1.0,
                 base1440 = 245.0,
                 base4k = 168.0 * cpuScale4k,
                 lowFactor = lowRatioEsports,
                 override = existing?.apexLegends,
             ),
             warzone = makeFps(
-                base1080 = 225.0 * x3dEsportsBoost,
+                base1080 = (if (isCpu) 280.0 else 225.0) * if (isX3d) 1.18 else 1.0,
                 base1440 = 182.0,
                 base4k = 122.0 * cpuScale4k,
                 lowFactor = lowRatioEsports - 0.02,
                 override = existing?.warzone,
             ),
             pubg = makeFps(
-                base1080 = 285.0 * x3dEsportsBoost,
+                base1080 = (if (isCpu) 340.0 else 285.0) * if (isX3d) 1.16 else 1.0,
                 base1440 = 220.0,
                 base4k = 142.0 * cpuScale4k,
                 lowFactor = lowRatioEsports - 0.02,
@@ -188,7 +192,7 @@ object BenchmarkEngine {
             ),
             // 7 AAA / Ağır Grafik Oyun
             cyberpunk2077 = makeFps(
-                base1080 = 155.0,
+                base1080 = cyberpunkBase1080 * x3dAaaBoost,
                 base1440 = 118.0,
                 base4k = 68.0 * cpuScale4k,
                 lowFactor = lowRatioAaa,
@@ -296,11 +300,28 @@ object BenchmarkEngine {
         }
 
         val isX3d = item.model.contains("X3D", ignoreCase = true) || (s.l3CacheMb ?: 0) >= 96
+        val isArrowLake = s.architecture?.contains("Arrow", ignoreCase = true) == true ||
+                item.model.contains("285K", ignoreCase = true) ||
+                item.model.contains("265", ignoreCase = true) ||
+                item.model.contains("245", ignoreCase = true) ||
+                item.model.contains("225", ignoreCase = true) ||
+                s.socket.contains("1851", ignoreCase = true)
+
         val boostGhz = (s.boostClock?.mhz ?: 4000) / 1000.0
         val singleCore = (boostGhz * 380.0 * archMultiplier).toInt().coerceAtLeast(1000)
         val multiCore = ((s.coreCount * boostGhz * 280.0 + s.tdp.watts * 30.0) * archMultiplier).toInt().coerceAtLeast(4000)
-        val relativeIndex = (((singleCore * 0.4 + multiCore * 0.0025) / 12.0 * 10.0) * if (isX3d) 1.12 else 1.0).coerceIn(20.0, 108.0)
-        val score = relativeIndex.toInt().coerceIn(10, 100)
+
+        // Raw productivity index (rendering/compute)
+        val rawProductivityIndex = (((singleCore * 0.4 + multiCore * 0.0025) / 12.0 * 10.0)).coerceIn(20.0, 115.0)
+
+        // Calibrated Gaming Index: 3D V-Cache massive boost vs Arrow Lake tile memory latency penalty
+        val gamingCacheMultiplier = when {
+            isX3d -> 1.30
+            isArrowLake -> 0.94
+            else -> 1.0
+        }
+        val gamingRelativeIndex = (rawProductivityIndex * gamingCacheMultiplier).coerceIn(20.0, 135.0)
+        val score = (if (isX3d) (rawProductivityIndex * 1.15) else rawProductivityIndex).toInt().coerceIn(10, 100)
         val tier = when {
             score >= 95 -> "S-Tier"
             score >= 85 -> "A-Tier"
@@ -308,8 +329,7 @@ object BenchmarkEngine {
             else -> "C-Tier"
         }
 
-        val cbRatio = relativeIndex / 100.0
-        val gameFps = buildFull12GameMatrix(ratio = cbRatio, isCpu = true, isX3d = isX3d)
+        val gameFps = buildFull12GameMatrix(ratio = gamingRelativeIndex / 100.0, isCpu = true, isX3d = isX3d)
 
         val cb2024Single = (singleCore / 16.5).toInt().coerceAtLeast(60)
         val cb2024Multi = (multiCore / 15.2).toInt().coerceAtLeast(800)
@@ -330,12 +350,12 @@ object BenchmarkEngine {
         return HardwareBenchmarkInfo(
             score = score,
             tier = tier,
-            gamingRelativeIndex = round1(relativeIndex) / 100.0,
-            relativePerformanceIndex = round1(relativeIndex),
+            gamingRelativeIndex = round1(gamingRelativeIndex) / 100.0,
+            relativePerformanceIndex = round1(rawProductivityIndex),
             cpuSynthetic = cpuSynthetic,
             gameFps = gameFps,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
-            testSuite = "Matematiksel IPC & Saat Hızı Simülasyonu",
+            testSuite = "Kalibre Edilmiş IPC & 3D V-Cache Simülasyonu",
         )
     }
 

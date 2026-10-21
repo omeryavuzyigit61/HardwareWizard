@@ -99,17 +99,22 @@ import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.StoreOffer
+import com.panda.myapplication.domain.model.VerifiedLabBenchmarks
+import com.panda.myapplication.domain.model.VerifiedLabGameTest
+import com.panda.myapplication.domain.model.VerifiedLabTestEntry
 import com.panda.myapplication.domain.model.Wattage
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.ElectricBlue
+import com.panda.myapplication.presentation.theme.GoldAccent
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
+import androidx.compose.ui.text.style.TextAlign
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.LocalAppStrings
@@ -1119,6 +1124,11 @@ private fun MetricProgressBar(
     }
 }
 
+private enum class GameBenchmarkMode {
+    SIMULATED,
+    VERIFIED,
+}
+
 @Composable
 private fun MultiGameFpsSimulationCard(
     item: HardwareItem,
@@ -1127,8 +1137,14 @@ private fun MultiGameFpsSimulationCard(
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val gameMatrix = remember(item.id) { BenchmarkEngine.resolveGameFpsForItem(item) } ?: return
+
+    val labTests = remember(item.id) { VerifiedLabBenchmarks.getLabTestsForItem(item) }
+    val hasLabTest = remember(labTests, item.id) { VerifiedLabBenchmarks.hasVerifiedLabTest(item) }
+
+    var selectedMode by remember(item.id) { mutableStateOf(GameBenchmarkMode.SIMULATED) }
     var selectedResolution by remember { mutableStateOf(GamingResolution.P1080) }
     var selectedCategoryFilter by remember { mutableStateOf<GameCategory?>(null) }
+    var selectedLabTestIndex by remember { mutableStateOf(0) }
 
     val allEntries = remember(gameMatrix) {
         gameMatrix.toSimulationEntries()
@@ -1148,23 +1164,28 @@ private fun MultiGameFpsSimulationCard(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(Spacing.small),
         ) {
+            // Header Row: Title & Subtitle
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(text = "🎮", fontSize = 18.sp)
+                    Text(text = "🎮", fontSize = 20.sp)
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
-                            text = LocalAppStrings.current.detailMultiGameFps,
+                            text = strings.detailMultiGameFps,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = tr(isTr, "Rekabetçi E-Spor (5) ve Ağır AAA (7) Test Katsayıları", "Competitive Esports (5) & AAA Title (7) Benchmarks"),
+                            text = if (selectedMode == GameBenchmarkMode.SIMULATED) {
+                                tr(isTr, "Kalibre Edilmiş IPC & 3D V-Cache Algoritmik Modeli", "Calibrated IPC & 3D V-Cache Algorithmic Model")
+                            } else {
+                                tr(isTr, "Bağımsız Laboratuvar Ölçümleri • Gerçek Oyun & Güç Tüketimi", "Independent Lab Benchmarks • Real Gameplay & Power Draw")
+                            },
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -1172,154 +1193,447 @@ private fun MultiGameFpsSimulationCard(
                 }
             }
 
-            // Resolution Switcher (1080p / 1440p / 4K)
+            // Reference Test Rig Pill (Madde 2: Sabit Referans Tezgâhı)
+            Surface(
+                shape = RoundedCornerShape(8.dp),
+                color = NeonCyan.copy(alpha = 0.10f),
+                border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = if (item.category == HardwareCategory.CPU) strings.gameBenchReferenceRigCpu else strings.gameBenchReferenceRigGpu,
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = NeonCyan,
+                        fontSize = 11.sp,
+                    )
+                }
+            }
+
+            // Segmented 2-Tab Mode Switcher (Madde 3: Simüle vs Gerçek Test)
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                GamingResolution.entries.forEach { res ->
-                    val isSelected = selectedResolution == res
-                    Surface(
-                        onClick = { selectedResolution = res },
-                        modifier = Modifier.weight(1f),
-                        shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant,
-                        border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
-                    ) {
-                        Column(
-                            modifier = Modifier.padding(vertical = 6.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                        ) {
-                            Text(
-                                text = res.label,
-                                style = MaterialTheme.typography.labelMedium,
-                                fontWeight = FontWeight.Black,
-                                color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
-                            )
-                            Text(
-                                text = res.subLabel,
-                                style = MaterialTheme.typography.labelSmall,
-                                fontSize = 9.sp,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                    }
-                }
-            }
-
-            // Category Filter Pills (Tümü / E-Spor / AAA)
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
-                val filterOptions: List<Pair<GameCategory?, String>> = listOf(
-                    null to tr(isTr, "Tümü (12)", "All (12)"),
-                    GameCategory.ESPORTS to "🎯 E-Spor (5)",
-                    GameCategory.AAA to "🔥 AAA Grafik (7)",
-                )
-                filterOptions.forEach { (cat, label) ->
-                    val isSelected = selectedCategoryFilter == cat
-                    Surface(
-                        onClick = { selectedCategoryFilter = cat },
-                        modifier = Modifier.weight(1f),
-                        shape = RoundedCornerShape(6.dp),
-                        color = if (isSelected) NeonEmerald.copy(alpha = 0.16f) else Color.Transparent,
-                        border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
+                // Tab 1: Simüle Test
+                val isSimSelected = selectedMode == GameBenchmarkMode.SIMULATED
+                Surface(
+                    onClick = { selectedMode = GameBenchmarkMode.SIMULATED },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(10.dp),
+                    color = if (isSimSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                    border = BorderStroke(1.dp, if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.outline),
+                ) {
+                    Row(
+                        modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
                     ) {
                         Text(
-                            text = label,
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(vertical = 5.dp),
-                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                            text = strings.gameBenchTabSimulated,
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = if (isSimSelected) FontWeight.Black else FontWeight.Medium,
+                            color = if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
+                            fontSize = 11.sp,
+                            maxLines = 1,
                         )
+                    }
+                }
+
+                // Tab 2: Doğrulanmış Gerçek Test
+                val isRealSelected = selectedMode == GameBenchmarkMode.VERIFIED
+                Surface(
+                    onClick = { selectedMode = GameBenchmarkMode.VERIFIED },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(10.dp),
+                    color = if (isRealSelected) NeonRose.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                    border = BorderStroke(1.dp, if (isRealSelected) NeonRose else MaterialTheme.colorScheme.outline),
+                ) {
+                    Row(
+                        modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
+                    ) {
+                        Text(
+                            text = strings.gameBenchTabVerified,
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = if (isRealSelected) FontWeight.Black else FontWeight.Medium,
+                            color = if (isRealSelected) NeonRose else MaterialTheme.colorScheme.onSurface,
+                            fontSize = 11.sp,
+                            maxLines = 1,
+                        )
+                        if (hasLabTest) {
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Box(
+                                modifier = Modifier
+                                    .size(6.dp)
+                                    .clip(CircleShape)
+                                    .background(NeonEmerald)
+                            )
+                        }
                     }
                 }
             }
 
-            HorizontalDivider(color = MaterialTheme.colorScheme.outline, thickness = 1.dp)
+            HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), thickness = 1.dp)
 
-            visibleEntries.forEach { game ->
-                val avgFpsVal = game.fps.avgFps(selectedResolution)
-                val low1FpsVal = game.fps.low1PctFps(selectedResolution)
-                val fpsColor = when {
-                    avgFpsVal >= 120 -> NeonEmerald
-                    avgFpsVal >= 60 -> NeonCyan
-                    else -> NeonAmber
-                }
-                val barCeiling = if (game.category == GameCategory.ESPORTS) 540f else 180f
-                val progress = (avgFpsVal / barCeiling).coerceIn(0.06f, 1f)
+            if (selectedMode == GameBenchmarkMode.SIMULATED) {
+                // -------------------------------------------------------------
+                // SEKME 1: SİMÜLE EDİLMİŞ 12-OYUN LİSTESİ
+                // -------------------------------------------------------------
 
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.45f)),
+                // Resolution Switcher (1080p / 1440p / 4K)
+                Row(
                     modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 8.dp),
-                    ) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically,
+                    GamingResolution.entries.forEach { res ->
+                        val isSelected = selectedResolution == res
+                        Surface(
+                            onClick = { selectedResolution = res },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(8.dp),
+                            color = if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant,
+                            border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline),
                         ) {
-                            Column(modifier = Modifier.weight(1f)) {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text(
-                                        text = game.title,
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = FontWeight.Bold,
-                                        color = MaterialTheme.colorScheme.onSurface,
-                                    )
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text(
-                                        text = if (game.category == GameCategory.ESPORTS) "E-SPOR" else "AAA",
-                                        style = MaterialTheme.typography.labelSmall,
-                                        fontSize = 9.sp,
-                                        fontWeight = FontWeight.Black,
-                                        color = if (game.category == GameCategory.ESPORTS) NeonCyan else NeonAmber,
-                                    )
-                                }
+                            Column(
+                                modifier = Modifier.padding(vertical = 6.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
                                 Text(
-                                    text = "${selectedResolution.label} • ${game.presetSubtitle}",
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontSize = 10.sp,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                )
-                            }
-
-                            Column(horizontalAlignment = Alignment.End) {
-                                Text(
-                                    text = "$avgFpsVal FPS",
-                                    style = MaterialTheme.typography.titleMedium,
+                                    text = res.label,
+                                    style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Black,
-                                    color = fpsColor,
+                                    color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
                                 )
                                 Text(
-                                    text = "%1 Low: $low1FpsVal FPS",
+                                    text = res.subLabel,
                                     style = MaterialTheme.typography.labelSmall,
-                                    fontSize = 10.sp,
-                                    fontWeight = FontWeight.SemiBold,
+                                    fontSize = 9.sp,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                             }
                         }
+                    }
+                }
 
-                        Spacer(modifier = Modifier.height(4.dp))
+                // Category Filter Pills (Tümü / E-Spor / AAA)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    val filterOptions: List<Pair<GameCategory?, String>> = listOf(
+                        null to tr(isTr, "Tümü (12)", "All (12)"),
+                        GameCategory.ESPORTS to "🎯 E-Spor (5)",
+                        GameCategory.AAA to "🔥 AAA Grafik (7)",
+                    )
+                    filterOptions.forEach { (cat, label) ->
+                        val isSelected = selectedCategoryFilter == cat
+                        Surface(
+                            onClick = { selectedCategoryFilter = cat },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(6.dp),
+                            color = if (isSelected) NeonEmerald.copy(alpha = 0.16f) else Color.Transparent,
+                            border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
+                        ) {
+                            Text(
+                                text = label,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                color = if (isSelected) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(vertical = 5.dp),
+                                textAlign = TextAlign.Center,
+                            )
+                        }
+                    }
+                }
 
-                        LinearProgressIndicator(
-                            progress = { progress },
+                visibleEntries.forEach { game ->
+                    val avgFpsVal = game.fps.avgFps(selectedResolution)
+                    val low1FpsVal = game.fps.low1PctFps(selectedResolution)
+                    val fpsColor = when {
+                        avgFpsVal >= 120 -> NeonEmerald
+                        avgFpsVal >= 60 -> NeonCyan
+                        else -> NeonAmber
+                    }
+                    val barCeiling = if (game.category == GameCategory.ESPORTS) 950f else 260f
+                    val progress = (avgFpsVal / barCeiling).coerceIn(0.06f, 1f)
+
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.45f)),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(5.dp)
-                                .clip(RoundedCornerShape(3.dp)),
-                            color = fpsColor,
-                            trackColor = MaterialTheme.colorScheme.surfaceVariant,
-                        )
+                                .padding(horizontal = 12.dp, vertical = 8.dp),
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text(
+                                            text = game.title,
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            fontWeight = FontWeight.Bold,
+                                            color = MaterialTheme.colorScheme.onSurface,
+                                        )
+                                        Spacer(modifier = Modifier.width(6.dp))
+                                        Text(
+                                            text = if (game.category == GameCategory.ESPORTS) "E-SPOR" else "AAA",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontSize = 9.sp,
+                                            fontWeight = FontWeight.Black,
+                                            color = if (game.category == GameCategory.ESPORTS) NeonCyan else NeonAmber,
+                                        )
+                                    }
+                                    Text(
+                                        text = "${selectedResolution.label} • ${game.presetSubtitle}",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontSize = 10.sp,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+
+                                Column(horizontalAlignment = Alignment.End) {
+                                    Text(
+                                        text = "$avgFpsVal FPS",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Black,
+                                        color = fpsColor,
+                                    )
+                                    Text(
+                                        text = "%1 Low: $low1FpsVal FPS",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        fontSize = 10.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(4.dp))
+
+                            LinearProgressIndicator(
+                                progress = { progress },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(5.dp)
+                                    .clip(RoundedCornerShape(3.dp)),
+                                color = fpsColor,
+                                trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                            )
+                        }
+                    }
+                }
+            } else {
+                // -------------------------------------------------------------
+                // SEKME 2: DOĞRULANMIŞ GERÇEK LABORATUVAR TESTLERİ (Nebi Akgün Tezgâhı)
+                // -------------------------------------------------------------
+                if (labTests.isNotEmpty()) {
+                    // Game Selector Pills (Counter-Strike 2, Cyberpunk 2077 vb.)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        labTests.forEachIndexed { idx, test ->
+                            val isSelected = selectedLabTestIndex == idx
+                            Surface(
+                                onClick = { selectedLabTestIndex = idx },
+                                modifier = Modifier.weight(1f),
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isSelected) NeonRose.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                                border = BorderStroke(1.dp, if (isSelected) NeonRose else MaterialTheme.colorScheme.outline),
+                            ) {
+                                Text(
+                                    text = test.gameTitle,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = if (isSelected) NeonRose else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(vertical = 6.dp),
+                                    textAlign = TextAlign.Center,
+                                )
+                            }
+                        }
+                    }
+
+                    val activeLabTest = labTests.getOrNull(selectedLabTestIndex) ?: labTests.first()
+
+                    // Rig & Game Title Info Header
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
+                        border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outline),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Column(modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    text = "${activeLabTest.gameTitle} (${activeLabTest.resolutionSettings})",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                )
+                                Text(
+                                    text = strings.gameBenchAvgMinLabel,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 10.sp,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    fontWeight = FontWeight.SemiBold,
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = "Tezgâh: ${activeLabTest.rigGpuOrCpu} • ${activeLabTest.rigRam}",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontSize = 9.5.sp,
+                                color = NeonCyan,
+                            )
+                        }
+                    }
+
+                    // Benchmark Bars: AMD (Red) vs Intel (Blue) (Videodaki yatay çift bar grafiği)
+                    val maxAvgFps = activeLabTest.entries.maxOfOrNull { it.avgFps } ?: 1000.0
+
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        activeLabTest.entries.forEach { entry ->
+                            val isCurrent = entry.matchesItem(item)
+                            val mainBarColor = if (entry.isAmd) Color(0xFFEF4444) else Color(0xFF2563EB)
+                            val minBarColor = if (entry.isAmd) Color(0xFFB91C1C) else Color(0xFF1D4ED8)
+
+                            val avgRatio = (entry.avgFps / maxAvgFps).toFloat().coerceIn(0.12f, 1f)
+                            val minRatio = (entry.minFps / maxAvgFps).toFloat().coerceIn(0.08f, 1f)
+
+                            Surface(
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isCurrent) GoldAccent.copy(alpha = 0.14f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.25f),
+                                border = BorderStroke(
+                                    width = if (isCurrent) 1.5.dp else 0.5.dp,
+                                    color = if (isCurrent) GoldAccent else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+                                ),
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 8.dp, vertical = 5.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                ) {
+                                    // Model Name & Watt
+                                    Row(
+                                        modifier = Modifier.width(115.dp),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                    ) {
+                                        Text(
+                                            text = "${entry.modelName} (${entry.wattLabel})",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontWeight = if (isCurrent) FontWeight.Black else FontWeight.Bold,
+                                            color = if (isCurrent) GoldAccent else MaterialTheme.colorScheme.onSurface,
+                                            fontSize = 10.5.sp,
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis,
+                                        )
+                                        if (isCurrent) {
+                                            Spacer(modifier = Modifier.width(4.dp))
+                                            Text(text = "⭐", fontSize = 9.sp)
+                                        }
+                                    }
+
+                                    Spacer(modifier = Modifier.width(6.dp))
+
+                                    // Double Horizontal Bar: Top=Avg, Bottom=Min
+                                    Column(
+                                        modifier = Modifier.weight(1f),
+                                        verticalArrangement = Arrangement.spacedBy(2.dp),
+                                    ) {
+                                        // Average Bar
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(avgRatio)
+                                                .height(13.dp)
+                                                .clip(RoundedCornerShape(2.dp))
+                                                .background(mainBarColor),
+                                            contentAlignment = Alignment.CenterEnd,
+                                        ) {
+                                            Text(
+                                                text = "${entry.avgFps.toInt()}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = Color.White,
+                                                fontWeight = FontWeight.Black,
+                                                fontSize = 9.sp,
+                                                modifier = Modifier.padding(end = 4.dp),
+                                            )
+                                        }
+
+                                        // Min / 1% Low Bar
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(minRatio)
+                                                .height(11.dp)
+                                                .clip(RoundedCornerShape(2.dp))
+                                                .background(minBarColor),
+                                            contentAlignment = Alignment.CenterEnd,
+                                        ) {
+                                            Text(
+                                                text = "${entry.minFps.toInt()}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = Color.White.copy(alpha = 0.95f),
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 8.sp,
+                                                modifier = Modifier.padding(end = 3.dp),
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // Model için henüz gerçek test bulunmuyorsa
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Text(
+                                text = "🧪 " + strings.gameBenchNoVerifiedYet,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                textAlign = TextAlign.Center,
+                            )
+                            Button(
+                                onClick = { selectedMode = GameBenchmarkMode.SIMULATED },
+                                colors = ButtonDefaults.buttonColors(containerColor = NeonCyan.copy(alpha = 0.2f), contentColor = NeonCyan),
+                                border = BorderStroke(1.dp, NeonCyan),
+                                shape = RoundedCornerShape(8.dp),
+                            ) {
+                                Text(text = strings.gameBenchSwitchToSim, fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                            }
+                        }
                     }
                 }
             }
