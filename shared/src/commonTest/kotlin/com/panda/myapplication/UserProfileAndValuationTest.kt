@@ -67,7 +67,7 @@ class UserProfileAndValuationTest {
 
         val result = repo.login("dombikpanda", "TS61trabzonspor54")
         assertTrue(result is DomainResult.Success)
-        val admin = (result as DomainResult.Success).data
+        val admin = result.data
         assertEquals("dombikpanda", admin.username)
         assertEquals("yavuzyigitomer52@gmail.com", admin.email)
         assertEquals(SpiritHardware.OVERCLOCKED_CPU, admin.spiritHardware)
@@ -84,7 +84,7 @@ class UserProfileAndValuationTest {
 
         val result = repo.login("yavuzyigitomer52@gmail.com", "TS61trabzonspor54")
         assertTrue(result is DomainResult.Success)
-        val admin = (result as DomainResult.Success).data
+        val admin = result.data
         assertEquals("dombikpanda", admin.username)
         assertEquals("yavuzyigitomer52@gmail.com", admin.email)
     }
@@ -107,7 +107,7 @@ class UserProfileAndValuationTest {
         )
 
         assertTrue(signUpResult is DomainResult.Success)
-        val user = (signUpResult as DomainResult.Success).data
+        val user = signUpResult.data
         assertEquals("speeddemon", user.username)
         assertEquals("custom_member@gmail.com", user.email)
         assertEquals(SpiritHardware.FLAGSHIP_GPU, user.spiritHardware)

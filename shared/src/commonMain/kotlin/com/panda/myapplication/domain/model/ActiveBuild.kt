@@ -40,7 +40,9 @@ data class ActiveBuild(
         HardwareCategory.KEYBOARD -> keyboard
         HardwareCategory.HEADSET -> headset
         HardwareCategory.PREBUILT_PC,
-        HardwareCategory.LAPTOP -> null
+        HardwareCategory.LAPTOP,
+        HardwareCategory.SMARTPHONE,
+        HardwareCategory.TABLET -> null
     }
 
     fun withComponent(item: HardwareItem): ActiveBuild = when (item.category) {
@@ -57,7 +59,9 @@ data class ActiveBuild(
         HardwareCategory.KEYBOARD -> copy(keyboard = item)
         HardwareCategory.HEADSET -> copy(headset = item)
         HardwareCategory.PREBUILT_PC,
-        HardwareCategory.LAPTOP -> this
+        HardwareCategory.LAPTOP,
+        HardwareCategory.SMARTPHONE,
+        HardwareCategory.TABLET -> this
     }
 
     fun withoutCategory(category: HardwareCategory): ActiveBuild = when (category) {
@@ -74,7 +78,9 @@ data class ActiveBuild(
         HardwareCategory.KEYBOARD -> copy(keyboard = null)
         HardwareCategory.HEADSET -> copy(headset = null)
         HardwareCategory.PREBUILT_PC,
-        HardwareCategory.LAPTOP -> this
+        HardwareCategory.LAPTOP,
+        HardwareCategory.SMARTPHONE,
+        HardwareCategory.TABLET -> this
     }
 }
 

@@ -33,12 +33,26 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.offset
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.*
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Button
@@ -204,7 +218,17 @@ fun HardwareListContent(
     onOpenDrawer: (() -> Unit)? = null,
     snackbarHostState: androidx.compose.material3.SnackbarHostState = remember { androidx.compose.material3.SnackbarHostState() },
 ) {
-    val listState = rememberLazyListState()
+    val listState = remember(uiState.segmentMode) { LazyListState(0, 0) }
+
+    LaunchedEffect(uiState.segmentMode, uiState.selectedCategory) {
+        listState.scrollToItem(0, 0)
+    }
+
+    LaunchedEffect(uiState.searchQuery.isBlank()) {
+        if (uiState.searchQuery.isBlank()) {
+            listState.scrollToItem(0, 0)
+        }
+    }
     var priceDialogItem by remember { mutableStateOf<HardwareItem?>(null) }
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -243,13 +267,17 @@ fun HardwareListContent(
                                 color = MaterialTheme.colorScheme.surface,
                                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
                             ) {
-                                Text(
-                                    text = "☰",
-                                    modifier = Modifier.padding(horizontal = 11.dp, vertical = 6.dp),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Black,
-                                    color = MaterialTheme.colorScheme.primary,
-                                )
+                                Box(
+                                    modifier = Modifier.size(38.dp),
+                                    contentAlignment = Alignment.Center,
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Rounded.Menu,
+                                        contentDescription = "Menu",
+                                        tint = MaterialTheme.colorScheme.primary,
+                                        modifier = Modifier.size(20.dp),
+                                    )
+                                }
                             }
                         }
 
@@ -310,7 +338,12 @@ fun HardwareListContent(
                         )
                     },
                     leadingIcon = {
-                        Text(text = "🔍", fontSize = 15.sp)
+                        Icon(
+                            imageVector = Icons.Rounded.Search,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                            modifier = Modifier.size(20.dp),
+                        )
                     },
                     trailingIcon = {
                         if (localSearchQuery.isNotEmpty()) {
@@ -321,11 +354,11 @@ fun HardwareListContent(
                                 },
                                 modifier = Modifier.size(28.dp),
                             ) {
-                                Text(
-                                    text = "✕",
-                                    style = MaterialTheme.typography.labelMedium,
-                                    fontWeight = FontWeight.Bold,
-                                    color = TextMuted,
+                                Icon(
+                                    imageVector = Icons.Rounded.Close,
+                                    contentDescription = "Clear search",
+                                    tint = TextMuted,
+                                    modifier = Modifier.size(18.dp),
                                 )
                             }
                         }
@@ -345,72 +378,15 @@ fun HardwareListContent(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
 
-                // Fluid Organic Segmented Tab: [ 🧩 Bireysel | 🖱️ Çevre | 🖥️ Hazır Sistem | 💻 Laptop ]
+                // Modern Fluid Sliding Segmented Bar (PC | Çevre | OEM | Laptop | Mobil)
                 val currentMode = uiState.segmentMode
-                Surface(
-                    shape = RoundedCornerShape(12.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.65f),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = Spacing.small),
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(4.dp),
-                        horizontalArrangement = Arrangement.spacedBy(4.dp),
-                    ) {
-                        val tabs = listOf(
-                            CatalogSegmentMode.INDIVIDUAL to ("🧩" to strings.segmentIndividual),
-                            CatalogSegmentMode.PERIPHERALS to ("🖱️" to strings.segmentPeripherals),
-                            CatalogSegmentMode.PREBUILT to ("🖥️" to strings.segmentPrebuilt),
-                            CatalogSegmentMode.LAPTOP to ("💻" to strings.segmentLaptop),
-                        )
-                        tabs.forEach { (mode, pair) ->
-                            val (emoji, title) = pair
-                            val isSelected = currentMode == mode
-                            val animatedBg by animateColorAsState(
-                                if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f) else Color.Transparent,
-                                animationSpec = tween(durationMillis = 200),
-                            )
-                            val animatedBorderColor by animateColorAsState(
-                                if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.85f) else Color.Transparent,
-                                animationSpec = tween(durationMillis = 200),
-                            )
-
-                            Surface(
-                                onClick = {
-                                    onEvent(HardwareListUiEvent.OnSegmentModeSelected(mode))
-                                },
-                                shape = RoundedCornerShape(9.dp),
-                                color = animatedBg,
-                                border = BorderStroke(
-                                    1.dp,
-                                    if (isSelected) animatedBorderColor else Color.Transparent,
-                                ),
-                                modifier = Modifier.weight(1f),
-                            ) {
-                                Row(
-                                    modifier = Modifier.padding(vertical = 8.dp, horizontal = 2.dp),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.Center,
-                                ) {
-                                    Text(text = emoji, fontSize = 11.sp)
-                                    Spacer(modifier = Modifier.width(4.dp))
-                                    Text(
-                                        text = title,
-                                        style = MaterialTheme.typography.labelSmall,
-                                        fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Medium,
-                                        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                                        textAlign = TextAlign.Center,
-                                        maxLines = 1,
-                                        softWrap = false,
-                                        overflow = TextOverflow.Ellipsis,
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
+                FluidSlidingSegmentBar(
+                    currentMode = currentMode,
+                    onModeSelected = { mode ->
+                        onEvent(HardwareListUiEvent.OnSegmentModeSelected(mode))
+                    },
+                    modifier = Modifier.padding(bottom = Spacing.small),
+                )
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -433,7 +409,12 @@ fun HardwareListContent(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(5.dp),
                         ) {
-                            Text(text = "🎛️", fontSize = 12.sp)
+                            Icon(
+                                imageVector = Icons.Rounded.Tune,
+                                contentDescription = null,
+                                modifier = Modifier.size(15.dp),
+                                tint = if (isFilterActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+                            )
                             Text(
                                 text = strings.filterButton,
                                 style = MaterialTheme.typography.labelMedium,
@@ -464,6 +445,24 @@ fun HardwareListContent(
                             modifier = Modifier.weight(1f),
                         )
                         CatalogSegmentMode.PREBUILT, CatalogSegmentMode.LAPTOP -> BrandFilterChips(
+                            availableBrands = uiState.availableBrands,
+                            selectedBrands = uiState.filters.selectedBrands,
+                            onBrandToggled = { brand ->
+                                val updated = if (uiState.filters.selectedBrands.contains(brand)) {
+                                    uiState.filters.selectedBrands - brand
+                                } else {
+                                    uiState.filters.selectedBrands + brand
+                                }
+                                onEvent(HardwareListUiEvent.OnFiltersChanged(uiState.filters.copy(selectedBrands = updated)))
+                            },
+                            onClearBrands = {
+                                onEvent(HardwareListUiEvent.OnFiltersChanged(uiState.filters.copy(selectedBrands = emptySet())))
+                            },
+                            modifier = Modifier.weight(1f),
+                        )
+                        CatalogSegmentMode.MOBILE -> MobileFilterChips(
+                            selectedCategory = uiState.selectedCategory,
+                            onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
                             availableBrands = uiState.availableBrands,
                             selectedBrands = uiState.filters.selectedBrands,
                             onBrandToggled = { brand ->
@@ -591,6 +590,11 @@ fun HardwareListContent(
                         ),
                         verticalArrangement = Arrangement.spacedBy(Spacing.small),
                     ) {
+                        if (uiState.segmentMode == CatalogSegmentMode.MOBILE && uiState.searchQuery.isBlank()) {
+                            item(key = "my_device_diagnostic") {
+                                MyDeviceDiagnosticCard()
+                            }
+                        }
                         items(
                             items = uiState.items,
                             key = { it.id.value },
@@ -642,6 +646,7 @@ fun FluidFilterChip(
     label: String,
     modifier: Modifier = Modifier,
     icon: String? = null,
+    imageVector: ImageVector? = null,
     accentColor: Color = NeonCyan,
 ) {
     val animatedBg by animateColorAsState(
@@ -666,9 +671,16 @@ fun FluidFilterChip(
         Row(
             modifier = Modifier.padding(horizontal = 11.dp, vertical = 7.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(5.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            if (icon != null) {
+            if (imageVector != null) {
+                Icon(
+                    imageVector = imageVector,
+                    contentDescription = null,
+                    modifier = Modifier.size(14.dp),
+                    tint = if (selected) accentColor else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                )
+            } else if (icon != null) {
                 Text(text = icon, fontSize = 12.sp)
             }
             Text(
@@ -690,31 +702,31 @@ fun CategoryFilterChips(
     modifier: Modifier = Modifier,
 ) {
     val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     val categories = listOf(
-        null to ("✨" to strings.filterAll),
-        HardwareCategory.CPU to ("⚡" to "CPU"),
-        HardwareCategory.GPU to ("🎮" to "GPU"),
-        HardwareCategory.RAM to ("🧠" to "RAM"),
-        HardwareCategory.MOTHERBOARD to ("🖲️" to strings.catMotherboard),
-        HardwareCategory.PSU to ("🔌" to "PSU"),
-        HardwareCategory.STORAGE to ("💾" to strings.catStorage),
-        HardwareCategory.COOLER to ("❄️" to strings.catCooler),
-        HardwareCategory.CASE to ("📦" to strings.catCase),
+        null to (Icons.Rounded.AutoAwesome to strings.filterAll),
+        HardwareCategory.CPU to (Icons.Rounded.Memory to "CPU"),
+        HardwareCategory.GPU to (Icons.Rounded.VideogameAsset to "GPU"),
+        HardwareCategory.RAM to (Icons.Rounded.Straighten to "RAM"),
+        HardwareCategory.MOTHERBOARD to (Icons.Rounded.Layers to strings.catMotherboard),
+        HardwareCategory.PSU to (Icons.Rounded.Bolt to "PSU"),
+        HardwareCategory.STORAGE to (Icons.Rounded.Storage to strings.catStorage),
+        HardwareCategory.COOLER to (Icons.Rounded.AcUnit to strings.catCooler),
+        HardwareCategory.CASE to (Icons.Rounded.Inbox to strings.catCase),
     )
 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         categories.forEach { (cat, pair) ->
-            val (icon, label) = pair
+            val (iconVector, label) = pair
             val isSelected = selectedCategory == cat
             FluidFilterChip(
                 selected = isSelected,
                 onClick = { onCategorySelected(cat) },
                 label = label,
-                icon = icon,
+                imageVector = iconVector,
                 accentColor = NeonCyan,
             )
         }
@@ -728,27 +740,27 @@ fun PeripheralCategoryChips(
     modifier: Modifier = Modifier,
 ) {
     val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
-    val categories: List<Pair<HardwareCategory?, Pair<String, String>>> = listOf(
-        null to ("✨" to strings.filterAll),
-        HardwareCategory.MONITOR to ("🖥️" to strings.catMonitor),
-        HardwareCategory.MOUSE to ("🖱️" to strings.catMouse),
-        HardwareCategory.KEYBOARD to ("⌨️" to strings.catKeyboard),
-        HardwareCategory.HEADSET to ("🎧" to strings.catHeadset),
+    val categories = listOf(
+        null to (Icons.Rounded.AutoAwesome to strings.filterAll),
+        HardwareCategory.MONITOR to (Icons.Rounded.Tv to strings.catMonitor),
+        HardwareCategory.MOUSE to (Icons.Rounded.Mouse to strings.catMouse),
+        HardwareCategory.KEYBOARD to (Icons.Rounded.Keyboard to strings.catKeyboard),
+        HardwareCategory.HEADSET to (Icons.Rounded.Headphones to strings.catHeadset),
     )
 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         categories.forEach { (cat, pair) ->
-            val (icon, label) = pair
+            val (iconVector, label) = pair
             val isSelected = selectedCategory == cat
             FluidFilterChip(
                 selected = isSelected,
                 onClick = { onCategorySelected(cat) },
                 label = label,
-                icon = icon,
+                imageVector = iconVector,
                 accentColor = NeonCyan,
             )
         }
@@ -764,17 +776,83 @@ fun BrandFilterChips(
     modifier: Modifier = Modifier,
 ) {
     val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         val isAllSelected = selectedBrands.isEmpty()
         FluidFilterChip(
             selected = isAllSelected,
             onClick = onClearBrands,
             label = strings.filterAll,
-            icon = "✨",
+            imageVector = Icons.Rounded.AutoAwesome,
+            accentColor = NeonCyan,
+        )
+
+        availableBrands.forEach { brand ->
+            val isSelected = selectedBrands.contains(brand)
+            FluidFilterChip(
+                selected = isSelected,
+                onClick = { onBrandToggled(brand) },
+                label = brand,
+                accentColor = NeonCyan,
+            )
+        }
+    }
+}
+
+@Composable
+fun MobileFilterChips(
+    selectedCategory: HardwareCategory?,
+    onCategorySelected: (HardwareCategory?) -> Unit,
+    availableBrands: List<String>,
+    selectedBrands: Set<String>,
+    onBrandToggled: (String) -> Unit,
+    onClearBrands: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val subCategories = listOf(
+        null to (Icons.Rounded.AutoAwesome to strings.filterAll),
+        HardwareCategory.SMARTPHONE to (Icons.Rounded.Smartphone to if (isTr) "Akıllı Telefon" else "Smartphone"),
+        HardwareCategory.TABLET to (Icons.Rounded.TabletAndroid to if (isTr) "Tablet" else "Tablet"),
+    )
+
+    Row(
+        modifier = modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        // Subcategory Chips
+        subCategories.forEach { (cat, pair) ->
+            val (iconVector, label) = pair
+            val isSelected = selectedCategory == cat
+            FluidFilterChip(
+                selected = isSelected,
+                onClick = { onCategorySelected(cat) },
+                label = label,
+                imageVector = iconVector,
+                accentColor = NeonCyan,
+            )
+        }
+
+        // Sleek Vertical Divider
+        Box(
+            modifier = Modifier
+                .width(1.dp)
+                .height(20.dp)
+                .background(MaterialTheme.colorScheme.outlineVariant),
+        )
+
+        // Brand Chips
+        val isAllBrandsSelected = selectedBrands.isEmpty()
+        FluidFilterChip(
+            selected = isAllBrandsSelected,
+            onClick = onClearBrands,
+            label = if (isTr) "Tüm Markalar" else "All Brands",
+            imageVector = Icons.Rounded.LocalOffer,
             accentColor = NeonCyan,
         )
 
@@ -1024,15 +1102,26 @@ fun HardwareCard(
                         color = NeonAmber.copy(alpha = 0.16f),
                         border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.65f)),
                     ) {
-                        Text(
-                            text = "🏷️ ${cardStrings.enterPrice}",
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = NeonAmber,
-                            maxLines = 1,
-                            softWrap = false,
-                        )
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.Sell,
+                                contentDescription = null,
+                                tint = NeonAmber,
+                                modifier = Modifier.size(11.dp),
+                            )
+                            Spacer(modifier = Modifier.width(3.dp))
+                            Text(
+                                text = cardStrings.enterPrice,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonAmber,
+                                maxLines = 1,
+                                softWrap = false,
+                            )
+                        }
                     }
                 } else {
                     Text(
@@ -1161,6 +1250,7 @@ fun HardwarePlaceholderBadge(
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
     Box(
         modifier = modifier
@@ -1197,6 +1287,7 @@ fun CategoryBadge(category: HardwareCategory) {
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
 
     Box(
@@ -1216,6 +1307,7 @@ fun CategoryBadge(category: HardwareCategory) {
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
+@Suppress("DEPRECATION")
 @Composable
 fun HardwareFilterBottomSheet(
     filters: HardwareFilterOptions,
@@ -1756,6 +1848,8 @@ fun HardwareFilterBottomSheet(
 }
 
 private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String = when (spec) {
+    is com.panda.myapplication.domain.model.PhoneSpec -> "${spec.displaySizeInch}\" ${spec.displayTech} • ${spec.chipset} • ${spec.storageGb}GB • ${spec.mainCameraMp}MP"
+    is com.panda.myapplication.domain.model.TabletSpec -> "${spec.displaySizeInch}\" • ${spec.chipset} • ${spec.storageGb}GB • ${spec.batteryMah}mAh" 
     is CpuSpec -> "${spec.socket} • ${spec.coreCount}C/${spec.threadCount}T • ${spec.baseClock.mhz}MHz • ${spec.tdp.watts}W TDP"
     is GpuSpec -> {
         val skuSuffix = if (!spec.partNumber.isNullOrBlank()) " • SKU: ${spec.partNumber}" else ""
@@ -1835,3 +1929,132 @@ fun HardwareListContentDarkPreview() {
 // endregion
 
 private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
+
+
+@Composable
+fun FluidSlidingSegmentBar(
+    currentMode: CatalogSegmentMode,
+    onModeSelected: (CatalogSegmentMode) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val strings = LocalAppStrings.current
+    val tabs = remember(strings) {
+        listOf(
+            CatalogSegmentMode.INDIVIDUAL to (Icons.Rounded.Memory to strings.segmentIndividual),
+            CatalogSegmentMode.PERIPHERALS to (Icons.Rounded.DevicesOther to strings.segmentPeripherals),
+            CatalogSegmentMode.PREBUILT to (Icons.Rounded.DesktopWindows to strings.segmentPrebuilt),
+            CatalogSegmentMode.LAPTOP to (Icons.Rounded.Laptop to strings.segmentLaptop),
+            CatalogSegmentMode.MOBILE to (Icons.Rounded.Smartphone to strings.segmentMobile),
+        )
+    }
+
+    val selectedIndex = tabs.indexOfFirst { it.first == currentMode }.coerceAtLeast(0)
+
+    Surface(
+        shape = RoundedCornerShape(13.dp),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)),
+        modifier = modifier
+            .fillMaxWidth()
+            .height(44.dp),
+    ) {
+        BoxWithConstraints(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(3.5.dp),
+        ) {
+            val totalWidth = maxWidth
+            val tabWidth = totalWidth / tabs.size
+            val pillOffset by animateDpAsState(
+                targetValue = tabWidth * selectedIndex,
+                animationSpec = spring(
+                    dampingRatio = 0.76f,
+                    stiffness = Spring.StiffnessMediumLow,
+                ),
+            )
+
+            // 1. Fluid Sliding Glowing Pill Indicator
+            Box(
+                modifier = Modifier
+                    .offset(x = pillOffset)
+                    .width(tabWidth)
+                    .fillMaxHeight()
+                    .clip(RoundedCornerShape(9.5.dp))
+                    .background(
+                        Brush.horizontalGradient(
+                            listOf(
+                                NeonCyan.copy(alpha = 0.22f),
+                                NeonPurple.copy(alpha = 0.16f),
+                            ),
+                        ),
+                    )
+                    .border(
+                        1.dp,
+                        NeonCyan.copy(alpha = 0.70f),
+                        RoundedCornerShape(9.5.dp),
+                    ),
+            )
+
+            // 2. Tab Items Row
+            Row(
+                modifier = Modifier.fillMaxSize(),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                tabs.forEachIndexed { index, (mode, pair) ->
+                    val (icon, title) = pair
+                    val isSelected = selectedIndex == index
+                    val iconTint by animateColorAsState(
+                        if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
+                        animationSpec = tween(180),
+                    )
+                    val textScale by animateFloatAsState(
+                        if (isSelected) 1.04f else 1.0f,
+                        animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMediumLow),
+                    )
+
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxHeight()
+                            .clip(RoundedCornerShape(9.5.dp))
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                            ) {
+                                onModeSelected(mode)
+                            }
+                            .padding(horizontal = 2.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                            modifier = Modifier.graphicsLayer {
+                                scaleX = textScale
+                                scaleY = textScale
+                            },
+                        ) {
+                            Icon(
+                                imageVector = icon,
+                                contentDescription = null,
+                                tint = iconTint,
+                                modifier = Modifier.size(13.5.dp),
+                            )
+                            Spacer(modifier = Modifier.width(4.5.dp))
+                            Text(
+                                text = title,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.SemiBold,
+                                color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.75f),
+                                textAlign = TextAlign.Center,
+                                maxLines = 1,
+                                softWrap = false,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1731,6 +1731,30 @@ object HardwareMapper {
                 powerConnectors = "1x 8-pin PCIe",
                 slotWidth = "2.0 Yuva",
             )
+            text.contains("9070 XT") || text.contains("9070XT") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 300,
+                recommendedPsuWatts = 750,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("9070") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 250,
+                recommendedPsuWatts = 700,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.5 Yuva",
+            )
+            text.contains("9060 XT") || text.contains("9060XT") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 190,
+                recommendedPsuWatts = 600,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
             text.contains("7900 XTX") -> ResolvedGpuSpecs(
                 vramMb = 24 * 1024,
                 memoryType = "GDDR6",
@@ -1803,11 +1827,35 @@ object HardwareMapper {
                 powerConnectors = "2x 8-pin PCIe",
                 slotWidth = "2.5 Yuva",
             )
+            text.contains("6800") -> ResolvedGpuSpecs(
+                vramMb = 16 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 250,
+                recommendedPsuWatts = 650,
+                powerConnectors = "2x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("6750 XT") -> ResolvedGpuSpecs(
+                vramMb = 12 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 250,
+                recommendedPsuWatts = 650,
+                powerConnectors = "1x 8-pin + 1x 6-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
             text.contains("6700 XT") -> ResolvedGpuSpecs(
                 vramMb = 12 * 1024,
                 memoryType = "GDDR6",
                 tdpWatts = 230,
                 recommendedPsuWatts = 650,
+                powerConnectors = "1x 8-pin PCIe",
+                slotWidth = "2.0 Yuva",
+            )
+            text.contains("6650 XT") -> ResolvedGpuSpecs(
+                vramMb = 8 * 1024,
+                memoryType = "GDDR6",
+                tdpWatts = 180,
+                recommendedPsuWatts = 500,
                 powerConnectors = "1x 8-pin PCIe",
                 slotWidth = "2.0 Yuva",
             )
@@ -1895,7 +1943,7 @@ object HardwareMapper {
                 (u.contains("5700") || u.contains("5600") || u.contains("5500") ||
                         u.contains("6600") || u.contains("6650") || u.contains("6700") || u.contains("6750") || u.contains("6800") || u.contains("6900") || u.contains("6950") ||
                         u.contains("7600") || u.contains("7700") || u.contains("7800") || u.contains("7900") ||
-                        u.contains("9070"))
+                        u.contains("9060") || u.contains("9070") || u.contains("9080") || u.contains("9000"))
         val isIntelArc = u.contains("ARC")
         return isNvidiaRtx || isAmdRx || isIntelArc
     }

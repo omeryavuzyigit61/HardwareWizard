@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.hardware_detail
+﻿package com.panda.myapplication.presentation.hardware_detail
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing

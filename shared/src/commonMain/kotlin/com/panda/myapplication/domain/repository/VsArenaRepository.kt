@@ -22,18 +22,24 @@ enum class VsArenaMode(val title: String, val subtitle: String) {
     LAPTOP_VS_LAPTOP(
         title = "Laptop vs Laptop",
         subtitle = "GPU TGP Watt, MUX Switch, Panel Hz, Ağırlık ve F/P",
+    ),
+    MOBILE_VS_MOBILE(
+        title = "Mobil vs Mobil",
+        subtitle = "Akıllı Telefon & Tablet, SoC, Kamera, Ekran Hz ve Pil",
     );
 
     fun localizedTitle(isTr: Boolean = true): String = if (isTr) title else when (this) {
         COMPONENT_VS_COMPONENT -> "Component vs Component"
         PREBUILT_VS_PREBUILT -> "Prebuilt vs Prebuilt"
         LAPTOP_VS_LAPTOP -> "Laptop vs Laptop"
+        MOBILE_VS_MOBILE -> "Mobile vs Mobile"
     }
 
     fun localizedSubtitle(isTr: Boolean = true): String = if (isTr) subtitle else when (this) {
         COMPONENT_VS_COMPONENT -> "CPU, GPU, Motherboard, RAM, SSD, PSU, Cooler, Case"
         PREBUILT_VS_PREBUILT -> "OEM Build Quality, Gaming FPS and DIY Value Delta"
         LAPTOP_VS_LAPTOP -> "GPU TGP Wattage, MUX Switch, Panel Refresh, Weight and Value"
+        MOBILE_VS_MOBILE -> "Smartphone & Tablet, SoC, Camera, Display Hz and Battery"
     }
 }
 
@@ -54,6 +60,7 @@ data class VsArenaSelectionState(
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
             VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
+            VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
         }
 
     val filledCount: Int

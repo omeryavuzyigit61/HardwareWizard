@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.wizard
+﻿package com.panda.myapplication.presentation.wizard
 
 import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.engine.BottleneckAnalysis

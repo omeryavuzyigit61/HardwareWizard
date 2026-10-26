@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.tools
+﻿package com.panda.myapplication.presentation.tools
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.horizontalScroll

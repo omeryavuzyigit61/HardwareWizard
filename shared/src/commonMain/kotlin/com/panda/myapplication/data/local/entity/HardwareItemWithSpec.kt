@@ -1,4 +1,4 @@
-package com.panda.myapplication.data.local.entity
+﻿package com.panda.myapplication.data.local.entity
 
 import androidx.room.Embedded
 import androidx.room.Relation

@@ -70,6 +70,13 @@ val dataModule = module {
             ioDispatcher = get(),
         )
     }
+    single<com.panda.myapplication.domain.repository.TuningVaultRepository> {
+        com.panda.myapplication.data.repository.TuningVaultRepositoryImpl(
+            httpClient = get(),
+            json = get(),
+            ioDispatcher = get(),
+        )
+    }
     single<com.panda.myapplication.domain.repository.UserRepository> {
         com.panda.myapplication.data.repository.UserRepositoryImpl(
             httpClient = get(),

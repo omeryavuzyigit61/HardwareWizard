@@ -35,6 +35,23 @@ class HardwareRepositoryImpl(
     private val seedMutex = Mutex()
     private var isSeeded = false
     private val memoryCache = MutableStateFlow<List<HardwareItem>?>(null)
+    private val dynamicSmartphones = MutableStateFlow<List<HardwareItem>>(
+        com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
+    )
+    private val dynamicTablets = MutableStateFlow<List<HardwareItem>>(
+        com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
+    )
+
+    private inline fun <T> mergeCatalogs(remote: List<T>, local: List<T>, keySelector: (T) -> String?): List<T> {
+        if (remote.isEmpty()) return local
+        if (local.isEmpty()) return remote
+        val remoteKeys = remote.mapNotNull { keySelector(it)?.trim()?.lowercase() }.toSet()
+        val missingLocals = local.filter { item ->
+            val key = keySelector(item)?.trim()?.lowercase()
+            key != null && !remoteKeys.contains(key)
+        }
+        return remote + missingLocals
+    }
 
     private suspend fun ensureSeeded() {
         if (isSeeded) return
@@ -51,12 +68,13 @@ class HardwareRepositoryImpl(
             val moboCount = existing.count { it.category == HardwareCategory.MOTHERBOARD }
             val hasBiostar = existing.any { it.brand.equals("BIOSTAR", ignoreCase = true) }
             val hasEvga = existing.any { it.brand.equals("EVGA", ignoreCase = true) }
+            val hasRx9070 = existing.any { it.model.contains("9070", ignoreCase = true) }
             val hasGenericImages = existing.any { item ->
                 item.images?.any { img -> img.contains("reference.webp") } == true
             }
             if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts ||
                 laptopCount < 300 || peripheralCount < 400 || caseCount < 150 || coolerCount < 140 ||
-                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages
+                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages || !hasRx9070
             ) {
                 localDataSource.seedDatabaseIfEmpty()
             }
@@ -336,6 +354,20 @@ class HardwareRepositoryImpl(
                     )?.applyOverride(overrideMap)
                 }
             }
+            HardwareCategory.SMARTPHONE -> combine(
+                dynamicSmartphones,
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, overrides ->
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.map { it.applyOverride(overrideMap) }
+            }
+            HardwareCategory.TABLET -> combine(
+                dynamicTablets,
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, overrides ->
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.map { it.applyOverride(overrideMap) }
+            }
         }
         emitAll(
             domainItemsFlow
@@ -355,7 +387,21 @@ class HardwareRepositoryImpl(
                 hardwareDao.observeAllPriceOverrides(),
             ) { itemWithSpec, overrides ->
                 if (itemWithSpec == null) {
-                    DomainResult.Failure(DomainError.NotFound)
+                    val mobileItem = dynamicSmartphones.value.find { it.id.value == id.value }
+                        ?: dynamicTablets.value.find { it.id.value == id.value }
+                        ?: com.panda.myapplication.data.local.seed.MobileSeedCatalog.findById(id.value)
+                    if (mobileItem != null) {
+                        val overrideMap = overrides.associateBy { it.hardwareId }
+                        DomainResult.Success(mobileItem.applyOverride(overrideMap))
+                    } else {
+                        val fromMemory = memoryCache.value?.find { it.id == id }
+                        if (fromMemory != null) {
+                            val overrideMap = overrides.associateBy { it.hardwareId }
+                            DomainResult.Success(fromMemory.applyOverride(overrideMap))
+                        } else {
+                            DomainResult.Failure(DomainError.NotFound)
+                        }
+                    }
                 } else {
                     val overrideMap = overrides.associateBy { it.hardwareId }
                     val domainItem = HardwareMapper.toDomain(itemWithSpec)?.applyOverride(overrideMap)
@@ -373,6 +419,18 @@ class HardwareRepositoryImpl(
 
     override fun observeBrands(category: HardwareCategory?): Flow<DomainResult<List<String>>> = flow {
         ensureSeeded()
+        if (category == HardwareCategory.SMARTPHONE) {
+            val brands = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
+                .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
+            emit(DomainResult.Success(brands))
+            return@flow
+        }
+        if (category == HardwareCategory.TABLET) {
+            val brands = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
+                .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
+            emit(DomainResult.Success(brands))
+            return@flow
+        }
         val daoFlow = if (category == null) {
             hardwareDao.observeAllBrands()
         } else {
@@ -427,6 +485,22 @@ class HardwareRepositoryImpl(
             if (remoteVerified.isNotEmpty()) {
                 com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
             }
+            val remoteSmartphonesResult = remoteDataSource.fetchSmartphonesJson()
+            if (remoteSmartphonesResult.isSuccess) {
+                val jsonStr = remoteSmartphonesResult.getOrThrow()
+                val parsed = com.panda.myapplication.data.local.seed.MobileSeedCatalog.parseSmartphonesJson(jsonStr)
+                if (parsed.isNotEmpty()) {
+                    dynamicSmartphones.value = parsed
+                }
+            }
+            val remoteTabletsResult = remoteDataSource.fetchTabletsJson()
+            if (remoteTabletsResult.isSuccess) {
+                val jsonStr = remoteTabletsResult.getOrThrow()
+                val parsed = com.panda.myapplication.data.local.seed.MobileSeedCatalog.parseTabletsJson(jsonStr)
+                if (parsed.isNotEmpty()) {
+                    dynamicTablets.value = parsed
+                }
+            }
             val localPrices = localDataSource.loadLocalPricesTr()
             val localBenchmarks = localDataSource.loadLocalBenchmarks()
             val allPrices = localPrices.toMutableMap().apply {
@@ -452,17 +526,17 @@ class HardwareRepositoryImpl(
             if (catalogResult.isSuccess) {
                 val catalog = catalogResult.getOrThrow()
                 val snapshot = HardwareMapper.buildCatalogSnapshot(
-                    cpus = catalog.cpus.ifEmpty { localDataSource.loadLocalCpus() },
-                    gpus = catalog.gpus.ifEmpty { localDataSource.loadLocalGpus() },
-                    rams = catalog.rams.ifEmpty { localDataSource.loadLocalRams() },
-                    motherboards = catalog.motherboards.ifEmpty { localDataSource.loadLocalMotherboards() },
-                    psus = catalog.psus.ifEmpty { localDataSource.loadLocalPsus() },
-                    storages = catalog.storages.ifEmpty { localDataSource.loadLocalStorages() },
-                    coolers = catalog.coolers.ifEmpty { localDataSource.loadLocalCoolers() },
-                    cases = catalog.cases.ifEmpty { localDataSource.loadLocalCases() },
-                    prebuilts = catalog.prebuilts.ifEmpty { localDataSource.loadLocalPrebuilts() },
-                    laptops = catalog.laptops.ifEmpty { localDataSource.loadLocalLaptops() },
-                    peripherals = catalog.peripherals.ifEmpty { localDataSource.loadLocalPeripherals() },
+                    cpus = mergeCatalogs(catalog.cpus, localDataSource.loadLocalCpus()) { it.name },
+                    gpus = mergeCatalogs(catalog.gpus, localDataSource.loadLocalGpus()) { it.name },
+                    rams = mergeCatalogs(catalog.rams, localDataSource.loadLocalRams()) { it.name },
+                    motherboards = mergeCatalogs(catalog.motherboards, localDataSource.loadLocalMotherboards()) { it.name },
+                    psus = mergeCatalogs(catalog.psus, localDataSource.loadLocalPsus()) { it.name },
+                    storages = mergeCatalogs(catalog.storages, localDataSource.loadLocalStorages()) { it.name },
+                    coolers = mergeCatalogs(catalog.coolers, localDataSource.loadLocalCoolers()) { it.name },
+                    cases = mergeCatalogs(catalog.cases, localDataSource.loadLocalCases()) { it.name },
+                    prebuilts = mergeCatalogs(catalog.prebuilts, localDataSource.loadLocalPrebuilts()) { it.name },
+                    laptops = mergeCatalogs(catalog.laptops, localDataSource.loadLocalLaptops()) { it.name },
+                    peripherals = mergeCatalogs(catalog.peripherals, localDataSource.loadLocalPeripherals()) { it.name },
                     pricesTr = allPrices,
                     benchmarks = allBenchmarks,
                     existingImages = existingImages,

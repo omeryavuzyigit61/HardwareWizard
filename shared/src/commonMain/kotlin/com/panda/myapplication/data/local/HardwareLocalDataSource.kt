@@ -1,4 +1,4 @@
-package com.panda.myapplication.data.local
+﻿package com.panda.myapplication.data.local
 
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.mapper.HardwareMapper

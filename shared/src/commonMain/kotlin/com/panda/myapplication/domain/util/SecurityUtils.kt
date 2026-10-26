@@ -1,4 +1,4 @@
-package com.panda.myapplication.domain.util
+﻿package com.panda.myapplication.domain.util
 
 /**
  * Central AppSec & Data Integrity Guard (DevSecOps).

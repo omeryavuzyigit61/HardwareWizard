@@ -250,6 +250,28 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Piksel Yoğunluğu", "${s.ppi} PPI (${s.screenSizeInch}\")"))
                 badges.add(EngineeringBadge("HDR Standardı", s.hdrCertification))
             }
+
+            is com.panda.myapplication.domain.model.PhoneSpec -> {
+                badges.add(EngineeringBadge("Yonga Seti (SoC)", s.chipset, isHighlighted = true))
+                s.antutuScore?.let { badges.add(EngineeringBadge("AnTuTu v10 Skoru", "${it} Puan", isHighlighted = true)) }
+                badges.add(EngineeringBadge("Ekran Paneli", "${s.displaySizeInch}\" ${s.displayTech} @ ${s.refreshRateHz}Hz (${s.peakBrightnessNit} Nit)", isHighlighted = true))
+                badges.add(EngineeringBadge("Ana Kamera", "${s.mainCameraMp} MP (${s.mainSensorSize}${if (s.hasOis) ", OIS" else ""})"))
+                s.opticalZoomX?.let { badges.add(EngineeringBadge("Optik Yakınlaştırma", "${it}x Optik Zoom", isHighlighted = true)) }
+                badges.add(EngineeringBadge("Batarya & Şarj", "${s.batteryMah} mAh (${s.wiredChargingWatt}W Kablolu)"))
+                badges.add(EngineeringBadge("Kasa & Koruma", "${s.waterResistance} • ${s.frameMaterial}"))
+                badges.add(EngineeringBadge("İşletim Sistemi", "${s.osName} (${s.updateYears} Yıl Güncelleme)"))
+            }
+
+            is com.panda.myapplication.domain.model.TabletSpec -> {
+                badges.add(EngineeringBadge("İşlemci / Yonga", s.chipset, isHighlighted = true))
+                s.antutuScore?.let { badges.add(EngineeringBadge("AnTuTu v10 Skoru", "${it} Puan", isHighlighted = true)) }
+                badges.add(EngineeringBadge("Ekran Mimarisi", "${s.displaySizeInch}\" ${s.displayTech} @ ${s.refreshRateHz}Hz (${s.peakBrightnessNit} Nit)", isHighlighted = true))
+                badges.add(EngineeringBadge("Stylus Kalem", s.stylusSupport, isHighlighted = true))
+                badges.add(EngineeringBadge("Batarya Kapasitesi", "${s.batteryMah} mAh (${s.wiredChargingWatt}W)"))
+                badges.add(EngineeringBadge("Ses Sistemi", "${s.speakerCount} Hoparlör${if (s.hasDolbyAtmos) " Dolby Atmos" else ""}", isHighlighted = true))
+                badges.add(EngineeringBadge("Tasarım", "${s.thicknessMm}mm İncelik • ${s.weightGrams}g"))
+                badges.add(EngineeringBadge("İşletim Sistemi", s.osName))
+            }
         }
 
         return badges

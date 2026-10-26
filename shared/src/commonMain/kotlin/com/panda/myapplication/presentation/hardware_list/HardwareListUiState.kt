@@ -9,6 +9,7 @@ enum class CatalogSegmentMode {
     PERIPHERALS,
     PREBUILT,
     LAPTOP,
+    MOBILE,
 }
 
 @Immutable

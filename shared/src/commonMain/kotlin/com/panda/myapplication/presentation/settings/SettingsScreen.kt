@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.settings
+﻿package com.panda.myapplication.presentation.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState

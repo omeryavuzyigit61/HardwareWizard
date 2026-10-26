@@ -5,6 +5,7 @@ import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
@@ -89,9 +90,18 @@ class GetCompatibleHardwareForSlotUseCase {
             }
 
             HardwareCategory.RAM -> {
-                val requiredGen = moboSpec?.memoryGeneration
+                val cpuInferredGen = when (cpuSpec?.socket?.uppercase()?.trim()) {
+                    "AM5", "LGA1851" -> DdrGeneration.DDR5
+                    "AM4", "LGA1200", "LGA1151" -> DdrGeneration.DDR4
+                    else -> null
+                }
+                val requiredGen = moboSpec?.memoryGeneration ?: cpuInferredGen
                 if (requiredGen != null) {
-                    constraintDesc = "Anakart nesline kilitlendi: ${requiredGen.name}"
+                    constraintDesc = if (moboSpec != null) {
+                        "Anakart nesline kilitlendi: ${requiredGen.name}"
+                    } else {
+                        "İşlemci soketine (${cpuSpec?.socket}) göre kilitlendi: ${requiredGen.name}"
+                    }
                     candidates.filter { item ->
                         val r = item.spec as? RamSpec ?: return@filter false
                         r.generation == requiredGen
@@ -184,7 +194,9 @@ class GetCompatibleHardwareForSlotUseCase {
             HardwareCategory.MOUSE,
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
-            HardwareCategory.MONITOR -> candidates
+            HardwareCategory.MONITOR,
+            HardwareCategory.SMARTPHONE,
+            HardwareCategory.TABLET -> candidates
         }
 
         return CompatibleSlotResult(

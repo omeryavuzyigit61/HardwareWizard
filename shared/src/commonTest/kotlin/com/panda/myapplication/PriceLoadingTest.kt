@@ -48,9 +48,9 @@ class PriceLoadingTest {
         assertTrue(map.isNotEmpty(), "Map should not be empty")
         val p = map["cpu_amd_ryzen_7_7800x3d"]
         assertTrue(p?.currentPriceTry == 20799.0)
-        assertTrue(p?.offers?.size == 1)
-        assertTrue(p?.priceHistory?.size == 2)
+        assertTrue(p.offers.size == 1)
+        assertTrue(p.priceHistory.size == 2)
         // Verify effectivePrice handles both price and priceTry
-        assertTrue(p?.priceHistory?.get(1)?.effectivePrice == 20799.0)
+        assertTrue(p.priceHistory[1].effectivePrice == 20799.0)
     }
 }

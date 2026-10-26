@@ -15,10 +15,12 @@ import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareListUseCase
@@ -82,6 +84,7 @@ class HardwareListViewModel(
                 CatalogSegmentMode.PERIPHERALS -> PERIPHERAL_CATEGORIES.toList()
                 CatalogSegmentMode.PREBUILT -> listOf(HardwareCategory.PREBUILT_PC)
                 CatalogSegmentMode.LAPTOP -> listOf(HardwareCategory.LAPTOP)
+                CatalogSegmentMode.MOBILE -> MOBILE_CATEGORIES.toList()
             }
             combine(categories.map { getHardwareListUseCase(it) }) { results ->
                 val all = mutableListOf<HardwareItem>()
@@ -132,6 +135,7 @@ class HardwareListViewModel(
                     CatalogSegmentMode.PERIPHERALS -> null
                     CatalogSegmentMode.PREBUILT -> HardwareCategory.PREBUILT_PC
                     CatalogSegmentMode.LAPTOP -> HardwareCategory.LAPTOP
+                    CatalogSegmentMode.MOBILE -> null
                 }
                 selectedCategory.value = nextCategory
                 filterOptions.value = filterOptions.value.copy(
@@ -150,8 +154,13 @@ class HardwareListViewModel(
                 val targetCategory = event.category
                 val inferredMode = when {
                     targetCategory == null -> segmentMode.value.let { current ->
-                        if (current == CatalogSegmentMode.PERIPHERALS) CatalogSegmentMode.PERIPHERALS else CatalogSegmentMode.INDIVIDUAL
+                        when (current) {
+                            CatalogSegmentMode.PERIPHERALS -> CatalogSegmentMode.PERIPHERALS
+                            CatalogSegmentMode.MOBILE -> CatalogSegmentMode.MOBILE
+                            else -> CatalogSegmentMode.INDIVIDUAL
+                        }
                     }
+                    targetCategory.isMobile -> CatalogSegmentMode.MOBILE
                     targetCategory.isPeripheral -> CatalogSegmentMode.PERIPHERALS
                     targetCategory == HardwareCategory.PREBUILT_PC -> CatalogSegmentMode.PREBUILT
                     targetCategory == HardwareCategory.LAPTOP -> CatalogSegmentMode.LAPTOP
@@ -335,7 +344,8 @@ class HardwareListViewModel(
                     if (filters.requirePcie5 && !s.supportsPcie5Power) return@filter false
                 }
                 is CoolerSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
-                is MouseSpec, is KeyboardSpec, is HeadsetSpec, is MonitorSpec -> Unit
+                is MouseSpec, is KeyboardSpec, is HeadsetSpec, is MonitorSpec,
+                is PhoneSpec, is TabletSpec -> Unit
             }
             true
         }
@@ -350,6 +360,11 @@ class HardwareListViewModel(
             HardwareSortOption.DEFAULT -> {
                 if (query.isNotBlank()) {
                     items.sortedByDescending { com.panda.myapplication.domain.engine.HardwareSearchEngine.calculateScore(it, query) }
+                } else if (items.any { it.category.isMobile }) {
+                    items.sortedWith(
+                        compareByDescending<HardwareItem> { (it.spec as? PhoneSpec)?.antutuScore ?: (it.spec as? TabletSpec)?.antutuScore ?: 0 }
+                            .thenByDescending { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: 0.0 }
+                    )
                 } else {
                     items.sortedWith(
                         compareBy<HardwareItem> { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: Double.MAX_VALUE }
@@ -363,6 +378,10 @@ class HardwareListViewModel(
             )
             HardwareSortOption.PRICE_DESC -> items.sortedByDescending { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: -1.0 }
             HardwareSortOption.NAME_ASC -> items.sortedBy { it.displayName }
+
+            // Mobil & Tablet
+            HardwareSortOption.ANTUTU_SCORE_DESC -> items.sortedByDescending { (it.spec as? PhoneSpec)?.antutuScore ?: (it.spec as? TabletSpec)?.antutuScore ?: 0 }
+            HardwareSortOption.BATTERY_DESC -> items.sortedByDescending { (it.spec as? PhoneSpec)?.batteryMah ?: (it.spec as? TabletSpec)?.batteryMah ?: 0 }
 
             // CPU
             HardwareSortOption.CPU_CORES_DESC -> items.sortedByDescending { (it.spec as? CpuSpec)?.coreCount ?: 0 }
@@ -429,6 +448,11 @@ class HardwareListViewModel(
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
             HardwareCategory.MONITOR,
+        )
+
+        val MOBILE_CATEGORIES = setOf(
+            HardwareCategory.SMARTPHONE,
+            HardwareCategory.TABLET,
         )
     }
 }

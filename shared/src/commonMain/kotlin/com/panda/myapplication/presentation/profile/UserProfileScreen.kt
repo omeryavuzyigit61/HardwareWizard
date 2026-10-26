@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.profile
+﻿package com.panda.myapplication.presentation.profile
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

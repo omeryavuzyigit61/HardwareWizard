@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.hardware_list
+﻿package com.panda.myapplication.presentation.hardware_list
 
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId

@@ -1,0 +1,7284 @@
+[
+  {
+    "id": "tablet-apple-ipad-pro-13-m4-256gb",
+    "name": "Apple iPad Pro 13 (M4)",
+    "brand": "Apple",
+    "model": "iPad Pro 13 (M4)",
+    "priceTry": 59999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-13-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-13-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-13-2024-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+    ],
+    "tier": "S+",
+    "benchmarkScore": 2750000,
+    "gamingIndex": 100,
+    "productivityIndex": 100,
+    "geekbench6Single": 3750,
+    "geekbench6Multi": 14500,
+    "relativePerformanceIndex": 100.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 59999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 60399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 59699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 62998.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 61198.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 60598.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 59999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M4",
+      "cpuArch": "9 Çekirdek (3P + 6E)",
+      "gpuModel": "Apple 10-Core GPU (Ray Tracing)",
+      "processNodeNm": 3,
+      "ramGb": 8,
+      "storageGb": 256,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 2750000,
+      "geekbenchSingle": 3750,
+      "geekbenchMulti": 14500,
+      "displaySizeInch": 13.0,
+      "displayTech": "Ultra Retina XDR Tandem OLED (Çift Katman)",
+      "resolution": "2064 x 2752",
+      "ppi": 264,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 1600,
+      "stylusSupport": "Apple Pencil Pro / USB-C Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10290,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 579,
+      "thicknessMm": 5.1,
+      "bodyMaterial": "Geri Dönüştürülmüş Yekpare Alüminyum",
+      "osName": "iPadOS 17.5 (iPadOS 18 Destekli)",
+      "updateYears": 6,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 59999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 59999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 60399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 59699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 62998.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 61198.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 60598.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 59999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 68998.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 68998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 69448.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 68648.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 72448.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 70378.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 69688.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 68998.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 80998.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 80998.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 81598.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 80498.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 85048.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 82618.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 81808.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 80998.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-pro-11-m4-256gb",
+    "name": "Apple iPad Pro 11 (M4)",
+    "brand": "Apple",
+    "model": "iPad Pro 11 (M4)",
+    "priceTry": 45999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-11-2024-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+    ],
+    "tier": "S+",
+    "benchmarkScore": 2720000,
+    "gamingIndex": 100,
+    "productivityIndex": 100,
+    "geekbench6Single": 3740,
+    "geekbench6Multi": 14450,
+    "relativePerformanceIndex": 99.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 45999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 46399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 45699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 48298.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 46918.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 46458.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 45999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M4 (9 Çekirdekli)",
+      "cpuArch": "9 Çekirdek (3P + 6E)",
+      "gpuModel": "Apple 10-Core GPU (Ray Tracing)",
+      "processNodeNm": 3,
+      "ramGb": 8,
+      "storageGb": 256,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 2720000,
+      "geekbenchSingle": 3740,
+      "geekbenchMulti": 14450,
+      "displaySizeInch": 11.0,
+      "displayTech": "Ultra Retina XDR Tandem OLED",
+      "resolution": "1668 x 2420",
+      "ppi": 264,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 1600,
+      "stylusSupport": "Apple Pencil Pro Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8160,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 444,
+      "thicknessMm": 5.3,
+      "bodyMaterial": "Geri Dönüştürülmüş Yekpare Alüminyum",
+      "osName": "iPadOS 17.5 (iPadOS 18 Destekli)",
+      "updateYears": 6,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 45999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 45999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 46399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 45699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 48298.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 46918.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 46458.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 45999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 52898.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 52898.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 53348.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 52548.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 55543.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 53956.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 53427.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 52898.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 62098.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 62098.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 62698.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 61598.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 65203.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 63340.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 62719.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 62098.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-pro-12-9-m2-128gb",
+    "name": "Apple iPad Pro 12.9 (M2)",
+    "brand": "Apple",
+    "model": "iPad Pro 12.9 (M2)",
+    "priceTry": 46999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-129-2022-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-129-2022-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1480000,
+    "gamingIndex": 96,
+    "productivityIndex": 98,
+    "geekbench6Single": 2580,
+    "geekbench6Multi": 9950,
+    "relativePerformanceIndex": 95.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 46999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 47399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 46699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 49348.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 47938.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 47468.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 46999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M2",
+      "cpuArch": "8 Çekirdek (4P + 4E)",
+      "gpuModel": "Apple 10-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1480000,
+      "geekbenchSingle": 2580,
+      "geekbenchMulti": 9950,
+      "displaySizeInch": 12.9,
+      "displayTech": "Liquid Retina XDR Mini-LED (2596 Bölge)",
+      "resolution": "2048 x 2732",
+      "ppi": 264,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 1600,
+      "stylusSupport": "Apple Pencil 2. Nesil Hover Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10758,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 682,
+      "thicknessMm": 6.4,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "iPadOS 16.1 (iPadOS 18 Destekli)",
+      "updateYears": 5,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 46999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 46999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 47399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 46699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 49348.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 47938.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 47468.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 46999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 54048.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 54048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 54498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 53698.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 56751.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 55129.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 54589.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 54048.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 63448.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 63448.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 64048.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 62948.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 66621.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 64717.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 64083.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 63448.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-pro-11-m2-128gb",
+    "name": "Apple iPad Pro 11 (M2)",
+    "brand": "Apple",
+    "model": "iPad Pro 11 (M2)",
+    "priceTry": 36999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2022.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2022.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-11-2022-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-11-2022-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1450000,
+    "gamingIndex": 95,
+    "productivityIndex": 97,
+    "geekbench6Single": 2550,
+    "geekbench6Multi": 9900,
+    "relativePerformanceIndex": 94.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 36999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 37399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 36699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 38848.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 37738.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 37368.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 36999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M2",
+      "cpuArch": "8 Çekirdek (4P + 4E)",
+      "gpuModel": "Apple 10-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1450000,
+      "geekbenchSingle": 2550,
+      "geekbenchMulti": 9900,
+      "displaySizeInch": 11.0,
+      "displayTech": "Liquid Retina IPS LCD",
+      "resolution": "1668 x 2388",
+      "ppi": 264,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "Apple Pencil 2. Nesil Hover Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 7538,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 466,
+      "thicknessMm": 5.9,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "iPadOS 16.1 (iPadOS 18 Destekli)",
+      "updateYears": 5,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 36999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 36999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 37399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 36699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 38848.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 37738.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 37368.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 36999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 42548.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 42548.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 42998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 42198.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 44676.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 43399.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 42974.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 42548.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 49948.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 49948.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 50548.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 49448.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 52446.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 50947.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 50448.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 49948.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-air-13-m2-128gb",
+    "name": "Apple iPad Air 13 (M2)",
+    "brand": "Apple",
+    "model": "iPad Air 13 (M2)",
+    "priceTry": 39999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-13-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-13-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-13-2024-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1460000,
+    "gamingIndex": 94,
+    "productivityIndex": 96,
+    "geekbench6Single": 2560,
+    "geekbench6Multi": 9920,
+    "relativePerformanceIndex": 93.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 39999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 40399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 39699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 41998.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 40798.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 40398.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 39999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M2",
+      "cpuArch": "8 Çekirdek (4P + 4E)",
+      "gpuModel": "Apple 9-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1460000,
+      "geekbenchSingle": 2560,
+      "geekbenchMulti": 9920,
+      "displaySizeInch": 13.0,
+      "displayTech": "Liquid Retina IPS LCD (P3 Geniş Renk)",
+      "resolution": "2048 x 2732",
+      "ppi": 264,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "Apple Pencil Pro Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 9705,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 617,
+      "thicknessMm": 6.1,
+      "bodyMaterial": "Yekpare Alüminyum",
+      "osName": "iPadOS 17.5 (iPadOS 18 Destekli)",
+      "updateYears": 5,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 39999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 39999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 40399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 39699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 41998.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 40798.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 40398.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 39999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 45998.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 45998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 46448.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 45648.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 48298.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 46918.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 46458.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 45998.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 53998.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 53998.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 54598.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 53498.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 56698.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 55078.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 54538.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 53998.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-air-11-m2-128gb",
+    "name": "Apple iPad Air 11 (M2)",
+    "brand": "Apple",
+    "model": "iPad Air 11 (M2)",
+    "priceTry": 29999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-11-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-11-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1440000,
+    "gamingIndex": 93,
+    "productivityIndex": 95,
+    "geekbench6Single": 2540,
+    "geekbench6Multi": 9880,
+    "relativePerformanceIndex": 92.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 29999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 30399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 29699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 31498.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 30598.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 30298.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 29999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M2",
+      "cpuArch": "8 Çekirdek (4P + 4E)",
+      "gpuModel": "Apple 9-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1440000,
+      "geekbenchSingle": 2540,
+      "geekbenchMulti": 9880,
+      "displaySizeInch": 11.0,
+      "displayTech": "Liquid Retina IPS LCD (P3)",
+      "resolution": "1640 x 2360",
+      "ppi": 264,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil Pro Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 7606,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 462,
+      "thicknessMm": 6.1,
+      "bodyMaterial": "Yekpare Alüminyum",
+      "osName": "iPadOS 17.5 (iPadOS 18 Destekli)",
+      "updateYears": 5,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 29999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 29999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 30399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 29699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 31498.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 30598.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 30298.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 29999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 34498.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 34498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 34948.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 34148.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 36223.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 35188.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 34843.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 34498.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 40498.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 40498.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 41098.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 39998.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 42523.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 41308.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 40903.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 40498.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-air-5-m1-64gb",
+    "name": "Apple iPad Air 5 (M1)",
+    "brand": "Apple",
+    "model": "iPad Air 5 (M1)",
+    "priceTry": 23999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2022.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2022.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-2022-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-2022-2.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1250000,
+    "gamingIndex": 88,
+    "productivityIndex": 92,
+    "geekbench6Single": 2280,
+    "geekbench6Multi": 8350,
+    "relativePerformanceIndex": 87.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 23999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 24399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 23699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 25198.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 24478.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 24238.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 23999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple M1",
+      "cpuArch": "8 Çekirdek (4P + 4E)",
+      "gpuModel": "Apple 8-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 64,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1250000,
+      "geekbenchSingle": 2280,
+      "geekbenchMulti": 8350,
+      "displaySizeInch": 10.9,
+      "displayTech": "Liquid Retina IPS LCD",
+      "resolution": "1640 x 2360",
+      "ppi": 264,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil 2 Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 7606,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 461,
+      "thicknessMm": 6.1,
+      "bodyMaterial": "Yekpare Alüminyum",
+      "osName": "iPadOS 15.4 (iPadOS 18 Destekli)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6 (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 8,
+          "priceTry": 23999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 23999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 24399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 23699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 25198.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 24478.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 24238.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 23999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 27598.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 27598.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 28048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 27248.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 28978.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 28150.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 27874.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 27598.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-10th-gen-64gb",
+    "name": "Apple iPad (10. Nesil)",
+    "brand": "Apple",
+    "model": "iPad (10. Nesil)",
+    "priceTry": 16999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 720000,
+    "gamingIndex": 75,
+    "productivityIndex": 82,
+    "geekbench6Single": 1580,
+    "geekbench6Multi": 4120,
+    "relativePerformanceIndex": 74.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 16999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 17399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 16699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 17848.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 17338.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 17168.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 16999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple A14 Bionic",
+      "cpuArch": "6 Çekirdek (2x3.0 GHz + 4x1.8 GHz)",
+      "gpuModel": "Apple 4-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 4,
+      "storageGb": 64,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 720000,
+      "geekbenchSingle": 1580,
+      "geekbenchMulti": 4120,
+      "displaySizeInch": 10.9,
+      "displayTech": "Liquid Retina IPS LCD (sRGB)",
+      "resolution": "1640 x 2360",
+      "ppi": 264,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil (USB-C & 1. Nesil)",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": false,
+      "batteryMah": 7606,
+      "wiredChargingWatt": 20,
+      "wirelessChargingWatt": null,
+      "weightGrams": 477,
+      "thicknessMm": 7.0,
+      "bodyMaterial": "Yekpare Alüminyum",
+      "osName": "iPadOS 16.1 (iPadOS 18 Destekli)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 4,
+          "priceTry": 16999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 16999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 17399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 16699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 17848.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 17338.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 17168.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 16999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 4,
+          "priceTry": 19548.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 19548.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 19198.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 20526.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19939.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19744.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 19548.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-9th-gen-64gb",
+    "name": "Apple iPad (9. Nesil)",
+    "brand": "Apple",
+    "model": "iPad (9. Nesil)",
+    "priceTry": 12999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-102-2021-1.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-102-2021-1.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-102-2021-1.jpg"
+    ],
+    "tier": "B+",
+    "benchmarkScore": 610000,
+    "gamingIndex": 68,
+    "productivityIndex": 75,
+    "geekbench6Single": 1380,
+    "geekbench6Multi": 3450,
+    "relativePerformanceIndex": 67.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 12999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 13399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 12699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 13648.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 13258.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 13128.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 12999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple A13 Bionic",
+      "cpuArch": "6 Çekirdek (2x2.65 GHz + 4x1.8 GHz)",
+      "gpuModel": "Apple 4-Core GPU",
+      "processNodeNm": 7,
+      "ramGb": 3,
+      "storageGb": 64,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 610000,
+      "geekbenchSingle": 1380,
+      "geekbenchMulti": 3450,
+      "displaySizeInch": 10.2,
+      "displayTech": "Retina IPS LCD (Ana Ekran Düğmesi)",
+      "resolution": "1620 x 2160",
+      "ppi": 264,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil 1. Nesil",
+      "mainCameraMp": 8,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": false,
+      "batteryMah": 8557,
+      "wiredChargingWatt": 20,
+      "wirelessChargingWatt": null,
+      "weightGrams": 487,
+      "thicknessMm": 7.5,
+      "bodyMaterial": "Alüminyum Kasa",
+      "osName": "iPadOS 15 (iPadOS 18 Destekli)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi Only",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 3,
+          "priceTry": 12999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 12999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 13399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 12699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 13648.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 13258.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 13128.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 12999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 3,
+          "priceTry": 14948.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 14948.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 15398.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 14598.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 15696.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 15247.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 15098.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 14948.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-mini-7-a17-pro-128gb",
+    "name": "Apple iPad mini 7 (A17 Pro)",
+    "brand": "Apple",
+    "model": "iPad mini 7 (A17 Pro)",
+    "priceTry": 23999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2024-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2024-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1520000,
+    "gamingIndex": 92,
+    "productivityIndex": 94,
+    "geekbench6Single": 2920,
+    "geekbench6Multi": 7350,
+    "relativePerformanceIndex": 91.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 23999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 24399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 23699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 25198.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 24478.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 24238.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 23999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple A17 Pro (Apple Intelligence)",
+      "cpuArch": "6 Çekirdek (2P + 4E)",
+      "gpuModel": "Apple 5-Core GPU (Ray Tracing)",
+      "processNodeNm": 3,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1520000,
+      "geekbenchSingle": 2920,
+      "geekbenchMulti": 7350,
+      "displaySizeInch": 8.3,
+      "displayTech": "Liquid Retina IPS (Kompakt Güç)",
+      "resolution": "1488 x 2266",
+      "ppi": 326,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil Pro Destekli",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 5078,
+      "wiredChargingWatt": 20,
+      "wirelessChargingWatt": null,
+      "weightGrams": 293,
+      "thicknessMm": 6.3,
+      "bodyMaterial": "Hafif Yekpare Alüminyum",
+      "osName": "iPadOS 18 (Apple Intelligence)",
+      "updateYears": 6,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 23999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 23999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 24399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 23699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 25198.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 24478.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 24238.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 23999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 27598.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 27598.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 28048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 27248.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 28978.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 28150.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 27874.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 27598.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-apple-ipad-mini-6-a15-64gb",
+    "name": "Apple iPad mini 6 (A15)",
+    "brand": "Apple",
+    "model": "iPad mini 6 (A15)",
+    "priceTry": 19999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2021.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2021.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2021-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2021-2.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1180000,
+    "gamingIndex": 82,
+    "productivityIndex": 85,
+    "geekbench6Single": 2180,
+    "geekbench6Multi": 5450,
+    "relativePerformanceIndex": 80.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 19999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 20399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 19699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 20998.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 20398.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 20198.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 19999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Apple A15 Bionic",
+      "cpuArch": "6 Çekirdek (2P + 4E)",
+      "gpuModel": "Apple 5-Core GPU",
+      "processNodeNm": 5,
+      "ramGb": 4,
+      "storageGb": 64,
+      "storageType": "NVMe",
+      "hasMicroSd": false,
+      "antutuScore": 1180000,
+      "geekbenchSingle": 2180,
+      "geekbenchMulti": 5450,
+      "displaySizeInch": 8.3,
+      "displayTech": "Liquid Retina IPS",
+      "resolution": "1488 x 2266",
+      "ppi": 326,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Apple Pencil 2. Nesil",
+      "mainCameraMp": 12,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 5124,
+      "wiredChargingWatt": 20,
+      "wirelessChargingWatt": null,
+      "weightGrams": 293,
+      "thicknessMm": 6.3,
+      "bodyMaterial": "Kompakt Alüminyum",
+      "osName": "iPadOS 15 (iPadOS 18 Destekli)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6 (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 4,
+          "priceTry": 19999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 19999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 20399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 19699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 20998.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 20398.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 20198.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 19999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 4,
+          "priceTry": 22998.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 22998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 23448.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 22648.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 24148.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 23458.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 23228.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 22998.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s10-ultra-256gb",
+    "name": "Samsung Galaxy Tab S10 Ultra",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S10 Ultra",
+    "priceTry": 46999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s10-ultra.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s10-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s10-ultra-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s10-ultra-2.jpg"
+    ],
+    "tier": "S+",
+    "benchmarkScore": 2120000,
+    "gamingIndex": 99,
+    "productivityIndex": 100,
+    "geekbench6Single": 2280,
+    "geekbench6Multi": 7500,
+    "relativePerformanceIndex": 99.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 46999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 47399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 46699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 49348.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 47938.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 47468.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 46999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Dimensity 9300+",
+      "cpuArch": "8 Çekirdek (4x3.4 GHz + 4x2.0 GHz)",
+      "gpuModel": "Immortalis-G720 MC12",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": true,
+      "antutuScore": 2120000,
+      "geekbenchSingle": 2280,
+      "geekbenchMulti": 7500,
+      "displaySizeInch": 14.6,
+      "displayTech": "Dynamic AMOLED 2X (Yansıma Önleyici Kaplama)",
+      "resolution": "1848 x 2960",
+      "ppi": 239,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 930,
+      "stylusSupport": "S-Pen Kutudan Çıkar (Ultra Düşük Gecikme)",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 11200,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 718,
+      "thicknessMm": 5.4,
+      "bodyMaterial": "Zırhlı Alüminyum Plus",
+      "osName": "Android 14 (One UI 6.1.1 Galaxy AI)",
+      "updateYears": 7,
+      "cellularOption": "Wi-Fi 7 (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 46999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 46999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 47399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 46699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 49348.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 47938.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 47468.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 46999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 54048.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 54048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 54498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 53698.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 56751.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 55129.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 54589.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 54048.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 63448.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 63448.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 64048.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 62948.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 66621.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 64717.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 64083.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 63448.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s10-plus-256gb",
+    "name": "Samsung Galaxy Tab S10+",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S10+",
+    "priceTry": 37999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s10-plus.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s10-plus.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s10-plus-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s10-plus-2.jpg"
+    ],
+    "tier": "S+",
+    "benchmarkScore": 2080000,
+    "gamingIndex": 98,
+    "productivityIndex": 99,
+    "geekbench6Single": 2250,
+    "geekbench6Multi": 7420,
+    "relativePerformanceIndex": 98.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 37999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 38399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 37699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 39898.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 38758.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 38378.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 37999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Dimensity 9300+",
+      "cpuArch": "8 Çekirdek (4x3.4 GHz + 4x2.0 GHz)",
+      "gpuModel": "Immortalis-G720 MC12",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": true,
+      "antutuScore": 2080000,
+      "geekbenchSingle": 2250,
+      "geekbenchMulti": 7420,
+      "displaySizeInch": 12.4,
+      "displayTech": "Dynamic AMOLED 2X (Yansıma Önleyici)",
+      "resolution": "1752 x 2800",
+      "ppi": 266,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 650,
+      "stylusSupport": "S-Pen Kutudan Çıkar",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10090,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 571,
+      "thicknessMm": 5.6,
+      "bodyMaterial": "Zırhlı Alüminyum Plus",
+      "osName": "Android 14 (One UI 6.1.1 Galaxy AI)",
+      "updateYears": 7,
+      "cellularOption": "Wi-Fi 7 (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 37999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 37999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 38399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 37699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 39898.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 38758.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 38378.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 37999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 43698.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 43698.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 44148.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 43348.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 45883.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 44572.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 44135.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 43698.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 51298.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 51298.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 51898.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 50798.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 53863.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 52324.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 51811.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 51298.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s9-ultra-256gb",
+    "name": "Samsung Galaxy Tab S9 Ultra",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S9 Ultra",
+    "priceTry": 39999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-ultra.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-ultra.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1580000,
+    "gamingIndex": 96,
+    "productivityIndex": 98,
+    "geekbench6Single": 2040,
+    "geekbench6Multi": 5500,
+    "relativePerformanceIndex": 95.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 39999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 40399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 39699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 41998.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 40798.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 40398.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 39999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 2 for Galaxy",
+      "cpuArch": "8 Çekirdek (1x3.36 GHz + 7 Çekirdek)",
+      "gpuModel": "Adreno 740",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": true,
+      "antutuScore": 1580000,
+      "geekbenchSingle": 2040,
+      "geekbenchMulti": 5500,
+      "displaySizeInch": 14.6,
+      "displayTech": "Dynamic AMOLED 2X (HDR10+)",
+      "resolution": "1848 x 2960",
+      "ppi": 239,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 930,
+      "stylusSupport": "S-Pen Dahil (IP68)",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 11200,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 732,
+      "thicknessMm": 5.5,
+      "bodyMaterial": "Zırhlı Alüminyum Gövde",
+      "osName": "Android 13 (Android 14 Galaxy AI)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 39999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 39999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 40399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 39699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 41998.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 40798.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 40398.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 39999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 45998.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 45998.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 46448.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 45648.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 48298.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 46918.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 46458.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 45998.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 53998.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 53998.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 54598.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 53498.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 56698.58
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 55078.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 54538.64
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 53998.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s9-plus-256gb",
+    "name": "Samsung Galaxy Tab S9+",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S9+",
+    "priceTry": 32999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-plus.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-plus.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-plus.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1550000,
+    "gamingIndex": 95,
+    "productivityIndex": 97,
+    "geekbench6Single": 2010,
+    "geekbench6Multi": 5420,
+    "relativePerformanceIndex": 94.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 32999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 33399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 32699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 34648.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 33658.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 33328.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 32999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 2 for Galaxy",
+      "cpuArch": "8 Çekirdek (1x3.36 GHz + 7 Çekirdek)",
+      "gpuModel": "Adreno 740",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": true,
+      "antutuScore": 1550000,
+      "geekbenchSingle": 2010,
+      "geekbenchMulti": 5420,
+      "displaySizeInch": 12.4,
+      "displayTech": "Dynamic AMOLED 2X",
+      "resolution": "1752 x 2800",
+      "ppi": 266,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 650,
+      "stylusSupport": "S-Pen Dahil (IP68)",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10090,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 581,
+      "thicknessMm": 5.7,
+      "bodyMaterial": "Zırhlı Alüminyum",
+      "osName": "Android 13 (Android 14 Galaxy AI)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 32999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 32999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 33399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 32699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 34648.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 33658.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 33328.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 32999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 37948.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 37948.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 38398.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 37598.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 39846.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 38707.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 38328.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 37948.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 44548.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 44548.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 45148.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 44048.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 46776.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 45439.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 44994.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 44548.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s9-128gb",
+    "name": "Samsung Galaxy Tab S9",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S9",
+    "priceTry": 26999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1500000,
+    "gamingIndex": 94,
+    "productivityIndex": 96,
+    "geekbench6Single": 1980,
+    "geekbench6Multi": 5320,
+    "relativePerformanceIndex": 92.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 26999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 27399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 26699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 28348.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 27538.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 27268.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 26999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 2 for Galaxy",
+      "cpuArch": "8 Çekirdek (1x3.36 GHz + 7 Çekirdek)",
+      "gpuModel": "Adreno 740",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": true,
+      "antutuScore": 1500000,
+      "geekbenchSingle": 1980,
+      "geekbenchMulti": 5320,
+      "displaySizeInch": 11.0,
+      "displayTech": "Dynamic AMOLED 2X (120Hz)",
+      "resolution": "1600 x 2560",
+      "ppi": 274,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 750,
+      "stylusSupport": "S-Pen Dahil (IP68)",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8400,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 498,
+      "thicknessMm": 5.9,
+      "bodyMaterial": "Zırhlı Alüminyum",
+      "osName": "Android 13 (Android 14 Galaxy AI)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 26999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 26999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 27399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 26699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 28348.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 27538.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 27268.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 26999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 31048.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 31048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 31498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 30698.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 32601.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 31669.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 31359.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 31048.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 36448.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 36448.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 37048.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 35948.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 38271.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 37177.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 36813.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 36448.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s9-fe-plus-128gb",
+    "name": "Samsung Galaxy Tab S9 FE+",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S9 FE+",
+    "priceTry": 18999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-plus-1.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-plus-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-plus-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 580000,
+    "gamingIndex": 74,
+    "productivityIndex": 84,
+    "geekbench6Single": 1010,
+    "geekbench6Multi": 2850,
+    "relativePerformanceIndex": 73.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 19399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 18699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 19948.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 19378.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 19188.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 18999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Exynos 1380",
+      "cpuArch": "8 Çekirdek (4x2.4 GHz + 4x2.0 GHz)",
+      "gpuModel": "Mali-G68 MP5",
+      "processNodeNm": 5,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 580000,
+      "geekbenchSingle": 1010,
+      "geekbenchMulti": 2850,
+      "displaySizeInch": 12.4,
+      "displayTech": "90Hz IPS LCD (Geniş Ekran)",
+      "resolution": "1600 x 2560",
+      "ppi": 243,
+      "refreshRateHz": 90,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "S-Pen Dahil (IP68)",
+      "mainCameraMp": 8,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10090,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 627,
+      "thicknessMm": 6.5,
+      "bodyMaterial": "Yekpare Metal Gövde",
+      "osName": "Android 13 (Android 14 Güncellendi)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 18999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 18999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 18699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 19948.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19378.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19188.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 18999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 21848.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 21848.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 22298.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 21498.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22941.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 22285.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 22067.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 21848.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s9-fe-128gb",
+    "name": "Samsung Galaxy Tab S9 FE",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S9 FE",
+    "priceTry": 14999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-1.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-2.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 575000,
+    "gamingIndex": 73,
+    "productivityIndex": 82,
+    "geekbench6Single": 1000,
+    "geekbench6Multi": 2820,
+    "relativePerformanceIndex": 72.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 14999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 15399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 14699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 15748.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 15298.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 15148.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 14999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Exynos 1380",
+      "cpuArch": "8 Çekirdek (4x2.4 GHz + 4x2.0 GHz)",
+      "gpuModel": "Mali-G68 MP5",
+      "processNodeNm": 5,
+      "ramGb": 6,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 575000,
+      "geekbenchSingle": 1000,
+      "geekbenchMulti": 2820,
+      "displaySizeInch": 10.9,
+      "displayTech": "90Hz IPS LCD (Suya & Toza Dayanıklı)",
+      "resolution": "1440 x 2304",
+      "ppi": 249,
+      "refreshRateHz": 90,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "S-Pen Dahil (IP68)",
+      "mainCameraMp": 8,
+      "frontCameraMp": 12,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8000,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 523,
+      "thicknessMm": 6.5,
+      "bodyMaterial": "Yekpare Metal Gövde",
+      "osName": "Android 13 (Android 14 Güncellendi)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 6,
+          "priceTry": 14999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 14999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 15399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 14699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 15748.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 15298.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 15148.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 14999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 6,
+          "priceTry": 17248.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 17248.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 17698.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 16898.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 18111.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 17593.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 17421.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 17248.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s8-ultra-128gb",
+    "name": "Samsung Galaxy Tab S8 Ultra",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S8 Ultra",
+    "priceTry": 28999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-ultra.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-ultra-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-ultra-2.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1250000,
+    "gamingIndex": 88,
+    "productivityIndex": 92,
+    "geekbench6Single": 1720,
+    "geekbench6Multi": 4250,
+    "relativePerformanceIndex": 86.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 28999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 29399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 28699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 30448.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 29578.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 29288.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 28999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 1",
+      "cpuArch": "8 Çekirdek (1x3.0 GHz + 3x2.5 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 730",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": true,
+      "antutuScore": 1250000,
+      "geekbenchSingle": 1720,
+      "geekbenchMulti": 4250,
+      "displaySizeInch": 14.6,
+      "displayTech": "Super AMOLED (120Hz)",
+      "resolution": "1848 x 2960",
+      "ppi": 240,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "S-Pen Dahil",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 11200,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 726,
+      "thicknessMm": 5.5,
+      "bodyMaterial": "Zırhlı Alüminyum",
+      "osName": "Android 12 (Android 14 Güncellendi)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 28999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 28999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 29399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 28699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 30448.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 29578.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 29288.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 28999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 33348.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 33348.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 33798.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 32998.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 35016.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 34015.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 33682.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 33348.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 39148.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 39148.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 39748.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 38648.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 41106.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 39931.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 39540.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 39148.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s8-plus-128gb",
+    "name": "Samsung Galaxy Tab S8+",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S8+",
+    "priceTry": 23999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-plus.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-plus.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-plus-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-plus-2.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1220000,
+    "gamingIndex": 87,
+    "productivityIndex": 91,
+    "geekbench6Single": 1690,
+    "geekbench6Multi": 4180,
+    "relativePerformanceIndex": 85.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 23999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 24399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 23699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 25198.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 24478.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 24238.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 23999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 1",
+      "cpuArch": "8 Çekirdek (1x3.0 GHz + 3x2.5 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 730",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": true,
+      "antutuScore": 1220000,
+      "geekbenchSingle": 1690,
+      "geekbenchMulti": 4180,
+      "displaySizeInch": 12.4,
+      "displayTech": "Super AMOLED (120Hz)",
+      "resolution": "1752 x 2800",
+      "ppi": 266,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "S-Pen Dahil",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10090,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 567,
+      "thicknessMm": 5.7,
+      "bodyMaterial": "Zırhlı Alüminyum",
+      "osName": "Android 12 (Android 14 Güncellendi)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 23999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 23999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 24399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 23699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 25198.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 24478.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 24238.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 23999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 27598.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 27598.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 28048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 27248.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 28978.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 28150.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 27874.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 27598.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-s8-128gb",
+    "name": "Samsung Galaxy Tab S8",
+    "brand": "Samsung",
+    "model": "Galaxy Tab S8",
+    "priceTry": 18999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s8-2.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1180000,
+    "gamingIndex": 85,
+    "productivityIndex": 89,
+    "geekbench6Single": 1650,
+    "geekbench6Multi": 4100,
+    "relativePerformanceIndex": 83.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 19399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 18699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 19948.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 19378.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 19188.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 18999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 1",
+      "cpuArch": "8 Çekirdek (1x3.0 GHz + 3x2.5 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 730",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": true,
+      "antutuScore": 1180000,
+      "geekbenchSingle": 1650,
+      "geekbenchMulti": 4100,
+      "displaySizeInch": 11.0,
+      "displayTech": "120Hz LTPS TFT LCD",
+      "resolution": "1600 x 2560",
+      "ppi": 274,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "S-Pen Dahil",
+      "mainCameraMp": 13,
+      "frontCameraMp": 12,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8000,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 503,
+      "thicknessMm": 6.3,
+      "bodyMaterial": "Zırhlı Alüminyum",
+      "osName": "Android 12 (Android 14 Güncellendi)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 18999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 18999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 18699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 19948.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19378.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19188.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 18999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 21848.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 21848.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 22298.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 21498.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22941.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 22285.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 22067.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 21848.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-a9-plus-64gb",
+    "name": "Samsung Galaxy Tab A9+",
+    "brand": "Samsung",
+    "model": "Galaxy Tab A9+",
+    "priceTry": 6499.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9-plus.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9-plus.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-a9-plus-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-a9-plus-2.jpg"
+    ],
+    "tier": "B",
+    "benchmarkScore": 410000,
+    "gamingIndex": 60,
+    "productivityIndex": 68,
+    "geekbench6Single": 710,
+    "geekbench6Multi": 1920,
+    "relativePerformanceIndex": 58.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 6499.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 6899.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 6199.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 6823.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 6628.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 6563.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 6499.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 695 5G",
+      "cpuArch": "8 Çekirdek (2x2.2 GHz + 6x1.8 GHz)",
+      "gpuModel": "Adreno 619",
+      "processNodeNm": 6,
+      "ramGb": 4,
+      "storageGb": 64,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 410000,
+      "geekbenchSingle": 710,
+      "geekbenchMulti": 1920,
+      "displaySizeInch": 11.0,
+      "displayTech": "90Hz TFT LCD (FHD+ 4 Hoparlör)",
+      "resolution": "1200 x 1920",
+      "ppi": 206,
+      "refreshRateHz": 90,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "Desteklenmiyor",
+      "mainCameraMp": 8,
+      "frontCameraMp": 5,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 7040,
+      "wiredChargingWatt": 15,
+      "wirelessChargingWatt": null,
+      "weightGrams": 480,
+      "thicknessMm": 6.9,
+      "bodyMaterial": "Metal Arka Gövde",
+      "osName": "Android 13 (Android 14 One UI 6.0)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi Only (Opsiyonel 5G)",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 4,
+          "priceTry": 6499.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 6499.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 6899.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 6199.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 6823.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 6628.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 6563.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 6499.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 4,
+          "priceTry": 7473.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 7473.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 7923.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 7123.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 7847.54
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 7623.33
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 7548.59
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 7473.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-samsung-galaxy-tab-a9-64gb",
+    "name": "Samsung Galaxy Tab A9",
+    "brand": "Samsung",
+    "model": "Galaxy Tab A9",
+    "priceTry": 4999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-a9-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-a9-2.jpg"
+    ],
+    "tier": "C+",
+    "benchmarkScore": 390000,
+    "gamingIndex": 55,
+    "productivityIndex": 62,
+    "geekbench6Single": 705,
+    "geekbench6Multi": 1900,
+    "relativePerformanceIndex": 52.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 4999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 5399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 4699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 5248.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 5098.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 5048.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 4999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Helio G99",
+      "cpuArch": "8 Çekirdek (2x2.2 GHz + 6x2.0 GHz)",
+      "gpuModel": "Mali-G57 MC2",
+      "processNodeNm": 6,
+      "ramGb": 4,
+      "storageGb": 64,
+      "storageType": "eMMC 5.1",
+      "hasMicroSd": true,
+      "antutuScore": 390000,
+      "geekbenchSingle": 705,
+      "geekbenchMulti": 1900,
+      "displaySizeInch": 8.7,
+      "displayTech": "Kompakt TFT LCD (60Hz)",
+      "resolution": "800 x 1340",
+      "ppi": 179,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "Desteklenmiyor",
+      "mainCameraMp": 8,
+      "frontCameraMp": 2,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 5100,
+      "wiredChargingWatt": 15,
+      "wirelessChargingWatt": null,
+      "weightGrams": 332,
+      "thicknessMm": 8.0,
+      "bodyMaterial": "Metal Kasa",
+      "osName": "Android 13 (Android 14 One UI 6.0)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi Only (Opsiyonel LTE)",
+      "variants": [
+        {
+          "variantKey": "64gb",
+          "storageGb": 64,
+          "ramGb": 4,
+          "priceTry": 4999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 4999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 5399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 4699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 5248.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 5098.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 5048.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 4999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 4,
+          "priceTry": 5748.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 5748.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 6198.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 5398.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 6036.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 5863.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 5806.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 5748.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-xiaomi-pad-6s-pro-256gb",
+    "name": "Xiaomi Xiaomi Pad 6S Pro 12.4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Pad 6S Pro 12.4",
+    "priceTry": 26999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6s-pro-124.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6s-pro-124.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-pad-6s-pro-124-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-pad-6s-pro-124-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1620000,
+    "gamingIndex": 96,
+    "productivityIndex": 97,
+    "geekbench6Single": 2010,
+    "geekbench6Multi": 5450,
+    "relativePerformanceIndex": 95.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 26999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 27399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 26699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 28348.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 27538.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 27268.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 26999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 2",
+      "cpuArch": "8 Çekirdek (1x3.2 GHz + 4x2.8 GHz + 3x2.0 GHz)",
+      "gpuModel": "Adreno 740",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": false,
+      "antutuScore": 1620000,
+      "geekbenchSingle": 2010,
+      "geekbenchMulti": 5450,
+      "displaySizeInch": 12.4,
+      "displayTech": "3K 144Hz 3:2 IPS LCD (900 Nit)",
+      "resolution": "2032 x 3048",
+      "ppi": 295,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 900,
+      "stylusSupport": "Xiaomi Focus Pen Destekli",
+      "mainCameraMp": 50,
+      "frontCameraMp": 32,
+      "speakerCount": 6,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10000,
+      "wiredChargingWatt": 120,
+      "wirelessChargingWatt": null,
+      "weightGrams": 590,
+      "thicknessMm": 6.26,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "Android 14 (HyperOS Pad)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 7 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 26999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 26999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 27399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 26699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 28348.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 27538.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 27268.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 26999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 31048.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 31048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 31498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 30698.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 32601.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 31669.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 31359.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 31048.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 36448.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 36448.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 37048.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 35948.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 38271.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 37177.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 36813.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 36448.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-xiaomi-pad-6-pro-256gb",
+    "name": "Xiaomi Xiaomi Pad 6 Pro",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Pad 6 Pro",
+    "priceTry": 20999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1300000,
+    "gamingIndex": 88,
+    "productivityIndex": 91,
+    "geekbench6Single": 1750,
+    "geekbench6Multi": 4420,
+    "relativePerformanceIndex": 86.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 20999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 21399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 20699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 22048.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 21418.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 21208.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 20999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8+ Gen 1",
+      "cpuArch": "8 Çekirdek (1x3.0 GHz + 3x2.5 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 730",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 256,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 1300000,
+      "geekbenchSingle": 1750,
+      "geekbenchMulti": 4420,
+      "displaySizeInch": 11.0,
+      "displayTech": "2.8K 144Hz IPS LCD (550 Nit)",
+      "resolution": "1800 x 2880",
+      "ppi": 309,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 550,
+      "stylusSupport": "Xiaomi Smart Pen 2",
+      "mainCameraMp": 50,
+      "frontCameraMp": 20,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8600,
+      "wiredChargingWatt": 67,
+      "wirelessChargingWatt": null,
+      "weightGrams": 490,
+      "thicknessMm": 6.51,
+      "bodyMaterial": "Yekpare Metal Kasa",
+      "osName": "Android 13 (HyperOS Güncellendi)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6E",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 20999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 20999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 21399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 20699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22048.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 21418.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 21208.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 20999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 24148.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 24148.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 24598.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 23798.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 25356.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 24631.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 24390.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 24148.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-xiaomi-pad-6-128gb",
+    "name": "Xiaomi Xiaomi Pad 6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Pad 6",
+    "priceTry": 13999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 785000,
+    "gamingIndex": 80,
+    "productivityIndex": 85,
+    "geekbench6Single": 1280,
+    "geekbench6Multi": 3450,
+    "relativePerformanceIndex": 78.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 13999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 14399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 13699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 14698.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 14278.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 14138.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 13999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 870 5G",
+      "cpuArch": "8 Çekirdek (1x3.2 GHz + 3x2.42 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 650",
+      "processNodeNm": 7,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 785000,
+      "geekbenchSingle": 1280,
+      "geekbenchMulti": 3450,
+      "displaySizeInch": 11.0,
+      "displayTech": "2.8K 144Hz IPS LCD (Gorilla Glass 3)",
+      "resolution": "1800 x 2880",
+      "ppi": 309,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 550,
+      "stylusSupport": "Xiaomi Smart Pen 2 Destekli",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8840,
+      "wiredChargingWatt": 33,
+      "wirelessChargingWatt": null,
+      "weightGrams": 490,
+      "thicknessMm": 6.51,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "Android 13 (HyperOS Pad)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 Only",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 13999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 13999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 14399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 13699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 14698.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 14278.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 14138.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 13999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 16098.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 16098.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 16548.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 15748.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 16903.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 16420.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 16259.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 16098.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-xiaomi-redmi-pad-pro-128gb",
+    "name": "Xiaomi Redmi Pad Pro",
+    "brand": "Xiaomi",
+    "model": "Redmi Pad Pro",
+    "priceTry": 11999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-pad-pro.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-pad-pro.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-pad-pro-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-pad-pro-2.jpg"
+    ],
+    "tier": "B+",
+    "benchmarkScore": 605000,
+    "gamingIndex": 73,
+    "productivityIndex": 80,
+    "geekbench6Single": 1020,
+    "geekbench6Multi": 2950,
+    "relativePerformanceIndex": 71.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 11999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 12399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 11699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 12598.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 12238.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 12118.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 11999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 7s Gen 2",
+      "cpuArch": "8 Çekirdek (4x2.4 GHz + 4x1.95 GHz)",
+      "gpuModel": "Adreno 710",
+      "processNodeNm": 4,
+      "ramGb": 6,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 605000,
+      "geekbenchSingle": 1020,
+      "geekbenchMulti": 2950,
+      "displaySizeInch": 12.1,
+      "displayTech": "2.5K 120Hz IPS LCD (600 Nit)",
+      "resolution": "1600 x 2560",
+      "ppi": 249,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "Redmi Smart Pen Destekli",
+      "mainCameraMp": 8,
+      "frontCameraMp": 8,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10000,
+      "wiredChargingWatt": 33,
+      "wirelessChargingWatt": null,
+      "weightGrams": 571,
+      "thicknessMm": 7.52,
+      "bodyMaterial": "Yekpare Metalik Gövde",
+      "osName": "Android 14 (HyperOS Pad)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 6,
+          "priceTry": 11999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 11999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 12399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 11699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 12598.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 12238.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 12118.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 11999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 6,
+          "priceTry": 13798.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 13798.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 14248.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 13448.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 14488.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 14074.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 13936.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 13798.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-xiaomi-redmi-pad-se-128gb",
+    "name": "Xiaomi Redmi Pad SE",
+    "brand": "Xiaomi",
+    "model": "Redmi Pad SE",
+    "priceTry": 6999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg"
+    ],
+    "tier": "C+",
+    "benchmarkScore": 290000,
+    "gamingIndex": 52,
+    "productivityIndex": 63,
+    "geekbench6Single": 410,
+    "geekbench6Multi": 1450,
+    "relativePerformanceIndex": 49.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 6999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 7399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 6699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 7348.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 7138.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 7068.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 6999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 680 4G",
+      "cpuArch": "8 Çekirdek (4x2.4 GHz + 4x1.9 GHz)",
+      "gpuModel": "Adreno 610",
+      "processNodeNm": 6,
+      "ramGb": 6,
+      "storageGb": 128,
+      "storageType": "eMMC 5.1",
+      "hasMicroSd": true,
+      "antutuScore": 290000,
+      "geekbenchSingle": 410,
+      "geekbenchMulti": 1450,
+      "displaySizeInch": 11.0,
+      "displayTech": "90Hz FHD+ IPS LCD (4 Hoparlör Dolby Atmos)",
+      "resolution": "1200 x 1920",
+      "ppi": 207,
+      "refreshRateHz": 90,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "Kapasitif Kalem",
+      "mainCameraMp": 8,
+      "frontCameraMp": 5,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8000,
+      "wiredChargingWatt": 10,
+      "wirelessChargingWatt": null,
+      "weightGrams": 478,
+      "thicknessMm": 7.36,
+      "bodyMaterial": "Alüminyum Alaşım",
+      "osName": "Android 13 (HyperOS Güncellendi)",
+      "updateYears": 2,
+      "cellularOption": "Wi-Fi Only",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 6,
+          "priceTry": 6999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 6999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 7399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 6699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 7348.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 7138.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 7068.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 6999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 6,
+          "priceTry": 8048.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 8048.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 8498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 7698.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 8451.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 8209.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 8129.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 8048.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-oneplus-pad-2-256gb",
+    "name": "OnePlus OnePlus Pad 2",
+    "brand": "OnePlus",
+    "model": "OnePlus Pad 2",
+    "priceTry": 24999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg"
+    ],
+    "tier": "S+",
+    "benchmarkScore": 2050000,
+    "gamingIndex": 98,
+    "productivityIndex": 98,
+    "geekbench6Single": 2260,
+    "geekbench6Multi": 7050,
+    "relativePerformanceIndex": 97.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 24999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 25399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 24699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 26248.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 25498.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 25248.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 24999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8 Gen 3",
+      "cpuArch": "8 Çekirdek (1x3.3 GHz + 5x3.2 GHz + 2x2.3 GHz)",
+      "gpuModel": "Adreno 750",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": false,
+      "antutuScore": 2050000,
+      "geekbenchSingle": 2260,
+      "geekbenchMulti": 7050,
+      "displaySizeInch": 12.1,
+      "displayTech": "3K 144Hz 7:5 ReadFit IPS (900 Nit)",
+      "resolution": "2120 x 3000",
+      "ppi": 303,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 900,
+      "stylusSupport": "OnePlus Stylo 2 Destekli",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 6,
+      "hasDolbyAtmos": true,
+      "batteryMah": 9510,
+      "wiredChargingWatt": 67,
+      "wirelessChargingWatt": null,
+      "weightGrams": 584,
+      "thicknessMm": 6.49,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "Android 14 (OxygenOS 14.1 Open Canvas)",
+      "updateYears": 4,
+      "cellularOption": "Wi-Fi 7 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 24999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 24999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 25399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 24699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 26248.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 25498.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 25248.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 24999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 28748.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 28748.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 29198.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 28398.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 30186.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 29323.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 29036.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 28748.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-oneplus-pad-128gb",
+    "name": "OnePlus OnePlus Pad",
+    "brand": "OnePlus",
+    "model": "OnePlus Pad",
+    "priceTry": 18999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-pad-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 1050000,
+    "gamingIndex": 86,
+    "productivityIndex": 89,
+    "geekbench6Single": 1540,
+    "geekbench6Multi": 4050,
+    "relativePerformanceIndex": 83.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 19399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 18699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 19948.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 19378.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 19188.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 18999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Dimensity 9000",
+      "cpuArch": "8 Çekirdek (1x3.05 GHz + 3x2.85 GHz + 4x1.8 GHz)",
+      "gpuModel": "Mali-G710 MC10",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 1050000,
+      "geekbenchSingle": 1540,
+      "geekbenchMulti": 4050,
+      "displaySizeInch": 11.61,
+      "displayTech": "2.8K 144Hz 7:5 ReadFit IPS (500 Nit)",
+      "resolution": "2000 x 2800",
+      "ppi": 296,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "OnePlus Stylo Destekli",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 9510,
+      "wiredChargingWatt": 67,
+      "wirelessChargingWatt": null,
+      "weightGrams": 552,
+      "thicknessMm": 6.54,
+      "bodyMaterial": "Yıldız Işığı Dokulu Alüminyum",
+      "osName": "Android 13 (Android 14 Güncellendi)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 18999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 18999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 18699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 19948.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19378.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19188.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 18999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 21848.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 21848.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 22298.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 21498.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22941.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 22285.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 22067.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 21848.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-oneplus-pad-go-128gb",
+    "name": "OnePlus OnePlus Pad Go",
+    "brand": "OnePlus",
+    "model": "OnePlus Pad Go",
+    "priceTry": 9999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad-go.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad-go.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-pad-go-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-pad-go-2.jpg"
+    ],
+    "tier": "B",
+    "benchmarkScore": 395000,
+    "gamingIndex": 60,
+    "productivityIndex": 68,
+    "geekbench6Single": 710,
+    "geekbench6Multi": 1920,
+    "relativePerformanceIndex": 56.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 9999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 10399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 9699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 10498.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 10198.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 10098.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 9999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Helio G99",
+      "cpuArch": "8 Çekirdek (2x2.2 GHz + 6x2.0 GHz)",
+      "gpuModel": "Mali-G57 MC2",
+      "processNodeNm": 6,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 395000,
+      "geekbenchSingle": 710,
+      "geekbenchMulti": 1920,
+      "displaySizeInch": 11.35,
+      "displayTech": "2.4K 90Hz 7:5 ReadFit IPS (400 Nit)",
+      "resolution": "1720 x 2408",
+      "ppi": 260,
+      "refreshRateHz": 90,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "Kapasitif Stylus",
+      "mainCameraMp": 8,
+      "frontCameraMp": 8,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8000,
+      "wiredChargingWatt": 33,
+      "wirelessChargingWatt": null,
+      "weightGrams": 532,
+      "thicknessMm": 6.89,
+      "bodyMaterial": "İki Tonlu İkiz Nane Yeşili Metal",
+      "osName": "Android 13 (OxygenOS 13.2)",
+      "updateYears": 2,
+      "cellularOption": "Wi-Fi (Opsiyonel 4G LTE)",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 9999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 9999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 10399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 9699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 10498.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 10198.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 10098.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 9999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 11498.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 11498.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 11948.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 11148.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 12073.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 11728.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 11613.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 11498.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-huawei-matepad-pro-13-2-256gb",
+    "name": "Huawei Huawei MatePad Pro 13.2",
+    "brand": "Huawei",
+    "model": "Huawei MatePad Pro 13.2",
+    "priceTry": 34999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg"
+    ],
+    "tier": "A+",
+    "benchmarkScore": 920000,
+    "gamingIndex": 86,
+    "productivityIndex": 92,
+    "geekbench6Single": 1380,
+    "geekbench6Multi": 4210,
+    "relativePerformanceIndex": 85.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 34999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 35399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 34699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 36748.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 35698.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 35348.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 34999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Kirin 9000S",
+      "cpuArch": "8 Çekirdek (1x2.62 GHz + 3x2.15 GHz + 4x1.53 GHz)",
+      "gpuModel": "Maleoon 910",
+      "processNodeNm": 7,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 920000,
+      "geekbenchSingle": 1380,
+      "geekbenchMulti": 4210,
+      "displaySizeInch": 13.2,
+      "displayTech": "2.8K 144Hz Esnek OLED (1000 Nit NearLink)",
+      "resolution": "1920 x 2880",
+      "ppi": 262,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 1000,
+      "stylusSupport": "M-Pencil 3. Nesil (10.000+ Basınç Seviyesi NearLink)",
+      "mainCameraMp": 13,
+      "frontCameraMp": 16,
+      "speakerCount": 6,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10100,
+      "wiredChargingWatt": 88,
+      "wirelessChargingWatt": null,
+      "weightGrams": 580,
+      "thicknessMm": 5.5,
+      "bodyMaterial": "Havacılık Sınıfı Fiberglas & Metal",
+      "osName": "HarmonyOS 4.0 (PC Düzeyi WPS Office)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 34999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 34999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 35399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 34699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 36748.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 35698.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 35348.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 34999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 40248.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 40248.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 40698.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 39898.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 42261.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 41053.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 40651.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 40248.85
+            }
+          ]
+        },
+        {
+          "variantKey": "1024gb",
+          "storageGb": 1024,
+          "ramGb": 16,
+          "priceTry": 47248.65,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 47248.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 47848.65,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 46748.65,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 49611.08
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 48193.62
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 47721.14
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 47248.65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-huawei-matepad-11-5s-papermatte-256gb",
+    "name": "Huawei Huawei MatePad 11.5S (PaperMatte)",
+    "brand": "Huawei",
+    "model": "Huawei MatePad 11.5S (PaperMatte)",
+    "priceTry": 18999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 880000,
+    "gamingIndex": 82,
+    "productivityIndex": 88,
+    "geekbench6Single": 1320,
+    "geekbench6Multi": 3950,
+    "relativePerformanceIndex": 80.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 19399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 18699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 19948.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 19378.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 19188.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 18999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Kirin 9000WL",
+      "cpuArch": "8 Çekirdek (1x2.48 GHz + 3x2.15 GHz + 4x1.53 GHz)",
+      "gpuModel": "Maleoon 910",
+      "processNodeNm": 7,
+      "ramGb": 8,
+      "storageGb": 256,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 880000,
+      "geekbenchSingle": 1320,
+      "geekbenchMulti": 3950,
+      "displaySizeInch": 11.5,
+      "displayTech": "2.8K 144Hz PaperMatte Yansıma Önleyici Mat Ekran",
+      "resolution": "1840 x 2800",
+      "ppi": 291,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "M-Pencil 3. Nesil NearLink",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8800,
+      "wiredChargingWatt": 22,
+      "wirelessChargingWatt": null,
+      "weightGrams": 510,
+      "thicknessMm": 6.2,
+      "bodyMaterial": "Metalik Mat Yekpare Gövde",
+      "osName": "HarmonyOS 4.2 (PC Seviyesi Üretkenlik)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 18999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 18999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 18699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 19948.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19378.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19188.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 18999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 21848.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 21848.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 22298.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 21498.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22941.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 22285.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 22067.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 21848.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-huawei-matepad-pro-11-2024-256gb",
+    "name": "Huawei Huawei MatePad Pro 11 (2024)",
+    "brand": "Huawei",
+    "model": "Huawei MatePad Pro 11 (2024)",
+    "priceTry": 24999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-pro-11-2024.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-pro-11-2024.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-matepad-pro-11-2024-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-matepad-pro-11-2024-2.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 915000,
+    "gamingIndex": 84,
+    "productivityIndex": 90,
+    "geekbench6Single": 1370,
+    "geekbench6Multi": 4180,
+    "relativePerformanceIndex": 82.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 24999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 25399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 24699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 26248.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 25498.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 25248.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 24999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Kirin 9000S",
+      "cpuArch": "8 Çekirdek (1x2.49 GHz + 3x2.15 GHz + 4x1.53 GHz)",
+      "gpuModel": "Maleoon 910",
+      "processNodeNm": 7,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": false,
+      "antutuScore": 915000,
+      "geekbenchSingle": 1370,
+      "geekbenchMulti": 4180,
+      "displaySizeInch": 11.0,
+      "displayTech": "OLED 120Hz (600 Nit Çift Yönlü Uydu Mesajlaşma)",
+      "resolution": "1600 x 2560",
+      "ppi": 274,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 600,
+      "stylusSupport": "M-Pencil 3. Nesil Destekli",
+      "mainCameraMp": 13,
+      "frontCameraMp": 16,
+      "speakerCount": 6,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8300,
+      "wiredChargingWatt": 66,
+      "wirelessChargingWatt": null,
+      "weightGrams": 449,
+      "thicknessMm": 5.9,
+      "bodyMaterial": "Magnezyum Alaşım İskelet",
+      "osName": "HarmonyOS 4.0",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 (Uydu Destekli)",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 24999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 24999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 25399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 24699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 26248.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 25498.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 25248.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 24999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 28748.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 28748.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 29198.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 28398.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 30186.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 29323.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 29036.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 28748.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-huawei-matepad-se-11-128gb",
+    "name": "Huawei Huawei MatePad SE 11",
+    "brand": "Huawei",
+    "model": "Huawei MatePad SE 11",
+    "priceTry": 6499.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-se-11.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-se-11.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-matepad-se-11-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-matepad-se-11-2.jpg"
+    ],
+    "tier": "C",
+    "benchmarkScore": 220000,
+    "gamingIndex": 44,
+    "productivityIndex": 58,
+    "geekbench6Single": 340,
+    "geekbench6Multi": 1220,
+    "relativePerformanceIndex": 42.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 6499.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 6899.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 6199.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 6823.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 6628.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 6563.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 6499.0
+      }
+    ],
+    "spec": {
+      "chipset": "Kirin 710A",
+      "cpuArch": "8 Çekirdek (4x2.0 GHz + 4x1.7 GHz)",
+      "gpuModel": "Mali-G51 MP4",
+      "processNodeNm": 14,
+      "ramGb": 4,
+      "storageGb": 128,
+      "storageType": "eMMC 5.1",
+      "hasMicroSd": true,
+      "antutuScore": 220000,
+      "geekbenchSingle": 340,
+      "geekbenchMulti": 1220,
+      "displaySizeInch": 11.0,
+      "displayTech": "FHD+ IPS LCD (4 Hoparlör Histen 9.0)",
+      "resolution": "1200 x 1920",
+      "ppi": 207,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "M-Pen lite Destekli",
+      "mainCameraMp": 8,
+      "frontCameraMp": 5,
+      "speakerCount": 4,
+      "hasDolbyAtmos": false,
+      "batteryMah": 7700,
+      "wiredChargingWatt": 22,
+      "wirelessChargingWatt": null,
+      "weightGrams": 475,
+      "thicknessMm": 6.9,
+      "bodyMaterial": "Metalik Yekpare Kasa",
+      "osName": "HarmonyOS 2.0 (Çocuk Köşesi & Eğitim)",
+      "updateYears": 2,
+      "cellularOption": "Wi-Fi Only",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 4,
+          "priceTry": 6499.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 6499.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 6899.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 6199.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 6823.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 6628.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 6563.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 6499.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 4,
+          "priceTry": 7473.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 7473.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 7923.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 7123.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 7847.54
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 7623.33
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 7548.59
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 7473.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-lenovo-legion-y700-2023-256gb",
+    "name": "Lenovo Lenovo Legion Y700 (2023)",
+    "brand": "Lenovo",
+    "model": "Lenovo Legion Y700 (2023)",
+    "priceTry": 18999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/lenovo-legion-y700-2023.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/lenovo-legion-y700-2023.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/lenovo/lenovo-legion-y700-2023-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/lenovo/lenovo-legion-y700-2023-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1320000,
+    "gamingIndex": 95,
+    "productivityIndex": 88,
+    "geekbench6Single": 1750,
+    "geekbench6Multi": 4480,
+    "relativePerformanceIndex": 90.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 18999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 19399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 18699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 19948.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 19378.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 19188.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 18999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8+ Gen 1",
+      "cpuArch": "8 Çekirdek (1x3.19 GHz + 3x2.75 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 730",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 3.1",
+      "hasMicroSd": true,
+      "antutuScore": 1320000,
+      "geekbenchSingle": 1750,
+      "geekbenchMulti": 4480,
+      "displaySizeInch": 8.8,
+      "displayTech": "2.5K 144Hz Kompakt Gaming IPS (500 Nit Çift Type-C)",
+      "resolution": "1600 x 2560",
+      "ppi": 343,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Lenovo Precision Pen 2",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 2,
+      "hasDolbyAtmos": true,
+      "batteryMah": 6550,
+      "wiredChargingWatt": 45,
+      "wirelessChargingWatt": null,
+      "weightGrams": 375,
+      "thicknessMm": 7.6,
+      "bodyMaterial": "Havacılık Alüminyum & Bypass Şarj",
+      "osName": "Android 13 (ZUI 15 Gaming)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 18999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 18999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 19399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 18699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 19948.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 19378.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 19188.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 18999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 21848.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 21848.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 22298.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 21498.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 22941.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 22285.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 22067.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 21848.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-lenovo-tab-p12-128gb",
+    "name": "Lenovo Lenovo Tab P12",
+    "brand": "Lenovo",
+    "model": "Lenovo Tab P12",
+    "priceTry": 14999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tab-p12.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tab-p12.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/lenovo-legion-y700-2023.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tab-p12.jpg"
+    ],
+    "tier": "A",
+    "benchmarkScore": 580000,
+    "gamingIndex": 74,
+    "productivityIndex": 85,
+    "geekbench6Single": 960,
+    "geekbench6Multi": 2450,
+    "relativePerformanceIndex": 72.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 14999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 15399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 14699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 15748.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 15298.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 15148.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 14999.0
+      }
+    ],
+    "spec": {
+      "chipset": "MediaTek Dimensity 7050",
+      "cpuArch": "8 Çekirdek (2x2.6 GHz + 6x2.0 GHz)",
+      "gpuModel": "Mali-G68 MC4",
+      "processNodeNm": 6,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": true,
+      "antutuScore": 580000,
+      "geekbenchSingle": 960,
+      "geekbenchMulti": 2450,
+      "displaySizeInch": 12.7,
+      "displayTech": "3K LTPS LCD (4 Hoparlör JBL Dolby Atmos)",
+      "resolution": "1840 x 2944",
+      "ppi": 273,
+      "refreshRateHz": 60,
+      "peakBrightnessNit": 400,
+      "stylusSupport": "Lenovo Tab Pen Plus Kalem Kutuda",
+      "mainCameraMp": 8,
+      "frontCameraMp": 13,
+      "speakerCount": 4,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10200,
+      "wiredChargingWatt": 30,
+      "wirelessChargingWatt": null,
+      "weightGrams": 615,
+      "thicknessMm": 6.9,
+      "bodyMaterial": "İki Tonlu Metalik Gövde",
+      "osName": "Android 13 (Android 14 Güncellendi)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 14999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 14999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 15399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 14699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 15748.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 15298.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 15148.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 14999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 17248.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 17248.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 17698.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 16898.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 18111.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 17593.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 17421.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 17248.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-honor-magicpad-2-256gb",
+    "name": "Honor Honor MagicPad 2",
+    "brand": "Honor",
+    "model": "Honor MagicPad 2",
+    "priceTry": 22999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-magicpad-2.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/honor-magicpad-2.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/honor-magicpad-2.jpg"
+    ],
+    "tier": "S",
+    "benchmarkScore": 1540000,
+    "gamingIndex": 95,
+    "productivityIndex": 96,
+    "geekbench6Single": 1980,
+    "geekbench6Multi": 5280,
+    "relativePerformanceIndex": 94.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 22999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 23399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 22699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 24148.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 23458.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 23228.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 22999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 8s Gen 3",
+      "cpuArch": "8 Çekirdek (1x3.0 GHz + 4x2.8 GHz + 3x2.0 GHz)",
+      "gpuModel": "Adreno 735",
+      "processNodeNm": 4,
+      "ramGb": 12,
+      "storageGb": 256,
+      "storageType": "UFS 4.0",
+      "hasMicroSd": false,
+      "antutuScore": 1540000,
+      "geekbenchSingle": 1980,
+      "geekbenchMulti": 5280,
+      "displaySizeInch": 12.3,
+      "displayTech": "3K 144Hz IMAX Enhanced OLED (1600 Nit)",
+      "resolution": "1920 x 3000",
+      "ppi": 290,
+      "refreshRateHz": 144,
+      "peakBrightnessNit": 1600,
+      "stylusSupport": "Honor Magic-Pencil 3",
+      "mainCameraMp": 13,
+      "frontCameraMp": 9,
+      "speakerCount": 8,
+      "hasDolbyAtmos": true,
+      "batteryMah": 10050,
+      "wiredChargingWatt": 66,
+      "wirelessChargingWatt": null,
+      "weightGrams": 555,
+      "thicknessMm": 5.8,
+      "bodyMaterial": "Ultra İnce Metal Gövde (8 Hoparlör Uzamsal Ses)",
+      "osName": "Android 14 (MagicOS 8.0.1)",
+      "updateYears": 3,
+      "cellularOption": "Wi-Fi 6 Only",
+      "variants": [
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 12,
+          "priceTry": 22999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 22999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 23399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 22699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 24148.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 23458.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 23228.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 22999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "512gb",
+          "storageGb": 512,
+          "ramGb": 12,
+          "priceTry": 26448.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 26448.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 26898.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 26098.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 27771.29
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 26977.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 26713.34
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 26448.85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "tablet-honor-pad-9-128gb",
+    "name": "Honor Honor Pad 9",
+    "brand": "Honor",
+    "model": "Honor Pad 9",
+    "priceTry": 11999.0,
+    "imageUrl": "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
+    "images": [
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg"
+    ],
+    "tier": "B+",
+    "benchmarkScore": 510000,
+    "gamingIndex": 71,
+    "productivityIndex": 78,
+    "geekbench6Single": 940,
+    "geekbench6Multi": 2750,
+    "relativePerformanceIndex": 68.0,
+    "stores": [
+      {
+        "storeName": "Hepsiburada",
+        "priceTry": 11999.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Amazon TR",
+        "priceTry": 12399.0,
+        "url": "https://www.google.com"
+      },
+      {
+        "storeName": "Trendyol",
+        "priceTry": 11699.0,
+        "url": "https://www.google.com"
+      }
+    ],
+    "priceHistory": [
+      {
+        "date": "2024-07",
+        "priceTry": 12598.95
+      },
+      {
+        "date": "2024-08",
+        "priceTry": 12238.98
+      },
+      {
+        "date": "2024-09",
+        "priceTry": 12118.99
+      },
+      {
+        "date": "2024-10",
+        "priceTry": 11999.0
+      }
+    ],
+    "spec": {
+      "chipset": "Snapdragon 6 Gen 1",
+      "cpuArch": "8 Çekirdek (4x2.2 GHz + 4x1.8 GHz)",
+      "gpuModel": "Adreno 710",
+      "processNodeNm": 4,
+      "ramGb": 8,
+      "storageGb": 128,
+      "storageType": "UFS 2.2",
+      "hasMicroSd": false,
+      "antutuScore": 510000,
+      "geekbenchSingle": 940,
+      "geekbenchMulti": 2750,
+      "displaySizeInch": 12.1,
+      "displayTech": "2.5K 120Hz IPS LCD (8 Hoparlör Çevreleyen Ses)",
+      "resolution": "1600 x 2560",
+      "ppi": 249,
+      "refreshRateHz": 120,
+      "peakBrightnessNit": 500,
+      "stylusSupport": "Honor Magic-Pencil Destekli",
+      "mainCameraMp": 13,
+      "frontCameraMp": 8,
+      "speakerCount": 8,
+      "hasDolbyAtmos": true,
+      "batteryMah": 8300,
+      "wiredChargingWatt": 35,
+      "wirelessChargingWatt": null,
+      "weightGrams": 555,
+      "thicknessMm": 6.96,
+      "bodyMaterial": "Yekpare Alüminyum Gövde",
+      "osName": "Android 13 (MagicOS 7.2)",
+      "updateYears": 2,
+      "cellularOption": "Wi-Fi Only",
+      "variants": [
+        {
+          "variantKey": "128gb",
+          "storageGb": 128,
+          "ramGb": 8,
+          "priceTry": 11999.0,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 11999.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 12399.0,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 11699.0,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 12598.95
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 12238.98
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 12118.99
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 11999.0
+            }
+          ]
+        },
+        {
+          "variantKey": "256gb",
+          "storageGb": 256,
+          "ramGb": 8,
+          "priceTry": 13798.85,
+          "stores": [
+            {
+              "storeName": "Hepsiburada",
+              "priceTry": 13798.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Amazon TR",
+              "priceTry": 14248.85,
+              "url": "https://www.google.com"
+            },
+            {
+              "storeName": "Trendyol",
+              "priceTry": 13448.85,
+              "url": "https://www.google.com"
+            }
+          ],
+          "priceHistory": [
+            {
+              "date": "2024-07",
+              "priceTry": 14488.79
+            },
+            {
+              "date": "2024-08",
+              "priceTry": 14074.83
+            },
+            {
+              "date": "2024-09",
+              "priceTry": 13936.84
+            },
+            {
+              "date": "2024-10",
+              "priceTry": 13798.85
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

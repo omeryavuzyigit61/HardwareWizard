@@ -1,4 +1,4 @@
-package com.panda.myapplication.domain.repository
+﻿package com.panda.myapplication.domain.repository
 
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.HardwareCategory

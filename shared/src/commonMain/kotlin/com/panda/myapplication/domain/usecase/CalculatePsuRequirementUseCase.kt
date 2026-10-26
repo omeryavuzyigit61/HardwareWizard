@@ -63,6 +63,8 @@ class CalculatePsuRequirementUseCase(
         is com.panda.myapplication.domain.model.KeyboardSpec,
         is com.panda.myapplication.domain.model.HeadsetSpec,
         is com.panda.myapplication.domain.model.MonitorSpec,
+        is com.panda.myapplication.domain.model.PhoneSpec,
+        is com.panda.myapplication.domain.model.TabletSpec,
         -> 0
     }
 
@@ -73,6 +75,8 @@ class CalculatePsuRequirementUseCase(
         is com.panda.myapplication.domain.model.KeyboardSpec,
         is com.panda.myapplication.domain.model.HeadsetSpec,
         is com.panda.myapplication.domain.model.MonitorSpec,
+        is com.panda.myapplication.domain.model.PhoneSpec,
+        is com.panda.myapplication.domain.model.TabletSpec,
         -> 0
     }
 

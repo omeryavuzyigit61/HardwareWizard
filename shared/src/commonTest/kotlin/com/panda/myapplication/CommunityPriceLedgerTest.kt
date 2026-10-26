@@ -219,12 +219,12 @@ class CommunityPriceLedgerTest {
 
         // Verify enhanced precision fields
         assertNotNull(clearance.radiatorSupportSummary)
-        assertTrue(clearance.radiatorSupportSummary!!.contains("360mm"))
+        assertTrue(clearance.radiatorSupportSummary.contains("360mm"))
 
         assertNotNull(clearance.ramClearanceStatus)
-        assertTrue(clearance.ramClearanceStatus!!.contains("Sıvı Soğutma"))
+        assertTrue(clearance.ramClearanceStatus.contains("Sıvı Soğutma"))
 
         assertNotNull(clearance.fanCapacitySummary)
-        assertTrue(clearance.fanCapacitySummary!!.contains("Fansız"))
+        assertTrue(clearance.fanCapacitySummary.contains("Fansız"))
     }
 }

@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.components
+﻿package com.panda.myapplication.presentation.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement

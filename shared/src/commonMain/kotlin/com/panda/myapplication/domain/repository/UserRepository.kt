@@ -27,4 +27,6 @@ interface UserRepository {
     suspend fun logout()
 
     suspend fun updateProfile(profile: UserProfile): DomainResult<Unit>
+
+    suspend fun refreshCurrentUserStats()
 }

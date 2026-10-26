@@ -48,6 +48,17 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.AcUnit
+import androidx.compose.material.icons.rounded.Autorenew
+import androidx.compose.material.icons.rounded.BatteryChargingFull
+import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material.icons.automirrored.rounded.MenuBook
+import androidx.compose.material.icons.rounded.SportsEsports
+import androidx.compose.material.icons.rounded.Tune
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import com.panda.myapplication.presentation.util.LocalAppStrings
@@ -1118,6 +1129,16 @@ internal fun ToolTopBar(
     onNavigateBack: () -> Unit,
     onOpenDrawer: () -> Unit,
 ) {
+    val headerIconVector = when {
+        icon.contains("❄") -> Icons.Rounded.AcUnit
+        icon.contains("🔋") -> Icons.Rounded.BatteryChargingFull
+        icon.contains("🎯") -> Icons.Rounded.SportsEsports
+        icon.contains("📚") -> Icons.AutoMirrored.Rounded.MenuBook
+        icon.contains("🔄") -> Icons.Rounded.Autorenew
+        icon.contains("⚡") -> Icons.Rounded.Bolt
+        else -> Icons.Rounded.Tune
+    }
+
     Surface(
         color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
@@ -1142,13 +1163,17 @@ internal fun ToolTopBar(
                     color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
                 ) {
-                    Text(
-                        text = "☰",
-                        modifier = Modifier.padding(horizontal = 11.dp, vertical = 6.dp),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Black,
-                        color = NeonCyan,
-                    )
+                    Box(
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Menu,
+                            contentDescription = null,
+                            tint = NeonCyan,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
                 }
 
                 Column(modifier = Modifier.weight(1f)) {
@@ -1156,7 +1181,12 @@ internal fun ToolTopBar(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
-                        Text(text = icon, fontSize = 16.sp)
+                        Icon(
+                            imageVector = headerIconVector,
+                            contentDescription = null,
+                            tint = NeonCyan,
+                            modifier = Modifier.size(17.dp),
+                        )
                         Text(
                             text = title,
                             style = MaterialTheme.typography.titleMedium,
@@ -1182,13 +1212,24 @@ internal fun ToolTopBar(
                 color = MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
             ) {
-                Text(
-                    text = "${LocalAppStrings.current.closeButton} ✕",
+                Row(
                     modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-                    style = MaterialTheme.typography.labelSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface,
-                )
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        text = LocalAppStrings.current.closeButton,
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Icon(
+                        imageVector = Icons.Rounded.Close,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.size(13.dp),
+                    )
+                }
             }
         }
     }

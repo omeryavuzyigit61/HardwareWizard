@@ -41,7 +41,11 @@ enum class HardwareSortOption(val displayName: String) {
     MOTHERBOARD_RAM_SLOTS_DESC("RAM Slot Sayısı: En Çok"),
 
     // PSU
-    PSU_WATTAGE_DESC("Güç Kapasitesi: En Yüksek");
+    PSU_WATTAGE_DESC("Güç Kapasitesi: En Yüksek"),
+
+    // Mobil & Tablet
+    ANTUTU_SCORE_DESC("AnTuTu / Performans: En Yüksek"),
+    BATTERY_DESC("Batarya Kapasitesi: En Yüksek");
 
     fun localizedName(isTr: Boolean = true): String = if (isTr) displayName else when (this) {
         DEFAULT -> "Default"
@@ -63,6 +67,8 @@ enum class HardwareSortOption(val displayName: String) {
         MOTHERBOARD_M2_SLOTS_DESC -> "M.2 Slots: Most"
         MOTHERBOARD_RAM_SLOTS_DESC -> "RAM Slots: Most"
         PSU_WATTAGE_DESC -> "Wattage: Highest"
+        ANTUTU_SCORE_DESC -> "AnTuTu / Performance: Highest"
+        BATTERY_DESC -> "Battery Capacity: Highest"
     }
 
     companion object {
@@ -84,6 +90,8 @@ enum class HardwareSortOption(val displayName: String) {
                 HardwareCategory.KEYBOARD -> common
                 HardwareCategory.HEADSET -> common
                 HardwareCategory.MONITOR -> common
+                HardwareCategory.SMARTPHONE -> common + listOf(ANTUTU_SCORE_DESC, BATTERY_DESC)
+                HardwareCategory.TABLET -> common + listOf(ANTUTU_SCORE_DESC, BATTERY_DESC)
             }
         }
     }

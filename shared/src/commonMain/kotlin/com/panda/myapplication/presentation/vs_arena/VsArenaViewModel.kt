@@ -1,4 +1,4 @@
-package com.panda.myapplication.presentation.vs_arena
+﻿package com.panda.myapplication.presentation.vs_arena
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

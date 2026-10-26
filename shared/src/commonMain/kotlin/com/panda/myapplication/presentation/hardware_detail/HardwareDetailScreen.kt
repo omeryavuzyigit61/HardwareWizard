@@ -2,6 +2,9 @@ package com.panda.myapplication.presentation.hardware_detail
 
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
+import com.panda.myapplication.domain.model.DeviceVariant
+import androidx.compose.foundation.layout.widthIn
+
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -95,12 +98,14 @@ import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
+import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.StoreOffer
+import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.model.VerifiedLabBenchmarks
 import com.panda.myapplication.domain.model.VerifiedLabGameTest
 import com.panda.myapplication.domain.model.VerifiedLabTestEntry
@@ -131,6 +136,7 @@ fun HardwareDetailRoute(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier,
     onNavigateToVsArena: () -> Unit = {},
+    onNavigateToTuningVault: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
     viewModel: HardwareDetailViewModel = koinViewModel(),
 ) {
@@ -180,6 +186,11 @@ fun HardwareDetailRoute(
         onLogoutAdmin = viewModel::logoutAdmin,
         onRefreshCommunityDeals = viewModel::onRefreshCommunityDeals,
         onOpenAuthSheet = onOpenAuthSheet,
+        onNavigateToTuningVault = onNavigateToTuningVault,
+        onSubmitTuningProfile = viewModel::onSubmitTuningProfile,
+        onSubmitProTip = viewModel::onSubmitProTip,
+        onUpvoteTip = viewModel::onUpvoteProTip,
+        onCreatePriceDropAlert = viewModel::onCreatePriceDropAlert,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -201,8 +212,16 @@ fun HardwareDetailContent(
     onLogoutAdmin: () -> Unit = {},
     onRefreshCommunityDeals: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
+    onNavigateToTuningVault: () -> Unit = {},
+    onSubmitTuningProfile: (com.panda.myapplication.domain.model.TuningProfile) -> Unit = {},
+    onSubmitProTip: (String) -> Unit = {},
+    onUpvoteTip: (String) -> Unit = {},
+    onCreatePriceDropAlert: (Double) -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
 ) {
+    var showPriceDropAlertDialog by remember { mutableStateOf(false) }
+    var showAddProTipDialog by remember { mutableStateOf(false) }
+    var showTuningShareDialog by remember { mutableStateOf(false) }
     val coroutineScope = rememberCoroutineScope()
     var showPriceDialog by remember { mutableStateOf(false) }
     var showCommunitySubmitSheet by remember { mutableStateOf(false) }
@@ -211,6 +230,13 @@ fun HardwareDetailContent(
     val strings = LocalAppStrings.current
     val currency = LocalAppCurrency.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+
+    val rawItem = uiState.item
+    var selectedVariantKey by remember(rawItem?.id?.value) {
+        mutableStateOf(rawItem?.variants?.firstOrNull()?.variantKey)
+    }
+    val activeVariant = rawItem?.variants?.find { it.variantKey == selectedVariantKey } ?: rawItem?.variants?.firstOrNull()
+    val activeItem = if (activeVariant != null && rawItem != null) rawItem.withVariant(activeVariant) else rawItem
 
     Scaffold(
         modifier = modifier
@@ -221,20 +247,21 @@ fun HardwareDetailContent(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             DetailTopBar(
-                title = uiState.item?.brand ?: (if (isTr) "Donanım Detayı" else "Hardware Details"),
+                title = activeItem?.displayName ?: activeItem?.brand ?: (if (isTr) "Donanım Detayı" else "Hardware Details"),
                 onNavigateBack = onNavigateBack,
-                onAddToVsArenaClick = if (uiState.item != null) onAddToVsArenaClick else null,
+                onAddToVsArenaClick = if (activeItem != null) onAddToVsArenaClick else null,
             )
         },
         bottomBar = {
-            if (uiState.item != null) {
+            if (activeItem != null) {
                 DetailBottomBar(
                     isAddedToBuild = uiState.isAddedToBuild,
-                    isPrebuilt = uiState.item.spec is PrebuiltSpec,
-                    isLaptop = uiState.item.spec is LaptopSpec,
-                    isCustomPrice = uiState.item.isCustomPrice,
-                    customPriceNote = uiState.item.customPriceNote,
-                    priceText = uiState.item.currentPriceTry.formatPriceWithCurrency(currency, strings.noPriceFallback),
+                    isPrebuilt = activeItem.spec is PrebuiltSpec,
+                    isLaptop = activeItem.spec is LaptopSpec,
+                    isMobile = activeItem.category.isMobile,
+                    isCustomPrice = activeItem.isCustomPrice,
+                    customPriceNote = activeItem.customPriceNote,
+                    priceText = activeItem.currentPriceTry.formatPriceWithCurrency(currency, strings.noPriceFallback),
                     onAddToBuildClick = onAddToBuildClick,
                     onAddToVsArenaClick = onAddToVsArenaClick,
                     onPriceOverrideClick = { showPriceDialog = true },
@@ -292,7 +319,7 @@ fun HardwareDetailContent(
                     }
                 }
                 uiState.item != null -> {
-                    val item = uiState.item
+                    val item = activeItem ?: uiState.item
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(
@@ -309,6 +336,20 @@ fun HardwareDetailContent(
                                 item = item,
                                 onPriceOverrideClick = { showPriceDialog = true },
                             )
+                        }
+
+                        // Storage & RAM Variants Card (Smartphones & Tablets)
+                        if (rawItem.variants.isNotEmpty()) {
+                            item(key = "storage_ram_variants") {
+                                DeviceVariantSelectorCard(
+                                    variants = rawItem.variants,
+                                    selectedVariantKey = activeVariant?.variantKey.orEmpty(),
+                                    onVariantSelect = { selectedVariantKey = it.variantKey },
+                                    currency = currency,
+                                    noPriceFallback = strings.noPriceFallback,
+                                    isTr = isTr,
+                                )
+                            }
                         }
 
                         // Special OEM Hazır Sistem Card & Profit Analyzer
@@ -388,6 +429,46 @@ fun HardwareDetailContent(
                             )
                         }
 
+                        // Topluluk Mikro İpuçları (Pro-Tips)
+                        item(key = "community_pro_tips") {
+                            HardwareProTipsSection(
+                                tips = uiState.proTips,
+                                onAddTipClick = {
+                                    if (!uiState.isLoggedIn) {
+                                        coroutineScope.launch {
+                                            snackbarHostState.showSnackbar("İpucu paylaşmak için oturum açmalısınız.")
+                                        }
+                                        onOpenAuthSheet()
+                                    } else {
+                                        showAddProTipDialog = true
+                                    }
+                                },
+                                onUpvoteClick = onUpvoteTip,
+                            )
+                        }
+
+                        // Topluluk OC / UV Silikon Kasası (Yalnızca CPU & GPU)
+                        if (item.category == com.panda.myapplication.domain.model.HardwareCategory.CPU || item.category == com.panda.myapplication.domain.model.HardwareCategory.GPU) {
+                            item(key = "community_tuning_vault") {
+                                CommunityTuningVaultSection(
+                                    profiles = uiState.tuningProfiles,
+                                    onShareTuningClick = {
+                                        if (!uiState.isLoggedIn) {
+                                            coroutineScope.launch {
+                                                snackbarHostState.showSnackbar(
+                                                    if (isTr) "OC/UV ayarı paylaşmak için oturum açmalısınız." else "Please sign in to share OC/UV settings."
+                                                )
+                                            }
+                                            onOpenAuthSheet()
+                                        } else {
+                                            showTuningShareDialog = true
+                                        }
+                                    },
+                                    onOpenTuningVaultClick = onNavigateToTuningVault,
+                                )
+                            }
+                        }
+
                         // Synthetic Multi-Benchmark Card - STRICTLY CpuSpec & GpuSpec
                         if ((item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU) && item.benchmarkInfo != null) {
                             item(key = "synthetic_benchmark") {
@@ -398,10 +479,18 @@ fun HardwareDetailContent(
                             }
                         }
 
-                        // Performance & Power Progress Bars (CPU, GPU & Peripherals)
+                        // Mobile Benchmark & Stability Card (Smartphone & Tablet)
+                        if (item.category.isMobile) {
+                            item(key = "mobile_benchmark_card") {
+                                MobileBenchmarkCard(item = item)
+                            }
+                        }
+
+                        // Performance & Power Progress Bars (CPU, GPU, Peripherals & Mobile)
                         if (item.category == HardwareCategory.CPU ||
                             item.category == HardwareCategory.GPU ||
-                            item.category.isPeripheral
+                            item.category.isPeripheral ||
+                            item.category.isMobile
                         ) {
                             item(key = "perf_power_section") {
                                 PerformancePowerSection(item = item)
@@ -466,6 +555,45 @@ fun HardwareDetailContent(
         AdminLoginPinDialog(
             onDismiss = { showAdminLoginDialog = false },
             onLogin = onLoginAdmin,
+        )
+    }
+
+    if (showPriceDropAlertDialog) {
+        PriceDropAlertDialog(
+            hardwareName = activeItem?.displayName ?: "",
+            currentPriceTry = activeItem?.currentPriceTry,
+            onDismiss = { showPriceDropAlertDialog = false },
+            onSaveAlert = { targetPrice ->
+                onCreatePriceDropAlert(targetPrice)
+                showPriceDropAlertDialog = false
+            },
+        )
+    }
+
+    if (showAddProTipDialog) {
+        AddProTipDialog(
+            hardwareName = activeItem?.displayName ?: "",
+            onDismiss = { showAddProTipDialog = false },
+            onSubmit = { tipText ->
+                onSubmitProTip(tipText)
+                showAddProTipDialog = false
+            },
+        )
+    }
+
+    if (showTuningShareDialog) {
+        TuningShareDialog(
+            hardwareId = activeItem?.id?.value ?: "",
+            hardwareName = activeItem?.displayName ?: "",
+            hardwareCategory = activeItem?.category?.name ?: "CPU",
+            userId = uiState.currentUser?.id ?: "usr-guest",
+            userDisplayName = uiState.currentUser?.username ?: (if (isTr) "Kullanıcı" else "Member"),
+            userBadge = uiState.currentUser?.effectiveBadge ?: "Lehim Çırağı",
+            onDismiss = { showTuningShareDialog = false },
+            onSubmit = { profile ->
+                onSubmitTuningProfile(profile)
+                showTuningShareDialog = false
+            },
         )
     }
 }
@@ -1066,6 +1194,54 @@ private fun PerformancePowerSection(
                         subText = tr(isTr, "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği", "Text and image clarity on ${s.screenSizeInch}\" display"),
                     )
                 }
+
+                is PhoneSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "AnTuTu v10 Performansı", "AnTuTu v10 Performance"),
+                        currentValue = "${s.antutuScore?.let { formatPoints(it) } ?: "N/A"} Puan",
+                        fraction = ((s.antutuScore ?: 1500000) / 2500000f).coerceIn(0.1f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.chipset} (${s.cpuArch})",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Ekran & Akıcılık", "Display & Smoothness"),
+                        currentValue = "${s.peakBrightnessNit} Nit • ${s.refreshRateHz} Hz",
+                        fraction = (s.peakBrightnessNit / 3000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.displayTech} (${s.resolution})",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Batarya & Hızlı Şarj", "Battery & Charging"),
+                        currentValue = "${s.batteryMah} mAh (${s.wiredChargingWatt}W)",
+                        fraction = (s.batteryMah / 6000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = s.chargingTimeToFullMin?.let { tr(isTr, "%100 dolum süresi ~$it dk", "Full charge ~$it min") } ?: "${s.wiredChargingWatt}W Hızlı Şarj",
+                    )
+                }
+
+                is TabletSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Hesaplama & Çoklu Görev Gücü", "Computing & Multitasking Power"),
+                        currentValue = "${s.chipset}",
+                        fraction = ((s.antutuScore ?: 1800000) / 3000000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "AnTuTu: ${s.antutuScore?.let { formatPoints(it) } ?: "N/A"} Puan",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Görsel Üretim & Panel", "Display & Creative Workspace"),
+                        currentValue = "${s.displaySizeInch}\" ${s.displayTech} (${s.refreshRateHz} Hz)",
+                        fraction = (s.displaySizeInch.toFloat() / 15f).coerceIn(0.3f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.stylusSupport} Desteği",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Batarya Kapasitesi", "Battery Capacity"),
+                        currentValue = "${s.batteryMah} mAh",
+                        fraction = (s.batteryMah / 12000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "${s.thicknessMm} mm Gövde • ${s.weightGrams}g",
+                    )
+                }
             }
         }
     }
@@ -1095,12 +1271,18 @@ private fun MetricProgressBar(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
             )
+            Spacer(modifier = Modifier.width(Spacing.small))
             Text(
                 text = currentValue,
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.Bold,
                 color = accentColor,
+                maxLines = 1,
+                softWrap = false,
             )
         }
 
@@ -2087,6 +2269,50 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
             rows.add(tr(isTr, "Piksel Yoğunluğu (PPI)", "Pixel Density (PPI)") to "${s.ppi} PPI")
             rows.add(tr(isTr, "HDR Sertifikası", "HDR Certification") to s.hdrCertification.ifBlank { getUnspecifiedText(isTr) })
         }
+
+        is PhoneSpec -> {
+            rows.add(tr(isTr, "Yonga Seti (SoC)", "Chipset (SoC)") to "${s.chipset} (${s.processNodeNm}nm)")
+            if (s.cpuArch.isNotBlank()) rows.add(tr(isTr, "İşlemci Çekirdek Yapısı", "CPU Architecture") to s.cpuArch)
+            if (s.gpuModel.isNotBlank()) rows.add(tr(isTr, "Grafik İşlemci (GPU)", "GPU Model") to s.gpuModel)
+            rows.add(tr(isTr, "Bellek & Depolama", "RAM & Storage") to "${s.ramGb} GB ${s.ramType} • ${s.storageGb} GB ${s.storageType}")
+            s.antutuScore?.let { rows.add(tr(isTr, "AnTuTu v10 Skoru", "AnTuTu v10 Score") to "${formatPoints(it)} Puan") }
+            if (s.geekbenchSingle != null && s.geekbenchMulti != null) {
+                rows.add(tr(isTr, "Geekbench 6 (Tek/Çoklu)", "Geekbench 6 (Single/Multi)") to "${formatPoints(s.geekbenchSingle)} / ${formatPoints(s.geekbenchMulti)}")
+            }
+            s.stabilityPercent?.let { rows.add(tr(isTr, "3DMark Termal Kararlılık", "3DMark Thermal Stability") to "%$it Kararlı") }
+            rows.add(tr(isTr, "Ekran Boyutu & Panel", "Display & Panel") to "${s.displaySizeInch} inç ${s.displayTech}")
+            rows.add(tr(isTr, "Çözünürlük & Tazeleme", "Resolution & Refresh Rate") to "${s.resolution} (${s.ppi} PPI) • ${s.refreshRateHz} Hz")
+            rows.add(tr(isTr, "Tepe Parlaklık (Nit)", "Peak Brightness") to "${s.peakBrightnessNit} Nit (${s.glassProtection})")
+            val oisDesc = if (s.hasOis) " (${s.oisType})" else ""
+            rows.add(tr(isTr, "Ana Kamera", "Main Camera") to "${s.mainCameraMp} MP • ${s.mainSensorSize} • ${s.mainAperture}$oisDesc")
+            s.opticalZoomX?.let { rows.add(tr(isTr, "Telefoto / Optik Zoom", "Telephoto / Optical Zoom") to "${s.telephotoMp ?: 0} MP • ${it}x Optik Yakınlaştırma") }
+            s.ultraWideMp?.let { rows.add(tr(isTr, "Ultra Geniş Açı", "Ultra-Wide Camera") to "$it MP") }
+            rows.add(tr(isTr, "Video Kayıt Çözünürlüğü", "Video Recording") to s.videoResolution)
+            val wirelessText = s.wirelessChargingWatt?.let { " • ${it}W Kablosuz" } ?: ""
+            rows.add(tr(isTr, "Batarya & Hızlı Şarj", "Battery & Charging") to "${s.batteryMah} mAh • ${s.wiredChargingWatt}W Kablolu$wirelessText")
+            rows.add(tr(isTr, "Kasa & Suya Dayanıklılık", "Build & Ingress Protection") to "${s.frameMaterial} Çerçeve • ${s.waterResistance} (${s.weightGrams}g / ${s.thicknessMm}mm)")
+            rows.add(tr(isTr, "İşletim Sistemi & Destek", "OS & Support") to "${s.osName} (${s.updateYears} Yıl Güncelleme Garantisi)")
+            rows.add(tr(isTr, "Oyun Yetenek Desteği", "Official Game Support") to "${s.pubgFpsSupport} Destekli")
+        }
+
+        is TabletSpec -> {
+            rows.add(tr(isTr, "Yonga Seti (SoC) & Mimari", "Chipset & Architecture") to "${s.chipset} (${s.processNodeNm}nm)")
+            if (s.cpuArch.isNotBlank()) rows.add(tr(isTr, "Çekirdek Dağılımı", "CPU Configuration") to s.cpuArch)
+            if (s.gpuModel.isNotBlank()) rows.add(tr(isTr, "Grafik İşlemci (GPU)", "GPU Model") to s.gpuModel)
+            rows.add(tr(isTr, "Bellek & Depolama", "RAM & Storage") to "${s.ramGb} GB RAM • ${s.storageGb} GB ${s.storageType}")
+            s.antutuScore?.let { rows.add(tr(isTr, "AnTuTu v10 Skoru", "AnTuTu v10 Score") to "${formatPoints(it)} Puan") }
+            if (s.geekbenchSingle != null && s.geekbenchMulti != null) {
+                rows.add(tr(isTr, "Geekbench 6 (Tek/Çoklu)", "Geekbench 6 (Single/Multi)") to "${formatPoints(s.geekbenchSingle)} / ${formatPoints(s.geekbenchMulti)}")
+            }
+            rows.add(tr(isTr, "Ekran & Panel Teknolojisi", "Display & Panel Tech") to "${s.displaySizeInch} inç ${s.displayTech} • ${s.refreshRateHz} Hz")
+            rows.add(tr(isTr, "Çözünürlük & Tepe Parlaklık", "Resolution & Brightness") to "${s.resolution} (${s.ppi} PPI) • ${s.peakBrightnessNit} Nit")
+            rows.add(tr(isTr, "Stylus Kalem Desteği", "Stylus Support") to s.stylusSupport)
+            rows.add(tr(isTr, "Ses Sistemi & Akustik", "Audio System") to "${s.speakerCount} Hoparlör${if (s.hasDolbyAtmos) " Dolby Atmos Desteği" else ""}")
+            rows.add(tr(isTr, "Batarya & Hızlı Şarj", "Battery & Charging") to "${s.batteryMah} mAh • ${s.wiredChargingWatt}W")
+            rows.add(tr(isTr, "Tasarım & Boyutlar", "Dimensions & Weight") to "${s.bodyMaterial} • ${s.thicknessMm} mm • ${s.weightGrams}g")
+            rows.add(tr(isTr, "İşletim Sistemi", "Operating System") to "${s.osName} (${s.updateYears} Yıl Güncelleme)")
+            rows.add(tr(isTr, "Hücresel Bağlantı", "Cellular Connectivity") to s.cellularOption)
+        }
     }
     return rows
 }
@@ -2101,6 +2327,7 @@ private fun DetailBottomBar(
     onPriceOverrideClick: () -> Unit = {},
     isPrebuilt: Boolean = false,
     isLaptop: Boolean = false,
+    isMobile: Boolean = false,
     isCustomPrice: Boolean = false,
     customPriceNote: String? = null,
 ) {
@@ -2181,7 +2408,7 @@ private fun DetailBottomBar(
                     )
                 }
 
-                if (!isLaptop) {
+                if (!isLaptop && !isMobile) {
                     val buttonContainerColor by animateColorAsState(
                         targetValue = if (isAddedToBuild) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
                     )
@@ -3148,6 +3375,8 @@ fun DetailPlaceholderHero(
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.SMARTPHONE -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.TABLET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
     }
     Column(
         modifier = modifier
@@ -3175,3 +3404,122 @@ fun DetailPlaceholderHero(
 
 
 
+
+
+@Composable
+private fun DeviceVariantSelectorCard(
+    variants: List<DeviceVariant>,
+    selectedVariantKey: String,
+    onVariantSelect: (DeviceVariant) -> Unit,
+    currency: com.panda.myapplication.domain.model.AppCurrency,
+    noPriceFallback: String,
+    isTr: Boolean,
+    modifier: Modifier = Modifier,
+) {
+    FluidOrganicCard(
+        modifier = modifier.fillMaxWidth(),
+        accentColor = ElectricBlue,
+        secondaryColor = NeonCyan,
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        contentPadding = Spacing.medium,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Column {
+                    Text(
+                        text = if (isTr) "Dahili Hafıza & RAM Seçenekleri" else "Storage & RAM Options",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Text(
+                        text = if (isTr) "Donanım konfigürasyonunu seçin" else "Select a hardware configuration",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                DetailBadge(
+                    text = if (isTr) "${variants.size} Seçenek" else "${variants.size} Variants",
+                    containerColor = MaterialTheme.colorScheme.primaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                )
+            }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                variants.forEach { variant ->
+                    val isSelected = variant.variantKey == selectedVariantKey
+                    val borderColor = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                    val containerColor = if (isSelected) {
+                        MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)
+                    } else {
+                        MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
+                    }
+
+                    Surface(
+                        onClick = { onVariantSelect(variant) },
+                        shape = RoundedCornerShape(12.dp),
+                        color = containerColor,
+                        border = BorderStroke(
+                            width = if (isSelected) 2.dp else 1.dp,
+                            color = borderColor,
+                        ),
+                        modifier = Modifier.widthIn(min = 135.dp),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                            verticalArrangement = Arrangement.spacedBy(3.dp),
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    text = variant.displayStorage,
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+                                )
+                                if (isSelected) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(8.dp)
+                                            .clip(CircleShape)
+                                            .background(MaterialTheme.colorScheme.primary),
+                                    )
+                                }
+                            }
+
+                            Text(
+                                text = variant.displayRam,
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+
+                            Spacer(modifier = Modifier.height(4.dp))
+
+                            Text(
+                                text = variant.priceTry.formatPriceWithCurrency(currency, noPriceFallback),
+                                style = MaterialTheme.typography.labelLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

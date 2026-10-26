@@ -16,6 +16,7 @@ import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
@@ -23,6 +24,7 @@ import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.ResolutionFps
 import com.panda.myapplication.domain.model.StorageInterface
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.repository.VsArenaMode
 import com.panda.myapplication.domain.util.SecurityUtils
 import com.panda.myapplication.presentation.util.formatPrice
@@ -162,6 +164,10 @@ object VsArenaEngine {
                     addAll(compareHeadsets(left.spec, right.spec))
                 left.spec is MonitorSpec && right.spec is MonitorSpec ->
                     addAll(compareMonitors(left.spec, right.spec))
+                left.spec is PhoneSpec && right.spec is PhoneSpec ->
+                    addAll(compareSmartphones(left.spec, right.spec))
+                left.spec is TabletSpec && right.spec is TabletSpec ->
+                    addAll(compareTablets(left.spec, right.spec))
             }
         }
 
@@ -218,6 +224,8 @@ object VsArenaEngine {
             HardwareCategory.KEYBOARD -> "Switch & Rapid Trigger Endeksi"
             HardwareCategory.HEADSET -> "Akustik Sürücü & Sahne Endeksi"
             HardwareCategory.MONITOR -> "Panel Hızı & Görüntü Endeksi"
+            HardwareCategory.SMARTPHONE -> "Mobil Sentetik & Donanım Endeksi"
+            HardwareCategory.TABLET -> "Tablet Üretkenlik & Multimedya Endeksi"
         }
 
         return VsChampionSummary(
@@ -1188,6 +1196,14 @@ object VsArenaEngine {
                 val ppiBonus = (s.ppi - 80).coerceAtLeast(0) * 0.35
                 itemBench ?: (35.0 + hzScore + oledBonus + ppiBonus).coerceIn(45.0, 105.0)
             }
+            is PhoneSpec -> {
+                val antutu = s.antutuScore?.toDouble() ?: 1500000.0
+                (antutu / 25000.0).coerceIn(30.0, 115.0)
+            }
+            is TabletSpec -> {
+                val antutu = s.antutuScore?.toDouble() ?: 1800000.0
+                (antutu / 25000.0).coerceIn(30.0, 120.0)
+            }
         }
     }
 
@@ -1357,6 +1373,308 @@ object VsArenaEngine {
             )
         )
         add(VsComparisonRow("HDR & Parlaklık Sertifikası", l.hdrCertification, r.hdrCertification))
+    }
+
+    private fun compareSmartphones(l: PhoneSpec, r: PhoneSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", "${l.chipset} (${l.processNodeNm}nm)", "${r.chipset} (${r.processNodeNm}nm)", isKeyMetric = true))
+        
+        if (l.antutuScore != null || r.antutuScore != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "AnTuTu v10 Benchmark Skoru",
+                    leftVal = l.antutuScore?.toDouble(),
+                    rightVal = r.antutuScore?.toDouble(),
+                    leftText = l.antutuScore?.let { "${it} Puan" } ?: UNSPECIFIED,
+                    rightText = r.antutuScore?.let { "${it} Puan" } ?: UNSPECIFIED,
+                    badgeSuffix = "Daha Yüksek AnTuTu",
+                    isKey = true,
+                )
+            )
+        }
+
+        if (l.geekbenchSingle != null || r.geekbenchSingle != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "Geekbench 6 (Tek Çekirdek)",
+                    leftVal = l.geekbenchSingle?.toDouble(),
+                    rightVal = r.geekbenchSingle?.toDouble(),
+                    leftText = l.geekbenchSingle?.let { "$it pts" } ?: UNSPECIFIED,
+                    rightText = r.geekbenchSingle?.let { "$it pts" } ?: UNSPECIFIED,
+                    badgeSuffix = "Tek Çekirdek",
+                )
+            )
+        }
+
+        if (l.geekbenchMulti != null || r.geekbenchMulti != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "Geekbench 6 (Çoklu Çekirdek)",
+                    leftVal = l.geekbenchMulti?.toDouble(),
+                    rightVal = r.geekbenchMulti?.toDouble(),
+                    leftText = l.geekbenchMulti?.let { "$it pts" } ?: UNSPECIFIED,
+                    rightText = r.geekbenchMulti?.let { "$it pts" } ?: UNSPECIFIED,
+                    badgeSuffix = "Çoklu Çekirdek",
+                    isKey = true,
+                )
+            )
+        }
+
+        if (l.stabilityPercent != null || r.stabilityPercent != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "3DMark Termal Kararlılık",
+                    leftVal = l.stabilityPercent?.toDouble(),
+                    rightVal = r.stabilityPercent?.toDouble(),
+                    leftText = l.stabilityPercent?.let { "%$it Kararlı" } ?: UNSPECIFIED,
+                    rightText = r.stabilityPercent?.let { "%$it Kararlı" } ?: UNSPECIFIED,
+                    badgeSuffix = "Daha Kararlı Termal",
+                    isKey = true,
+                )
+            )
+        }
+
+        add(
+            compareHigherBetter(
+                label = "Bellek (RAM) Kapasitesi",
+                leftVal = l.ramGb.toDouble(),
+                rightVal = r.ramGb.toDouble(),
+                leftText = "${l.ramGb} GB (${l.ramType})",
+                rightText = "${r.ramGb} GB (${r.ramType})",
+                badgeSuffix = "Daha Fazla Bellek",
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Dahili Depolama Alanı",
+                leftVal = l.storageGb.toDouble(),
+                rightVal = r.storageGb.toDouble(),
+                leftText = "${l.storageGb} GB (${l.storageType})",
+                rightText = "${r.storageGb} GB (${r.storageType})",
+                badgeSuffix = "Daha Geniş Hafıza",
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Ekran Yenileme Hızı (Akıcılık)",
+                leftVal = l.refreshRateHz.toDouble(),
+                rightVal = r.refreshRateHz.toDouble(),
+                leftText = "${l.refreshRateHz} Hz",
+                rightText = "${r.refreshRateHz} Hz",
+                badgeSuffix = "Daha Akıcı Panel",
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Tepe Parlaklık (Güneş Altı Netlik)",
+                leftVal = l.peakBrightnessNit.toDouble(),
+                rightVal = r.peakBrightnessNit.toDouble(),
+                leftText = "${l.peakBrightnessNit} Nit",
+                rightText = "${r.peakBrightnessNit} Nit",
+                badgeSuffix = "Daha Parlak Ekran",
+                isKey = true,
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Piksel Yoğunluğu (Keskinlik)",
+                leftVal = l.ppi.toDouble(),
+                rightVal = r.ppi.toDouble(),
+                leftText = "${l.ppi} PPI (${l.resolution})",
+                rightText = "${r.ppi} PPI (${r.resolution})",
+                badgeSuffix = "Daha Keskin Görüntü",
+            )
+        )
+
+        add(VsComparisonRow("Ekran Boyutu & Koruma", "${l.displaySizeInch}\" ${l.displayTech} (${l.glassProtection})", "${r.displaySizeInch}\" ${r.displayTech} (${r.glassProtection})"))
+        
+        val lOis = if (l.hasOis) " (${l.oisType})" else ""
+        val rOis = if (r.hasOis) " (${r.oisType})" else ""
+        add(VsComparisonRow("Ana Kamera Sensörü", "${l.mainCameraMp} MP • ${l.mainSensorSize}$lOis", "${r.mainCameraMp} MP • ${r.mainSensorSize}$rOis", isKeyMetric = true))
+
+        if (l.opticalZoomX != null || r.opticalZoomX != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "Optik Yakınlaştırma (Telefoto)",
+                    leftVal = l.opticalZoomX,
+                    rightVal = r.opticalZoomX,
+                    leftText = l.opticalZoomX?.let { "${it}x Optik Zoom" } ?: "Optik Zoom Yok",
+                    rightText = r.opticalZoomX?.let { "${it}x Optik Zoom" } ?: "Optik Zoom Yok",
+                    badgeSuffix = "Daha Fazla Yakınlaştırma",
+                    isKey = true,
+                )
+            )
+        }
+
+        add(
+            compareHigherBetter(
+                label = "Batarya Kapasitesi",
+                leftVal = l.batteryMah.toDouble(),
+                rightVal = r.batteryMah.toDouble(),
+                leftText = "${l.batteryMah} mAh",
+                rightText = "${r.batteryMah} mAh",
+                badgeSuffix = "Daha Büyük Pil",
+                isKey = true,
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Kablolu Hızlı Şarj Gücü",
+                leftVal = l.wiredChargingWatt.toDouble(),
+                rightVal = r.wiredChargingWatt.toDouble(),
+                leftText = "${l.wiredChargingWatt} W",
+                rightText = "${r.wiredChargingWatt} W",
+                badgeSuffix = "Daha Hızlı Dolum",
+            )
+        )
+
+        add(
+            compareLowerBetter(
+                label = "Cihaz Gövde Ağırlığı",
+                leftVal = l.weightGrams.toDouble(),
+                rightVal = r.weightGrams.toDouble(),
+                leftText = "${l.weightGrams} g (${l.thicknessMm} mm)",
+                rightText = "${r.weightGrams} g (${r.thicknessMm} mm)",
+                badgeSuffix = "Daha Hafif",
+            )
+        )
+
+        add(VsComparisonRow("Kasa Malzemesi & Suya Dayanıklılık", "${l.frameMaterial} • ${l.waterResistance}", "${r.frameMaterial} • ${r.waterResistance}"))
+        
+        add(
+            compareHigherBetter(
+                label = "Yazılım Güncelleme Garantisi",
+                leftVal = l.updateYears.toDouble(),
+                rightVal = r.updateYears.toDouble(),
+                leftText = "${l.osName} (${l.updateYears} Yıl)",
+                rightText = "${r.osName} (${r.updateYears} Yıl)",
+                badgeSuffix = "Daha Uzun Destek",
+            )
+        )
+
+        add(VsComparisonRow("Oyun Tavan Desteği", l.pubgFpsSupport, r.pubgFpsSupport))
+    }
+
+    private fun compareTablets(l: TabletSpec, r: TabletSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", "${l.chipset} (${l.processNodeNm}nm)", "${r.chipset} (${r.processNodeNm}nm)", isKeyMetric = true))
+
+        if (l.antutuScore != null || r.antutuScore != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "AnTuTu v10 Skoru",
+                    leftVal = l.antutuScore?.toDouble(),
+                    rightVal = r.antutuScore?.toDouble(),
+                    leftText = l.antutuScore?.let { "${it} Puan" } ?: UNSPECIFIED,
+                    rightText = r.antutuScore?.let { "${it} Puan" } ?: UNSPECIFIED,
+                    badgeSuffix = "Daha Yüksek AnTuTu",
+                    isKey = true,
+                )
+            )
+        }
+
+        if (l.geekbenchSingle != null || r.geekbenchSingle != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "Geekbench 6 (Tek Çekirdek)",
+                    leftVal = l.geekbenchSingle?.toDouble(),
+                    rightVal = r.geekbenchSingle?.toDouble(),
+                    leftText = l.geekbenchSingle?.let { "$it pts" } ?: UNSPECIFIED,
+                    rightText = r.geekbenchSingle?.let { "$it pts" } ?: UNSPECIFIED,
+                    badgeSuffix = "Tek Çekirdek",
+                )
+            )
+        }
+
+        if (l.geekbenchMulti != null || r.geekbenchMulti != null) {
+            add(
+                compareHigherBetterNullable(
+                    label = "Geekbench 6 (Çoklu Çekirdek)",
+                    leftVal = l.geekbenchMulti?.toDouble(),
+                    rightVal = r.geekbenchMulti?.toDouble(),
+                    leftText = l.geekbenchMulti?.let { "$it pts" } ?: UNSPECIFIED,
+                    rightText = r.geekbenchMulti?.let { "$it pts" } ?: UNSPECIFIED,
+                    badgeSuffix = "Çoklu Çekirdek",
+                    isKey = true,
+                )
+            )
+        }
+
+        add(
+            compareHigherBetter(
+                label = "Ekran Boyutu & Çalışma Alanı",
+                leftVal = l.displaySizeInch,
+                rightVal = r.displaySizeInch,
+                leftText = "${l.displaySizeInch}\" ${l.displayTech}",
+                rightText = "${r.displaySizeInch}\" ${r.displayTech}",
+                badgeSuffix = "Daha Geniş Ekran",
+                isKey = true,
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Ekran Yenileme Hızı",
+                leftVal = l.refreshRateHz.toDouble(),
+                rightVal = r.refreshRateHz.toDouble(),
+                leftText = "${l.refreshRateHz} Hz",
+                rightText = "${r.refreshRateHz} Hz",
+                badgeSuffix = "Daha Akıcı",
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Tepe Parlaklık (Nit)",
+                leftVal = l.peakBrightnessNit.toDouble(),
+                rightVal = r.peakBrightnessNit.toDouble(),
+                leftText = "${l.peakBrightnessNit} Nit",
+                rightText = "${r.peakBrightnessNit} Nit",
+                badgeSuffix = "Daha Parlak",
+            )
+        )
+
+        add(VsComparisonRow("Stylus Kalem Standardı", l.stylusSupport, r.stylusSupport, isKeyMetric = true))
+
+        add(
+            compareHigherBetter(
+                label = "Hoparlör & Akustik Ses",
+                leftVal = l.speakerCount.toDouble(),
+                rightVal = r.speakerCount.toDouble(),
+                leftText = "${l.speakerCount} Hoparlör${if (l.hasDolbyAtmos) " Dolby Atmos" else ""}",
+                rightText = "${r.speakerCount} Hoparlör${if (r.hasDolbyAtmos) " Dolby Atmos" else ""}",
+                badgeSuffix = "Daha Güçlü Ses",
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Batarya Kapasitesi",
+                leftVal = l.batteryMah.toDouble(),
+                rightVal = r.batteryMah.toDouble(),
+                leftText = "${l.batteryMah} mAh",
+                rightText = "${r.batteryMah} mAh",
+                badgeSuffix = "Daha Büyük Batarya",
+                isKey = true,
+            )
+        )
+
+        add(
+            compareLowerBetter(
+                label = "Kasa İnceliği",
+                leftVal = l.thicknessMm,
+                rightVal = r.thicknessMm,
+                leftText = "${l.thicknessMm} mm (${l.weightGrams}g)",
+                rightText = "${r.thicknessMm} mm (${r.weightGrams}g)",
+                badgeSuffix = "Daha İnce Gövde",
+            )
+        )
+
+        add(VsComparisonRow("İşletim Sistemi & Verimlilik", "${l.osName} (${l.updateYears} Yıl)", "${r.osName} (${r.updateYears} Yıl)"))
+        add(VsComparisonRow("Bağlantı & Hücresel", l.cellularOption, r.cellularOption))
     }
 
     private fun psuEfficiencyRank(rating: PsuEfficiencyRating): Int = when (rating) {

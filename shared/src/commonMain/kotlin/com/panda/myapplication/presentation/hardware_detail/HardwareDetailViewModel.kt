@@ -8,11 +8,18 @@ import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.HardwareId
+import com.panda.myapplication.domain.model.HardwareProTip
+import com.panda.myapplication.domain.model.PriceDropAlert
+import com.panda.myapplication.domain.model.TuningComment
+import com.panda.myapplication.domain.model.TuningProfile
+import com.panda.myapplication.domain.model.TuningReactionType
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
+import com.panda.myapplication.domain.repository.TuningVaultRepository
 import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareDetailUseCase
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -34,6 +41,7 @@ class HardwareDetailViewModel(
     private val vsArenaRepository: VsArenaRepository,
     private val communityPriceRepository: CommunityPriceRepository,
     private val userRepository: UserRepository,
+    private val tuningVaultRepository: TuningVaultRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HardwareDetailUiState())
@@ -41,6 +49,8 @@ class HardwareDetailViewModel(
 
     private val effectChannel = Channel<HardwareDetailEffect>(Channel.BUFFERED)
     val effects = effectChannel.receiveAsFlow()
+
+    private val tuningCommentsJobs = mutableMapOf<String, Job>()
 
     init {
         viewModelScope.launch {
@@ -103,6 +113,31 @@ class HardwareDetailViewModel(
             }
         }
 
+        // Topluluk OC/UV Ayarlarını Dinle
+        viewModelScope.launch {
+            tuningVaultRepository.observeTuningsForHardware(id).collect { tunings ->
+                _uiState.update { it.copy(tuningProfiles = tunings) }
+                tunings.forEach { profile ->
+                    if (!tuningCommentsJobs.containsKey(profile.id)) {
+                        tuningCommentsJobs[profile.id] = viewModelScope.launch {
+                            tuningVaultRepository.observeComments(profile.id).collect { comments ->
+                                _uiState.update { state ->
+                                    state.copy(tuningComments = state.tuningComments + (profile.id to comments))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Topluluk Mikro İpuçlarını Dinle
+        viewModelScope.launch {
+            tuningVaultRepository.observeTipsForHardware(id).collect { tips ->
+                _uiState.update { it.copy(proTips = tips) }
+            }
+        }
+
         // Canlı Arka Plan Senkronizasyonu: Desktop Admin veya Supabase'deki onayları anında yakala
         viewModelScope.launch {
             communityPriceRepository.refreshDeals()
@@ -110,6 +145,136 @@ class HardwareDetailViewModel(
                 delay(5000)
                 communityPriceRepository.refreshDeals()
             }
+        }
+    }
+
+    fun onSubmitTuningProfile(profile: TuningProfile) {
+        viewModelScope.launch {
+            when (tuningVaultRepository.submitTuningProfile(profile)) {
+                is DomainResult.Success -> {
+                    effectChannel.send(
+                        HardwareDetailEffect.ShowToast(
+                            "⚡ OC/UV ayarınız başarıyla onaya gönderildi! Yönetici onayından sonra yayınlanacaktır.",
+                            "⚡ Your OC/UV tuning profile was sent for review!"
+                        )
+                    )
+                }
+                is DomainResult.Failure -> {
+                    effectChannel.send(HardwareDetailEffect.ShowToast("Ayar gönderilemedi."))
+                }
+            }
+        }
+    }
+
+    fun onToggleReaction(tuningId: String, reactionType: TuningReactionType) {
+        val user = _uiState.value.currentUser
+        val userId = user?.id ?: "guest_${(1000..9999).random()}"
+        val tuning = _uiState.value.tuningProfiles.find { it.id == tuningId }
+        if (tuning != null && (tuning.userId == userId || tuning.userDisplayName == user?.username)) {
+            viewModelScope.launch {
+                effectChannel.send(
+                    HardwareDetailEffect.ShowToast(
+                        "⚠️ Kendi paylaştığınız ayara tepki veremezsiniz.",
+                        "⚠️ You cannot react to your own profile."
+                    )
+                )
+            }
+            return
+        }
+        viewModelScope.launch {
+            tuningVaultRepository.toggleReaction(tuningId, reactionType, userId)
+        }
+    }
+
+    fun onAddTuningComment(tuningId: String, text: String) {
+        if (text.isBlank()) return
+        val user = _uiState.value.currentUser
+        val comment = TuningComment(
+            id = "comment-${System.currentTimeMillis()}-${(100..999).random()}",
+            tuningId = tuningId,
+            userId = user?.id ?: "usr-guest",
+            userDisplayName = user?.username ?: "DonanımSever",
+            userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
+            userReputation = user?.reputationScore ?: 10,
+            commentText = text.trim(),
+            createdAtEpochMs = System.currentTimeMillis(),
+        )
+        viewModelScope.launch {
+            when (tuningVaultRepository.addComment(comment)) {
+                is DomainResult.Success -> {
+                    effectChannel.send(
+                        HardwareDetailEffect.ShowToast(
+                            "💬 Yorumunuz başarıyla paylaşıldı (+2 itibar puanı)!",
+                            "💬 Comment posted (+2 reputation)!"
+                        )
+                    )
+                }
+                is DomainResult.Failure -> {
+                    effectChannel.send(HardwareDetailEffect.ShowToast("Yorum gönderilemedi."))
+                }
+            }
+        }
+    }
+
+    fun onSubmitProTip(tipText: String) {
+        val user = _uiState.value.currentUser
+        val item = _uiState.value.item ?: return
+        val tip = HardwareProTip(
+            id = "tip-${System.currentTimeMillis()}-${(100..999).random()}",
+            hardwareId = item.id.value,
+            hardwareName = item.displayName,
+            userId = user?.id ?: "usr-guest",
+            userDisplayName = user?.username ?: "DonanımSever",
+            userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
+            tipText = tipText,
+            createdAtEpochMs = System.currentTimeMillis(),
+        )
+        viewModelScope.launch {
+            tuningVaultRepository.submitTip(tip)
+            effectChannel.send(HardwareDetailEffect.ShowToast("💡 Mikro ipucunuz paylaşıldı!", "💡 Your pro tip has been shared!"))
+        }
+    }
+
+    fun onUpvoteProTip(tipId: String) {
+        val user = _uiState.value.currentUser
+        val userId = user?.id ?: "guest"
+        val tip = _uiState.value.proTips.find { it.id == tipId }
+        if (tip != null && (tip.userId == userId || tip.userDisplayName == user?.username)) {
+            viewModelScope.launch {
+                effectChannel.send(
+                    HardwareDetailEffect.ShowToast(
+                        "⚠️ Kendi paylaştığınız mikro ipucuna oy veremezsiniz.",
+                        "⚠️ You cannot vote on your own tip."
+                    )
+                )
+            }
+            return
+        }
+        viewModelScope.launch {
+            tuningVaultRepository.upvoteTip(tipId, userId)
+        }
+    }
+
+    fun onCreatePriceDropAlert(targetPriceTry: Double) {
+        val user = _uiState.value.currentUser
+        val item = _uiState.value.item ?: return
+        val alert = PriceDropAlert(
+            id = "alert-${System.currentTimeMillis()}-${(100..999).random()}",
+            userId = user?.id ?: "usr-guest",
+            hardwareId = item.id.value,
+            hardwareName = item.displayName,
+            targetPriceTry = targetPriceTry,
+            onlyRetailCampaign = true,
+            createdAtEpochMs = System.currentTimeMillis(),
+        )
+        viewModelScope.launch {
+            tuningVaultRepository.createPriceAlert(alert)
+            effectChannel.send(
+                HardwareDetailEffect.ShowToast(
+                    "🔔 ${targetPriceTry.toInt()} ₺ için sıfır/perakende fiyat alarmı kuruldu!",
+                    "🔔 Price drop alert set for retail campaigns at ${targetPriceTry.toInt()} ₺!"
+                )
+            )
         }
     }
 

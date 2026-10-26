@@ -2,6 +2,8 @@ package com.panda.myapplication.presentation.tools
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import com.panda.myapplication.presentation.theme.NeonPurple
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -76,8 +78,13 @@ fun AdminModerationScreen(
     onNavigateBack: () -> Unit,
     onOpenDrawer: () -> Unit,
     repository: CommunityPriceRepository = koinInject(),
+    tuningVaultRepository: com.panda.myapplication.domain.repository.TuningVaultRepository = koinInject(),
     modifier: Modifier = Modifier,
 ) {
+    val pendingTunings by tuningVaultRepository.observePendingTunings().collectAsState(initial = emptyList())
+    var selectedModerationTab by remember { mutableStateOf(0) } // 0: Deals, 1: Tuning
+    var tuningRejectDialogProfileId by remember { mutableStateOf<String?>(null) }
+    var tuningRejectReasonText by remember { mutableStateOf("") }
     val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val isAdminLoggedIn by repository.isAdminLoggedIn.collectAsState()
@@ -204,6 +211,209 @@ fun AdminModerationScreen(
 
                 Spacer(modifier = Modifier.height(Spacing.small))
 
+                // Main Moderation Tab Switcher
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (selectedModerationTab == 0) NeonCyan.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (selectedModerationTab == 0) NeonCyan else MaterialTheme.colorScheme.outlineVariant),
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(10.dp))
+                            .clickable { selectedModerationTab = 0 }
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(vertical = 10.dp),
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(
+                                text = "🏷️ Fiyat Fırsatları ($pendingCount)",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (selectedModerationTab == 0) FontWeight.Bold else FontWeight.Normal,
+                                color = if (selectedModerationTab == 0) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (selectedModerationTab == 1) NeonPurple.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (selectedModerationTab == 1) NeonPurple else MaterialTheme.colorScheme.outlineVariant),
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(10.dp))
+                            .clickable { selectedModerationTab = 1 }
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(vertical = 10.dp),
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(
+                                text = "⚡ OC/UV Ayarları (${pendingTunings.size})",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (selectedModerationTab == 1) FontWeight.Bold else FontWeight.Normal,
+                                color = if (selectedModerationTab == 1) NeonPurple else MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(Spacing.small))
+
+                if (selectedModerationTab == 1) {
+                    // Tuning Moderation List
+                    if (pendingTunings.isEmpty()) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .weight(1f),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text("⚡", fontSize = 36.sp)
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text(
+                                    text = "Onay bekleyen OC / UV ayarı bulunmuyor.",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        }
+                    } else {
+                        LazyColumn(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(10.dp),
+                            contentPadding = PaddingValues(vertical = 8.dp),
+                        ) {
+                            items(pendingTunings, key = { it.id }) { tuning ->
+                                Surface(
+                                    shape = RoundedCornerShape(12.dp),
+                                    color = MaterialTheme.colorScheme.surfaceVariant,
+                                    border = BorderStroke(1.dp, NeonPurple.copy(alpha = 0.4f)),
+                                    modifier = Modifier.fillMaxWidth(),
+                                ) {
+                                    Column(modifier = Modifier.padding(12.dp)) {
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween,
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Column {
+                                                Text(
+                                                    text = tuning.hardwareName,
+                                                    style = MaterialTheme.typography.titleSmall,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = MaterialTheme.colorScheme.onSurface,
+                                                )
+                                                Text(
+                                                    text = "${tuning.profileTitle} (${tuning.tuningType.name})",
+                                                    style = MaterialTheme.typography.bodySmall,
+                                                    color = NeonCyan,
+                                                )
+                                            }
+                                            Surface(
+                                                shape = RoundedCornerShape(6.dp),
+                                                color = MaterialTheme.colorScheme.surface,
+                                            ) {
+                                                Text(
+                                                    text = "🌐 ${tuning.languageCode.uppercase()}",
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    fontWeight = FontWeight.Bold,
+                                                    color = NeonAmber,
+                                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                                )
+                                            }
+                                        }
+
+                                        Spacer(modifier = Modifier.height(6.dp))
+
+                                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                            tuning.voltageOffsetMv?.let {
+                                                Text("Voltaj: ${it.toInt()}mV", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                            }
+                                            tuning.clockMhz?.let {
+                                                Text("Saat: ${it.toInt()}MHz", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                            }
+                                            tuning.tempDelta?.let {
+                                                Text("Sıcaklık: ${it.toInt()}°C", style = MaterialTheme.typography.labelSmall, color = NeonEmerald)
+                                            }
+                                        }
+
+                                        val sysParts = listOfNotNull(
+                                            tuning.motherboardName?.let { "🖥️ $it" },
+                                            tuning.coolerName?.let { "❄️ $it" },
+                                            tuning.ramSpec?.let { "🧠 $it" },
+                                            tuning.secondaryHardware?.let { "🎮 $it" },
+                                        )
+                                        if (sysParts.isNotEmpty()) {
+                                            Spacer(modifier = Modifier.height(4.dp))
+                                            Text(
+                                                text = "Sistem: ${sysParts.joinToString(" • ")}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = NeonCyan,
+                                            )
+                                        }
+
+                                        if (!tuning.guideNotes.isNullOrBlank()) {
+                                            Spacer(modifier = Modifier.height(4.dp))
+                                            Text(
+                                                text = "Rehber: ${tuning.guideNotes}",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            )
+                                        }
+
+                                        Spacer(modifier = Modifier.height(8.dp))
+
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.End,
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Text(
+                                                text = "Yazar: @${tuning.userDisplayName} (${tuning.userBadge})",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                modifier = Modifier.weight(1f),
+                                            )
+                                            Button(
+                                                onClick = {
+                                                    coroutineScope.launch {
+                                                        tuningVaultRepository.approveTuningProfile(tuning.id)
+                                                    }
+                                                },
+                                                colors = ButtonDefaults.buttonColors(containerColor = NeonEmerald, contentColor = Color.Black),
+                                                shape = RoundedCornerShape(8.dp),
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                                            ) {
+                                                Text("✓ Onayla (+50p)", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                            }
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Button(
+                                                onClick = {
+                                                    tuningRejectDialogProfileId = tuning.id
+                                                    tuningRejectReasonText = "Seçilen dil ile metin uyuşmuyor."
+                                                },
+                                                colors = ButtonDefaults.buttonColors(containerColor = NeonRose, contentColor = Color.White),
+                                                shape = RoundedCornerShape(8.dp),
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                                            ) {
+                                                Text("✕ Reddet", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
                 // Search Bar
                 OutlinedTextField(
                     value = searchQuery,
@@ -306,11 +516,50 @@ fun AdminModerationScreen(
                         }
                     }
                 }
+                } // End of selectedModerationTab == 0
             }
         }
     }
+
+    tuningRejectDialogProfileId?.let { profileId ->
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { tuningRejectDialogProfileId = null },
+            title = { Text("Ayar Paylaşımını Reddet", fontWeight = FontWeight.Bold, color = NeonRose) },
+            text = {
+                Column {
+                    Text("Reddetme gerekçesini belirtin (Kullanıcı profilinde görecektir):", style = MaterialTheme.typography.bodySmall)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = tuningRejectReasonText,
+                        onValueChange = { tuningRejectReasonText = it },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(8.dp),
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        coroutineScope.launch {
+                            tuningVaultRepository.rejectTuningProfile(profileId, tuningRejectReasonText.trim())
+                            tuningRejectDialogProfileId = null
+                        }
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = NeonRose, contentColor = Color.White),
+                ) {
+                    Text("Reddet")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { tuningRejectDialogProfileId = null }) {
+                    Text("Vazgeç")
+                }
+            },
+        )
+    }
 }
 
+@Suppress("DEPRECATION")
 @Composable
 private fun AdminDealItemCard(
     deal: CommunityDeal,

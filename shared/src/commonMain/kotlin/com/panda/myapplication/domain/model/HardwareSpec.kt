@@ -19,10 +19,15 @@ enum class HardwareCategory(val displayName: String) {
     MOUSE("Oyuncu Faresi"),
     KEYBOARD("Oyuncu Klavyesi"),
     HEADSET("Oyuncu Kulaklığı"),
-    MONITOR("Oyuncu Monitörü");
+    MONITOR("Oyuncu Monitörü"),
+    SMARTPHONE("Akıllı Telefon"),
+    TABLET("Tablet");
 
     val isPeripheral: Boolean
         get() = this == MOUSE || this == KEYBOARD || this == HEADSET || this == MONITOR
+
+    val isMobile: Boolean
+        get() = this == SMARTPHONE || this == TABLET
 
     val englishName: String
         get() = when (this) {
@@ -40,6 +45,8 @@ enum class HardwareCategory(val displayName: String) {
             KEYBOARD -> "Gaming Keyboard"
             HEADSET -> "Gaming Headset"
             MONITOR -> "Gaming Monitor"
+            SMARTPHONE -> "Smartphone"
+            TABLET -> "Tablet"
         }
 
     fun localizedName(isTr: Boolean = true): String = if (isTr) displayName else englishName

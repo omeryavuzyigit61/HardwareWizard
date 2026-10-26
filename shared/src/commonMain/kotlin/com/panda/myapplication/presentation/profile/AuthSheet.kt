@@ -30,7 +30,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
+import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
@@ -69,6 +69,7 @@ import com.panda.myapplication.presentation.theme.NeonRose
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
+@Suppress("DEPRECATION")
 @Composable
 fun AuthSheet(
     userRepository: UserRepository,
@@ -139,13 +140,13 @@ fun AuthSheet(
             }
 
             // Tabs: Giriş Yap / Kayıt Ol
-            TabRow(
+            PrimaryTabRow(
                 selectedTabIndex = selectedTabIndex,
                 containerColor = CardSurfaceElevated,
                 contentColor = NeonCyan,
-                indicator = { tabPositions ->
-                    TabRowDefaults.SecondaryIndicator(
-                        Modifier.tabIndicatorOffset(tabPositions[selectedTabIndex]),
+                indicator = {
+                    TabRowDefaults.PrimaryIndicator(
+                        modifier = Modifier.tabIndicatorOffset(selectedTabIndex),
                         color = NeonCyan,
                     )
                 },

@@ -134,6 +134,8 @@ fun HardwareCategory.accentColor(): Color = when (this) {
     HardwareCategory.KEYBOARD -> NeonPurple
     HardwareCategory.HEADSET -> NeonAmber
     HardwareCategory.MONITOR -> NeonEmerald
+    HardwareCategory.SMARTPHONE -> ElectricBlue
+    HardwareCategory.TABLET -> NeonPurple
 }
 
 /**
@@ -154,6 +156,8 @@ fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) wh
     HardwareCategory.KEYBOARD -> "KLAVYE"
     HardwareCategory.HEADSET -> "KULAKLIK"
     HardwareCategory.MONITOR -> "MONİTÖR"
+    HardwareCategory.SMARTPHONE -> "TELEFON"
+    HardwareCategory.TABLET -> "TABLET"
 } else when (this) {
     HardwareCategory.PREBUILT_PC -> "PREBUILT PC"
     HardwareCategory.LAPTOP -> "LAPTOP"
@@ -169,6 +173,8 @@ fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) wh
     HardwareCategory.KEYBOARD -> "KEYBOARD"
     HardwareCategory.HEADSET -> "HEADSET"
     HardwareCategory.MONITOR -> "MONITOR"
+    HardwareCategory.SMARTPHONE -> "PHONE"
+    HardwareCategory.TABLET -> "TABLET"
 }
 
 /**
@@ -189,4 +195,6 @@ fun HardwareCategory.iconEmoji(): String = when (this) {
     HardwareCategory.KEYBOARD -> "⌨️"
     HardwareCategory.HEADSET -> "🎧"
     HardwareCategory.MONITOR -> "🖥️"
+    HardwareCategory.SMARTPHONE -> "📱"
+    HardwareCategory.TABLET -> "📱"
 }

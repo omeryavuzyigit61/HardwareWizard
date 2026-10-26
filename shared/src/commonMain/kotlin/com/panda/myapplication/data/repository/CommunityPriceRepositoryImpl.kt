@@ -1,5 +1,6 @@
 package com.panda.myapplication.data.repository
 
+import com.panda.myapplication.data.remote.SecurityUtils
 import com.panda.myapplication.data.remote.SupabaseConfig
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
@@ -51,10 +52,12 @@ class CommunityPriceRepositoryImpl(
         if (autoFetchRemote) {
             CoroutineScope(ioDispatcher).launch {
                 fetchRemoteDealsFromSupabase()
-                // Canlı arka plan senkronizasyonu: Desktop Admin veya diğer cihazlardan gelen onayları anında telefona çek
+                // Lifecycle-aware senkronizasyon: Yalnızca aktif ekran dinleyicisi varken buluttan veri çek
                 while (true) {
-                    kotlinx.coroutines.delay(6000)
-                    fetchRemoteDealsFromSupabase()
+                    kotlinx.coroutines.delay(8000)
+                    if (_deals.subscriptionCount.value > 0) {
+                        fetchRemoteDealsFromSupabase()
+                    }
                 }
             }
         }
@@ -332,13 +335,7 @@ class CommunityPriceRepositoryImpl(
     }
 
     override fun loginAdmin(pin: String): Boolean {
-        val trimmed = pin.trim()
-        val isValid = trimmed == SupabaseConfig.DEFAULT_ADMIN_PIN ||
-                trimmed == "1923" ||
-                trimmed == "admin" ||
-                trimmed == "61" ||
-                trimmed == "admin61"
-
+        val isValid = SecurityUtils.verifyAdminPin(pin)
         if (isValid) {
             _isAdminLoggedIn.value = true
         }

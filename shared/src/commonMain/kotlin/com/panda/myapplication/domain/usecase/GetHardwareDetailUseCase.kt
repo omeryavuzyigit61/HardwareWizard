@@ -1,4 +1,4 @@
-package com.panda.myapplication.domain.usecase
+﻿package com.panda.myapplication.domain.usecase
 
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.HardwareId

@@ -1,4 +1,4 @@
-package com.panda.myapplication.domain.model
+﻿package com.panda.myapplication.domain.model
 
 import kotlinx.serialization.Serializable
 

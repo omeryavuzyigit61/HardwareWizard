@@ -95,7 +95,28 @@ data class UserProfile(
     val gender: Gender = Gender.UNSPECIFIED,
     val spiritHardware: SpiritHardware = SpiritHardware.OVERCLOCKED_CPU,
     val createdAtEpochMs: Long = 1713000000000L,
+    val reputationScore: Int = 0,
+    val totalDealsCount: Int = 0,
+    val totalTuningsCount: Int = 0,
+    val totalTipsCount: Int = 0,
+    val badgeTitle: String = "Lehim Çırağı",
 ) {
+    /**
+     * İtibar puanına (Karma) göre dinamik rütbe unvanı hesaplaması.
+     */
+    val effectiveBadge: String
+        get() = calculateBadgeTitle(reputationScore, badgeTitle)
+
+    companion object {
+        fun calculateBadgeTitle(score: Int, fallback: String = "Lehim Çırağı"): String = when {
+            score >= 1200 -> "Efsanevi Mühendis"
+            score >= 501 -> "Overclock Şampiyonu"
+            score >= 201 -> "Undervolt Ustası"
+            score >= 51 -> "Silikon Meraklısı"
+            else -> fallback.ifBlank { "Lehim Çırağı" }
+        }
+    }
+
     /**
      * Doğum tarihinden (YYYY-AA-GG) güncel tarihi baz alarak kullanıcının kesin yaşını hesaplar.
      */

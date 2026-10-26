@@ -13,21 +13,21 @@
     kotlinx.serialization.KSerializer serializer(...);
 }
 
+# Keep only @Serializable classes and their generated serializers (allow R8 to obfuscate internal logic/security)
 -keep,includedescriptorclasses class com.panda.myapplication.**$$serializer { *; }
--keepclassmembers class com.panda.myapplication.** {
+-keep @kotlinx.serialization.Serializable class com.panda.myapplication.data.model.dto.** { *; }
+-keep @kotlinx.serialization.Serializable class com.panda.myapplication.domain.model.** { *; }
+-keepclassmembers @kotlinx.serialization.Serializable class com.panda.myapplication.** {
     *** Companion;
 }
--keepclasseswithmembers class com.panda.myapplication.** {
+-keepclasseswithmembers @kotlinx.serialization.Serializable class com.panda.myapplication.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
 
-# Keep DTOs and Domain serializable models intact for kotlinx.serialization
--keep @kotlinx.serialization.Serializable class com.panda.myapplication.** { *; }
-
 # Room Database & SQLite Bundled Driver
 -keep class * extends androidx.room.RoomDatabase { *; }
--keep @androidx.room.Entity class com.panda.myapplication.** { *; }
--keep @androidx.room.Dao interface com.panda.myapplication.** { *; }
+-keep @androidx.room.Entity class com.panda.myapplication.data.local.entity.** { *; }
+-keep @androidx.room.Dao interface com.panda.myapplication.data.local.dao.** { *; }
 -keep class com.panda.myapplication.data.local.**_Impl { *; }
 -keep class androidx.sqlite.driver.bundled.** { *; }
 -dontwarn androidx.sqlite.driver.bundled.**

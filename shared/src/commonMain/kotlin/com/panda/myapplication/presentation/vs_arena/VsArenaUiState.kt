@@ -29,6 +29,7 @@ data class VsArenaUiState(
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
             VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
+            VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
         }
 
     companion object {
@@ -45,6 +46,8 @@ data class VsArenaUiState(
             HardwareCategory.MOUSE,
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
+            HardwareCategory.SMARTPHONE,
+            HardwareCategory.TABLET,
         )
     }
 }

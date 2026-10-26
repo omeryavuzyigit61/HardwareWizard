@@ -481,6 +481,7 @@ private fun CommunityDealTickerRow(
 /**
  * Tıklanan fiyat bildiriminin tam detay popup ekranı (Modal Dialog).
  */
+@Suppress("DEPRECATION")
 @Composable
 fun CommunityDealDetailDialog(
     deal: CommunityDeal,
@@ -684,6 +685,7 @@ fun CommunityDealDetailDialog(
  * Yeni Topluluk Fiyatı / Fırsatı Bildirme Bottom Sheet Ekranı.
  */
 @OptIn(ExperimentalMaterial3Api::class)
+@Suppress("DEPRECATION")
 @Composable
 fun SubmitCommunityDealSheet(
     hardwareName: String,

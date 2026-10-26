@@ -36,7 +36,22 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
+import androidx.compose.material.icons.rounded.AcUnit
+import androidx.compose.material.icons.rounded.Autorenew
+import androidx.compose.material.icons.rounded.BatteryChargingFull
+import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Memory
+import androidx.compose.material.icons.automirrored.rounded.MenuBook
+import androidx.compose.material.icons.rounded.Person
+import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.rounded.SportsEsports
+import androidx.compose.material.icons.rounded.Tune
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -99,6 +114,7 @@ import com.panda.myapplication.presentation.tools.HardwareGlossaryScreen
 import com.panda.myapplication.presentation.tools.RamLatencyLabScreen
 import com.panda.myapplication.presentation.tools.UpsCalculatorScreen
 import com.panda.myapplication.presentation.tools.UndervoltGuideScreen
+import com.panda.myapplication.presentation.tools.CommunityTuningVaultScreen
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
@@ -135,6 +151,7 @@ object Destinations {
     const val DESK_SETUP_LAB = "desk_setup_lab"
     const val HARDWARE_GLOSSARY = "hardware_glossary"
     const val UNDERVOLT_GUIDE = "undervolt_guide"
+    const val COMMUNITY_TUNING_VAULT = "community_tuning_vault"
     const val ADMIN_MODERATION = "admin_moderation"
     const val SECOND_HAND_VALUATOR = "second_hand_valuator"
     const val USER_PROFILE = "user_profile"
@@ -153,7 +170,7 @@ private sealed class BottomNavTab(
 
 private data class EngineeringToolDrawerItem(
     val route: String,
-    val icon: String,
+    val icon: ImageVector,
     val title: String,
     val subtitle: String,
     val badge: String,
@@ -171,6 +188,7 @@ fun App() {
             .build()
     }
 
+    @Suppress("DEPRECATION")
     KoinApplication(
         application = {
             modules(dataModule, platformDatabaseModule, presentationModule)
@@ -208,7 +226,11 @@ fun App() {
                 }
             }
 
-            val isBottomBarVisible = currentRoute != null && !currentRoute.startsWith(Destinations.HARDWARE_DETAIL)
+            val isBottomBarVisible = currentRoute != null && (
+                currentRoute.startsWith(Destinations.HARDWARE_LIST) ||
+                currentRoute.startsWith(Destinations.WIZARD) ||
+                currentRoute.startsWith(Destinations.VS_ARENA)
+            )
 
             val navigateToVsArenaTab: () -> Unit = {
                 navController.navigate(Destinations.VS_ARENA) {
@@ -379,10 +401,21 @@ fun App() {
                             )
                         }
 
+                        composable(route = Destinations.COMMUNITY_TUNING_VAULT) {
+                            CommunityTuningVaultScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                                onOpenAuthSheet = { showAuthSheet = true },
+                            )
+                        }
+
                         composable(route = Destinations.UNDERVOLT_GUIDE) {
                             UndervoltGuideScreen(
                                 onNavigateBack = { navController.popBackStack() },
                                 onOpenDrawer = openDrawer,
+                                onNavigateToTuningVault = {
+                                    navController.navigate(Destinations.COMMUNITY_TUNING_VAULT)
+                                },
                             )
                         }
 
@@ -408,6 +441,11 @@ fun App() {
                                     navController.popBackStack()
                                 },
                                 onNavigateToVsArena = navigateToVsArenaTab,
+                                onNavigateToTuningVault = {
+                                    navController.navigate(Destinations.COMMUNITY_TUNING_VAULT) {
+                                        launchSingleTop = true
+                                    }
+                                },
                                 onOpenAuthSheet = { showAuthSheet = true },
                             )
                         }
@@ -478,7 +516,7 @@ private fun HardwareEngineeringDrawerContent(
         listOf(
             EngineeringToolDrawerItem(
                 route = Destinations.COOLING_LAB,
-                icon = "❄️",
+                icon = Icons.Rounded.AcUnit,
                 title = strings.drawerCoolingTitle,
                 subtitle = strings.drawerCoolingSubtitle,
                 badge = "THERMAL LAB",
@@ -486,7 +524,7 @@ private fun HardwareEngineeringDrawerContent(
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.RAM_LATENCY_LAB,
-                icon = "⚡",
+                icon = Icons.Rounded.Memory,
                 title = strings.drawerRamTitle,
                 subtitle = strings.drawerRamSubtitle,
                 badge = "MEMORY LAB",
@@ -494,7 +532,7 @@ private fun HardwareEngineeringDrawerContent(
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.UPS_CALCULATOR,
-                icon = "🔋",
+                icon = Icons.Rounded.BatteryChargingFull,
                 title = strings.drawerUpsTitle,
                 subtitle = strings.drawerUpsSubtitle,
                 badge = "POWER LAB",
@@ -502,7 +540,7 @@ private fun HardwareEngineeringDrawerContent(
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.DESK_SETUP_LAB,
-                icon = "🎯",
+                icon = Icons.Rounded.SportsEsports,
                 title = strings.drawerDeskTitle,
                 subtitle = strings.drawerDeskSubtitle,
                 badge = "ESPORTS LAB",
@@ -510,15 +548,23 @@ private fun HardwareEngineeringDrawerContent(
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.HARDWARE_GLOSSARY,
-                icon = "📚",
+                icon = Icons.AutoMirrored.Rounded.MenuBook,
                 title = strings.drawerGlossaryTitle,
                 subtitle = strings.drawerGlossarySubtitle,
                 badge = "KNOWLEDGE",
                 accentColor = NeonEmerald,
             ),
             EngineeringToolDrawerItem(
+                route = Destinations.COMMUNITY_TUNING_VAULT,
+                icon = Icons.Rounded.Bolt,
+                title = strings.drawerTuningVaultTitle,
+                subtitle = strings.drawerTuningVaultSubtitle,
+                badge = "OC / UV VAULT",
+                accentColor = NeonCyan,
+            ),
+            EngineeringToolDrawerItem(
                 route = Destinations.UNDERVOLT_GUIDE,
-                icon = "⚡",
+                icon = Icons.Rounded.Tune,
                 title = strings.drawerUndervoltTitle,
                 subtitle = strings.drawerUndervoltSubtitle,
                 badge = "TUNING LAB",
@@ -526,7 +572,7 @@ private fun HardwareEngineeringDrawerContent(
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.SECOND_HAND_VALUATOR,
-                icon = "🔄",
+                icon = Icons.Rounded.Autorenew,
                 title = strings.drawerValuationTitle,
                 subtitle = strings.drawerValuationSubtitle,
                 badge = "2ND HAND VALUATION",
@@ -604,13 +650,17 @@ private fun HardwareEngineeringDrawerContent(
                         color = MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     ) {
-                        Text(
-                            text = "✕",
-                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+                        Box(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.Close,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(16.dp),
+                            )
+                        }
                     }
                 }
             }
@@ -708,7 +758,20 @@ private fun HardwareEngineeringDrawerContent(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("👤", fontSize = 24.sp)
+                                Surface(
+                                    shape = CircleShape,
+                                    color = NeonCyan.copy(alpha = 0.14f),
+                                    modifier = Modifier.size(36.dp),
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Icon(
+                                            imageVector = Icons.Rounded.Person,
+                                            contentDescription = null,
+                                            tint = NeonCyan,
+                                            modifier = Modifier.size(20.dp),
+                                        )
+                                    }
+                                }
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Column {
                                     Text(
@@ -812,9 +875,11 @@ private fun HardwareEngineeringDrawerContent(
                             modifier = Modifier.size(40.dp),
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Text(
-                                    text = tool.icon,
-                                    fontSize = 18.sp,
+                                Icon(
+                                    imageVector = tool.icon,
+                                    contentDescription = null,
+                                    tint = tool.accentColor,
+                                    modifier = Modifier.size(20.dp),
                                 )
                             }
                         }
@@ -895,7 +960,12 @@ private fun HardwareEngineeringDrawerContent(
                         modifier = Modifier.size(40.dp),
                     ) {
                         Box(contentAlignment = Alignment.Center) {
-                            Text(text = "⚙️", fontSize = 18.sp)
+                            Icon(
+                                imageVector = Icons.Rounded.Settings,
+                                contentDescription = null,
+                                tint = NeonCyan,
+                                modifier = Modifier.size(20.dp),
+                            )
                         }
                     }
 
@@ -918,10 +988,11 @@ private fun HardwareEngineeringDrawerContent(
                         )
                     }
 
-                    Text(
-                        text = "›",
-                        fontSize = 18.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Rounded.KeyboardArrowRight,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp),
                     )
                 }
             }

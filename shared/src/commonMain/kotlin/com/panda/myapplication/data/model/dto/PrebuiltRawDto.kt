@@ -1,4 +1,4 @@
-package com.panda.myapplication.data.model.dto
+﻿package com.panda.myapplication.data.model.dto
 
 import kotlinx.serialization.Serializable
 

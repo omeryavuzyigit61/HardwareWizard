@@ -92,6 +92,14 @@ object HardwareSearchEngine {
 
         when (val s = item.spec) {
             is CpuSpec -> {
+                val cpuText = "${item.displayName} ${item.model} ${item.brand}".lowercase()
+                if (cpuText.contains("ryzen") || cpuText.contains("threadripper") || cpuText.contains("athlon")) {
+                    parts.add("amd")
+                    parts.add("ryzen")
+                }
+                if (cpuText.contains("core") || cpuText.contains("ultra") || cpuText.contains("xeon") || cpuText.contains("pentium") || cpuText.contains("celeron")) {
+                    parts.add("intel")
+                }
                 parts.add(s.socket)
                 s.architecture?.let { parts.add(it) }
                 parts.add("${s.coreCount} core")
@@ -102,6 +110,19 @@ object HardwareSearchEngine {
             }
             is GpuSpec -> {
                 parts.add(s.chipset)
+                val gpuText = "${item.displayName} ${item.model} ${s.chipset}".lowercase()
+                if (gpuText.contains("radeon") || gpuText.contains(" rx") || gpuText.contains("rx ") || gpuText.startsWith("rx")) {
+                    parts.add("amd")
+                    parts.add("radeon")
+                }
+                if (gpuText.contains("geforce") || gpuText.contains("rtx") || gpuText.contains("gtx")) {
+                    parts.add("nvidia")
+                    parts.add("geforce")
+                }
+                if (gpuText.contains("arc")) {
+                    parts.add("intel")
+                    parts.add("arc")
+                }
                 s.partNumber?.let { parts.add(it) }
                 parts.add(s.memoryType)
                 val vramGb = s.vram.megabytes / 1024
@@ -110,6 +131,13 @@ object HardwareSearchEngine {
                 parts.add("${s.tdp.watts}w")
             }
             is MotherboardSpec -> {
+                val moboText = "${item.displayName} ${item.model} ${s.chipset} ${s.socket}".lowercase()
+                if (moboText.contains("am4") || moboText.contains("am5") || moboText.contains("b650") || moboText.contains("x670") || moboText.contains("x870") || moboText.contains("b550") || moboText.contains("x570") || moboText.contains("a620") || moboText.contains("b850")) {
+                    parts.add("amd")
+                }
+                if (moboText.contains("lga1700") || moboText.contains("lga1851") || moboText.contains("z790") || moboText.contains("b760") || moboText.contains("z890") || moboText.contains("b860") || moboText.contains("z690")) {
+                    parts.add("intel")
+                }
                 parts.add(s.socket)
                 parts.add(s.chipset)
                 parts.add(s.formFactor.displayName)

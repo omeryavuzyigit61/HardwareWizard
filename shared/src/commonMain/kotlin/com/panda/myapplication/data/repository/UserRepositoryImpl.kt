@@ -2,7 +2,9 @@ package com.panda.myapplication.data.repository
 
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.local.entity.UserSessionEntity
+import com.panda.myapplication.data.remote.SecurityUtils
 import com.panda.myapplication.data.remote.SupabaseConfig
+import com.panda.myapplication.data.remote.SupabaseConfig.applySupabaseHeaders
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.Gender
@@ -11,7 +13,6 @@ import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.UserRepository
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
-import io.ktor.client.request.headers
 import io.ktor.client.request.patch
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
@@ -24,10 +25,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -49,13 +52,21 @@ class UserRepositoryImpl(
 
     private data class AccountCredential(
         val profile: UserProfile,
-        val password: String,
+        val passwordHash: String,
     )
 
-    private val _registeredAccounts = mutableMapOf<String, AccountCredential>()
+    private val _registeredAccounts = mutableMapOf(
+        "dombikpanda" to AccountCredential(
+            profile = MASTER_ADMIN_PROFILE,
+            passwordHash = MASTER_ADMIN_PASSWORD_SHA256,
+        ),
+        "yavuzyigitomer52@gmail.com" to AccountCredential(
+            profile = MASTER_ADMIN_PROFILE,
+            passwordHash = MASTER_ADMIN_PASSWORD_SHA256,
+        ),
+    )
 
     init {
-        // Cihaz yeniden başladığında veya uygulama açıldığında yerel oturumu geri yükle
         if (hardwareDao != null) {
             CoroutineScope(ioDispatcher).launch {
                 runCatching {
@@ -72,6 +83,39 @@ class UserRepositoryImpl(
                         )
                         _currentUser.value = profile
                         _isLoggedIn.value = true
+                        syncUserStatsFromCloud(session.userId)
+                    }
+                }
+            }
+        }
+    }
+
+    private suspend fun syncUserStatsFromCloud(userId: String) {
+        if (userId.isBlank() || userId.startsWith("guest")) return
+        runCatching {
+            val safeCols = "reputation_score,total_deals_count,total_tunings_count,total_tips_count,badge_title"
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.$userId&select=$safeCols"
+            val response = httpClient.get(url) {
+                applySupabaseHeaders()
+            }
+            if (response.status == HttpStatusCode.OK) {
+                val array = json.parseToJsonElement(response.bodyAsText()).jsonArray
+                if (array.isNotEmpty()) {
+                    val obj = array[0].jsonObject
+                    val repScore = obj["reputation_score"]?.jsonPrimitive?.intOrNull ?: 0
+                    val totalDeals = obj["total_deals_count"]?.jsonPrimitive?.intOrNull ?: 0
+                    val totalTunings = obj["total_tunings_count"]?.jsonPrimitive?.intOrNull ?: 0
+                    val totalTips = obj["total_tips_count"]?.jsonPrimitive?.intOrNull ?: 0
+                    val badge = obj["badge_title"]?.jsonPrimitive?.content ?: UserProfile.calculateBadgeTitle(repScore)
+
+                    _currentUser.update { current ->
+                        current?.copy(
+                            reputationScore = repScore,
+                            totalDealsCount = totalDeals,
+                            totalTuningsCount = totalTunings,
+                            totalTipsCount = totalTips,
+                            badgeTitle = badge,
+                        )
                     }
                 }
             }
@@ -115,6 +159,7 @@ class UserRepositoryImpl(
             return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Lütfen bir kullanıcı adı belirleyin.")))
         }
 
+        val hashedPassword = SecurityUtils.hashPassword(password)
         val profile = UserProfile(
             id = "usr-${kotlin.random.Random.nextInt(100000, 999999)}",
             email = trimmedEmail,
@@ -122,17 +167,16 @@ class UserRepositoryImpl(
             birthDateIso = birthDateIso.ifBlank { "2001-01-01" },
             gender = gender,
             spiritHardware = spiritHardware,
-            createdAtEpochMs = 1713500000000L,
+            createdAtEpochMs = System.currentTimeMillis(),
         )
 
-        // 1. Supabase Bulut Veritabanına kaydet
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/user_profiles"
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}"
             val body = buildJsonObject {
                 put("id", profile.id)
                 put("username", profile.username)
                 put("email", profile.email)
-                put("password_hash", password)
+                put("password_hash", hashedPassword)
                 put("birth_date_iso", profile.birthDateIso)
                 put("gender", profile.gender.name)
                 put("spirit_hardware", profile.spiritHardware.name)
@@ -140,16 +184,12 @@ class UserRepositoryImpl(
             }
             httpClient.post(url) {
                 contentType(ContentType.Application.Json)
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                    append("Prefer", "return=minimal")
-                }
+                applySupabaseHeaders(preferMinimal = true)
                 setBody(body.toString())
             }
         }
 
-        val cred = AccountCredential(profile, password)
+        val cred = AccountCredential(profile, hashedPassword)
         _registeredAccounts[trimmedUsername.lowercase()] = cred
         _registeredAccounts[trimmedEmail.lowercase()] = cred
 
@@ -165,81 +205,64 @@ class UserRepositoryImpl(
         password: String,
     ): DomainResult<UserProfile> = withContext(ioDispatcher) {
         val input = emailOrUsername.trim().removePrefix("@")
-
-        // 1. Yönetici Hesabı Doğrulaması
-        val isAdminIdentifier = input.equals("dombikpanda", ignoreCase = true) || input.equals("yavuzyigitomer52@gmail.com", ignoreCase = true)
-        if (isAdminIdentifier) {
-            if (password == "TS61trabzonspor54") {
-                val adminProfile = UserProfile(
-                    id = "usr-dombik-61",
-                    email = "yavuzyigitomer52@gmail.com",
-                    username = "dombikpanda",
-                    birthDateIso = "2000-05-14",
-                    gender = Gender.MALE,
-                    spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
-                    createdAtEpochMs = 1713000000000L,
-                )
-                _currentUser.value = adminProfile
-                _isLoggedIn.value = true
-                persistSession(adminProfile)
-                return@withContext DomainResult.Success(adminProfile)
-            } else {
-                return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
-            }
+        if (input.isBlank() || password.isBlank()) {
+            return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
         }
 
-        // 2. Canlı Supabase Bulut Veritabanından Kullanıcı Sorgulama
+        val hashedPassword = SecurityUtils.hashPassword(password)
+
+        // 1. Sunucu Tarafı Güvenli RPC Doğrulaması (password_hash sütunu istemciye asla dönmez)
         try {
-            val encodedInput = input.lowercase()
-            val url = "${SupabaseConfig.restApiUrl}/user_profiles?or=(username.ilike.$encodedInput,email.ilike.$encodedInput)&select=*"
-            val response = httpClient.get(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val rpcUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.RPC_AUTHENTICATE_USER}"
+            val rpcPayload = buildJsonObject {
+                put("p_identifier", input)
+                put("p_password_hash", hashedPassword)
+            }
+            val response = httpClient.post(rpcUrl) {
+                contentType(ContentType.Application.Json)
+                applySupabaseHeaders()
+                setBody(rpcPayload.toString())
             }
             if (response.status == HttpStatusCode.OK) {
                 val array = json.parseToJsonElement(response.bodyAsText()).jsonArray
                 if (array.isNotEmpty()) {
                     val userObj = array[0].jsonObject
-                    val storedPassword = userObj["password_hash"]?.jsonPrimitive?.content ?: ""
-                    if (storedPassword == password) {
-                        val profile = UserProfile(
-                            id = userObj["id"]?.jsonPrimitive?.content ?: "usr-0",
-                            email = userObj["email"]?.jsonPrimitive?.content ?: "",
-                            username = userObj["username"]?.jsonPrimitive?.content ?: "",
-                            birthDateIso = userObj["birth_date_iso"]?.jsonPrimitive?.content ?: "2000-01-01",
-                            gender = Gender.fromString(userObj["gender"]?.jsonPrimitive?.content),
-                            spiritHardware = SpiritHardware.fromString(userObj["spirit_hardware"]?.jsonPrimitive?.content),
-                            createdAtEpochMs = userObj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 1713500000000L,
-                        )
-                        _currentUser.value = profile
-                        _isLoggedIn.value = true
-                        persistSession(profile)
-                        return@withContext DomainResult.Success(profile)
-                    } else {
-                        return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
-                    }
+                    val repScore = userObj["reputation_score"]?.jsonPrimitive?.intOrNull ?: 0
+                    val profile = UserProfile(
+                        id = userObj["id"]?.jsonPrimitive?.content ?: "usr-0",
+                        email = userObj["email"]?.jsonPrimitive?.content ?: "",
+                        username = userObj["username"]?.jsonPrimitive?.content ?: "",
+                        birthDateIso = userObj["birth_date_iso"]?.jsonPrimitive?.content ?: "2000-01-01",
+                        gender = Gender.fromString(userObj["gender"]?.jsonPrimitive?.content),
+                        spiritHardware = SpiritHardware.fromString(userObj["spirit_hardware"]?.jsonPrimitive?.content),
+                        createdAtEpochMs = userObj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 1713500000000L,
+                        reputationScore = repScore,
+                        totalDealsCount = userObj["total_deals_count"]?.jsonPrimitive?.intOrNull ?: 0,
+                        totalTuningsCount = userObj["total_tunings_count"]?.jsonPrimitive?.intOrNull ?: 0,
+                        totalTipsCount = userObj["total_tips_count"]?.jsonPrimitive?.intOrNull ?: 0,
+                        badgeTitle = userObj["badge_title"]?.jsonPrimitive?.content ?: UserProfile.calculateBadgeTitle(repScore),
+                    )
+                    _currentUser.value = profile
+                    _isLoggedIn.value = true
+                    persistSession(profile)
+                    return@withContext DomainResult.Success(profile)
+                } else {
+                    return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
                 }
             }
         } catch (_: Exception) {
-            // Ağ hatası veya çevrimdışı durumda yerel kontrol
+            // Çevrimdışı durumda yerel önbellek kontrolü
         }
 
-        // 3. Yerel Kayıtlı Kullanıcı Hesabı Doğrulaması
+        // 2. Çevrimdışı / Yerel Kayıtlı Kullanıcı Hesabı Doğrulaması (Özetlenmiş Şifre ile)
         val account = _registeredAccounts[input.lowercase()]
-        if (account != null) {
-            if (account.password == password) {
-                _currentUser.value = account.profile
-                _isLoggedIn.value = true
-                persistSession(account.profile)
-                return@withContext DomainResult.Success(account.profile)
-            } else {
-                return@withContext DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
-            }
+        if (account != null && account.passwordHash == hashedPassword) {
+            _currentUser.value = account.profile
+            _isLoggedIn.value = true
+            persistSession(account.profile)
+            return@withContext DomainResult.Success(account.profile)
         }
 
-        // 4. Bulunamayan Kullanıcı Hatası
         DomainResult.Failure(DomainError.Unknown(IllegalArgumentException("Kullanıcı veya şifre bulunamadı!")))
     }
 
@@ -255,22 +278,45 @@ class UserRepositoryImpl(
     override suspend fun updateProfile(profile: UserProfile): DomainResult<Unit> = withContext(ioDispatcher) {
         _currentUser.value = profile
         persistSession(profile)
+
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/user_profiles?id=eq.${profile.id}"
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.${profile.id}"
             val body = buildJsonObject {
+                put("username", profile.username)
+                put("email", profile.email)
                 put("birth_date_iso", profile.birthDateIso)
                 put("gender", profile.gender.name)
                 put("spirit_hardware", profile.spiritHardware.name)
             }
             httpClient.patch(url) {
                 contentType(ContentType.Application.Json)
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+                applySupabaseHeaders(preferMinimal = true)
                 setBody(body.toString())
             }
         }
+
         DomainResult.Success(Unit)
+    }
+
+    override suspend fun refreshCurrentUserStats() = withContext(ioDispatcher) {
+        val uid = _currentUser.value?.id ?: return@withContext
+        syncUserStatsFromCloud(uid)
+    }
+
+    companion object {
+        // Yalnızca tek yönlü tuzlanmış SHA-256 özeti saklanır; düz metin (plaintext) parola asla kodda yer almaz.
+        private const val MASTER_ADMIN_PASSWORD_SHA256 = "610768c536f619515fce0de482af604d60efa48af177c2d5fc201cb6e5c64d6d"
+
+        private val MASTER_ADMIN_PROFILE = UserProfile(
+            id = "usr-master-admin-01",
+            email = "yavuzyigitomer52@gmail.com",
+            username = "dombikpanda",
+            birthDateIso = "2002-05-14",
+            gender = Gender.MALE,
+            spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
+            createdAtEpochMs = 1713500000000L,
+            reputationScore = 500,
+            badgeTitle = "Silikon Efendisi",
+        )
     }
 }

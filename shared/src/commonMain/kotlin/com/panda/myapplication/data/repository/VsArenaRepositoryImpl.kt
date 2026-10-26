@@ -24,6 +24,7 @@ class VsArenaRepositoryImpl : VsArenaRepository {
                 VsArenaMode.COMPONENT_VS_COMPONENT -> current.componentCategory
                 VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
                 VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
+                VsArenaMode.MOBILE_VS_MOBILE -> if (current.componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
             }
             val keepLeft = current.leftItem?.takeIf { it.category == targetCategory }
             val keepRight = current.rightItem?.takeIf { it.category == targetCategory }
@@ -80,6 +81,7 @@ class VsArenaRepositoryImpl : VsArenaRepository {
             val targetMode = when (item.category) {
                 HardwareCategory.PREBUILT_PC -> VsArenaMode.PREBUILT_VS_PREBUILT
                 HardwareCategory.LAPTOP -> VsArenaMode.LAPTOP_VS_LAPTOP
+                HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> VsArenaMode.MOBILE_VS_MOBILE
                 else -> VsArenaMode.COMPONENT_VS_COMPONENT
             }
             val newComponentCategory = if (targetMode == VsArenaMode.COMPONENT_VS_COMPONENT) {
