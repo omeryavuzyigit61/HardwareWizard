@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
@@ -96,7 +97,12 @@ class HardwareRepositoryImpl(
             val fanCount = existing.count { it.category == HardwareCategory.CASE_FAN }
             val upsCount = existing.count { it.category == HardwareCategory.UPS }
             val deskCount = existing.count { it.category == HardwareCategory.GAMING_DESK }
+            val lightCount = existing.count { it.category == HardwareCategory.GAMING_LIGHTING }
+            val swCount = existing.count { it.category == HardwareCategory.SMARTWATCH }
             val routerCount = existing.count { it.category == HardwareCategory.ROUTER }
+            val modemCount = existing.count { it.category == HardwareCategory.MODEM }
+            val apCount = existing.count { it.category == HardwareCategory.ACCESS_POINT }
+            val reCount = existing.count { it.category == HardwareCategory.RANGE_EXTENDER }
             val hasGenericImages = existing.any { item ->
                 item.images?.any { img -> img.contains("reference.webp") } == true
             }
@@ -113,8 +119,9 @@ class HardwareRepositoryImpl(
             if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts ||
                 laptopCount < 300 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
                 moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages || !hasRx9070 ||
-                micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
-                fanCount < 80 || upsCount < 50 || deskCount < 40 || routerCount < 50 ||
+                micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
+                fanCount < 180 || upsCount < 140 || deskCount < 100 || lightCount < 90 ||
+                swCount < 180 || routerCount < 140 || modemCount < 60 || apCount < 80 || reCount < 80 ||
                 hasIncompleteNewCategoryGallery
             ) {
                 localDataSource.seedDatabaseIfEmpty()
@@ -629,39 +636,83 @@ class HardwareRepositoryImpl(
     }.flowOn(ioDispatcher)
 
     override fun observeHardwareItem(id: HardwareId): Flow<DomainResult<HardwareItem>> = flow {
+        // 1. Fast path: Emit instantly from memory cache if already loaded (0ms latency)
+        val cachedInstant = memoryCache.value?.find { it.id == id }
+        if (cachedInstant != null) {
+            emit(DomainResult.Success(cachedInstant))
+        }
+
+        // 2. Fast path: Mobile / Tablet Seed Catalog
+        val mobileItem = dynamicSmartphones.value.find { it.id.value == id.value }
+            ?: dynamicTablets.value.find { it.id.value == id.value }
+            ?: com.panda.myapplication.data.local.seed.MobileSeedCatalog.findById(id.value)
+        if (mobileItem != null) {
+            emit(DomainResult.Success(mobileItem))
+            return@flow
+        }
+
         ensureSeeded()
+
+        // 3. If not in memoryCache, pre-warm memoryCache by querying item category and loading category specs
+        if (memoryCache.value?.find { it.id == id } == null) {
+            val entity = hardwareDao.getItemEntityById(id.value)
+            if (entity != null) {
+                runCatching {
+                    observeHardwareItemsByCategory(entity.category).firstOrNull()
+                }
+            }
+        }
+
+        // 4. Safe single-table observation combined with live price overrides (avoids 28-table Room @Relation)
         emitAll(
             combine(
-                hardwareDao.observeById(id.value),
+                hardwareDao.observeItemEntityById(id.value),
                 hardwareDao.observeAllPriceOverrides(),
-            ) { itemWithSpec, overrides ->
-                if (itemWithSpec == null) {
-                    val mobileItem = dynamicSmartphones.value.find { it.id.value == id.value }
-                        ?: dynamicTablets.value.find { it.id.value == id.value }
-                        ?: com.panda.myapplication.data.local.seed.MobileSeedCatalog.findById(id.value)
-                    if (mobileItem != null) {
-                        val overrideMap = overrides.associateBy { it.hardwareId }
-                        DomainResult.Success(mobileItem.applyOverride(overrideMap))
-                    } else {
-                        val fromMemory = memoryCache.value?.find { it.id == id }
-                        if (fromMemory != null) {
-                            val overrideMap = overrides.associateBy { it.hardwareId }
-                            DomainResult.Success(fromMemory.applyOverride(overrideMap))
-                        } else {
-                            DomainResult.Failure(DomainError.NotFound)
-                        }
-                    }
+            ) { itemEntity, overrides ->
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                val fromMemory = memoryCache.value?.find { it.id == id }
+                if (itemEntity == null && fromMemory == null) {
+                    DomainResult.Failure(DomainError.NotFound)
+                } else if (fromMemory != null) {
+                    val updated = if (itemEntity != null) {
+                        fromMemory.copy(
+                            priceInfo = if (itemEntity.currentPriceTry != null || !itemEntity.offers.isNullOrEmpty()) {
+                                fromMemory.priceInfo?.copy(
+                                    currentPriceTry = itemEntity.currentPriceTry,
+                                    lowestPriceTry = itemEntity.lowestPriceTry,
+                                    highestPriceTry = itemEntity.highestPriceTry,
+                                    offers = itemEntity.offers ?: emptyList(),
+                                    priceHistory = itemEntity.priceHistory ?: emptyList(),
+                                ) ?: com.panda.myapplication.domain.model.ProductPriceInfo(
+                                    currentPriceTry = itemEntity.currentPriceTry,
+                                    lowestPriceTry = itemEntity.lowestPriceTry,
+                                    highestPriceTry = itemEntity.highestPriceTry,
+                                    currency = "TRY",
+                                    imageUrl = itemEntity.imageUrl,
+                                    offers = itemEntity.offers ?: emptyList(),
+                                    priceHistory = itemEntity.priceHistory ?: emptyList(),
+                                )
+                            } else fromMemory.priceInfo,
+                            imageUrl = itemEntity.imageUrl ?: fromMemory.imageUrl,
+                            images = if (!itemEntity.images.isNullOrEmpty()) itemEntity.images else fromMemory.images,
+                        )
+                    } else fromMemory
+                    DomainResult.Success(updated.applyOverride(overrideMap))
                 } else {
-                    val overrideMap = overrides.associateBy { it.hardwareId }
-                    val domainItem = HardwareMapper.toDomain(itemWithSpec)?.applyOverride(overrideMap)
-                    if (domainItem != null) {
-                        DomainResult.Success(domainItem)
+                    val directFallback = memoryCache.value?.find { it.id == id }
+                    if (directFallback != null) {
+                        DomainResult.Success(directFallback.applyOverride(overrideMap))
                     } else {
                         DomainResult.Failure(DomainError.NotFound)
                     }
                 }
-            }.catch {
-                emit(DomainResult.Failure(DomainError.Storage))
+            }.catch { err ->
+                val fallback = memoryCache.value?.find { it.id == id }
+                if (fallback != null) {
+                    emit(DomainResult.Success(fallback))
+                } else {
+                    emit(DomainResult.Failure(DomainError.NotFound))
+                }
             }
         )
     }.flowOn(ioDispatcher)

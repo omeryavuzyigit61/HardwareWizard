@@ -141,6 +141,12 @@ abstract class HardwareDao {
     @Query("SELECT * FROM range_extender_specs")
     abstract fun observeAllRangeExtenderSpecs(): Flow<List<RangeExtenderSpecEntity>>
 
+    @Query("SELECT * FROM hardware_items WHERE id = :id LIMIT 1")
+    abstract fun observeItemEntityById(id: String): Flow<HardwareItemEntity?>
+
+    @Query("SELECT * FROM hardware_items WHERE id = :id LIMIT 1")
+    abstract suspend fun getItemEntityById(id: String): HardwareItemEntity?
+
     @Transaction
     @Query("SELECT * FROM hardware_items WHERE id = :id")
     abstract fun observeById(id: String): Flow<HardwareItemWithSpec?>

@@ -2025,109 +2025,82 @@ fun FluidSlidingSegmentBar(
     }
 
     val selectedIndex = tabs.indexOfFirst { it.first == currentMode }.coerceAtLeast(0)
+    val scrollState = rememberScrollState()
 
-    Surface(
-        shape = RoundedCornerShape(13.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)),
+    // Smoothly scroll to keep active tab centered in view
+    LaunchedEffect(selectedIndex) {
+        if (scrollState.maxValue > 0) {
+            val approximateItemWidth = scrollState.maxValue / tabs.size
+            val targetScroll = (selectedIndex * approximateItemWidth - 40).coerceIn(0, scrollState.maxValue)
+            scrollState.animateScrollTo(targetScroll)
+        }
+    }
+
+    Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(44.dp),
+            .horizontalScroll(scrollState),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        BoxWithConstraints(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(3.5.dp),
-        ) {
-            val totalWidth = maxWidth
-            val tabWidth = totalWidth / tabs.size
-            val pillOffset by animateDpAsState(
-                targetValue = tabWidth * selectedIndex,
-                animationSpec = spring(
-                    dampingRatio = 0.76f,
-                    stiffness = Spring.StiffnessMediumLow,
-                ),
+        tabs.forEachIndexed { index, (mode, pair) ->
+            val (icon, title) = pair
+            val isSelected = selectedIndex == index
+
+            val animatedBorderColor by animateColorAsState(
+                if (isSelected) NeonCyan.copy(alpha = 0.85f) else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.40f),
+                animationSpec = tween(220),
+            )
+            val animatedBgColor by animateColorAsState(
+                if (isSelected) NeonCyan.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.48f),
+                animationSpec = tween(220),
+            )
+            val iconTint by animateColorAsState(
+                if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.70f),
+                animationSpec = tween(220),
+            )
+            val textColor by animateColorAsState(
+                if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.80f),
+                animationSpec = tween(220),
             )
 
-            // 1. Fluid Sliding Glowing Pill Indicator
-            Box(
-                modifier = Modifier
-                    .offset(x = pillOffset)
-                    .width(tabWidth)
-                    .fillMaxHeight()
-                    .clip(RoundedCornerShape(9.5.dp))
-                    .background(
-                        Brush.horizontalGradient(
-                            listOf(
-                                NeonCyan.copy(alpha = 0.22f),
-                                NeonPurple.copy(alpha = 0.16f),
-                            ),
-                        ),
-                    )
-                    .border(
-                        1.dp,
-                        NeonCyan.copy(alpha = 0.70f),
-                        RoundedCornerShape(9.5.dp),
-                    ),
-            )
-
-            // 2. Tab Items Row
-            Row(
-                modifier = Modifier.fillMaxSize(),
-                verticalAlignment = Alignment.CenterVertically,
+            Surface(
+                onClick = { onModeSelected(mode) },
+                shape = RoundedCornerShape(13.dp),
+                color = animatedBgColor,
+                border = BorderStroke(1.2.dp, animatedBorderColor),
+                modifier = Modifier.height(40.dp),
             ) {
-                tabs.forEachIndexed { index, (mode, pair) ->
-                    val (icon, title) = pair
-                    val isSelected = selectedIndex == index
-                    val iconTint by animateColorAsState(
-                        if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
-                        animationSpec = tween(180),
+                Row(
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .padding(horizontal = 14.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center,
+                ) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = iconTint,
+                        modifier = Modifier.size(16.dp),
                     )
-                    val textScale by animateFloatAsState(
-                        if (isSelected) 1.04f else 1.0f,
-                        animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMediumLow),
+                    Spacer(modifier = Modifier.width(7.dp))
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                        color = textColor,
+                        maxLines = 1,
+                        softWrap = false,
                     )
-
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .clip(RoundedCornerShape(9.5.dp))
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                            ) {
-                                onModeSelected(mode)
-                            }
-                            .padding(horizontal = 2.dp),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center,
-                            modifier = Modifier.graphicsLayer {
-                                scaleX = textScale
-                                scaleY = textScale
-                            },
-                        ) {
-                            Icon(
-                                imageVector = icon,
-                                contentDescription = null,
-                                tint = iconTint,
-                                modifier = Modifier.size(13.5.dp),
-                            )
-                            Spacer(modifier = Modifier.width(4.5.dp))
-                            Text(
-                                text = title,
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.SemiBold,
-                                color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.75f),
-                                textAlign = TextAlign.Center,
-                                maxLines = 1,
-                                softWrap = false,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        }
+                    if (isSelected) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Box(
+                            modifier = Modifier
+                                .size(5.dp)
+                                .clip(CircleShape)
+                                .background(NeonCyan),
+                        )
                     }
                 }
             }
