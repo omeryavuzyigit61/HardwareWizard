@@ -627,7 +627,12 @@ class HardwareRepositoryImpl(
         }
         emitAll(
             domainItemsFlow
-                .map { DomainResult.Success(it) as DomainResult<List<HardwareItem>> }
+                .map { items ->
+                    val currentMem = memoryCache.value.orEmpty()
+                    val otherCats = currentMem.filter { it.category != category }
+                    memoryCache.value = otherCats + items
+                    DomainResult.Success(items) as DomainResult<List<HardwareItem>>
+                }
                 .catch {
                     val fallback = memoryCache.value?.filter { it.category == category } ?: emptyList()
                     emit(DomainResult.Success(fallback))
@@ -653,65 +658,31 @@ class HardwareRepositoryImpl(
 
         ensureSeeded()
 
-        // 3. If not in memoryCache, pre-warm memoryCache by querying item category and loading category specs
-        if (memoryCache.value?.find { it.id == id } == null) {
-            val entity = hardwareDao.getItemEntityById(id.value)
-            if (entity != null) {
-                runCatching {
-                    observeHardwareItemsByCategory(entity.category).firstOrNull()
-                }
+        // 3. Query base item to determine exact category
+        val entity = hardwareDao.getItemEntityById(id.value)
+        if (entity == null) {
+            val fallback = memoryCache.value?.find { it.id == id }
+            if (fallback != null) {
+                emit(DomainResult.Success(fallback))
+            } else {
+                emit(DomainResult.Failure(DomainError.NotFound))
             }
+            return@flow
         }
 
-        // 4. Safe single-table observation combined with live price overrides (avoids 28-table Room @Relation)
+        // 4. Delegate to category flow: loads exact spec for that category and emits the matching item
         emitAll(
-            combine(
-                hardwareDao.observeItemEntityById(id.value),
-                hardwareDao.observeAllPriceOverrides(),
-            ) { itemEntity, overrides ->
-                val overrideMap = overrides.associateBy { it.hardwareId }
-                val fromMemory = memoryCache.value?.find { it.id == id }
-                if (itemEntity == null && fromMemory == null) {
-                    DomainResult.Failure(DomainError.NotFound)
-                } else if (fromMemory != null) {
-                    val updated = if (itemEntity != null) {
-                        fromMemory.copy(
-                            priceInfo = if (itemEntity.currentPriceTry != null || !itemEntity.offers.isNullOrEmpty()) {
-                                fromMemory.priceInfo?.copy(
-                                    currentPriceTry = itemEntity.currentPriceTry,
-                                    lowestPriceTry = itemEntity.lowestPriceTry,
-                                    highestPriceTry = itemEntity.highestPriceTry,
-                                    offers = itemEntity.offers ?: emptyList(),
-                                    priceHistory = itemEntity.priceHistory ?: emptyList(),
-                                ) ?: com.panda.myapplication.domain.model.ProductPriceInfo(
-                                    currentPriceTry = itemEntity.currentPriceTry,
-                                    lowestPriceTry = itemEntity.lowestPriceTry,
-                                    highestPriceTry = itemEntity.highestPriceTry,
-                                    currency = "TRY",
-                                    imageUrl = itemEntity.imageUrl,
-                                    offers = itemEntity.offers ?: emptyList(),
-                                    priceHistory = itemEntity.priceHistory ?: emptyList(),
-                                )
-                            } else fromMemory.priceInfo,
-                            imageUrl = itemEntity.imageUrl ?: fromMemory.imageUrl,
-                            images = if (!itemEntity.images.isNullOrEmpty()) itemEntity.images else fromMemory.images,
-                        )
-                    } else fromMemory
-                    DomainResult.Success(updated.applyOverride(overrideMap))
-                } else {
-                    val directFallback = memoryCache.value?.find { it.id == id }
-                    if (directFallback != null) {
-                        DomainResult.Success(directFallback.applyOverride(overrideMap))
-                    } else {
-                        DomainResult.Failure(DomainError.NotFound)
+            observeHardwareItemsByCategory(entity.category).map { res ->
+                when (res) {
+                    is DomainResult.Success -> {
+                        val item = res.data.find { it.id.value == id.value }
+                        if (item != null) {
+                            DomainResult.Success(item)
+                        } else {
+                            DomainResult.Failure(DomainError.NotFound)
+                        }
                     }
-                }
-            }.catch { err ->
-                val fallback = memoryCache.value?.find { it.id == id }
-                if (fallback != null) {
-                    emit(DomainResult.Success(fallback))
-                } else {
-                    emit(DomainResult.Failure(DomainError.NotFound))
+                    is DomainResult.Failure -> res
                 }
             }
         )
