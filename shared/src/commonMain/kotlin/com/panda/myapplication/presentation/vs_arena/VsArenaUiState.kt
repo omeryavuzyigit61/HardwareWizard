@@ -46,6 +46,10 @@ data class VsArenaUiState(
             HardwareCategory.MOUSE,
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
+            HardwareCategory.MICROPHONE,
+            HardwareCategory.MOUSEPAD,
+            HardwareCategory.WEBCAM,
+            HardwareCategory.GAMING_CHAIR,
             HardwareCategory.SMARTPHONE,
             HardwareCategory.TABLET,
         )

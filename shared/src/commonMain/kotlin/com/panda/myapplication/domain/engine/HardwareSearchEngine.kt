@@ -6,7 +6,11 @@ import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PsuSpec
@@ -207,6 +211,34 @@ object HardwareSearchEngine {
                 parts.add("${s.responseSpeedGtGMs}ms")
                 parts.add("${s.ppi}ppi")
                 parts.add(s.hdrCertification)
+            }
+            is MicrophoneSpec -> {
+                parts.add(s.capsuleType)
+                parts.add(s.polarPattern)
+                parts.add(s.sampleRateAndBit)
+                parts.add(s.connectivity)
+                parts.add("mikrofon mic yayinci podcast")
+            }
+            is MousepadSpec -> {
+                parts.add(s.surfaceType)
+                parts.add(s.speedGlideTier)
+                parts.add(s.baseMaterial)
+                parts.add(s.dimensionsMm)
+                parts.add("mousepad pad deskmat")
+            }
+            is WebcamSpec -> {
+                parts.add(s.maxResolution)
+                parts.add("${s.maxFrameRateFps}fps")
+                parts.add(s.sensorModel)
+                parts.add(s.aperture)
+                parts.add("webcam kamera yayinci")
+            }
+            is GamingChairSpec -> {
+                parts.add(s.chairType)
+                parts.add(s.upholsteryMaterial)
+                parts.add(s.lumbarSupportType)
+                parts.add("${s.maxWeightCapacityKg}kg")
+                parts.add("koltuk sandalye chair ergonomi")
             }
             else -> Unit
         }

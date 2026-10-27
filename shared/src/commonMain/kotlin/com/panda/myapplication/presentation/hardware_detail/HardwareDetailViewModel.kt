@@ -150,7 +150,7 @@ class HardwareDetailViewModel(
 
     fun onSubmitTuningProfile(profile: TuningProfile) {
         viewModelScope.launch {
-            when (tuningVaultRepository.submitTuningProfile(profile)) {
+            when (val res = tuningVaultRepository.submitTuningProfile(profile)) {
                 is DomainResult.Success -> {
                     effectChannel.send(
                         HardwareDetailEffect.ShowToast(
@@ -160,7 +160,8 @@ class HardwareDetailViewModel(
                     )
                 }
                 is DomainResult.Failure -> {
-                    effectChannel.send(HardwareDetailEffect.ShowToast("Ayar gönderilemedi."))
+                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "Ayar gönderilemedi."
+                    effectChannel.send(HardwareDetailEffect.ShowToast(errorMsg))
                 }
             }
         }
@@ -200,7 +201,7 @@ class HardwareDetailViewModel(
             createdAtEpochMs = System.currentTimeMillis(),
         )
         viewModelScope.launch {
-            when (tuningVaultRepository.addComment(comment)) {
+            when (val res = tuningVaultRepository.addComment(comment)) {
                 is DomainResult.Success -> {
                     effectChannel.send(
                         HardwareDetailEffect.ShowToast(
@@ -210,7 +211,8 @@ class HardwareDetailViewModel(
                     )
                 }
                 is DomainResult.Failure -> {
-                    effectChannel.send(HardwareDetailEffect.ShowToast("Yorum gönderilemedi."))
+                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "Yorum gönderilemedi."
+                    effectChannel.send(HardwareDetailEffect.ShowToast(errorMsg))
                 }
             }
         }
@@ -230,8 +232,15 @@ class HardwareDetailViewModel(
             createdAtEpochMs = System.currentTimeMillis(),
         )
         viewModelScope.launch {
-            tuningVaultRepository.submitTip(tip)
-            effectChannel.send(HardwareDetailEffect.ShowToast("💡 Mikro ipucunuz paylaşıldı!", "💡 Your pro tip has been shared!"))
+            when (val res = tuningVaultRepository.submitTip(tip)) {
+                is DomainResult.Success -> {
+                    effectChannel.send(HardwareDetailEffect.ShowToast("💡 Mikro ipucunuz paylaşıldı!", "💡 Your pro tip has been shared!"))
+                }
+                is DomainResult.Failure -> {
+                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "İpucu gönderilemedi."
+                    effectChannel.send(HardwareDetailEffect.ShowToast(errorMsg))
+                }
+            }
         }
     }
 

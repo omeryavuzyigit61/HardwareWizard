@@ -1,6 +1,7 @@
 package com.panda.myapplication.domain.model
 
 import androidx.compose.runtime.Immutable
+import kotlin.time.Clock
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -100,7 +101,40 @@ data class UserProfile(
     val totalTuningsCount: Int = 0,
     val totalTipsCount: Int = 0,
     val badgeTitle: String = "Lehim Çırağı",
+    val warningCount: Int = 0,
+    val isBanned: Boolean = false,
+    val bannedUntilEpochMs: Long = 0L,
+    val banReason: String? = null,
+    val banEscalationTier: Int = 0,
 ) {
+    /**
+     * Kullanıcının topluluk etkileşimi (yorum, OC ayarı, mikro ipucu ekleme) şu anda askıda mı?
+     */
+    val isSuspended: Boolean
+        get() {
+            if (isBanned) return true
+            if (bannedUntilEpochMs <= 0L) return false
+            return Clock.System.now().toEpochMilliseconds() < bannedUntilEpochMs
+        }
+
+    /**
+     * Kalan ceza süresini kullanıcı dostu olarak biçimlendirir (Örn: "3 gün 5 saat", "4 saat").
+     */
+    val remainingSuspensionText: String
+        get() {
+            if (isBanned) return "Süresiz"
+            val diffMs = bannedUntilEpochMs - Clock.System.now().toEpochMilliseconds()
+            if (diffMs <= 0L) return ""
+            val totalHours = diffMs / (1000 * 60 * 60)
+            val days = totalHours / 24
+            val hours = totalHours % 24
+            return when {
+                days > 0 -> "$days gün $hours saat"
+                hours > 0 -> "$hours saat"
+                else -> "1 saatten az"
+            }
+        }
+
     /**
      * İtibar puanına (Karma) göre dinamik rütbe unvanı hesaplaması.
      */

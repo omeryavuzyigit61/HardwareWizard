@@ -1,4 +1,4 @@
-﻿package com.panda.myapplication.data.local.entity
+package com.panda.myapplication.data.local.entity
 
 import androidx.room.Embedded
 import androidx.room.Relation
@@ -20,6 +20,19 @@ data class HardwareItemWithSpec(
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val keyboard: KeyboardSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val headset: HeadsetSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val monitor: MonitorSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val microphone: MicrophoneSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val mousepad: MousepadSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val webcam: WebcamSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val gamingChair: GamingChairSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val caseFan: CaseFanSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val ups: UpsSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val gamingDesk: GamingDeskSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val gamingLighting: GamingLightingSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val smartwatch: SmartwatchSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val router: RouterSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val modem: ModemSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val accessPoint: AccessPointSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "hardware_id") val rangeExtender: RangeExtenderSpecEntity? = null,
 )
 
 /** Write model for an atomic catalog sync. */
@@ -39,4 +52,17 @@ data class HardwareCatalogSnapshot(
     val keyboards: List<KeyboardSpecEntity> = emptyList(),
     val headsets: List<HeadsetSpecEntity> = emptyList(),
     val monitors: List<MonitorSpecEntity> = emptyList(),
+    val microphones: List<MicrophoneSpecEntity> = emptyList(),
+    val mousepads: List<MousepadSpecEntity> = emptyList(),
+    val webcams: List<WebcamSpecEntity> = emptyList(),
+    val gamingChairs: List<GamingChairSpecEntity> = emptyList(),
+    val caseFans: List<CaseFanSpecEntity> = emptyList(),
+    val upss: List<UpsSpecEntity> = emptyList(),
+    val gamingDesks: List<GamingDeskSpecEntity> = emptyList(),
+    val gamingLightings: List<GamingLightingSpecEntity> = emptyList(),
+    val smartwatches: List<SmartwatchSpecEntity> = emptyList(),
+    val routers: List<RouterSpecEntity> = emptyList(),
+    val modems: List<ModemSpecEntity> = emptyList(),
+    val accessPoints: List<AccessPointSpecEntity> = emptyList(),
+    val rangeExtenders: List<RangeExtenderSpecEntity> = emptyList(),
 )

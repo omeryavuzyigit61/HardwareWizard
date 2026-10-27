@@ -302,6 +302,33 @@ interface AppStrings {
 
     val drawerTuningVaultTitle: String
     val drawerTuningVaultSubtitle: String
+    val drawerBattlestationTitle: String get() = if (isTurkish) "Kasa & Masa Vitrini" else "Battlestation Showcase"
+    val drawerBattlestationSubtitle: String get() = if (isTurkish) "Topluluğun en temiz masa dizilimleri ve RGB canavarları" else "Community's cleanest battlestations & RGB rigs"
+    val battlestationTitle: String get() = if (isTurkish) "Kasa & Masa Vitrini" else "Battlestation Showcase"
+    val battlestationSubtitle: String get() = if (isTurkish) "Topluluğun en temiz masa dizilimleri ve RGB canavarları" else "Community's cleanest battlestations & RGB rigs"
+    val battlestationShareRig: String get() = if (isTurkish) "+ Kasamı Paylaş" else "+ Share My Rig"
+    val battlestationTabRig: String get() = if (isTurkish) "🖥️ Kasa İçi" else "🖥️ Rig Inside"
+    val battlestationTabSetup: String get() = if (isTurkish) "🎮 Masa & Setup" else "🎮 Desk Setup"
+    val battlestationViewSpecs: String get() = if (isTurkish) "🖥️ Donanım Parçalarını Gör" else "🖥️ View Hardware Specs"
+    val battlestationSpecsTitle: String get() = if (isTurkish) "Sistem Bileşenleri" else "System Components"
+    val battlestationImportFromActiveBuild: String get() = if (isTurkish) "Sihirbazdaki Parçalarımı Aktar" else "Import from Active Build"
+    val battlestationEmptyFeed: String get() = if (isTurkish) "Henüz vitrinde paylaşılan bir kasa yok. İlk paylaşan sen ol!" else "No battlestations shared yet. Be the first to share yours!"
+    val catMicrophone: String get() = if (isTurkish) "Mikrofon" else "Microphone"
+    val catMousepad: String get() = if (isTurkish) "Mousepad" else "Mousepad"
+    val catWebcam: String get() = if (isTurkish) "Webcam" else "Webcam"
+    val catGamingChair: String get() = if (isTurkish) "Oyuncu Koltuğu" else "Gaming Chair"
+    val catCaseFan: String get() = if (isTurkish) "Kasa Fanı" else "Case Fan"
+    val catUps: String get() = if (isTurkish) "UPS Güç Kaynağı" else "UPS Power Supply"
+    val catGamingDesk: String get() = if (isTurkish) "Oyuncu Masası" else "Gaming Desk"
+    val catGamingLighting: String get() = if (isTurkish) "Oyuncu Aydınlatması" else "Gaming Lighting"
+    val catSmartwatch: String get() = if (isTurkish) "Akıllı Saat" else "Smartwatch"
+    val catRouter: String get() = if (isTurkish) "Wi-Fi Router" else "Wi-Fi Router"
+    val catModem: String get() = if (isTurkish) "Modem" else "Modem"
+    val catAccessPoint: String get() = if (isTurkish) "Access Point" else "Access Point"
+    val catRangeExtender: String get() = if (isTurkish) "Menzil Genişletici & Mesh" else "Range Extender & Mesh"
+    val segmentNetworking: String get() = if (isTurkish) "Ağ Sistemleri" else "Networking"
+    val drawerStudioLabTitle: String get() = if (isTurkish) "Stüdyo, Yüzey & Ergonomi Labı" else "Studio, Surface & Ergonomics Lab"
+    val drawerStudioLabSubtitle: String get() = if (isTurkish) "Mikrofon akustiği, mousepad sürtünme fiziği, kamera FOV ve koltuk ergonomisi" else "Mic acoustics, mousepad friction physics, webcam FOV & chair ergonomics"
 
 
 
@@ -6352,6 +6379,19 @@ fun HardwareCategory.localized(strings: AppStrings): String = when (this) {
     HardwareCategory.HEADSET -> strings.catHeadset
 
     HardwareCategory.MONITOR -> strings.catMonitor
+    HardwareCategory.MICROPHONE -> strings.catMicrophone
+    HardwareCategory.MOUSEPAD -> strings.catMousepad
+    HardwareCategory.WEBCAM -> strings.catWebcam
+    HardwareCategory.GAMING_CHAIR -> strings.catGamingChair
+    HardwareCategory.CASE_FAN -> strings.catCaseFan
+    HardwareCategory.UPS -> strings.catUps
+    HardwareCategory.GAMING_DESK -> strings.catGamingDesk
+    HardwareCategory.GAMING_LIGHTING -> strings.catGamingLighting
+    HardwareCategory.SMARTWATCH -> strings.catSmartwatch
+    HardwareCategory.ROUTER -> strings.catRouter
+    HardwareCategory.MODEM -> strings.catModem
+    HardwareCategory.ACCESS_POINT -> strings.catAccessPoint
+    HardwareCategory.RANGE_EXTENDER -> strings.catRangeExtender
 
     HardwareCategory.SMARTPHONE -> strings.catPhone
 

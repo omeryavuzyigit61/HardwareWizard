@@ -90,6 +90,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
+import com.panda.myapplication.domain.common.DomainError
+import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.SiliconLotteryTier
 import com.panda.myapplication.domain.model.TuningComment
 import com.panda.myapplication.domain.model.TuningProfile
@@ -142,6 +144,8 @@ fun CommunityTuningVaultScreen(
     var selectedCategoryFilter by remember { mutableStateOf<String?>(null) }
     var filterMyRigOnly by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
+    // Dil Filtresi: Türkiye / Türkçe kullanıcılar için varsayılan "tr", aksi halde "ALL"
+    var selectedLanguageFilter by remember { mutableStateOf(if (isTr) "tr" else "ALL") }
 
     var showShareDialog by remember { mutableStateOf(false) }
     var activeProofImageUrl by remember { mutableStateOf<String?>(null) }
@@ -153,12 +157,14 @@ fun CommunityTuningVaultScreen(
         approvedProfiles,
         selectedTypeFilter,
         selectedCategoryFilter,
+        selectedLanguageFilter,
         filterMyRigOnly,
         activeBuild.cpu?.id,
         activeBuild.gpu?.id,
         searchQuery,
     ) {
         approvedProfiles.filter { profile ->
+            val matchesLanguage = (selectedLanguageFilter == "ALL") || profile.languageCode.equals(selectedLanguageFilter, ignoreCase = true)
             val matchesType = selectedTypeFilter == null || profile.effectiveTuningTypes.contains(selectedTypeFilter)
             val matchesCategory = selectedCategoryFilter == null || profile.hardwareCategory.equals(selectedCategoryFilter, ignoreCase = true)
             val matchesMyRig = !filterMyRigOnly ||
@@ -171,7 +177,7 @@ fun CommunityTuningVaultScreen(
                 (profile.motherboardName?.contains(searchQuery, ignoreCase = true) == true) ||
                 (profile.coolerName?.contains(searchQuery, ignoreCase = true) == true) ||
                 (profile.ramSpec?.contains(searchQuery, ignoreCase = true) == true)
-            matchesType && matchesCategory && matchesMyRig && matchesQuery
+            matchesLanguage && matchesType && matchesCategory && matchesMyRig && matchesQuery
         }
     }
 
@@ -326,7 +332,66 @@ fun CommunityTuningVaultScreen(
                 ),
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(6.dp))
+
+            // 2.5. Language Priority Chips (TR Default for TR users + Global Filter)
+            val trCount = remember(approvedProfiles) { approvedProfiles.count { it.languageCode.equals("tr", ignoreCase = true) } }
+            val globalCount = approvedProfiles.size
+            val enCount = remember(approvedProfiles) { approvedProfiles.count { it.languageCode.equals("en", ignoreCase = true) } }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 2.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(20.dp),
+                    color = if (selectedLanguageFilter == "tr") NeonCyan.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                    border = BorderStroke(1.dp, if (selectedLanguageFilter == "tr") NeonCyan else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)),
+                    modifier = Modifier.clickable { selectedLanguageFilter = "tr" },
+                ) {
+                    Text(
+                        text = if (isTr) "🇹🇷 Türkçe ($trCount)" else "🇹🇷 Turkish ($trCount)",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = if (selectedLanguageFilter == "tr") FontWeight.Bold else FontWeight.Medium),
+                        color = if (selectedLanguageFilter == "tr") NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
+                    )
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(20.dp),
+                    color = if (selectedLanguageFilter == "ALL") NeonAmber.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                    border = BorderStroke(1.dp, if (selectedLanguageFilter == "ALL") NeonAmber else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)),
+                    modifier = Modifier.clickable { selectedLanguageFilter = "ALL" },
+                ) {
+                    Text(
+                        text = if (isTr) "🌐 Tümü / Global ($globalCount)" else "🌐 Global / All ($globalCount)",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = if (selectedLanguageFilter == "ALL") FontWeight.Bold else FontWeight.Medium),
+                        color = if (selectedLanguageFilter == "ALL") NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
+                    )
+                }
+
+                if (enCount > 0) {
+                    Surface(
+                        shape = RoundedCornerShape(20.dp),
+                        color = if (selectedLanguageFilter == "en") Color(0xFF60A5FA).copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                        border = BorderStroke(1.dp, if (selectedLanguageFilter == "en") Color(0xFF60A5FA) else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)),
+                        modifier = Modifier.clickable { selectedLanguageFilter = "en" },
+                    ) {
+                        Text(
+                            text = "🇬🇧 English ($enCount)",
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = if (selectedLanguageFilter == "en") FontWeight.Bold else FontWeight.Medium),
+                            color = if (selectedLanguageFilter == "en") Color(0xFF60A5FA) else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(6.dp))
 
             // 3. Filter Chips (My Rig Match, Category & Soft-Rounded Tuning Types)
             Row(
@@ -503,6 +568,20 @@ fun CommunityTuningVaultScreen(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                         )
+                        if (selectedLanguageFilter == "tr" && approvedProfiles.isNotEmpty()) {
+                            Button(
+                                onClick = { selectedLanguageFilter = "ALL" },
+                                colors = ButtonDefaults.buttonColors(containerColor = NeonAmber.copy(alpha = 0.18f), contentColor = NeonAmber),
+                                shape = RoundedCornerShape(10.dp),
+                                modifier = Modifier.padding(top = 4.dp),
+                            ) {
+                                Text(
+                                    text = if (isTr) "🌐 Tüm Dillerdeki Ayarları Göster (${approvedProfiles.size})" else "Show All Profiles (${approvedProfiles.size})",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Bold,
+                                )
+                            }
+                        }
                     }
                 }
             } else {
@@ -793,8 +872,13 @@ fun CommunityTuningVaultScreen(
                                     createdAtEpochMs = System.currentTimeMillis(),
                                 )
                                 coroutineScope.launch {
-                                    tuningVaultRepository.addComment(comment)
-                                    newCommentText = ""
+                                    val res = tuningVaultRepository.addComment(comment)
+                                    if (res is DomainResult.Failure) {
+                                        val msg = (res.error as? DomainError.Unknown)?.cause?.message ?: "Yorum gönderilemedi."
+                                        snackbarHostState.showSnackbar(msg)
+                                    } else {
+                                        newCommentText = ""
+                                    }
                                     isPosting = false
                                 }
                             }
@@ -822,15 +906,20 @@ fun CommunityTuningVaultScreen(
             onDismiss = { showShareDialog = false },
             onSubmit = { profile ->
                 coroutineScope.launch {
-                    tuningVaultRepository.submitTuningProfile(profile)
+                    val res = tuningVaultRepository.submitTuningProfile(profile)
                     showShareDialog = false
-                    snackbarHostState.showSnackbar(
-                        if (isTr) {
-                            "Ayarınız moderasyon onayına gönderildi! Onaylandığında +50 puan profilinize eklenecektir."
-                        } else {
-                            "Your tuning profile was sent for moderation! You will earn +50 reputation upon approval."
-                        }
-                    )
+                    if (res is DomainResult.Failure) {
+                        val msg = (res.error as? DomainError.Unknown)?.cause?.message ?: (if (isTr) "Ayar gönderilemedi." else "Submission failed.")
+                        snackbarHostState.showSnackbar(msg)
+                    } else {
+                        snackbarHostState.showSnackbar(
+                            if (isTr) {
+                                "Ayarınız moderasyon onayına gönderildi! Onaylandığında +50 puan profilinize eklenecektir."
+                            } else {
+                                "Your tuning profile was sent for moderation! You will earn +50 reputation upon approval."
+                            }
+                        )
+                    }
                 }
             },
         )

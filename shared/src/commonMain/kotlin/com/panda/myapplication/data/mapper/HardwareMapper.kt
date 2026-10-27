@@ -10,7 +10,20 @@ import com.panda.myapplication.data.local.entity.HardwareItemWithSpec
 import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
 import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
 import com.panda.myapplication.data.local.entity.LaptopSpecEntity
+import com.panda.myapplication.data.local.entity.GamingChairSpecEntity
+import com.panda.myapplication.data.local.entity.CaseFanSpecEntity
+import com.panda.myapplication.data.local.entity.UpsSpecEntity
+import com.panda.myapplication.data.local.entity.GamingDeskSpecEntity
+import com.panda.myapplication.data.local.entity.GamingLightingSpecEntity
+import com.panda.myapplication.data.local.entity.SmartwatchSpecEntity
+import com.panda.myapplication.data.local.entity.RouterSpecEntity
+import com.panda.myapplication.data.local.entity.ModemSpecEntity
+import com.panda.myapplication.data.local.entity.AccessPointSpecEntity
+import com.panda.myapplication.data.local.entity.RangeExtenderSpecEntity
+import com.panda.myapplication.data.local.entity.MicrophoneSpecEntity
 import com.panda.myapplication.data.local.entity.MonitorSpecEntity
+import com.panda.myapplication.data.local.entity.MousepadSpecEntity
+import com.panda.myapplication.data.local.entity.WebcamSpecEntity
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
 import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
@@ -43,7 +56,20 @@ import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MemorySize
 import com.panda.myapplication.domain.model.Money
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.CaseFanSpec
+import com.panda.myapplication.domain.model.UpsSpec
+import com.panda.myapplication.domain.model.GamingDeskSpec
+import com.panda.myapplication.domain.model.GamingLightingSpec
+import com.panda.myapplication.domain.model.SmartwatchSpec
+import com.panda.myapplication.domain.model.RouterSpec
+import com.panda.myapplication.domain.model.ModemSpec
+import com.panda.myapplication.domain.model.AccessPointSpec
+import com.panda.myapplication.domain.model.RangeExtenderSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
@@ -344,6 +370,181 @@ object HardwareMapper {
                     brightnessHdrNit = mn.brightnessHdrNit,
                     colorGamut = mn.colorGamut,
                     vrrSupport = mn.vrrSupport,
+                )
+            }
+            itemWithSpec.microphone != null -> {
+                val mc = itemWithSpec.microphone
+                MicrophoneSpec(
+                    capsuleType = mc.capsuleType,
+                    polarPattern = mc.polarPattern,
+                    sampleRateAndBit = mc.sampleRateAndBit,
+                    frequencyResponse = mc.frequencyResponse,
+                    connectivity = mc.connectivity,
+                    maxSplDb = mc.maxSplDb,
+                    hasBuiltInDsp = mc.hasBuiltInDsp,
+                    requiresPhantomPower = mc.requiresPhantomPower,
+                    hasZeroLatencyMonitoring = mc.hasZeroLatencyMonitoring,
+                    hasPopFilter = mc.hasPopFilter,
+                )
+            }
+            itemWithSpec.mousepad != null -> {
+                val mp = itemWithSpec.mousepad
+                MousepadSpec(
+                    surfaceType = mp.surfaceType,
+                    speedGlideTier = mp.speedGlideTier,
+                    baseMaterial = mp.baseMaterial,
+                    dimensionsMm = mp.dimensionsMm,
+                    thicknessMm = mp.thicknessMm,
+                    stitchedEdges = mp.stitchedEdges,
+                    stoppingPowerScore = mp.stoppingPowerScore,
+                    humidityResistance = mp.humidityResistance,
+                )
+            }
+            itemWithSpec.webcam != null -> {
+                val wc = itemWithSpec.webcam
+                WebcamSpec(
+                    maxResolution = wc.maxResolution,
+                    maxFrameRateFps = wc.maxFrameRateFps,
+                    sensorModel = wc.sensorModel,
+                    sensorSizeInch = wc.sensorSizeInch,
+                    aperture = wc.aperture,
+                    fieldOfViewDeg = wc.fieldOfViewDeg,
+                    focusType = wc.focusType,
+                    hasAiTracking = wc.hasAiTracking,
+                    hasHardwareHdr = wc.hasHardwareHdr,
+                    connectionType = wc.connectionType,
+                    privacyShutter = wc.privacyShutter,
+                )
+            }
+            itemWithSpec.gamingChair != null -> {
+                val gc = itemWithSpec.gamingChair
+                GamingChairSpec(
+                    chairType = gc.chairType,
+                    upholsteryMaterial = gc.upholsteryMaterial,
+                    lumbarSupportType = gc.lumbarSupportType,
+                    armrestType = gc.armrestType,
+                    gasLiftClass = gc.gasLiftClass,
+                    maxWeightCapacityKg = gc.maxWeightCapacityKg,
+                    recommendedHeightRange = gc.recommendedHeightRange,
+                    reclineAngleDeg = gc.reclineAngleDeg,
+                    tiltMechanism = gc.tiltMechanism,
+                )
+            }
+            itemWithSpec.caseFan != null -> {
+                val cf = itemWithSpec.caseFan
+                CaseFanSpec(
+                    fanSizeMm = cf.fanSizeMm,
+                    minRpm = cf.minRpm,
+                    maxRpm = cf.maxRpm,
+                    maxAirflowCfm = cf.maxAirflowCfm,
+                    staticPressureMmH2o = cf.staticPressureMmH2o,
+                    noiseLevelDba = cf.noiseLevelDba,
+                    bearingType = cf.bearingType,
+                    pwmPins = cf.pwmPins,
+                    isDaisyChain = cf.isDaisyChain,
+                    argbType = cf.argbType,
+                )
+            }
+            itemWithSpec.ups != null -> {
+                val u = itemWithSpec.ups
+                UpsSpec(
+                    vaRating = u.vaRating,
+                    wattCapacity = u.wattCapacity,
+                    topology = u.topology,
+                    sinewaveType = u.sinewaveType,
+                    batterySpecs = u.batterySpecs,
+                    runtimeMinFullLoad = u.runtimeMinFullLoad,
+                    runtimeMinHalfLoad = u.runtimeMinHalfLoad,
+                    outletCount = u.outletCount,
+                    hasUsbInterface = u.hasUsbInterface,
+                    surgeProtectionJoules = u.surgeProtectionJoules,
+                )
+            }
+            itemWithSpec.gamingDesk != null -> {
+                val gd = itemWithSpec.gamingDesk
+                GamingDeskSpec(
+                    deskWidthCm = gd.deskWidthCm,
+                    deskDepthCm = gd.deskDepthCm,
+                    isMotorizedHeight = gd.isMotorizedHeight,
+                    minHeightCm = gd.minHeightCm,
+                    maxHeightCm = gd.maxHeightCm,
+                    maxLoadKg = gd.maxLoadKg,
+                    surfaceFinish = gd.surfaceFinish,
+                    hasCableManagement = gd.hasCableManagement,
+                    integratedMousepad = gd.integratedMousepad,
+                )
+            }
+            itemWithSpec.gamingLighting != null -> {
+                val gl = itemWithSpec.gamingLighting
+                GamingLightingSpec(
+                    formFactor = gl.formFactor,
+                    maxLumens = gl.maxLumens,
+                    colorTempKelvin = gl.colorTempKelvin,
+                    criScore = gl.criScore,
+                    hasScreenMirroring = gl.hasScreenMirroring,
+                    supportedEcosystems = gl.supportedEcosystems,
+                    connectionType = gl.connectionType,
+                    powerSource = gl.powerSource,
+                )
+            }
+            itemWithSpec.smartwatch != null -> {
+                val sw = itemWithSpec.smartwatch
+                SmartwatchSpec(
+                    screenSizeInch = sw.screenSizeInch,
+                    screenPanel = sw.screenPanel,
+                    peakBrightnessNits = sw.peakBrightnessNits,
+                    batteryLifeDays = sw.batteryLifeDays,
+                    waterResistanceAtm = sw.waterResistanceAtm,
+                    osName = sw.osName,
+                    sensorsList = sw.sensorsList,
+                    hasCellularLte = sw.hasCellularLte,
+                    caseMaterial = sw.caseMaterial,
+                )
+            }
+            itemWithSpec.router != null -> {
+                val r = itemWithSpec.router
+                RouterSpec(
+                    wifiStandard = r.wifiStandard,
+                    speedClass = r.speedClass,
+                    bands = r.bands,
+                    ethernetPorts = r.ethernetPorts,
+                    hasGamingQos = r.hasGamingQos,
+                    hasSqmBufferbloat = r.hasSqmBufferbloat,
+                    processorAndRam = r.processorAndRam,
+                    usbSharingPorts = r.usbSharingPorts,
+                )
+            }
+            itemWithSpec.modem != null -> {
+                val m = itemWithSpec.modem
+                ModemSpec(
+                    vdslProfile = m.vdslProfile,
+                    fiberWanSupport = m.fiberWanSupport,
+                    wifiStandard = m.wifiStandard,
+                    lanPorts = m.lanPorts,
+                    voipPorts = m.voipPorts,
+                    chipset = m.chipset,
+                )
+            }
+            itemWithSpec.accessPoint != null -> {
+                val ap = itemWithSpec.accessPoint
+                AccessPointSpec(
+                    formFactor = ap.formFactor,
+                    wifiStandard = ap.wifiStandard,
+                    poeSupport = ap.poeSupport,
+                    maxClients = ap.maxClients,
+                    muMimoStreams = ap.muMimoStreams,
+                    uplinkPort = ap.uplinkPort,
+                )
+            }
+            itemWithSpec.rangeExtender != null -> {
+                val re = itemWithSpec.rangeExtender
+                RangeExtenderSpec(
+                    extenderType = re.extenderType,
+                    wifiStandard = re.wifiStandard,
+                    dedicatedBackhaul = re.dedicatedBackhaul,
+                    meshProtocol = re.meshProtocol,
+                    ethernetPorts = re.ethernetPorts,
+                    coverageAreaM2 = re.coverageAreaM2,
                 )
             }
             else -> return@runCatching null
@@ -1153,6 +1354,19 @@ object HardwareMapper {
         val keyboardPairs = mutableListOf<Pair<HardwareItemEntity, KeyboardSpecEntity>>()
         val headsetPairs = mutableListOf<Pair<HardwareItemEntity, HeadsetSpecEntity>>()
         val monitorPairs = mutableListOf<Pair<HardwareItemEntity, MonitorSpecEntity>>()
+        val microphonePairs = mutableListOf<Pair<HardwareItemEntity, MicrophoneSpecEntity>>()
+        val mousepadPairs = mutableListOf<Pair<HardwareItemEntity, MousepadSpecEntity>>()
+        val webcamPairs = mutableListOf<Pair<HardwareItemEntity, WebcamSpecEntity>>()
+        val gamingChairPairs = mutableListOf<Pair<HardwareItemEntity, GamingChairSpecEntity>>()
+        val caseFanPairs = mutableListOf<Pair<HardwareItemEntity, CaseFanSpecEntity>>()
+        val upsPairs = mutableListOf<Pair<HardwareItemEntity, UpsSpecEntity>>()
+        val gamingDeskPairs = mutableListOf<Pair<HardwareItemEntity, GamingDeskSpecEntity>>()
+        val gamingLightingPairs = mutableListOf<Pair<HardwareItemEntity, GamingLightingSpecEntity>>()
+        val smartwatchPairs = mutableListOf<Pair<HardwareItemEntity, SmartwatchSpecEntity>>()
+        val routerPairs = mutableListOf<Pair<HardwareItemEntity, RouterSpecEntity>>()
+        val modemPairs = mutableListOf<Pair<HardwareItemEntity, ModemSpecEntity>>()
+        val accessPointPairs = mutableListOf<Pair<HardwareItemEntity, AccessPointSpecEntity>>()
+        val rangeExtenderPairs = mutableListOf<Pair<HardwareItemEntity, RangeExtenderSpecEntity>>()
 
         peripherals.forEach { dto ->
             runCatching {
@@ -1248,6 +1462,181 @@ object HardwareMapper {
                             vrrSupport = dto.vrrSupport ?: "G-Sync Compatible / FreeSync Premium Pro",
                         )
                     }
+                    HardwareCategory.MICROPHONE -> {
+                        microphonePairs += itemEntity to MicrophoneSpecEntity(
+                            hardwareId = id,
+                            capsuleType = dto.capsuleType ?: "Dinamik (Dynamic)",
+                            polarPattern = dto.polarPattern ?: "Kardioid (Cardioid)",
+                            sampleRateAndBit = dto.sampleRateAndBit ?: "24-bit / 96kHz",
+                            frequencyResponse = dto.frequencyResponse ?: "20Hz - 20kHz",
+                            connectivity = dto.connectivity ?: "USB-C / XLR Hibrit",
+                            maxSplDb = dto.maxSplDb ?: 130,
+                            hasBuiltInDsp = dto.hasBuiltInDsp ?: true,
+                            requiresPhantomPower = dto.requiresPhantomPower ?: false,
+                            hasZeroLatencyMonitoring = dto.hasZeroLatencyMonitoring ?: true,
+                            hasPopFilter = dto.hasPopFilter ?: true,
+                        )
+                    }
+                    HardwareCategory.MOUSEPAD -> {
+                        mousepadPairs += itemEntity to MousepadSpecEntity(
+                            hardwareId = id,
+                            surfaceType = dto.surfaceType ?: "Dokuma Kumaş (Cloth)",
+                            speedGlideTier = dto.speedGlideTier ?: "Balanced (Dengeli)",
+                            baseMaterial = dto.baseMaterial ?: "Japon Poron / Doğal Kauçuk",
+                            dimensionsMm = dto.dimensionsMm ?: "490 x 420 mm",
+                            thicknessMm = dto.thicknessMm ?: 4.0,
+                            stitchedEdges = dto.stitchedEdges ?: true,
+                            stoppingPowerScore = dto.stoppingPowerScore ?: 8,
+                            humidityResistance = dto.humidityResistance ?: "Yüksek (%95+)",
+                        )
+                    }
+                    HardwareCategory.WEBCAM -> {
+                        webcamPairs += itemEntity to WebcamSpecEntity(
+                            hardwareId = id,
+                            maxResolution = dto.maxResolution ?: "4K UHD (3840x2160)",
+                            maxFrameRateFps = dto.maxFrameRateFps ?: 60,
+                            sensorModel = dto.sensorModel ?: "Sony STARVIS CMOS",
+                            sensorSizeInch = dto.sensorSizeInch ?: "1/2.8\"",
+                            aperture = dto.aperture ?: "f/2.0",
+                            fieldOfViewDeg = dto.fieldOfViewDeg ?: 82,
+                            focusType = dto.focusType ?: "PDAF Otomatik Odak",
+                            hasAiTracking = dto.hasAiTracking ?: false,
+                            hasHardwareHdr = dto.hasHardwareHdr ?: true,
+                            connectionType = dto.connectionType ?: "USB 3.0 Type-C",
+                            privacyShutter = dto.privacyShutter ?: true,
+                        )
+                    }
+                    HardwareCategory.GAMING_CHAIR -> {
+                        gamingChairPairs += itemEntity to GamingChairSpecEntity(
+                            hardwareId = id,
+                            chairType = dto.chairType ?: "Ergonomik Oyuncu Koltuğu",
+                            upholsteryMaterial = dto.upholsteryMaterial ?: "Nefes Alan Kumaş (SoftWeave)",
+                            lumbarSupportType = dto.lumbarSupportType ?: "4 Yönlü Mekanik L4-L5 Bel Desteği",
+                            armrestType = dto.armrestType ?: "4D Tam Metal Kolçak",
+                            gasLiftClass = dto.gasLiftClass ?: "Class 4 Ağır Hizmet (BIFMA)",
+                            maxWeightCapacityKg = dto.maxWeightCapacityKg ?: 150,
+                            recommendedHeightRange = dto.recommendedHeightRange ?: "165 - 195 cm",
+                            reclineAngleDeg = dto.reclineAngleDeg ?: 165,
+                            tiltMechanism = dto.tiltMechanism ?: "Multi-Tilt (Kurbağa Mekanizma)",
+                        )
+                    }
+                    HardwareCategory.CASE_FAN -> {
+                        caseFanPairs += itemEntity to CaseFanSpecEntity(
+                            hardwareId = id,
+                            fanSizeMm = dto.fanSizeMm ?: 120,
+                            minRpm = dto.minRpm ?: 600,
+                            maxRpm = dto.maxRpm ?: 2000,
+                            maxAirflowCfm = dto.maxAirflowCfm ?: 65.0,
+                            staticPressureMmH2o = dto.staticPressureMmH2o ?: 2.5,
+                            noiseLevelDba = dto.noiseLevelDba ?: 26.5,
+                            bearingType = dto.bearingType ?: "FDB (Fluid Dynamic)",
+                            pwmPins = dto.pwmPins ?: 4,
+                            isDaisyChain = dto.isDaisyChain ?: true,
+                            argbType = dto.argbType ?: "Adreslenebilir 5V ARGB",
+                        )
+                    }
+                    HardwareCategory.UPS -> {
+                        upsPairs += itemEntity to UpsSpecEntity(
+                            hardwareId = id,
+                            vaRating = dto.vaRating ?: 1500,
+                            wattCapacity = dto.wattCapacity ?: 900,
+                            topology = dto.topology ?: "Line-Interactive",
+                            sinewaveType = dto.sinewaveType ?: "Tam Sinüs (Pure Sine Wave)",
+                            batterySpecs = dto.batterySpecs ?: "12V 9Ah x 2",
+                            runtimeMinFullLoad = dto.runtimeMinFullLoad ?: 4,
+                            runtimeMinHalfLoad = dto.runtimeMinHalfLoad ?: 14,
+                            outletCount = dto.outletCount ?: 6,
+                            hasUsbInterface = dto.hasUsbInterface ?: true,
+                            surgeProtectionJoules = dto.surgeProtectionJoules ?: 450,
+                        )
+                    }
+                    HardwareCategory.GAMING_DESK -> {
+                        gamingDeskPairs += itemEntity to GamingDeskSpecEntity(
+                            hardwareId = id,
+                            deskWidthCm = dto.deskWidthCm ?: 150,
+                            deskDepthCm = dto.deskDepthCm ?: 75,
+                            isMotorizedHeight = dto.isMotorizedHeight ?: true,
+                            minHeightCm = dto.minHeightCm ?: 65,
+                            maxHeightCm = dto.maxHeightCm ?: 125,
+                            maxLoadKg = dto.maxLoadKg ?: 120,
+                            surfaceFinish = dto.surfaceFinish ?: "Manyetik Çelik / Karbon MDF",
+                            hasCableManagement = dto.hasCableManagement ?: true,
+                            integratedMousepad = dto.integratedMousepad ?: true,
+                        )
+                    }
+                    HardwareCategory.GAMING_LIGHTING -> {
+                        gamingLightingPairs += itemEntity to GamingLightingSpecEntity(
+                            hardwareId = id,
+                            formFactor = dto.lightingFormFactor ?: "Monitör ScreenBar",
+                            maxLumens = dto.maxLumens ?: 500,
+                            colorTempKelvin = dto.colorTempKelvin ?: "2700K - 6500K + RGB",
+                            criScore = dto.criScore ?: 95,
+                            hasScreenMirroring = dto.hasScreenMirroring ?: true,
+                            supportedEcosystems = dto.supportedEcosystems ?: "Razer Chroma / Matter / Alexa",
+                            connectionType = dto.connectionType ?: "Wi-Fi + Bluetooth",
+                            powerSource = dto.powerSource ?: "USB-C 5V / Adaptör",
+                        )
+                    }
+                    HardwareCategory.SMARTWATCH -> {
+                        smartwatchPairs += itemEntity to SmartwatchSpecEntity(
+                            hardwareId = id,
+                            screenSizeInch = dto.screenSizeInch ?: 1.43,
+                            screenPanel = dto.screenPanel ?: "AMOLED Always-On",
+                            peakBrightnessNits = dto.peakBrightnessNits ?: 2000,
+                            batteryLifeDays = dto.batteryLifeDays ?: 5,
+                            waterResistanceAtm = dto.waterResistanceAtm ?: 5,
+                            osName = dto.osName ?: "Wear OS / WatchOS",
+                            sensorsList = dto.sensorsList ?: "EKG, SpO2, Kalp Atışı, Çift Frekans GPS, Sıcaklık",
+                            hasCellularLte = dto.hasCellularLte ?: false,
+                            caseMaterial = dto.caseMaterial ?: "Havacılık Sınıfı Alüminyum / Titanyum",
+                        )
+                    }
+                    HardwareCategory.ROUTER -> {
+                        routerPairs += itemEntity to RouterSpecEntity(
+                            hardwareId = id,
+                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 7 (802.11be)",
+                            speedClass = dto.speedClass ?: "BE19000 Tri-Band",
+                            bands = dto.bands ?: "2.4GHz + 5GHz + 6GHz",
+                            ethernetPorts = dto.ethernetPorts ?: "2x 10GbE + 4x 2.5GbE LAN",
+                            hasGamingQos = dto.hasGamingQos ?: true,
+                            hasSqmBufferbloat = dto.hasSqmBufferbloat ?: true,
+                            processorAndRam = dto.processorAndRam ?: "Dört Çekirdek 2.6GHz + 2GB RAM",
+                            usbSharingPorts = dto.usbSharingPorts ?: "1x USB 3.2 Gen 1",
+                        )
+                    }
+                    HardwareCategory.MODEM -> {
+                        modemPairs += itemEntity to ModemSpecEntity(
+                            hardwareId = id,
+                            vdslProfile = dto.vdslProfile ?: "VDSL2 35b (Supervectoring 300M)",
+                            fiberWanSupport = dto.fiberWanSupport ?: true,
+                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 6 (AX3000)",
+                            lanPorts = dto.lanPorts ?: "1x 2.5GbE + 3x 1GbE LAN",
+                            voipPorts = dto.voipPorts ?: "2x FXS Telefon Hattı",
+                            chipset = dto.chipset ?: "Broadcom / MediaTek",
+                        )
+                    }
+                    HardwareCategory.ACCESS_POINT -> {
+                        accessPointPairs += itemEntity to AccessPointSpecEntity(
+                            hardwareId = id,
+                            formFactor = dto.formFactor ?: "Tavan / Duvar Tipi (Ceiling Mount)",
+                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 7 / Wi-Fi 6E",
+                            poeSupport = dto.poeSupport ?: "802.3at PoE+ (30W)",
+                            maxClients = dto.maxClients ?: 300,
+                            muMimoStreams = dto.muMimoStreams ?: "4x4 MU-MIMO",
+                            uplinkPort = dto.uplinkPort ?: "2.5GbE PoE Uplink",
+                        )
+                    }
+                    HardwareCategory.RANGE_EXTENDER -> {
+                        rangeExtenderPairs += itemEntity to RangeExtenderSpecEntity(
+                            hardwareId = id,
+                            extenderType = dto.extenderType ?: "Mesh Düğümü (Mesh Node)",
+                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 6E (AX5400)",
+                            dedicatedBackhaul = dto.dedicatedBackhaul ?: "Ayrılmış 5GHz / 6GHz Kablosuz Omurga + GbE LAN",
+                            meshProtocol = dto.meshProtocol ?: "EasyMesh / AiMesh / OneMesh",
+                            ethernetPorts = dto.ethernetPorts ?: "2x Gigabit LAN",
+                            coverageAreaM2 = dto.coverageAreaM2 ?: 220,
+                        )
+                    }
                     else -> Unit
                 }
             }
@@ -1266,7 +1655,20 @@ object HardwareMapper {
                 mousePairs.map { it.first } +
                 keyboardPairs.map { it.first } +
                 headsetPairs.map { it.first } +
-                monitorPairs.map { it.first })
+                monitorPairs.map { it.first } +
+                microphonePairs.map { it.first } +
+                mousepadPairs.map { it.first } +
+                webcamPairs.map { it.first } +
+                gamingChairPairs.map { it.first } +
+                caseFanPairs.map { it.first } +
+                upsPairs.map { it.first } +
+                gamingDeskPairs.map { it.first } +
+                gamingLightingPairs.map { it.first } +
+                smartwatchPairs.map { it.first } +
+                routerPairs.map { it.first } +
+                modemPairs.map { it.first } +
+                accessPointPairs.map { it.first } +
+                rangeExtenderPairs.map { it.first })
             .distinctBy { it.id }
 
         val enrichedItems = rawItems.map { item ->
@@ -1345,6 +1747,19 @@ object HardwareMapper {
             keyboards = keyboardPairs.map { it.second }.distinctBy { it.hardwareId },
             headsets = headsetPairs.map { it.second }.distinctBy { it.hardwareId },
             monitors = monitorPairs.map { it.second }.distinctBy { it.hardwareId },
+            microphones = microphonePairs.map { it.second }.distinctBy { it.hardwareId },
+            mousepads = mousepadPairs.map { it.second }.distinctBy { it.hardwareId },
+            webcams = webcamPairs.map { it.second }.distinctBy { it.hardwareId },
+            gamingChairs = gamingChairPairs.map { it.second }.distinctBy { it.hardwareId },
+            caseFans = caseFanPairs.map { it.second }.distinctBy { it.hardwareId },
+            upss = upsPairs.map { it.second }.distinctBy { it.hardwareId },
+            gamingDesks = gamingDeskPairs.map { it.second }.distinctBy { it.hardwareId },
+            gamingLightings = gamingLightingPairs.map { it.second }.distinctBy { it.hardwareId },
+            smartwatches = smartwatchPairs.map { it.second }.distinctBy { it.hardwareId },
+            routers = routerPairs.map { it.second }.distinctBy { it.hardwareId },
+            modems = modemPairs.map { it.second }.distinctBy { it.hardwareId },
+            accessPoints = accessPointPairs.map { it.second }.distinctBy { it.hardwareId },
+            rangeExtenders = rangeExtenderPairs.map { it.second }.distinctBy { it.hardwareId },
         )
     }
 

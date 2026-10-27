@@ -195,8 +195,13 @@ class GetCompatibleHardwareForSlotUseCase {
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
             HardwareCategory.MONITOR,
+            HardwareCategory.MICROPHONE,
+            HardwareCategory.MOUSEPAD,
+            HardwareCategory.WEBCAM,
+            HardwareCategory.GAMING_CHAIR,
             HardwareCategory.SMARTPHONE,
             HardwareCategory.TABLET -> candidates
+            else -> candidates
         }
 
         return CompatibleSlotResult(

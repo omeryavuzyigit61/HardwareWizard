@@ -13,7 +13,11 @@ import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PhoneSpec
@@ -164,6 +168,14 @@ object VsArenaEngine {
                     addAll(compareHeadsets(left.spec, right.spec))
                 left.spec is MonitorSpec && right.spec is MonitorSpec ->
                     addAll(compareMonitors(left.spec, right.spec))
+                left.spec is MicrophoneSpec && right.spec is MicrophoneSpec ->
+                    addAll(compareMicrophones(left.spec, right.spec))
+                left.spec is MousepadSpec && right.spec is MousepadSpec ->
+                    addAll(compareMousepads(left.spec, right.spec))
+                left.spec is WebcamSpec && right.spec is WebcamSpec ->
+                    addAll(compareWebcams(left.spec, right.spec))
+                left.spec is GamingChairSpec && right.spec is GamingChairSpec ->
+                    addAll(compareGamingChairs(left.spec, right.spec))
                 left.spec is PhoneSpec && right.spec is PhoneSpec ->
                     addAll(compareSmartphones(left.spec, right.spec))
                 left.spec is TabletSpec && right.spec is TabletSpec ->
@@ -224,8 +236,20 @@ object VsArenaEngine {
             HardwareCategory.KEYBOARD -> "Switch & Rapid Trigger Endeksi"
             HardwareCategory.HEADSET -> "Akustik Sürücü & Sahne Endeksi"
             HardwareCategory.MONITOR -> "Panel Hızı & Görüntü Endeksi"
+            HardwareCategory.MICROPHONE -> "Stüdyo Akustik & Kayıt Endeksi"
+            HardwareCategory.MOUSEPAD -> "Yüzey Kayma & Kontrol Endeksi"
+            HardwareCategory.WEBCAM -> "Sensör & Yayıncı Görüntü Endeksi"
+            HardwareCategory.GAMING_CHAIR -> "Ergonomi & Ortopedik Destek Endeksi"
             HardwareCategory.SMARTPHONE -> "Mobil Sentetik & Donanım Endeksi"
             HardwareCategory.TABLET -> "Tablet Üretkenlik & Multimedya Endeksi"
+            HardwareCategory.CASE_FAN -> "Termal Hava Akışı & Akustik Endeksi"
+            HardwareCategory.UPS -> "Güç Kapasitesi & Kesinti Koruma Endeksi"
+            HardwareCategory.GAMING_DESK -> "Ergonomi & Yük Taşıma Endeksi"
+            HardwareCategory.GAMING_LIGHTING -> "Işık Akısı & Ekosistem Endeksi"
+            HardwareCategory.SMARTWATCH -> "Giyilebilir Teknoloji & Pil Endeksi"
+            HardwareCategory.ROUTER, HardwareCategory.MODEM,
+            HardwareCategory.ACCESS_POINT, HardwareCategory.RANGE_EXTENDER -> "Ağ Bant Genişliği & Kapsama Endeksi"
+
         }
 
         return VsChampionSummary(
@@ -1196,6 +1220,32 @@ object VsArenaEngine {
                 val ppiBonus = (s.ppi - 80).coerceAtLeast(0) * 0.35
                 itemBench ?: (35.0 + hzScore + oledBonus + ppiBonus).coerceIn(45.0, 105.0)
             }
+            is MicrophoneSpec -> {
+                val itemBench = item.benchmarkScore?.toDouble()
+                val xlrBonus = if (s.connectivity.contains("XLR", ignoreCase = true)) 12.0 else 0.0
+                val dspBonus = if (s.hasBuiltInDsp) 8.0 else 0.0
+                val splBonus = (s.maxSplDb - 110).coerceAtLeast(0) * 0.5
+                itemBench ?: (68.0 + xlrBonus + dspBonus + splBonus).coerceIn(50.0, 100.0)
+            }
+            is MousepadSpec -> {
+                val itemBench = item.benchmarkScore?.toDouble()
+                val poronBonus = if (s.baseMaterial.contains("Poron", ignoreCase = true) || s.surfaceType.contains("Cam", ignoreCase = true)) 15.0 else 5.0
+                val stitchBonus = if (s.stitchedEdges) 5.0 else 0.0
+                itemBench ?: (70.0 + poronBonus + stitchBonus + s.stoppingPowerScore).coerceIn(50.0, 100.0)
+            }
+            is WebcamSpec -> {
+                val itemBench = item.benchmarkScore?.toDouble()
+                val resBonus = if (s.maxResolution.contains("4K", ignoreCase = true)) 20.0 else 8.0
+                val fpsBonus = if (s.maxFrameRateFps >= 60) 12.0 else 0.0
+                val aiBonus = if (s.hasAiTracking) 8.0 else 0.0
+                itemBench ?: (60.0 + resBonus + fpsBonus + aiBonus).coerceIn(50.0, 100.0)
+            }
+            is GamingChairSpec -> {
+                val itemBench = item.benchmarkScore?.toDouble()
+                val capBonus = (s.maxWeightCapacityKg - 110).coerceAtLeast(0) * 0.25
+                val lumbarBonus = if (s.lumbarSupportType.contains("4 Yönlü", ignoreCase = true) || s.lumbarSupportType.contains("4D", ignoreCase = true) || s.lumbarSupportType.contains("Mekanik", ignoreCase = true)) 14.0 else 6.0
+                itemBench ?: (68.0 + capBonus + lumbarBonus).coerceIn(50.0, 100.0)
+            }
             is PhoneSpec -> {
                 val antutu = s.antutuScore?.toDouble() ?: 1500000.0
                 (antutu / 25000.0).coerceIn(30.0, 115.0)
@@ -1204,6 +1254,7 @@ object VsArenaEngine {
                 val antutu = s.antutuScore?.toDouble() ?: 1800000.0
                 (antutu / 25000.0).coerceIn(30.0, 120.0)
             }
+            else -> item.benchmarkScore?.toDouble() ?: 75.0
         }
     }
 
@@ -1373,6 +1424,93 @@ object VsArenaEngine {
             )
         )
         add(VsComparisonRow("HDR & Parlaklık Sertifikası", l.hdrCertification, r.hdrCertification))
+    }
+
+    private fun compareMicrophones(l: MicrophoneSpec, r: MicrophoneSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Kapsül Mimarisi", l.capsuleType, r.capsuleType, isKeyMetric = true))
+        add(VsComparisonRow("Kutup Deseni (Polar Pattern)", l.polarPattern, r.polarPattern, isKeyMetric = true))
+        add(VsComparisonRow("Örnekleme & Bit Derinliği", l.sampleRateAndBit, r.sampleRateAndBit, isKeyMetric = true))
+        add(VsComparisonRow("Bağlantı Arayüzü", l.connectivity, r.connectivity, isKeyMetric = true))
+        add(
+            compareHigherBetter(
+                label = "Maksimum Ses Basıncı (Max SPL)",
+                leftVal = l.maxSplDb.toDouble(),
+                rightVal = r.maxSplDb.toDouble(),
+                leftText = "${l.maxSplDb} dB SPL",
+                rightText = "${r.maxSplDb} dB SPL",
+                badgeSuffix = "Daha Yüksek Ses Direnci",
+            )
+        )
+        add(VsComparisonRow("Frekans Tepkisi", l.frequencyResponse, r.frequencyResponse))
+        add(VsComparisonRow("Dahili DSP İşleme", if (l.hasBuiltInDsp) "Var" else "Yok", if (r.hasBuiltInDsp) "Var" else "Yok"))
+    }
+
+    private fun compareMousepads(l: MousepadSpec, r: MousepadSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Yüzey Teknolojisi", l.surfaceType, r.surfaceType, isKeyMetric = true))
+        add(VsComparisonRow("Kayma Hızı & Karakter", l.speedGlideTier, r.speedGlideTier, isKeyMetric = true))
+        add(
+            compareHigherBetter(
+                label = "Durdurma Gücü (Stopping Power)",
+                leftVal = l.stoppingPowerScore.toDouble(),
+                rightVal = r.stoppingPowerScore.toDouble(),
+                leftText = "${l.stoppingPowerScore}/10 Puan",
+                rightText = "${r.stoppingPowerScore}/10 Puan",
+                badgeSuffix = "Daha Keskin Flick Kontrolü",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Taban Materyali", l.baseMaterial, r.baseMaterial, isKeyMetric = true))
+        add(VsComparisonRow("Boyutlar", l.dimensionsMm, r.dimensionsMm))
+        add(VsComparisonRow("Kalınlık", "${l.thicknessMm} mm", "${r.thicknessMm} mm"))
+        add(VsComparisonRow("Nem & Ter Direnci", l.humidityResistance, r.humidityResistance))
+    }
+
+    private fun compareWebcams(l: WebcamSpec, r: WebcamSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Maksimum Çözünürlük", l.maxResolution, r.maxResolution, isKeyMetric = true))
+        add(
+            compareHigherBetter(
+                label = "Kare Hızı (FPS)",
+                leftVal = l.maxFrameRateFps.toDouble(),
+                rightVal = r.maxFrameRateFps.toDouble(),
+                leftText = "${l.maxFrameRateFps} FPS",
+                rightText = "${r.maxFrameRateFps} FPS",
+                badgeSuffix = "FPS Daha Akıcı",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Sensör & Boyut", "${l.sensorModel} (${l.sensorSizeInch})", "${r.sensorModel} (${r.sensorSizeInch})", isKeyMetric = true))
+        add(VsComparisonRow("Diyafram Açıklığı", l.aperture, r.aperture, isKeyMetric = true))
+        add(
+            compareHigherBetter(
+                label = "Görüş Açısı (FOV)",
+                leftVal = l.fieldOfViewDeg.toDouble(),
+                rightVal = r.fieldOfViewDeg.toDouble(),
+                leftText = "${l.fieldOfViewDeg}°",
+                rightText = "${r.fieldOfViewDeg}°",
+                badgeSuffix = "Daha Geniş Kadraj",
+            )
+        )
+        add(VsComparisonRow("Otomatik Odak & AI Takip", if (l.hasAiTracking) "${l.focusType} + AI Takip" else l.focusType, if (r.hasAiTracking) "${r.focusType} + AI Takip" else r.focusType))
+    }
+
+    private fun compareGamingChairs(l: GamingChairSpec, r: GamingChairSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Koltuk Mimarisi", l.chairType, r.chairType, isKeyMetric = true))
+        add(VsComparisonRow("Döşeme Kumaşı / Deri", l.upholsteryMaterial, r.upholsteryMaterial, isKeyMetric = true))
+        add(VsComparisonRow("L4/L5 Bel Desteği", l.lumbarSupportType, r.lumbarSupportType, isKeyMetric = true))
+        add(
+            compareHigherBetter(
+                label = "Maksimum Taşıma Kapasitesi",
+                leftVal = l.maxWeightCapacityKg.toDouble(),
+                rightVal = r.maxWeightCapacityKg.toDouble(),
+                leftText = "${l.maxWeightCapacityKg} kg",
+                rightText = "${r.maxWeightCapacityKg} kg",
+                badgeSuffix = "kg Daha Dayanıklı",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Kolçak Tipi", l.armrestType, r.armrestType))
+        add(VsComparisonRow("Mekanizma & Yatış Açısı", "${l.tiltMechanism} (${l.reclineAngleDeg}°)", "${r.tiltMechanism} (${r.reclineAngleDeg}°)"))
+        add(VsComparisonRow("Önerilen Kullanıcı Boyu", l.recommendedHeightRange, r.recommendedHeightRange))
     }
 
     private fun compareSmartphones(l: PhoneSpec, r: PhoneSpec): List<VsComparisonRow> = buildList {

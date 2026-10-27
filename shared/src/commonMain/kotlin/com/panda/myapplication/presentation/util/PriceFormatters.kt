@@ -134,6 +134,19 @@ fun HardwareCategory.accentColor(): Color = when (this) {
     HardwareCategory.KEYBOARD -> NeonPurple
     HardwareCategory.HEADSET -> NeonAmber
     HardwareCategory.MONITOR -> NeonEmerald
+    HardwareCategory.MICROPHONE -> NeonAmber
+    HardwareCategory.MOUSEPAD -> NeonCyan
+    HardwareCategory.WEBCAM -> ElectricBlue
+    HardwareCategory.GAMING_CHAIR -> NeonPurple
+    HardwareCategory.CASE_FAN -> NeonCyan
+    HardwareCategory.UPS -> GoldAccent
+    HardwareCategory.GAMING_DESK -> NeonEmerald
+    HardwareCategory.GAMING_LIGHTING -> NeonAmber
+    HardwareCategory.SMARTWATCH -> ElectricBlue
+    HardwareCategory.ROUTER -> NeonCyan
+    HardwareCategory.MODEM -> NeonPurple
+    HardwareCategory.ACCESS_POINT -> ElectricBlue
+    HardwareCategory.RANGE_EXTENDER -> NeonAmber
     HardwareCategory.SMARTPHONE -> ElectricBlue
     HardwareCategory.TABLET -> NeonPurple
 }
@@ -156,6 +169,19 @@ fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) wh
     HardwareCategory.KEYBOARD -> "KLAVYE"
     HardwareCategory.HEADSET -> "KULAKLIK"
     HardwareCategory.MONITOR -> "MONİTÖR"
+    HardwareCategory.MICROPHONE -> "MİKROFON"
+    HardwareCategory.MOUSEPAD -> "MOUSEPAD"
+    HardwareCategory.WEBCAM -> "WEBCAM"
+    HardwareCategory.GAMING_CHAIR -> "KOLTUK"
+    HardwareCategory.CASE_FAN -> "KASA FANI"
+    HardwareCategory.UPS -> "UPS GÜÇ"
+    HardwareCategory.GAMING_DESK -> "MASA"
+    HardwareCategory.GAMING_LIGHTING -> "AYDINLATMA"
+    HardwareCategory.SMARTWATCH -> "SAAT"
+    HardwareCategory.ROUTER -> "ROUTER"
+    HardwareCategory.MODEM -> "MODEM"
+    HardwareCategory.ACCESS_POINT -> "AP"
+    HardwareCategory.RANGE_EXTENDER -> "MESH"
     HardwareCategory.SMARTPHONE -> "TELEFON"
     HardwareCategory.TABLET -> "TABLET"
 } else when (this) {
@@ -173,6 +199,19 @@ fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) wh
     HardwareCategory.KEYBOARD -> "KEYBOARD"
     HardwareCategory.HEADSET -> "HEADSET"
     HardwareCategory.MONITOR -> "MONITOR"
+    HardwareCategory.MICROPHONE -> "MIC"
+    HardwareCategory.MOUSEPAD -> "MOUSEPAD"
+    HardwareCategory.WEBCAM -> "WEBCAM"
+    HardwareCategory.GAMING_CHAIR -> "CHAIR"
+    HardwareCategory.CASE_FAN -> "CASE FAN"
+    HardwareCategory.UPS -> "UPS"
+    HardwareCategory.GAMING_DESK -> "DESK"
+    HardwareCategory.GAMING_LIGHTING -> "LIGHTING"
+    HardwareCategory.SMARTWATCH -> "WATCH"
+    HardwareCategory.ROUTER -> "ROUTER"
+    HardwareCategory.MODEM -> "MODEM"
+    HardwareCategory.ACCESS_POINT -> "ACCESS POINT"
+    HardwareCategory.RANGE_EXTENDER -> "MESH / EXTENDER"
     HardwareCategory.SMARTPHONE -> "PHONE"
     HardwareCategory.TABLET -> "TABLET"
 }
@@ -195,6 +234,19 @@ fun HardwareCategory.iconEmoji(): String = when (this) {
     HardwareCategory.KEYBOARD -> "⌨️"
     HardwareCategory.HEADSET -> "🎧"
     HardwareCategory.MONITOR -> "🖥️"
+    HardwareCategory.MICROPHONE -> "🎙️"
+    HardwareCategory.MOUSEPAD -> "🎯"
+    HardwareCategory.WEBCAM -> "📷"
+    HardwareCategory.GAMING_CHAIR -> "🪑"
+    HardwareCategory.CASE_FAN -> "💨"
+    HardwareCategory.UPS -> "⚡"
+    HardwareCategory.GAMING_DESK -> "🪵"
+    HardwareCategory.GAMING_LIGHTING -> "💡"
+    HardwareCategory.SMARTWATCH -> "⌚"
+    HardwareCategory.ROUTER -> "📡"
+    HardwareCategory.MODEM -> "📶"
+    HardwareCategory.ACCESS_POINT -> "🗼"
+    HardwareCategory.RANGE_EXTENDER -> "🛜"
     HardwareCategory.SMARTPHONE -> "📱"
     HardwareCategory.TABLET -> "📱"
 }

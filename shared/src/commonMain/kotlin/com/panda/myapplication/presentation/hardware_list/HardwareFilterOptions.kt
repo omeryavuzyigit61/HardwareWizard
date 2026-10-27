@@ -90,8 +90,14 @@ enum class HardwareSortOption(val displayName: String) {
                 HardwareCategory.KEYBOARD -> common
                 HardwareCategory.HEADSET -> common
                 HardwareCategory.MONITOR -> common
+                HardwareCategory.MICROPHONE -> common
+                HardwareCategory.MOUSEPAD -> common
+                HardwareCategory.WEBCAM -> common
+                HardwareCategory.GAMING_CHAIR -> common
                 HardwareCategory.SMARTPHONE -> common + listOf(ANTUTU_SCORE_DESC, BATTERY_DESC)
                 HardwareCategory.TABLET -> common + listOf(ANTUTU_SCORE_DESC, BATTERY_DESC)
+                HardwareCategory.SMARTWATCH -> common + listOf(BATTERY_DESC)
+                else -> common
             }
         }
     }

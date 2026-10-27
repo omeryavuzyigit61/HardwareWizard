@@ -13,6 +13,8 @@ import com.panda.myapplication.domain.model.TuningStatus
 import com.panda.myapplication.domain.model.TuningType
 import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.TuningVaultRepository
+import com.panda.myapplication.domain.util.ProfanityFilter
+import kotlin.time.Clock
 import io.ktor.client.HttpClient
 import io.ktor.client.request.delete
 import io.ktor.client.request.get
@@ -34,7 +36,9 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.booleanOrNull
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.doubleOrNull
 import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.jsonArray
@@ -210,8 +214,46 @@ class TuningVaultRepositoryImpl(
     override fun observePendingTunings(): Flow<List<TuningProfile>> =
         _tuningProfiles.map { list -> list.filter { it.status == TuningStatus.PENDING } }
 
+    private suspend fun checkUserSuspended(userId: String): String? {
+        if (userId.isBlank() || userId.startsWith("guest") || userId == "anon") return null
+        return runCatching {
+            val checkUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.$userId&select=is_banned,banned_until_epoch_ms,ban_reason"
+            val response = httpClient.get(checkUrl) {
+                applySupabaseHeaders()
+            }
+            if (response.status == HttpStatusCode.OK) {
+                val arr = json.parseToJsonElement(response.bodyAsText()).jsonArray
+                if (arr.isNotEmpty()) {
+                    val obj = arr[0].jsonObject
+                    val isBanned = obj["is_banned"]?.jsonPrimitive?.booleanOrNull ?: false
+                    val bannedUntil = obj["banned_until_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L
+                    val reason = obj["ban_reason"]?.jsonPrimitive?.contentOrNull ?: "Topluluk kuralları ihlali"
+                    val now = Clock.System.now().toEpochMilliseconds()
+                    if (isBanned) {
+                        return@runCatching "Hesabınız süresiz olarak askıya alınmıştır. Gerekçe: $reason"
+                    } else if (bannedUntil > now) {
+                        val diffMs = bannedUntil - now
+                        val hours = (diffMs / (1000 * 60 * 60)).coerceAtLeast(1)
+                        val days = hours / 24
+                        val remainingStr = if (days > 0) "$days gün ${hours % 24} saat" else "$hours saat"
+                        return@runCatching "Hesabınız $remainingStr süreyle askıya alınmıştır. Gerekçe: $reason"
+                    }
+                }
+            }
+            null
+        }.getOrNull()
+    }
+
     override suspend fun submitTuningProfile(profile: TuningProfile): DomainResult<Unit> = withContext(ioDispatcher) {
+        val suspensionMsg = checkUserSuspended(profile.userId)
+        if (suspensionMsg != null) {
+            return@withContext DomainResult.Failure(DomainError.Unknown(IllegalStateException(suspensionMsg)))
+        }
+
         runCatching {
+            val maskedTitle = ProfanityFilter.mask(profile.profileTitle)
+            val maskedNotes = profile.guideNotes?.let { ProfanityFilter.mask(it) }
+
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_TUNING_PROFILES}"
             val payload = buildJsonObject {
                 put("id", profile.id)
@@ -219,7 +261,7 @@ class TuningVaultRepositoryImpl(
                 put("hardware_name", profile.hardwareName)
                 put("hardware_category", profile.hardwareCategory)
                 put("tuning_type", TuningType.toStorageString(profile.effectiveTuningTypes))
-                put("profile_title", profile.profileTitle)
+                put("profile_title", maskedTitle)
                 put("language_code", profile.languageCode)
                 profile.voltageOffsetMv?.let { put("voltage_offset_mv", it) }
                 profile.clockMhz?.let { put("clock_mhz", it) }
@@ -230,7 +272,7 @@ class TuningVaultRepositoryImpl(
                 profile.scoreAfter?.let { put("score_after", it) }
                 profile.benchmarkName?.let { put("benchmark_name", it) }
                 profile.proofImageUrl?.let { put("proof_image_url", it) }
-                profile.guideNotes?.let { put("guide_notes", it) }
+                maskedNotes?.let { put("guide_notes", it) }
                 profile.motherboardName?.let { put("motherboard_name", it) }
                 profile.coolerName?.let { put("cooler_name", it) }
                 profile.ramSpec?.let { put("ram_spec", it) }
@@ -484,6 +526,7 @@ class TuningVaultRepositoryImpl(
                     val jsonArray = json.parseToJsonElement(body).jsonArray
                     val loaded = jsonArray.map { elem ->
                         val obj = elem.jsonObject
+                        val rawCommentText = obj["comment_text"]?.jsonPrimitive?.content ?: ""
                         TuningComment(
                             id = obj["id"]?.jsonPrimitive?.content ?: "",
                             tuningId = obj["tuning_id"]?.jsonPrimitive?.content ?: tuningId,
@@ -491,7 +534,7 @@ class TuningVaultRepositoryImpl(
                             userDisplayName = obj["user_display_name"]?.jsonPrimitive?.content ?: "Topluluk Üyesi",
                             userBadge = obj["user_badge"]?.jsonPrimitive?.content ?: "Lehim Çırağı",
                             userReputation = obj["user_reputation"]?.jsonPrimitive?.intOrNull ?: 10,
-                            commentText = obj["comment_text"]?.jsonPrimitive?.content ?: "",
+                            commentText = ProfanityFilter.mask(rawCommentText),
                             createdAtEpochMs = obj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L,
                         )
                     }
@@ -503,7 +546,13 @@ class TuningVaultRepositoryImpl(
     }
 
     override suspend fun addComment(comment: TuningComment): DomainResult<Unit> = withContext(ioDispatcher) {
+        val suspensionMsg = checkUserSuspended(comment.userId)
+        if (suspensionMsg != null) {
+            return@withContext DomainResult.Failure(DomainError.Unknown(IllegalStateException(suspensionMsg)))
+        }
+
         runCatching {
+            val maskedText = ProfanityFilter.mask(comment.commentText)
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_TUNING_COMMENTS}"
             val payload = buildJsonObject {
                 put("id", comment.id)
@@ -512,7 +561,7 @@ class TuningVaultRepositoryImpl(
                 put("user_display_name", comment.userDisplayName)
                 put("user_badge", comment.userBadge)
                 put("user_reputation", comment.userReputation)
-                put("comment_text", comment.commentText)
+                put("comment_text", maskedText)
                 put("created_at_epoch_ms", comment.createdAtEpochMs)
             }
 
@@ -525,9 +574,10 @@ class TuningVaultRepositoryImpl(
                 setBody(payload.toString())
             }
 
+            val maskedComment = comment.copy(commentText = maskedText)
             _comments.update { map ->
                 val curList = map[comment.tuningId] ?: emptyList()
-                map + (comment.tuningId to (curList + comment))
+                map + (comment.tuningId to (curList + maskedComment))
             }
             val curCount = _tuningProfiles.value.find { it.id == comment.tuningId }?.commentsCount ?: 0
             val newCount = curCount + 1
@@ -577,7 +627,13 @@ class TuningVaultRepositoryImpl(
         _proTips.map { list -> list.filter { it.hardwareId.equals(hardwareId, ignoreCase = true) } }
 
     override suspend fun submitTip(tip: HardwareProTip): DomainResult<Unit> = withContext(ioDispatcher) {
+        val suspensionMsg = checkUserSuspended(tip.userId)
+        if (suspensionMsg != null) {
+            return@withContext DomainResult.Failure(DomainError.Unknown(IllegalStateException(suspensionMsg)))
+        }
+
         runCatching {
+            val maskedText = ProfanityFilter.mask(tip.tipText)
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}"
             val payload = buildJsonObject {
                 put("id", tip.id)
@@ -586,7 +642,7 @@ class TuningVaultRepositoryImpl(
                 put("user_id", tip.userId)
                 put("user_display_name", tip.userDisplayName)
                 put("user_badge", tip.userBadge)
-                put("tip_text", tip.tipText)
+                put("tip_text", maskedText)
                 put("upvotes_count", tip.upvotesCount)
                 put("status", "APPROVED")
                 put("created_at_epoch_ms", tip.createdAtEpochMs)
@@ -601,7 +657,7 @@ class TuningVaultRepositoryImpl(
                 setBody(payload.toString())
             }
 
-            _proTips.update { listOf(tip) + it }
+            _proTips.update { listOf(tip.copy(tipText = maskedText)) + it }
             patchUserProfileStats(userId = tip.userId, pointsDelta = 10, tipsDelta = 1)
 
             DomainResult.Success(Unit)

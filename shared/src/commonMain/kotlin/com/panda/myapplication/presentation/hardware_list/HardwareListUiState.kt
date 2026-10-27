@@ -7,6 +7,7 @@ import com.panda.myapplication.domain.model.HardwareItem
 enum class CatalogSegmentMode {
     INDIVIDUAL,
     PERIPHERALS,
+    NETWORKING,
     PREBUILT,
     LAPTOP,
     MOBILE,

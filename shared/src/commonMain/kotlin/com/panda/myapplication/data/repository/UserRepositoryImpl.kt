@@ -29,7 +29,9 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.booleanOrNull
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -93,7 +95,7 @@ class UserRepositoryImpl(
     private suspend fun syncUserStatsFromCloud(userId: String) {
         if (userId.isBlank() || userId.startsWith("guest")) return
         runCatching {
-            val safeCols = "reputation_score,total_deals_count,total_tunings_count,total_tips_count,badge_title"
+            val safeCols = "reputation_score,total_deals_count,total_tunings_count,total_tips_count,badge_title,warning_count,is_banned,banned_until_epoch_ms,ban_reason,ban_escalation_tier"
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.$userId&select=$safeCols"
             val response = httpClient.get(url) {
                 applySupabaseHeaders()
@@ -107,6 +109,11 @@ class UserRepositoryImpl(
                     val totalTunings = obj["total_tunings_count"]?.jsonPrimitive?.intOrNull ?: 0
                     val totalTips = obj["total_tips_count"]?.jsonPrimitive?.intOrNull ?: 0
                     val badge = obj["badge_title"]?.jsonPrimitive?.content ?: UserProfile.calculateBadgeTitle(repScore)
+                    val warningCount = obj["warning_count"]?.jsonPrimitive?.intOrNull ?: 0
+                    val isBanned = obj["is_banned"]?.jsonPrimitive?.booleanOrNull ?: false
+                    val bannedUntil = obj["banned_until_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L
+                    val banReason = obj["ban_reason"]?.jsonPrimitive?.contentOrNull
+                    val banEscalationTier = obj["ban_escalation_tier"]?.jsonPrimitive?.intOrNull ?: 0
 
                     _currentUser.update { current ->
                         current?.copy(
@@ -115,6 +122,11 @@ class UserRepositoryImpl(
                             totalTuningsCount = totalTunings,
                             totalTipsCount = totalTips,
                             badgeTitle = badge,
+                            warningCount = warningCount,
+                            isBanned = isBanned,
+                            bannedUntilEpochMs = bannedUntil,
+                            banReason = banReason,
+                            banEscalationTier = banEscalationTier,
                         )
                     }
                 }
@@ -228,6 +240,12 @@ class UserRepositoryImpl(
                 if (array.isNotEmpty()) {
                     val userObj = array[0].jsonObject
                     val repScore = userObj["reputation_score"]?.jsonPrimitive?.intOrNull ?: 0
+                    val warningCount = userObj["warning_count"]?.jsonPrimitive?.intOrNull ?: 0
+                    val isBanned = userObj["is_banned"]?.jsonPrimitive?.booleanOrNull ?: false
+                    val bannedUntil = userObj["banned_until_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L
+                    val banReason = userObj["ban_reason"]?.jsonPrimitive?.contentOrNull
+                    val banEscalationTier = userObj["ban_escalation_tier"]?.jsonPrimitive?.intOrNull ?: 0
+
                     val profile = UserProfile(
                         id = userObj["id"]?.jsonPrimitive?.content ?: "usr-0",
                         email = userObj["email"]?.jsonPrimitive?.content ?: "",
@@ -241,6 +259,11 @@ class UserRepositoryImpl(
                         totalTuningsCount = userObj["total_tunings_count"]?.jsonPrimitive?.intOrNull ?: 0,
                         totalTipsCount = userObj["total_tips_count"]?.jsonPrimitive?.intOrNull ?: 0,
                         badgeTitle = userObj["badge_title"]?.jsonPrimitive?.content ?: UserProfile.calculateBadgeTitle(repScore),
+                        warningCount = warningCount,
+                        isBanned = isBanned,
+                        bannedUntilEpochMs = bannedUntil,
+                        banReason = banReason,
+                        banEscalationTier = banEscalationTier,
                     )
                     _currentUser.value = profile
                     _isLoggedIn.value = true

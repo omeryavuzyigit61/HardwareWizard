@@ -115,6 +115,10 @@ import com.panda.myapplication.presentation.tools.RamLatencyLabScreen
 import com.panda.myapplication.presentation.tools.UpsCalculatorScreen
 import com.panda.myapplication.presentation.tools.UndervoltGuideScreen
 import com.panda.myapplication.presentation.tools.CommunityTuningVaultScreen
+import com.panda.myapplication.presentation.tools.BattlestationShowcaseScreen
+import com.panda.myapplication.presentation.tools.StudioAndSurfaceLabScreen
+import androidx.compose.material.icons.rounded.Mic
+import androidx.compose.material.icons.rounded.PhotoCamera
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
@@ -152,6 +156,8 @@ object Destinations {
     const val HARDWARE_GLOSSARY = "hardware_glossary"
     const val UNDERVOLT_GUIDE = "undervolt_guide"
     const val COMMUNITY_TUNING_VAULT = "community_tuning_vault"
+    const val BATTLESTATION_SHOWCASE = "battlestation_showcase"
+    const val STUDIO_SURFACE_LAB = "studio_surface_lab"
     const val ADMIN_MODERATION = "admin_moderation"
     const val SECOND_HAND_VALUATOR = "second_hand_valuator"
     const val USER_PROFILE = "user_profile"
@@ -409,6 +415,21 @@ fun App() {
                             )
                         }
 
+                        composable(route = Destinations.BATTLESTATION_SHOWCASE) {
+                            BattlestationShowcaseScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                                onOpenAuthSheet = { showAuthSheet = true },
+                            )
+                        }
+
+                        composable(route = Destinations.STUDIO_SURFACE_LAB) {
+                            StudioAndSurfaceLabScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                            )
+                        }
+
                         composable(route = Destinations.UNDERVOLT_GUIDE) {
                             UndervoltGuideScreen(
                                 onNavigateBack = { navController.popBackStack() },
@@ -547,12 +568,28 @@ private fun HardwareEngineeringDrawerContent(
                 accentColor = ElectricBlue,
             ),
             EngineeringToolDrawerItem(
+                route = Destinations.STUDIO_SURFACE_LAB,
+                icon = Icons.Rounded.Mic,
+                title = strings.drawerStudioLabTitle,
+                subtitle = strings.drawerStudioLabSubtitle,
+                badge = "STUDIO & ERGONOMICS",
+                accentColor = NeonAmber,
+            ),
+            EngineeringToolDrawerItem(
                 route = Destinations.HARDWARE_GLOSSARY,
                 icon = Icons.AutoMirrored.Rounded.MenuBook,
                 title = strings.drawerGlossaryTitle,
                 subtitle = strings.drawerGlossarySubtitle,
                 badge = "KNOWLEDGE",
                 accentColor = NeonEmerald,
+            ),
+            EngineeringToolDrawerItem(
+                route = Destinations.BATTLESTATION_SHOWCASE,
+                icon = Icons.Rounded.PhotoCamera,
+                title = strings.drawerBattlestationTitle,
+                subtitle = strings.drawerBattlestationSubtitle,
+                badge = "SHOWCASE",
+                accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.COMMUNITY_TUNING_VAULT,

@@ -251,6 +251,41 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("HDR Standardı", s.hdrCertification))
             }
 
+            is com.panda.myapplication.domain.model.MicrophoneSpec -> {
+                badges.add(EngineeringBadge("Kapsül Mimarisi", s.capsuleType, isHighlighted = true))
+                badges.add(EngineeringBadge("Kutup Deseni", s.polarPattern, isHighlighted = true))
+                badges.add(EngineeringBadge("Stüdyo Çözünürlüğü", s.sampleRateAndBit))
+                badges.add(EngineeringBadge("Bağlantı & Arayüz", s.connectivity, isHighlighted = s.connectivity.contains("XLR", ignoreCase = true)))
+                badges.add(EngineeringBadge("Maksimum SPL", "${s.maxSplDb} dB SPL"))
+                badges.add(EngineeringBadge("Donanımsal DSP", if (s.hasBuiltInDsp) "Entegre DSP & Limiter" else "Saf Analog Sinyal"))
+            }
+
+            is com.panda.myapplication.domain.model.MousepadSpec -> {
+                badges.add(EngineeringBadge("Yüzey Dokusu", s.surfaceType, isHighlighted = true))
+                badges.add(EngineeringBadge("Kayma Karakteri", s.speedGlideTier, isHighlighted = true))
+                badges.add(EngineeringBadge("Durdurma Gücü", "${s.stoppingPowerScore}/10 Kontrol Skoru"))
+                badges.add(EngineeringBadge("Taban Materyali", s.baseMaterial))
+                badges.add(EngineeringBadge("Boyut & Kalınlık", "${s.dimensionsMm} (${s.thicknessMm}mm)"))
+                badges.add(EngineeringBadge("Nem Direnci", s.humidityResistance))
+            }
+
+            is com.panda.myapplication.domain.model.WebcamSpec -> {
+                badges.add(EngineeringBadge("Video Çözünürlüğü", "${s.maxResolution} @ ${s.maxFrameRateFps} FPS", isHighlighted = true))
+                badges.add(EngineeringBadge("Görüntü Sensörü", "${s.sensorModel} (${s.sensorSizeInch})", isHighlighted = true))
+                badges.add(EngineeringBadge("Diyafram & Işık", s.aperture))
+                badges.add(EngineeringBadge("Görüş Açısı (FOV)", "${s.fieldOfViewDeg}° Geniş Açı"))
+                badges.add(EngineeringBadge("Otomatik Odak & AI", if (s.hasAiTracking) "${s.focusType} + AI Gimbal Takip" else s.focusType, isHighlighted = s.hasAiTracking))
+            }
+
+            is com.panda.myapplication.domain.model.GamingChairSpec -> {
+                badges.add(EngineeringBadge("Ergonomi Sınıfı", s.chairType, isHighlighted = true))
+                badges.add(EngineeringBadge("Döşeme Materyali", s.upholsteryMaterial, isHighlighted = true))
+                badges.add(EngineeringBadge("L4/L5 Bel Desteği", s.lumbarSupportType, isHighlighted = true))
+                badges.add(EngineeringBadge("Kolçak & Mekanizma", "${s.armrestType} • ${s.tiltMechanism}"))
+                badges.add(EngineeringBadge("Taşıma Kapasitesi", "${s.maxWeightCapacityKg} kg (${s.gasLiftClass})"))
+                badges.add(EngineeringBadge("Önerilen Boy", "${s.recommendedHeightRange} • ${s.reclineAngleDeg}° Yatış"))
+            }
+
             is com.panda.myapplication.domain.model.PhoneSpec -> {
                 badges.add(EngineeringBadge("Yonga Seti (SoC)", s.chipset, isHighlighted = true))
                 s.antutuScore?.let { badges.add(EngineeringBadge("AnTuTu v10 Skoru", "${it} Puan", isHighlighted = true)) }
@@ -272,6 +307,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Tasarım", "${s.thicknessMm}mm İncelik • ${s.weightGrams}g"))
                 badges.add(EngineeringBadge("İşletim Sistemi", s.osName))
             }
+            else -> Unit
         }
 
         return badges

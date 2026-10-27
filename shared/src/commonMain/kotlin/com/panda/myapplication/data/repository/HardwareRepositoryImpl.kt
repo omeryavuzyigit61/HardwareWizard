@@ -53,6 +53,26 @@ class HardwareRepositoryImpl(
         return remote + missingLocals
     }
 
+    private fun mergePeripherals(
+        remote: List<com.panda.myapplication.data.model.dto.PeripheralRawDto>,
+        local: List<com.panda.myapplication.data.model.dto.PeripheralRawDto>,
+    ): List<com.panda.myapplication.data.model.dto.PeripheralRawDto> {
+        if (remote.isEmpty()) return local
+        if (local.isEmpty()) return remote
+        val localByKey = local.associateBy { it.name.trim().lowercase() }
+        val enrichedRemote = remote.map { rem ->
+            val loc = localByKey[rem.name.trim().lowercase()]
+            if (loc != null && loc.images.size >= 3 && rem.images.size < 3) {
+                rem.copy(images = loc.images, imageUrl = loc.imageUrl ?: rem.imageUrl)
+            } else {
+                rem
+            }
+        }
+        val remoteKeys = enrichedRemote.map { it.name.trim().lowercase() }.toSet()
+        val missingLocals = local.filter { it.name.trim().lowercase() !in remoteKeys }
+        return enrichedRemote + missingLocals
+    }
+
     private suspend fun ensureSeeded() {
         if (isSeeded) return
         seedMutex.withLock {
@@ -69,12 +89,33 @@ class HardwareRepositoryImpl(
             val hasBiostar = existing.any { it.brand.equals("BIOSTAR", ignoreCase = true) }
             val hasEvga = existing.any { it.brand.equals("EVGA", ignoreCase = true) }
             val hasRx9070 = existing.any { it.model.contains("9070", ignoreCase = true) }
+            val micCount = existing.count { it.category == HardwareCategory.MICROPHONE }
+            val padCount = existing.count { it.category == HardwareCategory.MOUSEPAD }
+            val camCount = existing.count { it.category == HardwareCategory.WEBCAM }
+            val chairCount = existing.count { it.category == HardwareCategory.GAMING_CHAIR }
+            val fanCount = existing.count { it.category == HardwareCategory.CASE_FAN }
+            val upsCount = existing.count { it.category == HardwareCategory.UPS }
+            val deskCount = existing.count { it.category == HardwareCategory.GAMING_DESK }
+            val routerCount = existing.count { it.category == HardwareCategory.ROUTER }
             val hasGenericImages = existing.any { item ->
                 item.images?.any { img -> img.contains("reference.webp") } == true
             }
+            val hasIncompleteNewCategoryGallery = existing.any { item ->
+                (item.category == HardwareCategory.MICROPHONE ||
+                    item.category == HardwareCategory.MOUSEPAD ||
+                    item.category == HardwareCategory.WEBCAM ||
+                    item.category == HardwareCategory.GAMING_CHAIR) &&
+                    ((item.images?.size ?: 0) < 3 ||
+                        item.imageUrl?.contains("71f-N7a9lDL") == true ||
+                        item.imageUrl?.contains("71p1F+8H1wL") == true ||
+                        item.imageUrl?.contains("61y-vR1vXRL") == true)
+            }
             if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts ||
-                laptopCount < 300 || peripheralCount < 400 || caseCount < 150 || coolerCount < 140 ||
-                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages || !hasRx9070
+                laptopCount < 300 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
+                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages || !hasRx9070 ||
+                micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
+                fanCount < 80 || upsCount < 50 || deskCount < 40 || routerCount < 50 ||
+                hasIncompleteNewCategoryGallery
             ) {
                 localDataSource.seedDatabaseIfEmpty()
             }
@@ -354,6 +395,214 @@ class HardwareRepositoryImpl(
                     )?.applyOverride(overrideMap)
                 }
             }
+            HardwareCategory.MICROPHONE -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllMicrophoneSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            microphone = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.MOUSEPAD -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllMousepadSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            mousepad = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.WEBCAM -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllWebcamSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            webcam = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.GAMING_CHAIR -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllGamingChairSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            gamingChair = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.CASE_FAN -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllCaseFanSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            caseFan = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.UPS -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllUpsSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            ups = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.GAMING_DESK -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllGamingDeskSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            gamingDesk = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.GAMING_LIGHTING -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllGamingLightingSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            gamingLighting = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.SMARTWATCH -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllSmartwatchSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            smartwatch = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.ROUTER -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllRouterSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            router = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.MODEM -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllModemSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            modem = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.ACCESS_POINT -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllAccessPointSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            accessPoint = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
+            HardwareCategory.RANGE_EXTENDER -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllRangeExtenderSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.hardwareId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            rangeExtender = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
+                }
+            }
             HardwareCategory.SMARTPHONE -> combine(
                 dynamicSmartphones,
                 hardwareDao.observeAllPriceOverrides(),
@@ -536,7 +785,7 @@ class HardwareRepositoryImpl(
                     cases = mergeCatalogs(catalog.cases, localDataSource.loadLocalCases()) { it.name },
                     prebuilts = mergeCatalogs(catalog.prebuilts, localDataSource.loadLocalPrebuilts()) { it.name },
                     laptops = mergeCatalogs(catalog.laptops, localDataSource.loadLocalLaptops()) { it.name },
-                    peripherals = mergeCatalogs(catalog.peripherals, localDataSource.loadLocalPeripherals()) { it.name },
+                    peripherals = mergePeripherals(catalog.peripherals, localDataSource.loadLocalPeripherals()),
                     pricesTr = allPrices,
                     benchmarks = allBenchmarks,
                     existingImages = existingImages,

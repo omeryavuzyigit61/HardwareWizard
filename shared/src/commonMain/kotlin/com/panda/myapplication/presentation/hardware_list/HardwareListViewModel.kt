@@ -6,21 +6,25 @@ import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.GamingChairSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.MousepadSpec
 import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.TabletSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareListUseCase
@@ -82,6 +86,7 @@ class HardwareListViewModel(
             val categories = when (mode) {
                 CatalogSegmentMode.INDIVIDUAL -> INDIVIDUAL_CATEGORIES.toList()
                 CatalogSegmentMode.PERIPHERALS -> PERIPHERAL_CATEGORIES.toList()
+                CatalogSegmentMode.NETWORKING -> NETWORKING_CATEGORIES.toList()
                 CatalogSegmentMode.PREBUILT -> listOf(HardwareCategory.PREBUILT_PC)
                 CatalogSegmentMode.LAPTOP -> listOf(HardwareCategory.LAPTOP)
                 CatalogSegmentMode.MOBILE -> MOBILE_CATEGORIES.toList()
@@ -133,6 +138,7 @@ class HardwareListViewModel(
                 val nextCategory = when (event.mode) {
                     CatalogSegmentMode.INDIVIDUAL -> null
                     CatalogSegmentMode.PERIPHERALS -> null
+                    CatalogSegmentMode.NETWORKING -> null
                     CatalogSegmentMode.PREBUILT -> HardwareCategory.PREBUILT_PC
                     CatalogSegmentMode.LAPTOP -> HardwareCategory.LAPTOP
                     CatalogSegmentMode.MOBILE -> null
@@ -156,10 +162,12 @@ class HardwareListViewModel(
                     targetCategory == null -> segmentMode.value.let { current ->
                         when (current) {
                             CatalogSegmentMode.PERIPHERALS -> CatalogSegmentMode.PERIPHERALS
+                            CatalogSegmentMode.NETWORKING -> CatalogSegmentMode.NETWORKING
                             CatalogSegmentMode.MOBILE -> CatalogSegmentMode.MOBILE
                             else -> CatalogSegmentMode.INDIVIDUAL
                         }
                     }
+                    targetCategory.isNetworking -> CatalogSegmentMode.NETWORKING
                     targetCategory.isMobile -> CatalogSegmentMode.MOBILE
                     targetCategory.isPeripheral -> CatalogSegmentMode.PERIPHERALS
                     targetCategory == HardwareCategory.PREBUILT_PC -> CatalogSegmentMode.PREBUILT
@@ -343,9 +351,7 @@ class HardwareListViewModel(
                     if (filters.requireAtx3 && !s.isAtx3Compliant) return@filter false
                     if (filters.requirePcie5 && !s.supportsPcie5Power) return@filter false
                 }
-                is CoolerSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
-                is MouseSpec, is KeyboardSpec, is HeadsetSpec, is MonitorSpec,
-                is PhoneSpec, is TabletSpec -> Unit
+                else -> Unit
             }
             true
         }
@@ -441,6 +447,8 @@ class HardwareListViewModel(
             HardwareCategory.PSU,
             HardwareCategory.COOLER,
             HardwareCategory.CASE,
+            HardwareCategory.CASE_FAN,
+            HardwareCategory.UPS,
         )
 
         val PERIPHERAL_CATEGORIES = setOf(
@@ -448,11 +456,25 @@ class HardwareListViewModel(
             HardwareCategory.KEYBOARD,
             HardwareCategory.HEADSET,
             HardwareCategory.MONITOR,
+            HardwareCategory.MICROPHONE,
+            HardwareCategory.MOUSEPAD,
+            HardwareCategory.WEBCAM,
+            HardwareCategory.GAMING_CHAIR,
+            HardwareCategory.GAMING_DESK,
+            HardwareCategory.GAMING_LIGHTING,
+        )
+
+        val NETWORKING_CATEGORIES = setOf(
+            HardwareCategory.ROUTER,
+            HardwareCategory.MODEM,
+            HardwareCategory.ACCESS_POINT,
+            HardwareCategory.RANGE_EXTENDER,
         )
 
         val MOBILE_CATEGORIES = setOf(
             HardwareCategory.SMARTPHONE,
             HardwareCategory.TABLET,
+            HardwareCategory.SMARTWATCH,
         )
     }
 }

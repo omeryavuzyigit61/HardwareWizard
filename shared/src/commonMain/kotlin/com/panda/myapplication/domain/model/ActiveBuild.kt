@@ -13,9 +13,16 @@ data class ActiveBuild(
     val mouse: HardwareItem? = null,
     val keyboard: HardwareItem? = null,
     val headset: HardwareItem? = null,
+    val microphone: HardwareItem? = null,
+    val mousepad: HardwareItem? = null,
+    val webcam: HardwareItem? = null,
+    val gamingChair: HardwareItem? = null,
 ) {
     val items: List<HardwareItem>
-        get() = listOfNotNull(cpu, motherboard, ram, gpu, storage, cooler, case, psu, monitor, mouse, keyboard, headset)
+        get() = listOfNotNull(
+            cpu, motherboard, ram, gpu, storage, cooler, case, psu,
+            monitor, mouse, keyboard, headset, microphone, mousepad, webcam, gamingChair
+        )
 
     val totalPriceMinor: Long
         get() = items.sumOf { it.price?.amountMinor ?: 0L }
@@ -39,10 +46,15 @@ data class ActiveBuild(
         HardwareCategory.MOUSE -> mouse
         HardwareCategory.KEYBOARD -> keyboard
         HardwareCategory.HEADSET -> headset
+        HardwareCategory.MICROPHONE -> microphone
+        HardwareCategory.MOUSEPAD -> mousepad
+        HardwareCategory.WEBCAM -> webcam
+        HardwareCategory.GAMING_CHAIR -> gamingChair
         HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> null
+        else -> null
     }
 
     fun withComponent(item: HardwareItem): ActiveBuild = when (item.category) {
@@ -58,10 +70,15 @@ data class ActiveBuild(
         HardwareCategory.MOUSE -> copy(mouse = item)
         HardwareCategory.KEYBOARD -> copy(keyboard = item)
         HardwareCategory.HEADSET -> copy(headset = item)
+        HardwareCategory.MICROPHONE -> copy(microphone = item)
+        HardwareCategory.MOUSEPAD -> copy(mousepad = item)
+        HardwareCategory.WEBCAM -> copy(webcam = item)
+        HardwareCategory.GAMING_CHAIR -> copy(gamingChair = item)
         HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> this
+        else -> this
     }
 
     fun withoutCategory(category: HardwareCategory): ActiveBuild = when (category) {
@@ -77,10 +94,15 @@ data class ActiveBuild(
         HardwareCategory.MOUSE -> copy(mouse = null)
         HardwareCategory.KEYBOARD -> copy(keyboard = null)
         HardwareCategory.HEADSET -> copy(headset = null)
+        HardwareCategory.MICROPHONE -> copy(microphone = null)
+        HardwareCategory.MOUSEPAD -> copy(mousepad = null)
+        HardwareCategory.WEBCAM -> copy(webcam = null)
+        HardwareCategory.GAMING_CHAIR -> copy(gamingChair = null)
         HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> this
+        else -> this
     }
 }
 

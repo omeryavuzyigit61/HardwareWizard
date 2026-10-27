@@ -5,6 +5,7 @@ import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.Gender
 import com.panda.myapplication.domain.model.SpiritHardware
 import com.panda.myapplication.domain.model.UserProfile
+import com.panda.myapplication.domain.util.ProfanityFilter
 import io.ktor.client.HttpClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -149,5 +150,61 @@ class UserProfileAndValuationTest {
 
         val retentionPercentage = ((marketMedian / basePrice) * 100).roundToInt()
         assertEquals(74, retentionPercentage)
+    }
+
+    @Test
+    fun testProfanityFilterMasking() {
+        val cleanInput = "Bu anakart ve soğutucu ile 9070 XT gayet stabil çalışıyor, hiçbir sıkıntı yok."
+        assertEquals(cleanInput, ProfanityFilter.mask(cleanInput))
+        assertFalse(ProfanityFilter.containsProfanity(cleanInput))
+
+        val profaneInput1 = "Bu ayar çok sikik olmuş"
+        val masked1 = ProfanityFilter.mask(profaneInput1)
+        assertTrue(ProfanityFilter.containsProfanity(profaneInput1))
+        assertTrue(masked1.contains("s***k"))
+        assertFalse(masked1.contains("sikik"))
+
+        val profaneInput2 = "amk böyle kartın"
+        val masked2 = ProfanityFilter.mask(profaneInput2)
+        assertTrue(masked2.contains("***"))
+        assertFalse(masked2.contains("amk"))
+    }
+
+    @Test
+    fun testUserSuspensionAndWarnings() {
+        val normalUser = UserProfile(
+            id = "u-clean",
+            email = "clean@domain.com",
+            username = "cleanUser",
+            warningCount = 2,
+            isBanned = false,
+            bannedUntilEpochMs = 0L,
+        )
+        assertFalse(normalUser.isSuspended)
+        assertEquals("", normalUser.remainingSuspensionText)
+        assertEquals(2, normalUser.warningCount)
+
+        val bannedUser = UserProfile(
+            id = "u-banned",
+            email = "banned@domain.com",
+            username = "toxicUser",
+            isBanned = true,
+            banReason = "Aşırı küfür ve hakaret",
+        )
+        assertTrue(bannedUser.isSuspended)
+        assertEquals("Süresiz", bannedUser.remainingSuspensionText)
+
+        val futureTime = kotlin.time.Clock.System.now().toEpochMilliseconds() + (48 * 60 * 60 * 1000L)
+        val tempBannedUser = UserProfile(
+            id = "u-temp",
+            email = "temp@domain.com",
+            username = "warnedUser",
+            bannedUntilEpochMs = futureTime,
+            banReason = "6 uyarı limiti",
+            banEscalationTier = 1,
+        )
+        assertTrue(tempBannedUser.isSuspended)
+        assertTrue(tempBannedUser.remainingSuspensionText.contains("gün"))
+        assertEquals(1, tempBannedUser.banEscalationTier)
     }
 }

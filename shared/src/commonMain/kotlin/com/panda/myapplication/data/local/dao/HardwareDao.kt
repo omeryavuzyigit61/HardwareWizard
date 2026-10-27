@@ -15,15 +15,28 @@ import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
 import com.panda.myapplication.data.local.entity.CaseSpecEntity
+import com.panda.myapplication.data.local.entity.GamingChairSpecEntity
+import com.panda.myapplication.data.local.entity.CaseFanSpecEntity
+import com.panda.myapplication.data.local.entity.UpsSpecEntity
+import com.panda.myapplication.data.local.entity.GamingDeskSpecEntity
+import com.panda.myapplication.data.local.entity.GamingLightingSpecEntity
+import com.panda.myapplication.data.local.entity.SmartwatchSpecEntity
+import com.panda.myapplication.data.local.entity.RouterSpecEntity
+import com.panda.myapplication.data.local.entity.ModemSpecEntity
+import com.panda.myapplication.data.local.entity.AccessPointSpecEntity
+import com.panda.myapplication.data.local.entity.RangeExtenderSpecEntity
 import com.panda.myapplication.data.local.entity.HeadsetSpecEntity
 import com.panda.myapplication.data.local.entity.KeyboardSpecEntity
 import com.panda.myapplication.data.local.entity.LaptopSpecEntity
+import com.panda.myapplication.data.local.entity.MicrophoneSpecEntity
 import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
+import com.panda.myapplication.data.local.entity.MousepadSpecEntity
 import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.local.entity.AppSettingEntity
+import com.panda.myapplication.data.local.entity.WebcamSpecEntity
 import com.panda.myapplication.domain.model.HardwareCategory
 import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
@@ -89,6 +102,45 @@ abstract class HardwareDao {
     @Query("SELECT * FROM monitor_specs")
     abstract fun observeAllMonitorSpecs(): Flow<List<MonitorSpecEntity>>
 
+    @Query("SELECT * FROM microphone_specs")
+    abstract fun observeAllMicrophoneSpecs(): Flow<List<MicrophoneSpecEntity>>
+
+    @Query("SELECT * FROM mousepad_specs")
+    abstract fun observeAllMousepadSpecs(): Flow<List<MousepadSpecEntity>>
+
+    @Query("SELECT * FROM webcam_specs")
+    abstract fun observeAllWebcamSpecs(): Flow<List<WebcamSpecEntity>>
+
+    @Query("SELECT * FROM gaming_chair_specs")
+    abstract fun observeAllGamingChairSpecs(): Flow<List<GamingChairSpecEntity>>
+
+    @Query("SELECT * FROM case_fan_specs")
+    abstract fun observeAllCaseFanSpecs(): Flow<List<CaseFanSpecEntity>>
+
+    @Query("SELECT * FROM ups_specs")
+    abstract fun observeAllUpsSpecs(): Flow<List<UpsSpecEntity>>
+
+    @Query("SELECT * FROM gaming_desk_specs")
+    abstract fun observeAllGamingDeskSpecs(): Flow<List<GamingDeskSpecEntity>>
+
+    @Query("SELECT * FROM gaming_lighting_specs")
+    abstract fun observeAllGamingLightingSpecs(): Flow<List<GamingLightingSpecEntity>>
+
+    @Query("SELECT * FROM smartwatch_specs")
+    abstract fun observeAllSmartwatchSpecs(): Flow<List<SmartwatchSpecEntity>>
+
+    @Query("SELECT * FROM router_specs")
+    abstract fun observeAllRouterSpecs(): Flow<List<RouterSpecEntity>>
+
+    @Query("SELECT * FROM modem_specs")
+    abstract fun observeAllModemSpecs(): Flow<List<ModemSpecEntity>>
+
+    @Query("SELECT * FROM access_point_specs")
+    abstract fun observeAllAccessPointSpecs(): Flow<List<AccessPointSpecEntity>>
+
+    @Query("SELECT * FROM range_extender_specs")
+    abstract fun observeAllRangeExtenderSpecs(): Flow<List<RangeExtenderSpecEntity>>
+
     @Transaction
     @Query("SELECT * FROM hardware_items WHERE id = :id")
     abstract fun observeById(id: String): Flow<HardwareItemWithSpec?>
@@ -153,6 +205,45 @@ abstract class HardwareDao {
 
     @Upsert
     protected abstract suspend fun upsertMonitorSpecs(specs: List<MonitorSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertMicrophoneSpecs(specs: List<MicrophoneSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertMousepadSpecs(specs: List<MousepadSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertWebcamSpecs(specs: List<WebcamSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertGamingChairSpecs(specs: List<GamingChairSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertCaseFanSpecs(specs: List<CaseFanSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertUpsSpecs(specs: List<UpsSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertGamingDeskSpecs(specs: List<GamingDeskSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertGamingLightingSpecs(specs: List<GamingLightingSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertSmartwatchSpecs(specs: List<SmartwatchSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertRouterSpecs(specs: List<RouterSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertModemSpecs(specs: List<ModemSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertAccessPointSpecs(specs: List<AccessPointSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertRangeExtenderSpecs(specs: List<RangeExtenderSpecEntity>)
 
     // region User Price Overrides (BÖLÜM 2)
 
@@ -222,6 +313,19 @@ abstract class HardwareDao {
         snapshot.keyboards.chunked(chunkSize).forEach { upsertKeyboardSpecs(it) }
         snapshot.headsets.chunked(chunkSize).forEach { upsertHeadsetSpecs(it) }
         snapshot.monitors.chunked(chunkSize).forEach { upsertMonitorSpecs(it) }
+        snapshot.microphones.chunked(chunkSize).forEach { upsertMicrophoneSpecs(it) }
+        snapshot.mousepads.chunked(chunkSize).forEach { upsertMousepadSpecs(it) }
+        snapshot.webcams.chunked(chunkSize).forEach { upsertWebcamSpecs(it) }
+        snapshot.gamingChairs.chunked(chunkSize).forEach { upsertGamingChairSpecs(it) }
+        snapshot.caseFans.chunked(chunkSize).forEach { upsertCaseFanSpecs(it) }
+        snapshot.upss.chunked(chunkSize).forEach { upsertUpsSpecs(it) }
+        snapshot.gamingDesks.chunked(chunkSize).forEach { upsertGamingDeskSpecs(it) }
+        snapshot.gamingLightings.chunked(chunkSize).forEach { upsertGamingLightingSpecs(it) }
+        snapshot.smartwatches.chunked(chunkSize).forEach { upsertSmartwatchSpecs(it) }
+        snapshot.routers.chunked(chunkSize).forEach { upsertRouterSpecs(it) }
+        snapshot.modems.chunked(chunkSize).forEach { upsertModemSpecs(it) }
+        snapshot.accessPoints.chunked(chunkSize).forEach { upsertAccessPointSpecs(it) }
+        snapshot.rangeExtenders.chunked(chunkSize).forEach { upsertRangeExtenderSpecs(it) }
         deleteItemsCachedBefore(syncedAt)
     }
 

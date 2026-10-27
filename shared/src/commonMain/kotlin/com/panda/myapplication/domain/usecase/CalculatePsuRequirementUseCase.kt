@@ -58,26 +58,12 @@ class CalculatePsuRequirementUseCase(
             CoolerType.AIR -> policy.airCoolerDraw.watts
             CoolerType.LIQUID -> policy.liquidCoolerDraw.watts
         }
-        is MotherboardSpec, is PsuSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
-        is com.panda.myapplication.domain.model.MouseSpec,
-        is com.panda.myapplication.domain.model.KeyboardSpec,
-        is com.panda.myapplication.domain.model.HeadsetSpec,
-        is com.panda.myapplication.domain.model.MonitorSpec,
-        is com.panda.myapplication.domain.model.PhoneSpec,
-        is com.panda.myapplication.domain.model.TabletSpec,
-        -> 0
+        else -> 0
     }
 
     private fun HardwareItem.vendorRecommendedPsuWatts(): Int = when (val s = spec) {
         is GpuSpec -> s.recommendedPsu.watts
-        is CpuSpec, is RamSpec, is MotherboardSpec, is PsuSpec, is StorageSpec, is CoolerSpec, is CaseSpec, is PrebuiltSpec, is LaptopSpec,
-        is com.panda.myapplication.domain.model.MouseSpec,
-        is com.panda.myapplication.domain.model.KeyboardSpec,
-        is com.panda.myapplication.domain.model.HeadsetSpec,
-        is com.panda.myapplication.domain.model.MonitorSpec,
-        is com.panda.myapplication.domain.model.PhoneSpec,
-        is com.panda.myapplication.domain.model.TabletSpec,
-        -> 0
+        else -> 0
     }
 
     private fun ceilDiv(value: Int, divisor: Int): Int = (value + divisor - 1) / divisor

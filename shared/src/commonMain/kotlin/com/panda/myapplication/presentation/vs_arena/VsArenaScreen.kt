@@ -178,7 +178,17 @@ import com.panda.myapplication.presentation.util.LocalAppStrings
 
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 
-import com.panda.myapplication.presentation.util.iconEmoji
+import com.panda.myapplication.presentation.components.ModernSoftIcon
+import com.panda.myapplication.presentation.components.SoftCategoryIcon
+import com.panda.myapplication.presentation.components.iconVector
+import androidx.compose.material.icons.rounded.CompareArrows
+import androidx.compose.material.icons.rounded.Diamond
+import androidx.compose.material.icons.rounded.EmojiEvents
+import androidx.compose.material.icons.rounded.LocalFireDepartment
+import androidx.compose.material.icons.rounded.PlayArrow
+import androidx.compose.material.icons.rounded.SportsEsports
+import androidx.compose.material.icons.rounded.Check
+import androidx.compose.ui.graphics.vector.ImageVector
 
 import com.panda.myapplication.presentation.util.shortBadgeText
 
@@ -330,7 +340,7 @@ fun VsArenaScreen(
 
                             accentColor = ElectricBlue,
 
-                            icon = "🏆",
+                            iconVector = Icons.Rounded.EmojiEvents,
 
                         )
 
@@ -340,7 +350,7 @@ fun VsArenaScreen(
 
                             accentColor = GoldAccent,
 
-                            icon = "💎",
+                            iconVector = Icons.Rounded.Diamond,
 
                         )
 
@@ -394,19 +404,24 @@ fun VsArenaScreen(
 
                     ) {
 
-                        Text(
-
-                            text = tr(isTr, "⚔️ KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA", "⚔️ HEAD-TO-HEAD BENCHMARK COMPARISON"),
-
-                            style = MaterialTheme.typography.labelLarge,
-
-                            color = NeonCyan,
-
-                            fontWeight = FontWeight.ExtraBold,
-
-                            letterSpacing = 0.8.sp,
-
-                        )
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            ModernSoftIcon(
+                                icon = Icons.Rounded.CompareArrows,
+                                accentColor = NeonCyan,
+                                size = 26.dp,
+                                iconSize = 15.dp,
+                            )
+                            Text(
+                                text = tr(isTr, "KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA", "HEAD-TO-HEAD BENCHMARK COMPARISON"),
+                                style = MaterialTheme.typography.labelLarge,
+                                color = NeonCyan,
+                                fontWeight = FontWeight.ExtraBold,
+                                letterSpacing = 0.8.sp,
+                            )
+                        }
 
                         Text(
 
@@ -890,7 +905,12 @@ private fun VsArenaHeader(
 
                         ) {
 
-                            Text(text = cat.iconEmoji(), fontSize = 13.sp)
+                            Icon(
+                                imageVector = cat.iconVector(),
+                                contentDescription = null,
+                                modifier = Modifier.size(15.dp),
+                                tint = if (selected) accent else MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
 
                             Text(
 
@@ -966,7 +986,12 @@ private fun VsArenaHeader(
 
                         ) {
 
-                            Text(text = cat.iconEmoji(), fontSize = 13.sp)
+                            Icon(
+                                imageVector = cat.iconVector(),
+                                contentDescription = null,
+                                modifier = Modifier.size(15.dp),
+                                tint = if (selected) accent else MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
 
                             Text(
 
@@ -1306,7 +1331,11 @@ private fun VsFighterCornerCard(
 
                     ) {
 
-                        Text(text = category.iconEmoji(), fontSize = 24.sp)
+                        SoftCategoryIcon(
+                            category = category,
+                            size = 40.dp,
+                            iconSize = 22.dp,
+                        )
 
                         Text(
 
@@ -1374,7 +1403,11 @@ private fun VsFighterCornerCard(
 
                     } else {
 
-                        Text(text = category.iconEmoji(), fontSize = 28.sp)
+                        SoftCategoryIcon(
+                            category = category,
+                            size = 44.dp,
+                            iconSize = 24.dp,
+                        )
 
                     }
 
@@ -1450,7 +1483,7 @@ private fun VsChampionBannerCard(
 
     accentColor: Color,
 
-    icon: String,
+    iconVector: ImageVector,
 
 ) {
 
@@ -1514,7 +1547,12 @@ private fun VsChampionBannerCard(
 
                 ) {
 
-                    Text(text = icon, fontSize = 16.sp)
+                    ModernSoftIcon(
+                        icon = iconVector,
+                        accentColor = accentColor,
+                        size = 28.dp,
+                        iconSize = 16.dp,
+                    )
 
                     Text(
 
@@ -1770,17 +1808,23 @@ private fun VsGameFpsMatrixCard(
 
                 Column(modifier = Modifier.weight(1f)) {
 
-                    Text(
-
-                        text = tr(isTr, "🎮 12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ", "🎮 12-GAME FPS & 1% LOW SIMULATION MATRIX"),
-
-                        style = MaterialTheme.typography.labelLarge,
-
-                        color = NeonCyan,
-
-                        fontWeight = FontWeight.ExtraBold,
-
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        ModernSoftIcon(
+                            icon = Icons.Rounded.SportsEsports,
+                            accentColor = NeonCyan,
+                            size = 28.dp,
+                            iconSize = 16.dp,
+                        )
+                        Text(
+                            text = tr(isTr, "12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ", "12-GAME FPS & 1% LOW SIMULATION MATRIX"),
+                            style = MaterialTheme.typography.labelLarge,
+                            color = NeonCyan,
+                            fontWeight = FontWeight.ExtraBold,
+                        )
+                    }
 
                     Text(
 
@@ -1882,17 +1926,17 @@ private fun VsGameFpsMatrixCard(
 
             ) {
 
-                val filters: List<Pair<GameCategory?, String>> = listOf(
+                val filters: List<Triple<GameCategory?, String, ImageVector?>> = listOf(
 
-                    null to "${tr(isTr, "Tümü", "All")} (${gameRows.size})",
+                    Triple(null, "${tr(isTr, "Tümü", "All")} (${gameRows.size})", null),
 
-                    GameCategory.ESPORTS to "${tr(isTr, "🎯 E-Spor", "🎯 Esports")} (5)",
+                    Triple(GameCategory.ESPORTS, "${tr(isTr, "E-Spor", "Esports")} (5)", Icons.Rounded.SportsEsports),
 
-                    GameCategory.AAA to "${tr(isTr, "🔥 AAA Grafik", "🔥 AAA Graphics")} (7)",
+                    Triple(GameCategory.AAA, "${tr(isTr, "AAA Grafik", "AAA Graphics")} (7)", Icons.Rounded.LocalFireDepartment),
 
                 )
 
-                filters.forEach { (cat, label) ->
+                filters.forEach { (cat, label, filterIcon) ->
 
                     val selected = selectedCategoryFilter == cat
 
@@ -1912,21 +1956,28 @@ private fun VsGameFpsMatrixCard(
 
                     ) {
 
-                        Text(
-
-                            text = label,
-
-                            modifier = Modifier.padding(vertical = 6.dp),
-
-                            style = MaterialTheme.typography.labelSmall,
-
-                            color = if (selected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
-
-                            fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-
-                            textAlign = TextAlign.Center,
-
-                        )
+                        Row(
+                            modifier = Modifier.padding(vertical = 6.dp, horizontal = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
+                            if (filterIcon != null) {
+                                Icon(
+                                    imageVector = filterIcon,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(13.dp),
+                                    tint = if (selected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                            }
+                            Text(
+                                text = label,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = if (selected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
+                                fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
+                                textAlign = TextAlign.Center,
+                            )
+                        }
 
                     }
 
@@ -2404,16 +2455,11 @@ private fun VsComparisonMetricRow(
 
                             Spacer(Modifier.width(4.dp))
 
-                            Text(
-
-                                text = "✓",
-
-                                style = MaterialTheme.typography.labelMedium,
-
-                                color = NeonEmerald,
-
-                                fontWeight = FontWeight.Black,
-
+                            Icon(
+                                imageVector = Icons.Rounded.Check,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                                tint = NeonEmerald,
                             )
 
                         }
@@ -2472,16 +2518,11 @@ private fun VsComparisonMetricRow(
 
                             Spacer(Modifier.width(4.dp))
 
-                            Text(
-
-                                text = "✓",
-
-                                style = MaterialTheme.typography.labelMedium,
-
-                                color = NeonEmerald,
-
-                                fontWeight = FontWeight.Black,
-
+                            Icon(
+                                imageVector = Icons.Rounded.Check,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                                tint = NeonEmerald,
                             )
 
                         }
@@ -2554,7 +2595,12 @@ private fun VsEmptyArenaCard(
 
         ) {
 
-            Text(text = "⚔️", fontSize = 36.sp)
+            ModernSoftIcon(
+                icon = Icons.Rounded.CompareArrows,
+                accentColor = ElectricBlue,
+                size = 56.dp,
+                iconSize = 30.dp,
+            )
 
             Text(
 
@@ -2652,15 +2698,22 @@ private fun VsEmptyArenaCard(
 
                 ) {
 
-                    Text(
-
-                        text = tr(isTr, "⚡ Örnek Kapışmayı Hemen Başlat", "⚡ Launch Sample Showdown"),
-
-                        color = Color.White,
-
-                        fontWeight = FontWeight.Bold,
-
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.PlayArrow,
+                            contentDescription = null,
+                            modifier = Modifier.size(16.dp),
+                            tint = Color.White,
+                        )
+                        Text(
+                            text = tr(isTr, "Örnek Kapışmayı Hemen Başlat", "Launch Sample Showdown"),
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold,
+                        )
+                    }
 
                 }
 
@@ -2872,7 +2925,11 @@ private fun VsProductPickerSheetContent(
 
                             } else {
 
-                                Text(text = category.iconEmoji(), fontSize = 24.sp)
+                                SoftCategoryIcon(
+                            category = category,
+                            size = 40.dp,
+                            iconSize = 22.dp,
+                        )
 
                             }
 

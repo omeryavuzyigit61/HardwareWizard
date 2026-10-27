@@ -116,7 +116,11 @@ import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MemorySize
 import com.panda.myapplication.domain.model.Money
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
@@ -444,6 +448,11 @@ fun HardwareListContent(
                             onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
                             modifier = Modifier.weight(1f),
                         )
+                        CatalogSegmentMode.NETWORKING -> NetworkingCategoryChips(
+                            selectedCategory = uiState.selectedCategory,
+                            onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
+                            modifier = Modifier.weight(1f),
+                        )
                         CatalogSegmentMode.PREBUILT, CatalogSegmentMode.LAPTOP -> BrandFilterChips(
                             availableBrands = uiState.availableBrands,
                             selectedBrands = uiState.filters.selectedBrands,
@@ -712,6 +721,8 @@ fun CategoryFilterChips(
         HardwareCategory.STORAGE to (Icons.Rounded.Storage to strings.catStorage),
         HardwareCategory.COOLER to (Icons.Rounded.AcUnit to strings.catCooler),
         HardwareCategory.CASE to (Icons.Rounded.Inbox to strings.catCase),
+        HardwareCategory.CASE_FAN to (Icons.Rounded.Air to strings.catCaseFan),
+        HardwareCategory.UPS to (Icons.Rounded.BatteryChargingFull to "UPS"),
     )
 
     Row(
@@ -744,8 +755,14 @@ fun PeripheralCategoryChips(
         null to (Icons.Rounded.AutoAwesome to strings.filterAll),
         HardwareCategory.MONITOR to (Icons.Rounded.Tv to strings.catMonitor),
         HardwareCategory.MOUSE to (Icons.Rounded.Mouse to strings.catMouse),
+        HardwareCategory.MOUSEPAD to (Icons.Rounded.GridOn to strings.catMousepad),
         HardwareCategory.KEYBOARD to (Icons.Rounded.Keyboard to strings.catKeyboard),
         HardwareCategory.HEADSET to (Icons.Rounded.Headphones to strings.catHeadset),
+        HardwareCategory.MICROPHONE to (Icons.Rounded.Mic to strings.catMicrophone),
+        HardwareCategory.WEBCAM to (Icons.Rounded.Videocam to strings.catWebcam),
+        HardwareCategory.GAMING_CHAIR to (Icons.Rounded.Chair to strings.catGamingChair),
+        HardwareCategory.GAMING_DESK to (Icons.Rounded.TableRestaurant to strings.catGamingDesk),
+        HardwareCategory.GAMING_LIGHTING to (Icons.Rounded.Lightbulb to strings.catGamingLighting),
     )
 
     Row(
@@ -803,6 +820,40 @@ fun BrandFilterChips(
 }
 
 @Composable
+fun NetworkingCategoryChips(
+    selectedCategory: HardwareCategory?,
+    onCategorySelected: (HardwareCategory?) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
+    val categories = listOf(
+        null to (Icons.Rounded.AutoAwesome to strings.filterAll),
+        HardwareCategory.ROUTER to (Icons.Rounded.Router to strings.catRouter),
+        HardwareCategory.MODEM to (Icons.Rounded.Dns to strings.catModem),
+        HardwareCategory.ACCESS_POINT to (Icons.Rounded.CellTower to strings.catAccessPoint),
+        HardwareCategory.RANGE_EXTENDER to (Icons.Rounded.Sensors to strings.catRangeExtender),
+    )
+
+    Row(
+        modifier = modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        categories.forEach { (cat, pair) ->
+            val (iconVector, label) = pair
+            val isSelected = selectedCategory == cat
+            FluidFilterChip(
+                selected = isSelected,
+                onClick = { onCategorySelected(cat) },
+                label = label,
+                imageVector = iconVector,
+                accentColor = NeonCyan,
+            )
+        }
+    }
+}
+
+@Composable
 fun MobileFilterChips(
     selectedCategory: HardwareCategory?,
     onCategorySelected: (HardwareCategory?) -> Unit,
@@ -818,6 +869,7 @@ fun MobileFilterChips(
         null to (Icons.Rounded.AutoAwesome to strings.filterAll),
         HardwareCategory.SMARTPHONE to (Icons.Rounded.Smartphone to if (isTr) "Akıllı Telefon" else "Smartphone"),
         HardwareCategory.TABLET to (Icons.Rounded.TabletAndroid to if (isTr) "Tablet" else "Tablet"),
+        HardwareCategory.SMARTWATCH to (Icons.Rounded.Watch to if (isTr) "Akıllı Saat" else "Smartwatch"),
     )
 
     Row(
@@ -1250,7 +1302,12 @@ fun HardwarePlaceholderBadge(
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.MICROPHONE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.MOUSEPAD -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.WEBCAM -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.GAMING_CHAIR -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
         HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        else -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
     Box(
         modifier = modifier
@@ -1287,7 +1344,12 @@ fun CategoryBadge(category: HardwareCategory) {
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.MICROPHONE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.MOUSEPAD -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.WEBCAM -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.GAMING_CHAIR -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
         HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        else -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
 
     Box(
@@ -1872,6 +1934,19 @@ private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String 
     is KeyboardSpec -> "${spec.switchType} • ${if (spec.rapidTriggerSupported) "Rapid Trigger (${spec.minActuationMm}mm)" else "${spec.minActuationMm}mm"} • ${spec.layout}"
     is HeadsetSpec -> "${spec.driverType} (${spec.driverSizeMm}mm) • ${spec.impedanceOhm}Ω • ${spec.weightG}g"
     is MonitorSpec -> "${spec.screenSizeInch}\" ${spec.panelType} • ${spec.resolution} • ${spec.refreshRateHz}Hz (${spec.responseSpeedGtGMs}ms)"
+    is MicrophoneSpec -> "${spec.capsuleType} • ${spec.polarPattern} • ${spec.connectivity} • ${spec.maxSplDb}dB SPL"
+    is MousepadSpec -> "${spec.surfaceType} • ${spec.speedGlideTier} • ${spec.baseMaterial} • ${spec.dimensionsMm}"
+    is WebcamSpec -> "${spec.maxResolution} @ ${spec.maxFrameRateFps}FPS • ${spec.sensorModel} (${spec.sensorSizeInch}) • ${spec.aperture}"
+    is GamingChairSpec -> "${spec.chairType} • ${spec.upholsteryMaterial} • ${spec.lumbarSupportType} • Max ${spec.maxWeightCapacityKg}kg"
+    is com.panda.myapplication.domain.model.CaseFanSpec -> "${spec.fanSizeMm}mm • ${spec.maxRpm} RPM • ${spec.maxAirflowCfm} CFM • ${spec.noiseLevelDba} dBA"
+    is com.panda.myapplication.domain.model.UpsSpec -> "${spec.vaRating}VA / ${spec.wattCapacity}W • ${spec.topology} • ${spec.sinewaveType}"
+    is com.panda.myapplication.domain.model.GamingDeskSpec -> "${spec.deskWidthCm}x${spec.deskDepthCm}cm • Max ${spec.maxLoadKg}kg • ${if (spec.isMotorizedHeight) "Motorlu (${spec.minHeightCm}-${spec.maxHeightCm}cm)" else "Sabit"}"
+    is com.panda.myapplication.domain.model.GamingLightingSpec -> "${spec.formFactor} • ${spec.maxLumens} lm • ${spec.colorTempKelvin} • ${spec.supportedEcosystems}"
+    is com.panda.myapplication.domain.model.SmartwatchSpec -> "${spec.screenSizeInch}\" ${spec.screenPanel} • ${spec.batteryLifeDays} Gün • ${spec.waterResistanceAtm} ATM"
+    is com.panda.myapplication.domain.model.RouterSpec -> "${spec.wifiStandard} • ${spec.speedClass} • ${spec.ethernetPorts}"
+    is com.panda.myapplication.domain.model.ModemSpec -> "${spec.vdslProfile} • ${spec.wifiStandard} • ${spec.lanPorts}"
+    is com.panda.myapplication.domain.model.AccessPointSpec -> "${spec.formFactor} • ${spec.wifiStandard} • ${spec.poeSupport} • Max ${spec.maxClients} Cihaz"
+    is com.panda.myapplication.domain.model.RangeExtenderSpec -> "${spec.extenderType} • ${spec.wifiStandard} • ${spec.meshProtocol} • ${spec.coverageAreaM2}m²"
 }
 
 // region Previews
@@ -1942,6 +2017,7 @@ fun FluidSlidingSegmentBar(
         listOf(
             CatalogSegmentMode.INDIVIDUAL to (Icons.Rounded.Memory to strings.segmentIndividual),
             CatalogSegmentMode.PERIPHERALS to (Icons.Rounded.DevicesOther to strings.segmentPeripherals),
+            CatalogSegmentMode.NETWORKING to (Icons.Rounded.Router to strings.segmentNetworking),
             CatalogSegmentMode.PREBUILT to (Icons.Rounded.DesktopWindows to strings.segmentPrebuilt),
             CatalogSegmentMode.LAPTOP to (Icons.Rounded.Laptop to strings.segmentLaptop),
             CatalogSegmentMode.MOBILE to (Icons.Rounded.Smartphone to strings.segmentMobile),

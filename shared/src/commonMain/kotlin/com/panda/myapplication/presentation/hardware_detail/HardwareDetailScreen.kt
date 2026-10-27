@@ -1,5 +1,20 @@
 package com.panda.myapplication.presentation.hardware_detail
 
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
+import com.panda.myapplication.domain.model.CaseFanSpec
+import com.panda.myapplication.domain.model.UpsSpec
+import com.panda.myapplication.domain.model.GamingDeskSpec
+import com.panda.myapplication.domain.model.GamingLightingSpec
+import com.panda.myapplication.domain.model.SmartwatchSpec
+import com.panda.myapplication.domain.model.RouterSpec
+import com.panda.myapplication.domain.model.ModemSpec
+import com.panda.myapplication.domain.model.AccessPointSpec
+import com.panda.myapplication.domain.model.RangeExtenderSpec
+import com.panda.myapplication.domain.model.CompanionSoftware
+import com.panda.myapplication.domain.model.CompanionSoftwareRegistry
+
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DeviceVariant
@@ -94,7 +109,11 @@ import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.Money
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
@@ -394,12 +413,16 @@ fun HardwareDetailContent(
                         }
 
                         // Store Offers Comparison (Canlı TR Piyasası) Card
-                        item(key = "store_offers") {
-                            StoreOffersCard(
-                                offers = item.offers,
-                                currentPriceTry = item.currentPriceTry,
-                                productName = item.displayName,
-                            )
+                        // Temporarily hidden per user request (kaldırma sadece gizle)
+                        val showStoreOffers = false
+                        if (showStoreOffers) {
+                            item(key = "store_offers") {
+                                StoreOffersCard(
+                                    offers = item.offers,
+                                    currentPriceTry = item.currentPriceTry,
+                                    productName = item.displayName,
+                                )
+                            }
                         }
 
                         // Binance-Style Community Price Ledger & Deal Feed ("⚡ CANLI TOPLULUK FİYAT DEFTERİ")
@@ -486,11 +509,13 @@ fun HardwareDetailContent(
                             }
                         }
 
-                        // Performance & Power Progress Bars (CPU, GPU, Peripherals & Mobile)
+                        // Performance & Power Progress Bars (CPU, GPU, Peripherals, Networking, UPS & Mobile)
                         if (item.category == HardwareCategory.CPU ||
                             item.category == HardwareCategory.GPU ||
                             item.category.isPeripheral ||
-                            item.category.isMobile
+                            item.category.isMobile ||
+                            item.category.isNetworking ||
+                            item.category.isPowerBackup
                         ) {
                             item(key = "perf_power_section") {
                                 PerformancePowerSection(item = item)
@@ -500,6 +525,21 @@ fun HardwareDetailContent(
                         // Category-specific Polymorphic Technical Specifications Section
                         item(key = "tech_specs") {
                             PolymorphicTechnicalSpecsSection(item = item)
+                        }
+
+                        // Eşlikçi Yazılım & Sürücü Bulucu (Companion Software Hub)
+                        val companionSoftware = CompanionSoftwareRegistry.resolveFor(item)
+                        if (companionSoftware != null) {
+                            item(key = "companion_software") {
+                                CompanionSoftwareCard(software = companionSoftware)
+                            }
+                        }
+
+                        // Akıllı Kesintisiz Güç Kaynağı (UPS) Anlık Yük & Çalışma Süresi Simülatörü
+                        if (item.spec is UpsSpec) {
+                            item(key = "ups_runtime_estimator") {
+                                UpsRuntimeEstimatorCard(spec = item.spec as UpsSpec)
+                            }
                         }
                     }
                 }
@@ -1195,6 +1235,74 @@ private fun PerformancePowerSection(
                     )
                 }
 
+                is MicrophoneSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Maksimum Ses Basıncı Direnci (SPL)", "Max Sound Pressure Level (SPL)"),
+                        currentValue = "${s.maxSplDb} dB SPL",
+                        fraction = (s.maxSplDb / 150f).coerceIn(0.4f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = tr(isTr, "Yüksek sesli vokal ve yayınlarda seste bozulma (clipping) direnci", "Resistance to clipping during loud vocals and streaming"),
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Kapsül & Oda Gürültü İzolasyonu", "Capsule & Room Noise Isolation"),
+                        currentValue = "${s.capsuleType} (${s.polarPattern})",
+                        fraction = if (s.capsuleType.contains("Dinamik", ignoreCase = true)) 0.94f else 0.78f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = s.connectivity,
+                    )
+                }
+
+                is MousepadSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Durdurma Gücü (Stopping Power)", "Stopping Power & Flick Control"),
+                        currentValue = "${s.stoppingPowerScore}/10",
+                        fraction = (s.stoppingPowerScore / 10f).coerceIn(0.3f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.surfaceType} • ${s.speedGlideTier}",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Taban Stabilitesi & Kalınlık", "Base Stability & Thickness"),
+                        currentValue = "${s.thicknessMm} mm (${s.baseMaterial})",
+                        fraction = (s.thicknessMm.toFloat() / 6f).coerceIn(0.4f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.dimensionsMm} • ${s.humidityResistance}",
+                    )
+                }
+
+                is WebcamSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Kare Hızı & Akış Akıcılığı", "Frame Rate & Stream Smoothness"),
+                        currentValue = "${s.maxResolution} @ ${s.maxFrameRateFps} FPS",
+                        fraction = (s.maxFrameRateFps / 60f).coerceIn(0.4f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.sensorModel} (${s.sensorSizeInch})",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Görüş Açısı (FOV) & Diyafram", "Field of View (FOV) & Aperture"),
+                        currentValue = "${s.fieldOfViewDeg}° • ${s.aperture}",
+                        fraction = (s.fieldOfViewDeg / 100f).coerceIn(0.5f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = s.focusType,
+                    )
+                }
+
+                is GamingChairSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "İskelet & Taşıma Kapasitesi", "Frame & Max Weight Capacity"),
+                        currentValue = "${s.maxWeightCapacityKg} kg (${s.gasLiftClass})",
+                        fraction = (s.maxWeightCapacityKg / 160f).coerceIn(0.5f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.recommendedHeightRange} • ${s.reclineAngleDeg}° Yatış",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Ortopedik Bel & Kolçak Ergonomisi", "Lumbar & Armrest Ergonomics"),
+                        currentValue = s.lumbarSupportType,
+                        fraction = 0.92f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.upholsteryMaterial} • ${s.armrestType}",
+                    )
+                }
+
                 is PhoneSpec -> {
                     MetricProgressBar(
                         title = tr(isTr, "AnTuTu v10 Performansı", "AnTuTu v10 Performance"),
@@ -1240,6 +1348,202 @@ private fun PerformancePowerSection(
                         fraction = (s.batteryMah / 12000f).coerceIn(0.2f, 1f),
                         accentColor = MaterialTheme.colorScheme.tertiary,
                         subText = "${s.thicknessMm} mm Gövde • ${s.weightGrams}g",
+                    )
+                }
+
+                is CaseFanSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Hava Akışı Performansı (Airflow)", "Airflow Performance"),
+                        currentValue = "${s.maxAirflowCfm} CFM",
+                        fraction = (s.maxAirflowCfm.toFloat() / 100f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.fanSizeMm} mm Fan • Maks. ${s.maxRpm} RPM",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Statik Basınç (Radyatör Direnci)", "Static Pressure"),
+                        currentValue = "${s.staticPressureMmH2o} mmH2O",
+                        fraction = (s.staticPressureMmH2o.toFloat() / 4.5f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = tr(isTr, "Radyatör ve filtre hava itiş kabiliyeti", "Push-through capability"),
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Akustik Seviye (Sessizlik)", "Acoustic Silence Rating"),
+                        currentValue = "${s.noiseLevelDba} dBA",
+                        fraction = ((40f - s.noiseLevelDba.toFloat()) / 25f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "${s.bearingType} • ${if (s.pwmPins == 4) "PWM 4-Pin" else "Sabit Voltaj"}",
+                    )
+                }
+
+                is UpsSpec -> {
+                    val isPureSine = s.sinewaveType.contains("Tam Sinüs") || s.sinewaveType.contains("Pure Sine")
+                    MetricProgressBar(
+                        title = tr(isTr, "Aktif Çıkış Gücü Kapasitesi", "Power Output Capacity"),
+                        currentValue = "${s.wattCapacity}W (${s.vaRating} VA)",
+                        fraction = (s.wattCapacity.toFloat() / 2000f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.topology} • ${s.sinewaveType}",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Yedekleme Süresi (Yarı Yük)", "Backup Runtime (Half Load)"),
+                        currentValue = "~${s.runtimeMinHalfLoad} Dakika",
+                        fraction = (s.runtimeMinHalfLoad.toFloat() / 30f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "Tam Yükte: ~${s.runtimeMinFullLoad} dk (${s.batterySpecs})",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Dalga Formu & Koruma Teknolojisi", "Waveform & Protection"),
+                        currentValue = s.sinewaveType,
+                        fraction = if (isPureSine) 1.0f else 0.65f,
+                        accentColor = if (isPureSine) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.outline,
+                        subText = if (isPureSine) "Tam Sinüs (Active PFC PSU ile %100 Uyumlu)" else "Simüle Sinüs (Standart Güç)",
+                    )
+                }
+
+                is GamingDeskSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Çalışma Yüzeyi Boyutu", "Desk Surface Area"),
+                        currentValue = "${s.deskWidthCm} x ${s.deskDepthCm} cm",
+                        fraction = ((s.deskWidthCm.toFloat() * s.deskDepthCm.toFloat()) / 16000f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.surfaceFinish} Kaplama",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Taşıma Kapasitesi & Yük", "Load Capacity"),
+                        currentValue = "${s.maxLoadKg} kg Taşıma",
+                        fraction = (s.maxLoadKg.toFloat() / 160f).coerceIn(0.2f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = if (s.hasCableManagement) "Entegre Kablo Yönetimi Dahil" else "Standart Ayaklar",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Yükseklik Ayar Aralığı", "Height Adjustability"),
+                        currentValue = if (s.isMotorizedHeight) "${s.minHeightCm}-${s.maxHeightCm} cm (Motorlu)" else "Sabit ${s.minHeightCm} cm",
+                        fraction = if (s.isMotorizedHeight) 0.95f else 0.4f,
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = if (s.integratedMousepad) "Tam Boy Deskmat Dahil" else "Masa Yüzeyi",
+                    )
+                }
+
+                is GamingLightingSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Işık Akısı & Parlaklık", "Luminous Flux (Brightness)"),
+                        currentValue = "${s.maxLumens} Lümen",
+                        fraction = (s.maxLumens.toFloat() / 3000f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.formFactor} • ${s.colorTempKelvin}",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Renk Doğruluğu (CRI / Ra)", "Color Accuracy (CRI)"),
+                        currentValue = "CRI ${s.criScore} Ra",
+                        fraction = (s.criScore.toFloat() / 100f).coerceIn(0.5f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = s.powerSource,
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Ekran Senkronizasyonu & Ekosistem", "Sync & Ecosystem"),
+                        currentValue = if (s.hasScreenMirroring) "Reaktif Ekran Senkronu Var" else "Standart RGB",
+                        fraction = if (s.hasScreenMirroring) 1.0f else 0.5f,
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = s.supportedEcosystems,
+                    )
+                }
+
+                is SmartwatchSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Pil Ömrü & Dayanıklılık", "Battery Life"),
+                        currentValue = "${s.batteryLifeDays} Gün Normal",
+                        fraction = (s.batteryLifeDays.toFloat() / 21f).coerceIn(0.15f, 1f),
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "Zirve Parlaklık: ${s.peakBrightnessNits} Nit",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Ekran & Gövde Tasarımı", "Display & Build"),
+                        currentValue = "${s.screenSizeInch}\" ${s.screenPanel}",
+                        fraction = (s.screenSizeInch.toFloat() / 2.0f).coerceIn(0.3f, 1f),
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.caseMaterial} • ${s.waterResistanceAtm} ATM Su Geçirmezlik",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Sağlık & Sensör Dizilimi", "Health & Sensors"),
+                        currentValue = s.osName,
+                        fraction = 0.9f,
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = s.sensorsList,
+                    )
+                }
+
+                is RouterSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Wi-Fi Hız Sınıfı & Bantlar", "Aggregated Wi-Fi Speed"),
+                        currentValue = "${s.speedClass} (${s.wifiStandard})",
+                        fraction = 0.9f,
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = s.bands,
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Kablolu Ağ Port Kapasitesi", "Wired LAN/WAN Bandwidth"),
+                        currentValue = s.ethernetPorts,
+                        fraction = if (s.ethernetPorts.contains("10GbE")) 1.0f else if (s.ethernetPorts.contains("2.5GbE")) 0.75f else 0.5f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = s.processorAndRam,
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Oyun QoS & Bufferbloat Koruması", "Gaming QoS & SQM"),
+                        currentValue = if (s.hasGamingQos && s.hasSqmBufferbloat) "Gaming QoS + SQM Aktif" else "Standart QoS",
+                        fraction = if (s.hasGamingQos && s.hasSqmBufferbloat) 1.0f else 0.6f,
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = s.usbSharingPorts,
+                    )
+                }
+
+                is ModemSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "VDSL / Fiber Genişbant Standardı", "Broadband Profile"),
+                        currentValue = s.vdslProfile,
+                        fraction = 0.85f,
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = if (s.fiberWanSupport) "Gigabit Fiber WAN Desteği Mevcut" else "Standart DSL",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Kablosuz Wi-Fi & Portlar", "Wi-Fi & LAN Ports"),
+                        currentValue = "${s.wifiStandard} • ${s.lanPorts}",
+                        fraction = 0.8f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = "${s.chipset} • ${s.voipPorts}",
+                    )
+                }
+
+                is AccessPointSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Wi-Fi Standardı & Form Faktör", "Wi-Fi Standard & Form"),
+                        currentValue = "${s.wifiStandard} (${s.formFactor})",
+                        fraction = 0.9f,
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "${s.maxClients}+ Eşzamanlı İstemci Kapasitesi",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "PoE Besleme & Uplink Hızı", "PoE Power & Uplink"),
+                        currentValue = "${s.poeSupport} • ${s.uplinkPort}",
+                        fraction = 0.85f,
+                        accentColor = MaterialTheme.colorScheme.secondary,
+                        subText = s.muMimoStreams,
+                    )
+                }
+
+                is RangeExtenderSpec -> {
+                    MetricProgressBar(
+                        title = tr(isTr, "Menzil Genişletme & Wi-Fi", "Extender Wi-Fi"),
+                        currentValue = "${s.extenderType} (${s.wifiStandard})",
+                        fraction = 0.85f,
+                        accentColor = MaterialTheme.colorScheme.primary,
+                        subText = "~${s.coverageAreaM2} m² Kapsama Alanı",
+                    )
+                    MetricProgressBar(
+                        title = tr(isTr, "Mesh Omurgası & Ethernet", "Mesh Backhaul & Ports"),
+                        currentValue = s.meshProtocol,
+                        fraction = 0.8f,
+                        accentColor = MaterialTheme.colorScheme.tertiary,
+                        subText = "${s.dedicatedBackhaul} • ${s.ethernetPorts}",
                     )
                 }
             }
@@ -2270,6 +2574,54 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
             rows.add(tr(isTr, "HDR Sertifikası", "HDR Certification") to s.hdrCertification.ifBlank { getUnspecifiedText(isTr) })
         }
 
+        is MicrophoneSpec -> {
+            rows.add(tr(isTr, "Kapsül Mimarisi", "Capsule Type") to s.capsuleType)
+            rows.add(tr(isTr, "Kutup Deseni (Polar Pattern)", "Polar Pattern") to s.polarPattern)
+            rows.add(tr(isTr, "Örnekleme & Bit Derinliği", "Sample Rate & Bit Depth") to s.sampleRateAndBit)
+            rows.add(tr(isTr, "Frekans Tepki Aralığı", "Frequency Response") to s.frequencyResponse)
+            rows.add(tr(isTr, "Maksimum Ses Basıncı (Max SPL)", "Max SPL") to "${s.maxSplDb} dB SPL")
+            rows.add(tr(isTr, "Bağlantı & Arayüz", "Connectivity") to s.connectivity)
+            rows.add(tr(isTr, "Dahili DSP / Ses İşleme", "Built-in DSP") to if (s.hasBuiltInDsp) tr(isTr, "Var (Donanımsal EQ/Limiter)", "Yes (Hardware EQ/Limiter)") else tr(isTr, "Yok (Saf Sinyal)", "No (Pure Signal)"))
+            rows.add(tr(isTr, "+48V Phantom Power İhtiyacı", "Requires +48V Phantom Power") to if (s.requiresPhantomPower) tr(isTr, "Gerekli (+48V)", "Required (+48V)") else tr(isTr, "Gerekmez", "Not Required"))
+            rows.add(tr(isTr, "Sıfır Gecikmeli Monitörleme", "Zero-Latency Monitoring") to if (s.hasZeroLatencyMonitoring) tr(isTr, "Destekleniyor (3.5mm Jak)", "Supported (3.5mm Jack)") else tr(isTr, "Ses Kartı Üzerinden", "Via Audio Interface"))
+        }
+
+        is MousepadSpec -> {
+            rows.add(tr(isTr, "Yüzey Dokusu & Materyal", "Surface Material") to s.surfaceType)
+            rows.add(tr(isTr, "Kayma Karakteri (Speed/Control)", "Glide Profile") to s.speedGlideTier)
+            rows.add(tr(isTr, "Durdurma Gücü (Stopping Power)", "Stopping Power") to "${s.stoppingPowerScore} / 10")
+            rows.add(tr(isTr, "Alt Taban Teknolojisi", "Base Material") to s.baseMaterial)
+            rows.add(tr(isTr, "Boyutlar (En x Boy)", "Dimensions") to s.dimensionsMm)
+            rows.add(tr(isTr, "Kalınlık", "Thickness") to "${s.thicknessMm} mm")
+            rows.add(tr(isTr, "Kenar Dikişi (Stitched Edges)", "Stitched Edges") to if (s.stitchedEdges) tr(isTr, "Alçak Profil Dikişli", "Low-Profile Stitched") else tr(isTr, "Dikişsiz / Cam Kenar", "Unstitched / CNC Edge"))
+            rows.add(tr(isTr, "Nem & Ter Direnci", "Humidity Resistance") to s.humidityResistance)
+        }
+
+        is WebcamSpec -> {
+            rows.add(tr(isTr, "Maksimum Video Çözünürlüğü", "Max Video Resolution") to s.maxResolution)
+            rows.add(tr(isTr, "Maksimum Kare Hızı", "Max Frame Rate") to "${s.maxFrameRateFps} FPS")
+            rows.add(tr(isTr, "Görüntü Sensörü", "Image Sensor") to "${s.sensorModel} (${s.sensorSizeInch})")
+            rows.add(tr(isTr, "Diyafram Açıklığı (Lens)", "Lens Aperture") to s.aperture)
+            rows.add(tr(isTr, "Görüş Açısı (FOV)", "Field of View (FOV)") to "${s.fieldOfViewDeg}°")
+            rows.add(tr(isTr, "Odaklama Sistemi", "Focus System") to s.focusType)
+            rows.add(tr(isTr, "Yapay Zeka (AI) Kadraj Takibi", "AI Auto-Framing / Tracking") to if (s.hasAiTracking) tr(isTr, "Destekleniyor", "Supported") else tr(isTr, "Standart Sabit Kadraj", "Standard Fixed Frame"))
+            rows.add(tr(isTr, "Donanımsal HDR", "Hardware HDR") to if (s.hasHardwareHdr) tr(isTr, "Destekleniyor", "Supported") else tr(isTr, "Standart SDR", "Standard SDR"))
+            rows.add(tr(isTr, "Bağlantı Arayüzü", "Connection Interface") to s.connectionType)
+            rows.add(tr(isTr, "Fiziksel Gizlilik Kapağı", "Privacy Shutter") to if (s.privacyShutter) tr(isTr, "Var", "Included") else tr(isTr, "Yok", "None"))
+        }
+
+        is GamingChairSpec -> {
+            rows.add(tr(isTr, "Ergonomi & Koltuk Sınıfı", "Chair Type") to s.chairType)
+            rows.add(tr(isTr, "Döşeme Kumaşı / Materyal", "Upholstery Material") to s.upholsteryMaterial)
+            rows.add(tr(isTr, "L4-L5 Bel Desteği Mimarisi", "Lumbar Support System") to s.lumbarSupportType)
+            rows.add(tr(isTr, "Kolçak (Armrest) Mekanizması", "Armrest Type") to s.armrestType)
+            rows.add(tr(isTr, "Amortisör (Gas Lift) Sınıfı", "Gas Lift Class") to s.gasLiftClass)
+            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Weight Capacity") to "${s.maxWeightCapacityKg} kg")
+            rows.add(tr(isTr, "Önerilen Kullanıcı Boyu", "Recommended User Height") to s.recommendedHeightRange)
+            rows.add(tr(isTr, "Maksimum Sırt Yatış Açısı", "Max Recline Angle") to "${s.reclineAngleDeg}°")
+            rows.add(tr(isTr, "Salınım & Tilt Mekanizması", "Tilt Mechanism") to s.tiltMechanism)
+        }
+
         is PhoneSpec -> {
             rows.add(tr(isTr, "Yonga Seti (SoC)", "Chipset (SoC)") to "${s.chipset} (${s.processNodeNm}nm)")
             if (s.cpuArch.isNotBlank()) rows.add(tr(isTr, "İşlemci Çekirdek Yapısı", "CPU Architecture") to s.cpuArch)
@@ -2312,6 +2664,95 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
             rows.add(tr(isTr, "Tasarım & Boyutlar", "Dimensions & Weight") to "${s.bodyMaterial} • ${s.thicknessMm} mm • ${s.weightGrams}g")
             rows.add(tr(isTr, "İşletim Sistemi", "Operating System") to "${s.osName} (${s.updateYears} Yıl Güncelleme)")
             rows.add(tr(isTr, "Hücresel Bağlantı", "Cellular Connectivity") to s.cellularOption)
+        }
+
+        is CaseFanSpec -> {
+            rows.add(tr(isTr, "Fan Boyutu", "Fan Dimensions") to "${s.fanSizeMm} mm")
+            rows.add(tr(isTr, "Dönüş Hızı (RPM)", "Rotational Speed") to "${s.minRpm} - ${s.maxRpm} RPM")
+            rows.add(tr(isTr, "Hava Akışı (Airflow)", "Airflow") to "${s.maxAirflowCfm} CFM")
+            rows.add(tr(isTr, "Statik Basınç", "Static Pressure") to "${s.staticPressureMmH2o} mmH2O")
+            rows.add(tr(isTr, "Gürültü Seviyesi", "Noise Level") to "${s.noiseLevelDba} dBA")
+            rows.add(tr(isTr, "Rulman / Yatak Tipi", "Bearing Type") to s.bearingType)
+            rows.add(tr(isTr, "PWM Kontrol Pini", "PWM Connector") to "${s.pwmPins}-Pin PWM")
+            rows.add(tr(isTr, "Daisy-Chain Bağlantı", "Daisy-Chain") to if (s.isDaisyChain) "Manyetik / Geçmeli Kablosuz Destek" else "Standart Kablolu")
+            rows.add(tr(isTr, "Aydınlatma (RGB)", "Lighting") to s.argbType)
+        }
+
+        is UpsSpec -> {
+            rows.add(tr(isTr, "Güç Kapasitesi", "Power Capacity") to "${s.vaRating} VA / ${s.wattCapacity} Watt")
+            rows.add(tr(isTr, "Topoloji & Tip", "Topology & Type") to s.topology)
+            rows.add(tr(isTr, "Dalga Şekli (Çıkış)", "Output Waveform") to s.sinewaveType)
+            rows.add(tr(isTr, "Çıkış Prizleri", "Output Outlets") to "${s.outletCount} Priz")
+            rows.add(tr(isTr, "Akü Yapısı", "Battery Specs") to s.batterySpecs)
+            rows.add(tr(isTr, "Tipik Yedekleme Süresi", "Typical Backup Runtime") to "%50 Yük: ~${s.runtimeMinHalfLoad} dk | %100 Yük: ~${s.runtimeMinFullLoad} dk")
+            rows.add(tr(isTr, "USB Yönetim Portu", "USB Management Interface") to if (s.hasUsbInterface) "Var (Otomatik Güvenli Kapatma)" else "Yok")
+            rows.add(tr(isTr, "Darbe Dayanımı (Surge)", "Surge Protection") to "${s.surgeProtectionJoules} Joule")
+        }
+
+        is GamingDeskSpec -> {
+            rows.add(tr(isTr, "Masa Ölçüleri (G x D)", "Dimensions (W x D)") to "${s.deskWidthCm} x ${s.deskDepthCm} cm")
+            rows.add(tr(isTr, "Yükseklik Aralığı", "Height Range") to "${s.minHeightCm} - ${s.maxHeightCm} cm")
+            rows.add(tr(isTr, "Yükseklik Ayar Tipi", "Adjustment Mechanism") to if (s.isMotorizedHeight) "Elektrikli Motorlu Standing Desk" else "Sabit Yükseklik")
+            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Load Capacity") to "${s.maxLoadKg} kg")
+            rows.add(tr(isTr, "Yüzey Kaplaması", "Desktop Material") to s.surfaceFinish)
+            rows.add(tr(isTr, "Kablo Yönetimi", "Cable Management") to if (s.hasCableManagement) "Var (Entegre Kanal / Tepsi)" else "Yok")
+            rows.add(tr(isTr, "Özel Kesim Deskmat", "Integrated Deskmat") to if (s.integratedMousepad) "Tam Boy Mousepad Dahil" else "Yok")
+        }
+
+        is GamingLightingSpec -> {
+            rows.add(tr(isTr, "Aydınlatma Form Faktörü", "Form Factor") to s.formFactor)
+            rows.add(tr(isTr, "Işık Akısı (Maks. Lümen)", "Max Luminous Flux") to "${s.maxLumens} Lümen")
+            rows.add(tr(isTr, "Renk Sıcaklığı Aralığı", "Color Temperature") to s.colorTempKelvin)
+            rows.add(tr(isTr, "Renk Doğruluk İndeksi (CRI)", "Color Rendering Index") to "Ra ${s.criScore}")
+            rows.add(tr(isTr, "Ekran Senkronizasyonu", "Screen Mirroring") to if (s.hasScreenMirroring) "Destekleniyor (Reaktif Görsel Senkron)" else "Yok")
+            rows.add(tr(isTr, "Desteklenen Akıllı Ekosistemler", "Smart Ecosystems") to s.supportedEcosystems)
+            rows.add(tr(isTr, "Bağlantı Türü", "Connectivity") to s.connectionType)
+            rows.add(tr(isTr, "Güç Beslemesi", "Power Source") to s.powerSource)
+        }
+
+        is SmartwatchSpec -> {
+            rows.add(tr(isTr, "Ekran Boyutu & Paneli", "Display & Panel") to "${s.screenSizeInch}\" ${s.screenPanel}")
+            rows.add(tr(isTr, "Zirve Parlaklık", "Peak Brightness") to "${s.peakBrightnessNits} Nit")
+            rows.add(tr(isTr, "Tipik Pil Ömrü", "Battery Life") to "${s.batteryLifeDays} Gün")
+            rows.add(tr(isTr, "Su Geçirmezlik", "Water Resistance") to "${s.waterResistanceAtm} ATM (${s.waterResistanceAtm * 10} Metre)")
+            rows.add(tr(isTr, "Kasa Malzemesi", "Case Material") to s.caseMaterial)
+            rows.add(tr(isTr, "Sağlık Sensörleri", "Health Sensors") to s.sensorsList)
+            rows.add(tr(isTr, "İşletim Sistemi", "Operating System") to s.osName)
+            rows.add(tr(isTr, "Hücresel Bağlantı (LTE)", "Cellular LTE") to if (s.hasCellularLte) "eSIM / LTE Destekli" else "Bluetooth / Wi-Fi")
+        }
+
+        is RouterSpec -> {
+            rows.add(tr(isTr, "Wi-Fi Standardı", "Wi-Fi Standard") to "${s.wifiStandard} (${s.bands})")
+            rows.add(tr(isTr, "Hız Sınıfı", "Speed Class") to s.speedClass)
+            rows.add(tr(isTr, "Ethernet Portları", "Ethernet Ports") to s.ethernetPorts)
+            rows.add(tr(isTr, "Oyun QoS & SQM Desteği", "Gaming QoS & SQM") to "${if (s.hasGamingQos) "Oyun Önceliği Var" else "Yok"} • ${if (s.hasSqmBufferbloat) "SQM Anti-Bufferbloat" else "Standart"}")
+            rows.add(tr(isTr, "İşlemci & RAM", "Hardware") to s.processorAndRam)
+            rows.add(tr(isTr, "USB Paylaşım Portları", "USB Ports") to s.usbSharingPorts)
+        }
+
+        is ModemSpec -> {
+            rows.add(tr(isTr, "VDSL / Genişbant Profili", "VDSL Profile") to s.vdslProfile)
+            rows.add(tr(isTr, "Fiber WAN Desteği", "Fiber WAN") to if (s.fiberWanSupport) "Var (FTTH Fiber Uyumlu)" else "Yok")
+            rows.add(tr(isTr, "Dahili Wi-Fi Standardı", "Wi-Fi Standard") to s.wifiStandard)
+            rows.add(tr(isTr, "LAN Portları", "LAN Ports") to s.lanPorts)
+            rows.add(tr(isTr, "VoIP Telefon Hatları", "VoIP Ports") to s.voipPorts)
+            rows.add(tr(isTr, "Yonga Seti", "Chipset") to s.chipset)
+        }
+
+        is AccessPointSpec -> {
+            rows.add(tr(isTr, "Wi-Fi Standardı & Form", "Wi-Fi Standard & Form") to "${s.wifiStandard} (${s.formFactor})")
+            rows.add(tr(isTr, "PoE Standardı", "PoE Standard") to s.poeSupport)
+            rows.add(tr(isTr, "Eşzamanlı İstemci Sayısı", "Max Clients") to "${s.maxClients}+ Cihaz")
+            rows.add(tr(isTr, "MU-MIMO Anten Akışları", "MU-MIMO Streams") to s.muMimoStreams)
+            rows.add(tr(isTr, "Uplink Portu", "Uplink Port") to s.uplinkPort)
+        }
+
+        is RangeExtenderSpec -> {
+            rows.add(tr(isTr, "Cihaz Tipi & Wi-Fi", "Extender Type & Wi-Fi") to "${s.extenderType} (${s.wifiStandard})")
+            rows.add(tr(isTr, "Dedicated Backhaul Omurga", "Dedicated Backhaul") to s.dedicatedBackhaul)
+            rows.add(tr(isTr, "Mesh Protokolü", "Mesh Protocol") to s.meshProtocol)
+            rows.add(tr(isTr, "Ethernet Portları", "Ethernet Ports") to s.ethernetPorts)
+            rows.add(tr(isTr, "Kapsama Alanı", "Coverage Area") to "~${s.coverageAreaM2} m²")
         }
     }
     return rows
@@ -3375,8 +3816,13 @@ fun DetailPlaceholderHero(
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.HEADSET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MONITOR -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.MICROPHONE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        HardwareCategory.MOUSEPAD -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        HardwareCategory.WEBCAM -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
+        HardwareCategory.GAMING_CHAIR -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
         HardwareCategory.SMARTPHONE -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.TABLET -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
+        else -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     }
     Column(
         modifier = modifier
@@ -3517,6 +3963,294 @@ private fun DeviceVariantSelectorCard(
                                 color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
                             )
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@Composable
+private fun CompanionSoftwareCard(
+    software: CompanionSoftware,
+    modifier: Modifier = Modifier,
+) {
+    val uriHandler = LocalUriHandler.current
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+        ),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(Spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(Spacing.small),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(32.dp)
+                            .background(
+                                MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                CircleShape
+                            ),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = "⚡",
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                    }
+                    Column {
+                        Text(
+                            text = "Eşlikçi Yazılım & Sürücü Bulucu",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                        Text(
+                            text = software.name,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                    }
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)),
+                ) {
+                    Text(
+                        text = software.latestVersion,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                }
+            }
+
+            Text(
+                text = software.description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                software.capabilities.forEach { feature ->
+                    Surface(
+                        shape = RoundedCornerShape(6.dp),
+                        color = MaterialTheme.colorScheme.surface,
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.4f)),
+                    ) {
+                        Text(
+                            text = "• $feature",
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(4.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+            ) {
+                Button(
+                    onClick = {
+                        try {
+                            uriHandler.openUri(software.officialDownloadUrl)
+                        } catch (_: Exception) {}
+                    },
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(8.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                    ),
+                    contentPadding = PaddingValues(vertical = 10.dp, horizontal = 12.dp),
+                ) {
+                    Text(
+                        text = "Resmi Sürücüyü İndir",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold,
+                    )
+                }
+
+                if (software.webConfiguratorUrl != null) {
+                    OutlinedButton(
+                        onClick = {
+                            try {
+                                uriHandler.openUri(software.webConfiguratorUrl!!)
+                            } catch (_: Exception) {}
+                        },
+                        shape = RoundedCornerShape(8.dp),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
+                        contentPadding = PaddingValues(vertical = 10.dp, horizontal = 12.dp),
+                    ) {
+                        Text(
+                            text = "Tarayıcıdan Yönet (WebHID)",
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun UpsRuntimeEstimatorCard(
+    spec: UpsSpec,
+    modifier: Modifier = Modifier,
+) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    var setupLoadWatt by remember { mutableStateOf(350f) }
+    val isPureSine = spec.sinewaveType.contains("Tam Sinüs") || spec.sinewaveType.contains("Pure Sine")
+
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(Spacing.cardRadius),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(Spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(Spacing.small),
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(8.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFF10B981)),
+                )
+                Text(
+                    text = tr(isTr, "⚡ Akıllı Kesinti Yedekleme Simülatörü", "⚡ Smart Outage Runtime Simulator"),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+            }
+
+            Text(
+                text = tr(
+                    isTr,
+                    "Sisteminizin çektiği gücü seçerek bu güç kaynağının elektrik kesintisinde kasanızı ne kadar süre açık tutabileceğini anlık hesaplayın.",
+                    "Estimate how many minutes this UPS can keep your battlestation running during a power outage based on active load."
+                ),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+
+            HorizontalDivider(color = MaterialTheme.colorScheme.outline, thickness = 1.dp)
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = tr(isTr, "Simüle Edilen Sistem Yükü:", "Simulated Battlestation Load:"),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Text(
+                    text = "${setupLoadWatt.toInt()} Watt",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+            }
+
+            Slider(
+                value = setupLoadWatt,
+                onValueChange = { setupLoadWatt = it },
+                valueRange = 100f..spec.wattCapacity.toFloat().coerceAtLeast(150f),
+                steps = 15,
+                colors = SliderDefaults.colors(
+                    thumbColor = MaterialTheme.colorScheme.primary,
+                    activeTrackColor = MaterialTheme.colorScheme.primary,
+                ),
+            )
+
+            val loadRatio = (setupLoadWatt / spec.wattCapacity.toFloat().coerceAtLeast(1f)).coerceIn(0.1f, 1.0f)
+            val estimatedMinutes = if (loadRatio <= 0.5f) {
+                val factor = (0.5f / loadRatio).coerceIn(1.0f, 3.5f)
+                (spec.runtimeMinHalfLoad * factor).toInt()
+            } else {
+                val progress = (loadRatio - 0.5f) / 0.5f
+                (spec.runtimeMinHalfLoad - progress * (spec.runtimeMinHalfLoad - spec.runtimeMinFullLoad)).toInt().coerceAtLeast(spec.runtimeMinFullLoad)
+            }
+
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)),
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(Spacing.medium),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column {
+                        Text(
+                            text = tr(isTr, "Tahmini Çalışma Süresi", "Estimated Runtime"),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Text(
+                            text = "~$estimatedMinutes Dakika",
+                            style = MaterialTheme.typography.headlineSmall,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                    }
+
+                    Column(horizontalAlignment = Alignment.End) {
+                        Text(
+                            text = if (isPureSine) "Tam Sinüs (PFC Uyumlu)" else "Simüle Sinüs",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = if (isPureSine) Color(0xFF10B981) else Color(0xFFF59E0B),
+                        )
+                        Text(
+                            text = "${spec.wattCapacity}W / ${spec.vaRating}VA Sınır",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
                 }
             }

@@ -161,7 +161,11 @@ fun CommunityTuningVaultSection(
             }
 
             if (profiles.isNotEmpty()) {
-                val topProfile = profiles.first()
+                val topProfile = if (isTr) {
+                    profiles.firstOrNull { it.languageCode.equals("tr", ignoreCase = true) } ?: profiles.first()
+                } else {
+                    profiles.first()
+                }
                 Surface(
                     shape = RoundedCornerShape(12.dp),
                     color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f),
