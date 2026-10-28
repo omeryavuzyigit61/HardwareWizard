@@ -98,6 +98,11 @@ val dataModule = module {
             ioDispatcher = get(),
         )
     }
+    single<com.panda.myapplication.domain.repository.CommunityReportRepository> {
+        com.panda.myapplication.data.repository.CommunityReportRepositoryImpl(
+            ioDispatcher = get(),
+        )
+    }
 
     factory { GetHardwareListUseCase(repository = get()) }
     factory { GetHardwareDetailUseCase(repository = get()) }

@@ -118,6 +118,13 @@ import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 import kotlin.math.roundToInt
 
+import androidx.compose.material.icons.rounded.Flag
+import com.panda.myapplication.domain.model.ContentReport
+import com.panda.myapplication.domain.model.ReportReason
+import com.panda.myapplication.domain.model.ReportTargetType
+import com.panda.myapplication.domain.repository.CommunityReportRepository
+import com.panda.myapplication.presentation.components.ReportContentDialog
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CommunityTuningVaultScreen(
@@ -129,6 +136,7 @@ fun CommunityTuningVaultScreen(
     hardwareRepository: HardwareRepository = koinInject(),
     activeBuildRepository: ActiveBuildRepository = koinInject(),
     userRepository: UserRepository = koinInject(),
+    reportRepository: CommunityReportRepository = koinInject(),
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -150,6 +158,7 @@ fun CommunityTuningVaultScreen(
     var showShareDialog by remember { mutableStateOf(false) }
     var activeProofImageUrl by remember { mutableStateOf<String?>(null) }
     var activeDiscussionTuning by remember { mutableStateOf<TuningProfile?>(null) }
+    var reportingTargetTuning by remember { mutableStateOf<TuningProfile?>(null) }
 
     val hasActiveRigCpuOrGpu = activeBuild.cpu != null || activeBuild.gpu != null
 
@@ -598,6 +607,7 @@ fun CommunityTuningVaultScreen(
                             isTr = isTr,
                             onProofImageClick = { activeProofImageUrl = profile.proofImageUrl },
                             onDiscussionClick = { activeDiscussionTuning = profile },
+                            onReportClick = { reportingTargetTuning = profile },
                             onToggleReaction = { type ->
                                 val userId = currentUser?.id ?: "guest-${System.currentTimeMillis()}"
                                 if (profile.userId == userId || profile.userDisplayName == currentUser?.username) {
@@ -924,6 +934,42 @@ fun CommunityTuningVaultScreen(
             },
         )
     }
+
+    reportingTargetTuning?.let { target ->
+        val userId = currentUser?.id ?: ""
+        val isSelf = (userId.isNotBlank() && target.userId == userId) || target.userDisplayName == currentUser?.username
+        ReportContentDialog(
+            targetType = ReportTargetType.TUNING_PROFILE,
+            targetTitle = "${target.hardwareName} - ${target.profileTitle}",
+            reportedUserName = target.userDisplayName,
+            isSelfReport = isSelf,
+            isTr = isTr,
+            onDismiss = { reportingTargetTuning = null },
+            onSubmitReport = { reason, details ->
+                coroutineScope.launch {
+                    val report = ContentReport(
+                        id = "rep-tp-${System.currentTimeMillis()}",
+                        targetType = ReportTargetType.TUNING_PROFILE,
+                        targetId = target.id,
+                        targetTitle = "${target.hardwareName} - ${target.profileTitle}",
+                        reportedUserId = target.userId,
+                        reportedUserDisplayName = target.userDisplayName,
+                        reporterUserId = currentUser?.id ?: "guest",
+                        reporterUserDisplayName = currentUser?.username ?: (if (isTr) "Misafir" else "Guest"),
+                        isSelfReport = isSelf,
+                        reason = reason,
+                        details = details,
+                        timestampMillis = System.currentTimeMillis(),
+                    )
+                    reportRepository.submitReport(report)
+                    snackbarHostState.showSnackbar(
+                        if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."
+                        else "Report received. It will be reviewed by moderators."
+                    )
+                }
+            }
+        )
+    }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -933,6 +979,7 @@ private fun CommunityTuningCard(
     isTr: Boolean,
     onProofImageClick: () -> Unit,
     onDiscussionClick: () -> Unit,
+    onReportClick: () -> Unit,
     onToggleReaction: (TuningReactionType) -> Unit,
 ) {
     val lotteryTier = profile.siliconLotteryTier
@@ -1266,27 +1313,54 @@ private fun CommunityTuningCard(
                     ReactionPill(emoji = "⚠️", count = profile.reactionUnstableCount, onClick = { onToggleReaction(TuningReactionType.UNSTABLE) })
                 }
 
-                // Comments Button
-                Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .clickable { onDiscussionClick() },
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    Row(
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    // Comments Button
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.surface,
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable { onDiscussionClick() },
                     ) {
-                        Icon(imageVector = Icons.Rounded.ChatBubbleOutline, contentDescription = null, tint = NeonCyan, modifier = Modifier.size(14.dp))
-                        Text(
-                            text = "${profile.commentsCount}",
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onSurface,
-                        )
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            Icon(imageVector = Icons.Rounded.ChatBubbleOutline, contentDescription = null, tint = NeonCyan, modifier = Modifier.size(14.dp))
+                            Text(
+                                text = "${profile.commentsCount}",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+
+                    // Report Button
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.surface,
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable { onReportClick() },
+                    ) {
+                        Box(
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.Flag,
+                                contentDescription = if (isTr) "Raporla / Şikayet Et" else "Report",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                                modifier = Modifier.size(14.dp),
+                            )
+                        }
                     }
                 }
             }

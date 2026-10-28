@@ -73,16 +73,23 @@ import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 import kotlin.math.roundToInt
 
+import com.panda.myapplication.domain.model.ContentReport
+import com.panda.myapplication.domain.model.ReportStatus
+import com.panda.myapplication.domain.model.ReportTargetType
+import com.panda.myapplication.domain.repository.CommunityReportRepository
+
 @Composable
 fun AdminModerationScreen(
     onNavigateBack: () -> Unit,
     onOpenDrawer: () -> Unit,
     repository: CommunityPriceRepository = koinInject(),
     tuningVaultRepository: com.panda.myapplication.domain.repository.TuningVaultRepository = koinInject(),
+    reportRepository: CommunityReportRepository = koinInject(),
     modifier: Modifier = Modifier,
 ) {
     val pendingTunings by tuningVaultRepository.observePendingTunings().collectAsState(initial = emptyList())
-    var selectedModerationTab by remember { mutableStateOf(0) } // 0: Deals, 1: Tuning
+    val pendingReports by reportRepository.observePendingReports().collectAsState(initial = emptyList())
+    var selectedModerationTab by remember { mutableStateOf(0) } // 0: Deals, 1: Tuning, 2: Reports
     var tuningRejectDialogProfileId by remember { mutableStateOf<String?>(null) }
     var tuningRejectReasonText by remember { mutableStateOf("") }
     val strings = com.panda.myapplication.presentation.util.LocalAppStrings.current
@@ -254,10 +261,33 @@ fun AdminModerationScreen(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = "⚡ OC/UV Ayarları (${pendingTunings.size})",
+                                text = "⚡ OC/UV (${pendingTunings.size})",
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = if (selectedModerationTab == 1) FontWeight.Bold else FontWeight.Normal,
                                 color = if (selectedModerationTab == 1) NeonPurple else MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+
+                    Surface(
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (selectedModerationTab == 2) NeonRose.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (selectedModerationTab == 2) NeonRose else MaterialTheme.colorScheme.outlineVariant),
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(10.dp))
+                            .clickable { selectedModerationTab = 2 }
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(vertical = 10.dp),
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(
+                                text = "🚨 Raporlar (${pendingReports.size})",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (selectedModerationTab == 2) FontWeight.Bold else FontWeight.Normal,
+                                color = if (selectedModerationTab == 2) NeonRose else MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }
                     }
@@ -406,6 +436,158 @@ fun AdminModerationScreen(
                                                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
                                             ) {
                                                 Text("✕ Reddet", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else if (selectedModerationTab == 2) {
+                    // User Reports Moderation List
+                    if (pendingReports.isEmpty()) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .weight(1f),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text("🛡️", fontSize = 36.sp)
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text(
+                                    text = "İncelenmeyi bekleyen kullanıcı raporu bulunmuyor.",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        }
+                    } else {
+                        LazyColumn(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(10.dp),
+                            contentPadding = PaddingValues(vertical = 8.dp),
+                        ) {
+                            items(pendingReports, key = { it.id }) { report ->
+                                Surface(
+                                    shape = RoundedCornerShape(12.dp),
+                                    color = MaterialTheme.colorScheme.surfaceVariant,
+                                    border = BorderStroke(1.dp, if (report.isSelfReport) NeonCyan.copy(alpha = 0.5f) else NeonRose.copy(alpha = 0.5f)),
+                                    modifier = Modifier.fillMaxWidth(),
+                                ) {
+                                    Column(modifier = Modifier.padding(12.dp)) {
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.SpaceBetween,
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                            ) {
+                                                Surface(
+                                                    shape = RoundedCornerShape(6.dp),
+                                                    color = MaterialTheme.colorScheme.surface,
+                                                ) {
+                                                    Text(
+                                                        text = report.targetType.localizedTitle(isTr),
+                                                        style = MaterialTheme.typography.labelSmall,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = NeonPurple,
+                                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                                    )
+                                                }
+
+                                                if (report.isSelfReport) {
+                                                    Surface(
+                                                        shape = RoundedCornerShape(6.dp),
+                                                        color = NeonCyan.copy(alpha = 0.2f),
+                                                    ) {
+                                                        Text(
+                                                            text = "👤 KENDİ PAYLAŞIMI",
+                                                            style = MaterialTheme.typography.labelSmall,
+                                                            fontWeight = FontWeight.Black,
+                                                            color = NeonCyan,
+                                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                                                        )
+                                                    }
+                                                }
+                                            }
+
+                                            Text(
+                                                text = report.reason.localizedTitle(isTr),
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Bold,
+                                                color = if (report.isSelfReport) NeonCyan else NeonRose,
+                                            )
+                                        }
+
+                                        Spacer(modifier = Modifier.height(6.dp))
+
+                                        Text(
+                                            text = report.targetTitle,
+                                            style = MaterialTheme.typography.titleSmall,
+                                            fontWeight = FontWeight.Bold,
+                                            color = MaterialTheme.colorScheme.onSurface,
+                                        )
+
+                                        Spacer(modifier = Modifier.height(4.dp))
+
+                                        Text(
+                                            text = "Hedef Kullanıcı: @" + report.reportedUserDisplayName + " • Bildiren: @" + report.reporterUserDisplayName,
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        )
+
+                                        if (report.details.isNotBlank()) {
+                                            Spacer(modifier = Modifier.height(4.dp))
+                                            Surface(
+                                                shape = RoundedCornerShape(6.dp),
+                                                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.6f),
+                                                modifier = Modifier.fillMaxWidth(),
+                                            ) {
+                                                Text(
+                                                    text = "Açıklama: \"" + report.details + "\"",
+                                                    style = MaterialTheme.typography.bodySmall,
+                                                    color = MaterialTheme.colorScheme.onSurface,
+                                                    modifier = Modifier.padding(8.dp),
+                                                )
+                                            }
+                                        }
+
+                                        Spacer(modifier = Modifier.height(10.dp))
+
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.End,
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Button(
+                                                onClick = {
+                                                    coroutineScope.launch {
+                                                        reportRepository.resolveReport(report.id, ReportStatus.RESOLVED_REMOVED)
+                                                    }
+                                                },
+                                                colors = ButtonDefaults.buttonColors(containerColor = NeonRose, contentColor = Color.White),
+                                                shape = RoundedCornerShape(8.dp),
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                                            ) {
+                                                Text("🗑️ İçeriği Kaldır", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                            }
+                                            Spacer(modifier = Modifier.width(8.dp))
+                                            Button(
+                                                onClick = {
+                                                    coroutineScope.launch {
+                                                        reportRepository.resolveReport(report.id, ReportStatus.RESOLVED_DISMISSED)
+                                                    }
+                                                },
+                                                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surfaceVariant, contentColor = MaterialTheme.colorScheme.onSurface),
+                                                shape = RoundedCornerShape(8.dp),
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                                            ) {
+                                                Text("✓ Raporu Kapat", style = MaterialTheme.typography.labelSmall)
                                             }
                                         }
                                     }

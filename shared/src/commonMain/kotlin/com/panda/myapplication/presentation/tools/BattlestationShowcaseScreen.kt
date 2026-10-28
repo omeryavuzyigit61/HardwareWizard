@@ -132,6 +132,12 @@ import com.panda.myapplication.presentation.util.localized
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
+import com.panda.myapplication.domain.model.ContentReport
+import com.panda.myapplication.domain.model.ReportReason
+import com.panda.myapplication.domain.model.ReportTargetType
+import com.panda.myapplication.domain.repository.CommunityReportRepository
+import com.panda.myapplication.presentation.components.ReportContentDialog
+import androidx.compose.material.icons.rounded.Flag
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.put
@@ -147,6 +153,7 @@ fun BattlestationShowcaseScreen(
     userRepository: UserRepository = koinInject(),
     activeBuildRepository: ActiveBuildRepository = koinInject(),
     hardwareRepository: HardwareRepository = koinInject(),
+    reportRepository: CommunityReportRepository = koinInject(),
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.isTurkish
@@ -162,6 +169,7 @@ fun BattlestationShowcaseScreen(
     var showShareDialog by remember { mutableStateOf(false) }
     var activeInspectSpecsShowcase by remember { mutableStateOf<RigShowcase?>(null) }
     var activeFullscreenImageUrl by remember { mutableStateOf<String?>(null) }
+    var reportingTargetShowcase by remember { mutableStateOf<RigShowcase?>(null) }
 
     val onTriggerShare: () -> Unit = {
         if (!isLoggedIn) {
@@ -383,6 +391,9 @@ fun BattlestationShowcaseScreen(
                             },
                             onViewSpecsClick = {
                                 activeInspectSpecsShowcase = showcase
+                            },
+                            onReportClick = {
+                                reportingTargetShowcase = showcase
                             }
                         )
                     }
@@ -544,6 +555,42 @@ fun BattlestationShowcaseScreen(
             }
         )
     }
+
+    reportingTargetShowcase?.let { target ->
+        val isSelf = currentUser?.id == target.userId || target.userDisplayName == currentUser?.username
+        ReportContentDialog(
+            targetType = ReportTargetType.BATTLESTATION,
+            targetTitle = target.title,
+            reportedUserName = target.userDisplayName,
+            isSelfReport = isSelf,
+            isTr = isTr,
+            onDismiss = { reportingTargetShowcase = null },
+            onSubmitReport = { reason, details ->
+                coroutineScope.launch {
+                    val now = System.currentTimeMillis()
+                    val report = ContentReport(
+                        id = "rep-bs-$now",
+                        targetType = ReportTargetType.BATTLESTATION,
+                        targetId = target.id,
+                        targetTitle = target.title,
+                        reportedUserId = target.userId,
+                        reportedUserDisplayName = target.userDisplayName,
+                        reporterUserId = currentUser?.id ?: "guest",
+                        reporterUserDisplayName = currentUser?.username ?: (if (isTr) "Misafir" else "Guest"),
+                        isSelfReport = isSelf,
+                        reason = reason,
+                        details = details,
+                        timestampMillis = now,
+                    )
+                    reportRepository.submitReport(report)
+                    snackbarHostState.showSnackbar(
+                        if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."
+                        else "Report submitted. It will be reviewed by moderators."
+                    )
+                }
+            }
+        )
+    }
 }
 
 @Composable
@@ -554,6 +601,7 @@ private fun BattlestationCard(
     onLikeClick: () -> Unit,
     onPhotoClick: (String) -> Unit,
     onViewSpecsClick: () -> Unit,
+    onReportClick: () -> Unit,
 ) {
     var selectedPhotoTab by remember { mutableStateOf(0) } // 0: Kasa İçi, 1: Masa Düzeni
     val currentPhotoUrl = if (selectedPhotoTab == 0) showcase.photoRigUrl else showcase.photoSetupUrl
@@ -622,6 +670,18 @@ private fun BattlestationCard(
                             }
                         }
                     }
+                }
+
+                IconButton(
+                    onClick = onReportClick,
+                    modifier = Modifier.size(32.dp),
+                ) {
+                    Icon(
+                        imageVector = Icons.Rounded.Flag,
+                        contentDescription = if (isTr) "Raporla / Şikayet Et" else "Report",
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                        modifier = Modifier.size(18.dp),
+                    )
                 }
             }
 
