@@ -150,12 +150,12 @@
     ]
   },
   {
-    "name": "ARCTIC Liquid Freezer III 360 A-RGB White",
+    "name": "Arctic Liquid Freezer III 360 A-RGB White",
     "price": null,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
-    "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
+    "fan_rpm": 2000,
     "noise_level": 22.5,
     "sockets": [
       "AM5",
@@ -172,7 +172,15 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/4b3cb378557216401dabfeb2bb0719e1.1600.jpg",
       "https://www.arctic.de/media/eb/82/65/1707473361/Liquid_Freezer_III_360_ARGB_White_Rainbow_G01.png",
       "https://www.arctic.de/media/3d/52/a7/1707472942/Liquid_Freezer_III_360_ARGB_White_Out-of_the-box.jpg"
-    ]
+    ],
+    "manufacturer": "Arctic",
+    "cooler_type": "AIO Sıvı Soğutma",
+    "noise_level_db": 22.5,
+    "radiator_size_mm": 360,
+    "supported_sockets": "LGA1851/1700, AM5/AM4",
+    "tdp_capacity": 350,
+    "features": "38mm Ekstra Kalın Radyatör, Entegre VRM Fanı (Anakart Soğutması), Contact Frame Dahili",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/arctic_lf3_360_white.webp"
   },
   {
     "name": "ARCTIC Liquid Freezer III 420 A-RGB",
@@ -325,12 +333,12 @@
     ]
   },
   {
-    "name": "THERMALRIGHT Phantom Spirit 120 EVO",
+    "name": "Thermalright Phantom Spirit 120 EVO",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
-    "color": "Black",
-    "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
+    "color": "All-Black Anodized / ARGB Rim",
+    "fan_rpm": 2150,
     "noise_level": 25.6,
     "sockets": [
       "AM5",
@@ -347,7 +355,15 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/609dd9aca53bc830731d088d9c7ed292.1600.jpg",
       "https://m.media-amazon.com/images/I/71dEBPYOzcL._SL1500_.jpg",
       "https://media.pangoly.com/img/d/e/d/7/ded7d44d-c4a4-42d5-bef7-33682acb5f21.jpg"
-    ]
+    ],
+    "manufacturer": "Thermalright",
+    "cooler_type": "Air (Çift Kule)",
+    "noise_level_db": 28.1,
+    "radiator_size_mm": 120,
+    "supported_sockets": "LGA1851/1700/1200/115x, AM5/AM4",
+    "tdp_capacity": 280,
+    "features": "7x 6mm AGHP Gen 4 Isı Borusu, 2x TL-K12 Yüksek Statik Basınçlı Fan",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/thermalright_ps120_evo.webp"
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB",
@@ -775,12 +791,12 @@
     ]
   },
   {
-    "name": "NOCTUA NH-D15 G2",
+    "name": "Noctua NH-D15 G2",
     "price": null,
     "type": "Dual Tower Air Cooler",
     "size": null,
-    "color": "Brown / Silver",
-    "fan_rpm": "1500 RPM",
+    "color": "Kahverengi / Bej (Klasik Noctua)",
+    "fan_rpm": 1500,
     "noise_level": 24.8,
     "sockets": [
       "AM5",
@@ -797,7 +813,15 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/3cbf3ee92fcdc68aa1049b28ccbdb850.1600.jpg",
       "https://cdn.mos.cms.futurecdn.net/4H8d9JYpYSaoYWBjR3GAfZ.jpg",
       "https://m.media-amazon.com/images/I/81i9YOlnPEL._AC_.jpg"
-    ]
+    ],
+    "manufacturer": "Noctua",
+    "cooler_type": "Air (İkinci Nesil Amiral Kule)",
+    "noise_level_db": 24.8,
+    "radiator_size_mm": 140,
+    "supported_sockets": "LGA1851/1700/1200, AM5/AM4 (Ofset Montaj)",
+    "tdp_capacity": 300,
+    "features": "8x Isı Borusu, 2x NF-A14x25 G2 PBT Fan, SupraTorque Motor",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/noctua_nh_d15_g2.webp"
   },
   {
     "name": "NOCTUA NH-U12S chromax.black",

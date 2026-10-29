@@ -277,15 +277,15 @@
     "form_factor": "ATX",
     "memory_type": "DDR5",
     "memory_slots": 4,
-    "max_memory": 192,
-    "m2_slots": 4,
-    "pcie_slots": 3,
+    "max_memory": 256,
+    "m2_slots": "4x M.2 Shield Frozr (2x PCIe 5.0)",
+    "pcie_slots": "2x PCIe 5.0 x16",
     "sata_ports": 4,
     "pcie_generation": "PCIe 5.0",
     "vrm_phases": "18+2+1 Faz",
     "interface_ports": "2x USB4 40Gbps Type-C, HDMI 2.1, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
+    "color": "Carbon Black / Mystic Light",
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fac31c8cea999908580b1081eed58c0e.1600.jpg",
     "pcb_layers": "8 Katman 2oz Bakır (Server-Grade)",
     "m2_slots_detail": "2x PCIe Gen5 x4 + 3x PCIe Gen4 x4 M.2 Yuvası",
@@ -297,7 +297,10 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/fac31c8cea999908580b1081eed58c0e.1600.jpg",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/mpg-x870e-carbon-wifi/mpg_x870e_carbon_wifi-block02.png",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/Z690_Carbon_Wifi/msi-mpg-z690-carbon-wifi-hero-io.png"
-    ]
+    ],
+    "manufacturer": "MSI",
+    "wifi": "Wi-Fi 7 + 5G LAN + Çift USB4",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/msi_mpg_x870e_carbon.webp"
   },
   {
     "name": "MSI MAG X870 Tomahawk WiFi",
@@ -938,14 +941,14 @@
     "memory_type": "DDR5",
     "memory_slots": 4,
     "max_memory": 192,
-    "m2_slots": 5,
-    "pcie_slots": 3,
+    "m2_slots": "6x M.2 (3x PCIe 5.0)",
+    "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x16",
     "sata_ports": 4,
     "pcie_generation": "PCIe 5.0",
     "vrm_phases": "22+1+2+2 Faz",
     "interface_ports": "2x Thunderbolt 4 (40Gbps), HDMI 2.1, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
+    "color": "ROG Black / Polymo Lighting",
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a35b5eeaee6cdb44ec2f0b888b582a29.1600.jpg",
     "pcb_layers": "8 Katman 2oz Bakır (Server-Grade)",
     "m2_slots_detail": "1x PCIe Gen5 x4 + 4x PCIe Gen4 x4 M.2 Yuvası",
@@ -957,7 +960,10 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/a35b5eeaee6cdb44ec2f0b888b582a29.1600.jpg",
       "https://media.ldlc.com/r1600/ld/products/00/06/17/70/LD0006177070.jpg",
       "https://dlcdnwebimgs.asus.com/files/media/1d8927ca-d5f6-4046-95ad-ca2af410f9b2/v1/img/spec/connectivity.jpg"
-    ]
+    ],
+    "manufacturer": "ASUS",
+    "wifi": "Wi-Fi 7 + Dual Thunderbolt 4 + 5G LAN",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/asus_rog_z890_hero.webp"
   },
   {
     "name": "ASUS ROG Strix Z890-E Gaming WiFi",
@@ -2604,22 +2610,22 @@
     ]
   },
   {
-    "name": "ASROCK X870E Taichi",
+    "name": "ASRock X870E Taichi",
     "price": 36886.0,
     "socket": "AM5",
     "chipset": "X870E",
-    "form_factor": "ATX",
+    "form_factor": "E-ATX",
     "memory_type": "DDR5",
     "memory_slots": 4,
-    "max_memory": 192,
-    "m2_slots": 5,
-    "pcie_slots": 3,
+    "max_memory": 256,
+    "m2_slots": "4x M.2 (1x Blazing Gen5)",
+    "pcie_slots": "2x PCIe 5.0 x16",
     "sata_ports": 4,
     "pcie_generation": "PCIe 5.0",
     "vrm_phases": "18+2+2 Fazlı DrMOS (110A)",
     "interface_ports": "2x USB4 40Gbps Type-C, HDMI 2.1, 2.5G LAN",
     "has_wifi": true,
-    "color": "Black",
+    "color": "Black / Gold Gear",
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/23ef2a9c06fcdba69a77129c3df09ee6.1600.jpg",
     "pcb_layers": "8 Katman 2oz Bakır (Server-Grade)",
     "m2_slots_detail": "2x PCIe Gen5 x4 + 3x PCIe Gen4 x4 M.2 Yuvası",
@@ -2631,7 +2637,10 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/23ef2a9c06fcdba69a77129c3df09ee6.1600.jpg",
       "https://cdn.thefpsreview.com/wp-content/uploads/2024/09/asrock_x870e_taichi_15-1024x576.jpg.webp",
       "https://media.ldlc.com/r1600/ld/products/00/06/17/82/LD0006178281.jpg"
-    ]
+    ],
+    "manufacturer": "ASRock",
+    "wifi": "Wi-Fi 7 + Dual USB4 40Gbps + 5G LAN",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/asrock_x870e_taichi.webp"
   },
   {
     "name": "ASROCK X870E Phantom Gaming Nova",
@@ -15976,22 +15985,22 @@
     ]
   },
   {
-    "name": "Colorful CVN B650M GAMING FROZEN V14",
+    "name": "Colorful CVN B650M Gaming Frozen V14",
     "price": 6299.0,
     "socket": "AM5",
     "chipset": "B650",
-    "form_factor": "Micro-ATX",
+    "form_factor": "Micro ATX",
     "memory_type": "DDR5",
     "memory_slots": 4,
     "max_memory": 192,
-    "m2_slots": 2,
-    "pcie_slots": 2,
+    "m2_slots": "2x M.2 PCIe 5.0/4.0",
+    "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x4",
     "sata_ports": 4,
     "pcie_generation": "PCIe 5.0",
     "vrm_phases": "12+2 Faz 55A DrMOS",
     "interface_ports": "USB 3.2 Gen2 Type-C, DP 1.4, HDMI 2.0, 2.5G LAN",
     "has_wifi": true,
-    "color": "White / Silver",
+    "color": "White / Silver Armor",
     "imageUrl": "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1114112/101615961328714/321603/69142a74E137fe6da/42b10752b5083d5e.jpg!q70.webp",
     "pcb_layers": "6 Katman Beyaz PCB",
     "m2_slots_detail": "2x PCIe 5.0 x4 M.2 Yuvası",
@@ -16003,7 +16012,10 @@
       "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1114112/101615961328714/321603/69142a74E137fe6da/42b10752b5083d5e.jpg!q70.webp",
       "https://down-my.img.susercontent.com/file/sg-11134201-81zuz-micumlj4vls4ce",
       "https://bermorzone.com.ph/wp-content/uploads/2024/04/CVN-B650M-GAMING-FROZEN-V14-btz-ph-2.webp"
-    ]
+    ],
+    "manufacturer": "Colorful",
+    "wifi": "Wi-Fi 6 + Bluetooth 5.2",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_cvn_b650m_frozen.webp"
   },
   {
     "name": "Colorful CVN B760M FROZEN WIFI",
@@ -16044,14 +16056,14 @@
     "memory_type": "DDR5",
     "memory_slots": 4,
     "max_memory": 192,
-    "m2_slots": 5,
-    "pcie_slots": 3,
+    "m2_slots": "4x M.2 NVMe (1x PCIe 5.0)",
+    "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x4",
     "sata_ports": 4,
     "pcie_generation": "PCIe 5.0",
     "vrm_phases": "18+1+1+1 Faz 90A DrMOS",
     "interface_ports": "2x Thunderbolt 4 40Gbps Type-C, HDMI 2.1, 2.5G LAN",
     "has_wifi": true,
-    "color": "Wave White / Silver",
+    "color": "Wave Flow Silver / White",
     "imageUrl": "https://songphuong.vn/Content/uploads/2025/01/iGame-Z890-FLOW-V20-6.webp",
     "pcb_layers": "8 Katman 2oz Bakır PCB",
     "m2_slots_detail": "1x PCIe 5.0 x4 M.2 + 4x PCIe 4.0 x4 M.2",
@@ -16063,7 +16075,10 @@
       "https://songphuong.vn/Content/uploads/2025/01/iGame-Z890-FLOW-V20-6.webp",
       "https://kccshop.vn/media/product/250-10113-mainboard-colorful-igame-z890-flow-v20_0.jpeg",
       "https://gland.vn/media/product/15353_z5922114562924_9c2d1a64f114c02be093746f8f445541.jpg"
-    ]
+    ],
+    "manufacturer": "Colorful",
+    "wifi": "Wi-Fi 7 + BT 5.4 + 2.5G LAN",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_igame_z890_flow.webp"
   },
   {
     "name": "Maxsun MS-iCraft Z790 WiFi",

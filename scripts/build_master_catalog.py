@@ -105,6 +105,12 @@ GPU_REF_SPECS = {
     "GeForce RTX 3050": {"memory": 8, "memory_type": "GDDR6", "bus_width": 128, "core_clock": 1552, "boost_clock": 1777, "tdp": 130, "recommended_psu": 450, "conn": "1x 8-Pin PCIe", "slot": "2.0 Slot", "len": 200.0},
     "GeForce GTX 1660 SUPER": {"memory": 6, "memory_type": "GDDR6", "bus_width": 192, "core_clock": 1530, "boost_clock": 1785, "tdp": 125, "recommended_psu": 450, "conn": "1x 8-Pin PCIe", "slot": "2.0 Slot", "len": 204.0},
 
+    # AMD Radeon RX 9000 (RDNA 4) & GRE
+    "Radeon RX 9070 XT": {"memory": 16, "memory_type": "GDDR6", "bus_width": 256, "core_clock": 2400, "boost_clock": 2900, "tdp": 300, "recommended_psu": 750, "conn": "2x 8-Pin PCIe", "slot": "2.5 Slot", "len": 285.0},
+    "Radeon RX 9070 GRE": {"memory": 16, "memory_type": "GDDR6", "bus_width": 256, "core_clock": 2100, "boost_clock": 2650, "tdp": 220, "recommended_psu": 650, "conn": "2x 8-Pin PCIe", "slot": "2.5 Slot", "len": 275.0},
+    "Radeon RX 9070": {"memory": 16, "memory_type": "GDDR6", "bus_width": 256, "core_clock": 2050, "boost_clock": 2550, "tdp": 210, "recommended_psu": 600, "conn": "2x 8-Pin PCIe", "slot": "2.0 Slot", "len": 265.0},
+    "Radeon RX 7650 GRE": {"memory": 16, "memory_type": "GDDR6", "bus_width": 128, "core_clock": 1950, "boost_clock": 2700, "tdp": 180, "recommended_psu": 550, "conn": "1x 8-Pin PCIe", "slot": "2.0 Slot", "len": 240.0},
+
     # AMD Radeon RX 7000
     "Radeon RX 7900 XTX": {"memory": 24, "memory_type": "GDDR6", "bus_width": 384, "core_clock": 1900, "boost_clock": 2500, "tdp": 355, "recommended_psu": 850, "conn": "2x 8-Pin PCIe", "slot": "2.5 Slot", "len": 287.0},
     "Radeon RX 7900 XT": {"memory": 20, "memory_type": "GDDR6", "bus_width": 320, "core_clock": 1500, "boost_clock": 2400, "tdp": 315, "recommended_psu": 750, "conn": "2x 8-Pin PCIe", "slot": "2.5 Slot", "len": 276.0},
@@ -160,6 +166,11 @@ def identify_chipset(name: str) -> str | None:
     if "3060" in u: return "GeForce RTX 3060"
     if "3050" in u: return "GeForce RTX 3050"
     if "1660SUPER" in u: return "GeForce GTX 1660 SUPER"
+
+    if "9070XT" in u: return "Radeon RX 9070 XT"
+    if "9070GRE" in u: return "Radeon RX 9070 GRE"
+    if "9070" in u: return "Radeon RX 9070"
+    if "7650GRE" in u: return "Radeon RX 7650 GRE"
 
     if "7900XTX" in u: return "Radeon RX 7900 XTX"
     if "7900XT" in u: return "Radeon RX 7900 XT"

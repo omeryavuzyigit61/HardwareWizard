@@ -2204,17 +2204,17 @@
     ]
   },
   {
-    "name": "LIAN LI Lancool 207",
+    "name": "Lian Li Lancool 207",
     "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
-    "side_panel": "Tempered Glass",
-    "max_gpu_length": 410,
-    "max_cpu_cooler_height": 180,
+    "side_panel": "Temperli Cam",
+    "max_gpu_length": 410.0,
+    "max_cpu_cooler_height": 180.0,
     "max_radiator_size": 360,
-    "drive_bays": "2x 3.5\" + 2x 2.5\"",
+    "drive_bays": "2x 3.5\" / 2.5\"",
     "imageUrl": "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_black_ac78734_43927.jpg",
-    "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
+    "radiator_support": "Üst 360mm, Ön 2x 140mm ARGB Dahili",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool 207",
@@ -2222,7 +2222,11 @@
       "https://cdn.mwave.com.au/images/400/lianli_lancool_207_tempered_glass_rgb_atx_midtower_case_black_ac78734_43927.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/a998adb9356bd111a22aec7d1745b0e9.1600.jpg"
-    ]
+    ],
+    "manufacturer": "Lian Li",
+    "form_factor": "Kompakt ATX (Ön PSU Tasarımı)",
+    "max_psu_length": 160.0,
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_lancool_207.webp"
   },
   {
     "name": "LIAN LI Lancool 207 (White)",
@@ -3231,5 +3235,44 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/353cab550f9db3b59469acc1c68335ce.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/560da778f87c2b20e164180102f9f65b.1600.jpg"
     ]
+  },
+  {
+    "name": "Lian Li O11 Vision Chrome",
+    "manufacturer": "Lian Li",
+    "form_factor": "Mid Tower (Dual Chamber)",
+    "color": "Mirror Chrome / Black",
+    "side_panel": "3 Taraflı Sütunsuz Temperli Ayna Cam",
+    "max_gpu_length": 455.0,
+    "max_cpu_cooler_height": 167.0,
+    "max_psu_length": 220.0,
+    "radiator_support": "Yan 360mm, Alt 360mm, Arka 240mm",
+    "drive_bays": "2x 3.5\" HDD, 2x 2.5\" SSD",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_o11_vision_chrome.webp"
+  },
+  {
+    "name": "Lian Li A3-mATX Black",
+    "manufacturer": "Lian Li",
+    "form_factor": "Micro-ATX / Mini-ITX (26 Litre)",
+    "color": "Black",
+    "side_panel": "Tam Mesh Havalandırmalı Çelik Panel (DAN Cases Ortaklığı)",
+    "max_gpu_length": 415.0,
+    "max_cpu_cooler_height": 165.0,
+    "max_psu_length": 220.0,
+    "radiator_support": "Üst 360mm, Yan 360mm",
+    "drive_bays": "1x 3.5\", 2x 2.5\"",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_a3_matx_black.webp"
+  },
+  {
+    "name": "Montech King 95 Pro White",
+    "manufacturer": "Montech",
+    "form_factor": "Mid Tower (Kavisli Akvaryum)",
+    "color": "White",
+    "side_panel": "Kavisli Kesintisiz Panoramik Cam",
+    "max_gpu_length": 420.0,
+    "max_cpu_cooler_height": 175.0,
+    "max_psu_length": 190.0,
+    "radiator_support": "Üst 360mm, Yan 280mm, Alt 360mm (6x ARGB Fan Dahili)",
+    "drive_bays": "5x 3.5\" / 8x 2.5\"",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/montech_king_95_pro_white.webp"
   }
 ]

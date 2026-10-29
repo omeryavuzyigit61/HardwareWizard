@@ -33,21 +33,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 curl_cffi
 
-      - name: 1. Sync Global Technical Catalog & Multi-Angle Peripherals
+      - name: 1. Autonomous Hardware Discovery & Missing Brands Ingestion (DevSecOps)
+        run: |
+          python scripts/autonomous_hardware_discovery.py
+
+      - name: 2. Sync Global Technical Catalog & Multi-Angle Peripherals
         run: |
           python scripts/sync_global_catalog.py
 
-      - name: 2. Check TR Store Price Changes & Stock Status
+      - name: 3. Check TR Store Price Changes & Stock Status
         run: |
           python scripts/update_prices.py
 
-      - name: 3. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
+      - name: 4. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
         run: |
           python scripts/sync_systems_and_laptops.py
 
-      - name: 4. Final Dual Directory Catalog Verification
+      - name: 5. Final Dual Directory Catalog Verification & Hash Integrity
         run: |
-          python scripts/sync_global_catalog.py
+          python scripts/autonomous_hardware_discovery.py
 
       - name: Commit and push only if real data changes exist
         run: |

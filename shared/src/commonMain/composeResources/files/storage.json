@@ -2409,5 +2409,89 @@
     ],
     "model": "Rocket 5 2TB",
     "brand": "SABRENT"
+  },
+  {
+    "name": "Lexar NM790 1TB M.2 NVMe SSD",
+    "manufacturer": "Lexar",
+    "capacity": "1TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 2.0",
+    "read_speed": 7400,
+    "write_speed": 6500,
+    "tbw": 1000,
+    "dram_cache": "HMB (Host Memory Buffer) + Maxio MAP1602",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+  },
+  {
+    "name": "Lexar NM790 2TB M.2 NVMe SSD",
+    "manufacturer": "Lexar",
+    "capacity": "2TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 2.0",
+    "read_speed": 7400,
+    "write_speed": 6500,
+    "tbw": 1500,
+    "dram_cache": "HMB + Maxio MAP1602",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+  },
+  {
+    "name": "Lexar NM790 4TB M.2 NVMe SSD",
+    "manufacturer": "Lexar",
+    "capacity": "4TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 2.0",
+    "read_speed": 7400,
+    "write_speed": 6500,
+    "tbw": 3000,
+    "dram_cache": "HMB + Maxio MAP1602",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+  },
+  {
+    "name": "Crucial T705 2TB PCIe 5.0 M.2 NVMe SSD",
+    "manufacturer": "Crucial",
+    "capacity": "2TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 5.0 x4 NVMe 2.0",
+    "read_speed": 14500,
+    "write_speed": 12700,
+    "tbw": 1200,
+    "dram_cache": "DDR4 DRAM + Phison E26",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/crucial_t705.webp"
+  },
+  {
+    "name": "Crucial T500 2TB M.2 NVMe SSD",
+    "manufacturer": "Crucial",
+    "capacity": "2TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 2.0",
+    "read_speed": 7400,
+    "write_speed": 7000,
+    "tbw": 1200,
+    "dram_cache": "LPDDR4 DRAM + Phison E25",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/crucial_t500.webp"
+  },
+  {
+    "name": "Western Digital WD_BLACK SN850X 4TB M.2 NVMe SSD",
+    "manufacturer": "Western Digital",
+    "capacity": "4TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 1.4",
+    "read_speed": 7300,
+    "write_speed": 6600,
+    "tbw": 2400,
+    "dram_cache": "DDR4 DRAM",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/wd_black_sn850x.webp"
+  },
+  {
+    "name": "TeamGroup MP44 2TB M.2 NVMe SSD",
+    "manufacturer": "TeamGroup",
+    "capacity": "2TB",
+    "form_factor": "M.2 2280",
+    "interface": "PCIe 4.0 x4 NVMe 1.4",
+    "read_speed": 7400,
+    "write_speed": 7000,
+    "tbw": 2500,
+    "dram_cache": "Grafen Termal Etiket + HMB",
+    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/teamgroup_mp44.webp"
   }
 ]
