@@ -582,7 +582,11 @@ fun AdminModerationScreen(
                                                 shape = RoundedCornerShape(8.dp),
                                                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
                                             ) {
-                                                Text("🗑️ İçeriği Kaldır", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                                Text(
+                                                    text = if (report.isSelfReport) "🗑️ Yayından Kaldır" else "🗑️ İçeriği Kaldır",
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    fontWeight = FontWeight.Bold,
+                                                )
                                             }
                                             Spacer(modifier = Modifier.width(8.dp))
                                             Button(
@@ -972,7 +976,7 @@ private fun AdminAuthScreenContent(
                 )
 
                 Text(
-                    text = tr(isTr, "Topluluk fiyat bildirimlerini incelemek, onaylamak veya reddetmek için yönetici PIN kodunuzu girin.", "Enter your admin PIN to review, approve, or reject community price submissions."),
+                    text = tr(isTr, "Topluluk fiyat bildirimlerini, OC/UV profillerini ve kullanıcı raporlarını yönetmek için yönetici PIN kodunuzu girin (Varsayılan PIN: 1923 veya 1234).", "Enter your admin PIN to review price deals, OC/UV profiles, and user reports (Default PIN: 1923 or 1234)."),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

@@ -47,6 +47,7 @@ import androidx.compose.material.icons.rounded.Memory
 import androidx.compose.material.icons.automirrored.rounded.MenuBook
 import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.rounded.Shield
 import androidx.compose.material.icons.rounded.SportsEsports
 import androidx.compose.material.icons.rounded.Tune
 import androidx.compose.material3.Icon
@@ -614,6 +615,14 @@ private fun HardwareEngineeringDrawerContent(
                 subtitle = strings.drawerValuationSubtitle,
                 badge = "2ND HAND VALUATION",
                 accentColor = NeonEmerald,
+            ),
+            EngineeringToolDrawerItem(
+                route = Destinations.ADMIN_MODERATION,
+                icon = Icons.Rounded.Shield,
+                title = if (strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog") "Yönetici Moderasyon Paneli" else "Admin Moderation Panel",
+                subtitle = if (strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog") "Fiyatlar, OC/UV onayları ve raporlar" else "Deals, OC/UV approvals & reports",
+                badge = "ADMIN PANEL",
+                accentColor = NeonRose,
             ),
         )
     }
