@@ -1496,7 +1496,12 @@
     "integrated_gpu": "AMD Radeon Graphics (2 CU)",
     "memory_support": "DDR5-5600 / 6000 EXPO",
     "architecture": "Zen 5 + 3D V-Cache",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_9950x3d.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "AMD Ryzen 9 9900X3D",
@@ -1511,7 +1516,12 @@
     "integrated_gpu": "AMD Radeon Graphics (2 CU)",
     "memory_support": "DDR5-5600 / 6000 EXPO",
     "architecture": "Zen 5 + 3D V-Cache",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_9900x3d.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "AMD Ryzen 9 5900XT",
@@ -1526,7 +1536,12 @@
     "integrated_gpu": null,
     "memory_support": "DDR4-3200",
     "architecture": "Zen 3 AM4 Refresh",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_5900xt.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "AMD Ryzen 7 5800XT",
@@ -1541,7 +1556,12 @@
     "integrated_gpu": null,
     "memory_support": "DDR4-3200",
     "architecture": "Zen 3 AM4 Refresh",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_7_5800xt.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "INTEL Core Ultra 9 285",
@@ -1556,7 +1576,12 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S (65W Düşük Güç)",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_9_285.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "INTEL Core Ultra 7 265",
@@ -1571,7 +1596,12 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S (65W)",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_7_265.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "INTEL Core Ultra 5 245",
@@ -1586,7 +1616,12 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_5_245.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "INTEL Core Ultra 5 225",
@@ -1601,6 +1636,11 @@
     "integrated_gpu": "Intel Graphics (3 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S F/P Giriş",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_5_225.webp"
+    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+    ]
   }
 ]

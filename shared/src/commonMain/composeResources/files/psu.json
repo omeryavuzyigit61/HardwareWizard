@@ -5662,9 +5662,9 @@
     "warranty_years": 10,
     "imageUrl": "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ed3235057508a33ff8605786994551f9.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c17cdbd6418fa5750e7f4f517711717a.1600.jpg"
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
     ],
     "model": "Vertex GX-1000",
     "brand": "SEASONIC",
@@ -5673,7 +5673,7 @@
     "form_factor": "ATX 3.0",
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "features": "Cybenetics Platinum Verimlilik & A- Sessizlik Sertifikası, 135mm FDB Fan",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_vertex_gx1000.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png"
   },
   {
     "name": "Corsair RM1000x SHIFT ATX 3.0",
@@ -5737,7 +5737,12 @@
     "pcie_5_connector": "2x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, 120mm FDB Fan",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1300_black.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG-1300 Platinum (White)",
@@ -5749,7 +5754,12 @@
     "pcie_5_connector": "2x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, Beyaz Kablolar",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1300_white.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (Black)",
@@ -5761,7 +5771,12 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, O11 EVO/Vision Uyumlu",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1000_black.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (White)",
@@ -5773,7 +5788,12 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, Saf Beyaz Gövde",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1000_white.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (Black)",
@@ -5785,7 +5805,12 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Kablolama, 4x Dahili USB Hub, Mesh Izgara Soğutma",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_850_black.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+    ]
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (White)",
@@ -5797,7 +5822,12 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Kablolama, 4x Dahili USB Hub, Beyaz Örgülü Kablolar",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_850_white.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+    ]
   },
   {
     "name": "LIAN LI SP850 SFX Gold (Black)",
@@ -5809,7 +5839,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Mini-ITX / SFX Küçük Form Faktörü, PCIe 5.0 Hazır, Sıfır RPM Modu",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_sp850_black.webp"
+    "image_url": "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
+    "images": [
+      "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
+      "https://lian-li.com/wp-content/uploads/2022/07/SP850_02.webp",
+      "https://lian-li.com/wp-content/uploads/2022/07/SP850_03.webp"
+    ]
   },
   {
     "name": "Seasonic Vertex GX-1200 ATX 3.0",
@@ -5821,7 +5856,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "12 Yıl Garanti, Japon 105C Kapasitörler, Hibrit Sessiz Fan Kontrolü",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_vertex_gx1200.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+    "images": [
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
+      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
+    ]
   },
   {
     "name": "Seasonic Focus GX-1000 ATX 3.0 V3",
@@ -5833,7 +5873,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Kompakt 140mm Gövde, 10 Yıl Garanti, 135mm Akışkan Yataklı Fan",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx1000.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+    "images": [
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+    ]
   },
   {
     "name": "Seasonic Focus GX-850 ATX 3.0 V3",
@@ -5845,7 +5890,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Kompakt 140mm Derinlik, Kablosuz Bağlantı Tasarımı, Tam Modüler",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx850.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+    "images": [
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+    ]
   },
   {
     "name": "Seasonic Focus GX-750 ATX 3.0 V3",
@@ -5857,7 +5907,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Sessiz Hibrit Fan Eğrisi, PCIe 5.0 12VHPWR Doğal Kablo",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx750.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+    "images": [
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+    ]
   },
   {
     "name": "Seasonic Prime TX-1600 Titanium ATX 3.0",
@@ -5869,7 +5924,12 @@
     "pcie_5_connector": "2x 16-Pin 12VHPWR",
     "color": "Black / Chrome",
     "features": "Dünyanın En Yüksek Ripple Kararlılığı (%0.5 Tolerans), Titanyum Verimlilik, 12 Yıl Garanti",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_prime_tx1600.webp"
+    "image_url": "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
+    "images": [
+      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
+      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Modular.png",
+      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Back.png"
+    ]
   },
   {
     "name": "be quiet! Dark Power Pro 13 1300W Titanium",
@@ -5881,7 +5941,12 @@
     "pcie_5_connector": "2x 16-Pin 12VHPWR",
     "color": "Alüminyum Siyah",
     "features": "Çerçevesiz Silent Wings Fan, Overclocking Key (Tek/Çoklu 12V Kanal Anahtarı)",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_dark_power_pro_13.webp"
+    "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "be quiet! Straight Power 12 1000W Platinum",
@@ -5893,7 +5958,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Silent Wings 135mm Fan, Huni Şeklinde Hava Girişi, Platin Verimlilik",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_straight_power_12.webp"
+    "image_url": "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71p-v4z-2rL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71q-x3y-4mL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "be quiet! Pure Power 12 M 850W Gold",
@@ -5905,7 +5975,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "LLC + SR + DC/DC Dönüştürücüler, 120mm Sessiz Fan, F/P Şampiyonu",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_pure_power_12m_850.webp"
+    "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "be quiet! Pure Power 12 M 750W Gold",
@@ -5917,7 +5992,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "ATX 3.0 Yerel Uyumluluk, Çift 12V Kanalı, 10 Yıl Garanti",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_pure_power_12m_750.webp"
+    "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
+    ]
   },
   {
     "name": "Corsair RM1000x Shift Gold ATX 3.0",
@@ -5929,7 +6009,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Patentli Yan Panel Modüler Kablo Bağlantısı, Type 5 Micro-Fit Kablolar",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_rm1000x_shift.webp"
+    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+    "images": [
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+    ]
   },
   {
     "name": "Corsair RM850x Shift Gold ATX 3.0",
@@ -5941,7 +6026,12 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Yan Panel Modüler Bağlantı, 140mm Akışkan Yataklı FDB Fan, Zero RPM",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_rm850x_shift.webp"
+    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+    "images": [
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+    ]
   },
   {
     "name": "Corsair SF850 Platinum ATX 3.1",
@@ -5953,7 +6043,12 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "SFX Küçük Form Faktörü, 92mm FDB Sessiz Fan, Örgülü Esnek Kablolar",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_sf850_platinum.webp"
+    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+    "images": [
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
+    ]
   },
   {
     "name": "Corsair SF750 Platinum",
@@ -5965,7 +6060,12 @@
     "pcie_5_connector": "3x 8-Pin PCIe",
     "color": "Black",
     "features": "SFF ITX Sistemlerin Efsanevi Referans Güç Kaynağı, 7 Yıl Garanti",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_sf750_platinum.webp"
+    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+    "images": [
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
+    ]
   },
   {
     "name": "Super Flower Leadex VII Gold 1000W ATX 3.0",
@@ -5977,6 +6077,11 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Cybenetics Platinum Verimlilik, Patentli Universal Evrensel Soketler",
-    "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/superflower_leadex_vii_1000.webp"
+    "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+    ]
   }
 ]

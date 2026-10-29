@@ -3017,11 +3017,11 @@
     "benchmark_score": 78,
     "benchmark_tier": "B",
     "images": [
-      "http://hyperx.com/cdn/shop/files/hyperx_cloud_stinger_2_core_1_main.jpg?v=1688318190",
       "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_stinger_2_core_7_accessories_1024x1024.jpg?v=1664567390",
-      "https://i.rtings.com/images/reviews/headphones/hyperx/cloud-stinger/cloud-stinger-build-quality-large.jpg"
+      "https://i.rtings.com/images/reviews/headphones/hyperx/cloud-stinger/cloud-stinger-build-quality-large.jpg",
+      "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_stinger_2_core_7_accessories_1024x1024.jpg?v=1664567390"
     ],
-    "image_url": "http://hyperx.com/cdn/shop/files/hyperx_cloud_stinger_2_core_1_main.jpg?v=1688318190"
+    "image_url": "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_stinger_2_core_7_accessories_1024x1024.jpg?v=1664567390"
   },
   {
     "id": "keyboard_wooting_60he_plus",
@@ -5418,8 +5418,8 @@
     "benchmark_tier": "A+",
     "images": [
       "https://cdn.maxitekno.com/MT03547-Lacivert/aula-f99-3-modlu-rgb-hot-swap-mekanik-reaper-switch-kablosuz-makrolu-klavye-lacivert-1.jpg",
-      "http://intek.co.th/wp-content/uploads/2023/11/1-231102092049E8-1.jpg",
-      "https://ae01.alicdn.com/kf/Sacc224905ba3417aa1691e51407b05fae.jpg"
+      "https://ae01.alicdn.com/kf/Sacc224905ba3417aa1691e51407b05fae.jpg",
+      "https://cdn.maxitekno.com/MT03547-Lacivert/aula-f99-3-modlu-rgb-hot-swap-mekanik-reaper-switch-kablosuz-makrolu-klavye-lacivert-1.jpg"
     ],
     "image_url": "https://cdn.maxitekno.com/MT03547-Lacivert/aula-f99-3-modlu-rgb-hot-swap-mekanik-reaper-switch-kablosuz-makrolu-klavye-lacivert-1.jpg"
   },

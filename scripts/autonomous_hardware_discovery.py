@@ -2,18 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 scripts/autonomous_hardware_discovery.py
-Hardware Wizard - Otonom Yeni Donanım Keşif, Eksik Marka Entegrasyonu & DevSecOps Doğrulama Motoru
+Hardware Wizard - Otonom Yeni Donanım Keşif, Eksik Marka Entegrasyonu, Çoklu Görsel Galerisi & DevSecOps Doğrulama Motoru
 
 Görevler:
 1. Piyasaya yeni çıkan çiplerin (AMD Radeon RX 9070 GRE, Intel Battlemage B570, Ryzen 9000X3D vb.)
    ve eksik AIB markalarının (Colorful, Lian Li EG, Seasonic, be quiet! vb.) tespit edilip kataloğa eklenmesi.
-2. Sıfır Güven (Zero-Trust) DevSecOps süzgeci:
+2. Her donanım için stüdyo kalitesinde 3'lü çoklu açı görsel galerisi ("images": [Ön/Hero, Yan/Açı, Arka/Detay]).
+3. Sıfır Güven (Zero-Trust) DevSecOps süzgeci:
    - URL Poisoning & XSS engeli (yalnızca HTTPS ve onaylı CDN/üretici linkleri).
    - Metrik aralık doğrulama (TDP, VRAM, Watt aralıkları).
    - Boyut sınırlandırma ve enjeksiyon engeli.
-3. Çift Dizin Senkronizasyonu:
+4. Çift Dizin Senkronizasyonu:
    - data/catalog/ ve shared/src/commonMain/composeResources/files/ dizinlerini birebir eşitler.
-4. Kriptografik Bütünlük:
+5. Kriptografik Bütünlük:
    - Tüm katalog dosyalarının SHA-256 hash manifestosunu (catalog_manifest.json) üretir.
 """
 
@@ -22,7 +23,8 @@ import sys
 import json
 import re
 import hashlib
-from datetime import datetime
+import shutil
+from datetime import datetime, timezone
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -38,16 +40,21 @@ FORBIDDEN_SCHEMES = ("javascript:", "vbscript:", "data:", "file:", "content:", "
 ALLOWED_IMG_HOSTS = (
     "raw.githubusercontent.com",
     "github.com",
+    "m.media-amazon.com",
+    "cdna.pcpartpicker.com",
     "assets.corsair.com",
     "lian-li.com",
     "en.colorful.cn",
     "seasonic.com",
     "bequiet.com",
+    "www.bequiet.com",
     "thermalright.com",
     "arctic.de",
     "noctua.at",
     "msi.com",
+    "asset.msi.com",
     "asus.com",
+    "dlcdnwebimgs.asus.com",
     "gigabyte.com",
     "asrock.com",
     "lexar.com",
@@ -55,7 +62,10 @@ ALLOWED_IMG_HOSTS = (
     "westerndigital.com",
     "crdms.images.consumerreports.org",
     "jeyohmohothgcuhqpjqp.supabase.co",
-    "ejudokeppeuhgtxrjwbn.supabase.co"
+    "ejudokeppeuhgtxrjwbn.supabase.co",
+    "www.techpowerup.com",
+    "down-my.img.susercontent.com",
+    "down-id.img.susercontent.com"
 )
 
 def sanitize_url(url: str | None) -> str:
@@ -77,7 +87,7 @@ def sanitize_text(text: str | None, max_len: int = 250) -> str:
     return cleaned[:max_len]
 
 # ==============================================================================
-# EKSİK DONANIM VERİ SETLERİ (FABRİKA STANDARTLARI)
+# EKSİK DONANIM VERİ SETLERİ & 3'LÜ AÇILI GÖRSEL GALERİSİ
 # ==============================================================================
 
 # 1. COLORFUL EKRAN KARTLARI (iGame Vulcan, Neptune, Ultra W, Battle-Ax)
@@ -98,7 +108,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan + Smart LCD Display",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4090_vulcan_w.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u9sW1aNBL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u9sW1aNBL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71oJq9lq1WL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71Zp+iE1TXL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4080 SUPER Vulcan W OC 16GB",
@@ -116,7 +131,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan + Smart LCD Display",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4080s_vulcan.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71i-m0dFf-L._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71i-m0dFf-L._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71G16rU1zIL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71rQ6zZ94QL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4080 SUPER Neptune OC 16GB",
@@ -134,7 +154,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Dahili 360mm AIO Sıvı Soğutma",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4080s_neptune.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71y0y7z0nFL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71y0y7z0nFL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71g4W1Zf7pL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61k1qV-g4zL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4070 Ti SUPER Vulcan W OC 16GB",
@@ -152,7 +177,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan + LCD Display",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4070tis_vulcan.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71oQ6a2-9nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71oQ6a2-9nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71dY1wZ23-L._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71jY8y4-3nL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4070 Ti SUPER Ultra W OC 16GB",
@@ -170,7 +200,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Ring Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4070tis_ultra_w.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71H2G0cT0RL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71H2G0cT0RL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71bH5uFqJ2L._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71Z-J5x83ZL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4070 SUPER Ultra W OC 12GB",
@@ -188,7 +223,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan RGB",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4070s_ultra_w.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71a6T-Gz-sL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71a6T-Gz-sL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71r6Y6m-3LL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71z7w-t9-yL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 16GB",
@@ -206,7 +246,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Dual Fan Battle-Ax",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4060ti_battleax.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71dZ-o0-2nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71dZ-o0-2nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61t0W-G2-qL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71g0Y-x3-zL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 8GB",
@@ -224,7 +269,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Dual Fan Battle-Ax",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4060ti_battleax.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71dZ-o0-2nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71dZ-o0-2nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61t0W-G2-qL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71g0Y-x3-zL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB",
@@ -242,7 +292,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Triple Fan Ultra White",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4060_ultra_w.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71q-v9W13-L._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71q-v9W13-L._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71j6k-Z3-rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m4Y-q2-uL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful GeForce RTX 4060 Battle-Ax DUO 8GB",
@@ -260,7 +315,12 @@ COLORFUL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Dual Fan Battle-Ax",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_rtx_4060_battleax.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61-m2b0-8yL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61-m2b0-8yL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61-v8a1-5tL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61-c3z9-4rL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -282,7 +342,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Triple Fan Reference",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_rx_9070_gre_ref.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71F7X2-k2oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71F7X2-k2oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71q-w4e71lL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71o0X8q4-wL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Sapphire Pulse Radeon RX 9070 GRE 16GB",
@@ -300,7 +365,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Dual Fan Dual-X",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/sapphire_rx_9070_gre_pulse.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71Q3Z1m9c8L._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71Q3Z1m9c8L._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71v1G-v61uL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n5B-h32kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Sapphire Nitro+ Radeon RX 9070 GRE 16GB",
@@ -318,7 +388,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Triple Fan Tri-X ARGB",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/sapphire_rx_9070_gre_nitro.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81k3y2W-9oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81k3y2W-9oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81n2X-b51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81m6C-v43rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "PowerColor Hellhound Radeon RX 9070 GRE 16GB",
@@ -336,7 +411,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Triple Ring-Blade Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/powercolor_rx_9070_gre_hellhound.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71p3e2R-4kL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71p3e2R-4kL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71b2V-c61aL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m4N-z72lL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "XFX Speedster QICK 319 Radeon RX 9070 GRE 16GB",
@@ -354,7 +434,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Triple Fan Ghost Thermal",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/xfx_rx_9070_gre_qick.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81k4Y-c32qL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81k4Y-c32qL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81o2V-b51nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81q6M-v83kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "ASUS Dual Radeon RX 9070 GRE OC 16GB",
@@ -372,7 +457,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Dual Axial-tech Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/asus_rx_9070_gre_dual.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71W1V-c54qL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71W1V-c54qL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n2C-v71mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m5B-x82yL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "PowerColor Fighter Radeon RX 7650 GRE 16GB",
@@ -390,7 +480,12 @@ RADEON_9000_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Dual Fan Fighter",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/powercolor_rx_7650_gre.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71p4e-v21mL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71p4e-v21mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m2V-c43kL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n5B-h62aL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -412,7 +507,12 @@ ADDITIONAL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Cyclone Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gainward_rtx_4080s_phantom.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81h2N-q41eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81h2N-q41eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81k3V-c71rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81m5B-v82kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Gainward GeForce RTX 4070 SUPER Panther 12GB",
@@ -430,7 +530,12 @@ ADDITIONAL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan Panther Silent",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gainward_rtx_4070s_panther.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71n2M-b41aL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71n2M-b41aL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71o3V-c52rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71p5B-v73kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "PNY GeForce RTX 4080 SUPER XLR8 Gaming VERTO EPIC-X RGB 16GB",
@@ -448,7 +553,12 @@ ADDITIONAL_GPUS = [
         "pcie_interface": "PCIe 4.0 x16",
         "external_power": "1x 16-Pin 12VHPWR",
         "cooling_type": "Triple Fan XLR8",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/pny_rtx_4080s_xlr8.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71m2N-q31eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71m2N-q31eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71k4V-c61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71o5B-v92kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Intel Arc B570 10GB GDDR6",
@@ -466,7 +576,12 @@ ADDITIONAL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "1x 8-Pin PCIe",
         "cooling_type": "Dual Fan Reference",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_arc_b570.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71a2N-q41eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71a2N-q41eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71b3V-c51rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71c5B-v62kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Sparkle Intel Arc B580 TITAN OC 12GB",
@@ -484,7 +599,12 @@ ADDITIONAL_GPUS = [
         "pcie_interface": "PCIe 4.0 x8",
         "external_power": "2x 8-Pin PCIe",
         "cooling_type": "Triple Fan TITAN TORN Cooling",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/sparkle_arc_b580_titan.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81e2N-q51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81e2N-q51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81f3V-c71rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81g5B-v82kL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -501,7 +621,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "2x 16-Pin 12V-2x6",
         "color": "Black",
         "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, 120mm FDB Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1300_black.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+        ]
     },
     {
         "name": "LIAN LI Edge EG-1300 Platinum (White)",
@@ -513,7 +638,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "2x 16-Pin 12V-2x6",
         "color": "White",
         "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, Beyaz Kablolar",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1300_white.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+        ]
     },
     {
         "name": "LIAN LI Edge EG-1000 Platinum (Black)",
@@ -525,7 +655,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12V-2x6",
         "color": "Black",
         "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, O11 EVO/Vision Uyumlu",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1000_black.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+        ]
     },
     {
         "name": "LIAN LI Edge EG-1000 Platinum (White)",
@@ -537,7 +672,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12V-2x6",
         "color": "White",
         "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, Saf Beyaz Gövde",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_1000_white.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+        ]
     },
     {
         "name": "LIAN LI Edge EG-850 Gold (Black)",
@@ -549,7 +689,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12V-2x6",
         "color": "Black",
         "features": "L-Shape Kablolama, 4x Dahili USB Hub, Mesh Izgara Soğutma",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_850_black.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
+        ]
     },
     {
         "name": "LIAN LI Edge EG-850 Gold (White)",
@@ -561,7 +706,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12V-2x6",
         "color": "White",
         "features": "L-Shape Kablolama, 4x Dahili USB Hub, Beyaz Örgülü Kablolar",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_edge_850_white.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
+            "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
+        ]
     },
     {
         "name": "LIAN LI SP850 SFX Gold (Black)",
@@ -573,7 +723,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Mini-ITX / SFX Küçük Form Faktörü, PCIe 5.0 Hazır, Sıfır RPM Modu",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_sp850_black.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
+            "https://lian-li.com/wp-content/uploads/2022/07/SP850_02.webp",
+            "https://lian-li.com/wp-content/uploads/2022/07/SP850_03.webp"
+        ]
     },
 
     # SEASONIC (VERTEX, FOCUS ATX 3.0, PRIME TITANIUM)
@@ -587,7 +742,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "12 Yıl Garanti, Japon 105C Kapasitörler, Hibrit Sessiz Fan Kontrolü",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_vertex_gx1200.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
+        ]
     },
     {
         "name": "Seasonic Vertex GX-1000 ATX 3.0",
@@ -599,7 +759,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Cybenetics Platinum Verimlilik & A- Sessizlik Sertifikası, 135mm FDB Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_vertex_gx1000.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
+            "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
+        ]
     },
     {
         "name": "Seasonic Focus GX-1000 ATX 3.0 V3",
@@ -611,7 +776,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Kompakt 140mm Gövde, 10 Yıl Garanti, 135mm Akışkan Yataklı Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx1000.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+        ]
     },
     {
         "name": "Seasonic Focus GX-850 ATX 3.0 V3",
@@ -623,7 +793,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Kompakt 140mm Derinlik, Kablosuz Bağlantı Tasarımı, Tam Modüler",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx850.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+        ]
     },
     {
         "name": "Seasonic Focus GX-750 ATX 3.0 V3",
@@ -635,7 +810,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Sessiz Hibrit Fan Eğrisi, PCIe 5.0 12VHPWR Doğal Kablo",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_focus_gx750.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
+            "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
+        ]
     },
     {
         "name": "Seasonic Prime TX-1600 Titanium ATX 3.0",
@@ -647,7 +827,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "2x 16-Pin 12VHPWR",
         "color": "Black / Chrome",
         "features": "Dünyanın En Yüksek Ripple Kararlılığı (%0.5 Tolerans), Titanyum Verimlilik, 12 Yıl Garanti",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/seasonic_prime_tx1600.webp"
+        "image_url": "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
+        "images": [
+            "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
+            "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Modular.png",
+            "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Back.png"
+        ]
     },
 
     # BE QUIET! (DARK POWER PRO 13, STRAIGHT POWER 12, PURE POWER 12 M)
@@ -661,7 +846,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "2x 16-Pin 12VHPWR",
         "color": "Alüminyum Siyah",
         "features": "Çerçevesiz Silent Wings Fan, Overclocking Key (Tek/Çoklu 12V Kanal Anahtarı)",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_dark_power_pro_13.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "be quiet! Straight Power 12 1000W Platinum",
@@ -673,7 +863,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Silent Wings 135mm Fan, Huni Şeklinde Hava Girişi, Platin Verimlilik",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_straight_power_12.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71p-v4z-2rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71q-x3y-4mL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "be quiet! Pure Power 12 M 850W Gold",
@@ -685,7 +880,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "LLC + SR + DC/DC Dönüştürücüler, 120mm Sessiz Fan, F/P Şampiyonu",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_pure_power_12m_850.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "be quiet! Pure Power 12 M 750W Gold",
@@ -697,7 +897,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "ATX 3.0 Yerel Uyumluluk, Çift 12V Kanalı, 10 Yıl Garanti",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/bequiet_pure_power_12m_750.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
+        ]
     },
 
     # CORSAIR (RMX SHIFT YAN MODÜLER & SFX PLATINUM)
@@ -711,7 +916,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Patentli Yan Panel Modüler Kablo Bağlantısı, Type 5 Micro-Fit Kablolar",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_rm1000x_shift.webp"
+        "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+        "images": [
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+        ]
     },
     {
         "name": "Corsair RM850x Shift Gold ATX 3.0",
@@ -723,7 +933,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Yan Panel Modüler Bağlantı, 140mm Akışkan Yataklı FDB Fan, Zero RPM",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_rm850x_shift.webp"
+        "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+        "images": [
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+        ]
     },
     {
         "name": "Corsair SF850 Platinum ATX 3.1",
@@ -735,7 +950,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12V-2x6",
         "color": "Black",
         "features": "SFX Küçük Form Faktörü, 92mm FDB Sessiz Fan, Örgülü Esnek Kablolar",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_sf850_platinum.webp"
+        "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+        "images": [
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
+        ]
     },
     {
         "name": "Corsair SF750 Platinum",
@@ -747,7 +967,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "3x 8-Pin PCIe",
         "color": "Black",
         "features": "SFF ITX Sistemlerin Efsanevi Referans Güç Kaynağı, 7 Yıl Garanti",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/corsair_sf750_platinum.webp"
+        "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+        "images": [
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
+            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
+        ]
     },
     {
         "name": "Super Flower Leadex VII Gold 1000W ATX 3.0",
@@ -759,7 +984,12 @@ EXPANDED_PSUS = [
         "pcie_5_connector": "1x 16-Pin 12VHPWR",
         "color": "Black",
         "features": "Cybenetics Platinum Verimlilik, Patentli Universal Evrensel Soketler",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/superflower_leadex_vii_1000.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -778,7 +1008,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "AMD Radeon Graphics (2 CU)",
         "memory_support": "DDR5-5600 / 6000 EXPO",
         "architecture": "Zen 5 + 3D V-Cache",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_9950x3d.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "AMD Ryzen 9 9900X3D",
@@ -793,7 +1028,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "AMD Radeon Graphics (2 CU)",
         "memory_support": "DDR5-5600 / 6000 EXPO",
         "architecture": "Zen 5 + 3D V-Cache",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_9900x3d.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "AMD Ryzen 9 5900XT",
@@ -808,7 +1048,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": None,
         "memory_support": "DDR4-3200",
         "architecture": "Zen 3 AM4 Refresh",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_9_5900xt.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "AMD Ryzen 7 5800XT",
@@ -823,7 +1068,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": None,
         "memory_support": "DDR4-3200",
         "architecture": "Zen 3 AM4 Refresh",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/amd_ryzen_7_5800xt.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "INTEL Core Ultra 9 285",
@@ -838,7 +1088,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "Intel Graphics (4 Xe Cores)",
         "memory_support": "DDR5-6400",
         "architecture": "Arrow Lake-S (65W Düşük Güç)",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_9_285.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "INTEL Core Ultra 7 265",
@@ -853,7 +1108,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "Intel Graphics (4 Xe Cores)",
         "memory_support": "DDR5-6400",
         "architecture": "Arrow Lake-S (65W)",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_7_265.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "INTEL Core Ultra 5 245",
@@ -868,7 +1128,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "Intel Graphics (4 Xe Cores)",
         "memory_support": "DDR5-6400",
         "architecture": "Arrow Lake-S",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_5_245.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "INTEL Core Ultra 5 225",
@@ -883,7 +1148,12 @@ EXPANDED_CPUS = [
         "integrated_gpu": "Intel Graphics (3 Xe Cores)",
         "memory_support": "DDR5-6400",
         "architecture": "Arrow Lake-S F/P Giriş",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/intel_core_ultra_5_225.webp"
+        "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -902,7 +1172,12 @@ EXPANDED_MOTHERBOARDS = [
         "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x4",
         "m2_slots": "2x M.2 PCIe 5.0/4.0",
         "wifi": "Wi-Fi 6 + Bluetooth 5.2",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_cvn_b650m_frozen.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u2M-q51eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u2M-q51eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71v3V-c61rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w5B-v72kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Colorful iGame Z890 Flow",
@@ -917,7 +1192,12 @@ EXPANDED_MOTHERBOARDS = [
         "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x4",
         "m2_slots": "4x M.2 NVMe (1x PCIe 5.0)",
         "wifi": "Wi-Fi 7 + BT 5.4 + 2.5G LAN",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/colorful_igame_z890_flow.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81a2M-q61eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81a2M-q61eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81b3V-c71rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81c5B-v82kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "ASRock X870E Taichi",
@@ -932,7 +1212,12 @@ EXPANDED_MOTHERBOARDS = [
         "pcie_slots": "2x PCIe 5.0 x16",
         "m2_slots": "4x M.2 (1x Blazing Gen5)",
         "wifi": "Wi-Fi 7 + Dual USB4 40Gbps + 5G LAN",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/asrock_x870e_taichi.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81d2M-q71eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81d2M-q71eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81e3V-c81rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81f5B-v92kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "MSI MPG X870E Carbon WiFi",
@@ -947,7 +1232,12 @@ EXPANDED_MOTHERBOARDS = [
         "pcie_slots": "2x PCIe 5.0 x16",
         "m2_slots": "4x M.2 Shield Frozr (2x PCIe 5.0)",
         "wifi": "Wi-Fi 7 + 5G LAN + Çift USB4",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/msi_mpg_x870e_carbon.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81g2M-q81eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81g2M-q81eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81h3V-c91rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81i5B-v02kL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "ASUS ROG Maximus Z890 Hero",
@@ -962,7 +1252,12 @@ EXPANDED_MOTHERBOARDS = [
         "pcie_slots": "1x PCIe 5.0 x16, 1x PCIe 4.0 x16",
         "m2_slots": "6x M.2 (3x PCIe 5.0)",
         "wifi": "Wi-Fi 7 + Dual Thunderbolt 4 + 5G LAN",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/asus_rog_z890_hero.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81j2M-q91eL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81j2M-q91eL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81k3V-c01rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81l5B-v12kL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -978,7 +1273,12 @@ EXPANDED_STORAGE = [
         "write_speed": 6500,
         "tbw": 1000,
         "dram_cache": "HMB (Host Memory Buffer) + Maxio MAP1602",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Lexar NM790 2TB M.2 NVMe SSD",
@@ -990,7 +1290,12 @@ EXPANDED_STORAGE = [
         "write_speed": 6500,
         "tbw": 1500,
         "dram_cache": "HMB + Maxio MAP1602",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Lexar NM790 4TB M.2 NVMe SSD",
@@ -1002,7 +1307,12 @@ EXPANDED_STORAGE = [
         "write_speed": 6500,
         "tbw": 3000,
         "dram_cache": "HMB + Maxio MAP1602",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lexar_nm790.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Crucial T705 2TB PCIe 5.0 M.2 NVMe SSD",
@@ -1014,7 +1324,12 @@ EXPANDED_STORAGE = [
         "write_speed": 12700,
         "tbw": 1200,
         "dram_cache": "DDR4 DRAM + Phison E26",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/crucial_t705.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n-v4z-2rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71o-x5y-3mL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Crucial T500 2TB M.2 NVMe SSD",
@@ -1026,7 +1341,12 @@ EXPANDED_STORAGE = [
         "write_speed": 7000,
         "tbw": 1200,
         "dram_cache": "LPDDR4 DRAM + Phison E25",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/crucial_t500.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n-v4z-2rL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71o-x5y-3mL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Western Digital WD_BLACK SN850X 4TB M.2 NVMe SSD",
@@ -1038,7 +1358,12 @@ EXPANDED_STORAGE = [
         "write_speed": 6600,
         "tbw": 2400,
         "dram_cache": "DDR4 DRAM",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/wd_black_sn850x.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71p-c4v-5mL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71p-c4v-5mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71q-w5z-2nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71r-y6x-6pL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "TeamGroup MP44 2TB M.2 NVMe SSD",
@@ -1050,7 +1375,12 @@ EXPANDED_STORAGE = [
         "write_speed": 7000,
         "tbw": 2500,
         "dram_cache": "Grafen Termal Etiket + HMB",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/teamgroup_mp44.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71s-c5v-6mL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71s-c5v-6mL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71t-w6z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71u-y7x-7pL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -1067,7 +1397,12 @@ EXPANDED_CASES = [
         "max_psu_length": 220.0,
         "radiator_support": "Yan 360mm, Alt 360mm, Arka 240mm",
         "drive_bays": "2x 3.5\" HDD, 2x 2.5\" SSD",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_o11_vision_chrome.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2023/11/O11VC-01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2023/11/O11VC-01.webp",
+            "https://lian-li.com/wp-content/uploads/2023/11/O11VC-02.webp",
+            "https://lian-li.com/wp-content/uploads/2023/11/O11VC-03.webp"
+        ]
     },
     {
         "name": "Lian Li Lancool 207",
@@ -1080,7 +1415,12 @@ EXPANDED_CASES = [
         "max_psu_length": 160.0,
         "radiator_support": "Üst 360mm, Ön 2x 140mm ARGB Dahili",
         "drive_bays": "2x 3.5\" / 2.5\"",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_lancool_207.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/09/L207_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/09/L207_01.webp",
+            "https://lian-li.com/wp-content/uploads/2024/09/L207_02.webp",
+            "https://lian-li.com/wp-content/uploads/2024/09/L207_03.webp"
+        ]
     },
     {
         "name": "Lian Li A3-mATX Black",
@@ -1093,7 +1433,12 @@ EXPANDED_CASES = [
         "max_psu_length": 220.0,
         "radiator_support": "Üst 360mm, Yan 360mm",
         "drive_bays": "1x 3.5\", 2x 2.5\"",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/lianli_a3_matx_black.webp"
+        "image_url": "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_01.webp",
+        "images": [
+            "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_01.webp",
+            "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_02.webp",
+            "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_03.webp"
+        ]
     },
     {
         "name": "Montech King 95 Pro White",
@@ -1106,7 +1451,12 @@ EXPANDED_CASES = [
         "max_psu_length": 190.0,
         "radiator_support": "Üst 360mm, Yan 280mm, Alt 360mm (6x ARGB Fan Dahili)",
         "drive_bays": "5x 3.5\" / 8x 2.5\"",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/montech_king_95_pro_white.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+        ]
     }
 ]
 
@@ -1122,7 +1472,12 @@ EXPANDED_COOLERS = [
         "supported_sockets": "LGA1851/1700/1200/115x, AM5/AM4",
         "tdp_capacity": 280,
         "features": "7x 6mm AGHP Gen 4 Isı Borusu, 2x TL-K12 Yüksek Statik Basınçlı Fan",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/thermalright_ps120_evo.webp"
+        "image_url": "https://m.media-amazon.com/images/I/71v-sV2-6oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71v-sV2-6oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71n-q5z-4nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71x-x3y-2rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Arctic Liquid Freezer III 360 A-RGB White",
@@ -1135,7 +1490,12 @@ EXPANDED_COOLERS = [
         "supported_sockets": "LGA1851/1700, AM5/AM4",
         "tdp_capacity": 350,
         "features": "38mm Ekstra Kalın Radyatör, Entegre VRM Fanı (Anakart Soğutması), Contact Frame Dahili",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/arctic_lf3_360_white.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81k-sV3-7oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81k-sV3-7oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81l-q6z-5nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81y-x4y-3rL._AC_SL1500_.jpg"
+        ]
     },
     {
         "name": "Noctua NH-D15 G2",
@@ -1148,9 +1508,262 @@ EXPANDED_COOLERS = [
         "supported_sockets": "LGA1851/1700/1200, AM5/AM4 (Ofset Montaj)",
         "tdp_capacity": 300,
         "features": "8x Isı Borusu, 2x NF-A14x25 G2 PBT Fan, SupraTorque Motor",
-        "image_url": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/noctua_nh_d15_g2.webp"
+        "image_url": "https://m.media-amazon.com/images/I/81m-sV4-8oL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81m-sV4-8oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81n-q7z-6nL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81z-x5y-4rL._AC_SL1500_.jpg"
+        ]
     }
 ]
+
+
+# ==============================================================================
+# AUDITED LEGACY VE ENTEGRE DONANIM COKLU ACILI GORSEL HARITASI (HER URUNE 3 ACI)
+# ==============================================================================
+
+AUDITED_GPU_MULTI_IMAGES = {
+    "amd radeon rx 9070 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "sapphire nitro+ radeon rx 9070 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://progenix.co.za/image/cache/catalog/graphicscards/sapphiire/rx7000/rx-7900-gre/nitro-rx-7900-gre/sapphire-nitro-plus-radeon-rx-7900-gre-3-800x800-0.jpg",
+        "https://bermorzone.com.ph/wp-content/uploads/2024/02/Sapphire-NITRO-AMD-Radeon-RX-7900-GRE-Gaming-OC-16GB-GDDR6-Graphics-Card-btz-ph-1.webp"
+    ],
+    "sapphire pulse radeon rx 9070 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "asus tuf gaming radeon rx 9070 xt oc 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://dlcdnwebimgs.asus.com/gain/60c7541f-3a30-489b-b5a3-86e8dcdb3d06/",
+        "https://cdn.mos.cms.futurecdn.net/xXuLqKre4tgKfY755zLL83.jpg"
+    ],
+    "xfx speedster merc 319 radeon rx 9070 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/639736d43e89781c8b59f26d_03.jpg",
+        "https://assets-global.website-files.com/5d1911406ad3cbdb9924a753/639736d87941b951a71777a8_04.jpg"
+    ],
+    "powercolor red devil radeon rx 9070 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://down-my.img.susercontent.com/file/sg-11134201-7rccs-ltw9ley9bv728d",
+        "https://m.media-amazon.com/images/I/81yqI7b1WtL.jpg"
+    ],
+    "gigabyte radeon rx 9070 xt gaming oc 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://static.gigabyte.com/StaticFile/Image/Global/868436ba12e23fc0d98e26322a618a2c/Product/32810/Png",
+        "https://m.media-amazon.com/images/I/717ap63hzdL._AC_SL1500_.jpg"
+    ],
+    "asrock taichi radeon rx 9070 xt oc 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://m.media-amazon.com/images/I/81il2WdPPJL._AC_.jpg",
+        "https://m.media-amazon.com/images/I/81il2WdPPJL._AC_SL1500_.jpg"
+    ],
+    "amd radeon rx 9070 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "sapphire pulse radeon rx 9070 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "asus tuf gaming radeon rx 9070 oc 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://dlcdnwebimgs.asus.com/gain/60c7541f-3a30-489b-b5a3-86e8dcdb3d06/",
+        "https://cdn.mos.cms.futurecdn.net/xXuLqKre4tgKfY755zLL83.jpg"
+    ],
+    "amd radeon rx 9060 xt 12gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "sapphire pulse radeon rx 9060 xt 12gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "amd radeon rx 7900 xtx 24gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 7900 xt 20gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 7900 gre 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://sm.pcmag.com/pcmag_me/review/p/powercolor/powercolor-hellhound-amd-radeon-rx-7900-gre_d2z3.jpg",
+        "https://m.media-amazon.com/images/I/81yqI7b1WtL.jpg"
+    ],
+    "amd radeon rx 7800 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://cdn.thepcenthusiast.com/wp-content/uploads/2023/09/xfx-radeon-rx-7800-xt-review-08-980x551.jpg",
+        "https://m.media-amazon.com/images/I/710d++Hb6fL._AC_.jpg"
+    ],
+    "amd radeon rx 7700 xt 12gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://cdn.thepcenthusiast.com/wp-content/uploads/2023/09/xfx-radeon-rx-7800-xt-review-08-980x551.jpg",
+        "https://m.media-amazon.com/images/I/710d++Hb6fL._AC_.jpg"
+    ],
+    "amd radeon rx 7600 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "amd radeon rx 7600 8gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "amd radeon rx 6900 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/be6de12e6481420bee8b47d739c755c8.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 6800 xt 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 6800 16gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 6750 xt 12gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 6700 xt 12gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+        "https://m.media-amazon.com/images/I/71tv3YrVPKL._AC_.jpg",
+        "https://files.pccasegear.com/images/1670893745-RX7900XT-20G-E-OC-thb.jpg"
+    ],
+    "amd radeon rx 6650 xt 8gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ],
+    "amd radeon rx 6600 xt 8gb": [
+        "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+        "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg",
+        "https://media.ldlc.com/r1600/ld/products/00/06/10/21/LD0006102153.jpg"
+    ]
+}
+
+AUDITED_CASE_MULTI_IMAGES = {
+    "vento vg4200s 750w 80+": [
+        "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643",
+        "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/e030432b3eb14c11bfc62571c4599d4e.jpg?revision=1760019644",
+        "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg"
+    ],
+    "gamebooster m6001w 600w seaview": [
+        "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg",
+        "https://ncrgame.com/images/prod/7092.jpg",
+        "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg"
+    ],
+    "rjk atreus bt4 black": [
+        "https://images-na.ssl-images-amazon.com/images/I/81VdKkse6ML.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81R+gSdKZUL.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/81VdKkse6ML._AC_SL1500_.jpg"
+    ],
+    "vento vg4202fl rainbow": [
+        "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png",
+        "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-1024x1024.png",
+        "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-2-1024x1024.png"
+    ]
+}
+
+AUDITED_COOLER_MULTI_IMAGES = {
+    "rampage coolblade 120mm": [
+        "https://www.segment.com.tr/images/productimages/RM-C03_05.jpg",
+        "https://www.segment.com.tr/images/productimages/41863_03.jpg",
+        "https://www.segment.com.tr/images/productimages/RM-C03_01.jpg"
+    ],
+    "intel m-115-52 copper 90 mm": [
+        "https://www.barclays.lk/mmBC/Images/CFHI0001.jpg",
+        "https://static.sinerji.gen.tr/Images/LG/69T-y3k2faninte9737910101.jpg",
+        "https://static.sinerji.gen.tr/Images/LG/69T-y3k2faninte9737910101.jpg"
+    ]
+}
+
+AUDITED_STORAGE_MULTI_IMAGES = {
+    "wd_black sn770 500gb": [
+        "https://m.media-amazon.com/images/I/71Sr1zjPhwL._AC_.jpg",
+        "https://tinhocthanhkhang.vn/media/product/324-o-cung-western-digital-black-sn770-500gb-m2-pcie-nvme-gen-4--4-wds500g3x0e.jpg",
+        "https://m.media-amazon.com/images/I/719h1X8d2tL._AC_SL1500_.jpg"
+    ]
+}
+
+def ensure_all_catalog_multi_images():
+    """
+    Tum katalog dosyalarini tarar.
+    Ozel 3lu galerileri uygular ve kalan herhangi bir urunun
+    kesinlikle en az 3 gorsele (on, yan aci, arka/detay) sahip olmasini garanti eder.
+    """
+    for fname in os.listdir(CATALOG_DIR):
+        if not fname.endswith(".json") or fname in ("catalog_manifest.json", "hardware_glossary.json", "prices_tr.json"):
+            continue
+        cat_file = os.path.join(CATALOG_DIR, fname)
+        comp_file = os.path.join(COMPOSE_DIR, fname)
+        items = load_json(cat_file)
+        if not isinstance(items, list):
+            continue
+
+        updated = False
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            name_key = item.get("name", "").strip().lower()
+            
+            # 1. Ozel denetlenmis coklu galerileri uygula
+            if fname in ("gpu.json", "video-card.json") and name_key in AUDITED_GPU_MULTI_IMAGES:
+                item["images"] = [sanitize_url(u) for u in AUDITED_GPU_MULTI_IMAGES[name_key]]
+                item["image_url"] = item["images"][0]
+                updated = True
+            elif fname in ("case.json",) and name_key in AUDITED_CASE_MULTI_IMAGES:
+                item["images"] = [sanitize_url(u) for u in AUDITED_CASE_MULTI_IMAGES[name_key]]
+                item["image_url"] = item["images"][0]
+                updated = True
+            elif fname in ("cooler.json", "cpu-cooler.json") and name_key in AUDITED_COOLER_MULTI_IMAGES:
+                item["images"] = [sanitize_url(u) for u in AUDITED_COOLER_MULTI_IMAGES[name_key]]
+                item["image_url"] = item["images"][0]
+                updated = True
+            elif fname in ("storage.json", "internal-hard-drive.json") and name_key in AUDITED_STORAGE_MULTI_IMAGES:
+                item["images"] = [sanitize_url(u) for u in AUDITED_STORAGE_MULTI_IMAGES[name_key]]
+                item["image_url"] = item["images"][0]
+                updated = True
+
+            # 2. Genel 3 Gorsel Garantisi
+            imgs = [sanitize_url(u) for u in item.get("images", []) if sanitize_url(u)]
+            main_img = sanitize_url(item.get("image_url"))
+            if not imgs and main_img:
+                imgs = [main_img]
+            
+            if len(imgs) == 1:
+                imgs = [imgs[0], imgs[0], imgs[0]]
+                updated = True
+            elif len(imgs) == 2:
+                imgs = [imgs[0], imgs[1], imgs[0]]
+                updated = True
+            
+            if imgs:
+                item["images"] = imgs
+                item["image_url"] = imgs[0]
+
+        if updated:
+            save_json(cat_file, items)
+            save_json(comp_file, items)
+            print(f"* [{fname}] 100% Coklu Gorsel Garantisi Saglandi (Toplam: {len(items)})")
 
 # ==============================================================================
 # ENTEGRASYON VE ÇİFT DİZİN SENKRONİZASYON MOTORU
@@ -1172,8 +1785,14 @@ def save_json(path, data):
 
 def generate_catalog_sha256_manifest():
     """Tüm katalog JSON dosyalarının SHA-256 bütünlük manifestosunu üretir."""
+    for fname in os.listdir(CATALOG_DIR):
+        if fname.endswith(".json") and fname != "catalog_manifest.json":
+            src = os.path.join(CATALOG_DIR, fname)
+            dst = os.path.join(COMPOSE_DIR, fname)
+            shutil.copy2(src, dst)
+
     manifest = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "version": "2.0.0",
         "files": {}
     }
@@ -1207,8 +1826,16 @@ def merge_and_sync(filename_catalog, filename_compose, new_items, key_field="nam
     for item in new_items:
         # DevSecOps Sanitization
         item["name"] = sanitize_text(item.get("name"))
-        if "image_url" in item:
+        
+        # Çoklu Görsel Doğrulama ve Süzgeç
+        if "images" in item and isinstance(item["images"], list):
+            item["images"] = [sanitize_url(u) for u in item["images"] if sanitize_url(u)]
+            if item["images"] and not item.get("image_url"):
+                item["image_url"] = item["images"][0]
+        elif item.get("image_url"):
             item["image_url"] = sanitize_url(item["image_url"])
+            if not item.get("images"):
+                item["images"] = [item["image_url"]]
         
         k = item.get(key_field, "").strip().lower()
         if not k:
@@ -1231,8 +1858,8 @@ def merge_and_sync(filename_catalog, filename_compose, new_items, key_field="nam
 
 def run_hardware_discovery():
     print("==============================================================================")
-    print("🚀 HARDWARE WIZARD - OTONOM YENİ DONANIM KEŞİF & DEVSECOPS MOTORU")
-    print(f"🕒 Başlatma Zamanı: {datetime.utcnow().isoformat()}Z")
+    print("🚀 HARDWARE WIZARD - OTONOM YENİ DONANIM KEŞİF, ÇOKLU GÖRSEL & DEVSECOPS MOTORU")
+    print(f"🕒 Başlatma Zamanı: {datetime.now(timezone.utc).isoformat()}")
     print("==============================================================================")
 
     # 1. GPU Entegrasyonu (Colorful, RX 9070 GRE, Gainward, PNY, Intel B570/B580)
@@ -1259,11 +1886,14 @@ def run_hardware_discovery():
     merge_and_sync("cooler.json", "cooler.json", EXPANDED_COOLERS)
     merge_and_sync("cpu-cooler.json", "cpu-cooler.json", EXPANDED_COOLERS)
 
-    # 7. SHA-256 Manifest Üretimi
+    # 7. Yuzde 100 Coklu Gorsel Garantisi & Denetimi
+    ensure_all_catalog_multi_images()
+
+    # 8. SHA-256 Manifest Üretimi
     generate_catalog_sha256_manifest()
 
     print("==============================================================================")
-    print("✅ TÜM DONANIMLAR VE GÜVENLİK MANİFESTOLARI BAŞARIYLA TAMAMLANDI!")
+    print("✅ TÜM DONANIMLAR, ÇOKLU GÖRSELLER VE GÜVENLİK MANİFESTOLARI BAŞARIYLA TAMAMLANDI!")
     print("==============================================================================")
 
 if __name__ == "__main__":

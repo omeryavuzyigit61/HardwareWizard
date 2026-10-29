@@ -33,7 +33,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 330
+    "chargerWatt": 330,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_asus_rog_strix_scar_18_g834jy",
@@ -69,7 +70,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + Tri-Fan Soğutma Bloğu",
     "gamingScore": 100,
     "fps1080p": 165,
-    "fps1440p": 135
+    "fps1440p": 135,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_asus_rog_strix_scar_16_g634jyr_14900hx",
@@ -105,7 +107,8 @@
     "coolingTech": "Tri-Fan + Sıvı Metal + 7 Isı Borusu Buhar Odası Tasarımı",
     "gamingScore": 100,
     "fps1080p": 165,
-    "fps1440p": 135
+    "fps1440p": 135,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5"
   },
   {
     "id": "laptop_asus_rog_strix_scar_17_g733py_7945hx",
@@ -141,7 +144,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal (CPU & GPU) + Geniş Buhar Odası",
     "gamingScore": 100,
     "fps1080p": 168,
-    "fps1440p": 138
+    "fps1440p": 138,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp"
   },
   {
     "id": "laptop_asus_rog_strix_scar_17_x3d_7945hx3d",
@@ -177,7 +181,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + Özel Buhar Odası (Vapor Chamber)",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_duo_16_gx650py_çift_ekran",
@@ -213,7 +218,8 @@
     "coolingTech": "AAS Plus 2.0 Açılır İkinci Ekran Hava Girişi (30% Daha Fazla Hava Akışı) + Sıvı Metal",
     "gamingScore": 100,
     "fps1080p": 165,
-    "fps1440p": 136
+    "fps1440p": 136,
+    "image_url": "https://rog.asus.com/media/176705818928.jpg"
   },
   {
     "id": "laptop_asus_rog_scar_18_2024_g834jyr_14900hx_4090",
@@ -249,7 +255,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal Termal Macun + Tri-Fan Üç Fanlı ROG Akıllı Soğutma",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_acer_predator_helios_18_ph18_72_14900hx",
@@ -285,7 +292,8 @@
     "coolingTech": "5. Nesil AeroBlade 3D Metal Fanlar + Sıvı Metal Termal Macun + Vektör Isı Boruları",
     "gamingScore": 100,
     "fps1080p": 166,
-    "fps1440p": 137
+    "fps1440p": 137,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_17_x_ptx17_71",
@@ -321,7 +329,8 @@
     "coolingTech": "Tam CNC İşlenmiş Monoblok Alüminyum Şasi + Buhar Odası + 3 Fanlı Tri-Fan AeroBlade",
     "gamingScore": 100,
     "fps1080p": 165,
-    "fps1440p": 136
+    "fps1440p": 136,
+    "image_url": "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_17_x_ptx17_71_13900hx_4090",
@@ -357,7 +366,8 @@
     "coolingTech": "Üç Fanlı AeroBlade 3D Mimarisi + Geniş Buhar Odası + Sıvı Metal",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_18_ph18_72_14900hx_4090",
@@ -393,7 +403,8 @@
     "coolingTech": "5. Nesil AeroBlade 3D Metal Fanlar + Sıvı Metal Termal Gres",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g911_1490_fx90x_c_14900hx_4090",
@@ -429,7 +440,8 @@
     "coolingTech": "Akıllı Çift Turbo Fan + Sıvı Termal Macun",
     "gamingScore": 100,
     "fps1080p": 174,
-    "fps1440p": 144
+    "fps1440p": 144,
+    "image_url": "https://resim.epey.com/1012864/m_casper-excalibur-g911-1390-dx90a-c-3.png"
   },
   {
     "id": "laptop_dell_alienware_m18_r2_14900hx_4090",
@@ -465,7 +477,8 @@
     "coolingTech": "Element 31 Galyum-Silikon Termal Arayüz + 4 Fanlı Cryo-Tech Soğutma Mimarisi + Cherry MX Mekanik",
     "gamingScore": 100,
     "fps1080p": 166,
-    "fps1440p": 137
+    "fps1440p": 137,
+    "image_url": "https://m.media-amazon.com/images/I/71cXdhZg-BL._AC_SL1500_.jpg"
   },
   {
     "id": "laptop_dell_alienware_m18_r1_7945hx_4090",
@@ -501,7 +514,8 @@
     "coolingTech": "Element 31 Termal Arayüz + 4 Fanlı Cryo-Tech Soğutma Mimarisi",
     "gamingScore": 100,
     "fps1080p": 168,
-    "fps1440p": 138
+    "fps1440p": 138,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/11/2-38-scaled-e1700555518624.jpg"
   },
   {
     "id": "laptop_alienware_x16_r2_ultra_9_185h_4090",
@@ -537,7 +551,8 @@
     "coolingTech": "Element 31 Galyum-Silikon Sıvı Metal Termal Matris + Dört Fanlı Cryo-tech",
     "gamingScore": 100,
     "fps1080p": 172,
-    "fps1440p": 142
+    "fps1440p": 142,
+    "image_url": "https://www.notebookcheck.net/fileadmin/_processed_/5/d/csm_Alienware_X16_07_3567669ae8.png"
   },
   {
     "id": "laptop_gigabyte_aorus_17x_azf_13980hx_4090",
@@ -573,7 +588,8 @@
     "coolingTech": "WINDFORCE Infinity Buhar Odası (Vapor Chamber) + 4 Fanlı Soğutma Mimarisi",
     "gamingScore": 100,
     "fps1080p": 174,
-    "fps1440p": 144
+    "fps1440p": 144,
+    "image_url": "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg"
   },
   {
     "id": "laptop_lenovo_legion_9i_16irx8_liquid",
@@ -609,7 +625,8 @@
     "coolingTech": "Dünyanın İlk Entegre Sıvı Soğutma Pompası + Dövme Karbon Kapak + Coldfront Sıvı Metal",
     "gamingScore": 100,
     "fps1080p": 168,
-    "fps1440p": 140
+    "fps1440p": 140,
+    "image_url": "https://www.gizmochina.com/wp-content/uploads/2023/08/Lenovo-Legion-9i-2023-front.webp"
   },
   {
     "id": "laptop_lenovo_legion_pro_7i_16irx9h_14900hx",
@@ -645,7 +662,8 @@
     "coolingTech": "Legion Coldfront 5.0 Devasa Buhar Odası (Vapor Chamber) + Sıvı Metal Termal Bileşik",
     "gamingScore": 100,
     "fps1080p": 165,
-    "fps1440p": 136
+    "fps1440p": 136,
+    "image_url": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_msi_titan_18_hx_a14vig_14900hx",
@@ -681,7 +699,8 @@
     "coolingTech": "Cherry MX Ultra-Low Profile Mekanik Klavye + Devasa Buhar Odası Soğutucu + 4 Fan Yuvası",
     "gamingScore": 100,
     "fps1080p": 170,
-    "fps1440p": 142
+    "fps1440p": 142,
+    "image_url": "https://cdn.cs.1worldsync.com/fc/4e/fc4e6f84-4d19-457d-ba9c-962e28560a49.jpg"
   },
   {
     "id": "laptop_msi_titan_gt77_hx_13vi_13980hx",
@@ -717,7 +736,8 @@
     "coolingTech": "Cherry MX Mekanik Switchler + Cooler Boost Titan 4 Fanlı Soğutma Mimarisi",
     "gamingScore": 100,
     "fps1080p": 166,
-    "fps1440p": 138
+    "fps1440p": 138,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_1672904428c1c83f8f03bb887124d3d5c0bb2eb2e8.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_msi_vector_gp78_hx_13vi_13980hx_4090",
@@ -753,7 +773,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 8 Isı Borusu Extreme Overclock",
     "gamingScore": 100,
     "fps1080p": 172,
-    "fps1440p": 142
+    "fps1440p": 142,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_16750603883e8c3e3f11957589dacc5318cc7bd7e1.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_msi_raider_ge68_hx_13vi_13950hx_4090",
@@ -789,7 +810,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 7 Isı Borusu + MSI Mystic Light Matris Bar",
     "gamingScore": 100,
     "fps1080p": 173,
-    "fps1440p": 143
+    "fps1440p": 143,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_16687572106711a8ee671252e5db5baeb5fd27b14e.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
   },
   {
     "id": "laptop_medion_erazer_beast_x40_13900hx_4090_watercooling",
@@ -825,7 +847,8 @@
     "coolingTech": "Dahili Sıvı Soğutma Kanalı (Erazer Cooling Kit Ready) + Sıvı Metal Termal Macun",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://www.notebookcheck.net/fileadmin/Notebooks/Medion/Erazer_Beast_X40/Medion_Erazer_Beast_X40_Ansicht4.jpg"
   },
   {
     "id": "laptop_monster_semruk_s7_v9_3_13900hx_4090",
@@ -861,7 +884,8 @@
     "coolingTech": "Cherry MX Ultra-Low Profile Mekanik Klavye + Devasa 4 Fanlı Soğutma Sistemi",
     "gamingScore": 100,
     "fps1080p": 166,
-    "fps1440p": 137
+    "fps1440p": 137,
+    "image_url": "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
   },
   {
     "id": "laptop_monster_semruk_s7_v9_3_1_14900hx_4090",
@@ -897,7 +921,8 @@
     "coolingTech": "Buhar Odası + Çift Fan 8 Isı Borulu Monster Soğutma Mimarisi",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
   },
   {
     "id": "laptop_razer_blade_16_2024_oled_240hz_14900hx",
@@ -933,7 +958,8 @@
     "coolingTech": "Monoblok CNC T6 Uçak Alüminyum Gövde + Patentli Çift Fanlı Geniş Buhar Odası",
     "gamingScore": 100,
     "fps1080p": 168,
-    "fps1440p": 138
+    "fps1440p": 138,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/2-48.jpg"
   },
   {
     "id": "laptop_razer_blade_18_2024_thunderbolt_5",
@@ -969,7 +995,8 @@
     "coolingTech": "Thunderbolt 5 (120 Gbps) + 3 Fanlı Özel Buhar Odası + 6 Hoparlörlü THX Uzamsal Ses",
     "gamingScore": 100,
     "fps1080p": 168,
-    "fps1440p": 140
+    "fps1440p": 140,
+    "image_url": "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
   },
   {
     "id": "laptop_razer_blade_18_2024_14900hx_4090_4k",
@@ -1005,7 +1032,8 @@
     "coolingTech": "Dev Buhar Odası + 3 Fanlı Soğutma Mimarisi + Thunderbolt 5 (120Gbps)",
     "gamingScore": 100,
     "fps1080p": 175,
-    "fps1440p": 145
+    "fps1440p": 145,
+    "image_url": "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
   },
   {
     "id": "laptop_xmg_neo_16_e24_liquid_cooling_4090",
@@ -1041,7 +1069,8 @@
     "coolingTech": "XMG OASIS Harici Masaüstü Sıvı Soğutma Ünitesi Entegrasyonu + Cherry MX Mekanik Klavye",
     "gamingScore": 100,
     "fps1080p": 172,
-    "fps1440p": 144
+    "fps1440p": 144,
+    "image_url": "https://www.xmg.gg/wp-content/uploads/2025/02/XMG-NEO-16-E25-09.png"
   },
   {
     "id": "laptop_xmg_neo_16_e24_14900hx_4090_oasis",
@@ -1077,7 +1106,8 @@
     "coolingTech": "Entegre Sıvı Soğutma Borusu (XMG OASIS Su Soğutma Ünitesi Uyumlu) + Sıvı Metal Termal Bileşik",
     "gamingScore": 100,
     "fps1080p": 178,
-    "fps1440p": 148
+    "fps1440p": 148,
+    "image_url": "https://www.xmg.gg/wp-content/uploads/2024/09/XMG-NEO-16-E24-03_shadow.png"
   },
   {
     "id": "laptop_asus_rog_strix_scar_18_g834jz_14900hx",
@@ -1113,7 +1143,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + Tam Çevre Havalandırma (Tri-Fan)",
     "gamingScore": 99,
     "fps1080p": 155,
-    "fps1440p": 125
+    "fps1440p": 125,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_gigabyte_aorus_17x_azf_14900hx_4090",
@@ -1149,7 +1180,8 @@
     "coolingTech": "WINDFORCE Infinity Buhar Odası + 4 Fanlı Çepeçevre Soğutma Mimarisi",
     "gamingScore": 99,
     "fps1080p": 164,
-    "fps1440p": 135
+    "fps1440p": 135,
+    "image_url": "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16irx9h",
@@ -1185,7 +1217,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 330
+    "chargerWatt": 330,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-183de3.png"
   },
   {
     "id": "laptop_lenovo_legion_9i_gen_9_16irx9_14900hx_4080",
@@ -1221,7 +1254,8 @@
     "coolingTech": "Dünyanın İlk Dahili Entegre Sıvı Soğutma Pompası (ColdFront Liquid) + Üç Fanlı Hava Akışı",
     "gamingScore": 99,
     "fps1080p": 160,
-    "fps1440p": 132
+    "fps1440p": 132,
+    "image_url": "https://www.notebookcheck.net/fileadmin/_processed_/1/7/csm_11_Legion_9i_Hero_Colorful_Side_Thermal_38cede58a8.png"
   },
   {
     "id": "laptop_msi_raider_ge78_hx_14vig_14900hx",
@@ -1257,7 +1291,8 @@
     "coolingTech": "Mystic Light Matrix RGB Işık Çubuğu + Dynaudio 6 Hoparlörlü Ses Sistemi + Cooler Boost 5",
     "gamingScore": 99,
     "fps1080p": 164,
-    "fps1440p": 135
+    "fps1440p": 135,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_razer_blade_16_2024_14900hx_4080_oled",
@@ -1293,7 +1328,8 @@
     "coolingTech": "Vakum Mühürlü Buhar Odası (Vapor Chamber) + Sıvı Metal Termal Arayüz",
     "gamingScore": 99,
     "fps1080p": 162,
-    "fps1440p": 134
+    "fps1440p": 134,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/2-48.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_scar_16_g634jz",
@@ -1329,7 +1365,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + 3 Fanlı Tri-Fan Teknolojisi",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 120
+    "fps1440p": 120,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5"
   },
   {
     "id": "laptop_acer_predator_helios_16_ph16_72_14900hx_4080",
@@ -1365,7 +1402,8 @@
     "coolingTech": "AeroBlade 3D Çift Metal Fan + Sıvı Metal Soğutma Bloğu",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 120
+    "fps1440p": 120,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_alienware_m18_r2_14900hx_4080",
@@ -1401,7 +1439,8 @@
     "coolingTech": "Element 31 Termal Bileşik + Dört Fanlı Cryo-tech + Geniş Buhar Odası",
     "gamingScore": 98,
     "fps1080p": 160,
-    "fps1440p": 130
+    "fps1440p": 130,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6572/6572635cv1d.jpg"
   },
   {
     "id": "laptop_hp_omen_17_ck2000nt_13900hx_4080",
@@ -1437,7 +1476,8 @@
     "coolingTech": "OMEN Tempest Cooling Buhar Odası + Optik Mekanik Switch Klavye",
     "gamingScore": 98,
     "fps1080p": 158,
-    "fps1440p": 128
+    "fps1440p": 128,
+    "image_url": "https://www.hp.com/wcsstore/hpusstore/Treatment/mdps/Q3FY22_omen17_LT/hero_omen17_3.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16arx8h_7945hx",
@@ -1473,7 +1513,8 @@
     "coolingTech": "Legion Coldfront 5.0 Buhar Odası + Sıvı Metal Soğutma",
     "gamingScore": 98,
     "fps1080p": 152,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "image_url": "https://psrefstuff.lenovo.com/syspool/Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_03.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_7i_16irx8h_13900hx_4080",
@@ -1509,7 +1550,8 @@
     "coolingTech": "Coldfront 5.0 Buhar Odası (Vapor Chamber) + Sıvı Metal Termal Macun",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 120
+    "fps1440p": 120,
+    "image_url": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7i_16irx9h_14900hx_4080",
@@ -1545,7 +1587,8 @@
     "coolingTech": "Coldfront 5.0 Buhar Odası + Sıvı Metal Termal Macun",
     "gamingScore": 98,
     "fps1080p": 152,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "image_url": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16irx8h_13900hx_4080",
@@ -1581,7 +1624,8 @@
     "coolingTech": "Legion ColdFront 5.0 Özel Tam Gövde Buhar Odası + Sıvı Metal Termal Arayüz",
     "gamingScore": 98,
     "fps1080p": 160,
-    "fps1440p": 130
+    "fps1440p": 130,
+    "image_url": "https://laptopaz.vn/media/product/2775_laptopaz_legion_pro_7_11.png"
   },
   {
     "id": "laptop_msi_raider_ge78_hx_13vh_13980hx_4080",
@@ -1617,7 +1661,8 @@
     "coolingTech": "Mystic Light Matrix Işık Barı + Dynaudio 6 Hoparlör + Cooler Boost 5",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_msi_vector_17_hx_a14vhg_14900hx_4080",
@@ -1653,7 +1698,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 6 Isı Borusu",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 120
+    "fps1440p": 120,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2024/03/msi-vector-17-hx-a14vhg-838xtr-intel-core-i9-14900hx-32gb-ddr5-2tb-ssd-rtx4080-12gb-17-inc-qhd-240hz-freedos-gaming-laptop-1.jpg"
   },
   {
     "id": "laptop_razer_blade_16_2023_dual_mode_mini_led",
@@ -1689,7 +1735,8 @@
     "coolingTech": "CNC Eloksallı Alüminyum Kasa + Buhar Odası Cryo-Cooling",
     "gamingScore": 98,
     "fps1080p": 150,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/2-48.jpg"
   },
   {
     "id": "laptop_xmg_neo_17_m23_13900hx_4080",
@@ -1725,7 +1772,8 @@
     "coolingTech": "Cherry MX Ultra Low Profile Mekanik Klavye + OASIS Sıvı Soğutma Desteği",
     "gamingScore": 98,
     "fps1080p": 160,
-    "fps1440p": 130
+    "fps1440p": 130,
+    "image_url": "https://www.xmg.gg/wp-content/uploads/2025/02/XMG-NEO-16-E25-09.png"
   },
   {
     "id": "laptop_asus_rog_strix_g18_g814jvr_14900hx",
@@ -1761,7 +1809,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + Tri-Fan + 7 Isı Borulu Soğutma Bloğu",
     "gamingScore": 97,
     "fps1080p": 148,
-    "fps1440p": 118
+    "fps1440p": 118,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_m16_gu604vy_4090",
@@ -1797,7 +1846,8 @@
     "coolingTech": "AniMe Matrix Kapak Ekranı + Tri-Fan Soğutma + Sıvı Metal Termal Macun",
     "gamingScore": 97,
     "fps1080p": 142,
-    "fps1440p": 115
+    "fps1440p": 115,
+    "image_url": "https://cdn.cs.1worldsync.com/b8/71/b8711cd6-99f2-49f3-892c-7009d40cea80.jpg"
   },
   {
     "id": "laptop_dell_alienware_x16_r1_13900hk_4080",
@@ -1833,7 +1883,8 @@
     "coolingTech": "Magnezyum Alaşımlı Gövde + Arka Stadyum RGB Işık Halkası + Buhar Odası Cryo-Tech",
     "gamingScore": 97,
     "fps1080p": 146,
-    "fps1440p": 116
+    "fps1440p": 116,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/04/5-22-scaled-e1682667774233.jpg"
   },
   {
     "id": "laptop_dell_alienware_m16_r1_7845hx_4080",
@@ -1869,7 +1920,8 @@
     "coolingTech": "Element 31 Termal Arayüz + 4 Fanlı Cryo-Tech Soğutma Bloğu",
     "gamingScore": 97,
     "fps1080p": 148,
-    "fps1440p": 118
+    "fps1440p": 118,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/06/dell-gaming-alienware-m16-r1-awm16i7x60wh-intel-core-i7-13700hx-16gb-ddr5-512gb-ssd-rtx4060-8gb-16-inc-165hz-qhd-w11-home-gaming-laptop.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_17h_bxf_13700h_4080",
@@ -1905,7 +1957,8 @@
     "coolingTech": "WINDFORCE Infinity Çift Fan 6 Isı Borusu + OMRON Mekanik Switch Klavye",
     "gamingScore": 97,
     "fps1080p": 150,
-    "fps1440p": 122
+    "fps1440p": 122,
+    "image_url": "https://uaetechdubai.ae/wp-content/uploads/2025/02/GIGABYTE-AORUS-17H-BXF-74US554SH_uaetechdubai.ae_1.png"
   },
   {
     "id": "laptop_hp_omen_17_ck2000_13900hx_4080",
@@ -1941,7 +1994,8 @@
     "coolingTech": "OMEN Tempest Cooling (3 Taraflı Havalandırma + 5 Yollu Hava Akışı)",
     "gamingScore": 97,
     "fps1080p": 146,
-    "fps1440p": 116
+    "fps1440p": 116,
+    "image_url": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08358834.png"
   },
   {
     "id": "laptop_msi_vector_16_hx_a14vhg_14900hx_4080",
@@ -1977,7 +2031,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 6 Isı Borusu + SteelSeries Tuş Başına RGB Klavye",
     "gamingScore": 97,
     "fps1080p": 148,
-    "fps1440p": 118
+    "fps1440p": 118,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/vector-16-hx-a14v/images/kv-nb.png"
   },
   {
     "id": "laptop_msi_stealth_17_studio_a13vh_13900h_4080",
@@ -2013,7 +2068,8 @@
     "coolingTech": "Cooler Boost 5 Üçlü Fan (Tri-Fan) 7 Isı Borulu İnce Gövde Mimarisi",
     "gamingScore": 97,
     "fps1080p": 148,
-    "fps1440p": 120
+    "fps1440p": 120,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/03/msi-stealth-17-studio-a13vh-025tr-intel-core-i9-13900h-32gb-2tb-ssd-rtx-4080-17-3-inc-144hz-ultra-hd-w11-gaming-notebook-1.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g16_gu605my_oled",
@@ -2049,7 +2105,8 @@
     "coolingTech": "Tam CNC İşlenmiş Alüminyum Şasi + Buhar Odası + 2. Nesil Arc Flow Fanlar",
     "gamingScore": 96,
     "fps1080p": 140,
-    "fps1440p": 112
+    "fps1440p": 112,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/9-8-scaled-e1704880587737.jpg"
   },
   {
     "id": "laptop_hp_omen_transcend_16_u0000_oled",
@@ -2085,7 +2142,8 @@
     "coolingTech": "Magnezyum-Alüminyum Hafif Şasi (2.17 Kg) + OMEN Tempest Cooling",
     "gamingScore": 96,
     "fps1080p": 142,
-    "fps1440p": 114
+    "fps1440p": 114,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_msi_vector_gp68_hx_13vh_13950hx_4080",
@@ -2121,7 +2179,8 @@
     "coolingTech": "Cooler Boost 5 + Tam Performans TGP Canavarı",
     "gamingScore": 96,
     "fps1080p": 145,
-    "fps1440p": 115
+    "fps1440p": 115,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_1675740164844a2a2c453c1fe5e1d0b922dc8c4b60.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614jir",
@@ -2157,7 +2216,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 330
+    "chargerWatt": 330,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g16_gu605mz_4080",
@@ -2193,7 +2253,8 @@
     "coolingTech": "Buhar Odası + Sıvı Metal Termal İletkenlik",
     "gamingScore": 95,
     "fps1080p": 132,
-    "fps1440p": 105
+    "fps1440p": 105,
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/10/60/LD0006106088_0006106139_0006116099_0006116164.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614ji_13980hx_4070",
@@ -2229,7 +2290,8 @@
     "coolingTech": "Tri-Fan + Conductonaut Extreme Sıvı Metal Termal Macun",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://www.notebookcheck.nl/uploads/tx_nbc2/Asus_ROG_Strix_G16_G614_2023__1_.JPG"
   },
   {
     "id": "laptop_asus_rog_strix_g18_g814ji_13980hx_4070",
@@ -2265,7 +2327,8 @@
     "coolingTech": "Conductonaut Extreme Sıvı Metal + Tri-Fan Soğutma Bloğu",
     "gamingScore": 95,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_m16_gu604vi_13900h_4070",
@@ -2301,7 +2364,8 @@
     "coolingTech": "Tri-Fan Teknolojisi + Tam Genişlikli Soğutma Bloğu + Sıvı Metal",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://cdn.cs.1worldsync.com/10/19/10199956-0d92-4712-b8cb-980647fa4ec9.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_16_ph16_72_14900hx_4070",
@@ -2337,7 +2401,8 @@
     "coolingTech": "AeroBlade 3D Çift Metal Fan + Sıvı Metal Soğutma Bloğu",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_18_phn18_71_14900hx_4070",
@@ -2373,7 +2438,8 @@
     "coolingTech": "5. Nesil AeroBlade 3D Metal Fan Teknolojisi + Sıvı Metal Termal Macun",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/03/0-etailer-hero-predator-helios-neo-18-phn18-71-4zone-backlit-on-wallpaper-logo-black-01-custom-scaled-e1711010208772.jpg"
   },
   {
     "id": "laptop_dell_g16_7630_13900hx_4070",
@@ -2409,7 +2475,8 @@
     "coolingTech": "Alienware Esinlenmeli Çift Girişli Dört Egzozlu Buhar Odası",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/04/3_dell-gaming-g16-7630-g167630014wh-intel-core-i9-13900hx-16gb-ddr5-512gb-ssd-rtx-4060-8gb-16-inc-qhd-w11-home-gaming-notebook-283911.png"
   },
   {
     "id": "laptop_alienware_m16_r2_ultra_9_185h_4070",
@@ -2445,7 +2512,8 @@
     "coolingTech": "Alienware Cryo-tech Çift Fan",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://www.notebookcheck.net/fileadmin/_processed_/6/d/csm_Alienware-m16-R2-front-open_c4369f8fb0.png"
   },
   {
     "id": "laptop_gigabyte_aorus_16x_asg_14900hx_4070",
@@ -2481,7 +2549,8 @@
     "coolingTech": "WINDFORCE Infinity Soğutma + Çift Fan 5 Isı Borusu",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://i.pcmag.com/imagery/reviews/07ssH777n7roPf6CziSECPF-3.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_15x_asf_13900hx_4070",
@@ -2517,7 +2586,8 @@
     "coolingTech": "WINDFORCE Infinity Soğutma Mimarisi",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://files.pccasegear.com/images/AORUS-15X-ASF-B3AU754SH-add2.jpg"
   },
   {
     "id": "laptop_hp_omen_transcend_16_14900hx_4070",
@@ -2553,7 +2623,8 @@
     "coolingTech": "OMEN Tempest Soğutma Mimarisi + Sıvı Metal Termal Bileşik",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_5_16arx8_7745hx_4070",
@@ -2589,7 +2660,8 @@
     "coolingTech": "Legion ColdFront 5.0 Faz Değişimli Termal Bileşik (PTM7958)",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/Lenovo_Legion_5_Pro_16ARX8__2_.JPG"
   },
   {
     "id": "laptop_itopya_40db90a3",
@@ -2625,7 +2697,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 330
+    "chargerWatt": 330,
+    "image_url": "https://img.yenieera22.com/cdn/1000/5-daaf4b.png"
   },
   {
     "id": "laptop_itopya_fe97d098",
@@ -2661,7 +2734,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 330
+    "chargerWatt": 330,
+    "image_url": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/158827-1_large.jpg"
   },
   {
     "id": "laptop_msi_crosshair_16_hx_d14vgkg_14700hx_4070",
@@ -2697,7 +2771,8 @@
     "coolingTech": "Cooler Boost 5 Özel 6 Egzoz Çıkışlı Termal Blok",
     "gamingScore": 95,
     "fps1080p": 130,
-    "fps1440p": 100
+    "fps1440p": 100,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/Crosshair-16-HX-D14V/io01.png"
   },
   {
     "id": "laptop_razer_blade_14_2024_8945hs_4070",
@@ -2733,7 +2808,8 @@
     "coolingTech": "Özel Patentli Tam Yüzey Buhar Odası (Vapor Chamber) + Çift Fan",
     "gamingScore": 95,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://assets-prd.ignimgs.com/2025/08/25/razer-blade14-1756162850919.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614jir_14650hx",
@@ -2769,7 +2845,8 @@
     "coolingTech": "Tri-Fan Teknolojisi + Conductonaut Extreme Sıvı Metal + Tam Boy Soğutucu",
     "gamingScore": 94,
     "fps1080p": 125,
-    "fps1440p": 95
+    "fps1440p": 95,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_acer_nitro_17_an17_41_7840hs_4070",
@@ -2805,7 +2882,8 @@
     "coolingTech": "Çift Fanlı Dörtlü Egzoz Tasarımı + Sıvı Metal",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/07/acer-nitro-17-an17-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1688733178943.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_16_ph16_71_13900hx_4070",
@@ -2841,7 +2919,8 @@
     "coolingTech": "5. Nesil AeroBlade 3D Metal Fanlar + Sıvı Metal Termal Macun",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g911_1390_ex70x_c_13900hx_4070",
@@ -2877,7 +2956,8 @@
     "coolingTech": "Akıllı Turbo Fanlı Termal Mimari",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://file.casper.com.tr/media/g915-liste-gorseli-guncel_op.webp"
   },
   {
     "id": "laptop_dell_alienware_m16_r2_ultra_9_4070",
@@ -2913,7 +2993,8 @@
     "coolingTech": "Alienware Cryo-Tech Soğutma + F2 Tek Tuşla Stealth Modu (Sessiz Ofis Modu)",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://www.notebookcheck.net/fileadmin/_processed_/6/d/csm_Alienware-m16-R2-front-open_c4369f8fb0.png"
   },
   {
     "id": "laptop_alienware_m16_r2_ultra_7_155h_4070",
@@ -2949,7 +3030,8 @@
     "coolingTech": "Alienware Cryo-tech Soğutma Mimarisi + Yenilenmiş Hava Akışı",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://s2-techtudo.glbimg.com/ImLwOM4X-lczwNlCWHYF96bZM4I=/0x0:2400x1620/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/V/X/jrseVVQUCaQE7DEnSB9A/alienware-m16-r2-01.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_15_bsf_13700h_4070",
@@ -2985,7 +3067,8 @@
     "coolingTech": "WINDFORCE Infinity Çift Fan 5 Isı Borusu",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://spacenet.tn/147609-large_default/pc-portable-gamer-gigabyte-aorus-15-bsf-i7-13gen-16-go-1-to-noir.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_17_ye5_12900hx_3080ti",
@@ -3021,7 +3104,8 @@
     "coolingTech": "WINDFORCE Infinity Çift Fan 5 Isı Borusu",
     "gamingScore": 94,
     "fps1080p": 138,
-    "fps1440p": 108
+    "fps1440p": 108,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6508/6508553_sd.jpg"
   },
   {
     "id": "laptop_hp_omen_16_xf0000nt_7840hs_4070",
@@ -3057,7 +3141,8 @@
     "coolingTech": "OMEN Tempest Cooling Çift Fan Dört Yönlü Hava Akışı",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_5i_16irx9_14700hx_4070",
@@ -3093,7 +3178,8 @@
     "coolingTech": "Legion Coldfront 5.0 Hibrit Isı Borusu Mimarisi + 3D Bıçaklı Çift Fan",
     "gamingScore": 94,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_legion_7i_gen_9_16irx9_14900hx_4070_beyaz",
@@ -3129,7 +3215,8 @@
     "coolingTech": "Tam CNC Eloksallı Buzul Beyazı Alüminyum Şasi + Coldfront Hyper Soğutma Mimarisi",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/12_Legion_7i_G9_Hero_Colorful_Side_Thermal.jpg"
   },
   {
     "id": "laptop_lenovo_legion_slim_7_16irh8_13900h_4070",
@@ -3165,7 +3252,8 @@
     "coolingTech": "Legion ColdFront 5.0 Buhar Odası Destekli İnce Alüminyum Gövde",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/Legion/Legion_Slim_7_16IRH8/Legion_Slim_7_16IRH8_OverViewPic.jpg"
   },
   {
     "id": "laptop_msi_raider_ge68_hx_14vgg_14900hx_4070",
@@ -3201,7 +3289,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 6 Isı Borusu + Matrix Işık Barı",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg"
   },
   {
     "id": "laptop_msi_sword_17_hx_b14vgkg_14900hx_4070",
@@ -3237,7 +3326,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 6 Isı Borusu",
     "gamingScore": 94,
     "fps1080p": 128,
-    "fps1440p": 98
+    "fps1440p": 98,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/Crosshair-17-HX-D14V/io01.png"
   },
   {
     "id": "laptop_msi_pulse_16_ai_c1vgkg_ultra_7_155h_4070",
@@ -3273,7 +3363,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 5 Isı Borulu AI Dinamik Soğutma",
     "gamingScore": 94,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g17_g713pi_7945hx",
@@ -3309,7 +3400,8 @@
     "coolingTech": "Sıvı Metal (CPU) + Arc Flow Fanlar 4 Çıkış",
     "gamingScore": 93,
     "fps1080p": 128,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://www.yasertebat.com/public/images/products/rog-strix-g17-g713pi-2.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_16_phn16_72_14700hx",
@@ -3345,7 +3437,8 @@
     "coolingTech": "5. Nesil AeroBlade 3D Metal Fan + Sıvı Metal Termal Bileşik (CPU)",
     "gamingScore": 93,
     "fps1080p": 126,
-    "fps1440p": 95
+    "fps1440p": 95,
+    "image_url": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_18_phn18_71_14700hx_4070",
@@ -3381,7 +3474,8 @@
     "coolingTech": "5. Nesil AeroBlade Metal Fan + Sıvı Metal Termal Macun",
     "gamingScore": 93,
     "fps1080p": 125,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/03/0-etailer-hero-predator-helios-neo-18-phn18-71-4zone-backlit-on-wallpaper-logo-black-01-custom-scaled-e1711010208772.jpg"
   },
   {
     "id": "laptop_dell_g16_7630_13900hx_4070_cherry",
@@ -3417,7 +3511,8 @@
     "coolingTech": "Alienware İlhamlı Buhar Odası Termal Tasarımı + Cherry MX Mekanik Klavye",
     "gamingScore": 93,
     "fps1080p": 126,
-    "fps1440p": 95
+    "fps1440p": 95,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/04/3_dell-gaming-g16-7630-g167630014wh-intel-core-i9-13900hx-16gb-ddr5-512gb-ssd-rtx-4060-8gb-16-inc-qhd-w11-home-gaming-notebook-283911.png"
   },
   {
     "id": "laptop_dell_alienware_m16_r1_13700hx_4070",
@@ -3453,7 +3548,8 @@
     "coolingTech": "Element 31 Sıvı Metalik Formül + 4 Fanlı Cryo-Tech Soğutucu",
     "gamingScore": 93,
     "fps1080p": 126,
-    "fps1440p": 95
+    "fps1440p": 95,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/06/dell-gaming-alienware-m16-r1-awm16i7x60wh-intel-core-i7-13700hx-16gb-ddr5-512gb-ssd-rtx4060-8gb-16-inc-165hz-qhd-w11-home-gaming-laptop.jpg"
   },
   {
     "id": "laptop_hp_omen_16_wf0000_13700hx_4070",
@@ -3489,7 +3585,8 @@
     "coolingTech": "OMEN Tempest Cooling Teknolojisi + Bang & Olufsen Ses Sistemi",
     "gamingScore": 93,
     "fps1080p": 125,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_hp_omen_16_xf0000_7840hs_4070",
@@ -3525,7 +3622,8 @@
     "coolingTech": "OMEN Tempest Cooling Teknolojisi + Bang & Olufsen Ses",
     "gamingScore": 93,
     "fps1080p": 125,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_hp_victus_16_s0000nt_7840hs_4070",
@@ -3561,7 +3659,8 @@
     "coolingTech": "Victus Çift Fanlı Soğutma Mimarisi",
     "gamingScore": 93,
     "fps1080p": 122,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://cdn.cimri.io/image/560x560/hp-victus-16-s0000nt-7z4p7ea-ryzen-7-7840hs-32gb-ram-1tb-ssd-rtx-4070-windows-11-home-16-1-inc-oyun-bilgisayari_941306216.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r0000nt_13700h_4070",
@@ -3597,7 +3696,8 @@
     "coolingTech": "Victus Çift Fanlı Hava Akışı",
     "gamingScore": 93,
     "fps1080p": 122,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/victus-16-amd-new-3.png"
   },
   {
     "id": "laptop_lenovo_legion_slim_7i_16irh8_3k",
@@ -3633,7 +3733,8 @@
     "coolingTech": "Tamamen CNC Eloksallı Alüminyum Gövde + Coldfront 5.0 İnce Fanlar (Yalnızca 2.0 Kg)",
     "gamingScore": 93,
     "fps1080p": 122,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://p2-ofp.static.pub/fes/cms/2023/03/17/w86tz03ya4f3sgcsfr1mug5yvzbjmd651246.png"
   },
   {
     "id": "laptop_lenovo_legion_5_16irx9_14650hx_4070",
@@ -3669,7 +3770,8 @@
     "coolingTech": "Legion Coldfront Hyper Soğutma Mimarisi",
     "gamingScore": 93,
     "fps1080p": 124,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.notebookcheck.net/fileadmin/_processed_/1/9/csm_03_Legion_Pro_5i_G9_Hero_Front_Facing_JD_d1caa5018c.jpg"
   },
   {
     "id": "laptop_lenovo_legion_slim_7_16aph8_7840hs_4070",
@@ -3705,7 +3807,8 @@
     "coolingTech": "Legion ColdFront 5.0 Çift Fan",
     "gamingScore": 93,
     "fps1080p": 124,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.notebookcheck.nl/uploads/tx_nbc2/lenovo_legion_slim_7_g7_intel_16inch_stormgrey_7.jpg"
   },
   {
     "id": "laptop_msi_pulse_16_ai_c1vgkg_14900hx",
@@ -3741,7 +3844,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 5 Isı Borusu + 24 Bölgeli RGB Klavye",
     "gamingScore": 93,
     "fps1080p": 124,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg"
   },
   {
     "id": "laptop_msi_sword_16_hx_b14vgkg_14700hx_4070",
@@ -3777,7 +3881,8 @@
     "coolingTech": "Cooler Boost 5 Yenilenmiş Çift Fanlı Hava Akışı",
     "gamingScore": 93,
     "fps1080p": 126,
-    "fps1440p": 96
+    "fps1440p": 96,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/sword16-hx-b14v/nvidia/msi-sword16-gpu-nb-new.png"
   },
   {
     "id": "laptop_razer_blade_15_2023_13800h_4070_oled",
@@ -3813,7 +3918,8 @@
     "coolingTech": "CNC T6 Eloksallı Siyah Alüminyum Şasi (16.9mm) + Geniş Buhar Odası",
     "gamingScore": 93,
     "fps1080p": 124,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/rev2_front_back_to_back1_scene_combo.48.png"
   },
   {
     "id": "laptop_asus_rog_flow_x16_gv601vi_mini_led",
@@ -3849,7 +3955,8 @@
     "coolingTech": "3 Fanlı Tri-Fan Soğutma + Pulsar Isı Emici + Sıvı Metal Termal Arayüz",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://www.custommacbd.com/cdn/shop/files/Asus-rog-flow-x16-CustomMac-BD.jpg?v=1693749380"
   },
   {
     "id": "laptop_asus_tuf_gaming_a17_fa707xi_7940hs_4070",
@@ -3885,7 +3992,8 @@
     "coolingTech": "MIL-STD-810H Askeri Standart Dayanıklılık + Çift Arc Flow Fan",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://www.notebookcheck-ru.com/uploads/tx_nbc2/ASUS_TUF_Gaming_A17_FA707__2__01.jpg"
   },
   {
     "id": "laptop_asus_rog_flow_z13_acronym_rmt02_13900h_4070",
@@ -3921,7 +4029,8 @@
     "coolingTech": "Özel Buhar Odası (Vapor Chamber) + Sıvı Metal Termal Macun + 0dB Sessiz Çalışma",
     "gamingScore": 92,
     "fps1080p": 116,
-    "fps1440p": 88
+    "fps1440p": 88,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/3F640E11-2139-45BC-88B4-7BE3FB88B609/v1/images/large/1x/03__product__4.png"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41_7840hs_4070",
@@ -3957,7 +4066,8 @@
     "coolingTech": "Çift Fan + Sıvı Metal (Liquid Metal) Termal Macun + 4 Çıkışlı Soğutma",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 88
+    "fps1440p": 88,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_14_pt14_51_13700h_4070",
@@ -3993,7 +4103,8 @@
     "coolingTech": "Buhar Odası + 5. Nesil AeroBlade 3D Metal Fan + Sıvı Metal Termal Bileşik",
     "gamingScore": 92,
     "fps1080p": 122,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_15_bkr_13700h_4070",
@@ -4029,7 +4140,8 @@
     "coolingTech": "WINDFORCE Infinity Çift Fan + 5 Isı Borusu",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://static.gigabyte.com/StaticFile/Image/Global/dff479e344584bf4723cfdd78db4ac53/Product/30656"
   },
   {
     "id": "laptop_msi_stealth_16_ai_studio_a1vgg_oled",
@@ -4065,7 +4177,8 @@
     "coolingTech": "Magnezyum-Alüminyum Alaşımlı Hafif Gövde (1.99 Kg) + Dynaudio 6 Hoparlör + Cooler Boost 5",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/MSI_Stealth_16_AI_Studio__1_.jpg"
   },
   {
     "id": "laptop_msi_katana_17_b13vgk_13900h_4070",
@@ -4101,7 +4214,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 6 Isı Borulu Soğutma Mimarisi",
     "gamingScore": 92,
     "fps1080p": 122,
-    "fps1440p": 94
+    "fps1440p": 94,
+    "image_url": "https://www.laptop.com.tr/wp-content/uploads/2024/03/msi-sword-17-hx-b14vekg-053xtr-intel-core-i7-14700hx-32gb-ddr5-1tb-ssd-rtx4050-6gb-17-inc-full-hd-165hz-freedos-gaming-laptop.jpg"
   },
   {
     "id": "laptop_monster_tulpar_t7_v21_9_13700h_4070",
@@ -4137,7 +4251,8 @@
     "coolingTech": "Genişletilmiş Çift Fanlı Bakır Soğutma Mimarisi + RGB Klavye",
     "gamingScore": 92,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://static-data2.manualslib.com/product-images/5cc/2777696/monster-tulpar-t7-v21-9-laptop.jpg"
   },
   {
     "id": "laptop_itopya_481c7344",
@@ -4173,7 +4288,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/01/1-20-e1736275336659.jpg"
   },
   {
     "id": "laptop_itopya_70ad677c",
@@ -4209,7 +4325,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "LPDDR5X Lehimli (Yüksek Bant Genişliği)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-fce08c.png"
   },
   {
     "id": "laptop_asus_tuf_gaming_a15_fa507ui_8845hs",
@@ -4245,7 +4362,8 @@
     "coolingTech": "Arc Flow Fanlar (84 Kanat) + 5 Isı Borusu + 4 Hava Çıkışı",
     "gamingScore": 91,
     "fps1080p": 115,
-    "fps1440p": 85
+    "fps1440p": 85,
+    "image_url": "https://cdn.cs.1worldsync.com/55/d0/55d0c2b9-54ad-45bd-a6f9-87810c5a7c13.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g16_gu605mi_4070",
@@ -4281,7 +4399,8 @@
     "coolingTech": "3 Fanlı Tri-Fan Soğutma Bloğu + Sıvı Metal Termal Macun",
     "gamingScore": 91,
     "fps1080p": 115,
-    "fps1440p": 86
+    "fps1440p": 86,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/91C84B74-EEDB-4616-A3C5-76DC63ADC8DC/w1000/h732"
   },
   {
     "id": "laptop_asus_tuf_gaming_f17_fx707vi_13700h_4070",
@@ -4317,7 +4436,8 @@
     "coolingTech": "Arc Flow Fanlar (84 Bıçak) + 4 Hava Çıkışı",
     "gamingScore": 91,
     "fps1080p": 115,
-    "fps1440p": 86
+    "fps1440p": 86,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
   },
   {
     "id": "laptop_hb_6b540de9",
@@ -4353,7 +4473,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://mobileplanet.ua/uploads/product/2025-12-16/acer-nitro-18-ai-ryzen-ai-9-365-64gb-1tb-rtx5060-a-366753.webp"
   },
   {
     "id": "laptop_acer_predator_triton_14_pt14_51_mini_led",
@@ -4389,7 +4510,8 @@
     "coolingTech": "Tam CNC Eloksallı Alüminyum Şasi + Vortex Flow Hava Akışı + Buhar Odası",
     "gamingScore": 91,
     "fps1080p": 114,
-    "fps1440p": 85
+    "fps1440p": 85,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
   },
   {
     "id": "laptop_gaminggen_5b5f1766",
@@ -4425,7 +4547,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_074bdd1e",
@@ -4461,7 +4584,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-9-270h-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_c9a4aa48",
@@ -4497,7 +4621,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-9-270h-64gb-ddr5-1tb-ssd-rtx5070-8gb-115w-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c932157w-2-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_855cd0a7",
@@ -4533,7 +4658,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-2tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-3-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_c00d841e",
@@ -4569,7 +4695,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-64gb-ddr5-1tb-ssd-rtx5070-8gb-155w-16-inc-2k-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_25fbcd04",
@@ -4605,7 +4732,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16x-aurora-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5070-8gb-16-inc-wqxga-240hz-3ms-wva-w11-home-gaming-laptop-ac16251-cu932157w-2-300x300.jpg"
   },
   {
     "id": "laptop_alienware_m15_r7_6800h_3070ti",
@@ -4641,7 +4769,8 @@
     "coolingTech": "Alienware Cryo-Tech Soğutma Mimarisi + Element 31 Termal Bileşik",
     "gamingScore": 91,
     "fps1080p": 120,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://realhardwarereviews.com/wp-content/uploads/2022/05/Alienware-M15-R7-Thumbnail-1.jpg"
   },
   {
     "id": "laptop_gaminggen_3e31a173",
@@ -4677,7 +4806,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rz16-gaming-laptop-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_0508834f",
@@ -4713,7 +4843,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_c90df2ba",
@@ -4749,7 +4880,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_46a2089a",
@@ -4785,7 +4917,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_lenovo_legion_5_pro_16iah7h_12700h_3070ti",
@@ -4821,7 +4954,8 @@
     "coolingTech": "Legion ColdFront 4.0 Çift Fan",
     "gamingScore": 91,
     "fps1080p": 120,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/LenovoLegion5Pro16__1__06.JPG"
   },
   {
     "id": "laptop_msi_raider_ge68_hx_14vgg",
@@ -4857,7 +4991,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg"
   },
   {
     "id": "laptop_itopya_348d5550",
@@ -4893,7 +5028,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/5-787240.png"
   },
   {
     "id": "laptop_itopya_4985dfe0",
@@ -4929,7 +5065,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://platincdn.com/466/pictures/LBHKM18036_msi-crosshair-16-hx-e14wgk-046xtr_4.png"
   },
   {
     "id": "laptop_itopya_a13a7696",
@@ -4965,7 +5102,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-759627.png"
   },
   {
     "id": "laptop_itopya_bdcdbdfc",
@@ -5001,7 +5139,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-60b165.png"
   },
   {
     "id": "laptop_itopya_588a3a85",
@@ -5037,7 +5176,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/5-431ee8.png"
   },
   {
     "id": "laptop_itopya_597254df",
@@ -5073,7 +5213,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-86a570.png"
   },
   {
     "id": "laptop_itopya_b7d31287",
@@ -5109,7 +5250,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://img.yenieera22.com/cdn/1000/5-536e34.png"
   },
   {
     "id": "laptop_hb_09deb32c",
@@ -5145,7 +5287,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SL1500_.jpg"
   },
   {
     "id": "laptop_msi_katana_a15_ai_b8vg_8845hs_4070",
@@ -5181,7 +5324,8 @@
     "coolingTech": "Cooler Boost 5 Ortak Isı Borusu Mimarisi",
     "gamingScore": 91,
     "fps1080p": 120,
-    "fps1440p": 92
+    "fps1440p": 92,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/katana-15/msi-katana-a15-cpu.png"
   },
   {
     "id": "laptop_msi_stealth_14_studio_a13vg_13700h_4070",
@@ -5217,7 +5361,8 @@
     "coolingTech": "Buhar Odası (Vapor Chamber) + Sıvı Metal Termal Çözüm",
     "gamingScore": 91,
     "fps1080p": 118,
-    "fps1440p": 90
+    "fps1440p": 90,
+    "image_url": "https://img.pccomponentes.com/articles/1067/10672148/5850-msi-stealth-14-studio-a13vg-047xes-intel-core-i7-13700h-32gb-1tb-ssd-rtx-4070-14-caracteristicas.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g14_ga403ui_oled",
@@ -5253,7 +5398,8 @@
     "coolingTech": "Tam CNC Alüminyum Şasi + Çift Arc Flow Fan + Isı Boruları (1.50 Kg)",
     "gamingScore": 90,
     "fps1080p": 110,
-    "fps1440p": 82
+    "fps1440p": 82,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6570/6570271cv10d.jpg"
   },
   {
     "id": "laptop_hp_omen_transcend_14_ultra_9_185h_4070",
@@ -5289,7 +5435,8 @@
     "coolingTech": "Buhar Odası + Çift Fanlı OMEN Tempest",
     "gamingScore": 90,
     "fps1080p": 114,
-    "fps1440p": 88
+    "fps1440p": 88,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15ahp9_8845hs_4070",
@@ -5325,7 +5472,8 @@
     "coolingTech": "Lenovo LA1 AI Çip Destekli Dinamik Fan Kontrolü",
     "gamingScore": 90,
     "fps1080p": 112,
-    "fps1440p": 82
+    "fps1440p": 82,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg"
   },
   {
     "id": "laptop_msi_katana_15_b13vgk_13620h_4070",
@@ -5361,7 +5509,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 6 Isı Borusu + 4 Bölge RGB Klavye",
     "gamingScore": 90,
     "fps1080p": 112,
-    "fps1440p": 84
+    "fps1440p": 84,
+    "image_url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/94/MTA-115733028/msi_msi_katana_15_b13vgk_1256id_i7-13620h_rtx4070_32gb_15-6-_fhd_144hz_ips-level_full02_qicaiwf3.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_f15_fx507zi_12700h",
@@ -5397,7 +5546,8 @@
     "coolingTech": "Çift Arc Flow Fan + 5 Bakır Isı Borusu",
     "gamingScore": 89,
     "fps1080p": 108,
-    "fps1440p": 80
+    "fps1440p": 80,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/47be2296-5fde-4c9b-b262-8c6b8879a020/"
   },
   {
     "id": "laptop_asus_rog_strix_g17_g713pv_7845hx_4060",
@@ -5433,7 +5583,8 @@
     "coolingTech": "Sıvı Metal (CPU) + 4 Egzoz Çıkışlı Arc Flow Fanlar",
     "gamingScore": 89,
     "fps1080p": 106,
-    "fps1440p": 79
+    "fps1440p": 79,
+    "image_url": "https://m.media-amazon.com/images/I/61k6rA494+L._AC_SL1500_.jpg"
   },
   {
     "id": "laptop_gigabyte_aero_16_oled_bsf_13900h_4070",
@@ -5469,7 +5620,8 @@
     "coolingTech": "CNC Alüminyum Şasi + Çift Fanlı Sessiz Soğutma Bloğu",
     "gamingScore": 89,
     "fps1080p": 105,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/01/AERO-16-OLED-2023-01-e1672819837298.jpg"
   },
   {
     "id": "laptop_hp_omen_transcend_14_fb0000_oled",
@@ -5505,7 +5657,8 @@
     "coolingTech": "Intel Çift Kanallı Buhar Odası Termal Tasarımı (1.63 Kg Tüy Siklet)",
     "gamingScore": 89,
     "fps1080p": 108,
-    "fps1440p": 80
+    "fps1440p": 80,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_legion_slim_5_16aph8_7840hs_4060",
@@ -5541,7 +5694,8 @@
     "coolingTech": "Legion ColdFront 5.0 Dörtlü Egzoz Çift Fan Soğutma",
     "gamingScore": 89,
     "fps1080p": 106,
-    "fps1440p": 80
+    "fps1440p": 80,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/legion.jpg"
   },
   {
     "id": "laptop_razer_blade_14_2023_7940hs_4060",
@@ -5577,7 +5731,8 @@
     "coolingTech": "CNC T6 Eloksallı Siyah Alüminyum Şasi + Buhar Odası Cryo-Cooling (1.84 Kg)",
     "gamingScore": 89,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://assets-prd.ignimgs.com/2025/08/25/razer-blade14-1756162850919.jpg"
   },
   {
     "id": "laptop_asus_tuf_f16_5060",
@@ -5613,7 +5768,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/01/3-16-e1736274478874.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614jv_13650hx",
@@ -5649,7 +5805,8 @@
     "coolingTech": "Tri-Fan + Sıvı Metal Termal Bileşik + Çepeçevre Bakır Kanatçıklar",
     "gamingScore": 88,
     "fps1080p": 105,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g14_ga402xv_4060",
@@ -5685,7 +5842,8 @@
     "coolingTech": "Buhar Odası (Vapor Chamber) + Sıvı Metal Soğutma",
     "gamingScore": 88,
     "fps1080p": 102,
-    "fps1440p": 75
+    "fps1440p": 75,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6535/6535495_rd.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g16_gu603vv_13620h_4060",
@@ -5721,7 +5879,8 @@
     "coolingTech": "Sıvı Metal Termal Macun + Çift Arc Flow Fan (2.00 Kg)",
     "gamingScore": 88,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/02/49/LD0006024990.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_f16_fx607jv_13650hx_4060",
@@ -5757,7 +5916,8 @@
     "coolingTech": "Arc Flow Fanlar + 5 Isı Borusu Askeri Dayanıklılık (MIL-STD-810H)",
     "gamingScore": 88,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_16_phn16_71_13700hx",
@@ -5793,7 +5953,8 @@
     "coolingTech": "AeroBlade 3D Fan + Sıvı Metal Termal Arayüz",
     "gamingScore": 88,
     "fps1080p": 106,
-    "fps1440p": 79
+    "fps1440p": 79,
+    "image_url": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41_7840hs_4060",
@@ -5829,7 +5990,8 @@
     "coolingTech": "Çift Fan + Sıvı Metal Termal Arayüz",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_acer_nitro_5_an515_58_12700h_3070ti",
@@ -5865,7 +6027,8 @@
     "coolingTech": "CoolBoost Teknolojili Çift Fan + 4 Egzoz Çıkışı",
     "gamingScore": 88,
     "fps1080p": 105,
-    "fps1440p": 82
+    "fps1440p": 82,
+    "image_url": "https://cdn.devicebeast.com/laptop/img/optimised-poster/acer-nitro-5-an515-58.jpg"
   },
   {
     "id": "laptop_acer_nitro_16_an16_51_13700h_4060",
@@ -5901,7 +6064,8 @@
     "coolingTech": "Sıvı Metal + Çift Fanlı Dört Hava Çıkışı",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/08/acer-nitro-16-an16-51-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1692778812411.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_16_phn16_72_14700hx_4060",
@@ -5937,7 +6101,8 @@
     "coolingTech": "5. Nesil AeroBlade Metal Fanlar + Sıvı Metal",
     "gamingScore": 88,
     "fps1080p": 105,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_dell_g15_5530_13650hx_4060",
@@ -5973,7 +6138,8 @@
     "coolingTech": "Alienware Cryo-Tech Esinlenmeli Çift Fan Termal Tasarım",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/05/1-55-e1685458987401.jpg"
   },
   {
     "id": "laptop_dell_g15_5535_7840hs_4060",
@@ -6009,7 +6175,8 @@
     "coolingTech": "Çift Fanlı Bakır Isı Borulu Soğutma",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://hoangsonstore.com/wp-content/uploads/2023/12/moi-100-laptop-gaming-dell-g15-5535-ryzen-5-7640hs-ram-16gb-ssd-1tb-rtx-3050-15-6-fullhd-120hz-7597-8.jpg"
   },
   {
     "id": "laptop_dell_g16_7630_13650hx_4060",
@@ -6045,7 +6212,8 @@
     "coolingTech": "Çift Fanlı G-Serisi Termal Soğutma",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2023/04/3_dell-gaming-g16-7630-g167630014wh-intel-core-i9-13900hx-16gb-ddr5-512gb-ssd-rtx-4060-8gb-16-inc-qhd-w11-home-gaming-notebook-283911.png"
   },
   {
     "id": "laptop_gigabyte_aorus_16x_akg_14650hx_4060",
@@ -6081,7 +6249,8 @@
     "coolingTech": "WINDFORCE Infinity Çift Fanlı Tasarım",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://notebookspec.com/storage/notebook/13359-1.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r1000nt_14700hx_4060",
@@ -6117,7 +6286,8 @@
     "coolingTech": "Victus Çift Fanlı Soğutma Mimarisi",
     "gamingScore": 88,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg"
   },
   {
     "id": "laptop_hp_omen_16_wf0000nt_13700hx_4060",
@@ -6153,7 +6323,8 @@
     "coolingTech": "OMEN Tempest Soğutma Mimarisi",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain2x.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_5i_16irx8_13700hx_4060",
@@ -6189,7 +6360,8 @@
     "coolingTech": "Coldfront 5.0 + Legion TrueStrike RGB Klavye",
     "gamingScore": 88,
     "fps1080p": 106,
-    "fps1440p": 79
+    "fps1440p": 79,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_5_16arx8_7745hx_4060",
@@ -6225,7 +6397,8 @@
     "coolingTech": "Coldfront 5.0 Çift Fan + 4 Egzoz Çıkışı",
     "gamingScore": 88,
     "fps1080p": 105,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://p3-ofp.static.pub/ShareResource/na/subseries/gallery/lenovo-legion-pro-5-rgb-keyboard-01.png"
   },
   {
     "id": "laptop_lenovo_legion_pro_5i_16irx9_14650hx_4060",
@@ -6261,7 +6434,8 @@
     "coolingTech": "Legion Coldfront 5.0 Çift Fan + Hibrit Isı Borusu",
     "gamingScore": 88,
     "fps1080p": 106,
-    "fps1440p": 79
+    "fps1440p": 79,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15irx9_14700hx_4060",
@@ -6297,7 +6471,8 @@
     "coolingTech": "Lenovo LA1 AI Çip Destekli Hyperchamber Soğutma Mimarisi",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg"
   },
   {
     "id": "laptop_lenovo_legion_slim_5_14aph8_oled_7840hs_4060",
@@ -6333,7 +6508,8 @@
     "coolingTech": "Legion ColdFront 5.0 Çift Fan Kompakt Hibrit Bakır Isı Borusu",
     "gamingScore": 88,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg"
   },
   {
     "id": "laptop_msi_crosshair_17_hx_d14vfkg_14700hx_4060",
@@ -6369,7 +6545,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 88,
     "fps1080p": 105,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/Crosshair-17-HX-D14V/io01.png"
   },
   {
     "id": "laptop_monster_tulpar_t7_v20_6_2_13700h_4060",
@@ -6405,7 +6582,8 @@
     "coolingTech": "Duo Fanlı 5 Isı Borulu Termal Tasarım",
     "gamingScore": 88,
     "fps1080p": 104,
-    "fps1440p": 78
+    "fps1440p": 78,
+    "image_url": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785356133/785356133_0_MC/de6d7508ccf141e7a1b9a11e2fbdb654.png"
   },
   {
     "id": "laptop_asus_tuf_gaming_f16_fx607jv_13650hx",
@@ -6441,7 +6619,8 @@
     "coolingTech": "Arc Flow Fanlar (84 Kanat) + 4 Egzoz Çıkışı",
     "gamingScore": 87,
     "fps1080p": 100,
-    "fps1440p": 74
+    "fps1440p": 74,
+    "image_url": "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614jv_13450hx_4060",
@@ -6477,7 +6656,8 @@
     "coolingTech": "Tri-Fan + Sıvı Metal Termal Macun",
     "gamingScore": 87,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://s13emagst.akamaized.net/products/54409/54408081/images/res_3d5ec7862d060c46e80f9bd71d3afac3.jpg"
   },
   {
     "id": "laptop_alienware_x14_r2_13620h_4060",
@@ -6513,7 +6693,8 @@
     "coolingTech": "Buhar Odası + Element 31 Termal Bileşik İnce Gövde Mimarisi",
     "gamingScore": 87,
     "fps1080p": 98,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Alienware_X14_8.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r1000_14700hx_4060",
@@ -6549,7 +6730,8 @@
     "coolingTech": "Geliştirilmiş Çift Fanlı Hava Akışı Mimarisi",
     "gamingScore": 87,
     "fps1080p": 102,
-    "fps1440p": 75
+    "fps1440p": 75,
+    "image_url": "https://www.hp.com/wcsstore/hpusstore/Treatment/mdps/Q3FY21_omen_victus16/omen_victus_heroImage1.png"
   },
   {
     "id": "laptop_lenovo_legion_slim_5_14aph8_oled",
@@ -6585,7 +6767,8 @@
     "coolingTech": "Alüminyum Üst Kapak + Çift Soğutma Fanı + 3 Bakır Isı Borusu (1.75 Kg)",
     "gamingScore": 87,
     "fps1080p": 98,
-    "fps1440p": 74
+    "fps1440p": 74,
+    "image_url": "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg"
   },
   {
     "id": "laptop_lenovo_loq_16aph8_7840hs_4060",
@@ -6621,7 +6804,8 @@
     "coolingTech": "ColdFront LOQ Mimarisi",
     "gamingScore": 87,
     "fps1080p": 100,
-    "fps1440p": 75
+    "fps1440p": 75,
+    "image_url": "https://p2-ofp.static.pub/ShareResource/na/products/loq/lenovo-loq-16inch-amd-white-backlit-02.png"
   },
   {
     "id": "laptop_msi_stealth_14_studio_a13vf_13700h_4060",
@@ -6657,7 +6841,8 @@
     "coolingTech": "Magnezyum-Alüminyum Şasi + Buhar Odası (Vapor Chamber) Soğutucu (1.70 Kg)",
     "gamingScore": 87,
     "fps1080p": 98,
-    "fps1440p": 74
+    "fps1440p": 74,
+    "image_url": "https://down-id.img.susercontent.com/file/sg-11134201-824jh-mfdg7zptb0g960"
   },
   {
     "id": "laptop_monster_tulpar_t7_v20_6_13700h_4060",
@@ -6693,7 +6878,8 @@
     "coolingTech": "Çift Fanlı Geniş Bakır Kanatçıklı Soğutma Mimarisi + RGB Klavye",
     "gamingScore": 87,
     "fps1080p": 102,
-    "fps1440p": 75
+    "fps1440p": 75,
+    "image_url": "https://cdn.akakce.com/z/monster/monster-tulpar-t7-v20-6-9-i7-13700h-64-gb-1-tb-ssd-rtx4060-17-3-full-hd-notebook.jpg"
   },
   {
     "id": "laptop_monster_tulpar_t5_v23_3_2_13620h_4060",
@@ -6729,7 +6915,8 @@
     "coolingTech": "Duo Fanlı Soğutma Sistemi",
     "gamingScore": 87,
     "fps1080p": 102,
-    "fps1440p": 76
+    "fps1440p": 76,
+    "image_url": "https://img-monsternotebook.mncdn.com/UPLOAD/_html_assets/tr-13-gen-t5-v23-2/tulpar-4.png"
   },
   {
     "id": "laptop_asus_tuf_gaming_a15_fa507nv_7735hs",
@@ -6765,7 +6952,8 @@
     "coolingTech": "MIL-STD-810H Askeri Dayanıklılık + Çift Arc Flow Fan",
     "gamingScore": 86,
     "fps1080p": 98,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://modernsave.com/50009-large_default/notebook-asus-tuf-gaming-a15-fa507nur-lp037w.jpg"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41_7735hs_4060",
@@ -6801,7 +6989,8 @@
     "coolingTech": "Sıvı Metal (Liquid Metal) Termal Macun + Çift Fan 4 Hava Çıkışı",
     "gamingScore": 86,
     "fps1080p": 98,
-    "fps1440p": 73
+    "fps1440p": 73,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_dell_alienware_x14_r2_13620h_4060",
@@ -6837,7 +7026,8 @@
     "coolingTech": "Patentli Çift Eksenli Menteşe + GaN Type-C Şarj Adaptörü + Buhar Odası (14.5mm İncecik)",
     "gamingScore": 86,
     "fps1080p": 94,
-    "fps1440p": 70
+    "fps1440p": 70,
+    "image_url": "https://m.media-amazon.com/images/I/71ZOtcuTxbL.jpg"
   },
   {
     "id": "laptop_gigabyte_g6x_9kg_13650hx_4060",
@@ -6873,7 +7063,8 @@
     "coolingTech": "WINDFORCE Çift Fanlı Soğutma Sistemi",
     "gamingScore": 86,
     "fps1080p": 98,
-    "fps1440p": 74
+    "fps1440p": 74,
+    "image_url": "https://sm.pcmag.com/t/pcmag_au/review/g/gigabyte-g/gigabyte-g6x-9kg_nm5u.3840.jpg"
   },
   {
     "id": "laptop_hp_victus_16_s0000_7840hs_4060",
@@ -6909,7 +7100,8 @@
     "coolingTech": "OMEN Gaming Hub Akıllı Güç Yönetimi",
     "gamingScore": 86,
     "fps1080p": 98,
-    "fps1440p": 73
+    "fps1440p": 73,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/victus-16-amd-new-3.png"
   },
   {
     "id": "laptop_hp_omen_transcend_14_ultra_7_155h_4060",
@@ -6945,7 +7137,8 @@
     "coolingTech": "Intel İşbirliğiyle Buhar Odası Termal Tasarımı (OMEN Tempest)",
     "gamingScore": 86,
     "fps1080p": 96,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_loq_16irh8_13620h_4060",
@@ -6981,7 +7174,8 @@
     "coolingTech": "LOQ Termal Tasarım 4 Isı Borusu Çift Fan",
     "gamingScore": 86,
     "fps1080p": 96,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://p2-ofp.static.pub/ShareResource/na/products/gaming/560x450/lenovo-loq-16inch-white-backlit-02.png"
   },
   {
     "id": "laptop_msi_katana_17_b13vfk_13620h_4060",
@@ -7017,7 +7211,8 @@
     "coolingTech": "Cooler Boost 5 + 17 inç Geniş Ekran Deneyimi",
     "gamingScore": 86,
     "fps1080p": 96,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_1668147398a29da566d1f118800a05035a738983b1.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_msi_katana_a17_ai_b8vf_8845hs_4060",
@@ -7053,7 +7248,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan",
     "gamingScore": 86,
     "fps1080p": 98,
-    "fps1440p": 74
+    "fps1440p": 74,
+    "image_url": "https://down-th.img.susercontent.com/file/th-11134207-7r98x-lufxmguwjwa6d5"
   },
   {
     "id": "laptop_asus_tuf_gaming_a15_fa507nv_7535hs_4060",
@@ -7089,7 +7285,8 @@
     "coolingTech": "Çift Arc Flow Fan + 4 Hava Çıkışı",
     "gamingScore": 85,
     "fps1080p": 96,
-    "fps1440p": 71
+    "fps1440p": 71,
+    "image_url": "https://m.media-amazon.com/images/I/71ROr-qsTzL._AC_SL1500_.jpg"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41",
@@ -7125,7 +7322,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://cdn.akakce.com/z/acer/acer-nitro-16-an16-41-nh-qlkey-001-ryzen-5-7640hs-8-gb-512-gb-ssd-rtx4050-16-wuxga-notebook.jpg"
   },
   {
     "id": "laptop_acer_nitro_v_16_anv16_41_8845hs_4060",
@@ -7161,7 +7359,8 @@
     "coolingTech": "Nitro Çift Fan Soğutma Mimarisi",
     "gamingScore": 85,
     "fps1080p": 96,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2024/05/nitro-v-16-anv16-41-non-fingerprint-with-backlit-on-wp-logo-obsidian-black-01-custom-scaled-e1715771561887.jpg"
   },
   {
     "id": "laptop_framework_laptop_16_diy_edition",
@@ -7197,7 +7396,8 @@
     "coolingTech": "Dünyanın İlk %100 Modüler Parça Değiştirilebilir ve Tamir Edilebilir Oyuncu Laptopu",
     "gamingScore": 85,
     "fps1080p": 95,
-    "fps1440p": 70
+    "fps1440p": 70,
+    "image_url": "https://www.donanimhaber.com/images/images/haber/161942/src/oyuncular-icin-tasarlanmis-framework-laptop-16-tanitildi161942_0.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15irx9_13450hx_4060",
@@ -7233,7 +7433,8 @@
     "coolingTech": "Lenovo LA1 AI Çipi + Çift Fan Arkaya Eğimli Egzoz Tasarımı",
     "gamingScore": 85,
     "fps1080p": 96,
-    "fps1440p": 70
+    "fps1440p": 70,
+    "image_url": "https://s13emagst.akamaized.net/products/64170/64169850/images/res_e41dc86e0193835af68d5b1697e5fcc0.jpg"
   },
   {
     "id": "laptop_msi_katana_15_b13vfk_13620h_4060",
@@ -7269,7 +7470,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fanlı Tasarım",
     "gamingScore": 85,
     "fps1080p": 96,
-    "fps1440p": 72
+    "fps1440p": 72,
+    "image_url": "https://www.notebookcheck.org/uploads/tx_nbc2/MSI_Katana_15_2023_B13VGK__1__01.JPG"
   },
   {
     "id": "laptop_asus_tuf_a15_fa507uv",
@@ -7305,7 +7507,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://48y9ftle.cdn.imgeng.in/katalozi/slike/velike/131689-8f24e9d8-7113-4783-bcc0-b9c33816d2ca.jpg?preset=dvn1"
   },
   {
     "id": "laptop_gaminggen_ccc83988",
@@ -7341,7 +7544,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2026/03/asus-rog-strix-g16-g615jmr-s5048-gaming-intel-core-i7-14650hx-geforce-rtx-5060-8gb-115w-16gb-ddr5-512gb-ssd-16-inc-2-5k-wqxga-240hz-3ms-ips-level-freedos-gaming-klavye-2-300x300.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g14_2022_ga402rj_6700s",
@@ -7377,7 +7581,8 @@
     "coolingTech": "Buhar Odası Soğutucu (Vapor Chamber) + Sıvı Metal Termal Arayüz",
     "gamingScore": 84,
     "fps1080p": 88,
-    "fps1440p": 64
+    "fps1440p": 64,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/06C71793-252B-46BF-93FD-3A0FFFE9D850/w1000/h732"
   },
   {
     "id": "laptop_hb_769eda28",
@@ -7413,7 +7618,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g870_1245_dfa0x_b_12450h_4060",
@@ -7449,7 +7655,8 @@
     "coolingTech": "Turbo Fanlı Çift Soğutma",
     "gamingScore": 84,
     "fps1080p": 92,
-    "fps1440p": 68
+    "fps1440p": 68,
+    "image_url": "https://resim.epey.com/863691/m_casper-excalibur-g870-1245-dfa0x-b-2.jpg"
   },
   {
     "id": "laptop_gaminggen_148efd58",
@@ -7485,7 +7692,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dell-alienware-16-aurora-intel-core-7-240h-16gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-w11-home-gaming-laptop-ac16250-c716156w-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_7111920b",
@@ -7521,7 +7729,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-2tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156w-2-2-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_1e538883",
@@ -7557,7 +7766,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dell-alienware-16-aurora-intel-core-7-240h-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-2k-wqxga-120hz-wva-w11-home-gaming-laptop-ac16250-c716156wv1-2-300x300.jpg"
   },
   {
     "id": "laptop_hb_e1b9198e",
@@ -7593,7 +7803,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://cdn.myikas.com/images/3542de9d-175d-4149-92b7-188c78a724b3/fcca8d18-a01d-4c89-8a43-20a80f4d37ca/3840/hp-c21sgea-int-1.webp"
   },
   {
     "id": "laptop_gaminggen_579d04d5",
@@ -7629,7 +7840,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_56cee2d6",
@@ -7665,7 +7877,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_4c4ed747",
@@ -7701,7 +7914,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_25625956",
@@ -7737,7 +7951,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_592d29e2",
@@ -7773,7 +7988,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_8b971bfc",
@@ -7809,7 +8025,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_f025819f",
@@ -7845,7 +8062,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-intel-core-i7-14650hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_2cdedf95",
@@ -7881,7 +8099,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_d2406a2a",
@@ -7917,7 +8136,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_e49da852",
@@ -7953,7 +8173,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_3ea0e7c9",
@@ -7989,7 +8210,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-3-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_9e8afc4a",
@@ -8025,7 +8247,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-4-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_c7a0f4ee",
@@ -8061,7 +8284,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-9-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_bb14a8a6",
@@ -8097,7 +8321,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_b570de68",
@@ -8133,7 +8358,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-8-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_3789f25b",
@@ -8169,7 +8395,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/gameraider-flux-gr16-amd-ryzen-9-8940hx-rtx-5060-8gb-115w-16-inc-2-5k-qhd-180hz-freedos-gaming-laptop-3-10-300x300.jpg"
   },
   {
     "id": "laptop_hb_36d714bf",
@@ -8205,7 +8432,8 @@
     "screenSizeInch": 18.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://resim.epey.com/1050582/m_game-garaj-slayer-x7t-5060-c7-1.jpg"
   },
   {
     "id": "laptop_itopya_410257cb",
@@ -8241,7 +8469,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://img.yenieera22.com/cdn/1000/5-0830d8.png"
   },
   {
     "id": "laptop_hb_7e04fec0",
@@ -8277,7 +8506,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://platincdn.com/3393/pictures/YGFVW12280_lenovo-nb-loq-15ahp10-83jg00bjtr-ryzen-.jpg"
   },
   {
     "id": "laptop_hb_6b52416c",
@@ -8313,7 +8543,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://s13emagst.akamaized.net/products/96655/96654998/images/res_d1c988fa08af456cfb2443276980fea6.jpg"
   },
   {
     "id": "laptop_hb_c7213fdb",
@@ -8349,7 +8580,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.coolmatica.pt/store/356470-large_default/portatil-lenovo-thinkbook-16p-g6-iax-ultra-7-255hx-16-wqxga-32gb-ram-1tb-ssd-rtx-5060-8gb-win-11-pro.jpg"
   },
   {
     "id": "laptop_hb_be1059d8",
@@ -8385,7 +8617,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/25/57/LD0006255768.jpg"
   },
   {
     "id": "laptop_hb_4c6fba45",
@@ -8421,7 +8654,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": "laptop_itopya_77d17023",
@@ -8457,7 +8691,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://img.yenieera22.com/cdn/1000/1-17a0ed.png"
   },
   {
     "id": "laptop_lenovo_loq_15arp9_7435hs_4060",
@@ -8493,7 +8728,8 @@
     "coolingTech": "Çift Fanlı Ters Akışlı Soğutma Mimarisi",
     "gamingScore": 84,
     "fps1080p": 94,
-    "fps1440p": 68
+    "fps1440p": 68,
+    "image_url": "https://m.media-amazon.com/images/I/81ZA+PNb5+L._AC_SL1500_.jpg"
   },
   {
     "id": "laptop_gaminggen_253caecb",
@@ -8529,7 +8765,8 @@
     "screenSizeInch": 17.3,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-cyborg-17-b13wfkg-092xtr-intel-core-i7-13620h-32gb-ddr5-1tb-ssd-rtx-5060-8gb-17-3-inc-full-hd-144hz-ips-level-freedos-gaming-laptop-2-1-300x300.jpg"
   },
   {
     "id": "laptop_hb_98b65c4f",
@@ -8565,7 +8802,8 @@
     "screenSizeInch": 17.3,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://platincdn.com/4567/pictures/XDLNM14173_msi-katana-17-hx-b14wf-02.png"
   },
   {
     "id": "laptop_hb_6ebd1fef",
@@ -8601,7 +8839,8 @@
     "screenSizeInch": 17.3,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$"
   },
   {
     "id": "laptop_hb_f6f16b08",
@@ -8637,7 +8876,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://storage-asset.msi.com/global/picture/apluscontent/feature/1746432677.jpeg"
   },
   {
     "id": "laptop_hb_6b45a596",
@@ -8673,7 +8913,8 @@
     "screenSizeInch": 17.3,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://teknoklik.com/images/product/msi/293/msi-nb-katana-17-hx-b14wfk-252xtr-i7-14650hx-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-173-qhd-240hz-dos_1000x1000_CRLBGEJEAE.jpg"
   },
   {
     "id": "laptop_hb_4959b309",
@@ -8709,7 +8950,8 @@
     "screenSizeInch": 17.3,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://i.otto.de/i/otto/cd9957a1-cee8-552d-bcd0-faa95af566c9/msi-cyborg-17-b13wfkg-233-gaming-notebook-43-9-cm-17-3-zoll-intel-core-i7-13620h-geforce-rtx-5060-512-gb-ssd.jpg?$formatz$"
   },
   {
     "id": "laptop_msi_bravo_15_c7vf_7735hs_4060",
@@ -8745,7 +8987,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan 6 Isı Borusu",
     "gamingScore": 84,
     "fps1080p": 94,
-    "fps1440p": 70
+    "fps1440p": 70,
+    "image_url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/117/MTA-98857269/msi_msi_bravo_15_c7vf_026_laptop_gaming_-ryzen_7-7735hs-16gb-512gb_ssd-rtx4060_8gb-15-6-_fhd_144hz-w11-_full01_pj9q6soz.jpeg"
   },
   {
     "id": "laptop_acer_nitro_v_15_anv15_51_13620h_4060",
@@ -8781,7 +9024,8 @@
     "coolingTech": "Çift Fanlı Soğutma Mimarisi",
     "gamingScore": 83,
     "fps1080p": 90,
-    "fps1440p": 66
+    "fps1440p": 66,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/09/acer-nitro-v-15-anv15-51-non-fingerprint-with-backlit-on-wp-logo-black-01.tif-custom-scaled-e1695938663772.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_16_phn16_71_13500hx_4050",
@@ -8817,7 +9061,8 @@
     "coolingTech": "AeroBlade 3D Çift Metal Fan + Sıvı Metal",
     "gamingScore": 83,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_gigabyte_g6_kf_13620h_4060",
@@ -8853,7 +9098,8 @@
     "coolingTech": "WINDFORCE Çift Fan 4 Isı Borusu",
     "gamingScore": 83,
     "fps1080p": 90,
-    "fps1440p": 66
+    "fps1440p": 66,
+    "image_url": "https://cdn.mwave.com.au/images/400/g6_kfh3au854kh_ac73342_52793.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r1000",
@@ -8889,7 +9135,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_a16_advantage_fa617ns",
@@ -8925,7 +9172,8 @@
     "coolingTech": "Çift Arc Flow Fan + Kumtaşı Askeri Kamuflaj Kasa",
     "gamingScore": 82,
     "fps1080p": 90,
-    "fps1440p": 64
+    "fps1440p": 64,
+    "image_url": "https://hungrygeeks.com.ph/wp-content/uploads/2023/03/TUF-Gaming-A16-Advantage-Edition-1280-x-800-648x405.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614ju_13450hx_4050",
@@ -8961,7 +9209,8 @@
     "coolingTech": "Tri-Fan Teknolojisi + Sıvı Metal Termal Arayüz",
     "gamingScore": 82,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_f15_fx507vu_13620h_4050",
@@ -8997,7 +9246,8 @@
     "coolingTech": "Çift Arc Flow Fan + 5 Isı Borusu",
     "gamingScore": 82,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/04/1-34-scaled.jpg"
   },
   {
     "id": "laptop_gigabyte_g5_kf_12500h_4060",
@@ -9033,7 +9283,8 @@
     "coolingTech": "WINDFORCE Çift Fanlı Termal Çözüm",
     "gamingScore": 82,
     "fps1080p": 88,
-    "fps1440p": 64
+    "fps1440p": 64,
+    "image_url": "https://alarmplus.mk/wp-content/uploads/2025/11/GIGABYTE-Notebook-Gigabyte-G5-KF-15.6-FHD-144Hz-i5-12500H-16GB-512GB-SSD-RTX-4060-8GB-600x600.webp"
   },
   {
     "id": "laptop_lenovo_legion_pro_5i_16irx8_13500hx_4050",
@@ -9069,7 +9320,8 @@
     "coolingTech": "Coldfront 5.0 + Legion TrueStrike 4 Bölge RGB Klavye",
     "gamingScore": 82,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_msi_cyborg_15_a13vf_13620h_4060",
@@ -9105,7 +9357,8 @@
     "coolingTech": "Cooler Boost Taşınabilir Termal Çözüm",
     "gamingScore": 82,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_a15_fa507nu_7735hs_4050",
@@ -9141,7 +9394,8 @@
     "coolingTech": "MIL-STD-810H Askeri Dayanıklılık + Çift Arc Flow Fan",
     "gamingScore": 81,
     "fps1080p": 86,
-    "fps1440p": 60
+    "fps1440p": 60,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
   },
   {
     "id": "laptop_acer_nitro_16_an16_51_13500h_4050",
@@ -9177,7 +9431,8 @@
     "coolingTech": "Sıvı Metal Termal Macun + 4 Bölge RGB Klavye",
     "gamingScore": 81,
     "fps1080p": 88,
-    "fps1440p": 62
+    "fps1440p": 62,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/08/acer-nitro-16-an16-51-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1692778812411.jpg"
   },
   {
     "id": "laptop_dell_g15_5530_13450hx_4050",
@@ -9213,7 +9468,8 @@
     "coolingTech": "Çift Fanlı Termal Mimarisi",
     "gamingScore": 81,
     "fps1080p": 86,
-    "fps1440p": 60
+    "fps1440p": 60,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/05/1-55-e1685458987401.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15irx9",
@@ -9249,7 +9505,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15ahp9_8645hs_4050",
@@ -9285,7 +9542,8 @@
     "coolingTech": "LA1 AI Destekli Termal Yönetim",
     "gamingScore": 81,
     "fps1080p": 85,
-    "fps1440p": 60
+    "fps1440p": 60,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg"
   },
   {
     "id": "laptop_asus_rog_flow_x13_gv302xu_7940hs_4050",
@@ -9321,7 +9579,8 @@
     "coolingTech": "Sıvı Metal Soğutma + Çift Arc Flow Fan + 360 Derece Çadır/Tablet Modu",
     "gamingScore": 80,
     "fps1080p": 82,
-    "fps1440p": 56
+    "fps1440p": 56,
+    "image_url": "https://nvs.tn-cdn.net/2023/08/laptop-asus-rog-flow-x13-gv302xu-mu223w-4.webp"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41_7535hs_4050",
@@ -9357,7 +9616,8 @@
     "coolingTech": "Sıvı Metal (Liquid Metal) Termal Macun + Çift Fan 4 Hava Çıkışı (Termal Şampiyon)",
     "gamingScore": 80,
     "fps1080p": 86,
-    "fps1440p": 60
+    "fps1440p": 60,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r0000_13500h_4050",
@@ -9393,7 +9653,8 @@
     "coolingTech": "Genişletilmiş Çift Fanlı Hava Akış Mimarisi",
     "gamingScore": 80,
     "fps1080p": 84,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://www.hp.com/wcsstore/hpusstore/Treatment/mdps/Q3FY21_omen_victus16/omen_victus_heroImage1.png"
   },
   {
     "id": "laptop_hp_victus_16_s0000_7640hs_4050",
@@ -9429,7 +9690,8 @@
     "coolingTech": "Çift Fanlı Geniş Hava Girişi + OMEN Gaming Hub Kontrolü",
     "gamingScore": 80,
     "fps1080p": 84,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/victus-16-amd-new-3.png"
   },
   {
     "id": "laptop_lenovo_loq_15irx9_13450hx_4050",
@@ -9465,7 +9727,8 @@
     "coolingTech": "Lenovo LA1 AI Çipi + Çift Fanlı Arkaya Eğimli Egzoz",
     "gamingScore": 80,
     "fps1080p": 84,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://s13emagst.akamaized.net/products/64170/64169850/images/res_e41dc86e0193835af68d5b1697e5fcc0.jpg"
   },
   {
     "id": "laptop_msi_katana_15_b13vek_13420h_4050",
@@ -9501,7 +9764,8 @@
     "coolingTech": "Cooler Boost 5 Çift Fan + 6 Isı Borusu",
     "gamingScore": 80,
     "fps1080p": 84,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://exo.ir/image/cache/catalog/Products/MSI/Laptops/Katana-Series/B13/MSI-Katana-15-1-1500x1500.jpg"
   },
   {
     "id": "laptop_msi_cyborg_15_a12vf_12650h_4060",
@@ -9537,7 +9801,8 @@
     "coolingTech": "Cooler Boost Tek Fanlı İnce Tasarım Soğutma",
     "gamingScore": 80,
     "fps1080p": 85,
-    "fps1440p": 60
+    "fps1440p": 60,
+    "image_url": "https://down-my.img.susercontent.com/file/sg-11134201-82618-mjb7zjf75oua31"
   },
   {
     "id": "laptop_lenovo_loq_15iax9_12450hx_4050",
@@ -9573,7 +9838,8 @@
     "coolingTech": "Hyperchamber Çift Fanlı Sessiz Soğutma",
     "gamingScore": 79,
     "fps1080p": 82,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://s13emagst.akamaized.net/products/65080/65079229/images/res_2db71b6f4e44ac47630225185b84c947.jpg"
   },
   {
     "id": "laptop_msi_cyborg_15_a13vf_13420h_4060",
@@ -9609,7 +9875,8 @@
     "coolingTech": "Yarı Saydam Fütüristik Kasa + Tek Fanlı Hafif Soğutma (1.98 Kg)",
     "gamingScore": 79,
     "fps1080p": 82,
-    "fps1440p": 58
+    "fps1440p": 58,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg"
   },
   {
     "id": "laptop_gaminggen_297dbfac",
@@ -9645,7 +9912,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-tuf-gaming-f16-fx608jhr-rv048-gaming-intel-core-i7-14650hx-8gb-ddr5-512gb-ssd-rtx5050-8gb-16-inc-full-hd-165hz-ips-freedos-gaming-laptop-2-300x300.jpg"
   },
   {
     "id": "laptop_itopya_1034728c",
@@ -9681,7 +9949,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://i5.walmartimages.com/asr/5b3835ee-f3d7-4dec-821f-3991fc61e49f.c18f98b417364424aa854339b31cd0b5.jpeg"
   },
   {
     "id": "laptop_itopya_854d2bd0",
@@ -9717,7 +9986,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg"
   },
   {
     "id": "laptop_hb_de4f7b17",
@@ -9753,7 +10023,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
   },
   {
     "id": "laptop_hb_8f789c23",
@@ -9789,7 +10060,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/249ae019-de72-43f5-baa5-8d5740db962c/"
   },
   {
     "id": "laptop_hb_5dfab7da",
@@ -9825,7 +10097,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/asus-tuf-gaming-f16-fx607vj-rl033-gaming-intel-core-5-210h-8gb-512gb-ssd-rtx3050-16-inc-full-hd-144hz-ips-freedos-gaming-laptop-6-1024x1024.jpg"
   },
   {
     "id": "laptop_hb_4b9cd74a",
@@ -9861,7 +10134,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://down-ph.img.susercontent.com/file/ph-11134208-81ztc-mllhvt7wnmyt45"
   },
   {
     "id": "laptop_hb_60e7a486",
@@ -9897,7 +10171,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://img.datacomp.sk/asus-tuf-gaming-a15-fa506ncg-hn186w-cierny_i514071.jpg"
   },
   {
     "id": "laptop_hb_a0720b1a",
@@ -9933,7 +10208,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg"
   },
   {
     "id": "laptop_asus_rog_flow_z13_gz301vu_tablet",
@@ -9969,7 +10245,8 @@
     "coolingTech": "Buhar Odası + Sıvı Metal (Dünyanın En Güçlü Oyun Tableti 1.18 Kg)",
     "gamingScore": 78,
     "fps1080p": 75,
-    "fps1440p": 52
+    "fps1440p": 52,
+    "image_url": "https://dlcdnwebimgs.asus.com/files/media/2523515c-4a57-41a5-9004-67490621ae51/v1/images/large/1x/connectivity.jpg"
   },
   {
     "id": "laptop_gaminggen_438c20c3",
@@ -10005,7 +10282,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/asus-tuf-gaming-a16-fa607nuq-rl028-gaming-amd-ryzen-7-170-16gb-ddr5-512gb-ssd-rtx-4050-6gb-16-inc-144hz-full-hd-ips-level-freedos-gaming-laptop-4-1024x1024.jpg"
   },
   {
     "id": "laptop_hb_da42a8f5",
@@ -10041,7 +10319,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2025/06/acer-nitro-v-15-anv15-52-non-fingerprint-with-backlit-on-wp-logo-black-01-custom-scaled-e1749393310195.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g870_1245_bfa0x_b_12450h_4050",
@@ -10077,7 +10356,8 @@
     "coolingTech": "Turbo Fanlı Çift Soğutma Mimarisi",
     "gamingScore": 78,
     "fps1080p": 80,
-    "fps1440p": 56
+    "fps1440p": 56,
+    "image_url": "https://resim.epey.com/869672/m_casper-excalibur-g870-1245-bqa0p-b-1.png"
   },
   {
     "id": "laptop_hb_69826651",
@@ -10113,7 +10393,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://teknoklik.com/images/product/hp/1482/hp-victus-15-fb3038nt-bx9u9ea-6gb-rtx4050-amd-ryzen-7-7445h-16gb-ram-512gb-ssd-156-inc-fhd-144hz-freedos_1000x1000_OOFDRUETWW.jpg"
   },
   {
     "id": "laptop_hb_af579ef9",
@@ -10149,7 +10430,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://cdn.dsmcdn.com/mnresize/620/920/ty1790/prod/QC_PREP/20251118/15/7a33ea20-5410-3d85-9299-322db9ae66d8/1_org_zoom.jpg"
   },
   {
     "id": "laptop_hb_b276cffe",
@@ -10185,7 +10467,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://image.badem.shop/base/images/nx/ql/nxqlGH9VRGcYmbI6.webp"
   },
   {
     "id": "laptop_hb_8028a4d8",
@@ -10221,7 +10504,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://productimages.hepsiburada.net/s/777/424-600/110001431384225.jpg"
   },
   {
     "id": "laptop_itopya_3ab2556a",
@@ -10257,7 +10541,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://laptop365.vn/pic/product/loq_essential_15arp11_ct1_01_639062310123000449.jpg"
   },
   {
     "id": "laptop_hb_eb1a1be4",
@@ -10293,7 +10578,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/114/MTA-184257969/lenovo_lenovo_loq_15ahp11_83tn000tid_amd_ryzen_7_250_16gb_512gb_rtx5050-8gb_windows_11-ohs_full03_wacxdeub.webp"
   },
   {
     "id": "laptop_hb_6ca00c74",
@@ -10329,7 +10615,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg"
   },
   {
     "id": "laptop_hb_dc821379",
@@ -10365,7 +10652,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://cdn-s3.pttavm.com/pimages/592/146/228/34d9cb31-3d2d-4d68-9d97-29239682ce24.webp"
   },
   {
     "id": "laptop_hb_c8777f39",
@@ -10401,7 +10689,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 240
+    "chargerWatt": 240,
+    "image_url": "https://productimages.hepsiburada.net/s/777/424-600/110001597736869.jpg"
   },
   {
     "id": "laptop_hb_0dce7ab7",
@@ -10437,7 +10726,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://compulab.com.ec/wp-content/uploads/2026/02/PTLL040-768x768.jpg"
   },
   {
     "id": "laptop_hb_05f6e1a8",
@@ -10473,7 +10763,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://platincdn.com/2184/pictures/thumb/400X-TDFCL54348_210293129-1.jpg"
   },
   {
     "id": "laptop_hb_62051bd2",
@@ -10509,7 +10800,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://cdn.dsmcdn.com/mnresize/620/920/ty1794/prod/QC_PREP/20251129/15/b850371a-937a-39a6-b8cb-f75d6a7eb10c/1_org_zoom.jpg"
   },
   {
     "id": "laptop_hb_0bee04b9",
@@ -10545,7 +10837,8 @@
     "screenSizeInch": 14.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://images.migrosone.com/elektronik/product/39395473/39395473_1-7d72f2-1650x1650.jpg"
   },
   {
     "id": "laptop_msi_cyborg_15_a12vf_12450h_4060",
@@ -10581,7 +10874,8 @@
     "coolingTech": "Yarı Saydam Fütüristik Kasa + Tek Fanlı Hafif Soğutma (1.98 Kg)",
     "gamingScore": 78,
     "fps1080p": 80,
-    "fps1440p": 56
+    "fps1440p": 56,
+    "image_url": "https://down-ph.img.susercontent.com/file/ph-11134208-7r98x-luiucm1x1qvf83"
   },
   {
     "id": "laptop_hb_52b2b5fd",
@@ -10617,7 +10911,8 @@
     "screenSizeInch": 16.0,
     "ramSlots": "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)",
     "storageSlots": "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)",
-    "chargerWatt": 200
+    "chargerWatt": 200,
+    "image_url": "https://productimages.hepsiburada.net/s/777/424-600/110001559749178.jpg"
   },
   {
     "id": "laptop_monster_tulpar_t5_v23_3_12450h_4050",
@@ -10653,7 +10948,8 @@
     "coolingTech": "Kompakt Çift Fanlı Soğutma Bloğu",
     "gamingScore": 78,
     "fps1080p": 80,
-    "fps1440p": 54
+    "fps1440p": 54,
+    "image_url": "https://cdn.akakce.com/z/monster/monster-tulpar-t5-v23-3-5-i5-12450h-32-gb-1-tb-ssd-rtx4060-15-6-full-hd-notebook.jpg"
   },
   {
     "id": "laptop_monster_abra_a5_v20_3_13500h_4050",
@@ -10689,7 +10985,8 @@
     "coolingTech": "Abra Çift Fanlı Soğutma Mimarisi",
     "gamingScore": 78,
     "fps1080p": 80,
-    "fps1440p": 56
+    "fps1440p": 56,
+    "image_url": "https://cdn.akakce.com/z/monster/monster-abra-a5-v20-3-8-i7-13700h-64-gb-1-tb-ssd-rtx4050-15-6-full-hd-notebook.jpg"
   },
   {
     "id": "laptop_acer_nitro_v_15_anv15_51_13420h_4050",
@@ -10725,7 +11022,8 @@
     "coolingTech": "Çift Fanlı Egzoz Tasarımı",
     "gamingScore": 76,
     "fps1080p": 76,
-    "fps1440p": 52
+    "fps1440p": 52,
+    "image_url": "https://laptopmedia.com/wp-content/uploads/2023/09/acer-nitro-v-15-anv15-51-non-fingerprint-with-backlit-on-wp-logo-black-01.tif-custom-scaled-e1695938663772.jpg"
   },
   {
     "id": "laptop_gigabyte_g5_mf5_13500h_4050",
@@ -10761,7 +11059,8 @@
     "coolingTech": "WINDFORCE Çift Fan Soğutma",
     "gamingScore": 76,
     "fps1080p": 78,
-    "fps1440p": 54
+    "fps1440p": 54,
+    "image_url": "https://ecommerce.datablitz.com.ph/cdn/shop/files/G5_2023_-01_b5822c04-2cfd-4e24-beaa-44da953e8472_800x.jpg?v=1725603427"
   },
   {
     "id": "laptop_hp_victus_15_fa1000nt_13420h_4050",
@@ -10797,7 +11096,8 @@
     "coolingTech": "Victus Çift Fanlı Tasarım",
     "gamingScore": 76,
     "fps1080p": 76,
-    "fps1440p": 52
+    "fps1440p": 52,
+    "image_url": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08361319.png"
   },
   {
     "id": "laptop_lenovo_ideapad_gaming_3_15iah7_3050ti",
@@ -10833,7 +11133,8 @@
     "coolingTech": "Arkaya Eğimli Havalandırma Çıkışları + Çift Fan",
     "gamingScore": 72,
     "fps1080p": 68,
-    "fps1440p": 44
+    "fps1440p": 44,
+    "image_url": "https://www.notebookcheck.net/uploads/tx_nbc2/4zu3_Lenovo_Ideapad_Gaming_3_15IMH05.jpg"
   },
   {
     "id": "laptop_msi_thin_gf63_12ve_12450h_4050",
@@ -10869,7 +11170,8 @@
     "coolingTech": "MSI İnce Fan Soğutma Mimarisi",
     "gamingScore": 72,
     "fps1080p": 72,
-    "fps1440p": 48
+    "fps1440p": 48,
+    "image_url": "https://asset.msi.com/resize/image/global/product/product_16703914683041cca9a1f044dbea5916ac8b8f4178.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_hp_victus_15_fa1000_13420h_3050",
@@ -10905,7 +11207,8 @@
     "coolingTech": "Çift Fanlı Kompakt Termal Tasarım",
     "gamingScore": 70,
     "fps1080p": 65,
-    "fps1440p": 40
+    "fps1440p": 40,
+    "image_url": "https://kaas.hpcloud.hp.com/PROD/v2/renderbinary/7704801/6398472/con-win-nb-p-roku-23c1-hp-victus-15-fa1000-specification/con-nb-roku-22c1-15-fa0000-product-image"
   },
   {
     "id": "laptop_lenovo_loq_15iax9_12450hx_3050_6gb",
@@ -10915,9 +11218,9 @@
     "url": "https://www.hepsiburada.com",
     "imageUrl": "http://www.ventaysoporte.com/wp-content/uploads/2025/05/1-1.jpg",
     "images": [
-      "http://www.ventaysoporte.com/wp-content/uploads/2025/05/1-1.jpg",
       "https://s13emagst.akamaized.net/products/65080/65079229/images/res_6ee5c829720cfe0c841fedb1c92832cb.jpg",
-      "https://s13emagst.akamaized.net/products/65080/65079229/images/res_2db71b6f4e44ac47630225185b84c947.jpg"
+      "https://s13emagst.akamaized.net/products/65080/65079229/images/res_2db71b6f4e44ac47630225185b84c947.jpg",
+      "https://s13emagst.akamaized.net/products/65080/65079229/images/res_6ee5c829720cfe0c841fedb1c92832cb.jpg"
     ],
     "cpuModel": "Intel Core i5-12450HX",
     "cpuCores": "14 Çekirdek / 20 İzlek",
@@ -10941,7 +11244,8 @@
     "coolingTech": "Hyperchamber Çift Fan",
     "gamingScore": 68,
     "fps1080p": 62,
-    "fps1440p": 42
+    "fps1440p": 42,
+    "image_url": "https://s13emagst.akamaized.net/products/65080/65079229/images/res_6ee5c829720cfe0c841fedb1c92832cb.jpg"
   },
   {
     "id": "laptop_hp_victus_15_fb1000nt_7535hs_2050",
@@ -10977,6 +11281,7 @@
     "coolingTech": "Victus Çift Fan",
     "gamingScore": 62,
     "fps1080p": 54,
-    "fps1440p": 35
+    "fps1440p": 35,
+    "image_url": "https://kaas.hpcloud.hp.com/PROD/v2/renderbinary/8838271/8842042/con-win-nb-p-opihr-23c2-hp-victus-15-fb1000-specification/con-nb-opihr-23c2-hp-victus-15-fb1000-image"
   }
 ]
