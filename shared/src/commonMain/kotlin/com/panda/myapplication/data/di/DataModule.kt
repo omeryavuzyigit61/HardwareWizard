@@ -100,6 +100,8 @@ val dataModule = module {
     }
     single<com.panda.myapplication.domain.repository.CommunityReportRepository> {
         com.panda.myapplication.data.repository.CommunityReportRepositoryImpl(
+            httpClient = get(),
+            json = get(),
             ioDispatcher = get(),
         )
     }
