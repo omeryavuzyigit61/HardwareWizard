@@ -42,8 +42,11 @@ interface TuningVaultRepository {
     /** Donanım detay sayfası mikro ipuçlarını dinler. */
     fun observeTipsForHardware(hardwareId: String): Flow<List<HardwareProTip>>
 
-    /** Yeni mikro ipucu paylaşır. */
+    /** Yeni mikro ipucu / kullanıcı yorumu paylaşır. */
     suspend fun submitTip(tip: HardwareProTip): DomainResult<Unit>
+
+    /** Belirtilen kullanıcı yorumunu / mikro ipucunu siler veya yayından kaldırır. */
+    suspend fun deleteTip(tipId: String): DomainResult<Unit>
 
     /** Mikro ipucuna faydalı (upvote) oyu verir. */
     suspend fun upvoteTip(tipId: String, userId: String): DomainResult<Unit>

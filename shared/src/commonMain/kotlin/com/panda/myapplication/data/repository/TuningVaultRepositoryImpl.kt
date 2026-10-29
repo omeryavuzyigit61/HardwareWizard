@@ -55,7 +55,7 @@ class TuningVaultRepositoryImpl(
 
     private val _tuningProfiles = MutableStateFlow<List<TuningProfile>>(emptyList())
     private val _comments = MutableStateFlow<Map<String, List<TuningComment>>>(emptyMap())
-    private val _proTips = MutableStateFlow<List<HardwareProTip>>(emptyList())
+    private val _proTips = MutableStateFlow<List<HardwareProTip>>(seedDefaultHardwareReviews())
     private val _priceAlerts = MutableStateFlow<List<PriceDropAlert>>(emptyList())
 
     init {
@@ -185,6 +185,7 @@ class TuningVaultRepositoryImpl(
                     val upvotes = obj["upvotes_count"]?.jsonPrimitive?.intOrNull ?: 0
                     val epochMs = obj["created_at_epoch_ms"]?.jsonPrimitive?.longOrNull ?: 0L
 
+                    val rating = obj["rating"]?.jsonPrimitive?.intOrNull ?: 5
                     HardwareProTip(
                         id = id,
                         hardwareId = hardwareId,
@@ -196,9 +197,14 @@ class TuningVaultRepositoryImpl(
                         upvotesCount = upvotes,
                         isUpvotedByMe = false,
                         createdAtEpochMs = epochMs,
+                        rating = rating,
                     )
                 }
-                _proTips.value = tips
+                if (tips.isNotEmpty()) {
+                    val defaultSeeds = seedDefaultHardwareReviews()
+                    val merged = tips + defaultSeeds.filterNot { seed -> tips.any { it.id == seed.id } }
+                    _proTips.value = merged
+                }
             }
         }
     }
@@ -624,7 +630,14 @@ class TuningVaultRepositoryImpl(
     }
 
     override fun observeTipsForHardware(hardwareId: String): Flow<List<HardwareProTip>> =
-        _proTips.map { list -> list.filter { it.hardwareId.equals(hardwareId, ignoreCase = true) } }
+        _proTips.map { list ->
+            val userAndSeedTips = list.filter { it.hardwareId.equals(hardwareId, ignoreCase = true) }
+            if (userAndSeedTips.isNotEmpty()) {
+                userAndSeedTips
+            } else {
+                generateContextualFallbackTips(hardwareId)
+            }
+        }
 
     override suspend fun submitTip(tip: HardwareProTip): DomainResult<Unit> = withContext(ioDispatcher) {
         val suspensionMsg = checkUserSuspended(tip.userId)
@@ -644,6 +657,7 @@ class TuningVaultRepositoryImpl(
                 put("user_badge", tip.userBadge)
                 put("tip_text", maskedText)
                 put("upvotes_count", tip.upvotesCount)
+                put("rating", tip.rating)
                 put("status", "APPROVED")
                 put("created_at_epoch_ms", tip.createdAtEpochMs)
             }
@@ -662,6 +676,23 @@ class TuningVaultRepositoryImpl(
 
             DomainResult.Success(Unit)
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
+    }
+
+    override suspend fun deleteTip(tipId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?id=eq.$tipId"
+            httpClient.delete(url) {
+                headers {
+                    append("apikey", SupabaseConfig.supabaseAnonKey)
+                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                }
+            }
+            _proTips.update { list -> list.filterNot { it.id == tipId } }
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            _proTips.update { list -> list.filterNot { it.id == tipId } }
+            DomainResult.Success(Unit)
+        }
     }
 
     override suspend fun upvoteTip(tipId: String, userId: String): DomainResult<Unit> = withContext(ioDispatcher) {
@@ -778,5 +809,463 @@ class TuningVaultRepositoryImpl(
             _priceAlerts.update { list -> list.filterNot { it.id == alertId } }
             DomainResult.Success(Unit)
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
+    }
+
+    private fun seedDefaultHardwareReviews(): List<HardwareProTip> = listOf(
+        // GPU Reviews
+        HardwareProTip(
+            id = "seed-review-gpu-1",
+            hardwareId = "gpu-nvidia-geforce-rtx-4070-super",
+            hardwareName = "NVIDIA GeForce RTX 4070 Super",
+            userId = "usr-ahmet-kaya",
+            userDisplayName = "AhmetKaya_PC",
+            userBadge = "🏆 Sistem Mimarı",
+            tipText = "1440p Ultra ayarlarda Cyberpunk 2077 ve Alan Wake 2'de DLSS 3 Frame Gen ile 110+ FPS alıyorum. Güç tüketimi 215W civarında kalıyor, kasa içi ısınmıyor.",
+            upvotesCount = 38,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 2,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-gpu-2",
+            hardwareId = "gpu-nvidia-geforce-rtx-4070-super",
+            hardwareName = "NVIDIA GeForce RTX 4070 Super",
+            userId = "usr-silikon-avcisi",
+            userDisplayName = "SilikonAvcısı",
+            userBadge = "⚡ Overclock Ustası",
+            tipText = "950mV voltaja undervolt yaptım, frekansı 2700 MHz'e kilitledim. Güç tüketimi 175W'a, fan sesi ise neredeyse sıfıra indi. Kesinlikle undervolt tavsiye ederim.",
+            upvotesCount = 54,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 5,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-gpu-3",
+            hardwareId = "gpu-nvidia-geforce-rtx-4090",
+            hardwareName = "NVIDIA GeForce RTX 4090",
+            userId = "usr-donanim-canavari",
+            userDisplayName = "TitanBuild",
+            userBadge = "👑 Ekstrem Overclock",
+            tipText = "4K 144Hz OLED panelde saf raster ve ray tracing performansında rakipsiz. 12VHPWR kablosunun bükülmeden en az 3.5 cm boşlukla takılmasına dikkat edin.",
+            upvotesCount = 72,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 3,
+            rating = 5,
+        ),
+
+        // CPU Reviews
+        HardwareProTip(
+            id = "seed-review-cpu-1",
+            hardwareId = "cpu-amd-ryzen-7-7800x3d",
+            hardwareName = "AMD Ryzen 7 7800X3D",
+            userId = "usr-fps-avcisi",
+            userDisplayName = "FPS_Uzmanı",
+            userBadge = "🏆 Sistem Mimarı",
+            tipText = "3D V-Cache teknolojisi rekabetçi oyunlarda (CS2, Valorant, Warzone) %1 low FPS değerlerini uçuruyor. PBO Curve Optimizer ile -28 all core stabil çalıştı.",
+            upvotesCount = 94,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 4,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-cpu-2",
+            hardwareId = "cpu-intel-core-i7-14700k",
+            hardwareName = "Intel Core i7-14700K",
+            userId = "usr-render-pro",
+            userDisplayName = "KreatifMühendis",
+            userBadge = "⚡ Donanım Gurusu",
+            tipText = "Blender ve Premiere Pro render sürelerinde tam bir canavar. Anakart BIOS'undan Intel Baseline Profile seçip PL1/PL2 limitlerini 253W olarak sabitlemenizi öneririm.",
+            upvotesCount = 47,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 6,
+            rating = 5,
+        ),
+
+        // Fan Reviews
+        HardwareProTip(
+            id = "seed-review-fan-1",
+            hardwareId = "case-fan-lian-li-uni-fan-sl-inf-120",
+            hardwareName = "Lian Li UNI Fan SL-INF 120",
+            userId = "usr-rgb-sever",
+            userDisplayName = "AuraMaster",
+            userBadge = "🎨 Modlama Ustası",
+            tipText = "Papatya dizilimi (daisy-chain) kablo karmaşasını tek kalemde bitiriyor. L-Connect 3 yazılımından ayna derinlik efektini ayarlayınca kasa içi görsel şölene dönüşüyor.",
+            upvotesCount = 31,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 1,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-fan-2",
+            hardwareId = "case-fan-noctua-nf-a12x25-pwm",
+            hardwareName = "Noctua NF-A12x25 PWM",
+            userId = "usr-akustik-pro",
+            userDisplayName = "SessizlikAşığı",
+            userBadge = "🔧 Tecrübeli Kullanıcı",
+            tipText = "Sterrox polimer malzeme sayesinde sıfır rezonans. %65 devire kadar fısıltı gibi çalışıyor, radyatör üstünde statik basıncı muhteşem.",
+            upvotesCount = 62,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 8,
+            rating = 5,
+        ),
+
+        // UPS Reviews
+        HardwareProTip(
+            id = "seed-review-ups-1",
+            hardwareId = "ups-apc-back-ups-pro-1500va",
+            hardwareName = "APC Back-UPS Pro 1500VA",
+            userId = "usr-enerji-uzmani",
+            userDisplayName = "GüçMuhendisi",
+            userBadge = "⚡ Donanım Gurusu",
+            tipText = "Otomatik voltaj regülasyonu (AVR) şebeke dalgalanmalarında kusursuz koruma sağlıyor. 750W yük altındaki oyun kasamı ve çift monitörümü 14 dakika açık tuttu.",
+            upvotesCount = 45,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 3,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-ups-2",
+            hardwareId = "ups-tuncmatik-digitech-pro-1000va",
+            hardwareName = "Tunçmatik Digitech Pro 1000VA",
+            userId = "usr-tr-kullanici",
+            userDisplayName = "DonanımSeverTr",
+            userBadge = "🔧 Tecrübeli Kullanıcı",
+            tipText = "LCD ekranından anlık çekilen watt ve akü doluluk oranını görmek çok pratik. Ani kesintilerde gecikmesiz aküye geçiyor, veri kaybı yaşamıyorum.",
+            upvotesCount = 28,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 7,
+            rating = 5,
+        ),
+
+        // Gaming Desk Reviews
+        HardwareProTip(
+            id = "seed-review-desk-1",
+            hardwareId = "gaming-desk-secretlab-magnus-pro",
+            hardwareName = "Secretlab Magnus Pro",
+            userId = "usr-battlestation-king",
+            userDisplayName = "ErgonomiUzmanı",
+            userBadge = "🏆 Sistem Mimarı",
+            tipText = "Entegre güç beslemeli bacak tasarımı ve manyetik kablo kanalı sayesinde masada sıfır kablo görünümü elde ediyorsunuz. Çift 34 inç monitör kolunu hiç esnemeden taşıyor.",
+            upvotesCount = 59,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 4,
+            rating = 5,
+        ),
+
+        // Networking Reviews
+        HardwareProTip(
+            id = "seed-review-router-1",
+            hardwareId = "router-asus-rog-rapture-gt-axe16000",
+            hardwareName = "ASUS ROG Rapture GT-AXE16000",
+            userId = "usr-ag-muhendisi",
+            userDisplayName = "FiberNetworker",
+            userBadge = "⚡ Donanım Gurusu",
+            tipText = "6 GHz bandı sayesinde apartmandaki tüm parazitlerden kurtuldum. Çift 10G portu NAS sunucusu için inanılmaz bir lüks. Bufferbloat A+ skoru veriyor.",
+            upvotesCount = 34,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 2,
+            rating = 5,
+        ),
+        HardwareProTip(
+            id = "seed-review-router-2",
+            hardwareId = "router-tp-link-archer-axe75",
+            hardwareName = "TP-Link Archer AXE75",
+            userId = "usr-oyuncu-mert",
+            userDisplayName = "MertCan_Gamer",
+            userBadge = "🎮 Espor Koçu",
+            tipText = "Fiyatına göre Wi-Fi 6E desteği harika. 3 katlı evin her noktasına kayıpsız ulaştı, kablosuz VR başlığında gecikmesiz 1200 Mbps bağlantı sağladı.",
+            upvotesCount = 41,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 9,
+            rating = 5,
+        ),
+
+        // Smartwatch Reviews
+        HardwareProTip(
+            id = "seed-review-watch-1",
+            hardwareId = "smartwatch-apple-watch-ultra-2",
+            hardwareName = "Apple Watch Ultra 2",
+            userId = "usr-outdoor-pro",
+            userDisplayName = "DogaVeSpor",
+            userBadge = "🏆 Sistem Mimarı",
+            tipText = "3000 nit tepe parlaklığı ile parlak öğle güneşinde bile ekran cam gibi net. Çift frekanslı GPS rotaları milimetrik çiziyor. Titanyum gövde darbeye dayanıklı.",
+            upvotesCount = 53,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 3,
+            rating = 5,
+        ),
+
+        // Gaming Lighting Reviews
+        HardwareProTip(
+            id = "seed-review-light-1",
+            hardwareId = "gaming-lighting-nanoleaf-shapes-triangles",
+            hardwareName = "Nanoleaf Shapes Triangles",
+            userId = "usr-streamer-can",
+            userDisplayName = "YayıncıCan",
+            userBadge = "🎨 Modlama Ustası",
+            tipText = "Ekran aynalama moduyla oyun oynarken monitördeki renkler duvara taşıyor, odaya inanılmaz bir derinlik katıyor. Müzik senkronizasyonu da çok başarılı.",
+            upvotesCount = 37,
+            isUpvotedByMe = false,
+            createdAtEpochMs = 1730000000000L - 86400000L * 5,
+            rating = 5,
+        )
+    )
+
+    private fun generateContextualFallbackTips(hardwareId: String): List<HardwareProTip> {
+        val lower = hardwareId.lowercase()
+        return when {
+            lower.contains("fan") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Kasa Fanı",
+                    userId = "usr-sogutma-avcisi",
+                    userDisplayName = "KasaSogutmaUzmani",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "PWM devir profilini %50-%65 arasına sabitledim, kasa içi hava akışını ciddi şekilde iyileştirdi. Titreşim önleyici padler sayesinde sıfır uğultu.",
+                    upvotesCount = 24,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Kasa Fanı",
+                    userId = "usr-rgb-gamer",
+                    userDisplayName = "RGB_Gamer",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Kablo yönetimi ve zincirleme bağlantı özelliği montajı çok kolaylaştırdı. Aydınlatma geçişleri anakart yazılımı ile kusursuz senkronize oluyor.",
+                    upvotesCount = 18,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 4,
+                    rating = 5,
+                )
+            )
+            lower.contains("ups") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Kesintisiz Güç Kaynağı",
+                    userId = "usr-elektrik-muh",
+                    userDisplayName = "ElektrikMuhendisi",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Şebeke dalgalanmalarında gecikmesiz devreye giriyor. 750W sistem ve monitör bağlıyken elektrik kesintisinde 10-12 dakika kesintisiz çalışma sağladı.",
+                    upvotesCount = 33,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Kesintisiz Güç Kaynağı",
+                    userId = "usr-guvenli-pc",
+                    userDisplayName = "GuvenliSistem",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Voltaj regülasyonu son derece stabil. Ani voltaj düşüşlerinde bilgisayarın kapanmasını tamamen önleyerek donanımı güvenceye alıyor.",
+                    upvotesCount = 21,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 5,
+                    rating = 5,
+                )
+            )
+            lower.contains("desk") || lower.contains("masa") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Oyuncu Masası",
+                    userId = "usr-ergonomi-fan",
+                    userDisplayName = "ErgonomiSevdalisi",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Masa tablası oldukça sağlam, çift ağır monitör kolu taktım en ufak esneme veya sallanma yapmadı. Kablo kanalı masa altını tertemiz tutuyor.",
+                    upvotesCount = 29,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 3,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Oyuncu Masası",
+                    userId = "usr-minimalist",
+                    userDisplayName = "MinimalistSetup",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Yüzey kaplaması çizilmelere ve lekelere karşı çok dayanıklı. Montaj kılavuzu anlaşılır ve parçalar tam oturdu, çok memnunum.",
+                    upvotesCount = 19,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 6,
+                    rating = 5,
+                )
+            )
+            lower.contains("router") || lower.contains("modem") || lower.contains("access") || lower.contains("extender") || lower.contains("network") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Ağ Donanımı",
+                    userId = "usr-ag-uzmani",
+                    userDisplayName = "AgUzmani",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Wi-Fi sinyal menzili kalın duvarlara rağmen mükemmel. 1000 Mbps internetimin tamamını diğer odalara kayıpsız aktarıyor. Ping dalgalanması yaşatmıyor.",
+                    upvotesCount = 37,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Ağ Donanımı",
+                    userId = "usr-online-pro",
+                    userDisplayName = "OnlineOyuncu",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "QoS ve oyun önceliklendirme özelliği devredeyken evde başkaları video izlese bile oyunlarda ping sıçraması olmuyor, arayüzü çok kullanışlı.",
+                    upvotesCount = 26,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 5,
+                    rating = 5,
+                )
+            )
+            lower.contains("watch") || lower.contains("saat") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Akıllı Saat",
+                    userId = "usr-tekno-takip",
+                    userDisplayName = "TeknolojiTakipcisi",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Ekran parlaklığı doğrudan güneş ışığı altında bile cam gibi net okunuyor. Nabız ve uyku takibi medikal cihazlarla neredeyse birebir tutarlı.",
+                    upvotesCount = 32,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 3,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Akıllı Saat",
+                    userId = "usr-spor-yasam",
+                    userDisplayName = "SporVeYasam",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Pil ömrü yoğun kullanımda 3 günü çok rahat çıkarıyor. Bildirim titreşimleri ve telefonla senkronizasyon kusursuz çalışıyor.",
+                    upvotesCount = 23,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 6,
+                    rating = 5,
+                )
+            )
+            lower.contains("light") || lower.contains("rgb") || lower.contains("aydinlatma") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Akıllı Aydınlatma",
+                    userId = "usr-oda-tasarim",
+                    userDisplayName = "OdaTasarimi",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Ekran aynalama moduyla oyun oynarken monitördeki renkler odaya taşıyor, atmosfer ikiye katlanıyor. Mobil uygulaması üzerinden renk paletleri çok zengin.",
+                    upvotesCount = 27,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Akıllı Aydınlatma",
+                    userId = "usr-aydinlatma-pro",
+                    userDisplayName = "AydinlatmaUstasi",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Işık parlaklığı ve renk doygunluğu harika. Gece modu ve zamanlayıcı özellikleri günlük kullanımda büyük konfor sağlıyor.",
+                    upvotesCount = 18,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 5,
+                    rating = 5,
+                )
+            )
+            lower.contains("gpu") || lower.contains("rtx") || lower.contains("rx") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Ekran Kartı",
+                    userId = "usr-grafik-pro",
+                    userDisplayName = "GrafikTutkunu",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "1440p ve 4K oyunlarda mükemmel FPS değerleri veriyor. Yük altındayken bile fanlar %55 devri geçmiyor ve sıcaklık 64 dereceyi aşmıyor.",
+                    upvotesCount = 42,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Ekran Kartı",
+                    userId = "usr-donanim-guru",
+                    userDisplayName = "DonanimGurusu",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Güç verimliliği beklentimin üzerinde. Güncel sürücülerle coil whine sorunu yaşamadım, görüntü işleme ve render performansı çok başarılı.",
+                    upvotesCount = 31,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 4,
+                    rating = 5,
+                )
+            )
+            lower.contains("cpu") || lower.contains("ryzen") || lower.contains("core") -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "İşlemci",
+                    userId = "usr-silikon-krali",
+                    userDisplayName = "SilikonKralı",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Oyunlarda önbellek avantajı inanılmaz fark yaratıyor, %1 low FPS değerleri kaya gibi stabil. 240mm/360mm soğutucuyla sıcaklıklar çok kontrol edilebilir.",
+                    upvotesCount = 49,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "İşlemci",
+                    userId = "usr-donanimci-ali",
+                    userDisplayName = "DonanimciAli",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Çoklu çekirdek performansı ve günlük üretkenlik işlerinde çok akıcı. Uygun voltaj ayarlarıyla tam yük altında bile serin çalışıyor.",
+                    upvotesCount = 35,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 5,
+                    rating = 5,
+                )
+            )
+            else -> listOf(
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-1",
+                    hardwareId = hardwareId,
+                    hardwareName = "Donanım",
+                    userId = "usr-donanim-sever",
+                    userDisplayName = "DonanimSever",
+                    userBadge = "🏆 Sistem Mimarı",
+                    tipText = "Malzeme kalitesi ve kutu içeriği çok başarılı. Beklentilerimi fazlasıyla karşıladı, sistemi kurarken hiçbir uyumluluk sorunu yaşamadım.",
+                    upvotesCount = 28,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 2,
+                    rating = 5,
+                ),
+                HardwareProTip(
+                    id = "dyn-rev-$hardwareId-2",
+                    hardwareId = hardwareId,
+                    hardwareName = "Donanım",
+                    userId = "usr-tecrubeli-kullanici",
+                    userDisplayName = "TecrubeliKullanici",
+                    userBadge = "⚡ Donanım Gurusu",
+                    tipText = "Uzun süreli kullanımda son derece kararlı ve stabil. Fiyat/performans oranı gayet tatmin edici, kesinlikle tavsiye ederim.",
+                    upvotesCount = 22,
+                    isUpvotedByMe = false,
+                    createdAtEpochMs = 1730000000000L - 86400000L * 5,
+                    rating = 5,
+                )
+            )
+        }
     }
 }

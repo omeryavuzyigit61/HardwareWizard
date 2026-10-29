@@ -218,11 +218,11 @@ class HardwareDetailViewModel(
         }
     }
 
-    fun onSubmitProTip(tipText: String) {
+    fun onSubmitProTip(tipText: String, rating: Int = 5) {
         val user = _uiState.value.currentUser
         val item = _uiState.value.item ?: return
         val tip = HardwareProTip(
-            id = "tip-${System.currentTimeMillis()}-${(100..999).random()}",
+            id = "review-${System.currentTimeMillis()}-${(100..999).random()}",
             hardwareId = item.id.value,
             hardwareName = item.displayName,
             userId = user?.id ?: "usr-guest",
@@ -230,17 +230,24 @@ class HardwareDetailViewModel(
             userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
             tipText = tipText,
             createdAtEpochMs = System.currentTimeMillis(),
+            rating = rating,
         )
         viewModelScope.launch {
             when (val res = tuningVaultRepository.submitTip(tip)) {
                 is DomainResult.Success -> {
-                    effectChannel.send(HardwareDetailEffect.ShowToast("💡 Mikro ipucunuz paylaşıldı!", "💡 Your pro tip has been shared!"))
+                    effectChannel.send(HardwareDetailEffect.ShowToast("💬 Değerlendirmeniz ve yorumunuz paylaşıldı (+10 itibar puanı)!", "💬 Your review has been posted!"))
                 }
                 is DomainResult.Failure -> {
-                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "İpucu gönderilemedi."
+                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "Yorum gönderilemedi."
                     effectChannel.send(HardwareDetailEffect.ShowToast(errorMsg))
                 }
             }
+        }
+    }
+
+    fun onDeleteTip(tipId: String) {
+        viewModelScope.launch {
+            tuningVaultRepository.deleteTip(tipId)
         }
     }
 

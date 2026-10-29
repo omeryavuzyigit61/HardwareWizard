@@ -77,6 +77,7 @@ import com.panda.myapplication.domain.model.ContentReport
 import com.panda.myapplication.domain.model.ReportStatus
 import com.panda.myapplication.domain.model.ReportTargetType
 import com.panda.myapplication.domain.repository.CommunityReportRepository
+import com.panda.myapplication.domain.repository.RigShowcaseRepository
 
 @Composable
 fun AdminModerationScreen(
@@ -85,6 +86,7 @@ fun AdminModerationScreen(
     repository: CommunityPriceRepository = koinInject(),
     tuningVaultRepository: com.panda.myapplication.domain.repository.TuningVaultRepository = koinInject(),
     reportRepository: CommunityReportRepository = koinInject(),
+    rigShowcaseRepository: RigShowcaseRepository = koinInject(),
     modifier: Modifier = Modifier,
 ) {
     val pendingTunings by tuningVaultRepository.observePendingTunings().collectAsState(initial = emptyList())
@@ -567,6 +569,12 @@ fun AdminModerationScreen(
                                             Button(
                                                 onClick = {
                                                     coroutineScope.launch {
+                                                        when (report.targetType) {
+                                                            ReportTargetType.BATTLESTATION -> rigShowcaseRepository.deleteShowcase(report.targetId)
+                                                            ReportTargetType.COMMENT -> tuningVaultRepository.deleteTip(report.targetId)
+                                                            ReportTargetType.TUNING_PROFILE -> tuningVaultRepository.rejectTuningProfile(report.targetId, "Topluluk raporu ve moderatör kararıyla kaldırıldı.")
+                                                            else -> {}
+                                                        }
                                                         reportRepository.resolveReport(report.id, ReportStatus.RESOLVED_REMOVED)
                                                     }
                                                 },

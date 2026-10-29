@@ -180,6 +180,7 @@ data class HardwareProTip(
     val upvotesCount: Int = 0,
     val isUpvotedByMe: Boolean = false,
     val createdAtEpochMs: Long = 0L,
+    val rating: Int = 5,
 )
 
 @Serializable

@@ -370,10 +370,12 @@ fun BattlestationShowcaseScreen(
                     verticalArrangement = Arrangement.spacedBy(20.dp),
                 ) {
                     items(showcases, key = { it.id }) { showcase ->
+                        val isSelf = currentUser?.id == showcase.userId || (currentUser?.username != null && showcase.userDisplayName == currentUser?.username)
                         BattlestationCard(
                             showcase = showcase,
                             isTr = isTr,
                             strings = strings,
+                            isSelf = isSelf,
                             onLikeClick = {
                                 if (!isLoggedIn) {
                                     onOpenAuthSheet()
@@ -476,6 +478,31 @@ fun BattlestationShowcaseScreen(
                             )
                         }
                     }
+                }
+
+                Spacer(modifier = Modifier.height(14.dp))
+                val isInspectSelf = currentUser?.id == showcase.userId || (currentUser?.username != null && showcase.userDisplayName == currentUser?.username)
+                OutlinedButton(
+                    onClick = {
+                        val target = showcase
+                        activeInspectSpecsShowcase = null
+                        reportingTargetShowcase = target
+                    },
+                    shape = RoundedCornerShape(12.dp),
+                    border = BorderStroke(1.dp, if (isInspectSelf) NeonCyan.copy(alpha = 0.6f) else NeonRose.copy(alpha = 0.5f)),
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = if (isInspectSelf) NeonCyan else NeonRose,
+                    ),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Icon(Icons.Rounded.Flag, contentDescription = null, modifier = Modifier.size(15.dp))
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = if (isInspectSelf) (if (isTr) "Bu Sistem Vitrinini Yayından Kaldır" else "Retract This Setup")
+                        else (if (isTr) "Bu Sistem Vitrinini Raporla / Şikayet Et" else "Report This Setup"),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -583,10 +610,18 @@ fun BattlestationShowcaseScreen(
                         timestampMillis = now,
                     )
                     reportRepository.submitReport(report)
-                    snackbarHostState.showSnackbar(
-                        if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."
-                        else "Report submitted. It will be reviewed by moderators."
-                    )
+                    if (isSelf) {
+                        rigShowcaseRepository.deleteShowcase(target.id)
+                        snackbarHostState.showSnackbar(
+                            if (isTr) "Sistem vitrini paylaşımınız yayından kaldırıldı."
+                            else "Your setup showcase has been retracted."
+                        )
+                    } else {
+                        snackbarHostState.showSnackbar(
+                            if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."
+                            else "Report submitted. It will be reviewed by moderators."
+                        )
+                    }
                 }
             }
         )
@@ -598,6 +633,7 @@ private fun BattlestationCard(
     showcase: RigShowcase,
     isTr: Boolean,
     strings: com.panda.myapplication.presentation.util.AppStrings,
+    isSelf: Boolean = false,
     onLikeClick: () -> Unit,
     onPhotoClick: (String) -> Unit,
     onViewSpecsClick: () -> Unit,
@@ -672,16 +708,32 @@ private fun BattlestationCard(
                     }
                 }
 
-                IconButton(
-                    onClick = onReportClick,
-                    modifier = Modifier.size(32.dp),
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = if (isSelf) NeonCyan.copy(alpha = 0.15f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+                    border = BorderStroke(0.5.dp, if (isSelf) NeonCyan.copy(alpha = 0.5f) else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)),
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(12.dp))
+                        .clickable { onReportClick() }
                 ) {
-                    Icon(
-                        imageVector = Icons.Rounded.Flag,
-                        contentDescription = if (isTr) "Raporla / Şikayet Et" else "Report",
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-                        modifier = Modifier.size(18.dp),
-                    )
+                    Row(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Flag,
+                            contentDescription = if (isSelf) "Kaldır" else "Raporla",
+                            tint = if (isSelf) NeonCyan else NeonRose,
+                            modifier = Modifier.size(13.dp),
+                        )
+                        Text(
+                            text = if (isSelf) (if (isTr) "Kaldır" else "Retract") else (if (isTr) "Bildir" else "Report"),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = if (isSelf) NeonCyan else NeonRose,
+                        )
+                    }
                 }
             }
 
@@ -870,26 +922,54 @@ private fun BattlestationCard(
                     }
                 }
 
-                // Specs Button
-                if (!showcase.hardwareSpecsJson.isNullOrBlank()) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    // Specs Button
+                    if (!showcase.hardwareSpecsJson.isNullOrBlank()) {
+                        OutlinedButton(
+                            onClick = onViewSpecsClick,
+                            shape = RoundedCornerShape(20.dp),
+                            border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                contentColor = NeonCyan,
+                            ),
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.DeveloperBoard,
+                                contentDescription = null,
+                                modifier = Modifier.size(15.dp),
+                            )
+                            Spacer(modifier = Modifier.width(5.dp))
+                            Text(
+                                text = strings.battlestationViewSpecs,
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.SemiBold,
+                            )
+                        }
+                    }
+
+                    // Direct, highly visible Report / Retract Action Button
                     OutlinedButton(
-                        onClick = onViewSpecsClick,
+                        onClick = onReportClick,
                         shape = RoundedCornerShape(20.dp),
-                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
+                        border = BorderStroke(1.dp, if (isSelf) NeonCyan.copy(alpha = 0.6f) else NeonRose.copy(alpha = 0.45f)),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = NeonCyan,
+                            contentColor = if (isSelf) NeonCyan else NeonRose,
                         ),
-                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
                     ) {
                         Icon(
-                            imageVector = Icons.Rounded.DeveloperBoard,
+                            imageVector = Icons.Rounded.Flag,
                             contentDescription = null,
-                            modifier = Modifier.size(16.dp),
+                            modifier = Modifier.size(13.dp),
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = strings.battlestationViewSpecs,
-                            fontSize = 12.sp,
+                            text = if (isSelf) (if (isTr) "Kaldır" else "Retract") else (if (isTr) "Bildir" else "Report"),
+                            fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                         )
                     }

@@ -148,6 +148,12 @@ import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
 import kotlinx.coroutines.launch
 import org.koin.compose.viewmodel.koinViewModel
+import org.koin.compose.koinInject
+import com.panda.myapplication.domain.model.ContentReport
+import com.panda.myapplication.domain.model.ReportTargetType
+import com.panda.myapplication.domain.model.ReportReason
+import com.panda.myapplication.domain.repository.CommunityReportRepository
+import com.panda.myapplication.presentation.components.ReportContentDialog
 
 @Composable
 fun HardwareDetailRoute(
@@ -158,6 +164,7 @@ fun HardwareDetailRoute(
     onNavigateToTuningVault: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
     viewModel: HardwareDetailViewModel = koinViewModel(),
+    reportRepository: CommunityReportRepository = koinInject(),
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -208,8 +215,10 @@ fun HardwareDetailRoute(
         onNavigateToTuningVault = onNavigateToTuningVault,
         onSubmitTuningProfile = viewModel::onSubmitTuningProfile,
         onSubmitProTip = viewModel::onSubmitProTip,
+        onDeleteTip = viewModel::onDeleteTip,
         onUpvoteTip = viewModel::onUpvoteProTip,
         onCreatePriceDropAlert = viewModel::onCreatePriceDropAlert,
+        reportRepository = reportRepository,
         snackbarHostState = snackbarHostState,
         modifier = modifier,
     )
@@ -233,14 +242,17 @@ fun HardwareDetailContent(
     onOpenAuthSheet: () -> Unit = {},
     onNavigateToTuningVault: () -> Unit = {},
     onSubmitTuningProfile: (com.panda.myapplication.domain.model.TuningProfile) -> Unit = {},
-    onSubmitProTip: (String) -> Unit = {},
+    onSubmitProTip: (String, Int) -> Unit = { _, _ -> },
+    onDeleteTip: (String) -> Unit = {},
     onUpvoteTip: (String) -> Unit = {},
     onCreatePriceDropAlert: (Double) -> Unit = {},
+    reportRepository: CommunityReportRepository = koinInject(),
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
 ) {
     var showPriceDropAlertDialog by remember { mutableStateOf(false) }
     var showAddProTipDialog by remember { mutableStateOf(false) }
     var showTuningShareDialog by remember { mutableStateOf(false) }
+    var reportingTargetReview by remember { mutableStateOf<com.panda.myapplication.domain.model.HardwareProTip?>(null) }
     val coroutineScope = rememberCoroutineScope()
     var showPriceDialog by remember { mutableStateOf(false) }
     var showCommunitySubmitSheet by remember { mutableStateOf(false) }
@@ -452,14 +464,17 @@ fun HardwareDetailContent(
                             )
                         }
 
-                        // Topluluk Mikro İpuçları (Pro-Tips)
-                        item(key = "community_pro_tips") {
-                            HardwareProTipsSection(
+                        // 💬 Kullanıcı Yorumları & Topluluk Değerlendirmeleri
+                        item(key = "community_reviews_and_comments") {
+                            HardwareCommentsAndReviewsSection(
+                                hardwareName = item.displayName,
                                 tips = uiState.proTips,
+                                currentUserId = uiState.currentUser?.id,
+                                currentUsername = uiState.currentUser?.username,
                                 onAddTipClick = {
                                     if (!uiState.isLoggedIn) {
                                         coroutineScope.launch {
-                                            snackbarHostState.showSnackbar("İpucu paylaşmak için oturum açmalısınız.")
+                                            snackbarHostState.showSnackbar("Yorum ve deneyim paylaşmak için oturum açmalısınız.")
                                         }
                                         onOpenAuthSheet()
                                     } else {
@@ -467,6 +482,9 @@ fun HardwareDetailContent(
                                     }
                                 },
                                 onUpvoteClick = onUpvoteTip,
+                                onReportClick = { tip ->
+                                    reportingTargetReview = tip
+                                },
                             )
                         }
 
@@ -611,11 +629,11 @@ fun HardwareDetailContent(
     }
 
     if (showAddProTipDialog) {
-        AddProTipDialog(
+        AddProductReviewDialog(
             hardwareName = activeItem?.displayName ?: "",
             onDismiss = { showAddProTipDialog = false },
-            onSubmit = { tipText ->
-                onSubmitProTip(tipText)
+            onSubmit = { tipText, rating ->
+                onSubmitProTip(tipText, rating)
                 showAddProTipDialog = false
             },
         )
@@ -634,6 +652,49 @@ fun HardwareDetailContent(
                 onSubmitTuningProfile(profile)
                 showTuningShareDialog = false
             },
+        )
+    }
+
+    reportingTargetReview?.let { target ->
+        val isSelf = uiState.currentUser?.id == target.userId || (uiState.currentUser?.username != null && target.userDisplayName == uiState.currentUser?.username)
+        ReportContentDialog(
+            targetType = ReportTargetType.COMMENT,
+            targetTitle = "${activeItem?.displayName ?: ""}: \"${target.tipText.take(45)}\"",
+            reportedUserName = target.userDisplayName,
+            isSelfReport = isSelf,
+            isTr = isTr,
+            onDismiss = { reportingTargetReview = null },
+            onSubmitReport = { reason, details ->
+                coroutineScope.launch {
+                    val report = ContentReport(
+                        id = "rep-comment-${System.currentTimeMillis()}",
+                        targetType = ReportTargetType.COMMENT,
+                        targetId = target.id,
+                        targetTitle = "${activeItem?.displayName ?: ""}: \"${target.tipText.take(45)}\"",
+                        reportedUserId = target.userId,
+                        reportedUserDisplayName = target.userDisplayName,
+                        reporterUserId = uiState.currentUser?.id ?: "usr-guest",
+                        reporterUserDisplayName = uiState.currentUser?.username ?: (if (isTr) "Misafir" else "Guest"),
+                        isSelfReport = isSelf,
+                        reason = reason,
+                        details = details,
+                        timestampMillis = System.currentTimeMillis(),
+                    )
+                    reportRepository.submitReport(report)
+                    if (isSelf) {
+                        onDeleteTip(target.id)
+                        snackbarHostState.showSnackbar(
+                            if (isTr) "Yorumunuz yayından kaldırıldı." else "Your review has been removed."
+                        )
+                    } else {
+                        snackbarHostState.showSnackbar(
+                            if (isTr) "Yorum bildirimi moderasyon ekibine iletildi. Teşekkür ederiz."
+                            else "Review report submitted to moderation. Thank you."
+                        )
+                    }
+                    reportingTargetReview = null
+                }
+            }
         )
     }
 }

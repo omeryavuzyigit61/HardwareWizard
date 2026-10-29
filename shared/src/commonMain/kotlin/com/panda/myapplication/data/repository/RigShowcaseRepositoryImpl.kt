@@ -45,7 +45,7 @@ class RigShowcaseRepositoryImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : RigShowcaseRepository {
 
-    private val _showcases = MutableStateFlow<List<RigShowcase>>(emptyList())
+    private val _showcases = MutableStateFlow<List<RigShowcase>>(seedDefaultShowcases())
     private val _userLikes = MutableStateFlow<Set<String>>(emptySet())
 
     init {
@@ -97,7 +97,11 @@ class RigShowcaseRepositoryImpl(
                         createdAtEpochMs = epoch,
                     )
                 }
-                _showcases.value = items
+                if (items.isNotEmpty()) {
+                    val defaultSeeds = seedDefaultShowcases()
+                    val merged = items + defaultSeeds.filterNot { seed -> items.any { it.id == seed.id } }
+                    _showcases.value = merged
+                }
             }
         }
     }
@@ -258,4 +262,63 @@ class RigShowcaseRepositoryImpl(
             }
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
     }
+
+    override suspend fun deleteShowcase(showcaseId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_RIG_SHOWCASES}?id=eq.$showcaseId"
+            httpClient.delete(url) {
+                applySupabaseHeaders()
+            }
+            _showcases.update { list -> list.filterNot { it.id == showcaseId } }
+            DomainResult.Success(Unit)
+        }.getOrElse {
+            _showcases.update { list -> list.filterNot { it.id == showcaseId } }
+            DomainResult.Success(Unit)
+        }
+    }
+
+    private fun seedDefaultShowcases(): List<RigShowcase> = listOf(
+        RigShowcase(
+            id = "showcase-seed-1",
+            userId = "usr-silicon-master",
+            userDisplayName = "SilikonAvcısı",
+            userBadge = "🏆 Sistem Mimarı",
+            title = "Neon Cyberpunk Canavarı (RTX 4090 + 7800X3D)",
+            description = "Özel sıvı soğutma döngüsü ve 1440p 360Hz OLED ekran ile donatılmış oyun istasyonum. Cablemod kablolar ve dikey ekran kartı montajı yapıldı.",
+            photoRigUrl = "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80",
+            photoSetupUrl = "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=1200&q=80",
+            hardwareSpecsJson = """{"İşlemci":"AMD Ryzen 7 7800X3D","Ekran Kartı":"ASUS ROG Strix RTX 4090 OC","Anakart":"ASUS ROG Crosshair X670E Hero","RAM":"G.Skill Trident Z5 Neo 64GB DDR5-6000","Kasa":"Lian Li O11 Dynamic EVO XL","PSU":"Seasonic Vertex GX-1200W"}""",
+            likesCount = 142,
+            isLikedByMe = false,
+            createdAtEpochMs = 1730000000000L,
+        ),
+        RigShowcase(
+            id = "showcase-seed-2",
+            userId = "usr-mimar-emre",
+            userDisplayName = "MimarEmre",
+            userBadge = "⚡ Donanım Gurusu",
+            title = "Buz Beyazı Minimalist Kod & Tasarım Masası",
+            description = "Göz yormayan 4000K sıcak beyaz aydınlatma, ceviz masif ahşap masa tablası ve çift 4K referans monitör ile üretkenlik odaklı sessiz sistem.",
+            photoRigUrl = "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+            photoSetupUrl = "https://images.unsplash.com/photo-1547394765-185e131e1414?auto=format&fit=crop&w=1200&q=80",
+            hardwareSpecsJson = """{"İşlemci":"Intel Core i7-14700K","Ekran Kartı":"Gigabyte Aero RTX 4070 Ti Super White","Anakart":"MSI MPG Z790 Edge WiFi","RAM":"Corsair Dominator Titanium 32GB White","Kasa":"NZXT H9 Flow White","Soğutucu":"NZXT Kraken Elite 360 RGB White"}""",
+            likesCount = 98,
+            isLikedByMe = false,
+            createdAtEpochMs = 1729900000000L,
+        ),
+        RigShowcase(
+            id = "showcase-seed-3",
+            userId = "usr-cangamer",
+            userDisplayName = "CanGamer",
+            userBadge = "🎮 Espor Koçu",
+            title = "Mat Siyah FPS & Simülasyon Kokpiti",
+            description = "Sim-racing ve rekabetçi FPS oyunları için sıfır RGB, maksimum hava akışı ve akustik sessizlik felsefesiyle inşa edildi.",
+            photoRigUrl = "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?auto=format&fit=crop&w=1200&q=80",
+            photoSetupUrl = "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80",
+            hardwareSpecsJson = """{"İşlemci":"AMD Ryzen 5 7600X3D","Ekran Kartı":"Sapphire Nitro+ RX 7900 XTX","Anakart":"MSI MAG B650 Tomahawk WiFi","RAM":"Kingston Fury Renegade 32GB DDR5-6000 CL32","Kasa":"Fractal Design North Charcoal Black","PSU":"Corsair RM850x Shift"}""",
+            likesCount = 76,
+            isLikedByMe = false,
+            createdAtEpochMs = 1729800000000L,
+        )
+    )
 }

@@ -9,4 +9,5 @@ interface RigShowcaseRepository {
     suspend fun submitShowcase(showcase: RigShowcase): DomainResult<Unit>
     suspend fun toggleLike(showcaseId: String, userId: String): DomainResult<Unit>
     suspend fun uploadShowcaseImage(bytes: ByteArray, fileName: String): DomainResult<String>
+    suspend fun deleteShowcase(showcaseId: String): DomainResult<Unit>
 }
