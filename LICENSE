@@ -1,0 +1,80 @@
+PROPRIETARY SOFTWARE LICENSE & INTELLECTUAL PROPERTY AGREEMENT
+
+Copyright (c) 2024-2026 Ömer Yavuz Yiğit (omeryavuzyigit61). All Rights Reserved.
+
+IMPORTANT - READ CAREFULLY:
+This Software License Agreement ("Agreement") is a legally binding contract between you
+(either an individual or a single legal entity) and Ömer Yavuz Yiğit ("Author" or "Licensor"),
+the sole creator and copyright owner of the "Hardware Wizard" software ecosystem, including
+source code, mobile applications (Android/iOS), backend integration scripts, database schemas,
+hardware catalogs, architectural designs, algorithms, benchmarks, visual assets, and documentation
+(collectively referred to as the "Software").
+
+By accessing, cloning, compiling, installing, copying, or otherwise using any portion of this
+Software, you agree to be bound by the terms and conditions of this Agreement. If you do not
+agree with these terms, do not access, clone, download, or use this Software in any form.
+
+================================================================================
+1. GRANT OF LICENSE & RESTRICTIONS
+================================================================================
+(a) NON-COMMERCIAL / PERSONAL EVALUATION ONLY:
+    Licensor grants you a personal, non-exclusive, non-transferable, revocable license to inspect
+    and evaluate the source code strictly for private educational, non-commercial evaluation, and
+    personal demonstration purposes.
+
+(b) NO COMMERCIAL EXPLOITATION:
+    You may NOT sell, resell, rent, lease, sublicense, distribute, host as a paid or ad-supported
+    commercial service, monetized SaaS, cloud API, or commercial application (via Google Play Store,
+    Apple App Store, or any other distribution channel) any portion of this Software or derivative
+    works thereof without express prior written permission from the Licensor.
+
+(c) PROHIBITION ON DATABASE HARVESTING & SCRAPING:
+    The curated hardware database schemas, SHA-256 verified catalog datasets (including but not
+    limited to data/catalog/*.json and composeResources/files/*.json), proprietary pricing matrices,
+    benchmarking equations, and multi-angle hardware image mappings constitute proprietary trade
+    assets of the Licensor. Unauthorized automated extraction, scraping, bulk redistribution, or
+    commercial reuse of this database is strictly prohibited.
+
+(d) PROHIBITION ON REVERSE ENGINEERING & CLONING:
+    You shall not reverse engineer, decompile, disassemble, decouple proprietary security layers,
+    bypass 2FA/Zero-Trust validation routines, or attempt to derive the underlying intellectual
+    property or backend endpoints of the Software, except to the extent permitted by applicable
+    non-waivable statutory law.
+
+================================================================================
+2. INTELLECTUAL PROPERTY OWNERSHIP
+================================================================================
+All title, copyrights, trademarks, service marks, trade secrets, patents, and all other proprietary
+rights in and to the Software and any authorized copies thereof are owned exclusively by
+Ömer Yavuz Yiğit. This Agreement does not convey to you any ownership rights or title in the
+Software, but only a limited, revocable right of personal inspection under these terms.
+
+================================================================================
+3. USER-SUBMITTED CONTENT & COMMUNITY DATA
+================================================================================
+Any content, overclocking/undervolting profiles, build configurations, or hardware price tips
+submitted to the Hardware Wizard community ecosystem through authenticated accounts grant the
+Licensor a worldwide, royalty-free, perpetual, non-exclusive right to use, verify, moderate,
+display, and index such content within the platform.
+
+================================================================================
+4. DISCLAIMER OF WARRANTIES
+================================================================================
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, ACCURACY, TITLE, AND NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE,
+INCLUDING BUT NOT LIMITED TO HARDWARE INSTABILITY, OVERCLOCKING DAMAGE, DATA LOSS, OR SYSTEM FAILURE.
+
+================================================================================
+5. CONTACT & COMMERCIAL LICENSING INQUIRIES
+================================================================================
+For licensing inquiries, commercial partnerships, enterprise white-labeling, or permissions:
+
+Author: Ömer Yavuz Yiğit
+Email: yavuzyigitomer52@gmail.com
+GitHub: https://github.com/omeryavuzyigit61/HardwareWizard
+Location: Trabzon / Istanbul, Turkey
