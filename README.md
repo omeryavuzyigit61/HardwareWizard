@@ -33,25 +33,43 @@
 
 ---
 
-## 📸 Uygulama Ekran Görüntüleri
+## 📸 Uygulama Ekran Görüntüleri (Canlı & Özgün Görünümler)
 
 <div align="center">
 
-### 📱 Mobil Kullanıcı Deneyimi & Keşif
+### 📱 1. Donanım Kataloğu, Işık Hızında Arama & 3 Açılı Stüdyo Galerisi
 
-| Donanım Kataloğu & Filtreleme | İnteraktif Mühendislik Araçları | Canlı Donanım Teşhisi | Doğrulanmış Benchmark & Kararlılık |
+| Donanım Kataloğu & Ekosistem | Işık Hızında Anlık Arama | 3 Açılı Stüdyo Galerisi (Hero) | Açı 2: Kutu & Perspektif |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/mobile_catalog_lightspeed.png" width="220" alt="Hardware Catalog" /> | <img src="docs/screenshots/interactive_engineering_labs.png" width="220" alt="Engineering Labs" /> | <img src="docs/screenshots/hardware_device_diagnostics.jpg" width="220" alt="Device Diagnostics" /> | <img src="docs/screenshots/hardware_benchmark_stability.png" width="220" alt="Benchmark" /> |
-| *Işık hızında anlık arama, ekosistem filtreleri ve canlı fiyatlar* | *Thermal Lab, RAM True Latency, UPS Sizer ve Espor simülatörleri* | *Telefonun SoC, RAM, 120Hz ekran ve bataryasını canlı tespit eder* | *AnTuTu v10, Geekbench 6 ve 3DMark termal kararlılık metrikleri* |
+| <img src="docs/screenshots/01_live_catalog_home.png" width="220" alt="Hardware Catalog" /> | <img src="docs/screenshots/02_live_search_and_filter.png" width="220" alt="Instant Search" /> | <img src="docs/screenshots/03_live_hardware_detail_3images.png" width="220" alt="3-Angle Studio Gallery" /> | <img src="docs/screenshots/03b_live_hardware_detail_angle2.png" width="220" alt="Gallery Angle 2" /> |
+| *4.004 Parça, Ekosistem Sekmeleri & Kategori Çipleri* | *RTX 4090 arama sorgusu ve anlık teknik özellik kartları* | *3 Açılı stüdyo fotoğrafçılığı rozeti (`📷 1 / 3`) & Fiyat Analizi* | *Parmak hareketiyle kaydırılabilen açı 2 kutu ve perspektif görünümü* |
 
 <br/>
 
-### 🛡️ Topluluk, 2FA Güvenlik & Moderasyon
+### ⚡ 2. İnteraktif PC Toplama Sihirbazı & VS Arena Karşılaştırma
 
-| Silikon Kasası: OC/UV Paylaşımı | 2FA Güvenlik Doğrulaması | Canlı Moderasyon Paneli |
-|:---:|:---:|:---:|
-| <img src="docs/screenshots/community_oc_uv_sharing.jpg" width="260" alt="Silicon Vault OC UV" /> | <img src="docs/screenshots/2fa_security_verification.png" width="360" alt="2FA Security" /> | <img src="docs/screenshots/admin_panel_moderation.png" width="360" alt="Admin Moderation" /> |
-| *Kullanıcıların voltaj, saat hızı ve kanıt görseliyle ayar paylaşımı* | *E-posta kodlu ve OTP destekli 6 haneli 2FA güvenlik konsolu* | *Topluluk fırsatları, OC/UV onayları ve kullanıcı yönetimi* |
+| PC Sihirbazı Kokpit HUD & AI Teşhis | VS Arena Kafa Kafaya Kıyaslama |
+|:---:|:---:|
+| <img src="docs/screenshots/08_live_pc_builder_wizard.png" width="340" alt="PC Builder Wizard" /> | <img src="docs/screenshots/07_live_vs_arena_comparison.png" width="340" alt="VS Arena Battle" /> |
+| *Canlı TDP hesabı, önerilen PSU, AI Sistem Doktoru (0-100), darboğaz dengesi ve kasa sığma radarı* | *MSI RTX 5070 Ti vs Gigabyte RX 6600, F/P şampiyonu (+%172) ve 12 oyunluk FPS simülasyon matrisi* |
+
+<br/>
+
+### 🔬 3. 11 İnteraktif Mühendislik Laboratuvarı & Termal Simülasyon
+
+| 11 Mühendislik Laboratuvar Menüsü | Thermal Lab (Termal Simülasyon) |
+|:---:|:---:|
+| <img src="docs/screenshots/04_live_engineering_labs_drawer.png" width="340" alt="Engineering Labs Drawer" /> | <img src="docs/screenshots/05_live_thermal_simulation_lab.png" width="340" alt="Thermal Simulation Lab" /> |
+| *Thermal Lab, Memory Lab, Power Lab, Esports Latency Lab, Studio & Ergonomics ve 11 aktif araç* | *İşlemci TDP yükü, ortam sıcaklığı, hava akışı ve radyatör ısı yayılım grafikleri* |
+
+<br/>
+
+### 🛡️ 4. Sıfır Güven (Zero-Trust), 2FA Güvenlik & Canlı Moderasyon
+
+| 2FA Güvenlik Konsolu | Canlı Yönetici & Moderasyon Paneli |
+|:---:|:---:|
+| <img src="docs/screenshots/2fa_security_verification.png" width="420" alt="2FA Security Console" /> | <img src="docs/screenshots/admin_panel_moderation.png" width="420" alt="Admin Moderation Portal" /> |
+| *E-posta kodlu ve OTP destekli 6 haneli zaman aşımı korumalı 2FA konsolu* | *Topluluk donanım fırsatları, OC/UV onayları ve kullanıcı yönetimi* |
 
 </div>
 
@@ -79,15 +97,21 @@ Katalogdaki her bir parça (ekran kartları, güç kaynakları, kasalar, anakart
 
 ---
 
-## 🔬 İnteraktif Mühendislik Laboratuvarları
+## 🔬 11 İnteraktif Mühendislik Laboratuvarı & Simülasyon Merkezi
 
-Hardware Wizard, yalnızca bir katalog değil; aynı zamanda donanım fiziğini hesaplayan profesyonel bir simülasyon merkezidir:
+Hardware Wizard, sıradan bir donanım listeleme aracının çok ötesinde; donanım fiziğini, termal dinamikleri, elektrik gücünü ve sinyal gecikmelerini modelleyen **11 profesyonel interaktif mühendislik laboratuvarı** barındırır:
 
-* ❄️ **Thermal Lab (Termal & Soğutma Simülatörü):** İşlemci TDP yükü, ortam sıcaklığı, kasa hava akışı ve AIO su soğutma ile hava soğutma doygunluk eğrilerini simüle eder.
-* ⚡ **Memory Lab (RAM True Latency & Bant Genişliği):** `(CL × 2000) / Hız (MT/s)` formülüyle nanosaniye bazında gerçek gecikmeyi hesaplar; AMD 3D V-Cache etkisi ve %1 Low FPS kazanımını modeller.
-* 🔋 **Power Lab (UPS & Akü Dayanma Boyutlandırıcı):** Sisteminizin prizden çektiği gerçek Watt değerine ve Saf Sinüs PFC uyumuna göre kesintisiz güç kaynağının (UPS) çalışma süresini dakika bazında hesaplar.
-* 🎯 **Esports Lab (Masa & Çevre Birimleri Laboratuvarı):** Monitör PPI netliği, 8000 Hz Mouse polling rate CPU yükü, Hall Effect Manyetik Switch Rapid Trigger hassasiyeti ve kulaklık DAC empedans eşleştiricisi.
-* 📚 **Knowledge (Mühendislik & Donanım Sözlüğü):** TGP vs TDP farkı, ATX 3.1 standardı, GDDR6X, QD-OLED ve PCIe 5.0 gibi terimlerin derinlemesine teknik açıklamaları.
+1. ❄️ **Thermal Lab (Termal & Soğutma Simülatörü):** İşlemci TDP yükü, ortam sıcaklığı, kasa içi hava akışı (pozitif/negatif basınç) ve AIO su soğutma ile çift kule hava soğutucuların termal doygunluk eğrilerini simüle eder.
+2. ⚡ **Memory Lab (RAM True Latency & Bant Genişliği):** `(CL × 2000) / Hız (MT/s)` formülüyle nanosaniye bazında gerçek gecikmeyi hesaplar; AMD 3D V-Cache etkisi ve %1 Low FPS kazanımını modeller.
+3. 🔋 **Power Lab (UPS & Akü Dayanma Boyutlandırıcı):** Sisteminizin prizden çektiği gerçek Watt değerine ve Saf Sinüs PFC uyumuna göre kesintisiz güç kaynağının (UPS) çalışma süresini dakika bazında hesaplar.
+4. 🎯 **Esports Lab (Masa & Çevre Birimleri Laboratuvarı):** Monitör PPI piksel yoğunluğu, 8000 Hz Mouse polling rate CPU yükü, Hall Effect Manyetik Switch Rapid Trigger hassasiyeti ve kulaklık DAC empedans eşleştiricisi.
+5. 💺 **Studio & Ergonomics Lab (Ergonomi & Akustik Simülatörü):** Oyuncu ve çalışma koltuğu ergonomisi, masa yüksekliği, dinleme açısı ve oda akustiği yankı simülasyonu.
+6. 📚 **Knowledge Hub (Mühendislik & Donanım Sözlüğü):** TGP vs TDP farkı, ATX 3.1 12V-2x6 standardı, GDDR6X, QD-OLED ve PCIe 5.0 gibi terimlerin derinlemesine teknik açıklamaları.
+7. 📸 **Battlestation Showcase (Topluluk Masaüstü Vitrini):** Kullanıcıların kendi sistemlerini, kablo düzenlerini ve RGB aydınlatma kurulumlarını paylaştığı ilham verici vitrin.
+8. 🛡️ **OC / UV Vault (Silikon Kasası):** Kullanıcıların doğrulanmış voltaj ofseti, saat frekansı ve sıcaklık düşüşü sonuçlarını kanıt görseliyle paylaştığı silikon bilgi havuzu.
+9. 🔧 **Tuning Lab (Undervolt & Hız Aşırtma Rehberi):** PBO 2, Curve Optimizer ve GPU voltaj-frekans eğrisi optimizasyonları için adım adım etkileşimli kılavuz.
+10. 🏷️ **2nd Hand Valuation (İkinci El Değerleme Motoru):** Parça yaşı, garanti durumu, madencilik geçmişi ve kozmetik kondisyona göre ikinci el piyasa değerini ve adil fiyat aralığını tahmin eder.
+11. 🛡️ **Moderation & Admin Portal (Güvenlik Konsolu):** Topluluk paylaşımlarını, silikon kasası girdilerini ve 2FA yetkilendirmelerini yöneten canlı idari kontrol paneli.
 
 ---
 
