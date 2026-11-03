@@ -43,7 +43,7 @@ class CommunityReportRepositoryImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : CommunityReportRepository {
 
-    private val _reports = MutableStateFlow<List<ContentReport>>(seedInitialReports())
+    private val _reports = MutableStateFlow<List<ContentReport>>(emptyList())
 
     init {
         CoroutineScope(ioDispatcher).launch {
@@ -130,12 +130,7 @@ class CommunityReportRepositoryImpl(
                     )
                 }
 
-                if (remoteList.isNotEmpty()) {
-                    _reports.update { current ->
-                        val remoteIds = remoteList.map { it.id }.toSet()
-                        remoteList + current.filterNot { it.id in remoteIds }
-                    }
-                }
+                _reports.value = remoteList
             }
         }
     }
@@ -227,37 +222,4 @@ class CommunityReportRepositoryImpl(
         }
         DomainResult.Success(Unit)
     }
-
-    private fun seedInitialReports(): List<ContentReport> = listOf(
-        ContentReport(
-            id = "rep-init-1",
-            targetType = ReportTargetType.TUNING_PROFILE,
-            targetId = "tune-1792695948231-6420",
-            targetTitle = "AMD Ryzen 9 9900X - UV + PBO",
-            reportedUserId = "usr-dombik-61",
-            reportedUserDisplayName = "dombikpanda",
-            reporterUserId = "usr-test-88",
-            reporterUserDisplayName = "SilisyumUzmanı",
-            isSelfReport = false,
-            reason = ReportReason.DANGEROUS_VOLTAGE,
-            details = "SoC voltaj değeri 1.35V üzerinde, işlemci bellek kontrolcüsü için riskli olabilir.",
-            timestampMillis = 1793291000000L,
-            status = ReportStatus.PENDING,
-        ),
-        ContentReport(
-            id = "rep-init-2",
-            targetType = ReportTargetType.BATTLESTATION,
-            targetId = "rig_usr-dombik-61_1793294442712",
-            targetTitle = "Benim canavarım (Kasa Vitrini)",
-            reportedUserId = "usr-dombik-61",
-            reportedUserDisplayName = "dombikpanda",
-            reporterUserId = "usr-dombik-61",
-            reporterUserDisplayName = "dombikpanda",
-            isSelfReport = true,
-            reason = ReportReason.AUTHOR_RETRACTION,
-            details = "Yeni kablolama ve fan montajı yaptım, eski kasa fotoğrafımın vitrinden kaldırılmasını rica ediyorum.",
-            timestampMillis = 1793293000000L,
-            status = ReportStatus.PENDING,
-        )
-    )
 }
