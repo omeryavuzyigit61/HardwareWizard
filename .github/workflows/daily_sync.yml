@@ -27,29 +27,34 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: 'requirements.txt'
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 curl_cffi
+          pip install -r requirements.txt
 
       - name: 1. Autonomous Hardware Discovery & Missing Brands Ingestion (DevSecOps)
         run: |
           python scripts/autonomous_hardware_discovery.py
 
-      - name: 2. Sync Global Technical Catalog & Multi-Angle Peripherals
+      - name: 2. Sync Deep Hardware Specs & 12-Game FPS Benchmarks
+        run: |
+          python scripts/sync_deep_specs_and_benchmarks.py
+
+      - name: 3. Sync Global Technical Catalog & Multi-Angle Peripherals
         run: |
           python scripts/sync_global_catalog.py
 
-      - name: 3. Check TR Store Price Changes & Stock Status
+      - name: 4. Check TR Store Price Changes & Stock Status
         run: |
           python scripts/update_prices.py
 
-      - name: 4. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
+      - name: 5. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
         run: |
           python scripts/sync_systems_and_laptops.py
 
-      - name: 5. Final Dual Directory Catalog Verification & Hash Integrity
+      - name: 6. Final Dual Directory Catalog Verification & Hash Integrity
         run: |
           python scripts/autonomous_hardware_discovery.py
 
@@ -62,7 +67,7 @@ jobs:
             echo "Gerçek veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
             git checkout -- data/ shared/src/commonMain/composeResources/files/
           else
-            git add data/catalog/ shared/src/commonMain/composeResources/files/
+            git add data/ shared/src/commonMain/composeResources/files/
             git commit -m "chore(catalog): autonomous daily hardware catalog & TR prices sync [skip ci]"
             git push
           fi

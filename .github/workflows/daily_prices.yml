@@ -1,9 +1,8 @@
 name: Daily Turkey Hardware Price & Deep Spec Tracker
 
 on:
-  schedule:
-    # Her gece Türkiye saatiyle 03:00 (UTC 00:00)
-    - cron: '0 0 * * *'
+  # Not: Otomatik günlük çalışma 'daily_sync.yml' üzerinden tek bir boru hattında birleştirilmiştir.
+  # Bu iş akışı ihtiyaç halinde GitHub Actions arayüzünden manuel olarak (workflow_dispatch) tetiklenebilir.
   workflow_dispatch:
 
 permissions:
@@ -27,6 +26,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: 'requirements.txt'
 
       - name: Restore HTTP ETag & Incremental Crawl Cache
         uses: actions/cache@v4
@@ -39,7 +39,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 curl_cffi
+          pip install -r requirements.txt
 
       - name: 1. Sync Deep Hardware Specs & 12-Game FPS Benchmarks
         run: |
@@ -62,7 +62,7 @@ jobs:
             echo "Gerçek fiyat veya teknik veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
             git checkout -- data/ shared/src/commonMain/composeResources/files/
           else
-            git add data/catalog/ data/hardware_benchmarks.json data/prices_tr.json shared/src/commonMain/composeResources/files/
+            git add data/ shared/src/commonMain/composeResources/files/
             git commit -m "chore(catalog): autonomous deep specs, 12-game benchmarks & TR store prices sync [skip ci]"
             git push
           fi
