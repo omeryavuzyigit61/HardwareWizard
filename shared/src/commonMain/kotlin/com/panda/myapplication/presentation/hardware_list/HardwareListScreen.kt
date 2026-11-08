@@ -314,11 +314,42 @@ fun HardwareListContent(
                                 color = MaterialTheme.colorScheme.primary,
                             )
                             val subtitleText = when {
-                                uiState.isLoading && uiState.items.isEmpty() -> if (isTr) "Donanım kataloğu hazırlanıyor..." else "Preparing hardware catalog..."
-                                uiState.totalCount > 0 && uiState.items.size < uiState.totalCount -> if (isTr) "${uiState.items.size} / ${uiState.totalCount} donanım parçası listeleniyor" else "Showing ${uiState.items.size} / ${uiState.totalCount} components"
-                                uiState.totalCount > 0 -> if (isTr) "${uiState.totalCount} donanım parçası listeleniyor" else "Showing ${uiState.totalCount} components"
-                                uiState.errorMessage != null -> if (isTr) "Katalog yüklenemedi" else "Catalog could not be loaded"
-                                else -> if (isTr) "Donanım parçası bulunamadı" else "No hardware found"
+                                uiState.isLoading && uiState.items.isEmpty() -> when (strings.languageCode) {
+                                    "tr" -> "Donanım kataloğu hazırlanıyor..."
+                                    "es" -> "Preparando catálogo de hardware..."
+                                    "de" -> "Hardware-Katalog wird vorbereitet..."
+                                    "fr" -> "Préparation du catalogue matériel..."
+                                    "ru" -> "Подготовка каталога оборудования..."
+                                    "ja" -> "ハードウェアカタログを準備中..."
+                                    else -> "Preparing hardware catalog..."
+                                }
+                                uiState.totalCount > 0 -> when (strings.languageCode) {
+                                    "tr" -> "${uiState.totalCount} donanım parçası listeleniyor"
+                                    "es" -> "Mostrando ${uiState.totalCount} componentes"
+                                    "de" -> "${uiState.totalCount} Komponenten"
+                                    "fr" -> "${uiState.totalCount} composants"
+                                    "ru" -> "Отображается ${uiState.totalCount} компонентов"
+                                    "ja" -> "${uiState.totalCount} 件のハードウェアを表示中"
+                                    else -> "Showing ${uiState.totalCount} components"
+                                }
+                                uiState.errorMessage != null -> when (strings.languageCode) {
+                                    "tr" -> "Katalog yüklenemedi"
+                                    "es" -> "No se pudo cargar el catálogo"
+                                    "de" -> "Katalog konnte nicht geladen werden"
+                                    "fr" -> "Échec du chargement du catalogue"
+                                    "ru" -> "Не удалось загрузить каталог"
+                                    "ja" -> "カタログを読み込めませんでした"
+                                    else -> "Catalog could not be loaded"
+                                }
+                                else -> when (strings.languageCode) {
+                                    "tr" -> "Donanım parçası bulunamadı"
+                                    "es" -> "No se encontraron componentes"
+                                    "de" -> "Keine Komponenten gefunden"
+                                    "fr" -> "Aucun composant trouvé"
+                                    "ru" -> "Компоненты не найдены"
+                                    "ja" -> "ハードウェアが見つかりません"
+                                    else -> "No hardware found"
+                                }
                             }
                             Text(
                                 text = subtitleText,
