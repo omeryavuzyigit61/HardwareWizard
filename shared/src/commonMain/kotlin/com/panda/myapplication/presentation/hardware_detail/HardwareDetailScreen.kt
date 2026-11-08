@@ -559,7 +559,7 @@ fun HardwareDetailContent(
                         // Akıllı Kesintisiz Güç Kaynağı (UPS) Anlık Yük & Çalışma Süresi Simülatörü
                         if (item.spec is UpsSpec) {
                             item(key = "ups_runtime_estimator") {
-                                UpsRuntimeEstimatorCard(spec = item.spec as UpsSpec)
+                                UpsRuntimeEstimatorCard(spec = item.spec)
                             }
                         }
                     }
@@ -659,7 +659,7 @@ fun HardwareDetailContent(
     }
 
     reportingTargetReview?.let { target ->
-        val isSelf = uiState.currentUser?.id == target.userId || (uiState.currentUser?.username != null && target.userDisplayName == uiState.currentUser?.username)
+        val isSelf = uiState.currentUser?.id == target.userId || (uiState.currentUser?.username != null && target.userDisplayName == uiState.currentUser.username)
         ReportContentDialog(
             targetType = ReportTargetType.COMMENT,
             targetTitle = "${activeItem?.displayName ?: ""}: \"${target.tipText.take(45)}\"",
@@ -4173,7 +4173,7 @@ private fun CompanionSoftwareCard(
                     OutlinedButton(
                         onClick = {
                             try {
-                                uriHandler.openUri(software.webConfiguratorUrl!!)
+                                uriHandler.openUri(software.webConfiguratorUrl)
                             } catch (_: Exception) {}
                         },
                         shape = RoundedCornerShape(8.dp),

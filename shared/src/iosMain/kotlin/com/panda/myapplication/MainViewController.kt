@@ -6,6 +6,8 @@ import com.panda.myapplication.data.local.platformDatabaseModule
 import com.panda.myapplication.presentation.di.presentationModule
 import org.koin.core.context.startKoin
 
+import org.koin.mp.KoinPlatformTools
+
 fun initKoin() {
     startKoin {
         modules(dataModule, platformDatabaseModule, presentationModule)
@@ -14,7 +16,7 @@ fun initKoin() {
 
 fun MainViewController() = ComposeUIViewController(
     configure = {
-        if (org.koin.core.context.GlobalContext.getOrNull() == null) {
+        if (KoinPlatformTools.defaultContext().getOrNull() == null) {
             initKoin()
         }
     }

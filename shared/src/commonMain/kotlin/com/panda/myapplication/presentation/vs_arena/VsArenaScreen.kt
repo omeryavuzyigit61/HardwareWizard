@@ -181,7 +181,7 @@ import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.components.ModernSoftIcon
 import com.panda.myapplication.presentation.components.SoftCategoryIcon
 import com.panda.myapplication.presentation.components.iconVector
-import androidx.compose.material.icons.rounded.CompareArrows
+import androidx.compose.material.icons.automirrored.rounded.CompareArrows
 import androidx.compose.material.icons.rounded.Diamond
 import androidx.compose.material.icons.rounded.EmojiEvents
 import androidx.compose.material.icons.rounded.LocalFireDepartment
@@ -409,7 +409,7 @@ fun VsArenaScreen(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                         ) {
                             ModernSoftIcon(
-                                icon = Icons.Rounded.CompareArrows,
+                                icon = Icons.AutoMirrored.Rounded.CompareArrows,
                                 accentColor = NeonCyan,
                                 size = 26.dp,
                                 iconSize = 15.dp,
@@ -2598,7 +2598,7 @@ private fun VsEmptyArenaCard(
         ) {
 
             ModernSoftIcon(
-                icon = Icons.Rounded.CompareArrows,
+                icon = Icons.AutoMirrored.Rounded.CompareArrows,
                 accentColor = ElectricBlue,
                 size = 56.dp,
                 iconSize = 30.dp,
