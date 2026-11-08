@@ -35,6 +35,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.ChevronRight
+import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Computer
 import androidx.compose.material.icons.rounded.DeveloperBoard
@@ -62,6 +63,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -113,6 +116,7 @@ fun WorkstationLabScreen(
     val strings = LocalAppStrings.current
     val isTr = strings.isTurkish
 
+    var appSearchQuery by remember { mutableStateOf("") }
     var selectedCategory by remember { mutableStateOf(WorkstationCategory.VIDEO_EDITING) }
     var selectedAppId by remember { mutableStateOf("premiere_pro") }
     var selectedResolution by remember { mutableStateOf(WorkloadResolution.UHD_4K) }
@@ -124,6 +128,20 @@ fun WorkstationLabScreen(
             resolution = selectedResolution,
             phase = selectedPhase,
         )
+    }
+
+    val filteredApps = remember(appSearchQuery) {
+        if (appSearchQuery.isBlank()) {
+            emptyList()
+        } else {
+            val q = appSearchQuery.trim().lowercase()
+            WorkstationRequirementEngine.supportedApps.filter {
+                it.name.lowercase().contains(q) ||
+                it.shortName.lowercase().contains(q) ||
+                it.category.titleTr.lowercase().contains(q) ||
+                it.category.titleEn.lowercase().contains(q)
+            }
+        }
     }
 
     Scaffold(
@@ -141,7 +159,7 @@ fun WorkstationLabScreen(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = if (isTr) "Adobe, 3D, CAD & AI Donanım Kılavuzu" else "Hardware Matrix for Pro Workloads",
+                            text = if (isTr) "35 Profesyonel Uygulama Donanım Matrisi" else "Hardware Matrix for 35 Pro Applications",
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonCyan,
                         )
@@ -176,42 +194,166 @@ fun WorkstationLabScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
                 .padding(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
             contentPadding = PaddingValues(top = 8.dp, bottom = 48.dp),
         ) {
-            // 1. Kategori Seçici
+            // 0. Anlık Uygulama Arama Çubuğu
             item {
-                CategorySelectorTabs(
-                    selectedCategory = selectedCategory,
-                    onCategorySelect = { category ->
-                        selectedCategory = category
-                        val firstAppInCat = WorkstationRequirementEngine.supportedApps.firstOrNull { it.category == category }
-                        if (firstAppInCat != null) {
-                            selectedAppId = firstAppInCat.id
+                OutlinedTextField(
+                    value = appSearchQuery,
+                    onValueChange = { appSearchQuery = it },
+                    placeholder = {
+                        Text(
+                            text = if (isTr) "35 Pro Yazılımda Ara (Blender, FL Studio, Nuke, UE5)..." else "Search 35 Pro Apps (Blender, FL Studio, Nuke)...",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                        )
+                    },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Rounded.Search,
+                            contentDescription = null,
+                            tint = NeonCyan,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    },
+                    trailingIcon = {
+                        if (appSearchQuery.isNotBlank()) {
+                            IconButton(onClick = { appSearchQuery = "" }) {
+                                Icon(
+                                    imageVector = Icons.Rounded.Clear,
+                                    contentDescription = "Temizle",
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.size(16.dp),
+                                )
+                            }
                         }
                     },
-                    isTr = isTr,
+                    singleLine = true,
+                    shape = RoundedCornerShape(12.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedContainerColor = CardSurfaceElevated,
+                        unfocusedContainerColor = CardSurface,
+                        focusedBorderColor = NeonCyan,
+                        unfocusedBorderColor = GlassBorder,
+                    ),
+                    modifier = Modifier.fillMaxWidth(),
                 )
             }
 
-            // 2. Uygulama Seçim Çipleri
-            item {
-                AppSelectorChips(
-                    category = selectedCategory,
-                    selectedAppId = selectedAppId,
-                    onAppSelect = { appId ->
-                        selectedAppId = appId
-                        val targetApp = WorkstationRequirementEngine.supportedApps.find { it.id == appId }
-                        if (targetApp != null) {
-                            if (!targetApp.supportedResolutions.contains(selectedResolution)) {
-                                selectedResolution = targetApp.supportedResolutions.first()
+            // 1. Kategori Seçici veya Arama Sonuçları
+            if (appSearchQuery.isBlank()) {
+                item {
+                    CategorySelectorTabs(
+                        selectedCategory = selectedCategory,
+                        onCategorySelect = { category ->
+                            selectedCategory = category
+                            val firstAppInCat = WorkstationRequirementEngine.supportedApps.firstOrNull { it.category == category }
+                            if (firstAppInCat != null) {
+                                selectedAppId = firstAppInCat.id
+                                if (!firstAppInCat.supportedResolutions.contains(selectedResolution)) {
+                                    selectedResolution = firstAppInCat.supportedResolutions.first()
+                                }
+                                if (!firstAppInCat.supportedPhases.contains(selectedPhase)) {
+                                    selectedPhase = firstAppInCat.supportedPhases.first()
+                                }
                             }
-                            if (!targetApp.supportedPhases.contains(selectedPhase)) {
-                                selectedPhase = targetApp.supportedPhases.first()
+                        },
+                        isTr = isTr,
+                    )
+                }
+
+                // 2. Kategoriye Ait Uygulama Çipleri
+                item {
+                    AppSelectorChips(
+                        category = selectedCategory,
+                        selectedAppId = selectedAppId,
+                        onAppSelect = { appId ->
+                            selectedAppId = appId
+                            val targetApp = WorkstationRequirementEngine.supportedApps.find { it.id == appId }
+                            if (targetApp != null) {
+                                if (!targetApp.supportedResolutions.contains(selectedResolution)) {
+                                    selectedResolution = targetApp.supportedResolutions.first()
+                                }
+                                if (!targetApp.supportedPhases.contains(selectedPhase)) {
+                                    selectedPhase = targetApp.supportedPhases.first()
+                                }
+                            }
+                        },
+                    )
+                }
+            } else {
+                // Arama Filtresi Aktifken Eşleşen Uygulamalar
+                item {
+                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text(
+                            text = if (isTr) "BULUNAN UYGULAMALAR (${filteredApps.size})" else "MATCHED APPS (${filteredApps.size})",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonCyan,
+                        )
+
+                        if (filteredApps.isEmpty()) {
+                            Surface(
+                                shape = RoundedCornerShape(12.dp),
+                                color = CardSurface,
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                Text(
+                                    text = if (isTr) "Aramanızla eşleşen profesyonel yazılım bulunamadı." else "No matching professional software found.",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(14.dp),
+                                )
+                            }
+                        } else {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .horizontalScroll(rememberScrollState()),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            ) {
+                                filteredApps.forEach { app ->
+                                    val isSelected = app.id == selectedAppId
+                                    Surface(
+                                        shape = RoundedCornerShape(10.dp),
+                                        color = if (isSelected) ElectricBlue.copy(alpha = 0.24f) else CardSurface,
+                                        border = BorderStroke(
+                                            width = if (isSelected) 1.5.dp else 1.dp,
+                                            color = if (isSelected) ElectricBlue else GlassBorder,
+                                        ),
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(10.dp))
+                                            .clickable {
+                                                selectedAppId = app.id
+                                                selectedCategory = app.category
+                                                if (!app.supportedResolutions.contains(selectedResolution)) {
+                                                    selectedResolution = app.supportedResolutions.first()
+                                                }
+                                                if (!app.supportedPhases.contains(selectedPhase)) {
+                                                    selectedPhase = app.supportedPhases.first()
+                                                }
+                                            },
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                        ) {
+                                            Text(text = app.category.emoji, fontSize = 14.sp)
+                                            Text(
+                                                text = app.name,
+                                                style = MaterialTheme.typography.bodySmall,
+                                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                                color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                                            )
+                                        }
+                                    }
+                                }
                             }
                         }
-                    },
-                )
+                    }
+                }
             }
 
             // 3. Çözünürlük ve İş Akışı Aşaması Seçici
@@ -303,6 +445,10 @@ private fun CategorySelectorTabs(
         WorkstationCategory.entries.forEach { category ->
             val isSelected = category == selectedCategory
             val title = if (isTr) category.titleTr else category.titleEn
+            val appCount = remember(category) {
+                WorkstationRequirementEngine.supportedApps.count { it.category == category }
+            }
+
             Surface(
                 shape = RoundedCornerShape(12.dp),
                 color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else CardSurfaceElevated,
@@ -314,13 +460,19 @@ private fun CategorySelectorTabs(
                     .clip(RoundedCornerShape(12.dp))
                     .clickable { onCategorySelect(category) },
             ) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.labelSmall,
-                    fontWeight = if (isSelected) FontWeight.Black else FontWeight.Medium,
-                    color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                Row(
                     modifier = Modifier.padding(horizontal = 14.dp, vertical = 9.dp),
-                )
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    Text(text = category.emoji, fontSize = 14.sp)
+                    Text(
+                        text = "$title ($appCount)",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = if (isSelected) FontWeight.Black else FontWeight.Medium,
+                        color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
         }
     }
@@ -403,12 +555,25 @@ private fun WorkloadConfigCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                Text(
-                    text = app.name,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Black,
-                    color = MaterialTheme.colorScheme.onSurface,
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Text(text = app.category.emoji, fontSize = 20.sp)
+                    Column {
+                        Text(
+                            text = app.name,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Black,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Text(
+                            text = if (isTr) app.category.titleTr else app.category.titleEn,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
                 Surface(
                     shape = RoundedCornerShape(6.dp),
                     color = NeonEmerald.copy(alpha = 0.14f),
@@ -424,12 +589,48 @@ private fun WorkloadConfigCard(
                 }
             }
 
+            // Kritik Darboğaz Kutusu
+            Surface(
+                shape = RoundedCornerShape(10.dp),
+                color = NeonRose.copy(alpha = 0.08f),
+                border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.35f)),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Row(
+                    modifier = Modifier.padding(10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Icon(
+                        imageVector = Icons.Rounded.Speed,
+                        contentDescription = null,
+                        tint = NeonRose,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Column {
+                        Text(
+                            text = if (isTr) "KRİTİK DONANIM DARBOĞAZI" else "PRIMARY PERFORMANCE BOTTLENECK",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Black,
+                            color = NeonRose,
+                            fontSize = 9.sp,
+                        )
+                        Text(
+                            text = if (isTr) app.primaryBottleneckTr else app.primaryBottleneckEn,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            fontWeight = FontWeight.Medium,
+                        )
+                    }
+                }
+            }
+
             HorizontalDivider(color = GlassBorder.copy(alpha = 0.5f))
 
-            // Çözünürlük Seçimi
+            // Çözünürlük ve Proje Ölçeği Seçimi
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(
-                    text = if (isTr) "1. Çözünürlük ve Veri Formatı" else "1. Resolution & Media Format",
+                    text = if (isTr) "1. Proje Çözünürlüğü ve Veri Ölçeği" else "1. Project Resolution & Scale",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = NeonCyan,
@@ -456,63 +657,64 @@ private fun WorkloadConfigCard(
                             Text(
                                 text = if (isTr) res.labelTr else res.labelEn,
                                 style = MaterialTheme.typography.labelSmall,
-                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                 color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
-                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
                             )
                         }
                     }
                 }
                 Text(
                     text = if (isTr) selectedResolution.descriptionTr else selectedResolution.descriptionEn,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    fontSize = 11.sp,
+                    fontSize = 10.sp,
                 )
             }
 
-            HorizontalDivider(color = GlassBorder.copy(alpha = 0.5f))
-
-            // İş Akışı Aşaması (Playback vs Render)
+            // İş Akışı Aşaması Seçimi
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(
-                    text = if (isTr) "2. İş Akışı Aşaması (Anlık Kullanım vs Dışa Aktarma)" else "2. Pipeline Stage (Playback vs Export)",
+                    text = if (isTr) "2. İş Akışı Aşaması / Kalite Hedefi" else "2. Workflow Phase / Quality Target",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
-                    color = NeonAmber,
+                    color = ElectricBlue,
                 )
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
                     app.supportedPhases.forEach { phase ->
                         val isSelected = phase == selectedPhase
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = if (isSelected) NeonAmber.copy(alpha = 0.16f) else CardSurface,
+                            color = if (isSelected) ElectricBlue.copy(alpha = 0.2f) else CardSurface,
                             border = BorderStroke(
                                 width = if (isSelected) 1.5.dp else 1.dp,
-                                color = if (isSelected) NeonAmber else GlassBorder.copy(alpha = 0.6f),
+                                color = if (isSelected) ElectricBlue else GlassBorder.copy(alpha = 0.6f),
                             ),
                             modifier = Modifier
-                                .fillMaxWidth()
                                 .clip(RoundedCornerShape(10.dp))
                                 .clickable { onPhaseSelect(phase) },
                         ) {
-                            Column(modifier = Modifier.padding(10.dp)) {
-                                Text(
-                                    text = if (isTr) phase.labelTr else phase.labelEn,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) NeonAmber else MaterialTheme.colorScheme.onSurface,
-                                )
-                                Text(
-                                    text = if (isTr) phase.descriptionTr else phase.descriptionEn,
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    fontSize = 10.sp,
-                                )
-                            }
+                            Text(
+                                text = if (isTr) phase.labelTr else phase.labelEn,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.onSurface,
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                            )
                         }
                     }
                 }
+                Text(
+                    text = if (isTr) selectedPhase.descriptionTr else selectedPhase.descriptionEn,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    fontSize = 10.sp,
+                )
             }
         }
     }
@@ -525,53 +727,32 @@ private fun DataCitationBanner(
     isTr: Boolean,
 ) {
     Surface(
-        shape = RoundedCornerShape(14.dp),
+        shape = RoundedCornerShape(12.dp),
         color = CardSurface,
-        border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.4f)),
+        border = BorderStroke(1.dp, GlassBorder.copy(alpha = 0.6f)),
         modifier = Modifier.fillMaxWidth(),
     ) {
-        Column(
+        Row(
             modifier = Modifier.padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
-                Icon(
-                    imageVector = Icons.Rounded.Verified,
-                    contentDescription = null,
-                    tint = NeonEmerald,
-                    modifier = Modifier.size(16.dp),
-                )
+            Icon(
+                imageVector = Icons.Rounded.Verified,
+                contentDescription = null,
+                tint = NeonEmerald,
+                modifier = Modifier.size(20.dp),
+            )
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = if (isTr) "DOĞRULANMIŞ ENDÜSTRİYEL VERİ KAYNAĞI" else "VERIFIED BENCHMARK PROTOCOL",
+                    text = if (isTr) "Şeffaf ve Onaylı Test Verisi" else "Verified Benchmark Protocol",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonEmerald,
-                    fontSize = 10.sp,
                 )
-            }
-            Text(
-                text = citation,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 11.sp,
-            )
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
                 Text(
-                    text = if (isTr) "Temel Darboğaz:" else "Primary Bottleneck:",
+                    text = citation,
                     style = MaterialTheme.typography.labelSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = NeonRose,
-                    fontSize = 10.sp,
-                )
-                Text(
-                    text = if (isTr) app.primaryBottleneckTr else app.primaryBottleneckEn,
-                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontSize = 11.sp,
                 )
@@ -596,8 +777,8 @@ private fun HardwareTierCard(
             containerColor = if (isFeatured) CardSurfaceElevated else CardSurface,
         ),
         border = BorderStroke(
-            width = if (isFeatured) 2.dp else 1.dp,
-            color = if (isFeatured) NeonCyan else GlassBorder,
+            width = if (isFeatured) 1.5.dp else 1.dp,
+            color = if (isFeatured) tierColor else GlassBorder,
         ),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -605,18 +786,22 @@ private fun HardwareTierCard(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            // Başlık & Badge
+            // Başlık Çubuğu
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Surface(
-                        shape = CircleShape,
-                        color = tierColor.copy(alpha = 0.2f),
-                        modifier = Modifier.size(10.dp),
-                    ) {}
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp)
+                            .clip(CircleShape)
+                            .background(tierColor),
+                    )
                     Text(
                         text = if (isTr) recommendation.tier.titleTr else recommendation.tier.titleEn,
                         style = MaterialTheme.typography.titleSmall,
@@ -627,152 +812,185 @@ private fun HardwareTierCard(
 
                 Surface(
                     shape = RoundedCornerShape(6.dp),
-                    color = tierColor.copy(alpha = 0.14f),
-                    border = BorderStroke(1.dp, tierColor.copy(alpha = 0.4f)),
+                    color = NeonEmerald.copy(alpha = 0.12f),
+                    border = BorderStroke(0.5.dp, NeonEmerald.copy(alpha = 0.4f)),
                 ) {
                     Text(
-                        text = "${recommendation.benchmarkConfidenceScore}% Uyum",
+                        text = "${recommendation.benchmarkConfidenceScore}% GÜVEN SKORU",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
-                        color = tierColor,
+                        color = NeonEmerald,
                         fontSize = 9.sp,
-                        modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                     )
                 }
-            }
-
-            // Gerçek Dünya Deneyimi Notu
-            Surface(
-                shape = RoundedCornerShape(10.dp),
-                color = SlateDarkBackground.copy(alpha = 0.6f),
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Text(
-                    text = "💡 ${if (isTr) recommendation.estimatedExperienceNoteTr else recommendation.estimatedExperienceNoteEn}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurface,
-                    fontSize = 11.sp,
-                    lineHeight = 16.sp,
-                    modifier = Modifier.padding(10.dp),
-                )
             }
 
             HorizontalDivider(color = GlassBorder.copy(alpha = 0.4f))
 
-            // 1. İşlemci (CPU) Satırı + Katalog Arama Butonu
-            ComponentSpecRowWithCatalogJump(
+            // 1. İşlemci (CPU) Bölümü
+            HardwareComponentRow(
                 icon = Icons.Rounded.DeveloperBoard,
-                iconColor = NeonCyan,
-                label = if (isTr) "Önerilen İşlemci Yonga Ailesi" else "Target CPU Architecture",
-                chipsetName = recommendation.targetCpuChipset,
+                iconTint = NeonCyan,
+                label = if (isTr) "İşlemci (CPU)" else "Processor (CPU)",
+                chipset = recommendation.targetCpuChipset,
                 specs = recommendation.cpuSpecsSummary,
-                buttonText = if (isTr) "Tüm Modelleri Gör (${recommendation.targetCpuSearchQuery})" else "Browse All (${recommendation.targetCpuSearchQuery})",
-                onSearchClick = { onSearchCpu(recommendation.targetCpuSearchQuery) },
+                onSearchCatalog = { onSearchCpu(recommendation.targetCpuSearchQuery) },
+                isTr = isTr,
             )
 
-            // 2. Ekran Kartı (GPU) Satırı + Katalog Arama Butonu
-            ComponentSpecRowWithCatalogJump(
-                icon = Icons.Rounded.Speed,
-                iconColor = NeonEmerald,
-                label = if (isTr) "Önerilen GPU & VRAM" else "Target GPU & VRAM",
-                chipsetName = recommendation.targetGpuChipset,
-                specs = "${recommendation.vramRequirementGb}GB VRAM · ${recommendation.gpuSpecsSummary}",
-                buttonText = if (isTr) "Tüm Modelleri Gör (${recommendation.targetGpuSearchQuery})" else "Browse All (${recommendation.targetGpuSearchQuery})",
-                onSearchClick = { onSearchGpu(recommendation.targetGpuSearchQuery) },
+            HorizontalDivider(color = GlassBorder.copy(alpha = 0.3f))
+
+            // 2. Ekran Kartı (GPU) Bölümü
+            HardwareComponentRow(
+                icon = Icons.Rounded.Computer,
+                iconTint = NeonEmerald,
+                label = if (isTr) "Ekran Kartı (GPU)" else "Graphics Card (GPU)",
+                chipset = recommendation.targetGpuChipset,
+                specs = "${recommendation.gpuSpecsSummary} · ${recommendation.vramRequirementGb}GB VRAM",
+                onSearchCatalog = { onSearchGpu(recommendation.targetGpuSearchQuery) },
+                isTr = isTr,
             )
 
-            // 3. Bellek (RAM)
+            HorizontalDivider(color = GlassBorder.copy(alpha = 0.3f))
+
+            // 3. Bellek (RAM) ve Depolama (SSD)
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.Top,
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Rounded.Memory,
-                    contentDescription = null,
-                    tint = NeonAmber,
-                    modifier = Modifier.size(18.dp),
-                )
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = if (isTr) "Sistem Belleği (RAM)" else "System RAM",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontSize = 10.sp,
-                    )
-                    Text(
-                        text = "${recommendation.targetRamCapacityGb} GB RAM",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                    )
-                    Text(
-                        text = recommendation.targetRamTypeAndSpeed,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontSize = 10.sp,
-                    )
+                // RAM
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
+                    border = BorderStroke(0.5.dp, GlassBorder),
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Column(
+                        modifier = Modifier.padding(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.Memory,
+                                contentDescription = null,
+                                tint = NeonAmber,
+                                modifier = Modifier.size(14.dp),
+                            )
+                            Text(
+                                text = "${recommendation.targetRamCapacityGb} GB RAM",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Black,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                        Text(
+                            text = recommendation.targetRamTypeAndSpeed,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            fontSize = 10.sp,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+
+                // SSD
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
+                    border = BorderStroke(0.5.dp, GlassBorder),
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Column(
+                        modifier = Modifier.padding(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.Storage,
+                                contentDescription = null,
+                                tint = ElectricBlue,
+                                modifier = Modifier.size(14.dp),
+                            )
+                            Text(
+                                text = if (isTr) "Depolama" else "Storage",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Black,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                        Text(
+                            text = recommendation.targetStorageType,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            fontSize = 10.sp,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
                 }
             }
 
-            // 4. Depolama (Storage)
-            Row(
+            // Deneyim ve Akıcılık Analiz Notu
+            Surface(
+                shape = RoundedCornerShape(10.dp),
+                color = tierColor.copy(alpha = 0.08f),
                 modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.Top,
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Rounded.Storage,
-                    contentDescription = null,
-                    tint = ElectricBlue,
-                    modifier = Modifier.size(18.dp),
+                Text(
+                    text = if (isTr) recommendation.estimatedExperienceNoteTr else recommendation.estimatedExperienceNoteEn,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.padding(10.dp),
                 )
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = if (isTr) "Depolama & Scratch Disk" else "Storage & Scratch",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontSize = 10.sp,
-                    )
-                    Text(
-                        text = recommendation.targetStorageType,
-                        style = MaterialTheme.typography.bodySmall,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        fontSize = 11.sp,
-                    )
-                }
             }
         }
     }
 }
 
 @Composable
-private fun ComponentSpecRowWithCatalogJump(
+private fun HardwareComponentRow(
     icon: ImageVector,
-    iconColor: Color,
+    iconTint: Color,
     label: String,
-    chipsetName: String,
+    chipset: String,
     specs: String,
-    buttonText: String,
-    onSearchClick: () -> Unit,
+    onSearchCatalog: () -> Unit,
+    isTr: Boolean,
 ) {
-    Column(
+    Row(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.Top,
+            modifier = Modifier.weight(1f),
+            verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = iconColor,
-                modifier = Modifier.size(18.dp),
-            )
-            Column(modifier = Modifier.weight(1f)) {
+            Surface(
+                shape = CircleShape,
+                color = iconTint.copy(alpha = 0.16f),
+                modifier = Modifier.size(34.dp),
+            ) {
+                Box(contentAlignment = Alignment.Center) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = iconTint,
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
+            }
+
+            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
                     text = label,
                     style = MaterialTheme.typography.labelSmall,
@@ -780,51 +998,42 @@ private fun ComponentSpecRowWithCatalogJump(
                     fontSize = 10.sp,
                 )
                 Text(
-                    text = chipsetName,
-                    style = MaterialTheme.typography.bodyMedium,
+                    text = chipset,
+                    style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Black,
-                    color = iconColor,
+                    color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
                     text = specs,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontSize = 10.sp,
                 )
             }
         }
 
-        // Kullanıcının özellikle istediği: "sadece bir model seçme, tüm o çipi dahil et"
+        Spacer(modifier = Modifier.width(8.dp))
+
         Button(
-            onClick = onSearchClick,
+            onClick = onSearchCatalog,
             shape = RoundedCornerShape(8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = iconColor.copy(alpha = 0.14f),
-                contentColor = iconColor,
+                containerColor = iconTint.copy(alpha = 0.16f),
+                contentColor = iconTint,
             ),
-            border = BorderStroke(1.dp, iconColor.copy(alpha = 0.4f)),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 28.dp),
-            contentPadding = PaddingValues(vertical = 6.dp, horizontal = 12.dp),
+            border = BorderStroke(0.5.dp, iconTint.copy(alpha = 0.4f)),
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Rounded.Search,
-                    contentDescription = null,
-                    modifier = Modifier.size(14.dp),
-                )
-                Spacer(modifier = Modifier.width(6.dp))
                 Text(
-                    text = buttonText,
+                    text = if (isTr) "Tüm Modeller" else "All Models",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 10.sp,
+                    fontSize = 11.sp,
                 )
-                Spacer(modifier = Modifier.width(4.dp))
                 Icon(
                     imageVector = Icons.Rounded.ChevronRight,
                     contentDescription = null,
@@ -840,41 +1049,49 @@ private fun TechnicalTakeawayCard(
     takeaway: String,
     isTr: Boolean,
 ) {
-    Surface(
-        shape = RoundedCornerShape(16.dp),
-        color = CardSurfaceElevated,
+    Card(
+        shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
         border = BorderStroke(1.dp, GlassBorder),
         modifier = Modifier.fillMaxWidth(),
     ) {
-        Column(
-            modifier = Modifier.padding(14.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.Top,
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            Surface(
+                shape = CircleShape,
+                color = NeonCyan.copy(alpha = 0.16f),
+                modifier = Modifier.size(36.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Rounded.PrecisionManufacturing,
-                    contentDescription = null,
-                    tint = NeonCyan,
-                    modifier = Modifier.size(18.dp),
-                )
+                Box(contentAlignment = Alignment.Center) {
+                    Icon(
+                        imageVector = Icons.Rounded.PrecisionManufacturing,
+                        contentDescription = null,
+                        tint = NeonCyan,
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
+            }
+
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
                 Text(
-                    text = if (isTr) "🔬 MÜHENDİSLİK & MİMARİ ANALİZ NOTU" else "🔬 ENGINEERING ARCHITECTURE INSIGHT",
-                    style = MaterialTheme.typography.labelSmall,
+                    text = if (isTr) "Mühendislik Analizi & Mimari Not" else "Engineering Architecture & Bottleneck Takeaway",
+                    style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonCyan,
-                    fontSize = 10.sp,
+                )
+                Text(
+                    text = takeaway,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    lineHeight = 18.sp,
                 )
             }
-            Text(
-                text = takeaway,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 11.sp,
-                lineHeight = 17.sp,
-            )
         }
     }
 }

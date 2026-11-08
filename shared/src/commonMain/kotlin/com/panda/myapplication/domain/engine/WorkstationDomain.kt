@@ -5,12 +5,18 @@ package com.panda.myapplication.domain.engine
  * pre_prompt_kmp.md standartlarına uygun: Saf Kotlin, Android/Java bağımsız.
  */
 
-enum class WorkstationCategory(val titleTr: String, val titleEn: String) {
-    VIDEO_EDITING("Video & Post-Prodüksiyon", "Video & Post-Production"),
-    VFX_3D("3D Modelleme, CGI & VFX", "3D Modeling, CGI & VFX"),
-    CAD_ENGINEERING("Mühendislik & CAD / BIM", "Engineering & CAD / BIM"),
-    LOCAL_AI("Yapay Zeka & Yerel LLM", "Local AI & Machine Learning"),
-    GRAPHIC_DESIGN("Grafik & Fotoğraf Düzenleme", "Graphic & Photo Editing"),
+enum class WorkstationCategory(
+    val titleTr: String,
+    val titleEn: String,
+    val emoji: String,
+) {
+    VIDEO_EDITING("Video & Post-Prodüksiyon", "Video & Post-Production", "🎬"),
+    VFX_3D("3D Modelleme, CGI & VFX", "3D Modeling, CGI & VFX", "🧊"),
+    GAME_DEV_ARCHVIZ("Oyun Motorları & ArchViz", "Game Engines & ArchViz", "🎮"),
+    CAD_ENGINEERING("Mühendislik, CAD & Simülasyon", "Engineering, CAD & Sim", "📐"),
+    LOCAL_AI("Yapay Zeka & Veri Bilimi", "AI, LLM & Data Science", "🧠"),
+    GRAPHIC_DESIGN("Grafik & Fotoğraf Düzenleme", "Graphic & Photo Editing", "🎨"),
+    AUDIO_PRODUCTION("Müzik Prodüksiyonu & Ses", "Music Production & Audio", "🎧"),
 }
 
 enum class WorkloadResolution(
@@ -21,32 +27,32 @@ enum class WorkloadResolution(
     val descriptionEn: String,
 ) {
     FHD_1080P(
-        labelTr = "1080p FHD",
-        labelEn = "1080p FHD",
+        labelTr = "1080p FHD / Standart Proje",
+        labelEn = "1080p FHD / Standard Project",
         badge = "FHD",
-        descriptionTr = "Standart 8-bit H.264 / Hafif 3D sahneler",
-        descriptionEn = "Standard 8-bit H.264 / Light 3D assets",
+        descriptionTr = "Standart 8-bit H.264 / Hafif 3D / 32 Kanal DAW / Temel CAD",
+        descriptionEn = "Standard 8-bit H.264 / Light 3D / 32-Track DAW / Basic CAD",
     ),
     QHD_2K(
-        labelTr = "2K QHD (1440p)",
-        labelEn = "2K QHD (1440p)",
+        labelTr = "2K QHD (1440p) / Orta Ölçek",
+        labelEn = "2K QHD (1440p) / Mid Project",
         badge = "2K",
-        descriptionTr = "Yüksek bit hızlı H.265 / ProRes Proxy",
-        descriptionEn = "High bitrate H.265 / ProRes Proxy",
+        descriptionTr = "Yüksek bit hızlı H.265 / ProRes Proxy / 64 Kanal DAW / Orta Montaj",
+        descriptionEn = "High bitrate H.265 / ProRes Proxy / 64-Track DAW / Mid Assemblies",
     ),
     UHD_4K(
-        labelTr = "4K UHD (2160p)",
-        labelEn = "4K UHD (2160p)",
+        labelTr = "4K UHD (2160p) / Ağır Üretim",
+        labelEn = "4K UHD (2160p) / Heavy Pro",
         badge = "4K",
-        descriptionTr = "10-bit 4:2:2 All-Intra / Karmaşık 3D ve Nanite",
-        descriptionEn = "10-bit 4:2:2 All-Intra / Dense 3D & Nanite",
+        descriptionTr = "10-bit 4:2:2 All-Intra / Nanite & Işın İzleme / 100+ Kanal Orkestra / FEA",
+        descriptionEn = "10-bit 4:2:2 All-Intra / Nanite & RT / 100+ Orchestral Tracks / FEA",
     ),
     RAW_8K(
-        labelTr = "8K Cinema RAW",
-        labelEn = "8K Cinema RAW",
+        labelTr = "8K Cinema RAW / Extreme Stüdyo",
+        labelEn = "8K Cinema RAW / Studio Extreme",
         badge = "8K",
-        descriptionTr = "8K RED/ARRIRAW, Sinematik VFX, Ağır Model Eğitimi",
-        descriptionEn = "8K RED/ARRIRAW, Cinematic VFX, Heavy AI Model",
+        descriptionTr = "8K RED/ARRIRAW / Hollywood VFX & Houdini Sim / 70B LLM & Flux.1",
+        descriptionEn = "8K RED/ARRIRAW / Hollywood VFX & Houdini / 70B LLM & Flux.1",
     ),
 }
 
@@ -57,22 +63,22 @@ enum class WorkloadPhase(
     val descriptionEn: String,
 ) {
     REALTIME_PREVIEW(
-        labelTr = "Canlı Zaman Çizelgesi Önizleme (Playback)",
-        labelEn = "Real-Time Timeline Scrubbing",
-        descriptionTr = "Zaman çizelgesinde kare atlamadan (zero dropped frames) akıcı gezinme ve anlık efekt önizleme",
-        descriptionEn = "Fluid timeline playback with zero dropped frames and live FX preview",
+        labelTr = "Canlı Önizleme & Viewport (Playback)",
+        labelEn = "Real-Time Timeline Scrubbing & Viewport",
+        descriptionTr = "Zaman çizelgesinde veya 3D/DAW sahnesinde anlık kare atlamasız akıcı etkileşim",
+        descriptionEn = "Fluid timeline scrubbing and low-latency live viewport navigation",
     ),
     FINAL_RENDER(
-        labelTr = "Final Dışa Aktarma & Render (Export)",
-        labelEn = "Final Export & Baking",
-        descriptionTr = "Tüm çekirdekleri ve çift donanımsal kodlayıcıları (NVENC) zorlayan nihai çıktı süreci",
-        descriptionEn = "Full multithreaded and hardware dual-encoder export pipeline",
+        labelTr = "Final Dışa Aktarma & Render (Export / Mixdown)",
+        labelEn = "Final Export & Baking / Mixdown",
+        descriptionTr = "Çoklu çekirdekleri, çift NVENC ve QuickSync motorlarını zorlayan nihai çıktı süreci",
+        descriptionEn = "Full multithreaded, dual-NVENC and QuickSync accelerated final output pipeline",
     ),
     HEAVY_SIMULATION(
         labelTr = "Ağır Simülasyon, Işın İzleme & AI Çıkarım",
-        labelEn = "Heavy Simulation, Ray Tracing & Inference",
-        descriptionTr = "Fizik motoru, sıvı/partikül dinamikleri, OptiX gürültü giderme ve tensör matris hesaplaması",
-        descriptionEn = "Fluid/cloth dynamics, OptiX denoising and matrix tensor operations",
+        labelEn = "Heavy Simulation, Ray Tracing & AI Inference",
+        descriptionTr = "Akışkan/partikül fiziği, OptiX gürültü giderme, tensör matrisleri ve FEA çözücüleri",
+        descriptionEn = "Fluid/particle physics, OptiX denoising, tensor matrix and FEA solvers",
     ),
 }
 
