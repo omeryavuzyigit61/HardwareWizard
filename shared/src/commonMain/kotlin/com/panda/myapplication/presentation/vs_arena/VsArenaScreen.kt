@@ -415,7 +415,7 @@ fun VsArenaScreen(
                                 iconSize = 15.dp,
                             )
                             Text(
-                                text = tr(isTr, "KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA", "HEAD-TO-HEAD BENCHMARK COMPARISON"),
+                                text = strings.vsHeadToHeadHeader,
                                 style = MaterialTheme.typography.labelLarge,
                                 color = NeonCyan,
                                 fontWeight = FontWeight.ExtraBold,
@@ -685,7 +685,7 @@ private fun VsArenaHeader(
 
                         Text(
 
-                            text = tr(isTr, "Kafa Kafaya Kıyaslama", "Head-to-Head Comparison"),
+                            text = strings.tabVsArena,
 
                             style = MaterialTheme.typography.titleMedium,
 
@@ -741,7 +741,7 @@ private fun VsArenaHeader(
 
                     Text(
 
-                        text = tr(isTr, "Sıfırla", "Reset"),
+                        text = strings.coolingReset,
 
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
 
@@ -914,7 +914,7 @@ private fun VsArenaHeader(
 
                             Text(
 
-                                text = cat.shortBadgeText(),
+                                text = cat.shortBadgeText(strings),
 
                                 style = MaterialTheme.typography.labelMedium,
 
@@ -995,7 +995,7 @@ private fun VsArenaHeader(
 
                             Text(
 
-                                text = cat.shortBadgeText(),
+                                text = cat.shortBadgeText(strings),
 
                                 style = MaterialTheme.typography.labelMedium,
 
@@ -1069,7 +1069,7 @@ private fun VsFighterSlotsCard(
 
             modifier = Modifier.weight(1f),
 
-            cornerLabel = tr(isTr, "1. KÖŞE", "CORNER 1"),
+            cornerLabel = strings.vsCorner1,
 
             cornerColor = ElectricBlue,
 
@@ -1131,7 +1131,7 @@ private fun VsFighterSlotsCard(
 
             modifier = Modifier.weight(1f),
 
-            cornerLabel = tr(isTr, "2. KÖŞE", "CORNER 2"),
+            cornerLabel = strings.vsCorner2,
 
             cornerColor = NeonPurple,
 
@@ -1339,7 +1339,7 @@ private fun VsFighterCornerCard(
 
                         Text(
 
-                            text = "+ ${category.shortBadgeText()} ${strings.wizardSelect}",
+                            text = "+ ${category.shortBadgeText(strings)} ${strings.wizardSelect}",
 
                             style = MaterialTheme.typography.labelMedium,
 
@@ -1351,7 +1351,7 @@ private fun VsFighterCornerCard(
 
                         Text(
 
-                            text = tr(isTr, "Listeden eklemek için dokun", "Tap to add from list"),
+                            text = strings.vsTapToAdd,
 
                             style = MaterialTheme.typography.labelSmall,
 
@@ -1666,7 +1666,7 @@ private fun VsChampionBannerCard(
 
                     Text(
 
-                        text = tr(isTr, "1. Köşe:", "Corner 1:"),
+                        text = "${strings.vsCorner1}:",
 
                         style = MaterialTheme.typography.labelSmall,
 
@@ -1700,7 +1700,7 @@ private fun VsChampionBannerCard(
 
                     Text(
 
-                        text = tr(isTr, "2. Köşe:", "Corner 2:"),
+                        text = "${strings.vsCorner2}:",
 
                         style = MaterialTheme.typography.labelSmall,
 
@@ -1819,7 +1819,7 @@ private fun VsGameFpsMatrixCard(
                             iconSize = 16.dp,
                         )
                         Text(
-                            text = tr(isTr, "12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ", "12-GAME FPS & 1% LOW SIMULATION MATRIX"),
+                            text = strings.vs12GameMatrixHeader,
                             style = MaterialTheme.typography.labelLarge,
                             color = NeonCyan,
                             fontWeight = FontWeight.ExtraBold,
@@ -1928,7 +1928,7 @@ private fun VsGameFpsMatrixCard(
 
                 val filters: List<Triple<GameCategory?, String, ImageVector?>> = listOf(
 
-                    Triple(null, "${tr(isTr, "Tümü", "All")} (${gameRows.size})", null),
+                    Triple(null, "${strings.vsAllFilter} (${gameRows.size})", null),
 
                     Triple(GameCategory.ESPORTS, "${tr(isTr, "E-Spor", "Esports")} (5)", Icons.Rounded.SportsEsports),
 
@@ -2111,7 +2111,7 @@ private fun VsGameFpsMatrixCard(
 
                                     Text(
 
-                                        text = "${if (winner == ComparisonWinner.LEFT) "1. Köşe" else "2. Köşe"} $delta",
+                                        text = "${if (winner == ComparisonWinner.LEFT) strings.vsCorner1 else strings.vsCorner2} $delta",
 
                                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
 
@@ -2300,6 +2300,8 @@ private fun VsComparisonMetricRow(
     modifier: Modifier = Modifier,
 
 ) {
+    val strings = LocalAppStrings.current
+
 
     val leftWin = row.winner == ComparisonWinner.LEFT
 
@@ -2377,7 +2379,7 @@ private fun VsComparisonMetricRow(
 
                         Text(
 
-                            text = "${if (leftWin) "1. Köşe" else "2. Köşe"}: ${row.deltaBadge}",
+                            text = "${if (leftWin) strings.vsCorner1 else strings.vsCorner2}: ${row.deltaBadge}",
 
                             modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
 
@@ -2676,7 +2678,7 @@ private fun VsEmptyArenaCard(
 
                 Text(
 
-                    text = "${tr(isTr, "Popüler Kapışma Önerisi", "Popular Matchup")}: ${suggestedPair.first.model} vs ${suggestedPair.second.model}",
+                    text = "${strings.vsPopularMatchup}: ${suggestedPair.first.model} vs ${suggestedPair.second.model}",
 
                     style = MaterialTheme.typography.labelSmall,
 
@@ -2709,7 +2711,7 @@ private fun VsEmptyArenaCard(
                             tint = Color.White,
                         )
                         Text(
-                            text = tr(isTr, "Örnek Kapışmayı Hemen Başlat", "Launch Sample Showdown"),
+                            text = strings.vsLaunchSample,
                             color = Color.White,
                             fontWeight = FontWeight.Bold,
                         )
@@ -2803,7 +2805,7 @@ private fun VsProductPickerSheetContent(
 
                 Text(
 
-                    text = "${category.localized(strings)} ${tr(isTr, "model, marka veya özellik ara...", "search model, brand or specs...")}",
+                    text = strings.vsSearchPlaceholderFormat.replace("%s", category.localized(strings)),
 
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
 

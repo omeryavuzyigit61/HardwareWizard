@@ -34,6 +34,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import com.panda.myapplication.presentation.util.LocalAppStrings
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -67,6 +68,7 @@ fun HardwareCommentsAndReviewsSection(
     currentUsername: String? = null,
     onReportClick: (HardwareProTip) -> Unit = {},
 ) {
+    val strings = LocalAppStrings.current
     val avgRating = if (tips.isNotEmpty()) tips.map { it.rating.toDouble() }.average() else 5.0
     val formattedAvg = ((avgRating * 10).roundToInt() / 10.0).toString()
 
@@ -108,7 +110,7 @@ fun HardwareCommentsAndReviewsSection(
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
                             Text(
-                                text = "💬 KULLANICI YORUMLARI & DEĞERLENDİRMELERİ",
+                                text = strings.reviewSectionTitle,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
@@ -118,7 +120,7 @@ fun HardwareCommentsAndReviewsSection(
                             )
                         }
                         Text(
-                            text = "Gerçek kullanıcı deneyimleri, tavsiyeler ve kullanım notları",
+                            text = strings.reviewSectionSubtitle,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
@@ -145,12 +147,12 @@ fun HardwareCommentsAndReviewsSection(
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.Add,
-                            contentDescription = "Yorum Ekle",
+                            contentDescription = strings.reviewAddContentDesc,
                             tint = NeonEmerald,
                             modifier = Modifier.size(16.dp),
                         )
                         Text(
-                            text = "Yorum Yaz",
+                            text = strings.reviewAddButton,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.ExtraBold,
                             color = NeonEmerald,
@@ -191,7 +193,7 @@ fun HardwareCommentsAndReviewsSection(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Text(
-                            text = "${tips.size} Topluluk Değerlendirmesi",
+                            text = strings.reviewRatingCountFormat.replace("%d", tips.size.toString()),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -202,7 +204,7 @@ fun HardwareCommentsAndReviewsSection(
                         color = NeonCyan.copy(alpha = 0.12f),
                     ) {
                         Text(
-                            text = "+10 Puan Kazandırır",
+                            text = strings.reviewReputationReward,
                             style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
                             fontWeight = FontWeight.Bold,
                             color = NeonCyan,
@@ -225,13 +227,13 @@ fun HardwareCommentsAndReviewsSection(
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = "Henüz bu donanım için bir yorum yazılmamış.",
+                            text = strings.reviewEmptyTitle,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(modifier = Modifier.height(6.dp))
                         Text(
-                            text = "İlk deneyimi siz paylaşın ve +10 itibar puanı kazanın!",
+                            text = strings.reviewEmptySubtitle,
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonCyan,
                             fontWeight = FontWeight.Bold,
@@ -280,6 +282,7 @@ private fun ProductReviewCardItem(
     onUpvote: () -> Unit,
     onReport: () -> Unit,
 ) {
+    val strings = LocalAppStrings.current
     val upvoteBg by animateColorAsState(
         if (tip.isUpvotedByMe) NeonEmerald.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surface
     )
@@ -401,12 +404,12 @@ private fun ProductReviewCardItem(
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.ThumbUp,
-                            contentDescription = "Faydalı",
+                            contentDescription = strings.reviewHelpful,
                             tint = if (tip.isUpvotedByMe) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.size(13.dp),
                         )
                         Text(
-                            text = if (tip.upvotesCount > 0) "Faydalı (${tip.upvotesCount})" else "Faydalı",
+                            text = if (tip.upvotesCount > 0) "${strings.reviewHelpful} (${tip.upvotesCount})" else strings.reviewHelpful,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = if (tip.isUpvotedByMe) NeonEmerald else MaterialTheme.colorScheme.onSurface,
@@ -430,12 +433,12 @@ private fun ProductReviewCardItem(
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.Flag,
-                            contentDescription = if (isSelf) "Kaldır" else "Raporla",
+                            contentDescription = if (isSelf) strings.reviewRemoveMine else strings.reviewReport,
                             tint = if (isSelf) NeonCyan else NeonRose,
                             modifier = Modifier.size(12.dp),
                         )
                         Text(
-                            text = if (isSelf) "Yorumumu Kaldır" else "Bildir",
+                            text = if (isSelf) strings.reviewRemoveMine else strings.reviewReport,
                             style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
                             fontWeight = FontWeight.SemiBold,
                             color = if (isSelf) NeonCyan else NeonRose,

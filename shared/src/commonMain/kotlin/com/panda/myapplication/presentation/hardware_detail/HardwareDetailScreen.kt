@@ -143,6 +143,9 @@ import com.panda.myapplication.presentation.theme.NeonRose
 import androidx.compose.ui.text.style.TextAlign
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.AppStrings
+import com.panda.myapplication.presentation.util.StringsTR
+import com.panda.myapplication.presentation.util.StringsEN
 import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
@@ -2337,7 +2340,7 @@ private fun PolymorphicTechnicalSpecsSection(
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
-    val rows = buildPolymorphicSpecRows(item, isTr)
+    val rows = buildPolymorphicSpecRows(item, strings)
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -2417,36 +2420,39 @@ private fun getUnspecifiedText(isTr: Boolean): String = if (isTr) "Belirtilmedi"
 
 private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
 
-private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): List<Pair<String, String>> {
+private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): List<Pair<String, String>> {
+    val isTr = strings.isTurkish
     val rows = mutableListOf<Pair<String, String>>()
-    rows.add(tr(isTr, "Marka", "Brand") to item.brand)
-    rows.add(tr(isTr, "Model Kodu", "Model SKU") to item.model)
+    rows.add(strings.specBrand to item.brand)
+    rows.add(strings.specModelSku to item.model)
 
     when (val s = item.spec) {
         is CpuSpec -> {
-            rows.add(tr(isTr, "Soket", "Socket") to s.socket.ifBlank { getUnspecifiedText(isTr) })
-            rows.add(tr(isTr, "Çekirdek & İzlek Dizilimi", "Core & Thread Topology") to (s.coreTopology ?: "${s.coreCount} Çekirdek / ${s.threadCount} İzlek"))
-            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: getUnspecifiedText(isTr)
-            rows.add(tr(isTr, "Temel / Boost Frekans", "Base / Boost Clocks") to "${s.baseClock.mhz / 1000f} GHz / $boostText")
+            rows.add(strings.specSocket to s.socket.ifBlank { strings.specUnspecified })
+            val coresStr = "${s.coreCount} ${strings.specCoresLabel}"
+            val threadsStr = "${s.threadCount} ${strings.specThreadsLabel}"
+            rows.add(strings.specCoreTopology to (s.coreTopology ?: "$coresStr / $threadsStr"))
+            val boostText = s.boostClock?.let { "${it.mhz / 1000f} GHz" } ?: strings.specUnspecified
+            rows.add(strings.specBaseBoostClocks to "${s.baseClock.mhz / 1000f} GHz / $boostText")
             val cacheText = listOfNotNull(s.l2CacheMb?.let { "${it} MB L2" }, s.l3CacheMb?.let { "${it} MB L3" }).joinToString(" • ")
-            rows.add(tr(isTr, "L2 ve L3 Önbellek", "L2 & L3 Cache") to cacheText.ifBlank { getUnspecifiedText(isTr) })
-            rows.add(tr(isTr, "TDP ve Güç Limitleri", "TDP & Power Limits") to (s.powerLimits ?: "${s.tdp.watts} W TDP"))
-            rows.add(tr(isTr, "Mimari & Üretim Nodu", "Architecture & Node") to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { getUnspecifiedText(isTr) })
-            rows.add(tr(isTr, "Bellek Kontrolcü Desteği", "Memory Controller Support") to (s.maxMemorySpeed ?: getUnspecifiedText(isTr)))
-            rows.add(tr(isTr, "PCIe Sürümü & Hat Sayısı", "PCIe Version & Lanes") to (s.pcieVersion ?: getUnspecifiedText(isTr)))
-            rows.add(tr(isTr, "Dahili Grafik (iGPU)", "Integrated GPU (iGPU)") to (s.igpuModel ?: if (s.hasIntegratedGraphics) "Mevcut (Dahili Grafik)" else "Yok (Harici GPU Gerekli)"))
-            rows.add(tr(isTr, "Çarpan Kilidi (Overclock)", "Multiplier (Overclock)") to if (s.unlockedMultiplier == true) "Açık (Unlocked)" else if (s.unlockedMultiplier == false) "Kapalı (Locked)" else getUnspecifiedText(isTr))
+            rows.add(strings.specL2L3Cache to cacheText.ifBlank { strings.specUnspecified })
+            rows.add(strings.specTdpPowerLimits to (s.powerLimits ?: "${s.tdp.watts} W TDP"))
+            rows.add(strings.specArchNode to listOfNotNull(s.architecture, s.processNode).joinToString(" • ").ifBlank { strings.specUnspecified })
+            rows.add(strings.specMemController to (s.maxMemorySpeed ?: strings.specUnspecified))
+            rows.add(strings.specPcieVersion to (s.pcieVersion ?: strings.specUnspecified))
+            rows.add(strings.specIgpu to (s.igpuModel ?: if (s.hasIntegratedGraphics) strings.specIgpuIncluded else strings.specIgpuRequired))
+            rows.add(strings.specMultiplier to if (s.unlockedMultiplier == true) strings.specUnlocked else if (s.unlockedMultiplier == false) strings.specLocked else strings.specUnspecified)
         }
 
         is GpuSpec -> {
-            rows.add(tr(isTr, "Grafik İşlemci & Mimari", "GPU & Architecture") to listOfNotNull(s.chipset, s.architecture).joinToString(" • ").ifBlank { getUnspecifiedText(isTr) })
-            rows.add(tr(isTr, "Üretim Teknolojisi & Transistör", "Process Node") to (s.processNode ?: getUnspecifiedText(isTr)))
-            val coresText = listOfNotNull(s.cudaCores?.let { if (isTr) "$it Çekirdek" else "$it Cores" }, s.rtCores?.let { "$it RT" }, s.tensorAiTops).joinToString(" • ")
-            rows.add(tr(isTr, "Gölgelendirici / RT / Tensor", "Shaders / RT / Tensor") to coresText.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(strings.specGpuArch to listOfNotNull(s.chipset, s.architecture).joinToString(" • ").ifBlank { strings.specUnspecified })
+            rows.add(strings.specProcessNode to (s.processNode ?: strings.specUnspecified))
+            val coresText = listOfNotNull(s.cudaCores?.let { "$it ${strings.specCoresLabel}" }, s.rtCores?.let { "$it RT" }, s.tensorAiTops).joinToString(" • ")
+            rows.add(strings.specShadersRtTensor to coresText.ifBlank { strings.specUnspecified })
             val vramSpeed = s.memorySpeedGbps?.let { " • $it Gbps" } ?: ""
-            rows.add(tr(isTr, "VRAM Kapasitesi & Tipi", "VRAM Capacity & Type") to "${s.vram.megabytes / 1024} GB ${s.memoryType}$vramSpeed")
+            rows.add(strings.specVramCapacityType to "${s.vram.megabytes / 1024} GB ${s.memoryType}$vramSpeed")
             val busBw = listOfNotNull(s.busWidthBits?.let { "$it-Bit" }, s.bandwidthGbs?.let { "$it GB/s" }).joinToString(" • ")
-            rows.add(tr(isTr, "Bellek Veri Yolu & Bant Genişliği", "Memory Bus & Bandwidth") to busBw.ifBlank { getUnspecifiedText(isTr) })
+            rows.add(strings.specMemoryBusBandwidth to busBw.ifBlank { strings.specUnspecified })
             val boostText = s.boostClock?.let { "${it.mhz} MHz" } ?: getUnspecifiedText(isTr)
             rows.add(tr(isTr, "Çekirdek Frekansı (Temel/Boost)", "Core Clocks (Base / Boost)") to "${s.coreClock.mhz} MHz / $boostText")
             rows.add(tr(isTr, "TGP (TDP) / Önerilen PSU", "TGP (TDP) / Recommended PSU") to "${s.tdp.watts} W / ${s.recommendedPsu.watts} W PSU")
@@ -2495,7 +2501,7 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
 
         is StorageSpec -> {
             val totalGb = s.capacity.megabytes / 1024
-            rows.add(tr(isTr, "Depolama Kapasitesi", "Storage Capacity") to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
+            rows.add(strings.specStorageCapacity to (if (totalGb >= 1024) "${totalGb / 1024} TB (${totalGb} GB)" else "${totalGb} GB"))
             rows.add(tr(isTr, "Kontrolcü Modeli", "Controller Model") to (s.controller ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "DRAM Önbellek Yapısı", "DRAM Cache Structure") to (s.dramCache ?: (s.cacheMb?.let { "$it MB DRAM Cache" } ?: getUnspecifiedText(isTr))))
             rows.add(tr(isTr, "NAND Flaş Standardı", "NAND Flash Standard") to (s.nandType ?: getUnspecifiedText(isTr)))
@@ -2507,7 +2513,7 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
         }
 
         is PsuSpec -> {
-            rows.add(tr(isTr, "Çıkış Gücü Kapasitesi", "Output Power Capacity") to "${s.wattage.watts} Watt")
+            rows.add(strings.specPowerOutputCapacity to "${s.wattage.watts} Watt")
             rows.add(tr(isTr, "Cultists PSU Tier List", "Cultists PSU Tier Rating") to (s.tierRating ?: getUnspecifiedText(isTr)))
             val effText = listOfNotNull(s.efficiency.displayName, s.cybeneticsCert).joinToString(" • ")
             rows.add(tr(isTr, "Cybenetics & 80 PLUS Sertifikası", "Cybenetics & 80 PLUS Cert") to effText)
@@ -2818,6 +2824,10 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): 
     }
     return rows
 }
+
+private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): List<Pair<String, String>> =
+    buildPolymorphicSpecRows(item, if (isTr) StringsTR else StringsEN)
+
 
 @Composable
 private fun DetailBottomBar(

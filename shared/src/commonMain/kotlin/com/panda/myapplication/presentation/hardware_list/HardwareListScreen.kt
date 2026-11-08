@@ -1483,7 +1483,7 @@ fun HardwareFilterBottomSheet(
                     FilterChip(
                         selected = isSelected,
                         onClick = { onFiltersChanged(filters.copy(sortOption = sort)) },
-                        label = { Text(sort.localizedName(isTr)) },
+                        label = { Text(sort.localizedName(strings)) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
                             selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,

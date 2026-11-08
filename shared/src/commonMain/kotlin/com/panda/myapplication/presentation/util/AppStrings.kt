@@ -858,6 +858,106 @@ interface AppStrings {
 
     val ledgerSubmitAction: String
 
+    // --- EXTENDED LOCALIZATION V2 ---
+    val reviewSectionTitle: String
+    val reviewSectionSubtitle: String
+    val reviewAddButton: String
+    val reviewAddContentDesc: String
+    val reviewRatingCountFormat: String
+    val reviewReputationReward: String
+    val reviewEmptyTitle: String
+    val reviewEmptySubtitle: String
+    val reviewHelpful: String
+    val reviewReport: String
+    val reviewRemoveMine: String
+    val coolingCapacitySuffix: String
+    val coolingNoiseLabel: String
+    val coolingCoolerCapacity: String
+    val coolingHeadroomLabel: String
+    val coolingRatedTdpTemplate: String
+    val coolingCpuSearchPlaceholder: String
+    val coolingCoolerSearchPlaceholder: String
+    val coolingSelectedCpuDesc: String
+    val coolingSelectedCoolerDesc: String
+    val vsSelectCorner1: String
+    val vsSelectCorner2: String
+    val vsTapToAdd: String
+    val vsPopularMatchup: String
+    val vsLaunchSample: String
+    val vsHeadToHeadHeader: String
+    val vs12GameMatrixHeader: String
+    val vs12GameMatrixSubtitle: String
+    val vsAllFilter: String
+    val vsSearchPlaceholderFormat: String
+    val vsEmptyArenaDesc: String
+    val vsPricePerfChamp: String
+    val vsEfficiencyLeader: String
+    val vsDeltaTie: String
+    val vsParityTie: String
+    val vsFaster: String
+    val vsBetterValue: String
+    val vsGenTechDelta: String
+    val specBrand: String
+    val specModelSku: String
+    val specSocket: String
+    val specCoreTopology: String
+    val specBaseBoostClocks: String
+    val specL2L3Cache: String
+    val specTdpPowerLimits: String
+    val specArchNode: String
+    val specMemController: String
+    val specPcieVersion: String
+    val specIgpu: String
+    val specMultiplier: String
+    val specGpuArch: String
+    val specProcessNode: String
+    val specShadersRtTensor: String
+    val specVramCapacityType: String
+    val specMemoryBusBandwidth: String
+    val specStorageCapacity: String
+    val specPowerOutputCapacity: String
+    val specBatteryCapacity: String
+    val specMaxWeightCapacity: String
+    val specUnspecified: String
+    val specCoresLabel: String
+    val specThreadsLabel: String
+    val specIgpuIncluded: String
+    val specIgpuRequired: String
+    val specUnlocked: String
+    val specLocked: String
+    val sortDefault: String
+    val sortPriceAsc: String
+    val sortPriceDesc: String
+    val sortNameAsc: String
+    val sortCpuCoresDesc: String
+    val sortCpuClockDesc: String
+    val sortCpuTdpAsc: String
+    val sortCpuTdpDesc: String
+    val sortGpuVramDesc: String
+    val sortGpuTdpAsc: String
+    val sortGpuTdpDesc: String
+    val sortRamSpeedDesc: String
+    val sortRamClAsc: String
+    val sortRamCapacityDesc: String
+    val sortStorageCapacityDesc: String
+    val sortStorageReadSpeedDesc: String
+    val sortMotherboardM2Desc: String
+    val sortMotherboardRamDesc: String
+    val sortPsuWattageDesc: String
+    val sortAntutuDesc: String
+    val sortBatteryDesc: String
+    val wizardCockpitHud: String
+    val wizardLiveTdp: String
+    val wizardRecommendedPsu: String
+    val wizardBottleneckAnalysis: String
+    val wizardBottleneckPending: String
+    val wizardBottleneckBalancedFormat: String
+    val wizardBottleneckCpuRiskFormat: String
+    val wizardBottleneckGpuLimitFormat: String
+    val workstationMatrixTitle: String
+    val workstationSearchPlaceholder: String
+    val workstationNoResults: String
+
 }
 
 
@@ -1602,10 +1702,6 @@ private class AppStringsTR : AppStrings {
 
     override val vsLaptopMode = "💻 Gaming Laptop"
 
-    override val vsCorner1 = "1. Köşeyi Seç"
-
-    override val vsCorner2 = "2. Köşeyi Seç"
-
     override val vsArenaTitleFormat = "%s Karşılaştırma Arenası"
 
 
@@ -1635,6 +1731,108 @@ private class AppStringsTR : AppStrings {
     override val ledgerNoteFieldLabel = "Açıklama / Deneyim Notu"
 
     override val ledgerSubmitAction = "🚀 Fiyatı Bildir (Yönetici Onayına Sun)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "1. Köşe"
+    override val vsCorner2 = "2. Köşe"
+    override val reviewSectionTitle = "💬 KULLANICI YORUMLARI & DEĞERLENDİRMELERİ"
+    override val reviewSectionSubtitle = "Gerçek kullanıcı deneyimleri, tavsiyeler ve kullanım notları"
+    override val reviewAddButton = "Yorum Yaz"
+    override val reviewAddContentDesc = "Yorum Ekle"
+    override val reviewRatingCountFormat = "%d Topluluk Değerlendirmesi"
+    override val reviewReputationReward = "+10 Puan Kazandırır"
+    override val reviewEmptyTitle = "Henüz bu donanım için bir yorum yazılmamış."
+    override val reviewEmptySubtitle = "İlk deneyimi siz paylaşın ve +10 itibar puanı kazanın!"
+    override val reviewHelpful = "Faydalı"
+    override val reviewReport = "Bildir"
+    override val reviewRemoveMine = "Yorumumu Kaldır"
+    override val coolingCapacitySuffix = "Kapasite"
+    override val coolingNoiseLabel = "Gürültü"
+    override val coolingCoolerCapacity = "Soğutucu Kapasitesi"
+    override val coolingHeadroomLabel = "Termal Pay (Headroom)"
+    override val coolingRatedTdpTemplate = "%s • Kağıt TDP: %dW • Gerçek Tepe Güç (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "İşlemci ara (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Soğutucu ara (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "Seçilen işlemcinin gerçek TDP ve hesaplanan PPT/MTP tepe güç değeri simülatöre aktarılır."
+    override val coolingSelectedCoolerDesc = "Seçilen hava veya sıvı soğutucunun ısı dağıtma kapasitesi (W) simülatöre aktarılır."
+    override val vsSelectCorner1 = "1. Köşeyi Seç"
+    override val vsSelectCorner2 = "2. Köşeyi Seç"
+    override val vsTapToAdd = "Listeden eklemek için dokun"
+    override val vsPopularMatchup = "Popüler Kapışma Önerisi"
+    override val vsLaunchSample = "Örnek Kapışmayı Hemen Başlat"
+    override val vsHeadToHeadHeader = "KAFA KAFAYA TEKNİK & MATEMATİKSEL KIYASLAMA"
+    override val vs12GameMatrixHeader = "12 OYUN FPS & %1 LOW SİMÜLASYON MATRİSİ"
+    override val vs12GameMatrixSubtitle = "Rekabetçi E-Spor (5) & AAA Ağır Grafik (7) gerçek katsayı kıyası"
+    override val vsAllFilter = "Tümü"
+    override val vsSearchPlaceholderFormat = "%s model, marka veya özellik ara..."
+    override val vsEmptyArenaDesc = "Yukarıdaki 1. Köşe ve 2. Köşe kutularına dokunarak veya Katalog ekranındaki ürün kartlarındaki 'VS' butonunu kullanarak donanımları kafa kafaya kıyaslayabilirsiniz."
+    override val vsPricePerfChamp = "FİYAT / PERFORMANS ŞAMPİYONU"
+    override val vsEfficiencyLeader = "MODERN MİMARİ & VERİMLİLİK LİDERİ"
+    override val vsDeltaTie = "Fark (Eşit)"
+    override val vsParityTie = "Başa Baş Performans (Eşit)"
+    override val vsFaster = "Daha Güçlü"
+    override val vsBetterValue = "Daha Avantajlı"
+    override val vsGenTechDelta = "Nesil / Teknoloji Farkı"
+    override val specBrand = "Marka"
+    override val specModelSku = "Model Kodu"
+    override val specSocket = "Soket"
+    override val specCoreTopology = "Çekirdek & İzlek Dizilimi"
+    override val specBaseBoostClocks = "Temel / Boost Frekans"
+    override val specL2L3Cache = "L2 ve L3 Önbellek"
+    override val specTdpPowerLimits = "TDP ve Güç Limitleri"
+    override val specArchNode = "Mimari & Üretim Nodu"
+    override val specMemController = "Bellek Kontrolcü Desteği"
+    override val specPcieVersion = "PCIe Sürümü & Hat Sayısı"
+    override val specIgpu = "Dahili Grafik (iGPU)"
+    override val specMultiplier = "Çarpan Kilidi (Overclock)"
+    override val specGpuArch = "Grafik İşlemci & Mimari"
+    override val specProcessNode = "Üretim Teknolojisi"
+    override val specShadersRtTensor = "Gölgelendirici / RT / Tensor"
+    override val specVramCapacityType = "VRAM Kapasitesi & Tipi"
+    override val specMemoryBusBandwidth = "Bellek Veri Yolu & Bant Genişliği"
+    override val specStorageCapacity = "Depolama Kapasitesi"
+    override val specPowerOutputCapacity = "Çıkış Gücü Kapasitesi"
+    override val specBatteryCapacity = "Batarya Kapasitesi"
+    override val specMaxWeightCapacity = "Maksimum Taşıma Kapasitesi"
+    override val specUnspecified = "Belirtilmedi"
+    override val specCoresLabel = "Çekirdek"
+    override val specThreadsLabel = "İzlek"
+    override val specIgpuIncluded = "Mevcut (Dahili Grafik)"
+    override val specIgpuRequired = "Yok (Harici GPU Gerekli)"
+    override val specUnlocked = "Açık (Unlocked)"
+    override val specLocked = "Kapalı (Locked)"
+    override val sortDefault = "Varsayılan"
+    override val sortPriceAsc = "Fiyat: Artan"
+    override val sortPriceDesc = "Fiyat: Azalan"
+    override val sortNameAsc = "İsim: A-Z"
+    override val sortCpuCoresDesc = "Çekirdek: Çoktan Aza"
+    override val sortCpuClockDesc = "Saat Hızı: En Yüksek"
+    override val sortCpuTdpAsc = "TDP: En Düşük"
+    override val sortCpuTdpDesc = "TDP: En Yüksek"
+    override val sortGpuVramDesc = "VRAM: En Yüksek"
+    override val sortGpuTdpAsc = "Güç Tüketimi: En Düşük"
+    override val sortGpuTdpDesc = "Güç Tüketimi: En Yüksek"
+    override val sortRamSpeedDesc = "Frekans: En Yüksek"
+    override val sortRamClAsc = "CAS Gecikmesi (CL): En Düşük"
+    override val sortRamCapacityDesc = "Toplam Kapasite: En Yüksek"
+    override val sortStorageCapacityDesc = "Kapasite: En Yüksek"
+    override val sortStorageReadSpeedDesc = "Okuma Hızı: En Hızlı"
+    override val sortMotherboardM2Desc = "M.2 Slot Sayısı: En Çok"
+    override val sortMotherboardRamDesc = "RAM Slot Sayısı: En Çok"
+    override val sortPsuWattageDesc = "Güç Kapasitesi: En Yüksek"
+    override val sortAntutuDesc = "AnTuTu / Performans: En Yüksek"
+    override val sortBatteryDesc = "Batarya Kapasitesi: En Yüksek"
+    override val wizardCockpitHud = "KOKPİT HUD"
+    override val wizardLiveTdp = "CANLI GÜÇ TÜKETİMİ (TDP)"
+    override val wizardRecommendedPsu = "ÖNERİLEN PSU"
+    override val wizardBottleneckAnalysis = "DARBOĞAZ ANALİZİ"
+    override val wizardBottleneckPending = "CPU ve GPU seçildiğinde hesaplanacak"
+    override val wizardBottleneckBalancedFormat = "%%%d - Mükemmel Denge"
+    override val wizardBottleneckCpuRiskFormat = "%%%d - CPU Darboğazı Riski"
+    override val wizardBottleneckGpuLimitFormat = "%%%d - GPU Limitli / Tam Yük"
+    override val workstationMatrixTitle = "35 Profesyonel Uygulama Donanım Matrisi"
+    override val workstationSearchPlaceholder = "35 Pro Yazılımda Ara (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "Aramanızla eşleşen profesyonel yazılım bulunamadı."
 
 }
 
@@ -2382,9 +2580,7 @@ private class AppStringsEN : AppStrings {
 
     override val vsLaptopMode = "💻 Gaming Laptop"
 
-    override val vsCorner1 = "Select Corner 1"
 
-    override val vsCorner2 = "Select Corner 2"
 
     override val vsArenaTitleFormat = "%s Comparison Arena"
 
@@ -2415,6 +2611,108 @@ private class AppStringsEN : AppStrings {
     override val ledgerNoteFieldLabel = "Description / Experience Note"
 
     override val ledgerSubmitAction = "🚀 Submit Deal (Pending Review)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "Corner 1"
+    override val vsCorner2 = "Corner 2"
+    override val reviewSectionTitle = "💬 USER REVIEWS & RATINGS"
+    override val reviewSectionSubtitle = "Real user feedback, build recommendations and usage notes"
+    override val reviewAddButton = "Write Review"
+    override val reviewAddContentDesc = "Add Review"
+    override val reviewRatingCountFormat = "%d Community Reviews"
+    override val reviewReputationReward = "Earns +10 Points"
+    override val reviewEmptyTitle = "No reviews have been written for this hardware yet."
+    override val reviewEmptySubtitle = "Be the first to share your experience and earn +10 reputation points!"
+    override val reviewHelpful = "Helpful"
+    override val reviewReport = "Report"
+    override val reviewRemoveMine = "Delete My Review"
+    override val coolingCapacitySuffix = "Capacity"
+    override val coolingNoiseLabel = "Noise"
+    override val coolingCoolerCapacity = "Cooler Capacity"
+    override val coolingHeadroomLabel = "Thermal Headroom"
+    override val coolingRatedTdpTemplate = "%s • Rated TDP: %dW • Peak Power (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "Search CPU (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Search cooler (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "The selected CPU's rated TDP and calculated PPT/MTP peak power are transferred to the simulator."
+    override val coolingSelectedCoolerDesc = "The heat dissipation capacity (W) of the selected air or liquid cooler is transferred to the simulator."
+    override val vsSelectCorner1 = "Select Corner 1"
+    override val vsSelectCorner2 = "Select Corner 2"
+    override val vsTapToAdd = "Tap to add from list"
+    override val vsPopularMatchup = "Popular Matchup Suggestion"
+    override val vsLaunchSample = "Launch Sample Showdown"
+    override val vsHeadToHeadHeader = "HEAD-TO-HEAD TECHNICAL & BENCHMARK COMPARISON"
+    override val vs12GameMatrixHeader = "12-GAME FPS & 1% LOW SIMULATION MATRIX"
+    override val vs12GameMatrixSubtitle = "Competitive Esports (5) & AAA Heavy Graphics (7) real ratio comparison"
+    override val vsAllFilter = "All"
+    override val vsSearchPlaceholderFormat = "Search %s model, brand or specs..."
+    override val vsEmptyArenaDesc = "Tap the Corner 1 and Corner 2 boxes above or use the 'VS' button on catalog product cards to compare hardware head-to-head."
+    override val vsPricePerfChamp = "PRICE / PERFORMANCE CHAMPION"
+    override val vsEfficiencyLeader = "MODERN ARCHITECTURE & EFFICIENCY LEADER"
+    override val vsDeltaTie = "Delta (Tie)"
+    override val vsParityTie = "Head-to-Head Parity (Tie)"
+    override val vsFaster = "Faster"
+    override val vsBetterValue = "Better Value"
+    override val vsGenTechDelta = "Generation / Technology Delta"
+    override val specBrand = "Brand"
+    override val specModelSku = "Model SKU"
+    override val specSocket = "Socket"
+    override val specCoreTopology = "Core & Thread Topology"
+    override val specBaseBoostClocks = "Base / Boost Clocks"
+    override val specL2L3Cache = "L2 & L3 Cache"
+    override val specTdpPowerLimits = "TDP & Power Limits"
+    override val specArchNode = "Architecture & Node"
+    override val specMemController = "Memory Controller Support"
+    override val specPcieVersion = "PCIe Version & Lanes"
+    override val specIgpu = "Integrated GPU (iGPU)"
+    override val specMultiplier = "Multiplier (Overclock)"
+    override val specGpuArch = "GPU & Architecture"
+    override val specProcessNode = "Process Node"
+    override val specShadersRtTensor = "Shaders / RT / Tensor"
+    override val specVramCapacityType = "VRAM Capacity & Type"
+    override val specMemoryBusBandwidth = "Memory Bus & Bandwidth"
+    override val specStorageCapacity = "Storage Capacity"
+    override val specPowerOutputCapacity = "Power Output Capacity"
+    override val specBatteryCapacity = "Battery Capacity"
+    override val specMaxWeightCapacity = "Max Load Capacity"
+    override val specUnspecified = "Unspecified"
+    override val specCoresLabel = "Cores"
+    override val specThreadsLabel = "Threads"
+    override val specIgpuIncluded = "Included (iGPU)"
+    override val specIgpuRequired = "None (Discrete GPU Required)"
+    override val specUnlocked = "Unlocked"
+    override val specLocked = "Locked"
+    override val sortDefault = "Default"
+    override val sortPriceAsc = "Price: Low to High"
+    override val sortPriceDesc = "Price: High to Low"
+    override val sortNameAsc = "Name: A-Z"
+    override val sortCpuCoresDesc = "Cores: High to Low"
+    override val sortCpuClockDesc = "Clock Speed: Highest"
+    override val sortCpuTdpAsc = "TDP: Lowest"
+    override val sortCpuTdpDesc = "TDP: Highest"
+    override val sortGpuVramDesc = "VRAM: Highest"
+    override val sortGpuTdpAsc = "Power Draw: Lowest"
+    override val sortGpuTdpDesc = "Power Draw: Highest"
+    override val sortRamSpeedDesc = "Speed: Highest"
+    override val sortRamClAsc = "CAS Latency: Lowest"
+    override val sortRamCapacityDesc = "Total Capacity: Highest"
+    override val sortStorageCapacityDesc = "Capacity: Highest"
+    override val sortStorageReadSpeedDesc = "Read Speed: Fastest"
+    override val sortMotherboardM2Desc = "M.2 Slots: Most"
+    override val sortMotherboardRamDesc = "RAM Slots: Most"
+    override val sortPsuWattageDesc = "Wattage: Highest"
+    override val sortAntutuDesc = "AnTuTu / Performance: Highest"
+    override val sortBatteryDesc = "Battery Capacity: Highest"
+    override val wizardCockpitHud = "COCKPIT HUD"
+    override val wizardLiveTdp = "LIVE POWER DRAW (TDP)"
+    override val wizardRecommendedPsu = "RECOMMENDED PSU"
+    override val wizardBottleneckAnalysis = "BOTTLENECK ANALYSIS"
+    override val wizardBottleneckPending = "Calculated when CPU and GPU are selected"
+    override val wizardBottleneckBalancedFormat = "%d%% - Perfect Balance"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - CPU Bottleneck Risk"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - GPU Bound / Full Load"
+    override val workstationMatrixTitle = "Hardware Matrix for 35 Pro Applications"
+    override val workstationSearchPlaceholder = "Search 35 Pro Apps (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "No matching professional software found."
 
 }
 
@@ -3162,9 +3460,7 @@ private class AppStringsDE : AppStrings {
 
     override val vsLaptopMode = "💻 Gaming-Laptop"
 
-    override val vsCorner1 = "Ecke 1 wählen"
 
-    override val vsCorner2 = "Ecke 2 wählen"
 
     override val vsArenaTitleFormat = "%s Vergleichs-Arena"
 
@@ -3195,6 +3491,108 @@ private class AppStringsDE : AppStrings {
     override val ledgerNoteFieldLabel = "Beschreibung / Erfahrungsbericht"
 
     override val ledgerSubmitAction = "🚀 Deal melden (Wird geprüft)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "Ecke 1"
+    override val vsCorner2 = "Ecke 2"
+    override val reviewSectionTitle = "💬 ERFAHRUNGSBERICHTE & BEWERTUNGEN"
+    override val reviewSectionSubtitle = "Echte Nutzererfahrungen, Empfehlungen und Praxishinweise"
+    override val reviewAddButton = "Bewertung schreiben"
+    override val reviewAddContentDesc = "Bewertung hinzufügen"
+    override val reviewRatingCountFormat = "%d Community-Bewertungen"
+    override val reviewReputationReward = "+10 Punkte Belohnung"
+    override val reviewEmptyTitle = "Für diese Hardware wurde noch keine Bewertung verfasst."
+    override val reviewEmptySubtitle = "Teilen Sie als Erster Ihre Erfahrung und erhalten Sie +10 Reputationspunkte!"
+    override val reviewHelpful = "Hilfreich"
+    override val reviewReport = "Melden"
+    override val reviewRemoveMine = "Meine Bewertung löschen"
+    override val coolingCapacitySuffix = "Kapazität"
+    override val coolingNoiseLabel = "Lautstärke"
+    override val coolingCoolerCapacity = "Kühlerkapazität"
+    override val coolingHeadroomLabel = "Thermischer Spielraum"
+    override val coolingRatedTdpTemplate = "%s • Nenn-TDP: %dW • Spitzenleistung (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "CPU suchen (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Kühler suchen (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "Die Nenn-TDP der ausgewählten CPU und die berechnete PPT/MTP-Spitzenleistung werden an den Simulator übergeben."
+    override val coolingSelectedCoolerDesc = "Die Wärmeabfuhrkapazität (W) des ausgewählten Luft- oder Flüssigkeitskühlers wird an den Simulator übergeben."
+    override val vsSelectCorner1 = "Ecke 1 wählen"
+    override val vsSelectCorner2 = "Ecke 2 wählen"
+    override val vsTapToAdd = "Tippen zum Hinzufügen"
+    override val vsPopularMatchup = "Beliebter Showdown-Vorschlag"
+    override val vsLaunchSample = "Beispiel-Showdown starten"
+    override val vsHeadToHeadHeader = "DIREKTER TECHNISCHER & BENCHMARK-VERGLEICH"
+    override val vs12GameMatrixHeader = "12-SPIELE-FPS- & 1%-LOW-SIMULATIONSMATRIX"
+    override val vs12GameMatrixSubtitle = "Kompetitive E-Sports (5) & AAA-Grafik (7) Realwert-Vergleich"
+    override val vsAllFilter = "Alle"
+    override val vsSearchPlaceholderFormat = "%s Modell, Marke oder Eigenschaften suchen..."
+    override val vsEmptyArenaDesc = "Tippen Sie oben auf die Boxen für Ecke 1 und Ecke 2 oder nutzen Sie die 'VS'-Schaltfläche auf den Produktkarten, um Hardware direkt zu vergleichen."
+    override val vsPricePerfChamp = "PREIS-LEISTUNGS-CHAMPION"
+    override val vsEfficiencyLeader = "MODERNE ARCHITEKTUR & EFFIZIENZFÜHRER"
+    override val vsDeltaTie = "Differenz (Gleichstand)"
+    override val vsParityTie = "Leistungsgleichstand (Unentschieden)"
+    override val vsFaster = "Schneller"
+    override val vsBetterValue = "Besseres Preis-Leistungs-Verhältnis"
+    override val vsGenTechDelta = "Generations- / Technologieunterschied"
+    override val specBrand = "Marke"
+    override val specModelSku = "Modellnummer"
+    override val specSocket = "Sockel"
+    override val specCoreTopology = "Kern- & Thread-Topologie"
+    override val specBaseBoostClocks = "Basis- / Boost-Takt"
+    override val specL2L3Cache = "L2 & L3 Cache"
+    override val specTdpPowerLimits = "TDP & Leistungslimits"
+    override val specArchNode = "Architektur & Strukturbreite"
+    override val specMemController = "Speichercontroller-Unterstützung"
+    override val specPcieVersion = "PCIe-Version & Lanes"
+    override val specIgpu = "Integrierte Grafik (iGPU)"
+    override val specMultiplier = "Multiplikator (Overclocking)"
+    override val specGpuArch = "GPU & Architektur"
+    override val specProcessNode = "Fertigungstechnologie"
+    override val specShadersRtTensor = "Shader / RT / Tensor"
+    override val specVramCapacityType = "VRAM-Kapazität & Typ"
+    override val specMemoryBusBandwidth = "Speicherbus & Bandbreite"
+    override val specStorageCapacity = "Speicherkapazität"
+    override val specPowerOutputCapacity = "Ausgangsleistungskapazität"
+    override val specBatteryCapacity = "Akkukapazität"
+    override val specMaxWeightCapacity = "Maximale Tragkraft"
+    override val specUnspecified = "Nicht angegeben"
+    override val specCoresLabel = "Kerne"
+    override val specThreadsLabel = "Threads"
+    override val specIgpuIncluded = "Integriert (iGPU)"
+    override val specIgpuRequired = "Keine (Dedizierte GPU erforderlich)"
+    override val specUnlocked = "Freigeschaltet (Unlocked)"
+    override val specLocked = "Gesperrt (Locked)"
+    override val sortDefault = "Standard"
+    override val sortPriceAsc = "Preis: Aufsteigend"
+    override val sortPriceDesc = "Preis: Absteigend"
+    override val sortNameAsc = "Name: A-Z"
+    override val sortCpuCoresDesc = "Kerne: Viele nach wenige"
+    override val sortCpuClockDesc = "Taktrate: Höchste"
+    override val sortCpuTdpAsc = "TDP: Niedrigste"
+    override val sortCpuTdpDesc = "TDP: Höchste"
+    override val sortGpuVramDesc = "VRAM: Höchste"
+    override val sortGpuTdpAsc = "Stromverbrauch: Geringste"
+    override val sortGpuTdpDesc = "Stromverbrauch: Höchste"
+    override val sortRamSpeedDesc = "Geschwindigkeit: Höchste"
+    override val sortRamClAsc = "Latenz (CL): Niedrigste"
+    override val sortRamCapacityDesc = "Gesamtkapazität: Höchste"
+    override val sortStorageCapacityDesc = "Kapazität: Höchste"
+    override val sortStorageReadSpeedDesc = "Lesegeschwindigkeit: Schnellste"
+    override val sortMotherboardM2Desc = "M.2-Steckplätze: Meiste"
+    override val sortMotherboardRamDesc = "RAM-Steckplätze: Meiste"
+    override val sortPsuWattageDesc = "Leistung: Höchste"
+    override val sortAntutuDesc = "AnTuTu / Leistung: Höchste"
+    override val sortBatteryDesc = "Akkukapazität: Höchste"
+    override val wizardCockpitHud = "COCKPIT HUD"
+    override val wizardLiveTdp = "LIVE-LEISTUNGSAUFNAHME (TDP)"
+    override val wizardRecommendedPsu = "EMPFOHLENES NETZTEIL"
+    override val wizardBottleneckAnalysis = "BOTTLENECK-ANALYSE"
+    override val wizardBottleneckPending = "Wird berechnet, sobald CPU und GPU gewählt sind"
+    override val wizardBottleneckBalancedFormat = "%d%% - Perfekte Balance"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - CPU-Bottleneck-Risiko"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - GPU-Limitierung / Volllast"
+    override val workstationMatrixTitle = "Hardware-Matrix für 35 Pro-Anwendungen"
+    override val workstationSearchPlaceholder = "35 Pro-Apps durchsuchen (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "Keine passende professionelle Software gefunden."
 
 }
 
@@ -3942,9 +4340,7 @@ private class AppStringsES : AppStrings {
 
     override val vsLaptopMode = "💻 Portátil Gaming"
 
-    override val vsCorner1 = "Seleccionar Esquina 1"
 
-    override val vsCorner2 = "Seleccionar Esquina 2"
 
     override val vsArenaTitleFormat = "Arena de Comparación de %s"
 
@@ -3975,6 +4371,108 @@ private class AppStringsES : AppStrings {
     override val ledgerNoteFieldLabel = "Descripción / Nota de Experiencia"
 
     override val ledgerSubmitAction = "🚀 Enviar Oferta (Revisión Pendiente)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "Rincón 1"
+    override val vsCorner2 = "Rincón 2"
+    override val reviewSectionTitle = "💬 OPINIONES Y VALORACIONES"
+    override val reviewSectionSubtitle = "Experiencias reales de usuarios, consejos y notas de uso"
+    override val reviewAddButton = "Escribir reseña"
+    override val reviewAddContentDesc = "Añadir reseña"
+    override val reviewRatingCountFormat = "%d valoraciones de la comunidad"
+    override val reviewReputationReward = "+10 Puntos de reputación"
+    override val reviewEmptyTitle = "Aún no se han escrito reseñas para este componente."
+    override val reviewEmptySubtitle = "¡Sé el primero en compartir tu experiencia y gana +10 puntos de reputación!"
+    override val reviewHelpful = "Útil"
+    override val reviewReport = "Reportar"
+    override val reviewRemoveMine = "Eliminar mi reseña"
+    override val coolingCapacitySuffix = "Capacidad"
+    override val coolingNoiseLabel = "Ruido"
+    override val coolingCoolerCapacity = "Capacidad del disipador"
+    override val coolingHeadroomLabel = "Margen térmico (Headroom)"
+    override val coolingRatedTdpTemplate = "%s • TDP nominal: %dW • Potencia pico (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "Buscar CPU (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Buscar disipador (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "El TDP nominal y la potencia pico PPT/MTP calculada de la CPU seleccionada se transfieren al simulador."
+    override val coolingSelectedCoolerDesc = "La capacidad de disipación de calor (W) del disipador de aire o líquido seleccionado se transfiere al simulador."
+    override val vsSelectCorner1 = "Seleccionar Rincón 1"
+    override val vsSelectCorner2 = "Seleccionar Rincón 2"
+    override val vsTapToAdd = "Toca para agregar de la lista"
+    override val vsPopularMatchup = "Sugerencia de duelo popular"
+    override val vsLaunchSample = "Iniciar duelo de muestra"
+    override val vsHeadToHeadHeader = "COMPARACIÓN TÉCNICA Y DE RENDIMIENTO CARA A CARA"
+    override val vs12GameMatrixHeader = "MATRIZ DE SIMULACIÓN DE FPS Y 1% LOW EN 12 JUEGOS"
+    override val vs12GameMatrixSubtitle = "Esports competitivos (5) y gráficos pesados AAA (7) comparación de coeficientes reales"
+    override val vsAllFilter = "Todos"
+    override val vsSearchPlaceholderFormat = "Buscar modelo, marca o características de %s..."
+    override val vsEmptyArenaDesc = "Toca las casillas de Rincón 1 y Rincón 2 arriba o usa el botón 'VS' en las tarjetas del catálogo para comparar componentes cara a cara."
+    override val vsPricePerfChamp = "CAMPEÓN CALIDAD / PRECIO"
+    override val vsEfficiencyLeader = "LÍDER EN ARQUITECTURA Y EFICIENCIA"
+    override val vsDeltaTie = "Diferencia (Empate)"
+    override val vsParityTie = "Paridad de rendimiento (Empate)"
+    override val vsFaster = "Más rápido"
+    override val vsBetterValue = "Mejor relación calidad/precio"
+    override val vsGenTechDelta = "Diferencia generacional / tecnológica"
+    override val specBrand = "Marca"
+    override val specModelSku = "Código de modelo (SKU)"
+    override val specSocket = "Socket"
+    override val specCoreTopology = "Topología de núcleos e hilos"
+    override val specBaseBoostClocks = "Frecuencias base / boost"
+    override val specL2L3Cache = "Caché L2 y L3"
+    override val specTdpPowerLimits = "TDP y límites de potencia"
+    override val specArchNode = "Arquitectura y nodo de fabricación"
+    override val specMemController = "Soporte de controlador de memoria"
+    override val specPcieVersion = "Versión PCIe y líneas"
+    override val specIgpu = "GPU integrada (iGPU)"
+    override val specMultiplier = "Multiplicador (Overclock)"
+    override val specGpuArch = "GPU y arquitectura"
+    override val specProcessNode = "Nodo de proceso"
+    override val specShadersRtTensor = "Sombreadores / RT / Tensor"
+    override val specVramCapacityType = "Capacidad y tipo de VRAM"
+    override val specMemoryBusBandwidth = "Bus de memoria y ancho de banda"
+    override val specStorageCapacity = "Capacidad de almacenamiento"
+    override val specPowerOutputCapacity = "Capacidad de salida de potencia"
+    override val specBatteryCapacity = "Capacidad de la batería"
+    override val specMaxWeightCapacity = "Capacidad máxima de carga"
+    override val specUnspecified = "No especificado"
+    override val specCoresLabel = "Núcleos"
+    override val specThreadsLabel = "Hilos"
+    override val specIgpuIncluded = "Integrada (iGPU)"
+    override val specIgpuRequired = "Ninguna (Se requiere GPU dedicada)"
+    override val specUnlocked = "Desbloqueado"
+    override val specLocked = "Bloqueado"
+    override val sortDefault = "Por defecto"
+    override val sortPriceAsc = "Precio: Menor a mayor"
+    override val sortPriceDesc = "Precio: Mayor a menor"
+    override val sortNameAsc = "Nombre: A-Z"
+    override val sortCpuCoresDesc = "Núcleos: Mayor a menor"
+    override val sortCpuClockDesc = "Frecuencia de reloj: Más alta"
+    override val sortCpuTdpAsc = "TDP: Más bajo"
+    override val sortCpuTdpDesc = "TDP: Más alto"
+    override val sortGpuVramDesc = "VRAM: Más alta"
+    override val sortGpuTdpAsc = "Consumo: Más bajo"
+    override val sortGpuTdpDesc = "Consumo: Más alto"
+    override val sortRamSpeedDesc = "Velocidad: Más alta"
+    override val sortRamClAsc = "Latencia CAS: Más baja"
+    override val sortRamCapacityDesc = "Capacidad total: Más alta"
+    override val sortStorageCapacityDesc = "Capacidad: Más alta"
+    override val sortStorageReadSpeedDesc = "Velocidad de lectura: Más rápida"
+    override val sortMotherboardM2Desc = "Ranuras M.2: Más"
+    override val sortMotherboardRamDesc = "Ranuras RAM: Más"
+    override val sortPsuWattageDesc = "Potencia: Más alta"
+    override val sortAntutuDesc = "AnTuTu / Rendimiento: Más alto"
+    override val sortBatteryDesc = "Batería: Más alta"
+    override val wizardCockpitHud = "PANEL COCKPIT"
+    override val wizardLiveTdp = "CONSUMO EN VIVO (TDP)"
+    override val wizardRecommendedPsu = "FUENTE RECOMENDADA (PSU)"
+    override val wizardBottleneckAnalysis = "ANÁLISIS DE CUELLO DE BOTELLA"
+    override val wizardBottleneckPending = "Se calcula cuando se seleccionan CPU y GPU"
+    override val wizardBottleneckBalancedFormat = "%d%% - Equilibrio perfecto"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - Riesgo de cuello de botella en CPU"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - Límite en GPU / Carga completa"
+    override val workstationMatrixTitle = "Matriz de hardware para 35 aplicaciones pro"
+    override val workstationSearchPlaceholder = "Buscar en 35 aplicaciones pro (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "No se encontró software profesional coincidente."
 
 }
 
@@ -4722,9 +5220,7 @@ private class AppStringsFR : AppStrings {
 
     override val vsLaptopMode = "💻 PC Portable Gaming"
 
-    override val vsCorner1 = "Choisir le Coin 1"
 
-    override val vsCorner2 = "Choisir le Coin 2"
 
     override val vsArenaTitleFormat = "Arène de Comparaison : %s"
 
@@ -4755,6 +5251,108 @@ private class AppStringsFR : AppStrings {
     override val ledgerNoteFieldLabel = "Description / Avis d'Expérience"
 
     override val ledgerSubmitAction = "🚀 Soumettre (En attente de validation)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "Coin 1"
+    override val vsCorner2 = "Coin 2"
+    override val reviewSectionTitle = "💬 AVIS ET ÉVALUATIONS D'UTILISATEURS"
+    override val reviewSectionSubtitle = "Retours d'expérience réels, recommandations et notes d'utilisation"
+    override val reviewAddButton = "Écrire un avis"
+    override val reviewAddContentDesc = "Ajouter un avis"
+    override val reviewRatingCountFormat = "%d évaluations de la communauté"
+    override val reviewReputationReward = "Rapporte +10 points"
+    override val reviewEmptyTitle = "Aucun avis n'a encore été rédigé pour ce composant."
+    override val reviewEmptySubtitle = "Soyez le premier à partager votre expérience et gagnez +10 points de réputation !"
+    override val reviewHelpful = "Utile"
+    override val reviewReport = "Signaler"
+    override val reviewRemoveMine = "Supprimer mon avis"
+    override val coolingCapacitySuffix = "Capacité"
+    override val coolingNoiseLabel = "Bruit"
+    override val coolingCoolerCapacity = "Capacité du refroidisseur"
+    override val coolingHeadroomLabel = "Marge thermique (Headroom)"
+    override val coolingRatedTdpTemplate = "%s • TDP nominal : %dW • Puissance crête (PPT/MTP) : %dW • TjMax : %d°C"
+    override val coolingCpuSearchPlaceholder = "Rechercher CPU (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Rechercher refroidisseur (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "Le TDP nominal et la puissance crête PPT/MTP calculée du processeur sélectionné sont transférés vers le simulateur."
+    override val coolingSelectedCoolerDesc = "La capacité de dissipation thermique (W) du refroidisseur à air ou liquide sélectionné est transférée vers le simulateur."
+    override val vsSelectCorner1 = "Sélectionner Coin 1"
+    override val vsSelectCorner2 = "Sélectionner Coin 2"
+    override val vsTapToAdd = "Toucher pour ajouter depuis la liste"
+    override val vsPopularMatchup = "Affrontement populaire suggéré"
+    override val vsLaunchSample = "Lancer l'affrontement d'exemple"
+    override val vsHeadToHeadHeader = "COMPARAISON TECHNIQUE ET DE BENCHMARK EN FACE-À-FACE"
+    override val vs12GameMatrixHeader = "MATRICE DE SIMULATION FPS & 1% LOW SUR 12 JEUX"
+    override val vs12GameMatrixSubtitle = "Esports compétitifs (5) et graphismes lourds AAA (7) comparaison de ratios réels"
+    override val vsAllFilter = "Tous"
+    override val vsSearchPlaceholderFormat = "Rechercher modèle, marque ou spécifications de %s..."
+    override val vsEmptyArenaDesc = "Appuyez sur les cases Coin 1 et Coin 2 ci-dessus ou utilisez le bouton 'VS' sur les fiches du catalogue pour comparer le matériel en face-à-face."
+    override val vsPricePerfChamp = "CHAMPION QUALITÉ / PRIX"
+    override val vsEfficiencyLeader = "LEADER ARCHITECTURE & EFFICACITÉ"
+    override val vsDeltaTie = "Écart (Égalité)"
+    override val vsParityTie = "Parité de performance (Égalité)"
+    override val vsFaster = "Plus rapide"
+    override val vsBetterValue = "Meilleur rapport valeur"
+    override val vsGenTechDelta = "Écart de génération / technologie"
+    override val specBrand = "Marque"
+    override val specModelSku = "Numéro de modèle"
+    override val specSocket = "Socket"
+    override val specCoreTopology = "Topologie cœurs & threads"
+    override val specBaseBoostClocks = "Fréquences de base / boost"
+    override val specL2L3Cache = "Cache L2 et L3"
+    override val specTdpPowerLimits = "TDP et limites d'alimentation"
+    override val specArchNode = "Architecture et procédé de gravure"
+    override val specMemController = "Contrôleur de mémoire pris en charge"
+    override val specPcieVersion = "Version PCIe & lignes"
+    override val specIgpu = "Graphiques intégrés (iGPU)"
+    override val specMultiplier = "Coefficient multiplicateur (OC)"
+    override val specGpuArch = "GPU et architecture"
+    override val specProcessNode = "Procédé de fabrication"
+    override val specShadersRtTensor = "Shaders / RT / Tensor"
+    override val specVramCapacityType = "Capacité et type de VRAM"
+    override val specMemoryBusBandwidth = "Bus mémoire et bande passante"
+    override val specStorageCapacity = "Capacité de stockage"
+    override val specPowerOutputCapacity = "Capacité de puissance de sortie"
+    override val specBatteryCapacity = "Capacité de la batterie"
+    override val specMaxWeightCapacity = "Capacité de charge maximale"
+    override val specUnspecified = "Non spécifié"
+    override val specCoresLabel = "Cœurs"
+    override val specThreadsLabel = "Threads"
+    override val specIgpuIncluded = "Intégrée (iGPU)"
+    override val specIgpuRequired = "Aucune (GPU dédiée requise)"
+    override val specUnlocked = "Débloqué"
+    override val specLocked = "Verrouillé"
+    override val sortDefault = "Par défaut"
+    override val sortPriceAsc = "Prix : Croissant"
+    override val sortPriceDesc = "Prix : Décroissant"
+    override val sortNameAsc = "Nom : A-Z"
+    override val sortCpuCoresDesc = "Cœurs : Décroissant"
+    override val sortCpuClockDesc = "Fréquence : La plus haute"
+    override val sortCpuTdpAsc = "TDP : Le plus bas"
+    override val sortCpuTdpDesc = "TDP : Le plus haut"
+    override val sortGpuVramDesc = "VRAM : La plus haute"
+    override val sortGpuTdpAsc = "Consommation : La plus basse"
+    override val sortGpuTdpDesc = "Consommation : La plus haute"
+    override val sortRamSpeedDesc = "Vitesse : La plus haute"
+    override val sortRamClAsc = "Latence CAS : La plus basse"
+    override val sortRamCapacityDesc = "Capacité totale : La plus haute"
+    override val sortStorageCapacityDesc = "Capacité : La plus haute"
+    override val sortStorageReadSpeedDesc = "Vitesse de lecture : La plus rapide"
+    override val sortMotherboardM2Desc = "Slots M.2 : Les plus nombreux"
+    override val sortMotherboardRamDesc = "Slots RAM : Les plus nombreux"
+    override val sortPsuWattageDesc = "Puissance : La plus haute"
+    override val sortAntutuDesc = "AnTuTu / Performance : La plus haute"
+    override val sortBatteryDesc = "Batterie : La plus haute"
+    override val wizardCockpitHud = "COCKPIT HUD"
+    override val wizardLiveTdp = "CONSOMMATION EN DIRECT (TDP)"
+    override val wizardRecommendedPsu = "ALIMENTATION RECOMMANDÉE"
+    override val wizardBottleneckAnalysis = "ANALYSE DE GOULOT D'ÉTRANGLEMENT"
+    override val wizardBottleneckPending = "Calculé lorsque le CPU et le GPU sont sélectionnés"
+    override val wizardBottleneckBalancedFormat = "%d%% - Équilibre parfait"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - Risque de goulot d'étranglement CPU"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - Limité par le GPU / Pleine charge"
+    override val workstationMatrixTitle = "Matrice matérielle pour 35 applications pro"
+    override val workstationSearchPlaceholder = "Rechercher parmi 35 apps pro (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "Aucun logiciel professionnel correspondant trouvé."
 
 }
 
@@ -5502,9 +6100,7 @@ private class AppStringsRU : AppStrings {
 
     override val vsLaptopMode = "💻 Игровой ноутбук"
 
-    override val vsCorner1 = "Выбрать угол 1"
 
-    override val vsCorner2 = "Выбрать угол 2"
 
     override val vsArenaTitleFormat = "Арена сравнения: %s"
 
@@ -5535,6 +6131,108 @@ private class AppStringsRU : AppStrings {
     override val ledgerNoteFieldLabel = "Описание / Примечание"
 
     override val ledgerSubmitAction = "🚀 Отправить (На модерацию)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "Угол 1"
+    override val vsCorner2 = "Угол 2"
+    override val reviewSectionTitle = "💬 ОТЗЫВЫ И ОЦЕНКИ ПОЛЬЗОВАТЕЛЕЙ"
+    override val reviewSectionSubtitle = "Реальный опыт пользователей, советы и заметки по использованию"
+    override val reviewAddButton = "Написать отзыв"
+    override val reviewAddContentDesc = "Добавить отзыв"
+    override val reviewRatingCountFormat = "%d оценок сообщества"
+    override val reviewReputationReward = "+10 очков репутации"
+    override val reviewEmptyTitle = "Для этого оборудования еще нет отзывов."
+    override val reviewEmptySubtitle = "Поделитесь своим опытом первым и получите +10 очков репутации!"
+    override val reviewHelpful = "Полезно"
+    override val reviewReport = "Пожаловаться"
+    override val reviewRemoveMine = "Удалить отзыв"
+    override val coolingCapacitySuffix = "Емкость"
+    override val coolingNoiseLabel = "Шум"
+    override val coolingCoolerCapacity = "Мощность кулера"
+    override val coolingHeadroomLabel = "Тепловой запас (Headroom)"
+    override val coolingRatedTdpTemplate = "%s • Номин. TDP: %dW • Пиковая мощность (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "Поиск процессора (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "Поиск кулера (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "Номинальный TDP и расчетная пиковая мощность PPT/MTP выбранного процессора передаются в симулятор."
+    override val coolingSelectedCoolerDesc = "Мощность рассеивания тепла (Вт) выбранного воздушного или водяного кулера передается в симулятор."
+    override val vsSelectCorner1 = "Выбрать Угол 1"
+    override val vsSelectCorner2 = "Выбрать Угол 2"
+    override val vsTapToAdd = "Нажмите для добавления из списка"
+    override val vsPopularMatchup = "Популярное сравнение"
+    override val vsLaunchSample = "Запустить пример сравнения"
+    override val vsHeadToHeadHeader = "СРАВНЕНИЕ ТЕХНИЧЕСКИХ ХАРАКТЕРИСТИК И БЕНЧМАРКОВ"
+    override val vs12GameMatrixHeader = "МАТРИЦА СИМУЛЯЦИИ 12 ИГР: FPS И 1% LOW"
+    override val vs12GameMatrixSubtitle = "Киберспорт (5) и AAA-графика (7): сравнение реальных показателей"
+    override val vsAllFilter = "Все"
+    override val vsSearchPlaceholderFormat = "Поиск модели, бренда или параметров %s..."
+    override val vsEmptyArenaDesc = "Нажмите на блоки Угол 1 и Угол 2 выше или используйте кнопку 'VS' в каталоге, чтобы сравнить устройства друг с другом."
+    override val vsPricePerfChamp = "ЧЕМПИОН ЦЕНА / ПРОИЗВОДИТЕЛЬНОСТЬ"
+    override val vsEfficiencyLeader = "ЛИДЕР АРХИТЕКТУРЫ И ЭФФЕКТИВНОСТИ"
+    override val vsDeltaTie = "Разница (Ничья)"
+    override val vsParityTie = "Паритет производительности (Ничья)"
+    override val vsFaster = "Быстрее"
+    override val vsBetterValue = "Выгоднее"
+    override val vsGenTechDelta = "Разница поколений / технологий"
+    override val specBrand = "Бренд"
+    override val specModelSku = "Модель (SKU)"
+    override val specSocket = "Сокет"
+    override val specCoreTopology = "Топология ядер и потоков"
+    override val specBaseBoostClocks = "Базовая / Boost частота"
+    override val specL2L3Cache = "Кэш L2 и L3"
+    override val specTdpPowerLimits = "TDP и лимиты мощности"
+    override val specArchNode = "Архитектура и техпроцесс"
+    override val specMemController = "Поддержка контроллера памяти"
+    override val specPcieVersion = "Версия PCIe и линии"
+    override val specIgpu = "Встроенная графика (iGPU)"
+    override val specMultiplier = "Множитель (Разгон)"
+    override val specGpuArch = "Графический процессор и архитектура"
+    override val specProcessNode = "Техпроцесс"
+    override val specShadersRtTensor = "Шейдеры / RT / Tensor"
+    override val specVramCapacityType = "Объем и тип VRAM"
+    override val specMemoryBusBandwidth = "Шина памяти и пропускная способность"
+    override val specStorageCapacity = "Объем накопителя"
+    override val specPowerOutputCapacity = "Выходная мощность"
+    override val specBatteryCapacity = "Емкость аккумулятора"
+    override val specMaxWeightCapacity = "Максимальная нагрузка"
+    override val specUnspecified = "Не указано"
+    override val specCoresLabel = "Ядер"
+    override val specThreadsLabel = "Потоков"
+    override val specIgpuIncluded = "Встроена (iGPU)"
+    override val specIgpuRequired = "Отсутствует (Требуется дискретная GPU)"
+    override val specUnlocked = "Разблокирован"
+    override val specLocked = "Заблокирован"
+    override val sortDefault = "По умолчанию"
+    override val sortPriceAsc = "Цена: По возрастанию"
+    override val sortPriceDesc = "Цена: По убыванию"
+    override val sortNameAsc = "Название: А-Я"
+    override val sortCpuCoresDesc = "Ядра: По убыванию"
+    override val sortCpuClockDesc = "Частота: Максимальная"
+    override val sortCpuTdpAsc = "TDP: Минимальный"
+    override val sortCpuTdpDesc = "TDP: Максимальный"
+    override val sortGpuVramDesc = "VRAM: Максимальный"
+    override val sortGpuTdpAsc = "Потребление: Минимальное"
+    override val sortGpuTdpDesc = "Потребление: Максимальное"
+    override val sortRamSpeedDesc = "Частота: Максимальная"
+    override val sortRamClAsc = "Латентность (CL): Минимальная"
+    override val sortRamCapacityDesc = "Объем: Максимальный"
+    override val sortStorageCapacityDesc = "Емкость: Максимальная"
+    override val sortStorageReadSpeedDesc = "Скорость чтения: Максимальная"
+    override val sortMotherboardM2Desc = "Слоты M.2: Больше всего"
+    override val sortMotherboardRamDesc = "Слоты RAM: Больше всего"
+    override val sortPsuWattageDesc = "Мощность: Максимальная"
+    override val sortAntutuDesc = "AnTuTu / Производительность: Макс."
+    override val sortBatteryDesc = "Емкость батареи: Максимальная"
+    override val wizardCockpitHud = "ПАНЕЛЬ КОКПИТА"
+    override val wizardLiveTdp = "ПОТРЕБЛЕНИЕ В РЕАЛЬНОМ ВРЕМЕНИ (TDP)"
+    override val wizardRecommendedPsu = "РЕКОМЕНДУЕМЫЙ БП"
+    override val wizardBottleneckAnalysis = "АНАЛИЗ УЗКИХ МЕСТ"
+    override val wizardBottleneckPending = "Рассчитывается после выбора процессора и видеокарты"
+    override val wizardBottleneckBalancedFormat = "%d%% - Идеальный баланс"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - Риск узкого места CPU"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - Упор в GPU / Полная нагрузка"
+    override val workstationMatrixTitle = "Аппаратная матрица для 35 профессиональных программ"
+    override val workstationSearchPlaceholder = "Поиск по 35 программам (Blender, FL Studio, Nuke, UE5)..."
+    override val workstationNoResults = "Подходящее программное обеспечение не найдено."
 
 }
 
@@ -6282,9 +6980,7 @@ private class AppStringsJA : AppStrings {
 
     override val vsLaptopMode = "💻 ゲーミングノート比較"
 
-    override val vsCorner1 = "第1コーナーを選択"
 
-    override val vsCorner2 = "第2コーナーを選択"
 
     override val vsArenaTitleFormat = "%s 比較アリーナ"
 
@@ -6315,6 +7011,108 @@ private class AppStringsJA : AppStrings {
     override val ledgerNoteFieldLabel = "説明 / 取引メモ"
 
     override val ledgerSubmitAction = "🚀 報告を送信 (審査待ち)"
+
+    // --- EXTENDED LOCALIZATION V2 ---
+    override val vsCorner1 = "コーナー1"
+    override val vsCorner2 = "コーナー2"
+    override val reviewSectionTitle = "💬 ユーザーレビュー・評価"
+    override val reviewSectionSubtitle = "実際のユーザー体験談、推奨事項、使用時の注意点"
+    override val reviewAddButton = "レビューを書く"
+    override val reviewAddContentDesc = "レビューを追加"
+    override val reviewRatingCountFormat = "%d件のコミュニティ評価"
+    override val reviewReputationReward = "+10評判ポイント獲得"
+    override val reviewEmptyTitle = "このハードウェアのレビューはまだ投稿されていません。"
+    override val reviewEmptySubtitle = "最初の体験談を共有して、+10評判ポイントを獲得しましょう！"
+    override val reviewHelpful = "役に立った"
+    override val reviewReport = "報告"
+    override val reviewRemoveMine = "自分のレビューを削除"
+    override val coolingCapacitySuffix = "冷却能力"
+    override val coolingNoiseLabel = "騒音値"
+    override val coolingCoolerCapacity = "クーラー冷却容量"
+    override val coolingHeadroomLabel = "熱的ヘッドルーム"
+    override val coolingRatedTdpTemplate = "%s • 公称TDP: %dW • ピーク電力 (PPT/MTP): %dW • TjMax: %d°C"
+    override val coolingCpuSearchPlaceholder = "CPUを検索 (7500F, 7800X3D, 9950X, 14700K, AM5...)"
+    override val coolingCoolerSearchPlaceholder = "クーラーを検索 (Thermalright, Arctic, 240mm, 360mm, Noctua...)"
+    override val coolingSelectedCpuDesc = "選択したCPUの公称TDPと計算されたPPT/MTPピーク電力がシミュレーターに転送されます。"
+    override val coolingSelectedCoolerDesc = "選択した空冷または水冷クーラーの熱放散能力 (W) がシミュレーターに転送されます。"
+    override val vsSelectCorner1 = "コーナー1を選択"
+    override val vsSelectCorner2 = "コーナー2を選択"
+    override val vsTapToAdd = "タップしてリストから追加"
+    override val vsPopularMatchup = "人気のおすすめ対決"
+    override val vsLaunchSample = "サンプル対決を即時開始"
+    override val vsHeadToHeadHeader = "直接対決・技術仕様＆ベンチマーク徹底比較"
+    override val vs12GameMatrixHeader = "12ゲームFPS＆1% Lowシミュレーションマトリクス"
+    override val vs12GameMatrixSubtitle = "競技eスポーツ(5本)＆AAA超高画質(7本)の実測比率比較"
+    override val vsAllFilter = "すべて"
+    override val vsSearchPlaceholderFormat = "%sのモデル、ブランド、仕様を検索..."
+    override val vsEmptyArenaDesc = "上の「コーナー1」「コーナー2」の枠をタップするか、カタログの製品カードにある「VS」ボタンを使って、ハードウェア同士を徹底比較できます。"
+    override val vsPricePerfChamp = "コスパ最強チャンピオン"
+    override val vsEfficiencyLeader = "最新アーキテクチャ・省電力リーダー"
+    override val vsDeltaTie = "差（引き分け）"
+    override val vsParityTie = "互角の性能（同等）"
+    override val vsFaster = "より高速"
+    override val vsBetterValue = "より高コスパ"
+    override val vsGenTechDelta = "世代・アーキテクチャ差"
+    override val specBrand = "ブランド"
+    override val specModelSku = "型番・SKU"
+    override val specSocket = "ソケット"
+    override val specCoreTopology = "コア・スレッド構成"
+    override val specBaseBoostClocks = "ベース／ブーストクロック"
+    override val specL2L3Cache = "L2・L3キャッシュ"
+    override val specTdpPowerLimits = "TDPおよび電力制限"
+    override val specArchNode = "アーキテクチャ・製造プロセス"
+    override val specMemController = "メモリコントローラー対応"
+    override val specPcieVersion = "PCIeバージョン・レーン数"
+    override val specIgpu = "内蔵GPU (iGPU)"
+    override val specMultiplier = "倍率ロック (OC)"
+    override val specGpuArch = "GPU＆アーキテクチャ"
+    override val specProcessNode = "プロセスルール"
+    override val specShadersRtTensor = "シェーダー／RT／Tensor"
+    override val specVramCapacityType = "VRAM容量＆メモリ種別"
+    override val specMemoryBusBandwidth = "メモリバス幅＆帯域幅"
+    override val specStorageCapacity = "ストレージ容量"
+    override val specPowerOutputCapacity = "定格出力容量"
+    override val specBatteryCapacity = "バッテリー容量"
+    override val specMaxWeightCapacity = "最大耐荷重"
+    override val specUnspecified = "指定なし"
+    override val specCoresLabel = "コア"
+    override val specThreadsLabel = "スレッド"
+    override val specIgpuIncluded = "あり (内蔵グラフィックス)"
+    override val specIgpuRequired = "なし (個別グラフィックカード必須)"
+    override val specUnlocked = "アンロック (倍率変更可)"
+    override val specLocked = "ロック"
+    override val sortDefault = "デフォルト"
+    override val sortPriceAsc = "価格が安い順"
+    override val sortPriceDesc = "価格が高い順"
+    override val sortNameAsc = "名前: 昇順"
+    override val sortCpuCoresDesc = "コア数が多い順"
+    override val sortCpuClockDesc = "クロック周波数が高い順"
+    override val sortCpuTdpAsc = "TDPが低い順"
+    override val sortCpuTdpDesc = "TDPが高い順"
+    override val sortGpuVramDesc = "VRAM容量が多い順"
+    override val sortGpuTdpAsc = "消費電力が低い順"
+    override val sortGpuTdpDesc = "消費電力が高い順"
+    override val sortRamSpeedDesc = "メモリクロックが高い順"
+    override val sortRamClAsc = "レイテンシ (CL) が低い順"
+    override val sortRamCapacityDesc = "総容量が多い順"
+    override val sortStorageCapacityDesc = "容量が多い順"
+    override val sortStorageReadSpeedDesc = "読込速度が速い順"
+    override val sortMotherboardM2Desc = "M.2スロット数が多い順"
+    override val sortMotherboardRamDesc = "RAMスロット数が多い順"
+    override val sortPsuWattageDesc = "ワット数が高い順"
+    override val sortAntutuDesc = "AnTuTuスコアが高い順"
+    override val sortBatteryDesc = "バッテリー容量が多い順"
+    override val wizardCockpitHud = "コックピットHUD"
+    override val wizardLiveTdp = "リアルタイム消費電力 (TDP)"
+    override val wizardRecommendedPsu = "推奨電源 (PSU)"
+    override val wizardBottleneckAnalysis = "ボトルネック分析"
+    override val wizardBottleneckPending = "CPUとGPUを選択すると計算されます"
+    override val wizardBottleneckBalancedFormat = "%d%% - 理想的なバランス"
+    override val wizardBottleneckCpuRiskFormat = "%d%% - CPUボトルネックリスク"
+    override val wizardBottleneckGpuLimitFormat = "%d%% - GPUバウンド／フルロード"
+    override val workstationMatrixTitle = "プロ向け35種主要アプリケーション・推奨スペックマトリクス"
+    override val workstationSearchPlaceholder = "35種のプロ向けアプリを検索 (Blender, FL Studio, UE5等)..."
+    override val workstationNoResults = "一致するプロ向けソフトウェアが見つかりませんでした。"
 
 }
 

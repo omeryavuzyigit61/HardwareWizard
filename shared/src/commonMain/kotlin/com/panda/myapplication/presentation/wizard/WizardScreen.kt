@@ -434,7 +434,7 @@ private fun WizardHeader(
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
             ) {
-                Text(tr(isTr, "Sıfırla", "Reset"), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(strings.coolingReset, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
             Button(
@@ -526,7 +526,7 @@ private fun LiveCockpitSection(
                 }
 
                 Text(
-                    text = tr(isTr, "KOKPİT HUD", "COCKPIT HUD"),
+                    text = strings.wizardCockpitHud,
                     style = MaterialTheme.typography.labelSmall,
                     color = NeonCyan,
                     fontWeight = FontWeight.Black,
@@ -544,7 +544,7 @@ private fun LiveCockpitSection(
             ) {
                 Column {
                     Text(
-                        text = tr(isTr, "CANLI GÜÇ TÜKETİMİ (TDP)", "LIVE POWER DRAW (TDP)"),
+                        text = strings.wizardLiveTdp,
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -567,7 +567,7 @@ private fun LiveCockpitSection(
 
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
-                        text = tr(isTr, "ÖNERİLEN PSU", "RECOMMENDED PSU"),
+                        text = strings.wizardRecommendedPsu,
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -627,7 +627,7 @@ private fun LiveCockpitSection(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = tr(isTr, "DARBOĞAZ ANALİZİ", "BOTTLENECK ANALYSIS"),
+                    text = strings.wizardBottleneckAnalysis,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -637,12 +637,12 @@ private fun LiveCockpitSection(
                     BottleneckType.GPU_BOTTLENECK -> NeonAmber
                 }
                 val bottleneckDisp = if (bottleneck.percentage == 0) {
-                    tr(isTr, "CPU ve GPU seçildiğinde hesaplanacak", "Calculated when CPU and GPU are selected")
+                    strings.wizardBottleneckPending
                 } else {
                     when (bottleneck.type) {
-                        BottleneckType.BALANCED -> tr(isTr, "%${bottleneck.percentage} - Mükemmel Denge", "${bottleneck.percentage}% - Balanced Match")
-                        BottleneckType.CPU_BOTTLENECK -> tr(isTr, "%${bottleneck.percentage} - CPU Darboğazı Riski", "${bottleneck.percentage}% - CPU Bottleneck Risk")
-                        BottleneckType.GPU_BOTTLENECK -> tr(isTr, "%${bottleneck.percentage} - GPU Limitli / Tam Yükte", "${bottleneck.percentage}% - GPU Bound / Full Load")
+                        BottleneckType.BALANCED -> strings.wizardBottleneckBalancedFormat.replace("%d", bottleneck.percentage.toString())
+                        BottleneckType.CPU_BOTTLENECK -> strings.wizardBottleneckCpuRiskFormat.replace("%d", bottleneck.percentage.toString())
+                        BottleneckType.GPU_BOTTLENECK -> strings.wizardBottleneckGpuLimitFormat.replace("%d", bottleneck.percentage.toString())
                     }
                 }
                 Text(

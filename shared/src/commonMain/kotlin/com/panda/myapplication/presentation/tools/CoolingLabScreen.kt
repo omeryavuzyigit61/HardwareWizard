@@ -434,7 +434,7 @@ fun CoolingLabScreen(
                         }
                         Spacer(modifier = Modifier.height(Spacing.small))
                         Text(
-                            text = if (isTr) "${cpu.socket} • Kağıt TDP: ${cpu.baseTdpWatts}W • Gerçek Tepe Güç (PPT/MTP): ${cpu.peakPptMtpWatts}W • TjMax: ${cpu.tjMaxCelsius}°C" else "${cpu.socket} • Rated TDP: ${cpu.baseTdpWatts}W • Peak Power (PPT/MTP): ${cpu.peakPptMtpWatts}W • TjMax: ${cpu.tjMaxCelsius}°C",
+                            text = strings.coolingRatedTdpTemplate.replaceFirst("%s", cpu.socket).replaceFirst("%d", cpu.baseTdpWatts.toString()).replaceFirst("%d", cpu.peakPptMtpWatts.toString()).replaceFirst("%d", cpu.tjMaxCelsius.toString()),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
@@ -509,7 +509,7 @@ fun CoolingLabScreen(
                                             overflow = TextOverflow.Ellipsis,
                                         )
                                         Text(
-                                            text = "${cooler.typeLabel} • ${cooler.maxDissipationWatts}W Kapasite",
+                                            text = "${cooler.typeLabel} • ${cooler.maxDissipationWatts}W ${strings.coolingCapacitySuffix}",
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurface,
                                         )
@@ -571,13 +571,13 @@ fun CoolingLabScreen(
                                                 overflow = TextOverflow.Ellipsis,
                                             )
                                             Text(
-                                                text = "${item.typeLabel} • ${if (isTr) "Gürültü" else "Noise"}: ${item.noiseDba} dBA",
+                                                text = "${item.typeLabel} • ${strings.coolingNoiseLabel}: ${item.noiseDba} dBA",
                                                 style = MaterialTheme.typography.labelSmall,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                             )
                                         }
                                         Text(
-                                            text = "${item.maxDissipationWatts}W Kapasite",
+                                            text = "${item.maxDissipationWatts}W ${strings.coolingCapacitySuffix}",
                                             style = MaterialTheme.typography.labelMedium,
                                             fontWeight = FontWeight.Black,
                                             color = NeonEmerald,
@@ -659,7 +659,7 @@ fun CoolingLabScreen(
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = if (isTr) "Soğutucu Kapasitesi" else "Cooler Capacity",
+                                text = strings.coolingCoolerCapacity,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -672,7 +672,7 @@ fun CoolingLabScreen(
                         }
                         Column(horizontalAlignment = Alignment.End) {
                             Text(
-                                text = "Termal Pay (Headroom)",
+                                text = strings.coolingHeadroomLabel,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -938,7 +938,7 @@ private fun CatalogCpuPickerSheet(
                 color = NeonCyan,
             )
             Text(
-                text = if (isTr) "Seçilen işlemcinin gerçek TDP ve hesaplanan PPT/MTP tepe güç değeri simülatöre aktarılır." else "Real TDP and calculated PPT/MTP peak power values of selected CPU are applied to the simulator.",
+                text = strings.coolingSelectedCpuDesc,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -946,7 +946,7 @@ private fun CatalogCpuPickerSheet(
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
-                placeholder = { Text(if (isTr) "İşlemci ara (7500F, 7800X3D, 9950X, 14700K, AM5...)" else "Search CPU (7500F, 7800X3D, 9950X, 14700K, AM5...)") },
+                placeholder = { Text(strings.coolingCpuSearchPlaceholder) },
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth(),
@@ -1046,7 +1046,7 @@ private fun CatalogCoolerPickerSheet(
                 color = NeonCyan,
             )
             Text(
-                text = if (isTr) "Seçilen hava veya sıvı soğutucunun ısı dağıtma kapasitesi (W) simülatöre aktarılır." else "Heat dissipation capacity (W) of selected cooler is applied to the simulator.",
+                text = strings.coolingSelectedCoolerDesc,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -1054,7 +1054,7 @@ private fun CatalogCoolerPickerSheet(
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
-                placeholder = { Text(if (isTr) "Soğutucu ara (Thermalright, Arctic, 240mm, 360mm, Noctua...)" else "Search Cooler (Thermalright, Arctic, 240mm, 360mm, Noctua...)") },
+                placeholder = { Text(strings.coolingCoolerSearchPlaceholder) },
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth(),
@@ -1099,7 +1099,7 @@ private fun CatalogCoolerPickerSheet(
                                     overflow = TextOverflow.Ellipsis,
                                 )
                                 Text(
-                                    text = "${mapped.typeLabel} • Kapasite: ${mapped.maxDissipationWatts}W",
+                                    text = "${mapped.typeLabel} • ${strings.coolingCapacitySuffix}: ${mapped.maxDissipationWatts}W",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonCyan,
                                     fontWeight = FontWeight.SemiBold,

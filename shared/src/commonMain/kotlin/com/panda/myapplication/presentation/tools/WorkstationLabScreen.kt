@@ -159,7 +159,7 @@ fun WorkstationLabScreen(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = if (isTr) "35 Profesyonel Uygulama Donanım Matrisi" else "Hardware Matrix for 35 Pro Applications",
+                            text = strings.workstationMatrixTitle,
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonCyan,
                         )
@@ -204,7 +204,7 @@ fun WorkstationLabScreen(
                     onValueChange = { appSearchQuery = it },
                     placeholder = {
                         Text(
-                            text = if (isTr) "35 Pro Yazılımda Ara (Blender, FL Studio, Nuke, UE5)..." else "Search 35 Pro Apps (Blender, FL Studio, Nuke)...",
+                            text = strings.workstationSearchPlaceholder,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                         )
@@ -300,7 +300,7 @@ fun WorkstationLabScreen(
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
                                 Text(
-                                    text = if (isTr) "Aramanızla eşleşen profesyonel yazılım bulunamadı." else "No matching professional software found.",
+                                    text = strings.workstationNoResults,
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     modifier = Modifier.padding(14.dp),

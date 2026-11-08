@@ -152,69 +152,42 @@ fun HardwareCategory.accentColor(): Color = when (this) {
 }
 
 /**
- * Centralized short badge text for hardware categories.
+ * Centralized short badge text for hardware categories across all 7 supported languages.
  */
-fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String = if (isTr) when (this) {
-    HardwareCategory.PREBUILT_PC -> "OEM SİSTEM"
-    HardwareCategory.LAPTOP -> "LAPTOP"
+fun HardwareCategory.shortBadgeText(strings: AppStrings): String = when (this) {
+    HardwareCategory.PREBUILT_PC -> strings.catPrebuilt.uppercase()
+    HardwareCategory.LAPTOP -> strings.catLaptop.uppercase()
     HardwareCategory.CPU -> "CPU"
     HardwareCategory.GPU -> "GPU"
     HardwareCategory.RAM -> "RAM"
-    HardwareCategory.MOTHERBOARD -> "ANAKART"
+    HardwareCategory.MOTHERBOARD -> strings.catMotherboard.uppercase()
     HardwareCategory.PSU -> "PSU"
     HardwareCategory.STORAGE -> "SSD"
-    HardwareCategory.COOLER -> "SOĞUTUCU"
-    HardwareCategory.CASE -> "KASA"
-    HardwareCategory.MOUSE -> "MOUSE"
-    HardwareCategory.KEYBOARD -> "KLAVYE"
-    HardwareCategory.HEADSET -> "KULAKLIK"
-    HardwareCategory.MONITOR -> "MONİTÖR"
-    HardwareCategory.MICROPHONE -> "MİKROFON"
-    HardwareCategory.MOUSEPAD -> "MOUSEPAD"
-    HardwareCategory.WEBCAM -> "WEBCAM"
-    HardwareCategory.GAMING_CHAIR -> "KOLTUK"
-    HardwareCategory.CASE_FAN -> "KASA FANI"
-    HardwareCategory.UPS -> "UPS GÜÇ"
-    HardwareCategory.GAMING_DESK -> "MASA"
-    HardwareCategory.GAMING_LIGHTING -> "AYDINLATMA"
-    HardwareCategory.SMARTWATCH -> "SAAT"
-    HardwareCategory.ROUTER -> "ROUTER"
-    HardwareCategory.MODEM -> "MODEM"
-    HardwareCategory.ACCESS_POINT -> "AP"
-    HardwareCategory.RANGE_EXTENDER -> "MESH"
-    HardwareCategory.SMARTPHONE -> "TELEFON"
-    HardwareCategory.TABLET -> "TABLET"
-} else when (this) {
-    HardwareCategory.PREBUILT_PC -> "PREBUILT PC"
-    HardwareCategory.LAPTOP -> "LAPTOP"
-    HardwareCategory.CPU -> "CPU"
-    HardwareCategory.GPU -> "GPU"
-    HardwareCategory.RAM -> "RAM"
-    HardwareCategory.MOTHERBOARD -> "MOTHERBOARD"
-    HardwareCategory.PSU -> "PSU"
-    HardwareCategory.STORAGE -> "SSD"
-    HardwareCategory.COOLER -> "COOLER"
-    HardwareCategory.CASE -> "CASE"
-    HardwareCategory.MOUSE -> "MOUSE"
-    HardwareCategory.KEYBOARD -> "KEYBOARD"
-    HardwareCategory.HEADSET -> "HEADSET"
-    HardwareCategory.MONITOR -> "MONITOR"
-    HardwareCategory.MICROPHONE -> "MIC"
-    HardwareCategory.MOUSEPAD -> "MOUSEPAD"
-    HardwareCategory.WEBCAM -> "WEBCAM"
-    HardwareCategory.GAMING_CHAIR -> "CHAIR"
-    HardwareCategory.CASE_FAN -> "CASE FAN"
-    HardwareCategory.UPS -> "UPS"
-    HardwareCategory.GAMING_DESK -> "DESK"
-    HardwareCategory.GAMING_LIGHTING -> "LIGHTING"
-    HardwareCategory.SMARTWATCH -> "WATCH"
-    HardwareCategory.ROUTER -> "ROUTER"
-    HardwareCategory.MODEM -> "MODEM"
-    HardwareCategory.ACCESS_POINT -> "ACCESS POINT"
-    HardwareCategory.RANGE_EXTENDER -> "MESH / EXTENDER"
-    HardwareCategory.SMARTPHONE -> "PHONE"
-    HardwareCategory.TABLET -> "TABLET"
+    HardwareCategory.COOLER -> strings.catCooler.uppercase()
+    HardwareCategory.CASE -> strings.catCase.uppercase()
+    HardwareCategory.MOUSE -> strings.catMouse.uppercase()
+    HardwareCategory.KEYBOARD -> strings.catKeyboard.uppercase()
+    HardwareCategory.HEADSET -> strings.catHeadset.uppercase()
+    HardwareCategory.MONITOR -> strings.catMonitor.uppercase()
+    HardwareCategory.MICROPHONE -> strings.catMicrophone.uppercase()
+    HardwareCategory.MOUSEPAD -> strings.catMousepad.uppercase()
+    HardwareCategory.WEBCAM -> strings.catWebcam.uppercase()
+    HardwareCategory.GAMING_CHAIR -> strings.catGamingChair.uppercase()
+    HardwareCategory.CASE_FAN -> strings.catCaseFan.uppercase()
+    HardwareCategory.UPS -> strings.catUps.uppercase()
+    HardwareCategory.GAMING_DESK -> strings.catGamingDesk.uppercase()
+    HardwareCategory.GAMING_LIGHTING -> strings.catGamingLighting.uppercase()
+    HardwareCategory.SMARTWATCH -> strings.catSmartwatch.uppercase()
+    HardwareCategory.ROUTER -> strings.catRouter.uppercase()
+    HardwareCategory.MODEM -> strings.catModem.uppercase()
+    HardwareCategory.ACCESS_POINT -> strings.catAccessPoint.uppercase()
+    HardwareCategory.RANGE_EXTENDER -> strings.catRangeExtender.uppercase()
+    HardwareCategory.SMARTPHONE -> strings.catPhone.uppercase()
+    HardwareCategory.TABLET -> strings.catTablet.uppercase()
 }
+
+fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String =
+    shortBadgeText(if (isTr) StringsTR else StringsEN)
 
 /**
  * Centralized category emoji icon.
