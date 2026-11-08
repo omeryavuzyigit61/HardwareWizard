@@ -2,8 +2,8 @@ name: Autonomous Daily Hardware Catalog & TR Price Sync
 
 on:
   schedule:
-    # Her gün Türkiye saatiyle 03:00 (UTC 00:00)
-    - cron: '0 0 * * *'
+    # Her gün Türkiye saatiyle 03:20 (UTC 00:20 - GitHub Actions 00:00 tepe yük kuyruk gecikmesini engellemek için)
+    - cron: '20 0 * * *'
   workflow_dispatch:
 
 permissions:

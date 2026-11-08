@@ -1501,7 +1501,19 @@
       "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "microarchitecture": "Zen 5 (Granite Ridge)",
+    "process_node": "TSMC 4nm FinFET (Zen 5)",
+    "core_topology": "16 Çekirdek / 32 İzlek (Çift CCD)",
+    "core_clock": 4.3,
+    "l2_cache": 16.0,
+    "l3_cache": 64,
+    "power_limits": "170W TDP / 230W PPT",
+    "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
+    "pcie_version": "PCIe 5.0 (28 Hat)",
+    "graphics": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "unlocked_multiplier": true
   },
   {
     "name": "AMD Ryzen 9 9900X3D",
@@ -1521,7 +1533,19 @@
       "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "microarchitecture": "Zen 5 (Granite Ridge)",
+    "process_node": "TSMC 4nm FinFET (Zen 5)",
+    "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
+    "core_clock": 4.4,
+    "l2_cache": 12.0,
+    "l3_cache": 64,
+    "power_limits": "120W TDP / 162W PPT",
+    "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
+    "pcie_version": "PCIe 5.0 (28 Hat)",
+    "graphics": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
+    "unlocked_multiplier": true
   },
   {
     "name": "AMD Ryzen 9 5900XT",
@@ -1541,7 +1565,19 @@
       "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "microarchitecture": "Zen 3 (Vermeer)",
+    "process_node": "TSMC 7nm FinFET (Zen 3)",
+    "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD Zen 3)",
+    "core_clock": 3.7,
+    "l2_cache": 6.0,
+    "l3_cache": 64,
+    "power_limits": "105W TDP / 142W PPT",
+    "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
+    "pcie_version": "PCIe 4.0 (24 Hat)",
+    "graphics": "Yok (Harici GPU Gerekir)",
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "unlocked_multiplier": true
   },
   {
     "name": "AMD Ryzen 7 5800XT",
@@ -1561,7 +1597,19 @@
       "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "microarchitecture": "Zen 3 (Vermeer)",
+    "process_node": "TSMC 7nm FinFET (Zen 3)",
+    "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
+    "core_clock": 3.8,
+    "l2_cache": 4.0,
+    "l3_cache": 32,
+    "power_limits": "105W TDP / 142W PPT",
+    "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
+    "pcie_version": "PCIe 4.0 (24 Hat)",
+    "graphics": "Yok (Harici GPU Gerekir)",
+    "igpu_model": "Yok (Harici GPU Gerekir)",
+    "unlocked_multiplier": true
   },
   {
     "name": "INTEL Core Ultra 9 285",

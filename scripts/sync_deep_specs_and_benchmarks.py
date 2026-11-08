@@ -1415,10 +1415,55 @@ def enrich_ram(item: Dict[str, Any]) -> Dict[str, Any]:
 # ==============================================================================
 # 6. STORAGE (SSD) CONTROLLER & DRAM CACHE MATRIX
 # ==============================================================================
+def parse_capacity_gb(raw_cap: Any, name: str = "") -> int:
+    """Parse capacity to integer GB from int, float, or string (e.g. '2000 GB', '2TB', 1000)."""
+    if isinstance(raw_cap, (int, float)):
+        return int(raw_cap)
+    if isinstance(raw_cap, str):
+        raw = raw_cap.upper().strip()
+        m_tb = re.search(r"(\d+(?:\.\d+)?)\s*TB", raw)
+        if m_tb:
+            return int(float(m_tb.group(1)) * 1000)
+        m_gb = re.search(r"(\d+)\s*GB", raw)
+        if m_gb:
+            return int(m_gb.group(1))
+        m_num = re.search(r"^(\d+)$", raw)
+        if m_num:
+            val = int(m_num.group(1))
+            return val * 1000 if val <= 16 else val
+    name_upper = (name or "").upper()
+    if "8TB" in name_upper or "8 TB" in name_upper:
+        return 8000
+    if "4TB" in name_upper or "4 TB" in name_upper:
+        return 4000
+    if "2TB" in name_upper or "2 TB" in name_upper:
+        return 2000
+    if "1TB" in name_upper or "1 TB" in name_upper:
+        return 1000
+    if "500GB" in name_upper or "512GB" in name_upper:
+        return 500
+    if "250GB" in name_upper or "256GB" in name_upper:
+        return 250
+    return 1000
+
+def parse_cooler_size_mm(raw_size: Any) -> int:
+    if isinstance(raw_size, (int, float)):
+        return int(raw_size)
+    if isinstance(raw_size, str):
+        m = re.search(r"(\d+)", raw_size)
+        if m:
+            return int(m.group(1))
+    return 360
+
 def enrich_storage(item: Dict[str, Any]) -> Dict[str, Any]:
     name = (item.get("name") or "").upper()
-    cap = item.get("capacity") or 1000
-    is_gen5 = "5.0" in name or (item.get("seq_read") or 0) >= 10000
+    cap = parse_capacity_gb(item.get("capacity"), name)
+    try:
+        raw_read = item.get("seq_read")
+        seq_read_num = float(raw_read) if raw_read is not None else 0.0
+    except (ValueError, TypeError):
+        seq_read_num = 0.0
+    is_gen5 = "5.0" in name or seq_read_num >= 10000
 
     if is_gen5 or "T705" in name or "T700" in name or "MP700" in name or "CARDEA Z540" in name:
         item["controller"] = "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)"
@@ -1492,7 +1537,7 @@ def enrich_storage(item: Dict[str, Any]) -> Dict[str, Any]:
 # ==============================================================================
 def enrich_cooler(item: Dict[str, Any]) -> Dict[str, Any]:
     name = (item.get("name") or "").upper()
-    size = item.get("size")
+    size = parse_cooler_size_mm(item.get("size"))
 
     if "LIQUID FREEZER III" in name or "FREEZER III" in name:
         rad_mm = size or 360

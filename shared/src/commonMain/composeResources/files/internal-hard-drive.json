@@ -2436,8 +2436,8 @@
     "read_speed": 14500,
     "write_speed": 12700,
     "tbw": 1200,
-    "nand_type": "Micron 232-Layer 3D TLC",
-    "controller": "Phison PS5026-E26",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "form_factor": "M.2 2280 (Çift Taraflı)",
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
     "images": [
@@ -2447,7 +2447,12 @@
     ],
     "model": "T705 2TB",
     "brand": "CRUCIAL",
-    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg"
+    "image_url": "https://media.ldlc.com/r1600/ld/products/00/06/10/89/LD0006108990.jpg",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "endurance_tbw": 1200
   },
   {
     "name": "SK Hynix Platinum P41 NVMe 2TB",
@@ -2470,7 +2475,12 @@
     ],
     "model": "Platinum P41 2TB",
     "brand": "SK HYNIX",
-    "image_url": "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/61y8yRovzNL.jpg",
+    "dram_cache": null,
+    "seq_read": null,
+    "seq_write": null,
+    "random_iops": null,
+    "endurance_tbw": null
   },
   {
     "name": "Samsung 990 PRO with Heatsink 4TB",
@@ -2482,8 +2492,8 @@
     "read_speed": 7450,
     "write_speed": 6900,
     "tbw": 2400,
-    "nand_type": "Samsung V-NAND 3-bit MLC (TLC)",
-    "controller": "Samsung Pascal",
+    "nand_type": "Samsung 176-Katman V-NAND V7 3D TLC",
+    "controller": "Samsung Pascal (S4LV008 8nm ARM Kontrolcü)",
     "form_factor": "M.2 2280 Dahili Soğutuculu",
     "imageUrl": "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
     "images": [
@@ -2493,7 +2503,12 @@
     ],
     "model": "990 PRO Heatsink 4TB",
     "brand": "SAMSUNG",
-    "image_url": "https://m.media-amazon.com/images/I/71YyP9f977L.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/71YyP9f977L.jpg",
+    "dram_cache": "4GB Samsung LPDDR4 DRAM Cache",
+    "seq_read": 7450,
+    "seq_write": 6900,
+    "random_iops": "1400K / 1550K IOPS (Tepe Hız)",
+    "endurance_tbw": 2400
   },
   {
     "name": "Sabrent Rocket 5 PCIe 5.0 2TB",
@@ -2505,8 +2520,8 @@
     "read_speed": 14000,
     "write_speed": 12000,
     "tbw": 1400,
-    "nand_type": "Micron 232-Layer B58R TLC",
-    "controller": "Phison PS5026-E26 Max",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
     "form_factor": "M.2 2280",
     "imageUrl": "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
     "images": [
@@ -2516,7 +2531,12 @@
     ],
     "model": "Rocket 5 2TB",
     "brand": "SABRENT",
-    "image_url": "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/71c3E4m8BML.jpg",
+    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "endurance_tbw": 1200
   },
   {
     "name": "Lexar NM790 1TB M.2 NVMe SSD",
@@ -2533,7 +2553,13 @@
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "random_iops": "1000K / 900K IOPS",
+    "endurance_tbw": 750
   },
   {
     "name": "Lexar NM790 2TB M.2 NVMe SSD",
@@ -2550,7 +2576,13 @@
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "random_iops": "1000K / 900K IOPS",
+    "endurance_tbw": 1500
   },
   {
     "name": "Lexar NM790 4TB M.2 NVMe SSD",
@@ -2567,7 +2599,13 @@
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": "Maxio MAP1602A (12nm DRAM-less)",
+    "nand_type": "YMTC 232-Katman Xtacking 3.0 3D TLC",
+    "seq_read": 7400,
+    "seq_write": 6500,
+    "random_iops": "1000K / 900K IOPS",
+    "endurance_tbw": 3000
   },
   {
     "name": "Crucial T705 2TB PCIe 5.0 M.2 NVMe SSD",
@@ -2584,7 +2622,13 @@
       "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71n-v4z-2rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71o-x5y-3mL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)",
+    "nand_type": "Micron 232-Layer 3D TLC NAND (B58R)",
+    "seq_read": 12400,
+    "seq_write": 11800,
+    "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
+    "endurance_tbw": 1200
   },
   {
     "name": "Crucial T500 2TB M.2 NVMe SSD",
@@ -2601,7 +2645,13 @@
       "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71n-v4z-2rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71o-x5y-3mL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": null,
+    "nand_type": null,
+    "seq_read": null,
+    "seq_write": null,
+    "random_iops": null,
+    "endurance_tbw": null
   },
   {
     "name": "Western Digital WD_BLACK SN850X 4TB M.2 NVMe SSD",
@@ -2618,7 +2668,13 @@
       "https://m.media-amazon.com/images/I/71p-c4v-5mL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71q-w5z-2nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71r-y6x-6pL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": "WD Black G2 (Proprietary Tri-Core ARM)",
+    "nand_type": "Kioxia/SanDisk 112-Katman BiCS5 3D TLC",
+    "seq_read": 7300,
+    "seq_write": 6600,
+    "random_iops": "1200K / 1100K IOPS",
+    "endurance_tbw": 2400
   },
   {
     "name": "TeamGroup MP44 2TB M.2 NVMe SSD",
@@ -2635,6 +2691,12 @@
       "https://m.media-amazon.com/images/I/71s-c5v-6mL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71t-w6z-3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71u-y7x-7pL._AC_SL1500_.jpg"
-    ]
+    ],
+    "controller": null,
+    "nand_type": null,
+    "seq_read": null,
+    "seq_write": null,
+    "random_iops": null,
+    "endurance_tbw": null
   }
 ]

@@ -3001,13 +3001,13 @@
     "color": "Black",
     "side_panel": "Seamless Tempered Glass",
     "external_volume": 66.8,
-    "max_gpu_length": 435,
+    "max_gpu_length": 400,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
-    "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm",
-    "included_fans": "4x 120mm Quiet Airflow Fan",
-    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1 Type-A, Audio Jack",
+    "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
+    "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/640e44d6b2b0264413b089545b628d0a.1600.jpg",
@@ -3309,13 +3309,13 @@
     "color": "White",
     "side_panel": "Tempered Glass",
     "external_volume": 54.4,
-    "max_gpu_length": 410,
-    "max_cpu_cooler_height": 185,
+    "max_gpu_length": 400,
+    "max_cpu_cooler_height": 165,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 4x 2.5 Inch",
-    "radiator_support": "Ön: 420mm / Üst: 360mm",
-    "included_fans": "1x F360 RGB Core Tek Parça Ön Fan Kiti",
-    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.2 Gen 1, Audio",
+    "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
+    "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
+    "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
     "images": [
       "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
@@ -3406,7 +3406,9 @@
       "https://lian-li.com/wp-content/uploads/2023/11/O11VC-01.webp",
       "https://lian-li.com/wp-content/uploads/2023/11/O11VC-02.webp",
       "https://lian-li.com/wp-content/uploads/2023/11/O11VC-03.webp"
-    ]
+    ],
+    "included_fans": null,
+    "front_panel_usb": null
   },
   {
     "name": "Lian Li A3-mATX Black",
@@ -3424,7 +3426,9 @@
       "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_01.webp",
       "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_02.webp",
       "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_03.webp"
-    ]
+    ],
+    "included_fans": null,
+    "front_panel_usb": null
   },
   {
     "name": "Montech King 95 Pro White",
@@ -3442,6 +3446,8 @@
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
-    ]
+    ],
+    "included_fans": null,
+    "front_panel_usb": null
   }
 ]

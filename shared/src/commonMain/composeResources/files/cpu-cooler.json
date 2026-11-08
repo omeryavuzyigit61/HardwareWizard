@@ -3435,7 +3435,7 @@
     "type": "Air",
     "color": "White",
     "height": 155,
-    "fan_rpm": "1550 RPM ± 10%",
+    "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
     "noise_level": 25.6,
     "sockets": [
       "AM5",
@@ -3444,8 +3444,8 @@
       "LGA1851"
     ],
     "max_tdp": 265,
-    "radiator_dimensions": "125 x 135 x 155 mm (6x 6mm AGHP Bakır Boru)",
-    "fan_airflow": "66.17 CFM",
+    "radiator_dimensions": "Çift Kule Tipi (7x 6mm AGHP Isı Borusu, 157mm Yükseklik)",
+    "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "imageUrl": "https://www.thermalright.com/wp-content/uploads/2021/11/PA120-SE-ARGB-WHITE-1.jpg",
     "images": [
       "https://www.thermalright.com/wp-content/uploads/2021/11/PA120-SE-ARGB-WHITE-1.jpg",
@@ -3669,7 +3669,7 @@
     "type": "Liquid",
     "color": "White",
     "height": 65,
-    "fan_rpm": "200-2000 RPM (P12 PWM A-RGB)",
+    "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
     "noise_level": 22.5,
     "sockets": [
       "AM5",
@@ -3677,9 +3677,9 @@
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 320,
-    "radiator_dimensions": "398 x 120 x 38 mm (Ekstra Kalın 38mm Beyaz Radyatör & VRM Fanı)",
-    "fan_airflow": "48.8 CFM",
+    "max_tdp": 300,
+    "radiator_dimensions": "360mm x 38mm Ekstra Kalın Radyatör (Arctic Yüksek Isı Kapasitesi)",
+    "fan_airflow": "56.3 CFM / 2.20 mmH2O Statik Basınç (P12 PWM PST)",
     "imageUrl": "https://www.arctic.de/media/4e/f2/31/1707987823/Liquid_Freezer_III_360_A-RGB_White_G00.jpg",
     "images": [
       "https://www.arctic.de/media/4e/f2/31/1707987823/Liquid_Freezer_III_360_A-RGB_White_G00.jpg",
@@ -3860,6 +3860,9 @@
     ],
     "model": "HydroShift LCD 360RGB",
     "brand": "LIAN LI",
-    "image_url": "https://m.media-amazon.com/images/I/61r59C39TPL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
+    "max_tdp": null,
+    "radiator_dimensions": null,
+    "fan_airflow": null
   }
 ]

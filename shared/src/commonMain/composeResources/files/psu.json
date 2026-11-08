@@ -5682,11 +5682,11 @@
     "type": "Yan Panel Modüler ATX 3.0",
     "efficiency": "80+ Gold",
     "color": "Black",
-    "modular": "Full Modular (Side Interface)",
+    "modular": "Tam Modüler (Full Modular)",
     "pcie_connectors": 4,
     "sata_connectors": 12,
     "eps_connectors": "2x 8-Pin EPS12V",
-    "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
     "fan_size": "140mm FDB",
     "fan_bearing": "Fluid Dynamic Bearing (Sıfır RPM)",
     "cybenetics_efficiency": "Gold",
@@ -5699,7 +5699,13 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/8bc2cb01b2a5875aa983b4cc5be68221.1600.jpg"
     ],
     "model": "RM1000x SHIFT",
-    "brand": "CORSAIR"
+    "brand": "CORSAIR",
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
+    "cybenetics_lambda": "Lambda A (<25 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "topology": "LLC Resonant + DC-DC / %100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP"
   },
   {
     "name": "be quiet! Dark Power Pro 13 1300W",
@@ -5742,7 +5748,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI Edge EG-1300 Platinum (White)",
@@ -5759,7 +5773,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (Black)",
@@ -5776,7 +5798,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (White)",
@@ -5793,7 +5823,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (Black)",
@@ -5810,7 +5848,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (White)",
@@ -5827,7 +5873,15 @@
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
       "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
+    "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+    "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
   },
   {
     "name": "LIAN LI SP850 SFX Gold (Black)",
@@ -6014,7 +6068,15 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
+    "cybenetics_lambda": "Lambda A (<25 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "LLC Resonant + DC-DC / %100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+    "fan_size": "135mm Manyetik Kaldırma (ML) Fan (Sıfır RPM Modu)"
   },
   {
     "name": "Corsair RM850x Shift Gold ATX 3.0",
@@ -6031,7 +6093,15 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
-    ]
+    ],
+    "tier": "Tier A (High-End)",
+    "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
+    "cybenetics_lambda": "Lambda A (<25 dBA)",
+    "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
+    "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+    "topology": "LLC Resonant + DC-DC / %100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+    "fan_size": "135mm Manyetik Kaldırma (ML) Fan (Sıfır RPM Modu)"
   },
   {
     "name": "Corsair SF850 Platinum ATX 3.1",
