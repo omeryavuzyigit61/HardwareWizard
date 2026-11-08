@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/screenshots/app_logo_hardware_wizard.png" width="128" alt="Hardware Wizard App Icon" />
+
 # 🧙‍♂️ HARDWARE WIZARD
 ### *Yeni Nesil Çoklu Platform Donanım Kataloğu, PC Sihirbazı, İnteraktif Mühendislik Laboratuvarları & Silikon Topluluğu*
 
