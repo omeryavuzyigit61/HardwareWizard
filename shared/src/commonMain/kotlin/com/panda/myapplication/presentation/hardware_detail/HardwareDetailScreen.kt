@@ -763,11 +763,11 @@ private fun DetailTopBar(
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.65f)),
                 ) {
                     Text(
-                        text = "⚖️ " + strings.addToVsArena,
+                        text = "⚖️ +VS",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.ExtraBold,
                         color = NeonCyan,
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
                     )
                 }
             }
@@ -2902,7 +2902,8 @@ private fun DetailBottomBar(
             }
 
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.weight(1.3f, fill = false),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Surface(
@@ -2913,10 +2914,10 @@ private fun DetailBottomBar(
                 ) {
                     Text(
                         text = "⚖️ +VS",
-                        style = MaterialTheme.typography.labelLarge,
+                        style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp),
                     )
                 }
 
@@ -2932,24 +2933,34 @@ private fun DetailBottomBar(
                             containerColor = buttonContainerColor,
                             contentColor = MaterialTheme.colorScheme.onPrimary,
                         ),
-                        contentPadding = PaddingValues(horizontal = Spacing.medium, vertical = Spacing.small),
+                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp),
+                        modifier = Modifier.weight(1f, fill = false),
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
                             if (isAddedToBuild) {
                                 CheckMarkCanvas(color = MaterialTheme.colorScheme.onSecondary)
-                                Spacer(modifier = Modifier.width(Spacing.small))
+                                Spacer(modifier = Modifier.width(4.dp))
                                 Text(
                                     text = if (isPrebuilt) strings.detailImportedSystem else strings.detailAddedToWizard,
                                     fontWeight = FontWeight.Bold,
-                                    style = MaterialTheme.typography.labelLarge,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    softWrap = false,
                                 )
                             } else {
                                 PlusIconCanvas(color = MaterialTheme.colorScheme.onPrimary)
-                                Spacer(modifier = Modifier.width(Spacing.small))
+                                Spacer(modifier = Modifier.width(4.dp))
                                 Text(
-                                    text = if (isPrebuilt) (if (isTr) "Sihirbaza Aktar" else "Import to Build") else strings.addToWizard,
+                                    text = if (isPrebuilt) (if (isTr) "Sihirbaza Aktar" else "Import to Build") else strings.addToWizard.removePrefix("+").trim(),
                                     fontWeight = FontWeight.Bold,
-                                    style = MaterialTheme.typography.labelLarge,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    softWrap = false,
                                 )
                             }
                         }

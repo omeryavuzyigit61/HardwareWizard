@@ -203,7 +203,7 @@ fun BattlestationShowcaseScreen(
                 },
                 text = {
                     Text(
-                        text = strings.battlestationShareRig,
+                        text = strings.battlestationShareRig.removePrefix("+").trim(),
                         fontWeight = FontWeight.ExtraBold,
                         fontSize = 13.sp,
                         maxLines = 1,
@@ -281,7 +281,7 @@ fun BattlestationShowcaseScreen(
                                 contentColor = Color.Black,
                             ),
                             shape = RoundedCornerShape(10.dp),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
                         ) {
                             Icon(
                                 imageVector = Icons.Rounded.Add,
@@ -290,7 +290,7 @@ fun BattlestationShowcaseScreen(
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
-                                text = strings.battlestationShareRig,
+                                text = strings.battlestationShareRig.removePrefix("+").trim(),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 1,
@@ -661,6 +661,7 @@ private fun BattlestationCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
                 Row(
+                    modifier = Modifier.weight(1f, fill = false),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
@@ -680,7 +681,7 @@ private fun BattlestationCard(
                         }
                     }
 
-                    Column {
+                    Column(modifier = Modifier.weight(1f, fill = false)) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -690,6 +691,9 @@ private fun BattlestationCard(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
                                 color = MaterialTheme.colorScheme.onSurface,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f, fill = false),
                             )
                             Surface(
                                 shape = RoundedCornerShape(4.dp),
@@ -701,12 +705,15 @@ private fun BattlestationCard(
                                     fontSize = 10.sp,
                                     color = NeonPurple,
                                     fontWeight = FontWeight.Medium,
+                                    maxLines = 1,
                                     modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                                 )
                             }
                         }
                     }
                 }
+
+                Spacer(modifier = Modifier.width(8.dp))
 
                 Surface(
                     shape = RoundedCornerShape(12.dp),
@@ -732,6 +739,8 @@ private fun BattlestationCard(
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = if (isSelf) NeonCyan else NeonRose,
+                            maxLines = 1,
+                            softWrap = false,
                         )
                     }
                 }
@@ -923,8 +932,9 @@ private fun BattlestationCard(
                 }
 
                 Row(
+                    modifier = Modifier.weight(1f, fill = false),
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     // Specs Button
                     if (!showcase.hardwareSpecsJson.isNullOrBlank()) {
@@ -935,23 +945,27 @@ private fun BattlestationCard(
                             colors = ButtonDefaults.outlinedButtonColors(
                                 contentColor = NeonCyan,
                             ),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
+                            modifier = Modifier.weight(1f, fill = false),
                         ) {
                             Icon(
                                 imageVector = Icons.Rounded.DeveloperBoard,
                                 contentDescription = null,
-                                modifier = Modifier.size(15.dp),
+                                modifier = Modifier.size(14.dp),
                             )
-                            Spacer(modifier = Modifier.width(5.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 text = strings.battlestationViewSpecs,
-                                fontSize = 12.sp,
+                                fontSize = 11.sp,
                                 fontWeight = FontWeight.SemiBold,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                softWrap = false,
                             )
                         }
                     }
 
-                    // Direct, highly visible Report / Retract Action Button
+                    // Direct, compact Report / Retract Action Button
                     OutlinedButton(
                         onClick = onReportClick,
                         shape = RoundedCornerShape(20.dp),
@@ -959,18 +973,20 @@ private fun BattlestationCard(
                         colors = ButtonDefaults.outlinedButtonColors(
                             contentColor = if (isSelf) NeonCyan else NeonRose,
                         ),
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.Flag,
-                            contentDescription = null,
+                            contentDescription = if (isSelf) "Kaldır" else "Bildir",
                             modifier = Modifier.size(13.dp),
                         )
-                        Spacer(modifier = Modifier.width(4.dp))
+                        Spacer(modifier = Modifier.width(3.dp))
                         Text(
                             text = if (isSelf) (if (isTr) "Kaldır" else "Retract") else (if (isTr) "Bildir" else "Report"),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
+                            maxLines = 1,
+                            softWrap = false,
                         )
                     }
                 }

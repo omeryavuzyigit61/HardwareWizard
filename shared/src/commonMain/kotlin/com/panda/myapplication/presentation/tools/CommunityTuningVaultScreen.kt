@@ -1029,7 +1029,7 @@ private fun CommunityTuningCard(
                         )
                     }
 
-                    Column {
+                    Column(modifier = Modifier.weight(1f, fill = false)) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -1041,6 +1041,7 @@ private fun CommunityTuningCard(
                                 color = MaterialTheme.colorScheme.onSurface,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f, fill = false),
                             )
                             Surface(
                                 shape = RoundedCornerShape(4.dp),
@@ -1062,6 +1063,7 @@ private fun CommunityTuningCard(
 
                 // Multi-Select Tuning Type Badges (e.g., UNDERVOLT + PBO)
                 FlowRow(
+                    modifier = Modifier.weight(1f, fill = false),
                     horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.End),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {

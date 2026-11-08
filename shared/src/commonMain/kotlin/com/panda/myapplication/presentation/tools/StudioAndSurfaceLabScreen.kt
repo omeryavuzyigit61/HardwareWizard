@@ -56,6 +56,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -354,7 +355,12 @@ private fun MicrophoneAcousticSimulatorTab(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 val roomLabels = if (isTr) listOf("Boş / Yankılı", "Ev Odası", "Stüdyo Süngerli") else listOf("Untreated", "Home Room", "Treated Studio")
                 roomLabels.forEachIndexed { idx, txt ->
                     FilterChip(
@@ -375,7 +381,12 @@ private fun MicrophoneAcousticSimulatorTab(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 val kbLabels = if (isTr) listOf("Sessiz Linear", "Mekanik / HE", "Clicky Blue") else listOf("Silent Linear", "Mechanical/HE", "Loud Clicky")
                 kbLabels.forEachIndexed { idx, txt ->
                     FilterChip(
@@ -408,14 +419,19 @@ private fun MicrophoneAcousticSimulatorTab(
                 Text(
                     text = if (isTr) "📊 Yayın Ses Netliği (SNR) Skoru" else "📊 Broadcast Voice Clarity (SNR)",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
+                    fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.weight(1f, fill = false),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
+                Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "$snrScore / 100",
                     fontWeight = FontWeight.Black,
-                    fontSize = 20.sp,
+                    fontSize = 18.sp,
                     color = if (snrScore >= 80) NeonEmerald else if (snrScore >= 65) NeonAmber else NeonRose,
+                    softWrap = false,
                 )
             }
 
@@ -541,7 +557,12 @@ private fun MousepadFrictionPhysicsTab(
                 fontSize = 14.sp,
                 color = NeonCyan,
             )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 val skateLabels = if (isTr) listOf("%100 Saf PTFE", "Dot (Nokta) PTFE", "Temperli Cam Skatez") else listOf("100% Virgin PTFE", "Dot PTFE", "Glass Skates")
                 skateLabels.forEachIndexed { idx, txt ->
                     FilterChip(
@@ -751,7 +772,12 @@ private fun WebcamFovAndLightSimulatorTab(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 val luxLabels = if (isTr) listOf("Loş Oda (30 lx)", "Ev Lambası (150 lx)", "Stüdyo Işığı (500 lx)") else listOf("Dim (30 lx)", "Room (150 lx)", "Key Light (500 lx)")
                 luxLabels.forEachIndexed { idx, txt ->
                     FilterChip(
@@ -1037,6 +1063,7 @@ private fun LabMetricRow(
             fontSize = 12.sp,
             fontWeight = FontWeight.Bold,
             color = valueColor,
+            textAlign = TextAlign.End,
         )
     }
 }

@@ -330,19 +330,25 @@ fun CoolingLabScreen(
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
-                                letterSpacing = 1.sp,
+                                letterSpacing = 0.5.sp,
+                                modifier = Modifier.weight(1f, fill = false),
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
+                            Spacer(modifier = Modifier.width(Spacing.small))
                             OutlinedButton(
                                 onClick = { isCpuPickerOpen = true },
                                 shape = RoundedCornerShape(8.dp),
                                 border = BorderStroke(1.dp, NeonCyan),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
                             ) {
                                 Text(
                                     text = "🔍 ${LocalAppStrings.current.selectCpuCatalog} (${catalogCpus.size})",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan,
+                                    maxLines = 1,
+                                    softWrap = false,
                                 )
                             }
                         }
@@ -467,19 +473,25 @@ fun CoolingLabScreen(
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
-                                letterSpacing = 1.sp,
+                                letterSpacing = 0.5.sp,
+                                modifier = Modifier.weight(1f, fill = false),
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
+                            Spacer(modifier = Modifier.width(Spacing.small))
                             OutlinedButton(
                                 onClick = { isCoolerPickerOpen = true },
                                 shape = RoundedCornerShape(8.dp),
                                 border = BorderStroke(1.dp, NeonCyan),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
                             ) {
                                 Text(
                                     text = "🔍 ${LocalAppStrings.current.selectCoolerCatalog} (${catalogCoolers.size})",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan,
+                                    maxLines = 1,
+                                    softWrap = false,
                                 )
                             }
                         }
@@ -644,7 +656,7 @@ fun CoolingLabScreen(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
                     ) {
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = strings.coolingCpuTdp,
                                 style = MaterialTheme.typography.labelSmall,
@@ -657,7 +669,10 @@ fun CoolingLabScreen(
                                 color = NeonAmber,
                             )
                         }
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
                             Text(
                                 text = strings.coolingCoolerCapacity,
                                 style = MaterialTheme.typography.labelSmall,
@@ -670,7 +685,10 @@ fun CoolingLabScreen(
                                 color = NeonCyan,
                             )
                         }
-                        Column(horizontalAlignment = Alignment.End) {
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            horizontalAlignment = Alignment.End,
+                        ) {
                             Text(
                                 text = strings.coolingHeadroomLabel,
                                 style = MaterialTheme.typography.labelSmall,

@@ -15,6 +15,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 
 import androidx.compose.foundation.layout.Arrangement
 
@@ -762,89 +764,48 @@ private fun VsArenaHeader(
 
 
         // 3 Comparison Modes Switcher
-
         Row(
-
             modifier = Modifier
-
                 .fillMaxWidth()
-
+                .horizontalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
-
             horizontalArrangement = Arrangement.spacedBy(8.dp),
-
         ) {
-
             VsArenaMode.entries.forEach { entry ->
-
                 val isSelected = mode == entry
-
                 val bgColor by animateColorAsState(
-
                     if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surface,
-
                 )
-
                 val borderColor by animateColorAsState(
-
                     if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
-
                 )
-
                 val shortLabel = when (entry) {
-
                     VsArenaMode.COMPONENT_VS_COMPONENT -> strings.vsCompMode
-
                     VsArenaMode.PREBUILT_VS_PREBUILT -> strings.vsPrebuiltMode
-
                     VsArenaMode.LAPTOP_VS_LAPTOP -> strings.vsLaptopMode
-
                     VsArenaMode.MOBILE_VS_MOBILE -> if (isTr) "Mobil" else "Mobile" 
-
                 }
 
                 Surface(
-
                     modifier = Modifier
-
-                        .weight(1f)
-
                         .clip(RoundedCornerShape(12.dp))
-
                         .clickable { onModeSelected(entry) },
-
                     color = bgColor,
-
                     shape = RoundedCornerShape(12.dp),
-
                     border = BorderStroke(if (isSelected) 1.5.dp else 1.dp, borderColor),
-
                 ) {
-
                     Text(
-
                         text = shortLabel,
-
-                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 10.dp),
-
-                        style = MaterialTheme.typography.labelSmall,
-
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 9.dp),
+                        style = MaterialTheme.typography.labelMedium,
                         color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
-
                         fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Medium,
-
                         textAlign = TextAlign.Center,
-
                         maxLines = 1,
-
-                        overflow = TextOverflow.Ellipsis,
-
+                        softWrap = false,
                     )
-
                 }
-
             }
-
         }
 
 

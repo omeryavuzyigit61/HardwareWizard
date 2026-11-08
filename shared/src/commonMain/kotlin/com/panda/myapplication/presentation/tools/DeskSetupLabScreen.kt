@@ -1,4 +1,4 @@
-﻿package com.panda.myapplication.presentation.tools
+package com.panda.myapplication.presentation.tools
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.horizontalScroll
@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -39,6 +40,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
@@ -185,11 +187,11 @@ fun DeskSetupLabScreen(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
-                            Column {
+                            Column(modifier = Modifier.weight(1f)) {
                                 Text(strings.deskPixelDensity, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 Text(
                                     text = "$ppi PPI",
-                                    style = MaterialTheme.typography.titleLarge,
+                                    style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Black,
                                     color = when {
                                         ppi >= 105 -> NeonEmerald
@@ -198,20 +200,38 @@ fun DeskSetupLabScreen(
                                     },
                                 )
                             }
-                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text(strings.deskViewingDistance, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                                Text(
+                                    strings.deskViewingDistance,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    textAlign = TextAlign.Center,
+                                )
                                 Text(
                                     text = "~$idealDistanceCm cm",
-                                    style = MaterialTheme.typography.titleLarge,
+                                    style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Black,
                                     color = NeonCyan,
                                 )
                             }
-                            Column(horizontalAlignment = Alignment.End) {
-                                Text(strings.deskGpuPixelLoad, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                horizontalAlignment = Alignment.End,
+                            ) {
+                                Text(
+                                    strings.deskGpuPixelLoad,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    textAlign = TextAlign.End,
+                                )
                                 Text(
                                     text = "%${res.gpuLoadPercent}",
-                                    style = MaterialTheme.typography.titleLarge,
+                                    style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Black,
                                     color = if (res.gpuLoadPercent >= 238) NeonAmber else NeonEmerald,
                                 )
@@ -400,7 +420,9 @@ fun DeskSetupLabScreen(
                         )
 
                         Row(
-                            modifier = Modifier.fillMaxWidth(),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .horizontalScroll(rememberScrollState()),
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
                             listOf(16, 32, 80, 250).forEach { ohm ->

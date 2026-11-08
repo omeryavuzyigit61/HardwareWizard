@@ -249,6 +249,7 @@ private fun ValuationHeroHeader(
                         letterSpacing = 0.5.sp,
                         maxLines = 1,
                         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f, fill = false),
                     )
                 }
 
@@ -307,11 +308,16 @@ private fun TotalValuationTiersCard(
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonCyan,
+                    modifier = Modifier.weight(1f, fill = false),
+                    maxLines = 1,
+                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                 )
+                Spacer(modifier = Modifier.width(Spacing.small))
                 Text(
                     text = LocalAppStrings.current.valuationNewTotal.replace("%s", formatTry(totalNew)),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    softWrap = false,
                 )
             }
 

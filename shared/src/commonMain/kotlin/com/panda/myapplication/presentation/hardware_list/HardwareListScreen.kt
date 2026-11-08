@@ -1177,10 +1177,10 @@ fun HardwareCard(
                 }
             }
 
-            // 3. SAĞ BLOK (Fiyat ve Aksiyon - minWidth: 96dp, wrapContentWidth(Alignment.End))
+            // 3. SAĞ BLOK (Fiyat ve Aksiyon - minWidth: 68dp, wrapContentWidth(Alignment.End))
             Column(
                 modifier = Modifier
-                    .widthIn(min = 96.dp)
+                    .widthIn(min = 68.dp)
                     .wrapContentWidth(Alignment.End),
                 horizontalAlignment = Alignment.End,
                 verticalArrangement = Arrangement.spacedBy(6.dp),

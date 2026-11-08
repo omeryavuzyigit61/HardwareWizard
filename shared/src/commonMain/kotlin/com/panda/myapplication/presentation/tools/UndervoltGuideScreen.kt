@@ -137,12 +137,14 @@ fun UndervoltGuideScreen(
                                 modifier = Modifier.size(22.dp),
                             )
                         }
-                        Column {
+                        Column(modifier = Modifier.weight(1f, fill = false)) {
                             Text(
                                 text = "⚡ Topluluk Silikon Kasası (OC/UV)",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
                             Text(
                                 text = "Doğrulanmış ayarları inceleyin veya kendi sistem donanım profilinizi paylaşın.",

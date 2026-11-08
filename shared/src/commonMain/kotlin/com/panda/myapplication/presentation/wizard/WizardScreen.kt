@@ -377,7 +377,7 @@ private fun WizardHeader(
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.weight(1f),
         ) {
             if (onOpenDrawer != null) {
@@ -388,7 +388,7 @@ private fun WizardHeader(
                     border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.6f)),
                 ) {
                     Box(
-                        modifier = Modifier.size(38.dp),
+                        modifier = Modifier.size(36.dp),
                         contentAlignment = Alignment.Center,
                     ) {
                         Icon(
@@ -401,47 +401,59 @@ private fun WizardHeader(
                 }
             }
 
-            Column {
+            Column(modifier = Modifier.weight(1f, fill = false)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(10.dp)
+                            .size(8.dp)
                             .clip(CircleShape)
                             .background(NeonCyan),
                     )
-                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Spacer(modifier = Modifier.width(6.dp))
                     Text(
                         text = tr(isTr, "DONANIM LABORATUVARI", "HARDWARE LAB"),
-                        style = MaterialTheme.typography.labelMedium,
+                        style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
                         color = NeonCyan,
-                        letterSpacing = 1.5.sp,
+                        letterSpacing = 0.5.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
                 Text(
                     text = strings.wizardInteractiveTitle,
-                    style = MaterialTheme.typography.titleLarge,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         }
 
-        Row(horizontalArrangement = Arrangement.spacedBy(Spacing.small)) {
+        Spacer(modifier = Modifier.width(6.dp))
+
+        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             OutlinedButton(
                 onClick = onClearBuild,
                 shape = RoundedCornerShape(8.dp),
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
-                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
             ) {
-                Text(strings.coolingReset, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(
+                    text = strings.coolingReset,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    softWrap = false,
+                )
             }
 
             Button(
                 onClick = onShareBuild,
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = NeonCyan),
-                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -455,9 +467,11 @@ private fun WizardHeader(
                     )
                     Text(
                         text = tr(isTr, "Paylaş", "Share"),
-                        style = MaterialTheme.typography.labelMedium,
+                        style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onPrimary,
+                        maxLines = 1,
+                        softWrap = false,
                     )
                 }
             }
@@ -504,9 +518,10 @@ private fun LiveCockpitSection(
                     shape = RoundedCornerShape(20.dp),
                     color = badgeBg,
                     border = BorderStroke(1.dp, badgeBorder),
+                    modifier = Modifier.weight(1f, fill = false),
                 ) {
                     Row(
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Box(
@@ -521,16 +536,22 @@ private fun LiveCockpitSection(
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = badgeTextColor,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
                         )
                     }
                 }
+
+                Spacer(modifier = Modifier.width(8.dp))
 
                 Text(
                     text = strings.wizardCockpitHud,
                     style = MaterialTheme.typography.labelSmall,
                     color = NeonCyan,
                     fontWeight = FontWeight.Black,
-                    letterSpacing = 1.sp,
+                    letterSpacing = 0.5.sp,
+                    maxLines = 1,
+                    softWrap = false,
                 )
             }
 
@@ -630,7 +651,11 @@ private fun LiveCockpitSection(
                     text = strings.wizardBottleneckAnalysis,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f, fill = false),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
+                Spacer(modifier = Modifier.width(Spacing.small))
                 val bottleneckColor = when (bottleneck.type) {
                     BottleneckType.BALANCED -> NeonEmerald
                     BottleneckType.CPU_BOTTLENECK -> NeonRose
@@ -650,6 +675,8 @@ private fun LiveCockpitSection(
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = bottleneckColor,
+                    maxLines = 1,
+                    softWrap = false,
                 )
             }
 
@@ -2381,13 +2408,24 @@ private fun SystemCardShareDialog(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
-                    Column {
+                    Column(modifier = Modifier.weight(0.42f)) {
                         Text(tr(isTr, "GÜÇ TÜKETİMİ", "POWER DRAW"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text("${cockpitInfo.componentTdpSum}W TDP", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, color = NeonCyan)
                     }
-                    Column {
+                    Spacer(modifier = Modifier.width(Spacing.small))
+                    Column(
+                        modifier = Modifier.weight(0.58f),
+                        horizontalAlignment = Alignment.End,
+                    ) {
                         Text(tr(isTr, "DARBOĞAZ", "BOTTLENECK"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        Text(bottleneck.message, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, color = NeonEmerald)
+                        Text(
+                            text = bottleneck.message,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonEmerald,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
                     }
                 }
 

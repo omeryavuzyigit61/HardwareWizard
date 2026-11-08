@@ -1,4 +1,4 @@
-﻿package com.panda.myapplication.presentation.tools
+package com.panda.myapplication.presentation.tools
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.horizontalScroll
@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -172,17 +173,21 @@ fun UpsCalculatorScreen(
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
                                 text = strings.upsPcWatts,
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.weight(1f, fill = false),
                             )
+                            Spacer(modifier = Modifier.width(Spacing.small))
                             Text(
                                 text = "$pcWatts W",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
+                                softWrap = false,
                             )
                         }
                         com.panda.myapplication.presentation.components.FluidInteractiveSlider(
@@ -195,17 +200,21 @@ fun UpsCalculatorScreen(
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
                                 text = strings.upsMonitorWatts,
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.weight(1f, fill = false),
                             )
+                            Spacer(modifier = Modifier.width(Spacing.small))
                             Text(
                                 text = "$monitorWatts W",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonAmber,
+                                softWrap = false,
                             )
                         }
                         com.panda.myapplication.presentation.components.FluidInteractiveSlider(
@@ -263,8 +272,9 @@ fun UpsCalculatorScreen(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
-                            Column {
-                                Text(text = strings.upsTotalLoad,
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = strings.upsTotalLoad,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -275,8 +285,12 @@ fun UpsCalculatorScreen(
                                     color = NeonAmber,
                                 )
                             }
-                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text(text = strings.upsRawVa,
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                                Text(
+                                    text = strings.upsRawVa,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -287,8 +301,12 @@ fun UpsCalculatorScreen(
                                     color = NeonCyan,
                                 )
                             }
-                            Column(horizontalAlignment = Alignment.End) {
-                                Text(text = strings.upsSafetyMargin,
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                horizontalAlignment = Alignment.End,
+                            ) {
+                                Text(
+                                    text = strings.upsSafetyMargin,
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
