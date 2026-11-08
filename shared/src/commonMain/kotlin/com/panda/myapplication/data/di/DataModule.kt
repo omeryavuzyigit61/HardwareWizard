@@ -97,6 +97,7 @@ val dataModule = module {
         com.panda.myapplication.data.repository.SettingsRepositoryImpl(
             hardwareDao = get(),
             ioDispatcher = get(),
+            fastSettingsStore = getOrNull(),
         )
     }
     single<com.panda.myapplication.domain.repository.CommunityReportRepository> {

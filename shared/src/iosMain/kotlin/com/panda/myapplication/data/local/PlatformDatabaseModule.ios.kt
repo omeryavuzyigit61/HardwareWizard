@@ -4,6 +4,9 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 actual val platformDatabaseModule: Module = module {
+    single<FastSettingsStore> {
+        IosFastSettingsStore()
+    }
     single<HardwareDatabase> {
         buildHardwareDatabase(hardwareDatabaseBuilder(), get())
     }

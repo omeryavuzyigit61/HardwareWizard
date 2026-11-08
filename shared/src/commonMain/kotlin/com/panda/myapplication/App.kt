@@ -247,8 +247,7 @@ fun App() {
             ModalNavigationDrawer(
                 drawerState = drawerState,
                 drawerContent = {
-                    if (drawerState.isOpen || drawerState.targetValue == DrawerValue.Open) {
-                        HardwareEngineeringDrawerContent(
+                    HardwareEngineeringDrawerContent(
                         currentRoute = currentRoute,
                         currentUser = currentUser,
                         isLoggedIn = isLoggedIn,
@@ -281,7 +280,6 @@ fun App() {
                             }
                         },
                     )
-                    }
                 },
             ) {
                 Scaffold(
@@ -706,7 +704,7 @@ private fun HardwareEngineeringDrawerContent(
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     ) {
                         Box(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp),
+                            modifier = Modifier.size(40.dp),
                             contentAlignment = Alignment.Center,
                         ) {
                             Icon(

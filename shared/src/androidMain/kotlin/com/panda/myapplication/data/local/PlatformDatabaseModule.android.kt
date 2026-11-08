@@ -16,6 +16,11 @@ fun setHardwareContext(context: Context) {
 }
 
 actual val platformDatabaseModule: Module = module {
+    single<FastSettingsStore> {
+        val context: Context = runCatching { androidContext() }.getOrNull()
+            ?: (appContext ?: error("Context is not initialized. Ensure HardwareWizardApp or setHardwareContext is used."))
+        AndroidFastSettingsStore(context)
+    }
     single<HardwareDatabase> {
         val context: Context = runCatching { androidContext() }.getOrNull()
             ?: (appContext ?: error("Context is not initialized. Ensure HardwareWizardApp or setHardwareContext is used."))

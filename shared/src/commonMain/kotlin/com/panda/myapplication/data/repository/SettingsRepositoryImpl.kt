@@ -1,5 +1,6 @@
 package com.panda.myapplication.data.repository
 
+import com.panda.myapplication.data.local.FastSettingsStore
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.local.entity.AppSettingEntity
 import com.panda.myapplication.domain.model.AppCurrency
@@ -23,10 +24,23 @@ import kotlinx.coroutines.withContext
 internal class SettingsRepositoryImpl(
     private val hardwareDao: HardwareDao? = null,
     private val ioDispatcher: CoroutineDispatcher,
+    private val fastSettingsStore: FastSettingsStore? = null,
 ) : SettingsRepository {
 
     private val scope = CoroutineScope(SupervisorJob() + ioDispatcher)
-    private val _settings = MutableStateFlow(AppSettings())
+
+    // Synchronously read initial values from fast platform storage (instantaneous on startup)
+    private val initialTheme = fastSettingsStore?.getString(KEY_THEME_MODE)?.let { ThemeMode.fromString(it) } ?: ThemeMode.DARK
+    private val initialLang = fastSettingsStore?.getString(KEY_LANGUAGE)?.let { AppLanguage.fromCode(it) } ?: AppLanguage.TR
+    private val initialCurr = fastSettingsStore?.getString(KEY_CURRENCY)?.let { AppCurrency.fromCode(it) } ?: AppCurrency.TRY
+
+    private val _settings = MutableStateFlow(
+        AppSettings(
+            themeMode = initialTheme,
+            language = initialLang,
+            currency = initialCurr,
+        )
+    )
     override val settings: StateFlow<AppSettings> = _settings.asStateFlow()
     private val _isLoaded = MutableStateFlow(false)
     override val isLoaded: StateFlow<Boolean> = _isLoaded.asStateFlow()
@@ -45,10 +59,14 @@ internal class SettingsRepositoryImpl(
                 val list = hardwareDao.getAllSettings()
                 val map = list.associate { it.key to it.value }
 
+                val themeStr = map[KEY_THEME_MODE] ?: fastSettingsStore?.getString(KEY_THEME_MODE)
+                val langStr = map[KEY_LANGUAGE] ?: fastSettingsStore?.getString(KEY_LANGUAGE)
+                val currStr = map[KEY_CURRENCY] ?: fastSettingsStore?.getString(KEY_CURRENCY)
+
                 val loaded = AppSettings(
-                    themeMode = ThemeMode.fromString(map[KEY_THEME_MODE]),
-                    language = AppLanguage.fromCode(map[KEY_LANGUAGE]),
-                    currency = AppCurrency.fromCode(map[KEY_CURRENCY]),
+                    themeMode = ThemeMode.fromString(themeStr),
+                    language = AppLanguage.fromCode(langStr),
+                    currency = AppCurrency.fromCode(currStr),
                     dataSaver = map[KEY_DATA_SAVER]?.toBooleanStrictOrNull() ?: false,
                     temperatureUnit = TemperatureUnit.fromString(map[KEY_TEMPERATURE_UNIT]),
                     lengthUnit = LengthUnit.fromString(map[KEY_LENGTH_UNIT]),
@@ -57,9 +75,14 @@ internal class SettingsRepositoryImpl(
                     enthusiastMode = map[KEY_ENTHUSIAST_MODE]?.toBooleanStrictOrNull() ?: true,
                 )
                 _settings.value = loaded
+
+                // Keep fast settings store in sync
+                map[KEY_THEME_MODE]?.let { fastSettingsStore?.setString(KEY_THEME_MODE, it) }
+                map[KEY_LANGUAGE]?.let { fastSettingsStore?.setString(KEY_LANGUAGE, it) }
+                map[KEY_CURRENCY]?.let { fastSettingsStore?.setString(KEY_CURRENCY, it) }
             } catch (e: Throwable) {
                 if (e is kotlinx.coroutines.CancellationException) throw e
-                // Keep default settings if loading fails
+                // Keep default/fast settings if loading fails
             } finally {
                 _isLoaded.value = true
             }
@@ -67,6 +90,7 @@ internal class SettingsRepositoryImpl(
     }
 
     private fun persistSetting(key: String, value: String) {
+        fastSettingsStore?.setString(key, value)
         scope.launch {
             try {
                 hardwareDao?.saveSetting(AppSettingEntity(key = key, value = value))
@@ -120,7 +144,6 @@ internal class SettingsRepositoryImpl(
     }
 
     override suspend fun clearCache(): Boolean = withContext(ioDispatcher) {
-        // Cache clear acknowledgement
         true
     }
 
