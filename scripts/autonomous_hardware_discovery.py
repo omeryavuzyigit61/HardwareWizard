@@ -1779,14 +1779,18 @@ def load_json(path):
     return []
 
 def save_json(path, data):
+    basename = os.path.basename(path)
+    if os.path.dirname(os.path.abspath(path)) == os.path.abspath(COMPOSE_DIR) and basename in ("gpu.json", "psu.json", "storage.json", "cooler.json", "ram.json"):
+        return
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def generate_catalog_sha256_manifest():
     """Tüm katalog JSON dosyalarının SHA-256 bütünlük manifestosunu üretir."""
+    DUPLICATE_FILES = {"gpu.json", "ram.json", "psu.json", "storage.json", "cooler.json"}
     for fname in os.listdir(CATALOG_DIR):
-        if fname.endswith(".json") and fname != "catalog_manifest.json":
+        if fname.endswith(".json") and fname != "catalog_manifest.json" and fname not in DUPLICATE_FILES:
             src = os.path.join(CATALOG_DIR, fname)
             dst = os.path.join(COMPOSE_DIR, fname)
             shutil.copy2(src, dst)

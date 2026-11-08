@@ -28,6 +28,8 @@ internal class SettingsRepositoryImpl(
     private val scope = CoroutineScope(SupervisorJob() + ioDispatcher)
     private val _settings = MutableStateFlow(AppSettings())
     override val settings: StateFlow<AppSettings> = _settings.asStateFlow()
+    private val _isLoaded = MutableStateFlow(false)
+    override val isLoaded: StateFlow<Boolean> = _isLoaded.asStateFlow()
 
     init {
         loadInitialSettings()
@@ -35,7 +37,10 @@ internal class SettingsRepositoryImpl(
 
     private fun loadInitialSettings() {
         scope.launch {
-            if (hardwareDao == null) return@launch
+            if (hardwareDao == null) {
+                _isLoaded.value = true
+                return@launch
+            }
             try {
                 val list = hardwareDao.getAllSettings()
                 val map = list.associate { it.key to it.value }
@@ -52,8 +57,11 @@ internal class SettingsRepositoryImpl(
                     enthusiastMode = map[KEY_ENTHUSIAST_MODE]?.toBooleanStrictOrNull() ?: true,
                 )
                 _settings.value = loaded
-            } catch (_: Throwable) {
+            } catch (e: Throwable) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
                 // Keep default settings if loading fails
+            } finally {
+                _isLoaded.value = true
             }
         }
     }

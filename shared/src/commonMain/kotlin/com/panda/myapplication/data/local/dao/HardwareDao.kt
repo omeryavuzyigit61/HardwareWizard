@@ -41,8 +41,16 @@ import com.panda.myapplication.domain.model.HardwareCategory
 import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
 
+data class CategoryCountTuple(
+    val category: HardwareCategory,
+    val cnt: Int,
+)
+
 @Dao
 abstract class HardwareDao {
+
+    @Query("SELECT category, COUNT(*) AS cnt FROM hardware_items GROUP BY category")
+    abstract suspend fun getCategoryCounts(): List<CategoryCountTuple>
 
     // region Reads
 

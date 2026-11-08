@@ -62,6 +62,8 @@ class HardwareListViewModel(
     private val isFilterSheetVisible = MutableStateFlow(false)
     private val isRefreshing = MutableStateFlow(false)
     private val errorMessage = MutableStateFlow<String?>(null)
+    private val pageSize = 50
+    private val displayedLimit = MutableStateFlow(pageSize)
 
     private val _uiState = MutableStateFlow(HardwareListUiState(isLoading = true))
     val uiState: StateFlow<HardwareListUiState> = _uiState.asStateFlow()
@@ -129,6 +131,7 @@ class HardwareListViewModel(
 
     fun onSearchQueryChange(newQuery: String) {
         rawSearchQuery.value = newQuery
+        displayedLimit.value = pageSize
     }
 
     fun onEvent(event: HardwareListUiEvent) {
@@ -236,6 +239,9 @@ class HardwareListViewModel(
             HardwareListUiEvent.OnRefresh -> {
                 refresh(isManual = true)
             }
+            HardwareListUiEvent.OnLoadMore -> {
+                displayedLimit.update { it + pageSize }
+            }
         }
     }
 
@@ -246,13 +252,14 @@ class HardwareListViewModel(
                 debouncedSearchQuery,
                 filterStateFlow,
                 isRefreshing,
-            ) { result, query, (filters, brands, sheetVisible), _ ->
+                displayedLimit,
+            ) { result, query, (filters, brands, sheetVisible), _, limit ->
                 when (result) {
                     is DomainResult.Success -> {
-                        val total = result.data.size
                         val filtered = filterItems(result.data, query, filters)
                         val sorted = sortItems(filtered, filters.sortOption, query)
-                        Triple(true, sorted to total, Triple(query, filters, brands to sheetVisible))
+                        val windowed = sorted.take(limit)
+                        Triple(true, windowed to sorted.size, Triple(query, filters, brands to sheetVisible))
                     }
                     is DomainResult.Failure -> {
                         Triple(false, emptyList<HardwareItem>() to 0, Triple(query, filters, brands to sheetVisible))
@@ -420,7 +427,9 @@ class HardwareListViewModel(
 
     private fun refresh(isManual: Boolean = false) {
         viewModelScope.launch {
-            isRefreshing.value = true
+            if (isManual) {
+                isRefreshing.value = true
+            }
             when (repository.refreshHardwareItems()) {
                 is DomainResult.Success -> {
                     isRefreshing.value = false

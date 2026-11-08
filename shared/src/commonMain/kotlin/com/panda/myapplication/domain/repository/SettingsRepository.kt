@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 
 interface SettingsRepository {
     val settings: StateFlow<AppSettings>
+    val isLoaded: StateFlow<Boolean>
 
     suspend fun updateThemeMode(themeMode: ThemeMode)
     suspend fun updateLanguage(language: AppLanguage)

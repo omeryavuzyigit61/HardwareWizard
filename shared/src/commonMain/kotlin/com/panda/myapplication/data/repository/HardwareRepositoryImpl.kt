@@ -36,12 +36,28 @@ internal class HardwareRepositoryImpl(
     private val seedMutex = Mutex()
     private var isSeeded = false
     private val memoryCache = MutableStateFlow<List<HardwareItem>?>(null)
-    private val dynamicSmartphones = MutableStateFlow<List<HardwareItem>>(
-        com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
-    )
-    private val dynamicTablets = MutableStateFlow<List<HardwareItem>>(
-        com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
-    )
+    private val dynamicSmartphones = MutableStateFlow<List<HardwareItem>>(emptyList())
+    private val dynamicTablets = MutableStateFlow<List<HardwareItem>>(emptyList())
+    private val mobileSeedMutex = Mutex()
+    private var isMobileSeedLoaded = false
+
+    private suspend fun ensureMobileSeedLoaded() {
+        if (isMobileSeedLoaded) return
+        mobileSeedMutex.withLock {
+            if (isMobileSeedLoaded) return
+            try {
+                withContext(ioDispatcher) {
+                    val smartphones = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
+                    val tablets = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
+                    dynamicSmartphones.value = smartphones
+                    dynamicTablets.value = tablets
+                    isMobileSeedLoaded = true
+                }
+            } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+            }
+        }
+    }
 
     private inline fun <T> mergeCatalogs(remote: List<T>, local: List<T>, keySelector: (T) -> String?): List<T> {
         if (remote.isEmpty()) return local
@@ -78,54 +94,55 @@ internal class HardwareRepositoryImpl(
         if (isSeeded) return
         seedMutex.withLock {
             if (isSeeded) return
-            val existing = hardwareDao.getAllHardwareItems()
-            val hasCpus = existing.any { it.category == HardwareCategory.CPU }
-            val hasGpus = existing.any { it.category == HardwareCategory.GPU }
-            val hasPrebuilts = existing.any { it.category == HardwareCategory.PREBUILT_PC }
-            val laptopCount = existing.count { it.category == HardwareCategory.LAPTOP }
-            val peripheralCount = existing.count { it.category.isPeripheral }
-            val caseCount = existing.count { it.category == HardwareCategory.CASE }
-            val coolerCount = existing.count { it.category == HardwareCategory.COOLER }
-            val moboCount = existing.count { it.category == HardwareCategory.MOTHERBOARD }
-            val hasBiostar = existing.any { it.brand.equals("BIOSTAR", ignoreCase = true) }
-            val hasEvga = existing.any { it.brand.equals("EVGA", ignoreCase = true) }
-            val hasRx9070 = existing.any { it.model.contains("9070", ignoreCase = true) }
-            val micCount = existing.count { it.category == HardwareCategory.MICROPHONE }
-            val padCount = existing.count { it.category == HardwareCategory.MOUSEPAD }
-            val camCount = existing.count { it.category == HardwareCategory.WEBCAM }
-            val chairCount = existing.count { it.category == HardwareCategory.GAMING_CHAIR }
-            val fanCount = existing.count { it.category == HardwareCategory.CASE_FAN }
-            val upsCount = existing.count { it.category == HardwareCategory.UPS }
-            val deskCount = existing.count { it.category == HardwareCategory.GAMING_DESK }
-            val lightCount = existing.count { it.category == HardwareCategory.GAMING_LIGHTING }
-            val swCount = existing.count { it.category == HardwareCategory.SMARTWATCH }
-            val routerCount = existing.count { it.category == HardwareCategory.ROUTER }
-            val modemCount = existing.count { it.category == HardwareCategory.MODEM }
-            val apCount = existing.count { it.category == HardwareCategory.ACCESS_POINT }
-            val reCount = existing.count { it.category == HardwareCategory.RANGE_EXTENDER }
-            val hasGenericImages = existing.any { item ->
-                item.images?.any { img -> img.contains("reference.webp") } == true
+            val seededVersion = hardwareDao.getSetting("catalog_seed_version")
+            val currentCatalogVersion = "2.0.0"
+            if (seededVersion == currentCatalogVersion) {
+                isSeeded = true
+                return
             }
-            val hasIncompleteNewCategoryGallery = existing.any { item ->
-                (item.category == HardwareCategory.MICROPHONE ||
-                    item.category == HardwareCategory.MOUSEPAD ||
-                    item.category == HardwareCategory.WEBCAM ||
-                    item.category == HardwareCategory.GAMING_CHAIR) &&
-                    ((item.images?.size ?: 0) < 3 ||
-                        item.imageUrl?.contains("71f-N7a9lDL") == true ||
-                        item.imageUrl?.contains("71p1F+8H1wL") == true ||
-                        item.imageUrl?.contains("61y-vR1vXRL") == true)
-            }
-            if (existing.isEmpty() || !hasCpus || !hasGpus || !hasPrebuilts ||
+
+            val counts = hardwareDao.getCategoryCounts().associate { it.category to it.cnt }
+            val hasCpus = (counts[HardwareCategory.CPU] ?: 0) > 0
+            val hasGpus = (counts[HardwareCategory.GPU] ?: 0) > 0
+            val hasPrebuilts = (counts[HardwareCategory.PREBUILT_PC] ?: 0) > 0
+            val laptopCount = counts[HardwareCategory.LAPTOP] ?: 0
+            val caseCount = counts[HardwareCategory.CASE] ?: 0
+            val coolerCount = counts[HardwareCategory.COOLER] ?: 0
+            val moboCount = counts[HardwareCategory.MOTHERBOARD] ?: 0
+            val micCount = counts[HardwareCategory.MICROPHONE] ?: 0
+            val padCount = counts[HardwareCategory.MOUSEPAD] ?: 0
+            val camCount = counts[HardwareCategory.WEBCAM] ?: 0
+            val chairCount = counts[HardwareCategory.GAMING_CHAIR] ?: 0
+            val fanCount = counts[HardwareCategory.CASE_FAN] ?: 0
+            val upsCount = counts[HardwareCategory.UPS] ?: 0
+            val deskCount = counts[HardwareCategory.GAMING_DESK] ?: 0
+            val lightCount = counts[HardwareCategory.GAMING_LIGHTING] ?: 0
+            val swCount = counts[HardwareCategory.SMARTWATCH] ?: 0
+            val routerCount = counts[HardwareCategory.ROUTER] ?: 0
+            val modemCount = counts[HardwareCategory.MODEM] ?: 0
+            val apCount = counts[HardwareCategory.ACCESS_POINT] ?: 0
+            val reCount = counts[HardwareCategory.RANGE_EXTENDER] ?: 0
+
+            val peripheralCount = (counts[HardwareCategory.KEYBOARD] ?: 0) +
+                (counts[HardwareCategory.MOUSE] ?: 0) +
+                (counts[HardwareCategory.HEADSET] ?: 0) +
+                (counts[HardwareCategory.MONITOR] ?: 0)
+
+            val isMissingCore = !hasCpus || !hasGpus || !hasPrebuilts ||
                 laptopCount < 300 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
-                moboCount < 640 || !hasBiostar || !hasEvga || hasGenericImages || !hasRx9070 ||
-                micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
+                moboCount < 640 || micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
                 fanCount < 180 || upsCount < 140 || deskCount < 100 || lightCount < 90 ||
-                swCount < 180 || routerCount < 140 || modemCount < 60 || apCount < 80 || reCount < 80 ||
-                hasIncompleteNewCategoryGallery
-            ) {
+                swCount < 180 || routerCount < 140 || modemCount < 60 || apCount < 80 || reCount < 80
+
+            if (counts.isEmpty() || isMissingCore) {
                 localDataSource.seedDatabaseIfEmpty()
             }
+            hardwareDao.saveSetting(
+                com.panda.myapplication.data.local.entity.AppSettingEntity(
+                    key = "catalog_seed_version",
+                    value = currentCatalogVersion,
+                )
+            )
             isSeeded = true
         }
     }
@@ -610,19 +627,25 @@ internal class HardwareRepositoryImpl(
                     )?.applyOverride(overrideMap)
                 }
             }
-            HardwareCategory.SMARTPHONE -> combine(
-                dynamicSmartphones,
-                hardwareDao.observeAllPriceOverrides(),
-            ) { items, overrides ->
-                val overrideMap = overrides.associateBy { it.hardwareId }
-                items.map { it.applyOverride(overrideMap) }
+            HardwareCategory.SMARTPHONE -> {
+                ensureMobileSeedLoaded()
+                combine(
+                    dynamicSmartphones,
+                    hardwareDao.observeAllPriceOverrides(),
+                ) { items, overrides ->
+                    val overrideMap = overrides.associateBy { it.hardwareId }
+                    items.map { it.applyOverride(overrideMap) }
+                }
             }
-            HardwareCategory.TABLET -> combine(
-                dynamicTablets,
-                hardwareDao.observeAllPriceOverrides(),
-            ) { items, overrides ->
-                val overrideMap = overrides.associateBy { it.hardwareId }
-                items.map { it.applyOverride(overrideMap) }
+            HardwareCategory.TABLET -> {
+                ensureMobileSeedLoaded()
+                combine(
+                    dynamicTablets,
+                    hardwareDao.observeAllPriceOverrides(),
+                ) { items, overrides ->
+                    val overrideMap = overrides.associateBy { it.hardwareId }
+                    items.map { it.applyOverride(overrideMap) }
+                }
             }
         }
         emitAll(
@@ -691,13 +714,15 @@ internal class HardwareRepositoryImpl(
     override fun observeBrands(category: HardwareCategory?): Flow<DomainResult<List<String>>> = flow {
         ensureSeeded()
         if (category == HardwareCategory.SMARTPHONE) {
-            val brands = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
+            ensureMobileSeedLoaded()
+            val brands = dynamicSmartphones.value.ifEmpty { com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones() }
                 .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
             emit(DomainResult.Success(brands))
             return@flow
         }
         if (category == HardwareCategory.TABLET) {
-            val brands = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
+            ensureMobileSeedLoaded()
+            val brands = dynamicTablets.value.ifEmpty { com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets() }
                 .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
             emit(DomainResult.Success(brands))
             return@flow
@@ -749,7 +774,12 @@ internal class HardwareRepositoryImpl(
     override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
         ensureSeeded()
         val now = Clock.System.now()
-        runCatching {
+        val lastSyncStr = hardwareDao.getSetting("last_remote_sync_at")
+        val lastSyncMillis = lastSyncStr?.toLongOrNull()
+        if (lastSyncMillis != null && (now.toEpochMilliseconds() - lastSyncMillis) < 24 * 3600 * 1000L) {
+            return@withContext DomainResult.Success(Unit)
+        }
+        try {
             val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
             val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
             val remoteVerified = remoteDataSource.fetchVerifiedLabBenchmarks().getOrDefault(emptyList())
@@ -866,10 +896,16 @@ internal class HardwareRepositoryImpl(
                     hardwareDao.upsertHardwareItems(updated)
                 }
             }
+            hardwareDao.saveSetting(
+                com.panda.myapplication.data.local.entity.AppSettingEntity(
+                    key = "last_remote_sync_at",
+                    value = now.toEpochMilliseconds().toString(),
+                )
+            )
             DomainResult.Success(Unit)
-        }.getOrElse {
-            // Silent fallback to local cache - background network error never fails UI
-            DomainResult.Success(Unit)
+        } catch (e: Exception) {
+            if (e is kotlinx.coroutines.CancellationException) throw e
+            DomainResult.Failure(DomainError.Network)
         }
     }
 }

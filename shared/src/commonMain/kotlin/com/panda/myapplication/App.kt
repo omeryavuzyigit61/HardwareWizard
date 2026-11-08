@@ -135,7 +135,6 @@ import com.panda.myapplication.presentation.tools.SecondHandValuationScreen
 import com.panda.myapplication.presentation.vs_arena.VsArenaRoute
 import com.panda.myapplication.presentation.wizard.WizardRoute
 import kotlinx.coroutines.launch
-import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import com.panda.myapplication.domain.repository.SettingsRepository
@@ -197,13 +196,7 @@ fun App() {
             .build()
     }
 
-    @Suppress("DEPRECATION")
-    KoinApplication(
-        application = {
-            modules(dataModule, platformDatabaseModule, presentationModule)
-        },
-    ) {
-        val settingsRepository: SettingsRepository = koinInject()
+    val settingsRepository: SettingsRepository = koinInject()
         val appSettings by settingsRepository.settings.collectAsStateWithLifecycle()
 
         val appStrings = remember(appSettings.language) { getAppStrings(appSettings.language) }
@@ -254,7 +247,8 @@ fun App() {
             ModalNavigationDrawer(
                 drawerState = drawerState,
                 drawerContent = {
-                    HardwareEngineeringDrawerContent(
+                    if (drawerState.isOpen || drawerState.targetValue == DrawerValue.Open) {
+                        HardwareEngineeringDrawerContent(
                         currentRoute = currentRoute,
                         currentUser = currentUser,
                         isLoggedIn = isLoggedIn,
@@ -287,6 +281,7 @@ fun App() {
                             }
                         },
                     )
+                    }
                 },
             ) {
                 Scaffold(
@@ -534,7 +529,6 @@ fun App() {
             }
             }
         }
-    }
 }
 
 @Composable

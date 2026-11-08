@@ -2008,10 +2008,10 @@ def main():
     # --------------------------------------------------------------------------
     os.makedirs(SHARED_FILES_DIR, exist_ok=True)
     all_catalog_files = [
-        "cpu.json", "gpu.json", "video-card.json",
-        "ram.json", "memory.json", "motherboard.json",
-        "psu.json", "power-supply.json", "storage.json",
-        "internal-hard-drive.json", "cooler.json", "cpu-cooler.json",
+        "cpu.json", "video-card.json",
+        "memory.json", "motherboard.json",
+        "power-supply.json",
+        "internal-hard-drive.json", "cpu-cooler.json",
         "case.json"
     ]
     for filename in all_catalog_files:

@@ -57,17 +57,18 @@ jobs:
       - name: 6. Final Dual Directory Catalog Verification & Hash Integrity
         run: |
           python scripts/autonomous_hardware_discovery.py
+          python scripts/prepare_prepopulated_db.py
 
       - name: Commit and push only if real data changes exist
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff -I '"lastUpdated":' --quiet data/ shared/src/commonMain/composeResources/files/; then
+          if git diff -I '"lastUpdated":' --quiet data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/; then
             echo "Gerçek veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
-            git checkout -- data/ shared/src/commonMain/composeResources/files/
+            git checkout -- data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
           else
-            git add data/ shared/src/commonMain/composeResources/files/
+            git add data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
             git commit -m "chore(catalog): autonomous daily hardware catalog & TR prices sync [skip ci]"
             git push
           fi

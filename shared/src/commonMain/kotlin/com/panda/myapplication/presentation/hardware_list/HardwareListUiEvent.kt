@@ -16,6 +16,7 @@ sealed interface HardwareListUiEvent {
     data class OnFiltersChanged(val filters: HardwareFilterOptions) : HardwareListUiEvent
     data object OnResetFilters : HardwareListUiEvent
     data object OnRefresh : HardwareListUiEvent
+    data object OnLoadMore : HardwareListUiEvent
 }
 
 sealed interface HardwareListEffect {

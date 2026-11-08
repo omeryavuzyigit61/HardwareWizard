@@ -598,7 +598,7 @@ object HardwareMapper {
         val benchmarkInfo = if (isCpuOrGpu) {
             if (entity.benchmarkScore != null) {
                 val relPct = (entity.benchmarkGamingIndex ?: entity.benchmarkScore).toDouble()
-                val enrichedGames = com.panda.myapplication.domain.engine.BenchmarkEngine.buildFull12GameMatrix(
+                val enrichedGames = entity.gameFps ?: com.panda.myapplication.domain.engine.BenchmarkEngine.buildFull12GameMatrix(
                     ratio = relPct / 100.0,
                     isCpu = entity.category == HardwareCategory.CPU,
                     isX3d = entity.model.contains("X3D", ignoreCase = true),
@@ -616,7 +616,7 @@ object HardwareMapper {
                     dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
                 )
             } else {
-                com.panda.myapplication.domain.engine.BenchmarkEngine.simulateBenchmark(intermediateItem)
+                null
             }
         } else if (entity.benchmarkScore != null) {
             HardwareBenchmarkInfo(

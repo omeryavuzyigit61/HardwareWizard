@@ -77,6 +77,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -238,6 +239,19 @@ fun HardwareListContent(
     LaunchedEffect(uiState.searchQuery.isBlank()) {
         if (uiState.searchQuery.isBlank()) {
             listState.scrollToItem(0, 0)
+        }
+    }
+
+    val shouldLoadMore by remember(listState, uiState.items.size, uiState.totalCount) {
+        derivedStateOf {
+            val totalItems = listState.layoutInfo.totalItemsCount
+            val lastVisible = listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
+            totalItems > 0 && lastVisible >= totalItems - 8 && uiState.items.size < uiState.totalCount
+        }
+    }
+    LaunchedEffect(shouldLoadMore) {
+        if (shouldLoadMore) {
+            onEvent(HardwareListUiEvent.OnLoadMore)
         }
     }
     var priceDialogItem by remember { mutableStateOf<HardwareItem?>(null) }
