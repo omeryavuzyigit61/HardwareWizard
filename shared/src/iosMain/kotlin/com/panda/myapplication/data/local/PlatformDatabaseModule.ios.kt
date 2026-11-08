@@ -7,4 +7,7 @@ actual val platformDatabaseModule: Module = module {
     single<HardwareDatabase> {
         buildHardwareDatabase(hardwareDatabaseBuilder(), get())
     }
+    single<com.panda.myapplication.domain.util.SecureStorage> {
+        IosSecureStorage()
+    }
 }

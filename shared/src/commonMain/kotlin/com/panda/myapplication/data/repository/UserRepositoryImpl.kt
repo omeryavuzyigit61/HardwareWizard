@@ -39,10 +39,13 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
-class UserRepositoryImpl(
+import com.panda.myapplication.domain.util.SecureStorage
+
+internal class UserRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val hardwareDao: HardwareDao? = null,
+    private val secureStorage: SecureStorage? = null,
     private val ioDispatcher: CoroutineDispatcher,
 ) : UserRepository {
 
@@ -69,9 +72,20 @@ class UserRepositoryImpl(
     )
 
     init {
-        if (hardwareDao != null) {
-            CoroutineScope(ioDispatcher).launch {
-                runCatching {
+        CoroutineScope(ioDispatcher).launch {
+            runCatching {
+                // 1. Önce donanım tabanlı SecureStorage (Keystore/Keychain) kontrol edilir
+                val secureJson = secureStorage?.get(KEY_USER_SESSION)
+                if (!secureJson.isNullOrBlank()) {
+                    val profile = json.decodeFromString(UserProfile.serializer(), secureJson)
+                    _currentUser.value = profile
+                    _isLoggedIn.value = true
+                    syncUserStatsFromCloud(profile.id)
+                    return@launch
+                }
+
+                // 2. Eski düz SQLite oturumu varsa güvenli depolamaya taşınır ve SQLite'tan silinir
+                if (hardwareDao != null) {
                     val session = hardwareDao.getUserSession()
                     if (session != null) {
                         val profile = UserProfile(
@@ -85,6 +99,7 @@ class UserRepositoryImpl(
                         )
                         _currentUser.value = profile
                         _isLoggedIn.value = true
+                        persistSession(profile)
                         syncUserStatsFromCloud(session.userId)
                     }
                 }
@@ -136,17 +151,10 @@ class UserRepositoryImpl(
 
     private suspend fun persistSession(profile: UserProfile) {
         runCatching {
-            hardwareDao?.saveUserSession(
-                UserSessionEntity(
-                    userId = profile.id,
-                    email = profile.email,
-                    username = profile.username,
-                    birthDateIso = profile.birthDateIso,
-                    gender = profile.gender.name,
-                    spiritHardware = profile.spiritHardware.name,
-                    createdAtEpochMs = profile.createdAtEpochMs,
-                )
-            )
+            val jsonPayload = json.encodeToString(UserProfile.serializer(), profile)
+            secureStorage?.put(KEY_USER_SESSION, jsonPayload)
+            // pre_prompt_kmp.md güvenliği gereği SQLite üzerindeki şifresiz oturumu temizle
+            hardwareDao?.clearUserSession()
         }
     }
 
@@ -179,7 +187,7 @@ class UserRepositoryImpl(
             birthDateIso = birthDateIso.ifBlank { "2001-01-01" },
             gender = gender,
             spiritHardware = spiritHardware,
-            createdAtEpochMs = System.currentTimeMillis(),
+            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
         )
 
         runCatching {
@@ -293,6 +301,7 @@ class UserRepositoryImpl(
         _currentUser.value = null
         _isLoggedIn.value = false
         runCatching {
+            secureStorage?.remove(KEY_USER_SESSION)
             hardwareDao?.clearUserSession()
         }
         Unit
@@ -327,6 +336,8 @@ class UserRepositoryImpl(
     }
 
     companion object {
+        private const val KEY_USER_SESSION = "hw_active_user_session"
+
         // Yalnızca tek yönlü tuzlanmış SHA-256 özeti saklanır; düz metin (plaintext) parola asla kodda yer almaz.
         private const val MASTER_ADMIN_PASSWORD_SHA256 = "610768c536f619515fce0de482af604d60efa48af177c2d5fc201cb6e5c64d6d"
 

@@ -594,7 +594,7 @@ fun BattlestationShowcaseScreen(
             onDismiss = { reportingTargetShowcase = null },
             onSubmitReport = { reason, details ->
                 coroutineScope.launch {
-                    val now = System.currentTimeMillis()
+                    val now = com.panda.myapplication.domain.util.currentEpochMillis()
                     val report = ContentReport(
                         id = "rep-bs-$now",
                         targetType = ReportTargetType.BATTLESTATION,
@@ -1110,7 +1110,7 @@ private fun ShareRigShowcaseDialog(
             coroutineScope.launch {
                 if (slot == 1) {
                     isUploading1 = true
-                    val fileName = "showcase_rig_${userId}_${System.currentTimeMillis()}.jpg"
+                    val fileName = "showcase_rig_${userId}_${com.panda.myapplication.domain.util.currentEpochMillis()}.jpg"
                     when (val res = rigShowcaseRepository.uploadShowcaseImage(bytes, fileName)) {
                         is DomainResult.Success -> {
                             photoRigUrl = res.data
@@ -1123,7 +1123,7 @@ private fun ShareRigShowcaseDialog(
                     isUploading1 = false
                 } else {
                     isUploading2 = true
-                    val fileName = "showcase_setup_${userId}_${System.currentTimeMillis()}.jpg"
+                    val fileName = "showcase_setup_${userId}_${com.panda.myapplication.domain.util.currentEpochMillis()}.jpg"
                     when (val res = rigShowcaseRepository.uploadShowcaseImage(bytes, fileName)) {
                         is DomainResult.Success -> {
                             photoSetupUrl = res.data
@@ -1435,7 +1435,7 @@ private fun ShareRigShowcaseDialog(
                                 }
 
                                 val showcase = RigShowcase(
-                                    id = "rig_${userId}_${System.currentTimeMillis()}",
+                                    id = "rig_${userId}_${com.panda.myapplication.domain.util.currentEpochMillis()}",
                                     userId = userId,
                                     userDisplayName = userDisplayName,
                                     userBadge = userBadge,
@@ -1446,7 +1446,7 @@ private fun ShareRigShowcaseDialog(
                                     hardwareSpecsJson = specsMap.toString(),
                                     likesCount = 0,
                                     isLikedByMe = false,
-                                    createdAtEpochMs = System.currentTimeMillis(),
+                                    createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
                                 )
                                 onSubmit(showcase)
                             }

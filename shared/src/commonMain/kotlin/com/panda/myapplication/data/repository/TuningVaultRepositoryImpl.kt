@@ -47,7 +47,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
-class TuningVaultRepositoryImpl(
+internal class TuningVaultRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,

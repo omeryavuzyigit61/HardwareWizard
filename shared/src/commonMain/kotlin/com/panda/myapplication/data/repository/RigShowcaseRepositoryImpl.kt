@@ -39,7 +39,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
-class RigShowcaseRepositoryImpl(
+internal class RigShowcaseRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,

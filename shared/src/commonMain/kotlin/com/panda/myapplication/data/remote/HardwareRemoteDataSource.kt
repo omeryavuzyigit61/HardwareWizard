@@ -14,8 +14,9 @@ import com.panda.myapplication.data.model.dto.StorageRawDto
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.header
-import kotlin.time.Clock
 import io.ktor.client.statement.bodyAsText
+import kotlin.time.Clock
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -50,7 +51,7 @@ class HardwareRemoteDataSource(
 ) {
 
     suspend fun fetchAllHardware(): Result<RemoteHardwareCatalog> = withContext(ioDispatcher) {
-        runCatching {
+        try {
             coroutineScope {
                 val cpusDeferred = async { fetchJsonList<CpuRawDto>("$baseUrl/cpu.json") }
                 val gpusDeferred = async { fetchJsonList<GpuRawDto>("$baseUrl/video-card.json") }
@@ -80,20 +81,26 @@ class HardwareRemoteDataSource(
                     error("GitHub açık veri kaynağından donanım parçaları çekilemedi.")
                 }
 
-                RemoteHardwareCatalog(
-                    cpus = cpus,
-                    gpus = gpus,
-                    rams = rams,
-                    motherboards = mobos,
-                    psus = psus,
-                    storages = storages,
-                    coolers = coolers,
-                    cases = cases,
-                    prebuilts = prebuilts,
-                    laptops = laptops,
-                    peripherals = peripherals,
+                Result.success(
+                    RemoteHardwareCatalog(
+                        cpus = cpus,
+                        gpus = gpus,
+                        rams = rams,
+                        motherboards = mobos,
+                        psus = psus,
+                        storages = storages,
+                        coolers = coolers,
+                        cases = cases,
+                        prebuilts = prebuilts,
+                        laptops = laptops,
+                        peripherals = peripherals,
+                    )
                 )
             }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
@@ -104,7 +111,7 @@ class HardwareRemoteDataSource(
     }
 
     suspend fun fetchPricesTr(url: String = DEFAULT_PRICES_TR_URL): Result<Map<String, com.panda.myapplication.domain.model.ProductPriceInfo>> = withContext(ioDispatcher) {
-        runCatching {
+        try {
             val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
                 httpClient.get(bustCacheUrl(url)) {
                     header("Cache-Control", "no-cache")
@@ -112,12 +119,16 @@ class HardwareRemoteDataSource(
                 }.bodyAsText(),
                 "prices_tr.json",
             )
-            json.decodeFromString<Map<String, com.panda.myapplication.domain.model.ProductPriceInfo>>(text)
+            Result.success(json.decodeFromString<Map<String, com.panda.myapplication.domain.model.ProductPriceInfo>>(text))
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
     suspend fun fetchBenchmarks(url: String = DEFAULT_BENCHMARKS_URL): Result<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>> = withContext(ioDispatcher) {
-        runCatching {
+        try {
             val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
                 httpClient.get(bustCacheUrl(url)) {
                     header("Cache-Control", "no-cache")
@@ -125,56 +136,79 @@ class HardwareRemoteDataSource(
                 }.bodyAsText(),
                 "hardware_benchmarks.json",
             )
-            parseBenchmarkJson(text)
+            Result.success(parseBenchmarkJson(text))
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
-    fun parseBenchmarkJson(text: String): Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo> = runCatching {
-        val safeText = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(text, "hardware_benchmarks")
-        val element = json.parseToJsonElement(safeText)
-        if (element is kotlinx.serialization.json.JsonObject && (element.containsKey("cpus") || element.containsKey("gpus"))) {
-            return@runCatching json.decodeFromJsonElement(com.panda.myapplication.data.model.dto.BenchmarkCatalogRawDto.serializer(), element).toDomainMap()
+    fun parseBenchmarkJson(text: String): Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo> {
+        return try {
+            val safeText = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(text, "hardware_benchmarks")
+            val element = json.parseToJsonElement(safeText)
+            if (element is kotlinx.serialization.json.JsonObject && (element.containsKey("cpus") || element.containsKey("gpus"))) {
+                json.decodeFromJsonElement(com.panda.myapplication.data.model.dto.BenchmarkCatalogRawDto.serializer(), element).toDomainMap()
+            } else {
+                json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(safeText)
+            }
+        } catch (_: Exception) {
+            emptyMap()
         }
-        json.decodeFromString<Map<String, com.panda.myapplication.domain.model.HardwareBenchmarkInfo>>(safeText)
-    }.getOrDefault(emptyMap())
+    }
 
     suspend fun fetchVerifiedLabBenchmarks(
         url: String = DEFAULT_VERIFIED_BENCHMARKS_URL,
     ): Result<List<com.panda.myapplication.domain.model.VerifiedLabGameTest>> = withContext(ioDispatcher) {
-        runCatching {
+        try {
             val list = fetchJsonList<com.panda.myapplication.domain.model.VerifiedLabGameTest>(url)
             if (list.isNotEmpty()) {
                 com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(list)
             }
-            list
+            Result.success(list)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
     suspend fun fetchSmartphonesJson(url: String = DEFAULT_SMARTPHONES_URL): Result<String> = withContext(ioDispatcher) {
-        runCatching {
-            com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
+        try {
+            val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
                 httpClient.get(bustCacheUrl(url)) {
                     header("Cache-Control", "no-cache")
                     header("Pragma", "no-cache")
                 }.bodyAsText(),
                 "smartphone.json",
             )
+            Result.success(text)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
     suspend fun fetchTabletsJson(url: String = DEFAULT_TABLETS_URL): Result<String> = withContext(ioDispatcher) {
-        runCatching {
-            com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
+        try {
+            val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
                 httpClient.get(bustCacheUrl(url)) {
                     header("Cache-Control", "no-cache")
                     header("Pragma", "no-cache")
                 }.bodyAsText(),
                 "tablet.json",
             )
+            Result.success(text)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 
-    private suspend inline fun <reified T> fetchJsonList(url: String): List<T> = runCatching {
+    private suspend inline fun <reified T> fetchJsonList(url: String): List<T> = try {
         val targetUrl = bustCacheUrl(url)
         val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
             httpClient.get(targetUrl) {
@@ -186,12 +220,22 @@ class HardwareRemoteDataSource(
         val jsonElement = json.parseToJsonElement(text)
         if (jsonElement is kotlinx.serialization.json.JsonArray) {
             jsonElement.mapNotNull { element ->
-                runCatching { json.decodeFromJsonElement<T>(element) }.getOrNull()
+                try {
+                    json.decodeFromJsonElement<T>(element)
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (_: Exception) {
+                    null
+                }
             }
         } else {
             emptyList()
         }
-    }.getOrDefault(emptyList())
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        emptyList()
+    }
 
     companion object {
         const val DEFAULT_BASE_URL = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/catalog"

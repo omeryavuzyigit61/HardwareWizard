@@ -38,7 +38,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
-class CommunityPriceRepositoryImpl(
+internal class CommunityPriceRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,

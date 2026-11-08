@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class VsArenaRepositoryImpl : VsArenaRepository {
+internal class VsArenaRepositoryImpl : VsArenaRepository {
 
     private val _state = MutableStateFlow(VsArenaSelectionState())
     override val state: StateFlow<VsArenaSelectionState> = _state.asStateFlow()

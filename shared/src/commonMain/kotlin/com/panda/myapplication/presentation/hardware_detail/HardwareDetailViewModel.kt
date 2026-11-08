@@ -191,14 +191,14 @@ class HardwareDetailViewModel(
         if (text.isBlank()) return
         val user = _uiState.value.currentUser
         val comment = TuningComment(
-            id = "comment-${System.currentTimeMillis()}-${(100..999).random()}",
+            id = "comment-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
             tuningId = tuningId,
             userId = user?.id ?: "usr-guest",
             userDisplayName = user?.username ?: "DonanımSever",
             userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
             userReputation = user?.reputationScore ?: 10,
             commentText = text.trim(),
-            createdAtEpochMs = System.currentTimeMillis(),
+            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
         )
         viewModelScope.launch {
             when (val res = tuningVaultRepository.addComment(comment)) {
@@ -222,14 +222,14 @@ class HardwareDetailViewModel(
         val user = _uiState.value.currentUser
         val item = _uiState.value.item ?: return
         val tip = HardwareProTip(
-            id = "review-${System.currentTimeMillis()}-${(100..999).random()}",
+            id = "review-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
             hardwareId = item.id.value,
             hardwareName = item.displayName,
             userId = user?.id ?: "usr-guest",
             userDisplayName = user?.username ?: "DonanımSever",
             userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
             tipText = tipText,
-            createdAtEpochMs = System.currentTimeMillis(),
+            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
             rating = rating,
         )
         viewModelScope.launch {
@@ -275,13 +275,13 @@ class HardwareDetailViewModel(
         val user = _uiState.value.currentUser
         val item = _uiState.value.item ?: return
         val alert = PriceDropAlert(
-            id = "alert-${System.currentTimeMillis()}-${(100..999).random()}",
+            id = "alert-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
             userId = user?.id ?: "usr-guest",
             hardwareId = item.id.value,
             hardwareName = item.displayName,
             targetPriceTry = targetPriceTry,
             onlyRetailCampaign = true,
-            createdAtEpochMs = System.currentTimeMillis(),
+            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
         )
         viewModelScope.launch {
             tuningVaultRepository.createPriceAlert(alert)

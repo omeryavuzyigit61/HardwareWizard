@@ -26,7 +26,7 @@ import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlin.time.Clock
 
-class HardwareRepositoryImpl(
+internal class HardwareRepositoryImpl(
     private val hardwareDao: HardwareDao,
     private val localDataSource: HardwareLocalDataSource,
     private val remoteDataSource: HardwareRemoteDataSource,

@@ -215,7 +215,7 @@ fun TuningShareDialog(
             isUploadingImage = true
             uploadErrorText = null
             val kbSize = (compressedBytes.size / 1024).coerceAtLeast(1)
-            val fileName = "proof_${userId}_${System.currentTimeMillis()}.jpg"
+            val fileName = "proof_${userId}_${com.panda.myapplication.domain.util.currentEpochMillis()}.jpg"
             coroutineScope.launch {
                 when (val res = tuningVaultRepository.uploadProofImage(compressedBytes, fileName)) {
                     is DomainResult.Success -> {
@@ -926,8 +926,8 @@ fun TuningShareDialog(
                     if (title.isNotBlank() && selectedHardwareName.isNotBlank()) {
                         val orderedTypes = selectedTypes.toList().ifEmpty { listOf(TuningType.UNDERVOLT) }
                         val newProfile = TuningProfile(
-                            id = "tune-${System.currentTimeMillis()}-${(1000..9999).random()}",
-                            hardwareId = selectedHardwareId.ifBlank { "hw-custom-${System.currentTimeMillis()}" },
+                            id = "tune-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(1000..9999).random()}",
+                            hardwareId = selectedHardwareId.ifBlank { "hw-custom-${com.panda.myapplication.domain.util.currentEpochMillis()}" },
                             hardwareName = selectedHardwareName.trim(),
                             hardwareCategory = selectedCategory,
                             tuningType = orderedTypes.first(),
@@ -946,7 +946,7 @@ fun TuningShareDialog(
                             userId = userId,
                             userDisplayName = userDisplayName,
                             userBadge = userBadge,
-                            createdAtEpochMs = System.currentTimeMillis(),
+                            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
                             motherboardName = motherboardName.trim().ifBlank { null },
                             coolerName = coolerName.trim().ifBlank { null },
                             ramSpec = ramSpec.trim().ifBlank { null },

@@ -89,6 +89,7 @@ val dataModule = module {
             httpClient = get(),
             json = get(),
             hardwareDao = get(),
+            secureStorage = getOrNull(),
             ioDispatcher = get(),
         )
     }

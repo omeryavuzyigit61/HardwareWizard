@@ -82,7 +82,7 @@ private fun presentPicker(
     val picker = UIImagePickerController()
     picker.sourceType = sourceType
     @Suppress("UNCHECKED_CAST")
-    picker.delegate = delegate as? UIImagePickerControllerDelegateProtocol
+    picker.delegate = delegate as? UINavigationControllerDelegateProtocol
     rootVc.presentViewController(picker, animated = true, completion = null)
 }
 

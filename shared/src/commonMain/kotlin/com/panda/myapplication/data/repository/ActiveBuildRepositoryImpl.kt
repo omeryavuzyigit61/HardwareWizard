@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class ActiveBuildRepositoryImpl : ActiveBuildRepository {
+internal class ActiveBuildRepositoryImpl : ActiveBuildRepository {
 
     private val _activeBuild = MutableStateFlow(ActiveBuild())
     override val activeBuild: StateFlow<ActiveBuild> = _activeBuild.asStateFlow()

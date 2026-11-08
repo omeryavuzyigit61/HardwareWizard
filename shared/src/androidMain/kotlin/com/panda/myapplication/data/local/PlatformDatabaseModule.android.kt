@@ -32,4 +32,8 @@ actual val platformDatabaseModule: Module = module {
         val context = appContext ?: error("Context is not initialized. Ensure HardwareContextProvider is active or call setHardwareContext(context).")
         buildHardwareDatabase(hardwareDatabaseBuilder(context), get())
     }
+    single<com.panda.myapplication.domain.util.SecureStorage> {
+        val context = appContext ?: error("Context is not initialized. Ensure HardwareContextProvider is active or call setHardwareContext(context).")
+        AndroidSecureStorage(context)
+    }
 }

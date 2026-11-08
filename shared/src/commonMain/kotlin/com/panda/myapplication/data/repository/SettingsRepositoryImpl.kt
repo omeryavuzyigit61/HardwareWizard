@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class SettingsRepositoryImpl(
+internal class SettingsRepositoryImpl(
     private val hardwareDao: HardwareDao? = null,
     private val ioDispatcher: CoroutineDispatcher,
 ) : SettingsRepository {

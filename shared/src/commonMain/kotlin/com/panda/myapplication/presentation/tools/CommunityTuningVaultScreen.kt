@@ -609,7 +609,7 @@ fun CommunityTuningVaultScreen(
                             onDiscussionClick = { activeDiscussionTuning = profile },
                             onReportClick = { reportingTargetTuning = profile },
                             onToggleReaction = { type ->
-                                val userId = currentUser?.id ?: "guest-${System.currentTimeMillis()}"
+                                val userId = currentUser?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}"
                                 if (profile.userId == userId || profile.userDisplayName == currentUser?.username) {
                                     coroutineScope.launch {
                                         snackbarHostState.showSnackbar(
@@ -872,14 +872,14 @@ fun CommunityTuningVaultScreen(
                                 isPosting = true
                                 val user = currentUser
                                 val comment = TuningComment(
-                                    id = "com-${System.currentTimeMillis()}-${(100..999).random()}",
+                                    id = "com-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
                                     tuningId = tuning.id,
-                                    userId = user?.id ?: "guest-${System.currentTimeMillis()}",
+                                    userId = user?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}",
                                     userDisplayName = user?.username ?: (if (isTr) "Topluluk Üyesi" else "Community Member"),
                                     userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
                                     userReputation = user?.reputationScore ?: 10,
                                     commentText = newCommentText.trim(),
-                                    createdAtEpochMs = System.currentTimeMillis(),
+                                    createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
                                 )
                                 coroutineScope.launch {
                                     val res = tuningVaultRepository.addComment(comment)
@@ -907,7 +907,7 @@ fun CommunityTuningVaultScreen(
     // Tuning Share Dialog (Full System Rig Registration)
     if (showShareDialog) {
         TuningShareDialog(
-            userId = currentUser?.id ?: "guest-${System.currentTimeMillis()}",
+            userId = currentUser?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}",
             userDisplayName = currentUser?.username ?: (if (isTr) "Topluluk Üyesi" else "Community Member"),
             userBadge = currentUser?.effectiveBadge ?: "Lehim Çırağı",
             hardwareRepository = hardwareRepository,
@@ -948,7 +948,7 @@ fun CommunityTuningVaultScreen(
             onSubmitReport = { reason, details ->
                 coroutineScope.launch {
                     val report = ContentReport(
-                        id = "rep-tp-${System.currentTimeMillis()}",
+                        id = "rep-tp-${com.panda.myapplication.domain.util.currentEpochMillis()}",
                         targetType = ReportTargetType.TUNING_PROFILE,
                         targetId = target.id,
                         targetTitle = "${target.hardwareName} - ${target.profileTitle}",
@@ -959,7 +959,7 @@ fun CommunityTuningVaultScreen(
                         isSelfReport = isSelf,
                         reason = reason,
                         details = details,
-                        timestampMillis = System.currentTimeMillis(),
+                        timestampMillis = com.panda.myapplication.domain.util.currentEpochMillis(),
                     )
                     reportRepository.submitReport(report)
                     snackbarHostState.showSnackbar(

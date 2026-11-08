@@ -667,7 +667,7 @@ fun HardwareDetailContent(
             onSubmitReport = { reason, details ->
                 coroutineScope.launch {
                     val report = ContentReport(
-                        id = "rep-comment-${System.currentTimeMillis()}",
+                        id = "rep-comment-${com.panda.myapplication.domain.util.currentEpochMillis()}",
                         targetType = ReportTargetType.COMMENT,
                         targetId = target.id,
                         targetTitle = "${activeItem?.displayName ?: ""}: \"${target.tipText.take(45)}\"",
@@ -678,7 +678,7 @@ fun HardwareDetailContent(
                         isSelfReport = isSelf,
                         reason = reason,
                         details = details,
-                        timestampMillis = System.currentTimeMillis(),
+                        timestampMillis = com.panda.myapplication.domain.util.currentEpochMillis(),
                     )
                     reportRepository.submitReport(report)
                     if (isSelf) {

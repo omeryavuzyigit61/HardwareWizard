@@ -37,7 +37,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
 
-class CommunityReportRepositoryImpl(
+internal class CommunityReportRepositoryImpl(
     private val httpClient: HttpClient? = null,
     private val json: Json? = null,
     private val ioDispatcher: CoroutineDispatcher,
