@@ -118,6 +118,8 @@ import com.panda.myapplication.presentation.tools.UndervoltGuideScreen
 import com.panda.myapplication.presentation.tools.CommunityTuningVaultScreen
 import com.panda.myapplication.presentation.tools.BattlestationShowcaseScreen
 import com.panda.myapplication.presentation.tools.StudioAndSurfaceLabScreen
+import com.panda.myapplication.presentation.tools.WorkstationLabScreen
+import androidx.compose.material.icons.rounded.PrecisionManufacturing
 import androidx.compose.material.icons.rounded.Mic
 import androidx.compose.material.icons.rounded.PhotoCamera
 import androidx.compose.material3.Button
@@ -161,6 +163,7 @@ object Destinations {
     const val STUDIO_SURFACE_LAB = "studio_surface_lab"
     const val ADMIN_MODERATION = "admin_moderation"
     const val SECOND_HAND_VALUATOR = "second_hand_valuator"
+    const val WORKSTATION_LAB = "workstation_lab"
     const val USER_PROFILE = "user_profile"
     const val SETTINGS = "settings"
 }
@@ -310,16 +313,21 @@ fun App() {
                 ) { innerPadding ->
                     NavHost(
                         navController = navController,
-                        startDestination = "${Destinations.HARDWARE_LIST}?category={category}",
+                        startDestination = "${Destinations.HARDWARE_LIST}?category={category}&q={q}",
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(bottom = innerPadding.calculateBottomPadding())
                             .imePadding(),
                     ) {
                         composable(
-                            route = "${Destinations.HARDWARE_LIST}?category={category}",
+                            route = "${Destinations.HARDWARE_LIST}?category={category}&q={q}",
                             arguments = listOf(
                                 navArgument("category") {
+                                    type = NavType.StringType
+                                    nullable = true
+                                    defaultValue = null
+                                },
+                                navArgument("q") {
                                     type = NavType.StringType
                                     nullable = true
                                     defaultValue = null
@@ -330,9 +338,11 @@ fun App() {
                             val initialCategory = categoryName?.let {
                                 runCatching { HardwareCategory.valueOf(it) }.getOrNull()
                             }
+                            val initialQuery = backStackEntry.arguments?.read { getStringOrNull("q") }
 
                             HardwareListRoute(
                                 initialCategory = initialCategory,
+                                initialSearchQuery = initialQuery,
                                 onItemClick = { item ->
                                     navController.navigate("${Destinations.HARDWARE_DETAIL}/${item.id.value}")
                                 },
@@ -490,6 +500,16 @@ fun App() {
                             )
                         }
 
+                        composable(route = Destinations.WORKSTATION_LAB) {
+                            WorkstationLabScreen(
+                                onNavigateBack = { navController.popBackStack() },
+                                onOpenDrawer = openDrawer,
+                                onNavigateToCatalogWithFilter = { query, category ->
+                                    navController.navigate("${Destinations.HARDWARE_LIST}?category=${category.name}&q=${query}")
+                                },
+                            )
+                        }
+
                         composable(route = Destinations.USER_PROFILE) {
                             UserProfileScreen(
                                 userRepository = userRepository,
@@ -575,6 +595,14 @@ private fun HardwareEngineeringDrawerContent(
                 subtitle = strings.drawerStudioLabSubtitle,
                 badge = "STUDIO & ERGONOMICS",
                 accentColor = NeonAmber,
+            ),
+            EngineeringToolDrawerItem(
+                route = Destinations.WORKSTATION_LAB,
+                icon = Icons.Rounded.PrecisionManufacturing,
+                title = strings.drawerWorkstationTitle,
+                subtitle = strings.drawerWorkstationSubtitle,
+                badge = "PRO WORKLOAD",
+                accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
                 route = Destinations.HARDWARE_GLOSSARY,

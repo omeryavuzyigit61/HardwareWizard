@@ -160,6 +160,7 @@ object Spacing {
 fun HardwareListRoute(
     modifier: Modifier = Modifier,
     initialCategory: HardwareCategory? = null,
+    initialSearchQuery: String? = null,
     viewModel: HardwareListViewModel = koinViewModel(),
     onItemClick: ((HardwareItem) -> Unit)? = null,
     onNavigateToVsArena: (() -> Unit)? = null,
@@ -174,6 +175,12 @@ fun HardwareListRoute(
     LaunchedEffect(initialCategory) {
         if (initialCategory != null) {
             viewModel.onEvent(HardwareListUiEvent.OnCategorySelected(initialCategory))
+        }
+    }
+
+    LaunchedEffect(initialSearchQuery) {
+        if (!initialSearchQuery.isNullOrBlank()) {
+            viewModel.onSearchQueryChange(initialSearchQuery)
         }
     }
 

@@ -329,6 +329,8 @@ interface AppStrings {
     val segmentNetworking: String get() = if (isTurkish) "Ağ Sistemleri" else "Networking"
     val drawerStudioLabTitle: String get() = if (isTurkish) "Stüdyo, Yüzey & Ergonomi Labı" else "Studio, Surface & Ergonomics Lab"
     val drawerStudioLabSubtitle: String get() = if (isTurkish) "Mikrofon akustiği, mousepad sürtünme fiziği, kamera FOV ve koltuk ergonomisi" else "Mic acoustics, mousepad friction physics, webcam FOV & chair ergonomics"
+    val drawerWorkstationTitle: String get() = if (isTurkish) "Workstation & Creator Lab" else "Workstation & Creator Lab"
+    val drawerWorkstationSubtitle: String get() = if (isTurkish) "Adobe, Blender, UE5, CAD & AI Donanım Kılavuzu" else "Adobe, Blender, UE5, CAD & AI Hardware Guide"
 
 
 
@@ -6382,15 +6384,24 @@ fun HardwareCategory.localized(strings: AppStrings): String = when (this) {
     HardwareCategory.MICROPHONE -> strings.catMicrophone
     HardwareCategory.MOUSEPAD -> strings.catMousepad
     HardwareCategory.WEBCAM -> strings.catWebcam
-    HardwareCategory.GAMING_CHAIR -> strings.catGamingChair
-    HardwareCategory.CASE_FAN -> strings.catCaseFan
-    HardwareCategory.UPS -> strings.catUps
-    HardwareCategory.GAMING_DESK -> strings.catGamingDesk
-    HardwareCategory.GAMING_LIGHTING -> strings.catGamingLighting
-    HardwareCategory.SMARTWATCH -> strings.catSmartwatch
-    HardwareCategory.ROUTER -> strings.catRouter
-    HardwareCategory.MODEM -> strings.catModem
-    HardwareCategory.ACCESS_POINT -> strings.catAccessPoint
+    HardwareCategory.GAMING_CHAIR -> strings.catGamingChair
+
+    HardwareCategory.CASE_FAN -> strings.catCaseFan
+
+    HardwareCategory.UPS -> strings.catUps
+
+    HardwareCategory.GAMING_DESK -> strings.catGamingDesk
+
+    HardwareCategory.GAMING_LIGHTING -> strings.catGamingLighting
+
+    HardwareCategory.SMARTWATCH -> strings.catSmartwatch
+
+    HardwareCategory.ROUTER -> strings.catRouter
+
+    HardwareCategory.MODEM -> strings.catModem
+
+    HardwareCategory.ACCESS_POINT -> strings.catAccessPoint
+
     HardwareCategory.RANGE_EXTENDER -> strings.catRangeExtender
 
     HardwareCategory.SMARTPHONE -> strings.catPhone
