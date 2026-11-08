@@ -132,7 +132,6 @@ import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.presentation.profile.AuthSheet
 import com.panda.myapplication.presentation.profile.UserProfileScreen
 import com.panda.myapplication.presentation.tools.SecondHandValuationScreen
-import com.panda.myapplication.presentation.tools.AdminModerationScreen
 import com.panda.myapplication.presentation.vs_arena.VsArenaRoute
 import com.panda.myapplication.presentation.wizard.WizardRoute
 import kotlinx.coroutines.launch
@@ -451,12 +450,7 @@ fun App() {
                             )
                         }
 
-                        composable(route = Destinations.ADMIN_MODERATION) {
-                            AdminModerationScreen(
-                                onNavigateBack = { navController.popBackStack() },
-                                onOpenDrawer = openDrawer,
-                            )
-                        }
+
 
                         composable(
                             route = "${Destinations.HARDWARE_DETAIL}/{itemId}",
@@ -644,14 +638,7 @@ private fun HardwareEngineeringDrawerContent(
                 badge = "2ND HAND VALUATION",
                 accentColor = NeonEmerald,
             ),
-            EngineeringToolDrawerItem(
-                route = Destinations.ADMIN_MODERATION,
-                icon = Icons.Rounded.Shield,
-                title = if (strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog") "Yönetici Moderasyon Paneli" else "Admin Moderation Panel",
-                subtitle = if (strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog") "Fiyatlar, OC/UV onayları ve raporlar" else "Deals, OC/UV approvals & reports",
-                badge = "ADMIN PANEL",
-                accentColor = NeonRose,
-            ),
+
         )
     }
 
