@@ -1354,6 +1354,15 @@ CURATED_LAPTOPS = [
 # 5. FİYAT GEÇMİŞİ VE HESAPLAMA MOTORU
 # -----------------------------------------------------------------------------
 
+def safe_float(val, default: float | None = None) -> float | None:
+    if val is None:
+        return default
+    try:
+        return float(val)
+    except (TypeError, ValueError):
+        return default
+
+
 def estimate_component_price(text: str, prices_map: dict) -> float | None:
     if not text:
         return None
@@ -1440,12 +1449,17 @@ def main():
     print(f"   Max Pages: {args.max_pages} | Live Crawl: {not args.skip_live_crawl}       ")
     print("================================================================================")
 
-    # 1. Mevcut prices_tr.json oku
+    # 1. Mevcut prices_tr.json oku (en kapsamlı kaynaktan yükle)
     existing_prices = {}
-    main_price_file = TARGET_PRICE_FILES[0]
-    if os.path.exists(main_price_file):
-        with open(main_price_file, "r", encoding="utf-8") as f:
-            existing_prices = json.load(f)
+    for p_file in [os.path.join(FILES_DIR, "prices_tr.json"), os.path.join(ROOT_DIR, "data", "prices_tr.json"), os.path.join(CATALOG_DIR, "prices_tr.json")]:
+        if os.path.exists(p_file):
+            try:
+                with open(p_file, "r", encoding="utf-8") as f:
+                    p_data = json.load(f)
+                    if isinstance(p_data, dict) and len(p_data) > len(existing_prices):
+                        existing_prices = p_data
+            except Exception:
+                pass
     print(f"[+] Mevcut tekil donanım fiyat kataloğu yüklendi: {len(existing_prices)} ürün.")
 
     # 2. Canlı Tarama (Scraping)
@@ -1480,8 +1494,20 @@ def main():
 
     # 3. Curated Base ile Birleştir ve Deduplicate Et
     all_prebuilts = {}
-    for p in CURATED_PREBUILTS:
-        all_prebuilts[p["id"]] = p
+    existing_pb_path = os.path.join(CATALOG_DIR, "prebuilt-pc.json")
+    if not os.path.exists(existing_pb_path):
+        existing_pb_path = os.path.join(FILES_DIR, "prebuilt-pc.json")
+    if os.path.exists(existing_pb_path):
+        try:
+            with open(existing_pb_path, "r", encoding="utf-8") as f:
+                loaded = json.load(f)
+                for pb in loaded:
+                    all_prebuilts[pb["id"]] = pb
+        except Exception:
+            pass
+    if not all_prebuilts:
+        for p in CURATED_PREBUILTS:
+            all_prebuilts[p["id"]] = p
     for p in scraped_prebuilts:
         existing_key = None
         for k, v in all_prebuilts.items():
@@ -1490,6 +1516,10 @@ def main():
                 break
         if not existing_key:
             all_prebuilts[p["id"]] = p
+        else:
+            if all_prebuilts[existing_key].get("imageUrl") and not p.get("imageUrl"):
+                p["imageUrl"] = all_prebuilts[existing_key]["imageUrl"]
+            all_prebuilts[existing_key].update(p)
 
     all_laptops = {}
     existing_lp_path = os.path.join(CATALOG_DIR, "laptop.json")
@@ -1538,7 +1568,7 @@ def main():
         ssd_cost = estimate_component_price(ps["storageSpec"], existing_prices) or 2000.0
         case_psu_cost = estimate_component_price(ps["psuCaseSpec"], existing_prices) or 3500.0
 
-        system_price = float(ps["priceTry"])
+        system_price = safe_float(ps.get("priceTry"))
         analyzed = dict(ps)
 
         if cpu_cost is not None and gpu_cost is not None:
@@ -1577,43 +1607,44 @@ def main():
 
     for pb in final_prebuilts:
         pid = pb["id"]
-        system_price = float(pb["priceTry"])
-        prev_entry = existing_prices.get(pid, {})
-        history = upsert_daily_cheapest_history(
-            existing_history=prev_entry.get("priceHistory", []),
-            today_str=today_str,
-            cheapest_price=system_price,
-            cheapest_store=pb["storeName"],
-            min_floor_try=15000.0,
-        )
-        all_hist = [h["priceTry"] for h in history] or [system_price]
-        existing_prices[pid] = {
-            "productId": pid,
-            "currentPriceTry": system_price,
-            "lowestPriceTry": min(all_hist),
-            "highestPriceTry": max(all_hist),
-            "lastUpdated": datetime.now().isoformat(),
-            "imageUrl": pb.get("imageUrl"),
-            "priceHistory": history,
-            "offers": [
-                {
-                    "storeName": pb["storeName"],
-                    "priceTry": system_price,
-                    "url": pb["url"],
-                    "inStock": True,
-                    "imageUrl": pb.get("imageUrl")
-                }
-            ]
-        }
+        system_price = safe_float(pb.get("priceTry"))
+        if system_price is not None and system_price > 0:
+            prev_entry = existing_prices.get(pid, {})
+            history = upsert_daily_cheapest_history(
+                existing_history=prev_entry.get("priceHistory", []),
+                today_str=today_str,
+                cheapest_price=system_price,
+                cheapest_store=pb["storeName"],
+                min_floor_try=15000.0,
+            )
+            all_hist = [h["priceTry"] for h in history] or [system_price]
+            existing_prices[pid] = {
+                "productId": pid,
+                "currentPriceTry": system_price,
+                "lowestPriceTry": min(all_hist),
+                "highestPriceTry": max(all_hist),
+                "lastUpdated": datetime.now().isoformat(),
+                "imageUrl": pb.get("imageUrl"),
+                "priceHistory": history,
+                "offers": [
+                    {
+                        "storeName": pb["storeName"],
+                        "priceTry": system_price,
+                        "url": pb.get("url", ""),
+                        "inStock": True,
+                        "imageUrl": pb.get("imageUrl")
+                    }
+                ]
+            }
 
     # 5. Gaming Laptop Fiyat Geçmişi ve Güncellemesi
     print("\n[+] 3. Adım: Gaming Laptop modelleri yapılandırılıyor...")
     raw_laptops = []
     for pid, lp in all_laptops.items():
-        price = float(lp["priceTry"])
-        store_name = "Monster Notebook" if "monsternotebook.com.tr" in lp["url"] else (
-            "İtopya" if "itopya.com" in lp["url"] else (
-                "Gaming.Gen.TR" if "gaming.gen.tr" in lp["url"] else "Hepsiburada"
+        url = lp.get("url") or ""
+        store_name = "Monster Notebook" if "monsternotebook.com.tr" in url else (
+            "İtopya" if "itopya.com" in url else (
+                "Gaming.Gen.TR" if "gaming.gen.tr" in url else "Hepsiburada"
             )
         )
         analyzed_lp = dict(lp)
@@ -1642,35 +1673,36 @@ def main():
 
     for lp in final_laptops:
         pid = lp["id"]
-        price = float(lp["priceTry"])
+        price = safe_float(lp.get("priceTry"))
         store_name = lp.pop("_storeName", "Hepsiburada")
-        prev_entry = existing_prices.get(pid, {})
-        history = upsert_daily_cheapest_history(
-            existing_history=prev_entry.get("priceHistory", []),
-            today_str=today_str,
-            cheapest_price=price,
-            cheapest_store=store_name,
-            min_floor_try=18000.0,
-        )
-        all_hist = [h["priceTry"] for h in history] or [price]
-        existing_prices[pid] = {
-            "productId": pid,
-            "currentPriceTry": price,
-            "lowestPriceTry": min(all_hist),
-            "highestPriceTry": max(all_hist),
-            "lastUpdated": datetime.now().isoformat(),
-            "imageUrl": lp.get("imageUrl"),
-            "priceHistory": history,
-            "offers": [
-                {
-                    "storeName": store_name,
-                    "priceTry": price,
-                    "url": lp["url"],
-                    "inStock": True,
-                    "imageUrl": lp.get("imageUrl")
-                }
-            ]
-        }
+        if price is not None and price > 0:
+            prev_entry = existing_prices.get(pid, {})
+            history = upsert_daily_cheapest_history(
+                existing_history=prev_entry.get("priceHistory", []),
+                today_str=today_str,
+                cheapest_price=price,
+                cheapest_store=store_name,
+                min_floor_try=18000.0,
+            )
+            all_hist = [h["priceTry"] for h in history] or [price]
+            existing_prices[pid] = {
+                "productId": pid,
+                "currentPriceTry": price,
+                "lowestPriceTry": min(all_hist),
+                "highestPriceTry": max(all_hist),
+                "lastUpdated": datetime.now().isoformat(),
+                "imageUrl": lp.get("imageUrl"),
+                "priceHistory": history,
+                "offers": [
+                    {
+                        "storeName": store_name,
+                        "priceTry": price,
+                        "url": lp.get("url", ""),
+                        "inStock": True,
+                        "imageUrl": lp.get("imageUrl")
+                    }
+                ]
+            }
 
     # 6. Dosyaları Kaydet (data/catalog/ ve shared/.../composeResources/files/)
     print("\n[+] 4. Adım: Dosyalar senkronize ediliyor...")
