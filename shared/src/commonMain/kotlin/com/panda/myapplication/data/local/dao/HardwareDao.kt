@@ -9,7 +9,6 @@ import com.panda.myapplication.data.local.entity.CpuSpecEntity
 import com.panda.myapplication.data.local.entity.GpuSpecEntity
 import com.panda.myapplication.data.local.entity.HardwareCatalogSnapshot
 import com.panda.myapplication.data.local.entity.HardwareItemEntity
-import com.panda.myapplication.data.local.entity.HardwareItemWithSpec
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity

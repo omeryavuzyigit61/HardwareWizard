@@ -1,17 +1,12 @@
 package com.panda.myapplication.domain.usecase
 
-import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
-import com.panda.myapplication.domain.model.LaptopSpec
-import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.PsuCalculationPolicy
 import com.panda.myapplication.domain.model.PsuRequirement
-import com.panda.myapplication.domain.model.PsuSpec
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec

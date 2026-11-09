@@ -1,17 +1,9 @@
 package com.panda.myapplication.domain.util
 
-import kotlinx.cinterop.BetaInteropApi
 import kotlinx.cinterop.ExperimentalForeignApi
-import kotlinx.cinterop.addressOf
-import kotlinx.cinterop.usePinned
-import platform.Foundation.NSData
 import platform.Foundation.NSProcessInfo
-import platform.Foundation.create
 import platform.UIKit.UIDevice
 import platform.UIKit.UIDeviceBatteryState
-import platform.UIKit.UIImage
-import platform.UIKit.UIImageJPEGRepresentation
-import platform.posix.memcpy
 import kotlin.math.round
 
 @OptIn(ExperimentalForeignApi::class)

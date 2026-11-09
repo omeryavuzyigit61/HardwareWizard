@@ -138,7 +138,6 @@ import com.panda.myapplication.domain.engine.ComparisonWinner
 
 import com.panda.myapplication.domain.engine.VsChampionSummary
 
-import com.panda.myapplication.domain.engine.VsComparisonReport
 
 import com.panda.myapplication.domain.engine.VsComparisonRow
 

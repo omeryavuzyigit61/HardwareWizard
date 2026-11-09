@@ -1,7 +1,6 @@
 package com.panda.myapplication.data.repository
 
 import com.panda.myapplication.data.local.dao.HardwareDao
-import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.remote.SecurityUtils
 import com.panda.myapplication.data.remote.SupabaseConfig
 import com.panda.myapplication.data.remote.SupabaseConfig.applySupabaseHeaders
@@ -11,6 +10,7 @@ import com.panda.myapplication.domain.model.Gender
 import com.panda.myapplication.domain.model.SpiritHardware
 import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.UserRepository
+import com.panda.myapplication.domain.util.SecureStorage
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.patch
@@ -38,8 +38,6 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
-
-import com.panda.myapplication.domain.util.SecureStorage
 
 internal class UserRepositoryImpl(
     private val httpClient: HttpClient,

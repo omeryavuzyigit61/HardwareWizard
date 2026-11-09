@@ -17,7 +17,6 @@ import com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto
 import com.panda.myapplication.data.model.dto.TabletCatalogItemDto
 import hardwarewizard.shared.generated.resources.Res
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlin.time.Clock
 import kotlinx.serialization.json.Json
@@ -34,50 +33,21 @@ class HardwareLocalDataSource(
     },
 ) {
 
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalCpus(): List<CpuRawDto> = readJsonAssetList("files/cpu.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalGpus(): List<GpuRawDto> = readJsonAssetList("files/video-card.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalRams(): List<RamRawDto> = readJsonAssetList("files/memory.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalMotherboards(): List<MotherboardRawDto> = readJsonAssetList("files/motherboard.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalPsus(): List<PsuRawDto> = readJsonAssetList("files/power-supply.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalStorages(): List<StorageRawDto> = readJsonAssetList("files/internal-hard-drive.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalCoolers(): List<CoolerRawDto> = readJsonAssetList("files/cpu-cooler.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalCases(): List<CaseRawDto> = readJsonAssetList("files/case.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalPrebuilts(): List<PrebuiltRawDto> = readJsonAssetList("files/prebuilt-pc.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalLaptops(): List<LaptopRawDto> = readJsonAssetList("files/laptop.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalPeripherals(): List<PeripheralRawDto> = readJsonAssetList("files/peripherals.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalSmartphones(): List<SmartphoneCatalogItemDto> = readJsonAssetList("files/smartphone.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalTablets(): List<TabletCatalogItemDto> = readJsonAssetList("files/tablet.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun loadLocalVerifiedBenchmarks(): List<com.panda.myapplication.domain.model.VerifiedLabGameTest> =
         readJsonAssetList("files/verified_lab_benchmarks.json")
-
-    @OptIn(ExperimentalResourceApi::class)
     suspend fun seedDatabaseIfEmpty(): Result<Unit> = withContext(ioDispatcher) {
         runCatching {
             val cpus = loadLocalCpus()

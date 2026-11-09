@@ -36,6 +36,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
+import kotlin.time.Duration.Companion.milliseconds
 
 internal class CommunityReportRepositoryImpl(
     private val httpClient: HttpClient? = null,
@@ -49,7 +50,7 @@ internal class CommunityReportRepositoryImpl(
         CoroutineScope(ioDispatcher).launch {
             fetchRemoteReports()
             while (true) {
-                delay(15000)
+                delay(15000.milliseconds)
                 if (_reports.subscriptionCount.value > 0) {
                     fetchRemoteReports()
                 }

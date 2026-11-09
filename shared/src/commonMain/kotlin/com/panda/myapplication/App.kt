@@ -1,6 +1,5 @@
 package com.panda.myapplication
 
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -14,9 +13,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -32,9 +29,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
@@ -47,7 +41,6 @@ import androidx.compose.material.icons.rounded.Memory
 import androidx.compose.material.icons.automirrored.rounded.MenuBook
 import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material.icons.rounded.Settings
-import androidx.compose.material.icons.rounded.Shield
 import androidx.compose.material.icons.rounded.SportsEsports
 import androidx.compose.material.icons.rounded.Tune
 import androidx.compose.material3.Icon
@@ -62,13 +55,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -86,8 +73,6 @@ import androidx.savedstate.read
 import coil3.ImageLoader
 import coil3.compose.setSingletonImageLoaderFactory
 import coil3.network.ktor3.KtorNetworkFetcherFactory
-import com.panda.myapplication.data.di.dataModule
-import com.panda.myapplication.data.local.platformDatabaseModule
 import com.panda.myapplication.domain.engine.BuildAnalysisEngine
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
@@ -95,11 +80,8 @@ import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.presentation.components.FluidBottomBar
 import com.panda.myapplication.presentation.components.FluidBottomNavTabItem
 import com.panda.myapplication.presentation.components.FluidTabIconType
-import com.panda.myapplication.presentation.di.presentationModule
 import com.panda.myapplication.presentation.hardware_detail.HardwareDetailRoute
 import com.panda.myapplication.presentation.hardware_list.HardwareListRoute
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.HardwareWizardTheme
@@ -107,8 +89,6 @@ import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
-import com.panda.myapplication.presentation.theme.TextSecondary
 import com.panda.myapplication.presentation.tools.CoolingLabScreen
 import com.panda.myapplication.presentation.tools.DeskSetupLabScreen
 import com.panda.myapplication.presentation.tools.HardwareGlossaryScreen

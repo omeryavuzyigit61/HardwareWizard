@@ -4,18 +4,13 @@ import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
-import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
-import com.panda.myapplication.domain.model.PcieGeneration
 import com.panda.myapplication.domain.model.PrebuiltSpec
-import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
-import com.panda.myapplication.domain.model.StorageInterface
-import com.panda.myapplication.domain.model.StorageMediaType
 import com.panda.myapplication.domain.model.StorageSpec
 
 data class EngineeringBadge(

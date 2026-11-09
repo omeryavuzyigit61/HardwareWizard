@@ -37,6 +37,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
+import kotlin.time.Duration.Companion.milliseconds
 
 internal class CommunityPriceRepositoryImpl(
     private val httpClient: HttpClient,
@@ -54,7 +55,7 @@ internal class CommunityPriceRepositoryImpl(
                 fetchRemoteDealsFromSupabase()
                 // Lifecycle-aware senkronizasyon: Yalnızca aktif ekran dinleyicisi varken buluttan veri çek
                 while (true) {
-                    kotlinx.coroutines.delay(8000)
+                    kotlinx.coroutines.delay(8000.milliseconds)
                     if (_deals.subscriptionCount.value > 0) {
                         fetchRemoteDealsFromSupabase()
                     }

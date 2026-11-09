@@ -1,7 +1,6 @@
 package com.panda.myapplication
 
 import com.panda.myapplication.domain.model.ProductPriceInfo
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.Json
 import kotlin.test.Test

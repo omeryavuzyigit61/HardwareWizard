@@ -48,7 +48,6 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.theme.SlateDarkBackground
-import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import kotlin.math.roundToLong
 

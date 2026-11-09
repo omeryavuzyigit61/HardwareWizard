@@ -1327,13 +1327,12 @@ object HardwareMapper {
         val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Prebuilt id must not be blank" }
         val name = dto.name ?: "OEM Hazır Sistem"
         val brand = dto.brand ?: dto.storeName ?: "OEM"
-        val model = name
         val priceMinor = dto.price?.let { (it * 100).toLong() }
 
         val item = HardwareItemEntity(
             id = id,
             brand = brand,
-            model = model,
+            model = name,
             category = HardwareCategory.PREBUILT_PC,
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "TRY" else null,
@@ -1370,13 +1369,12 @@ object HardwareMapper {
         val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Laptop id must not be blank" }
         val name = dto.name ?: "Gaming Laptop"
         val brand = dto.brand ?: "Laptop"
-        val model = name
         val priceMinor = dto.price?.let { (it * 100).toLong() }
 
         val item = HardwareItemEntity(
             id = id,
             brand = brand,
-            model = model,
+            model = name,
             category = HardwareCategory.LAPTOP,
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "TRY" else null,
@@ -1420,7 +1418,7 @@ object HardwareMapper {
     fun smartphoneDtoToEntity(dto: SmartphoneCatalogItemDto, syncedAt: Instant): Pair<HardwareItemEntity, PhoneSpecEntity>? {
         val s = dto.spec ?: return null
         val effImg = dto.imageUrl.ifBlank { dto.images.firstOrNull().orEmpty() }
-        val effImgs = if (dto.images.isNotEmpty()) dto.images else listOfNotNull(effImg.takeIf { it.isNotBlank() })
+        val effImgs = dto.images.ifEmpty { listOfNotNull(effImg.takeIf { it.isNotBlank() }) }
         val item = HardwareItemEntity(
             id = dto.id,
             brand = dto.brand.ifBlank { "Akıllı Telefon" },
@@ -1495,7 +1493,7 @@ object HardwareMapper {
     fun tabletDtoToEntity(dto: TabletCatalogItemDto, syncedAt: Instant): Pair<HardwareItemEntity, TabletSpecEntity>? {
         val s = dto.spec ?: return null
         val effImg = dto.imageUrl.ifBlank { dto.images.firstOrNull().orEmpty() }
-        val effImgs = if (dto.images.isNotEmpty()) dto.images else listOfNotNull(effImg.takeIf { it.isNotBlank() })
+        val effImgs = dto.images.ifEmpty { listOfNotNull(effImg.takeIf { it.isNotBlank() }) }
         val item = HardwareItemEntity(
             id = dto.id,
             brand = dto.brand.ifBlank { "Tablet" },
@@ -2056,26 +2054,6 @@ object HardwareMapper {
 
     // region DTO -> Domain Helpers
 
-    fun CpuRawDto.toDomain(): HardwareItem? = cpuDtoToEntity(this, Instant.DISTANT_PAST)?.let { (item, spec) ->
-        toDomain(HardwareItemWithSpec(item = item, cpu = spec, gpu = null, ram = null, motherboard = null, psu = null, storage = null, cooler = null))
-    }
-
-    fun GpuRawDto.toDomain(): HardwareItem? = gpuDtoToEntity(this, Instant.DISTANT_PAST)?.let { (item, spec) ->
-        toDomain(HardwareItemWithSpec(item = item, cpu = null, gpu = spec, ram = null, motherboard = null, psu = null, storage = null, cooler = null))
-    }
-
-    fun RamRawDto.toDomain(): HardwareItem? = ramDtoToEntity(this, Instant.DISTANT_PAST)?.let { (item, spec) ->
-        toDomain(HardwareItemWithSpec(item = item, cpu = null, gpu = null, ram = spec, motherboard = null, psu = null, storage = null, cooler = null))
-    }
-
-    fun MotherboardRawDto.toDomain(): HardwareItem? = motherboardDtoToEntity(this, Instant.DISTANT_PAST)?.let { (item, spec) ->
-        toDomain(HardwareItemWithSpec(item = item, cpu = null, gpu = null, ram = null, motherboard = spec, psu = null, storage = null, cooler = null))
-    }
-
-    fun PsuRawDto.toDomain(): HardwareItem? = psuDtoToEntity(this, Instant.DISTANT_PAST)?.let { (item, spec) ->
-        toDomain(HardwareItemWithSpec(item = item, cpu = null, gpu = null, ram = null, motherboard = null, psu = spec, storage = null, cooler = null))
-    }
-
     // endregion
 
     // region Private Helpers
@@ -2618,7 +2596,4 @@ object HardwareMapper {
         return s.contains("AM4") || s.contains("AM5") || s.contains("1200") || s.contains("1700") || s.contains("1851") || s.contains("STRX4") || s.contains("STR5")
     }
 
-    // endregion
-
-    // endregion
 }

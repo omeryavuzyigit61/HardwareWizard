@@ -4,7 +4,6 @@ import com.panda.myapplication.domain.engine.HardwareSearchEngine
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.Frequency
 import com.panda.myapplication.domain.model.GpuSpec
-import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.MemorySize

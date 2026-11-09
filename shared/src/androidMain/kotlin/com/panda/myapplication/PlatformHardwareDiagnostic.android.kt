@@ -1,9 +1,6 @@
 package com.panda.myapplication.domain.util
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Build
-import java.io.ByteArrayOutputStream
 
 actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
     val manufacturer = Build.MANUFACTURER.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }

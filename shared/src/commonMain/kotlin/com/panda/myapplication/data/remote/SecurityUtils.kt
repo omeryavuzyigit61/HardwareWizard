@@ -36,8 +36,7 @@ object SecurityUtils {
      */
     fun verifyAdminPin(inputPin: String): Boolean {
         val trimmed = inputPin.trim()
-        if (trimmed.isEmpty()) return false
-        return hashPassword(trimmed) == "246964b58d6c3d65e8e54cb39d4a7e4a350b43ede9b4551a0e788e130337b66e"
+        return trimmed.isNotEmpty() && hashPassword(trimmed) == "246964b58d6c3d65e8e54cb39d4a7e4a350b43ede9b4551a0e788e130337b66e"
     }
 
     /**

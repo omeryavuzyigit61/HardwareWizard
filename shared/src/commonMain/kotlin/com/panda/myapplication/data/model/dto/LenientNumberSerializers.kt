@@ -89,7 +89,7 @@ object FlexibleSpeedListSerializer : KSerializer<List<Int>?> {
                 val prim = it as? JsonPrimitive
                 prim?.intOrNull ?: prim?.content?.filter { c -> c.isDigit() }?.toIntOrNull()
             }
-            return if (list.isNotEmpty()) list else null
+            return list.ifEmpty { null }
         }
         if (element is JsonPrimitive) {
             val intVal = element.intOrNull
@@ -151,7 +151,7 @@ object FlexibleModulesListSerializer : KSerializer<List<Int>?> {
                 val prim = it as? JsonPrimitive
                 prim?.intOrNull ?: prim?.content?.filter { c -> c.isDigit() }?.toIntOrNull()
             }
-            return if (list.isNotEmpty()) list else null
+            return list.ifEmpty { null }
         }
         if (element is JsonPrimitive) {
             val intVal = element.intOrNull

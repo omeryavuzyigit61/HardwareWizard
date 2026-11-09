@@ -46,6 +46,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
+import kotlin.time.Duration.Companion.milliseconds
 
 internal class TuningVaultRepositoryImpl(
     private val httpClient: HttpClient,
@@ -64,7 +65,7 @@ internal class TuningVaultRepositoryImpl(
             fetchRemoteTips()
             // Lifecycle-aware senkronizasyon: Yalnızca aktif UI abonesi varken bulut sorgusu yap
             while (true) {
-                delay(8000)
+                delay(8000.milliseconds)
                 if (_tuningProfiles.subscriptionCount.value > 0) {
                     fetchRemoteTunings()
                 }

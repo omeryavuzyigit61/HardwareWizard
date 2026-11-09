@@ -38,6 +38,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.put
+import kotlin.time.Duration.Companion.milliseconds
 
 internal class RigShowcaseRepositoryImpl(
     private val httpClient: HttpClient,
@@ -52,7 +53,7 @@ internal class RigShowcaseRepositoryImpl(
         CoroutineScope(ioDispatcher).launch {
             fetchRemoteShowcases()
             while (true) {
-                delay(12000)
+                delay(12000.milliseconds)
                 if (_showcases.subscriptionCount.value > 0) {
                     fetchRemoteShowcases()
                 }

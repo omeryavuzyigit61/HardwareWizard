@@ -17,15 +17,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.emitAll
-import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import kotlin.time.Clock
 import kotlinx.serialization.json.Json
+import kotlin.time.Clock
 
 internal class HardwareRepositoryImpl(
     private val hardwareDao: HardwareDao,
@@ -769,14 +768,14 @@ internal class HardwareRepositoryImpl(
                 val res = remoteDataSource.fetchSmartphonesJson()
                 if (res.isSuccess) {
                     json.decodeFromString<List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>>(res.getOrThrow())
-                } else emptyList<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>()
+                } else emptyList()
             }.getOrDefault(emptyList())
 
             val remoteTablets: List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto> = runCatching {
                 val res = remoteDataSource.fetchTabletsJson()
                 if (res.isSuccess) {
                     json.decodeFromString<List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>>(res.getOrThrow())
-                } else emptyList<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>()
+                } else emptyList()
             }.getOrDefault(emptyList())
             val localPrices = localDataSource.loadLocalPricesTr()
             val localBenchmarks = localDataSource.loadLocalBenchmarks()

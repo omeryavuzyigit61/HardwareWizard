@@ -10,7 +10,6 @@ import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareProTip
 import com.panda.myapplication.domain.model.PriceDropAlert
-import com.panda.myapplication.domain.model.TuningComment
 import com.panda.myapplication.domain.model.TuningProfile
 import com.panda.myapplication.domain.model.TuningReactionType
 import com.panda.myapplication.domain.repository.ActiveBuildRepository

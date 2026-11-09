@@ -2,7 +2,6 @@ package com.panda.myapplication
 
 import com.panda.myapplication.data.mapper.HardwareMapper
 import com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto
-import com.panda.myapplication.data.model.dto.TabletCatalogItemDto
 import com.panda.myapplication.domain.engine.HardwareEnrichmentEngine
 import com.panda.myapplication.domain.engine.VsArenaEngine
 import com.panda.myapplication.domain.model.ActiveBuild

@@ -88,7 +88,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -103,12 +102,10 @@ import com.panda.myapplication.domain.model.GameCategory
 import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
-import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
-import com.panda.myapplication.domain.model.Money
 import com.panda.myapplication.domain.model.GamingChairSpec
 import com.panda.myapplication.domain.model.MicrophoneSpec
 import com.panda.myapplication.domain.model.MonitorSpec
@@ -126,15 +123,12 @@ import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.model.VerifiedLabBenchmarks
-import com.panda.myapplication.domain.model.VerifiedLabGameTest
-import com.panda.myapplication.domain.model.VerifiedLabTestEntry
 import com.panda.myapplication.domain.model.Wattage
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.GoldAccent
-import com.panda.myapplication.presentation.theme.HardwareWizardTheme
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
@@ -144,8 +138,6 @@ import androidx.compose.ui.text.style.TextAlign
 import com.panda.myapplication.presentation.util.formatPrice
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.AppStrings
-import com.panda.myapplication.presentation.util.StringsTR
-import com.panda.myapplication.presentation.util.StringsEN
 import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
@@ -154,7 +146,6 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.koin.compose.koinInject
 import com.panda.myapplication.domain.model.ContentReport
 import com.panda.myapplication.domain.model.ReportTargetType
-import com.panda.myapplication.domain.model.ReportReason
 import com.panda.myapplication.domain.repository.CommunityReportRepository
 import com.panda.myapplication.presentation.components.ReportContentDialog
 

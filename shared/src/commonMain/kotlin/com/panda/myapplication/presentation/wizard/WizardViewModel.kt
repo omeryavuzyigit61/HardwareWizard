@@ -6,7 +6,6 @@ import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.engine.AnalysisState
 import com.panda.myapplication.domain.engine.BuildAnalysisEngine
 import com.panda.myapplication.domain.engine.ResolutionOption
-import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.ActiveBuildRepository

@@ -120,7 +120,6 @@ import kotlin.math.roundToInt
 
 import androidx.compose.material.icons.rounded.Flag
 import com.panda.myapplication.domain.model.ContentReport
-import com.panda.myapplication.domain.model.ReportReason
 import com.panda.myapplication.domain.model.ReportTargetType
 import com.panda.myapplication.domain.repository.CommunityReportRepository
 import com.panda.myapplication.presentation.components.ReportContentDialog
