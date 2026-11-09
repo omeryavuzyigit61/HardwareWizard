@@ -74,6 +74,10 @@ class HardwareLocalDataSource(
     suspend fun loadLocalTablets(): List<TabletCatalogItemDto> = readJsonAssetList("files/tablet.json")
 
     @OptIn(ExperimentalResourceApi::class)
+    suspend fun loadLocalVerifiedBenchmarks(): List<com.panda.myapplication.domain.model.VerifiedLabGameTest> =
+        readJsonAssetList("files/verified_lab_benchmarks.json")
+
+    @OptIn(ExperimentalResourceApi::class)
     suspend fun seedDatabaseIfEmpty(): Result<Unit> = withContext(ioDispatcher) {
         runCatching {
             val cpus = loadLocalCpus()
@@ -92,6 +96,10 @@ class HardwareLocalDataSource(
 
             val pricesTr = loadLocalPricesTr()
             val benchmarks = loadLocalBenchmarks()
+            val verified = runCatching { loadLocalVerifiedBenchmarks() }.getOrDefault(emptyList())
+            if (verified.isNotEmpty()) {
+                com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(verified)
+            }
 
             val syncedAt = Clock.System.now()
             val snapshot = HardwareMapper.buildCatalogSnapshot(

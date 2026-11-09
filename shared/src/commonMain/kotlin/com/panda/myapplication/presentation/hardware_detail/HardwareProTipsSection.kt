@@ -257,23 +257,6 @@ fun HardwareCommentsAndReviewsSection(
     }
 }
 
-/**
- * Geriye dönük uyumluluk için alias fonksiyon
- */
-@Composable
-fun HardwareProTipsSection(
-    tips: List<HardwareProTip>,
-    onAddTipClick: () -> Unit,
-    onUpvoteClick: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    HardwareCommentsAndReviewsSection(
-        tips = tips,
-        onAddTipClick = onAddTipClick,
-        onUpvoteClick = onUpvoteClick,
-        modifier = modifier,
-    )
-}
 
 @Composable
 private fun ProductReviewCardItem(
@@ -562,18 +545,3 @@ fun AddProductReviewDialog(
     )
 }
 
-/**
- * Geriye dönük uyumluluk için alias
- */
-@Composable
-fun AddProTipDialog(
-    hardwareName: String,
-    onDismiss: () -> Unit,
-    onSubmit: (String) -> Unit,
-) {
-    AddProductReviewDialog(
-        hardwareName = hardwareName,
-        onDismiss = onDismiss,
-        onSubmit = { text, _ -> onSubmit(text) }
-    )
-}

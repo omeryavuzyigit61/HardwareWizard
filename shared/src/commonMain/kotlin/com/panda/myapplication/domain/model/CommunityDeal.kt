@@ -40,10 +40,6 @@ enum class CommunityDealType(
         FOREIGN_PURCHASE -> "Import"
     }
 
-    companion object {
-        fun fromId(id: String): CommunityDealType =
-            entries.firstOrNull { it.id.equals(id, ignoreCase = true) } ?: OWN_PURCHASE
-    }
 }
 
 /**

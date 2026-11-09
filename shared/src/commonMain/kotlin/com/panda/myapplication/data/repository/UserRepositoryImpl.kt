@@ -60,16 +60,7 @@ internal class UserRepositoryImpl(
         val passwordHash: String,
     )
 
-    private val _registeredAccounts = mutableMapOf(
-        "dombikpanda" to AccountCredential(
-            profile = MASTER_ADMIN_PROFILE,
-            passwordHash = MASTER_ADMIN_PASSWORD_SHA256,
-        ),
-        "yavuzyigitomer52@gmail.com" to AccountCredential(
-            profile = MASTER_ADMIN_PROFILE,
-            passwordHash = MASTER_ADMIN_PASSWORD_SHA256,
-        ),
-    )
+    private val _registeredAccounts = mutableMapOf<String, AccountCredential>()
 
     init {
         CoroutineScope(ioDispatcher).launch {
@@ -337,20 +328,5 @@ internal class UserRepositoryImpl(
 
     companion object {
         private const val KEY_USER_SESSION = "hw_active_user_session"
-
-        // Yalnızca tek yönlü tuzlanmış SHA-256 özeti saklanır; düz metin (plaintext) parola asla kodda yer almaz.
-        private const val MASTER_ADMIN_PASSWORD_SHA256 = "610768c536f619515fce0de482af604d60efa48af177c2d5fc201cb6e5c64d6d"
-
-        private val MASTER_ADMIN_PROFILE = UserProfile(
-            id = "usr-master-admin-01",
-            email = "yavuzyigitomer52@gmail.com",
-            username = "dombikpanda",
-            birthDateIso = "2002-05-14",
-            gender = Gender.MALE,
-            spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
-            createdAtEpochMs = 1713500000000L,
-            reputationScore = 500,
-            badgeTitle = "Silikon Efendisi",
-        )
     }
 }

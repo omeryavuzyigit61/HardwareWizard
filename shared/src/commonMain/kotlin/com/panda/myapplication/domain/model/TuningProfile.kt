@@ -69,11 +69,6 @@ enum class TuningReactionType(val key: String, val emoji: String, val label: Str
     EFFICIENT("EFFICIENT", "⚡", "Yüksek Verimlilik"),
     STABLE("STABLE", "🧪", "Kaya Gibi Stabil"),
     UNSTABLE("UNSTABLE", "⚠️", "Kararsız / Riskli");
-
-    companion object {
-        fun fromKey(key: String?): TuningReactionType =
-            entries.firstOrNull { it.key.equals(key, ignoreCase = true) } ?: HOT
-    }
 }
 
 @Serializable

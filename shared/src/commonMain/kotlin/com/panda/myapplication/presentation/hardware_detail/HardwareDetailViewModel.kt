@@ -182,36 +182,6 @@ class HardwareDetailViewModel(
         }
     }
 
-    fun onAddTuningComment(tuningId: String, text: String) {
-        if (text.isBlank()) return
-        val user = _uiState.value.currentUser
-        val comment = TuningComment(
-            id = "comment-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
-            tuningId = tuningId,
-            userId = user?.id ?: "usr-guest",
-            userDisplayName = user?.username ?: "DonanımSever",
-            userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
-            userReputation = user?.reputationScore ?: 10,
-            commentText = text.trim(),
-            createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
-        )
-        viewModelScope.launch {
-            when (val res = tuningVaultRepository.addComment(comment)) {
-                is DomainResult.Success -> {
-                    effectChannel.send(
-                        HardwareDetailEffect.ShowToast(
-                            "💬 Yorumunuz başarıyla paylaşıldı (+2 itibar puanı)!",
-                            "💬 Comment posted (+2 reputation)!"
-                        )
-                    )
-                }
-                is DomainResult.Failure -> {
-                    val errorMsg = (res.error as? DomainError.Unknown)?.cause?.message ?: "Yorum gönderilemedi."
-                    effectChannel.send(HardwareDetailEffect.ShowToast(errorMsg))
-                }
-            }
-        }
-    }
 
     fun onSubmitProTip(tipText: String, rating: Int = 5) {
         val user = _uiState.value.currentUser

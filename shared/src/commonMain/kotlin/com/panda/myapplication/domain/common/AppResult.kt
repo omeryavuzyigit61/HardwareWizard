@@ -19,9 +19,7 @@ sealed interface DataError : AppError {
     }
 
     sealed interface Local : DataError {
-        data object DiskFull : Local
         data object NotFound : Local
-        data object CorruptedData : Local
         data class Unknown(val message: String? = null) : Local
     }
 }

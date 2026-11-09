@@ -3665,35 +3665,6 @@ private fun StoreOffersCard(
     }
 }
 
-@Preview
-@Composable
-private fun HardwareDetailContentPreview() {
-    HardwareWizardTheme {
-        HardwareDetailContent(
-            uiState = HardwareDetailUiState(
-                isLoading = false,
-                item = HardwareItem(
-                    id = HardwareId("cpu-1"),
-                    brand = "AMD",
-                    model = "Ryzen 7 7800X3D",
-                    price = Money(amountMinor = 44900, currencyCode = "USD"),
-                    spec = CpuSpec(
-                        socket = "AM5",
-                        coreCount = 8,
-                        threadCount = 16,
-                        baseClock = Frequency(4200),
-                        boostClock = Frequency(5000),
-                        tdp = Wattage(120),
-                        hasIntegratedGraphics = true,
-                    ),
-                ),
-                isAddedToBuild = false,
-            ),
-            onNavigateBack = {},
-            onAddToBuildClick = {},
-        )
-    }
-}
 
 @Composable
 fun HardwareDetailHeroImage(

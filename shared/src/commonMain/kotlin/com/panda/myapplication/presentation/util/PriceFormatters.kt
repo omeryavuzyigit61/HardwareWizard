@@ -74,25 +74,6 @@ fun Double?.formatTryOrNull(currency: AppCurrency = AppCurrency.TRY): String? {
     return clean.formatPriceWithCurrency(currency)
 }
 
-/**
- * Compact formatter for chart axes (e.g., `"34.5B ₺"` or `"$ 890"`).
- */
-fun formatTryCompact(price: Double, currency: AppCurrency = AppCurrency.TRY): String {
-    val converted = when (currency) {
-        AppCurrency.TRY -> price
-        AppCurrency.USD -> price / RATE_USD
-        AppCurrency.EUR -> price / RATE_EUR
-        AppCurrency.GBP -> price / RATE_GBP
-    }
-    val rounded = converted.roundToLong()
-    val symbol = currency.symbol
-    return if (rounded >= 10_000L) {
-        val k = (rounded / 100.0).roundToLong() / 10.0
-        if (currency == AppCurrency.TRY) "${k}B ₺" else "$symbol ${k}k"
-    } else {
-        if (currency == AppCurrency.TRY) "${converted.formatPrice()} ₺" else "$symbol ${converted.formatPrice()}"
-    }
-}
 
 /**
  * Opens an external store URL ONLY if it passes [SecurityUtils.validateStoreUrl] (HTTPS + Whitelisted Domain).

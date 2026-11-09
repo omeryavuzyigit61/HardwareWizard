@@ -59,35 +59,55 @@ class UserProfileAndValuationTest {
     }
 
     @Test
-    fun testMasterAdminLoginWithUsername() = runTest {
+    fun testUserLoginWithUsername() = runTest {
         val repo = UserRepositoryImpl(
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
         )
 
-        val result = repo.login("dombikpanda", "TS61trabzonspor54")
+        repo.signUp(
+            email = "tester@hardwarewizard.com",
+            password = "SecurePassword123!",
+            username = "wizard_fan",
+            birthDateIso = "2000-01-01",
+            gender = Gender.MALE,
+            spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
+        )
+        repo.logout()
+
+        val result = repo.login("wizard_fan", "SecurePassword123!")
         assertTrue(result is DomainResult.Success)
-        val admin = result.data
-        assertEquals("dombikpanda", admin.username)
-        assertEquals("yavuzyigitomer52@gmail.com", admin.email)
-        assertEquals(SpiritHardware.OVERCLOCKED_CPU, admin.spiritHardware)
+        val user = result.data
+        assertEquals("wizard_fan", user.username)
+        assertEquals("tester@hardwarewizard.com", user.email)
+        assertEquals(SpiritHardware.OVERCLOCKED_CPU, user.spiritHardware)
         assertTrue(repo.isLoggedIn.value)
     }
 
     @Test
-    fun testMasterAdminLoginWithEmail() = runTest {
+    fun testUserLoginWithEmail() = runTest {
         val repo = UserRepositoryImpl(
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
         )
 
-        val result = repo.login("yavuzyigitomer52@gmail.com", "TS61trabzonspor54")
+        repo.signUp(
+            email = "tester@hardwarewizard.com",
+            password = "SecurePassword123!",
+            username = "wizard_fan",
+            birthDateIso = "2000-01-01",
+            gender = Gender.MALE,
+            spiritHardware = SpiritHardware.OVERCLOCKED_CPU,
+        )
+        repo.logout()
+
+        val result = repo.login("tester@hardwarewizard.com", "SecurePassword123!")
         assertTrue(result is DomainResult.Success)
-        val admin = result.data
-        assertEquals("dombikpanda", admin.username)
-        assertEquals("yavuzyigitomer52@gmail.com", admin.email)
+        val user = result.data
+        assertEquals("wizard_fan", user.username)
+        assertEquals("tester@hardwarewizard.com", user.email)
     }
 
     @Test

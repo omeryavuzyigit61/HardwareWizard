@@ -264,6 +264,27 @@ class BuildDoctorAndSimulationTest {
 
     @Test
     fun verifiedLabBenchmarksReturnsAccurateDataset() {
+        val cs2TestSample = com.panda.myapplication.domain.model.VerifiedLabGameTest(
+            id = "cpu_cs2_1080p_low",
+            gameTitle = "Counter-Strike 2",
+            resolutionSettings = "1080P • Düşük Detay (Rekabetçi)",
+            rigSummary = "RTX 5090 32GB • DDR5 Hızlı Bellek",
+            rigGpuOrCpu = "NVIDIA GeForce RTX 5090 32GB",
+            rigRam = "DDR5 6000MTs CL28",
+            isCpuTest = true,
+            entries = listOf(
+                com.panda.myapplication.domain.model.VerifiedLabTestEntry(
+                    modelName = "9800X3D",
+                    fullModelName = "AMD Ryzen 7 9800X3D",
+                    wattLabel = "120W",
+                    isAmd = true,
+                    avgFps = 926.0,
+                    minFps = 318.0,
+                    modelKeywords = listOf("9800X3D"),
+                )
+            ),
+        )
+        VerifiedLabBenchmarks.updateRemoteTests(listOf(cs2TestSample))
         val cpu9800X3D = createTestCpu(name = "Ryzen 7 9800X3D")
         val tests = VerifiedLabBenchmarks.getLabTestsForItem(cpu9800X3D)
 

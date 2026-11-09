@@ -2001,59 +2001,7 @@ private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String 
     is com.panda.myapplication.domain.model.RangeExtenderSpec -> "${spec.extenderType} • ${spec.wifiStandard} • ${spec.meshProtocol} • ${spec.coverageAreaM2}m²"
 }
 
-// region Previews
 
-private val mockHardwareList = listOf(
-    HardwareItem(
-        id = HardwareId("cpu_1"),
-        brand = "AMD",
-        model = "Ryzen 7 7800X3D",
-        price = Money(34005L, "USD"),
-        spec = CpuSpec(
-            socket = "AM5",
-            coreCount = 8,
-            threadCount = 16,
-            baseClock = Frequency(4200),
-            boostClock = Frequency(5000),
-            tdp = Wattage(120),
-            hasIntegratedGraphics = true,
-        ),
-    ),
-    HardwareItem(
-        id = HardwareId("gpu_1"),
-        brand = "MSI",
-        model = "GeForce RTX 4070 SUPER Ventus",
-        price = Money(59999L, "USD"),
-        spec = GpuSpec(
-            chipset = "RTX 4070 SUPER",
-            vram = MemorySize(12288),
-            memoryType = "GDDR6X",
-            coreClock = Frequency(1980),
-            boostClock = Frequency(2505),
-            tdp = Wattage(200),
-            recommendedPsu = Wattage(650),
-        ),
-    ),
-)
-
-@Preview
-@Composable
-fun HardwareListContentDarkPreview() {
-    HardwareWizardTheme {
-        HardwareListContent(
-            uiState = HardwareListUiState(
-                isLoading = false,
-                items = mockHardwareList,
-                totalCount = 2,
-                selectedCategory = null,
-                searchQuery = "",
-            ),
-            onEvent = {},
-        )
-    }
-}
-
-// endregion
 
 private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
 

@@ -49,25 +49,3 @@ actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
         matchedCatalogName = friendlyModel,
     )
 }
-
-@OptIn(ExperimentalForeignApi::class, BetaInteropApi::class)
-actual fun compressProofImageToWebp(rawBytes: ByteArray, maxDimension: Int, targetQuality: Int): ByteArray {
-    if (rawBytes.isEmpty()) return rawBytes
-    return try {
-        val nsData = rawBytes.usePinned { pinned ->
-            NSData.create(bytes = pinned.addressOf(0), length = rawBytes.size.toULong())
-        }
-        val image = UIImage.imageWithData(nsData) ?: return rawBytes
-        val quality = (targetQuality.toDouble() / 100.0).coerceIn(0.1, 1.0)
-        val compressedNsData = UIImageJPEGRepresentation(image, quality) ?: return rawBytes
-
-        val size = compressedNsData.length.toInt()
-        val result = ByteArray(size)
-        result.usePinned { pinned ->
-            memcpy(pinned.addressOf(0), compressedNsData.bytes, compressedNsData.length)
-        }
-        if (result.isNotEmpty()) result else rawBytes
-    } catch (_: Exception) {
-        rawBytes
-    }
-}

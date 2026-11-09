@@ -45,7 +45,7 @@ internal class CommunityPriceRepositoryImpl(
     private val autoFetchRemote: Boolean = true,
 ) : CommunityPriceRepository {
 
-    private val _deals = MutableStateFlow<List<CommunityDeal>>(createInitialSeedDeals())
+    private val _deals = MutableStateFlow<List<CommunityDeal>>(emptyList())
     private val _isAdminLoggedIn = MutableStateFlow(false)
 
     init {
@@ -348,87 +348,5 @@ internal class CommunityPriceRepositoryImpl(
 
     override fun isAdmin(): Boolean = _isAdminLoggedIn.value
 
-    private companion object {
-        fun createInitialSeedDeals(): List<CommunityDeal> {
-            val now = 1713300000000L
-            return listOf(
-                CommunityDeal(
-                    id = "deal-seed-1",
-                    hardwareId = "gpu_rtx_4070_super",
-                    hardwareName = "GeForce RTX 4070 Super 12GB",
-                    priceTry = 23499.0,
-                    dealType = CommunityDealType.DISCOUNT_CAMPAIGN,
-                    note = "İtopya Gece Kampanyası ile sepette kupon kodu kullanılarak alındı. Kapalı kutu faturalı.",
-                    proofUrl = "https://www.itopya.com",
-                    userDisplayName = "Mert K.",
-                    createdAtEpochMs = now - (3600 * 1000 * 4),
-                    status = DealStatus.APPROVED,
-                    reviewedBy = "Ömer Admin",
-                ),
-                CommunityDeal(
-                    id = "deal-seed-2",
-                    hardwareId = "cpu_ryzen_7_7800x3d",
-                    hardwareName = "AMD Ryzen 7 7800X3D",
-                    priceTry = 13850.0,
-                    dealType = CommunityDealType.OWN_PURCHASE,
-                    note = "Vatan Bilgisayar mağaza içi nakit ödeme indirimiyle temin edildi.",
-                    proofUrl = "https://www.vatanbilgisayar.com",
-                    userDisplayName = "Burak T.",
-                    createdAtEpochMs = now - (3600 * 1000 * 12),
-                    status = DealStatus.APPROVED,
-                    reviewedBy = "Ömer Admin",
-                ),
-                CommunityDeal(
-                    id = "deal-seed-3",
-                    hardwareId = "case_lian_li_o11_vision",
-                    hardwareName = "Lian Li O11 Vision",
-                    priceTry = 5200.0,
-                    dealType = CommunityDealType.SECOND_HAND,
-                    note = "Sarı siteden sıfır ayarında, faturalı ve kutulu olarak elden alındı.",
-                    proofUrl = "https://www.sahibinden.com",
-                    userDisplayName = "Oğuz Y.",
-                    createdAtEpochMs = now - (3600 * 1000 * 24),
-                    status = DealStatus.APPROVED,
-                    reviewedBy = "Ömer Admin",
-                ),
-                CommunityDeal(
-                    id = "deal-seed-4",
-                    hardwareId = "cooler_arctic_liquid_freezer_iii_360",
-                    hardwareName = "Arctic Liquid Freezer III 360",
-                    priceTry = 3450.0,
-                    dealType = CommunityDealType.FOREIGN_PURCHASE,
-                    note = "Amazon DE üzerinden gümrük ve DDP kargo dahil toplam maliyet.",
-                    proofUrl = "https://www.amazon.de",
-                    userDisplayName = "Caner B.",
-                    createdAtEpochMs = now - (3600 * 1000 * 36),
-                    status = DealStatus.APPROVED,
-                    reviewedBy = "Ömer Admin",
-                ),
-                CommunityDeal(
-                    id = "deal-pending-1",
-                    hardwareId = "gpu_rtx_4080_super",
-                    hardwareName = "GeForce RTX 4080 Super 16GB",
-                    priceTry = 37999.0,
-                    dealType = CommunityDealType.DISCOUNT_CAMPAIGN,
-                    note = "Gaming.gen.tr hafta sonu lansman özel fiyatı, stok 10 adet.",
-                    proofUrl = "https://www.gaming.gen.tr",
-                    userDisplayName = "Serkan V.",
-                    createdAtEpochMs = now - (1800 * 1000),
-                    status = DealStatus.PENDING,
-                ),
-                CommunityDeal(
-                    id = "deal-pending-2",
-                    hardwareId = "cpu_intel_core_i7_14700k",
-                    hardwareName = "Intel Core i7-14700K",
-                    priceTry = 14200.0,
-                    dealType = CommunityDealType.SECOND_HAND,
-                    note = "Garantisi 18 ay devam eden, hiç overclock yapılmamış temiz işlemci.",
-                    proofUrl = "https://www.sahibinden.com",
-                    userDisplayName = "Ahmet E.",
-                    createdAtEpochMs = now - (900 * 1000),
-                    status = DealStatus.PENDING,
-                ),
-            )
-        }
-    }
+
 }

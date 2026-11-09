@@ -56,19 +56,8 @@ abstract class HardwareDao {
 
     // region Reads
 
-    @Transaction
-    @Query("SELECT * FROM hardware_items ORDER BY brand, model")
-    abstract fun observeAll(): Flow<List<HardwareItemWithSpec>>
-
-    @Transaction
-    @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
-    abstract fun observeByCategory(category: HardwareCategory): Flow<List<HardwareItemWithSpec>>
-
     @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
     abstract fun observeItemEntitiesByCategory(category: HardwareCategory): Flow<List<HardwareItemEntity>>
-
-    @Query("SELECT * FROM hardware_items ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
-    abstract fun observeAllItemEntities(): Flow<List<HardwareItemEntity>>
 
     @Query("SELECT * FROM cpu_specs")
     abstract fun observeAllCpuSpecs(): Flow<List<CpuSpecEntity>>
@@ -158,14 +147,7 @@ abstract class HardwareDao {
     abstract fun observeAllTabletSpecs(): Flow<List<TabletSpecEntity>>
 
     @Query("SELECT * FROM hardware_items WHERE id = :id LIMIT 1")
-    abstract fun observeItemEntityById(id: String): Flow<HardwareItemEntity?>
-
-    @Query("SELECT * FROM hardware_items WHERE id = :id LIMIT 1")
     abstract suspend fun getItemEntityById(id: String): HardwareItemEntity?
-
-    @Transaction
-    @Query("SELECT * FROM hardware_items WHERE id = :id")
-    abstract fun observeById(id: String): Flow<HardwareItemWithSpec?>
 
     @Query("SELECT DISTINCT brand FROM hardware_items WHERE category = :category ORDER BY brand ASC")
     abstract fun observeBrandsByCategory(category: HardwareCategory): Flow<List<String>>
@@ -291,9 +273,6 @@ abstract class HardwareDao {
     @Query("SELECT * FROM user_sessions WHERE id = :id LIMIT 1")
     abstract suspend fun getUserSession(id: String = UserSessionEntity.ACTIVE_SESSION_ID): UserSessionEntity?
 
-    @Upsert
-    abstract suspend fun saveUserSession(session: UserSessionEntity)
-
     @Query("DELETE FROM user_sessions WHERE id = :id")
     abstract suspend fun clearUserSession(id: String = UserSessionEntity.ACTIVE_SESSION_ID)
 
@@ -309,9 +288,6 @@ abstract class HardwareDao {
 
     @Query("SELECT * FROM app_settings")
     abstract suspend fun getAllSettings(): List<AppSettingEntity>
-
-    @Query("DELETE FROM app_settings WHERE `key` = :key")
-    abstract suspend fun deleteSetting(key: String)
 
     // endregion
 

@@ -17,5 +17,3 @@ data class MyDeviceDiagnostic(
 )
 
 expect fun getMyDeviceDiagnostic(): MyDeviceDiagnostic
-
-expect fun compressProofImageToWebp(rawBytes: ByteArray, maxDimension: Int = 1080, targetQuality: Int = 78): ByteArray

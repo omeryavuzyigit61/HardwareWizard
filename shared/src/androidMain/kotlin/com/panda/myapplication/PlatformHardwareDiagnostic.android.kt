@@ -97,36 +97,3 @@ private fun resolveFriendlySocName(rawSoc: String, hardware: String): String {
         else -> "Snapdragon / Dimensity"
     }
 }
-
-actual fun compressProofImageToWebp(rawBytes: ByteArray, maxDimension: Int, targetQuality: Int): ByteArray {
-    if (rawBytes.isEmpty()) return rawBytes
-    return try {
-        val bitmap = BitmapFactory.decodeByteArray(rawBytes, 0, rawBytes.size) ?: return rawBytes
-        val width = bitmap.width
-        val height = bitmap.height
-        val scale = if (width > height) {
-            if (width > maxDimension) maxDimension.toFloat() / width else 1.0f
-        } else {
-            if (height > maxDimension) maxDimension.toFloat() / height else 1.0f
-        }
-        val targetWidth = (width * scale).toInt().coerceAtLeast(1)
-        val targetHeight = (height * scale).toInt().coerceAtLeast(1)
-        val scaledBitmap = if (scale < 1.0f) {
-            Bitmap.createScaledBitmap(bitmap, targetWidth, targetHeight, true)
-        } else {
-            bitmap
-        }
-        val stream = ByteArrayOutputStream()
-        val format = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            Bitmap.CompressFormat.WEBP_LOSSY
-        } else {
-            @Suppress("DEPRECATION")
-            Bitmap.CompressFormat.WEBP
-        }
-        scaledBitmap.compress(format, targetQuality, stream)
-        val outBytes = stream.toByteArray()
-        if (outBytes.isNotEmpty()) outBytes else rawBytes
-    } catch (_: Exception) {
-        rawBytes
-    }
-}

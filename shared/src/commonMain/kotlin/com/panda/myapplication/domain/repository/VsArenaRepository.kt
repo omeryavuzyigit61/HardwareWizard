@@ -82,5 +82,4 @@ interface VsArenaRepository {
      */
     fun addQuickItem(item: HardwareItem): String
     fun addQuickItemBilingual(item: HardwareItem): VsQuickAddFeedback
-    fun addItemToComparison(item: HardwareItem): String = addQuickItem(item)
 }

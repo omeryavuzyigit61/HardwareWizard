@@ -45,14 +45,27 @@ class CommunityPriceLedgerTest {
     }
 
     @Test
-    fun testInitialSeedDealsExistAndContainApprovedDeals() = runTest {
+    fun testEmptyDealsOnInitializationAndSubmission() = runTest {
         val repository = createRepository()
+        val initialDeals = repository.observeAllDeals().first()
+        assertTrue(initialDeals.isEmpty(), "Deals list must start purely empty without hardcoded seed bloat")
+
+        val approvedDeal = CommunityDeal(
+            id = "deal-approved-1",
+            hardwareId = "gpu_rtx_4070_super",
+            hardwareName = "GeForce RTX 4070 Super 12GB",
+            priceTry = 23499.0,
+            dealType = CommunityDealType.DISCOUNT_CAMPAIGN,
+            note = "İtopya Gece Kampanyası ile sepette kupon kodu kullanılarak alındı.",
+            proofUrl = "https://www.itopya.com",
+            userDisplayName = "Mert K.",
+            createdAtEpochMs = 1713300000000L,
+            status = DealStatus.APPROVED,
+        )
+        repository.submitDeal(approvedDeal)
+
         val allDeals = repository.observeAllDeals().first()
-        assertTrue(allDeals.isNotEmpty(), "Seed deals must be initialized")
-
-        val approvedDeals = allDeals.filter { it.status == DealStatus.APPROVED }
-        assertTrue(approvedDeals.size >= 4, "Should have at least 4 initial approved deals")
-
+        assertEquals(1, allDeals.size)
         val rtxDeal = allDeals.find { it.hardwareId == "gpu_rtx_4070_super" }
         assertNotNull(rtxDeal)
         assertEquals(CommunityDealType.DISCOUNT_CAMPAIGN, rtxDeal.dealType)
@@ -107,6 +120,16 @@ class CommunityPriceLedgerTest {
     @Test
     fun testAdminApproveAndRejectWorkflow() = runTest {
         val repository = createRepository()
+        val testPending = CommunityDeal(
+            id = "pending-deal-test",
+            hardwareId = "gpu_rtx_4080_super",
+            hardwareName = "GeForce RTX 4080 Super 16GB",
+            priceTry = 37999.0,
+            dealType = CommunityDealType.DISCOUNT_CAMPAIGN,
+            createdAtEpochMs = 1713500000000L,
+            status = DealStatus.PENDING,
+        )
+        repository.submitDeal(testPending)
         val pendingDealsBefore = repository.observeAllPendingDeals().first()
         val targetPending = pendingDealsBefore.first()
 
