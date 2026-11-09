@@ -21,7 +21,6 @@ data class HardwareDetailUiState(
     val tuningComments: Map<String, List<TuningComment>> = emptyMap(),
     val proTips: List<HardwareProTip> = emptyList(),
     val priceAlerts: List<PriceDropAlert> = emptyList(),
-    val isAdmin: Boolean = false,
     val isLoggedIn: Boolean = false,
     val currentUser: UserProfile? = null,
 )

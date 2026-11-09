@@ -53,11 +53,6 @@ class HardwareDetailViewModel(
     private val tuningCommentsJobs = mutableMapOf<String, Job>()
 
     init {
-        viewModelScope.launch {
-            communityPriceRepository.isAdminLoggedIn.collect { isAdmin ->
-                _uiState.update { it.copy(isAdmin = isAdmin) }
-            }
-        }
 
         viewModelScope.launch {
             userRepository.currentUser.collect { user ->
@@ -382,24 +377,4 @@ class HardwareDetailViewModel(
         }
     }
 
-    // Yönetici Hızlı Onaylama
-    fun onApproveCommunityDeal(dealId: String) {
-        viewModelScope.launch {
-            communityPriceRepository.approveDeal(dealId)
-            effectChannel.send(HardwareDetailEffect.ShowToast("✅ Fiyat bildirimi onaylandı ve deftere eklendi.", "✅ Price submission approved and added to ledger."))
-        }
-    }
-
-    // Yönetici Reddetme
-    fun onRejectCommunityDeal(dealId: String, reason: String? = null) {
-        viewModelScope.launch {
-            communityPriceRepository.rejectDeal(dealId, reason)
-            effectChannel.send(HardwareDetailEffect.ShowToast("❌ Fiyat bildirimi reddedildi.", "❌ Price submission rejected."))
-        }
-    }
-
-    // Admin Giriş/Çıkış
-    fun loginAdmin(pin: String): Boolean = communityPriceRepository.loginAdmin(pin)
-
-    fun logoutAdmin() = communityPriceRepository.logoutAdmin()
 }

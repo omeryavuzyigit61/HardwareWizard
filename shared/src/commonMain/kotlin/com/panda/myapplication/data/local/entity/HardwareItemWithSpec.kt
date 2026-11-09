@@ -33,6 +33,8 @@ data class HardwareItemWithSpec(
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val modem: ModemSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val accessPoint: AccessPointSpecEntity? = null,
     @Relation(parentColumn = "id", entityColumn = "hardware_id") val rangeExtender: RangeExtenderSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "item_id") val phone: PhoneSpecEntity? = null,
+    @Relation(parentColumn = "id", entityColumn = "item_id") val tablet: TabletSpecEntity? = null,
 )
 
 /** Write model for an atomic catalog sync. */
@@ -65,4 +67,6 @@ data class HardwareCatalogSnapshot(
     val modems: List<ModemSpecEntity> = emptyList(),
     val accessPoints: List<AccessPointSpecEntity> = emptyList(),
     val rangeExtenders: List<RangeExtenderSpecEntity> = emptyList(),
+    val phones: List<PhoneSpecEntity> = emptyList(),
+    val tablets: List<TabletSpecEntity> = emptyList(),
 )

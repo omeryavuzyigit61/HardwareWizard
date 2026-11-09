@@ -159,7 +159,6 @@ object Destinations {
     const val COMMUNITY_TUNING_VAULT = "community_tuning_vault"
     const val BATTLESTATION_SHOWCASE = "battlestation_showcase"
     const val STUDIO_SURFACE_LAB = "studio_surface_lab"
-    const val ADMIN_MODERATION = "admin_moderation"
     const val SECOND_HAND_VALUATOR = "second_hand_valuator"
     const val WORKSTATION_LAB = "workstation_lab"
     const val USER_PROFILE = "user_profile"

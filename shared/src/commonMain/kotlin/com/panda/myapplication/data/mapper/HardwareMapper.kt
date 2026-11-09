@@ -20,6 +20,12 @@ import com.panda.myapplication.data.local.entity.RouterSpecEntity
 import com.panda.myapplication.data.local.entity.ModemSpecEntity
 import com.panda.myapplication.data.local.entity.AccessPointSpecEntity
 import com.panda.myapplication.data.local.entity.RangeExtenderSpecEntity
+import com.panda.myapplication.data.local.entity.PhoneSpecEntity
+import com.panda.myapplication.data.local.entity.TabletSpecEntity
+import com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto
+import com.panda.myapplication.data.model.dto.TabletCatalogItemDto
+import com.panda.myapplication.domain.model.PhoneSpec
+import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.data.local.entity.MicrophoneSpecEntity
 import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MousepadSpecEntity
@@ -545,6 +551,95 @@ object HardwareMapper {
                     meshProtocol = re.meshProtocol,
                     ethernetPorts = re.ethernetPorts,
                     coverageAreaM2 = re.coverageAreaM2,
+                )
+            }
+            itemWithSpec.phone != null -> {
+                val p = itemWithSpec.phone
+                PhoneSpec(
+                    chipset = p.chipset,
+                    cpuArch = p.cpuArch,
+                    gpuModel = p.gpuModel,
+                    processNodeNm = p.processNodeNm,
+                    ramGb = p.ramGb,
+                    ramType = p.ramType,
+                    storageGb = p.storageGb,
+                    storageType = p.storageType,
+                    hasMicroSd = p.hasMicroSd,
+                    antutuScore = p.antutuScore,
+                    geekbenchSingle = p.geekbenchSingle,
+                    geekbenchMulti = p.geekbenchMulti,
+                    stabilityPercent = p.stabilityPercent,
+                    displaySizeInch = p.displaySizeInch,
+                    displayTech = p.displayTech,
+                    resolution = p.resolution,
+                    ppi = p.ppi,
+                    refreshRateHz = p.refreshRateHz,
+                    peakBrightnessNit = p.peakBrightnessNit,
+                    glassProtection = p.glassProtection,
+                    hdrSupport = p.hdrSupport,
+                    mainCameraMp = p.mainCameraMp,
+                    mainSensorSize = p.mainSensorSize,
+                    mainAperture = p.mainAperture,
+                    hasOis = p.hasOis,
+                    oisType = p.oisType,
+                    telephotoMp = p.telephotoMp,
+                    opticalZoomX = p.opticalZoomX,
+                    ultraWideMp = p.ultraWideMp,
+                    videoResolution = p.videoResolution,
+                    selfieCameraMp = p.selfieCameraMp,
+                    batteryMah = p.batteryMah,
+                    wiredChargingWatt = p.wiredChargingWatt,
+                    wirelessChargingWatt = p.wirelessChargingWatt,
+                    hasReverseCharging = p.hasReverseCharging,
+                    chargingTimeToFullMin = p.chargingTimeToFullMin,
+                    weightGrams = p.weightGrams,
+                    thicknessMm = p.thicknessMm,
+                    frameMaterial = p.frameMaterial,
+                    waterResistance = p.waterResistance,
+                    hasStylus = p.hasStylus,
+                    osName = p.osName,
+                    updateYears = p.updateYears,
+                    pubgFpsSupport = p.pubgFpsSupport,
+                    genshinStabilityScore = p.genshinStabilityScore,
+                    variants = p.variants,
+                )
+            }
+            itemWithSpec.tablet != null -> {
+                val t = itemWithSpec.tablet
+                TabletSpec(
+                    chipset = t.chipset,
+                    cpuArch = t.cpuArch,
+                    gpuModel = t.gpuModel,
+                    processNodeNm = t.processNodeNm,
+                    ramGb = t.ramGb,
+                    storageGb = t.storageGb,
+                    storageType = t.storageType,
+                    hasMicroSd = t.hasMicroSd,
+                    antutuScore = t.antutuScore,
+                    geekbenchSingle = t.geekbenchSingle,
+                    geekbenchMulti = t.geekbenchMulti,
+                    stabilityPercent = t.stabilityPercent,
+                    displaySizeInch = t.displaySizeInch,
+                    displayTech = t.displayTech,
+                    resolution = t.resolution,
+                    ppi = t.ppi,
+                    refreshRateHz = t.refreshRateHz,
+                    peakBrightnessNit = t.peakBrightnessNit,
+                    stylusSupport = t.stylusSupport,
+                    mainCameraMp = t.mainCameraMp,
+                    frontCameraMp = t.frontCameraMp,
+                    speakerCount = t.speakerCount,
+                    hasDolbyAtmos = t.hasDolbyAtmos,
+                    batteryMah = t.batteryMah,
+                    wiredChargingWatt = t.wiredChargingWatt,
+                    wirelessChargingWatt = t.wirelessChargingWatt,
+                    weightGrams = t.weightGrams,
+                    thicknessMm = t.thicknessMm,
+                    bodyMaterial = t.bodyMaterial,
+                    osName = t.osName,
+                    updateYears = t.updateYears,
+                    cellularOption = t.cellularOption,
+                    variants = t.variants,
                 )
             }
             else -> return@runCatching null
@@ -1322,6 +1417,143 @@ object HardwareMapper {
         return item to spec
     }
 
+    fun smartphoneDtoToEntity(dto: SmartphoneCatalogItemDto, syncedAt: Instant): Pair<HardwareItemEntity, PhoneSpecEntity>? {
+        val s = dto.spec ?: return null
+        val effImg = dto.imageUrl.ifBlank { dto.images.firstOrNull().orEmpty() }
+        val effImgs = if (dto.images.isNotEmpty()) dto.images else listOfNotNull(effImg.takeIf { it.isNotBlank() })
+        val item = HardwareItemEntity(
+            id = dto.id,
+            brand = dto.brand.ifBlank { "Akıllı Telefon" },
+            model = dto.model.ifBlank { dto.name },
+            category = HardwareCategory.SMARTPHONE,
+            priceMinor = (dto.priceTry * 100).toLong(),
+            currencyCode = "TRY",
+            cachedAt = syncedAt,
+            currentPriceTry = dto.priceTry,
+            lowestPriceTry = dto.priceTry,
+            highestPriceTry = dto.priceTry,
+            offers = dto.stores.map { StoreOffer(storeName = it.storeName, priceTry = it.priceTry, url = it.url) },
+            priceHistory = dto.priceHistory.map { PricePoint(date = it.date, priceTry = it.priceTry) },
+            benchmarkScore = dto.benchmarkScore ?: s.antutuScore,
+            benchmarkTier = dto.tier,
+            benchmarkGamingIndex = dto.gamingIndex ?: 80,
+            imageUrl = effImg.takeIf { it.isNotBlank() },
+            images = effImgs,
+        )
+        val spec = PhoneSpecEntity(
+            itemId = dto.id,
+            chipset = s.chipset,
+            cpuArch = s.cpuArch,
+            gpuModel = s.gpuModel,
+            processNodeNm = s.processNodeNm,
+            ramGb = s.ramGb,
+            ramType = s.ramType,
+            storageGb = s.storageGb,
+            storageType = s.storageType,
+            hasMicroSd = s.hasMicroSd,
+            antutuScore = s.antutuScore,
+            geekbenchSingle = s.geekbenchSingle,
+            geekbenchMulti = s.geekbenchMulti,
+            stabilityPercent = s.stabilityPercent,
+            displaySizeInch = s.displaySizeInch,
+            displayTech = s.displayTech,
+            resolution = s.resolution,
+            ppi = s.ppi,
+            refreshRateHz = s.refreshRateHz,
+            peakBrightnessNit = s.peakBrightnessNit,
+            glassProtection = s.glassProtection,
+            hdrSupport = s.hdrSupport,
+            mainCameraMp = s.mainCameraMp,
+            mainSensorSize = s.mainSensorSize,
+            mainAperture = s.mainAperture,
+            hasOis = s.hasOis,
+            oisType = s.oisType,
+            telephotoMp = s.telephotoMp,
+            opticalZoomX = s.opticalZoomX,
+            ultraWideMp = s.ultraWideMp,
+            videoResolution = s.videoResolution,
+            selfieCameraMp = s.selfieCameraMp,
+            batteryMah = s.batteryMah,
+            wiredChargingWatt = s.wiredChargingWatt,
+            wirelessChargingWatt = s.wirelessChargingWatt,
+            hasReverseCharging = s.hasReverseCharging,
+            chargingTimeToFullMin = s.chargingTimeToFullMin,
+            weightGrams = s.weightGrams,
+            thicknessMm = s.thicknessMm,
+            frameMaterial = s.frameMaterial,
+            waterResistance = s.waterResistance,
+            hasStylus = s.hasStylus,
+            osName = s.osName,
+            updateYears = s.updateYears,
+            pubgFpsSupport = s.pubgFpsSupport,
+            genshinStabilityScore = s.genshinStabilityScore,
+            variants = s.variants,
+        )
+        return item to spec
+    }
+
+    fun tabletDtoToEntity(dto: TabletCatalogItemDto, syncedAt: Instant): Pair<HardwareItemEntity, TabletSpecEntity>? {
+        val s = dto.spec ?: return null
+        val effImg = dto.imageUrl.ifBlank { dto.images.firstOrNull().orEmpty() }
+        val effImgs = if (dto.images.isNotEmpty()) dto.images else listOfNotNull(effImg.takeIf { it.isNotBlank() })
+        val item = HardwareItemEntity(
+            id = dto.id,
+            brand = dto.brand.ifBlank { "Tablet" },
+            model = dto.model.ifBlank { dto.name },
+            category = HardwareCategory.TABLET,
+            priceMinor = (dto.priceTry * 100).toLong(),
+            currencyCode = "TRY",
+            cachedAt = syncedAt,
+            currentPriceTry = dto.priceTry,
+            lowestPriceTry = dto.priceTry,
+            highestPriceTry = dto.priceTry,
+            offers = dto.stores.map { StoreOffer(storeName = it.storeName, priceTry = it.priceTry, url = it.url) },
+            priceHistory = dto.priceHistory.map { PricePoint(date = it.date, priceTry = it.priceTry) },
+            benchmarkScore = dto.benchmarkScore ?: s.antutuScore,
+            benchmarkTier = dto.tier,
+            benchmarkGamingIndex = dto.gamingIndex ?: 80,
+            imageUrl = effImg.takeIf { it.isNotBlank() },
+            images = effImgs,
+        )
+        val spec = TabletSpecEntity(
+            itemId = dto.id,
+            chipset = s.chipset,
+            cpuArch = s.cpuArch,
+            gpuModel = s.gpuModel,
+            processNodeNm = s.processNodeNm,
+            ramGb = s.ramGb,
+            storageGb = s.storageGb,
+            storageType = s.storageType,
+            hasMicroSd = s.hasMicroSd,
+            antutuScore = s.antutuScore,
+            geekbenchSingle = s.geekbenchSingle,
+            geekbenchMulti = s.geekbenchMulti,
+            stabilityPercent = s.stabilityPercent,
+            displaySizeInch = s.displaySizeInch,
+            displayTech = s.displayTech,
+            resolution = s.resolution,
+            ppi = s.ppi,
+            refreshRateHz = s.refreshRateHz,
+            peakBrightnessNit = s.peakBrightnessNit,
+            stylusSupport = s.stylusSupport,
+            mainCameraMp = s.mainCameraMp,
+            frontCameraMp = s.frontCameraMp,
+            speakerCount = s.speakerCount,
+            hasDolbyAtmos = s.hasDolbyAtmos,
+            batteryMah = s.batteryMah,
+            wiredChargingWatt = s.wiredChargingWatt,
+            wirelessChargingWatt = s.wirelessChargingWatt,
+            weightGrams = s.weightGrams,
+            thicknessMm = s.thicknessMm,
+            bodyMaterial = s.bodyMaterial,
+            osName = s.osName,
+            updateYears = s.updateYears,
+            cellularOption = s.cellularOption,
+            variants = s.variants,
+        )
+        return item to spec
+    }
+
     fun buildCatalogSnapshot(
         cpus: List<CpuRawDto> = emptyList(),
         gpus: List<GpuRawDto> = emptyList(),
@@ -1334,6 +1566,8 @@ object HardwareMapper {
         prebuilts: List<PrebuiltRawDto> = emptyList(),
         laptops: List<LaptopRawDto> = emptyList(),
         peripherals: List<PeripheralRawDto> = emptyList(),
+        smartphones: List<SmartphoneCatalogItemDto> = emptyList(),
+        tablets: List<TabletCatalogItemDto> = emptyList(),
         pricesTr: Map<String, ProductPriceInfo> = emptyMap(),
         benchmarks: Map<String, HardwareBenchmarkInfo> = emptyMap(),
         existingImages: Map<String, String?> = emptyMap(),
@@ -1349,6 +1583,8 @@ object HardwareMapper {
         val casePairs = cases.mapNotNull { runCatching { caseDtoToEntity(it, syncedAt) }.getOrNull() }
         val prebuiltPairs = prebuilts.mapNotNull { runCatching { prebuiltDtoToEntity(it, syncedAt) }.getOrNull() }
         val laptopPairs = laptops.mapNotNull { runCatching { laptopDtoToEntity(it, syncedAt) }.getOrNull() }
+        val phonePairs = smartphones.mapNotNull { runCatching { smartphoneDtoToEntity(it, syncedAt) }.getOrNull() }
+        val tabletPairs = tablets.mapNotNull { runCatching { tabletDtoToEntity(it, syncedAt) }.getOrNull() }
 
         val mousePairs = mutableListOf<Pair<HardwareItemEntity, MouseSpecEntity>>()
         val keyboardPairs = mutableListOf<Pair<HardwareItemEntity, KeyboardSpecEntity>>()
@@ -1668,7 +1904,9 @@ object HardwareMapper {
                 routerPairs.map { it.first } +
                 modemPairs.map { it.first } +
                 accessPointPairs.map { it.first } +
-                rangeExtenderPairs.map { it.first })
+                rangeExtenderPairs.map { it.first } +
+                phonePairs.map { it.first } +
+                tabletPairs.map { it.first })
             .distinctBy { it.id }
 
         val enrichedItems = rawItems.map { item ->
@@ -1760,6 +1998,8 @@ object HardwareMapper {
             modems = modemPairs.map { it.second }.distinctBy { it.hardwareId },
             accessPoints = accessPointPairs.map { it.second }.distinctBy { it.hardwareId },
             rangeExtenders = rangeExtenderPairs.map { it.second }.distinctBy { it.hardwareId },
+            phones = phonePairs.map { it.second }.distinctBy { it.itemId },
+            tablets = tabletPairs.map { it.second }.distinctBy { it.itemId },
         )
     }
 

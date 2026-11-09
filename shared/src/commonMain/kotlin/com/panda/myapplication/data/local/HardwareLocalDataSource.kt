@@ -1,4 +1,4 @@
-﻿package com.panda.myapplication.data.local
+package com.panda.myapplication.data.local
 
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.mapper.HardwareMapper
@@ -13,6 +13,8 @@ import com.panda.myapplication.data.model.dto.PrebuiltRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
+import com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto
+import com.panda.myapplication.data.model.dto.TabletCatalogItemDto
 import hardwarewizard.shared.generated.resources.Res
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.first
@@ -66,6 +68,12 @@ class HardwareLocalDataSource(
     suspend fun loadLocalPeripherals(): List<PeripheralRawDto> = readJsonAssetList("files/peripherals.json")
 
     @OptIn(ExperimentalResourceApi::class)
+    suspend fun loadLocalSmartphones(): List<SmartphoneCatalogItemDto> = readJsonAssetList("files/smartphone.json")
+
+    @OptIn(ExperimentalResourceApi::class)
+    suspend fun loadLocalTablets(): List<TabletCatalogItemDto> = readJsonAssetList("files/tablet.json")
+
+    @OptIn(ExperimentalResourceApi::class)
     suspend fun seedDatabaseIfEmpty(): Result<Unit> = withContext(ioDispatcher) {
         runCatching {
             val cpus = loadLocalCpus()
@@ -79,6 +87,8 @@ class HardwareLocalDataSource(
             val prebuilts = loadLocalPrebuilts()
             val laptops = loadLocalLaptops()
             val peripherals = loadLocalPeripherals()
+            val smartphones = loadLocalSmartphones()
+            val tablets = loadLocalTablets()
 
             val pricesTr = loadLocalPricesTr()
             val benchmarks = loadLocalBenchmarks()
@@ -96,6 +106,8 @@ class HardwareLocalDataSource(
                 prebuilts = prebuilts,
                 laptops = laptops,
                 peripherals = peripherals,
+                smartphones = smartphones,
+                tablets = tablets,
                 pricesTr = pricesTr,
                 benchmarks = benchmarks,
                 syncedAt = syncedAt,

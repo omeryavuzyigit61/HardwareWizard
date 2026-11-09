@@ -209,10 +209,6 @@ fun HardwareDetailRoute(
         onSaveCustomPrice = viewModel::onSaveCustomPrice,
         onClearCustomPrice = viewModel::onClearCustomPrice,
         onSubmitCommunityDeal = viewModel::onSubmitCommunityDeal,
-        onApproveCommunityDeal = viewModel::onApproveCommunityDeal,
-        onRejectCommunityDeal = viewModel::onRejectCommunityDeal,
-        onLoginAdmin = viewModel::loginAdmin,
-        onLogoutAdmin = viewModel::logoutAdmin,
         onRefreshCommunityDeals = viewModel::onRefreshCommunityDeals,
         onOpenAuthSheet = onOpenAuthSheet,
         onNavigateToTuningVault = onNavigateToTuningVault,
@@ -237,10 +233,6 @@ fun HardwareDetailContent(
     onSaveCustomPrice: (Double, String?) -> Unit = { _, _ -> },
     onClearCustomPrice: () -> Unit = {},
     onSubmitCommunityDeal: (Double, CommunityDealType, String?, String?, String) -> Unit = { _, _, _, _, _ -> },
-    onApproveCommunityDeal: (String) -> Unit = {},
-    onRejectCommunityDeal: (String, String?) -> Unit = { _, _ -> },
-    onLoginAdmin: (String) -> Boolean = { false },
-    onLogoutAdmin: () -> Unit = {},
     onRefreshCommunityDeals: () -> Unit = {},
     onOpenAuthSheet: () -> Unit = {},
     onNavigateToTuningVault: () -> Unit = {},
@@ -260,7 +252,6 @@ fun HardwareDetailContent(
     var showPriceDialog by remember { mutableStateOf(false) }
     var showCommunitySubmitSheet by remember { mutableStateOf(false) }
     var selectedDealForDetail by remember { mutableStateOf<CommunityDeal?>(null) }
-    var showAdminLoginDialog by remember { mutableStateOf(false) }
     val strings = LocalAppStrings.current
     val currency = LocalAppCurrency.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -444,7 +435,6 @@ fun HardwareDetailContent(
                         item(key = "community_deals_ledger") {
                             CommunityPriceLedgerSection(
                                 deals = uiState.communityDeals,
-                                isAdmin = uiState.isAdmin,
                                 onDealClick = { deal -> selectedDealForDetail = deal },
                                 onSubmitClick = {
                                     if (!uiState.isLoggedIn) {
@@ -459,10 +449,6 @@ fun HardwareDetailContent(
                                         showCommunitySubmitSheet = true
                                     }
                                 },
-                                onApproveDeal = onApproveCommunityDeal,
-                                onRejectDeal = { dealId -> onRejectCommunityDeal(dealId, null) },
-                                onAdminLoginClick = { showAdminLoginDialog = true },
-                                onAdminLogoutClick = onLogoutAdmin,
                                 onRefreshClick = onRefreshCommunityDeals,
                             )
                         }
@@ -599,25 +585,10 @@ fun HardwareDetailContent(
         val currentDeal = selectedDealForDetail!!
         CommunityDealDetailDialog(
             deal = currentDeal,
-            isAdmin = uiState.isAdmin,
             onDismiss = { selectedDealForDetail = null },
-            onApprove = {
-                onApproveCommunityDeal(currentDeal.id)
-                selectedDealForDetail = null
-            },
-            onReject = {
-                onRejectCommunityDeal(currentDeal.id, null)
-                selectedDealForDetail = null
-            },
         )
     }
 
-    if (showAdminLoginDialog) {
-        AdminLoginPinDialog(
-            onDismiss = { showAdminLoginDialog = false },
-            onLogin = onLoginAdmin,
-        )
-    }
 
     if (showPriceDropAlertDialog) {
         PriceDropAlertDialog(
@@ -2825,8 +2796,6 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): L
     return rows
 }
 
-private fun buildPolymorphicSpecRows(item: HardwareItem, isTr: Boolean = true): List<Pair<String, String>> =
-    buildPolymorphicSpecRows(item, if (isTr) StringsTR else StringsEN)
 
 
 @Composable

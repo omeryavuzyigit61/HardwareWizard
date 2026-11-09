@@ -81,18 +81,13 @@ import kotlin.math.roundToInt
 @Composable
 fun CommunityPriceLedgerSection(
     deals: List<CommunityDeal>,
-    isAdmin: Boolean,
     onDealClick: (CommunityDeal) -> Unit,
     onSubmitClick: () -> Unit,
-    onApproveDeal: (String) -> Unit,
-    onRejectDeal: (String) -> Unit,
-    onAdminLoginClick: () -> Unit,
-    onAdminLogoutClick: () -> Unit,
     onRefreshClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
-    val displayDeals = if (isAdmin) deals else deals.filter { it.status == DealStatus.APPROVED }
     val approvedDeals = deals.filter { it.status == DealStatus.APPROVED }
+    val displayDeals = approvedDeals
 
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -164,36 +159,18 @@ fun CommunityPriceLedgerSection(
                         }
                     }
 
-                    if (isAdmin) {
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = NeonAmber.copy(alpha = 0.18f),
-                            border = BorderStroke(1.dp, NeonAmber),
-                        ) {
-                            Text(
-                                text = tr(isTr, "🛡️ YÖNETİCİ", "🛡️ ADMIN"),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold,
-                                color = NeonAmber,
-                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
-                                maxLines = 1,
-                                softWrap = false,
-                            )
-                        }
-                    } else {
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-                        ) {
-                            Text(
-                                text = if (isTr) "${approvedDeals.size} Fırsat" else "${approvedDeals.size} Deals",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
-                                maxLines = 1,
-                                softWrap = false,
-                            )
-                        }
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                    ) {
+                        Text(
+                            text = if (isTr) "${approvedDeals.size} Fırsat" else "${approvedDeals.size} Deals",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 2.dp),
+                            maxLines = 1,
+                            softWrap = false,
+                        )
                     }
                 }
             }
@@ -306,10 +283,7 @@ fun CommunityPriceLedgerSection(
                     displayDeals.take(5).forEach { deal ->
                         CommunityDealTickerRow(
                             deal = deal,
-                            isAdmin = isAdmin,
                             onClick = { onDealClick(deal) },
-                            onApprove = { onApproveDeal(deal.id) },
-                            onReject = { onRejectDeal(deal.id) },
                         )
                     }
                 }
@@ -339,15 +313,7 @@ fun CommunityPriceLedgerSection(
                     )
                 }
 
-                if (isAdmin) {
-                    TextButton(onClick = onAdminLogoutClick) {
-                        Text(
-                            text = strings.ledgerAdminLogout,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = NeonRose,
-                        )
-                    }
-                }
+
             }
         }
     }
@@ -359,10 +325,7 @@ fun CommunityPriceLedgerSection(
 @Composable
 private fun CommunityDealTickerRow(
     deal: CommunityDeal,
-    isAdmin: Boolean,
     onClick: () -> Unit,
-    onApprove: () -> Unit,
-    onReject: () -> Unit,
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
@@ -448,31 +411,7 @@ private fun CommunityDealTickerRow(
                     }
                 }
 
-                if (isAdmin && deal.status == DealStatus.PENDING) {
-                    Spacer(modifier = Modifier.width(6.dp))
-                    IconButton(
-                        onClick = onApprove,
-                        modifier = Modifier.size(26.dp),
-                    ) {
-                        Text(
-                            text = "✓",
-                            color = NeonEmerald,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
-                        )
-                    }
-                    IconButton(
-                        onClick = onReject,
-                        modifier = Modifier.size(26.dp),
-                    ) {
-                        Text(
-                            text = "✕",
-                            color = NeonRose,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                        )
-                    }
-                }
+
             }
         }
     }
@@ -485,10 +424,7 @@ private fun CommunityDealTickerRow(
 @Composable
 fun CommunityDealDetailDialog(
     deal: CommunityDeal,
-    isAdmin: Boolean,
     onDismiss: () -> Unit,
-    onApprove: () -> Unit,
-    onReject: () -> Unit,
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -640,37 +576,7 @@ fun CommunityDealDetailDialog(
                     }
                 }
 
-                // Admin Inline Moderation Controls
-                if (isAdmin) {
-                    Spacer(modifier = Modifier.height(Spacing.small))
-                    Text(
-                        text = tr(isTr, "🛡️ Yönetici Moderasyon Kararı:", "🛡️ Admin Moderation Decision:"),
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = NeonAmber,
-                    )
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(Spacing.small),
-                    ) {
-                        Button(
-                            onClick = onApprove,
-                            colors = ButtonDefaults.buttonColors(containerColor = NeonEmerald),
-                            shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.weight(1f),
-                        ) {
-                            Text(tr(isTr, "✓ Onayla", "✓ Approve"), fontWeight = FontWeight.Bold)
-                        }
-                        Button(
-                            onClick = onReject,
-                            colors = ButtonDefaults.buttonColors(containerColor = NeonRose),
-                            shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.weight(1f),
-                        ) {
-                            Text(tr(isTr, "✕ Reddet", "✕ Reject"), fontWeight = FontWeight.Bold)
-                        }
-                    }
-                }
+
             }
         },
         confirmButton = {
@@ -901,78 +807,7 @@ fun SubmitCommunityDealSheet(
     }
 }
 
-/**
- * Yönetici PIN Giriş Dialogu (Tek yetkili admin için hızlı doğrulama).
- */
-@Composable
-fun AdminLoginPinDialog(
-    onDismiss: () -> Unit,
-    onLogin: (pin: String) -> Boolean,
-) {
-    val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
-    var pinText by remember { mutableStateOf("") }
-    var isError by remember { mutableStateOf(false) }
 
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = {
-            Text(
-                text = tr(isTr, "🛡️ Yönetici Girişi", "🛡️ Admin Authentication"),
-                fontWeight = FontWeight.Bold,
-            )
-        },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
-                Text(
-                    text = tr(isTr, "Topluluk fiyat bildirimlerini doğrudan onaylamak veya reddetmek için yönetici PIN kodunuzu girin.", "Enter your admin PIN to moderate community deal submissions directly."),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                OutlinedTextField(
-                    value = pinText,
-                    onValueChange = {
-                        pinText = it
-                        isError = false
-                    },
-                    label = { Text(tr(isTr, "Yönetici PIN", "Admin PIN")) },
-                    visualTransformation = PasswordVisualTransformation(),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
-                    singleLine = true,
-                    isError = isError,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                if (isError) {
-                    Text(
-                        text = tr(isTr, "Geçersiz PIN kodu! (Varsayılan: 1923)", "Invalid PIN code! (Default: 1923)"),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = NeonRose,
-                    )
-                }
-            }
-        },
-        confirmButton = {
-            Button(
-                onClick = {
-                    val success = onLogin(pinText)
-                    if (success) {
-                        onDismiss()
-                    } else {
-                        isError = true
-                    }
-                },
-                colors = ButtonDefaults.buttonColors(containerColor = NeonAmber),
-            ) {
-                Text(strings.authTabLogin, fontWeight = FontWeight.Bold)
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(if (isTr) "İptal" else "Cancel")
-            }
-        },
-    )
-}
 
 private fun formatTry(amount: Double): String {
     val rounded = amount.roundToInt()

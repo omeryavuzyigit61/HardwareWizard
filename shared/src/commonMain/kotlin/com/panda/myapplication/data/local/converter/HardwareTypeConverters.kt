@@ -77,6 +77,16 @@ class HardwareTypeConverters {
         runCatching { json.decodeFromString<com.panda.myapplication.domain.model.GameFpsBenchmark>(it) }.getOrNull()
     }
 
+    @TypeConverter
+    fun deviceVariantListToJson(value: List<com.panda.myapplication.domain.model.DeviceVariant>?): String? = value?.let {
+        json.encodeToString(it)
+    }
+
+    @TypeConverter
+    fun jsonToDeviceVariantList(value: String?): List<com.panda.myapplication.domain.model.DeviceVariant>? = value?.let {
+        runCatching { json.decodeFromString<List<com.panda.myapplication.domain.model.DeviceVariant>>(it) }.getOrNull()
+    }
+
     private companion object {
         val json = Json {
             ignoreUnknownKeys = true

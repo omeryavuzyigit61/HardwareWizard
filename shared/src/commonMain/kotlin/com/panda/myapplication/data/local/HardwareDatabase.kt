@@ -39,6 +39,8 @@ import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.local.entity.AppSettingEntity
 import com.panda.myapplication.data.local.entity.WebcamSpecEntity
+import com.panda.myapplication.data.local.entity.PhoneSpecEntity
+import com.panda.myapplication.data.local.entity.TabletSpecEntity
 import kotlinx.coroutines.CoroutineDispatcher
 
 @Database(
@@ -71,11 +73,13 @@ import kotlinx.coroutines.CoroutineDispatcher
         ModemSpecEntity::class,
         AccessPointSpecEntity::class,
         RangeExtenderSpecEntity::class,
+        PhoneSpecEntity::class,
+        TabletSpecEntity::class,
         UserPriceOverrideEntity::class,
         UserSessionEntity::class,
         AppSettingEntity::class,
     ],
-    version = 33,
+    version = 34,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

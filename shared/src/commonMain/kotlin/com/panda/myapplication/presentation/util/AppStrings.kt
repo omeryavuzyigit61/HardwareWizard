@@ -838,7 +838,6 @@ interface AppStrings {
 
     val ledgerSubmitDealBtn: String
 
-    val ledgerAdminLogout: String
 
     val ledgerReportedPrice: String
 
@@ -1712,7 +1711,6 @@ private class AppStringsTR : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Fiyat Bildir / Fırsat Paylaş"
 
-    override val ledgerAdminLogout = "Admin Çıkışı"
 
     override val ledgerReportedPrice = "Bildirilen Fiyat"
 
@@ -2592,7 +2590,6 @@ private class AppStringsEN : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Submit Price / Share Deal"
 
-    override val ledgerAdminLogout = "Admin Logout"
 
     override val ledgerReportedPrice = "Reported Price"
 
@@ -3472,7 +3469,6 @@ private class AppStringsDE : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Preis melden / Deal teilen"
 
-    override val ledgerAdminLogout = "Admin Abmelden"
 
     override val ledgerReportedPrice = "Gemeldeter Preis"
 
@@ -4352,7 +4348,6 @@ private class AppStringsES : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Reportar Precio / Compartir Oferta"
 
-    override val ledgerAdminLogout = "Cerrar Sesión Admin"
 
     override val ledgerReportedPrice = "Precio Notificado"
 
@@ -5232,7 +5227,6 @@ private class AppStringsFR : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Signaler un Prix / Partager un Bon Plan"
 
-    override val ledgerAdminLogout = "Déconnexion Admin"
 
     override val ledgerReportedPrice = "Prix Signalé"
 
@@ -6112,7 +6106,6 @@ private class AppStringsRU : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ Сообщить цену / Поделиться скидкой"
 
-    override val ledgerAdminLogout = "Выход администратора"
 
     override val ledgerReportedPrice = "Указанная цена"
 
@@ -6992,7 +6985,6 @@ private class AppStringsJA : AppStrings {
 
     override val ledgerSubmitDealBtn = "+ 価格報告・特価を共有"
 
-    override val ledgerAdminLogout = "管理者ログアウト"
 
     override val ledgerReportedPrice = "報告された価格"
 

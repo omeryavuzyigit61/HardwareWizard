@@ -37,6 +37,8 @@ import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.local.entity.AppSettingEntity
 import com.panda.myapplication.data.local.entity.WebcamSpecEntity
+import com.panda.myapplication.data.local.entity.PhoneSpecEntity
+import com.panda.myapplication.data.local.entity.TabletSpecEntity
 import com.panda.myapplication.domain.model.HardwareCategory
 import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
@@ -149,6 +151,12 @@ abstract class HardwareDao {
     @Query("SELECT * FROM range_extender_specs")
     abstract fun observeAllRangeExtenderSpecs(): Flow<List<RangeExtenderSpecEntity>>
 
+    @Query("SELECT * FROM phone_specs")
+    abstract fun observeAllPhoneSpecs(): Flow<List<PhoneSpecEntity>>
+
+    @Query("SELECT * FROM tablet_specs")
+    abstract fun observeAllTabletSpecs(): Flow<List<TabletSpecEntity>>
+
     @Query("SELECT * FROM hardware_items WHERE id = :id LIMIT 1")
     abstract fun observeItemEntityById(id: String): Flow<HardwareItemEntity?>
 
@@ -259,6 +267,12 @@ abstract class HardwareDao {
     @Upsert
     protected abstract suspend fun upsertRangeExtenderSpecs(specs: List<RangeExtenderSpecEntity>)
 
+    @Upsert
+    protected abstract suspend fun upsertPhoneSpecs(specs: List<PhoneSpecEntity>)
+
+    @Upsert
+    protected abstract suspend fun upsertTabletSpecs(specs: List<TabletSpecEntity>)
+
     // region User Price Overrides (BÖLÜM 2)
 
     @Query("SELECT * FROM user_price_overrides")
@@ -340,6 +354,8 @@ abstract class HardwareDao {
         snapshot.modems.chunked(chunkSize).forEach { upsertModemSpecs(it) }
         snapshot.accessPoints.chunked(chunkSize).forEach { upsertAccessPointSpecs(it) }
         snapshot.rangeExtenders.chunked(chunkSize).forEach { upsertRangeExtenderSpecs(it) }
+        snapshot.phones.chunked(chunkSize).forEach { upsertPhoneSpecs(it) }
+        snapshot.tablets.chunked(chunkSize).forEach { upsertTabletSpecs(it) }
         deleteItemsCachedBefore(syncedAt)
     }
 

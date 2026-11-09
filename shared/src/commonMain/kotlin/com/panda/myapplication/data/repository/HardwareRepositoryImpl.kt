@@ -25,6 +25,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlin.time.Clock
+import kotlinx.serialization.json.Json
 
 internal class HardwareRepositoryImpl(
     private val hardwareDao: HardwareDao,
@@ -33,31 +34,15 @@ internal class HardwareRepositoryImpl(
     private val ioDispatcher: CoroutineDispatcher,
 ) : HardwareRepository {
 
+    private val json: Json = Json {
+        ignoreUnknownKeys = true
+        isLenient = true
+        coerceInputValues = true
+    }
     private val seedMutex = Mutex()
     private var isSeeded = false
     private val memoryCache = MutableStateFlow<List<HardwareItem>?>(null)
-    private val dynamicSmartphones = MutableStateFlow<List<HardwareItem>>(emptyList())
-    private val dynamicTablets = MutableStateFlow<List<HardwareItem>>(emptyList())
-    private val mobileSeedMutex = Mutex()
-    private var isMobileSeedLoaded = false
 
-    private suspend fun ensureMobileSeedLoaded() {
-        if (isMobileSeedLoaded) return
-        mobileSeedMutex.withLock {
-            if (isMobileSeedLoaded) return
-            try {
-                withContext(ioDispatcher) {
-                    val smartphones = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones()
-                    val tablets = com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets()
-                    dynamicSmartphones.value = smartphones
-                    dynamicTablets.value = tablets
-                    isMobileSeedLoaded = true
-                }
-            } catch (e: Exception) {
-                if (e is kotlinx.coroutines.CancellationException) throw e
-            }
-        }
-    }
 
     private inline fun <T> mergeCatalogs(remote: List<T>, local: List<T>, keySelector: (T) -> String?): List<T> {
         if (remote.isEmpty()) return local
@@ -95,7 +80,7 @@ internal class HardwareRepositoryImpl(
         seedMutex.withLock {
             if (isSeeded) return
             val seededVersion = hardwareDao.getSetting("catalog_seed_version")
-            val currentCatalogVersion = "2.0.0"
+            val currentCatalogVersion = "2.1.0"
             if (seededVersion == currentCatalogVersion) {
                 isSeeded = true
                 return
@@ -106,6 +91,8 @@ internal class HardwareRepositoryImpl(
             val hasGpus = (counts[HardwareCategory.GPU] ?: 0) > 0
             val hasPrebuilts = (counts[HardwareCategory.PREBUILT_PC] ?: 0) > 0
             val laptopCount = counts[HardwareCategory.LAPTOP] ?: 0
+            val phoneCount = counts[HardwareCategory.SMARTPHONE] ?: 0
+            val tabletCount = counts[HardwareCategory.TABLET] ?: 0
             val caseCount = counts[HardwareCategory.CASE] ?: 0
             val coolerCount = counts[HardwareCategory.COOLER] ?: 0
             val moboCount = counts[HardwareCategory.MOTHERBOARD] ?: 0
@@ -129,7 +116,7 @@ internal class HardwareRepositoryImpl(
                 (counts[HardwareCategory.MONITOR] ?: 0)
 
             val isMissingCore = !hasCpus || !hasGpus || !hasPrebuilts ||
-                laptopCount < 300 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
+                laptopCount < 300 || phoneCount < 200 || tabletCount < 30 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
                 moboCount < 640 || micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
                 fanCount < 180 || upsCount < 140 || deskCount < 100 || lightCount < 90 ||
                 swCount < 180 || routerCount < 140 || modemCount < 60 || apCount < 80 || reCount < 80
@@ -627,24 +614,36 @@ internal class HardwareRepositoryImpl(
                     )?.applyOverride(overrideMap)
                 }
             }
-            HardwareCategory.SMARTPHONE -> {
-                ensureMobileSeedLoaded()
-                combine(
-                    dynamicSmartphones,
-                    hardwareDao.observeAllPriceOverrides(),
-                ) { items, overrides ->
-                    val overrideMap = overrides.associateBy { it.hardwareId }
-                    items.map { it.applyOverride(overrideMap) }
+            HardwareCategory.SMARTPHONE -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllPhoneSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            phone = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
                 }
             }
-            HardwareCategory.TABLET -> {
-                ensureMobileSeedLoaded()
-                combine(
-                    dynamicTablets,
-                    hardwareDao.observeAllPriceOverrides(),
-                ) { items, overrides ->
-                    val overrideMap = overrides.associateBy { it.hardwareId }
-                    items.map { it.applyOverride(overrideMap) }
+            HardwareCategory.TABLET -> combine(
+                hardwareDao.observeItemEntitiesByCategory(category),
+                hardwareDao.observeAllTabletSpecs(),
+                hardwareDao.observeAllPriceOverrides(),
+            ) { items, specs, overrides ->
+                val specMap = specs.associateBy { it.itemId }
+                val overrideMap = overrides.associateBy { it.hardwareId }
+                items.mapNotNull { item ->
+                    HardwareMapper.toDomain(
+                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
+                            item = item,
+                            tablet = specMap[item.id],
+                        )
+                    )?.applyOverride(overrideMap)
                 }
             }
         }
@@ -670,14 +669,7 @@ internal class HardwareRepositoryImpl(
             emit(DomainResult.Success(cachedInstant))
         }
 
-        // 2. Fast path: Mobile / Tablet Seed Catalog
-        val mobileItem = dynamicSmartphones.value.find { it.id.value == id.value }
-            ?: dynamicTablets.value.find { it.id.value == id.value }
-            ?: com.panda.myapplication.data.local.seed.MobileSeedCatalog.findById(id.value)
-        if (mobileItem != null) {
-            emit(DomainResult.Success(mobileItem))
-            return@flow
-        }
+
 
         ensureSeeded()
 
@@ -713,20 +705,7 @@ internal class HardwareRepositoryImpl(
 
     override fun observeBrands(category: HardwareCategory?): Flow<DomainResult<List<String>>> = flow {
         ensureSeeded()
-        if (category == HardwareCategory.SMARTPHONE) {
-            ensureMobileSeedLoaded()
-            val brands = dynamicSmartphones.value.ifEmpty { com.panda.myapplication.data.local.seed.MobileSeedCatalog.getSmartphones() }
-                .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
-            emit(DomainResult.Success(brands))
-            return@flow
-        }
-        if (category == HardwareCategory.TABLET) {
-            ensureMobileSeedLoaded()
-            val brands = dynamicTablets.value.ifEmpty { com.panda.myapplication.data.local.seed.MobileSeedCatalog.getTablets() }
-                .map { it.brand.trim() }.filter { it.isNotBlank() }.distinct().sorted()
-            emit(DomainResult.Success(brands))
-            return@flow
-        }
+
         val daoFlow = if (category == null) {
             hardwareDao.observeAllBrands()
         } else {
@@ -786,22 +765,19 @@ internal class HardwareRepositoryImpl(
             if (remoteVerified.isNotEmpty()) {
                 com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
             }
-            val remoteSmartphonesResult = remoteDataSource.fetchSmartphonesJson()
-            if (remoteSmartphonesResult.isSuccess) {
-                val jsonStr = remoteSmartphonesResult.getOrThrow()
-                val parsed = com.panda.myapplication.data.local.seed.MobileSeedCatalog.parseSmartphonesJson(jsonStr)
-                if (parsed.isNotEmpty()) {
-                    dynamicSmartphones.value = parsed
-                }
-            }
-            val remoteTabletsResult = remoteDataSource.fetchTabletsJson()
-            if (remoteTabletsResult.isSuccess) {
-                val jsonStr = remoteTabletsResult.getOrThrow()
-                val parsed = com.panda.myapplication.data.local.seed.MobileSeedCatalog.parseTabletsJson(jsonStr)
-                if (parsed.isNotEmpty()) {
-                    dynamicTablets.value = parsed
-                }
-            }
+            val remoteSmartphones: List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto> = runCatching {
+                val res = remoteDataSource.fetchSmartphonesJson()
+                if (res.isSuccess) {
+                    json.decodeFromString<List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>>(res.getOrThrow())
+                } else emptyList<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>()
+            }.getOrDefault(emptyList())
+
+            val remoteTablets: List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto> = runCatching {
+                val res = remoteDataSource.fetchTabletsJson()
+                if (res.isSuccess) {
+                    json.decodeFromString<List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>>(res.getOrThrow())
+                } else emptyList<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>()
+            }.getOrDefault(emptyList())
             val localPrices = localDataSource.loadLocalPricesTr()
             val localBenchmarks = localDataSource.loadLocalBenchmarks()
             val allPrices = localPrices.toMutableMap().apply {
@@ -838,6 +814,8 @@ internal class HardwareRepositoryImpl(
                     prebuilts = mergeCatalogs(catalog.prebuilts, localDataSource.loadLocalPrebuilts()) { it.name },
                     laptops = mergeCatalogs(catalog.laptops, localDataSource.loadLocalLaptops()) { it.name },
                     peripherals = mergePeripherals(catalog.peripherals, localDataSource.loadLocalPeripherals()),
+                    smartphones = mergeCatalogs(remoteSmartphones, localDataSource.loadLocalSmartphones()) { it.id },
+                    tablets = mergeCatalogs(remoteTablets, localDataSource.loadLocalTablets()) { it.id },
                     pricesTr = allPrices,
                     benchmarks = allBenchmarks,
                     existingImages = existingImages,
