@@ -139,7 +139,7 @@
   },
   {
     "name": "LIAN LI O11 Vision",
-    "price": 4900.0,
+    "price": 9699.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -185,7 +185,7 @@
   },
   {
     "name": "LIAN LI O11 Dynamic Mini",
-    "price": 4199.0,
+    "price": 8499.0,
     "type": "Micro ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -277,7 +277,7 @@
   },
   {
     "name": "LIAN LI Lancool III RGB",
-    "price": null,
+    "price": 10369.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -323,7 +323,7 @@
   },
   {
     "name": "LIAN LI A3-mATX",
-    "price": null,
+    "price": 6949.0,
     "type": "Micro ATX Mini Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -369,7 +369,7 @@
   },
   {
     "name": "NZXT H9 Flow",
-    "price": 10659.0,
+    "price": 13009.68,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -438,7 +438,7 @@
   },
   {
     "name": "NZXT H7 Flow (2024)",
-    "price": 3499.0,
+    "price": 6639.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -484,7 +484,7 @@
   },
   {
     "name": "NZXT H6 Flow",
-    "price": 7978.0,
+    "price": 6570.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -668,7 +668,7 @@
   },
   {
     "name": "CORSAIR 4000D AIRFLOW",
-    "price": 4799.0,
+    "price": 21599.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1105,7 +1105,7 @@
   },
   {
     "name": "MSI MAG Pano M100R PZ",
-    "price": 4699.0,
+    "price": 2697.0,
     "type": "Micro ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1128,7 +1128,7 @@
   },
   {
     "name": "MSI MAG Pano M100R PZ (White)",
-    "price": 3403.0,
+    "price": 3499.0,
     "type": "Micro ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "MSI MAG Forge 100R",
-    "price": 2399.0,
+    "price": 2099.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1174,7 +1174,7 @@
   },
   {
     "name": "MSI MAG Forge 112R",
-    "price": null,
+    "price": 2799.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "CORSAIR 9000D RGB AIRFLOW",
-    "price": 4500.0,
+    "price": 35599.0,
     "type": "ATX Full Tower",
     "color": "Black",
     "psu": null,
@@ -1453,7 +1453,7 @@
   },
   {
     "name": "ASUS ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
-    "price": null,
+    "price": 900.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1475,7 +1475,7 @@
   },
   {
     "name": "ASUS ROG Cronox GR801 ARGB Panaromik",
-    "price": 10227.0,
+    "price": 32499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 360 Panaroma Siyah Ayna Efektli",
-    "price": 3169.0,
+    "price": 4371.75,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1563,7 +1563,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 600 TG",
-    "price": 7632.65,
+    "price": 4609.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1629,7 +1629,7 @@
   },
   {
     "name": "LIAN LI VECTOR V100R Beyaz ATX",
-    "price": 4999.0,
+    "price": 6919.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "MSI MAG PANO 130R PZ",
-    "price": 4399.0,
+    "price": 3899.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1673,7 +1673,7 @@
   },
   {
     "name": "VENTO VG4200S 750W 80+",
-    "price": null,
+    "price": 6499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1695,7 +1695,7 @@
   },
   {
     "name": "GameBooster M6001W 600W SeaView",
-    "price": 2852.0,
+    "price": 2999.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1717,7 +1717,7 @@
   },
   {
     "name": "SilverStone Milo Serisi ML03B HTPC Siyah",
-    "price": null,
+    "price": 15499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1827,7 +1827,7 @@
   },
   {
     "name": "Aerocool CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim",
-    "price": 2750.0,
+    "price": 2023.08,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1849,7 +1849,7 @@
   },
   {
     "name": "SilverStone GD09B-C USB 3.0 Type-C, Kompakt ATX HTPC",
-    "price": 2545.0,
+    "price": 2071.01,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1893,7 +1893,7 @@
   },
   {
     "name": "RJK ATREUS BT4 Black",
-    "price": null,
+    "price": 3588.36,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1937,7 +1937,7 @@
   },
   {
     "name": "HYTE Revolt 3 Black USB 3.2 Premium ITX Small Form Factor",
-    "price": 5057.0,
+    "price": 5599.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1959,7 +1959,7 @@
   },
   {
     "name": "ANTEC CX700 ARGB WHITE",
-    "price": 5299.0,
+    "price": 5499.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -2025,7 +2025,7 @@
   },
   {
     "name": "MSI MAG FORGE 340R AIRFLOW",
-    "price": 3199.0,
+    "price": 2949.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2047,7 +2047,7 @@
   },
   {
     "name": "MSI MAG FORGE M120R AIRFLOW",
-    "price": 2899.0,
+    "price": 2637.71,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2091,7 +2091,7 @@
   },
   {
     "name": "Vento VG4202FL Rainbow",
-    "price": 4800.0,
+    "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2113,7 +2113,7 @@
   },
   {
     "name": "ASUS A31 PLUS TG ARGB",
-    "price": 6757.0,
+    "price": 6780.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2135,7 +2135,7 @@
   },
   {
     "name": "MSI MPG GUNGNIR 300R AIRFLOW",
-    "price": 8076.0,
+    "price": 4399.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2157,7 +2157,7 @@
   },
   {
     "name": "FRISBY FC-8960G 400W",
-    "price": 3176.0,
+    "price": 3699.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2179,7 +2179,7 @@
   },
   {
     "name": "RAMPAGE ARC-X120mm",
-    "price": 2280.0,
+    "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB",
-    "price": 4500.0,
+    "price": 4260.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -2223,7 +2223,7 @@
   },
   {
     "name": "MSI MAG FORGE 100R",
-    "price": 2399.0,
+    "price": 2099.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2245,7 +2245,7 @@
   },
   {
     "name": "ASUS ProArt PA602 Walnut Wood Metal Siyah E-ATX Bilgisayar",
-    "price": 5999.0,
+    "price": 1645.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2311,7 +2311,7 @@
   },
   {
     "name": "Lian Li Lancool 207",
-    "price": null,
+    "price": 5669.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Temperli Cam",
@@ -2864,7 +2864,7 @@
   },
   {
     "name": "ASUS Prime AP201",
-    "price": null,
+    "price": 6107.88,
     "type": "MicroATX Mini Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2886,7 +2886,7 @@
   },
   {
     "name": "ASUS Prime AP201 (White)",
-    "price": null,
+    "price": 4999.0,
     "type": "MicroATX Mini Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -2952,7 +2952,7 @@
   },
   {
     "name": "COOLER MASTER MasterBox TD500 Mesh V2",
-    "price": 7638.0,
+    "price": 7709.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2996,7 +2996,7 @@
   },
   {
     "name": "NZXT H9 Flow (2024 Dual Chamber)",
-    "price": 6499.0,
+    "price": null,
     "type": "Dual Chamber ATX Mid Tower",
     "color": "Black",
     "side_panel": "Seamless Tempered Glass",
@@ -3018,7 +3018,7 @@
   },
   {
     "name": "Fractal Design Terra",
-    "price": 6899.0,
+    "price": null,
     "type": "Mini ITX SFF Premium",
     "color": "Jade Green / Walnut",
     "side_panel": "Anodized CNC Aluminum Wings",
@@ -3040,7 +3040,7 @@
   },
   {
     "name": "Corsair 3500X ARGB",
-    "price": 3999.0,
+    "price": 3500.0,
     "type": "Panoramic Glass ATX Mid Tower",
     "color": "Black",
     "side_panel": "Seamless Tempered Glass",
@@ -3062,7 +3062,7 @@
   },
   {
     "name": "Hyte Y70 Touch",
-    "price": 13999.0,
+    "price": null,
     "type": "Panoramic Corner 4K Touchscreen ATX",
     "color": "Snow White",
     "side_panel": "3-Piece Panoramic Glass with Integrated 4K Touch Display",
@@ -3084,7 +3084,7 @@
   },
   {
     "name": "be quiet! Shadow Base 800 FX",
-    "price": 7899.0,
+    "price": null,
     "type": "Maximum Airflow E-ATX Full Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -3106,7 +3106,7 @@
   },
   {
     "name": "ASUS ROG Hyperion GR701",
-    "price": 18999.0,
+    "price": null,
     "type": "Ultimate Flagship E-ATX Full Tower",
     "color": "Anodized Black Aluminum",
     "side_panel": "Dual Tool-Free Tempered Glass",
@@ -3128,7 +3128,7 @@
   },
   {
     "name": "Thermaltake Tower 300",
-    "price": 4999.0,
+    "price": 850.0,
     "type": "Octagonal Prism Micro ATX Showcase",
     "color": "Hydrangea Blue",
     "side_panel": "3-Sided Tempered Glass",
@@ -3150,7 +3150,7 @@
   },
   {
     "name": "Antec C8 Curve Wood",
-    "price": 5499.0,
+    "price": null,
     "type": "Seamless Curved Glass E-ATX",
     "color": "Walnut Black",
     "side_panel": "Full Curve Panoramic Glass",
@@ -3172,7 +3172,7 @@
   },
   {
     "name": "Corsair 6500X Dual Chamber",
-    "price": 7999.0,
+    "price": null,
     "type": "Dual Chamber Panoramic ATX",
     "color": "Black",
     "side_panel": "Seamless Tempered Glass",
@@ -3194,7 +3194,7 @@
   },
   {
     "name": "Corsair 2500X Micro ATX Dual Chamber",
-    "price": 5799.0,
+    "price": null,
     "type": "Micro ATX Dual Chamber",
     "color": "White",
     "side_panel": "Dual Tempered Glass",
@@ -3216,7 +3216,7 @@
   },
   {
     "name": "Fractal Design Torrent",
-    "price": 7699.0,
+    "price": null,
     "type": "High Airflow E-ATX Full Tower",
     "color": "Black",
     "side_panel": "Light Tint Tempered Glass",
@@ -3238,7 +3238,7 @@
   },
   {
     "name": "Fractal Design Torrent Compact",
-    "price": 5499.0,
+    "price": null,
     "type": "High Airflow ATX Mid Tower",
     "color": "White",
     "side_panel": "Clear Tempered Glass",
@@ -3260,7 +3260,7 @@
   },
   {
     "name": "Fractal Design Ridge",
-    "price": 4999.0,
+    "price": null,
     "type": "Console SFF Slim Mini ITX",
     "color": "Black / Fabric",
     "side_panel": "Perforated Steel & Kvadrat Kumaş Ön Yüzey",
@@ -3282,7 +3282,7 @@
   },
   {
     "name": "Lian Li DAN Cases A4-H2O",
-    "price": 5299.0,
+    "price": null,
     "type": "Ultra SFF Mini ITX Liquid Ready",
     "color": "Silver Aluminum",
     "side_panel": "Fine Perforated Aluminum",
@@ -3304,7 +3304,7 @@
   },
   {
     "name": "NZXT H7 Flow RGB (2024)",
-    "price": 5299.0,
+    "price": null,
     "type": "High Airflow ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -3326,7 +3326,7 @@
   },
   {
     "name": "ASUS TUF Gaming GT502",
-    "price": 5799.0,
+    "price": 10668.89,
     "type": "Dual Chamber ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass & Dayanıklı Kumaş Taşıma Kolları",
@@ -3348,7 +3348,7 @@
   },
   {
     "name": "Cooler Master NR200P V2",
-    "price": 4299.0,
+    "price": null,
     "type": "Compact Mini ITX SFF",
     "color": "Black",
     "side_panel": "Tempered Glass & Vented Panel (İkisi de Kutu İçinde)",
@@ -3370,7 +3370,7 @@
   },
   {
     "name": "Jonsbo D31 MESH Screen",
-    "price": 4499.0,
+    "price": null,
     "type": "Micro ATX with 8-inch HD LCD Screen",
     "color": "Black",
     "side_panel": "Tempered Glass & 8 inç 1280x800 Entegre Donanım Monitörü",
@@ -3408,7 +3408,8 @@
       "https://lian-li.com/wp-content/uploads/2023/11/O11VC-03.webp"
     ],
     "included_fans": null,
-    "front_panel_usb": null
+    "front_panel_usb": null,
+    "price": null
   },
   {
     "name": "Lian Li A3-mATX Black",
@@ -3428,7 +3429,8 @@
       "https://lian-li.com/wp-content/uploads/2024/05/A3-mATX_03.webp"
     ],
     "included_fans": null,
-    "front_panel_usb": null
+    "front_panel_usb": null,
+    "price": null
   },
   {
     "name": "Montech King 95 Pro White",
@@ -3448,6 +3450,8 @@
       "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
     ],
     "included_fans": null,
-    "front_panel_usb": null
+    "front_panel_usb": null,
+    "price": null,
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "name": "ASUS ROG Crosshair X870E Hero",
-    "price": 40202.0,
+    "price": 40999.0,
     "socket": "AM5",
     "chipset": "X870E",
     "form_factor": "ATX",
@@ -32,7 +32,7 @@
   },
   {
     "name": "ASUS ROG Strix X870E-E Gaming WiFi",
-    "price": 31999.0,
+    "price": 36999.0,
     "socket": "AM5",
     "chipset": "X870E",
     "form_factor": "ATX",
@@ -125,7 +125,7 @@
   },
   {
     "name": "ASUS TUF Gaming X870-Plus WiFi",
-    "price": 19999.0,
+    "price": 22399.0,
     "socket": "AM5",
     "chipset": "X870",
     "form_factor": "ATX",
@@ -218,7 +218,7 @@
   },
   {
     "name": "ASUS Prime B650M-K",
-    "price": 5821.02,
+    "price": 6999.0,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro ATX",
@@ -280,7 +280,7 @@
   },
   {
     "name": "MSI MPG X870E Carbon WiFi",
-    "price": 29049.0,
+    "price": 32499.0,
     "socket": "AM5",
     "chipset": "X870E",
     "form_factor": "ATX",
@@ -468,7 +468,7 @@
   },
   {
     "name": "MSI Pro B650M-P",
-    "price": 6999.0,
+    "price": 5199.0,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro ATX",
@@ -997,7 +997,7 @@
   },
   {
     "name": "ASUS ROG Strix Z890-E Gaming WiFi",
-    "price": 24999.0,
+    "price": 25799.0,
     "socket": "LGA1851",
     "chipset": "Z890",
     "form_factor": "ATX",
@@ -1183,7 +1183,7 @@
   },
   {
     "name": "ASUS Prime H610M-K D4",
-    "price": 2500.07,
+    "price": 4599.0,
     "socket": "LGA1700",
     "chipset": "H610",
     "form_factor": "Micro ATX",
@@ -1276,7 +1276,7 @@
   },
   {
     "name": "MSI MAG Z790 Tomahawk MAX WiFi",
-    "price": 13385.08,
+    "price": 14499.0,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "ATX",
@@ -1338,7 +1338,7 @@
   },
   {
     "name": "MSI B760 Gaming Plus WiFi",
-    "price": 8153.0,
+    "price": 9299.0,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "ATX",
@@ -1369,7 +1369,7 @@
   },
   {
     "name": "MSI Pro B760M-P DDR4",
-    "price": 6163.08,
+    "price": 6799.0,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro ATX",
@@ -1971,7 +1971,7 @@
   },
   {
     "name": "ASUS ROG STRIX X870-A GAMING WIFI",
-    "price": 24999.0,
+    "price": 26999.0,
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
@@ -2203,7 +2203,7 @@
   },
   {
     "name": "ASUS ROG CROSSHAIR X870E EXTREME",
-    "price": 60633.0,
+    "price": 64899.0,
     "socket": "AM5",
     "form_factor": "EATX",
     "max_memory": 256,
@@ -11937,7 +11937,7 @@
   },
   {
     "name": "ASUS Prime A620M-K",
-    "price": 4318.15,
+    "price": 5199.0,
     "socket": "AM5",
     "chipset": "A620M",
     "form_factor": "Micro ATX",
@@ -11968,7 +11968,7 @@
   },
   {
     "name": "ASUS EX-B650M-V7",
-    "price": 7599.0,
+    "price": 7799.0,
     "socket": "AM5",
     "chipset": "B650M",
     "form_factor": "Micro ATX",
@@ -11999,7 +11999,7 @@
   },
   {
     "name": "ASUS Prime B840M-A-CSM",
-    "price": 7479.0,
+    "price": 7999.0,
     "socket": "AM5",
     "chipset": "B840M",
     "form_factor": "Micro ATX",
@@ -12030,7 +12030,7 @@
   },
   {
     "name": "ASUS Prime B860M-A-CSM",
-    "price": 9723.0,
+    "price": 10799.0,
     "socket": "LGA1851",
     "chipset": "B860M",
     "form_factor": "Micro ATX",
@@ -12061,7 +12061,7 @@
   },
   {
     "name": "COLORFUL BATTLE-AX B760M-G Beyaz WIFI DDR5",
-    "price": 5418.8,
+    "price": 8999.0,
     "socket": "LGA1700",
     "chipset": "B760M",
     "form_factor": "Micro ATX",
@@ -12092,7 +12092,7 @@
   },
   {
     "name": "ASUS PRIME B840M-K DDR5",
-    "price": 5299.0,
+    "price": 6699.0,
     "socket": "AM5",
     "chipset": "B840M",
     "form_factor": "Micro ATX",
@@ -12123,7 +12123,7 @@
   },
   {
     "name": "ASUS Prime B650M-R",
-    "price": 5039.0,
+    "price": 6199.0,
     "socket": "AM5",
     "chipset": "B650M",
     "form_factor": "Micro ATX",
@@ -12343,7 +12343,7 @@
   },
   {
     "name": "MSI PRO B860M-E",
-    "price": 7176.0,
+    "price": 7799.0,
     "socket": "LGA1851",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -15679,7 +15679,7 @@
   },
   {
     "name": "MSI H610 MEG ACE",
-    "price": 2702.0,
+    "price": 3999.0,
     "socket": "LGA1700",
     "chipset": "H610",
     "form_factor": "ATX",
@@ -16299,7 +16299,7 @@
   },
   {
     "name": "Biostar X670E Valkyrie",
-    "price": 14999.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "X670E",
     "form_factor": "ATX",
@@ -16330,7 +16330,7 @@
   },
   {
     "name": "Biostar B650E Silver",
-    "price": 8999.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650E",
     "form_factor": "ATX",
@@ -16361,7 +16361,7 @@
   },
   {
     "name": "Biostar Z790 Valkyrie",
-    "price": 15499.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "ATX",
@@ -16392,7 +16392,7 @@
   },
   {
     "name": "Biostar B760A-Silver",
-    "price": 6499.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "ATX",
@@ -16423,7 +16423,7 @@
   },
   {
     "name": "EVGA Z790 DARK K|NGP|N",
-    "price": 28999.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "E-ATX",
@@ -16454,7 +16454,7 @@
   },
   {
     "name": "EVGA Z790 Classified",
-    "price": 21999.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "E-ATX",
@@ -16485,7 +16485,7 @@
   },
   {
     "name": "Colorful CVN X870 GAMING FROZEN",
-    "price": 11499.0,
+    "price": 17999.0,
     "socket": "AM5",
     "chipset": "X870",
     "form_factor": "ATX",
@@ -16516,7 +16516,7 @@
   },
   {
     "name": "Colorful CVN B650M Gaming Frozen V14",
-    "price": 6299.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro ATX",
@@ -16549,7 +16549,7 @@
   },
   {
     "name": "Colorful CVN B760M FROZEN WIFI",
-    "price": 5799.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro-ATX",
@@ -16580,7 +16580,7 @@
   },
   {
     "name": "Colorful iGame Z890 Flow",
-    "price": 13999.0,
+    "price": null,
     "socket": "LGA1851",
     "chipset": "Z890",
     "form_factor": "ATX",
@@ -16613,7 +16613,7 @@
   },
   {
     "name": "Maxsun MS-iCraft Z790 WiFi",
-    "price": 9999.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "ATX",
@@ -16644,7 +16644,7 @@
   },
   {
     "name": "Maxsun Terminator B650M WiFi",
-    "price": 5499.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro-ATX",
@@ -16675,7 +16675,7 @@
   },
   {
     "name": "Maxsun iCraft Z890 Vertex",
-    "price": 14999.0,
+    "price": null,
     "socket": "LGA1851",
     "chipset": "Z890",
     "form_factor": "ATX",
@@ -16706,7 +16706,7 @@
   },
   {
     "name": "Soyo Monarch B650M WiFi",
-    "price": 4999.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro-ATX",
@@ -16737,7 +16737,7 @@
   },
   {
     "name": "Soyo Classic B760M",
-    "price": 4399.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro-ATX",
@@ -16768,7 +16768,7 @@
   },
   {
     "name": "Onda B650PLUS-W",
-    "price": 4799.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro-ATX",
@@ -16799,7 +16799,7 @@
   },
   {
     "name": "Onda B760PLUS-W",
-    "price": 4499.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro-ATX",
@@ -16830,7 +16830,7 @@
   },
   {
     "name": "Yeston Sakura B650M",
-    "price": 6999.0,
+    "price": null,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro-ATX",
@@ -16861,7 +16861,7 @@
   },
   {
     "name": "Yeston Sakura B760M",
-    "price": 6499.0,
+    "price": null,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro-ATX",
@@ -17196,7 +17196,7 @@
   },
   {
     "name": "MSI B550M PRO-VDH WIFI",
-    "price": 4899.0,
+    "price": 6199.0,
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -17283,7 +17283,7 @@
   },
   {
     "name": "MSI MPG B550 GAMING PLUS",
-    "price": 7699.0,
+    "price": 8199.0,
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
@@ -17341,7 +17341,7 @@
   },
   {
     "name": "MSI B550-A PRO",
-    "price": 7799.0,
+    "price": 7999.0,
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
@@ -19881,7 +19881,7 @@
   },
   {
     "name": "ASUS PRIME A520M-E CSM",
-    "price": 3209.08,
+    "price": 4299.0,
     "socket": "AM4",
     "chipset": "A520M",
     "form_factor": "Micro ATX",

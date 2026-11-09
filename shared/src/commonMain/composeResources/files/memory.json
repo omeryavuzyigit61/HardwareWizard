@@ -1,7 +1,7 @@
 [
   {
     "name": "CORSAIR Vengeance 32GB (2x16GB) DDR5-6000 CL30",
-    "price": 5700.0,
+    "price": 26642.0,
     "speed": [
       5,
       6000
@@ -262,7 +262,7 @@
   },
   {
     "name": "G.SKILL Flare X5 32GB (2x16GB) DDR5-6000 CL30 AMD EXPO",
-    "price": 5400.0,
+    "price": 6861.0,
     "speed": [
       5,
       6000
@@ -610,7 +610,7 @@
   },
   {
     "name": "CORSAIR Vengeance 64GB (2x32GB) DDR5-6000 CL30",
-    "price": 13609.0,
+    "price": 68620.0,
     "speed": [
       5,
       6000
@@ -697,7 +697,7 @@
   },
   {
     "name": "CORSAIR Vengeance LPX 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 2466.0,
+    "price": 2710.0,
     "speed": [
       4,
       3200
@@ -726,7 +726,7 @@
   },
   {
     "name": "CORSAIR Vengeance LPX 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 4999.0,
+    "price": 14922.0,
     "speed": [
       4,
       3200
@@ -784,7 +784,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB PRO 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 19200.0,
+    "price": 2710.0,
     "speed": [
       4,
       3200
@@ -842,7 +842,7 @@
   },
   {
     "name": "G.SKILL Ripjaws V 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 9108.0,
+    "price": 7589.0,
     "speed": [
       4,
       3200
@@ -900,7 +900,7 @@
   },
   {
     "name": "G.SKILL Ripjaws V 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 14698.04,
+    "price": 17499.0,
     "speed": [
       4,
       3200
@@ -958,7 +958,7 @@
   },
   {
     "name": "KINGSTON Fury Beast 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 6899.0,
+    "price": 7541.0,
     "speed": [
       4,
       3200
@@ -1016,7 +1016,7 @@
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (2x8GB) DDR4-3600 CL17",
-    "price": 7404.0,
+    "price": 15180.0,
     "speed": [
       4,
       3600
@@ -1045,7 +1045,7 @@
   },
   {
     "name": "Team T-Force Vulcan Z 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 1942.0,
+    "price": 5400.0,
     "speed": [
       4,
       3200
@@ -1074,7 +1074,7 @@
   },
   {
     "name": "Team T-Force Vulcan Z 32GB (2x16GB) DDR4-3600 CL18",
-    "price": 3736.0,
+    "price": 12960.0,
     "speed": [
       4,
       3600
@@ -1190,7 +1190,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "price": 23400.0,
+    "price": 31878.0,
     "speed": [
       5,
       6000
@@ -1364,7 +1364,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "price": 12000.0,
+    "price": 40378.0,
     "speed": [
       5,
       6000
@@ -4032,7 +4032,7 @@
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 48GB (2x24GB) DDR5-6000 CL30",
-    "price": 41640.0,
+    "price": 49999.0,
     "speed": [
       5,
       6000
@@ -4061,7 +4061,7 @@
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 64GB (2x32GB) DDR5-6000 CL30",
-    "price": 14940.0,
+    "price": 53599.0,
     "speed": [
       5,
       6000
@@ -11224,7 +11224,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 2874.0,
+    "price": 14572.0,
     "speed": [
       5,
       5600
@@ -13544,7 +13544,7 @@
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 3000.0,
+    "price": 15787.0,
     "speed": [
       5,
       5600
@@ -14849,7 +14849,7 @@
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 2700.0,
+    "price": 15499.0,
     "speed": [
       5,
       5600
@@ -15893,7 +15893,7 @@
   },
   {
     "name": "LEXAR Ares RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 7500.0,
+    "price": 16499.0,
     "speed": [
       5,
       5600
@@ -16502,7 +16502,7 @@
   },
   {
     "name": "LEXAR Thor OC 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 16200.0,
+    "price": 16394.0,
     "speed": [
       5,
       5600
@@ -17024,7 +17024,7 @@
   },
   {
     "name": "Patriot Viper Venom RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 15271.08,
+    "price": 17499.0,
     "speed": [
       5,
       5600
@@ -18010,7 +18010,7 @@
   },
   {
     "name": "CRUCIAL Pro Overclocking 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 2426.0,
+    "price": 14722.09,
     "speed": [
       5,
       5600
@@ -18155,7 +18155,7 @@
   },
   {
     "name": "CRUCIAL Pro Overclocking 64GB (2x32GB) DDR4-3600 CL18",
-    "price": null,
+    "price": 29935.0,
     "speed": [
       4,
       3600
@@ -19054,7 +19054,7 @@
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 16529.0,
+    "price": 15699.0,
     "speed": [
       5,
       5600

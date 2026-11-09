@@ -300,7 +300,7 @@
   },
   {
     "name": "SAMSUNG 990 PRO 1TB",
-    "price": 12300.0,
+    "price": 15499.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -323,7 +323,7 @@
   },
   {
     "name": "SAMSUNG 990 PRO 2TB",
-    "price": 18000.0,
+    "price": 30499.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -553,7 +553,7 @@
   },
   {
     "name": "KINGSTON KC3000 2TB",
-    "price": 20899.0,
+    "price": 25199.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -622,7 +622,7 @@
   },
   {
     "name": "KINGSTON Fury Renegade 2TB",
-    "price": 25999.0,
+    "price": 31399.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -645,7 +645,7 @@
   },
   {
     "name": "KINGSTON NV3 1TB",
-    "price": 8599.0,
+    "price": 8999.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1180,7 +1180,7 @@
   },
   {
     "name": "CORSAIR MP700 PRO 1TB",
-    "price": 3933.0,
+    "price": 10299.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1420,7 +1420,7 @@
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
-    "price": 3180.0,
+    "price": 11999.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1444,7 +1444,7 @@
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
-    "price": 9638.0,
+    "price": 30499.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2068,7 +2068,7 @@
   },
   {
     "name": "WD Blue SN5000 1TB",
-    "price": 3294.0,
+    "price": 8799.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2484,7 +2484,7 @@
   },
   {
     "name": "Samsung 990 PRO with Heatsink 4TB",
-    "price": 16999.0,
+    "price": null,
     "capacity": "4000 GB",
     "type": "M.2-2280 NVMe SSD",
     "cache": "4096 MB LPDDR4",
@@ -2559,7 +2559,8 @@
     "seq_read": 7400,
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
-    "endurance_tbw": 750
+    "endurance_tbw": 750,
+    "price": null
   },
   {
     "name": "Lexar NM790 2TB M.2 NVMe SSD",
@@ -2582,7 +2583,8 @@
     "seq_read": 7400,
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
-    "endurance_tbw": 1500
+    "endurance_tbw": 1500,
+    "price": null
   },
   {
     "name": "Lexar NM790 4TB M.2 NVMe SSD",
@@ -2605,7 +2607,8 @@
     "seq_read": 7400,
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
-    "endurance_tbw": 3000
+    "endurance_tbw": 3000,
+    "price": null
   },
   {
     "name": "Crucial T705 2TB PCIe 5.0 M.2 NVMe SSD",
@@ -2628,7 +2631,8 @@
     "seq_read": 12400,
     "seq_write": 11800,
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
-    "endurance_tbw": 1200
+    "endurance_tbw": 1200,
+    "price": null
   },
   {
     "name": "Crucial T500 2TB M.2 NVMe SSD",
@@ -2651,7 +2655,8 @@
     "seq_read": null,
     "seq_write": null,
     "random_iops": null,
-    "endurance_tbw": null
+    "endurance_tbw": null,
+    "price": null
   },
   {
     "name": "Western Digital WD_BLACK SN850X 4TB M.2 NVMe SSD",
@@ -2674,7 +2679,8 @@
     "seq_read": 7300,
     "seq_write": 6600,
     "random_iops": "1200K / 1100K IOPS",
-    "endurance_tbw": 2400
+    "endurance_tbw": 2400,
+    "price": null
   },
   {
     "name": "TeamGroup MP44 2TB M.2 NVMe SSD",
@@ -2697,6 +2703,7 @@
     "seq_read": null,
     "seq_write": null,
     "random_iops": null,
-    "endurance_tbw": null
+    "endurance_tbw": null,
+    "price": null
   }
 ]

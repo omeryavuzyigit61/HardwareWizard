@@ -133,7 +133,7 @@
   },
   {
     "name": "ASUS Dual GeForce RTX 3060 V2 OC",
-    "price": null,
+    "price": 3060.0,
     "chipset": "GeForce RTX 3060",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -661,7 +661,7 @@
   },
   {
     "name": "MSI RTX 4090 VENTUS 3X 24G OC",
-    "price": 130322.0,
+    "price": 131886.0,
     "chipset": "GeForce RTX 4090",
     "memory": 24,
     "memory_type": "GDDR6X",
@@ -925,7 +925,7 @@
   },
   {
     "name": "MSI GeForce RTX 5090 Suprim X",
-    "price": 197419.0,
+    "price": 199788.0,
     "chipset": "GeForce RTX 5090",
     "memory": 32,
     "memory_type": "GDDR7",
@@ -958,7 +958,7 @@
   },
   {
     "name": "MSI GeForce RTX 5090 Gaming X Trio",
-    "price": 196451.0,
+    "price": 204032.0,
     "chipset": "GeForce RTX 5090",
     "memory": 32,
     "memory_type": "GDDR7",
@@ -1849,7 +1849,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5080 ProArt OC",
-    "price": 112541.0,
+    "price": 137998.0,
     "chipset": "GeForce RTX 5080",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -2080,7 +2080,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5080 AORUS Master",
-    "price": 89613.0,
+    "price": 151799.0,
     "chipset": "GeForce RTX 5080",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -2740,7 +2740,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5070 Ti ROG Strix OC",
-    "price": 89940.0,
+    "price": 5070.0,
     "chipset": "GeForce RTX 5070 Ti",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -3070,7 +3070,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5070 Ti AORUS Master",
-    "price": 57000.0,
+    "price": 57684.0,
     "chipset": "GeForce RTX 5070 Ti",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -3730,7 +3730,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5070 ROG Strix OC",
-    "price": 59550.0,
+    "price": 60264.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -3796,7 +3796,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5070 Dual OC",
-    "price": 48367.0,
+    "price": 48948.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -4060,7 +4060,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5070 AORUS Master",
-    "price": 45000.0,
+    "price": 75900.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -8680,7 +8680,7 @@
   },
   {
     "name": "ASUS GeForce RTX 4070 Ti ROG Strix OC",
-    "price": null,
+    "price": 114537.41,
     "chipset": "GeForce RTX 4070 Ti",
     "memory": 12,
     "memory_type": "GDDR6X",
@@ -30823,7 +30823,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 3050 AORUS Master",
-    "price": null,
+    "price": 27324.0,
     "chipset": "GeForce RTX 3050",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -36301,7 +36301,7 @@
   },
   {
     "name": "GIGABYTE Radeon RX 6600 AORUS Master",
-    "price": 13800.0,
+    "price": 13965.0,
     "chipset": "Radeon RX 6600",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -36994,7 +36994,7 @@
   },
   {
     "name": "ASUS PRIME GeForce RTX 5080 OC 16GB",
-    "price": 78203.0,
+    "price": 5080.0,
     "chipset": "GeForce RTX 5080",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -55012,7 +55012,7 @@
   },
   {
     "name": "GIGABYTE Radeon RX 9070 XT Gaming OC 16GB",
-    "price": null,
+    "price": 9070.0,
     "chipset": "Radeon RX 9070 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -55045,7 +55045,7 @@
   },
   {
     "name": "ASRock Taichi Radeon RX 9070 XT OC 16GB",
-    "price": null,
+    "price": 69999.0,
     "chipset": "Radeon RX 9070 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -55177,7 +55177,7 @@
   },
   {
     "name": "AMD Radeon RX 9060 XT 12GB",
-    "price": null,
+    "price": 37744.07,
     "chipset": "Radeon RX 9060 XT",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -55735,7 +55735,8 @@
     "bus_width": 384,
     "bandwidth_gbs": 1008.0,
     "power_connectors": "1x 16-Pin 12VHPWR (600W)",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4080 SUPER Vulcan W OC 16GB",
@@ -55769,7 +55770,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 736.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4080 SUPER Neptune OC 16GB",
@@ -55803,7 +55805,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 736.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4070 Ti SUPER Vulcan W OC 16GB",
@@ -55837,7 +55840,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 672.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4070 Ti SUPER Ultra W OC 16GB",
@@ -55871,7 +55875,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 672.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4070 SUPER Ultra W OC 12GB",
@@ -55905,7 +55910,8 @@
     "bus_width": 192,
     "bandwidth_gbs": 504.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 16GB",
@@ -55939,7 +55945,8 @@
     "bus_width": 128,
     "bandwidth_gbs": 288.0,
     "power_connectors": "1x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 8GB",
@@ -55973,7 +55980,8 @@
     "bus_width": 128,
     "bandwidth_gbs": 288.0,
     "power_connectors": "1x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB",
@@ -56007,7 +56015,8 @@
     "bus_width": 128,
     "bandwidth_gbs": 272.0,
     "power_connectors": "1x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Colorful GeForce RTX 4060 Battle-Ax DUO 8GB",
@@ -56041,7 +56050,8 @@
     "bus_width": 128,
     "bandwidth_gbs": 272.0,
     "power_connectors": "1x 8-Pin PCIe",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "AMD Radeon RX 9070 GRE 16GB",
@@ -56064,7 +56074,8 @@
       "https://m.media-amazon.com/images/I/71F7X2-k2oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71q-w4e71lL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71o0X8q4-wL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": 60720.0
   },
   {
     "name": "Sapphire Pulse Radeon RX 9070 GRE 16GB",
@@ -56087,7 +56098,8 @@
       "https://m.media-amazon.com/images/I/71Q3Z1m9c8L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71v1G-v61uL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71n5B-h32kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "Sapphire Nitro+ Radeon RX 9070 GRE 16GB",
@@ -56110,7 +56122,8 @@
       "https://m.media-amazon.com/images/I/81k3y2W-9oL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81n2X-b51eL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81m6C-v43rL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "PowerColor Hellhound Radeon RX 9070 GRE 16GB",
@@ -56133,7 +56146,8 @@
       "https://m.media-amazon.com/images/I/71p3e2R-4kL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71b2V-c61aL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m4N-z72lL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "XFX Speedster QICK 319 Radeon RX 9070 GRE 16GB",
@@ -56156,7 +56170,8 @@
       "https://m.media-amazon.com/images/I/81k4Y-c32qL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81o2V-b51nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81q6M-v83kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "ASUS Dual Radeon RX 9070 GRE OC 16GB",
@@ -56179,7 +56194,8 @@
       "https://m.media-amazon.com/images/I/71W1V-c54qL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71n2C-v71mL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m5B-x82yL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "PowerColor Fighter Radeon RX 7650 GRE 16GB",
@@ -56202,7 +56218,8 @@
       "https://m.media-amazon.com/images/I/71p4e-v21mL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71m2V-c43kL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71n5B-h62aL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "Gainward GeForce RTX 4080 SUPER Phantom GS 16GB",
@@ -56236,7 +56253,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 736.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Gainward GeForce RTX 4070 SUPER Panther 12GB",
@@ -56270,7 +56288,8 @@
     "bus_width": 192,
     "bandwidth_gbs": 504.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "PNY GeForce RTX 4080 SUPER XLR8 Gaming VERTO EPIC-X RGB 16GB",
@@ -56304,7 +56323,8 @@
     "bus_width": 256,
     "bandwidth_gbs": 736.0,
     "power_connectors": "1x 16-Pin 12VHPWR",
-    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null
   },
   {
     "name": "Intel Arc B570 10GB GDDR6",
@@ -56327,7 +56347,8 @@
       "https://m.media-amazon.com/images/I/71a2N-q41eL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71b3V-c51rL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71c5B-v62kL._AC_SL1500_.jpg"
-    ]
+    ],
+    "price": null
   },
   {
     "name": "Sparkle Intel Arc B580 TITAN OC 12GB",
@@ -56361,6 +56382,7 @@
     "bus_width": 192,
     "bandwidth_gbs": 456.0,
     "power_connectors": "2x 8-Pin / 1x 8-Pin",
-    "display_outputs": "3x DisplayPort 2.1 (UHBR13.5), 1x HDMI 2.1"
+    "display_outputs": "3x DisplayPort 2.1 (UHBR13.5), 1x HDMI 2.1",
+    "price": 27299.09
   }
 ]

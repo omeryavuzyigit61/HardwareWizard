@@ -379,7 +379,7 @@
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB",
-    "price": 3265.57,
+    "price": 3399.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -405,7 +405,7 @@
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB White",
-    "price": 2999.0,
+    "price": 4554.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
@@ -984,7 +984,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid M360",
-    "price": 5399.0,
+    "price": 5899.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -1010,7 +1010,7 @@
   },
   {
     "name": "ASUS ROG Ryujin III 360 ARGB",
-    "price": 14999.0,
+    "price": 19599.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -1999,7 +1999,7 @@
   },
   {
     "name": "ASUS Prime LC 240 ARGB",
-    "price": 2399.0,
+    "price": 3299.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -2026,7 +2026,7 @@
   },
   {
     "name": "Endorfy Fera 5 ARGB 120mm",
-    "price": 799.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2053,7 +2053,7 @@
   },
   {
     "name": "GIGABYTE Eagle 360I ARGB",
-    "price": 2499.0,
+    "price": 4499.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2080,7 +2080,7 @@
   },
   {
     "name": "SEGOTEP K6 SE Siyah 120mm",
-    "price": 479.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2134,7 +2134,7 @@
   },
   {
     "name": "BITFENIX S7 Digital Beyaz ARGB 360mm",
-    "price": 2799.0,
+    "price": 2999.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2215,7 +2215,7 @@
   },
   {
     "name": "FSP NP5 Siyah 12cm ARGB",
-    "price": 1354.59,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2242,7 +2242,7 @@
   },
   {
     "name": "RAMPAGE FROSTY RM-C200 Beyaz 120mm ARGB Kule Tipi",
-    "price": 1126.44,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -2269,7 +2269,7 @@
   },
   {
     "name": "ANTEC Skeleton 360 ARGB",
-    "price": 4499.0,
+    "price": 6679.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2296,7 +2296,7 @@
   },
   {
     "name": "COUGAR POSEIDON ELITE ARGB 360",
-    "price": 6600.0,
+    "price": 6679.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2323,7 +2323,7 @@
   },
   {
     "name": "ASUS PRIME LC 360 ARGB",
-    "price": 4999.0,
+    "price": 5549.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2404,7 +2404,7 @@
   },
   {
     "name": "FSP MP7 WA 2x120mm ARGB",
-    "price": 899.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "White",
@@ -2566,7 +2566,7 @@
   },
   {
     "name": "MSI GG CORE FROZR L 120 MM",
-    "price": 1699.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2620,7 +2620,7 @@
   },
   {
     "name": "Ocypus Beta A10 124 mm",
-    "price": 540.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2647,7 +2647,7 @@
   },
   {
     "name": "INTEL M-115-52 Copper 90 mm",
-    "price": 458.0,
+    "price": null,
     "type": "Air",
     "size": 120,
     "color": "Black",
@@ -2674,7 +2674,7 @@
   },
   {
     "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm AIO 2.4\" IPS",
-    "price": 1999.0,
+    "price": 2799.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -2755,7 +2755,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid E360",
-    "price": 7062.0,
+    "price": 7260.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -3430,7 +3430,7 @@
   },
   {
     "name": "Thermalright Peerless Assassin 120 SE ARGB (White)",
-    "price": 1699.0,
+    "price": null,
     "size": null,
     "type": "Air",
     "color": "White",
@@ -3456,7 +3456,7 @@
   },
   {
     "name": "Thermalright Frozen Prism 360 Black ARGB",
-    "price": 2799.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3482,7 +3482,7 @@
   },
   {
     "name": "Lian Li HydroShift LCD 360TL",
-    "price": 10499.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3508,7 +3508,7 @@
   },
   {
     "name": "DeepCool Mystique 360",
-    "price": 6799.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3534,7 +3534,7 @@
   },
   {
     "name": "DeepCool LT720 360mm",
-    "price": 4299.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3560,7 +3560,7 @@
   },
   {
     "name": "be quiet! Dark Rock Elite",
-    "price": 4299.0,
+    "price": null,
     "size": null,
     "type": "Air",
     "color": "Black",
@@ -3586,7 +3586,7 @@
   },
   {
     "name": "Cooler Master MasterLiquid 360 Atmos",
-    "price": 6299.0,
+    "price": 6899.0,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3612,7 +3612,7 @@
   },
   {
     "name": "Thermalright Frozen Warframe 360 Black",
-    "price": 3899.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3638,7 +3638,7 @@
   },
   {
     "name": "Thermalright AXP90-X47 Full Copper",
-    "price": 1899.0,
+    "price": null,
     "size": null,
     "type": "Air",
     "color": "Pure Raw Copper",
@@ -3664,7 +3664,7 @@
   },
   {
     "name": "Arctic Liquid Freezer III 360 A-RGB (White)",
-    "price": 4299.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "White",
@@ -3690,7 +3690,7 @@
   },
   {
     "name": "Arctic Freezer 36 A-RGB Black",
-    "price": 1499.0,
+    "price": null,
     "size": null,
     "type": "Air",
     "color": "Black",
@@ -3716,7 +3716,7 @@
   },
   {
     "name": "Corsair A115 Dual Tower Air Cooler",
-    "price": 4399.0,
+    "price": null,
     "size": null,
     "type": "Air",
     "color": "Black",
@@ -3742,7 +3742,7 @@
   },
   {
     "name": "Lian Li Galahad II LCD 360 (White)",
-    "price": 10999.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "White",
@@ -3768,7 +3768,7 @@
   },
   {
     "name": "DeepCool LS720 SE Digital",
-    "price": 4899.0,
+    "price": null,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3794,7 +3794,7 @@
   },
   {
     "name": "ASUS ProArt LC 420",
-    "price": 11999.0,
+    "price": 14999.0,
     "size": 420,
     "type": "Liquid",
     "color": "Minimalist Black",
@@ -3820,7 +3820,7 @@
   },
   {
     "name": "ID-Cooling FrostFlow X 240",
-    "price": 1999.0,
+    "price": null,
     "size": 240,
     "type": "Liquid",
     "color": "Black",
