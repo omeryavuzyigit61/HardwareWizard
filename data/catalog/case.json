@@ -323,7 +323,7 @@
   },
   {
     "name": "LIAN LI A3-mATX",
-    "price": 6949.0,
+    "price": null,
     "type": "Micro ATX Mini Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -668,7 +668,7 @@
   },
   {
     "name": "CORSAIR 4000D AIRFLOW",
-    "price": 21599.0,
+    "price": 17999.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 360 Panaroma Siyah Ayna Efektli",
-    "price": 4371.75,
+    "price": 4380.45,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1563,7 +1563,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 600 TG",
-    "price": 4609.0,
+    "price": 4649.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1717,7 +1717,7 @@
   },
   {
     "name": "SilverStone Milo Serisi ML03B HTPC Siyah",
-    "price": 15499.0,
+    "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1827,7 +1827,7 @@
   },
   {
     "name": "Aerocool CS-101 250W USB 3.0 Micro ATX/Mini ITX Slim",
-    "price": 2023.08,
+    "price": 1601.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "ANTEC CX500M ARGB BLACK",
-    "price": 5100.0,
+    "price": 5752.8,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2003,7 +2003,7 @@
   },
   {
     "name": "ANTEC C8 WOOD",
-    "price": 10200.0,
+    "price": 8759.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2069,7 +2069,7 @@
   },
   {
     "name": "GIGABYTE C201 PANORAMIC",
-    "price": 3920.0,
+    "price": 5079.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -3326,7 +3326,7 @@
   },
   {
     "name": "ASUS TUF Gaming GT502",
-    "price": 10668.89,
+    "price": 10691.39,
     "type": "Dual Chamber ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass & Dayanıklı Kumaş Taşıma Kolları",

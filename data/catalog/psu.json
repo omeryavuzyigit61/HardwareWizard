@@ -1,7 +1,7 @@
 [
   {
     "name": "1st Player ACK 80 Plus 750W",
-    "price": 5495.9,
+    "price": 6854.14,
     "type": "ATX",
     "efficiency": "80 plus",
     "wattage": 750,
@@ -85,7 +85,7 @@
   },
   {
     "name": "1st Player ACK Gold 750W",
-    "price": 4899.0,
+    "price": 5768.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -197,7 +197,7 @@
   },
   {
     "name": "ASUS Prime Bronze 750W",
-    "price": 5420.97,
+    "price": 5829.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -225,7 +225,7 @@
   },
   {
     "name": "ASUS Prime Gold 750W",
-    "price": 8509.0,
+    "price": 7590.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -309,7 +309,7 @@
   },
   {
     "name": "ASUS Tuf Gold 750W",
-    "price": 7399.0,
+    "price": 7799.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -785,7 +785,7 @@
   },
   {
     "name": "COUGAR GES ATX 3.1 750W",
-    "price": 7200.0,
+    "price": 7286.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -1485,7 +1485,7 @@
   },
   {
     "name": "LIAN LI SP Gold V2 750W",
-    "price": 21893.01,
+    "price": null,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -2577,7 +2577,7 @@
   },
   {
     "name": "Gametech GTP G Yarı Modüler 750W",
-    "price": 1620.15,
+    "price": 7051.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -3361,7 +3361,7 @@
   },
   {
     "name": "MSI MAG A550BN 750W",
-    "price": 4999.0,
+    "price": 4427.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -3389,7 +3389,7 @@
   },
   {
     "name": "MSI MAG A650BN 750W",
-    "price": 3699.0,
+    "price": 3599.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -4872,7 +4872,7 @@
   },
   {
     "name": "Adata XPG Pylon II 750W",
-    "price": 2898.0,
+    "price": 6429.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -4928,7 +4928,7 @@
   },
   {
     "name": "CORSAIR RM1000e (2023) ATX 3.0 1000W",
-    "price": 11699.0,
+    "price": 11164.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -4956,7 +4956,7 @@
   },
   {
     "name": "CORSAIR RM850e (2023) ATX 3.0 850W",
-    "price": 8400.0,
+    "price": 8500.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -4984,7 +4984,7 @@
   },
   {
     "name": "CORSAIR RM750e (2023) ATX 3.0 750W",
-    "price": 7200.0,
+    "price": 7286.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -5040,7 +5040,7 @@
   },
   {
     "name": "CORSAIR RM1000x Shift ATX 3.0 1000W",
-    "price": 11018.06,
+    "price": 11299.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5095,7 +5095,7 @@
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
-    "price": 6821.26,
+    "price": 7113.57,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5151,7 +5151,7 @@
   },
   {
     "name": "MSI MAG A650BN 650W",
-    "price": 3047.59,
+    "price": 6746.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 650,
@@ -5263,7 +5263,7 @@
   },
   {
     "name": "ASUS TUF Gaming 850G 850W",
-    "price": 7807.02,
+    "price": 9299.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5319,7 +5319,7 @@
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
-    "price": 27299.0,
+    "price": 19260.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 1000,
@@ -5373,7 +5373,7 @@
   },
   {
     "name": "ASUS ROG Thor 1600W Titanium",
-    "price": 50337.0,
+    "price": 51905.0,
     "type": "ATX",
     "efficiency": "titanium",
     "wattage": 1600,
@@ -5400,7 +5400,7 @@
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
-    "price": 49999.0,
+    "price": 48641.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 3000,
@@ -5508,7 +5508,7 @@
   },
   {
     "name": "DEEPCOOL PN850M ATX 3.1 850W",
-    "price": 6871.0,
+    "price": 6953.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5905,7 +5905,8 @@
       "https://lian-li.com/wp-content/uploads/2022/07/SP850_02.webp",
       "https://lian-li.com/wp-content/uploads/2022/07/SP850_03.webp"
     ],
-    "price": null
+    "price": 12799.0,
+    "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110001536899026.jpg"
   },
   {
     "name": "Seasonic Vertex GX-1200 ATX 3.0",
@@ -6138,7 +6139,8 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
     ],
-    "price": 1200.0
+    "price": 1200.0,
+    "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110000756280457.jpg"
   },
   {
     "name": "Corsair SF750 Platinum",

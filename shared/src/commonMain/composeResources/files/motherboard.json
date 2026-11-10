@@ -32,7 +32,7 @@
   },
   {
     "name": "ASUS ROG Strix X870E-E Gaming WiFi",
-    "price": 36999.0,
+    "price": 35449.0,
     "socket": "AM5",
     "chipset": "X870E",
     "form_factor": "ATX",
@@ -218,7 +218,7 @@
   },
   {
     "name": "ASUS Prime B650M-K",
-    "price": 6999.0,
+    "price": 6174.27,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "Micro ATX",
@@ -280,7 +280,7 @@
   },
   {
     "name": "MSI MPG X870E Carbon WiFi",
-    "price": 32499.0,
+    "price": 28299.0,
     "socket": "AM5",
     "chipset": "X870E",
     "form_factor": "ATX",
@@ -561,7 +561,7 @@
   },
   {
     "name": "GIGABYTE B650 Aorus Elite AX",
-    "price": 11548.0,
+    "price": 10076.22,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "ATX",
@@ -654,7 +654,7 @@
   },
   {
     "name": "GIGABYTE B650 Eagle AX",
-    "price": 9015.08,
+    "price": 8280.09,
     "socket": "AM5",
     "chipset": "B650",
     "form_factor": "ATX",
@@ -716,7 +716,7 @@
   },
   {
     "name": "GIGABYTE A620M DS3H",
-    "price": 7331.0,
+    "price": 12033.34,
     "socket": "AM5",
     "chipset": "A620",
     "form_factor": "Micro ATX",
@@ -1183,7 +1183,7 @@
   },
   {
     "name": "ASUS Prime H610M-K D4",
-    "price": 4599.0,
+    "price": 2699.0,
     "socket": "LGA1700",
     "chipset": "H610",
     "form_factor": "Micro ATX",
@@ -1276,7 +1276,7 @@
   },
   {
     "name": "MSI MAG Z790 Tomahawk MAX WiFi",
-    "price": 14499.0,
+    "price": 13234.56,
     "socket": "LGA1700",
     "chipset": "Z790",
     "form_factor": "ATX",
@@ -1338,7 +1338,7 @@
   },
   {
     "name": "MSI B760 Gaming Plus WiFi",
-    "price": 9299.0,
+    "price": 6199.0,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "ATX",
@@ -1369,7 +1369,7 @@
   },
   {
     "name": "MSI Pro B760M-P DDR4",
-    "price": 6799.0,
+    "price": 6377.59,
     "socket": "LGA1700",
     "chipset": "B760",
     "form_factor": "Micro ATX",
@@ -1768,7 +1768,7 @@
   },
   {
     "name": "ASUS B650E MAX GAMING WIFI W",
-    "price": 12961.0,
+    "price": 11729.0,
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
@@ -1971,7 +1971,7 @@
   },
   {
     "name": "ASUS ROG STRIX X870-A GAMING WIFI",
-    "price": 26999.0,
+    "price": 24670.8,
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
@@ -3257,7 +3257,7 @@
   },
   {
     "name": "GIGABYTE X870 Gaming X AX",
-    "price": 11399.0,
+    "price": 14499.0,
     "socket": "AM5",
     "chipset": "X870",
     "form_factor": "ATX",
@@ -11937,7 +11937,7 @@
   },
   {
     "name": "ASUS Prime A620M-K",
-    "price": 5199.0,
+    "price": 4779.5,
     "socket": "AM5",
     "chipset": "A620M",
     "form_factor": "Micro ATX",
@@ -12061,7 +12061,7 @@
   },
   {
     "name": "COLORFUL BATTLE-AX B760M-G Beyaz WIFI DDR5",
-    "price": 8999.0,
+    "price": 5999.0,
     "socket": "LGA1700",
     "chipset": "B760M",
     "form_factor": "Micro ATX",
@@ -12092,7 +12092,7 @@
   },
   {
     "name": "ASUS PRIME B840M-K DDR5",
-    "price": 6699.0,
+    "price": 4947.95,
     "socket": "AM5",
     "chipset": "B840M",
     "form_factor": "Micro ATX",
@@ -12123,7 +12123,7 @@
   },
   {
     "name": "ASUS Prime B650M-R",
-    "price": 6199.0,
+    "price": 5459.09,
     "socket": "AM5",
     "chipset": "B650M",
     "form_factor": "Micro ATX",
@@ -12154,7 +12154,7 @@
   },
   {
     "name": "COLORFUL BATTLE AX B650M-E PRO V14 DDR5",
-    "price": 5436.28,
+    "price": 5454.68,
     "socket": "AM5",
     "chipset": "B650M",
     "form_factor": "Micro ATX",
@@ -12216,7 +12216,7 @@
   },
   {
     "name": "GIGABYTE B650M S2H",
-    "price": 4824.0,
+    "price": 5158.51,
     "socket": "AM5",
     "chipset": "B650M",
     "form_factor": "ATX",
@@ -12279,7 +12279,7 @@
   },
   {
     "name": "NZXT N9 X870E",
-    "price": 15489.77,
+    "price": 16855.0,
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
@@ -12343,7 +12343,7 @@
   },
   {
     "name": "MSI PRO B860M-E",
-    "price": 7799.0,
+    "price": 5499.0,
     "socket": "LGA1851",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -12375,7 +12375,7 @@
   },
   {
     "name": "ASUS PRO A620AT-CSM",
-    "price": 6069.0,
+    "price": 19359.63,
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
@@ -12407,7 +12407,7 @@
   },
   {
     "name": "GIGABYTE B840M H",
-    "price": 4099.0,
+    "price": 4153.49,
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -12663,7 +12663,7 @@
   },
   {
     "name": "GIGABYTE B650M S2H",
-    "price": 4824.0,
+    "price": 5158.51,
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
@@ -12695,7 +12695,7 @@
   },
   {
     "name": "GIGABYTE B760M H DDR4",
-    "price": 4415.08,
+    "price": 4483.57,
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -12727,7 +12727,7 @@
   },
   {
     "name": "GIGABYTE B840M H",
-    "price": 4099.0,
+    "price": 4153.49,
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -12759,7 +12759,7 @@
   },
   {
     "name": "SAPPHIRE A520M-E",
-    "price": 2800.0,
+    "price": 8044.48,
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -12823,7 +12823,7 @@
   },
   {
     "name": "GIGABYTE B760M DS3H GEN5",
-    "price": 6669.0,
+    "price": 18169.14,
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -15028,7 +15028,7 @@
   },
   {
     "name": "GIGABYTE B850 AORUS Master",
-    "price": 11299.0,
+    "price": 14094.3,
     "socket": "AM5",
     "chipset": "B850",
     "form_factor": "ATX",
@@ -15183,7 +15183,7 @@
   },
   {
     "name": "GIGABYTE B850 Eagle AX",
-    "price": 9499.0,
+    "price": 10249.0,
     "socket": "AM5",
     "chipset": "B850",
     "form_factor": "ATX",
@@ -15679,7 +15679,7 @@
   },
   {
     "name": "MSI H610 MEG ACE",
-    "price": 3999.0,
+    "price": 2499.0,
     "socket": "LGA1700",
     "chipset": "H610",
     "form_factor": "ATX",
@@ -15989,7 +15989,7 @@
   },
   {
     "name": "GIGABYTE H610 Gaming X AX",
-    "price": 2526.46,
+    "price": 3912.09,
     "socket": "LGA1700",
     "chipset": "H610",
     "form_factor": "ATX",
@@ -17138,7 +17138,7 @@
   },
   {
     "name": "GIGABYTE B550M K",
-    "price": 4499.0,
+    "price": 4367.09,
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -17196,7 +17196,7 @@
   },
   {
     "name": "MSI B550M PRO-VDH WIFI",
-    "price": 6199.0,
+    "price": 4499.0,
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
@@ -17341,7 +17341,7 @@
   },
   {
     "name": "MSI B550-A PRO",
-    "price": 7999.0,
+    "price": 6099.02,
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
@@ -17804,7 +17804,7 @@
   },
   {
     "name": "GIGABYTE B550 Eagle AX",
-    "price": 6155.74,
+    "price": 6861.15,
     "socket": "AM4",
     "chipset": "B550",
     "form_factor": "ATX",
@@ -19912,7 +19912,7 @@
   },
   {
     "name": "GIGABYTE A520M K V2 1.0 DDR4",
-    "price": 2599.0,
+    "price": 2699.0,
     "socket": "AM4",
     "chipset": "A520M",
     "form_factor": "Micro ATX",
@@ -19943,7 +19943,7 @@
   },
   {
     "name": "GIGABYTE A520M K V2 1.0 DDR4",
-    "price": 2599.0,
+    "price": 2699.0,
     "socket": "AM4",
     "chipset": "A520M",
     "form_factor": "Micro ATX",

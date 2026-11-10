@@ -1,7 +1,7 @@
 [
   {
     "name": "CORSAIR Vengeance 32GB (2x16GB) DDR5-6000 CL30",
-    "price": 26642.0,
+    "price": 36999.0,
     "speed": [
       5,
       6000
@@ -262,7 +262,7 @@
   },
   {
     "name": "G.SKILL Flare X5 32GB (2x16GB) DDR5-6000 CL30 AMD EXPO",
-    "price": 6861.0,
+    "price": 24439.06,
     "speed": [
       5,
       6000
@@ -726,7 +726,7 @@
   },
   {
     "name": "CORSAIR Vengeance LPX 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 14922.0,
+    "price": 14515.41,
     "speed": [
       4,
       3200
@@ -958,7 +958,7 @@
   },
   {
     "name": "KINGSTON Fury Beast 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 7541.0,
+    "price": 7199.0,
     "speed": [
       4,
       3200
@@ -987,7 +987,7 @@
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 13762.0,
+    "price": 14980.42,
     "speed": [
       4,
       3200
@@ -1016,7 +1016,7 @@
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (2x8GB) DDR4-3600 CL17",
-    "price": 15180.0,
+    "price": 7404.0,
     "speed": [
       4,
       3600
@@ -1190,7 +1190,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "price": 31878.0,
+    "price": 23400.0,
     "speed": [
       5,
       6000
@@ -1364,7 +1364,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "price": 40378.0,
+    "price": 45663.0,
     "speed": [
       5,
       6000
@@ -11224,7 +11224,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 14572.0,
+    "price": 14719.08,
     "speed": [
       5,
       5600
@@ -13544,7 +13544,7 @@
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 15787.0,
+    "price": 19899.0,
     "speed": [
       5,
       5600
@@ -14849,7 +14849,7 @@
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 15499.0,
+    "price": 15014.09,
     "speed": [
       5,
       5600
@@ -16502,7 +16502,7 @@
   },
   {
     "name": "LEXAR Thor OC 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 16394.0,
+    "price": 16200.0,
     "speed": [
       5,
       5600
@@ -17024,7 +17024,7 @@
   },
   {
     "name": "Patriot Viper Venom RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 17499.0,
+    "price": 16981.42,
     "speed": [
       5,
       5600

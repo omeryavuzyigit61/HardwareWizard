@@ -1,7 +1,7 @@
 [
   {
     "name": "AMD Ryzen 9 9950X",
-    "price": 25316.46,
+    "price": 26499.76,
     "socket": "AM5",
     "core_count": 16,
     "threads": 32,
@@ -57,7 +57,7 @@
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
-    "price": 22702.74,
+    "price": 23494.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -85,7 +85,7 @@
   },
   {
     "name": "AMD Ryzen 7 9700X",
-    "price": 14248.62,
+    "price": 14599.41,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -113,7 +113,7 @@
   },
   {
     "name": "AMD Ryzen 5 9600X",
-    "price": 9173.42,
+    "price": 9508.02,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -225,7 +225,7 @@
   },
   {
     "name": "AMD Ryzen 9 7900X",
-    "price": 18527.6,
+    "price": 17939.08,
     "socket": "AM5",
     "core_count": 12,
     "threads": 24,
@@ -253,7 +253,7 @@
   },
   {
     "name": "AMD Ryzen 7 7800X3D",
-    "price": 15518.4,
+    "price": 16071.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -281,7 +281,7 @@
   },
   {
     "name": "AMD Ryzen 7 7700X",
-    "price": 11736.4,
+    "price": 12145.72,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -309,7 +309,7 @@
   },
   {
     "name": "AMD Ryzen 7 7700",
-    "price": 4990.0,
+    "price": 24179.8,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -337,7 +337,7 @@
   },
   {
     "name": "AMD Ryzen 5 7600X",
-    "price": 8658.1,
+    "price": 8894.6,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -365,7 +365,7 @@
   },
   {
     "name": "AMD Ryzen 5 7600",
-    "price": 7051.59,
+    "price": 7392.57,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -393,7 +393,7 @@
   },
   {
     "name": "AMD Ryzen 5 7500F",
-    "price": 6399.0,
+    "price": 6870.31,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -421,7 +421,7 @@
   },
   {
     "name": "AMD Ryzen 7 8700G",
-    "price": 16844.0,
+    "price": 15677.0,
     "socket": "AM5",
     "core_count": 8,
     "threads": 16,
@@ -449,7 +449,7 @@
   },
   {
     "name": "AMD Ryzen 5 8600G",
-    "price": 9894.22,
+    "price": 22386.67,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -477,7 +477,7 @@
   },
   {
     "name": "AMD Ryzen 5 8500G",
-    "price": 8561.28,
+    "price": 7920.0,
     "socket": "AM5",
     "core_count": 6,
     "threads": 12,
@@ -617,7 +617,7 @@
   },
   {
     "name": "AMD Ryzen 7 5800X",
-    "price": 12687.02,
+    "price": 28844.64,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -645,7 +645,7 @@
   },
   {
     "name": "AMD Ryzen 7 5700X",
-    "price": 8417.02,
+    "price": 8710.57,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -673,7 +673,7 @@
   },
   {
     "name": "AMD Ryzen 7 5700G",
-    "price": 12285.0,
+    "price": 13951.94,
     "socket": "AM4",
     "core_count": 8,
     "threads": 16,
@@ -701,7 +701,7 @@
   },
   {
     "name": "AMD Ryzen 5 5600X",
-    "price": 6788.08,
+    "price": 7115.67,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -729,7 +729,7 @@
   },
   {
     "name": "AMD Ryzen 5 5600",
-    "price": 6045.34,
+    "price": 6256.89,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -785,7 +785,7 @@
   },
   {
     "name": "AMD Ryzen 5 5500",
-    "price": 4480.82,
+    "price": 4723.34,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -813,7 +813,7 @@
   },
   {
     "name": "AMD Ryzen 5 3600",
-    "price": 14363.44,
+    "price": 4324.0,
     "socket": "AM4",
     "core_count": 6,
     "threads": 12,
@@ -841,7 +841,7 @@
   },
   {
     "name": "INTEL Core Ultra 9 285K",
-    "price": 30499.0,
+    "price": 31599.0,
     "socket": "LGA1851",
     "core_count": 24,
     "threads": 24,
@@ -869,7 +869,7 @@
   },
   {
     "name": "INTEL Core Ultra 7 265K",
-    "price": 16591.99,
+    "price": 21499.0,
     "socket": "LGA1851",
     "core_count": 20,
     "threads": 20,
@@ -897,7 +897,7 @@
   },
   {
     "name": "INTEL Core Ultra 7 265KF",
-    "price": 14922.06,
+    "price": 18599.0,
     "socket": "LGA1851",
     "core_count": 20,
     "threads": 20,
@@ -925,7 +925,7 @@
   },
   {
     "name": "INTEL Core Ultra 5 245K",
-    "price": 11920.09,
+    "price": 12235.08,
     "socket": "LGA1851",
     "core_count": 14,
     "threads": 14,
@@ -1009,7 +1009,7 @@
   },
   {
     "name": "INTEL Core i9-14900K",
-    "price": 22154.22,
+    "price": 26299.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -1037,7 +1037,7 @@
   },
   {
     "name": "INTEL Core i9-14900KF",
-    "price": 23227.82,
+    "price": 26299.0,
     "socket": "LGA1700",
     "core_count": 24,
     "threads": 32,
@@ -1065,7 +1065,7 @@
   },
   {
     "name": "INTEL Core i7-14700K",
-    "price": 19510.23,
+    "price": 23399.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -1093,7 +1093,7 @@
   },
   {
     "name": "INTEL Core i7-14700KF",
-    "price": 18103.82,
+    "price": 17899.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "INTEL Core i7-14700",
-    "price": 18824.05,
+    "price": 23399.0,
     "socket": "LGA1700",
     "core_count": 20,
     "threads": 28,
@@ -1149,7 +1149,7 @@
   },
   {
     "name": "INTEL Core i5-14600K",
-    "price": 12492.79,
+    "price": 29264.43,
     "socket": "LGA1700",
     "core_count": 14,
     "threads": 20,
@@ -1177,7 +1177,7 @@
   },
   {
     "name": "INTEL Core i5-14600KF",
-    "price": 12297.59,
+    "price": 15499.0,
     "socket": "LGA1700",
     "core_count": 14,
     "threads": 20,
@@ -1233,7 +1233,7 @@
   },
   {
     "name": "INTEL Core i5-14400F",
-    "price": 6978.39,
+    "price": 7630.95,
     "socket": "LGA1700",
     "core_count": 10,
     "threads": 16,
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "INTEL Core i5-14400",
-    "price": 8920.63,
+    "price": 20742.12,
     "socket": "LGA1700",
     "core_count": 10,
     "threads": 16,
@@ -1289,7 +1289,7 @@
   },
   {
     "name": "INTEL Core i3-14100F",
-    "price": 5422.69,
+    "price": 5299.0,
     "socket": "LGA1700",
     "core_count": 4,
     "threads": 8,
@@ -1429,7 +1429,7 @@
   },
   {
     "name": "INTEL Core i5-12400F",
-    "price": 6099.02,
+    "price": 6410.25,
     "socket": "LGA1700",
     "core_count": 6,
     "threads": 12,
@@ -1457,7 +1457,7 @@
   },
   {
     "name": "INTEL Core i3-12100F",
-    "price": 6154.91,
+    "price": 3540.0,
     "socket": "LGA1700",
     "core_count": 4,
     "threads": 8,
@@ -1515,7 +1515,7 @@
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "unlocked_multiplier": true,
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110001118388256.jpg",
-    "price": 35744.05
+    "price": 36989.25
   },
   {
     "name": "AMD Ryzen 9 9900X3D",
@@ -1699,6 +1699,6 @@
       "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
     ],
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110003073886796.jpg",
-    "price": 9706.31
+    "price": 25553.97
   }
 ]

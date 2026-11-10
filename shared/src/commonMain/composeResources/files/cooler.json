@@ -405,7 +405,7 @@
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB White",
-    "price": 4554.0,
+    "price": 2999.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
@@ -1010,7 +1010,7 @@
   },
   {
     "name": "ASUS ROG Ryujin III 360 ARGB",
-    "price": 19599.0,
+    "price": 20899.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -2053,7 +2053,7 @@
   },
   {
     "name": "GIGABYTE Eagle 360I ARGB",
-    "price": 4499.0,
+    "price": null,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2202,7 +2202,7 @@
       "LGA1851"
     ],
     "max_tdp": 220,
-    "imageUrl": "https://img.yenieera22.com/cdn/1000/3-c7d0ff.png",
+    "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/fazeon/thumb/158716-4_small.jpg",
     "radiator_dimensions": "120mm x 27mm Alüminyum Radyatör",
     "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
     "model": "A5120TRA",
@@ -2269,7 +2269,7 @@
   },
   {
     "name": "ANTEC Skeleton 360 ARGB",
-    "price": 6679.0,
+    "price": null,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2296,7 +2296,7 @@
   },
   {
     "name": "COUGAR POSEIDON ELITE ARGB 360",
-    "price": 6679.0,
+    "price": 6600.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2323,7 +2323,7 @@
   },
   {
     "name": "ASUS PRIME LC 360 ARGB",
-    "price": 5549.0,
+    "price": 6399.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2755,7 +2755,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid E360",
-    "price": 7260.0,
+    "price": 7062.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",

@@ -661,7 +661,7 @@
   },
   {
     "name": "MSI RTX 4090 VENTUS 3X 24G OC",
-    "price": 131886.0,
+    "price": 130322.0,
     "chipset": "GeForce RTX 4090",
     "memory": 24,
     "memory_type": "GDDR6X",
@@ -925,7 +925,7 @@
   },
   {
     "name": "MSI GeForce RTX 5090 Suprim X",
-    "price": 199788.0,
+    "price": 197419.0,
     "chipset": "GeForce RTX 5090",
     "memory": 32,
     "memory_type": "GDDR7",
@@ -958,7 +958,7 @@
   },
   {
     "name": "MSI GeForce RTX 5090 Gaming X Trio",
-    "price": 204032.0,
+    "price": 196451.0,
     "chipset": "GeForce RTX 5090",
     "memory": 32,
     "memory_type": "GDDR7",
@@ -1849,7 +1849,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5080 ProArt OC",
-    "price": 137998.0,
+    "price": 112541.0,
     "chipset": "GeForce RTX 5080",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -2080,7 +2080,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5080 AORUS Master",
-    "price": 151799.0,
+    "price": 135999.0,
     "chipset": "GeForce RTX 5080",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -3070,7 +3070,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5070 Ti AORUS Master",
-    "price": 57684.0,
+    "price": 57000.0,
     "chipset": "GeForce RTX 5070 Ti",
     "memory": 16,
     "memory_type": "GDDR7",
@@ -3730,7 +3730,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5070 ROG Strix OC",
-    "price": 60264.0,
+    "price": 59550.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -3796,7 +3796,7 @@
   },
   {
     "name": "ASUS GeForce RTX 5070 Dual OC",
-    "price": 48948.0,
+    "price": 48367.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -4060,7 +4060,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 5070 AORUS Master",
-    "price": 75900.0,
+    "price": 45000.0,
     "chipset": "GeForce RTX 5070",
     "memory": 12,
     "memory_type": "GDDR7",
@@ -8680,7 +8680,7 @@
   },
   {
     "name": "ASUS GeForce RTX 4070 Ti ROG Strix OC",
-    "price": 114537.41,
+    "price": 114777.2,
     "chipset": "GeForce RTX 4070 Ti",
     "memory": 12,
     "memory_type": "GDDR6X",
@@ -30823,7 +30823,7 @@
   },
   {
     "name": "GIGABYTE GeForce RTX 3050 AORUS Master",
-    "price": 27324.0,
+    "price": null,
     "chipset": "GeForce RTX 3050",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -36301,7 +36301,7 @@
   },
   {
     "name": "GIGABYTE Radeon RX 6600 AORUS Master",
-    "price": 13965.0,
+    "price": 13800.0,
     "chipset": "Radeon RX 6600",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -54880,7 +54880,7 @@
   },
   {
     "name": "SAPPHIRE PULSE Radeon RX 9070 XT 16GB",
-    "price": null,
+    "price": 65477.0,
     "chipset": "Radeon RX 9070 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -55045,7 +55045,7 @@
   },
   {
     "name": "ASRock Taichi Radeon RX 9070 XT OC 16GB",
-    "price": 69999.0,
+    "price": null,
     "chipset": "Radeon RX 9070 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -55177,7 +55177,7 @@
   },
   {
     "name": "AMD Radeon RX 9060 XT 12GB",
-    "price": 37744.07,
+    "price": 26981.5,
     "chipset": "Radeon RX 9060 XT",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -55210,7 +55210,7 @@
   },
   {
     "name": "SAPPHIRE PULSE Radeon RX 9060 XT 12GB",
-    "price": null,
+    "price": 42887.39,
     "chipset": "Radeon RX 9060 XT",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -56075,7 +56075,7 @@
       "https://m.media-amazon.com/images/I/71q-w4e71lL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71o0X8q4-wL._AC_SL1500_.jpg"
     ],
-    "price": 60720.0
+    "price": null
   },
   {
     "name": "Sapphire Pulse Radeon RX 9070 GRE 16GB",
