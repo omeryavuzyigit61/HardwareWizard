@@ -1420,7 +1420,7 @@
   },
   {
     "name": "MSI Spatium M570 PRO 1TB",
-    "price": 11999.0,
+    "price": 9999.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1444,7 +1444,7 @@
   },
   {
     "name": "MSI Spatium M570 PRO 2TB",
-    "price": 29999.0,
+    "price": 22499.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",

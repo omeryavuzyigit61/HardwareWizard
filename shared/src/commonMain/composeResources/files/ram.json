@@ -175,7 +175,7 @@
   },
   {
     "name": "G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5-6000 CL30 AMD EXPO",
-    "price": 42000.0,
+    "price": 47551.17,
     "speed": [
       5,
       6000
@@ -262,7 +262,7 @@
   },
   {
     "name": "G.SKILL Flare X5 32GB (2x16GB) DDR5-6000 CL30 AMD EXPO",
-    "price": 24439.06,
+    "price": 25999.0,
     "speed": [
       5,
       6000
@@ -726,7 +726,7 @@
   },
   {
     "name": "CORSAIR Vengeance LPX 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 14515.41,
+    "price": 14355.9,
     "speed": [
       4,
       3200
@@ -784,7 +784,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB PRO 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 2710.0,
+    "price": 19200.0,
     "speed": [
       4,
       3200
@@ -842,7 +842,7 @@
   },
   {
     "name": "G.SKILL Ripjaws V 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 7589.0,
+    "price": 7761.39,
     "speed": [
       4,
       3200
@@ -900,7 +900,7 @@
   },
   {
     "name": "G.SKILL Ripjaws V 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 17499.0,
+    "price": 19499.0,
     "speed": [
       4,
       3200
@@ -958,7 +958,7 @@
   },
   {
     "name": "KINGSTON Fury Beast 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 7199.0,
+    "price": 7019.03,
     "speed": [
       4,
       3200
@@ -987,7 +987,7 @@
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR4-3200 CL16",
-    "price": 14980.42,
+    "price": 14700.6,
     "speed": [
       4,
       3200
@@ -1045,7 +1045,7 @@
   },
   {
     "name": "Team T-Force Vulcan Z 16GB (2x8GB) DDR4-3200 CL16",
-    "price": 5400.0,
+    "price": 4990.0,
     "speed": [
       4,
       3200
@@ -1074,7 +1074,7 @@
   },
   {
     "name": "Team T-Force Vulcan Z 32GB (2x16GB) DDR4-3600 CL18",
-    "price": 12960.0,
+    "price": 13500.0,
     "speed": [
       4,
       3600
@@ -1364,7 +1364,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "price": 45663.0,
+    "price": 42466.59,
     "speed": [
       5,
       6000
@@ -11224,7 +11224,7 @@
   },
   {
     "name": "CORSAIR Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 14719.08,
+    "price": 14526.53,
     "speed": [
       5,
       5600
@@ -12587,7 +12587,7 @@
   },
   {
     "name": "G.SKILL Trident Z5 RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 13800.0,
+    "price": 15014.03,
     "speed": [
       5,
       5600
@@ -14849,7 +14849,7 @@
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 15014.09,
+    "price": 14849.1,
     "speed": [
       5,
       5600
@@ -15893,7 +15893,7 @@
   },
   {
     "name": "LEXAR Ares RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 16499.0,
+    "price": 15599.03,
     "speed": [
       5,
       5600
@@ -17024,7 +17024,7 @@
   },
   {
     "name": "Patriot Viper Venom RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 16981.42,
+    "price": 16964.03,
     "speed": [
       5,
       5600
@@ -18010,7 +18010,7 @@
   },
   {
     "name": "CRUCIAL Pro Overclocking 16GB (1x16GB) DDR5-5600 CL40",
-    "price": 14722.09,
+    "price": 15202.56,
     "speed": [
       5,
       5600
