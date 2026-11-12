@@ -1,7 +1,7 @@
 [
   {
     "name": "1st Player ACK 80 Plus 750W",
-    "price": 6856.85,
+    "price": 2462.64,
     "type": "ATX",
     "efficiency": "80 plus",
     "wattage": 750,
@@ -29,7 +29,7 @@
   },
   {
     "name": "1st Player ACK Bronze 750W",
-    "price": 1890.0,
+    "price": 2195.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -85,7 +85,7 @@
   },
   {
     "name": "1st Player ACK Gold 750W",
-    "price": 4899.0,
+    "price": 5768.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -253,7 +253,7 @@
   },
   {
     "name": "ASUS Tuf Bronze 750W",
-    "price": 4589.1,
+    "price": 5190.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -309,7 +309,7 @@
   },
   {
     "name": "ASUS Tuf Gold 750W",
-    "price": 7542.3,
+    "price": 7319.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -533,7 +533,7 @@
   },
   {
     "name": "CORSAIR CV 750W",
-    "price": 1200.0,
+    "price": 7290.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -785,7 +785,7 @@
   },
   {
     "name": "COUGAR GES ATX 3.1 750W",
-    "price": 7200.0,
+    "price": 7286.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "LIAN LI RS-G 750W",
-    "price": 2115.75,
+    "price": 5372.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -2577,7 +2577,7 @@
   },
   {
     "name": "Gametech GTP G Yarı Modüler 750W",
-    "price": 2000.0,
+    "price": 7722.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -3753,7 +3753,7 @@
   },
   {
     "name": "MSI MPG A-GS PCIE5 750W",
-    "price": 8000.0,
+    "price": 4999.9,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -4928,7 +4928,7 @@
   },
   {
     "name": "CORSAIR RM1000e (2023) ATX 3.0 1000W",
-    "price": 11699.0,
+    "price": 11032.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5040,7 +5040,7 @@
   },
   {
     "name": "CORSAIR RM1000x Shift ATX 3.0 1000W",
-    "price": 11006.78,
+    "price": 11289.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5095,7 +5095,7 @@
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
-    "price": 6814.28,
+    "price": 6989.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5123,7 +5123,7 @@
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
-    "price": 5499.0,
+    "price": 5694.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -5151,7 +5151,7 @@
   },
   {
     "name": "MSI MAG A650BN 650W",
-    "price": 3014.1,
+    "price": 3047.59,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 650,
@@ -5179,7 +5179,7 @@
   },
   {
     "name": "MSI MPG A850G PCIE5 850W",
-    "price": 7399.0,
+    "price": 8890.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5207,7 +5207,7 @@
   },
   {
     "name": "MSI MPG A1000G PCIE5 1000W",
-    "price": 9584.1,
+    "price": 1000.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5263,7 +5263,7 @@
   },
   {
     "name": "ASUS TUF Gaming 850G 850W",
-    "price": 7799.03,
+    "price": 7099.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5291,7 +5291,7 @@
   },
   {
     "name": "ASUS TUF Gaming 1000G 1000W",
-    "price": 9018.75,
+    "price": 1000.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5319,7 +5319,7 @@
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
-    "price": 27299.0,
+    "price": 1000.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 1000,
@@ -5346,7 +5346,7 @@
   },
   {
     "name": "ASUS ROG Thor 1200W Platinum II",
-    "price": 1200.0,
+    "price": 31666.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 1200,
@@ -5400,7 +5400,7 @@
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
-    "price": 49999.0,
+    "price": 47179.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 3000,
@@ -6140,7 +6140,7 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
     ],
-    "price": 1200.0,
+    "price": 6299.0,
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110000756280457.jpg"
   },
   {
