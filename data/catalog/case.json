@@ -139,7 +139,7 @@
   },
   {
     "name": "LIAN LI O11 Vision",
-    "price": 9799.0,
+    "price": 9699.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -760,7 +760,7 @@
   },
   {
     "name": "CORSAIR 6500X",
-    "price": 11339.0,
+    "price": 12499.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1128,7 +1128,7 @@
   },
   {
     "name": "MSI MAG Pano M100R PZ (White)",
-    "price": 3403.0,
+    "price": 3499.0,
     "type": "Micro ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "CORSAIR 9000D RGB AIRFLOW",
-    "price": 4500.0,
+    "price": 35599.0,
     "type": "ATX Full Tower",
     "color": "Black",
     "psu": null,
@@ -1475,7 +1475,7 @@
   },
   {
     "name": "ASUS ROG Cronox GR801 ARGB Panaromik",
-    "price": 30599.0,
+    "price": 29919.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 360 Panaroma Siyah Ayna Efektli",
-    "price": 4299.0,
+    "price": 3764.11,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1607,7 +1607,7 @@
   },
   {
     "name": "ANTEC AX65 ARGB",
-    "price": 11609.0,
+    "price": 2032.28,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1629,7 +1629,7 @@
   },
   {
     "name": "LIAN LI VECTOR V100R Beyaz ATX",
-    "price": 6328.68,
+    "price": 5129.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1893,7 +1893,7 @@
   },
   {
     "name": "RJK ATREUS BT4 Black",
-    "price": 3588.36,
+    "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1937,7 +1937,7 @@
   },
   {
     "name": "HYTE Revolt 3 Black USB 3.2 Premium ITX Small Form Factor",
-    "price": 26476.17,
+    "price": 5599.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1959,7 +1959,7 @@
   },
   {
     "name": "ANTEC CX700 ARGB WHITE",
-    "price": 5637.74,
+    "price": 2999.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "ANTEC CX500M ARGB BLACK",
-    "price": 10364.0,
+    "price": 5161.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2003,7 +2003,7 @@
   },
   {
     "name": "ANTEC C8 WOOD",
-    "price": 10200.0,
+    "price": 7999.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2047,7 +2047,7 @@
   },
   {
     "name": "MSI MAG FORGE M120R AIRFLOW",
-    "price": 2615.81,
+    "price": 2573.85,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2069,7 +2069,7 @@
   },
   {
     "name": "GIGABYTE C201 PANORAMIC",
-    "price": 6044.07,
+    "price": 3899.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2091,7 +2091,7 @@
   },
   {
     "name": "Vento VG4202FL Rainbow",
-    "price": null,
+    "price": 4857.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB",
-    "price": 3960.0,
+    "price": 3870.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -2886,7 +2886,7 @@
   },
   {
     "name": "ASUS Prime AP201 (White)",
-    "price": 4999.0,
+    "price": 4944.89,
     "type": "MicroATX Mini Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -3128,7 +3128,7 @@
   },
   {
     "name": "Thermaltake Tower 300",
-    "price": 850.0,
+    "price": 9149.0,
     "type": "Octagonal Prism Micro ATX Showcase",
     "color": "Hydrangea Blue",
     "side_panel": "3-Sided Tempered Glass",

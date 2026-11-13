@@ -29,7 +29,7 @@
   },
   {
     "name": "1st Player ACK Bronze 750W",
-    "price": 2195.0,
+    "price": 1932.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -197,7 +197,7 @@
   },
   {
     "name": "ASUS Prime Bronze 750W",
-    "price": 5114.07,
+    "price": 4649.07,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -225,7 +225,7 @@
   },
   {
     "name": "ASUS Prime Gold 750W",
-    "price": 8499.0,
+    "price": 9999.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -253,7 +253,7 @@
   },
   {
     "name": "ASUS Tuf Bronze 750W",
-    "price": 5190.0,
+    "price": 5270.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -1317,7 +1317,7 @@
   },
   {
     "name": "Everest EPS 4900B 750W",
-    "price": 2500.0,
+    "price": null,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "LIAN LI RS-G 750W",
-    "price": 5372.0,
+    "price": 2161.08,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -2577,7 +2577,7 @@
   },
   {
     "name": "Gametech GTP G Yarı Modüler 750W",
-    "price": 7722.0,
+    "price": 5999.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -3753,7 +3753,7 @@
   },
   {
     "name": "MSI MPG A-GS PCIE5 750W",
-    "price": 4999.9,
+    "price": 8000.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -4928,7 +4928,7 @@
   },
   {
     "name": "CORSAIR RM1000e (2023) ATX 3.0 1000W",
-    "price": 11032.0,
+    "price": 11699.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5123,7 +5123,7 @@
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
-    "price": 5694.0,
+    "price": 5449.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -5151,7 +5151,7 @@
   },
   {
     "name": "MSI MAG A650BN 650W",
-    "price": 3047.59,
+    "price": 3081.08,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 650,
@@ -5179,7 +5179,7 @@
   },
   {
     "name": "MSI MPG A850G PCIE5 850W",
-    "price": 8890.0,
+    "price": 8421.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5319,7 +5319,7 @@
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
-    "price": 1000.0,
+    "price": 27299.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 1000,
@@ -5346,7 +5346,7 @@
   },
   {
     "name": "ASUS ROG Thor 1200W Platinum II",
-    "price": 31666.0,
+    "price": 1200.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 1200,
@@ -5400,7 +5400,7 @@
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
-    "price": 47179.0,
+    "price": 49999.0,
     "type": "ATX",
     "efficiency": "platinum",
     "wattage": 3000,
@@ -5535,7 +5535,7 @@
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 850W",
-    "price": null,
+    "price": 5758.28,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5618,7 +5618,7 @@
   },
   {
     "name": "BE QUIET! Pure Power 12 M 850W",
-    "price": null,
+    "price": 4020.03,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -6052,7 +6052,7 @@
       "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
     ],
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110002711580514.jpg",
-    "price": 3999.0
+    "price": 4449.0
   },
   {
     "name": "be quiet! Pure Power 12 M 750W Gold",
@@ -6140,7 +6140,7 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
     ],
-    "price": 6299.0,
+    "price": 1200.0,
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110000756280457.jpg"
   },
   {

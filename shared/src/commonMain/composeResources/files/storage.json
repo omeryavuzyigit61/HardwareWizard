@@ -622,7 +622,7 @@
   },
   {
     "name": "KINGSTON Fury Renegade 2TB",
-    "price": 25999.0,
+    "price": 31399.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -645,7 +645,7 @@
   },
   {
     "name": "KINGSTON NV3 1TB",
-    "price": 10322.0,
+    "price": 8999.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -990,7 +990,7 @@
   },
   {
     "name": "LEXAR NM790 1TB",
-    "price": 5464.0,
+    "price": 5400.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2068,7 +2068,7 @@
   },
   {
     "name": "WD Blue SN5000 1TB",
-    "price": 3294.0,
+    "price": 8799.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",

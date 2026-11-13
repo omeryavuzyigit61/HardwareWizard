@@ -379,7 +379,7 @@
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB",
-    "price": 3265.57,
+    "price": 3399.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -405,7 +405,7 @@
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB White",
-    "price": 4554.0,
+    "price": 2999.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
@@ -984,7 +984,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid M360",
-    "price": 5399.0,
+    "price": 5899.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -1010,7 +1010,7 @@
   },
   {
     "name": "ASUS ROG Ryujin III 360 ARGB",
-    "price": 14999.0,
+    "price": 20899.0,
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "Black",
@@ -1999,7 +1999,7 @@
   },
   {
     "name": "ASUS Prime LC 240 ARGB",
-    "price": 5549.0,
+    "price": 3299.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -2053,7 +2053,7 @@
   },
   {
     "name": "GIGABYTE Eagle 360I ARGB",
-    "price": 4499.0,
+    "price": null,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2134,7 +2134,7 @@
   },
   {
     "name": "BITFENIX S7 Digital Beyaz ARGB 360mm",
-    "price": 5161.0,
+    "price": 2999.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2269,7 +2269,7 @@
   },
   {
     "name": "ANTEC Skeleton 360 ARGB",
-    "price": 6679.0,
+    "price": null,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2296,7 +2296,7 @@
   },
   {
     "name": "COUGAR POSEIDON ELITE ARGB 360",
-    "price": 6679.0,
+    "price": 6600.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -2323,7 +2323,7 @@
   },
   {
     "name": "ASUS PRIME LC 360 ARGB",
-    "price": 4999.0,
+    "price": 5599.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2674,7 +2674,7 @@
   },
   {
     "name": "MSI MPG CORELIQUID D240 LGA AM5&1700 240mm AIO 2.4\" IPS",
-    "price": 5464.0,
+    "price": 2799.0,
     "type": "Liquid",
     "size": 240,
     "color": "Black",
@@ -2755,7 +2755,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid E360",
-    "price": 7260.0,
+    "price": 7062.0,
     "type": "Liquid",
     "size": 360,
     "color": "Black",
@@ -2782,7 +2782,7 @@
   },
   {
     "name": "MSI MAG CoreLiquid E360 (White)",
-    "price": 5857.0,
+    "price": 10399.0,
     "type": "Liquid",
     "size": 360,
     "color": "White",
@@ -3586,7 +3586,7 @@
   },
   {
     "name": "Cooler Master MasterLiquid 360 Atmos",
-    "price": null,
+    "price": 6899.0,
     "size": 360,
     "type": "Liquid",
     "color": "Black",
@@ -3794,7 +3794,7 @@
   },
   {
     "name": "ASUS ProArt LC 420",
-    "price": null,
+    "price": 13999.0,
     "size": 420,
     "type": "Liquid",
     "color": "Minimalist Black",
