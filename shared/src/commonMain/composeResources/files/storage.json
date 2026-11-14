@@ -300,7 +300,7 @@
   },
   {
     "name": "SAMSUNG 990 PRO 1TB",
-    "price": 13662.0,
+    "price": 15499.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -323,7 +323,7 @@
   },
   {
     "name": "SAMSUNG 990 PRO 2TB",
-    "price": 19448.0,
+    "price": 30499.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -369,7 +369,7 @@
   },
   {
     "name": "SAMSUNG 990 EVO 1TB",
-    "price": 8422.0,
+    "price": 12751.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -714,7 +714,7 @@
   },
   {
     "name": "KINGSTON NV2 2TB",
-    "price": 8015.0,
+    "price": 7108.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -737,7 +737,7 @@
   },
   {
     "name": "WD Black SN850X 1TB",
-    "price": 6679.0,
+    "price": 7286.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -760,7 +760,7 @@
   },
   {
     "name": "WD Black SN850X 2TB",
-    "price": 11536.0,
+    "price": 12144.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -806,7 +806,7 @@
   },
   {
     "name": "WD Black SN770 2TB",
-    "price": 9229.0,
+    "price": 9120.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1013,7 +1013,7 @@
   },
   {
     "name": "LEXAR NM790 2TB",
-    "price": 8804.0,
+    "price": 10200.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1180,7 +1180,7 @@
   },
   {
     "name": "CORSAIR MP700 PRO 1TB",
-    "price": 5599.0,
+    "price": 10299.0,
     "capacity": 1000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1204,7 +1204,7 @@
   },
   {
     "name": "CORSAIR MP700 PRO 2TB",
-    "price": 11476.0,
+    "price": 26716.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1252,7 +1252,7 @@
   },
   {
     "name": "KINGSTON Fury Renegade 4TB",
-    "price": 23034.0,
+    "price": 22760.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1276,7 +1276,7 @@
   },
   {
     "name": "WD_BLACK SN850X 4TB",
-    "price": 20948.0,
+    "price": 21859.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -1684,7 +1684,7 @@
   },
   {
     "name": "WD Blue SN580 2TB",
-    "price": 8197.0,
+    "price": 8100.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2092,7 +2092,7 @@
   },
   {
     "name": "WD Blue SN5000 2TB",
-    "price": 23872.0,
+    "price": 8021.0,
     "capacity": 2000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2164,7 +2164,7 @@
   },
   {
     "name": "KINGSTON NV3 4TB",
-    "price": 36925.0,
+    "price": 36487.0,
     "capacity": 4000,
     "type": "SSD",
     "form_factor": "M.2-2280",
@@ -2512,7 +2512,7 @@
   },
   {
     "name": "Sabrent Rocket 5 PCIe 5.0 2TB",
-    "price": 6861.0,
+    "price": null,
     "capacity": "2000 GB",
     "type": "M.2-2280 NVMe SSD",
     "cache": "4096 MB LPDDR4",
@@ -2704,6 +2704,6 @@
     "seq_write": null,
     "random_iops": null,
     "endurance_tbw": null,
-    "price": 7650.0
+    "price": null
   }
 ]

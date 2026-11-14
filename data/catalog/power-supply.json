@@ -29,7 +29,7 @@
   },
   {
     "name": "1st Player ACK Bronze 750W",
-    "price": 1932.0,
+    "price": 2395.0,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 750,
@@ -85,7 +85,7 @@
   },
   {
     "name": "1st Player ACK Gold 750W",
-    "price": 5768.0,
+    "price": 4899.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -225,7 +225,7 @@
   },
   {
     "name": "ASUS Prime Gold 750W",
-    "price": 9999.0,
+    "price": 5699.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -785,7 +785,7 @@
   },
   {
     "name": "COUGAR GES ATX 3.1 750W",
-    "price": 7286.0,
+    "price": 7200.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "LIAN LI RS-G 750W",
-    "price": 2161.08,
+    "price": 5372.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -5040,7 +5040,7 @@
   },
   {
     "name": "CORSAIR RM1000x Shift ATX 3.0 1000W",
-    "price": 11289.0,
+    "price": 11400.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5095,7 +5095,7 @@
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
-    "price": 6989.0,
+    "price": 7359.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5123,7 +5123,7 @@
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
-    "price": 5449.0,
+    "price": 5499.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 750,
@@ -5151,7 +5151,7 @@
   },
   {
     "name": "MSI MAG A650BN 650W",
-    "price": 3081.08,
+    "price": 7330.41,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 650,
@@ -5179,7 +5179,7 @@
   },
   {
     "name": "MSI MPG A850G PCIE5 850W",
-    "price": 8421.0,
+    "price": 9429.0,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -5207,7 +5207,7 @@
   },
   {
     "name": "MSI MPG A1000G PCIE5 1000W",
-    "price": 1000.0,
+    "price": 9996.57,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 1000,
@@ -5618,7 +5618,7 @@
   },
   {
     "name": "BE QUIET! Pure Power 12 M 850W",
-    "price": 4020.03,
+    "price": null,
     "type": "ATX",
     "efficiency": "gold",
     "wattage": 850,
@@ -6140,7 +6140,7 @@
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
       "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
     ],
-    "price": 1200.0,
+    "price": 1000.0,
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110000756280457.jpg"
   },
   {

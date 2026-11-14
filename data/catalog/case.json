@@ -369,7 +369,7 @@
   },
   {
     "name": "NZXT H9 Flow",
-    "price": 10659.0,
+    "price": 10787.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -415,7 +415,7 @@
   },
   {
     "name": "NZXT H9 Elite",
-    "price": 14744.0,
+    "price": 14921.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -576,7 +576,7 @@
   },
   {
     "name": "NZXT H5 Flow (2024)",
-    "price": 5297.0,
+    "price": 5361.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -622,7 +622,7 @@
   },
   {
     "name": "CORSAIR 5000D AIRFLOW",
-    "price": 9301.0,
+    "price": 9412.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -760,7 +760,7 @@
   },
   {
     "name": "CORSAIR 6500X",
-    "price": 12499.0,
+    "price": 11536.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "NZXT H3 Flow",
-    "price": 13009.68,
+    "price": 7816.0,
     "type": "MicroATX Mid Tower",
     "color": "Black",
     "psu": null,
@@ -1245,7 +1245,7 @@
   },
   {
     "name": "CORSAIR 3000D AIRFLOW",
-    "price": 4704.0,
+    "price": 7893.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "psu": null,
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "CORSAIR 9000D RGB AIRFLOW",
-    "price": 35599.0,
+    "price": 35460.0,
     "type": "ATX Full Tower",
     "color": "Black",
     "psu": null,
@@ -1497,7 +1497,7 @@
   },
   {
     "name": "ASUS ROG Strix Hyperion GR701",
-    "price": 25579.0,
+    "price": 26769.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -1519,7 +1519,7 @@
   },
   {
     "name": "BITFENIX Grafi Black",
-    "price": 4989.0,
+    "price": 7000.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "COOLER MASTER MasterFrame 360 Panaroma Siyah Ayna Efektli",
-    "price": 3764.11,
+    "price": 4380.45,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2069,7 +2069,7 @@
   },
   {
     "name": "GIGABYTE C201 PANORAMIC",
-    "price": 3899.0,
+    "price": 3299.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2157,7 +2157,7 @@
   },
   {
     "name": "FRISBY FC-8960G 400W",
-    "price": 9475.0,
+    "price": 3214.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "CORSAIR CC-9011213-WW 5000X RGB",
-    "price": 3870.0,
+    "price": 3500.0,
     "type": "ATX Mid Tower",
     "color": "White",
     "side_panel": "Tempered Glass",
@@ -2267,7 +2267,7 @@
   },
   {
     "name": "MSI PRO SHIELD M100P",
-    "price": 2188.0,
+    "price": 2214.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2289,7 +2289,7 @@
   },
   {
     "name": "ASUS ROG Strix Helios II GX601S",
-    "price": 19894.0,
+    "price": 20239.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -2776,7 +2776,7 @@
   },
   {
     "name": "DEEPCOOL CH560 Digital",
-    "price": 4140.0,
+    "price": 4554.0,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -3326,7 +3326,7 @@
   },
   {
     "name": "ASUS TUF Gaming GT502",
-    "price": 8399.0,
+    "price": 8099.0,
     "type": "Dual Chamber ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass & Dayanıklı Kumaş Taşıma Kolları",
