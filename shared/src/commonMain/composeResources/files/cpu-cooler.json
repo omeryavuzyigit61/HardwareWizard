@@ -161,7 +161,7 @@
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
-    "fan_rpm": 2000,
+    "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
     "noise_level": 22.5,
     "sockets": [
       "AM5",
@@ -352,7 +352,7 @@
     "type": "Dual Tower Air Cooler",
     "size": null,
     "color": "All-Black Anodized / ARGB Rim",
-    "fan_rpm": 2150,
+    "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
     "noise_level": 25.6,
     "sockets": [
       "AM5",

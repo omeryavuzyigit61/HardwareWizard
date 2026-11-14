@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Hardware Wizard - Açık Kaynaklı Veri Seti Zenginleştirme Betiği (enrich_catalog.py)
-GitHub docyx/pc-part-dataset ve buildcores/buildcores-open-db veri şemalarını kullanarak
+GitHub docyx/pc-part-dataset ve Kaynakça veri şemalarını kullanarak
 yerel katalog dosyalarındaki eksik alanları (soket, chipset, bellek tipi, slot sayıları vb.)
 doğrulanmış gerçek verilerle tamamlar.
 Verisi bulunamayan alanlar kesinlikle uydurulmaz, null ("Veri Bulunamadı") bırakılır.

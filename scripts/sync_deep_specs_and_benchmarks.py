@@ -6,11 +6,11 @@ Standardized on:
   - CPU-Monkey & TechPowerUp CPU Database
   - TechPowerUp GPU Database & Tom's GPU Hierarchy
   - Cybenetics & Cultists Network PSU Tier List
-  - IronScale Labs & BuildCores OpenDB (Motherboard, RAM, SSD, Cooler, Case)
+  - IRONScale Labs, DisplaySpecifications, EloShapes, RTINGS & Official Vendor QVL/VRM Datasheets
 
 Hybrid Architecture:
-  - Integrated Verified Engineering Reference Matrix (zero Cloudflare/403 failure risk)
-  - Optional curl_cffi live schema reader with graceful fallback
+  - Single-request bulk Kaynakça feeds (Geekbench 6 CPU/Mobile JSON, IRONScale Labs PSU DB) via curl_cffi
+  - Integrated Verified Engineering Reference Matrix (zero per-item Cloudflare/403 ban risk)
   - 100% deterministic coverage for all products across all categories
 """
 
@@ -1270,11 +1270,11 @@ PSU_ENGINEERING_RULES = [
 ]
 
 # ==============================================================================
-# 4. MOTHERBOARD VRM & SPEC MATRIX (IronScale Labs & BuildCores)
+# 4. MOTHERBOARD VRM & SPEC MATRIX (Official Vendor QVL & VRM Datasheets)
 # ==============================================================================
 def enrich_motherboard(item: Dict[str, Any]) -> Dict[str, Any]:
     # Dinamik & Sıfır Halüsinasyon İlkesi: Tüm anakartlara yonga seti adına göre
-    # jenerik VRM / PCB / ses kodeği varsayımı yazılmaz; yalnızca OpenDB ve gerçek ürün verisi korunur.
+    # jenerik VRM / PCB / ses kodeği varsayımı yazılmaz; yalnızca doğrulanmış gerçek ürün verisi korunur.
     return item
 
 # ==============================================================================
@@ -1570,11 +1570,154 @@ def build_12_game_fps_matrix(
     }
 
 
+GEEKBENCH_CPU_URL = "https://browser.geekbench.com/processor-benchmarks.json"
+GEEKBENCH_MOBILE_URL = "https://browser.geekbench.com/mobile-benchmarks.json"
+IRONSCALE_PSU_URL = "https://ironscalelabs.com/data/psu-data.js?v=204"
+
+
+def fetch_kaynakca_text(url: str, timeout: int = 18) -> Optional[str]:
+    """Single-request bulk Kaynakça feed fetcher via curl_cffi with urllib fallback."""
+    try:
+        from curl_cffi import requests as cf_requests  # type: ignore
+
+        resp = cf_requests.get(url, impersonate="chrome", timeout=timeout)
+        if resp.status_code == 200 and resp.text:
+            return resp.text
+        print(f"[WARN] {url} returned HTTP {resp.status_code}")
+    except Exception as exc:
+        print(f"[WARN] curl_cffi request failed for {url}: {exc}")
+
+    try:
+        import urllib.request
+
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                ),
+                "Accept": "application/json,text/javascript,*/*;q=0.8",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            if resp.status == 200:
+                return resp.read().decode("utf-8", errors="ignore")
+    except Exception as exc:
+        print(f"[WARN] urllib fallback failed for {url}: {exc}")
+    return None
+
+
+def fetch_geekbench_index(url: str) -> Dict[str, Dict[str, Any]]:
+    """Fetch a Geekbench 6 bulk benchmark JSON feed and index devices by normalized name."""
+    raw = fetch_kaynakca_text(url)
+    if not raw:
+        return {}
+    try:
+        payload = json.loads(raw)
+    except Exception as exc:
+        print(f"[WARN] Invalid JSON from {url}: {exc}")
+        return {}
+
+    index: Dict[str, Dict[str, Any]] = {}
+    for dev in payload.get("devices", []):
+        name = dev.get("name")
+        if not name or not dev.get("score") or not dev.get("multicore_score"):
+            continue
+        key = normalize_key(str(name))
+        if len(key) < 5:
+            continue
+        existing = index.get(key)
+        if existing is None or int(dev.get("samples") or 0) > int(existing.get("samples") or 0):
+            index[key] = dev
+    return index
+
+
+def match_geekbench_entry(gb_index: Dict[str, Dict[str, Any]], *candidates: Optional[str]) -> Optional[Dict[str, Any]]:
+    """Match a catalog product against a bulk Geekbench index using normalized exact names."""
+    if not gb_index:
+        return None
+    for raw_name in candidates:
+        if not raw_name:
+            continue
+        key = normalize_key(str(raw_name))
+        if len(key) >= 5 and key in gb_index:
+            return gb_index[key]
+    return None
+
+
+def fetch_ironscale_records() -> List[Dict[str, Any]]:
+    """Fetch the IRONScale Labs (Cybenetics / Cultists PSU DB) single-request JS feed."""
+    raw = fetch_kaynakca_text(IRONSCALE_PSU_URL)
+    if not raw or "window.IRON_PSU_DB =" not in raw:
+        return []
+    try:
+        js_clean = raw.split("window.IRON_PSU_DB =", 1)[1].strip().rstrip(";")
+        data = json.loads(js_clean)
+        records = data.get("records", [])
+        return records if isinstance(records, list) else []
+    except Exception as exc:
+        print(f"[WARN] Failed to parse IRONScale Labs feed: {exc}")
+        return []
+
+
+def load_psu_lab_helpers():
+    """Reuse PSU matching and formatting helpers from scripts/sync_psu_specs.py."""
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+    import sync_psu_specs  # type: ignore
+
+    return sync_psu_specs
+
+
+def sync_mobile_geekbench(gb_mobile_index: Dict[str, Dict[str, Any]]) -> Tuple[int, int]:
+    """Update smartphone.json and tablet.json with live Geekbench 6 single/multi scores."""
+    if not gb_mobile_index:
+        return 0, 0
+    counts = [0, 0]
+    for idx, fname in enumerate(("smartphone.json", "tablet.json")):
+        fpath = os.path.join(DATA_CATALOG_DIR, fname)
+        if not os.path.exists(fpath):
+            continue
+        with open(fpath, "r", encoding="utf-8") as f:
+            items = json.load(f)
+        updated = 0
+        for item in items:
+            matched = match_geekbench_entry(gb_mobile_index, item.get("name"), item.get("model"))
+            if not matched:
+                continue
+            gb_s = int(matched["score"])
+            gb_m = int(matched["multicore_score"])
+            item["geekbench6Single"] = gb_s
+            item["geekbench6Multi"] = gb_m
+            spec = item.get("spec")
+            if isinstance(spec, dict):
+                spec["geekbenchSingle"] = gb_s
+                spec["geekbenchMulti"] = gb_m
+            updated += 1
+        with open(fpath, "w", encoding="utf-8") as f:
+            json.dump(items, f, indent=2, ensure_ascii=False)
+        counts[idx] = updated
+    return counts[0], counts[1]
+
+
 def main():
     print("=" * 80)
     print(" HARDWAREWIZARD LABORATORY DATA & BENCHMARK SYNCHRONIZATION ENGINE")
-    print(" Standards: CPU-Monkey, TechPowerUp (GPU/CPU), Cybenetics, IronScale Labs")
+    print(" Standards: CPU-Monkey, TechPowerUp, Geekbench 6, Cybenetics, IRONScale Labs")
     print("=" * 80)
+
+    print("[*] Kaynakça toplu veri akışları tek istekle çekiliyor (Geekbench 6 + IRONScale Labs)...")
+    gb_cpu_index = fetch_geekbench_index(GEEKBENCH_CPU_URL)
+    gb_mobile_index = fetch_geekbench_index(GEEKBENCH_MOBILE_URL)
+    ironscale_records = fetch_ironscale_records()
+    psu_helpers = load_psu_lab_helpers() if ironscale_records else None
+    print(
+        f"  -> Geekbench 6 CPU: {len(gb_cpu_index)} model | "
+        f"Geekbench 6 Mobile: {len(gb_mobile_index)} cihaz | "
+        f"IRONScale Labs PSU: {len(ironscale_records)} test"
+    )
 
     # 1. Load existing benchmarks
     benchmarks_data = {"cpus": {}, "gpus": {}}
@@ -1586,14 +1729,16 @@ def main():
             print(f"[WARN] Failed to read benchmarks file: {e}")
 
     stats = {
-        "cpu_specs": 0, "cpu_benchmarks": 0,
+        "cpu_specs": 0, "cpu_benchmarks": 0, "cpu_gb6_live": 0,
         "gpu_specs": 0, "gpu_benchmarks": 0,
-        "psu_specs": 0,
+        "psu_specs": 0, "psu_ironscale_live": 0,
         "motherboard_specs": 0,
         "ram_specs": 0,
         "storage_specs": 0,
         "cooler_specs": 0,
         "case_specs": 0,
+        "smartphone_gb6_live": 0,
+        "tablet_gb6_live": 0,
     }
 
     # --------------------------------------------------------------------------
@@ -1606,6 +1751,7 @@ def main():
         for item in cpus:
             if item.get("price") is not None and float(item.get("price", 0)) < 1500.0:
                 item["price"] = None
+            gb_cpu_match = match_geekbench_entry(gb_cpu_index, item.get("name"), item.get("model"))
             match = match_cpu_ref(item["name"])
             if match:
                 ref_key, ref = match
@@ -1628,6 +1774,10 @@ def main():
                 # Benchmark synchronization (12-Game Matrix + 1% Low FPS)
                 b = ref["bench"]
                 bench_id = "cpu_" + re.sub(r"[^a-z0-9]+", "_", item["name"].lower()).strip("_")
+                gb6_s = int(gb_cpu_match["score"]) if gb_cpu_match else b["gb6_s"]
+                gb6_m = int(gb_cpu_match["multicore_score"]) if gb_cpu_match else b["gb6_m"]
+                if gb_cpu_match:
+                    stats["cpu_gb6_live"] += 1
                 cp_tuple = (round(b["gaming_rel"] * 175.0, 1), round(b["gaming_rel"] * 140.0, 1), round(b["gaming_rel"] * 95.0, 1))
                 fh_tuple = (round(b["gaming_rel"] * 255.0, 1), round(b["gaming_rel"] * 210.0, 1), round(b["gaming_rel"] * 145.0, 1))
                 cs_tuple = (round(b["gaming_rel"] * 620.0, 1), round(b["gaming_rel"] * 500.0, 1), round(b["gaming_rel"] * 310.0, 1))
@@ -1640,8 +1790,8 @@ def main():
                         "cinebench_2024_multi": b["cb24_m"],
                         "cinebench_r23_single": b["cbr23_s"],
                         "cinebench_r23_multi": b["cbr23_m"],
-                        "geekbench_6_single": b["gb6_s"],
-                        "geekbench_6_multi": b["gb6_m"],
+                        "geekbench_6_single": gb6_s,
+                        "geekbench_6_multi": gb6_m,
                         "passmark_cpu_mark": b["pm"],
                     },
                     "games": build_12_game_fps_matrix(
@@ -1653,6 +1803,13 @@ def main():
                     ),
                 }
                 stats["cpu_benchmarks"] += 1
+            elif gb_cpu_match:
+                bench_id = "cpu_" + re.sub(r"[^a-z0-9]+", "_", item["name"].lower()).strip("_")
+                existing_cpu_bench = benchmarks_data.get("cpus", {}).get(bench_id)
+                if isinstance(existing_cpu_bench, dict) and isinstance(existing_cpu_bench.get("synthetic"), dict):
+                    existing_cpu_bench["synthetic"]["geekbench_6_single"] = int(gb_cpu_match["score"])
+                    existing_cpu_bench["synthetic"]["geekbench_6_multi"] = int(gb_cpu_match["multicore_score"])
+                    stats["cpu_gb6_live"] += 1
 
         with open(cpu_path, "w", encoding="utf-8") as f:
             json.dump(cpus, f, indent=2, ensure_ascii=False)
@@ -1723,7 +1880,7 @@ def main():
         shutil.copy2(gpu_path, os.path.join(DATA_CATALOG_DIR, "video-card.json"))
 
     # --------------------------------------------------------------------------
-    # Process PSUs
+    # Process PSUs (IRONScale Labs Cybenetics/Cultists Live Feed + Matrix Fallback)
     # --------------------------------------------------------------------------
     psu_path = os.path.join(DATA_CATALOG_DIR, "psu.json")
     if os.path.exists(psu_path):
@@ -1732,8 +1889,30 @@ def main():
         for item in psus:
             if item.get("price") is not None and float(item.get("price", 0)) < 1200.0:
                 item["price"] = None
+            iron_match = (
+                psu_helpers.match_psu_to_ironscale(item, ironscale_records)
+                if psu_helpers and ironscale_records
+                else None
+            )
             ref = match_psu_ref(item.get("name", ""))
-            if ref is not None:
+            if iron_match is not None:
+                tier_raw = str(iron_match.get("tier") or "").strip()
+                if tier_raw:
+                    tier_label = psu_helpers.TIER_LABELS.get(tier_raw, f"Tier {tier_raw}")
+                    desc = str(iron_match.get("description") or "").replace("\n", " ").strip()
+                    item["tier"] = f"{tier_label} ({desc})" if desc and len(desc) <= 120 else tier_label
+                item["topology"] = psu_helpers.format_topology_info(iron_match)
+                item["capacitors"] = psu_helpers.format_capacitor_info(iron_match)
+                stats["psu_ironscale_live"] += 1
+                if ref is not None:
+                    item["cybenetics"] = item.get("cybenetics") or ref["efficiency"]
+                    item["cybenetics_lambda"] = item.get("cybenetics_lambda") or ref["cybenetics_lambda"]
+                    item["atx_standard"] = item.get("atx_standard") or ref["atx_standard"]
+                    item["pcie_12vhpwr"] = item.get("pcie_12vhpwr") or ref["pcie_12vhpwr"]
+                    item["protections"] = item.get("protections") or ref["protections"]
+                    item["modular"] = item.get("modular") or ref["modular"]
+                    item["fan_size"] = item.get("fan_size") or ref["fan_size"]
+            elif ref is not None:
                 item["tier"] = ref["tier"]
                 item["cybenetics"] = ref["efficiency"]
                 item["cybenetics_lambda"] = ref["cybenetics_lambda"]
@@ -1847,6 +2026,14 @@ def main():
         return None
 
     for cpu_k, cpu_v in list(benchmarks_data.get("cpus", {}).items()):
+        if isinstance(cpu_v, dict):
+            gb_match = match_geekbench_entry(
+                gb_cpu_index,
+                cpu_k[4:].replace("_", " ") if cpu_k.startswith("cpu_") else cpu_k.replace("_", " "),
+            )
+            if gb_match and isinstance(cpu_v.get("synthetic"), dict):
+                cpu_v["synthetic"]["geekbench_6_single"] = int(gb_match["score"])
+                cpu_v["synthetic"]["geekbench_6_multi"] = int(gb_match["multicore_score"])
         games_map = cpu_v.get("games", {})
         if len(games_map) < 12 or "low1_1080p" not in games_map.get("cyberpunk_2077", {}):
             sc = int(cpu_v.get("score") or 75)
@@ -1871,6 +2058,13 @@ def main():
             )
 
     # --------------------------------------------------------------------------
+    # Process Smartphones & Tablets (Geekbench 6 Mobile Official Bulk JSON)
+    # --------------------------------------------------------------------------
+    phone_gb_count, tablet_gb_count = sync_mobile_geekbench(gb_mobile_index)
+    stats["smartphone_gb6_live"] = phone_gb_count
+    stats["tablet_gb6_live"] = tablet_gb_count
+
+    # --------------------------------------------------------------------------
     # Save Benchmarks File
     # --------------------------------------------------------------------------
     with open(DATA_BENCHMARKS_PATH, "w", encoding="utf-8") as f:
@@ -1883,9 +2077,9 @@ def main():
     all_catalog_files = [
         "cpu.json", "video-card.json",
         "memory.json", "motherboard.json",
-        "power-supply.json",
+        "power-supply.json", "psu.json",
         "internal-hard-drive.json", "cpu-cooler.json",
-        "case.json"
+        "case.json", "smartphone.json", "tablet.json"
     ]
     for filename in all_catalog_files:
         src = os.path.join(DATA_CATALOG_DIR, filename)
@@ -1908,11 +2102,12 @@ def main():
     print("\n" + "=" * 80)
     print(" SENKRONİZASYON BAŞARIYLA TAMAMLANDI! ÖZET RAPOR:")
     print("=" * 80)
-    print(f"  • İşlemci (CPU) Teknik Veri Güncellemesi   : {stats['cpu_specs']} ürün")
+    print(f"  • İşlemci (CPU) Teknik Veri Güncellemesi   : {stats['cpu_specs']} ürün (Canlı Geekbench 6: {stats['cpu_gb6_live']})")
     print(f"  • İşlemci (CPU) Benchmark Puanları         : {stats['cpu_benchmarks']} model")
     print(f"  • Ekran Kartı (GPU) Teknik Veri Güncellemesi: {stats['gpu_specs']} ürün")
     print(f"  • Ekran Kartı (GPU) Benchmark Puanları     : {stats['gpu_benchmarks']} model")
-    print(f"  • Güç Kaynağı (PSU) Cybenetics & Tier      : {stats['psu_specs']} ürün")
+    print(f"  • Güç Kaynağı (PSU) Cybenetics & Tier      : {stats['psu_specs']} ürün (Canlı IRONScale Labs: {stats['psu_ironscale_live']})")
+    print(f"  • Mobil/Tablet Canlı Geekbench 6 Eşleşmesi : {stats['smartphone_gb6_live']} telefon / {stats['tablet_gb6_live']} tablet")
     print(f"  • Anakart (Motherboard) VRM & PCB Katmanı  : {stats['motherboard_specs']} ürün")
     print(f"  • RAM (Bellek) Die Tipi & True Latency     : {stats['ram_specs']} ürün")
     print(f"  • Depolama (SSD) Kontrolcü & DRAM Cache    : {stats['storage_specs']} ürün")

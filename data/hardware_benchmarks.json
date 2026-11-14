@@ -9,8 +9,8 @@
         "cinebench_2024_multi": 2280,
         "cinebench_r23_single": 2340,
         "cinebench_r23_multi": 43200,
-        "geekbench_6_single": 3450,
-        "geekbench_6_multi": 21800,
+        "geekbench_6_single": 3071,
+        "geekbench_6_multi": 26188,
         "passmark_cpu_mark": 66500
       },
       "games": {
@@ -121,8 +121,8 @@
         "cinebench_2024_multi": 1820,
         "cinebench_r23_single": 2280,
         "cinebench_r23_multi": 34200,
-        "geekbench_6_single": 3380,
-        "geekbench_6_multi": 19200,
+        "geekbench_6_single": 3021,
+        "geekbench_6_multi": 22309,
         "passmark_cpu_mark": 54800
       },
       "games": {
@@ -233,8 +233,8 @@
         "cinebench_2024_multi": 1360,
         "cinebench_r23_single": 2240,
         "cinebench_r23_multi": 24200,
-        "geekbench_6_single": 3320,
-        "geekbench_6_multi": 16400,
+        "geekbench_6_single": 2964,
+        "geekbench_6_multi": 18721,
         "passmark_cpu_mark": 44200
       },
       "games": {
@@ -345,8 +345,8 @@
         "cinebench_2024_multi": 1180,
         "cinebench_r23_single": 2210,
         "cinebench_r23_multi": 21800,
-        "geekbench_6_single": 3280,
-        "geekbench_6_multi": 15200,
+        "geekbench_6_single": 3009,
+        "geekbench_6_multi": 17686,
         "passmark_cpu_mark": 39500
       },
       "games": {
@@ -457,8 +457,8 @@
         "cinebench_2024_multi": 920,
         "cinebench_r23_single": 2180,
         "cinebench_r23_multi": 17200,
-        "geekbench_6_single": 3220,
-        "geekbench_6_multi": 12800,
+        "geekbench_6_single": 2923,
+        "geekbench_6_multi": 14358,
         "passmark_cpu_mark": 32500
       },
       "games": {
@@ -569,8 +569,8 @@
         "cinebench_2024_multi": 2040,
         "cinebench_r23_single": 2080,
         "cinebench_r23_multi": 38200,
-        "geekbench_6_single": 3050,
-        "geekbench_6_multi": 20400,
+        "geekbench_6_single": 2537,
+        "geekbench_6_multi": 22236,
         "passmark_cpu_mark": 61200
       },
       "games": {
@@ -681,8 +681,8 @@
         "cinebench_2024_multi": 2180,
         "cinebench_r23_single": 2110,
         "cinebench_r23_multi": 39600,
-        "geekbench_6_single": 3080,
-        "geekbench_6_multi": 21100,
+        "geekbench_6_single": 2599,
+        "geekbench_6_multi": 22412,
         "passmark_cpu_mark": 63400
       },
       "games": {
@@ -793,8 +793,8 @@
         "cinebench_2024_multi": 1620,
         "cinebench_r23_single": 2040,
         "cinebench_r23_multi": 29800,
-        "geekbench_6_single": 3010,
-        "geekbench_6_multi": 18100,
+        "geekbench_6_single": 2525,
+        "geekbench_6_multi": 19450,
         "passmark_cpu_mark": 51200
       },
       "games": {
@@ -905,8 +905,8 @@
         "cinebench_2024_multi": 1740,
         "cinebench_r23_single": 2060,
         "cinebench_r23_multi": 31500,
-        "geekbench_6_single": 3030,
-        "geekbench_6_multi": 18600,
+        "geekbench_6_single": 2608,
+        "geekbench_6_multi": 19155,
         "passmark_cpu_mark": 52900
       },
       "games": {
@@ -1017,8 +1017,8 @@
         "cinebench_2024_multi": 1120,
         "cinebench_r23_single": 1960,
         "cinebench_r23_multi": 19200,
-        "geekbench_6_single": 2980,
-        "geekbench_6_multi": 15600,
+        "geekbench_6_single": 2436,
+        "geekbench_6_multi": 15606,
         "passmark_cpu_mark": 36800
       },
       "games": {
@@ -1129,8 +1129,8 @@
         "cinebench_2024_multi": 1140,
         "cinebench_r23_single": 2010,
         "cinebench_r23_multi": 20100,
-        "geekbench_6_single": 3000,
-        "geekbench_6_multi": 15400,
+        "geekbench_6_single": 2487,
+        "geekbench_6_multi": 14789,
         "passmark_cpu_mark": 37200
       },
       "games": {
@@ -1241,8 +1241,8 @@
         "cinebench_2024_multi": 1080,
         "cinebench_r23_single": 1960,
         "cinebench_r23_multi": 18800,
-        "geekbench_6_single": 2920,
-        "geekbench_6_multi": 14600,
+        "geekbench_6_single": 2509,
+        "geekbench_6_multi": 15235,
         "passmark_cpu_mark": 35200
       },
       "games": {
@@ -1353,8 +1353,8 @@
         "cinebench_2024_multi": 880,
         "cinebench_r23_single": 1980,
         "cinebench_r23_multi": 15400,
-        "geekbench_6_single": 2940,
-        "geekbench_6_multi": 12600,
+        "geekbench_6_single": 2590,
+        "geekbench_6_multi": 13593,
         "passmark_cpu_mark": 29800
       },
       "games": {
@@ -1465,8 +1465,8 @@
         "cinebench_2024_multi": 840,
         "cinebench_r23_single": 1920,
         "cinebench_r23_multi": 14600,
-        "geekbench_6_single": 2880,
-        "geekbench_6_multi": 12100,
+        "geekbench_6_single": 2477,
+        "geekbench_6_multi": 12927,
         "passmark_cpu_mark": 28200
       },
       "games": {
@@ -1577,8 +1577,8 @@
         "cinebench_2024_multi": 820,
         "cinebench_r23_single": 1880,
         "cinebench_r23_multi": 14200,
-        "geekbench_6_single": 2820,
-        "geekbench_6_multi": 11800,
+        "geekbench_6_single": 2391,
+        "geekbench_6_multi": 12469,
         "passmark_cpu_mark": 27400
       },
       "games": {
@@ -1689,8 +1689,8 @@
         "cinebench_2024_multi": 980,
         "cinebench_r23_single": 1860,
         "cinebench_r23_multi": 17800,
-        "geekbench_6_single": 2780,
-        "geekbench_6_multi": 13900,
+        "geekbench_6_single": 2261,
+        "geekbench_6_multi": 13618,
         "passmark_cpu_mark": 33200
       },
       "games": {
@@ -2025,8 +2025,8 @@
         "cinebench_2024_multi": 1520,
         "cinebench_r23_single": 1640,
         "cinebench_r23_multi": 28600,
-        "geekbench_6_single": 2350,
-        "geekbench_6_multi": 16500,
+        "geekbench_6_single": 2086,
+        "geekbench_6_multi": 15310,
         "passmark_cpu_mark": 45800
       },
       "games": {
@@ -2137,8 +2137,8 @@
         "cinebench_2024_multi": 1280,
         "cinebench_r23_single": 1620,
         "cinebench_r23_multi": 22400,
-        "geekbench_6_single": 2320,
-        "geekbench_6_multi": 14200,
+        "geekbench_6_single": 2052,
+        "geekbench_6_multi": 13839,
         "passmark_cpu_mark": 39500
       },
       "games": {
@@ -2249,8 +2249,8 @@
         "cinebench_2024_multi": 880,
         "cinebench_r23_single": 1520,
         "cinebench_r23_multi": 15100,
-        "geekbench_6_single": 2180,
-        "geekbench_6_multi": 11600,
+        "geekbench_6_single": 2012,
+        "geekbench_6_multi": 11768,
         "passmark_cpu_mark": 28400
       },
       "games": {
@@ -2361,8 +2361,8 @@
         "cinebench_2024_multi": 810,
         "cinebench_r23_single": 1410,
         "cinebench_r23_multi": 13900,
-        "geekbench_6_single": 2040,
-        "geekbench_6_multi": 10800,
+        "geekbench_6_single": 1841,
+        "geekbench_6_multi": 11004,
         "passmark_cpu_mark": 26500
       },
       "games": {
@@ -2473,8 +2473,8 @@
         "cinebench_2024_multi": 880,
         "cinebench_r23_single": 1600,
         "cinebench_r23_multi": 15300,
-        "geekbench_6_single": 2280,
-        "geekbench_6_multi": 11400,
+        "geekbench_6_single": 2059,
+        "geekbench_6_multi": 11251,
         "passmark_cpu_mark": 28100
       },
       "games": {
@@ -2585,8 +2585,8 @@
         "cinebench_2024_multi": 820,
         "cinebench_r23_single": 1560,
         "cinebench_r23_multi": 14200,
-        "geekbench_6_single": 2220,
-        "geekbench_6_multi": 10800,
+        "geekbench_6_single": 2037,
+        "geekbench_6_multi": 10858,
         "passmark_cpu_mark": 26800
       },
       "games": {
@@ -2697,8 +2697,8 @@
         "cinebench_2024_multi": 780,
         "cinebench_r23_single": 1510,
         "cinebench_r23_multi": 13600,
-        "geekbench_6_single": 2150,
-        "geekbench_6_multi": 10200,
+        "geekbench_6_single": 1886,
+        "geekbench_6_multi": 9883,
         "passmark_cpu_mark": 24600
       },
       "games": {
@@ -2809,8 +2809,8 @@
         "cinebench_2024_multi": 660,
         "cinebench_r23_single": 1570,
         "cinebench_r23_multi": 11500,
-        "geekbench_6_single": 2210,
-        "geekbench_6_multi": 8800,
+        "geekbench_6_single": 1998,
+        "geekbench_6_multi": 9195,
         "passmark_cpu_mark": 22100
       },
       "games": {
@@ -2921,8 +2921,8 @@
         "cinebench_2024_multi": 640,
         "cinebench_r23_single": 1530,
         "cinebench_r23_multi": 11100,
-        "geekbench_6_single": 2160,
-        "geekbench_6_multi": 8500,
+        "geekbench_6_single": 1925,
+        "geekbench_6_multi": 9100,
         "passmark_cpu_mark": 21600
       },
       "games": {
@@ -3033,8 +3033,8 @@
         "cinebench_2024_multi": 610,
         "cinebench_r23_single": 1480,
         "cinebench_r23_multi": 10500,
-        "geekbench_6_single": 2080,
-        "geekbench_6_multi": 8100,
+        "geekbench_6_single": 1821,
+        "geekbench_6_multi": 8417,
         "passmark_cpu_mark": 19900
       },
       "games": {
@@ -3145,8 +3145,8 @@
         "cinebench_2024_multi": 580,
         "cinebench_r23_single": 1420,
         "cinebench_r23_multi": 9900,
-        "geekbench_6_single": 1980,
-        "geekbench_6_multi": 7600,
+        "geekbench_6_single": 1755,
+        "geekbench_6_multi": 8201,
         "passmark_cpu_mark": 18800
       },
       "games": {
@@ -3257,8 +3257,8 @@
         "cinebench_2024_multi": 520,
         "cinebench_r23_single": 1280,
         "cinebench_r23_multi": 9200,
-        "geekbench_6_single": 1780,
-        "geekbench_6_multi": 6900,
+        "geekbench_6_single": 1532,
+        "geekbench_6_multi": 7420,
         "passmark_cpu_mark": 17800
       },
       "games": {
@@ -3369,8 +3369,8 @@
         "cinebench_2024_multi": 2450,
         "cinebench_r23_single": 2320,
         "cinebench_r23_multi": 45600,
-        "geekbench_6_single": 3420,
-        "geekbench_6_multi": 23500,
+        "geekbench_6_single": 2813,
+        "geekbench_6_multi": 25659,
         "passmark_cpu_mark": 67800
       },
       "games": {
@@ -3481,8 +3481,8 @@
         "cinebench_2024_multi": 2080,
         "cinebench_r23_single": 2260,
         "cinebench_r23_multi": 37800,
-        "geekbench_6_single": 3310,
-        "geekbench_6_multi": 20800,
+        "geekbench_6_single": 2736,
+        "geekbench_6_multi": 23540,
         "passmark_cpu_mark": 57400
       },
       "games": {
@@ -3593,8 +3593,8 @@
         "cinebench_2024_multi": 2080,
         "cinebench_r23_single": 2260,
         "cinebench_r23_multi": 37800,
-        "geekbench_6_single": 3310,
-        "geekbench_6_multi": 20800,
+        "geekbench_6_single": 2732,
+        "geekbench_6_multi": 23052,
         "passmark_cpu_mark": 57400
       },
       "games": {
@@ -3929,8 +3929,8 @@
         "cinebench_2024_multi": 2320,
         "cinebench_r23_single": 2360,
         "cinebench_r23_multi": 42800,
-        "geekbench_6_single": 3350,
-        "geekbench_6_multi": 22400,
+        "geekbench_6_single": 2892,
+        "geekbench_6_multi": 26034,
         "passmark_cpu_mark": 64800
       },
       "games": {
@@ -4041,8 +4041,8 @@
         "cinebench_2024_multi": 2210,
         "cinebench_r23_single": 2300,
         "cinebench_r23_multi": 40800,
-        "geekbench_6_single": 3250,
-        "geekbench_6_multi": 21600,
+        "geekbench_6_single": 2657,
+        "geekbench_6_multi": 21996,
         "passmark_cpu_mark": 61200
       },
       "games": {
@@ -4153,8 +4153,8 @@
         "cinebench_2024_multi": 2210,
         "cinebench_r23_single": 2300,
         "cinebench_r23_multi": 40800,
-        "geekbench_6_single": 3250,
-        "geekbench_6_multi": 21600,
+        "geekbench_6_single": 2675,
+        "geekbench_6_multi": 23118,
         "passmark_cpu_mark": 61200
       },
       "games": {
@@ -4265,8 +4265,8 @@
         "cinebench_2024_multi": 1840,
         "cinebench_r23_single": 2160,
         "cinebench_r23_multi": 34800,
-        "geekbench_6_single": 3080,
-        "geekbench_6_multi": 19600,
+        "geekbench_6_single": 2579,
+        "geekbench_6_multi": 20803,
         "passmark_cpu_mark": 52400
       },
       "games": {
@@ -4377,8 +4377,8 @@
         "cinebench_2024_multi": 1840,
         "cinebench_r23_single": 2160,
         "cinebench_r23_multi": 34800,
-        "geekbench_6_single": 3080,
-        "geekbench_6_multi": 19600,
+        "geekbench_6_single": 2555,
+        "geekbench_6_multi": 20961,
         "passmark_cpu_mark": 52400
       },
       "games": {
@@ -4489,8 +4489,8 @@
         "cinebench_2024_multi": 1680,
         "cinebench_r23_single": 2080,
         "cinebench_r23_multi": 31200,
-        "geekbench_6_single": 2980,
-        "geekbench_6_multi": 18200,
+        "geekbench_6_single": 2397,
+        "geekbench_6_multi": 17017,
         "passmark_cpu_mark": 47500
       },
       "games": {
@@ -4601,8 +4601,8 @@
         "cinebench_2024_multi": 1380,
         "cinebench_r23_single": 2060,
         "cinebench_r23_multi": 24800,
-        "geekbench_6_single": 2920,
-        "geekbench_6_multi": 15800,
+        "geekbench_6_single": 2512,
+        "geekbench_6_multi": 17155,
         "passmark_cpu_mark": 39800
       },
       "games": {
@@ -4713,8 +4713,8 @@
         "cinebench_2024_multi": 1380,
         "cinebench_r23_single": 2060,
         "cinebench_r23_multi": 24800,
-        "geekbench_6_single": 2920,
-        "geekbench_6_multi": 15800,
+        "geekbench_6_single": 2459,
+        "geekbench_6_multi": 17252,
         "passmark_cpu_mark": 39800
       },
       "games": {
@@ -4825,8 +4825,8 @@
         "cinebench_2024_multi": 1210,
         "cinebench_r23_single": 1920,
         "cinebench_r23_multi": 21500,
-        "geekbench_6_single": 2750,
-        "geekbench_6_multi": 14200,
+        "geekbench_6_single": 2103,
+        "geekbench_6_multi": 12279,
         "passmark_cpu_mark": 35200
       },
       "games": {
@@ -4937,8 +4937,8 @@
         "cinebench_2024_multi": 920,
         "cinebench_r23_single": 1820,
         "cinebench_r23_multi": 16400,
-        "geekbench_6_single": 2580,
-        "geekbench_6_multi": 12200,
+        "geekbench_6_single": 2031,
+        "geekbench_6_multi": 11013,
         "passmark_cpu_mark": 27800
       },
       "games": {
@@ -5049,8 +5049,8 @@
         "cinebench_2024_multi": 920,
         "cinebench_r23_single": 1820,
         "cinebench_r23_multi": 16400,
-        "geekbench_6_single": 2580,
-        "geekbench_6_multi": 12200,
+        "geekbench_6_single": 2015,
+        "geekbench_6_multi": 10825,
         "passmark_cpu_mark": 27800
       },
       "games": {
@@ -5161,8 +5161,8 @@
         "cinebench_2024_multi": 510,
         "cinebench_r23_single": 1780,
         "cinebench_r23_multi": 9100,
-        "geekbench_6_single": 2450,
-        "geekbench_6_multi": 7800,
+        "geekbench_6_single": 2121,
+        "geekbench_6_multi": 7848,
         "passmark_cpu_mark": 15200
       },
       "games": {
@@ -5273,8 +5273,8 @@
         "cinebench_2024_multi": 2160,
         "cinebench_r23_single": 2280,
         "cinebench_r23_multi": 39500,
-        "geekbench_6_single": 3200,
-        "geekbench_6_multi": 21200,
+        "geekbench_6_single": 2611,
+        "geekbench_6_multi": 22684,
         "passmark_cpu_mark": 59500
       },
       "games": {
@@ -5385,8 +5385,8 @@
         "cinebench_2024_multi": 1720,
         "cinebench_r23_single": 2120,
         "cinebench_r23_multi": 31000,
-        "geekbench_6_single": 3000,
-        "geekbench_6_multi": 18500,
+        "geekbench_6_single": 2479,
+        "geekbench_6_multi": 19240,
         "passmark_cpu_mark": 47200
       },
       "games": {
@@ -5497,8 +5497,8 @@
         "cinebench_2024_multi": 1340,
         "cinebench_r23_single": 2020,
         "cinebench_r23_multi": 24200,
-        "geekbench_6_single": 2880,
-        "geekbench_6_multi": 15400,
+        "geekbench_6_single": 2371,
+        "geekbench_6_multi": 15962,
         "passmark_cpu_mark": 38400
       },
       "games": {
@@ -5609,8 +5609,8 @@
         "cinebench_2024_multi": 890,
         "cinebench_r23_single": 1780,
         "cinebench_r23_multi": 15800,
-        "geekbench_6_single": 2520,
-        "geekbench_6_multi": 11800,
+        "geekbench_6_single": 1999,
+        "geekbench_6_multi": 11069,
         "passmark_cpu_mark": 26200
       },
       "games": {
@@ -5721,8 +5721,8 @@
         "cinebench_2024_multi": 700,
         "cinebench_r23_single": 1720,
         "cinebench_r23_multi": 12400,
-        "geekbench_6_single": 2420,
-        "geekbench_6_multi": 9800,
+        "geekbench_6_single": 1958,
+        "geekbench_6_multi": 9411,
         "passmark_cpu_mark": 19800
       },
       "games": {
@@ -5833,8 +5833,8 @@
         "cinebench_2024_multi": 480,
         "cinebench_r23_single": 1680,
         "cinebench_r23_multi": 8500,
-        "geekbench_6_single": 2320,
-        "geekbench_6_multi": 6900,
+        "geekbench_6_single": 1947,
+        "geekbench_6_multi": 7318,
         "passmark_cpu_mark": 14100
       },
       "games": {
@@ -5945,8 +5945,8 @@
         "cinebench_2024_multi": 2280,
         "cinebench_r23_single": 2340,
         "cinebench_r23_multi": 43200,
-        "geekbench_6_single": 3450,
-        "geekbench_6_multi": 21800,
+        "geekbench_6_single": 3054,
+        "geekbench_6_multi": 26402,
         "passmark_cpu_mark": 66500
       },
       "games": {
@@ -6057,8 +6057,8 @@
         "cinebench_2024_multi": 1820,
         "cinebench_r23_single": 2280,
         "cinebench_r23_multi": 34200,
-        "geekbench_6_single": 3380,
-        "geekbench_6_multi": 19200,
+        "geekbench_6_single": 2794,
+        "geekbench_6_multi": 20843,
         "passmark_cpu_mark": 54800
       },
       "games": {

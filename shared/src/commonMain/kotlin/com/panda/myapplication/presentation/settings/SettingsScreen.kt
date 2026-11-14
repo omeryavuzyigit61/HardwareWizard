@@ -884,34 +884,50 @@ private fun SourcesDetailsDialog(
                     .verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                SourceItemTile(
-                    "🧩 ${tr(isTr, "PC Bileşenleri & Masa Ekipmanları", "PC Core & Desk Setup")}",
-                    tr(
-                        isTr,
-                        "BuildCores OpenDB & docyx/pc-part-dataset (CPU, GPU, Anakart, RAM, SSD, Kasa, Soğutucu, Fan, Monitör, Çevre Birimleri, UPS, Oyuncu Masası)",
-                        "BuildCores OpenDB & docyx/pc-part-dataset (CPUs, GPUs, Motherboards, RAM, Storage, Cases, Coolers, Fans, Monitors, Peripherals, UPS, Gaming Desks)",
-                    ),
-                )
                 SourceItemTile("🎮 ${strings.catGpu}", strings.sourcesGpuDesc)
                 SourceItemTile("⚡ ${strings.catCpu}", strings.sourcesCpuDesc)
                 SourceItemTile(
                     "🔋 ${strings.catPsu}",
-                    "${strings.sourcesPsuDesc} • IRONScale Labs PSU Veritabanı",
+                    "${strings.sourcesPsuDesc} • IRONScale Labs",
+                )
+                SourceItemTile(
+                    "🖥️ ${tr(isTr, "Monitör & Ekran Panelleri", "Monitors & Display Panels")}",
+                    tr(
+                        isTr,
+                        "DisplaySpecifications, TFTCentral, RTINGS Ekran Laboratuvarı (Panel Bit Derinliği, DCI-P3, HDR/Nit)",
+                        "DisplaySpecifications, TFTCentral, RTINGS Display Lab (Panel Bit Depth, DCI-P3, HDR/Nits)",
+                    ),
+                )
+                SourceItemTile(
+                    "🖱️ ${tr(isTr, "Çevre Birimleri & Akustik", "Peripherals & Acoustics")}",
+                    tr(
+                        isTr,
+                        "EloShapes, RTINGS, Sensor.fyi, AutoEq (Sensör, MCU, Switch, Polling Rate, Empedans)",
+                        "EloShapes, RTINGS, Sensor.fyi, AutoEq (Sensor, MCU, Switches, Polling Rate, Impedance)",
+                    ),
+                )
+                SourceItemTile(
+                    "💾 ${tr(isTr, "Anakart, Bellek (RAM) & Depolama (SSD)", "Motherboards, Memory (RAM) & Storage (SSD)")}",
+                    tr(
+                        isTr,
+                        "TechPowerUp SSD Veritabanı, Üretici Resmi QVL & VRM Veri Sayfaları",
+                        "TechPowerUp SSD Database, Official Vendor QVL & VRM Datasheets",
+                    ),
+                )
+                SourceItemTile(
+                    "📱 ${tr(isTr, "Mobil, Tablet, Laptop & Akıllı Saat", "Mobile, Tablet, Laptop & Smartwatches")}",
+                    tr(
+                        isTr,
+                        "GSMArena, Kimovil, Geekbench 6 Resmi Mobil JSON, AnTuTu v10 ve DXOMARK",
+                        "GSMArena, Kimovil, Geekbench 6 Official Mobile JSON, AnTuTu v10, and DXOMARK",
+                    ),
                 )
                 SourceItemTile(
                     "📡 ${tr(isTr, "Ağ & Kablosuz Ekipmanlar", "Networking & Wireless Hardware")}",
                     tr(
                         isTr,
-                        "OpenWrt Table of Hardware (Router, Modem, Access Point, Menzil Genişletici) & üretici veri sayfaları",
-                        "OpenWrt Table of Hardware (Routers, Modems, Access Points, Range Extenders) & official vendor datasheets",
-                    ),
-                )
-                SourceItemTile(
-                    "📱 ${tr(isTr, "Mobil, Tablet, Laptop & Saat", "Mobile, Tablet, Laptop & Wearables")}",
-                    tr(
-                        isTr,
-                        "Geekbench 6 Açık Karşılaştırma Akışı, resmi üretici teknik katalogları ve donanım telemetrisi",
-                        "Geekbench 6 Open Benchmark Feed, official OEM technical catalogs, and device telemetry",
+                        "OpenWrt Table of Hardware (ToH), WikiDevi (TechInfoDepot) & Üretici Veri Sayfaları",
+                        "OpenWrt Table of Hardware (ToH), WikiDevi (TechInfoDepot) & Official Vendor Datasheets",
                     ),
                 )
                 SourceItemTile("📸 ${tr(isTr, "Ürün Stüdyo Görselleri", "Product Studio Imagery")}", strings.sourcesImagesDesc)
