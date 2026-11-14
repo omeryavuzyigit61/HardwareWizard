@@ -1,5 +1,6 @@
 package com.panda.myapplication.presentation.hardware_list
 
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.presentation.util.localized
 
 import androidx.compose.animation.animateColorAsState
@@ -106,7 +107,6 @@ import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -477,7 +477,7 @@ fun HardwareListContent(
                             onCategorySelected = { onEvent(HardwareListUiEvent.OnCategorySelected(it)) },
                             modifier = Modifier.weight(1f),
                         )
-                        CatalogSegmentMode.PREBUILT, CatalogSegmentMode.LAPTOP -> BrandFilterChips(
+                        CatalogSegmentMode.LAPTOP -> BrandFilterChips(
                             availableBrands = uiState.availableBrands,
                             selectedBrands = uiState.filters.selectedBrands,
                             onBrandToggled = { brand ->
@@ -636,7 +636,9 @@ fun HardwareListContent(
                                 item = item,
                                 onClick = { onEvent(HardwareListUiEvent.OnHardwareItemClicked(item)) },
                                 onAddToVsClick = { onEvent(HardwareListUiEvent.OnAddToVsArena(item)) },
-                                onPriceOverrideClick = { priceDialogItem = item },
+                                onPriceOverrideClick = if (FeatureFlags.IS_PRICING_ENABLED) {
+                                    { priceDialogItem = item }
+                                } else null,
                             )
                         }
                     }
@@ -645,19 +647,21 @@ fun HardwareListContent(
         }
     }
 
-    priceDialogItem?.let { dialogItem ->
-        PriceOverrideDialog(
-            item = dialogItem,
-            onDismiss = { priceDialogItem = null },
-            onSaveCustomPrice = { customPrice, note ->
-                onEvent(HardwareListUiEvent.OnSaveCustomPrice(dialogItem.id, customPrice, note))
-                priceDialogItem = null
-            },
-            onClearCustomPrice = {
-                onEvent(HardwareListUiEvent.OnClearCustomPrice(dialogItem.id))
-                priceDialogItem = null
-            },
-        )
+    if (FeatureFlags.IS_PRICING_ENABLED) {
+        priceDialogItem?.let { dialogItem ->
+            PriceOverrideDialog(
+                item = dialogItem,
+                onDismiss = { priceDialogItem = null },
+                onSaveCustomPrice = { customPrice, note ->
+                    onEvent(HardwareListUiEvent.OnSaveCustomPrice(dialogItem.id, customPrice, note))
+                    priceDialogItem = null
+                },
+                onClearCustomPrice = {
+                    onEvent(HardwareListUiEvent.OnClearCustomPrice(dialogItem.id))
+                    priceDialogItem = null
+                },
+            )
+        }
     }
 
     if (uiState.isFilterSheetVisible) {
@@ -969,7 +973,7 @@ fun HardwareCard(
         color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(
             1.dp,
-            if (item.isCustomPrice) NeonAmber.copy(alpha = 0.65f) else MaterialTheme.colorScheme.outline,
+            if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) NeonAmber.copy(alpha = 0.65f) else MaterialTheme.colorScheme.outline,
         ),
     ) {
         Row(
@@ -1038,56 +1042,6 @@ fun HardwareCard(
                 )
 
                 when (val spec = item.spec) {
-                    is PrebuiltSpec -> {
-                        if ((spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) ||
-                            (spec.estimatedSeparatePriceTry != null && spec.estimatedSeparatePriceTry > 0.0)
-                        ) {
-                            FlowRow(
-                                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                verticalArrangement = Arrangement.spacedBy(4.dp),
-                                modifier = Modifier.fillMaxWidth(),
-                            ) {
-                                if (spec.priceAdvantageTry != null && spec.priceAdvantageTry > 0.0) {
-                                    val isAdv = spec.isAdvantageous
-                                    val pillBg = if (isAdv) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.secondaryContainer
-                                    val pillText = if (isAdv) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSecondaryContainer
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(6.dp))
-                                            .background(pillBg)
-                                            .padding(horizontal = 6.dp, vertical = 2.dp),
-                                    ) {
-                                        Text(
-                                            text = "+${spec.priceAdvantageTry.toLong()} ₺ Kâr",
-                                            style = MaterialTheme.typography.labelSmall,
-                                            fontWeight = FontWeight.Black,
-                                            color = pillText,
-                                            softWrap = false,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis,
-                                        )
-                                    }
-                                }
-                                if (spec.estimatedSeparatePriceTry != null && spec.estimatedSeparatePriceTry > 0.0) {
-                                    Text(
-                                        text = "${if (isTr) "Ayrı" else "Separate"}: ${spec.estimatedSeparatePriceTry.toLong()} ₺",
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        softWrap = false,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis,
-                                    )
-                                }
-                            }
-                        }
-                        Text(
-                            text = "${spec.cpuModel} • ${spec.gpuModel} • ${spec.ramSpec}",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                    }
                     is LaptopSpec -> {
                         FlowRow(
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -1152,70 +1106,72 @@ fun HardwareCard(
             // 3. SAĞ BLOK (Fiyat ve Aksiyon - minWidth: 68dp, wrapContentWidth(Alignment.End))
             Column(
                 modifier = Modifier
-                    .widthIn(min = 68.dp)
+                    .then(if (FeatureFlags.IS_PRICING_ENABLED) Modifier.widthIn(min = 68.dp) else Modifier)
                     .wrapContentWidth(Alignment.End),
                 horizontalAlignment = Alignment.End,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                val cardCurrency = LocalAppCurrency.current
-                val cardStrings = LocalAppStrings.current
-                if (item.currentPriceTry != null) {
-                    val priceText = item.currentPriceTry.formatPriceWithCurrency(cardCurrency, cardStrings.noPriceFallback)
-                    Text(
-                        text = priceText,
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Black,
-                        color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
-                        softWrap = false,
-                        maxLines = 1,
-                        overflow = TextOverflow.Clip,
-                        textAlign = TextAlign.End,
-                    )
-                } else if (onPriceOverrideClick != null) {
-                    Surface(
-                        onClick = onPriceOverrideClick,
-                        shape = RoundedCornerShape(6.dp),
-                        color = NeonAmber.copy(alpha = 0.16f),
-                        border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.65f)),
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+                    val cardCurrency = LocalAppCurrency.current
+                    val cardStrings = LocalAppStrings.current
+                    if (item.currentPriceTry != null) {
+                        val priceText = item.currentPriceTry.formatPriceWithCurrency(cardCurrency, cardStrings.noPriceFallback)
+                        Text(
+                            text = priceText,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Black,
+                            color = if (item.isCustomPrice) NeonAmber else MaterialTheme.colorScheme.primary,
+                            softWrap = false,
+                            maxLines = 1,
+                            overflow = TextOverflow.Clip,
+                            textAlign = TextAlign.End,
+                        )
+                    } else if (onPriceOverrideClick != null) {
+                        Surface(
+                            onClick = onPriceOverrideClick,
+                            shape = RoundedCornerShape(6.dp),
+                            color = NeonAmber.copy(alpha = 0.16f),
+                            border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.65f)),
                         ) {
-                            Icon(
-                                imageVector = Icons.Rounded.Sell,
-                                contentDescription = null,
-                                tint = NeonAmber,
-                                modifier = Modifier.size(11.dp),
-                            )
-                            Spacer(modifier = Modifier.width(3.dp))
-                            Text(
-                                text = cardStrings.enterPrice,
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold,
-                                color = NeonAmber,
-                                maxLines = 1,
-                                softWrap = false,
-                            )
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Rounded.Sell,
+                                    contentDescription = null,
+                                    tint = NeonAmber,
+                                    modifier = Modifier.size(11.dp),
+                                )
+                                Spacer(modifier = Modifier.width(3.dp))
+                                Text(
+                                    text = cardStrings.enterPrice,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    color = NeonAmber,
+                                    maxLines = 1,
+                                    softWrap = false,
+                                )
+                            }
                         }
+                    } else {
+                        Text(
+                            text = cardStrings.noPriceFallback,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            softWrap = false,
+                            maxLines = 1,
+                            overflow = TextOverflow.Clip,
+                            textAlign = TextAlign.End,
+                        )
                     }
-                } else {
-                    Text(
-                        text = cardStrings.noPriceFallback,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        softWrap = false,
-                        maxLines = 1,
-                        overflow = TextOverflow.Clip,
-                        textAlign = TextAlign.End,
-                    )
                 }
 
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    if (onPriceOverrideClick != null && item.currentPriceTry != null) {
+                    if (FeatureFlags.IS_PRICING_ENABLED && onPriceOverrideClick != null && item.currentPriceTry != null) {
                         Surface(
                             onClick = onPriceOverrideClick,
                             shape = RoundedCornerShape(6.dp),
@@ -1320,7 +1276,6 @@ fun HardwarePlaceholderBadge(
         HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
-        HardwareCategory.PREBUILT_PC -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.LAPTOP -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MOUSE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
@@ -1362,7 +1317,6 @@ fun CategoryBadge(category: HardwareCategory) {
         HardwareCategory.STORAGE -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.COOLER -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.CASE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
-        HardwareCategory.PREBUILT_PC -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
         HardwareCategory.LAPTOP -> MaterialTheme.colorScheme.tertiaryContainer to MaterialTheme.colorScheme.onTertiaryContainer
         HardwareCategory.MOUSE -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
         HardwareCategory.KEYBOARD -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
@@ -1952,7 +1906,6 @@ private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String 
         spec.maxRadiatorSizeMm?.let { "${if (isTr) "Radyatör" else "Radiator"}: ${it}mm" },
         spec.sidePanel,
     ).joinToString(" • ")
-    is PrebuiltSpec -> "${spec.cpuModel} • ${spec.gpuModel} • ${spec.ramSpec} • ${spec.storageSpec}"
     is LaptopSpec -> "${spec.gpuModel} (${spec.gpuWattTgp}) • ${spec.muxSwitch} • ${spec.displaySpec}"
     is MouseSpec -> "${spec.sensor} • ${spec.pollingRateHz}Hz • ${spec.weightG}g • ${spec.switchType}"
     is KeyboardSpec -> "${spec.switchType} • ${if (spec.rapidTriggerSupported) "Rapid Trigger (${spec.minActuationMm}mm)" else "${spec.minActuationMm}mm"} • ${spec.layout}"
@@ -1990,8 +1943,7 @@ fun FluidSlidingSegmentBar(
             CatalogSegmentMode.INDIVIDUAL to (Icons.Rounded.Memory to strings.segmentIndividual),
             CatalogSegmentMode.PERIPHERALS to (Icons.Rounded.DevicesOther to strings.segmentPeripherals),
             CatalogSegmentMode.NETWORKING to (Icons.Rounded.Router to strings.segmentNetworking),
-            CatalogSegmentMode.PREBUILT to (Icons.Rounded.DesktopWindows to strings.segmentPrebuilt),
-            CatalogSegmentMode.LAPTOP to (Icons.Rounded.Laptop to strings.segmentLaptop),
+                CatalogSegmentMode.LAPTOP to (Icons.Rounded.Laptop to strings.segmentLaptop),
             CatalogSegmentMode.MOBILE to (Icons.Rounded.Smartphone to strings.segmentMobile),
         )
     }

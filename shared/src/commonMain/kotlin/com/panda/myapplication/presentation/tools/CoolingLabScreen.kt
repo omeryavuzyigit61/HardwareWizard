@@ -1,6 +1,7 @@
 package com.panda.myapplication.presentation.tools
 
 import androidx.compose.animation.animateColorAsState
+import com.panda.myapplication.domain.config.FeatureFlags
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
@@ -1014,7 +1015,11 @@ private fun CatalogCpuPickerSheet(
                             }
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = item.currentPriceTry.formatPriceWithCurrency(fallback = if (isTr) "Seç" else "Select"),
+                                text = if (FeatureFlags.IS_PRICING_ENABLED) {
+                                    item.currentPriceTry.formatPriceWithCurrency(fallback = if (isTr) "Seç" else "Select")
+                                } else {
+                                    if (isTr) "Seç" else "Select"
+                                },
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonEmerald,

@@ -153,7 +153,6 @@ CATEGORY_FILE_MAP = {
     "psu": ["power-supply.json", "psu.json"],
     "cooler": ["cpu-cooler.json", "cooler.json"],
     "case": ["case.json"],
-    "prebuilt_pc": ["prebuilt-pc.json"],
     "laptop": ["laptop.json"]
 }
 
@@ -179,7 +178,6 @@ CATEGORY_POSITIVE_REQUIREMENTS = {
     "psu": ["PSU", "GÜÇ KAYNAĞI", "GUC KAYNAGI", "POWER SUPPLY", "WATT", "80 PLUS", "80+"],
     "cooler": ["SOĞUTUCU", "SOGUTUCU", "COOLER", "SIVI SOĞUTMA", "HAVA SOĞUTMA", "AIO", "ISLEMCI SOGUTUCU", "İŞLEMCİ SOĞUTUCU"],
     "case": ["KASA", "CASE", "CHASSIS", "TOWER", "GAMING KASA", "OYUNCU KASASI"],
-    "prebuilt_pc": ["HAZIR SİSTEM", "GAMING PC", "OEM", "SİSTEM"],
     "laptop": ["LAPTOP", "NOTEBOOK", "GAMING LAPTOP", "DİZÜSTÜ"]
 }
 
@@ -192,7 +190,6 @@ CATEGORY_PRICE_FLOORS = {
     "psu": 1000.0,
     "cooler": 400.0,
     "case": 800.0,
-    "prebuilt_pc": 12000.0,
     "laptop": 15000.0
 }
 
@@ -238,7 +235,7 @@ def is_valid_category_item(category: str, title: str, price: float | None = None
     if not title or len(title.strip()) < 8:
         return False
     lower = title.lower()
-    if category not in ("prebuilt_pc", "laptop"):
+    if category != "laptop":
         if any(neg in lower for neg in NEGATIVE_KEYWORDS):
             return False
     upper = title.upper()
@@ -1332,7 +1329,7 @@ def direct_search_fallback(catalogs: dict, matched_offers_by_id: dict):
     print("\n[+] Doğrudan Arama (Direct Search Fallback) başlatılıyor...")
     unmatched_items = []
     for cat, items in catalogs.items():
-        if cat in ("prebuilt_pc", "laptop"):
+        if cat == "laptop":
             continue
         for it in items:
             pid = resolve_product_id(cat, it)
@@ -1544,7 +1541,7 @@ def main():
                 hist = resolve_price_history(prod_id, current_price, best_store, existing_hist, sorted_offers, cat)
                 lowest_price = min(p["priceTry"] for p in hist) if hist else current_price
                 highest_price = max(p["priceTry"] for p in hist) if hist else current_price
-                if cat in ("prebuilt_pc", "laptop"):
+                if cat == "laptop":
                     it["priceTry"] = current_price
                 else:
                     it["price"] = current_price
@@ -1552,7 +1549,7 @@ def main():
                 hist = []
                 lowest_price = None
                 highest_price = None
-                if cat not in ("prebuilt_pc", "laptop"):
+                if cat != "laptop":
                     it["price"] = None
 
             # Görseli zaten doğrulanmış ürünler için tekrar görsel araması yapma

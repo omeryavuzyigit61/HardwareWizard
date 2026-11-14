@@ -88,7 +88,6 @@ internal class HardwareRepositoryImpl(
             val counts = hardwareDao.getCategoryCounts().associate { it.category to it.cnt }
             val hasCpus = (counts[HardwareCategory.CPU] ?: 0) > 0
             val hasGpus = (counts[HardwareCategory.GPU] ?: 0) > 0
-            val hasPrebuilts = (counts[HardwareCategory.PREBUILT_PC] ?: 0) > 0
             val laptopCount = counts[HardwareCategory.LAPTOP] ?: 0
             val phoneCount = counts[HardwareCategory.SMARTPHONE] ?: 0
             val tabletCount = counts[HardwareCategory.TABLET] ?: 0
@@ -114,7 +113,7 @@ internal class HardwareRepositoryImpl(
                 (counts[HardwareCategory.HEADSET] ?: 0) +
                 (counts[HardwareCategory.MONITOR] ?: 0)
 
-            val isMissingCore = !hasCpus || !hasGpus || !hasPrebuilts ||
+            val isMissingCore = !hasCpus || !hasGpus ||
                 laptopCount < 300 || phoneCount < 200 || tabletCount < 30 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
                 moboCount < 640 || micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
                 fanCount < 180 || upsCount < 140 || deskCount < 100 || lightCount < 90 ||
@@ -305,22 +304,6 @@ internal class HardwareRepositoryImpl(
                         com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
                             item = item,
                             case = specMap[item.id],
-                        )
-                    )?.applyOverride(overrideMap)
-                }
-            }
-            HardwareCategory.PREBUILT_PC -> combine(
-                hardwareDao.observeItemEntitiesByCategory(category),
-                hardwareDao.observeAllPrebuiltSpecs(),
-                hardwareDao.observeAllPriceOverrides(),
-            ) { items, specs, overrides ->
-                val specMap = specs.associateBy { it.itemId }
-                val overrideMap = overrides.associateBy { it.hardwareId }
-                items.mapNotNull { item ->
-                    HardwareMapper.toDomain(
-                        com.panda.myapplication.data.local.entity.HardwareItemWithSpec(
-                            item = item,
-                            prebuilt = specMap[item.id],
                         )
                     )?.applyOverride(overrideMap)
                 }
@@ -810,7 +793,6 @@ internal class HardwareRepositoryImpl(
                     storages = mergeCatalogs(catalog.storages, localDataSource.loadLocalStorages()) { it.name },
                     coolers = mergeCatalogs(catalog.coolers, localDataSource.loadLocalCoolers()) { it.name },
                     cases = mergeCatalogs(catalog.cases, localDataSource.loadLocalCases()) { it.name },
-                    prebuilts = mergeCatalogs(catalog.prebuilts, localDataSource.loadLocalPrebuilts()) { it.name },
                     laptops = mergeCatalogs(catalog.laptops, localDataSource.loadLocalLaptops()) { it.name },
                     peripherals = mergePeripherals(catalog.peripherals, localDataSource.loadLocalPeripherals()),
                     smartphones = mergeCatalogs(remoteSmartphones, localDataSource.loadLocalSmartphones()) { it.id },

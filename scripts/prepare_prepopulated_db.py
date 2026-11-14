@@ -139,10 +139,10 @@ def populate_smartphones(cursor):
             `cpu_synthetic`, `gpu_synthetic`, `game_fps`, `image_url`, `images`
         ) VALUES (?, ?, ?, 'SMARTPHONE', ?, 'TRY', ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?, NULL, NULL, NULL, ?, ?)
         """, (
-            pid, p.get("brand", "Akıllı Telefon"), p.get("model", p.get("name", "")),
+            pid, p.get("brand") or "", p.get("model") or p.get("name") or "",
             price_minor, now_ms, p.get("priceTry"), p.get("priceTry"), p.get("priceTry"),
             offers, history, p.get("benchmarkScore") or s.get("antutuScore"),
-            p.get("tier", "A"), p.get("gamingIndex", 80), img, imgs
+            p.get("tier") or "", p.get("gamingIndex") or 0, img, imgs
         ))
         
         variants_json = json.dumps(s.get("variants") or [])
@@ -159,23 +159,23 @@ def populate_smartphones(cursor):
             `genshin_stability_score`, `variants`
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            pid, s.get("chipset", ""), s.get("cpuArch", ""), s.get("gpuModel", ""),
-            s.get("processNodeNm", 3), s.get("ramGb", 8), s.get("ramType", "LPDDR5X"),
-            s.get("storageGb", 256), s.get("storageType", "UFS 4.0"), 1 if s.get("hasMicroSd") else 0,
+            pid, s.get("chipset") or "", s.get("cpuArch") or "", s.get("gpuModel") or "",
+            s.get("processNodeNm") or 0, s.get("ramGb") or 0, s.get("ramType") or "",
+            s.get("storageGb") or 0, s.get("storageType") or "", 1 if s.get("hasMicroSd") else 0,
             s.get("antutuScore"), s.get("geekbenchSingle"), s.get("geekbenchMulti"),
-            s.get("stabilityPercent"), s.get("displaySizeInch", 6.8), s.get("displayTech", "OLED"),
-            s.get("resolution", "FHD+"), s.get("ppi", 460), s.get("refreshRateHz", 120),
-            s.get("peakBrightnessNit", 2000), s.get("glassProtection", "Gorilla Glass"),
-            s.get("hdrSupport", "Dolby Vision"), s.get("mainCameraMp", 50), s.get("mainSensorSize", "1/1.3"),
-            s.get("mainAperture", "f/1.8"), 1 if s.get("hasOis", True) else 0, s.get("oisType", "OIS"),
+            s.get("stabilityPercent"), s.get("displaySizeInch") or 0.0, s.get("displayTech") or "",
+            s.get("resolution") or "", s.get("ppi") or 0, s.get("refreshRateHz") or 0,
+            s.get("peakBrightnessNit") or 0, s.get("glassProtection") or "",
+            s.get("hdrSupport") or "", s.get("mainCameraMp") or 0, s.get("mainSensorSize") or "",
+            s.get("mainAperture") or "", 1 if s.get("hasOis") else 0, s.get("oisType") or "",
             s.get("telephotoMp"), s.get("opticalZoomX"), s.get("ultraWideMp"),
-            s.get("videoResolution", "4K 60 FPS"), s.get("selfieCameraMp", 12), s.get("batteryMah", 5000),
-            s.get("wiredChargingWatt", 45), s.get("wirelessChargingWatt"),
+            s.get("videoResolution") or "", s.get("selfieCameraMp") or 0, s.get("batteryMah") or 0,
+            s.get("wiredChargingWatt") or 0, s.get("wirelessChargingWatt"),
             1 if s.get("hasReverseCharging") else 0, s.get("chargingTimeToFullMin"),
-            s.get("weightGrams", 220), s.get("thicknessMm", 8.2), s.get("frameMaterial", "Titanyum"),
-            s.get("waterResistance", "IP68"), 1 if s.get("hasStylus") else 0,
-            s.get("osName", "Android 14"), s.get("updateYears", 7),
-            s.get("pubgFpsSupport", "120 FPS"), s.get("genshinStabilityScore", "%70+ Kararlı"),
+            s.get("weightGrams") or 0, s.get("thicknessMm") or 0.0, s.get("frameMaterial") or "",
+            s.get("waterResistance") or "", 1 if s.get("hasStylus") else 0,
+            s.get("osName") or "", s.get("updateYears") or 0,
+            s.get("pubgFpsSupport") or "", s.get("genshinStabilityScore") or "",
             variants_json
         ))
     print(f"  [OK] {len(data)} akıllı telefon Room SQLite veritabanına işlendi.")
@@ -205,10 +205,10 @@ def populate_tablets(cursor):
             `cpu_synthetic`, `gpu_synthetic`, `game_fps`, `image_url`, `images`
         ) VALUES (?, ?, ?, 'TABLET', ?, 'TRY', ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?, NULL, NULL, NULL, ?, ?)
         """, (
-            pid, p.get("brand", "Tablet"), p.get("model", p.get("name", "")),
+            pid, p.get("brand") or "", p.get("model") or p.get("name") or "",
             price_minor, now_ms, p.get("priceTry"), p.get("priceTry"), p.get("priceTry"),
             offers, history, p.get("benchmarkScore") or s.get("antutuScore"),
-            p.get("tier", "A"), p.get("gamingIndex", 80), img, imgs
+            p.get("tier") or "", p.get("gamingIndex") or 0, img, imgs
         ))
         
         variants_json = json.dumps(s.get("variants") or [])
@@ -222,19 +222,19 @@ def populate_tablets(cursor):
             `thickness_mm`, `body_material`, `os_name`, `update_years`, `cellular_option`, `variants`
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            pid, s.get("chipset", ""), s.get("cpuArch", ""), s.get("gpuModel", ""),
-            s.get("processNodeNm", 3), s.get("ramGb", 8), s.get("storageGb", 256),
-            s.get("storageType", "NVMe"), 1 if s.get("hasMicroSd") else 0,
+            pid, s.get("chipset") or "", s.get("cpuArch") or "", s.get("gpuModel") or "",
+            s.get("processNodeNm") or 0, s.get("ramGb") or 0, s.get("storageGb") or 0,
+            s.get("storageType") or "", 1 if s.get("hasMicroSd") else 0,
             s.get("antutuScore"), s.get("geekbenchSingle"), s.get("geekbenchMulti"),
-            s.get("stabilityPercent"), s.get("displaySizeInch", 11.0), s.get("displayTech", "OLED"),
-            s.get("resolution", "2064 x 2752"), s.get("ppi", 264), s.get("refreshRateHz", 120),
-            s.get("peakBrightnessNit", 1000), s.get("stylusSupport", "Stylus Destekli"),
-            s.get("mainCameraMp", 12), s.get("frontCameraMp", 12), s.get("speakerCount", 4),
-            1 if s.get("hasDolbyAtmos", True) else 0, s.get("batteryMah", 10000),
-            s.get("wiredChargingWatt", 35), s.get("wirelessChargingWatt"),
-            s.get("weightGrams", 550), s.get("thicknessMm", 5.5), s.get("bodyMaterial", "Alüminyum"),
-            s.get("osName", "Android / iPadOS"), s.get("updateYears", 5),
-            s.get("cellularOption", "Wi-Fi"), variants_json
+            s.get("stabilityPercent"), s.get("displaySizeInch") or 0.0, s.get("displayTech") or "",
+            s.get("resolution") or "", s.get("ppi") or 0, s.get("refreshRateHz") or 0,
+            s.get("peakBrightnessNit") or 0, s.get("stylusSupport") or "",
+            s.get("mainCameraMp") or 0, s.get("frontCameraMp") or 0, s.get("speakerCount") or 0,
+            1 if s.get("hasDolbyAtmos") else 0, s.get("batteryMah") or 0,
+            s.get("wiredChargingWatt") or 0, s.get("wirelessChargingWatt"),
+            s.get("weightGrams") or 0, s.get("thicknessMm") or 0.0, s.get("bodyMaterial") or "",
+            s.get("osName") or "", s.get("updateYears") or 0,
+            s.get("cellularOption") or "", variants_json
         ))
     print(f"  [OK] {len(data)} tablet Room SQLite veritabanına işlendi.")
 
@@ -243,10 +243,18 @@ def checkpoint_and_optimize(source_db_path, output_db_path):
     
     conn = sqlite3.connect(source_db_path)
     cursor = conn.cursor()
-    
+
+    cursor.execute("DROP TABLE IF EXISTS prebuilt_specs;")
+    if cursor.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='hardware_items';").fetchone():
+        cursor.execute("DELETE FROM hardware_items WHERE category = 'PREBUILT_PC';")
+
     ensure_tables(cursor)
     populate_smartphones(cursor)
     populate_tablets(cursor)
+
+    cursor.execute("PRAGMA user_version = 35;")
+    cursor.execute("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY, identity_hash TEXT);")
+    cursor.execute("INSERT OR REPLACE INTO room_master_table (id, identity_hash) VALUES (42, '219d90c66fd6dc49f100818175002008');")
     
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
     tables = [row[0] for row in cursor.fetchall()]

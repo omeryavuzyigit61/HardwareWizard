@@ -32,7 +32,6 @@ import com.panda.myapplication.data.local.entity.MousepadSpecEntity
 import com.panda.myapplication.data.local.entity.WebcamSpecEntity
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
-import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
@@ -43,7 +42,6 @@ import com.panda.myapplication.data.model.dto.GpuRawDto
 import com.panda.myapplication.data.model.dto.LaptopRawDto
 import com.panda.myapplication.data.model.dto.MotherboardRawDto
 import com.panda.myapplication.data.model.dto.PeripheralRawDto
-import com.panda.myapplication.data.model.dto.PrebuiltRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
@@ -80,7 +78,6 @@ import com.panda.myapplication.domain.model.MotherboardFormFactor
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PcieGeneration
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -265,26 +262,6 @@ object HardwareMapper {
                     radiatorSupport = cs.radiatorSupport,
                     includedFans = cs.includedFans,
                     frontPanelUsb = cs.frontPanelUsb,
-                )
-            }
-            itemWithSpec.prebuilt != null -> {
-                val pb = itemWithSpec.prebuilt
-                PrebuiltSpec(
-                    storeName = pb.storeName,
-                    cpuModel = pb.cpuModel,
-                    gpuModel = pb.gpuModel,
-                    motherboardModel = pb.motherboardModel,
-                    ramSpec = pb.ramSpec,
-                    storageSpec = pb.storageSpec,
-                    psuCaseSpec = pb.psuCaseSpec,
-                    estimatedSeparatePriceTry = pb.estimatedSeparatePriceTry,
-                    priceAdvantageTry = pb.priceAdvantageTry,
-                    fps1080p = pb.fps1080p,
-                    fps1440p = pb.fps1440p,
-                    fps4k = pb.fps4k,
-                    gamingScore = pb.gamingScore,
-                    cpuId = pb.cpuId,
-                    gpuId = pb.gpuId,
                 )
             }
             itemWithSpec.laptop != null -> {
@@ -750,74 +727,12 @@ object HardwareMapper {
         val hasIntegratedGraphics = !dto.graphics.isNullOrBlank() && !dto.graphics.equals("None", ignoreCase = true)
 
         val architecture = dto.microarchitecture?.ifBlank { null }
-        val upper = rawName.uppercase()
-        val l3CacheMb = dto.l3CacheMb ?: when {
-            // Dual CCD X3D
-            upper.contains("9950X3D") || upper.contains("7950X3D") || upper.contains("7900X3D") -> 128
-            // Single CCD X3D
-            upper.contains("9800X3D") || upper.contains("7800X3D") || upper.contains("5800X3D") || upper.contains("5700X3D") || upper.contains("7600X3D") -> 96
-            // Dual CCD Ryzen 9 (Zen 3, Zen 4, Zen 5, Zen 2)
-            upper.contains("9950X") || upper.contains("9900X") || upper.contains("7950X") || upper.contains("7900X") || upper.contains("7900") || upper.contains("5950X") || upper.contains("5900X") || upper.contains("3950X") || upper.contains("3900X") -> 64
-            // Intel Raptor / Arrow Lake
-            upper.contains("14900") || upper.contains("13900") || upper.contains("285K") -> 36
-            upper.contains("14700") || upper.contains("13700") -> 33
-            upper.contains("265K") -> 30
-            upper.contains("14600") || upper.contains("13600") || upper.contains("245K") -> 24
-            upper.contains("12900") -> 30
-            upper.contains("12700") -> 25
-            upper.contains("12600") -> 20
-            upper.contains("12400") || upper.contains("13400") || upper.contains("14400") -> 18
-            coreCount >= 12 -> 64
-            coreCount >= 8 -> 32
-            else -> 16
-        }
-
-        val l2CacheMb = dto.l2CacheMb ?: when {
-            upper.contains("285K") -> 40.0
-            upper.contains("265K") -> 36.0
-            upper.contains("14900") || upper.contains("13900") -> 32.0
-            upper.contains("14700") -> 28.0
-            upper.contains("245K") -> 26.0
-            upper.contains("14600") || upper.contains("13600") -> 20.0
-            upper.contains("9950") || upper.contains("7950") -> 16.0
-            upper.contains("9900") || upper.contains("7900") -> 12.0
-            upper.contains("9800") || upper.contains("7800") || upper.contains("9700") || upper.contains("7700") -> 8.0
-            upper.contains("9600") || upper.contains("7600") || upper.contains("7500") -> 6.0
-            else -> (coreCount * 0.5)
-        }
-
-        val processNode = dto.processNode ?: when {
-            upper.contains("285K") || upper.contains("265K") || upper.contains("245K") -> "TSMC 3nm N3B FinFET"
-            upper.contains("9950") || upper.contains("9900") || upper.contains("9800") || upper.contains("9700") || upper.contains("9600") -> "TSMC 4nm FinFET"
-            upper.contains("7950") || upper.contains("7900") || upper.contains("7800") || upper.contains("7700") || upper.contains("7600") || upper.contains("7500") -> "TSMC 5nm FinFET"
-            upper.contains("14900") || upper.contains("14700") || upper.contains("14600") || upper.contains("14400") -> "Intel 7 (10nm Enhanced SuperFin)"
-            upper.contains("13900") || upper.contains("13700") || upper.contains("13600") || upper.contains("13400") -> "Intel 7 (10nm)"
-            upper.contains("12900") || upper.contains("12700") || upper.contains("12600") || upper.contains("12400") || upper.contains("12100") -> "Intel 7 (10nm)"
-            upper.contains("5950") || upper.contains("5900") || upper.contains("5800") || upper.contains("5700") || upper.contains("5600") || upper.contains("5500") -> "TSMC 7nm FinFET"
-            else -> null
-        }
-
-        val pcieVersion = dto.pcieVersion ?: when {
-            socket.contains("AM5", ignoreCase = true) -> "PCIe 5.0 (28 Hattı / Lanes)"
-            socket.contains("1851", ignoreCase = true) -> "PCIe 5.0 (24 Hattı / Lanes)"
-            socket.contains("1700", ignoreCase = true) -> "PCIe 5.0 (x16) + PCIe 4.0 (x4)"
-            socket.contains("AM4", ignoreCase = true) -> if (upper.contains("5500") || upper.contains("G")) "PCIe 3.0" else "PCIe 4.0 (24 Hattı)"
-            else -> null
-        }
-
-        val maxMemorySpeed = dto.maxMemorySpeed ?: when {
-            socket.contains("AM5", ignoreCase = true) -> if (upper.contains("9000") || upper.contains("9900") || upper.contains("9800") || upper.contains("9700") || upper.contains("9600")) "DDR5-5600 MT/s (Native) • EXPO 6000+" else "DDR5-5200 MT/s (Native) • EXPO 6000+"
-            socket.contains("1851", ignoreCase = true) -> "DDR5-6400 MT/s • XMP 3.0"
-            socket.contains("1700", ignoreCase = true) -> "DDR5-5600 / DDR4-3200 MT/s"
-            socket.contains("AM4", ignoreCase = true) -> "DDR4-3200 MT/s"
-            else -> null
-        }
-
-        val unlockedMultiplier = dto.unlockedMultiplier ?: when {
-            upper.contains("AMD") || upper.contains("RYZEN") -> !upper.contains("PRO ")
-            upper.contains("K") || upper.contains("KF") || upper.contains("KS") || upper.contains("EXTREME") -> true
-            else -> false
-        }
+        val l3CacheMb = dto.l3CacheMb
+        val l2CacheMb = dto.l2CacheMb
+        val processNode = dto.processNode?.ifBlank { null }
+        val pcieVersion = dto.pcieVersion?.ifBlank { null }
+        val maxMemorySpeed = dto.maxMemorySpeed?.ifBlank { null }
+        val unlockedMultiplier = dto.unlockedMultiplier
 
         val item = HardwareItemEntity(
             id = id,
@@ -893,16 +808,15 @@ object HardwareMapper {
             else -> extractedModel
         }
 
-        val factorySpecs = resolveGpuFactorySpecs(chipset, rawName, dto.memory)
-        val vramMb = (dto.memory?.let { it * 1024 }) ?: factorySpecs.vramMb
-        val memoryType = dto.memoryType ?: factorySpecs.memoryType
-        val coreClockMhz = (dto.coreClockMhz ?: 1500).coerceAtLeast(500)
-        val boostClockMhz = (dto.boostClockMhz ?: (coreClockMhz + 250)).coerceAtLeast(coreClockMhz)
-        val tdpWatts = dto.tdpWatts ?: factorySpecs.tdpWatts
-        val recommendedPsuWatts = dto.recommendedPsuWatts ?: factorySpecs.recommendedPsuWatts
+        val vramMb = dto.memory?.let { it * 1024 } ?: 0
+        val memoryType = dto.memoryType ?: ""
+        val coreClockMhz = dto.coreClockMhz ?: 0
+        val boostClockMhz = dto.boostClockMhz
+        val tdpWatts = dto.tdpWatts ?: 0
+        val recommendedPsuWatts = dto.recommendedPsuWatts ?: 0
         val lengthMm = dto.length?.toInt()
-        val powerConnectors = dto.powerConnectors ?: factorySpecs.powerConnectors
-        val slotWidth = dto.slotWidth ?: factorySpecs.slotWidth
+        val powerConnectors = dto.powerConnectors
+        val slotWidth = dto.slotWidth
 
         val item = HardwareItemEntity(
             id = id,
@@ -1102,54 +1016,17 @@ object HardwareMapper {
             else -> PsuEfficiencyRating.GOLD
         }
 
-        val modularity = dto.modularity ?: when {
-            isEdge || upper.contains("RM") || upper.contains("HYDRO G") || upper.contains("VITA") || upper.contains("THOR") || upper.contains("AURA") || upper.contains("C750") || upper.contains("C850") || upper.contains("C1000") || upper.contains("A750GL") || upper.contains("A850GL") || upper.contains("A1000G") -> "Tam Modüler (Full Modular)"
-            upper.contains("SEMI") -> "Yarı Modüler"
-            upper.contains("BN") -> "Modüler Değil"
-            else -> null
-        }
-
-        val tierRating = dto.tierRating ?: when {
-            isEdge || upper.contains("RM") || upper.contains("HYDRO G") || upper.contains("A1000G") || upper.contains("A850GL") || upper.contains("A750GL") || upper.contains("THOR") || upper.contains("STRIX") || upper.contains("VITA GM") || upper.contains("NZXT C") -> "Tier A (High-End)"
-            upper.contains("BN") || upper.contains("BRONZE") -> "Tier C (Entry-Level)"
-            else -> null
-        }
-
-        val atxStandard = dto.atxStandard ?: when {
-            isAtx31 -> "ATX 3.1 & PCIe 5.1"
-            isAtx3 -> "ATX 3.0 & PCIe 5.0"
-            else -> null
-        }
-
-        val pcie12Vhpwr = dto.pcie12Vhpwr ?: when {
-            isAtx31 -> "1x 16-Pin 12V-2x6 (600W Native)"
-            isAtx3 -> "1x 16-Pin 12VHPWR (600W Native)"
-            else -> null
-        }
-
+        val modularity = dto.modularity?.ifBlank { null }
+        val tierRating = dto.tierRating?.ifBlank { null }
+        val atxStandard = dto.atxStandard?.ifBlank { null }
+        val pcie12Vhpwr = dto.pcie12Vhpwr?.ifBlank { null }
         val epsConnectors = dto.epsConnectors
         val pcieConnectors = dto.pcieConnectors
         val sataConnectors = dto.sataConnectors
-        val topology = dto.topology ?: when {
-            isEdge -> "LLC Resonant + DC-DC / %100 Japon 105°C Kapasitörler"
-            upper.contains("HYDRO G") -> "LLC Half-Bridge + DC-DC / 105°C Japon Kapasitör (Conformal Coating)"
-            upper.contains("THOR") || upper.contains("STRIX") -> "ROG Soğutuculu LLC Resonant + DC-DC / %100 Japon Kapasitör"
-            else -> null
-        }
+        val topology = dto.topology?.ifBlank { null }
         val protections = dto.protections
-        val fanAndSize = dto.fanAndSize ?: when {
-            isEdge -> "120mm FDB Fan (Sıfır RPM) / 182mm (L-Shape Çift Bölmeli)"
-            upper.contains("RM1000") || upper.contains("RM850X") -> "135mm Manyetik Kaldırma (ML) Fan / 160mm"
-            upper.contains("A1000G") || upper.contains("NZXT C") || upper.contains("AURA") -> "135mm FDB Fan (Sıfır RPM) / 150mm"
-            upper.contains("GL") || upper.contains("VITA") || upper.contains("RME") -> "120mm FDB Fan / 140mm Kompakt"
-            else -> null
-        }
-        val cybeneticsCert = dto.cybeneticsCert ?: when {
-            isEdge -> "Cybenetics Platinum (Verimlilik) & Standard+ (Ses)"
-            upper.contains("RM") -> "Cybenetics Gold"
-            upper.contains("THOR") -> "Cybenetics Platinum / Lambda A++"
-            else -> null
-        }
+        val fanAndSize = dto.fanAndSize?.ifBlank { null }
+        val cybeneticsCert = dto.cybeneticsCert?.ifBlank { null }
 
         val item = HardwareItemEntity(
             id = id,
@@ -1169,10 +1046,10 @@ object HardwareMapper {
             isAtx3Compliant = isAtx3,
             supportsPcie5Power = isAtx3,
             modularity = modularity,
-            formFactor = dto.type ?: "ATX",
+            formFactor = dto.type?.ifBlank { null },
             outputs = dto.outputs ?: listOfNotNull(pcie12Vhpwr, epsConnectors, pcieConnectors).takeIf { it.isNotEmpty() }?.joinToString(" • "),
             tierRating = tierRating,
-            capacitors = dto.capacitors ?: topology,
+            capacitors = dto.capacitors?.ifBlank { null },
             atxStandard = atxStandard,
             pcie12Vhpwr = pcie12Vhpwr,
             epsConnectors = epsConnectors,
@@ -1319,48 +1196,6 @@ object HardwareMapper {
             radiatorSupport = dto.radiatorSupport,
             includedFans = dto.includedFans,
             frontPanelUsb = dto.frontPanelUsb,
-        )
-        return item to spec
-    }
-
-    fun prebuiltDtoToEntity(dto: PrebuiltRawDto, cachedAt: Instant): Pair<HardwareItemEntity, PrebuiltSpecEntity> {
-        val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Prebuilt id must not be blank" }
-        val name = dto.name ?: "OEM Hazır Sistem"
-        val brand = dto.brand ?: dto.storeName ?: "OEM"
-        val priceMinor = dto.price?.let { (it * 100).toLong() }
-
-        val item = HardwareItemEntity(
-            id = id,
-            brand = brand,
-            model = name,
-            category = HardwareCategory.PREBUILT_PC,
-            priceMinor = priceMinor,
-            currencyCode = if (priceMinor != null) "TRY" else null,
-            cachedAt = cachedAt,
-            imageUrl = dto.imageUrl,
-            images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
-            currentPriceTry = dto.priceTry,
-            lowestPriceTry = dto.priceTry,
-            highestPriceTry = dto.priceTry,
-            benchmarkGamingIndex = dto.gamingScore,
-        )
-        val spec = PrebuiltSpecEntity(
-            itemId = id,
-            storeName = dto.storeName ?: "Mağaza",
-            cpuModel = dto.cpuModel ?: "",
-            gpuModel = dto.gpuModel ?: "",
-            motherboardModel = dto.motherboardModel ?: "",
-            ramSpec = dto.ramSpec ?: "",
-            storageSpec = dto.storageSpec ?: "",
-            psuCaseSpec = dto.psuCaseSpec ?: "",
-            estimatedSeparatePriceTry = dto.estimatedSeparatePriceTry,
-            priceAdvantageTry = dto.priceAdvantageTry,
-            fps1080p = dto.fps1080p ?: 0,
-            fps1440p = dto.fps1440p ?: 0,
-            fps4k = dto.fps4k ?: 0,
-            gamingScore = dto.gamingScore ?: 0,
-            cpuId = dto.cpuId,
-            gpuId = dto.gpuId,
         )
         return item to spec
     }
@@ -1561,7 +1396,6 @@ object HardwareMapper {
         storages: List<StorageRawDto> = emptyList(),
         coolers: List<CoolerRawDto> = emptyList(),
         cases: List<CaseRawDto> = emptyList(),
-        prebuilts: List<PrebuiltRawDto> = emptyList(),
         laptops: List<LaptopRawDto> = emptyList(),
         peripherals: List<PeripheralRawDto> = emptyList(),
         smartphones: List<SmartphoneCatalogItemDto> = emptyList(),
@@ -1579,7 +1413,6 @@ object HardwareMapper {
         val storagePairs = storages.mapNotNull { runCatching { storageDtoToEntity(it, syncedAt) }.getOrNull() }
         val coolerPairs = coolers.mapNotNull { runCatching { coolerDtoToEntity(it, syncedAt) }.getOrNull() }
         val casePairs = cases.mapNotNull { runCatching { caseDtoToEntity(it, syncedAt) }.getOrNull() }
-        val prebuiltPairs = prebuilts.mapNotNull { runCatching { prebuiltDtoToEntity(it, syncedAt) }.getOrNull() }
         val laptopPairs = laptops.mapNotNull { runCatching { laptopDtoToEntity(it, syncedAt) }.getOrNull() }
         val phonePairs = smartphones.mapNotNull { runCatching { smartphoneDtoToEntity(it, syncedAt) }.getOrNull() }
         val tabletPairs = tablets.mapNotNull { runCatching { tabletDtoToEntity(it, syncedAt) }.getOrNull() }
@@ -1637,238 +1470,238 @@ object HardwareMapper {
                     HardwareCategory.MOUSE -> {
                         mousePairs += itemEntity to MouseSpecEntity(
                             hardwareId = id,
-                            sensor = dto.sensor ?: "PixArt PAW3395",
-                            maxDpi = dto.maxDpi ?: 26000,
-                            pollingRateHz = dto.pollingRateHz ?: 1000,
-                            switchType = dto.switchType ?: "Optik Switch",
-                            weightG = dto.weightG ?: 60,
-                            connectivity = dto.connectivity ?: "2.4GHz / USB-C",
+                            sensor = dto.sensor ?: "",
+                            maxDpi = dto.maxDpi ?: 0,
+                            pollingRateHz = dto.pollingRateHz ?: 0,
+                            switchType = dto.switchType ?: "",
+                            weightG = dto.weightG ?: 0,
+                            connectivity = dto.connectivity ?: "",
                             batteryHours = dto.batteryHours,
-                            mcu = dto.mcu ?: "Nordic 52840",
-                            clickLatencyMs = dto.clickLatencyMs ?: 0.8,
-                            shapeType = dto.shapeType ?: "Simetrik",
+                            mcu = dto.mcu ?: "",
+                            clickLatencyMs = dto.clickLatencyMs ?: 0.0,
+                            shapeType = dto.shapeType ?: "",
                         )
                     }
                     HardwareCategory.KEYBOARD -> {
                         keyboardPairs += itemEntity to KeyboardSpecEntity(
                             hardwareId = id,
-                            switchType = dto.switchType ?: "Mekanik Switch",
+                            switchType = dto.switchType ?: "",
                             rapidTriggerSupported = dto.rapidTriggerSupported ?: false,
-                            minActuationMm = dto.minActuationMm ?: 1.8,
-                            pollingRateHz = dto.pollingRateHz ?: 1000,
-                            layout = dto.layout ?: "TKL",
-                            hotSwap = dto.hotSwap ?: true,
-                            connectivity = dto.connectivity ?: "Kablolu USB-C",
-                            maxActuationMm = dto.maxActuationMm ?: 4.0,
-                            caseMaterial = dto.caseMaterial ?: "Alüminyum CNC / ABS",
+                            minActuationMm = dto.minActuationMm ?: 0.0,
+                            pollingRateHz = dto.pollingRateHz ?: 0,
+                            layout = dto.layout ?: "",
+                            hotSwap = dto.hotSwap ?: false,
+                            connectivity = dto.connectivity ?: "",
+                            maxActuationMm = dto.maxActuationMm ?: 0.0,
+                            caseMaterial = dto.caseMaterial ?: "",
                             isHallEffect = dto.isHallEffect ?: (dto.switchType?.contains("Hall Effect", ignoreCase = true) == true),
                         )
                     }
                     HardwareCategory.HEADSET -> {
                         headsetPairs += itemEntity to HeadsetSpecEntity(
                             hardwareId = id,
-                            driverType = dto.driverType ?: "Dinamik Neodimyum",
-                            driverSizeMm = dto.driverSizeMm ?: 50,
-                            impedanceOhm = dto.impedanceOhm ?: 32,
-                            frequencyResponse = dto.frequencyResponse ?: "20Hz - 20kHz",
+                            driverType = dto.driverType ?: "",
+                            driverSizeMm = dto.driverSizeMm ?: 0,
+                            impedanceOhm = dto.impedanceOhm ?: 0,
+                            frequencyResponse = dto.frequencyResponse ?: "",
                             dacAmpRequired = dto.dacAmpRequired ?: false,
-                            micType = dto.micType ?: "Çıkarılabilir Kardioid",
-                            weightG = dto.weightG ?: 300,
-                            connectivity = dto.connectivity ?: "2.4GHz / Bluetooth / 3.5mm",
-                            soundIsolation = dto.soundIsolation ?: "Pasif / ANC",
+                            micType = dto.micType ?: "",
+                            weightG = dto.weightG ?: 0,
+                            connectivity = dto.connectivity ?: "",
+                            soundIsolation = dto.soundIsolation ?: "",
                         )
                     }
                     HardwareCategory.MONITOR -> {
                         monitorPairs += itemEntity to MonitorSpecEntity(
                             hardwareId = id,
-                            panelType = dto.panelType ?: "Fast IPS",
-                            screenSizeInch = dto.screenSizeInch ?: 27.0,
-                            resolution = dto.resolution ?: "1440p",
-                            refreshRateHz = dto.refreshRateHz ?: 240,
-                            responseSpeedGtGMs = dto.responseSpeedGtGMs ?: 1.0,
-                            ppi = dto.ppi ?: 109,
-                            hdrCertification = dto.hdrCertification ?: "HDR400",
-                            bitDepth = dto.bitDepth ?: "8-bit + FRC",
-                            responseMprtMs = dto.responseMprtMs ?: 0.5,
-                            brightnessSdrNit = dto.brightnessSdrNit ?: 350,
-                            brightnessHdrNit = dto.brightnessHdrNit ?: 400,
-                            colorGamut = dto.colorGamut ?: "%100 sRGB, %98 DCI-P3",
-                            vrrSupport = dto.vrrSupport ?: "G-Sync Compatible / FreeSync Premium Pro",
+                            panelType = dto.panelType ?: "",
+                            screenSizeInch = dto.screenSizeInch ?: 0.0,
+                            resolution = dto.resolution ?: "",
+                            refreshRateHz = dto.refreshRateHz ?: 0,
+                            responseSpeedGtGMs = dto.responseSpeedGtGMs ?: 0.0,
+                            ppi = dto.ppi ?: 0,
+                            hdrCertification = dto.hdrCertification ?: "",
+                            bitDepth = dto.bitDepth ?: "",
+                            responseMprtMs = dto.responseMprtMs ?: 0.0,
+                            brightnessSdrNit = dto.brightnessSdrNit ?: 0,
+                            brightnessHdrNit = dto.brightnessHdrNit ?: 0,
+                            colorGamut = dto.colorGamut ?: "",
+                            vrrSupport = dto.vrrSupport ?: "",
                         )
                     }
                     HardwareCategory.MICROPHONE -> {
                         microphonePairs += itemEntity to MicrophoneSpecEntity(
                             hardwareId = id,
-                            capsuleType = dto.capsuleType ?: "Dinamik (Dynamic)",
-                            polarPattern = dto.polarPattern ?: "Kardioid (Cardioid)",
-                            sampleRateAndBit = dto.sampleRateAndBit ?: "24-bit / 96kHz",
-                            frequencyResponse = dto.frequencyResponse ?: "20Hz - 20kHz",
-                            connectivity = dto.connectivity ?: "USB-C / XLR Hibrit",
-                            maxSplDb = dto.maxSplDb ?: 130,
-                            hasBuiltInDsp = dto.hasBuiltInDsp ?: true,
+                            capsuleType = dto.capsuleType ?: "",
+                            polarPattern = dto.polarPattern ?: "",
+                            sampleRateAndBit = dto.sampleRateAndBit ?: "",
+                            frequencyResponse = dto.frequencyResponse ?: "",
+                            connectivity = dto.connectivity ?: "",
+                            maxSplDb = dto.maxSplDb ?: 0,
+                            hasBuiltInDsp = dto.hasBuiltInDsp ?: false,
                             requiresPhantomPower = dto.requiresPhantomPower ?: false,
-                            hasZeroLatencyMonitoring = dto.hasZeroLatencyMonitoring ?: true,
-                            hasPopFilter = dto.hasPopFilter ?: true,
+                            hasZeroLatencyMonitoring = dto.hasZeroLatencyMonitoring ?: false,
+                            hasPopFilter = dto.hasPopFilter ?: false,
                         )
                     }
                     HardwareCategory.MOUSEPAD -> {
                         mousepadPairs += itemEntity to MousepadSpecEntity(
                             hardwareId = id,
-                            surfaceType = dto.surfaceType ?: "Dokuma Kumaş (Cloth)",
-                            speedGlideTier = dto.speedGlideTier ?: "Balanced (Dengeli)",
-                            baseMaterial = dto.baseMaterial ?: "Japon Poron / Doğal Kauçuk",
-                            dimensionsMm = dto.dimensionsMm ?: "490 x 420 mm",
-                            thicknessMm = dto.thicknessMm ?: 4.0,
-                            stitchedEdges = dto.stitchedEdges ?: true,
-                            stoppingPowerScore = dto.stoppingPowerScore ?: 8,
-                            humidityResistance = dto.humidityResistance ?: "Yüksek (%95+)",
+                            surfaceType = dto.surfaceType ?: "",
+                            speedGlideTier = dto.speedGlideTier ?: "",
+                            baseMaterial = dto.baseMaterial ?: "",
+                            dimensionsMm = dto.dimensionsMm ?: "",
+                            thicknessMm = dto.thicknessMm ?: 0.0,
+                            stitchedEdges = dto.stitchedEdges ?: false,
+                            stoppingPowerScore = dto.stoppingPowerScore ?: 0,
+                            humidityResistance = dto.humidityResistance ?: "",
                         )
                     }
                     HardwareCategory.WEBCAM -> {
                         webcamPairs += itemEntity to WebcamSpecEntity(
                             hardwareId = id,
-                            maxResolution = dto.maxResolution ?: "4K UHD (3840x2160)",
-                            maxFrameRateFps = dto.maxFrameRateFps ?: 60,
-                            sensorModel = dto.sensorModel ?: "Sony STARVIS CMOS",
-                            sensorSizeInch = dto.sensorSizeInch ?: "1/2.8\"",
-                            aperture = dto.aperture ?: "f/2.0",
-                            fieldOfViewDeg = dto.fieldOfViewDeg ?: 82,
-                            focusType = dto.focusType ?: "PDAF Otomatik Odak",
+                            maxResolution = dto.maxResolution ?: "",
+                            maxFrameRateFps = dto.maxFrameRateFps ?: 0,
+                            sensorModel = dto.sensorModel ?: "",
+                            sensorSizeInch = dto.sensorSizeInch ?: "",
+                            aperture = dto.aperture ?: "",
+                            fieldOfViewDeg = dto.fieldOfViewDeg ?: 0,
+                            focusType = dto.focusType ?: "",
                             hasAiTracking = dto.hasAiTracking ?: false,
-                            hasHardwareHdr = dto.hasHardwareHdr ?: true,
-                            connectionType = dto.connectionType ?: "USB 3.0 Type-C",
-                            privacyShutter = dto.privacyShutter ?: true,
+                            hasHardwareHdr = dto.hasHardwareHdr ?: false,
+                            connectionType = dto.connectionType ?: "",
+                            privacyShutter = dto.privacyShutter ?: false,
                         )
                     }
                     HardwareCategory.GAMING_CHAIR -> {
                         gamingChairPairs += itemEntity to GamingChairSpecEntity(
                             hardwareId = id,
-                            chairType = dto.chairType ?: "Ergonomik Oyuncu Koltuğu",
-                            upholsteryMaterial = dto.upholsteryMaterial ?: "Nefes Alan Kumaş (SoftWeave)",
-                            lumbarSupportType = dto.lumbarSupportType ?: "4 Yönlü Mekanik L4-L5 Bel Desteği",
-                            armrestType = dto.armrestType ?: "4D Tam Metal Kolçak",
-                            gasLiftClass = dto.gasLiftClass ?: "Class 4 Ağır Hizmet (BIFMA)",
-                            maxWeightCapacityKg = dto.maxWeightCapacityKg ?: 150,
-                            recommendedHeightRange = dto.recommendedHeightRange ?: "165 - 195 cm",
-                            reclineAngleDeg = dto.reclineAngleDeg ?: 165,
-                            tiltMechanism = dto.tiltMechanism ?: "Multi-Tilt (Kurbağa Mekanizma)",
+                            chairType = dto.chairType ?: "",
+                            upholsteryMaterial = dto.upholsteryMaterial ?: "",
+                            lumbarSupportType = dto.lumbarSupportType ?: "",
+                            armrestType = dto.armrestType ?: "",
+                            gasLiftClass = dto.gasLiftClass ?: "",
+                            maxWeightCapacityKg = dto.maxWeightCapacityKg ?: 0,
+                            recommendedHeightRange = dto.recommendedHeightRange ?: "",
+                            reclineAngleDeg = dto.reclineAngleDeg ?: 0,
+                            tiltMechanism = dto.tiltMechanism ?: "",
                         )
                     }
                     HardwareCategory.CASE_FAN -> {
                         caseFanPairs += itemEntity to CaseFanSpecEntity(
                             hardwareId = id,
-                            fanSizeMm = dto.fanSizeMm ?: 120,
-                            minRpm = dto.minRpm ?: 600,
-                            maxRpm = dto.maxRpm ?: 2000,
-                            maxAirflowCfm = dto.maxAirflowCfm ?: 65.0,
-                            staticPressureMmH2o = dto.staticPressureMmH2o ?: 2.5,
-                            noiseLevelDba = dto.noiseLevelDba ?: 26.5,
-                            bearingType = dto.bearingType ?: "FDB (Fluid Dynamic)",
-                            pwmPins = dto.pwmPins ?: 4,
-                            isDaisyChain = dto.isDaisyChain ?: true,
-                            argbType = dto.argbType ?: "Adreslenebilir 5V ARGB",
+                            fanSizeMm = dto.fanSizeMm ?: 0,
+                            minRpm = dto.minRpm ?: 0,
+                            maxRpm = dto.maxRpm ?: 0,
+                            maxAirflowCfm = dto.maxAirflowCfm ?: 0.0,
+                            staticPressureMmH2o = dto.staticPressureMmH2o ?: 0.0,
+                            noiseLevelDba = dto.noiseLevelDba ?: 0.0,
+                            bearingType = dto.bearingType ?: "",
+                            pwmPins = dto.pwmPins ?: 0,
+                            isDaisyChain = dto.isDaisyChain ?: false,
+                            argbType = dto.argbType ?: "",
                         )
                     }
                     HardwareCategory.UPS -> {
                         upsPairs += itemEntity to UpsSpecEntity(
                             hardwareId = id,
-                            vaRating = dto.vaRating ?: 1500,
-                            wattCapacity = dto.wattCapacity ?: 900,
-                            topology = dto.topology ?: "Line-Interactive",
-                            sinewaveType = dto.sinewaveType ?: "Tam Sinüs (Pure Sine Wave)",
-                            batterySpecs = dto.batterySpecs ?: "12V 9Ah x 2",
-                            runtimeMinFullLoad = dto.runtimeMinFullLoad ?: 4,
-                            runtimeMinHalfLoad = dto.runtimeMinHalfLoad ?: 14,
-                            outletCount = dto.outletCount ?: 6,
-                            hasUsbInterface = dto.hasUsbInterface ?: true,
-                            surgeProtectionJoules = dto.surgeProtectionJoules ?: 450,
+                            vaRating = dto.vaRating ?: 0,
+                            wattCapacity = dto.wattCapacity ?: 0,
+                            topology = dto.topology ?: "",
+                            sinewaveType = dto.sinewaveType ?: "",
+                            batterySpecs = dto.batterySpecs ?: "",
+                            runtimeMinFullLoad = dto.runtimeMinFullLoad ?: 0,
+                            runtimeMinHalfLoad = dto.runtimeMinHalfLoad ?: 0,
+                            outletCount = dto.outletCount ?: 0,
+                            hasUsbInterface = dto.hasUsbInterface ?: false,
+                            surgeProtectionJoules = dto.surgeProtectionJoules ?: 0,
                         )
                     }
                     HardwareCategory.GAMING_DESK -> {
                         gamingDeskPairs += itemEntity to GamingDeskSpecEntity(
                             hardwareId = id,
-                            deskWidthCm = dto.deskWidthCm ?: 150,
-                            deskDepthCm = dto.deskDepthCm ?: 75,
-                            isMotorizedHeight = dto.isMotorizedHeight ?: true,
-                            minHeightCm = dto.minHeightCm ?: 65,
-                            maxHeightCm = dto.maxHeightCm ?: 125,
-                            maxLoadKg = dto.maxLoadKg ?: 120,
-                            surfaceFinish = dto.surfaceFinish ?: "Manyetik Çelik / Karbon MDF",
-                            hasCableManagement = dto.hasCableManagement ?: true,
-                            integratedMousepad = dto.integratedMousepad ?: true,
+                            deskWidthCm = dto.deskWidthCm ?: 0,
+                            deskDepthCm = dto.deskDepthCm ?: 0,
+                            isMotorizedHeight = dto.isMotorizedHeight ?: false,
+                            minHeightCm = dto.minHeightCm ?: 0,
+                            maxHeightCm = dto.maxHeightCm ?: 0,
+                            maxLoadKg = dto.maxLoadKg ?: 0,
+                            surfaceFinish = dto.surfaceFinish ?: "",
+                            hasCableManagement = dto.hasCableManagement ?: false,
+                            integratedMousepad = dto.integratedMousepad ?: false,
                         )
                     }
                     HardwareCategory.GAMING_LIGHTING -> {
                         gamingLightingPairs += itemEntity to GamingLightingSpecEntity(
                             hardwareId = id,
-                            formFactor = dto.lightingFormFactor ?: "Monitör ScreenBar",
-                            maxLumens = dto.maxLumens ?: 500,
-                            colorTempKelvin = dto.colorTempKelvin ?: "2700K - 6500K + RGB",
-                            criScore = dto.criScore ?: 95,
-                            hasScreenMirroring = dto.hasScreenMirroring ?: true,
-                            supportedEcosystems = dto.supportedEcosystems ?: "Razer Chroma / Matter / Alexa",
-                            connectionType = dto.connectionType ?: "Wi-Fi + Bluetooth",
-                            powerSource = dto.powerSource ?: "USB-C 5V / Adaptör",
+                            formFactor = dto.lightingFormFactor ?: "",
+                            maxLumens = dto.maxLumens ?: 0,
+                            colorTempKelvin = dto.colorTempKelvin ?: "",
+                            criScore = dto.criScore ?: 0,
+                            hasScreenMirroring = dto.hasScreenMirroring ?: false,
+                            supportedEcosystems = dto.supportedEcosystems ?: "",
+                            connectionType = dto.connectionType ?: "",
+                            powerSource = dto.powerSource ?: "",
                         )
                     }
                     HardwareCategory.SMARTWATCH -> {
                         smartwatchPairs += itemEntity to SmartwatchSpecEntity(
                             hardwareId = id,
-                            screenSizeInch = dto.screenSizeInch ?: 1.43,
-                            screenPanel = dto.screenPanel ?: "AMOLED Always-On",
-                            peakBrightnessNits = dto.peakBrightnessNits ?: 2000,
-                            batteryLifeDays = dto.batteryLifeDays ?: 5,
-                            waterResistanceAtm = dto.waterResistanceAtm ?: 5,
-                            osName = dto.osName ?: "Wear OS / WatchOS",
-                            sensorsList = dto.sensorsList ?: "EKG, SpO2, Kalp Atışı, Çift Frekans GPS, Sıcaklık",
+                            screenSizeInch = dto.screenSizeInch ?: 0.0,
+                            screenPanel = dto.screenPanel ?: "",
+                            peakBrightnessNits = dto.peakBrightnessNits ?: 0,
+                            batteryLifeDays = dto.batteryLifeDays ?: 0,
+                            waterResistanceAtm = dto.waterResistanceAtm ?: 0,
+                            osName = dto.osName ?: "",
+                            sensorsList = dto.sensorsList ?: "",
                             hasCellularLte = dto.hasCellularLte ?: false,
-                            caseMaterial = dto.caseMaterial ?: "Havacılık Sınıfı Alüminyum / Titanyum",
+                            caseMaterial = dto.caseMaterial ?: "",
                         )
                     }
                     HardwareCategory.ROUTER -> {
                         routerPairs += itemEntity to RouterSpecEntity(
                             hardwareId = id,
-                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 7 (802.11be)",
-                            speedClass = dto.speedClass ?: "BE19000 Tri-Band",
-                            bands = dto.bands ?: "2.4GHz + 5GHz + 6GHz",
-                            ethernetPorts = dto.ethernetPorts ?: "2x 10GbE + 4x 2.5GbE LAN",
-                            hasGamingQos = dto.hasGamingQos ?: true,
-                            hasSqmBufferbloat = dto.hasSqmBufferbloat ?: true,
-                            processorAndRam = dto.processorAndRam ?: "Dört Çekirdek 2.6GHz + 2GB RAM",
-                            usbSharingPorts = dto.usbSharingPorts ?: "1x USB 3.2 Gen 1",
+                            wifiStandard = dto.wifiStandard ?: "",
+                            speedClass = dto.speedClass ?: "",
+                            bands = dto.bands ?: "",
+                            ethernetPorts = dto.ethernetPorts ?: "",
+                            hasGamingQos = dto.hasGamingQos ?: false,
+                            hasSqmBufferbloat = dto.hasSqmBufferbloat ?: false,
+                            processorAndRam = dto.processorAndRam ?: "",
+                            usbSharingPorts = dto.usbSharingPorts ?: "",
                         )
                     }
                     HardwareCategory.MODEM -> {
                         modemPairs += itemEntity to ModemSpecEntity(
                             hardwareId = id,
-                            vdslProfile = dto.vdslProfile ?: "VDSL2 35b (Supervectoring 300M)",
-                            fiberWanSupport = dto.fiberWanSupport ?: true,
-                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 6 (AX3000)",
-                            lanPorts = dto.lanPorts ?: "1x 2.5GbE + 3x 1GbE LAN",
-                            voipPorts = dto.voipPorts ?: "2x FXS Telefon Hattı",
-                            chipset = dto.chipset ?: "Broadcom / MediaTek",
+                            vdslProfile = dto.vdslProfile ?: "",
+                            fiberWanSupport = dto.fiberWanSupport ?: false,
+                            wifiStandard = dto.wifiStandard ?: "",
+                            lanPorts = dto.lanPorts ?: "",
+                            voipPorts = dto.voipPorts ?: "",
+                            chipset = dto.chipset ?: "",
                         )
                     }
                     HardwareCategory.ACCESS_POINT -> {
                         accessPointPairs += itemEntity to AccessPointSpecEntity(
                             hardwareId = id,
-                            formFactor = dto.formFactor ?: "Tavan / Duvar Tipi (Ceiling Mount)",
-                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 7 / Wi-Fi 6E",
-                            poeSupport = dto.poeSupport ?: "802.3at PoE+ (30W)",
-                            maxClients = dto.maxClients ?: 300,
-                            muMimoStreams = dto.muMimoStreams ?: "4x4 MU-MIMO",
-                            uplinkPort = dto.uplinkPort ?: "2.5GbE PoE Uplink",
+                            formFactor = dto.formFactor ?: "",
+                            wifiStandard = dto.wifiStandard ?: "",
+                            poeSupport = dto.poeSupport ?: "",
+                            maxClients = dto.maxClients ?: 0,
+                            muMimoStreams = dto.muMimoStreams ?: "",
+                            uplinkPort = dto.uplinkPort ?: "",
                         )
                     }
                     HardwareCategory.RANGE_EXTENDER -> {
                         rangeExtenderPairs += itemEntity to RangeExtenderSpecEntity(
                             hardwareId = id,
-                            extenderType = dto.extenderType ?: "Mesh Düğümü (Mesh Node)",
-                            wifiStandard = dto.wifiStandard ?: "Wi-Fi 6E (AX5400)",
-                            dedicatedBackhaul = dto.dedicatedBackhaul ?: "Ayrılmış 5GHz / 6GHz Kablosuz Omurga + GbE LAN",
-                            meshProtocol = dto.meshProtocol ?: "EasyMesh / AiMesh / OneMesh",
-                            ethernetPorts = dto.ethernetPorts ?: "2x Gigabit LAN",
-                            coverageAreaM2 = dto.coverageAreaM2 ?: 220,
+                            extenderType = dto.extenderType ?: "",
+                            wifiStandard = dto.wifiStandard ?: "",
+                            dedicatedBackhaul = dto.dedicatedBackhaul ?: "",
+                            meshProtocol = dto.meshProtocol ?: "",
+                            ethernetPorts = dto.ethernetPorts ?: "",
+                            coverageAreaM2 = dto.coverageAreaM2 ?: 0,
                         )
                     }
                     else -> Unit
@@ -1884,7 +1717,6 @@ object HardwareMapper {
                 storagePairs.map { it.first } +
                 coolerPairs.map { it.first } +
                 casePairs.map { it.first } +
-                prebuiltPairs.map { it.first } +
                 laptopPairs.map { it.first } +
                 mousePairs.map { it.first } +
                 keyboardPairs.map { it.first } +
@@ -1916,7 +1748,6 @@ object HardwareMapper {
             val benchData = if (isCpuOrGpu) {
                 benchmarks[item.id]
                     ?: (gpuKey?.let { benchmarks["gpu_$it"] ?: benchmarks[it] })
-                    ?: generateFallbackBenchmarkInfo(item.id, item.category)
             } else null
 
             val rawImage = item.imageUrl ?: priceData?.imageUrl ?: existingImages[item.id]
@@ -1977,7 +1808,6 @@ object HardwareMapper {
             storages = storagePairs.map { it.second }.distinctBy { it.itemId },
             coolers = coolerPairs.map { it.second }.distinctBy { it.itemId },
             cases = casePairs.map { it.second }.distinctBy { it.itemId },
-            prebuilts = prebuiltPairs.map { it.second }.distinctBy { it.itemId },
             laptops = laptopPairs.map { it.second }.distinctBy { it.itemId },
             mice = mousePairs.map { it.second }.distinctBy { it.hardwareId },
             keyboards = keyboardPairs.map { it.second }.distinctBy { it.hardwareId },
@@ -1998,30 +1828,6 @@ object HardwareMapper {
             rangeExtenders = rangeExtenderPairs.map { it.second }.distinctBy { it.hardwareId },
             phones = phonePairs.map { it.second }.distinctBy { it.itemId },
             tablets = tabletPairs.map { it.second }.distinctBy { it.itemId },
-        )
-    }
-
-    fun generateFallbackBenchmarkInfo(id: String, category: HardwareCategory): HardwareBenchmarkInfo? {
-        if (category != HardwareCategory.CPU && category != HardwareCategory.GPU) return null
-        val seed = kotlin.math.abs(id.hashCode())
-        val baseScore = 70 + (seed % 28)
-        val tier = when {
-            baseScore >= 94 -> "S-Tier"
-            baseScore >= 85 -> "A-Tier"
-            baseScore >= 75 -> "B-Tier"
-            else -> "C-Tier"
-        }
-        val testSuite = if (category == HardwareCategory.CPU) {
-            "Cinebench R23 & 3DMark TimeSpy"
-        } else {
-            "3DMark TimeSpy Extreme & Port Royal"
-        }
-        return HardwareBenchmarkInfo(
-            score = baseScore,
-            gamingIndex = (baseScore + (seed % 5)).coerceAtMost(100),
-            productivityIndex = (baseScore + ((seed / 3) % 5)).coerceAtMost(100),
-            tier = tier,
-            testSuite = testSuite,
         )
     }
 
@@ -2182,352 +1988,6 @@ object HardwareMapper {
             "Z590", "B560", "H570", "H510", "Z490", "B460", "H410"
         )
         return chipsets.firstOrNull { name.contains(it, ignoreCase = true) } ?: "Veri Bulunamadı"
-    }
-
-    private data class ResolvedGpuSpecs(
-        val vramMb: Int,
-        val memoryType: String,
-        val tdpWatts: Int,
-        val recommendedPsuWatts: Int,
-        val powerConnectors: String,
-        val slotWidth: String,
-    )
-
-    private fun resolveGpuFactorySpecs(chipset: String, name: String, memoryFromDto: Int?): ResolvedGpuSpecs {
-        val text = "$chipset $name".uppercase()
-        return when {
-            text.contains("5090") -> ResolvedGpuSpecs(
-                vramMb = 32 * 1024,
-                memoryType = "GDDR7",
-                tdpWatts = 575,
-                recommendedPsuWatts = 1000,
-                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
-                slotWidth = "3.5 Yuva",
-            )
-            text.contains("5080") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR7",
-                tdpWatts = 360,
-                recommendedPsuWatts = 850,
-                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("5070 TI") || text.contains("5070TI") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR7",
-                tdpWatts = 300,
-                recommendedPsuWatts = 750,
-                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("5070") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR7",
-                tdpWatts = 250,
-                recommendedPsuWatts = 650,
-                powerConnectors = "1x 16-pin (12V-2x6 / PCIe 5.0)",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("5060 TI") || text.contains("5060TI") -> ResolvedGpuSpecs(
-                vramMb = (memoryFromDto ?: 16) * 1024,
-                memoryType = "GDDR7",
-                tdpWatts = 180,
-                recommendedPsuWatts = 600,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("4090") -> ResolvedGpuSpecs(
-                vramMb = 24 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 450,
-                recommendedPsuWatts = 850,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "3.5 Yuva",
-            )
-            text.contains("4080 SUPER") || text.contains("4080") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 320,
-                recommendedPsuWatts = 750,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "3.5 Yuva",
-            )
-            text.contains("4070 TI SUPER") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 285,
-                recommendedPsuWatts = 750,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("4070 TI") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 285,
-                recommendedPsuWatts = 700,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("4070 SUPER") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 220,
-                recommendedPsuWatts = 650,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("4070") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 200,
-                recommendedPsuWatts = 650,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("4060 TI") -> ResolvedGpuSpecs(
-                vramMb = (memoryFromDto ?: 8) * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 160,
-                recommendedPsuWatts = 550,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("4060") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 115,
-                recommendedPsuWatts = 500,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("3090 TI") -> ResolvedGpuSpecs(
-                vramMb = 24 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 450,
-                recommendedPsuWatts = 850,
-                powerConnectors = "1x 16-pin (12VHPWR)",
-                slotWidth = "3.5 Yuva",
-            )
-            text.contains("3090") -> ResolvedGpuSpecs(
-                vramMb = 24 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 350,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("3080 TI") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 350,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("3080") -> ResolvedGpuSpecs(
-                vramMb = (memoryFromDto ?: 10) * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 320,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("3070 TI") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6X",
-                tdpWatts = 290,
-                recommendedPsuWatts = 700,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("3070") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 220,
-                recommendedPsuWatts = 650,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("3060 TI") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = if (text.contains("GDDR6X")) "GDDR6X" else "GDDR6",
-                tdpWatts = 200,
-                recommendedPsuWatts = 600,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("3060") -> ResolvedGpuSpecs(
-                vramMb = (memoryFromDto ?: 12) * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 170,
-                recommendedPsuWatts = 550,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("9070 XT") || text.contains("9070XT") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 300,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("9070") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 250,
-                recommendedPsuWatts = 700,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("9060 XT") || text.contains("9060XT") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 190,
-                recommendedPsuWatts = 600,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("7900 XTX") -> ResolvedGpuSpecs(
-                vramMb = 24 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 355,
-                recommendedPsuWatts = 800,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "3.0 Yuva",
-            )
-            text.contains("7900 XT") -> ResolvedGpuSpecs(
-                vramMb = 20 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 315,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("7900 GRE") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 260,
-                recommendedPsuWatts = 700,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("7800 XT") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 263,
-                recommendedPsuWatts = 700,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("7700 XT") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 245,
-                recommendedPsuWatts = 700,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("7600 XT") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 190,
-                recommendedPsuWatts = 600,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("7600") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 165,
-                recommendedPsuWatts = 550,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6950 XT") || text.contains("6900 XT") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 335,
-                recommendedPsuWatts = 850,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("6800 XT") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 300,
-                recommendedPsuWatts = 750,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.5 Yuva",
-            )
-            text.contains("6800") -> ResolvedGpuSpecs(
-                vramMb = 16 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 250,
-                recommendedPsuWatts = 650,
-                powerConnectors = "2x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6750 XT") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 250,
-                recommendedPsuWatts = 650,
-                powerConnectors = "1x 8-pin + 1x 6-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6700 XT") -> ResolvedGpuSpecs(
-                vramMb = 12 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 230,
-                recommendedPsuWatts = 650,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6650 XT") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 180,
-                recommendedPsuWatts = 500,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6600 XT") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 160,
-                recommendedPsuWatts = 500,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            text.contains("6600") -> ResolvedGpuSpecs(
-                vramMb = 8 * 1024,
-                memoryType = "GDDR6",
-                tdpWatts = 132,
-                recommendedPsuWatts = 450,
-                powerConnectors = "1x 8-pin PCIe",
-                slotWidth = "2.0 Yuva",
-            )
-            else -> {
-                val vram = ((memoryFromDto ?: 8) * 1024).coerceAtLeast(1024)
-                val memType = when {
-                    text.contains("GDDR7") -> "GDDR7"
-                    text.contains("GDDR6X") -> "GDDR6X"
-                    text.contains("HBM") -> "HBM2"
-                    text.contains("GDDR5") -> "GDDR5"
-                    else -> "GDDR6"
-                }
-                val tdp = if (text.contains("XT") || text.contains("TI") || text.contains("SUPER")) 240 else 180
-                ResolvedGpuSpecs(
-                    vramMb = vram,
-                    memoryType = memType,
-                    tdpWatts = tdp,
-                    recommendedPsuWatts = maxOf(tdp + 250, 500),
-                    powerConnectors = if (tdp >= 220) "2x 8-pin PCIe" else "1x 8-pin PCIe",
-                    slotWidth = if (tdp >= 250) "3.0 Yuva" else "2.0 Yuva",
-                )
-            }
-        }
     }
 
     // region Anti-Antique Hardware Modernity Guards

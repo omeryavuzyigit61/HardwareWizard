@@ -31,7 +31,6 @@ import com.panda.myapplication.data.local.entity.MicrophoneSpecEntity
 import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
 import com.panda.myapplication.data.local.entity.MousepadSpecEntity
-import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.local.entity.UserSessionEntity
 import com.panda.myapplication.data.local.entity.AppSettingEntity
@@ -81,9 +80,6 @@ abstract class HardwareDao {
 
     @Query("SELECT * FROM case_specs")
     abstract fun observeAllCaseSpecs(): Flow<List<CaseSpecEntity>>
-
-    @Query("SELECT * FROM prebuilt_specs")
-    abstract fun observeAllPrebuiltSpecs(): Flow<List<PrebuiltSpecEntity>>
 
     @Query("SELECT * FROM laptop_specs")
     abstract fun observeAllLaptopSpecs(): Flow<List<LaptopSpecEntity>>
@@ -190,9 +186,6 @@ abstract class HardwareDao {
 
     @Upsert
     protected abstract suspend fun upsertCaseSpecs(specs: List<CaseSpecEntity>)
-
-    @Upsert
-    protected abstract suspend fun upsertPrebuiltSpecs(specs: List<PrebuiltSpecEntity>)
 
     @Upsert
     protected abstract suspend fun upsertLaptopSpecs(specs: List<LaptopSpecEntity>)
@@ -310,7 +303,6 @@ abstract class HardwareDao {
         snapshot.storages.chunked(chunkSize).forEach { upsertStorageSpecs(it) }
         snapshot.coolers.chunked(chunkSize).forEach { upsertCoolerSpecs(it) }
         snapshot.cases.chunked(chunkSize).forEach { upsertCaseSpecs(it) }
-        snapshot.prebuilts.chunked(chunkSize).forEach { upsertPrebuiltSpecs(it) }
         snapshot.laptops.chunked(chunkSize).forEach { upsertLaptopSpecs(it) }
         snapshot.mice.chunked(chunkSize).forEach { upsertMouseSpecs(it) }
         snapshot.keyboards.chunked(chunkSize).forEach { upsertKeyboardSpecs(it) }

@@ -1735,7 +1735,9 @@
       "https://mediawebimg.asus.com/files/media/d1b30d89-702a-48a2-9947-d2191d7dac0f/img/core/fan/fan-3.png",
       "https://mediawebimg.asus.com/files/media/d1b30d89-702a-48a2-9947-d2191d7dac0f/img/new_product_imgs/00_spec/spec_mobile.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3ed831f2c6b1c74abe73d5c4d40bd306.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3ed831f2c6b1c74abe73d5c4d40bd306.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 4
   },
   {
     "name": "GIGABYTE X870E AORUS ELITE WIFI7",
@@ -1764,7 +1766,9 @@
       "https://m.media-amazon.com/images/I/81K0TK96dnL._AC_SL1500_.jpg",
       "https://highendstore.net/image/cache/catalog/x8705-1100x1100w.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1e1c3a84fdb8ea01eec98abd4c40d5d8.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1e1c3a84fdb8ea01eec98abd4c40d5d8.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "ASUS B650E MAX GAMING WIFI W",
@@ -1793,7 +1797,9 @@
       "https://dlcdnwebimgs.asus.com/gain/2fb644d0-cf3e-4356-8e0f-2fb3c8914421/w692",
       "https://dlcdnwebimgs.asus.com/files/media/62322c69-a3b5-4f44-8276-16783756ba16/v1/img/new_product_imgs/00_spec/spec_mobile.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/233f7973b2f73df3b3273091792a871d.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/233f7973b2f73df3b3273091792a871d.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 4
   },
   {
     "name": "MSI PRO Z790-A MAX WIFI",
@@ -1822,7 +1828,9 @@
       "https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/PRO-Z790-A-WIFI/msi-pro_z790-a_wifi-3d2.png",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/PRO-Z790-A-WIFI/lan-z790-mb-wifi-high.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/55e781311c4d62e83df9ac297a64c01a.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/55e781311c4d62e83df9ac297a64c01a.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 6
   },
   {
     "name": "GIGABYTE X870 EAGLE WIFI7",
@@ -1851,7 +1859,9 @@
       "https://m.media-amazon.com/images/I/814i-7ayYzL._AC_.jpg",
       "https://media.ldlc.com/r1600/ld/products/00/06/17/43/LD0006174390.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/a06aef05389e93f5e4de5dc26d807abe.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/a06aef05389e93f5e4de5dc26d807abe.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "GIGABYTE X870 AORUS ELITE WIFI7 ICE",
@@ -1880,7 +1890,8 @@
       "https://m.media-amazon.com/images/I/81bEtXvsRZL._AC_SL1500_.jpg",
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/634c91d7-591b-4366-919e-b99164d905ef.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/d1f30b497f0fd6289278b33ec776f86b.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/d1f30b497f0fd6289278b33ec776f86b.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "GIGABYTE B760M GAMING PLUS WIFI DDR4",
@@ -1890,7 +1901,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Black / Silver",
-    "chipset": null,
+    "chipset": "Intel B760",
     "memory_type": "DDR4",
     "m2_slots": 3,
     "has_wifi": true,
@@ -1909,7 +1920,9 @@
       "https://product.hstatic.net/200000837185/product/b760m_gaming_plus_wifi_ddr4-02_3bc96a9576534512b2c505123114355c_grande.png",
       "https://nvs.tn-cdn.net/2024/05/gigabyte-b760m-gaming-plus-wifi-ddr4-5.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/6dcbd73f46d20ca37c1e80a00f3ef206.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/6dcbd73f46d20ca37c1e80a00f3ef206.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "GIGABYTE B650M GAMING PLUS WIFI",
@@ -1919,7 +1932,7 @@
     "max_memory": 192,
     "memory_slots": 4,
     "color": "Silver / Black",
-    "chipset": null,
+    "chipset": "AMD B650",
     "memory_type": "DDR5",
     "m2_slots": 3,
     "has_wifi": true,
@@ -1938,7 +1951,8 @@
       "https://files.pccasegear.com/images/GA-B650M-GAMING-PLUS-WIFI-thumb.jpg",
       "https://static.gigabyte.com/StaticFile/Image/Global/c05ccdf552b030528377993211e01be7/Product/40346"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dbb71bb11592fff92343d7d68db13544.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dbb71bb11592fff92343d7d68db13544.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "GIGABYTE B650 GAMING X AX V2",
@@ -1967,7 +1981,9 @@
       "https://m.media-amazon.com/images/I/71i6SdfjnTL._AC_.jpg",
       "https://media.ldlc.com/r1600/ld/products/00/06/12/90/LD0006129083.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/51FV8n5IuGL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/51FV8n5IuGL.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "ASUS ROG STRIX X870-A GAMING WIFI",
@@ -1996,7 +2012,9 @@
       "https://dlcdnwebimgs.asus.com/files/media/c0f2a55e-fee6-48db-9ff6-764135a83e3b/v1/img/spec/cooling.png",
       "https://dlcdnwebimgs.asus.com/files/media/c0f2a55e-fee6-48db-9ff6-764135a83e3b/v1/img/spec/connectivity.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/8759f89d039f01404d65dcb994629292.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/8759f89d039f01404d65dcb994629292.1600.jpg",
+    "pcie_slots": 2,
+    "sata_ports": 2
   },
   {
     "name": "ASUS TUF GAMING B650-E WIFI",
@@ -2025,7 +2043,8 @@
       "https://dlcdnwebimgs.asus.com/files/media/4ef65be8-b94c-496b-b1e8-fdc28edb085b/img/performance/Cooler.png",
       "https://dlcdnwebimgs.asus.com/files/media/16f90ad5-e6b1-4191-a5a6-0a7a47cf0369/img/spec-performance.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/287ac861ab77945d4c6d046865f62b5e.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/287ac861ab77945d4c6d046865f62b5e.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "GIGABYTE Z790 EAGLE AX",
@@ -2054,7 +2073,9 @@
       "https://m.media-amazon.com/images/I/814Z11bhI4L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81YT2Xd9lUL._AC_SL1500_.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3d487ee6ea150ca534c123f409cbae68.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3d487ee6ea150ca534c123f409cbae68.1600.jpg",
+    "pcie_slots": 5,
+    "sata_ports": 4
   },
   {
     "name": "ASROCK B650M PG Lightning Wifi",
@@ -2064,7 +2085,7 @@
     "max_memory": 256,
     "memory_slots": 4,
     "color": "Silver / Black",
-    "chipset": null,
+    "chipset": "AMD B650",
     "memory_type": "DDR5",
     "m2_slots": 3,
     "has_wifi": true,
@@ -2083,7 +2104,8 @@
       "https://down-my.img.susercontent.com/file/my-11134207-7r98u-lvskannuix0f12",
       "https://m.media-amazon.com/images/I/61Hy3VN85VL._AC_SL1200_.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1a90e8359fccb756980a4cea99fab24f.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1a90e8359fccb756980a4cea99fab24f.1600.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "MSI PRO B650M-A WIFI",
@@ -2093,7 +2115,7 @@
     "max_memory": 192,
     "memory_slots": 4,
     "color": "Black",
-    "chipset": null,
+    "chipset": "AMD B650",
     "memory_type": "DDR5",
     "m2_slots": 3,
     "has_wifi": true,
@@ -2112,7 +2134,9 @@
       "https://m.media-amazon.com/images/I/81r6gJjhzHL._AC_SL1500_.jpg",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B650M/PRO-B650M-A-WIFI/block03.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/a7ffc5ab34c099836bb0ff9f9dfcab6d.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/a7ffc5ab34c099836bb0ff9f9dfcab6d.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "ASUS ROG STRIX B650E-F GAMING WIFI",
@@ -2141,7 +2165,8 @@
       "https://dlcdnwebimgs.asus.com/files/media/398D9060-E4B9-4A5E-B3AC-53FE4DC9144E/v1/img/spec/performance-m.png",
       "https://dlcdnwebimgs.asus.com/files/media/398D9060-E4B9-4A5E-B3AC-53FE4DC9144E/v1/img/spec/connectivity-m.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/b950287e2f141caa4638fc93dc99a6ba.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/b950287e2f141caa4638fc93dc99a6ba.1600.jpg",
+    "pcie_slots": 1
   },
   {
     "name": "MSI MAG X670E TOMAHAWK WIFI",
@@ -2170,7 +2195,9 @@
       "https://storage-asset.msi.com/global/picture/image/feature/mb/X670E/mag-x670e-tomahawk-wifi/mag-x670e-tomahawk-wifi-block02.png",
       "https://storage-asset.msi.com/global/picture/images/mb/IO/msi-mag_x670e_tomahawk_wifi-io.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c4516e2f81a19d4c9045028a3bae013b.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c4516e2f81a19d4c9045028a3bae013b.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 4
   },
   {
     "name": "ASUS ROG STRIX B650E-I GAMING WIFI",
@@ -2199,7 +2226,8 @@
       "https://dlcdnwebimgs.asus.com/gain/FE82325B-98A9-4D55-B0FA-E8E168C2FB6B",
       "https://dlcdnwebimgs.asus.com/files/media/42CF69C2-D16A-449F-A113-E7AB3C57AEE7/v1/img/spec/connectivity.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/bf950d502a28575d015348684bf78a37.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/bf950d502a28575d015348684bf78a37.1600.jpg",
+    "pcie_slots": 1
   },
   {
     "name": "ASUS ROG CROSSHAIR X870E EXTREME",
@@ -2228,7 +2256,9 @@
       "https://dlcdnwebimgs.asus.com/files/media/e69310e1-3b89-42d7-8899-cf3c6f433b0f/v2/img/kv/pd.png",
       "https://dlcdnwebimgs.asus.com/files/media/e69310e1-3b89-42d7-8899-cf3c6f433b0f/v1/img/spec/connectivity-m.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/32edc55907aae5cb63ec877846bb73ac.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/32edc55907aae5cb63ec877846bb73ac.1600.jpg",
+    "pcie_slots": 2,
+    "sata_ports": 4
   },
   {
     "name": "ASUS X870E ROG Strix-E Gaming",
@@ -12339,7 +12369,9 @@
       "https://cdn.thepcenthusiast.com/wp-content/uploads/2026/04/gigabyte-x870e-aero-x-dk-wood-front-view.jpg",
       "https://static.gigabyte.com/StaticFile/Image/Global/558af9aa7911f9f6fa3139b8e1e3c94f/Product/47366/Png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/33c7a08707de5ea393fa0b22607b8c96.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/33c7a08707de5ea393fa0b22607b8c96.1600.jpg",
+    "pcie_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "MSI PRO B860M-E",
@@ -12371,7 +12403,8 @@
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B860/PRO-B860M-E/kv-pd.png",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B860/PRO-B860M-E/datasheet-io.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/6c74beb5c52c860a45a3c0a014e85e70.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/6c74beb5c52c860a45a3c0a014e85e70.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "ASUS PRO A620AT-CSM",
@@ -12467,7 +12500,9 @@
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B840/b840m-gaming-plus-wifi6e/images/msi-b840m-gaming-plus-wifi6e-hero-03.png",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B840/b840m-gaming-plus-wifi6e/images/Identify-3.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dea4ba35e608bbf535d5683528bc69d0.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dea4ba35e608bbf535d5683528bc69d0.1600.jpg",
+    "pcie_slots": 1,
+    "has_wifi": true
   },
   {
     "name": "MSI PRO A620M-B",
@@ -12499,7 +12534,8 @@
       "https://m.media-amazon.com/images/I/714ZdKLPt4L._AC_SL1500_.jpg",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/A620M/PRO-A620M-B/hero-block.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/79413285909a450a67e6970386d9f4c2.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/79413285909a450a67e6970386d9f4c2.1600.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "ASUS PRIME B860M-A WIFI",
@@ -12531,7 +12567,8 @@
       "https://dlcdnwebimgs.asus.com/files/media/43b108b5-3311-493e-b25c-2325d9a745aa/v1/features/images/large/s1/pd.webp",
       "https://dlcdnwebimgs.asus.com/files/media/43b108b5-3311-493e-b25c-2325d9a745aa/v1/features/images/large/s9/card01.webp"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/4e71038d63efeda0fea8dcba1247409c.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/4e71038d63efeda0fea8dcba1247409c.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "GIGABYTE Z890 UD WIFI6E",
@@ -12563,7 +12600,8 @@
       "https://www.cclonline.com/images/avante/Z890-UD-WIFI6E-01.jpg",
       "https://files.pccasegear.com/images/Z890-UD-WIFI6E-add3.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/946d202eac3d801e534eb8be78d4cd75.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/946d202eac3d801e534eb8be78d4cd75.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "MSI B760M PROJECT ZERO",
@@ -12595,7 +12633,8 @@
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-project-zero/msi-b760m-project-zero-kv.png",
       "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-project-zero/msi-b760m-project-zero-io.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/11fc33319a384baac53d8baeba97b2ce.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/11fc33319a384baac53d8baeba97b2ce.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "ASUS EX-B760M-V5",
@@ -12627,7 +12666,8 @@
       "https://dlcdnwebimgs.asus.com/files/media/b9eed304-2d06-4485-9507-da139b9937a1/img/new_product_imgs/02_Cooling/VRM/VRM_heatsink.png",
       "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4ei56p7w9kg4e"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1e20fcdfc3ac73aae41d19e73b2d505c.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/1e20fcdfc3ac73aae41d19e73b2d505c.1600.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "ASUS PRO A620M-DASH-CSM",
@@ -12659,7 +12699,8 @@
       "https://dlcdnwebimgs.asus.com/gain/0ddcd298-7728-464b-9edd-f1a39036588a/",
       "https://dlcdnwebimgs.asus.com/files/media/240aa02c-2a42-4118-bb78-ce7882c37f87/img/Pro-A620M-DASH_IO.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/2cceba642fa8ac9a89bf32e4c0ce693d.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/2cceba642fa8ac9a89bf32e4c0ce693d.1600.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "GIGABYTE B650M S2H",
@@ -12691,7 +12732,8 @@
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523135_sd.jpg",
       "https://static.gigabyte.com/StaticFile/Image/Global/f6adc7299051048ad5ce535bd3d40a51/Product/39577/Png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/e1da0209a373409c2c4d0b57b6d8c400.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/e1da0209a373409c2c4d0b57b6d8c400.1600.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "GIGABYTE B760M H DDR4",
@@ -12723,7 +12765,8 @@
       "https://static.gigabyte.com/StaticFile/Image/Global/4455759e4fdb13c9b837f08842a483e9/Product/35131",
       "https://anphat.com.vn/media/lib/09-05-2023/b760mhddr4.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/61i9v6vHDaL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/61i9v6vHDaL.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "GIGABYTE B840M H",
@@ -12819,7 +12862,9 @@
       "https://www.club386.com/wp-content/uploads/2026/02/sapphire-pure-x870a-wifi-7-review-12.jpg",
       "https://www.club386.com/wp-content/uploads/2026/02/sapphire-pure-x870a-wifi-7-review-04.jpg"
     ],
-    "image_url": "https://www.techpowerup.com/img/EBGiI304bXCNJiT5.jpg"
+    "image_url": "https://www.techpowerup.com/img/EBGiI304bXCNJiT5.jpg",
+    "pcie_slots": 3,
+    "has_wifi": true
   },
   {
     "name": "GIGABYTE B760M DS3H GEN5",
@@ -12851,7 +12896,8 @@
       "https://static.gigabyte.com/StaticFile/Image/Global/74a19f09cebd58831e913703ba3e065c/Product/33481",
       "https://m.media-amazon.com/images/I/819loXNzHQL._AC_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/51akm4SHaLL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/51akm4SHaLL.jpg",
+    "pcie_slots": 3
   },
   {
     "name": "MAXSUN Challanger B650M-K",
@@ -12883,7 +12929,8 @@
       "https://sm.pcmag.com/t/pcmag_uk/review/m/maxsun-cha/maxsun-challenger-b650m-wi-fi_4knp.1920.jpg",
       "https://sm.pcmag.com/pcmag_ca/photo/t/the-rear-i/the-rear-io-of-the-maxsun-challenger-b650m-wi-fi-motherboard_akbv.jpg"
     ],
-    "image_url": "https://compshop.co.il/image/cache/catalog/products/hardware/motherboards/3/82364-3-800x800.jpg"
+    "image_url": "https://compshop.co.il/image/cache/catalog/products/hardware/motherboards/3/82364-3-800x800.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "COLORFUL iGame Z890 VULCAN W V20",
@@ -12947,7 +12994,8 @@
       "https://www.techpowerup.com/img/QNJR5sEJEKCL45Vo.jpg",
       "https://negroup.co.id/cni-content/uploads/modules/product/20230619105314.png"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/b4c62ce4f09448f9549c8f660c62654c.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/b4c62ce4f09448f9549c8f660c62654c.1600.jpg",
+    "pcie_slots": 2
   },
   {
     "name": "ASUS Z690 ROG Strix-E Gaming",
@@ -17115,7 +17163,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Blue / Silver",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": true,
@@ -17134,7 +17182,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e4dfe919e40ad3962fc5a662b56e8310.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/68437d2eec7d3f058132c02a4b56609b.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/ff4b4e2c7f72b014f39f1864b19e7250.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/ff4b4e2c7f72b014f39f1864b19e7250.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "GIGABYTE B550M K",
@@ -17144,7 +17194,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Brown / Silver",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": false,
@@ -17163,7 +17213,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/cd5f3bb9add2e4123ade1d5161553326.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/bf6939e818d9dd155a2acf5199ef6720.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/f52a9a0b2a28f096b5b1e5bf02707224.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/f52a9a0b2a28f096b5b1e5bf02707224.1600.jpg",
+    "pcie_slots": 2,
+    "sata_ports": 64
   },
   {
     "name": "MSI PRO B550M-VC WIFI",
@@ -17173,7 +17225,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Black",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": true,
@@ -17192,7 +17244,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/57b4a5399dc626e9c5786f786aeb94ac.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cd4ef210d3d8dfca5503e8b301064744.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3ba98d49243674bac25ebc39e6cc1fbc.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3ba98d49243674bac25ebc39e6cc1fbc.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 8
   },
   {
     "name": "MSI B550M PRO-VDH WIFI",
@@ -17202,7 +17256,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Black",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": true,
@@ -17221,7 +17275,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/cd4ef210d3d8dfca5503e8b301064744.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3ba98d49243674bac25ebc39e6cc1fbc.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/57b4a5399dc626e9c5786f786aeb94ac.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/57b4a5399dc626e9c5786f786aeb94ac.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "MSI MAG B550 TOMAHAWK MAX WIFI",
@@ -17250,7 +17306,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/b4c7550465b4b8115e71249aaf216a65.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/fe0743e587416e7fa161bfd0dca8237f.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/cf20560e7e4a9e474fcb4c88238e4ffd.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/cf20560e7e4a9e474fcb4c88238e4ffd.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 6
   },
   {
     "name": "GIGABYTE B550M AORUS ELITE AX",
@@ -17260,7 +17318,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Black / Silver",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": true,
@@ -17279,7 +17337,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/ae499a3a43fc2a8161dfbb77c1ca4158.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/322a6059c413dd736536e5ad5c3a2285.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/bf6939e818d9dd155a2acf5199ef6720.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/bf6939e818d9dd155a2acf5199ef6720.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "MSI MPG B550 GAMING PLUS",
@@ -17308,7 +17368,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e1677ccd8b20b24c91fd17885a1b8b8a.1600.jpg",
       "https://m.media-amazon.com/images/I/51vaEhdWy8L.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/607f7ca77131a0bf7dc6b75617795203.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/607f7ca77131a0bf7dc6b75617795203.1600.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 6
   },
   {
     "name": "ASROCK B550M Pro4",
@@ -17318,7 +17380,7 @@
     "max_memory": 128,
     "memory_slots": 4,
     "color": "Silver / Black",
-    "chipset": null,
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "m2_slots": 2,
     "has_wifi": false,
@@ -17337,7 +17399,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/66aa5dd590cf1bb5fe8de0417f9ed7e6.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f50779cfddeda830b0af852915702a00.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/472d12f3f649d3c11155e02f9fd70e22.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/472d12f3f649d3c11155e02f9fd70e22.1600.jpg",
+    "pcie_slots": 3,
+    "sata_ports": 4
   },
   {
     "name": "MSI B550-A PRO",
@@ -17366,7 +17430,9 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/9fbd314b4f9cba3c311c944654b5785a.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/881123709f9b9e9139596364dbcad25e.1600.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/51YHWAAsu5L.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/51YHWAAsu5L.jpg",
+    "pcie_slots": 4,
+    "sata_ports": 6
   },
   {
     "name": "ASUS B550 ROG Strix-E Gaming",

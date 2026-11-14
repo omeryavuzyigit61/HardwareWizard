@@ -1,6 +1,7 @@
 package com.panda.myapplication
 
 import androidx.compose.foundation.BorderStroke
+import com.panda.myapplication.domain.config.FeatureFlags
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -520,7 +521,7 @@ private fun HardwareEngineeringDrawerContent(
 ) {
     val strings = LocalAppStrings.current
     val engineeringTools = remember(strings) {
-        listOf(
+        listOfNotNull(
             EngineeringToolDrawerItem(
                 route = Destinations.COOLING_LAB,
                 icon = Icons.Rounded.AcUnit,
@@ -601,14 +602,18 @@ private fun HardwareEngineeringDrawerContent(
                 badge = "TUNING LAB",
                 accentColor = NeonCyan,
             ),
-            EngineeringToolDrawerItem(
-                route = Destinations.SECOND_HAND_VALUATOR,
-                icon = Icons.Rounded.Autorenew,
-                title = strings.drawerValuationTitle,
-                subtitle = strings.drawerValuationSubtitle,
-                badge = "2ND HAND VALUATION",
-                accentColor = NeonEmerald,
-            ),
+            if (FeatureFlags.IS_PRICING_ENABLED) {
+                EngineeringToolDrawerItem(
+                    route = Destinations.SECOND_HAND_VALUATOR,
+                    icon = Icons.Rounded.Autorenew,
+                    title = strings.drawerValuationTitle,
+                    subtitle = strings.drawerValuationSubtitle,
+                    badge = "2ND HAND VALUATION",
+                    accentColor = NeonEmerald,
+                )
+            } else {
+                null
+            },
 
         )
     }

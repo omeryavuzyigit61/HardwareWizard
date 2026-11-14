@@ -7,7 +7,6 @@ import com.panda.myapplication.data.model.dto.GpuRawDto
 import com.panda.myapplication.data.model.dto.LaptopRawDto
 import com.panda.myapplication.data.model.dto.MotherboardRawDto
 import com.panda.myapplication.data.model.dto.PeripheralRawDto
-import com.panda.myapplication.data.model.dto.PrebuiltRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
@@ -34,7 +33,6 @@ data class RemoteHardwareCatalog(
     val storages: List<StorageRawDto> = emptyList(),
     val coolers: List<CoolerRawDto> = emptyList(),
     val cases: List<CaseRawDto> = emptyList(),
-    val prebuilts: List<PrebuiltRawDto> = emptyList(),
     val laptops: List<LaptopRawDto> = emptyList(),
     val peripherals: List<PeripheralRawDto> = emptyList(),
 )
@@ -61,7 +59,6 @@ class HardwareRemoteDataSource(
                 val storagesDeferred = async { fetchJsonList<StorageRawDto>("$baseUrl/internal-hard-drive.json") }
                 val coolersDeferred = async { fetchJsonList<CoolerRawDto>("$baseUrl/cpu-cooler.json") }
                 val casesDeferred = async { fetchJsonList<CaseRawDto>("$baseUrl/case.json") }
-                val prebuiltsDeferred = async { fetchJsonList<PrebuiltRawDto>("$baseUrl/prebuilt-pc.json") }
                 val laptopsDeferred = async { fetchJsonList<LaptopRawDto>("$baseUrl/laptop.json") }
                 val peripheralsDeferred = async { fetchJsonList<PeripheralRawDto>("$baseUrl/peripherals.json") }
 
@@ -73,7 +70,6 @@ class HardwareRemoteDataSource(
                 val storages = storagesDeferred.await()
                 val coolers = coolersDeferred.await()
                 val cases = casesDeferred.await()
-                val prebuilts = prebuiltsDeferred.await()
                 val laptops = laptopsDeferred.await()
                 val peripherals = peripheralsDeferred.await()
 
@@ -91,7 +87,6 @@ class HardwareRemoteDataSource(
                         storages = storages,
                         coolers = coolers,
                         cases = cases,
-                        prebuilts = prebuilts,
                         laptops = laptops,
                         peripherals = peripherals,
                     )

@@ -11,7 +11,6 @@ import com.panda.myapplication.domain.model.HardwareBenchmarkInfo
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.LaptopSpec
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.ResolutionFps
 import kotlin.math.round
 
@@ -59,7 +58,7 @@ object BenchmarkEngine {
 
     /**
      * Resolves a complete 12-game FPS matrix (5 E-Spor + 7 AAA) across 1080p, 1440p, and 4K
-     * with Average FPS and 1% Low FPS for GPU, CPU, Prebuilt PC, and Gaming Laptop items.
+     * with Average FPS and 1% Low FPS for GPU, CPU, and Gaming Laptop items.
      */
     fun resolveGameFpsForItem(item: HardwareItem): GameFpsBenchmark? {
         return when (val s = item.spec) {
@@ -75,22 +74,6 @@ object BenchmarkEngine {
                 val ratio = ((item.benchmarkInfo?.relativePerformanceIndex ?: simulateCpu(item, s).relativePerformanceIndex) / 100.0)
                     .coerceIn(0.25, 1.25)
                 buildFull12GameMatrix(ratio = ratio, isCpu = true, isX3d = isX3d, existing = existing)
-            }
-            is PrebuiltSpec -> {
-                val isX3d = s.cpuModel.contains("X3D", ignoreCase = true)
-                val base1080 = s.fps1080p.takeIf { it > 0 }?.toDouble()
-                val base1440 = s.fps1440p.takeIf { it > 0 }?.toDouble()
-                val base4k = s.fps4k.takeIf { it > 0 }?.toDouble()
-                val scoreRatio = if (s.gamingScore > 0) (s.gamingScore / 100.0).coerceIn(0.25, 1.25) else 0.72
-                val ratio1080 = base1080?.let { (it / 165.0).coerceIn(0.25, 1.30) } ?: scoreRatio
-                val ratio1440 = base1440?.let { (it / 120.0).coerceIn(0.22, 1.30) } ?: (ratio1080 * 0.96)
-                val ratio4k = base4k?.let { (it / 70.0).coerceIn(0.18, 1.30) } ?: (ratio1440 * 0.90)
-                buildFull12GameMatrixByResolutionRatios(
-                    r1080 = ratio1080,
-                    r1440 = ratio1440,
-                    r4k = ratio4k,
-                    isX3d = isX3d,
-                )
             }
             is LaptopSpec -> {
                 val base1080 = s.fps1080p.takeIf { it > 0 }?.toDouble()
@@ -461,31 +444,14 @@ object BenchmarkEngine {
     }
 
     private fun simulateGeneral(item: HardwareItem): HardwareBenchmarkInfo {
-        val seed = kotlin.math.abs(item.id.value.hashCode())
-        val baseScore = 70 + (seed % 28)
-        val tier = when {
-            baseScore >= 94 -> "S-Tier"
-            baseScore >= 85 -> "A-Tier"
-            baseScore >= 75 -> "B-Tier"
-            else -> "C-Tier"
-        }
-        val testSuite = when (item.category) {
-            HardwareCategory.RAM -> "AIDA64 Memory Latency & Bandwidth"
-            HardwareCategory.MOTHERBOARD -> "VRM Thermal Load & Signal Stability"
-            HardwareCategory.STORAGE -> "CrystalDiskMark 8 & PCMark 10"
-            HardwareCategory.COOLER -> "Thermal Dissipation 30 Dk Stres Testi"
-            HardwareCategory.PSU -> "Cybenetics Load & Transient Response"
-            HardwareCategory.CASE -> "Wind Tunnel Smoke Flow & Thermal"
-            else -> "Donanım Standartları Bağıl Analizi"
-        }
         return HardwareBenchmarkInfo(
-            score = baseScore,
-            tier = tier,
-            relativePerformanceIndex = baseScore.toDouble(),
+            score = 0,
+            tier = "",
+            relativePerformanceIndex = 0.0,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
-            testSuite = testSuite,
-            gamingIndex = baseScore,
-            productivityIndex = baseScore,
+            testSuite = "",
+            gamingIndex = 0,
+            productivityIndex = 0,
         )
     }
 

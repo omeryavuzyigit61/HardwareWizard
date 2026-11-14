@@ -101,7 +101,6 @@ fun UriHandler.openSafeStoreUrl(
  * Centralized category accent color mapping used across Catalog, Detail, Wizard, and VS Arena.
  */
 fun HardwareCategory.accentColor(): Color = when (this) {
-    HardwareCategory.PREBUILT_PC -> NeonEmerald
     HardwareCategory.LAPTOP -> NeonPurple
     HardwareCategory.CPU -> ElectricBlue
     HardwareCategory.GPU -> NeonPurple
@@ -136,7 +135,6 @@ fun HardwareCategory.accentColor(): Color = when (this) {
  * Centralized short badge text for hardware categories across all 7 supported languages.
  */
 fun HardwareCategory.shortBadgeText(strings: AppStrings): String = when (this) {
-    HardwareCategory.PREBUILT_PC -> strings.catPrebuilt.uppercase()
     HardwareCategory.LAPTOP -> strings.catLaptop.uppercase()
     HardwareCategory.CPU -> "CPU"
     HardwareCategory.GPU -> "GPU"
@@ -174,7 +172,6 @@ fun HardwareCategory.shortBadgeText(isTr: Boolean = true): String =
  * Centralized category emoji icon.
  */
 fun HardwareCategory.iconEmoji(): String = when (this) {
-    HardwareCategory.PREBUILT_PC -> "🖥️"
     HardwareCategory.LAPTOP -> "💻"
     HardwareCategory.CPU -> "🧠"
     HardwareCategory.GPU -> "🎮"

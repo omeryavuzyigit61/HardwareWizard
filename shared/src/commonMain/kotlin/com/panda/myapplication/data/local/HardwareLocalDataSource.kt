@@ -9,7 +9,6 @@ import com.panda.myapplication.data.model.dto.GpuRawDto
 import com.panda.myapplication.data.model.dto.LaptopRawDto
 import com.panda.myapplication.data.model.dto.MotherboardRawDto
 import com.panda.myapplication.data.model.dto.PeripheralRawDto
-import com.panda.myapplication.data.model.dto.PrebuiltRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
@@ -41,7 +40,6 @@ class HardwareLocalDataSource(
     suspend fun loadLocalStorages(): List<StorageRawDto> = readJsonAssetList("files/internal-hard-drive.json")
     suspend fun loadLocalCoolers(): List<CoolerRawDto> = readJsonAssetList("files/cpu-cooler.json")
     suspend fun loadLocalCases(): List<CaseRawDto> = readJsonAssetList("files/case.json")
-    suspend fun loadLocalPrebuilts(): List<PrebuiltRawDto> = readJsonAssetList("files/prebuilt-pc.json")
     suspend fun loadLocalLaptops(): List<LaptopRawDto> = readJsonAssetList("files/laptop.json")
     suspend fun loadLocalPeripherals(): List<PeripheralRawDto> = readJsonAssetList("files/peripherals.json")
     suspend fun loadLocalSmartphones(): List<SmartphoneCatalogItemDto> = readJsonAssetList("files/smartphone.json")
@@ -58,7 +56,6 @@ class HardwareLocalDataSource(
             val storages = loadLocalStorages()
             val coolers = loadLocalCoolers()
             val cases = loadLocalCases()
-            val prebuilts = loadLocalPrebuilts()
             val laptops = loadLocalLaptops()
             val peripherals = loadLocalPeripherals()
             val smartphones = loadLocalSmartphones()
@@ -81,7 +78,6 @@ class HardwareLocalDataSource(
                 storages = storages,
                 coolers = coolers,
                 cases = cases,
-                prebuilts = prebuilts,
                 laptops = laptops,
                 peripherals = peripherals,
                 smartphones = smartphones,

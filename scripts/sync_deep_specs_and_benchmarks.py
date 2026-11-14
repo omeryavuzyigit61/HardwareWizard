@@ -1273,93 +1273,8 @@ PSU_ENGINEERING_RULES = [
 # 4. MOTHERBOARD VRM & SPEC MATRIX (IronScale Labs & BuildCores)
 # ==============================================================================
 def enrich_motherboard(item: Dict[str, Any]) -> Dict[str, Any]:
-    name = (item.get("name") or "").upper()
-    chipset = (item.get("chipset") or "").upper()
-    socket = item.get("socket") or ""
-
-    # Defaults based on chipset & line
-    if "X870E" in name or "X870E" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or ("18+2+2 Faz 110A SPS" if "HERO" in name or "STRIX" in name else "16+2+2 Faz 80A DrMOS")
-        item["pcb_layers"] = "8 Katman 2oz Bakır (Server-Grade)"
-        item["m2_slots_detail"] = "2x PCIe Gen5 x4 + 3x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0"
-        item["memory_speed_oc"] = "DDR5-8400+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Realtek 5G/2.5G LAN + Wi-Fi 7 (320MHz) & BT 5.4"
-        item["audio_codec"] = "Realtek ALC4080 (SupremeFX 120dB SNR)" if "ROG" in name else "Realtek ALC1220"
-        item["interface_ports"] = "2x USB4 40Gbps Type-C, HDMI 2.1, 2.5G LAN"
-    elif "X870" in name or "X870" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "16+2+1 Faz 80A DrMOS"
-        item["pcb_layers"] = "8 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "1x PCIe Gen5 x4 + 3x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0"
-        item["memory_speed_oc"] = "DDR5-8000+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Realtek 2.5G LAN + Wi-Fi 7 & BT 5.4"
-        item["audio_codec"] = "Realtek ALC1220 (7.1 Surround)"
-        item["interface_ports"] = "1x USB4 40Gbps Type-C, USB 3.2 Gen 2x2, 2.5G LAN"
-    elif "Z890" in name or "Z890" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "20+1+2+1 Faz 110A SPS"
-        item["pcb_layers"] = "8 Katman 2oz Bakır (Server-Grade)"
-        item["m2_slots_detail"] = "1x PCIe Gen5 x4 + 4x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0"
-        item["memory_speed_oc"] = "DDR5-8800+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Intel Killer 2.5G/5G LAN + Wi-Fi 7 & BT 5.4"
-        item["audio_codec"] = "Realtek ALC4080 (Hi-Fi DAC)"
-        item["interface_ports"] = "2x Thunderbolt 4 (40Gbps), HDMI 2.1, 2.5G LAN"
-    elif "Z790" in name or "Z790" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "16+1+1 Faz 90A SPS"
-        item["pcb_layers"] = "6-8 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "1x PCIe Gen5 x4 + 3x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0"
-        item["memory_speed_oc"] = "DDR5-7800+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3"
-        item["audio_codec"] = "Realtek ALC1220 / ALC4080"
-        item["interface_ports"] = "USB 3.2 Gen 2x2 Type-C (20Gbps), 2.5G LAN"
-    elif "B650E" in name or "B650E" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "16+2+2 Faz 70A DrMOS"
-        item["pcb_layers"] = "6 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "1x PCIe Gen5 x4 + 2x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0"
-        item["memory_speed_oc"] = "DDR5-7600+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Realtek 2.5G LAN + Wi-Fi 6E & BT 5.3"
-        item["audio_codec"] = "Realtek ALC4080 / ALC1220"
-        item["interface_ports"] = "USB 3.2 Gen 2 Type-C, HDMI 2.1, 2.5G LAN"
-    elif "B650" in name or "B650" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "12+2+1 Faz 60A DrMOS"
-        item["pcb_layers"] = "6 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "1x PCIe Gen5 x4 + 2x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 4.0 / PCIe 5.0 M.2"
-        item["memory_speed_oc"] = "DDR5-7200+ MHz (OC) / 192 GB Maks."
-        item["network"] = "Realtek 2.5G LAN + Wi-Fi 6E" if item.get("has_wifi") else "Realtek 2.5G LAN"
-        item["audio_codec"] = "Realtek ALC897 (7.1 Surround)"
-        item["interface_ports"] = "USB 3.2 Gen 2 Type-C, DisplayPort, HDMI, 2.5G LAN"
-    elif "B760" in name or "B760" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "12+1+1 Faz 60A DrMOS"
-        item["pcb_layers"] = "6 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "3x PCIe Gen4 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 5.0 x16 / PCIe 4.0 M.2"
-        item["memory_speed_oc"] = "DDR5-7200+ / DDR4-5333+ MHz (OC)"
-        item["network"] = "Realtek 2.5G LAN + Wi-Fi 6E" if item.get("has_wifi") else "Realtek 2.5G LAN"
-        item["audio_codec"] = "Realtek ALC897"
-        item["interface_ports"] = "USB 3.2 Gen 2 Type-C, 2.5G LAN, HDMI 2.1"
-    elif "B550" in name or "B550" in chipset:
-        item["vrm_phases"] = item.get("vrm_phases") or "10+2 Faz DrMOS"
-        item["pcb_layers"] = "4-6 Katman 2oz Bakır"
-        item["m2_slots_detail"] = "1x PCIe Gen4 x4 + 1x PCIe Gen3 x4 M.2 Yuvası"
-        item["pcie_generation"] = "PCIe 4.0 x16"
-        item["memory_speed_oc"] = "DDR4-4800+ MHz (OC) / 128 GB Maks."
-        item["network"] = "Realtek 1G/2.5G LAN"
-        item["audio_codec"] = "Realtek ALC897"
-        item["interface_ports"] = "USB 3.2 Gen 2, HDMI, Gigabit LAN"
-    else:
-        # Sıfır Halüsinasyon İlkesi: Bilinmeyen yonga setlerinde uydurma VRM/PCB verisi üretme
-        item["vrm_phases"] = item.get("vrm_phases")
-        item["pcb_layers"] = item.get("pcb_layers")
-        item["m2_slots_detail"] = item.get("m2_slots_detail")
-        item["pcie_generation"] = item.get("pcie_generation")
-        item["memory_speed_oc"] = item.get("memory_speed_oc")
-        item["network"] = item.get("network")
-        item["audio_codec"] = item.get("audio_codec")
-        item["interface_ports"] = item.get("interface_ports")
+    # Dinamik & Sıfır Halüsinasyon İlkesi: Tüm anakartlara yonga seti adına göre
+    # jenerik VRM / PCB / ses kodeği varsayımı yazılmaz; yalnızca OpenDB ve gerçek ürün verisi korunur.
     return item
 
 # ==============================================================================
@@ -1367,49 +1282,13 @@ def enrich_motherboard(item: Dict[str, Any]) -> Dict[str, Any]:
 # Formula: True Latency (ns) = round(2000.0 * CL / MHz, 2)
 # ==============================================================================
 def enrich_ram(item: Dict[str, Any]) -> Dict[str, Any]:
-    name = (item.get("name") or "").upper()
     speed_list = item.get("speed") or []
-    speed_mhz = speed_list[1] if len(speed_list) >= 2 else (speed_list[0] if len(speed_list) == 1 else 6000)
-    cl = item.get("cas_latency") or 30
+    speed_mhz = speed_list[1] if len(speed_list) >= 2 else (speed_list[0] if len(speed_list) == 1 else 0)
+    cl = item.get("cas_latency") or 0
 
-    # True latency calculation: 2000 * CL / MHz
-    true_latency_ns = round(2000.0 * float(cl) / float(speed_mhz), 2)
-    item["first_word_latency"] = true_latency_ns
-
-    # Die estimation & profiles
-    is_ddr5 = speed_mhz >= 4800 or "DDR5" in name
-    if is_ddr5:
-        item["profile"] = "AMD EXPO & Intel XMP 3.0"
-        if speed_mhz >= 6400:
-            item["die_type"] = "SK Hynix A-Die"
-            item["timings"] = f"CL{cl}-38-38-96"
-            item["voltage"] = item.get("voltage") or 1.40
-        elif speed_mhz == 6000 and cl <= 30:
-            item["die_type"] = "SK Hynix A-Die / M-Die"
-            item["timings"] = "CL30-38-38-96"
-            item["voltage"] = item.get("voltage") or 1.35
-        elif speed_mhz == 6000 and cl == 32:
-            item["die_type"] = "SK Hynix M-Die"
-            item["timings"] = "CL32-38-38-96"
-            item["voltage"] = item.get("voltage") or 1.35
-        elif speed_mhz == 6000 and cl >= 36:
-            item["die_type"] = "Samsung B-Die / Micron"
-            item["timings"] = f"CL{cl}-44-44-96"
-            item["voltage"] = item.get("voltage") or 1.35
-        else:
-            item["die_type"] = item.get("die_type")
-            item["timings"] = item.get("timings") or f"CL{cl}"
-            item["voltage"] = item.get("voltage") or 1.25
-    else:
-        item["profile"] = "Intel XMP 2.0"
-        if speed_mhz >= 3600 and cl <= 16:
-            item["die_type"] = "Samsung B-Die"
-            item["timings"] = f"CL{cl}-16-16-36"
-            item["voltage"] = item.get("voltage") or 1.35
-        else:
-            item["die_type"] = item.get("die_type")
-            item["timings"] = item.get("timings") or f"CL{cl}"
-            item["voltage"] = item.get("voltage") or 1.35
+    # True latency calculation: yalnızca gerçek hız ve CL değeri varsa hesaplanır
+    if isinstance(speed_mhz, (int, float)) and isinstance(cl, (int, float)) and speed_mhz > 0 and cl > 0:
+        item["first_word_latency"] = round(2000.0 * float(cl) / float(speed_mhz), 2)
     return item
 
 # ==============================================================================
@@ -1458,14 +1337,8 @@ def parse_cooler_size_mm(raw_size: Any) -> int:
 def enrich_storage(item: Dict[str, Any]) -> Dict[str, Any]:
     name = (item.get("name") or "").upper()
     cap = parse_capacity_gb(item.get("capacity"), name)
-    try:
-        raw_read = item.get("seq_read")
-        seq_read_num = float(raw_read) if raw_read is not None else 0.0
-    except (ValueError, TypeError):
-        seq_read_num = 0.0
-    is_gen5 = "5.0" in name or seq_read_num >= 10000
 
-    if is_gen5 or "T705" in name or "T700" in name or "MP700" in name or "CARDEA Z540" in name:
+    if "T705" in name or "T700" in name or "MP700" in name or "CARDEA Z540" in name:
         item["controller"] = "Phison PS5026-E26 (12nm TSMC Çift Çekirdek ARM Cortex-R5)"
         item["dram_cache"] = f"{min(4, max(1, cap // 1000 * 2))}GB LPDDR4-4266 DRAM Cache"
         item["nand_type"] = "Micron 232-Layer 3D TLC NAND (B58R)"

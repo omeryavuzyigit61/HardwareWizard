@@ -1,6 +1,7 @@
 package com.panda.myapplication.presentation.hardware_list
 
 import androidx.compose.runtime.Immutable
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.MotherboardFormFactor
@@ -78,7 +79,11 @@ enum class HardwareSortOption(val displayName: String) {
 
     companion object {
         fun optionsForCategory(category: HardwareCategory?): List<HardwareSortOption> {
-            val common = listOf(DEFAULT, PRICE_ASC, PRICE_DESC, NAME_ASC)
+            val common = if (FeatureFlags.IS_PRICING_ENABLED) {
+                listOf(DEFAULT, PRICE_ASC, PRICE_DESC, NAME_ASC)
+            } else {
+                listOf(DEFAULT, NAME_ASC)
+            }
             return when (category) {
                 null -> common
                 HardwareCategory.CPU -> common + listOf(CPU_CORES_DESC, CPU_CLOCK_DESC, CPU_TDP_ASC, CPU_TDP_DESC)
@@ -89,7 +94,6 @@ enum class HardwareSortOption(val displayName: String) {
                 HardwareCategory.PSU -> common + listOf(PSU_WATTAGE_DESC)
                 HardwareCategory.COOLER -> common
                 HardwareCategory.CASE -> common
-                HardwareCategory.PREBUILT_PC -> common
                 HardwareCategory.LAPTOP -> common
                 HardwareCategory.MOUSE -> common
                 HardwareCategory.KEYBOARD -> common

@@ -1,6 +1,7 @@
 package com.panda.myapplication.domain.engine
 
 import androidx.compose.runtime.Immutable
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
@@ -21,7 +22,6 @@ import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
 import com.panda.myapplication.domain.model.PhoneSpec
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuEfficiencyRating
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -135,8 +135,10 @@ object VsArenaEngine {
         val valueChampion = buildValueChampion(left, right, leftScore, rightScore)
 
         val rows = buildList {
-            // 1. Price comparison row (always first)
-            add(buildPriceRow(left, right))
+            // 1. Price comparison row (always first when pricing is enabled)
+            if (FeatureFlags.IS_PRICING_ENABLED) {
+                add(buildPriceRow(left, right))
+            }
 
             // 2. Category-specific deep engineering & performance rows
             when {
@@ -156,8 +158,6 @@ object VsArenaEngine {
                     addAll(compareCoolers(left.spec, right.spec))
                 left.spec is CaseSpec && right.spec is CaseSpec ->
                     addAll(compareCases(left.spec, right.spec))
-                left.spec is PrebuiltSpec && right.spec is PrebuiltSpec ->
-                    addAll(comparePrebuilts(left, left.spec, right, right.spec))
                 left.spec is LaptopSpec && right.spec is LaptopSpec ->
                     addAll(compareLaptops(left, left.spec, right, right.spec))
                 left.spec is MouseSpec && right.spec is MouseSpec ->
@@ -225,7 +225,7 @@ object VsArenaEngine {
         }
 
         val unitLabel = when (left.category) {
-            HardwareCategory.CPU, HardwareCategory.GPU, HardwareCategory.PREBUILT_PC, HardwareCategory.LAPTOP -> "Performans Endeksi"
+            HardwareCategory.CPU, HardwareCategory.GPU, HardwareCategory.LAPTOP -> "Performans Endeksi"
             HardwareCategory.PSU -> "Güç & Tier Endeksi"
             HardwareCategory.RAM -> "Bellek Hız/Gecikme Endeksi"
             HardwareCategory.STORAGE -> "NVMe G/Ç Endeksi"
@@ -888,107 +888,6 @@ object VsArenaEngine {
         )
     }
 
-    private fun comparePrebuilts(
-        leftItem: HardwareItem,
-        l: PrebuiltSpec,
-        rightItem: HardwareItem,
-        r: PrebuiltSpec,
-    ): List<VsComparisonRow> = buildList {
-        add(
-            compareHigherBetter(
-                label = "Oyun & Sistem Performans Skoru",
-                leftVal = l.gamingScore.toDouble(),
-                rightVal = r.gamingScore.toDouble(),
-                leftText = "${l.gamingScore}/100 Puan",
-                rightText = "${r.gamingScore}/100 Puan",
-                badgeSuffix = "Daha Güçlü Sistem",
-                isKey = true,
-            )
-        )
-        add(
-            compareHigherBetterNullable(
-                label = "Tek Tek Toplamaya Göre Fiyat Avantajı / Kâr",
-                leftVal = l.priceAdvantageTry,
-                rightVal = r.priceAdvantageTry,
-                leftText = formatAdvantageText(l.priceAdvantageTry, l.estimatedSeparatePriceTry),
-                rightText = formatAdvantageText(r.priceAdvantageTry, r.estimatedSeparatePriceTry),
-                customDelta = if (l.priceAdvantageTry != null && r.priceAdvantageTry != null && abs(l.priceAdvantageTry - r.priceAdvantageTry) >= 100.0) {
-                    "+${abs(l.priceAdvantageTry - r.priceAdvantageTry).formatPrice()} ₺ Daha Kârlı"
-                } else null,
-                isKey = true,
-            )
-        )
-        add(
-            compareHigherBetter(
-                label = "1080p Ultra Ortalama Oyun FPS",
-                leftVal = l.fps1080p.toDouble(),
-                rightVal = r.fps1080p.toDouble(),
-                leftText = if (l.fps1080p > 0) "${l.fps1080p} FPS" else UNSPECIFIED,
-                rightText = if (r.fps1080p > 0) "${r.fps1080p} FPS" else UNSPECIFIED,
-                badgeSuffix = "1080p FPS",
-                isKey = true,
-            )
-        )
-        add(
-            compareHigherBetter(
-                label = "1440p (2K) Ultra Ortalama Oyun FPS",
-                leftVal = l.fps1440p.toDouble(),
-                rightVal = r.fps1440p.toDouble(),
-                leftText = if (l.fps1440p > 0) "${l.fps1440p} FPS" else UNSPECIFIED,
-                rightText = if (r.fps1440p > 0) "${r.fps1440p} FPS" else UNSPECIFIED,
-                badgeSuffix = "2K FPS",
-                isKey = true,
-            )
-        )
-        add(
-            compareHigherBetter(
-                label = "4K UHD Ultra Ortalama Oyun FPS",
-                leftVal = l.fps4k.toDouble(),
-                rightVal = r.fps4k.toDouble(),
-                leftText = if (l.fps4k > 0) "${l.fps4k} FPS" else UNSPECIFIED,
-                rightText = if (r.fps4k > 0) "${r.fps4k} FPS" else UNSPECIFIED,
-                badgeSuffix = "4K FPS",
-            )
-        )
-        add(
-            VsComparisonRow(
-                label = "Ekran Kartı (GPU)",
-                leftValue = l.gpuModel.ifBlank { UNSPECIFIED },
-                rightValue = r.gpuModel.ifBlank { UNSPECIFIED },
-                isKeyMetric = true,
-            )
-        )
-        add(
-            VsComparisonRow(
-                label = "İşlemci (CPU)",
-                leftValue = l.cpuModel.ifBlank { UNSPECIFIED },
-                rightValue = r.cpuModel.ifBlank { UNSPECIFIED },
-                isKeyMetric = true,
-            )
-        )
-        add(
-            VsComparisonRow(
-                label = "Anakart & Platform",
-                leftValue = l.motherboardModel.ifBlank { UNSPECIFIED },
-                rightValue = r.motherboardModel.ifBlank { UNSPECIFIED },
-            )
-        )
-        add(
-            VsComparisonRow(
-                label = "Bellek (RAM) & Depolama (SSD)",
-                leftValue = "${l.ramSpec.ifBlank { UNSPECIFIED }} • ${l.storageSpec.ifBlank { UNSPECIFIED }}",
-                rightValue = "${r.ramSpec.ifBlank { UNSPECIFIED }} • ${r.storageSpec.ifBlank { UNSPECIFIED }}",
-            )
-        )
-        add(
-            VsComparisonRow(
-                label = "Kasa, PSU & Satıcı Mağaza",
-                leftValue = "${l.psuCaseSpec.ifBlank { UNSPECIFIED }} (${l.storeName})",
-                rightValue = "${r.psuCaseSpec.ifBlank { UNSPECIFIED }} (${r.storeName})",
-            )
-        )
-    }
-
     private fun compareLaptops(
         leftItem: HardwareItem,
         l: LaptopSpec,
@@ -1146,10 +1045,6 @@ object VsArenaEngine {
         return when (val s = item.spec) {
             is CpuSpec, is GpuSpec -> {
                 BenchmarkEngine.evaluate(item).info.relativePerformanceIndex.coerceAtLeast(10.0)
-            }
-            is PrebuiltSpec -> {
-                if (s.gamingScore > 0) s.gamingScore.toDouble()
-                else ((s.fps1080p * 0.4 + s.fps1440p * 0.6) / 1.5).coerceIn(30.0, 100.0)
             }
             is LaptopSpec -> {
                 val tgpBonus = (extractFirstInt(s.gpuWattTgp) ?: 100) * 0.08

@@ -290,7 +290,8 @@
       "https://www.thermalright.com/wp-content/uploads/2022/01/5-1.jpg",
       "https://m.media-amazon.com/images/I/71f2bqIOwdS.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+    "height": 155
   },
   {
     "name": "THERMALRIGHT Phantom Spirit 120 SE",
@@ -342,7 +343,8 @@
       "https://static.tandoanh.vn/wp-content/uploads/2023/04/Thermalright-Phantom-Spirit-120-SE-ARGB-H1.jpg",
       "https://m.media-amazon.com/images/I/71dEBPYOzcL._SL1500_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/51KizlEeQZL.jpg",
+    "height": 154
   },
   {
     "name": "Thermalright Phantom Spirit 120 EVO",
@@ -375,7 +377,8 @@
     "supported_sockets": "LGA1851/1700/1200/115x, AM5/AM4",
     "tdp_capacity": 280,
     "features": "7x 6mm AGHP Gen 4 Isı Borusu, 2x TL-K12 Yüksek Statik Basınçlı Fan",
-    "image_url": "https://m.media-amazon.com/images/I/71v-sV2-6oL._AC_SL1500_.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/71v-sV2-6oL._AC_SL1500_.jpg",
+    "height": 157
   },
   {
     "name": "THERMALRIGHT Frozen Prism 360 ARGB",
@@ -739,7 +742,8 @@
       "https://m.media-amazon.com/images/I/41K2nMA4QZL._SL1000_.jpg",
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6541/6541442_sd.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+    "height": 65
   },
   {
     "name": "NZXT Kraken Elite 360 RGB",
@@ -791,7 +795,8 @@
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6541/6541442_sd.jpg",
       "https://www.custompc.com/wp-content/sites/custompc/2023/08/NZXT-Kraken-Elite-360-RGB-review-02.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/87647223e3478a0264b523d38ec982e1.1600.jpg",
+    "height": 65
   },
   {
     "name": "NOCTUA NH-D15 chromax.black",
@@ -850,7 +855,8 @@
     "supported_sockets": "LGA1851/1700/1200, AM5/AM4 (Ofset Montaj)",
     "tdp_capacity": 300,
     "features": "8x Isı Borusu, 2x NF-A14x25 G2 PBT Fan, SupraTorque Motor",
-    "image_url": "https://m.media-amazon.com/images/I/81m-sV4-8oL._AC_SL1500_.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/81m-sV4-8oL._AC_SL1500_.jpg",
+    "height": 168
   },
   {
     "name": "NOCTUA NH-U12S chromax.black",
@@ -876,7 +882,8 @@
       "https://c1.neweggimages.com/ProductImageCompressAll1280/AADYS211008A79A5.jpg",
       "https://down-id.img.susercontent.com/file/sg-11134275-821d9-mh2qujwhv47i0e"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/03d2c7690b9a62e9131a8514ea3c0dfa.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/03d2c7690b9a62e9131a8514ea3c0dfa.1600.jpg",
+    "height": 158
   },
   {
     "name": "BE QUIET! Dark Rock Pro 5",
@@ -902,7 +909,8 @@
       "https://www.xpert.mt/images/thumbs/0012797_be-quiet-dark-rock-pro-5-heatsink-120135mm-fan-cpu-cooler-bk036.jpeg",
       "https://basic-tutorials.com/wp-content/uploads/2023/11/20231031-IMG_5204.jpg"
     ],
-    "image_url": "https://pcper.com/wp-content/uploads/2023/10/be-quiet-dark-rock-pro-5-with-box.jpg"
+    "image_url": "https://pcper.com/wp-content/uploads/2023/10/be-quiet-dark-rock-pro-5-with-box.jpg",
+    "height": 168
   },
   {
     "name": "CORSAIR iCUE LINK Titan 360 RX RGB",
@@ -1032,7 +1040,8 @@
       "https://static.nb.com.ar/i/nb_WATER-COOLER-ASUS-ROG-RYUJIN-III-360-ARGB-EXTREME_export_8a547ab1b93ed328764c69a3da19902e.png",
       "https://files.pccasegear.com/images/ROG-RYUJIN-III-360-ARGB-EXTREME-add6.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/39b44057eccd6eb120ce03241efb9758.1600.jpg",
+    "height": 101
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro 360",
@@ -1232,7 +1241,9 @@
       "https://m.media-amazon.com/images/I/71f2bqIOwdS.jpg",
       "https://www.thermalright.com/wp-content/uploads/2022/01/5-1.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+    "height": 155,
+    "type": "Air Cooler"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro",
@@ -1287,7 +1298,9 @@
       "https://images-na.ssl-images-amazon.com/images/I/81iqBIQ8eML.jpg",
       "https://m.media-amazon.com/images/I/61brcJrcJzL._AC_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/41oLozsjh1L.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/41oLozsjh1L.jpg",
+    "height": 148,
+    "type": "Air Cooler"
   },
   {
     "name": "THERMALRIGHT Assassin X SE",
@@ -1313,7 +1326,9 @@
       "https://ecommerce.datablitz.com.ph/cdn/shop/files/71HUpJ75qEL._SL1500_1024x.jpg?v=1755228898",
       "https://m.media-amazon.com/images/I/71KmumYGrXL._SL1500_.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/29e78572835de73e133232c5e96c20e9.1600.jpg",
+    "height": 148,
+    "type": "Air Cooler"
   },
   {
     "name": "COOLER MASTER MasterLiquid 240L Core ARGB",
@@ -1484,7 +1499,9 @@
       "https://m.media-amazon.com/images/I/71Mtg5ohk5L._SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71i29z576bL._SL1500_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/41595fJKAOL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/41595fJKAOL.jpg",
+    "height": 154,
+    "type": "Air Cooler"
   },
   {
     "name": "THERMALRIGHT Assassin Spirit 120 EVO DARK",
@@ -1510,7 +1527,9 @@
       "https://m.media-amazon.com/images/I/71Mtg5ohk5L._SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71i29z576bL._SL1500_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/41e3ob6-J3L.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/41e3ob6-J3L.jpg",
+    "height": 154,
+    "type": "Air Cooler"
   },
   {
     "name": "THERMALRIGHT Peerless Assassin 120 Black",
@@ -1536,7 +1555,9 @@
       "https://www.crox.com.au/wp-content/uploads/thermalright-pa120-bk-4.png",
       "https://m.media-amazon.com/images/I/71KmumYGrXL._SL1500_.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/41TOck4ZY5L.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/41TOck4ZY5L.jpg",
+    "height": 157,
+    "type": "Air Cooler"
   },
   {
     "name": "THERMALRIGHT Assassin X 120 R Digital ARGB",
@@ -1588,7 +1609,9 @@
       "https://m.media-amazon.com/images/I/71f2bqIOwdS._SL1500_.jpg",
       "https://media.pangoly.com/img/1/f/7/e/1f7eb9f5-4af8-47ed-ac11-7802ba402a26.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c09b33bf4c2452bbc71fac7691860f4a.1600.jpg",
+    "height": 157,
+    "type": "Air Cooler"
   },
   {
     "name": "NZXT Kraken Elite 360 (2024)",
@@ -1652,7 +1675,7 @@
     "type": "Liquid",
     "size": 240,
     "color": "White",
-    "height": null,
+    "height": 65,
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
     "noise_level": 28.5,
     "sockets": [
@@ -1760,7 +1783,7 @@
     "type": "Liquid",
     "size": 420,
     "color": "White",
-    "height": null,
+    "height": 68,
     "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
     "noise_level": 22.5,
     "sockets": [
@@ -1814,7 +1837,7 @@
     "type": "Liquid",
     "size": 280,
     "color": "White",
-    "height": null,
+    "height": 68,
     "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
     "noise_level": 22.5,
     "sockets": [
@@ -1868,7 +1891,7 @@
     "type": "Liquid",
     "size": 280,
     "color": "White",
-    "height": null,
+    "height": 65,
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
     "noise_level": 28.5,
     "sockets": [
@@ -2003,7 +2026,7 @@
     "type": "Liquid",
     "size": 240,
     "color": "Black",
-    "height": null,
+    "height": 68,
     "fan_rpm": "800 - 2000 RPM (PWM)",
     "noise_level": 24.5,
     "sockets": [
@@ -2273,7 +2296,7 @@
     "type": "Liquid",
     "size": 360,
     "color": "Black",
-    "height": null,
+    "height": 66,
     "fan_rpm": "800 - 2000 RPM (PWM)",
     "noise_level": 24.5,
     "sockets": [
@@ -2678,7 +2701,7 @@
     "type": "Liquid",
     "size": 240,
     "color": "Black",
-    "height": null,
+    "height": 84,
     "fan_rpm": "800 - 2000 RPM (PWM)",
     "noise_level": 24.5,
     "sockets": [
@@ -3029,7 +3052,7 @@
     "type": "Liquid",
     "size": 360,
     "color": "White",
-    "height": null,
+    "height": 62,
     "fan_rpm": "500 - 2600 RPM",
     "noise_level": 31.0,
     "sockets": [
@@ -3056,7 +3079,7 @@
     "type": "Liquid",
     "size": 360,
     "color": "White",
-    "height": null,
+    "height": 68,
     "fan_rpm": "500 - 2250 RPM",
     "noise_level": 32.9,
     "sockets": [
@@ -3272,7 +3295,7 @@
     "type": "Liquid",
     "size": 360,
     "color": "White",
-    "height": null,
+    "height": 108,
     "fan_rpm": "500 - 2200 RPM",
     "noise_level": 32.0,
     "sockets": [

@@ -2,6 +2,7 @@ package com.panda.myapplication.presentation.vs_arena
 
 
 
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.presentation.util.localized
 
 
@@ -345,15 +346,19 @@ fun VsArenaScreen(
 
                         )
 
-                        VsChampionBannerCard(
+                        if (FeatureFlags.IS_PRICING_ENABLED) {
 
-                            summary = report.valueChampion,
+                            VsChampionBannerCard(
 
-                            accentColor = GoldAccent,
+                                summary = report.valueChampion,
 
-                            iconVector = Icons.Rounded.Diamond,
+                                accentColor = GoldAccent,
 
-                        )
+                                iconVector = Icons.Rounded.Diamond,
+
+                            )
+
+                        }
 
                     }
 
@@ -780,7 +785,6 @@ private fun VsArenaHeader(
                 )
                 val shortLabel = when (entry) {
                     VsArenaMode.COMPONENT_VS_COMPONENT -> strings.vsCompMode
-                    VsArenaMode.PREBUILT_VS_PREBUILT -> strings.vsPrebuiltMode
                     VsArenaMode.LAPTOP_VS_LAPTOP -> strings.vsLaptopMode
                     VsArenaMode.MOBILE_VS_MOBILE -> if (isTr) "Mobil" else "Mobile" 
                 }
@@ -1407,23 +1411,27 @@ private fun VsFighterCornerCard(
 
                 )
 
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+
                     val arenaCurr = LocalAppCurrency.current
 
-                Text(text = item.currentPriceTry.formatPriceWithCurrency(arenaCurr),
+                    Text(text = item.currentPriceTry.formatPriceWithCurrency(arenaCurr),
 
-                    style = MaterialTheme.typography.labelMedium,
+                        style = MaterialTheme.typography.labelMedium,
 
-                    color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
+                        color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
 
-                    fontWeight = FontWeight.ExtraBold,
+                        fontWeight = FontWeight.ExtraBold,
 
-                    softWrap = false,
+                        softWrap = false,
 
-                    maxLines = 1,
+                        maxLines = 1,
 
-                    overflow = TextOverflow.Ellipsis,
+                        overflow = TextOverflow.Ellipsis,
 
-                )
+                    )
+
+                }
 
             }
 
@@ -2957,7 +2965,7 @@ private fun VsProductPickerSheetContent(
 
                             modifier = Modifier
 
-                                .widthIn(min = 96.dp)
+                                .then(if (FeatureFlags.IS_PRICING_ENABLED) Modifier.widthIn(min = 96.dp) else Modifier)
 
                                 .wrapContentWidth(Alignment.End),
 
@@ -2967,25 +2975,29 @@ private fun VsProductPickerSheetContent(
 
                         ) {
 
-                            Text(
+                            if (FeatureFlags.IS_PRICING_ENABLED) {
 
-                                text = item.currentPriceTry.formatPriceWithCurrency(strings.customPriceOutOfStock),
+                                Text(
 
-                                style = MaterialTheme.typography.titleSmall,
+                                    text = item.currentPriceTry.formatPriceWithCurrency(strings.customPriceOutOfStock),
 
-                                color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
+                                    style = MaterialTheme.typography.titleSmall,
 
-                                fontWeight = FontWeight.ExtraBold,
+                                    color = if (item.currentPriceTry != null) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.65f),
 
-                                softWrap = false,
+                                    fontWeight = FontWeight.ExtraBold,
 
-                                maxLines = 1,
+                                    softWrap = false,
 
-                                overflow = TextOverflow.Clip,
+                                    maxLines = 1,
 
-                                textAlign = TextAlign.End,
+                                    overflow = TextOverflow.Clip,
 
-                            )
+                                    textAlign = TextAlign.End,
+
+                                )
+
+                            }
 
 
 

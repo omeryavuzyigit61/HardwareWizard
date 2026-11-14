@@ -1453,7 +1453,7 @@
   },
   {
     "name": "ASUS ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
-    "price": 900.0,
+    "price": null,
     "type": "ATX Mid Tower",
     "color": "Black",
     "side_panel": "Tempered Glass",
@@ -1757,7 +1757,8 @@
       "https://m.media-amazon.com/images/I/41WNKBNz1CL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/ef83d082d135664ff32d4be6b3ee42a1.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/d36e4a71c2ad6cdcc6c9a3a6cf72407c.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/d36e4a71c2ad6cdcc6c9a3a6cf72407c.1600.jpg",
+    "external_volume": 11.452
   },
   {
     "name": "SilverStone RM400 4U ATX Server",
@@ -1867,7 +1868,8 @@
       "https://m.media-amazon.com/images/I/51uaSDdDCTL.jpg",
       "https://images-na.ssl-images-amazon.com/images/I/41mP7X6rtLL.jpg"
     ],
-    "image_url": "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg"
+    "image_url": "https://m.media-amazon.com/images/I/31MZZsXpLIL.jpg",
+    "external_volume": 26.486
   },
   {
     "name": "SilverStone ML04 Type-C Slim mATX Salon Medya",
@@ -1955,7 +1957,8 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/3317203331bd2f20f9796641f40cc7fe.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/6c85b3ec7012e97d0835e94b156dfa32.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/fc2a8d8cde52e2b72838865ac8d8b7cc.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/fc2a8d8cde52e2b72838865ac8d8b7cc.1600.jpg",
+    "external_volume": 32.423
   },
   {
     "name": "ANTEC CX700 ARGB WHITE",
@@ -2354,7 +2357,8 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/a998adb9356bd111a22aec7d1745b0e9.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1efda4d4b2c45a0a176bca7b6bef5145.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/393f3d73165045839334a1621040ee20.1600.jpg",
+    "external_volume": 45.498
   },
   {
     "name": "NZXT H9 Elite (White)",
@@ -2794,7 +2798,8 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/443bc7f159a1a2f90984e0f8f569b77d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1e97473cc9d74cace17356c4037ac66a.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg",
+    "external_volume": 49.615
   },
   {
     "name": "DEEPCOOL CH560 Digital (White)",
@@ -2816,7 +2821,8 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/443bc7f159a1a2f90984e0f8f569b77d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1e97473cc9d74cace17356c4037ac66a.1600.jpg"
     ],
-    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg"
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/778e1eb0d22f6ad081da95fb06602734.1600.jpg",
+    "external_volume": 49.615
   },
   {
     "name": "DEEPCOOL CH510",
@@ -3128,7 +3134,7 @@
   },
   {
     "name": "Thermaltake Tower 300",
-    "price": 850.0,
+    "price": null,
     "type": "Octagonal Prism Micro ATX Showcase",
     "color": "Hydrangea Blue",
     "side_panel": "3-Sided Tempered Glass",

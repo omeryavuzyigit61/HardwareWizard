@@ -22,7 +22,6 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
             if (current.mode == mode) return@update current
             val targetCategory = when (mode) {
                 VsArenaMode.COMPONENT_VS_COMPONENT -> current.componentCategory
-                VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
                 VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
                 VsArenaMode.MOBILE_VS_MOBILE -> if (current.componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
             }
@@ -37,7 +36,7 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
     }
 
     override fun selectComponentCategory(category: HardwareCategory) {
-        if (category == HardwareCategory.PREBUILT_PC || category == HardwareCategory.LAPTOP) return
+        if (category == HardwareCategory.LAPTOP) return
         _state.update { current ->
             val keepLeft = current.leftItem?.takeIf { it.category == category }
             val keepRight = current.rightItem?.takeIf { it.category == category }
@@ -79,7 +78,6 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
         var feedbackEn = ""
         _state.update { current ->
             val targetMode = when (item.category) {
-                HardwareCategory.PREBUILT_PC -> VsArenaMode.PREBUILT_VS_PREBUILT
                 HardwareCategory.LAPTOP -> VsArenaMode.LAPTOP_VS_LAPTOP
                 HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> VsArenaMode.MOBILE_VS_MOBILE
                 else -> VsArenaMode.COMPONENT_VS_COMPONENT

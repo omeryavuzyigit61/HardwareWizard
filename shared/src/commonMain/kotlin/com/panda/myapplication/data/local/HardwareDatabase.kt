@@ -31,7 +31,6 @@ import com.panda.myapplication.data.local.entity.MonitorSpecEntity
 import com.panda.myapplication.data.local.entity.MotherboardSpecEntity
 import com.panda.myapplication.data.local.entity.MouseSpecEntity
 import com.panda.myapplication.data.local.entity.MousepadSpecEntity
-import com.panda.myapplication.data.local.entity.PrebuiltSpecEntity
 import com.panda.myapplication.data.local.entity.PsuSpecEntity
 import com.panda.myapplication.data.local.entity.RamSpecEntity
 import com.panda.myapplication.data.local.entity.StorageSpecEntity
@@ -54,7 +53,6 @@ import kotlinx.coroutines.CoroutineDispatcher
         StorageSpecEntity::class,
         CoolerSpecEntity::class,
         CaseSpecEntity::class,
-        PrebuiltSpecEntity::class,
         LaptopSpecEntity::class,
         MouseSpecEntity::class,
         KeyboardSpecEntity::class,
@@ -79,7 +77,7 @@ import kotlinx.coroutines.CoroutineDispatcher
         UserSessionEntity::class,
         AppSettingEntity::class,
     ],
-    version = 34,
+    version = 35,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

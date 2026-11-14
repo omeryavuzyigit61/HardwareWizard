@@ -1,5 +1,6 @@
 package com.panda.myapplication.presentation.wizard
 
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.presentation.util.localized
 
 import androidx.compose.foundation.BorderStroke
@@ -120,7 +121,6 @@ import com.panda.myapplication.domain.model.MousepadSpec
 import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
@@ -1760,14 +1760,16 @@ private fun SlotListHeader(
             letterSpacing = 1.sp,
         )
 
-        val wizardCurrency = LocalAppCurrency.current
-        val priceText = totalPriceTry.formatPriceWithCurrency(wizardCurrency, "0")
-        Text(
-            text = "${strings.wizardTotalPrefix}: $priceText",
-            style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary,
-        )
+        if (FeatureFlags.IS_PRICING_ENABLED) {
+            val wizardCurrency = LocalAppCurrency.current
+            val priceText = totalPriceTry.formatPriceWithCurrency(wizardCurrency, "0")
+            Text(
+                text = "${strings.wizardTotalPrefix}: $priceText",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary,
+            )
+        }
     }
 }
 
@@ -1965,27 +1967,29 @@ private fun ComponentSlotCard(
                     }
 
                     // Sağ Blok (Fiyat): minWidth = 96dp, maxLines = 1, softWrap = false
-                    Column(
-                        modifier = Modifier
-                            .widthIn(min = 96.dp)
-                            .wrapContentWidth(Alignment.End),
-                        horizontalAlignment = Alignment.End,
-                    ) {
-                        val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
-                        Text(
-                            text = priceText,
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.ExtraBold,
-                            color = when {
-                                item.isCustomPrice -> NeonAmber
-                                item.currentPriceTry != null -> NeonEmerald
-                                else -> MaterialTheme.colorScheme.onSurfaceVariant
-                            },
-                            softWrap = false,
-                            maxLines = 1,
-                            overflow = TextOverflow.Clip,
-                            textAlign = TextAlign.End,
-                        )
+                    if (FeatureFlags.IS_PRICING_ENABLED) {
+                        Column(
+                            modifier = Modifier
+                                .widthIn(min = 96.dp)
+                                .wrapContentWidth(Alignment.End),
+                            horizontalAlignment = Alignment.End,
+                        ) {
+                            val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
+                            Text(
+                                text = priceText,
+                                style = MaterialTheme.typography.titleSmall,
+                                fontWeight = FontWeight.ExtraBold,
+                                color = when {
+                                    item.isCustomPrice -> NeonAmber
+                                    item.currentPriceTry != null -> NeonEmerald
+                                    else -> MaterialTheme.colorScheme.onSurfaceVariant
+                                },
+                                softWrap = false,
+                                maxLines = 1,
+                                overflow = TextOverflow.Clip,
+                                textAlign = TextAlign.End,
+                            )
+                        }
                     }
                 }
 
@@ -2048,7 +2052,6 @@ private fun formatSlotSpecSummary(item: HardwareItem, isTr: Boolean = true): Str
         s.maxRadiatorSizeMm?.let { "Rad: ${it}mm" },
     ).joinToString(" • ")
     is PsuSpec -> "${s.wattage.watts}W • ${s.efficiency.name}"
-    is PrebuiltSpec -> "${s.cpuModel} • ${s.gpuModel} • ${s.storeName}"
     is LaptopSpec -> "${s.gpuModel} (${s.gpuWattTgp}) • ${s.displaySpec}"
     is MouseSpec -> "${s.sensor} • ${s.pollingRateHz}Hz • ${s.weightG}g"
     is KeyboardSpec -> "${s.switchType} • ${s.minActuationMm}mm • ${s.layout}"
@@ -2267,22 +2270,24 @@ private fun PickerItemCard(
             // Sağ Blok (Fiyat ve Aksiyon): minWidth = 96dp, maxLines = 1, softWrap = false
             Column(
                 modifier = Modifier
-                    .widthIn(min = 96.dp)
+                    .then(if (FeatureFlags.IS_PRICING_ENABLED) Modifier.widthIn(min = 96.dp) else Modifier)
                     .wrapContentWidth(Alignment.End),
                 horizontalAlignment = Alignment.End,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
-                Text(
-                    text = priceText,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.ExtraBold,
-                    color = NeonCyan,
-                    softWrap = false,
-                    maxLines = 1,
-                    overflow = TextOverflow.Clip,
-                    textAlign = TextAlign.End,
-                )
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+                    val priceText = item.currentPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, LocalAppStrings.current.noPriceFallback)
+                    Text(
+                        text = priceText,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = NeonCyan,
+                        softWrap = false,
+                        maxLines = 1,
+                        overflow = TextOverflow.Clip,
+                        textAlign = TextAlign.End,
+                    )
+                }
                 Button(
                     onClick = onSelect,
                     shape = RoundedCornerShape(6.dp),
@@ -2439,13 +2444,15 @@ private fun SystemCardShareDialog(
                 // Total Price & Built With Badge
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
+                    horizontalArrangement = if (FeatureFlags.IS_PRICING_ENABLED) Arrangement.SpaceBetween else Arrangement.End,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    val priceText = build.totalPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, "N/A")
-                    Column {
-                        Text(tr(isTr, "TOPLAM BÜTÇE", "TOTAL BUDGET"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        Text(priceText, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Black, color = NeonCyan)
+                    if (FeatureFlags.IS_PRICING_ENABLED) {
+                        val priceText = build.totalPriceTry.formatPriceWithCurrency(LocalAppCurrency.current, "N/A")
+                        Column {
+                            Text(tr(isTr, "TOPLAM BÜTÇE", "TOTAL BUDGET"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            Text(priceText, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Black, color = NeonCyan)
+                        }
                     }
 
                     Text(

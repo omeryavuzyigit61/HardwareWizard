@@ -15,10 +15,6 @@ enum class VsArenaMode(val title: String, val subtitle: String) {
         title = "Bileşen vs Bileşen",
         subtitle = "CPU, GPU, Anakart, RAM, SSD, PSU, Soğutucu, Kasa",
     ),
-    PREBUILT_VS_PREBUILT(
-        title = "Hazır Sistem vs Sistem",
-        subtitle = "OEM Kasa Kalitesi, Oyun FPS ve Tek Tek Toplama Kârı",
-    ),
     LAPTOP_VS_LAPTOP(
         title = "Laptop vs Laptop",
         subtitle = "GPU TGP Watt, MUX Switch, Panel Hz, Ağırlık ve F/P",
@@ -30,14 +26,12 @@ enum class VsArenaMode(val title: String, val subtitle: String) {
 
     fun localizedTitle(isTr: Boolean = true): String = if (isTr) title else when (this) {
         COMPONENT_VS_COMPONENT -> "Component vs Component"
-        PREBUILT_VS_PREBUILT -> "Prebuilt vs Prebuilt"
         LAPTOP_VS_LAPTOP -> "Laptop vs Laptop"
         MOBILE_VS_MOBILE -> "Mobile vs Mobile"
     }
 
     fun localizedSubtitle(isTr: Boolean = true): String = if (isTr) subtitle else when (this) {
         COMPONENT_VS_COMPONENT -> "CPU, GPU, Motherboard, RAM, SSD, PSU, Cooler, Case"
-        PREBUILT_VS_PREBUILT -> "OEM Build Quality, Gaming FPS and DIY Value Delta"
         LAPTOP_VS_LAPTOP -> "GPU TGP Wattage, MUX Switch, Panel Refresh, Weight and Value"
         MOBILE_VS_MOBILE -> "Smartphone & Tablet, SoC, Camera, Display Hz and Battery"
     }
@@ -58,7 +52,6 @@ data class VsArenaSelectionState(
     val activeCategory: HardwareCategory
         get() = when (mode) {
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
-            VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
             VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
         }

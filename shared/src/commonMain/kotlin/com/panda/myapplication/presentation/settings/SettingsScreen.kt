@@ -5,6 +5,9 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import com.panda.myapplication.domain.config.FeatureFlags
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -213,15 +216,17 @@ fun SettingsScreen(
                         value = "${settings.language.flag} ${settings.language.displayName}",
                         onClick = { showLanguageDialog = true },
                     )
-                    HorizontalDivider(
-                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
-                        modifier = Modifier.padding(vertical = 8.dp),
-                    )
-                    SettingsNavigationRow(
-                        label = strings.currencyLabel,
-                        value = settings.currency.displayName,
-                        onClick = { showCurrencyDialog = true },
-                    )
+                    if (FeatureFlags.IS_PRICING_ENABLED) {
+                        HorizontalDivider(
+                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
+                            modifier = Modifier.padding(vertical = 8.dp),
+                        )
+                        SettingsNavigationRow(
+                            label = strings.currencyLabel,
+                            value = settings.currency.displayName,
+                            onClick = { showCurrencyDialog = true },
+                        )
+                    }
                 }
             }
 
@@ -874,14 +879,45 @@ private fun SourcesDetailsDialog(
         },
         text = {
             Column(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
+                SourceItemTile(
+                    "🧩 ${tr(isTr, "PC Bileşenleri & Masa Ekipmanları", "PC Core & Desk Setup")}",
+                    tr(
+                        isTr,
+                        "BuildCores OpenDB & docyx/pc-part-dataset (CPU, GPU, Anakart, RAM, SSD, Kasa, Soğutucu, Fan, Monitör, Çevre Birimleri, UPS, Oyuncu Masası)",
+                        "BuildCores OpenDB & docyx/pc-part-dataset (CPUs, GPUs, Motherboards, RAM, Storage, Cases, Coolers, Fans, Monitors, Peripherals, UPS, Gaming Desks)",
+                    ),
+                )
                 SourceItemTile("🎮 ${strings.catGpu}", strings.sourcesGpuDesc)
                 SourceItemTile("⚡ ${strings.catCpu}", strings.sourcesCpuDesc)
-                SourceItemTile("🔋 ${strings.catPsu}", strings.sourcesPsuDesc)
+                SourceItemTile(
+                    "🔋 ${strings.catPsu}",
+                    "${strings.sourcesPsuDesc} • IRONScale Labs PSU Veritabanı",
+                )
+                SourceItemTile(
+                    "📡 ${tr(isTr, "Ağ & Kablosuz Ekipmanlar", "Networking & Wireless Hardware")}",
+                    tr(
+                        isTr,
+                        "OpenWrt Table of Hardware (Router, Modem, Access Point, Menzil Genişletici) & üretici veri sayfaları",
+                        "OpenWrt Table of Hardware (Routers, Modems, Access Points, Range Extenders) & official vendor datasheets",
+                    ),
+                )
+                SourceItemTile(
+                    "📱 ${tr(isTr, "Mobil, Tablet, Laptop & Saat", "Mobile, Tablet, Laptop & Wearables")}",
+                    tr(
+                        isTr,
+                        "Geekbench 6 Açık Karşılaştırma Akışı, resmi üretici teknik katalogları ve donanım telemetrisi",
+                        "Geekbench 6 Open Benchmark Feed, official OEM technical catalogs, and device telemetry",
+                    ),
+                )
                 SourceItemTile("📸 ${tr(isTr, "Ürün Stüdyo Görselleri", "Product Studio Imagery")}", strings.sourcesImagesDesc)
-                SourceItemTile("💰 ${tr(isTr, "Piyasa & Fiyat Listeleme", "Market & Price Aggregators")}", strings.sourcesPricesDesc)
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+                    SourceItemTile("💰 ${tr(isTr, "Piyasa & Fiyat Listeleme", "Market & Price Aggregators")}", strings.sourcesPricesDesc)
+                }
             }
         },
         confirmButton = {

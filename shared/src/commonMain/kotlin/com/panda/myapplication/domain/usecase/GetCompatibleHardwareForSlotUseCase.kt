@@ -189,7 +189,6 @@ class GetCompatibleHardwareForSlotUseCase {
 
             HardwareCategory.STORAGE,
             HardwareCategory.PSU,
-            HardwareCategory.PREBUILT_PC,
             HardwareCategory.LAPTOP,
             HardwareCategory.MOUSE,
             HardwareCategory.KEYBOARD,

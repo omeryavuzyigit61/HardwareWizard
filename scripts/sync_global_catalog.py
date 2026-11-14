@@ -133,8 +133,6 @@ def enrich_laptops():
                 lp["cpuCores"] = "16 Çekirdek / 32 İzlek (Zen 4)"
             elif "8845" in cpu_model or "7840" in cpu_model or "7735" in cpu_model:
                 lp["cpuCores"] = "8 Çekirdek / 16 İzlek (Zen 4 / Zen 3+)"
-            else:
-                lp["cpuCores"] = "14 Çekirdek / 20 İzlek Yüksek Performans"
 
         if not lp.get("cpuClockGhz"):
             if "14900" in cpu_model:
@@ -145,8 +143,6 @@ def enrich_laptops():
                 lp["cpuClockGhz"] = "2.10 GHz Taban / 5.50 GHz Tepe (Boost)"
             elif "8845" in cpu_model or "7840" in cpu_model:
                 lp["cpuClockGhz"] = "3.80 GHz Taban / 5.10 GHz Tepe (Boost)"
-            else:
-                lp["cpuClockGhz"] = "2.60 GHz Taban / 5.00 GHz Tepe (Boost)"
 
         # 2. Ekran & Panel Standartları
         disp = lp.get("displaySpec", "")
@@ -157,7 +153,7 @@ def enrich_laptops():
                 lp["screenResolution"] = "2560x1440 (2K QHD 16:9)"
             elif "4K" in disp or "3840x2160" in disp:
                 lp["screenResolution"] = "3840x2160 (4K UHD)"
-            else:
+            elif "FHD" in disp or "1920x1080" in disp or "1080p" in disp:
                 lp["screenResolution"] = "1920x1080 (FHD 16:9)"
 
         if not lp.get("refreshRateHz") or lp.get("refreshRateHz") == 0:
@@ -171,8 +167,6 @@ def enrich_laptops():
                 lp["refreshRateHz"] = 300
             elif "360Hz" in disp:
                 lp["refreshRateHz"] = 360
-            else:
-                lp["refreshRateHz"] = 165
 
         if not lp.get("panelTech"):
             if "OLED" in disp:
@@ -181,14 +175,12 @@ def enrich_laptops():
                 lp["panelTech"] = "Mini-LED (1100 Nit Tepe Parlaklık)"
             elif "Nebula" in disp:
                 lp["panelTech"] = "ROG Nebula Fast IPS (3ms)"
-            else:
-                lp["panelTech"] = "Fast IPS (Geniş Görüş Açılı Espor Paneli)"
 
         if not lp.get("colorGamut"):
             if "DCI-P3" in disp:
-                lp["colorGamut"] = "%100 DCI-P3 Profesyonel Sinema Gamutu"
-            else:
-                lp["colorGamut"] = "%100 sRGB Canlı Renk Doğruluğu"
+                lp["colorGamut"] = "%100 DCI-P3"
+            elif "sRGB" in disp:
+                lp["colorGamut"] = "%100 sRGB"
 
         if not lp.get("screenSizeInch") or lp.get("screenSizeInch") == 0.0:
             if "18" in disp or "18 inç" in disp or "G18" in lp.get("name", ""):
@@ -197,57 +189,27 @@ def enrich_laptops():
                 lp["screenSizeInch"] = 17.3
             elif "16" in disp or "16 inç" in disp or "G16" in lp.get("name", "") or "16IRX" in lp.get("name", ""):
                 lp["screenSizeInch"] = 16.0
+            elif "15.6" in disp or "15 inç" in disp:
+                lp["screenSizeInch"] = 15.6
             elif "14" in disp or "Zephyrus G14" in lp.get("name", ""):
                 lp["screenSizeInch"] = 14.0
-            else:
-                lp["screenSizeInch"] = 15.6
 
         # 3. Bellek (RAM) Yuvaları
         if not lp.get("ramSlots"):
             if "Zephyrus" in lp.get("name", "") or "Blade 14" in lp.get("name", ""):
                 lp["ramSlots"] = "LPDDR5X Lehimli (Yüksek Bant Genişliği)"
-            else:
-                lp["ramSlots"] = "2x SO-DIMM Yuva (Genişletilebilir, Maks 64GB)"
 
-        # 4. Depolama (SSD) Yuvaları
-        if not lp.get("storageSlots"):
-            lp["storageSlots"] = "2x M.2 NVMe Yuvası (1x Dolu PCIe 4.0, 1x Boş Gen4 Genişleme)"
-
-        # 5. Adaptör & Şarj Gücü
+        # 4. Adaptör & Şarj Gücü
         if not lp.get("chargerWatt") or lp.get("chargerWatt") == 0:
             gpu_watt = lp.get("gpuWattTgp", "")
-            if "175W" in gpu_watt or "RTX 4090" in lp.get("gpuModel", "") or "RTX 4080" in lp.get("gpuModel", ""):
+            if "175W" in gpu_watt:
                 lp["chargerWatt"] = 330
-            elif "140W" in gpu_watt or "RTX 4070" in lp.get("gpuModel", "") or "RTX 4060" in lp.get("gpuModel", ""):
+            elif "140W" in gpu_watt:
                 lp["chargerWatt"] = 240
-            else:
-                lp["chargerWatt"] = 200
 
     save_json(laptop_path, laptops)
     save_json(os.path.join(COMPOSE_DIR, "laptop.json"), laptops)
     return len(laptops)
-
-def enrich_prebuilt():
-    """
-    OEM Hazır Sistemler:
-    - Çoklu görsel (images) galerisi
-    """
-    pb_path = os.path.join(CATALOG_DIR, "prebuilt-pc.json")
-    prebuilts = load_json(pb_path) or []
-
-    for pb in prebuilts:
-        main_img = pb.get("imageUrl") or ""
-        imgs = pb.get("images") or []
-        if not imgs and main_img:
-            imgs = [main_img]
-        clean_imgs = [i for i in imgs if i and not ("_2.jpg" in i or "_angle.png" in i or "_ports.png" in i)]
-        if not clean_imgs and main_img:
-            clean_imgs = [main_img]
-        pb["images"] = clean_imgs
-
-    save_json(pb_path, prebuilts)
-    save_json(os.path.join(COMPOSE_DIR, "prebuilt-pc.json"), prebuilts)
-    return len(prebuilts)
 
 def sync_peripherals():
     """
@@ -281,24 +243,8 @@ def sync_peripherals():
             p["images"] = [img] if img else []
 
         cat = p.get("category", "")
-        if cat == "MOUSE":
-            p.setdefault("mcu", "Nordic nRF52840")
-            p.setdefault("click_latency_ms", 0.5)
-            p.setdefault("shape_type", "Simetrik")
-        elif cat == "KEYBOARD":
-            p.setdefault("max_actuation_mm", 4.0)
-            p.setdefault("case_material", "Alüminyum CNC / ABS")
+        if cat == "KEYBOARD" and p.get("switch_type"):
             p.setdefault("is_hall_effect", "Hall Effect" in p.get("switch_type", "") or "Manyetik" in p.get("switch_type", ""))
-        elif cat == "HEADSET":
-            p.setdefault("connectivity", "2.4GHz / Bluetooth / 3.5mm")
-            p.setdefault("sound_isolation", "Pasif Akustik Yalıtım")
-        elif cat == "MONITOR":
-            p.setdefault("bit_depth", "8-bit + FRC")
-            p.setdefault("response_mprt_ms", 0.5)
-            p.setdefault("brightness_sdr_nit", 350)
-            p.setdefault("brightness_hdr_nit", 400)
-            p.setdefault("color_gamut", "%100 sRGB, %98 DCI-P3")
-            p.setdefault("vrr_support", "G-Sync Compatible / FreeSync Premium Pro")
 
     save_json(peri_path, result)
     save_json(os.path.join(COMPOSE_DIR, "peripherals.json"), result)
@@ -363,8 +309,7 @@ def main():
     num_laptops = enrich_laptops()
     print(f"✓ Gaming Laptoplar (6 Donanım Kartı & Multi-Angle): {num_laptops} ürün")
 
-    num_prebuilts = enrich_prebuilt()
-    print(f"✓ OEM Hazır Sistemler (Multi-Angle): {num_prebuilts} ürün")
+
 
     num_prices = sync_prices_tr()
     print(f"✓ Canlı TR Mağaza Fiyat Veritabanı: {num_prices} ürün")

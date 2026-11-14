@@ -1439,13 +1439,13 @@ def upsert_daily_cheapest_history(
 # -----------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Hardware Wizard - Prebuilt PC & Gaming Laptop Sync")
+    parser = argparse.ArgumentParser(description="Hardware Wizard - Gaming Laptop Sync")
     parser.add_argument("--max-pages", type=int, default=8, help="Kategori başına taranacak maksimum sayfa sayısı (default: 8)")
     parser.add_argument("--skip-live-crawl", action="store_true", help="Yalnızca doğrulanmış genişletilmiş kataloğu derle")
     args = parser.parse_args()
 
     print("================================================================================")
-    print("   HARDWARE WIZARD - OEM HAZIR SİSTEMLER & GAMING LAPTOP SENKRONİZASYONU        ")
+    print("   HARDWARE WIZARD - GAMING LAPTOP SENKRONİZASYONU                              ")
     print(f"   Max Pages: {args.max_pages} | Live Crawl: {not args.skip_live_crawl}       ")
     print("================================================================================")
 
@@ -1463,17 +1463,11 @@ def main():
     print(f"[+] Mevcut tekil donanım fiyat kataloğu yüklendi: {len(existing_prices)} ürün.")
 
     # 2. Canlı Tarama (Scraping)
-    scraped_prebuilts = []
     scraped_laptops = []
 
     if not args.skip_live_crawl:
         print("\n[+] 1. Adım: Mağaza kategori sayfaları taranıyor (max_pages = %d)..." % args.max_pages)
         tasks = [
-            ("Gaming.Gen.TR Sistemler", scrape_gaming_gen_systems),
-            ("İtopya Sistemler", scrape_itopya_systems),
-            ("Tebilon Sistemler", scrape_tebilon_systems),
-            ("İncehesap Sistemler", scrape_incehesap_systems),
-            ("Vatan Bilgisayar Sistemler", scrape_vatan_systems),
             ("Gaming.Gen.TR Laptoplar", scrape_gaming_gen_laptops),
             ("İtopya Laptoplar", scrape_itopya_laptops),
             ("Hepsiburada Laptoplar", scrape_hepsiburada_laptops),
@@ -1484,43 +1478,12 @@ def main():
                 name = future_to_name[fut]
                 try:
                     res = fut.result()
-                    if "Sistemler" in name:
-                        scraped_prebuilts.extend(res)
-                    else:
-                        scraped_laptops.extend(res)
+                    scraped_laptops.extend(res)
                     print(f"    -> [{name}] Tamamlandı: {len(res)} ürün çekildi.")
                 except Exception as ex:
                     print(f"    -> [{name}] Hata: {ex}")
 
     # 3. Curated Base ile Birleştir ve Deduplicate Et
-    all_prebuilts = {}
-    existing_pb_path = os.path.join(CATALOG_DIR, "prebuilt-pc.json")
-    if not os.path.exists(existing_pb_path):
-        existing_pb_path = os.path.join(FILES_DIR, "prebuilt-pc.json")
-    if os.path.exists(existing_pb_path):
-        try:
-            with open(existing_pb_path, "r", encoding="utf-8") as f:
-                loaded = json.load(f)
-                for pb in loaded:
-                    all_prebuilts[pb["id"]] = pb
-        except Exception:
-            pass
-    if not all_prebuilts:
-        for p in CURATED_PREBUILTS:
-            all_prebuilts[p["id"]] = p
-    for p in scraped_prebuilts:
-        existing_key = None
-        for k, v in all_prebuilts.items():
-            if v.get("url") and p.get("url") and v["url"].strip() == p["url"].strip():
-                existing_key = k
-                break
-        if not existing_key:
-            all_prebuilts[p["id"]] = p
-        else:
-            if all_prebuilts[existing_key].get("imageUrl") and not p.get("imageUrl"):
-                p["imageUrl"] = all_prebuilts[existing_key]["imageUrl"]
-            all_prebuilts[existing_key].update(p)
-
     all_laptops = {}
     existing_lp_path = os.path.join(CATALOG_DIR, "laptop.json")
     if os.path.exists(existing_lp_path):
@@ -1548,96 +1511,11 @@ def main():
                 lp["images"] = all_laptops[existing_key]["images"]
             all_laptops[existing_key].update(lp)
 
-    print(f"\n[+] Toplam Birleştirilmiş Veri: {len(all_prebuilts)} Hazır Sistem, {len(all_laptops)} Gaming Laptop.")
+    print(f"\n[+] Toplam Birleştirilmiş Veri: {len(all_laptops)} Gaming Laptop.")
 
-    # 4. Hazır Sistem Parça Parça Maliyet ve Kâr/Zarar Analizi
     today_str = datetime.now().strftime("%Y-%m-%d")
-    final_prebuilts = []
 
-    print("\n[+] 2. Adım: Hazır Sistem Parça Maliyet ve Kâr/Fark Analizi yapılıyor...")
-    raw_prebuilts = []
-    for pid, ps in all_prebuilts.items():
-        # Enforce Pure Name Rule: Store + Model Code
-        clean_name = clean_system_title(ps.get("name", ""), ps.get("url", ""), ps.get("storeName", ""))
-        ps["name"] = clean_name
-
-        cpu_cost = estimate_component_price(ps["cpuModel"], existing_prices)
-        gpu_cost = estimate_component_price(ps["gpuModel"], existing_prices)
-        mobo_cost = estimate_component_price(ps["motherboardModel"], existing_prices) or 3500.0
-        ram_cost = estimate_component_price(ps["ramSpec"], existing_prices) or 2200.0
-        ssd_cost = estimate_component_price(ps["storageSpec"], existing_prices) or 2000.0
-        case_psu_cost = estimate_component_price(ps["psuCaseSpec"], existing_prices) or 3500.0
-
-        system_price = safe_float(ps.get("priceTry"))
-        analyzed = dict(ps)
-
-        if cpu_cost is not None and gpu_cost is not None:
-            total_sep = round(cpu_cost + gpu_cost + mobo_cost + ram_cost + ssd_cost + case_psu_cost, 2)
-            adv_try = round(total_sep - system_price, 2)
-            analyzed["estimatedSeparatePriceTry"] = total_sep
-            if adv_try > 0.0:
-                analyzed["priceAdvantageTry"] = adv_try
-            else:
-                # Prevent nonsensical negative profit
-                analyzed["priceAdvantageTry"] = None
-        else:
-            analyzed["estimatedSeparatePriceTry"] = None
-            analyzed["priceAdvantageTry"] = None
-
-        raw_prebuilts.append(analyzed)
-
-    def _enrich_prebuilt_img(pb: dict) -> dict:
-        cur_img = pb.get("imageUrl")
-        if not cur_img or "placeholder" in cur_img.lower() or "unsplash" in cur_img.lower():
-            clean_name = pb.get("name", "")
-            q = f"{clean_name} gaming desktop case isolated"
-            for u in search_bing_images(q, count=4):
-                if verify_image_url(u, timeout=2.5):
-                    pb["imageUrl"] = u
-                    return pb
-            for u in search_duckduckgo_images(f"{clean_name} pc case"):
-                if verify_image_url(u, timeout=2.5):
-                    pb["imageUrl"] = u
-                    return pb
-        return pb
-
-    print("    -> Hazır sistem görselleri paralel taranıyor...")
-    with ThreadPoolExecutor(max_workers=8) as executor:
-        final_prebuilts = list(executor.map(_enrich_prebuilt_img, raw_prebuilts))
-
-    for pb in final_prebuilts:
-        pid = pb["id"]
-        system_price = safe_float(pb.get("priceTry"))
-        if system_price is not None and system_price > 0:
-            prev_entry = existing_prices.get(pid, {})
-            history = upsert_daily_cheapest_history(
-                existing_history=prev_entry.get("priceHistory", []),
-                today_str=today_str,
-                cheapest_price=system_price,
-                cheapest_store=pb["storeName"],
-                min_floor_try=15000.0,
-            )
-            all_hist = [h["priceTry"] for h in history] or [system_price]
-            existing_prices[pid] = {
-                "productId": pid,
-                "currentPriceTry": system_price,
-                "lowestPriceTry": min(all_hist),
-                "highestPriceTry": max(all_hist),
-                "lastUpdated": datetime.now().isoformat(),
-                "imageUrl": pb.get("imageUrl"),
-                "priceHistory": history,
-                "offers": [
-                    {
-                        "storeName": pb["storeName"],
-                        "priceTry": system_price,
-                        "url": pb.get("url", ""),
-                        "inStock": True,
-                        "imageUrl": pb.get("imageUrl")
-                    }
-                ]
-            }
-
-    # 5. Gaming Laptop Fiyat Geçmişi ve Güncellemesi
+    # 4. Gaming Laptop Fiyat Geçmişi ve Güncellemesi
     print("\n[+] 3. Adım: Gaming Laptop modelleri yapılandırılıyor...")
     raw_laptops = []
     for pid, lp in all_laptops.items():
@@ -1707,7 +1585,6 @@ def main():
     # 6. Dosyaları Kaydet (data/catalog/ ve shared/.../composeResources/files/)
     print("\n[+] 4. Adım: Dosyalar senkronize ediliyor...")
     targets = [
-        ("prebuilt-pc.json", final_prebuilts),
         ("laptop.json", final_laptops),
     ]
     for fname, data in targets:
@@ -1725,7 +1602,7 @@ def main():
         print(f"  [OK] {os.path.basename(p_file)} güncellendi ({len(existing_prices)} toplam ürün).")
 
     print("\n================================================================================")
-    print(f"   BAŞARILI: {len(final_prebuilts)} Hazır Sistem & {len(final_laptops)} Gaming Laptop Eşitlendi! ")
+    print(f"   BAŞARILI: {len(final_laptops)} Gaming Laptop Eşitlendi! ")
     print("================================================================================")
 
 if __name__ == "__main__":

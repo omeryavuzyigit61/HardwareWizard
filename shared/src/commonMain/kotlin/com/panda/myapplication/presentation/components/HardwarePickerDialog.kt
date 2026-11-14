@@ -1,6 +1,7 @@
 package com.panda.myapplication.presentation.components
 
 import androidx.compose.foundation.BorderStroke
+import com.panda.myapplication.domain.config.FeatureFlags
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -330,14 +331,16 @@ fun HardwarePickerDialog(
                                                         modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp),
                                                     )
                                                 }
-                                                val priceTry = item.currentPriceTry
-                                                if (priceTry != null && priceTry > 0) {
-                                                    Text(
-                                                        text = "₺${priceTry.toInt()}",
-                                                        style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
-                                                        color = NeonEmerald,
-                                                        fontWeight = FontWeight.Bold,
-                                                    )
+                                                if (FeatureFlags.IS_PRICING_ENABLED) {
+                                                    val priceTry = item.currentPriceTry
+                                                    if (priceTry != null && priceTry > 0) {
+                                                        Text(
+                                                            text = "₺${priceTry.toInt()}",
+                                                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
+                                                            color = NeonEmerald,
+                                                            fontWeight = FontWeight.Bold,
+                                                        )
+                                                    }
                                                 }
                                             }
                                         }

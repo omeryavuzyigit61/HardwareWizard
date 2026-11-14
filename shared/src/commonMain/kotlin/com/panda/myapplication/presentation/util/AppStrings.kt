@@ -7160,8 +7160,6 @@ fun HardwareCategory.localized(strings: AppStrings): String = when (this) {
 
     HardwareCategory.CASE -> strings.catCase
 
-    HardwareCategory.PREBUILT_PC -> strings.catPrebuilt
-
     HardwareCategory.LAPTOP -> strings.catLaptop
 
     HardwareCategory.MOUSE -> strings.catMouse

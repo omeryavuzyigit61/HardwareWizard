@@ -50,7 +50,6 @@ data class ActiveBuild(
         HardwareCategory.MOUSEPAD -> mousepad
         HardwareCategory.WEBCAM -> webcam
         HardwareCategory.GAMING_CHAIR -> gamingChair
-        HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> null
@@ -74,7 +73,6 @@ data class ActiveBuild(
         HardwareCategory.MOUSEPAD -> copy(mousepad = item)
         HardwareCategory.WEBCAM -> copy(webcam = item)
         HardwareCategory.GAMING_CHAIR -> copy(gamingChair = item)
-        HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> this
@@ -98,7 +96,6 @@ data class ActiveBuild(
         HardwareCategory.MOUSEPAD -> copy(mousepad = null)
         HardwareCategory.WEBCAM -> copy(webcam = null)
         HardwareCategory.GAMING_CHAIR -> copy(gamingChair = null)
-        HardwareCategory.PREBUILT_PC,
         HardwareCategory.LAPTOP,
         HardwareCategory.SMARTPHONE,
         HardwareCategory.TABLET -> this

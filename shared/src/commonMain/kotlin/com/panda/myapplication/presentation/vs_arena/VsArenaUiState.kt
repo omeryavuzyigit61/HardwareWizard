@@ -27,7 +27,6 @@ data class VsArenaUiState(
     val activeCategory: HardwareCategory
         get() = when (mode) {
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
-            VsArenaMode.PREBUILT_VS_PREBUILT -> HardwareCategory.PREBUILT_PC
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
             VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
         }

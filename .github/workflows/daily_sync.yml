@@ -17,6 +17,8 @@ jobs:
   autonomous-daily-sync:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    env:
+      ENABLE_PRICE_SYNC: 'false'
 
     steps:
       - name: Check out repository
@@ -38,23 +40,28 @@ jobs:
         run: |
           python scripts/autonomous_hardware_discovery.py
 
-      - name: 2. Sync Deep Hardware Specs & 12-Game FPS Benchmarks
+      - name: 2. Sync BuildCores OpenDB (48,000+ Open Hardware Schemas)
+        run: |
+          python scripts/sync_buildcores_opendb.py
+
+      - name: 3. Sync Deep Hardware Specs & 12-Game FPS Benchmarks
         run: |
           python scripts/sync_deep_specs_and_benchmarks.py
 
-      - name: 3. Sync Global Technical Catalog & Multi-Angle Peripherals
+      - name: 4. Sync Global Technical Catalog & Multi-Angle Peripherals
         run: |
           python scripts/sync_global_catalog.py
 
-      - name: 4. Check TR Store Price Changes & Stock Status
+      - name: 5. Check TR Store Price Changes & Stock Status
+        if: env.ENABLE_PRICE_SYNC == 'true'
         run: |
           python scripts/update_prices.py
 
-      - name: 5. Autonomous OEM Prebuilt Systems & Gaming Laptops Scraper
+      - name: 6. Autonomous Gaming Laptops Sync
         run: |
-          python scripts/sync_systems_and_laptops.py
+          python scripts/sync_systems_and_laptops.py --skip-live-crawl
 
-      - name: 6. Final Dual Directory Catalog Verification & Hash Integrity
+      - name: 7. Final Dual Directory Catalog Verification & Hash Integrity
         run: |
           python scripts/autonomous_hardware_discovery.py
           python scripts/prepare_prepopulated_db.py

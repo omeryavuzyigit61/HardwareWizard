@@ -8,7 +8,6 @@ import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
@@ -183,19 +182,6 @@ object HardwareEnrichmentEngine {
                     badges.add(EngineeringBadge("Anakart Desteği", s.supportedMotherboardFormFactors.joinToString(", ") { it.name }))
                 }
                 s.sidePanel?.let { badges.add(EngineeringBadge("Yan Panel", it)) }
-            }
-
-            is PrebuiltSpec -> {
-                badges.add(EngineeringBadge("Satıcı / Mağaza", s.storeName, isHighlighted = true))
-                badges.add(EngineeringBadge("İşlemci", s.cpuModel))
-                badges.add(EngineeringBadge("Ekran Kartı", s.gpuModel, isHighlighted = true))
-                badges.add(EngineeringBadge("Anakart", s.motherboardModel))
-                badges.add(EngineeringBadge("Bellek (RAM)", s.ramSpec))
-                badges.add(EngineeringBadge("Depolama", s.storageSpec))
-                badges.add(EngineeringBadge("Kasa & Güç Kaynağı", s.psuCaseSpec))
-                if (s.priceAdvantageTry != null && s.priceAdvantageTry > 0.0) {
-                    badges.add(EngineeringBadge("Kâr / Fiyat Avantajı", "+${s.priceAdvantageTry.toLong()} ₺ (%${s.advantagePercent.toInt()})", isHighlighted = true))
-                }
             }
 
             is LaptopSpec -> {

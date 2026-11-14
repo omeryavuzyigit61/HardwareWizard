@@ -78,7 +78,6 @@ fun HardwareCategory.iconVector(): ImageVector = when (this) {
     HardwareCategory.MODEM -> Icons.Rounded.Dns
     HardwareCategory.ACCESS_POINT -> Icons.Rounded.CellTower
     HardwareCategory.RANGE_EXTENDER -> Icons.Rounded.Sensors
-    HardwareCategory.PREBUILT_PC -> Icons.Rounded.Computer
     HardwareCategory.LAPTOP -> Icons.Rounded.Laptop
     HardwareCategory.SMARTPHONE -> Icons.Rounded.Smartphone
     HardwareCategory.TABLET -> Icons.Rounded.TabletAndroid

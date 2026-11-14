@@ -9,7 +9,6 @@ import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MemorySize
-import com.panda.myapplication.domain.model.PrebuiltSpec
 import com.panda.myapplication.domain.model.ProductPriceInfo
 import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.Wattage
@@ -135,61 +134,7 @@ class SharedCommonTest {
     }
 
     @Test
-    fun vsArenaEngineComparesPrebuiltSystemsAndLaptops() {
-        val prebuiltA = HardwareItem(
-            id = HardwareId("prebuilt_a"),
-            brand = "Gaming.Gen.TR",
-            model = "BLADE-7500F RTX 4060 Ti",
-            price = null,
-            priceInfo = ProductPriceInfo(currentPriceTry = 29999.0),
-            spec = PrebuiltSpec(
-                storeName = "Gaming.Gen.TR",
-                cpuModel = "AMD Ryzen 5 7500F",
-                gpuModel = "ASUS DUAL RTX 4060 Ti 8GB",
-                motherboardModel = "ASUS PRIME B650M-R",
-                ramSpec = "16GB DDR5",
-                storageSpec = "1TB NVMe",
-                psuCaseSpec = "650W 80+ Bronze",
-                estimatedSeparatePriceTry = 32500.0,
-                priceAdvantageTry = 2501.0,
-                fps1080p = 145,
-                fps1440p = 98,
-                fps4k = 54,
-                gamingScore = 82,
-            ),
-        )
-
-        val prebuiltB = HardwareItem(
-            id = HardwareId("prebuilt_b"),
-            brand = "Sinerji",
-            model = "Sinerji Kraken RTX 4080 SUPER",
-            price = null,
-            priceInfo = ProductPriceInfo(currentPriceTry = 89999.0),
-            spec = PrebuiltSpec(
-                storeName = "Sinerji",
-                cpuModel = "AMD Ryzen 7 9800X3D",
-                gpuModel = "MSI RTX 4080 SUPER 16GB",
-                motherboardModel = "MSI X670E TOMAHAWK",
-                ramSpec = "32GB DDR5",
-                storageSpec = "2TB KC3000",
-                psuCaseSpec = "850W Gold ATX 3.0",
-                estimatedSeparatePriceTry = 93500.0,
-                priceAdvantageTry = 3501.0,
-                fps1080p = 250,
-                fps1440p = 190,
-                fps4k = 115,
-                gamingScore = 98,
-            ),
-        )
-
-        val prebuiltReport = VsArenaEngine.compare(
-            left = prebuiltA,
-            right = prebuiltB,
-            mode = VsArenaMode.PREBUILT_VS_PREBUILT,
-        )
-        assertEquals(ComparisonWinner.RIGHT, prebuiltReport.performanceChampion.winner)
-        assertTrue(prebuiltReport.rows.any { it.label.contains("Tek Tek") || it.label.contains("Avantaj") })
-
+    fun vsArenaEngineComparesLaptops() {
         val laptopA = HardwareItem(
             id = HardwareId("laptop_a"),
             brand = "ASUS",

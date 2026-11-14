@@ -77,7 +77,6 @@ class HardwareListViewModel(
                 CatalogSegmentMode.INDIVIDUAL -> INDIVIDUAL_CATEGORIES.toList()
                 CatalogSegmentMode.PERIPHERALS -> PERIPHERAL_CATEGORIES.toList()
                 CatalogSegmentMode.NETWORKING -> NETWORKING_CATEGORIES.toList()
-                CatalogSegmentMode.PREBUILT -> listOf(HardwareCategory.PREBUILT_PC)
                 CatalogSegmentMode.LAPTOP -> listOf(HardwareCategory.LAPTOP)
                 CatalogSegmentMode.MOBILE -> MOBILE_CATEGORIES.toList()
             }
@@ -130,7 +129,6 @@ class HardwareListViewModel(
                     CatalogSegmentMode.INDIVIDUAL -> null
                     CatalogSegmentMode.PERIPHERALS -> null
                     CatalogSegmentMode.NETWORKING -> null
-                    CatalogSegmentMode.PREBUILT -> HardwareCategory.PREBUILT_PC
                     CatalogSegmentMode.LAPTOP -> HardwareCategory.LAPTOP
                     CatalogSegmentMode.MOBILE -> null
                 }
@@ -161,7 +159,6 @@ class HardwareListViewModel(
                     targetCategory.isNetworking -> CatalogSegmentMode.NETWORKING
                     targetCategory.isMobile -> CatalogSegmentMode.MOBILE
                     targetCategory.isPeripheral -> CatalogSegmentMode.PERIPHERALS
-                    targetCategory == HardwareCategory.PREBUILT_PC -> CatalogSegmentMode.PREBUILT
                     targetCategory == HardwareCategory.LAPTOP -> CatalogSegmentMode.LAPTOP
                     else -> CatalogSegmentMode.INDIVIDUAL
                 }

@@ -8,7 +8,6 @@ enum class CatalogSegmentMode {
     INDIVIDUAL,
     PERIPHERALS,
     NETWORKING,
-    PREBUILT,
     LAPTOP,
     MOBILE,
 }

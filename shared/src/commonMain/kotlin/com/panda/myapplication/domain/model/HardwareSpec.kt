@@ -14,7 +14,6 @@ enum class HardwareCategory(val displayName: String) {
     STORAGE("Depolama (SSD/HDD)"),
     COOLER("İşlemci Soğutucu"),
     CASE("Kasa"),
-    PREBUILT_PC("OEM Hazır Sistem"),
     LAPTOP("Gaming Laptop"),
     MOUSE("Oyuncu Faresi"),
     KEYBOARD("Oyuncu Klavyesi"),
@@ -60,7 +59,6 @@ enum class HardwareCategory(val displayName: String) {
             STORAGE -> "Storage (SSD/HDD)"
             COOLER -> "CPU Cooler"
             CASE -> "Case"
-            PREBUILT_PC -> "Prebuilt PC"
             LAPTOP -> "Gaming Laptop"
             MOUSE -> "Gaming Mouse"
             KEYBOARD -> "Gaming Keyboard"

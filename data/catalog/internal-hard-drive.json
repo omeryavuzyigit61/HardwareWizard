@@ -2560,7 +2560,8 @@
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
     "endurance_tbw": 750,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "Lexar NM790 2TB M.2 NVMe SSD",
@@ -2584,7 +2585,8 @@
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
     "endurance_tbw": 1500,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "Lexar NM790 4TB M.2 NVMe SSD",
@@ -2608,7 +2610,8 @@
     "seq_write": 6500,
     "random_iops": "1000K / 900K IOPS",
     "endurance_tbw": 3000,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "Crucial T705 2TB PCIe 5.0 M.2 NVMe SSD",
@@ -2632,7 +2635,8 @@
     "seq_write": 11800,
     "random_iops": "1500K / 1500K IOPS (Rastgele 4K Okuma/Yazma)",
     "endurance_tbw": 1200,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "Crucial T500 2TB M.2 NVMe SSD",
@@ -2656,7 +2660,8 @@
     "seq_write": null,
     "random_iops": null,
     "endurance_tbw": null,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "Western Digital WD_BLACK SN850X 4TB M.2 NVMe SSD",
@@ -2680,7 +2685,8 @@
     "seq_write": 6600,
     "random_iops": "1200K / 1100K IOPS",
     "endurance_tbw": 2400,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   },
   {
     "name": "TeamGroup MP44 2TB M.2 NVMe SSD",
@@ -2704,6 +2710,7 @@
     "seq_write": null,
     "random_iops": null,
     "endurance_tbw": null,
-    "price": null
+    "price": null,
+    "type": "NVMe SSD"
   }
 ]
