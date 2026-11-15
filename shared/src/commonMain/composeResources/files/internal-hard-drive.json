@@ -2547,7 +2547,7 @@
     "read_speed": 7400,
     "write_speed": 6500,
     "tbw": 1000,
-    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "dram_cache": "HMB (Host Memory Buffer) + Maxio MAP1602",
     "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
@@ -2572,7 +2572,7 @@
     "read_speed": 7400,
     "write_speed": 6500,
     "tbw": 1500,
-    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "dram_cache": "HMB + Maxio MAP1602",
     "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
@@ -2597,7 +2597,7 @@
     "read_speed": 7400,
     "write_speed": 6500,
     "tbw": 3000,
-    "dram_cache": "HMB (Host Memory Buffer 64MB - DRAM-less)",
+    "dram_cache": "HMB + Maxio MAP1602",
     "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
@@ -2622,7 +2622,7 @@
     "read_speed": 14500,
     "write_speed": 12700,
     "tbw": 1200,
-    "dram_cache": "4GB LPDDR4-4266 DRAM Cache",
+    "dram_cache": "DDR4 DRAM + Phison E26",
     "image_url": "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71m-b3c-4nL._AC_SL1500_.jpg",
@@ -2672,7 +2672,7 @@
     "read_speed": 7300,
     "write_speed": 6600,
     "tbw": 2400,
-    "dram_cache": "2GB DDR4 DRAM Cache",
+    "dram_cache": "DDR4 DRAM",
     "image_url": "https://m.media-amazon.com/images/I/71p-c4v-5mL._AC_SL1500_.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/71p-c4v-5mL._AC_SL1500_.jpg",
