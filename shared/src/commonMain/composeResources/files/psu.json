@@ -279,15 +279,18 @@
     "topology": "OEM: CWT (GPG) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "135mm Champion ZFB1325H12H 12V, 0.45A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/asus-prime-bronze-750w-2025-0/outside.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Prime Bronze 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/asus-prime-bronze-750w-2025-0/outside.webp",
-      "https://thepcshop.co.za/wp-content/uploads/2026/03/PRIME-750B-BLACK_Asus-PRIME-750W-80-PLUS-Bronze-ATX-Non-modular-Power-Supply_wr_01a-720x720.jpg",
-      "https://thepcshop.co.za/wp-content/uploads/2026/03/PRIME-750B-BLACK_Asus-PRIME-750W-80-PLUS-Bronze-ATX-Non-modular-Power-Supply_wr_03a.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-prime-750w-bronze-80-plus-bronze-full-moduler-guc-kaynagi-6.jpg"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: -1.24%",
     "extra_specs": {
@@ -318,15 +321,18 @@
     "topology": "OEM: CWT (GPX (ATX 3.0)) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitonix IN1S429I-DCG",
     "fan_size": "135mm Power Logic PLA13525B12M 12V, 0.40A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/asus-prime-gold-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Prime Gold 750W",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/asus-prime-gold-750w-2024-0/outside-v182.webp",
-      "https://m.media-amazon.com/images/I/71An7HGx2yL._AC_.jpg",
-      "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/asus-prime-ap-850g-850w-80-gold-135mm-fanli-guc-kaynagi-6-1.jpg"
     ],
     "outputs": "+12V: 62A (744W) • 12V Ripple: 54mV • Regülasyon: -0.91%",
     "extra_specs": {
@@ -357,15 +363,18 @@
     "topology": "OEM: Great Wall (GW-ATXBL (Modified)) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S429I - DCG • OPP: 660.41W (120.07%)",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://songphuong.vn/Content/uploads/2025/06/TUF-Gaming-750W-Bronze-1.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Bronze 750W",
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
     "images": [
-      "https://songphuong.vn/Content/uploads/2025/06/TUF-Gaming-750W-Bronze-1.webp",
-      "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
-      "https://www.ardalzaeem.net/wp-content/uploads/2025/08/70b5fa9f1a41d20f52825f7e6c39bcb5-hi.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/01/asus-tuf-gaming-650b-650w-80-bronze-psu-guc-kaynagi-5.jpg"
     ],
     "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
     "extra_specs": {
@@ -396,15 +405,18 @@
     "topology": "OEM: Great Wall (GW-ATXBL (Modified)) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S429I - DCG • OPP: 660.41W (120.07%)",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Bronze EVO 750W",
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
     "images": [
-      "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
-      "https://dlcdnwebimgs.asus.com/gain/d38ef86f-6abf-45ed-a19b-fb76f98f2e0a/w800",
-      "https://nvs.tn-cdn.net/2026/03/asus-tuf-gaming-750w-bronze-evo-3.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-tuf-gaming-650b-evo-650w-80bronze-atx-3-1-guc-kaynagi-7.jpg"
     ],
     "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
     "extra_specs": {
@@ -435,15 +447,18 @@
     "topology": "OEM: Great Wall (Hunters Fire) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Gold 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
-      "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
-      "https://ecommerce.datablitz.com.ph/cdn/shop/products/fwebp_2_13b3d6eb-2cdd-4316-815c-1bb641e12a5d_1024x.jpg?v=1676920510"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-6-1.jpg"
     ],
     "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
     "extra_specs": {
@@ -474,15 +489,18 @@
     "topology": "OEM: Great Wall (Hunters Fire) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Tuf Gold EVO 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://static.wixstatic.com/media/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp/v1/fill/w_2276,h_2108,al_c,q_90,enc_avif,quality_auto/131a7a_41107cb8f9904d9daa49bf9be28fc83d~mv2.webp",
-      "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
-      "https://ecommerce.datablitz.com.ph/cdn/shop/files/image_74_cb11f304-9789-48af-9ec8-4451b179aa3b_1024x.jpg?v=1777788929"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-tuf-gaming-1200g-evo-1200w-80gold-pcie-5-1-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
     "extra_specs": {
@@ -1221,7 +1239,6 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/delta-gps-750hb-750w-2020/outside-v180.png",
-      "https://www.qp.com.tr/pub/media/catalog/product/cache/6ff5005527a0dd788c36f13c4c09fac2/7/5/750_gold_2.jpg",
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg"
     ],
     "outputs": "+12V: 62,5A (750W) • 12V Ripple: 22mV • Regülasyon: -1.40%",
@@ -1294,7 +1311,6 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18,5ms?",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/delta-gps-750fb-750w-2015-0/outside-v180.png",
-      "https://techolay.net/sosyal/ek/1761138712769-webp.194806/",
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg"
     ],
     "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
@@ -1389,12 +1405,15 @@
     "topology": "OEM: Helly (ATX-0200) • Double Forward • Aktif PFC • Grup Regülasyon — 3.3V hattı saturasyon bobiniyle regüle ediliyor",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
     "fan_size": "120mm",
-    "imageUrl": "https://m.media-amazon.com/images/I/71zkjfIUhBL._UF1000,1000_QL80_.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/12/enermax-maxpro-iii-600w-80-standard-120mm-fanli-guc-kaynagi-emp600w-2-yil-birebir-degisim-garantili-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Maxpro III 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/enermax-maxpro-iii-600w-80-standard-120mm-fanli-guc-kaynagi-emp600w-2-yil-birebir-degisim-garantili-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/enermax-maxpro-iii-600w-80-standard-120mm-fanli-guc-kaynagi-emp600w-2-yil-birebir-degisim-garantili-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/enermax-maxpro-iii-600w-80-standard-120mm-fanli-guc-kaynagi-emp600w-2-yil-birebir-degisim-garantili-3.jpg",
       "https://m.media-amazon.com/images/I/71zkjfIUhBL._UF1000,1000_QL80_.jpg",
       "https://m.media-amazon.com/images/I/61d2raCrjOL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
@@ -1457,15 +1476,18 @@
     "topology": "OEM: RSY (A0155) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S313I-SAG",
     "fan_size": "120mm Globe Fan S1202512M 12V, 0.30A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_III/REVOLUTION_III-02.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution III 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
     "images": [
-      "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_III/REVOLUTION_III-02.webp",
-      "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_DF12/REVOLUTION_DF_12_01_750.jpg",
-      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-6.jpg"
     ],
     "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%",
     "extra_specs": {
@@ -1496,15 +1518,18 @@
     "topology": "OEM: RSY (A0155) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S313I-SAG",
     "fan_size": "120mm Globe Fan S1202512M 12V, 0.30A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/enermax-revolution-iii-850w-2025-0/outside.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Revolution III S 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 14ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/enermax-revolution-iii-850w-2025-0/outside.webp",
-      "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
-      "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-revolution-iii-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-erv1000g-ahg-mac-2-yil-birebir-degisim-garantili-6.jpg"
     ],
     "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%",
     "extra_specs": {},
@@ -1569,15 +1594,18 @@
     "topology": "OEM: RSY (NZ01) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S313I-SAG • OPP: 1637.02W (136.42%)",
     "fan_size": "135mm Globe Fan RL4Z S1352512HH 12V, 0.45A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/enermax-platimax-df-ii-1200w-2025-0/outside-v182.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Platimax DF II 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 21.8ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/enermax-platimax-df-ii-1200w-2025-0/outside-v182.png",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b8eec2ba376cbbd68178f2f48e719110.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ffb0dcaddaa0f2c84a734265b9bb2eb6.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/enermax-platimax-ii-1200df-1200w-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-eps1200p-npx-6.jpg"
     ],
     "outputs": "+12V: 100A (1200W) • 12V Ripple: 23.46mV • Regülasyon: -0.62%",
     "extra_specs": {},
@@ -1710,15 +1738,18 @@
     "topology": "OEM: AOJİE (SAMA) (920MC ATX 3.1) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: Esthome EST.7610F • OPP: 1401.10W (140.11%)",
     "fan_size": "120mm Endofy Fluctus 10-1037 12V 0.15A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/endorfy-supremo-gold-lm6-1000w-2025-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Supremo Gold FM6 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 22.4ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/endorfy-supremo-gold-lm6-1000w-2025-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/089cae677a05ec17d24c85de9a616d6b.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/9e8071018c0f52bc1f130bb94020d7e5.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/endorfy-supremo-fm6-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-ey7a011-6.jpg"
     ],
     "outputs": "+12V: 83A (996W) • 12V Ripple: 42.03mV • Regülasyon: -0.66%",
     "extra_specs": {},
@@ -2976,15 +3007,18 @@
     "topology": "OEM: FSP (HYDRO G PRO) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: Weltrend WT7527",
     "fan_size": "120mm Protechnic Electric MGA12012XF-O25 12V, 0.52A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-750w-2019-0/outside-v182.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "Hyper 80+ PRO 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-750w-2019-0/outside-v182.png",
-      "https://m.media-amazon.com/images/I/51edzhvwa4L.jpg",
-      "https://m.media-amazon.com/images/I/41w90bTj8uL.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/fsp-vita-bd-850w-80-bronze-pcie-5-1-atx-guc-kaynagi-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/fsp-hydro-g-pro-750w-2019-0/outside-v182.png"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%",
     "extra_specs": {},
@@ -3309,7 +3343,6 @@
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/fazeon-p1a-b-850w-2026-0/outside.png",
-      "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
       "https://i0.shbdn.com/photos/35/49/96/x5_1283354996hgh.jpg"
     ],
     "outputs": "+12V: 61.5A (738W)",
@@ -4470,15 +4503,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-1-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A650BN 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {},
@@ -4543,15 +4579,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BN II 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-ii-650w-2026-0/outside-v183.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {
@@ -4621,15 +4660,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-BNL Full Range 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-14.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-13.jpg"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {},
@@ -4689,15 +4731,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-DN Full Range 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-14.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/07/msi-mag-a750gl-750w-80-gold-full-moduler-guc-kaynagi-13.jpg"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {},
@@ -4830,15 +4875,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A-GL PCI-e 5.0 II 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/msi-mag-a750bn-pcie5-ii-750w-80-gold-pcie-5-1-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {
@@ -4942,15 +4990,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm DF1202512SEHN 12V, 0.40A (Sleeve Bearing?)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MPG A-GS PCIE5 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-pci-e-5-0-750w-2024-0/outside-v182.webp"
     ],
     "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
     "extra_specs": {},
@@ -5200,13 +5251,12 @@
     "topology": "OEM: HEC? (Bilinmiyor) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "120mm Yate Loon D12SH-12 12V, 0.30A (Sleeve Bearing)",
-    "imageUrl": "https://watanimall.com/wp-content/uploads/2024/06/PSU-THR-TR-TG-750-3.png",
+    "imageUrl": "https://admin.itti.com.np/storage/product/thermalright-tg-750w-80-gold-fully-moduler-power-supply-price-nepal/aef4001d-33f0-4580-b8fd-66f1cb61c7d3.webp",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MON-TG 750W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://watanimall.com/wp-content/uploads/2024/06/PSU-THR-TR-TG-750-3.png",
       "https://admin.itti.com.np/storage/product/thermalright-tg-750w-80-gold-fully-moduler-power-supply-price-nepal/aef4001d-33f0-4580-b8fd-66f1cb61c7d3.webp",
       "https://img.drz.lazcdn.com/static/np/p/ef1fc651dbf4dd90e23b826eaefe4e39.jpg_720x720q80.jpg"
     ],
@@ -5280,7 +5330,6 @@
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
       "https://ironscalelabs.com/images/psu-auto/monster-bpab-850w-2024-0/fan.webp",
-      "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
       "https://down-th.img.susercontent.com/file/th-11134201-7r990-lx5mxue91rjkb0"
     ],
     "outputs": "+12V: 70.5A (846W)",
@@ -6490,15 +6539,18 @@
     "topology": "OEM: Chicony Power (Bilinmiyor) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Corsair NR135L 12V, 022A (Rifle Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A (<25 dBA)",
     "model": "RM1000e (2023) ATX 3.0 1000W",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ce27e414f67e9e8786401e4260bb85fa.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e1a0bb0ca24bc0c2d95fea57a8c2019d.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/corsair-rm1000e-2025-1000w-80-gold-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-cp-9020297-eu-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp"
     ],
     "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
     "extra_specs": {},
@@ -6524,15 +6576,18 @@
     "topology": "OEM: Chicony Power (Bilinmiyor) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Corsair NR135L 12V, 022A (Rifle Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "RM850e (2023) ATX 3.0 850W",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/corsair-rm-turuncu-etiket-2013-850w-2013-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/74e6caafd69bcc53d6e5060a3249248d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3fa3c80c1defc487364f6bdaf2670b1e.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-6.jpg"
     ],
     "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
     "extra_specs": {},
@@ -6694,12 +6749,13 @@
     "topology": "OEM: CWT (GPX ATX 3.0) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: IN1S429I - DCG • OPP: 1044.08W (122.83%)",
     "fan_size": "120mm Revizyon: E (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-mag-a850gl-pcie5-toy-story-edition-850w-80-gold-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A850GL PCIE5 850W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-mag-a850gl-pcie5-toy-story-edition-850w-80-gold-guc-kaynagi-1.jpg",
       "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/79be60ce3783b8918a1c0940d3e4ff19.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/eef1b2e0ab31f6cbcbe01d162f44b952.1600.jpg"
@@ -6728,15 +6784,18 @@
     "topology": "OEM: CWT (GPX ATX 3.0) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: IN1S429I - DCG • OPP: 1044.08W (122.83%)",
     "fan_size": "120mm Revizyon: E (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A750GL PCIE5 750W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon) • Hold-Up Time: 17.2ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mag-a1000pls-pcie5-guc-kaynagi-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-gl-pci-e-5-0-850w-2023-0/outside-v182.webp"
     ],
     "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
     "extra_specs": {},
@@ -6762,15 +6821,18 @@
     "topology": "OEM: CWT (GSB) • Double Forward • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP • IC: Infineon INIS429I-DCG",
     "fan_size": "120mm Yate Loon D12SH-12 12V, 0.30A (Sleeve Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-650-0-650w-2021-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-1-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MAG A650BN 650W",
     "capacitors": "85°C - 105°C Çin (ChengX / CapXon)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-650-0-650w-2021-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/11/msi-mag-a650bn-650w-80-bronze-140mm-fanli-psu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-a650bn-guc-kaynagi-unitesi-650-w-204-pin-atx-atx-siy-guc-kaynagi-uniteleri-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mag-a-bn-650-0-650w-2021-0/outside-v182.webp"
     ],
     "outputs": "+12V: 54A (646W) • 12V Ripple: 13.3mV • Regülasyon: -2.64%",
     "extra_specs": {
@@ -6801,15 +6863,18 @@
     "topology": "OEM: CWT (CTE) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: Nuvoton MS51FB9AE • OPP: 1051.64W (123.72%)",
     "fan_size": "135mm ZIC ZFF132512H BAX3 12V, 0.45A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "MPG A850G PCIE5 850W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp"
     ],
     "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%",
     "extra_specs": {},
@@ -6835,15 +6900,18 @@
     "topology": "OEM: CWT (CTE) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: Nuvoton MS51FB9AE • OPP: 1051.64W (123.72%)",
     "fan_size": "135mm ZIC ZFF132512H BAX3 12V, 0.45A (Fluid Dynamic Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
     "model": "MPG A1000G PCIE5 1000W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 16.6ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/msi-mpg-ai1600ts-pcie5-guc-kaynagi-5.jpg",
+      "https://ironscalelabs.com/images/psu-auto/msi-mpg-a-gs-pcie5-850w-2025-0/outside-v182.webp"
     ],
     "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%",
     "extra_specs": {},
@@ -6869,15 +6937,18 @@
     "topology": "OEM: Great Wall (GW-ATXBL (Modified)) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: INFSitronix IN1S429I - DCG • OPP: 660.41W (120.07%)",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 750G 750W",
     "capacitors": "105°C Tayvan Teapo (2.000h - 6.000h) • Hold-Up Time: 11.3ms",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/asus-tuf-bronze-550w-2022-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/45c889b358290996d7737156b64146c0.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-750g-750w-80-gold-psu-6-1.jpg"
     ],
     "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
     "extra_specs": {},
@@ -6903,15 +6974,18 @@
     "topology": "OEM: Great Wall (Hunters Fire) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 850G 850W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-850g-850w-80-gold-psu-6-1.jpg"
     ],
     "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
     "extra_specs": {},
@@ -6937,15 +7011,18 @@
     "topology": "OEM: Great Wall (Hunters Fire) • Half Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "fan_size": "135mm Champion CF1325H12D 12V, 0.60A (Double Ball Bearing)",
-    "imageUrl": "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-1-1.jpg",
     "cybenetics": "80 PLUS Gold / Cybenetics Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
     "model": "TUF Gaming 1000G 1000W",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con)",
     "images": [
-      "https://ironscalelabs.com/images/psu-auto/asus-tuf-gold-850w-2023-0/outside-v182.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/6f6f30fe3667a292aee80208a58acb28.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/02/asus-tuf-gaming-1000g-1000w-80-gold-psu-6-1.jpg"
     ],
     "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
     "extra_specs": {},
@@ -6971,14 +7048,17 @@
     "topology": "OEM: Seasonic • ROG Soğutuculu Tam Köprü LLC Resonant + DC-DC • Aktif PFC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/F40C3AEA-D458-41E6-BF27-045C0C8D5086",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
     "model": "ROG Thor 1000W Platinum II",
     "images": [
-      "https://dlcdnwebimgs.asus.com/gain/F40C3AEA-D458-41E6-BF27-045C0C8D5086",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
     "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
@@ -7005,14 +7085,17 @@
     "topology": "OEM: Seasonic • ROG Soğutuculu Tam Köprü LLC Resonant + DC-DC • Aktif PFC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://pcboost.co.uk/wp-content/uploads/2022/11/ROG-THOR-1200W-Platinum-II-Fully-Modular-Power-Supply-From-ASUS.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
     "model": "ROG Thor 1200W Platinum II",
     "images": [
-      "https://pcboost.co.uk/wp-content/uploads/2022/11/ROG-THOR-1200W-Platinum-II-Fully-Modular-Power-Supply-From-ASUS.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1000w-platinum-iii-rog-equalizer-1000w-80platinum-full-moduler-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
     "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
@@ -7039,14 +7122,17 @@
     "topology": "OEM: Seasonic • ROG Soğutuculu Tam Köprü LLC Resonant + DC-DC • Aktif PFC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://static.tweaktown.com/news/9/8/98665_22_asus-rog-thor-1600w-titanium-iii-psu-unveiled-2-12v-2x6-connectors-magnetic-oled-screen_full.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Titanium",
     "cybenetics_lambda": "Lambda A++ (<15 dBA)",
     "model": "ROG Thor 1600W Titanium",
     "images": [
-      "https://static.tweaktown.com/news/9/8/98665_22_asus-rog-thor-1600w-titanium-iii-psu-unveiled-2-12v-2x6-connectors-magnetic-oled-screen_full.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/asus-rog-thor-1600w-titanium-iii-evo-rog-equalizer-1600w-80titanium-full-moduler-atx-3-1-guc-kaynagi-6.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
     "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
@@ -7073,14 +7159,17 @@
     "topology": "OEM: CWT / Great Wall • Çift Transformatörlü LLC + DC-DC • Aktif PFC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
     "fan_size": "120mm FDB Fan",
-    "imageUrl": "https://www.cclonline.com/images/avante/ASUS-PRO-WS-3000P.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-1-2.jpg",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
     "model": "Pro WS 3000W Platinum",
     "images": [
-      "https://www.cclonline.com/images/avante/ASUS-PRO-WS-3000P.png",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b22fb9713e4ad5dd4245dbec30740766.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3fb2d887e5a452db696692c8205dd369.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-1-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-2-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-5-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/asus-pro-ws-1600w-platinum-80-platinum-pcie-5-1-full-moduler-atx-3-1-guc-kaynagi-6-1.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
     "outputs": "250A +12V Rayı (3000W Sürekli) • Sunucu Sınıfı Regülasyon",
@@ -7379,12 +7468,7 @@
     "cybenetics_efficiency": "Platinum",
     "cybenetics_noise": "A- (Sessiz Çalışma)",
     "warranty_years": 10,
-    "imageUrl": "https://m.media-amazon.com/images/I/71iZq9v8tZL.jpg",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
-    ],
+    "images": [],
     "model": "Vertex GX-1000",
     "brand": "SEASONIC",
     "manufacturer": "Seasonic",
@@ -7392,7 +7476,6 @@
     "form_factor": "ATX 3.0",
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "features": "Cybenetics Platinum Verimlilik & A- Sessizlik Sertifikası, 135mm FDB Fan",
-    "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
     "tier": "Tier A+ (En Üst Seviye / Flagship)",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
     "cybenetics_lambda": "Lambda A- (25-30 dBA)",
@@ -7463,9 +7546,8 @@
     "cybenetics_efficiency": "Titanium",
     "cybenetics_noise": "A (Fısıltı Sessizliğinde)",
     "warranty_years": 10,
-    "imageUrl": "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
+    "imageUrl": "https://www.avadirect.com/Pictures/Big/16144734_2.png",
     "images": [
-      "https://m.media-amazon.com/images/I/71LqF+wU9tL.jpg",
       "https://www.avadirect.com/Pictures/Big/16144734_2.png",
       "https://media.ldlc.com/r1600/ld/products/00/06/03/66/LD0006036687_0006036700.jpg"
     ],
@@ -7495,12 +7577,7 @@
     "pcie_5_connector": "2x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, 120mm FDB Fan",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ],
+    "images": [],
     "tier": "Tier A (Üst Seviye / High-End)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7531,12 +7608,7 @@
     "pcie_5_connector": "2x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Dual Chamber Tasarım, 4x Dahili USB 2.0 Hub Çıkışı, Beyaz Kablolar",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ],
+    "images": [],
     "tier": "Tier A (Üst Seviye / High-End)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7567,12 +7639,7 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, O11 EVO/Vision Uyumlu",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ],
+    "images": [],
     "tier": "Tier A (Üst Seviye / High-End)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7603,12 +7670,7 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Dual Chamber Tasarım, Dahili USB Hub, Saf Beyaz Gövde",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ],
+    "images": [],
     "tier": "Tier A (Üst Seviye / High-End)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7639,12 +7701,7 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "L-Shape Kablolama, 4x Dahili USB Hub, Mesh Izgara Soğutma",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_01.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_03.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_05.webp"
-    ],
+    "images": [],
     "tier": "Tier B+ (İleri Orta Seviye)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7673,12 +7730,7 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "White",
     "features": "L-Shape Kablolama, 4x Dahili USB Hub, Beyaz Örgülü Kablolar",
-    "image_url": "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_02.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_04.webp",
-      "https://lian-li.com/wp-content/uploads/2024/06/EDGE_06.webp"
-    ],
+    "images": [],
     "tier": "Tier B+ (İleri Orta Seviye)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
     "cybenetics_lambda": "Lambda A+ (<20 dBA)",
@@ -7707,12 +7759,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Mini-ITX / SFX Küçük Form Faktörü, PCIe 5.0 Hazır, Sıfır RPM Modu",
-    "image_url": "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2022/07/SP850_01.webp",
-      "https://lian-li.com/wp-content/uploads/2022/07/SP850_02.webp",
-      "https://lian-li.com/wp-content/uploads/2022/07/SP850_03.webp"
-    ],
+    "images": [],
     "price": null,
     "type": "SFX (100mm x 125mm x 63.5mm)",
     "efficiency": "80+ Gold",
@@ -7739,12 +7786,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "12 Yıl Garanti, Japon 105C Kapasitörler, Hibrit Sessiz Fan Kontrolü",
-    "image_url": "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Back.png",
-      "https://seasonic.com/wp-content/uploads/2022/10/Vertex-GX-1200-Top.png"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (160 x 150 x 86 mm)",
     "efficiency": "80+ Gold",
@@ -7775,12 +7817,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Kompakt 140mm Gövde, 10 Yıl Garanti, 135mm Akışkan Yataklı Fan",
-    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (140 x 150 x 86 mm Kompakt Kasa)",
     "efficiency": "80+ Gold",
@@ -7811,12 +7848,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Kompakt 140mm Derinlik, Kablosuz Bağlantı Tasarımı, Tam Modüler",
-    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (140 x 150 x 86 mm Kompakt Kasa)",
     "efficiency": "80+ Gold",
@@ -7847,12 +7879,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Sessiz Hibrit Fan Eğrisi, PCIe 5.0 12VHPWR Doğal Kablo",
-    "image_url": "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Modular.png",
-      "https://seasonic.com/wp-content/uploads/2023/07/Focus-GX-850-V3-Top.png"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (140 x 150 x 86 mm Kompakt Kasa)",
     "efficiency": "80+ Gold",
@@ -7883,12 +7910,7 @@
     "pcie_5_connector": "2x 16-Pin 12VHPWR",
     "color": "Black / Chrome",
     "features": "Dünyanın En Yüksek Ripple Kararlılığı (%0.5 Tolerans), Titanyum Verimlilik, 12 Yıl Garanti",
-    "image_url": "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
-    "images": [
-      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Hero.png",
-      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Modular.png",
-      "https://seasonic.com/wp-content/uploads/2022/06/Prime-TX-1600-Back.png"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (210 x 150 x 86 mm)",
     "efficiency": "80+ Titanium",
@@ -7921,12 +7943,7 @@
     "pcie_5_connector": "2x 16-Pin 12VHPWR",
     "color": "Alüminyum Siyah",
     "features": "Çerçevesiz Silent Wings Fan, Overclocking Key (Tek/Çoklu 12V Kanal Anahtarı)",
-    "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "tier": "Tier A+ (En Üst Seviye / Flagship)",
     "cybenetics": "Cybenetics Titanium / 80 PLUS Titanium",
@@ -7955,12 +7972,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Silent Wings 135mm Fan, Huni Şeklinde Hava Girişi, Platin Verimlilik",
-    "image_url": "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/71o-b1c-3nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71p-v4z-2rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71q-x3y-4mL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "tier": "Tier A (Üst Seviye / High-End)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
@@ -7989,11 +8001,8 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "LLC + SR + DC/DC Dönüştürücüler, 120mm Sessiz Fan, F/P Şampiyonu",
-    "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
+      "https://productimages.hepsiburada.net/s/777/222-222/110002711580514.jpg"
     ],
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110002711580514.jpg",
     "price": 3999.0,
@@ -8024,12 +8033,7 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "ATX 3.0 Yerel Uyumluluk, Çift 12V Kanalı, 10 Yıl Garanti",
-    "image_url": "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/71r-c2v-4mL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71s-w3z-1nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71t-y4x-5pL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "type": "ATX (160 x 150 x 86 mm)",
     "efficiency": "80+ Gold",
@@ -8060,11 +8064,13 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Patentli Yan Panel Modüler Kablo Bağlantısı, Type 5 Micro-Fit Kablolar",
-    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
     "images": [
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-6.jpg"
     ],
     "tier": "Tier B- (Giriş-Orta Seviye)",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
@@ -8084,7 +8090,8 @@
     "source_provenance": [
       "IRONScale Labs"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg"
   },
   {
     "name": "Corsair RM850x Shift Gold ATX 3.0",
@@ -8096,11 +8103,13 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Yan Panel Modüler Bağlantı, 140mm Akışkan Yataklı FDB Fan, Zero RPM",
-    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
     "images": [
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_01.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_03.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020253-NA/Gallery/RM1000x_SHIFT_04.webp"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-6.jpg"
     ],
     "tier": "Tier B- (Giriş-Orta Seviye)",
     "cybenetics": "Cybenetics Gold / 80 PLUS Gold",
@@ -8120,7 +8129,8 @@
     "source_provenance": [
       "IRONScale Labs"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/corsair-rm850e-850w-80-gold-pcie-5-0-full-moduler-atx-guc-kaynagi-cp-9020263-eu-2.jpg"
   },
   {
     "name": "Corsair SF850 Platinum ATX 3.1",
@@ -8132,12 +8142,7 @@
     "pcie_5_connector": "1x 16-Pin 12V-2x6",
     "color": "Black",
     "features": "SFX Küçük Form Faktörü, 92mm FDB Sessiz Fan, Örgülü Esnek Kablolar",
-    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
-    "images": [
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
-    ],
+    "images": [],
     "price": 1200.0,
     "tier": "Tier A+ (SFX Referans / Flagship)",
     "cybenetics": "Cybenetics Platinum / 80 PLUS Platinum",
@@ -8166,12 +8171,7 @@
     "pcie_5_connector": "3x 8-Pin PCIe",
     "color": "Black",
     "features": "SFF ITX Sistemlerin Efsanevi Referans Güç Kaynağı, 7 Yıl Garanti",
-    "image_url": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
-    "images": [
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_01.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_03.webp",
-      "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020256-NA/Gallery/SF850_04.webp"
-    ],
+    "images": [],
     "price": null,
     "type": "SFX (100 x 125 x 63.5 mm)",
     "efficiency": "80+ Platinum",
@@ -8202,11 +8202,8 @@
     "pcie_5_connector": "1x 16-Pin 12VHPWR",
     "color": "Black",
     "features": "Cybenetics Platinum Verimlilik, Patentli Universal Evrensel Soketler",
-    "image_url": "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/71u-sV1-5oL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71m-q4z-3nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71w-x2y-1rL._AC_SL1500_.jpg"
+      "https://productimages.hepsiburada.net/s/777/222-222/110001025404803.jpg"
     ],
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110001025404803.jpg",
     "price": null,

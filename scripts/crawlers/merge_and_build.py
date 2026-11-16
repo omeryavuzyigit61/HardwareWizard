@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-source catalog merger building enriched catalog JSONs without fabricated specs."""
+"""Cross-source catalog merger building enriched catalog JSONs with verified, title-matched images."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import collections
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from typing import Any
@@ -14,10 +15,23 @@ from typing import Any
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
+from scripts.crawlers.http_client import PoliteHttpClient
+from scripts.crawlers.image_curator import (
+    backfill_missing_via_wikimedia,
+    build_gallery_index,
+    clean_doubled_gpu_name,
+    dedupe_synthetic_peripheral_clones,
+    filter_and_prune_item_images,
+    find_best_gallery_match,
+    is_image_compatible_with_item,
+    is_valid_gpu_product,
+    quarantine_cross_model_collisions,
+)
+from scripts.crawlers.sources_images import verify_image_url_pool
 from scripts.crawlers.state_manager import (
     CrawlStateManager,
     normalize_canonical_key,
@@ -26,10 +40,8 @@ from scripts.crawlers.state_manager import (
 
 FILES_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
 DATA_CATALOG_DIR = os.path.join(ROOT_DIR, "data", "catalog")
+DATA_DIR = os.path.join(ROOT_DIR, "data")
 VERIFIED_DATE = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-# Maximum distinct items allowed to share the same non-manufacturer image URL
-MAX_SHARED_IMAGE_REPEAT = 4
 
 
 def _load_json(path: str, default: Any) -> Any:
@@ -48,7 +60,6 @@ def _save_json_both(filename: str, data: Any) -> None:
 
 
 def _index_raw_by_source(state: CrawlStateManager, category: str) -> dict[str, dict[str, dict[str, Any]]]:
-    """Returns {source_name: {canonical_key: record_dict}} and also a normalized alias index."""
     by_src: dict[str, dict[str, dict[str, Any]]] = collections.defaultdict(dict)
     for row in state.load_records_for_category(category):
         rec = {
@@ -83,11 +94,11 @@ def _match_lookup(src_map: dict[str, dict[str, Any]], *names: str | None) -> dic
 
 def _is_modern_cpu_name(name: str, socket: str = "") -> bool:
     u = f"{name} {socket}".upper()
-    bad = ("A4-", "A6-", "A8-", "A10-", "A12-", "ATHLON II", "PHENOM", "SEMPRON", "OPTERON", "FX-", "PENTIUM", "CELERON", "CORE 2", "XEON", "ATOM", "AM1", "AM2", "AM3", "FM1", "FM2", "775", "1156", "1155", "1150", "1151")
+    bad = ("A4-", "A6-", "A8-", "A10-", "A12-", "ATHLON II", "PHENOM", "SEMPRON", "OPTERON", "FX-", "PENTIUM", "CELERON", "CORE 2", "XEON", "ATOM", "EMBEDDED", "AM1", "AM2", "AM3", "FM1", "FM2", "775", "1156", "1155", "1150", "1151")
     if any(b in u for b in bad):
         return False
     is_amd = any(k in u for k in ("RYZEN", "THREADRIPPER", "3000G", "200GE")) and any(
-        s in u for s in ("AM4", "AM5", "TR4", "STRX4", "STR5", "SWRX8", "RYZEN")
+        s in u for s in ("AM4", "AM5", "TR4", "TRX4", "STRX4", "STR5", "WRX8", "SWRX8", "RYZEN")
     )
     is_intel = any(
         k in u
@@ -97,25 +108,94 @@ def _is_modern_cpu_name(name: str, socket: str = "") -> bool:
             "13900", "13700", "13600", "13500", "13400", "13100",
             "12900", "12700", "12600", "12500", "12400", "12100",
             "11900", "11700", "11600", "11500", "11400",
-            "10900", "10700", "10600", "10500", "10400", "10100",
+            "10900", "10700", "10600", "10500", "10400", "10100", "10105",
         )
     )
     return is_amd or is_intel
 
 
-def _merge_cpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[dict[str, Any]]:
+def _hid(category: str, name: str) -> str:
+    san = re.sub(r"_+", "_", re.sub(r"[^a-z0-9]", "_", (name or "").lower())).strip("_")
+    return f"{category.lower()}_{san}"
+
+
+def _seed_prices_tr_image(
+    item: dict[str, Any],
+    category: str,
+    prices_tr: dict[str, Any] | None,
+    image_key: str = "imageUrl",
+) -> None:
+    if not prices_tr or item.get("images") or item.get(image_key):
+        return
+    item_id = item.get("id") or _hid(category, item.get("name") or "")
+    entry = prices_tr.get(item_id)
+    if isinstance(entry, dict):
+        u = entry.get("imageUrl")
+        if isinstance(u, str) and u.startswith("https://"):
+            item["images"] = [u]
+            item[image_key] = u
+
+
+def _apply_curated_gallery(
+    item: dict[str, Any],
+    category: str,
+    gallery_recs: list[dict[str, Any]],
+    health_map: dict[str, bool],
+    image_key: str = "imageUrl",
+    prefer_gallery: bool = False,
+    prices_tr: dict[str, Any] | None = None,
+) -> None:
+    _seed_prices_tr_image(item, category, prices_tr, image_key=image_key)
+    brand = str(item.get("brand") or (item.get("name", "").split()[0] if item.get("name") else ""))
+    name = str(item.get("name") or item.get("model") or "")
+    chipset = str(item.get("chipset") or "")
+
+    existing_clean = filter_and_prune_item_images(item, category, health_map, image_key=image_key)
+    matched = find_best_gallery_match(category, brand, name, chipset, gallery_recs, health_map) if gallery_recs else []
+
+    if prefer_gallery and matched:
+        final = list(dict.fromkeys(matched + existing_clean))[:6]
+    elif not existing_clean and matched:
+        final = matched[:6]
+    elif len(existing_clean) < 2 and matched:
+        final = list(dict.fromkeys(existing_clean + matched))[:6]
+    else:
+        final = existing_clean
+
+    item["images"] = final
+    if final:
+        item[image_key] = final[0]
+        if image_key == "image_url":
+            item.pop("imageUrl", None)
+        else:
+            item.pop("image_url", None)
+    else:
+        item.pop("imageUrl", None)
+        if image_key == "image_url":
+            item["image_url"] = None
+        else:
+            item.pop("image_url", None)
+
+
+def _merge_cpus(
+    state: CrawlStateManager,
+    benchmarks: dict[str, Any],
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "cpu.json"), [])
     by_name: dict[str, dict[str, Any]] = {}
     for item in existing:
-        if item.get("name"):
-            by_name[normalize_canonical_key(item["name"])] = dict(item)
+        nm = item.get("name") or ""
+        if nm and "EMBEDDED" not in nm.upper() and _is_modern_cpu_name(nm, str(item.get("socket") or "")):
+            by_name[normalize_canonical_key(nm)] = dict(item)
 
     raw_src = _index_raw_by_source(state, "CPU")
     pcp = raw_src.get("pc-part-dataset", {})
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pm = raw_src.get("PassMark", {})
+    gg_gallery = build_gallery_index(state, "CPU", ("GamingGen Store API",))
 
-    # Expand catalog with modern CPUs from pc-part-dataset and TechPowerUp
     for rec in list(pcp.values()) + list(tpu.values()):
         name = rec["display_name"]
         p = rec["payload"]
@@ -145,7 +225,7 @@ def _merge_cpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[di
     enriched_list: list[dict[str, Any]] = []
     for ckey, item in by_name.items():
         name = item["name"]
-        prov: list[str] = ["HardwareWizard Katalog"] if item in existing else []
+        prov: list[str] = ["HardwareWizard Katalog"] if item.get("price") or item.get("l2_cache") else []
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
 
         m_pcp = _match_lookup(pcp, name)
@@ -176,7 +256,6 @@ def _merge_cpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[di
                 syn = b_rec.setdefault("synthetic", {})
                 syn["passmark_cpu_mark"] = pm_score
                 if "score" not in b_rec:
-                    # Relative 10-99 index anchored around PassMark 65,000 flagship
                     rel = round(min(0.99, max(0.25, pm_score / 62000.0)), 3)
                     b_rec["gaming_relative_index"] = rel
                     b_rec["score"] = int(rel * 100)
@@ -184,53 +263,114 @@ def _merge_cpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[di
         if item.get("core_count") and not item.get("threads"):
             item["threads"] = item["core_count"]
 
+        _apply_curated_gallery(item, "CPU", gg_gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov)) or ["Katalog Verisi"]
         item["spec_verified_at"] = VERIFIED_DATE
         enriched_list.append(item)
 
     enriched_list.sort(key=lambda x: (x.get("release_date") or "", x.get("name") or ""), reverse=True)
-    return enriched_list[:450]
+    cpus_final = enriched_list[:450]
+    quarantine_cross_model_collisions(cpus_final, "CPU", image_key="imageUrl", max_allowed_variants=4)
+    return cpus_final
 
 
-def _merge_gpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[dict[str, Any]]:
+def _infer_gpu_brand(name: str, chipset: str = "") -> str:
+    first = name.split()[0] if name.split() else ""
+    up_first = first.upper()
+    if up_first in ("ASUS", "MSI", "GIGABYTE", "ASROCK", "SAPPHIRE", "POWERCOLOR", "XFX", "ZOTAC", "PALIT", "PNY", "GAINWARD", "INNO3D", "GALAX", "KFA2", "EVGA", "AMD", "NVIDIA", "INTEL", "BIOSTAR", "MAXSUN", "COLORFUL", "SPARKLE", "YESTON", "ACER", "LENOVO", "DELL", "HP"):
+        return first
+    cl = f"{name} {chipset}".lower()
+    if "radeon" in cl:
+        return "AMD"
+    if "geforce" in cl or "rtx" in cl or "gtx" in cl:
+        return "NVIDIA"
+    if "arc" in cl:
+        return "Intel"
+    return first or "GPU"
+
+
+def _merge_gpus(
+    state: CrawlStateManager,
+    benchmarks: dict[str, Any],
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "video-card.json"), [])
     raw_src = _index_raw_by_source(state, "GPU")
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pm = raw_src.get("PassMark", {})
     pcp = raw_src.get("pc-part-dataset", {})
+    gg_gallery = build_gallery_index(state, "GPU", ("GamingGen Store API",))
+    tpu_gallery = build_gallery_index(state, "GPU", ("TechPowerUp Ajax",))
 
     by_name: dict[str, dict[str, Any]] = {}
+    by_vram_trimmed: dict[str, str] = {}
     for item in existing:
-        if item.get("name"):
-            by_name[normalize_canonical_key(item["name"])] = dict(item)
+        nm_raw = item.get("name") or ""
+        ch = item.get("chipset") or ""
+        nm = clean_doubled_gpu_name(nm_raw)
+        if nm and is_valid_gpu_product(nm, ch):
+            it_clean = dict(item)
+            it_clean["name"] = nm
+            br_inf = item.get("brand") or _infer_gpu_brand(nm, ch)
+            it_clean["brand"] = br_inf
+            ckey = normalize_canonical_key(nm)
+            vtrim = re.sub(r"_+", "_", re.sub(r"\d+(?:gb|tb)", "", ckey)).strip("_")
+            if br_inf.upper() in ("AMD", "NVIDIA", "INTEL") and vtrim in by_vram_trimmed:
+                prev = by_name[by_vram_trimmed[vtrim]]
+                if len(nm) > len(prev["name"]):
+                    for k, v in prev.items():
+                        it_clean.setdefault(k, v)
+                    del by_name[by_vram_trimmed[vtrim]]
+                    by_name[ckey] = it_clean
+                    by_vram_trimmed[vtrim] = ckey
+                continue
+            by_name[ckey] = it_clean
+            by_vram_trimmed.setdefault(vtrim, ckey)
 
-    # Add 2025/2026 new RTX 50 / RX 9000 / Arc B cards discovered in TechPowerUp or PCP
+    # Add modern discrete desktop cards from TPU (with real tpucdn.com photos) and major imaged pc-part-dataset entries
     for rec in list(tpu.values()) + list(pcp.values()):
-        name = rec["display_name"]
+        name = clean_doubled_gpu_name(rec["display_name"])
         chip = str(rec["payload"].get("chipset") or name)
+        if not is_valid_gpu_product(name, chip):
+            continue
         up = f"{name} {chip}".upper()
         if not any(k in up for k in ("RTX 50", "RX 90", "ARC B5", "RTX 40", "RX 7")):
             continue
         ckey = normalize_canonical_key(name)
-        if ckey not in by_name:
+        imgs = [u for u in (rec.get("images") or []) if health_map.get(u, False)]
+        # If reference TPU entry matches existing card with VRAM suffix (e.g. "AMD Radeon RX 9070 XT 16GB"), enrich existing instead of duplicating
+        existing_alias_key = by_vram_trimmed.get(re.sub(r"_+", "_", re.sub(r"\d+(?:gb|tb)", "", ckey)).strip("_"))
+        target_key = ckey if ckey in by_name else (existing_alias_key if existing_alias_key in by_name else ckey)
+        if target_key not in by_name:
+            gg_hit = find_best_gallery_match("GPU", rec.get("brand") or "", name, chip, gg_gallery, health_map)
+            if not imgs and not gg_hit and not any(k in up for k in ("RTX 5090", "RTX 5080", "RTX 5070", "RX 9070", "ARC B580", "ARC B570")):
+                continue
+            final_imgs = gg_hit or imgs
             by_name[ckey] = {
                 "name": name,
+                "brand": rec.get("brand") or _infer_gpu_brand(name, chip),
                 "chipset": chip,
                 "memory": rec["payload"].get("memory"),
                 "memory_type": rec["payload"].get("memory_type"),
                 "core_clock": rec["payload"].get("core_clock"),
                 "boost_clock": rec["payload"].get("boost_clock"),
                 "length": rec["payload"].get("length"),
-                "images": [],
+                "images": final_imgs,
+                "imageUrl": final_imgs[0] if final_imgs else None,
             }
+            by_vram_trimmed.setdefault(re.sub(r"_+", "_", re.sub(r"\d+(?:gb|tb)", "", ckey)).strip("_"), ckey)
+        elif imgs and not by_name[target_key].get("images"):
+            by_name[target_key]["images"] = imgs
+            by_name[target_key]["imageUrl"] = imgs[0]
 
     gpu_bench_map = benchmarks.setdefault("gpus", {})
     result: list[dict[str, Any]] = []
     for item in by_name.values():
         name = item["name"]
         chip = item.get("chipset") or name
-        prov: list[str] = ["HardwareWizard Katalog"] if item in existing else []
+        prov: list[str] = ["HardwareWizard Katalog"] if item.get("price") or item.get("power_connectors") else []
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
 
         m_pcp = _match_lookup(pcp, name, chip)
@@ -247,7 +387,6 @@ def _merge_gpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[di
                 if not item.get(fld) and tp.get(fld) is not None:
                     item[fld] = tp[fld]
             extra.update(m_tpu["extra_specs"])
-            # Compute FP32 TFLOPS from Shaders * Boost/Core Clock * 2 if missing
             shaders = item.get("cuda_cores") or tp.get("cuda_cores")
             clk_mhz = item.get("boost_clock") or item.get("core_clock")
             if shaders and clk_mhz and not item.get("fp32_tflops"):
@@ -269,28 +408,52 @@ def _merge_gpus(state: CrawlStateManager, benchmarks: dict[str, Any]) -> list[di
                 if hw_id in gpu_bench_map:
                     gpu_bench_map[hw_id].setdefault("synthetic", {})["passmark_g3d_mark"] = g3d
 
+        # Strictly prefer GamingGen AIB photos first; fall back to TPU ONLY for real AMD/NVIDIA/Intel reference cards
+        brand_u = (item.get("brand") or name.split()[0]).upper()
+        first_word_u = (name.split()[0] if name.split() else "").upper()
+        _apply_curated_gallery(item, "GPU", gg_gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
+        if not item.get("images") and first_word_u in ("NVIDIA", "AMD", "INTEL", "RADEON", "GEFORCE", "ARC"):
+            _apply_curated_gallery(item, "GPU", tpu_gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
+
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov)) or ["Katalog Verisi"]
         item["spec_verified_at"] = VERIFIED_DATE
+        # Prune synthetic phantom cards that exist in NO real dataset/store, have NO price, and have NO verified image
+        has_real_backing = bool(
+            item.get("price")
+            or (prices_tr and _hid("GPU", name) in prices_tr)
+            or item.get("images")
+            or m_pcp
+            or m_tpu
+            or brand_u in ("NVIDIA", "AMD", "INTEL")
+        )
+        if not has_real_backing:
+            continue
         result.append(item)
 
+    quarantine_cross_model_collisions(result, "GPU", image_key="imageUrl", max_allowed_variants=4)
     return result
 
 
-def _merge_storage(state: CrawlStateManager) -> list[dict[str, Any]]:
+def _merge_storage(
+    state: CrawlStateManager,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "internal-hard-drive.json"), [])
     raw_src = _index_raw_by_source(state, "STORAGE")
     newmaxx = raw_src.get("NewMaxx SSD Sheet", {})
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pcp = raw_src.get("pc-part-dataset", {})
+    gallery = build_gallery_index(state, "STORAGE", ("GamingGen Store API", "TechPowerUp Ajax"))
 
     by_key = {normalize_for_brand_match(it["name"]): dict(it) for it in existing if it.get("name")}
 
-    # Add notable NVMe drives from NewMaxx / TPU
-    for rec in list(newmaxx.values())[:220] + list(tpu.values())[:100]:
+    for rec in list(tpu.values())[:180] + list(newmaxx.values())[:220]:
         name = rec["display_name"]
         bkey = normalize_for_brand_match(name)
         p = rec["payload"]
+        imgs = [u for u in (rec.get("images") or []) if health_map.get(u, False)]
         if bkey not in by_key and p.get("controller"):
             by_key[bkey] = {
                 "name": name,
@@ -303,13 +466,14 @@ def _merge_storage(state: CrawlStateManager) -> list[dict[str, Any]]:
                 "controller": p.get("controller"),
                 "dram_cache": p.get("dram_cache"),
                 "nand_type": p.get("nand_type"),
-                "images": [],
+                "images": imgs,
+                "imageUrl": imgs[0] if imgs else None,
             }
 
     out: list[dict[str, Any]] = []
     for item in by_key.values():
         name = item["name"]
-        prov: list[str] = ["HardwareWizard Katalog"] if item in existing else []
+        prov: list[str] = ["HardwareWizard Katalog"] if item.get("price") or item.get("endurance_tbw") else []
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
 
         for src_name, src_map in (("NewMaxx SSD Sheet", newmaxx), ("TechPowerUp DB", tpu), ("pc-part-dataset", pcp)):
@@ -322,18 +486,26 @@ def _merge_storage(state: CrawlStateManager) -> list[dict[str, Any]]:
                         item[fld] = mp[fld]
                 extra.update(m["extra_specs"])
 
+        _apply_curated_gallery(item, "STORAGE", gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov)) or ["Katalog Verisi"]
         item["spec_verified_at"] = VERIFIED_DATE
         out.append(item)
+
+    quarantine_cross_model_collisions(out, "STORAGE", image_key="imageUrl", max_allowed_variants=8)
     return out
 
 
-def _merge_psu(state: CrawlStateManager) -> list[dict[str, Any]]:
+def _merge_psu(
+    state: CrawlStateManager,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "power-supply.json"), [])
     raw_src = _index_raw_by_source(state, "PSU")
     iron = raw_src.get("IRONScale Labs", {})
     pcp = raw_src.get("pc-part-dataset", {})
+    gallery = build_gallery_index(state, "PSU", ("GamingGen Store API", "IRONScale Labs"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
@@ -344,12 +516,11 @@ def _merge_psu(state: CrawlStateManager) -> list[dict[str, Any]]:
         m_iron = _match_lookup(iron, name)
         if m_iron:
             extra.update(m_iron["extra_specs"])
-            if not item.get("images") and m_iron["images"]:
-                item["images"] = m_iron["images"]
-                item["imageUrl"] = m_iron["images"][0]
         m_pcp = _match_lookup(pcp, name)
         if m_pcp:
             prov.append("pc-part-dataset")
+
+        _apply_curated_gallery(item, "PSU", gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov))
         item["spec_verified_at"] = VERIFIED_DATE
@@ -361,17 +532,20 @@ def _merge_generic_pcp_category(
     state: CrawlStateManager,
     filename: str,
     cat_key: str,
-    dedup_image_cleanup: bool = False,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, filename), [])
     raw_src = _index_raw_by_source(state, cat_key)
     pcp = raw_src.get("pc-part-dataset", {})
+    gallery = build_gallery_index(state, cat_key, ("GamingGen Store API",))
 
-    url_counts = collections.Counter(it.get("imageUrl") or it.get("image_url") for it in existing if (it.get("imageUrl") or it.get("image_url")))
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
         name = item.get("name", "")
+        if cat_key == "MOTHERBOARD" and "sapphire" in name.lower() and "a520m" in name.lower():
+            item["socket"] = "AM4"
         prov = ["HardwareWizard Katalog"]
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
         m = _match_lookup(pcp, name)
@@ -379,29 +553,37 @@ def _merge_generic_pcp_category(
             prov.append("pc-part-dataset")
             extra.update(m["extra_specs"])
 
-        if dedup_image_cleanup:
-            img = item.get("imageUrl") or item.get("image_url")
-            if img and url_counts[img] > MAX_SHARED_IMAGE_REPEAT:
-                item.pop("imageUrl", None)
-                item.pop("image_url", None)
-                item["images"] = []
-
+        _apply_curated_gallery(item, cat_key, gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov))
         item["spec_verified_at"] = VERIFIED_DATE
         out.append(item)
+
+    quarantine_cross_model_collisions(out, cat_key, image_key="imageUrl", max_allowed_variants=8)
     return out
 
 
-def _merge_peripherals(state: CrawlStateManager) -> list[dict[str, Any]]:
-    existing = _load_json(os.path.join(FILES_DIR, "peripherals.json"), [])
-    url_counts_by_cat: dict[str, collections.Counter[str]] = collections.defaultdict(collections.Counter)
-    for it in existing:
-        img = it.get("image_url") or (it.get("images") or [None])[0]
-        if img:
-            url_counts_by_cat[it.get("category", "")][img] += 1
+def _is_spare_accessory_misentry(cat: str, name: str) -> bool:
+    low = (name or "").lower()
+    if any(k in low for k in ("vip reservation", "layout collection")):
+        return True
+    if cat == "KEYBOARD" and any(k in low for k in ("aluminum plate", "brass plate", "pc plate", "fr4 plate", "z-plate")):
+        return True
+    if cat == "GAMING_CHAIR" and "armrest" in low:
+        return True
+    if cat == "GAMING_DESK" and any(k in low for k in ("desk mat", "magpad", "led strip - collection")):
+        return True
+    return False
 
-    # Load all non-PC raw sources
+
+def _merge_peripherals(
+    state: CrawlStateManager,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    existing = _load_json(os.path.join(FILES_DIR, "peripherals.json"), [])
+    existing = [it for it in dedupe_synthetic_peripheral_clones(existing) if not _is_spare_accessory_misentry(it.get("category", ""), it.get("name", ""))]
+
     sensor_fyi = _index_raw_by_source(state, "MOUSE").get("Sensor.fyi", {})
     autoeq = _index_raw_by_source(state, "HEADSET").get("AutoEq Acoustic DB", {})
     openwrt = _index_raw_by_source(state, "ROUTER").get("OpenWrt Releases", {})
@@ -409,13 +591,23 @@ def _merge_peripherals(state: CrawlStateManager) -> list[dict[str, Any]]:
     pcp_ups = _index_raw_by_source(state, "UPS").get("pc-part-dataset", {})
 
     shopify_by_cat: dict[str, dict[str, dict[str, Any]]] = {}
-    for cat in ("MOUSE", "KEYBOARD", "MOUSEPAD", "GAMING_CHAIR", "GAMING_DESK"):
+    galleries_by_cat: dict[str, list[dict[str, Any]]] = {}
+    for cat in (
+        "MOUSE", "KEYBOARD", "HEADSET", "MONITOR", "MICROPHONE", "MOUSEPAD",
+        "WEBCAM", "GAMING_CHAIR", "CASE_FAN", "UPS", "GAMING_DESK",
+        "GAMING_LIGHTING", "SMARTWATCH", "ROUTER", "MODEM", "ACCESS_POINT", "RANGE_EXTENDER",
+    ):
         cat_srcs = _index_raw_by_source(state, cat)
         merged_shop: dict[str, dict[str, Any]] = {}
         for sname, smap in cat_srcs.items():
             if "Official" in sname:
                 merged_shop.update(smap)
         shopify_by_cat[cat] = merged_shop
+        galleries_by_cat[cat] = build_gallery_index(
+            state,
+            cat,
+            ("Keychron Official", "Pulsar Official", "Secretlab Official", "LethalGamingGear Official", "GamingGen Store API", "GSMArena Gallery"),
+        )
 
     by_id: dict[str, dict[str, Any]] = {}
     for raw in existing:
@@ -427,12 +619,6 @@ def _merge_peripherals(state: CrawlStateManager) -> list[dict[str, Any]]:
         full_model = f"{brand} {model}".strip() if brand and model and not model.lower().startswith(brand.lower()) else (model or name)
         prov = ["HardwareWizard Katalog"]
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
-
-        # Clean over-shared placeholder thumbnails
-        cur_img = item.get("image_url")
-        if cur_img and url_counts_by_cat[cat][cur_img] > MAX_SHARED_IMAGE_REPEAT:
-            item["image_url"] = None
-            item["images"] = []
 
         if cat == "MOUSE":
             m_sf = _match_lookup(sensor_fyi, full_model, model, name)
@@ -471,19 +657,36 @@ def _merge_peripherals(state: CrawlStateManager) -> list[dict[str, Any]]:
                 prov.append("OpenWrt Releases")
                 extra.update(m_ow["extra_specs"])
 
+        # Normalize Keychron / Lemokey vendor strings mistakenly saved as Shopify collection names (preserve SteelSeries!)
+        br_low_per = str(item.get("brand") or "").lower()
+        if "steelseries" in item.get("id", "").lower() or "steelseries" in name.lower():
+            item["brand"] = "SteelSeries"
+        elif br_low_per.endswith(" series") or item.get("brand") in ("ISO Keyboards", "Trackball Series"):
+            item["brand"] = "Lemokey" if "lemokey" in name.lower() else "Keychron"
+
+        _apply_curated_gallery(item, cat, galleries_by_cat.get(cat, []), health_map, image_key="image_url", prefer_gallery=False, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov))
         item["spec_verified_at"] = VERIFIED_DATE
         by_id[item["id"]] = item
 
-    # Add top newly crawled authentic OpenWrt routers, NUT/PCP UPS, & Shopify official items
-    _append_new_peripherals(by_id, "MOUSE", shopify_by_cat.get("MOUSE", {}), "Üretici Resmi Katalog", limit=45)
-    _append_new_peripherals(by_id, "KEYBOARD", shopify_by_cat.get("KEYBOARD", {}), "Üretici Resmi Katalog", limit=55)
-    _append_new_peripherals(by_id, "MOUSEPAD", shopify_by_cat.get("MOUSEPAD", {}), "Üretici Resmi Katalog", limit=40)
-    _append_new_peripherals(by_id, "GAMING_CHAIR", shopify_by_cat.get("GAMING_CHAIR", {}), "Secretlab Resmi", limit=25)
-    _append_new_peripherals(by_id, "GAMING_DESK", shopify_by_cat.get("GAMING_DESK", {}), "Secretlab Resmi", limit=15)
-    _append_new_peripherals(by_id, "ROUTER", openwrt, "OpenWrt Releases", limit=60)
-    _append_new_peripherals(by_id, "UPS", pcp_ups, "pc-part-dataset", limit=45)
+    # Idempotently top up only up to target category ceilings so repeated runs never bloat peripherals.json
+    cat_caps = {
+        "MOUSE": 330,
+        "KEYBOARD": 380,
+        "MOUSEPAD": 350,
+        "GAMING_CHAIR": 250,
+        "GAMING_DESK": 65,
+        "ROUTER": 260,
+        "UPS": 210,
+    }
+    _append_new_peripherals(by_id, "MOUSE", shopify_by_cat.get("MOUSE", {}), "Üretici Resmi Katalog", health_map, limit=45, max_total=cat_caps["MOUSE"])
+    _append_new_peripherals(by_id, "KEYBOARD", shopify_by_cat.get("KEYBOARD", {}), "Üretici Resmi Katalog", health_map, limit=55, max_total=cat_caps["KEYBOARD"])
+    _append_new_peripherals(by_id, "MOUSEPAD", shopify_by_cat.get("MOUSEPAD", {}), "Üretici Resmi Katalog", health_map, limit=40, max_total=cat_caps["MOUSEPAD"])
+    _append_new_peripherals(by_id, "GAMING_CHAIR", shopify_by_cat.get("GAMING_CHAIR", {}), "Secretlab Resmi", health_map, limit=25, max_total=cat_caps["GAMING_CHAIR"])
+    _append_new_peripherals(by_id, "GAMING_DESK", shopify_by_cat.get("GAMING_DESK", {}), "Secretlab Resmi", health_map, limit=15, max_total=cat_caps["GAMING_DESK"])
+    _append_new_peripherals(by_id, "ROUTER", openwrt, "OpenWrt Releases", health_map, limit=60, max_total=cat_caps["ROUTER"])
+    _append_new_peripherals(by_id, "UPS", pcp_ups, "pc-part-dataset", health_map, limit=45, max_total=cat_caps["UPS"])
 
     return list(by_id.values())
 
@@ -493,27 +696,40 @@ def _append_new_peripherals(
     category: str,
     src_map: dict[str, dict[str, Any]],
     source_label: str,
+    health_map: dict[str, bool],
     limit: int,
+    max_total: int = 9999,
 ) -> None:
+    cur_count = sum(1 for v in by_id.values() if v.get("category") == category)
+    if cur_count >= max_total:
+        return
     existing_keys = {normalize_canonical_key(v.get("name", "")) for v in by_id.values() if v.get("category") == category}
     added = 0
     seen_recs: set[str] = set()
     for rec in src_map.values():
-        if added >= limit:
+        if added >= limit or (cur_count + added) >= max_total:
             break
         name = rec["display_name"]
+        if _is_spare_accessory_misentry(category, name):
+            continue
         ckey = normalize_canonical_key(name)
         if not ckey or ckey in existing_keys or ckey in seen_recs:
             continue
         seen_recs.add(ckey)
         new_id = f"{category.lower()}_{ckey}"
-        imgs = rec.get("images") or []
+        imgs = [u for u in (rec.get("images") or []) if health_map.get(u, False)]
+        raw_br = str(rec.get("brand") or name.split()[0]).strip()
+        if raw_br.lower().endswith(" series") or raw_br in ("ISO Keyboards", "Trackball Series"):
+            brand_clean = "Lemokey" if "lemokey" in name.lower() else "Keychron"
+        else:
+            brand_clean = raw_br
+        model_clean = name[len(brand_clean):].strip() if name.lower().startswith(brand_clean.lower() + " ") else name
         entry: dict[str, Any] = {
             "id": new_id,
             "category": category,
             "name": name,
-            "brand": rec.get("brand") or name.split()[0],
-            "model": name,
+            "brand": brand_clean,
+            "model": model_clean or name,
             "image_url": imgs[0] if imgs else None,
             "images": imgs,
             "extra_specs": rec.get("extra_specs") or {},
@@ -525,12 +741,19 @@ def _append_new_peripherals(
         added += 1
 
 
-def _merge_mobile(state: CrawlStateManager, filename: str, category: str) -> list[dict[str, Any]]:
+def _merge_mobile(
+    state: CrawlStateManager,
+    filename: str,
+    category: str,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, filename), [])
     raw_src = _index_raw_by_source(state, category)
     dxo = raw_src.get("DXOMARK", {})
     gsm = raw_src.get("GSMArena", {})
     nb_cpu = _index_raw_by_source(state, "CPU_MOBILE_REF").get("Notebookcheck", {})
+    gallery = build_gallery_index(state, category, ("GSMArena Gallery", "DXOMARK", "GSMArena", "GamingGen Store API"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
@@ -549,14 +772,6 @@ def _merge_mobile(state: CrawlStateManager, filename: str, category: str) -> lis
                     camel = "".join(w.title() if i > 0 else w for i, w in enumerate(fld.split("_")))
                     spec[camel] = dp[fld]
             extra.update(m_dxo["extra_specs"])
-            if m_dxo["images"]:
-                cur_imgs = list(item.get("images") or [])
-                for im in m_dxo["images"]:
-                    if im not in cur_imgs:
-                        cur_imgs.append(im)
-                item["images"] = cur_imgs[:5]
-                if not item.get("imageUrl"):
-                    item["imageUrl"] = cur_imgs[0]
 
         m_gsm = _match_lookup(gsm, name, item.get("model"))
         if m_gsm:
@@ -573,17 +788,26 @@ def _merge_mobile(state: CrawlStateManager, filename: str, category: str) -> lis
                 prov.append("Notebookcheck")
                 extra.update(m_soc["extra_specs"])
 
+        _apply_curated_gallery(item, category, gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["spec"] = spec
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov))
         item["spec_verified_at"] = VERIFIED_DATE
         out.append(item)
+
+    quarantine_cross_model_collisions(out, category, image_key="imageUrl", max_allowed_variants=2)
     return out
 
 
-def _merge_laptops(state: CrawlStateManager) -> list[dict[str, Any]]:
+def _merge_laptops(
+    state: CrawlStateManager,
+    health_map: dict[str, bool],
+    prices_tr: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "laptop.json"), [])
     nb_cpu = _index_raw_by_source(state, "CPU_MOBILE_REF").get("Notebookcheck", {})
+    gallery = build_gallery_index(state, "LAPTOP", ("GamingGen Store API",))
+
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
@@ -595,29 +819,134 @@ def _merge_laptops(state: CrawlStateManager) -> list[dict[str, Any]]:
             if m_cpu:
                 prov.append("Notebookcheck")
                 extra.update(m_cpu["extra_specs"])
+
+        _apply_curated_gallery(item, "LAPTOP", gallery, health_map, image_key="imageUrl", prefer_gallery=False, prices_tr=prices_tr)
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov))
         item["spec_verified_at"] = VERIFIED_DATE
         out.append(item)
+
+    quarantine_cross_model_collisions(out, "LAPTOP", image_key="imageUrl", max_allowed_variants=5)
     return out
+
+
+def _sanitize_and_save_prices_tr(
+    health_map: dict[str, bool],
+    catalog_image_by_id: dict[str, str | None],
+) -> None:
+    src_path = os.path.join(FILES_DIR, "prices_tr.json")
+    pt = _load_json(src_path, {})
+    cleaned = 0
+    replaced = 0
+    for item_id, entry in pt.items():
+        if not isinstance(entry, dict):
+            continue
+        cur_u = entry.get("imageUrl")
+        if item_id in catalog_image_by_id:
+            target_u = catalog_image_by_id[item_id]
+            if cur_u != target_u:
+                entry["imageUrl"] = target_u
+                if target_u is None:
+                    cleaned += 1
+                else:
+                    replaced += 1
+            continue
+        cat = item_id.split("_", 1)[0].split("-", 1)[0].upper()
+        name_guess = item_id.replace("_", " ").replace("-", " ")
+        is_bad = (
+            not isinstance(cur_u, str)
+            or not health_map.get(cur_u, False)
+            or not is_image_compatible_with_item(cat, "", name_guess, "", cur_u)
+        )
+        if is_bad and cur_u:
+            entry["imageUrl"] = None
+            cleaned += 1
+
+    for folder in (FILES_DIR, DATA_CATALOG_DIR, DATA_DIR):
+        os.makedirs(folder, exist_ok=True)
+        with open(os.path.join(folder, "prices_tr.json"), "w", encoding="utf-8") as f:
+            json.dump(pt, f, ensure_ascii=False, indent=2)
+    print(f"  [OK] prices_tr.json sanitized: replaced={replaced}, cleared_bad={cleaned}")
 
 
 def run_merge_all() -> None:
     state = CrawlStateManager()
-    benchmarks = _load_json(os.path.join(FILES_DIR, "hardware_benchmarks.json"), {"cpus": {}, "gpus": {}})
+    http = PoliteHttpClient()
 
-    cpus = _merge_cpus(state, benchmarks)
-    gpus = _merge_gpus(state, benchmarks)
-    storages = _merge_storage(state)
-    psus = _merge_psu(state)
-    motherboards = _merge_generic_pcp_category(state, "motherboard.json", "MOTHERBOARD", dedup_image_cleanup=False)
-    rams = _merge_generic_pcp_category(state, "memory.json", "RAM", dedup_image_cleanup=True)
-    coolers = _merge_generic_pcp_category(state, "cpu-cooler.json", "COOLER", dedup_image_cleanup=False)
-    cases = _merge_generic_pcp_category(state, "case.json", "CASE", dedup_image_cleanup=False)
-    peripherals = _merge_peripherals(state)
-    smartphones = _merge_mobile(state, "smartphone.json", "SMARTPHONE")
-    tablets = _merge_mobile(state, "tablet.json", "TABLET")
-    laptops = _merge_laptops(state)
+    # Load full cached URL health map (fast local SQLite read) and check any uncached catalog/source URLs
+    health_map = state.load_image_health_map()
+    all_urls: list[str] = []
+    for (imgs_j,) in state.conn.execute("SELECT images_json FROM raw_records WHERE images_json != '[]'"):
+        all_urls.extend(json.loads(imgs_j))
+    for fn in ("cpu.json", "video-card.json", "motherboard.json", "memory.json", "internal-hard-drive.json", "power-supply.json", "cpu-cooler.json", "case.json", "laptop.json", "peripherals.json", "smartphone.json", "tablet.json"):
+        for row in _load_json(os.path.join(FILES_DIR, fn), []):
+            for k in ("imageUrl", "image_url"):
+                if row.get(k):
+                    all_urls.append(row[k])
+            all_urls.extend(row.get("images") or [])
+    missing_probe = [u for u in set(all_urls) if isinstance(u, str) and u.startswith("https://") and u not in health_map]
+    if missing_probe:
+        health_map.update(verify_image_url_pool(state, missing_probe, max_workers=16))
+
+    benchmarks = _load_json(os.path.join(FILES_DIR, "hardware_benchmarks.json"), {"cpus": {}, "gpus": {}})
+    prices_tr = _load_json(os.path.join(FILES_DIR, "prices_tr.json"), {})
+    # Re-seed HTTP-200 verified legacy prices_tr studio URLs from git HEAD so valid unique/series photos aren't lost across incremental rebuilds
+    try:
+        head_raw = subprocess.check_output(
+            ["git", "show", "HEAD:data/prices_tr.json"],
+            cwd=ROOT_DIR,
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8")
+        head_pt = json.loads(head_raw)
+        extra_urls = [
+            v.get("imageUrl")
+            for v in head_pt.values()
+            if isinstance(v, dict) and isinstance(v.get("imageUrl"), str) and v["imageUrl"].startswith("https://")
+            and v["imageUrl"] not in health_map
+        ]
+        if extra_urls:
+            health_map.update(verify_image_url_pool(state, extra_urls, max_workers=16))
+        for item_id, hv in head_pt.items():
+            if not isinstance(hv, dict):
+                continue
+            hu = hv.get("imageUrl")
+            if isinstance(hu, str) and health_map.get(hu, False):
+                cur_entry = prices_tr.get(item_id)
+                if isinstance(cur_entry, dict) and not cur_entry.get("imageUrl"):
+                    cur_entry["imageUrl"] = hu
+    except Exception:
+        pass
+
+    print("  [1/4] Merging & matching studio galleries across all categories...", flush=True)
+    cpus = _merge_cpus(state, benchmarks, health_map, prices_tr=prices_tr)
+    gpus = _merge_gpus(state, benchmarks, health_map, prices_tr=prices_tr)
+    storages = _merge_storage(state, health_map, prices_tr=prices_tr)
+    psus = _merge_psu(state, health_map, prices_tr=prices_tr)
+    motherboards = _merge_generic_pcp_category(state, "motherboard.json", "MOTHERBOARD", health_map, prices_tr=prices_tr)
+    rams = _merge_generic_pcp_category(state, "memory.json", "RAM", health_map, prices_tr=prices_tr)
+    coolers = _merge_generic_pcp_category(state, "cpu-cooler.json", "COOLER", health_map, prices_tr=prices_tr)
+    cases = _merge_generic_pcp_category(state, "case.json", "CASE", health_map, prices_tr=prices_tr)
+    peripherals = _merge_peripherals(state, health_map, prices_tr=prices_tr)
+    smartphones = _merge_mobile(state, "smartphone.json", "SMARTPHONE", health_map, prices_tr=prices_tr)
+    tablets = _merge_mobile(state, "tablet.json", "TABLET", health_map, prices_tr=prices_tr)
+    laptops = _merge_laptops(state, health_map, prices_tr=prices_tr)
+
+    print("  [2/4] Backfilling reference hardware photos cleanly (cached + high-precision Wikimedia)...", flush=True)
+    backfill_missing_via_wikimedia(state, tablets, "TABLET", http, health_map, max_queries=15)
+    backfill_missing_via_wikimedia(state, smartphones, "SMARTPHONE", http, health_map, max_queries=15)
+    backfill_missing_via_wikimedia(state, cpus, "CPU", http, health_map, max_queries=15)
+    print("  [3/4] Sanitizing prices_tr.json & exporting unified JSON catalogs...", flush=True)
+
+    # Build authoritative catalog image map by item_id (explicitly recording None for cleared items so prices_tr never resurrects stale URLs)
+    catalog_image_by_id: dict[str, str | None] = {}
+    for cat, lst in (("CPU", cpus), ("GPU", gpus), ("STORAGE", storages), ("PSU", psus), ("MOTHERBOARD", motherboards), ("RAM", rams), ("COOLER", coolers), ("CASE", cases)):
+        for it in lst:
+            catalog_image_by_id[_hid(cat, it.get("name", ""))] = it.get("imageUrl")
+    for it in laptops + smartphones + tablets + peripherals:
+        if it.get("id"):
+            catalog_image_by_id[it["id"]] = it.get("imageUrl") or it.get("image_url")
+
+    _sanitize_and_save_prices_tr(health_map, catalog_image_by_id)
 
     _save_json_both("cpu.json", cpus)
     _save_json_both("video-card.json", gpus)
@@ -659,7 +988,7 @@ def run_merge_all() -> None:
     _save_json_both("catalog_manifest.json", manifest)
     state.close()
 
-    print("=== Merged Catalog Summary ===")
+    print("=== Merged Catalog Summary (Cleaned & Curated) ===")
     for k, v in manifest["counts"].items():
         print(f"  {k:15s}: {v}")
 

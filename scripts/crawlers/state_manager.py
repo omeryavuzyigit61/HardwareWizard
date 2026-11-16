@@ -210,7 +210,17 @@ class CrawlStateManager:
         return self.conn.execute("SELECT * FROM image_health WHERE url = ?", (url,)).fetchone()
 
     def set_image_health(self, url: str, ok: bool, status_code: int, content_type: str = "") -> None:
-        self.conn.execute(
+        self.set_image_health_batch([(url, ok, status_code, content_type)])
+
+    def load_image_health_map(self) -> dict[str, bool]:
+        rows = self.conn.execute("SELECT url, ok FROM image_health").fetchall()
+        return {r["url"]: bool(r["ok"]) for r in rows}
+
+    def set_image_health_batch(self, items: list[tuple[str, bool, int, str]]) -> None:
+        if not items:
+            return
+        now = utc_now_iso()
+        self.conn.executemany(
             """
             INSERT INTO image_health (url, ok, status_code, content_type, checked_at)
             VALUES (?, ?, ?, ?, ?)
@@ -220,7 +230,7 @@ class CrawlStateManager:
                 content_type = excluded.content_type,
                 checked_at = excluded.checked_at
             """,
-            (url, 1 if ok else 0, status_code, content_type, utc_now_iso()),
+            [(u, 1 if ok else 0, sc, ct, now) for u, ok, sc, ct in items],
         )
         self.conn.commit()
 

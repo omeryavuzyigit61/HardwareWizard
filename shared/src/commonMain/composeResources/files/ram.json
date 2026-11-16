@@ -79,12 +79,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB White 32GB (2x16GB) DDR5-6000 CL30",
@@ -137,12 +144,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB White 32GB (2x16GB) DDR5-6000 CL30",
@@ -282,12 +292,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 32GB (2x16GB) DDR5-6000 CL30 AMD EXPO",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 32GB (2x16GB) DDR5-6000 CL32 AMD EXPO",
@@ -311,12 +324,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Flare X5 32GB (2x16GB) DDR5-6000 CL32 AMD EXPO",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6000 CL30",
@@ -340,12 +356,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR5-6000 CL30",
@@ -427,12 +446,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB White 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Renegade RGB 32GB (2x16GB) DDR5-6400 CL32",
@@ -485,12 +507,20 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/ram/xpg_lancer_blade_rgb_32gb_2x16gb_ddr5_6000_cl30.webp"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB White 32GB (2x16GB) DDR5-6000 CL30",
@@ -510,16 +540,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://static.tweaktown.com/content/1/0/10549_888_xpg-lancer-blade-rgb-ddr5-6000-32gb-dual-channel-memory-kit-review_full.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB White 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [
-      "https://static.tweaktown.com/content/1/0/10549_888_xpg-lancer-blade-rgb-ddr5-6000-32gb-dual-channel-memory-kit-review_full.jpg",
-      "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
-      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -834,21 +859,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87cd8e9d02ffb0997769f4a4d5969669.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Vengeance RGB PRO White 16GB (2x8GB) DDR4-3600 CL18",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/87cd8e9d02ffb0997769f4a4d5969669.1600.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/05/77/39/LD0005773975_1_0005774011_0005774129.jpg",
-      "https://gland.vn/media/product/2385_corsair_vengeance_rgb_pro_2dimms_white.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/87cd8e9d02ffb0997769f4a4d5969669.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87cd8e9d02ffb0997769f4a4d5969669.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws V 16GB (2x8GB) DDR4-3200 CL16",
@@ -868,21 +891,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Ripjaws V 16GB (2x8GB) DDR4-3200 CL16",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
-      "https://img.pccasegear.com/tr:n-gallery/images/1585619081-F4-3200C16D-16GVKB-thb3.jpg",
-      "https://m.media-amazon.com/images/I/618SEnJR1nL._AC_SL1500_.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws V 16GB (2x8GB) DDR4-3600 CL18",
@@ -902,21 +923,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws V 16GB (2x8GB) DDR4-3600 CL18",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
-      "https://m.media-amazon.com/images/I/618SEnJR1nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61Z4mK+UcZL._AC_SL1500_.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws V 32GB (2x16GB) DDR4-3200 CL16",
@@ -936,21 +955,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Ripjaws V 32GB (2x16GB) DDR4-3200 CL16",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
-      "https://m.media-amazon.com/images/I/618SEnJR1nL._AC_SL1500_.jpg",
-      "https://files.pccasegear.com/images/1585619081-F4-3200C16D-16GVKB-thb3.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws V 32GB (2x16GB) DDR4-3600 CL18",
@@ -970,21 +987,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws V 32GB (2x16GB) DDR4-3600 CL18",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg",
-      "https://m.media-amazon.com/images/I/618SEnJR1nL._AC_SL1500_.jpg",
-      "https://files.pccasegear.com/images/1585619081-F4-3200C16D-16GVKB-thb3.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c75eee87606a7ee1b5f90816fc5a16ea.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 16GB (2x8GB) DDR4-3200 CL16",
@@ -1037,12 +1052,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Fury Beast 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (2x8GB) DDR4-3600 CL17",
@@ -1091,21 +1109,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "T-Force Vulcan Z 16GB (2x8GB) DDR4-3200 CL16",
     "images": [
-      "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg",
-      "https://m.media-amazon.com/images/I/71yyY+Y29WL._AC_.jpg",
-      "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/632929_226266_04_package_zoom.jpg"
+      "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg"
   },
   {
     "name": "Team T-Force Vulcan Z 32GB (2x16GB) DDR4-3600 CL18",
@@ -1125,21 +1141,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "T-Force Vulcan Z 32GB (2x16GB) DDR4-3600 CL18",
     "images": [
-      "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg",
-      "https://images10.newegg.com/BizIntell/item/20/331/20-331-351/features-layout-1_042619.jpg",
-      "https://www.goldfries.com/wp-content/uploads/2019/06/package.jpg"
+      "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/71QYVWwXVlL.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -1192,12 +1206,19 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -1250,12 +1271,19 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -1308,12 +1336,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
@@ -1366,12 +1401,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-5600 CL36 (White)",
@@ -1424,12 +1466,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -1482,12 +1531,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -1511,12 +1567,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-7200 CL34",
@@ -1540,12 +1599,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -1801,12 +1867,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Vengeance RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
   },
   {
     "name": "CORSAIR Vengeance 32GB (2x16GB) DDR5-6000 CL32",
@@ -2149,12 +2218,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -2207,12 +2279,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -2265,12 +2340,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
@@ -2323,12 +2401,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-5600 CL36 (White)",
@@ -2381,12 +2462,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Titanium RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -2439,12 +2523,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Titanium RGB 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -2497,12 +2584,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -2555,12 +2645,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -2613,12 +2706,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -2671,12 +2767,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -2729,12 +2828,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
@@ -2787,12 +2889,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-5600 CL36 (White)",
@@ -2845,12 +2950,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Platinum RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -2903,12 +3011,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Platinum RGB 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -2961,12 +3072,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -4005,12 +4119,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL32",
@@ -4034,12 +4151,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL36",
@@ -4063,12 +4183,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 48GB (2x24GB) DDR5-6000 CL30",
@@ -4092,12 +4215,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 (AMD EXPO) 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 64GB (2x32GB) DDR5-6000 CL30",
@@ -4121,12 +4247,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 (AMD EXPO) 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6000 CL32",
@@ -4150,12 +4279,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6000 CL36",
@@ -4179,12 +4311,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6400 CL32",
@@ -4208,12 +4343,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-5600 CL36",
@@ -4237,12 +4375,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 48GB (2x24GB) DDR5-6000 CL30",
@@ -4266,12 +4407,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Ripjaws S5 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 64GB (2x32GB) DDR5-6000 CL30",
@@ -4295,12 +4439,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Ripjaws S5 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-7200 CL34",
@@ -4324,12 +4471,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 16GB (2x8GB) DDR4-3200 CL16",
@@ -4353,12 +4503,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Ripjaws S5 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR4-3200 CL16",
@@ -4382,12 +4535,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Ripjaws S5 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 16GB (2x8GB) DDR4-3600 CL18",
@@ -4411,12 +4567,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws S5 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR4-3600 CL18",
@@ -4440,12 +4599,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws S5 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -4469,12 +4631,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL32",
@@ -4527,12 +4692,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL36",
@@ -4585,12 +4753,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6400 CL32",
@@ -4643,12 +4814,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-5600 CL36",
@@ -4701,12 +4875,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-5600 CL36 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 48GB (2x24GB) DDR5-6000 CL30",
@@ -4759,12 +4936,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 64GB (2x32GB) DDR5-6000 CL30",
@@ -4817,12 +4997,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-7200 CL34",
@@ -4875,12 +5058,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (2x8GB) DDR4-3200 CL16",
@@ -4991,12 +5177,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR4-3200 CL16 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (2x8GB) DDR4-3600 CL18",
@@ -5107,12 +5296,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR5-6000 CL32",
@@ -5339,12 +5531,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Renegade RGB 32GB (2x16GB) DDR5-6000 CL30",
@@ -6064,12 +6259,19 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL32 (White)",
@@ -6122,12 +6324,19 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL36 (White)",
@@ -6180,12 +6389,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
@@ -6238,12 +6454,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-5600 CL36 (White)",
@@ -6296,12 +6519,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -6354,12 +6584,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 64GB (2x32GB) DDR5-6000 CL30 (White)",
@@ -6412,12 +6649,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
@@ -6466,16 +6710,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/01_p_xpg_lancer_blade_2000x2000_bk_01.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer Blade RGB 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [
-      "https://webapi3.adata.com/storage/product/01_p_xpg_lancer_blade_2000x2000_bk_01.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6500,16 +6739,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://xzone.com.vn/wp-content/uploads/2023/06/adata-xpg-spectrix-d35g-16gb-ddr4-3200-rgb-01-01.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer Blade RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
-    "images": [
-      "https://xzone.com.vn/wp-content/uploads/2023/06/adata-xpg-spectrix-d35g-16gb-ddr4-3200-rgb-01-01.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6534,16 +6768,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [
-      "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6568,21 +6797,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://rbtechngames.com/wp-content/uploads/2024/05/rbtech_xpg_lancer_blade_white_1.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3200 CL16 (White)",
     "images": [
-      "https://rbtechngames.com/wp-content/uploads/2024/05/rbtech_xpg_lancer_blade_white_1.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
+      "https://rbtechngames.com/wp-content/uploads/2024/05/rbtech_xpg_lancer_blade_white_1.png"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://rbtechngames.com/wp-content/uploads/2024/05/rbtech_xpg_lancer_blade_white_1.png"
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (2x8GB) DDR4-3600 CL18",
@@ -6602,16 +6829,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://techarc.pk/wp-content/uploads/2023/11/xpg-spectrix-d35g-rgb-16gb-2x8gb-3600mhz-c18-ddr4-dram-desktop-memory.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [
-      "https://techarc.pk/wp-content/uploads/2023/11/xpg-spectrix-d35g-rgb-16gb-2x8gb-3600mhz-c18-ddr4-dram-desktop-memory.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6636,16 +6858,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 16GB (2x8GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6670,16 +6887,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [
-      "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6704,16 +6916,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -6767,21 +6974,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-LANCER-RGB-DDR5-6000-32GB2X16GB-MEMORY-KIT-WHITE.webp",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
     "images": [
-      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-LANCER-RGB-DDR5-6000-32GB2X16GB-MEMORY-KIT-WHITE.webp",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
+      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-LANCER-RGB-DDR5-6000-32GB2X16GB-MEMORY-KIT-WHITE.webp"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-LANCER-RGB-DDR5-6000-32GB2X16GB-MEMORY-KIT-WHITE.webp"
   },
   {
     "name": "XPG Lancer RGB 32GB (2x16GB) DDR5-6000 CL32",
@@ -6946,21 +7151,19 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://media.pangoly.com/img/3/1/5/1/3151a685-4fbe-42e0-8cd7-20cbfab8897f.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Lancer RGB 32GB (2x16GB) DDR5-6400 CL32 (White)",
     "images": [
-      "https://media.pangoly.com/img/3/1/5/1/3151a685-4fbe-42e0-8cd7-20cbfab8897f.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
+      "https://media.pangoly.com/img/3/1/5/1/3151a685-4fbe-42e0-8cd7-20cbfab8897f.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://media.pangoly.com/img/3/1/5/1/3151a685-4fbe-42e0-8cd7-20cbfab8897f.jpg"
   },
   {
     "name": "XPG Lancer RGB 32GB (2x16GB) DDR5-5600 CL36",
@@ -7042,12 +7245,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer RGB 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/146069-3_large.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/146069-3_large.jpg"
   },
   {
     "name": "XPG Lancer RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
@@ -7067,16 +7273,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://static.tweaktown.com/content/1/0/10549_888_xpg-lancer-blade-rgb-ddr5-6000-32gb-dual-channel-memory-kit-review_full.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer RGB 48GB (2x24GB) DDR5-6000 CL30 (White)",
-    "images": [
-      "https://static.tweaktown.com/content/1/0/10549_888_xpg-lancer-blade-rgb-ddr5-6000-32gb-dual-channel-memory-kit-review_full.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -7188,21 +7389,19 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Lancer RGB 32GB (2x16GB) DDR5-7200 CL34 (White)",
     "images": [
-      "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
+      "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg"
   },
   {
     "name": "XPG Lancer RGB 16GB (2x8GB) DDR4-3200 CL16",
@@ -7226,12 +7425,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer RGB 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/140562-1-2_large.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/140562-1-2_large.jpg"
   },
   {
     "name": "XPG Lancer RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
@@ -7251,16 +7453,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://xzone.com.vn/wp-content/uploads/2023/06/adata-xpg-spectrix-d35g-16gb-ddr4-3200-rgb-01-01.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer RGB 16GB (2x8GB) DDR4-3200 CL16 (White)",
-    "images": [
-      "https://xzone.com.vn/wp-content/uploads/2023/06/adata-xpg-spectrix-d35g-16gb-ddr4-3200-rgb-01-01.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -7285,16 +7482,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61--FjuijGL._AC_SL1500_.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [
-      "https://m.media-amazon.com/images/I/61--FjuijGL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -7348,16 +7540,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [
-      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -7382,16 +7569,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 16GB (2x8GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -7420,12 +7602,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/140000-1-1_large.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xpg/thumb/140000-1-1_large.jpg"
   },
   {
     "name": "XPG Lancer RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
@@ -7445,16 +7630,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://netcodex.ph/wp-content/uploads/2025/01/XPG-SPECTRIX-D50-16GB2X8GB-DDR4-3600-RGB-WHITE.webp",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -9774,12 +9954,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro Overclocking 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 32GB (2x16GB) DDR4-3200 CL16",
@@ -9803,12 +9986,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro Overclocking 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 16GB (2x8GB) DDR4-3600 CL18",
@@ -9832,12 +10018,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro Overclocking 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 32GB (2x16GB) DDR4-3600 CL18",
@@ -9861,12 +10050,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro Overclocking 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR5-6000 CL30",
@@ -10122,12 +10314,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR4-3200 CL16",
@@ -10151,12 +10346,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 16GB (2x8GB) DDR4-3600 CL18",
@@ -10180,12 +10378,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR4-3600 CL18",
@@ -10209,12 +10410,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Delta RGB 32GB (2x16GB) DDR5-6000 CL30 (White)",
@@ -10905,12 +11109,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL32",
@@ -10934,12 +11141,15 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL36",
@@ -10963,12 +11173,15 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-6400 CL32",
@@ -10992,12 +11205,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-5600 CL36",
@@ -11021,12 +11237,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 48GB (2x24GB) DDR5-6000 CL30",
@@ -11046,21 +11265,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "T-Force Vulcan 48GB (2x24GB) DDR5-6000 CL30",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/96753a64597c28e46bf80ef7064b214b.1600.jpg",
-      "https://m.media-amazon.com/images/I/419fXKKDtvL.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 64GB (2x32GB) DDR5-6000 CL30",
@@ -11080,21 +11297,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "T-Force Vulcan 64GB (2x32GB) DDR5-6000 CL30",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/96753a64597c28e46bf80ef7064b214b.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-7200 CL34",
@@ -11118,12 +11333,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 16GB (2x8GB) DDR4-3200 CL16",
@@ -11176,12 +11394,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 16GB (2x8GB) DDR4-3600 CL18",
@@ -11234,12 +11455,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -11263,12 +11487,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -11321,12 +11552,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-6200 CL32 (White)",
@@ -11379,12 +11617,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -11437,12 +11682,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Vengeance RGB 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -11495,12 +11747,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Vengeance RGB 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-4.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/894ce2f4aaaf96e8a0cc61288f9ff27d.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/corsair-vengeance-rgb-32gb-2x16gb-6400mhz-cl36-intel-xmp-3-0-amd-expo-ddr5-ram-cmh32gx5m2b6400z36-1.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -11640,12 +11899,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Vengeance RGB 32GB (2x16GB) DDR4-3600 CL16 (White)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 64GB (2x32GB) DDR4-3600 CL18",
@@ -11698,12 +11960,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Vengeance RGB 64GB (2x32GB) DDR4-3600 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
   },
   {
     "name": "CORSAIR Vengeance RGB 32GB (2x16GB) DDR4-4000 CL18",
@@ -11756,12 +12021,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Vengeance RGB 32GB (2x16GB) DDR4-4000 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/51j0fB0LDAL.jpg"
   },
   {
     "name": "CORSAIR Vengeance 32GB (2x16GB) DDR5-6000 CL28",
@@ -12046,12 +12314,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -12104,12 +12375,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-6200 CL32 (White)",
@@ -12162,12 +12436,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Dominator Titanium RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -12220,12 +12497,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Titanium RGB 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -12278,12 +12558,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Dominator Titanium RGB 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/10c582ed536d6c9003d52dfe90c1e093.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Titanium RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -12336,12 +12619,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -12394,12 +12680,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-6200 CL32 (White)",
@@ -12448,21 +12737,19 @@
     "voltage": 1.25,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Dominator Platinum RGB 16GB (1x16GB) DDR5-5600 CL40",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4850071086f7967ae820d24c6d9d634c.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/14efe97f96919022afdfc48699226b7f.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -12482,16 +12769,11 @@
     "voltage": 1.25,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Dominator Platinum RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2bf9c19005b3014bc81be0ca4a35323e.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4850071086f7967ae820d24c6d9d634c.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/14efe97f96919022afdfc48699226b7f.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -12520,12 +12802,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Dominator Platinum RGB 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -12578,12 +12863,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Dominator Platinum RGB 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2d5f8a5348178d69f75557c090aed328.1600.jpg"
   },
   {
     "name": "CORSAIR Dominator Platinum RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -13274,12 +13562,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 (AMD EXPO) 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Flare X5 (AMD EXPO) 96GB (2x48GB) DDR5-6000 CL30",
@@ -13303,12 +13594,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Flare X5 (AMD EXPO) 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5bfb04d855b1e501d71ef7516d5c39f7.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6000 CL28",
@@ -13332,12 +13626,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-6200 CL32",
@@ -13361,12 +13658,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 16GB (1x16GB) DDR5-5600 CL40",
@@ -13390,12 +13690,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Ripjaws S5 16GB (1x16GB) DDR5-5600 CL40",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 96GB (2x48GB) DDR5-6000 CL30",
@@ -13419,12 +13722,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Ripjaws S5 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR5-8000 CL38",
@@ -13448,12 +13754,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Ripjaws S5 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 16GB (1x16GB) DDR4-3200 CL16",
@@ -13477,12 +13786,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Ripjaws S5 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR4-3600 CL16",
@@ -13506,12 +13818,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Ripjaws S5 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 64GB (2x32GB) DDR4-3600 CL18",
@@ -13535,12 +13850,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws S5 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "G.SKILL Ripjaws S5 32GB (2x16GB) DDR4-4000 CL18",
@@ -13564,12 +13882,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Ripjaws S5 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/24d251679c92dd15d250e400ea873727.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -13622,12 +13943,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-6200 CL32",
@@ -13680,12 +14004,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-6200 CL32 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (1x16GB) DDR5-5600 CL40",
@@ -13738,12 +14065,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Fury Beast RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 96GB (2x48GB) DDR5-6000 CL30",
@@ -13796,12 +14126,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Fury Beast RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR5-8000 CL38",
@@ -13854,12 +14187,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 16GB (1x16GB) DDR4-3200 CL16",
@@ -13912,12 +14248,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Fury Beast RGB 16GB (1x16GB) DDR4-3200 CL16 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR4-3600 CL16",
@@ -13970,12 +14309,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR4-3600 CL16 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 64GB (2x32GB) DDR4-3600 CL18",
@@ -14028,12 +14370,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast RGB 64GB (2x32GB) DDR4-3600 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast RGB 32GB (2x16GB) DDR4-4000 CL18",
@@ -14086,12 +14431,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast RGB 32GB (2x16GB) DDR4-4000 CL18 (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/54ddbd8a23594ec6f8f120d748c9e559.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR5-6000 CL28",
@@ -14289,12 +14637,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Fury Beast 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 64GB (2x32GB) DDR4-3600 CL18",
@@ -14318,12 +14669,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Beast 32GB (2x16GB) DDR4-4000 CL18",
@@ -14347,12 +14701,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Fury Beast 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ba87b0c925c292d22dca488e2296d258.1600.jpg"
   },
   {
     "name": "KINGSTON Fury Renegade RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -14898,12 +15255,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6000 CL28 (White)",
@@ -14956,12 +15320,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-6200 CL32 (White)",
@@ -15014,12 +15385,19 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
@@ -15039,16 +15417,11 @@
     "voltage": 1.25,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/869_gallery_pw06.png",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Lancer Blade RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/869_gallery_pw06.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15077,12 +15450,19 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
@@ -15102,16 +15482,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer Blade RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15140,12 +15515,19 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/xpg-lancer-blade-hafiza-birimi-16-gb-1-x-16-gb-ddr5-288-pin-hafiza-birimleri-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/xpg-lancer-blade-black-16gb-5600mhz-cl46-ddr5-ram-ax5u5600c4616g-slabbk.jpg"
   },
   {
     "name": "XPG Lancer Blade RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
@@ -15165,16 +15547,11 @@
     "voltage": 1.45,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15199,16 +15576,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer Blade RGB 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [
-      "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15262,16 +15634,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61--FjuijGL._AC_SL1500_.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [
-      "https://m.media-amazon.com/images/I/61--FjuijGL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15296,21 +15663,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
     "profile": "Intel XMP 2.0",
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-3600 CL16 (White)",
     "images": [
-      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
+      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png"
   },
   {
     "name": "XPG Lancer Blade RGB 64GB (2x32GB) DDR4-3600 CL18",
@@ -15330,16 +15695,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/01_p_xpg_lancer_blade_2000x2000_bk_01.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [
-      "https://webapi3.adata.com/storage/product/01_p_xpg_lancer_blade_2000x2000_bk_01.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15364,16 +15724,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://texonware.com/wp-content/uploads/2026/02/xpg-lancer-blade-rgb-64gb-6000mhz-ddr5-ram-white-price-in-pa-19643-2074886-120524075755364-600x600.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 64GB (2x32GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://texonware.com/wp-content/uploads/2026/02/xpg-lancer-blade-rgb-64gb-6000mhz-ddr5-ram-white-price-in-pa-19643-2074886-120524075755364-600x600.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15398,16 +15753,11 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [
-      "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15432,21 +15782,19 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer Blade RGB 32GB (2x16GB) DDR4-4000 CL18 (White)",
     "images": [
-      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1a16a735d969ab30a225f940f51aa806.1600.jpg"
+      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png"
   },
   {
     "name": "XPG Lancer RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -15611,16 +15959,11 @@
     "voltage": 1.25,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/869_gallery_pw06.png",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Lancer RGB 16GB (1x16GB) DDR5-5600 CL40 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/869_gallery_pw06.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15674,16 +16017,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Lancer RGB 96GB (2x48GB) DDR5-6000 CL30 (White)",
-    "images": [
-      "https://webapi3.adata.com/storage/product/06_p_lancer_blade_rgb_2000x2000_wh_04.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15737,21 +16075,19 @@
     "voltage": 1.45,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Lancer RGB 32GB (2x16GB) DDR5-8000 CL38 (White)",
     "images": [
-      "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
+      "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://files.pccasegear.com/UserFiles/AX5U6000C4016G-DCLARWH-adata-xpg-lancer-rgb-32gb-2x16gb-6000mhz-cl40-ddr5-white-product1.jpg"
   },
   {
     "name": "XPG Lancer RGB 16GB (1x16GB) DDR4-3200 CL16",
@@ -15771,16 +16107,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer RGB 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [
-      "https://webapi3.adata.com/storage/product/02_xpg_lancer_blade_rgb_f_1200x695.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15805,16 +16136,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://digitempire.com.my/wp-content/uploads/2024/06/RML-XPG-DDR4-8G-AX4U32008G16A-SWHD35G-img-1.jpeg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Lancer RGB 16GB (1x16GB) DDR4-3200 CL16 (White)",
-    "images": [
-      "https://digitempire.com.my/wp-content/uploads/2024/06/RML-XPG-DDR4-8G-AX4U32008G16A-SWHD35G-img-1.jpeg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15839,16 +16165,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [
-      "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15936,16 +16257,11 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://www.novabilgisayar.com/urunler/XPG-AX5U6000C3016G-DCLARWH.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 64GB (2x32GB) DDR4-3600 CL18 (White)",
-    "images": [
-      "https://www.novabilgisayar.com/urunler/XPG-AX5U6000C3016G-DCLARWH.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -15970,16 +16286,11 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [
-      "https://m.media-amazon.com/images/I/71qYFyLPy-L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -16004,16 +16315,11 @@
     "voltage": 1.4,
     "heat_spreader": true,
     "rgb": true,
-    "imageUrl": "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Lancer RGB 32GB (2x16GB) DDR4-4000 CL18 (White)",
-    "images": [
-      "https://product.hstatic.net/200000420363/product/ram-adata-xpg-lancer-blade-rgb-white-32gb-3_a5e9839893af404eb86f9881556e6296_master.png",
-      "https://m.media-amazon.com/images/I/41U7Rp5izRL.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa1c163ebb57782d902e577098956cbc.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -16564,12 +16870,17 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-6000 CL32",
@@ -16593,12 +16904,17 @@
     "die_type": "SK Hynix M-Die",
     "timings": "CL32-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-6000 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-6000 CL36",
@@ -16622,12 +16938,17 @@
     "die_type": "Samsung B-Die / Micron",
     "timings": "CL36-44-44-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-6000 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-6000 CL28",
@@ -16651,12 +16972,17 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-6200 CL32",
@@ -16680,12 +17006,17 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "Thor OC 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-6400 CL32",
@@ -16709,12 +17040,17 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL32-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-6400 CL32",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-5600 CL36",
@@ -16738,12 +17074,17 @@
     "die_type": "Micron / Samsung",
     "timings": "CL36-40-40-80",
     "model": "Thor OC 32GB (2x16GB) DDR5-5600 CL36",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 16GB (1x16GB) DDR5-5600 CL40",
@@ -16767,12 +17108,17 @@
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "Thor OC 16GB (1x16GB) DDR5-5600 CL40",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 48GB (2x24GB) DDR5-6000 CL30",
@@ -16796,12 +17142,17 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Thor OC 48GB (2x24GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 64GB (2x32GB) DDR5-6000 CL30",
@@ -16825,12 +17176,17 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Thor OC 64GB (2x32GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 96GB (2x48GB) DDR5-6000 CL30",
@@ -16854,12 +17210,17 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "Thor OC 96GB (2x48GB) DDR5-6000 CL30",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-7200 CL34",
@@ -16883,12 +17244,17 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL34-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-7200 CL34",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR5-8000 CL38",
@@ -16912,12 +17278,17 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "Thor OC 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-2.jpg",
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/lexar-thor-oc-16gb-2x8gb-6000mhz-cl38-intel-xmp-3-0-amd-expo-ddr5-ram-ld5u08g60c38lg-rgd-1.jpg"
   },
   {
     "name": "LEXAR Thor OC 16GB (2x8GB) DDR4-3200 CL16",
@@ -16941,12 +17312,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Thor OC 16GB (2x8GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR4-3200 CL16",
@@ -16970,12 +17344,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Thor OC 32GB (2x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 16GB (1x16GB) DDR4-3200 CL16",
@@ -16999,12 +17376,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Thor OC 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR4-3600 CL16",
@@ -17028,12 +17408,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Thor OC 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 16GB (2x8GB) DDR4-3600 CL18",
@@ -17057,12 +17440,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Thor OC 16GB (2x8GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR4-3600 CL18",
@@ -17086,12 +17472,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Thor OC 32GB (2x16GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 64GB (2x32GB) DDR4-3600 CL18",
@@ -17115,12 +17504,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Thor OC 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "LEXAR Thor OC 32GB (2x16GB) DDR4-4000 CL18",
@@ -17144,12 +17536,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Thor OC 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/31695QatJHL.jpg"
   },
   {
     "name": "Patriot Viper Venom RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -18362,12 +18757,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro Overclocking 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 32GB (2x16GB) DDR4-3600 CL16",
@@ -18391,12 +18789,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Pro Overclocking 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 64GB (2x32GB) DDR4-3600 CL18",
@@ -18420,12 +18821,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro Overclocking 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro Overclocking 32GB (2x16GB) DDR4-4000 CL18",
@@ -18449,12 +18853,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro Overclocking 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/41lunNC6OYL.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR5-6000 CL28",
@@ -18623,12 +19030,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL16-18-18-38",
     "model": "Pro 16GB (1x16GB) DDR4-3200 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR4-3600 CL16",
@@ -18652,12 +19062,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "Pro 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 64GB (2x32GB) DDR4-3600 CL18",
@@ -18681,12 +19094,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro 64GB (2x32GB) DDR4-3600 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "CRUCIAL Pro 32GB (2x16GB) DDR4-4000 CL18",
@@ -18710,12 +19126,15 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "Pro 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/749157446fcdcc5fe5abbb0e8d37ed08.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Delta RGB 32GB (2x16GB) DDR5-6000 CL28",
@@ -19261,12 +19680,15 @@
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6000 CL28",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-6200 CL32",
@@ -19290,12 +19712,15 @@
     "die_type": "Micron / Samsung",
     "timings": "CL32-40-40-80",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-6200 CL32",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 16GB (1x16GB) DDR5-5600 CL40",
@@ -19315,21 +19740,19 @@
     "voltage": 1.25,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "Micron / Samsung",
     "timings": "CL40-40-40-80",
     "model": "T-Force Vulcan 16GB (1x16GB) DDR5-5600 CL40",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/96753a64597c28e46bf80ef7064b214b.1600.jpg",
-      "https://m.media-amazon.com/images/I/419fXKKDtvL.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 96GB (2x48GB) DDR5-6000 CL30",
@@ -19349,21 +19772,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
     "profile": "AMD EXPO & Intel XMP 3.0",
     "die_type": "SK Hynix A-Die / M-Die",
     "timings": "CL30-38-38-96",
     "model": "T-Force Vulcan 96GB (2x48GB) DDR5-6000 CL30",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/96753a64597c28e46bf80ef7064b214b.1600.jpg",
-      "https://m.media-amazon.com/images/I/419fXKKDtvL.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b4f07141b6924fe51915a886aa19e17f.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR5-8000 CL38",
@@ -19387,12 +19808,15 @@
     "die_type": "SK Hynix A-Die",
     "timings": "CL38-38-38-96",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR5-8000 CL38",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 16GB (1x16GB) DDR4-3200 CL16",
@@ -19445,12 +19869,15 @@
     "die_type": "Samsung B-Die",
     "timings": "CL16-16-16-36",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR4-3600 CL16",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 64GB (2x32GB) DDR4-3600 CL18",
@@ -19470,21 +19897,19 @@
     "voltage": 1.35,
     "heat_spreader": true,
     "rgb": false,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg",
     "profile": "Intel XMP 2.0",
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "T-Force Vulcan 64GB (2x32GB) DDR4-3600 CL18",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/5e3069d55acca20a4888a13f804fcd9e.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea84cc2cd75b7db39d870c75de1032e3.1600.jpg"
   },
   {
     "name": "TEAMGROUP T-Force Vulcan 32GB (2x16GB) DDR4-4000 CL18",
@@ -19508,11 +19933,14 @@
     "die_type": "SK Hynix CJR / Micron E-Die",
     "timings": "CL18-18-18-38",
     "model": "T-Force Vulcan 32GB (2x16GB) DDR4-4000 CL18",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e3488d1b7a025327c3252101cc31cb6a.1600.jpg"
   }
 ]

@@ -19,7 +19,6 @@
       "PassMark Dünya Sıralaması": "#182"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -43,7 +42,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -66,7 +64,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -89,7 +86,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -112,7 +108,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -128,17 +123,20 @@
     "l3_cache": 16,
     "process_node": "7 nm",
     "release_date": "Sep 2026",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/09/amd-ryzen-5-5500f-tray-4-4ghz-6-cekirdek-16mb-onbellek-soket-am4-islemci-fc1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/09/amd-ryzen-5-5500f-tray-4-4ghz-6-cekirdek-16mb-onbellek-soket-am4-islemci-fc2.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Vermeer",
       "Çıkış Tarihi (Release)": "Sep 2026",
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/09/amd-ryzen-5-5500f-tray-4-4ghz-6-cekirdek-16mb-onbellek-soket-am4-islemci-fc1.jpg"
   },
   {
     "name": "AMD Ryzen 9 PRO 9945",
@@ -158,7 +156,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -181,7 +178,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -204,7 +200,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -227,7 +222,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -243,17 +237,20 @@
     "l3_cache": 32,
     "process_node": "4 nm",
     "release_date": "Sep 2025",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/amd-ryzen-5-9500f-tray-5ghz-6-cekirdek-32mb-onbellek-am5-4nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/amd-ryzen-5-9500f-tray-5ghz-6-cekirdek-32mb-onbellek-am5-4nm-islemci-2.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Granite Ridge",
       "Çıkış Tarihi (Release)": "Sep 2025",
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/amd-ryzen-5-9500f-tray-5ghz-6-cekirdek-32mb-onbellek-am5-4nm-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen 5 7400",
@@ -273,7 +270,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -296,7 +292,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -321,7 +316,6 @@
       "PassMark Dünya Sıralaması": "#1067"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -347,7 +341,6 @@
       "PassMark Dünya Sıralaması": "#1105"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -373,7 +366,6 @@
       "PassMark Dünya Sıralaması": "#1079"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -390,7 +382,9 @@
     "l3_cache": 12,
     "process_node": "3 nm",
     "release_date": "Sep 2024",
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/da/Intel_Core_Ultra_7_258V%2C_verbaut_in_einem_ASUS_Zenbook_S_14_UX5406.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Lunar Lake",
       "Çıkış Tarihi (Release)": "Sep 2024",
@@ -399,11 +393,11 @@
       "PassMark Dünya Sıralaması": "#1121"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Intel_Core_Ultra_7_258V%2C_verbaut_in_einem_ASUS_Zenbook_S_14_UX5406.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "name": "Intel Core Ultra 7 256V",
@@ -425,7 +419,6 @@
       "PassMark Dünya Sıralaması": "#1090"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -451,7 +444,6 @@
       "PassMark Dünya Sıralaması": "#1158"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -477,7 +469,6 @@
       "PassMark Dünya Sıralaması": "#1152"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -503,7 +494,6 @@
       "PassMark Dünya Sıralaması": "#1175"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -529,7 +519,6 @@
       "PassMark Dünya Sıralaması": "#1189"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -553,7 +542,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -576,7 +564,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -599,7 +586,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -622,7 +608,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -645,7 +630,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -671,7 +655,6 @@
       "PassMark Dünya Sıralaması": "#213"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -699,7 +682,6 @@
       "PassMark Dünya Sıralaması": "#327"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -713,7 +695,9 @@
     "boost_clock": 5.1,
     "microarchitecture": "Raptor Lake",
     "tdp": 125,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/01/Intel_Core_i5-13600KF_with_LGA_1700_socket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "socket": "1700",
     "threads": 20,
     "l3_cache": 24,
@@ -727,12 +711,12 @@
       "PassMark Dünya Sıralaması": "#426"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Intel_Core_i5-13600KF_with_LGA_1700_socket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "name": "INTEL Core i9-13900K",
@@ -758,7 +742,6 @@
     "model": "Core i9-13900K",
     "images": [
       "https://product.hstatic.net/200000722513/product/i9k-t2-special-box-07-1080x1080pixels_6c9ec1001cdf4e4998c13af4ac6c7581_114c47698e4a4984863c3b26e0619b65_master.png",
-      "https://img.4gamers.com.tw/ckfinder/files/Elvis/Review/Intel-Core-i9-13900K-and-i5-13600K/09.jpg",
       "https://www.pcstudio.in/wp-content/uploads/2022/10/Intel-Core-I9-13900K-Processor-1.jpg"
     ],
     "release_date": "Sep 2022",
@@ -801,8 +784,7 @@
     "model": "Core i7-13700K",
     "images": [
       "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_.jpg",
-      "https://halinhcomputer.vn/uploads/images/web-halinh-new/linh-kien-le/cpu-new/13700k.png",
-      "https://tpucdn.com/cpu-specs/images/chips/2850-back.jpg"
+      "https://halinhcomputer.vn/uploads/images/web-halinh-new/linh-kien-le/cpu-new/13700k.png"
     ],
     "release_date": "Sep 2022",
     "extra_specs": {
@@ -843,9 +825,7 @@
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-13600K",
     "images": [
-      "https://m.media-amazon.com/images/I/61lNEpDfdcL._AC_SL1500_.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2829-front.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2829-back.jpg"
+      "https://m.media-amazon.com/images/I/61lNEpDfdcL._AC_SL1500_.jpg"
     ],
     "release_date": "Sep 2022",
     "extra_specs": {
@@ -860,167 +840,6 @@
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V3C48",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 3.8,
-    "microarchitecture": "Rembrandt",
-    "tdp": 45,
-    "socket": "FP7",
-    "l3_cache": 16,
-    "process_node": "6 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Rembrandt",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "6 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V3C44",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.8,
-    "microarchitecture": "Rembrandt",
-    "tdp": 45,
-    "socket": "FP7",
-    "l3_cache": 8,
-    "process_node": "6 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Rembrandt",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "6 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V3C18I",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 3.8,
-    "microarchitecture": "Rembrandt",
-    "tdp": 15,
-    "socket": "FP7",
-    "l3_cache": 16,
-    "process_node": "6 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Rembrandt",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "6 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V3C16",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 3.8,
-    "microarchitecture": "Rembrandt",
-    "tdp": 15,
-    "socket": "FP7",
-    "l3_cache": 16,
-    "process_node": "6 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Rembrandt",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "6 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V3C14",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.8,
-    "microarchitecture": "Rembrandt",
-    "tdp": 15,
-    "socket": "FP7",
-    "l3_cache": 8,
-    "process_node": "6 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Rembrandt",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "6 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded R2544",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.7,
-    "microarchitecture": "Picasso",
-    "tdp": 45,
-    "socket": "FP5",
-    "l3_cache": 4,
-    "process_node": "12 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Picasso",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "12 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded R2514",
-    "core_count": 4,
-    "threads": 8,
-    "core_clock": 3.7,
-    "microarchitecture": "Picasso",
-    "tdp": 15,
-    "socket": "FP5",
-    "l3_cache": 4,
-    "process_node": "12 nm",
-    "release_date": "Sep 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Picasso",
-      "Çıkış Tarihi (Release)": "Sep 2022",
-      "Üretim Teknolojisi (Litografi)": "12 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
   },
@@ -1081,14 +900,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://thumbs.dreamstime.com/z/close-up-amd-ryzen-processor-packaging-box-isolated-white-background-dnipro-ukraine-june-282214806.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900x-tray-5-6ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci.jpeg",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD)",
     "power_limits": "170W TDP / 230W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7900X",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900x-tray-5-6ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci.jpeg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900x-tray-5-6ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci-1.jpeg",
       "https://thumbs.dreamstime.com/z/close-up-amd-ryzen-processor-packaging-box-isolated-white-background-dnipro-ukraine-june-282214806.jpg",
-      "https://www.pcstudio.in/wp-content/uploads/2022/09/Amd-Ryzen-9-7950X-Desktop-Processor-1.jpg",
       "https://cdn.wccftech.com/wp-content/uploads/2024/11/AMD-Ryzen-7-9800X3D-AM5-Socket-CPU-Burn-_Main.jpg"
     ],
     "release_date": "Sep 2022",
@@ -1127,9 +947,7 @@
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7700X",
     "images": [
-      "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_SL1500_.jpg",
-      "https://cdn.mos.cms.futurecdn.net/fY7kXQoDXUVjodncaB6bj7-1920-80.jpg",
-      "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/AMD_Ryzen_7_7700X_ryzen_5_7600X_cinebench_r23.jpg"
+      "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_SL1500_.jpg"
     ],
     "release_date": "Sep 2022",
     "extra_specs": {
@@ -1161,15 +979,13 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 5 7600X",
     "images": [
-      "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
-      "https://www.techspot.com/articles-info/2534/images/2022-09-25-image.jpg",
-      "https://www.hwcooling.net/wp-content/uploads/2022/09/amd_ryzen-5-7600x_01.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-5-7600x-tray-5-3ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci.jpeg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-5-7600x-tray-5-3ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci-1.jpeg"
     ],
     "release_date": "Sep 2022",
     "extra_specs": {
@@ -1182,7 +998,8 @@
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-5-7600x-tray-5-3ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci.jpeg"
   },
   {
     "name": "AMD Ryzen 5 7520U",
@@ -1202,7 +1019,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1225,145 +1041,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9950X3D",
-    "core_count": 16,
-    "threads": 32,
-    "core_clock": 5.7,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 170,
-    "socket": "AM5",
-    "l3_cache": 128,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9950X",
-    "core_count": 16,
-    "threads": 32,
-    "core_clock": 5.7,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 170,
-    "socket": "AM5",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9900X3D",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.5,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 120,
-    "socket": "AM5",
-    "l3_cache": 128,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9900X",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.6,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 120,
-    "socket": "AM5",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9700X",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.5,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 65,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 9600X",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 5.4,
-    "microarchitecture": "Granite Ridge",
-    "tdp": 65,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "4 nm",
-    "release_date": "Oct 2025",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Granite Ridge",
-      "Çıkış Tarihi (Release)": "Oct 2025",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1386,7 +1063,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1409,7 +1085,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1425,17 +1100,19 @@
     "l3_cache": 4,
     "process_node": "6 nm",
     "release_date": "Oct 2025",
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8b/AMD%404nmCCD%286nmIOD%29%40Zen5%40Granite_Ridge%40Ryzen_5_9600X%40100-000001405_BY_2429SUY_9AEQ579S40073_DSC01872.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Mendocino",
       "Çıkış Tarihi (Release)": "Oct 2025",
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/AMD%404nmCCD%286nmIOD%29%40Zen5%40Granite_Ridge%40Ryzen_5_9600X%40100-000001405_BY_2429SUY_9AEQ579S40073_DSC01872.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "name": "AMD Ryzen 5 150",
@@ -1455,7 +1132,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1478,7 +1154,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1501,7 +1176,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1524,7 +1198,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -1763,7 +1436,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -1786,14 +1458,14 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i9-14900KF-Core-i9-14th-Gen-24-Core-8P-16E-LGA-1700-125W-None-Integrated-Graphics-Processor-Boxed-BX8071514900KF_b64278bd-c6f9-4261-84c4-98b9bbef8c6e.da96bc5e8bc7d3725c763f8c2290da5e.jpeg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/intel-core-i9-14900kf-tray-6-0ghz-24-cekirdek-36mb-onbellek-lga1700-islemci-1.jpg",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i9-14900KF",
     "images": [
-      "https://i5.walmartimages.com/seo/Intel-Core-i9-14900KF-Core-i9-14th-Gen-24-Core-8P-16E-LGA-1700-125W-None-Integrated-Graphics-Processor-Boxed-BX8071514900KF_b64278bd-c6f9-4261-84c4-98b9bbef8c6e.da96bc5e8bc7d3725c763f8c2290da5e.jpeg",
-      "https://kccshop.vn/media/product/250-12983-cpu-intel-core-i9-14900kf-tray--3-20-ghz--up-to-6-0ghz--24-nh--n-32-lu---ng--36-mb-cache-_0_main.jpeg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/intel-core-i9-14900kf-tray-6-0ghz-24-cekirdek-36mb-onbellek-lga1700-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/intel-core-i9-14900kf-tray-6-0ghz-24-cekirdek-36mb-onbellek-lga1700-islemci-2.jpg",
       "https://image.made-in-china.com/2f0j00ICqoemDyGMkb/Intel-Core-I9-14900kf-Desktop-Processor-24-Cores-6-0-GHz-LGA1700-Computer-CPU.webp"
     ],
     "release_date": "Oct 2023",
@@ -1829,15 +1501,13 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.tradeinn.com/f/14047/140472438/intel-core-i9-14900k-processor.jpg",
+    "imageUrl": "https://cdn.wccftech.com/wp-content/uploads/2023/09/Intel-Core-i9-14900K-Desktop-CPU.png",
     "core_topology": "8P + 16E (24 Çekirdek / 32 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i9-14900K",
     "images": [
-      "https://www.tradeinn.com/f/14047/140472438/intel-core-i9-14900k-processor.jpg",
-      "https://cdn.wccftech.com/wp-content/uploads/2023/09/Intel-Core-i9-14900K-Desktop-CPU.png",
-      "https://tpucdn.com/cpu-specs/images/chips/3269-back.jpg"
+      "https://cdn.wccftech.com/wp-content/uploads/2023/09/Intel-Core-i9-14900K-Desktop-CPU.png"
     ],
     "release_date": "Oct 2023",
     "extra_specs": {
@@ -1879,8 +1549,7 @@
     "model": "Core i7-14700KF",
     "images": [
       "https://tech4gamers.com/wp-content/uploads/2024/04/20231103_144503-1320x1414.jpg",
-      "https://gitec.ge/images/thumbs/0070465_i7-14700kf.jpeg",
-      "https://parastech.pk/wp-content/uploads/2025/09/Intel-Core-i7-14700KF-3.4-GHz-14th-Gen-20-Core-LGA-1700-Processor-Tary-Price-in-Pakistan.jpg"
+      "https://gitec.ge/images/thumbs/0070465_i7-14700kf.jpeg"
     ],
     "release_date": "Oct 2023",
     "extra_specs": {
@@ -1915,15 +1584,15 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://rbtechngames.com/wp-content/uploads/2023/11/rbtech_intel_core_i7_14700K_3.jpeg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/intel-core-i7-14700k-tray-5-6ghz-28mb-onbellek-20-cekirdek-1700-islemci-1.jpg",
     "core_topology": "8P + 12E (20 Çekirdek / 28 İzlek)",
     "power_limits": "125W PBP / 253W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i7-14700K",
     "images": [
-      "https://rbtechngames.com/wp-content/uploads/2023/11/rbtech_intel_core_i7_14700K_3.jpeg",
-      "https://cdn.mos.cms.futurecdn.net/iNEztQ5iPLdNPYtk9tFJ54-1200-80.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3268-front.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/intel-core-i7-14700k-tray-5-6ghz-28mb-onbellek-20-cekirdek-1700-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/intel-core-i7-14700k-tray-5-6ghz-28mb-onbellek-20-cekirdek-1700-islemci-2.jpg",
+      "https://rbtechngames.com/wp-content/uploads/2023/11/rbtech_intel_core_i7_14700K_3.jpeg"
     ],
     "release_date": "Oct 2023",
     "extra_specs": {
@@ -1958,12 +1627,14 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61DK+cQvKOL.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/intel-core-i5-14600kf-tray-5-3ghz-14-cekirdek-24mb-onbellek-1700-islemci-1.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-14600KF",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/intel-core-i5-14600kf-tray-5-3ghz-14-cekirdek-24mb-onbellek-1700-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/intel-core-i5-14600kf-tray-5-3ghz-14-cekirdek-24mb-onbellek-1700-islemci-2.jpg",
       "https://m.media-amazon.com/images/I/61DK+cQvKOL.jpg",
       "https://halinhcomputer.vn/uploads/images/web-halinh-new/linh-kien-le/cpu-new/14600kf.png",
       "https://gitec.ge/images/thumbs/0069876_i5-14600kf.jpeg"
@@ -2001,15 +1672,12 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-5600 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": true,
-    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i5-14600K-Core-i5-14th-Gen-14-Core-6P-8E-LGA-1700-125W-Intel-UHD-Graphics-770-Processor-Boxed-BX8071514600K_43a64fc7-d60c-4333-8879-fb46cc53b672.f9b1397f5f1a3f7de5d79e021f76f9ea.jpeg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "125W PBP / 181W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-14600K",
     "images": [
-      "https://i5.walmartimages.com/seo/Intel-Core-i5-14600K-Core-i5-14th-Gen-14-Core-6P-8E-LGA-1700-125W-Intel-UHD-Graphics-770-Processor-Boxed-BX8071514600K_43a64fc7-d60c-4333-8879-fb46cc53b672.f9b1397f5f1a3f7de5d79e021f76f9ea.jpeg",
-      "https://tpucdn.com/cpu-specs/images/chips/3266-front.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3266-installed.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/6/63/Intel_Core_i5-14600K_%28INVADERPC%29_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
     ],
     "release_date": "Oct 2023",
     "extra_specs": {
@@ -2025,7 +1693,8 @@
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Intel_Core_i5-14600K_%28INVADERPC%29_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "name": "AMD Ryzen Threadripper PRO 7995WX",
@@ -2045,7 +1714,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2068,7 +1736,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2091,7 +1758,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2114,7 +1780,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2137,7 +1802,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2160,7 +1824,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2176,17 +1839,19 @@
     "l3_cache": 256,
     "process_node": "5 nm",
     "release_date": "Oct 2023",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-threadripper-7980x-tray-5-1ghz-64-cekirdek-256mb-onbellek-soket-str5-islemci-1.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Storm Peak",
       "Çıkış Tarihi (Release)": "Oct 2023",
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-threadripper-7980x-tray-5-1ghz-64-cekirdek-256mb-onbellek-soket-str5-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen Threadripper 7970X",
@@ -2206,10 +1871,10 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "image_url": null
   },
   {
     "name": "AMD Ryzen Threadripper 7960X",
@@ -2229,7 +1894,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2255,7 +1919,6 @@
       "PassMark Dünya Sıralaması": "#1893"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2273,17 +1936,24 @@
     "l3_cache": 96,
     "process_node": "5 nm",
     "release_date": "Nov 2025",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-6.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raphael",
       "Çıkış Tarihi (Release)": "Nov 2025",
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/11/amd-ryzen-5-7500x3d-4-5ghz-102mb-onbellek-6-cekirdek-soket-am5-5nm-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
@@ -2302,12 +1972,14 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5600 MT/s Çift Kanal (Native) • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://edgecomputertech.com/wp-content/uploads/2024/12/RYZEN-7-9800X3D.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/12/amd-ryzen-7-9800x3d-tray-5-2ghz-8-cekirdek-96mb-onbellek-soket-am5-4nm-islemci-1.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (2. Nesil 3D V-Cache)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 9800X3D",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/amd-ryzen-7-9800x3d-tray-5-2ghz-8-cekirdek-96mb-onbellek-soket-am5-4nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/amd-ryzen-7-9800x3d-tray-5-2ghz-8-cekirdek-96mb-onbellek-soket-am5-4nm-islemci-2.jpg",
       "https://edgecomputertech.com/wp-content/uploads/2024/12/RYZEN-7-9800X3D.jpg",
       "https://www.amd.com/content/dam/amd/en/images/pr-feed/1301653.png",
       "https://www.hwcooling.net/wp-content/uploads/2024/11/amd-ryzen-7-9800x3d-02.jpg"
@@ -2321,121 +1993,6 @@
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 7945",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.4,
-    "microarchitecture": "Raphael",
-    "tdp": 65,
-    "socket": "AM5",
-    "l3_cache": 64,
-    "process_node": "5 nm",
-    "release_date": "Nov 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Raphael",
-      "Çıkış Tarihi (Release)": "Nov 2023",
-      "Üretim Teknolojisi (Litografi)": "5 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 7745",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.3,
-    "microarchitecture": "Raphael",
-    "tdp": 65,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "5 nm",
-    "release_date": "Nov 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Raphael",
-      "Çıkış Tarihi (Release)": "Nov 2023",
-      "Üretim Teknolojisi (Litografi)": "5 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 7700X",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.4,
-    "microarchitecture": "Raphael",
-    "tdp": 105,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "5 nm",
-    "release_date": "Nov 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Raphael",
-      "Çıkış Tarihi (Release)": "Nov 2023",
-      "Üretim Teknolojisi (Litografi)": "5 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 7645",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 5.1,
-    "microarchitecture": "Raphael",
-    "tdp": 65,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "5 nm",
-    "release_date": "Nov 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Raphael",
-      "Çıkış Tarihi (Release)": "Nov 2023",
-      "Üretim Teknolojisi (Litografi)": "5 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded 7600X",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 5.3,
-    "microarchitecture": "Raphael",
-    "tdp": 105,
-    "socket": "AM5",
-    "l3_cache": 32,
-    "process_node": "5 nm",
-    "release_date": "Nov 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Raphael",
-      "Çıkış Tarihi (Release)": "Nov 2023",
-      "Üretim Teknolojisi (Litografi)": "5 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2458,7 +2015,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2481,7 +2037,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2504,7 +2059,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2527,7 +2081,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2550,7 +2103,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -2576,7 +2128,6 @@
       "PassMark Dünya Sıralaması": "#380"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2605,7 +2156,6 @@
       "PassMark Dünya Sıralaması": "#373"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2633,7 +2183,6 @@
       "PassMark Dünya Sıralaması": "#481"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2662,7 +2211,6 @@
       "PassMark Dünya Sıralaması": "#474"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2690,7 +2238,6 @@
       "PassMark Dünya Sıralaması": "#680"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -2719,102 +2266,9 @@
       "PassMark Dünya Sıralaması": "#679"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V2748",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 4.25,
-    "microarchitecture": "Renoir",
-    "tdp": 35,
-    "socket": "FP6",
-    "l3_cache": 8,
-    "process_node": "7 nm",
-    "release_date": "Nov 2020",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Renoir",
-      "Çıkış Tarihi (Release)": "Nov 2020",
-      "Üretim Teknolojisi (Litografi)": "7 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V2718",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 4.15,
-    "microarchitecture": "Renoir",
-    "tdp": 10,
-    "socket": "FP6",
-    "l3_cache": 8,
-    "process_node": "7 nm",
-    "release_date": "Nov 2020",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Renoir",
-      "Çıkış Tarihi (Release)": "Nov 2020",
-      "Üretim Teknolojisi (Litografi)": "7 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V2546",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 3.95,
-    "microarchitecture": "Renoir",
-    "tdp": 35,
-    "socket": "FP6",
-    "l3_cache": 8,
-    "process_node": "7 nm",
-    "release_date": "Nov 2020",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Renoir",
-      "Çıkış Tarihi (Release)": "Nov 2020",
-      "Üretim Teknolojisi (Litografi)": "7 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded V2516",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 3.95,
-    "microarchitecture": "Renoir",
-    "tdp": 10,
-    "socket": "FP6",
-    "l3_cache": 8,
-    "process_node": "7 nm",
-    "release_date": "Nov 2020",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Renoir",
-      "Çıkış Tarihi (Release)": "Nov 2020",
-      "Üretim Teknolojisi (Litografi)": "7 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
   },
@@ -2882,8 +2336,7 @@
     "model": "Ryzen 9 5900X",
     "images": [
       "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-9-5900X-review.jpg",
-      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-5900x-og.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2363-front.jpg"
+      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-5900x-og.jpg"
     ],
     "release_date": "Nov 2020",
     "extra_specs": {
@@ -2922,8 +2375,7 @@
     "model": "Ryzen 7 5800X",
     "images": [
       "https://www.custompc.com/wp-content/sites/custompc/2023/05/AMD-Ryzen-7-5800X-review.jpg",
-      "https://imageio.forbes.com/specials-images/imageserve/5fa3c646bdbeae1374ba01fa/0x0.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2362-back.jpg"
+      "https://imageio.forbes.com/specials-images/imageserve/5fa3c646bdbeae1374ba01fa/0x0.jpg"
     ],
     "release_date": "Nov 2020",
     "extra_specs": {
@@ -2962,8 +2414,7 @@
     "model": "Ryzen 5 5600X",
     "images": [
       "https://images.pc-builds.com/images/components/9c7bd782c8737108dc7e6695c6452ff3/c15461b88975e00b0a274da5c3f950a2/c842fc1d9be07eb3f1549daffe22146b.png",
-      "https://techiezoid.com/wp-content/uploads/2022/09/amd-ryzen-5-5600x-01-scaled-1.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2365-back.jpg"
+      "https://techiezoid.com/wp-content/uploads/2022/09/amd-ryzen-5-5600x-01-scaled-1.jpg"
     ],
     "release_date": "Nov 2020",
     "extra_specs": {
@@ -2996,7 +2447,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3019,7 +2469,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3042,7 +2491,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3058,17 +2506,20 @@
     "l3_cache": 96,
     "process_node": "5 nm",
     "release_date": "May 2026",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/amd-ryzen-7-7700x3d-tray-4-5ghz-8-cekirdek-96mb-onbellek-am5-5nm-islemci-fc1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/amd-ryzen-7-7700x3d-tray-4-5ghz-8-cekirdek-96mb-onbellek-am5-5nm-islemci-fc2.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raphael",
       "Çıkış Tarihi (Release)": "May 2026",
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/amd-ryzen-7-7700x3d-tray-4-5ghz-8-cekirdek-96mb-onbellek-am5-5nm-islemci-fc1.jpg"
   },
   {
     "name": "AMD Ryzen 7 5800X3D AM4 10th Anniversary Edition",
@@ -3081,17 +2532,22 @@
     "l3_cache": 96,
     "process_node": "7 nm",
     "release_date": "May 2026",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci-h1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci-h2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci-h3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci-h4.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Vermeer",
       "Çıkış Tarihi (Release)": "May 2026",
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2022/10/amd-ryzen-7-5800x3d-10th-anniversary-edition-4-5ghz-96mb-onbellek-8-cekirdek-am4-7nm-islemci-h1.jpg"
   },
   {
     "name": "AMD Ryzen 5 PRO 5655GE",
@@ -3111,7 +2567,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3134,7 +2589,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3157,7 +2611,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3180,7 +2633,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3203,7 +2655,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3226,7 +2677,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3249,7 +2699,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3272,7 +2721,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3295,7 +2743,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3318,7 +2765,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3343,7 +2789,6 @@
       "PassMark Dünya Sıralaması": "#509"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3369,7 +2814,6 @@
       "PassMark Dünya Sıralaması": "#810"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3393,7 +2837,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3416,7 +2859,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3439,7 +2881,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3462,7 +2903,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3487,7 +2927,6 @@
       "PassMark Dünya Sıralaması": "#888"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3513,7 +2952,6 @@
       "PassMark Dünya Sıralaması": "#1071"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3539,7 +2977,6 @@
       "PassMark Dünya Sıralaması": "#977"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3565,7 +3002,6 @@
       "PassMark Dünya Sıralaması": "#1332"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3591,7 +3027,6 @@
       "PassMark Dünya Sıralaması": "#1372"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3615,7 +3050,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3638,7 +3072,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3661,7 +3094,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -3686,7 +3118,6 @@
       "PassMark Dünya Sıralaması": "#205"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3712,7 +3143,6 @@
       "PassMark Dünya Sıralaması": "#136"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3738,7 +3168,6 @@
       "PassMark Dünya Sıralaması": "#297"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3764,7 +3193,6 @@
       "PassMark Dünya Sıralaması": "#261"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -3790,193 +3218,8 @@
       "PassMark Dünya Sıralaması": "#262"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P185i",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.1,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 16,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P185",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.1,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 16,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P174i",
-    "core_count": 10,
-    "threads": 20,
-    "core_clock": 5.0,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 16,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P174",
-    "core_count": 10,
-    "threads": 20,
-    "core_clock": 5.0,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 16,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P164i",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.0,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 8,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P164",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.0,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 8,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P132i",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 4.5,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 4,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded P132",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 4.5,
-    "microarchitecture": "Gorgon Point",
-    "tdp": 28,
-    "socket": "FP8",
-    "l3_cache": 4,
-    "process_node": "4 nm",
-    "release_date": "Mar 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Gorgon Point",
-      "Çıkış Tarihi (Release)": "Mar 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
   },
@@ -3998,7 +3241,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4021,7 +3263,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4044,7 +3285,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4067,7 +3307,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4090,7 +3329,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4113,7 +3351,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4136,7 +3373,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4159,7 +3395,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4182,7 +3417,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4205,7 +3439,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4228,7 +3461,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4251,7 +3483,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4317,7 +3548,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4340,7 +3570,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4363,7 +3592,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4386,7 +3614,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4409,7 +3636,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4434,7 +3660,6 @@
       "PassMark Dünya Sıralaması": "#1161"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -4461,7 +3686,6 @@
       "PassMark Dünya Sıralaması": "#806"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4490,7 +3714,6 @@
       "PassMark Dünya Sıralaması": "#788"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4518,7 +3741,6 @@
       "PassMark Dünya Sıralaması": "#928"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4547,7 +3769,6 @@
       "PassMark Dünya Sıralaması": "#910"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4574,7 +3795,6 @@
       "PassMark Dünya Sıralaması": "#1361"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -4601,7 +3821,6 @@
       "PassMark Dünya Sıralaması": "#847"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4630,7 +3849,6 @@
       "PassMark Dünya Sıralaması": "#818"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4658,7 +3876,6 @@
       "PassMark Dünya Sıralaması": "#999"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4687,7 +3904,6 @@
       "PassMark Dünya Sıralaması": "#1011"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4714,7 +3930,6 @@
       "PassMark Dünya Sıralaması": "#1404"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -4741,7 +3956,6 @@
       "PassMark Dünya Sıralaması": "#1097"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4770,7 +3984,6 @@
       "PassMark Dünya Sıralaması": "#1087"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4799,7 +4012,6 @@
       "PassMark Dünya Sıralaması": "#1192"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4826,7 +4038,6 @@
       "PassMark Dünya Sıralaması": "#1522"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -4853,7 +4064,6 @@
       "PassMark Dünya Sıralaması": "#1266"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4882,7 +4092,86 @@
       "PassMark Dünya Sıralaması": "#1281"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
+      "pc-part-dataset",
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-10105T",
+    "core_count": 4,
+    "threads": 8,
+    "core_clock": 3.9,
+    "microarchitecture": "Comet Lake-R",
+    "tdp": 35,
+    "socket": "1200",
+    "l3_cache": 6,
+    "process_node": "14 nm",
+    "release_date": "Mar 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Comet Lake-R",
+      "Çıkış Tarihi (Release)": "Mar 2021",
+      "Üretim Teknolojisi (Litografi)": "14 nm",
+      "PassMark CPU Mark": "7.810",
+      "PassMark Dünya Sıralaması": "#2002"
+    },
+    "source_provenance": [
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-10105F",
+    "core_count": 4,
+    "core_clock": 3.7,
+    "boost_clock": 4.4,
+    "microarchitecture": "Comet Lake",
+    "tdp": 65,
+    "images": [],
+    "socket": "1200",
+    "threads": 8,
+    "l3_cache": 6,
+    "process_node": "14 nm",
+    "release_date": "Mar 2021",
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Comet Lake-R",
+      "Çıkış Tarihi (Release)": "Mar 2021",
+      "Üretim Teknolojisi (Litografi)": "14 nm",
+      "PassMark CPU Mark": "8.860",
+      "PassMark Dünya Sıralaması": "#1885"
+    },
+    "source_provenance": [
+      "pc-part-dataset",
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-10105",
+    "core_count": 4,
+    "core_clock": 3.7,
+    "boost_clock": 4.4,
+    "microarchitecture": "Comet Lake",
+    "tdp": 65,
+    "graphics": "Intel UHD Graphics 630",
+    "images": [],
+    "socket": "1200",
+    "threads": 8,
+    "l3_cache": 6,
+    "process_node": "14 nm",
+    "release_date": "Mar 2021",
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Comet Lake-R",
+      "Çıkış Tarihi (Release)": "Mar 2021",
+      "Üretim Teknolojisi (Litografi)": "14 nm",
+      "PassMark CPU Mark": "8.281",
+      "PassMark Dünya Sıralaması": "#1938"
+    },
+    "source_provenance": [
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -4907,7 +4196,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4930,7 +4218,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4953,7 +4240,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4976,7 +4262,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -4999,7 +4284,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5022,7 +4306,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5045,7 +4328,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5068,7 +4350,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5091,7 +4372,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5114,7 +4394,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5137,7 +4416,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5160,7 +4438,6 @@
       "Üretim Teknolojisi (Litografi)": "12 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5183,7 +4460,6 @@
       "Üretim Teknolojisi (Litografi)": "12 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5206,10 +4482,10 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "image_url": null
   },
   {
     "name": "AMD Ryzen AI Z2 Extreme",
@@ -5229,10 +4505,10 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "image_url": null
   },
   {
     "name": "AMD Ryzen 5 5500X3D",
@@ -5252,7 +4528,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5277,7 +4552,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -5303,7 +4577,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -5329,54 +4602,7 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded R2314",
-    "core_count": 4,
-    "threads": 4,
-    "core_clock": 3.5,
-    "microarchitecture": "Picasso",
-    "tdp": 15,
-    "socket": "FP5",
-    "l3_cache": 4,
-    "process_node": "12 nm",
-    "release_date": "Jun 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Picasso",
-      "Çıkış Tarihi (Release)": "Jun 2022",
-      "Üretim Teknolojisi (Litografi)": "12 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen Embedded R2312",
-    "core_count": 2,
-    "threads": 4,
-    "core_clock": 3.5,
-    "microarchitecture": "Picasso",
-    "tdp": 15,
-    "socket": "FP5",
-    "l3_cache": 4,
-    "process_node": "12 nm",
-    "release_date": "Jun 2022",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Picasso",
-      "Çıkış Tarihi (Release)": "Jun 2022",
-      "Üretim Teknolojisi (Litografi)": "12 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5399,7 +4625,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5422,7 +4647,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5445,7 +4669,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5468,7 +4691,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5491,7 +4713,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5514,7 +4735,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5537,145 +4757,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X199i",
-    "core_count": 16,
-    "threads": 32,
-    "core_clock": 5.1,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X199",
-    "core_count": 16,
-    "threads": 32,
-    "core_clock": 5.1,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X188i",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.0,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X188",
-    "core_count": 12,
-    "threads": 24,
-    "core_clock": 5.0,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 64,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X168i",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.0,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 32,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
-    "name": "AMD Ryzen AI Embedded X168",
-    "core_count": 8,
-    "threads": 16,
-    "core_clock": 5.0,
-    "microarchitecture": "Strix Halo",
-    "tdp": 55,
-    "socket": "FP11",
-    "l3_cache": 32,
-    "process_node": "4 nm",
-    "release_date": "Jul 2026",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Strix Halo",
-      "Çıkış Tarihi (Release)": "Jul 2026",
-      "Üretim Teknolojisi (Litografi)": "4 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5698,7 +4779,6 @@
       "Üretim Teknolojisi (Litografi)": "3 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5723,7 +4803,6 @@
       "PassMark Dünya Sıralaması": "#405"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -5747,7 +4826,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5770,7 +4848,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5786,17 +4863,20 @@
     "l3_cache": 128,
     "process_node": "4 nm",
     "release_date": "Jul 2025",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-pro-9975wx-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-pro-9975wx-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-2.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Shimada Peak",
       "Çıkış Tarihi (Release)": "Jul 2025",
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-pro-9975wx-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen Threadripper PRO 9965WX",
@@ -5816,7 +4896,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5839,7 +4918,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5862,7 +4940,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5885,7 +4962,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5901,17 +4977,20 @@
     "l3_cache": 128,
     "process_node": "4 nm",
     "release_date": "Jul 2025",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-9970x-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-9970x-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-3.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Shimada Peak",
       "Çıkış Tarihi (Release)": "Jul 2025",
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/11/amd-ryzen-threadripper-9970x-tray-5-4ghz-32-cekirdek-128mb-onbellek-soket-str5-islemci-2.jpg"
   },
   {
     "name": "AMD Ryzen Threadripper 9960X",
@@ -5931,7 +5010,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5954,7 +5032,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -5977,7 +5054,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6000,7 +5076,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6023,7 +5098,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6041,12 +5115,7 @@
     "integrated_gpu": null,
     "memory_support": "DDR4-3200",
     "architecture": "Zen 3 AM4 Refresh",
-    "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "microarchitecture": "Zen 3 (Vermeer)",
     "process_node": "TSMC 7nm FinFET (Zen 3)",
     "core_topology": "12 Çekirdek / 24 İzlek (Çift CCD Zen 3)",
@@ -6087,12 +5156,7 @@
     "integrated_gpu": null,
     "memory_support": "DDR4-3200",
     "architecture": "Zen 3 AM4 Refresh",
-    "image_url": "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/61o2N-q41eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61p3V-c51rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61q5B-v62kL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "microarchitecture": "Zen 3 (Vermeer)",
     "process_node": "TSMC 7nm FinFET (Zen 3)",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 3)",
@@ -6138,7 +5202,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6160,15 +5223,16 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/amd-ryzen-5-7500f-tray-5-0ghz-6-cekirdek-32mb-onbellek-am5-islemci-1.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 5 7500F",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/amd-ryzen-5-7500f-tray-5-0ghz-6-cekirdek-32mb-onbellek-am5-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/amd-ryzen-5-7500f-tray-5-0ghz-6-cekirdek-32mb-onbellek-am5-islemci-2.jpg",
       "https://m.media-amazon.com/images/I/61RfWUr4kvL._AC_.jpg",
-      "https://cdn.wccftech.com/wp-content/uploads/2023/07/AMD-Ryzen-5-7500F-Desktop-CPU.jpeg",
-      "https://tpucdn.com/cpu-specs/images/chips/3259-front.jpg"
+      "https://cdn.wccftech.com/wp-content/uploads/2023/07/AMD-Ryzen-5-7500F-Desktop-CPU.jpeg"
     ],
     "release_date": "Jul 2023",
     "extra_specs": {
@@ -6202,7 +5266,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -6226,7 +5289,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6249,7 +5311,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6272,7 +5333,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6295,7 +5355,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6319,7 +5378,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -6343,7 +5401,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6366,7 +5423,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6389,7 +5445,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6412,7 +5467,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6436,7 +5490,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -6460,7 +5513,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6483,7 +5535,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6506,7 +5557,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6531,7 +5581,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -6555,7 +5604,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6578,7 +5626,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6601,7 +5648,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6624,7 +5670,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6649,7 +5694,6 @@
       "PassMark Dünya Sıralaması": "#433"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6675,7 +5719,6 @@
       "PassMark Dünya Sıralaması": "#489"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6701,7 +5744,6 @@
       "PassMark Dünya Sıralaması": "#490"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6727,7 +5769,6 @@
       "PassMark Dünya Sıralaması": "#439"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6753,7 +5794,6 @@
       "PassMark Dünya Sıralaması": "#476"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6779,7 +5819,6 @@
       "PassMark Dünya Sıralaması": "#467"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6805,7 +5844,6 @@
       "PassMark Dünya Sıralaması": "#662"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6831,7 +5869,6 @@
       "PassMark Dünya Sıralaması": "#670"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -6855,7 +5892,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6878,7 +5914,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6901,7 +5936,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6924,7 +5958,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6947,7 +5980,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6970,7 +6002,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -6993,7 +6024,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7016,7 +6046,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7039,7 +6068,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7062,7 +6090,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7085,7 +6112,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7108,7 +6134,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7131,7 +6156,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7154,7 +6178,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7177,7 +6200,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7193,17 +6215,22 @@
     "l3_cache": 96,
     "process_node": "4 nm",
     "release_date": "Jan 2026",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/amd-ryzen-7-9850x3d-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/amd-ryzen-7-9850x3d-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/amd-ryzen-7-9850x3d-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/amd-ryzen-7-9850x3d-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci-04.jpg"
+    ],
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Granite Ridge",
       "Çıkış Tarihi (Release)": "Jan 2026",
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/amd-ryzen-7-9850x3d-5-6ghz-8-cekirdek-96mb-onbellek-am5-4nm-islemci-1.jpg"
   },
   {
     "name": "Intel Core Ultra 9 285T",
@@ -7225,7 +6252,6 @@
       "PassMark Dünya Sıralaması": "#396"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7251,7 +6277,6 @@
       "PassMark Dünya Sıralaması": "#229"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7277,7 +6302,6 @@
       "PassMark Dünya Sıralaması": "#473"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7303,7 +6327,6 @@
       "PassMark Dünya Sıralaması": "#233"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7329,7 +6352,6 @@
       "PassMark Dünya Sıralaması": "#422"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7355,7 +6377,6 @@
       "PassMark Dünya Sıralaması": "#309"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7381,7 +6402,6 @@
       "PassMark Dünya Sıralaması": "#479"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7408,7 +6428,6 @@
       "PassMark Dünya Sıralaması": "#282"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -7435,7 +6454,6 @@
       "PassMark Dünya Sıralaması": "#303"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7461,7 +6479,6 @@
       "PassMark Dünya Sıralaması": "#554"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7487,7 +6504,6 @@
       "PassMark Dünya Sıralaması": "#585"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7513,7 +6529,6 @@
       "PassMark Dünya Sıralaması": "#429"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7539,7 +6554,6 @@
       "PassMark Dünya Sıralaması": "#551"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7565,7 +6579,6 @@
       "PassMark Dünya Sıralaması": "#379"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7591,7 +6604,6 @@
       "PassMark Dünya Sıralaması": "#592"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7619,7 +6631,6 @@
       "PassMark Dünya Sıralaması": "#434"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -7646,7 +6657,6 @@
       "PassMark Dünya Sıralaması": "#753"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7672,7 +6682,6 @@
       "PassMark Dünya Sıralaması": "#665"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -7699,7 +6708,6 @@
       "PassMark Dünya Sıralaması": "#543"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -7719,12 +6727,7 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S (65W Düşük Güç)",
-    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "microarchitecture": "Arrow Lake-S (LGA1851)",
     "core_count": 24,
@@ -7768,12 +6771,7 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S (65W)",
-    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "microarchitecture": "Arrow Lake-S (LGA1851)",
     "core_count": 20,
@@ -7817,12 +6815,7 @@
     "integrated_gpu": "Intel Graphics (4 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S",
-    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "price": null,
     "microarchitecture": "Arrow Lake-S (LGA1851)",
     "process_node": "TSMC N3B (Arrow Lake)",
@@ -7865,11 +6858,8 @@
     "integrated_gpu": "Intel Graphics (3 Xe Cores)",
     "memory_support": "DDR5-6400",
     "architecture": "Arrow Lake-S F/P Giriş",
-    "image_url": "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/61j4R-t51eL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61k5V-u61rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61l6B-w72kL._AC_SL1500_.jpg"
+      "https://productimages.hepsiburada.net/s/777/222-222/110003073886796.jpg"
     ],
     "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110003073886796.jpg",
     "price": 9706.31,
@@ -7920,7 +6910,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7943,7 +6932,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7966,7 +6954,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -7989,7 +6976,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8012,7 +6998,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8035,7 +7020,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8058,7 +7042,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8081,7 +7064,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8104,7 +7086,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8127,7 +7108,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8150,7 +7130,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8173,7 +7152,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8196,7 +7174,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8219,7 +7196,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8242,7 +7218,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8265,7 +7240,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8288,7 +7262,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8311,7 +7284,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8334,7 +7306,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8352,11 +7323,9 @@
     "integrated_gpu": "AMD Radeon Graphics (2 CU)",
     "memory_support": "DDR5-5600 / 6000 EXPO",
     "architecture": "Zen 5 + 3D V-Cache",
-    "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/10/amd-ryzen-9-9950x3d-5-7ghz-16-cekirdek-128mb-onbellek-am5-4nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/10/amd-ryzen-9-9950x3d-5-7ghz-16-cekirdek-128mb-onbellek-am5-4nm-islemci-2.jpg"
     ],
     "microarchitecture": "Zen 5 (Granite Ridge)",
     "process_node": "TSMC 4nm FinFET (Zen 5)",
@@ -8370,7 +7339,6 @@
     "graphics": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "unlocked_multiplier": true,
-    "imageUrl": "https://productimages.hepsiburada.net/s/777/222-222/110001118388256.jpg",
     "price": 35744.05,
     "core_count": 16,
     "release_date": "Jan 2025",
@@ -8384,7 +7352,8 @@
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/10/amd-ryzen-9-9950x3d-5-7ghz-16-cekirdek-128mb-onbellek-am5-4nm-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen 9 9900X3D",
@@ -8399,11 +7368,9 @@
     "integrated_gpu": "AMD Radeon Graphics (2 CU)",
     "memory_support": "DDR5-5600 / 6000 EXPO",
     "architecture": "Zen 5 + 3D V-Cache",
-    "image_url": "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/61k3t-q21nL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61m4v-w52rL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61n5x-z73kL._AC_SL1500_.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/amd-ryzen-9-9900x3d-tray-5-5ghz-12-cekirdek-128mb-onbellek-am5-4nm-islemci-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/amd-ryzen-9-9900x3d-tray-5-5ghz-12-cekirdek-128mb-onbellek-am5-4nm-islemci-2.jpg"
     ],
     "microarchitecture": "Zen 5 (Granite Ridge)",
     "process_node": "TSMC 4nm FinFET (Zen 5)",
@@ -8430,7 +7397,8 @@
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/04/amd-ryzen-9-9900x3d-tray-5-5ghz-12-cekirdek-128mb-onbellek-am5-4nm-islemci-1.jpg"
   },
   {
     "name": "AMD Ryzen 9 9850HX",
@@ -8450,7 +7418,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8473,7 +7440,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8496,7 +7462,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8519,7 +7484,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8542,7 +7506,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8565,7 +7528,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8588,7 +7550,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8611,7 +7572,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8634,7 +7594,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -8659,7 +7618,6 @@
       "PassMark Dünya Sıralaması": "#448"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8685,7 +7643,6 @@
       "PassMark Dünya Sıralaması": "#344"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8712,7 +7669,6 @@
       "PassMark Dünya Sıralaması": "#315"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -8741,7 +7697,6 @@
       "PassMark Dünya Sıralaması": "#337"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -8768,7 +7723,6 @@
       "PassMark Dünya Sıralaması": "#550"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8794,7 +7748,6 @@
       "PassMark Dünya Sıralaması": "#437"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8821,7 +7774,6 @@
       "PassMark Dünya Sıralaması": "#370"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -8848,7 +7800,6 @@
       "PassMark Dünya Sıralaması": "#727"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8874,7 +7825,6 @@
       "PassMark Dünya Sıralaması": "#450"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8902,7 +7852,6 @@
       "PassMark Dünya Sıralaması": "#885"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -8929,7 +7878,6 @@
       "PassMark Dünya Sıralaması": "#629"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8955,7 +7903,6 @@
       "PassMark Dünya Sıralaması": "#1022"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -8981,7 +7928,6 @@
       "PassMark Dünya Sıralaması": "#1475"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9009,7 +7955,6 @@
       "PassMark Dünya Sıralaması": "#1371"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9039,9 +7984,7 @@
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i7-14700",
     "images": [
-      "https://staticg.sportskeeda.com/editor/2024/01/56f13-17052559829935-1920.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3442-package.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3442-back.jpg"
+      "https://staticg.sportskeeda.com/editor/2024/01/56f13-17052559829935-1920.jpg"
     ],
     "release_date": "Jan 2024",
     "extra_specs": {
@@ -9076,16 +8019,11 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
     "core_topology": "6P + 8E (14 Çekirdek / 20 İzlek)",
     "power_limits": "65W PBP / 154W MTP",
     "igpu_model": "Intel UHD Graphics 770 (32 EU)",
     "model": "Core i5-14500",
-    "images": [
-      "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3448-front.jpg",
-      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-luyhp6uyrsbp97"
-    ],
+    "images": [],
     "release_date": "Jan 2024",
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raptor Lake-R",
@@ -9119,15 +8057,13 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i5-14400F",
     "images": [
-      "https://m.media-amazon.com/images/I/61IgclF1FEL.jpg",
-      "https://hoanglongcomputer.vn/media/lib/21-03-2024/intel-core-i5-3.jpg",
-      "https://a.allegroimg.com/original/11fcca/14e764254a6b81623b700b4158f5/PROCESOR-Intel-Core-i5-14400F-10-RDZENI-16-WATKOW-LGA1700-OEM"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/03/intel-core-i5-14400f-tray-4-7ghz-20mb-onbellek-10-cekirdek-1700-islemci.jpg",
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400f.webp"
     ],
     "release_date": "Jan 2024",
     "extra_specs": {
@@ -9143,7 +8079,8 @@
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/03/intel-core-i5-14400f-tray-4-7ghz-20mb-onbellek-10-cekirdek-1700-islemci.jpg"
   },
   {
     "name": "INTEL Core i5-14400",
@@ -9162,14 +8099,14 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.club386.com/wp-content/uploads/2024/03/intel-core-i5-14400F-product-image-1200x675.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/intel-core-i5-14400-tray-4-7ghz-10-cekirdek-20mb-onbellek-lga1700-10nm-islemci-fc1.jpg",
     "core_topology": "6P + 4E (10 Çekirdek / 16 İzlek)",
     "power_limits": "65W PBP / 148W MTP",
     "igpu_model": "Intel UHD Graphics 730 (24 EU)",
     "model": "Core i5-14400",
     "images": [
-      "https://www.club386.com/wp-content/uploads/2024/03/intel-core-i5-14400F-product-image-1200x675.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3449-front.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/intel-core-i5-14400-tray-4-7ghz-10-cekirdek-20mb-onbellek-lga1700-10nm-islemci-fc1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/intel-core-i5-14400-tray-4-7ghz-10-cekirdek-20mb-onbellek-lga1700-10nm-islemci-fc2.jpg",
       "https://cdn.bodanius.com/media/1/0ec206978_intel-core-i5-14400-10-core-2.5ghz-4.7ghz_x.jpg"
     ],
     "release_date": "Jan 2024",
@@ -9205,15 +8142,13 @@
     "pcie_version": "PCIe 5.0 (16 Hat) + PCIe 4.0 (4 Hat)",
     "max_memory_speed": "DDR5-4800 / DDR4-3200 MT/s Çift Kanal",
     "unlocked_multiplier": false,
-    "imageUrl": "https://i5.walmartimages.com/seo/Intel-Core-i3-14100F-Core-i3-14th-Gen-Raptor-Lake-4-Core-4P-0E-LGA-1700-58W-None-Integrated-Graphics-Processor-BX8071514100F_8333b7b0-5fc9-46de-85d2-a4f670d0f522.f093e11ab48f3cc61122770c5fc1e101.jpeg",
+    "imageUrl": "https://www.hwcooling.net/wp-content/uploads/2024/02/intel-core-i3-14100f-01.jpg",
     "core_topology": "4P Çekirdek (4 Çekirdek / 8 İzlek)",
     "power_limits": "58W PBP / 110W MTP",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Core i3-14100F",
     "images": [
-      "https://i5.walmartimages.com/seo/Intel-Core-i3-14100F-Core-i3-14th-Gen-Raptor-Lake-4-Core-4P-0E-LGA-1700-58W-None-Integrated-Graphics-Processor-BX8071514100F_8333b7b0-5fc9-46de-85d2-a4f670d0f522.f093e11ab48f3cc61122770c5fc1e101.jpeg",
-      "https://www.hwcooling.net/wp-content/uploads/2024/02/intel-core-i3-14100f-01.jpg",
-      "https://itmag.kz/upload/iblock/40/14/product_image_91014_1248293.jpg"
+      "https://www.hwcooling.net/wp-content/uploads/2024/02/intel-core-i3-14100f-01.jpg"
     ],
     "release_date": "Jan 2024",
     "extra_specs": {
@@ -9249,7 +8184,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -9271,16 +8205,11 @@
     "pcie_version": "PCIe 4.0 (20 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6400+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Monolitik APU)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon 780M (12 CU RDNA 3, 2.9 GHz)",
     "model": "Ryzen 7 8700G",
-    "images": [
-      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
-      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-8700g.jpg",
-      "https://www.adrenaline.com.br/wp-content/uploads/2024/01/amd-ryzen-7-8700g-review-adrenaline-02-1200x900.jpg"
-    ],
+    "images": [],
     "release_date": "Jan 2024",
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Phoenix",
@@ -9311,12 +8240,13 @@
     "pcie_version": "PCIe 4.0 (24 Hat)",
     "max_memory_speed": "DDR4-3200 MT/s Çift Kanal • XMP 3600+",
     "unlocked_multiplier": false,
-    "imageUrl": "https://www.club386.com/wp-content/uploads/2024/09/amd-ryzen-7-7700x3d-product-photo.jpg",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/03/amd-ryzen-7-5700x3d-tray-4-1ghz-96-mb-onbellek-8-cekirdek-am4-7nm-islemci.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Zen 3)",
     "power_limits": "105W TDP / 142W PPT",
     "igpu_model": "Yok (Harici GPU Gerekir)",
     "model": "Ryzen 7 5700X3D",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/03/amd-ryzen-7-5700x3d-tray-4-1ghz-96-mb-onbellek-8-cekirdek-am4-7nm-islemci.jpg",
       "https://www.club386.com/wp-content/uploads/2024/09/amd-ryzen-7-7700x3d-product-photo.jpg",
       "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/amd-ryzen-7-5700x3d-mockup.jpg",
       "https://cdn.mos.cms.futurecdn.net/9WKMCNYDHRUSMttqUSudUV.jpg"
@@ -9398,8 +8328,7 @@
     "model": "Ryzen 5 8500G",
     "images": [
       "https://m.media-amazon.com/images/I/61x2NkFzm9L._AC_.jpg",
-      "https://m.media-amazon.com/images/I/61RDXIvWNML._AC_.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3436-installed.jpg"
+      "https://m.media-amazon.com/images/I/61RDXIvWNML._AC_.jpg"
     ],
     "release_date": "Jan 2024",
     "extra_specs": {
@@ -9434,7 +8363,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -9460,7 +8388,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
@@ -9484,7 +8411,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -9509,7 +8435,6 @@
       "PassMark Dünya Sıralaması": "#946"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9537,7 +8462,6 @@
       "PassMark Dünya Sıralaması": "#351"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9566,7 +8490,6 @@
       "PassMark Dünya Sıralaması": "#185"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9593,7 +8516,6 @@
       "PassMark Dünya Sıralaması": "#366"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9619,7 +8541,6 @@
       "PassMark Dünya Sıralaması": "#717"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9645,7 +8566,6 @@
       "PassMark Dünya Sıralaması": "#701"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9672,7 +8592,6 @@
       "PassMark Dünya Sıralaması": "#300"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9699,7 +8618,6 @@
       "PassMark Dünya Sıralaması": "#383"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9727,7 +8645,6 @@
       "PassMark Dünya Sıralaması": "#336"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9754,7 +8671,6 @@
       "PassMark Dünya Sıralaması": "#937"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9781,7 +8697,6 @@
       "PassMark Dünya Sıralaması": "#695"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9808,7 +8723,6 @@
       "PassMark Dünya Sıralaması": "#528"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9834,7 +8748,6 @@
       "PassMark Dünya Sıralaması": "#750"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9861,7 +8774,6 @@
       "PassMark Dünya Sıralaması": "#419"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9888,7 +8800,6 @@
       "PassMark Dünya Sıralaması": "#507"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9916,7 +8827,6 @@
       "PassMark Dünya Sıralaması": "#447"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -9943,7 +8853,6 @@
       "PassMark Dünya Sıralaması": "#675"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9969,7 +8878,6 @@
       "PassMark Dünya Sıralaması": "#681"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -9995,7 +8903,6 @@
       "PassMark Dünya Sıralaması": "#872"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10023,7 +8930,6 @@
       "PassMark Dünya Sıralaması": "#542"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10050,7 +8956,6 @@
       "PassMark Dünya Sıralaması": "#992"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10078,7 +8983,6 @@
       "PassMark Dünya Sıralaması": "#905"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10105,7 +9009,6 @@
       "PassMark Dünya Sıralaması": "#687"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10131,7 +9034,6 @@
       "PassMark Dünya Sıralaması": "#989"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10157,7 +9059,6 @@
       "PassMark Dünya Sıralaması": "#712"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10185,7 +9086,6 @@
       "PassMark Dünya Sıralaması": "#555"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10212,7 +9112,6 @@
       "PassMark Dünya Sıralaması": "#1046"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10238,7 +9137,6 @@
       "PassMark Dünya Sıralaması": "#700"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10266,7 +9164,6 @@
       "PassMark Dünya Sıralaması": "#838"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10293,7 +9190,6 @@
       "PassMark Dünya Sıralaması": "#1591"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10321,7 +9217,6 @@
       "PassMark Dünya Sıralaması": "#1552"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10349,7 +9244,6 @@
       "PassMark Dünya Sıralaması": "#1403"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10376,7 +9270,6 @@
       "PassMark Dünya Sıralaması": "#1469"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -10404,7 +9297,6 @@
       "PassMark Dünya Sıralaması": "#1439"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -10455,29 +9347,6 @@
     "spec_verified_at": "2026-11-16"
   },
   {
-    "name": "AMD Ryzen Embedded V2A46",
-    "core_count": 6,
-    "threads": 12,
-    "core_clock": 3.2,
-    "microarchitecture": "Renoir",
-    "tdp": 35,
-    "socket": "FP6",
-    "l3_cache": 8,
-    "process_node": "7 nm",
-    "release_date": "Jan 2023",
-    "images": [],
-    "extra_specs": {
-      "Silikon Kod Adı (Codename)": "Renoir",
-      "Çıkış Tarihi (Release)": "Jan 2023",
-      "Üretim Teknolojisi (Litografi)": "7 nm"
-    },
-    "source_provenance": [
-      "HardwareWizard Katalog",
-      "TechPowerUp DB"
-    ],
-    "spec_verified_at": "2026-11-16"
-  },
-  {
     "name": "AMD Ryzen 9 7950X3D",
     "price": 32400.0,
     "socket": "AM5",
@@ -10494,16 +9363,11 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
     "core_topology": "16 Çekirdek / 32 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7950X3D",
-    "images": [
-      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
-      "https://c8.alamy.com/comp/2RN1DRC/amd-ryzen-9-7950x3d-processor-close-up-studio-shot-2RN1DRC.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3024-back.jpg"
-    ],
+    "images": [],
     "release_date": "Jan 2023",
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raphael",
@@ -10535,7 +9399,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10558,7 +9421,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10581,7 +9443,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10603,16 +9464,11 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
     "core_topology": "12 Çekirdek / 24 İzlek (3D V-Cache + Frekans CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 9 7900X3D",
-    "images": [
-      "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-9-7900x3d.jpg",
-      "https://pics.computerbase.de/1/0/6/9/3/6-ec1bc4fec008442b/article-1280x720.167a15ee.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/3023-front.jpg"
-    ],
+    "images": [],
     "release_date": "Jan 2023",
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raphael",
@@ -10634,7 +9490,10 @@
     "microarchitecture": "Zen 4",
     "tdp": 65,
     "graphics": "Radeon",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900-tray-5-4ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci.jpeg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900-tray-5-4ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci-1.jpeg"
+    ],
     "socket": "AM5",
     "threads": 24,
     "l3_cache": 64,
@@ -10646,11 +9505,11 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/10/amd-ryzen-9-7900-tray-5-4ghz-12-cekirdek-64mb-onbellek-soket-am5-islemci.jpeg"
   },
   {
     "name": "AMD Ryzen 9 7845HX",
@@ -10670,7 +9529,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10693,7 +9551,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10716,7 +9573,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10739,7 +9595,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10761,15 +9616,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.avadirect.com/Pictures/Big/15800212_1.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/01/amd-ryzen-7-7800x3d-5-0ghz-8-cekirdek-96mb-onbellek-soket-am5-islemci.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (3D V-Cache Tek CCD)",
     "power_limits": "120W TDP / 162W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7800X3D",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/amd-ryzen-7-7800x3d-5-0ghz-8-cekirdek-96mb-onbellek-soket-am5-islemci.jpg",
       "https://www.avadirect.com/Pictures/Big/15800212_1.png",
-      "https://www.pcstudio.in/wp-content/uploads/2023/01/Amd-Ryzen-7-7800X3D-Gaming-Processor-1.jpg",
-      "https://www.igorslab.de/wp-content/uploads/2023/03/CPU-Front-and-Back-2048x1002.jpg"
+      "https://www.pcstudio.in/wp-content/uploads/2023/01/Amd-Ryzen-7-7800X3D-Gaming-Processor-1.jpg"
     ],
     "release_date": "Jan 2023",
     "extra_specs": {
@@ -10802,7 +9657,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10825,7 +9679,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10848,7 +9701,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10871,7 +9723,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10893,16 +9744,11 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
     "core_topology": "8 Çekirdek / 16 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 7 7700",
-    "images": [
-      "https://m.media-amazon.com/images/I/61nRX0W6fhL._AC_.jpg",
-      "https://cdn.mos.cms.futurecdn.net/fY7kXQoDXUVjodncaB6bj7-1920-80.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2960-front.jpg"
-    ],
+    "images": [],
     "release_date": "Jan 2023",
     "extra_specs": {
       "Silikon Kod Adı (Codename)": "Raphael",
@@ -10934,7 +9780,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10957,7 +9802,6 @@
       "Üretim Teknolojisi (Litografi)": "5 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -10980,7 +9824,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11003,7 +9846,6 @@
       "Üretim Teknolojisi (Litografi)": "4 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11025,15 +9867,15 @@
     "pcie_version": "PCIe 5.0 (28 Hat)",
     "max_memory_speed": "DDR5-5200 MT/s Çift Kanal • EXPO 6000+",
     "unlocked_multiplier": true,
-    "imageUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/AMD/Ryzen_5_7600/ryzen_5_7600.png",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/01/amd-ryzen-5-7600-3-80ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci.jpg",
     "core_topology": "6 Çekirdek / 12 İzlek (Zen 4)",
     "power_limits": "65W TDP / 88W PPT",
     "igpu_model": "AMD Radeon Graphics (2 CU RDNA 2, 2.2 GHz)",
     "model": "Ryzen 5 7600",
     "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/amd-ryzen-5-7600-3-80ghz-6-cekirdek-38mb-onbellek-soket-am5-islemci.jpg",
       "https://www.notebookcheck.net/fileadmin/Notebooks/AMD/Ryzen_5_7600/ryzen_5_7600.png",
-      "https://www.hwcooling.net/wp-content/uploads/2023/01/amd-ryzen-5-7600-01.jpg",
-      "https://tpucdn.com/cpu-specs/images/chips/2959-back.jpg"
+      "https://www.hwcooling.net/wp-content/uploads/2023/01/amd-ryzen-5-7600-01.jpg"
     ],
     "release_date": "Jan 2023",
     "extra_specs": {
@@ -11066,7 +9908,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11089,7 +9930,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11112,7 +9952,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11135,7 +9974,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11158,7 +9996,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11181,7 +10018,6 @@
       "Üretim Teknolojisi (Litografi)": "6 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11204,7 +10040,6 @@
       "Üretim Teknolojisi (Litografi)": "7 nm"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
@@ -11229,7 +10064,6 @@
       "PassMark Dünya Sıralaması": "#1014"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11255,7 +10089,6 @@
       "PassMark Dünya Sıralaması": "#635"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11281,7 +10114,6 @@
       "PassMark Dünya Sıralaması": "#785"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11307,7 +10139,6 @@
       "PassMark Dünya Sıralaması": "#724"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11334,7 +10165,6 @@
       "PassMark Dünya Sıralaması": "#451"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11361,7 +10191,6 @@
       "PassMark Dünya Sıralaması": "#674"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11389,7 +10218,6 @@
       "PassMark Dünya Sıralaması": "#488"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11416,7 +10244,6 @@
       "PassMark Dünya Sıralaması": "#1145"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11442,7 +10269,6 @@
       "PassMark Dünya Sıralaması": "#980"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11468,7 +10294,6 @@
       "PassMark Dünya Sıralaması": "#787"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11495,7 +10320,6 @@
       "PassMark Dünya Sıralaması": "#576"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11522,7 +10346,6 @@
       "PassMark Dünya Sıralaması": "#668"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11550,7 +10373,6 @@
       "PassMark Dünya Sıralaması": "#589"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11577,7 +10399,6 @@
       "PassMark Dünya Sıralaması": "#1232"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11603,7 +10424,6 @@
       "PassMark Dünya Sıralaması": "#1036"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11629,7 +10449,6 @@
       "PassMark Dünya Sıralaması": "#1025"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11657,7 +10476,6 @@
       "PassMark Dünya Sıralaması": "#971"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11684,7 +10502,6 @@
       "PassMark Dünya Sıralaması": "#1343"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11710,7 +10527,6 @@
       "PassMark Dünya Sıralaması": "#1296"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11736,7 +10552,6 @@
       "PassMark Dünya Sıralaması": "#1043"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11762,7 +10577,6 @@
       "PassMark Dünya Sıralaması": "#1078"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11790,7 +10604,6 @@
       "PassMark Dünya Sıralaması": "#1070"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11817,7 +10630,6 @@
       "PassMark Dünya Sıralaması": "#1339"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
     ],
@@ -11872,7 +10684,6 @@
       "PassMark Dünya Sıralaması": "#1125"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "pc-part-dataset",
       "TechPowerUp DB",
       "PassMark"
@@ -11899,9 +10710,820 @@
       "PassMark Dünya Sıralaması": "#1754"
     },
     "source_provenance": [
-      "HardwareWizard Katalog",
       "TechPowerUp DB",
       "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-12100T",
+    "core_count": 4,
+    "core_clock": 2.2,
+    "boost_clock": 4.1,
+    "microarchitecture": "Alder Lake",
+    "tdp": 35,
+    "graphics": "Intel UHD Graphics 730",
+    "images": [],
+    "socket": "1700",
+    "threads": 8,
+    "l3_cache": 12,
+    "process_node": "10 nm",
+    "release_date": "Jan 2022",
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Alder Lake-S",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "10 nm",
+      "PassMark CPU Mark": "12.411",
+      "PassMark Dünya Sıralaması": "#1572"
+    },
+    "source_provenance": [
+      "pc-part-dataset",
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-12100F",
+    "core_count": 4,
+    "core_clock": 3.3,
+    "boost_clock": 4.3,
+    "microarchitecture": "Alder Lake",
+    "tdp": 58,
+    "images": [],
+    "socket": "1700",
+    "threads": 8,
+    "l3_cache": 12,
+    "process_node": "10 nm",
+    "release_date": "Jan 2022",
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Alder Lake-S",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "10 nm",
+      "PassMark CPU Mark": "13.949",
+      "PassMark Dünya Sıralaması": "#1453"
+    },
+    "source_provenance": [
+      "pc-part-dataset",
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-12100E",
+    "core_count": 4,
+    "threads": 8,
+    "core_clock": 4.2,
+    "microarchitecture": "Alder Lake-S",
+    "tdp": 60,
+    "socket": "1700",
+    "l3_cache": 12,
+    "process_node": "10 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Alder Lake-S",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "10 nm",
+      "PassMark CPU Mark": "13.621",
+      "PassMark Dünya Sıralaması": "#1480"
+    },
+    "source_provenance": [
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Intel Core i3-12100",
+    "core_count": 4,
+    "core_clock": 3.3,
+    "boost_clock": 4.3,
+    "microarchitecture": "Alder Lake",
+    "tdp": 60,
+    "graphics": "Intel UHD Graphics 730",
+    "images": [],
+    "socket": "1700",
+    "threads": 8,
+    "l3_cache": 12,
+    "process_node": "10 nm",
+    "release_date": "Jan 2022",
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Alder Lake-S",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "10 nm",
+      "PassMark CPU Mark": "12.540",
+      "PassMark Dünya Sıralaması": "#1563"
+    },
+    "source_provenance": [
+      "pc-part-dataset",
+      "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 6980HX",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 5.0,
+    "microarchitecture": "Rembrandt",
+    "tdp": 45,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 6980HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 5.0,
+    "microarchitecture": "Rembrandt",
+    "tdp": 45,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 6900HX",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.9,
+    "microarchitecture": "Rembrandt",
+    "tdp": 45,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 6900HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.9,
+    "microarchitecture": "Rembrandt",
+    "tdp": 35,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 6800U",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.7,
+    "microarchitecture": "Rembrandt",
+    "tdp": 15,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 6800HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.7,
+    "microarchitecture": "Rembrandt",
+    "tdp": 35,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 6800H",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.7,
+    "microarchitecture": "Rembrandt",
+    "tdp": 45,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5825U",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.5,
+    "microarchitecture": "Barcelo",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Barcelo",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 6600U",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.5,
+    "microarchitecture": "Rembrandt",
+    "tdp": 15,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 6600HS",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.5,
+    "microarchitecture": "Rembrandt",
+    "tdp": 35,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 6600H",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.5,
+    "microarchitecture": "Rembrandt",
+    "tdp": 45,
+    "socket": "FP7",
+    "l3_cache": 16,
+    "process_node": "6 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Rembrandt",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "6 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 5625U",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.3,
+    "microarchitecture": "Barcelo",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Barcelo",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 3 5425U",
+    "core_count": 4,
+    "threads": 8,
+    "core_clock": 4.1,
+    "microarchitecture": "Barcelo",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2022",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Barcelo",
+      "Çıkış Tarihi (Release)": "Jan 2022",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 5980HX",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.8,
+    "microarchitecture": "Cezanne",
+    "tdp": 45,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 5980HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.8,
+    "microarchitecture": "Cezanne",
+    "tdp": 35,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 5900HX",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.6,
+    "microarchitecture": "Cezanne",
+    "tdp": 45,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 5900HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.6,
+    "microarchitecture": "Cezanne",
+    "tdp": 35,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 9 5900",
+    "core_count": 12,
+    "threads": 24,
+    "core_clock": 4.7,
+    "microarchitecture": "Vermeer",
+    "tdp": 65,
+    "socket": "AM4",
+    "l3_cache": 64,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Vermeer",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5800U",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.4,
+    "microarchitecture": "Cezanne-U",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne-U",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5800HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.4,
+    "microarchitecture": "Cezanne",
+    "tdp": 35,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5800H",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.4,
+    "microarchitecture": "Cezanne",
+    "tdp": 45,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5800",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.6,
+    "microarchitecture": "Vermeer",
+    "tdp": 65,
+    "socket": "AM4",
+    "l3_cache": 32,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Vermeer",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 5700U",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.3,
+    "microarchitecture": "Lucienne",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Lucienne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 5600U",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.2,
+    "microarchitecture": "Cezanne-U",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne-U",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 5600HS",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.2,
+    "microarchitecture": "Cezanne",
+    "tdp": 35,
+    "socket": "FP6",
+    "l3_cache": 16,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 5560U",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.0,
+    "microarchitecture": "Cezanne-U",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne-U",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 5 5500U",
+    "core_count": 6,
+    "threads": 12,
+    "core_clock": 4.0,
+    "microarchitecture": "Lucienne",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Lucienne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 3 5400U",
+    "core_count": 4,
+    "threads": 8,
+    "core_clock": 4.0,
+    "microarchitecture": "Cezanne-U",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Cezanne-U",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 3 5300U",
+    "core_count": 4,
+    "threads": 8,
+    "core_clock": 3.8,
+    "microarchitecture": "Lucienne",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 4,
+    "process_node": "7 nm",
+    "release_date": "Jan 2021",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Lucienne",
+      "Çıkış Tarihi (Release)": "Jan 2021",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 4800U",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.2,
+    "microarchitecture": "Renoir",
+    "tdp": 15,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2020",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Renoir",
+      "Çıkış Tarihi (Release)": "Jan 2020",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 4800HS",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.2,
+    "microarchitecture": "Renoir",
+    "tdp": 45,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2020",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Renoir",
+      "Çıkış Tarihi (Release)": "Jan 2020",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "AMD Ryzen 7 4800H",
+    "core_count": 8,
+    "threads": 16,
+    "core_clock": 4.2,
+    "microarchitecture": "Renoir",
+    "tdp": 45,
+    "socket": "FP6",
+    "l3_cache": 8,
+    "process_node": "7 nm",
+    "release_date": "Jan 2020",
+    "images": [],
+    "extra_specs": {
+      "Silikon Kod Adı (Codename)": "Renoir",
+      "Çıkış Tarihi (Release)": "Jan 2020",
+      "Üretim Teknolojisi (Litografi)": "7 nm"
+    },
+    "source_provenance": [
+      "TechPowerUp DB"
     ],
     "spec_verified_at": "2026-11-16"
   }

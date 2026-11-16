@@ -10357,6 +10357,27 @@
       },
       "gaming_relative_index": 0.59,
       "score": 59
+    },
+    "cpu_intel_core_i3_10105": {
+      "synthetic": {
+        "passmark_cpu_mark": 8281
+      },
+      "gaming_relative_index": 0.25,
+      "score": 25
+    },
+    "cpu_intel_core_i3_10105f": {
+      "synthetic": {
+        "passmark_cpu_mark": 8860
+      },
+      "gaming_relative_index": 0.25,
+      "score": 25
+    },
+    "cpu_intel_core_i3_10105t": {
+      "synthetic": {
+        "passmark_cpu_mark": 7810
+      },
+      "gaming_relative_index": 0.25,
+      "score": 25
     }
   },
   "gpus": {
@@ -270997,7 +271018,8 @@
       "synthetic": {
         "time_spy_graphics": 13400,
         "time_spy_extreme": 6100,
-        "steel_nomad": 3200
+        "steel_nomad": 3200,
+        "passmark_g3d_mark": 16105
       },
       "games": {
         "counter_strike_2": {
@@ -279105,7 +279127,8 @@
       "synthetic": {
         "time_spy_graphics": 11900,
         "time_spy_extreme": 5400,
-        "steel_nomad": 2850
+        "steel_nomad": 2850,
+        "passmark_g3d_mark": 14214
       },
       "games": {
         "counter_strike_2": {

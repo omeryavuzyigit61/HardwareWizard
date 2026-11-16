@@ -16,6 +16,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from scripts.crawlers.http_client import PoliteHttpClient
+from scripts.crawlers.sources_images import crawl_gaming_gen_store, crawl_gsmarena_galleries
 from scripts.crawlers.sources_mobile_laptop import crawl_mobile_and_laptop
 from scripts.crawlers.sources_network_ups import crawl_networking_and_ups
 from scripts.crawlers.sources_pc import crawl_pc_components
@@ -26,7 +27,7 @@ from scripts.crawlers.state_manager import CrawlStateManager
 def main() -> int:
     parser = argparse.ArgumentParser(description="HardwareWizard Multi-Source Checkpointed Crawler")
     parser.add_argument("--mode", choices=("full", "delta"), default="delta", help="Full checkpointed crawl or delta refresh")
-    parser.add_argument("--groups", default="pc,peripherals,mobile,network", help="Comma-separated groups to run")
+    parser.add_argument("--groups", default="pc,peripherals,mobile,network,images", help="Comma-separated groups to run")
     parser.add_argument("--gsmarena-limit", type=int, default=15, help="Max GSMArena device pages per run (10s delay each)")
     parser.add_argument("--shopify-pages", type=int, default=3, help="Max Shopify pages per brand")
     parser.add_argument("--nut-vendors", type=int, default=6, help="Max NUT UPS DDL vendors")
@@ -52,6 +53,10 @@ def main() -> int:
     if "mobile" in groups:
         res = crawl_mobile_and_laptop(http, state, max_gsmarena_devices=args.gsmarena_limit, delta_only=delta_only)
         print(f"[MOBILE & LAPTOP] {res}")
+    if "images" in groups:
+        gg_cnt = crawl_gaming_gen_store(http, state, max_pages_per_cat=3, delta_only=delta_only)
+        gsm_cnt = crawl_gsmarena_galleries(http, state, delta_only=delta_only)
+        print(f"[IMAGES] GamingGen={gg_cnt}, GSMArenaGallery={gsm_cnt}")
 
     print("\n=== Crawl State Summary (category | source | count) ===")
     for cat, src, cnt in state.summary_counts():

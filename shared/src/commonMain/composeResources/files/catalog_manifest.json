@@ -3,14 +3,14 @@
   "verifiedAt": "2026-11-16",
   "counts": {
     "cpu": 450,
-    "gpu": 1669,
-    "storage": 402,
+    "gpu": 1302,
+    "storage": 546,
     "psu": 227,
     "motherboard": 645,
     "ram": 664,
     "cooler": 144,
     "case": 154,
-    "peripherals": 2764,
+    "peripherals": 2844,
     "smartphone": 247,
     "tablet": 39,
     "laptop": 486

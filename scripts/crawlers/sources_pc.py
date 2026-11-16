@@ -593,24 +593,26 @@ def _crawl_tpu_ajax_tables(
 def _parse_tpu_rows(cat: str, list_html: str, source_url: str) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", list_html, re.S):
-        tds = [_strip_tags(td) for td in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        raw_tds = re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)
+        tds = [_strip_tags(td) for td in raw_tds]
         if not tds:
             continue
         if cat == "CPU" and len(tds) >= 9:
             name, codename, cores_str, clock_str, socket_s, proc_s, l3_s, tdp_s, rel_s = tds[:9]
+            name_m = re.search(r"<a[^>]*>(.*?)</a>", raw_tds[0], re.S)
+            if name_m:
+                name = _strip_tags(name_m.group(1)) or name
             if not name:
                 continue
             brand = "AMD" if "amd" in source_url.lower() or any(k in name.lower() for k in ("ryzen", "epyc", "threadripper", "athlon")) else "Intel"
             full_name = name if name.lower().startswith(brand.lower()) else f"{brand} {name}"
             if "BGA" in socket_s.upper() and "Core Ultra" not in name:
-                # Focus desktop & flagship mobile CPUs rather than embedded Atom parts
                 if "Atom" in name or "Processor U" in name:
                     continue
             cores_m = re.match(r"(\d+)(?:\s*/\s*(\d+))?", cores_str)
             c_cnt = int(cores_m.group(1)) if cores_m else None
             t_cnt = int(cores_m.group(2)) if cores_m and cores_m.group(2) else c_cnt
 
-            # Parse "3.9 to 5.4 GHz" or "3.5 GHz"
             clks = [float(x) for x in re.findall(r"(\d+(?:\.\d+)?)\s*GHz", clock_str, re.I)]
             if not clks:
                 clks = [round(float(x) / 1000.0, 2) for x in re.findall(r"(\d+(?:\.\d+)?)\s*MHz", clock_str, re.I)]
@@ -653,20 +655,43 @@ def _parse_tpu_rows(cat: str, list_html: str, source_url: str) -> list[dict[str,
             )
 
         elif cat == "GPU" and len(tds) >= 6:
-            col0, bus_s, mem_s, gclk_s, mclk_s, cfg_s = tds[:6]
-            m_split = re.match(
-                r"^(.*?)\s+((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{4}|\d{4})\s*(.*)$",
-                col0,
-            )
-            if m_split:
-                chip_name = m_split.group(1).strip()
-                rel_s = m_split.group(2).strip()
-                gpu_die = m_split.group(3).strip()
-            else:
-                parts0 = [x.strip() for x in re.split(r"\s{2,}", col0) if x.strip()]
-                chip_name = parts0[0] if parts0 else col0
-                rel_s = parts0[1] if len(parts0) > 1 else ""
-                gpu_die = parts0[2] if len(parts0) > 2 else ""
+            raw_col0 = raw_tds[0]
+            _, bus_s, mem_s, gclk_s, mclk_s, cfg_s = tds[:6]
+
+            # Extract structured elements from TPU td[0]
+            nm_m = re.search(r'class="item-name"[^>]*>(.*?)</div>', raw_col0, re.S)
+            rel_m = re.search(r'class="item-released"[^>]*>(.*?)</div>', raw_col0, re.S)
+            chip_m = re.search(r'class="item-chip"[^>]*>(.*?)</div>', raw_col0, re.S)
+            img_m = re.search(r'<img[^>]+src=["\']?(https://tpucdn\.com/[^"\'\s>]+)', raw_col0, re.I)
+
+            chip_name = _strip_tags(nm_m.group(1)) if nm_m else ""
+            if not chip_name:
+                a_m = re.search(r'<a[^>]*>(.*?)</a>', raw_col0, re.S)
+                chip_name = _strip_tags(a_m.group(1)) if a_m else tds[0]
+            chip_name = re.sub(
+                r"\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+.*$",
+                "",
+                chip_name,
+                flags=re.I,
+            ).strip()
+            rel_s = _strip_tags(rel_m.group(1)) if rel_m else ""
+            gpu_die = _strip_tags(chip_m.group(1)) if chip_m else ""
+
+            if not chip_name:
+                continue
+            cu_up = chip_name.upper()
+            # Keep desktop discrete GPUs; skip embedded/laptop iGPUs
+            if any(
+                skip in cu_up
+                for skip in (
+                    "MOBILE", "MAX-Q", "LAPTOP", "EMBEDDED", "GRAPHICS ",
+                    "RADEON 610M", "RADEON 660M", "RADEON 680M", "RADEON 740M",
+                    "RADEON 760M", "RADEON 780M", "RADEON 840M", "RADEON 860M",
+                    "RADEON 880M", "RADEON 890M", "RADEON 8050S", "RADEON 8060S",
+                    "QUADRO", "RTX A", "RTX PRO", "CMP ", "MINING",
+                )
+            ):
+                continue
 
             mem_m = re.search(r"(\d+)\s*GB\s*/\s*([A-Z0-9+]+)\s*/\s*(\d+)\s*bit", mem_s, re.I)
             sh_m = re.match(r"(\d+)\s*/\s*(\d+)\s*/\s*(\d+)", cfg_s)
@@ -681,13 +706,15 @@ def _parse_tpu_rows(cat: str, list_html: str, source_url: str) -> list[dict[str,
                 extra["PCIe Veri Yolu Arayüzü"] = bus_s
             if sh_m:
                 extra["Shaders / TMUs / ROPs"] = f"{sh_m.group(1)} / {sh_m.group(2)} / {sh_m.group(3)}"
+            brand = "NVIDIA" if "nvidia" in source_url.lower() else ("AMD" if "amd" in source_url.lower() else "Intel")
+            display_name = chip_name if chip_name.lower().startswith(brand.lower()) else f"{brand} {chip_name}"
             rows.append(
                 {
                     "category": "GPU",
                     "source_name": "TechPowerUp Ajax",
-                    "canonical_key": normalize_for_brand_match(chip_name),
-                    "display_name": chip_name,
-                    "brand": "NVIDIA" if "nvidia" in source_url.lower() else ("AMD" if "amd" in source_url.lower() else "Intel"),
+                    "canonical_key": normalize_for_brand_match(display_name),
+                    "display_name": display_name,
+                    "brand": brand,
                     "payload": {
                         "chipset": chip_name,
                         "memory": int(mem_m.group(1)) if mem_m else None,
@@ -702,16 +729,25 @@ def _parse_tpu_rows(cat: str, list_html: str, source_url: str) -> list[dict[str,
                         "release_date": rel_s or None,
                     },
                     "extra_specs": extra,
-                    "images": [],
+                    "images": [img_m.group(1)] if img_m else [],
                     "source_url": source_url,
                 }
             )
 
         elif cat == "SSD" and len(tds) >= 7:
-            col0, nand_s, fmt_s, iface_s, rel_s, ctrl_s, dram_s = tds[:7]
-            model_name = re.split(r"\s{3,}", col0)[0].strip()
+            raw_col0 = raw_tds[0]
+            _, nand_s, fmt_s, iface_s, rel_s, ctrl_s, dram_s = tds[:7]
+            nm_m = re.search(r'class="drive-name"[^>]*>(.*?)</a>', raw_col0, re.S)
+            model_name = _strip_tags(nm_m.group(1)) if nm_m else re.split(r"\s{3,}", tds[0])[0].strip()
+            img_m = re.search(r'<img[^>]+src=["\']?(https://tpucdn\.com/[^"\'\s>]+)', raw_col0, re.I)
             if not model_name:
                 continue
+            caps = [_strip_tags(c) for c in re.findall(r'class="drive-capacity"[^>]*>(.*?)</a>', raw_col0, re.S)]
+            imgs: list[str] = []
+            if img_m:
+                small_u = img_m.group(1)
+                full_u = small_u.replace(".small.jpg", ".jpg")
+                imgs = [full_u, small_u] if full_u != small_u else [small_u]
             rows.append(
                 {
                     "category": "STORAGE",
@@ -728,9 +764,9 @@ def _parse_tpu_rows(cat: str, list_html: str, source_url: str) -> list[dict[str,
                     },
                     "extra_specs": {
                         "Çıkış Tarihi (Release)": rel_s,
-                        "Kapasite Varyantları": col0[len(model_name):].strip() or "-",
+                        "Kapasite Varyantları": ", ".join(caps) if caps else "-",
                     },
-                    "images": [],
+                    "images": imgs,
                     "source_url": source_url,
                 }
             )

@@ -839,7 +839,8 @@ object HardwareMapper {
         val isSku = isStockCode(extractedModel)
         val partNumber = if (isSku) extractedModel else null
 
-        // Marketing model name: prioritize chipset if model is SKU, or combine properly
+        // Marketing model name: prioritize chipset if model is SKU, or combine without repeating core GPU family
+        val chipCore = rawChipset?.replace(Regex("^(?:GeForce|Radeon|Intel Arc|Intel)\\s+", RegexOption.IGNORE_CASE), "")?.trim().orEmpty()
         val finalModel = when {
             isSku && rawChipset != null -> {
                 if (rawChipset.startsWith(brand, ignoreCase = true)) {
@@ -848,7 +849,10 @@ object HardwareMapper {
                     rawChipset
                 }
             }
-            rawChipset != null && !extractedModel.contains(rawChipset, ignoreCase = true) && !rawChipset.contains(extractedModel, ignoreCase = true) -> {
+            rawChipset != null &&
+                !extractedModel.contains(rawChipset, ignoreCase = true) &&
+                !rawChipset.contains(extractedModel, ignoreCase = true) &&
+                (chipCore.isBlank() || !extractedModel.contains(chipCore, ignoreCase = true)) -> {
                 "$rawChipset $extractedModel"
             }
             else -> extractedModel
@@ -1280,12 +1284,17 @@ object HardwareMapper {
         val id = requireNotNull(dto.id?.takeIf { it.isNotBlank() }) { "Laptop id must not be blank" }
         val name = dto.name ?: "Gaming Laptop"
         val brand = dto.brand ?: "Laptop"
+        val lapModel = if (name.length > brand.length + 2 && name.startsWith("$brand ", ignoreCase = true)) {
+            name.substring(brand.length).trim().ifBlank { name }
+        } else {
+            name
+        }
         val priceMinor = dto.price?.let { (it * 100).toLong() }
 
         val item = HardwareItemEntity(
             id = id,
             brand = brand,
-            model = name,
+            model = lapModel,
             category = HardwareCategory.LAPTOP,
             priceMinor = priceMinor,
             currencyCode = if (priceMinor != null) "TRY" else null,
@@ -1934,25 +1943,21 @@ object HardwareMapper {
         com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(url)
 
     fun resolveDefaultHardwareImage(category: HardwareCategory, model: String, brand: String): String? {
+        if (category != HardwareCategory.CPU) return null
         val upper = "${brand.uppercase()} ${model.uppercase()}"
-        return when (category) {
-            HardwareCategory.CPU -> when {
-                upper.contains("9800X3D") || upper.contains("9950X") || upper.contains("9900X") || upper.contains("9700X") || upper.contains("9600X") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
-                upper.contains("7800X3D") || upper.contains("7950X") || upper.contains("7900X") || upper.contains("7700X") || upper.contains("7600X") || upper.contains("7600") || upper.contains("7500F") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-                upper.contains("5800X3D") || upper.contains("5700X3D") || upper.contains("5950X") || upper.contains("5900X") || upper.contains("5800X") || upper.contains("5700X") || upper.contains("5600") || upper.contains("5500") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
-                upper.contains("ULTRA") || upper.contains("285K") || upper.contains("265K") || upper.contains("245K") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
-                upper.contains("14900") || upper.contains("14700") || upper.contains("14600") || upper.contains("14400") || upper.contains("14100") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
-                upper.contains("RYZEN") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-                upper.contains("INTEL") || upper.contains("CORE") ->
-                    "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
-                else -> null
-            }
+        return when {
+            upper.contains("9800X3D") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
+            upper.contains("7800X3D") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
+            upper.contains("5800X3D") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
+            upper.contains("285K") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
+            upper.contains("14700K") && !upper.contains("KF") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
+            upper.contains("14400") && !upper.contains("14400T") ->
+                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
             else -> null
         }
     }
@@ -2095,11 +2100,11 @@ object HardwareMapper {
         val u = name.uppercase()
         val s = socket.uppercase()
 
-        // 1. Explicit antique blacklists (Purge AMD A-series, FX, Phenom, Athlon II, Sempron, Opteron, Intel Pentium, Celeron, Core 2, Xeon)
+        // 1. Explicit antique & industrial embedded blacklists
         if (u.contains("A4-") || u.contains("A6-") || u.contains("A8-") || u.contains("A10-") || u.contains("A12-") ||
             u.contains("ATHLON II") || u.contains("PHENOM") || u.contains("SEMPRON") || u.contains("OPTERON") ||
             u.contains("FX-") || u.contains("PENTIUM") || u.contains("CELERON") || u.contains("CORE 2") ||
-            u.contains("XEON") || u.contains("CORE DUO") || u.contains("ATOM") ||
+            u.contains("XEON") || u.contains("CORE DUO") || u.contains("ATOM") || u.contains("EMBEDDED") ||
             s.contains("AM1") || s.contains("AM2") || s.contains("AM3") || s.contains("FM1") || s.contains("FM2") ||
             s.contains("775") || s.contains("1156") || s.contains("1155") || s.contains("1150") || s.contains("1151")) {
             return false

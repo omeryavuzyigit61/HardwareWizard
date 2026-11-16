@@ -29,7 +29,7 @@ CATALOG_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeReso
 
 ROOM_SCHEMA_VERSION = 36
 ROOM_IDENTITY_HASH = "67974b2b98fd0fd519c42be66d6f74f3"
-CATALOG_SEED_VERSION = "4.0.0"
+CATALOG_SEED_VERSION = "4.1.0"
 
 MIN_VALID_TRY_PRICE = 250.0
 MAX_VALID_TRY_PRICE = 2_500_000.0
@@ -159,7 +159,14 @@ def _sanitize_image_url(raw_url: Any) -> str | None:
     lower = trimmed.lower()
     if any(lower.startswith(s) for s in FORBIDDEN_SCHEMES):
         return None
-    if any(bad in lower for bad in (".svg", "svg%20", "<svg", "placeholder", "blank.gif", "no-image", "no_image", "roundnew", "logo_2020")):
+    if any(
+        bad in lower
+        for bad in (
+            ".svg", "svg%20", "<svg", "placeholder", "blank.gif", "no-image", "no_image",
+            "roundnew", "logo_2020", "/static/stores/", "/stores/amazon-", "iconic-features",
+            "static0.gamerantimages.com", "images.unsplash.com",
+        )
+    ):
         return None
     if lower.startswith("https://"):
         norm = trimmed
@@ -232,19 +239,17 @@ def _resolve_default_image(category: str, model: str, brand: str) -> str | None:
     if category != "CPU":
         return None
     upper = f"{brand.upper()} {model.upper()}"
-    if any(k in upper for k in ("9800X3D", "9950X", "9900X", "9700X", "9600X")):
+    if "9800X3D" in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
-    if any(k in upper for k in ("7800X3D", "7950X", "7900X", "7700X", "7600X", "7600", "7500F")):
+    if "7800X3D" in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-    if any(k in upper for k in ("5800X3D", "5700X3D", "5950X", "5900X", "5800X", "5700X", "5600", "5500")):
+    if "5800X3D" in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
-    if any(k in upper for k in ("ULTRA", "285K", "265K", "245K")):
+    if "285K" in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
-    if any(k in upper for k in ("14900", "14700", "14600", "14400", "14100")):
+    if "14700K" in upper and "KF" not in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
-    if "RYZEN" in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-    if "INTEL" in upper or "CORE" in upper:
+    if "14400" in upper and "14400T" not in upper:
         return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
     return None
 
@@ -278,7 +283,7 @@ def _deduce_cpu_socket(dto: dict[str, Any], raw_name: str) -> str:
 def _is_modern_cpu(name: str, socket: str) -> bool:
     u = name.upper()
     s = socket.upper()
-    if any(b in u for b in ("A4-", "A6-", "A8-", "A10-", "A12-", "ATHLON II", "PHENOM", "SEMPRON", "OPTERON", "FX-", "PENTIUM", "CELERON", "CORE 2", "XEON", "CORE DUO", "ATOM")):
+    if any(b in u for b in ("A4-", "A6-", "A8-", "A10-", "A12-", "ATHLON II", "PHENOM", "SEMPRON", "OPTERON", "FX-", "PENTIUM", "CELERON", "CORE 2", "XEON", "CORE DUO", "ATOM", "EMBEDDED")):
         return False
     if any(b in s for b in ("AM1", "AM2", "AM3", "FM1", "FM2", "775", "1156", "1155", "1150", "1151")):
         return False
@@ -648,9 +653,15 @@ def populate_all_catalogs(cursor: sqlite3.Cursor, legacy_images: dict[str, str])
                 brand = "Intel"
         is_sku = _is_stock_code(extracted_model)
         part_num = extracted_model if is_sku else None
+        chip_core = re.sub(r"^(?:GeForce|Radeon|Intel Arc|Intel)\s+", "", raw_chipset or "", flags=re.I).strip() if raw_chipset else ""
         if is_sku and raw_chipset:
             final_model = raw_chipset[len(brand):].strip() or raw_chipset if raw_chipset.lower().startswith(brand.lower()) else raw_chipset
-        elif raw_chipset and raw_chipset.lower() not in extracted_model.lower() and extracted_model.lower() not in raw_chipset.lower():
+        elif (
+            raw_chipset
+            and raw_chipset.lower() not in extracted_model.lower()
+            and extracted_model.lower() not in raw_chipset.lower()
+            and (not chip_core or chip_core.lower() not in extracted_model.lower())
+        ):
             final_model = f"{raw_chipset} {extracted_model}"
         else:
             final_model = extracted_model
@@ -1047,14 +1058,19 @@ def populate_all_catalogs(cursor: sqlite3.Cursor, legacy_images: dict[str, str])
         seen_lp.add(item_id)
         name = _clean_str(dto.get("name")) or "Gaming Laptop"
         brand = _clean_str(dto.get("brand")) or "Laptop"
+        lap_model = (
+            name[len(brand):].strip() or name
+            if len(name) > len(brand) + 2 and name.lower().startswith(brand.lower() + " ")
+            else name
+        )
         ptry = _as_float(dto.get("priceTry"))
         pminor = int(round(ptry * 100)) if ptry is not None else None
         enr = _serialize_item_enrichment(
-            item_id, "LAPTOP", brand, name, dto.get("imageUrl") or dto.get("image_url"),
+            item_id, "LAPTOP", brand, lap_model, dto.get("imageUrl") or dto.get("image_url"),
             dto.get("images"), ptry, ptry, ptry, None, None, prices_tr, benchmarks, legacy_images
         )
         _insert_hardware_item(
-            cursor, item_id, brand, name, "LAPTOP", pminor, "TRY" if pminor is not None else None,
+            cursor, item_id, brand, lap_model, "LAPTOP", pminor, "TRY" if pminor is not None else None,
             now_ms, enr, dto.get("extra_specs"), dto.get("source_provenance"), dto.get("spec_verified_at"),
             override_bgidx=_as_int(dto.get("gamingScore")),
         )
@@ -1424,17 +1440,6 @@ def populate_all_catalogs(cursor: sqlite3.Cursor, legacy_images: dict[str, str])
 def rebuild_prepopulated_db(output_db_path: str = TARGET_DB_PATH) -> None:
     os.makedirs(os.path.dirname(output_db_path), exist_ok=True)
     legacy_images: dict[str, str] = {}
-    if os.path.exists(output_db_path):
-        old_conn = sqlite3.connect(output_db_path)
-        try:
-            for item_id, img_url in old_conn.execute(
-                "SELECT id, image_url FROM hardware_items WHERE image_url IS NOT NULL AND image_url != ''"
-            ):
-                legacy_images[item_id] = img_url
-        except sqlite3.Error:
-            pass
-        finally:
-            old_conn.close()
 
     staging_path = output_db_path + ".tmp"
     if os.path.exists(staging_path):
