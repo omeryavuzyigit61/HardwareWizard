@@ -264,8 +264,28 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "usbSpeed": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot"
+    },
+    "extra_specs": {
+      "USB Bağlantı Standardı": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "Kablosuz Ağ (Wi-Fi)": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+      "Bluetooth Sürümü": "6.0, A2DP, LE",
+      "Sensörler & Biyometri": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+      "Fiziksel Ölçüler": "163.4 x 78 x 8.8 mm (6.43 x 3.07 x 0.35 in)",
+      "SIM / eSIM Desteği": "· Nano-SIM + eSIM + eSIM (max 2 at a time; International) · eSIM + eSIM (8 or more, max 2 at a time; USA) · Nano-SIM + Nano-SIM + eSIM + eSI",
+      "Ekran Özellikleri (Ham)": "969 nits max brightness (measured)",
+      "Notebookcheck Mobil İşlemci Sırası": "100 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "36 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "GSMArena",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-18-pro-256gb",
@@ -277,7 +297,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-194000/iPhone-18-Pro-Max.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2410000,
@@ -532,8 +553,32 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 172,
+      "usbSpeed": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot"
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "172 pts",
+      "Çıkış Tarihi": "2026-09-18",
+      "USB Bağlantı Standardı": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "Kablosuz Ağ (Wi-Fi)": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+      "Bluetooth Sürümü": "6.0, A2DP, LE",
+      "Sensörler & Biyometri": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+      "Fiziksel Ölçüler": "150 x 71.9 x 8.8 mm (5.91 x 2.83 x 0.35 in)",
+      "SIM / eSIM Desteği": "· Nano-SIM + eSIM + eSIM (max 2 at a time; International) · eSIM + eSIM (8 or more, max 2 at a time; USA) · Nano-SIM + Nano-SIM + eSIM + eSI",
+      "Ekran Özellikleri (Ham)": "971 nits max brightness (measured)",
+      "Notebookcheck Mobil İşlemci Sırası": "100 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "36 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "GSMArena",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-18-air-256gb",
@@ -801,7 +846,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-18-128gb",
@@ -1028,7 +1078,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-fold-512gb",
@@ -1255,7 +1310,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "100 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "36 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-17-pro-max-256gb",
@@ -1267,7 +1332,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/2025/09/iPhone-17-Pro-Max.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2150000,
@@ -1522,8 +1588,32 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 151,
+      "usbSpeed": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot"
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "Çıkış Tarihi": "2025-09-12",
+      "USB Bağlantı Standardı": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "Kablosuz Ağ (Wi-Fi)": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+      "Bluetooth Sürümü": "6.0, A2DP, LE",
+      "Sensörler & Biyometri": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+      "Fiziksel Ölçüler": "163.4 x 78 x 8.8 mm (6.43 x 3.07 x 0.35 in)",
+      "SIM / eSIM Desteği": "· Nano-SIM + eSIM + eSIM (max 2 at a time; International) · eSIM + eSIM (8 or more, max 2 at a time; USA) · Nano-SIM + Nano-SIM (China)",
+      "Ekran Özellikleri (Ham)": "1000 nits max brightness (measured)",
+      "Notebookcheck Mobil İşlemci Sırası": "218",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "GSMArena",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-17-pro-256gb",
@@ -1535,7 +1625,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/2025/09/iPhone-17-Pro-Max.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2120000,
@@ -1790,8 +1881,34 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 168,
+      "dxomarkSelfie": 154,
+      "usbSpeed": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot"
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "168 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "154 pts",
+      "Çıkış Tarihi": "2025-09-19",
+      "USB Bağlantı Standardı": "USB Type-C 3.2 Gen 2, DisplayPort",
+      "Kablosuz Ağ (Wi-Fi)": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+      "Bluetooth Sürümü": "6.0, A2DP, LE",
+      "Sensörler & Biyometri": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+      "Fiziksel Ölçüler": "150 x 71.9 x 8.8 mm (5.91 x 2.83 x 0.35 in)",
+      "SIM / eSIM Desteği": "· Nano-SIM + eSIM + eSIM (max 2 at a time; International) · eSIM + eSIM (8 or more, max 2 at a time; USA) · Nano-SIM + Nano-SIM (China)",
+      "Ekran Özellikleri (Ham)": "1012 nits max brightness (measured)",
+      "Notebookcheck Mobil İşlemci Sırası": "218",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "GSMArena",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-17-air-256gb",
@@ -2059,7 +2176,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "244",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-17-128gb",
@@ -2071,7 +2198,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-188507/iPhone-17.png"
     ],
     "tier": "S",
     "benchmarkScore": 1820000,
@@ -2285,8 +2413,34 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 157,
+      "dxomarkDisplay": 151,
+      "usbSpeed": "USB Type-C 2.0, DisplayPort",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac/6/7, tri-band, hotspot"
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "157 pts",
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "Çıkış Tarihi": "2025-09-19",
+      "USB Bağlantı Standardı": "USB Type-C 2.0, DisplayPort",
+      "Kablosuz Ağ (Wi-Fi)": "Wi-Fi 802.11 a/b/g/n/ac/6/7, tri-band, hotspot",
+      "Bluetooth Sürümü": "6.0, A2DP, LE",
+      "Sensörler & Biyometri": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+      "Fiziksel Ölçüler": "149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)",
+      "SIM / eSIM Desteği": "· Nano-SIM + eSIM + eSIM (max 2 at a time; International) · eSIM + eSIM (8 or more, max 2 at a time; USA) · Nano-SIM + Nano-SIM (China)",
+      "Ekran Özellikleri (Ham)": "1012 nits max brightness (measured)",
+      "Notebookcheck Mobil İşlemci Sırası": "244",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "GSMArena",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-se-4-128gb",
@@ -2513,7 +2667,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "471 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "12 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-16-pro-max-256gb",
@@ -2525,7 +2689,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/drafts/post-178568/Apple-iPhone-16-Pro-Max_featured-image-packshot-review.png"
     ],
     "tier": "S+",
     "benchmarkScore": 1820000,
@@ -2780,8 +2945,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 161,
+      "dxomarkSelfie": 151,
+      "dxomarkDisplay": 150
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "161 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "151 pts",
+      "DXOMARK Ekran Kalite Puanı": "150 pts",
+      "Çıkış Tarihi": "2024-09-20",
+      "Notebookcheck Mobil İşlemci Sırası": "464",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "24 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-16-pro-256gb",
@@ -2793,7 +2976,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-179125/Apple-iPhone-16-Pro_featured-image-packshot-review.png"
     ],
     "tier": "S+",
     "benchmarkScore": 1800000,
@@ -3048,8 +3232,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 157,
+      "dxomarkDisplay": 150
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "157 pts",
+      "DXOMARK Ekran Kalite Puanı": "150 pts",
+      "Çıkış Tarihi": "2024-09-20",
+      "Notebookcheck Mobil İşlemci Sırası": "464",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "24 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-16-plus-256gb",
@@ -3276,7 +3476,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "471 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "12 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-16-128gb",
@@ -3288,7 +3498,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-179164/Apple-iPhone-16_featured-image-packshot-review.png"
     ],
     "tier": "S",
     "benchmarkScore": 1600000,
@@ -3502,8 +3713,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 147,
+      "dxomarkDisplay": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "147 pts",
+      "DXOMARK Ekran Kalite Puanı": "142 pts",
+      "Çıkış Tarihi": "2024-09-20",
+      "Notebookcheck Mobil İşlemci Sırası": "471 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "12 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-15-pro-max-256gb",
@@ -3515,7 +3742,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155689/Apple-iPhone-15-Pro-Max_-blue-titanium_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1550000,
@@ -3770,8 +3998,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 154,
+      "dxomarkSelfie": 149,
+      "dxomarkDisplay": 151,
+      "dxomarkBattery": 134,
+      "dxomarkAudio": 143
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "154 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "149 pts",
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "DXOMARK Batarya Performans Puanı": "134 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "143 pts",
+      "Çıkış Tarihi": "2023-09-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-15-pro-128gb",
@@ -3783,7 +4029,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-157596/Apple-iPhone-15-Pro_-natural_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1530000,
@@ -3997,8 +4244,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 154,
+      "dxomarkSelfie": 149,
+      "dxomarkDisplay": 151,
+      "dxomarkBattery": 114,
+      "dxomarkAudio": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "154 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "149 pts",
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "DXOMARK Batarya Performans Puanı": "114 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "142 pts",
+      "Çıkış Tarihi": "2023-09-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-15-plus-128gb",
@@ -4010,7 +4275,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-plus-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-plus-2.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-157595/Apple-iPhone-15-Plus_yellow_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1380000,
@@ -4224,8 +4490,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 145,
+      "dxomarkDisplay": 140,
+      "dxomarkBattery": 131,
+      "dxomarkAudio": 141
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "140 pts",
+      "DXOMARK Batarya Performans Puanı": "131 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "141 pts",
+      "Çıkış Tarihi": "2023-09-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-15-128gb",
@@ -4237,7 +4519,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-157597/Apple-iPhone-15_-blue_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1350000,
@@ -4451,8 +4734,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 145,
+      "dxomarkDisplay": 140,
+      "dxomarkBattery": 113,
+      "dxomarkAudio": 141
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "140 pts",
+      "DXOMARK Batarya Performans Puanı": "113 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "141 pts",
+      "Çıkış Tarihi": "2023-09-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-14-pro-max-128gb",
@@ -4464,7 +4763,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-125428/Apple-iPhone-14-Pro-Max_FINAL_featured-image-packshot-review-1.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1370000,
@@ -4678,8 +4978,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 146,
+      "dxomarkSelfie": 145,
+      "dxomarkDisplay": 146,
+      "dxomarkBattery": 133,
+      "dxomarkAudio": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "146 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "146 pts",
+      "DXOMARK Batarya Performans Puanı": "133 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "142 pts",
+      "Çıkış Tarihi": "2022-09-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-14-pro-128gb",
@@ -4691,7 +5009,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-126771/Apple-iPhone-14-Pro_FINAL_featured-image-packshot-review-1.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1350000,
@@ -4905,8 +5224,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 146,
+      "dxomarkSelfie": 145,
+      "dxomarkDisplay": 146,
+      "dxomarkBattery": 119,
+      "dxomarkAudio": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "146 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "146 pts",
+      "DXOMARK Batarya Performans Puanı": "119 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "142 pts",
+      "Çıkış Tarihi": "2022-09-06"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-14-plus-128gb",
@@ -4918,7 +5255,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-plus.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-plus-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-plus-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-plus-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-132367/Apple-iPhone-14_Plus_FINAL_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1220000,
@@ -5132,8 +5470,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkSelfie": 144,
+      "dxomarkDisplay": 138,
+      "dxomarkBattery": 128,
+      "dxomarkAudio": 141
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "144 pts",
+      "DXOMARK Ekran Kalite Puanı": "138 pts",
+      "DXOMARK Batarya Performans Puanı": "128 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "141 pts",
+      "Çıkış Tarihi": "2022-10-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-14-128gb",
@@ -5145,7 +5501,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-125834/Apple-iPhone-14_FINAL_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1200000,
@@ -5359,8 +5716,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkSelfie": 144,
+      "dxomarkDisplay": 138,
+      "dxomarkBattery": 112,
+      "dxomarkAudio": 141
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "144 pts",
+      "DXOMARK Ekran Kalite Puanı": "138 pts",
+      "DXOMARK Batarya Performans Puanı": "112 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "141 pts",
+      "Çıkış Tarihi": "2022-09-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-13-pro-max-128gb",
@@ -5372,7 +5747,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-95593/Apple-iPhone-13-Pro-Max-featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1210000,
@@ -5586,8 +5962,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 141,
+      "dxomarkSelfie": 134,
+      "dxomarkDisplay": 142,
+      "dxomarkBattery": 136,
+      "dxomarkAudio": 139
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "141 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "134 pts",
+      "DXOMARK Ekran Kalite Puanı": "142 pts",
+      "DXOMARK Batarya Performans Puanı": "136 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "139 pts",
+      "Çıkış Tarihi": "2021-09-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-13-128gb",
@@ -5599,7 +5993,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-2.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-95995/Apple-iPhone-13-featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 1150000,
@@ -5813,8 +6208,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 125,
+      "dxomarkSelfie": 134,
+      "dxomarkDisplay": 135,
+      "dxomarkBattery": 115,
+      "dxomarkAudio": 138
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "125 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "134 pts",
+      "DXOMARK Ekran Kalite Puanı": "135 pts",
+      "DXOMARK Batarya Performans Puanı": "115 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "138 pts",
+      "Çıkış Tarihi": "2021-09-14"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-apple-iphone-se-2022-64gb",
@@ -5826,7 +6239,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg",
       "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-se-2022-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-se-2022-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-se-2022-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-110247/Apple-iPhone-SE-2022_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 1050000,
@@ -6040,8 +6454,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 100,
+      "dxomarkDisplay": 120,
+      "dxomarkBattery": 84,
+      "dxomarkAudio": 122
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "100 pts",
+      "DXOMARK Ekran Kalite Puanı": "120 pts",
+      "DXOMARK Batarya Performans Puanı": "84 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "122 pts",
+      "Çıkış Tarihi": "2022-03-18"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s26-ultra-256gb",
@@ -6053,7 +6483,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-190763/Samsung-S26-Ultra-png.png"
     ],
     "tier": "S+",
     "benchmarkScore": 3400000,
@@ -6308,8 +6739,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 157,
+      "dxomarkSelfie": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "157 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "142 pts",
+      "Çıkış Tarihi": "2026-03-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s26-plus-256gb",
@@ -6321,7 +6764,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-193024/Samsung-galaxy-S26.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2950000,
@@ -6576,8 +7020,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 146
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "146 pts",
+      "Çıkış Tarihi": "2026-03-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s26-128gb",
@@ -6589,7 +7043,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-193024/Samsung-galaxy-S26.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2850000,
@@ -6803,8 +7258,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 146
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "146 pts",
+      "Çıkış Tarihi": "2026-03-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-7-512gb",
@@ -7031,7 +7496,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-7-256gb",
@@ -7299,7 +7769,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s25-ultra-256gb",
@@ -7311,7 +7786,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-181483/Samsung-Galaxy-S25-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2950000,
@@ -7566,8 +8042,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 151,
+      "dxomarkDisplay": 160
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "151 pts",
+      "DXOMARK Ekran Kalite Puanı": "160 pts",
+      "Çıkış Tarihi": "2025-02-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s25-plus-256gb",
@@ -7579,7 +8067,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182255/Samsung-Galaxy-S25_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2550000,
@@ -7834,8 +8323,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 157
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "157 pts",
+      "Çıkış Tarihi": "2025-02-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s25-128gb",
@@ -7847,7 +8346,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182255/Samsung-Galaxy-S25_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2480000,
@@ -8061,8 +8561,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 157
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "157 pts",
+      "Çıkış Tarihi": "2025-02-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s25-slim-256gb",
@@ -8289,7 +8799,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s24-ultra-256gb",
@@ -8301,7 +8816,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164446/Samsung-Galaxy-S24-Ultra_A_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1980000,
@@ -8556,8 +9072,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 144,
+      "dxomarkDisplay": 155,
+      "dxomarkBattery": 130,
+      "dxomarkAudio": 139
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "144 pts",
+      "DXOMARK Ekran Kalite Puanı": "155 pts",
+      "DXOMARK Batarya Performans Puanı": "130 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "139 pts",
+      "Çıkış Tarihi": "2024-01-31"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s24-plus-256gb",
@@ -8569,7 +9101,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-166686/Samsung-Galaxy-S24-Plus_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1750000,
@@ -8783,8 +9316,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkDisplay": 154,
+      "dxomarkBattery": 109,
+      "dxomarkAudio": 139
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Ekran Kalite Puanı": "154 pts",
+      "DXOMARK Batarya Performans Puanı": "109 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "139 pts",
+      "Çıkış Tarihi": "2024-01-17"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s24-128gb",
@@ -8796,7 +9345,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-166686/Samsung-Galaxy-S24-Plus_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1700000,
@@ -9010,8 +9560,28 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkDisplay": 154,
+      "dxomarkBattery": 109,
+      "dxomarkAudio": 139
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Ekran Kalite Puanı": "154 pts",
+      "DXOMARK Batarya Performans Puanı": "109 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "139 pts",
+      "Çıkış Tarihi": "2024-01-17",
+      "Notebookcheck Mobil İşlemci Sırası": "510 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": "8 MiB"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s24-fe-128gb",
@@ -9023,7 +9593,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-178742/Samsung-Galaxy-S24-FE_featured-image-packshot-review-1.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1620000,
@@ -9237,8 +9808,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkDisplay": 145
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Ekran Kalite Puanı": "145 pts",
+      "Çıkış Tarihi": "2024-09-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-special-edition-512gb",
@@ -9465,7 +10048,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-6-256gb",
@@ -9733,7 +10321,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-6-256gb",
@@ -9960,7 +10553,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-5-256gb",
@@ -10187,7 +10785,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-5-256gb",
@@ -10414,7 +11017,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-4-256gb",
@@ -10641,7 +11249,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-4-128gb",
@@ -10868,7 +11481,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s23-ultra-256gb",
@@ -10880,7 +11498,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-139011/Samsung-Galaxy-S23-Ultra_-featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1580000,
@@ -11094,8 +11713,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 140,
+      "dxomarkSelfie": 141,
+      "dxomarkDisplay": 148,
+      "dxomarkBattery": 142,
+      "dxomarkAudio": 139
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "140 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "141 pts",
+      "DXOMARK Ekran Kalite Puanı": "148 pts",
+      "DXOMARK Batarya Performans Puanı": "142 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "139 pts",
+      "Çıkış Tarihi": "2023-02-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s23-plus-256gb",
@@ -11107,7 +11744,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-140900/Samsung-Galaxy-S23_-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1530000,
@@ -11321,8 +11959,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkDisplay": 149,
+      "dxomarkBattery": 109,
+      "dxomarkAudio": 133
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Ekran Kalite Puanı": "149 pts",
+      "DXOMARK Batarya Performans Puanı": "109 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "133 pts",
+      "Çıkış Tarihi": "2023-02-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s23-128gb",
@@ -11334,7 +11988,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-140900/Samsung-Galaxy-S23_-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1500000,
@@ -11548,8 +12203,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 133,
+      "dxomarkDisplay": 149,
+      "dxomarkBattery": 109,
+      "dxomarkAudio": 133
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "133 pts",
+      "DXOMARK Ekran Kalite Puanı": "149 pts",
+      "DXOMARK Batarya Performans Puanı": "109 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "133 pts",
+      "Çıkış Tarihi": "2023-02-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s23-fe-128gb",
@@ -11561,7 +12232,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-163185/Samsung-Galaxy-S23-FE_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1180000,
@@ -11775,8 +12447,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 127,
+      "dxomarkDisplay": 140,
+      "dxomarkBattery": 101,
+      "dxomarkAudio": 138
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "127 pts",
+      "DXOMARK Ekran Kalite Puanı": "140 pts",
+      "DXOMARK Batarya Performans Puanı": "101 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "138 pts",
+      "Çıkış Tarihi": "2023-10-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s22-ultra-256gb",
@@ -11788,7 +12476,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-5g-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-112063/Samsung-Galaxy-S22-Ultra-Snapdragon_-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1220000,
@@ -12002,8 +12691,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 135,
+      "dxomarkDisplay": 135,
+      "dxomarkBattery": 103,
+      "dxomarkAudio": 133
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "135 pts",
+      "DXOMARK Ekran Kalite Puanı": "135 pts",
+      "DXOMARK Batarya Performans Puanı": "103 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "133 pts",
+      "Çıkış Tarihi": "2022-02-09"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s22-128gb",
@@ -12015,7 +12720,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-108382/Samsung-Galaxy-S22-Exynos-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 1150000,
@@ -12229,8 +12935,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 133,
+      "dxomarkBattery": 90,
+      "dxomarkAudio": 120
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "133 pts",
+      "DXOMARK Batarya Performans Puanı": "90 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "120 pts",
+      "Çıkış Tarihi": "2022-02-09"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s21-fe-128gb",
@@ -12242,7 +12962,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-105187/Samsung-Galaxy-S21-FE-5G-featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 920000,
@@ -12456,8 +13177,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 117,
+      "dxomarkSelfie": 127,
+      "dxomarkDisplay": 130,
+      "dxomarkBattery": 82,
+      "dxomarkAudio": 118
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "117 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "127 pts",
+      "DXOMARK Ekran Kalite Puanı": "130 pts",
+      "DXOMARK Batarya Performans Puanı": "82 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "118 pts",
+      "Çıkış Tarihi": "2022-01-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a55-256gb",
@@ -12469,7 +13208,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167690/Samsung-Galaxy-A55-5G_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 735000,
@@ -12683,8 +13423,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 108,
+      "dxomarkDisplay": 147,
+      "dxomarkBattery": 121
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "108 pts",
+      "DXOMARK Ekran Kalite Puanı": "147 pts",
+      "DXOMARK Batarya Performans Puanı": "121 pts",
+      "Çıkış Tarihi": "2024-03-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a54-128gb",
@@ -12696,7 +13450,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-142650/Samsung-Galaxy-A54-5G_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 610000,
@@ -12910,8 +13665,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 107,
+      "dxomarkDisplay": 129,
+      "dxomarkBattery": 113,
+      "dxomarkAudio": 133
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "107 pts",
+      "DXOMARK Ekran Kalite Puanı": "129 pts",
+      "DXOMARK Batarya Performans Puanı": "113 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "133 pts",
+      "Çıkış Tarihi": "2023-03-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a35-128gb",
@@ -12923,7 +13694,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-168239/Samsung-Galaxy-A35-5G_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 605000,
@@ -13137,8 +13909,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 104,
+      "dxomarkDisplay": 143,
+      "dxomarkBattery": 101
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "104 pts",
+      "DXOMARK Ekran Kalite Puanı": "143 pts",
+      "DXOMARK Batarya Performans Puanı": "101 pts",
+      "Çıkış Tarihi": "2024-03-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a34-128gb",
@@ -13150,7 +13936,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-142157/Samsung-Galaxy-A34-5G_featured-image-packshot-review-1.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 580000,
@@ -13364,8 +14151,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 92,
+      "dxomarkBattery": 129,
+      "dxomarkAudio": 126
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "92 pts",
+      "DXOMARK Batarya Performans Puanı": "129 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "126 pts",
+      "Çıkış Tarihi": "2023-03-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a25-128gb",
@@ -13377,7 +14178,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-163874/Samsung-Galaxy-A25-5G.png"
     ],
     "tier": "B",
     "benchmarkScore": 480000,
@@ -13591,8 +14393,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 92
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "92 pts",
+      "Çıkış Tarihi": "2023-12-16"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a15-5g-128gb",
@@ -13604,7 +14416,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167234/Samsung-Galaxy-A15-5G_-Final_featured-image-packshot-review.jpg"
     ],
     "tier": "B",
     "benchmarkScore": 420000,
@@ -13818,8 +14631,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 83,
+      "dxomarkBattery": 127
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "83 pts",
+      "DXOMARK Batarya Performans Puanı": "127 pts",
+      "Çıkış Tarihi": "2024-01-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a15-128gb",
@@ -14046,7 +14871,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a05s-128gb",
@@ -14058,7 +14888,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-163369/Samsung-Galaxy-A05s_featured-image-packshot-review.jpg"
     ],
     "tier": "C+",
     "benchmarkScore": 310000,
@@ -14272,8 +15103,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 45
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "45 pts",
+      "Çıkış Tarihi": "2023-10-16"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-m55-256gb",
@@ -14500,7 +15341,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-m35-128gb",
@@ -14727,7 +15573,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-xcover7-128gb",
@@ -14954,7 +15805,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-15-ultra-512gb",
@@ -14966,7 +15822,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182714/Xiaomi-15-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2900000,
@@ -15180,8 +16037,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 159,
+      "dxomarkDisplay": 150
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "159 pts",
+      "DXOMARK Ekran Kalite Puanı": "150 pts",
+      "Çıkış Tarihi": "2025-03-03"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-15-pro-256gb",
@@ -15449,7 +16318,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-15-256gb",
@@ -15461,7 +16335,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182717/Xiaom-15_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2800000,
@@ -15675,8 +16550,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 147,
+      "dxomarkDisplay": 148
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "147 pts",
+      "DXOMARK Ekran Kalite Puanı": "148 pts",
+      "Çıkış Tarihi": "2025-03-02"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-14-ultra-512gb",
@@ -15688,7 +16575,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167787/Xiaomi-14-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2100000,
@@ -15902,8 +16790,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 149,
+      "dxomarkDisplay": 140,
+      "dxomarkBattery": 123
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "149 pts",
+      "DXOMARK Ekran Kalite Puanı": "140 pts",
+      "DXOMARK Batarya Performans Puanı": "123 pts",
+      "Çıkış Tarihi": "2024-02-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-14-pro-256gb",
@@ -16130,7 +17032,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-14-256gb",
@@ -16142,7 +17049,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167814/Xiaomi-14-featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2010000,
@@ -16356,8 +17264,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 138,
+      "dxomarkDisplay": 137,
+      "dxomarkBattery": 133,
+      "dxomarkAudio": 135
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "138 pts",
+      "DXOMARK Ekran Kalite Puanı": "137 pts",
+      "DXOMARK Batarya Performans Puanı": "133 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "135 pts",
+      "Çıkış Tarihi": "2024-02-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-14t-pro-512gb",
@@ -16369,7 +17293,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-178853/Xiaomi-14T-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2100000,
@@ -16542,8 +17467,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 135,
+      "dxomarkDisplay": 143,
+      "dxomarkBattery": 128
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "135 pts",
+      "DXOMARK Ekran Kalite Puanı": "143 pts",
+      "DXOMARK Batarya Performans Puanı": "128 pts",
+      "Çıkış Tarihi": "2024-09-26",
+      "Notebookcheck Mobil İşlemci Sırası": "476 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-14t-256gb",
@@ -16555,7 +17498,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-178755/Xiaomi-14T-titan-gray_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1400000,
@@ -16769,8 +17713,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 134,
+      "dxomarkDisplay": 142,
+      "dxomarkBattery": 116
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "134 pts",
+      "DXOMARK Ekran Kalite Puanı": "142 pts",
+      "DXOMARK Batarya Performans Puanı": "116 pts",
+      "Çıkış Tarihi": "2024-09-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-13t-pro-512gb",
@@ -16782,7 +17740,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-158018/Xiaomi-13T-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -16955,8 +17914,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 131,
+      "dxomarkDisplay": 129,
+      "dxomarkBattery": 120,
+      "dxomarkAudio": 122
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "131 pts",
+      "DXOMARK Ekran Kalite Puanı": "129 pts",
+      "DXOMARK Batarya Performans Puanı": "120 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "122 pts",
+      "Çıkış Tarihi": "2023-09-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-13t-256gb",
@@ -16968,7 +17943,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155619/Xiaomi-13T_featured-image-packshot-review-Recovered-Recovered.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 900000,
@@ -17182,8 +18158,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 123,
+      "dxomarkDisplay": 129,
+      "dxomarkBattery": 114,
+      "dxomarkAudio": 128
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "123 pts",
+      "DXOMARK Ekran Kalite Puanı": "129 pts",
+      "DXOMARK Batarya Performans Puanı": "114 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "128 pts",
+      "Çıkış Tarihi": "2023-09-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-mix-fold-4-512gb",
@@ -17410,7 +18402,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-mix-flip-512gb",
@@ -17596,7 +18593,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-14-pro-plus-512gb",
@@ -17782,7 +18784,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-pro-plus-512gb",
@@ -17794,7 +18801,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164973/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 780000,
@@ -17967,8 +18975,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 120,
+      "dxomarkBattery": 120
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "120 pts",
+      "DXOMARK Batarya Performans Puanı": "120 pts",
+      "Çıkış Tarihi": "2023-12-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-pro-256gb",
@@ -17980,7 +19000,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164973/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 610000,
@@ -18194,8 +19215,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 120,
+      "dxomarkBattery": 120
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "120 pts",
+      "DXOMARK Batarya Performans Puanı": "120 pts",
+      "Çıkış Tarihi": "2023-12-01"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-128gb",
@@ -18422,7 +19455,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f7-pro-512gb",
@@ -18608,7 +19646,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f7-256gb",
@@ -18835,7 +19878,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f6-pro-512gb",
@@ -19021,7 +20074,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f6-256gb",
@@ -19248,7 +20306,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f5-pro-256gb",
@@ -19260,7 +20323,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-154144/POCO-F5-Pro.png"
     ],
     "tier": "A+",
     "benchmarkScore": 1300000,
@@ -19474,8 +20538,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkBattery": 131,
+      "dxomarkAudio": 119
+    },
+    "extra_specs": {
+      "DXOMARK Batarya Performans Puanı": "131 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "119 pts",
+      "Çıkış Tarihi": "2023-07-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f5-256gb",
@@ -19702,7 +20778,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f4-gt-256gb",
@@ -19714,7 +20795,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-116528/Poco-F4-GT_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 1050000,
@@ -19928,8 +21010,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 111,
+      "dxomarkBattery": 100,
+      "dxomarkAudio": 128
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "111 pts",
+      "DXOMARK Batarya Performans Puanı": "100 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "128 pts",
+      "Çıkış Tarihi": "2022-04-28"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-x7-pro-512gb",
@@ -20115,7 +21211,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-x6-pro-512gb",
@@ -20301,7 +21402,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-x6-256gb",
@@ -20528,7 +21634,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-x5-pro-256gb",
@@ -20755,7 +21866,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-m6-pro-512gb",
@@ -20941,7 +22057,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-c75-256gb",
@@ -21168,7 +22289,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x8-ultra-512gb",
@@ -21180,7 +22306,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/drafts/post-185372/Oppo-Find-X8-Ultra-image-1.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 3050000,
@@ -21394,8 +22521,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 168
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "168 pts",
+      "Çıkış Tarihi": "2025-04-10"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x8-pro-512gb",
@@ -21407,7 +22544,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-179939/Oppo-Find-X8-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2880000,
@@ -21621,8 +22759,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 157,
+      "dxomarkDisplay": 152,
+      "dxomarkBattery": 155
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "157 pts",
+      "DXOMARK Ekran Kalite Puanı": "152 pts",
+      "DXOMARK Batarya Performans Puanı": "155 pts",
+      "Çıkış Tarihi": "2024-10-30",
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x8-256gb",
@@ -21634,7 +22790,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-179937/Oppo-Find-X8_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2820000,
@@ -21848,8 +23005,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkBattery": 156
+    },
+    "extra_specs": {
+      "DXOMARK Batarya Performans Puanı": "156 pts",
+      "Çıkış Tarihi": "2024-10-30",
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x7-ultra-512gb",
@@ -21861,7 +23032,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-168145/Oppo-Find-X7-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2120000,
@@ -22034,8 +23206,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 157,
+      "dxomarkDisplay": 144,
+      "dxomarkBattery": 160
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "157 pts",
+      "DXOMARK Ekran Kalite Puanı": "144 pts",
+      "DXOMARK Batarya Performans Puanı": "160 pts",
+      "Çıkış Tarihi": "2024-03-12"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x7-256gb",
@@ -22262,7 +23448,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "476 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-n3-512gb",
@@ -22489,7 +23685,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-n3-flip-256gb",
@@ -22716,7 +23917,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-reno-12-pro-512gb",
@@ -22902,7 +24108,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-reno-12-256gb",
@@ -23129,7 +24340,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-reno-11-pro-512gb",
@@ -23315,7 +24531,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-reno-10-pro-plus-256gb",
@@ -23542,7 +24763,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-a98-256gb",
@@ -23769,7 +24995,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-13-512gb",
@@ -23781,7 +25012,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-172074/OnePlus-13_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2920000,
@@ -23995,8 +25227,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 143
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "143 pts",
+      "Çıkış Tarihi": "2024-10-31"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-12-512gb",
@@ -24008,7 +25250,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-110018/Xiaomi-12-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2110000,
@@ -24181,8 +25424,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 113,
+      "dxomarkDisplay": 119,
+      "dxomarkBattery": 100,
+      "dxomarkAudio": 122
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "113 pts",
+      "DXOMARK Ekran Kalite Puanı": "119 pts",
+      "DXOMARK Batarya Performans Puanı": "100 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "122 pts",
+      "Çıkış Tarihi": "2022-03-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-12r-256gb",
@@ -24409,7 +25668,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-open-512gb",
@@ -24421,7 +25685,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-162643/OnePlus-Open_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1580000,
@@ -24635,8 +25900,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 137,
+      "dxomarkAudio": 135
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "137 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "135 pts",
+      "Çıkış Tarihi": "2023-10-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-nord-4-256gb",
@@ -24863,7 +26140,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-nord-3-256gb",
@@ -25090,7 +26372,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-nord-ce-4-128gb",
@@ -25317,7 +26604,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-7-pro-512gb",
@@ -25544,7 +26836,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-7-256gb",
@@ -25771,7 +27068,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-6-pro-512gb",
@@ -25957,7 +27259,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-6-rsr-1tb",
@@ -26143,7 +27450,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-v3-512gb",
@@ -26155,7 +27467,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-177719/Honor-Magic-V3_featured-image-packshot-review.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2050000,
@@ -26369,8 +27682,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 137,
+      "dxomarkDisplay": 149
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "137 pts",
+      "DXOMARK Ekran Kalite Puanı": "149 pts",
+      "Çıkış Tarihi": "2024-07-19"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-v2-512gb",
@@ -26382,7 +27707,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167258/Honor-Magic-V2_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1550000,
@@ -26555,8 +27881,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 117,
+      "dxomarkDisplay": 151
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "117 pts",
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "Çıkış Tarihi": "2024-01-26"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-200-pro-512gb",
@@ -26568,7 +27906,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-173311/honor_200_pro_featured_image_2.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1500000,
@@ -26741,8 +28080,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 137,
+      "dxomarkDisplay": 151,
+      "dxomarkBattery": 145
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "137 pts",
+      "DXOMARK Ekran Kalite Puanı": "151 pts",
+      "DXOMARK Batarya Performans Puanı": "145 pts",
+      "Çıkış Tarihi": "2024-05-27"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-200-256gb",
@@ -26754,7 +28107,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-174329/Honor-200_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 830000,
@@ -26968,8 +28322,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 130,
+      "dxomarkDisplay": 147,
+      "dxomarkBattery": 145
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "130 pts",
+      "DXOMARK Ekran Kalite Puanı": "147 pts",
+      "DXOMARK Batarya Performans Puanı": "145 pts",
+      "Çıkış Tarihi": "2024-06-12"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-90-256gb",
@@ -26981,7 +28349,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-magic6-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-150729/Honor-90_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 710000,
@@ -27195,8 +28564,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 122,
+      "dxomarkDisplay": 140,
+      "dxomarkBattery": 116,
+      "dxomarkAudio": 106
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "122 pts",
+      "DXOMARK Ekran Kalite Puanı": "140 pts",
+      "DXOMARK Batarya Performans Puanı": "116 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "106 pts",
+      "Çıkış Tarihi": "2023-06-07"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-x9b-256gb",
@@ -27423,7 +28808,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-xt-ultimate-512gb",
@@ -27650,7 +29040,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-70-pro-plus-512gb",
@@ -27877,7 +29272,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-pura-70-ultra-512gb",
@@ -27889,7 +29289,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-172110/Huawei-Pura-70-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 980000,
@@ -28103,8 +29504,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 163
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "163 pts",
+      "Çıkış Tarihi": "2024-04-29"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-pura-70-pro-plus-512gb",
@@ -28290,7 +29701,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-pura-70-pro-512gb",
@@ -28476,7 +29892,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-pura-70-256gb",
@@ -28703,7 +30124,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-60-rs-ultimate-512gb",
@@ -28930,7 +30356,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-60-pro-plus-512gb",
@@ -28942,7 +30373,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164762/Huawei-Mate-60-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 920000,
@@ -29156,8 +30588,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 148
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "148 pts",
+      "Çıkış Tarihi": "2023-08-30"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-x5-512gb",
@@ -29384,7 +30826,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-pocket-2-512gb",
@@ -29396,7 +30843,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-177413/Huawei-Pocket-2_featured-image-packshot-review-Recovered.png"
     ],
     "tier": "S",
     "benchmarkScore": 890000,
@@ -29569,8 +31017,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 148
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "148 pts",
+      "Çıkış Tarihi": "2024-02-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-nova-13-pro-256gb",
@@ -29797,7 +31255,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-gt-20-pro-256gb",
@@ -30024,7 +31487,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-gt-10-pro-256gb",
@@ -30251,7 +31719,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-note-40-pro-plus-256gb",
@@ -30478,7 +31951,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-note-40-pro-256gb",
@@ -30705,7 +32183,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-zero-40-5g-512gb",
@@ -30891,7 +32374,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-hot-50-pro-plus-256gb",
@@ -31118,7 +32606,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-phantom-v-fold-2-512gb",
@@ -31304,7 +32797,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-phantom-v-flip-2-256gb",
@@ -31531,7 +33029,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-camon-30-premier-512gb",
@@ -31717,7 +33220,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-camon-30-pro-512gb",
@@ -31903,7 +33411,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-pova-6-pro-256gb",
@@ -32130,7 +33643,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-spark-20-pro-plus-256gb",
@@ -32357,7 +33875,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x200-ultra-512gb",
@@ -32369,7 +33892,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182397/Vivo-X200-Ultra.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2920000,
@@ -32583,8 +34107,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 167,
+      "dxomarkDisplay": 149
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "167 pts",
+      "DXOMARK Ekran Kalite Puanı": "149 pts",
+      "Çıkış Tarihi": "2025-04-21"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x200-pro-512gb",
@@ -32811,7 +34347,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x200-pro-mini-256gb",
@@ -33038,7 +34584,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x200-256gb",
@@ -33265,7 +34821,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "438",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x100-ultra-512gb",
@@ -33451,7 +35017,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x100-pro-512gb",
@@ -33463,7 +35034,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164206/Vivo-X100-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2110000,
@@ -33636,8 +35208,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 150,
+      "dxomarkDisplay": 153,
+      "dxomarkAudio": 134
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "150 pts",
+      "DXOMARK Ekran Kalite Puanı": "153 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "134 pts",
+      "Çıkış Tarihi": "2023-11-21",
+      "Notebookcheck Mobil İşlemci Sırası": "476 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x-fold-3-pro-512gb",
@@ -33864,7 +35454,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-v40-pro-256gb",
@@ -34091,7 +35686,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-10-pro-xl-256gb",
@@ -34103,7 +35703,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-186973/Google-pixel-10-Pro-XL.png"
     ],
     "tier": "S+",
     "benchmarkScore": 1850000,
@@ -34358,8 +35959,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 163,
+      "dxomarkDisplay": 161
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "163 pts",
+      "DXOMARK Ekran Kalite Puanı": "161 pts",
+      "Çıkış Tarihi": "2025-08-28"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-9-pro-xl-256gb",
@@ -34371,7 +35984,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-176677/Google-Pixel-9-Pro-XL_featured-image-packshot-review.png"
     ],
     "tier": "S",
     "benchmarkScore": 1320000,
@@ -34585,8 +36199,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 160,
+      "dxomarkSelfie": 148,
+      "dxomarkDisplay": 158
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "160 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "148 pts",
+      "DXOMARK Ekran Kalite Puanı": "158 pts",
+      "Çıkış Tarihi": "2024-08-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-9-pro-128gb",
@@ -34598,7 +36226,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-179935/Google-Pixel-9-Pro_featured-image-packshot-review.png"
     ],
     "tier": "S",
     "benchmarkScore": 1300000,
@@ -34812,8 +36441,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 158
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "158 pts",
+      "Çıkış Tarihi": "2024-08-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-9-128gb",
@@ -34825,7 +36464,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-121436/Google-Pixel-9-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1220000,
@@ -35039,8 +36679,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 143,
+      "dxomarkDisplay": 156
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "143 pts",
+      "DXOMARK Ekran Kalite Puanı": "156 pts",
+      "Çıkış Tarihi": "2024-08-22"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-9-pro-fold-256gb",
@@ -35052,7 +36704,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-176257/Google-Pixel-9-Pro-Fold_featured-image-packshot-review.png"
     ],
     "tier": "S",
     "benchmarkScore": 1280000,
@@ -35307,8 +36960,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 129,
+      "dxomarkDisplay": 152
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "129 pts",
+      "DXOMARK Ekran Kalite Puanı": "152 pts",
+      "Çıkış Tarihi": "2024-08-31"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-9a-128gb",
@@ -35320,7 +36985,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-176341/Google-pixel-9a-featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1180000,
@@ -35534,8 +37200,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 128,
+      "dxomarkDisplay": 155
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "128 pts",
+      "DXOMARK Ekran Kalite Puanı": "155 pts",
+      "Çıkış Tarihi": "2025-04-10"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-8-pro-128gb",
@@ -35547,7 +37225,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-157488/Google-Pixel-8-Pro-2-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1140000,
@@ -35761,8 +37440,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 153,
+      "dxomarkSelfie": 145,
+      "dxomarkDisplay": 154,
+      "dxomarkBattery": 111,
+      "dxomarkAudio": 142
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "153 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "154 pts",
+      "DXOMARK Batarya Performans Puanı": "111 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "142 pts",
+      "Çıkış Tarihi": "2023-10-12"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-9-pro-512gb",
@@ -35989,7 +37686,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-9-256gb",
@@ -36216,7 +37918,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-8-pro-512gb",
@@ -36402,7 +38109,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-7-ultimate-512gb",
@@ -36588,7 +38300,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-zenfone-11-ultra-256gb",
@@ -36600,7 +38317,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-173857/Asus-Zenfone-11-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2080000,
@@ -36814,8 +38532,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 125,
+      "dxomarkDisplay": 143
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "125 pts",
+      "DXOMARK Ekran Kalite Puanı": "143 pts",
+      "Çıkış Tarihi": "2024-03-14"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-zenfone-10-256gb",
@@ -36827,7 +38557,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155804/Asus-Zenfone-10_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1540000,
@@ -37041,8 +38772,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 126,
+      "dxomarkAudio": 131
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "126 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "131 pts",
+      "Çıkış Tarihi": "2023-06-29"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-gt-7-pro-512gb",
@@ -37228,7 +38971,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-gt-6-512gb",
@@ -37414,7 +39162,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-12-pro-plus-512gb",
@@ -37600,7 +39353,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-motorola-razr-50-ultra-512gb",
@@ -37786,7 +39544,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-motorola-edge-50-ultra-512gb",
@@ -37798,7 +39561,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-50-ultra-2.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-175418/Motorola-Edge-50-Ultra-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -37971,8 +39735,18 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 146
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "146 pts",
+      "Çıkış Tarihi": "2024-05-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-nothing-phone-2-256gb",
@@ -37984,7 +39758,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg",
       "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155308/Nothing-Phone-2_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1270000,
@@ -38198,8 +39973,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 134,
+      "dxomarkBattery": 124,
+      "dxomarkAudio": 105
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "134 pts",
+      "DXOMARK Batarya Performans Puanı": "124 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "105 pts",
+      "Çıkış Tarihi": "2023-07-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-nothing-phone-2a-plus-256gb",
@@ -38426,7 +40215,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-nothing-phone-2a-128gb",
@@ -38438,7 +40232,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg",
       "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155308/Nothing-Phone-2_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 740000,
@@ -38652,8 +40447,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 134,
+      "dxomarkBattery": 124,
+      "dxomarkAudio": 105
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "134 pts",
+      "DXOMARK Batarya Performans Puanı": "124 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "105 pts",
+      "Çıkış Tarihi": "2023-07-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-sony-xperia-1-vi-256gb",
@@ -38880,7 +40689,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-sony-xperia-1-v-256gb",
@@ -39107,7 +40921,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s22-plus-256gb",
@@ -39119,7 +40938,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-108382/Samsung-Galaxy-S22-Exynos-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 1180000,
@@ -39333,8 +41153,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 133,
+      "dxomarkBattery": 90,
+      "dxomarkAudio": 120
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "133 pts",
+      "DXOMARK Batarya Performans Puanı": "90 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "120 pts",
+      "Çıkış Tarihi": "2022-02-09"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a73-5g-128gb",
@@ -39561,7 +41395,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a53-5g-128gb",
@@ -39573,7 +41412,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-112140/galaxy-A53.png"
     ],
     "tier": "B",
     "benchmarkScore": 490000,
@@ -39787,8 +41627,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 79,
+      "dxomarkDisplay": 108,
+      "dxomarkBattery": 95,
+      "dxomarkAudio": 126
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "79 pts",
+      "DXOMARK Ekran Kalite Puanı": "108 pts",
+      "DXOMARK Batarya Performans Puanı": "95 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "126 pts",
+      "Çıkış Tarihi": "2022-03-17"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a33-5g-128gb",
@@ -39800,7 +41656,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-112131/Samsung-Galaxy-A33-5G-featured-image-packshot-review-Recovered-Recovered.jpg"
     ],
     "tier": "B",
     "benchmarkScore": 480000,
@@ -40014,8 +41871,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 85,
+      "dxomarkBattery": 96,
+      "dxomarkAudio": 125
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "85 pts",
+      "DXOMARK Batarya Performans Puanı": "96 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "125 pts",
+      "Çıkış Tarihi": "2022-03-17"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-m14-5g-128gb",
@@ -40242,7 +42113,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-13-ultra-512gb",
@@ -40254,7 +42130,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-149039/Xiaomi-13-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1580000,
@@ -40427,8 +42304,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 140,
+      "dxomarkSelfie": 128,
+      "dxomarkDisplay": 130,
+      "dxomarkBattery": 133,
+      "dxomarkAudio": 140
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "140 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "128 pts",
+      "DXOMARK Ekran Kalite Puanı": "130 pts",
+      "DXOMARK Batarya Performans Puanı": "133 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "140 pts",
+      "Çıkış Tarihi": "2023-04-18"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-13-pro-256gb",
@@ -40440,7 +42335,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-139229/Xiaomi-13-Pro_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1540000,
@@ -40654,8 +42550,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 136,
+      "dxomarkDisplay": 131,
+      "dxomarkBattery": 126,
+      "dxomarkAudio": 140
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "136 pts",
+      "DXOMARK Ekran Kalite Puanı": "131 pts",
+      "DXOMARK Batarya Performans Puanı": "126 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "140 pts",
+      "Çıkış Tarihi": "2022-12-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-13-256gb",
@@ -40667,7 +42579,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-139298/Xiaomi-13-featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1500000,
@@ -40881,8 +42794,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 130,
+      "dxomarkDisplay": 132,
+      "dxomarkBattery": 128,
+      "dxomarkAudio": 134
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "130 pts",
+      "DXOMARK Ekran Kalite Puanı": "132 pts",
+      "DXOMARK Batarya Performans Puanı": "128 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "134 pts",
+      "Çıkış Tarihi": "2022-12-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-12t-pro-256gb",
@@ -40894,7 +42823,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-130950/Xiaomi-12T-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1290000,
@@ -41108,8 +43038,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 129,
+      "dxomarkDisplay": 127,
+      "dxomarkBattery": 123,
+      "dxomarkAudio": 127
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "129 pts",
+      "DXOMARK Ekran Kalite Puanı": "127 pts",
+      "DXOMARK Batarya Performans Puanı": "123 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "127 pts",
+      "Çıkış Tarihi": "2022-10-04"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-12-pro-plus-256gb",
@@ -41121,7 +43067,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-145957/Xiaomi-Redmi-Note-12-Pro-5G-Plain_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 580000,
@@ -41335,8 +43282,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 102,
+      "dxomarkBattery": 136
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "102 pts",
+      "DXOMARK Batarya Performans Puanı": "136 pts",
+      "Çıkış Tarihi": "2023-03-23"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-f4-256gb",
@@ -41563,7 +43522,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-x4-gt-256gb",
@@ -41790,7 +43754,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-m5s-128gb",
@@ -42017,7 +43986,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-c65-256gb",
@@ -42244,7 +44218,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x6-pro-256gb",
@@ -42256,7 +44235,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-145608/Oppo-Find-X6-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1560000,
@@ -42470,8 +44450,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 153,
+      "dxomarkDisplay": 138,
+      "dxomarkBattery": 151,
+      "dxomarkAudio": 128
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "153 pts",
+      "DXOMARK Ekran Kalite Puanı": "138 pts",
+      "DXOMARK Batarya Performans Puanı": "151 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "128 pts",
+      "Çıkış Tarihi": "2023-03-21"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-reno-10-256gb",
@@ -42698,7 +44694,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-a78-256gb",
@@ -42925,7 +44926,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-11-256gb",
@@ -43152,7 +45158,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-10-pro-128gb",
@@ -43379,7 +45390,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-10t-256gb",
@@ -43606,7 +45622,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-gt-5-pro-512gb",
@@ -43792,7 +45813,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-11-pro-plus-512gb",
@@ -43978,7 +46004,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-motorola-edge-40-pro-256gb",
@@ -43990,7 +46021,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-50-ultra-2.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-144720/Motorola-Edge-40-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1530000,
@@ -44204,8 +46236,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 130,
+      "dxomarkDisplay": 122,
+      "dxomarkAudio": 116
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "130 pts",
+      "DXOMARK Ekran Kalite Puanı": "122 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "116 pts",
+      "Çıkış Tarihi": "2023-04-04"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-nothing-phone-1-256gb",
@@ -44217,7 +46263,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg",
       "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/nothing/nothing-phone2-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155308/Nothing-Phone-2_featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 610000,
@@ -44431,8 +46478,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkDisplay": 134,
+      "dxomarkBattery": 124,
+      "dxomarkAudio": 105
+    },
+    "extra_specs": {
+      "DXOMARK Ekran Kalite Puanı": "134 pts",
+      "DXOMARK Batarya Performans Puanı": "124 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "105 pts",
+      "Çıkış Tarihi": "2023-07-11"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-mate-50-pro-256gb",
@@ -44444,7 +46505,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-132257/Huawei-Mate-50-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1250000,
@@ -44658,8 +46720,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 149,
+      "dxomarkSelfie": 145,
+      "dxomarkDisplay": 133,
+      "dxomarkBattery": 103,
+      "dxomarkAudio": 144
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "149 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "145 pts",
+      "DXOMARK Ekran Kalite Puanı": "133 pts",
+      "DXOMARK Batarya Performans Puanı": "103 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "144 pts",
+      "Çıkış Tarihi": "2022-09-06"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-p60-pro-256gb",
@@ -44671,7 +46751,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-147160/Huawei-P60-Pro_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1270000,
@@ -44885,8 +46966,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 156,
+      "dxomarkDisplay": 143,
+      "dxomarkBattery": 138,
+      "dxomarkAudio": 141
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "156 pts",
+      "DXOMARK Ekran Kalite Puanı": "143 pts",
+      "DXOMARK Batarya Performans Puanı": "138 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "141 pts",
+      "Çıkış Tarihi": "2023-03-23"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-nova-12-pro-256gb",
@@ -45113,7 +47210,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-huawei-nova-12-se-256gb",
@@ -45340,7 +47442,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-note-30-pro-256gb",
@@ -45567,7 +47674,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-zero-30-5g-256gb",
@@ -45794,7 +47906,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-zero-ultra-256gb",
@@ -46021,7 +48138,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-infinix-hot-40-pro-256gb",
@@ -46248,7 +48370,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-phantom-v-flip-256gb",
@@ -46475,7 +48602,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-camon-30-5g-256gb",
@@ -46702,7 +48834,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-camon-20-premier-512gb",
@@ -46888,7 +49025,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-tecno-spark-20-pro-256gb",
@@ -47115,7 +49257,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-7-256gb",
@@ -47127,7 +49274,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-8-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-8-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-150836/Asus-ROG-Phone-7_-W_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1580000,
@@ -47341,8 +49489,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 108,
+      "dxomarkDisplay": 132,
+      "dxomarkBattery": 135,
+      "dxomarkAudio": 148
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "108 pts",
+      "DXOMARK Ekran Kalite Puanı": "132 pts",
+      "DXOMARK Batarya Performans Puanı": "135 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "148 pts",
+      "Çıkış Tarihi": "2023-05-15"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-rog-phone-6-pro-512gb",
@@ -47528,7 +49692,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-asus-zenfone-9-128gb",
@@ -47755,7 +49924,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-11r-256gb",
@@ -47982,7 +50156,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-8a-128gb",
@@ -47994,7 +50173,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-2.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-168631/Google-pixel-8a_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1120000,
@@ -48208,8 +50388,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 136,
+      "dxomarkDisplay": 145
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "136 pts",
+      "DXOMARK Ekran Kalite Puanı": "145 pts",
+      "Çıkış Tarihi": "2024-03-20"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-7-pro-128gb",
@@ -48221,7 +50413,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-2.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-126764/Google-Pixel-7-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 920000,
@@ -48435,8 +50628,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 147,
+      "dxomarkSelfie": 142,
+      "dxomarkDisplay": 148,
+      "dxomarkBattery": 102,
+      "dxomarkAudio": 137
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "147 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "142 pts",
+      "DXOMARK Ekran Kalite Puanı": "148 pts",
+      "DXOMARK Batarya Performans Puanı": "102 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "137 pts",
+      "Çıkış Tarihi": "2022-10-06"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-google-pixel-7-128gb",
@@ -48448,7 +50659,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-2.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-xl-1.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-127929/Google-Pixel-7_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 890000,
@@ -48662,8 +50874,26 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 140,
+      "dxomarkSelfie": 138,
+      "dxomarkDisplay": 136,
+      "dxomarkBattery": 98,
+      "dxomarkAudio": 123
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "140 pts",
+      "DXOMARK Selfie (Ön) Kamera Puanı": "138 pts",
+      "DXOMARK Ekran Kalite Puanı": "136 pts",
+      "DXOMARK Batarya Performans Puanı": "98 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "123 pts",
+      "Çıkış Tarihi": "2022-10-06"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-v40-256gb",
@@ -48890,7 +51120,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-v30-pro-512gb",
@@ -49076,7 +51311,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-x90-pro-256gb",
@@ -49088,7 +51328,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg",
       "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x100-pro-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-136691/Vivo-X90-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -49302,8 +51543,22 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 136,
+      "dxomarkDisplay": 132,
+      "dxomarkAudio": 133
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "136 pts",
+      "DXOMARK Ekran Kalite Puanı": "132 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "133 pts",
+      "Çıkış Tarihi": "2022-12-06"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-cmf-phone-1-128gb",
@@ -49530,7 +51785,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-10t-128gb",
@@ -49757,7 +52017,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-nord-ce-4-256gb",
@@ -49984,7 +52249,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-nord-ce-3-128gb",
@@ -50211,7 +52481,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-6-ultimate-512gb",
@@ -50397,7 +52672,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-5-pro-512gb",
@@ -50583,7 +52863,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-magic-4-pro-256gb",
@@ -50810,7 +53095,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-70-128gb",
@@ -50822,7 +53112,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-70.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-70-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-70-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-70-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-120436/featured-image-packshot-review-1.png"
     ],
     "tier": "B+",
     "benchmarkScore": 615000,
@@ -51036,8 +53327,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 115,
+      "dxomarkDisplay": 125,
+      "dxomarkBattery": 126,
+      "dxomarkAudio": 109
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "115 pts",
+      "DXOMARK Ekran Kalite Puanı": "125 pts",
+      "DXOMARK Batarya Performans Puanı": "126 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "109 pts",
+      "Çıkış Tarihi": "2022-05-30"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-x8b-128gb",
@@ -51264,7 +53571,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-12t-128gb",
@@ -51276,7 +53588,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12t.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12t.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12t.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-130310/Xiaomi-12T_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 820000,
@@ -51490,8 +53803,24 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 115,
+      "dxomarkDisplay": 130,
+      "dxomarkBattery": 118,
+      "dxomarkAudio": 126
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "115 pts",
+      "DXOMARK Ekran Kalite Puanı": "130 pts",
+      "DXOMARK Batarya Performans Puanı": "118 pts",
+      "DXOMARK Ses / Hoparlör Puanı": "126 pts",
+      "Çıkış Tarihi": "2022-10-04"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-4g-128gb",
@@ -51718,7 +54047,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-note-12-4g-128gb",
@@ -51945,7 +54279,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-xiaomi-redmi-12-128gb",
@@ -52172,7 +54511,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-s21-fe-2022-128gb",
@@ -52399,7 +54743,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a24-128gb",
@@ -52626,7 +54975,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-a14-128gb",
@@ -52853,7 +55207,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-m34-128gb",
@@ -53080,7 +55439,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-samsung-galaxy-m14-128gb",
@@ -53307,7 +55671,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-poco-m5-128gb",
@@ -53534,7 +55903,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-v25-256gb",
@@ -53761,7 +56135,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-vivo-y200-256gb",
@@ -53988,7 +56367,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-10r-256gb",
@@ -54215,7 +56599,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-11-pro-256gb",
@@ -54442,7 +56831,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-realme-c67-128gb",
@@ -54669,7 +57063,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-90-lite-256gb",
@@ -54681,7 +57080,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-90-lite.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-90-lite-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-90-lite-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-90-lite-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-153992/featured-image-packshot-review-1.png"
     ],
     "tier": "C+",
     "benchmarkScore": 420000,
@@ -54895,8 +57295,20 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkCamera": 73,
+      "dxomarkBattery": 127
+    },
+    "extra_specs": {
+      "DXOMARK Arka Kamera Puanı": "73 pts",
+      "DXOMARK Batarya Performans Puanı": "127 pts",
+      "Çıkış Tarihi": "2023-06-23"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-honor-x7b-128gb",
@@ -54908,7 +57320,8 @@
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/honor-x7b.jpg",
       "https://fdn2.gsmarena.com/vv/pics/honor/honor-x7b-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/honor/honor-x7b-2.jpg"
+      "https://fdn2.gsmarena.com/vv/pics/honor/honor-x7b-2.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-163897/Honor-X7b_featured-image-packshot-review.jpg"
     ],
     "tier": "C+",
     "benchmarkScore": 310000,
@@ -55122,7 +57535,17 @@
             }
           ]
         }
-      ]
-    }
+      ],
+      "dxomarkBattery": 151
+    },
+    "extra_specs": {
+      "DXOMARK Batarya Performans Puanı": "151 pts",
+      "Çıkış Tarihi": "2023-12-04"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "DXOMARK"
+    ],
+    "spec_verified_at": "2026-11-16"
   }
 ]

@@ -2,6 +2,7 @@ package com.panda.myapplication.data.local.converter
 
 import androidx.room.TypeConverter
 import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.builtins.MapSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import kotlin.time.Instant
@@ -87,11 +88,22 @@ class HardwareTypeConverters {
         runCatching { json.decodeFromString<List<com.panda.myapplication.domain.model.DeviceVariant>>(it) }.getOrNull()
     }
 
+    @TypeConverter
+    fun stringMapToJson(value: Map<String, String>?): String? = value?.let {
+        json.encodeToString(stringMapSerializer, it)
+    }
+
+    @TypeConverter
+    fun jsonToStringMap(value: String?): Map<String, String>? = value?.let {
+        runCatching { json.decodeFromString(stringMapSerializer, it) }.getOrNull()
+    }
+
     private companion object {
         val json = Json {
             ignoreUnknownKeys = true
             coerceInputValues = true
         }
         val stringListSerializer = ListSerializer(String.serializer())
+        val stringMapSerializer = MapSerializer(String.serializer(), String.serializer())
     }
 }

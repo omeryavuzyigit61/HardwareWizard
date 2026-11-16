@@ -210,7 +210,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-pro-11-m4-256gb",
@@ -423,7 +428,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-pro-12-9-m2-128gb",
@@ -636,7 +646,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "344",
+      "Çekirdek / İzlek": "20",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-pro-11-m2-128gb",
@@ -849,7 +869,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "344",
+      "Çekirdek / İzlek": "20",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-air-13-m2-128gb",
@@ -1062,7 +1092,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "344",
+      "Çekirdek / İzlek": "20",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-air-11-m2-128gb",
@@ -1275,7 +1315,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "344",
+      "Çekirdek / İzlek": "20",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-air-5-m1-64gb",
@@ -1447,7 +1497,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "457",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-10th-gen-64gb",
@@ -1619,7 +1679,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-9th-gen-64gb",
@@ -1791,7 +1856,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-mini-7-a17-pro-128gb",
@@ -1963,7 +2033,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-apple-ipad-mini-6-a15-64gb",
@@ -2135,7 +2210,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s10-ultra-256gb",
@@ -2348,7 +2428,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "476 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s10-plus-256gb",
@@ -2561,7 +2651,17 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {
+      "Notebookcheck Mobil İşlemci Sırası": "476 *",
+      "Çekirdek / İzlek": "",
+      "Mobil TDP / Güç Aralığı": ""
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "Notebookcheck"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-ultra-256gb",
@@ -2774,7 +2874,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-plus-256gb",
@@ -2987,7 +3092,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-128gb",
@@ -3200,7 +3310,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-fe-plus-128gb",
@@ -3372,7 +3487,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-fe-128gb",
@@ -3544,7 +3664,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s8-ultra-128gb",
@@ -3757,7 +3882,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s8-plus-128gb",
@@ -3929,7 +4059,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s8-128gb",
@@ -4101,7 +4236,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-a9-plus-64gb",
@@ -4273,7 +4413,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-samsung-galaxy-tab-a9-64gb",
@@ -4445,7 +4590,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-xiaomi-pad-6s-pro-256gb",
@@ -4658,7 +4808,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-xiaomi-pad-6-pro-256gb",
@@ -4830,7 +4985,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-xiaomi-pad-6-128gb",
@@ -5002,7 +5162,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-xiaomi-redmi-pad-pro-128gb",
@@ -5174,7 +5339,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-xiaomi-redmi-pad-se-128gb",
@@ -5346,7 +5516,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-oneplus-pad-2-256gb",
@@ -5518,7 +5693,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-oneplus-pad-128gb",
@@ -5690,7 +5870,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-oneplus-pad-go-128gb",
@@ -5862,7 +6047,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-huawei-matepad-pro-13-2-256gb",
@@ -6075,7 +6265,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-huawei-matepad-11-5s-papermatte-256gb",
@@ -6247,7 +6442,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-huawei-matepad-pro-11-2024-256gb",
@@ -6419,7 +6619,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-huawei-matepad-se-11-128gb",
@@ -6591,7 +6796,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-lenovo-legion-y700-2023-256gb",
@@ -6763,7 +6973,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-lenovo-tab-p12-128gb",
@@ -6935,7 +7150,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-honor-magicpad-2-256gb",
@@ -7107,7 +7327,12 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "tablet-honor-pad-9-128gb",
@@ -7279,6 +7504,11 @@
           ]
         }
       ]
-    }
+    },
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
   }
 ]

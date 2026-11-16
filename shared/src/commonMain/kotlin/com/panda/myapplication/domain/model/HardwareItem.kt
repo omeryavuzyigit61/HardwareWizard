@@ -16,6 +16,9 @@ data class HardwareItem(
     val images: List<String> = emptyList(),
     val customPriceTry: Double? = null,
     val customPriceNote: String? = null,
+    val extraSpecs: Map<String, String> = emptyMap(),
+    val sourceProvenance: List<String> = emptyList(),
+    val specVerifiedAt: String? = null,
 ) {
     val category: HardwareCategory get() = spec.category
 

@@ -123,6 +123,7 @@ import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
+import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.GpuSpec
@@ -1906,6 +1907,148 @@ fun HardwareFilterBottomSheet(
                 Spacer(modifier = Modifier.height(Spacing.medium))
             }
 
+            // Cooling Type Filter (Cooler)
+            if (selectedCategory == HardwareCategory.COOLER) {
+                Text(
+                    text = tr(isTr, "SOĞUTUCU TİPİ", "COOLER TYPE"),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.secondary,
+                )
+                Spacer(modifier = Modifier.height(Spacing.small))
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, CoolerType.LIQUID to tr(isTr, "Sıvı Soğutma (AIO)", "Liquid AIO"), CoolerType.AIR to tr(isTr, "Hava Soğutma", "Air Cooler")).forEach { (ctype, label) ->
+                        FilterChip(
+                            selected = filters.coolerTypeFilter == ctype,
+                            onClick = { onFiltersChanged(filters.copy(coolerTypeFilter = ctype)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            // Monitor Filters
+            if (selectedCategory == HardwareCategory.MONITOR) {
+                Text(
+                    text = tr(isTr, "MONİTÖR: YENİLEME HIZI & PANEL", "MONITOR: REFRESH RATE & PANEL"),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                Spacer(modifier = Modifier.height(Spacing.small))
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, 144 to "144Hz+", 240 to "240Hz+", 360 to "360Hz+").forEach { (hz, label) ->
+                        FilterChip(
+                            selected = filters.minMonitorRefreshHz == hz,
+                            onClick = { onFiltersChanged(filters.copy(minMonitorRefreshHz = hz)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.small))
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, "OLED" to "OLED / QD-OLED", "IPS" to "IPS", "VA" to "VA").forEach { (panel, label) ->
+                        FilterChip(
+                            selected = filters.monitorPanelFilter == panel,
+                            onClick = { onFiltersChanged(filters.copy(monitorPanelFilter = panel)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            // Mouse / Keyboard / UPS / Router / Mobile quick filters
+            if (selectedCategory == HardwareCategory.MOUSE) {
+                Text(
+                    text = tr(isTr, "FARE: ULTRA HAFİF AĞIRLIK", "MOUSE: ULTRALIGHT WEIGHT"),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                Spacer(modifier = Modifier.height(Spacing.small))
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, 50 to "≤ 50g", 60 to "≤ 60g", 75 to "≤ 75g").forEach { (w, label) ->
+                        FilterChip(
+                            selected = filters.maxMouseWeightG == w,
+                            onClick = { onFiltersChanged(filters.copy(maxMouseWeightG = w)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            if (selectedCategory == HardwareCategory.KEYBOARD) {
+                FilterChip(
+                    selected = filters.requireHallEffectKeyboard,
+                    onClick = { onFiltersChanged(filters.copy(requireHallEffectKeyboard = !filters.requireHallEffectKeyboard)) },
+                    label = { Text(tr(isTr, "Yalnız Hall Effect / Rapid Trigger", "Hall Effect / Rapid Trigger Only")) },
+                )
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            if (selectedCategory == HardwareCategory.UPS) {
+                FilterChip(
+                    selected = filters.requirePureSineUps,
+                    onClick = { onFiltersChanged(filters.copy(requirePureSineUps = !filters.requirePureSineUps)) },
+                    label = { Text(tr(isTr, "Yalnız Tam Sinüs (Pure Sine Wave)", "Pure Sine Wave Only")) },
+                )
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            if (selectedCategory == HardwareCategory.ROUTER) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, "Wi-Fi 7" to "Wi-Fi 7", "Wi-Fi 6E" to "Wi-Fi 6E", "Wi-Fi 6" to "Wi-Fi 6").forEach { (wf, label) ->
+                        FilterChip(
+                            selected = filters.wifiStandardFilter == wf,
+                            onClick = { onFiltersChanged(filters.copy(wifiStandardFilter = wf)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
+            if (selectedCategory == HardwareCategory.SMARTPHONE || selectedCategory == HardwareCategory.TABLET) {
+                Text(
+                    text = tr(isTr, "MİNİMUM BATARYA KAPASİTESİ", "MIN BATTERY CAPACITY"),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.secondary,
+                )
+                Spacer(modifier = Modifier.height(Spacing.small))
+                Row(
+                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(Spacing.small),
+                ) {
+                    listOf(null to strings.filterAll, 4500 to "4500+ mAh", 5000 to "5000+ mAh", 6000 to "6000+ mAh", 8000 to "8000+ mAh").forEach { (mah, label) ->
+                        FilterChip(
+                            selected = filters.minMobileBatteryMah == mah,
+                            onClick = { onFiltersChanged(filters.copy(minMobileBatteryMah = mah)) },
+                            label = { Text(label) },
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.height(Spacing.medium))
+            }
+
             Button(
                 onClick = onDismiss,
                 modifier = Modifier.fillMaxWidth(),
@@ -1921,8 +2064,18 @@ fun HardwareFilterBottomSheet(
 }
 
 private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String = when (spec) {
-    is com.panda.myapplication.domain.model.PhoneSpec -> "${spec.displaySizeInch}\" ${spec.displayTech} • ${spec.chipset} • ${spec.storageGb}GB • ${spec.mainCameraMp}MP"
-    is com.panda.myapplication.domain.model.TabletSpec -> "${spec.displaySizeInch}\" • ${spec.chipset} • ${spec.storageGb}GB • ${spec.batteryMah}mAh" 
+    is com.panda.myapplication.domain.model.PhoneSpec -> listOfNotNull(
+        spec.displaySizeInch.takeIf { it > 0 }?.let { "${it}\" ${spec.displayTech}".trim() },
+        spec.chipset.ifBlank { null },
+        spec.storageGb.takeIf { it > 0 }?.let { "${it}GB" },
+        spec.dxomarkCamera?.let { "DXO $it" } ?: spec.mainCameraMp.takeIf { it > 0 }?.let { "${it}MP" },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.TabletSpec -> listOfNotNull(
+        spec.displaySizeInch.takeIf { it > 0 }?.let { "${it}\"" },
+        spec.chipset.ifBlank { null },
+        spec.storageGb.takeIf { it > 0 }?.let { "${it}GB" },
+        spec.batteryMah.takeIf { it > 0 }?.let { "${it}mAh" },
+    ).joinToString(" • ")
     is CpuSpec -> "${spec.socket} • ${spec.coreCount}C/${spec.threadCount}T • ${spec.baseClock.mhz}MHz • ${spec.tdp.watts}W TDP"
     is GpuSpec -> {
         val skuSuffix = if (!spec.partNumber.isNullOrBlank()) " • SKU: ${spec.partNumber}" else ""
@@ -1934,29 +2087,118 @@ private fun formatSpecSummary(spec: HardwareSpec, isTr: Boolean = true): String 
     is StorageSpec -> "${spec.mediaType.name} • ${spec.capacity.megabytes / 1024}GB • ${spec.sequentialReadMbps}MB/s ${if (isTr) "Okuma" else "Read"}"
     is CoolerSpec -> "${spec.type.displayName} • Max TDP: ${spec.maxCoolingTdp.watts}W"
     is CaseSpec -> listOfNotNull(
-        spec.type ?: "Mid Tower",
+        spec.type,
         spec.maxGpuLengthMm?.let { "GPU: ${it}mm" },
         spec.maxRadiatorSizeMm?.let { "${if (isTr) "Radyatör" else "Radiator"}: ${it}mm" },
         spec.sidePanel,
     ).joinToString(" • ")
-    is LaptopSpec -> "${spec.gpuModel} (${spec.gpuWattTgp}) • ${spec.muxSwitch} • ${spec.displaySpec}"
-    is MouseSpec -> "${spec.sensor} • ${spec.pollingRateHz}Hz • ${spec.weightG}g • ${spec.switchType}"
-    is KeyboardSpec -> "${spec.switchType} • ${if (spec.rapidTriggerSupported) "Rapid Trigger (${spec.minActuationMm}mm)" else "${spec.minActuationMm}mm"} • ${spec.layout}"
-    is HeadsetSpec -> "${spec.driverType} (${spec.driverSizeMm}mm) • ${spec.impedanceOhm}Ω • ${spec.weightG}g"
-    is MonitorSpec -> "${spec.screenSizeInch}\" ${spec.panelType} • ${spec.resolution} • ${spec.refreshRateHz}Hz (${spec.responseSpeedGtGMs}ms)"
-    is MicrophoneSpec -> "${spec.capsuleType} • ${spec.polarPattern} • ${spec.connectivity} • ${spec.maxSplDb}dB SPL"
-    is MousepadSpec -> "${spec.surfaceType} • ${spec.speedGlideTier} • ${spec.baseMaterial} • ${spec.dimensionsMm}"
-    is WebcamSpec -> "${spec.maxResolution} @ ${spec.maxFrameRateFps}FPS • ${spec.sensorModel} (${spec.sensorSizeInch}) • ${spec.aperture}"
-    is GamingChairSpec -> "${spec.chairType} • ${spec.upholsteryMaterial} • ${spec.lumbarSupportType} • Max ${spec.maxWeightCapacityKg}kg"
-    is com.panda.myapplication.domain.model.CaseFanSpec -> "${spec.fanSizeMm}mm • ${spec.maxRpm} RPM • ${spec.maxAirflowCfm} CFM • ${spec.noiseLevelDba} dBA"
-    is com.panda.myapplication.domain.model.UpsSpec -> "${spec.vaRating}VA / ${spec.wattCapacity}W • ${spec.topology} • ${spec.sinewaveType}"
-    is com.panda.myapplication.domain.model.GamingDeskSpec -> "${spec.deskWidthCm}x${spec.deskDepthCm}cm • Max ${spec.maxLoadKg}kg • ${if (spec.isMotorizedHeight) "Motorlu (${spec.minHeightCm}-${spec.maxHeightCm}cm)" else "Sabit"}"
-    is com.panda.myapplication.domain.model.GamingLightingSpec -> "${spec.formFactor} • ${spec.maxLumens} lm • ${spec.colorTempKelvin} • ${spec.supportedEcosystems}"
-    is com.panda.myapplication.domain.model.SmartwatchSpec -> "${spec.screenSizeInch}\" ${spec.screenPanel} • ${spec.batteryLifeDays} Gün • ${spec.waterResistanceAtm} ATM"
-    is com.panda.myapplication.domain.model.RouterSpec -> "${spec.wifiStandard} • ${spec.speedClass} • ${spec.ethernetPorts}"
-    is com.panda.myapplication.domain.model.ModemSpec -> "${spec.vdslProfile} • ${spec.wifiStandard} • ${spec.lanPorts}"
-    is com.panda.myapplication.domain.model.AccessPointSpec -> "${spec.formFactor} • ${spec.wifiStandard} • ${spec.poeSupport} • Max ${spec.maxClients} Cihaz"
-    is com.panda.myapplication.domain.model.RangeExtenderSpec -> "${spec.extenderType} • ${spec.wifiStandard} • ${spec.meshProtocol} • ${spec.coverageAreaM2}m²"
+    is LaptopSpec -> listOfNotNull(
+        listOfNotNull(spec.gpuModel.ifBlank { null }, spec.gpuWattTgp.ifBlank { null }?.let { "($it)" }).joinToString(" ").ifBlank { null },
+        spec.muxSwitch.ifBlank { null },
+        spec.displaySpec.ifBlank { null },
+    ).joinToString(" • ")
+    is MouseSpec -> listOfNotNull(
+        spec.sensor.ifBlank { null },
+        spec.pollingRateHz.takeIf { it > 0 }?.let { "${it}Hz" },
+        spec.weightG.takeIf { it > 0 }?.let { "${it}g" },
+        spec.switchType.ifBlank { null },
+    ).joinToString(" • ")
+    is KeyboardSpec -> listOfNotNull(
+        spec.switchType.ifBlank { null },
+        when {
+            spec.rapidTriggerSupported && spec.minActuationMm > 0 -> "Rapid Trigger (${spec.minActuationMm}mm)"
+            spec.rapidTriggerSupported -> "Rapid Trigger"
+            spec.minActuationMm > 0 -> "${spec.minActuationMm}mm"
+            else -> null
+        },
+        spec.layout.ifBlank { null },
+    ).joinToString(" • ")
+    is HeadsetSpec -> listOfNotNull(
+        listOfNotNull(spec.driverType.ifBlank { null }, spec.driverSizeMm.takeIf { it > 0 }?.let { "(${it}mm)" }).joinToString(" ").ifBlank { null },
+        spec.impedanceOhm.takeIf { it > 0 }?.let { "${it}Ω" },
+        spec.weightG.takeIf { it > 0 }?.let { "${it}g" },
+        spec.connectivity.ifBlank { null },
+    ).joinToString(" • ")
+    is MonitorSpec -> listOfNotNull(
+        listOfNotNull(spec.screenSizeInch.takeIf { it > 0 }?.let { "${it}\"" }, spec.panelType.ifBlank { null }).joinToString(" ").ifBlank { null },
+        spec.resolution.ifBlank { null },
+        spec.refreshRateHz.takeIf { it > 0 }?.let { "${it}Hz" },
+        spec.responseSpeedGtGMs.takeIf { it > 0 }?.let { "${it}ms" },
+    ).joinToString(" • ")
+    is MicrophoneSpec -> listOfNotNull(
+        spec.capsuleType.ifBlank { null },
+        spec.polarPattern.ifBlank { null },
+        spec.connectivity.ifBlank { null },
+        spec.maxSplDb.takeIf { it > 0 }?.let { "${it}dB SPL" },
+    ).joinToString(" • ")
+    is MousepadSpec -> listOfNotNull(
+        spec.surfaceType.ifBlank { null },
+        spec.speedGlideTier.ifBlank { null },
+        spec.baseMaterial.ifBlank { null },
+        spec.dimensionsMm.ifBlank { null },
+    ).joinToString(" • ")
+    is WebcamSpec -> listOfNotNull(
+        spec.maxResolution.ifBlank { null },
+        spec.maxFrameRateFps.takeIf { it > 0 }?.let { "${it}FPS" },
+        spec.sensorModel.ifBlank { null },
+        spec.fieldOfViewDeg.takeIf { it > 0 }?.let { "${it}° FOV" },
+    ).joinToString(" • ")
+    is GamingChairSpec -> listOfNotNull(
+        spec.chairType.ifBlank { null },
+        spec.upholsteryMaterial.ifBlank { null },
+        spec.lumbarSupportType.ifBlank { null },
+        spec.maxWeightCapacityKg.takeIf { it > 0 }?.let { "Max ${it}kg" },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.CaseFanSpec -> listOfNotNull(
+        spec.fanSizeMm.takeIf { it > 0 }?.let { "${it}mm" },
+        spec.maxRpm.takeIf { it > 0 }?.let { "${it} RPM" },
+        spec.maxAirflowCfm.takeIf { it > 0 }?.let { "${it} CFM" },
+        spec.noiseLevelDba.takeIf { it > 0 }?.let { "${it} dBA" },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.UpsSpec -> listOfNotNull(
+        if (spec.vaRating > 0 && spec.wattCapacity > 0) "${spec.vaRating}VA / ${spec.wattCapacity}W"
+        else spec.vaRating.takeIf { it > 0 }?.let { "${it}VA" } ?: spec.wattCapacity.takeIf { it > 0 }?.let { "${it}W" },
+        spec.topology.ifBlank { null },
+        spec.sinewaveType.ifBlank { null },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.GamingDeskSpec -> listOfNotNull(
+        if (spec.deskWidthCm > 0 && spec.deskDepthCm > 0) "${spec.deskWidthCm}x${spec.deskDepthCm}cm" else null,
+        spec.maxLoadKg.takeIf { it > 0 }?.let { "Max ${it}kg" },
+        spec.surfaceFinish.ifBlank { null },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.GamingLightingSpec -> listOfNotNull(
+        spec.formFactor.ifBlank { null },
+        spec.maxLumens.takeIf { it > 0 }?.let { "$it lm" },
+        spec.colorTempKelvin.ifBlank { null },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.SmartwatchSpec -> listOfNotNull(
+        listOfNotNull(spec.screenSizeInch.takeIf { it > 0 }?.let { "${it}\"" }, spec.screenPanel.ifBlank { null }).joinToString(" ").ifBlank { null },
+        spec.batteryLifeDays.takeIf { it > 0 }?.let { "$it Gün" },
+        spec.waterResistanceAtm.takeIf { it > 0 }?.let { "$it ATM" },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.RouterSpec -> listOfNotNull(
+        spec.wifiStandard.ifBlank { null },
+        spec.speedClass.ifBlank { null },
+        spec.ethernetPorts.ifBlank { null },
+        spec.processorAndRam.ifBlank { null },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.ModemSpec -> listOfNotNull(
+        spec.vdslProfile.ifBlank { null },
+        spec.wifiStandard.ifBlank { null },
+        spec.lanPorts.ifBlank { null },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.AccessPointSpec -> listOfNotNull(
+        spec.formFactor.ifBlank { null },
+        spec.wifiStandard.ifBlank { null },
+        spec.poeSupport.ifBlank { null },
+        spec.maxClients.takeIf { it > 0 }?.let { "Max $it Cihaz" },
+    ).joinToString(" • ")
+    is com.panda.myapplication.domain.model.RangeExtenderSpec -> listOfNotNull(
+        spec.extenderType.ifBlank { null },
+        spec.wifiStandard.ifBlank { null },
+        spec.meshProtocol.ifBlank { null },
+        spec.coverageAreaM2.takeIf { it > 0 }?.let { "${it}m²" },
+    ).joinToString(" • ")
 }
 
 

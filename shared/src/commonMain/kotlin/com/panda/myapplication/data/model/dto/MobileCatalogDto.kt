@@ -10,6 +10,7 @@ import com.panda.myapplication.domain.model.PricePoint
 import com.panda.myapplication.domain.model.ProductPriceInfo
 import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.TabletSpec
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -44,6 +45,9 @@ data class SmartphoneCatalogItemDto(
     val stores: List<MobileStoreDto> = emptyList(),
     val priceHistory: List<MobilePricePointDto> = emptyList(),
     val spec: PhoneSpec? = null,
+    @SerialName("extra_specs") val extraSpecs: Map<String, String> = emptyMap(),
+    @SerialName("source_provenance") val sourceProvenance: List<String> = emptyList(),
+    @SerialName("spec_verified_at") val specVerifiedAt: String? = null,
 ) {
 }
 
@@ -66,6 +70,9 @@ data class TabletCatalogItemDto(
     val stores: List<MobileStoreDto> = emptyList(),
     val priceHistory: List<MobilePricePointDto> = emptyList(),
     val spec: TabletSpec? = null,
+    @SerialName("extra_specs") val extraSpecs: Map<String, String> = emptyMap(),
+    @SerialName("source_provenance") val sourceProvenance: List<String> = emptyList(),
+    @SerialName("spec_verified_at") val specVerifiedAt: String? = null,
 ) {
     fun toDomain(): HardwareItem? {
         val tabletSpec = spec ?: return null

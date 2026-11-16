@@ -1,25 +1,18 @@
 {
-  "generated_at": "2026-11-16T12:27:46.001698+00:00",
-  "version": "2.0.0",
-  "files": {
-    "case.json": "6a1cd8bd3baaf3e46d8bac3aa11e30d4a88ad2009983e0dbc1d9cfef63e9baeb",
-    "cooler.json": "593ab44360407a066b8dd751318784f43db582f6d467793f0727c59064558736",
-    "cpu-cooler.json": "593ab44360407a066b8dd751318784f43db582f6d467793f0727c59064558736",
-    "cpu.json": "4ee6d08f26e5f549bc87ae9d11336cb49ea68f6d540d58e066e175b4ed3e6674",
-    "gpu.json": "57c5a52c2f80f6948cd799fa18b114daf71a783a9e27d1ee5d8aa586d41b5a2f",
-    "hardware_glossary.json": "7f6ad354139ed30b8ec04deeb01884175b586d5578d73baaaec33d65b683c67e",
-    "internal-hard-drive.json": "b1f0ef8316e839a8843e9d804b4a5064ae4812d61d185515dc161769e798702b",
-    "laptop.json": "573f534a8fca191216546c4ed8287ad23327e0ac1918f47ea1d9c925a9ad86f0",
-    "memory.json": "e4c88d25ac637d7c610d16368d7a68fd93f7b822e72f0645d4cd4eab198ae8be",
-    "motherboard.json": "6c6ecb86bbdfeb58d16d80343862cc63ba84812e7fc386f6969a4114c641419e",
-    "peripherals.json": "0aae6b34a6f29f65b1bdad8ff92d4c087522b04e05c0bc5f77aac24a657a3046",
-    "power-supply.json": "f0662652318903d62798018e067e47440bf42d22d1736d1eefb5deb2813b5121",
-    "prices_tr.json": "c3d83dbd27b6c2dd09872ab085b562e287c645dc1ed72c38684494e0d7bf93a7",
-    "psu.json": "f0662652318903d62798018e067e47440bf42d22d1736d1eefb5deb2813b5121",
-    "ram.json": "e4c88d25ac637d7c610d16368d7a68fd93f7b822e72f0645d4cd4eab198ae8be",
-    "smartphone.json": "5b7134303ae5638a7d545048cbfc3a5f280ff89b37384182943339bec84a7e8b",
-    "storage.json": "b1f0ef8316e839a8843e9d804b4a5064ae4812d61d185515dc161769e798702b",
-    "tablet.json": "d24ae3ebc73bc0493059c9bd8444b11cc964cde5323f1100fd847826a91580f1",
-    "video-card.json": "57c5a52c2f80f6948cd799fa18b114daf71a783a9e27d1ee5d8aa586d41b5a2f"
+  "catalogVersion": "4.0.0",
+  "verifiedAt": "2026-11-16",
+  "counts": {
+    "cpu": 450,
+    "gpu": 1669,
+    "storage": 402,
+    "psu": 227,
+    "motherboard": 645,
+    "ram": 664,
+    "cooler": 144,
+    "case": 154,
+    "peripherals": 2764,
+    "smartphone": 247,
+    "tablet": 39,
+    "laptop": 486
   }
 }

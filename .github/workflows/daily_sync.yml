@@ -36,31 +36,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 1. Autonomous Hardware Discovery & Missing Brands Ingestion (DevSecOps)
-        run: |
-          python scripts/autonomous_hardware_discovery.py
+      - name: Restore crawler checkpoint cache (scripts/cache)
+        uses: actions/cache@v4
+        with:
+          path: scripts/cache
+          key: crawler-state-${{ github.run_id }}
+          restore-keys: |
+            crawler-state-
 
-      - name: 2. Sync Deep Hardware Specs & Verified Kaynakca Feeds (Delta-Only)
+      - name: 1. Multi-Source Checkpointed Crawler (Delta Mode)
         run: |
-          python scripts/sync_deep_specs_and_benchmarks.py --delta-only
+          python -m scripts.crawlers.run_crawl --mode delta --gsmarena-limit 15
 
-      - name: 3. Sync Global Technical Catalog & Multi-Angle Peripherals
+      - name: 2. Merge Multi-Source Catalogs & Verify Provenance
         run: |
-          python scripts/sync_global_catalog.py
+          python -m scripts.crawlers.merge_and_build
 
-      - name: 4. Check TR Store Price Changes & Stock Status
+      - name: 3. Check TR Store Price Changes & Stock Status
         if: env.ENABLE_PRICE_SYNC == 'true'
         run: |
           python scripts/update_prices.py
 
-      - name: 5. Autonomous Gaming Laptops Sync
+      - name: 4. Conditional Room v36 SQLite DB Rebuild
         run: |
-          python scripts/sync_systems_and_laptops.py --skip-live-crawl
-
-      - name: 6. Final Dual Directory Catalog Verification & Conditional DB Rebuild
-        run: |
-          python scripts/autonomous_hardware_discovery.py
-          if [ -n "$(git status --porcelain data/catalog/ data/hardware_benchmarks.json)" ]; then
+          if [ -n "$(git status --porcelain data/ shared/src/commonMain/composeResources/files/)" ]; then
             echo "Yeni donanım veya özellik değişikliği tespit edildi; hardware_wizard.db güncelleniyor..."
             python scripts/prepare_prepopulated_db.py
           else
@@ -72,11 +71,11 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff -I '"lastUpdated":' --quiet data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/; then
+          if git diff -I '"lastUpdated":\|"verifiedAt":\|"spec_verified_at":' --quiet data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/; then
             echo "Gerçek veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
             git checkout -- data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
           else
             git add data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
-            git commit -m "chore(catalog): autonomous daily hardware catalog & TR prices sync [skip ci]"
+            git commit -m "chore(catalog): autonomous daily multi-source delta catalog sync [skip ci]"
             git push
           fi

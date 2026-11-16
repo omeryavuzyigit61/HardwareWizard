@@ -60,13 +60,13 @@ fun MobileBenchmarkCard(
     val geekMulti = phoneSpec?.geekbenchMulti ?: tabletSpec?.geekbenchMulti
     val stabilityPct = phoneSpec?.stabilityPercent ?: tabletSpec?.stabilityPercent
     val chipset = phoneSpec?.chipset ?: tabletSpec?.chipset ?: ""
-    val processNode = phoneSpec?.processNodeNm ?: tabletSpec?.processNodeNm ?: 3
+    val processNode = (phoneSpec?.processNodeNm ?: tabletSpec?.processNodeNm ?: 0).takeIf { it > 0 }
     val cleanChipset = when {
-        chipset.contains("${processNode}nm", ignoreCase = true) || chipset.contains("nm)", ignoreCase = true) -> chipset
-        processNode > 0 -> "$chipset (${processNode}nm)"
+        chipset.contains("nm", ignoreCase = true) -> chipset
+        processNode != null -> "$chipset (${processNode}nm)"
         else -> chipset
     }
-    val pubgFps = phoneSpec?.pubgFpsSupport ?: "90 FPS"
+    val pubgFps = phoneSpec?.pubgFpsSupport?.takeIf { it.isNotBlank() }
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -382,24 +382,46 @@ fun MobileBenchmarkCard(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                // PUBG Mobile Badge
-                GameCapabilityChip(
-                    emoji = "🎯",
-                    text = "PUBG Mobile: $pubgFps",
-                    accentColor = NeonEmerald,
-                )
+                // DXOMARK Sub-Scores (when verified)
+                phoneSpec?.dxomarkCamera?.let { cam ->
+                    GameCapabilityChip(emoji = "📷", text = "DXOMARK Kamera: $cam", accentColor = NeonEmerald)
+                }
+                phoneSpec?.dxomarkSelfie?.let { sf ->
+                    GameCapabilityChip(emoji = "🤳", text = "DXOMARK Selfie: $sf", accentColor = NeonCyan)
+                }
+                phoneSpec?.dxomarkDisplay?.let { dp ->
+                    GameCapabilityChip(emoji = "🖥️", text = "DXOMARK Ekran: $dp", accentColor = ElectricBlue)
+                }
+                phoneSpec?.dxomarkBattery?.let { bt ->
+                    GameCapabilityChip(emoji = "🔋", text = "DXOMARK Pil: $bt", accentColor = NeonAmber)
+                }
+                phoneSpec?.dxomarkAudio?.let { au ->
+                    GameCapabilityChip(emoji = "🔊", text = "DXOMARK Ses: $au", accentColor = NeonPurple)
+                }
+
+                // PUBG Mobile Badge (only if known)
+                if (pubgFps != null) {
+                    GameCapabilityChip(
+                        emoji = "🎯",
+                        text = "PUBG Mobile: $pubgFps",
+                        accentColor = NeonEmerald,
+                    )
+                }
 
                 // High Refresh Display Badge
-                val hz = phoneSpec?.refreshRateHz ?: tabletSpec?.refreshRateHz ?: 120
-                GameCapabilityChip(
-                    emoji = "⚡",
-                    text = "${hz}Hz Akıcı Panel",
-                    accentColor = ElectricBlue,
-                )
+                val hz = (phoneSpec?.refreshRateHz ?: tabletSpec?.refreshRateHz ?: 0)
+                if (hz >= 90) {
+                    GameCapabilityChip(
+                        emoji = "⚡",
+                        text = "${hz}Hz Akıcı Panel",
+                        accentColor = ElectricBlue,
+                    )
+                }
 
                 // Ray Tracing Badge
                 if (chipset.contains("A18", ignoreCase = true) ||
-                    chipset.contains("Snapdragon 8 Gen", ignoreCase = true) ||
+                    chipset.contains("A19", ignoreCase = true) ||
+                    chipset.contains("Snapdragon 8", ignoreCase = true) ||
                     chipset.contains("Dimensity 9", ignoreCase = true) ||
                     chipset.contains("M4", ignoreCase = true)
                 ) {
@@ -411,14 +433,14 @@ fun MobileBenchmarkCard(
                 }
 
                 // Tablet Stylus / Phone OIS
-                if (phoneSpec?.hasOis == true) {
+                if (phoneSpec?.hasOis == true && phoneSpec.oisType.isNotBlank()) {
                     GameCapabilityChip(
                         emoji = "📸",
                         text = phoneSpec.oisType,
                         accentColor = NeonCyan,
                     )
                 }
-                if (tabletSpec != null) {
+                if (tabletSpec != null && tabletSpec.stylusSupport.isNotBlank()) {
                     GameCapabilityChip(
                         emoji = "✏️",
                         text = tabletSpec.stylusSupport,

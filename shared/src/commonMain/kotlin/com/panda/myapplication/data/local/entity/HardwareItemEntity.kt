@@ -43,4 +43,7 @@ data class HardwareItemEntity(
     @ColumnInfo(name = "game_fps") val gameFps: GameFpsBenchmark? = null,
     @ColumnInfo(name = "image_url") val imageUrl: String? = null,
     @ColumnInfo(name = "images") val images: List<String>? = null,
+    @ColumnInfo(name = "extra_specs") val extraSpecs: Map<String, String>? = null,
+    @ColumnInfo(name = "source_provenance") val sourceProvenance: List<String>? = null,
+    @ColumnInfo(name = "spec_verified_at") val specVerifiedAt: String? = null,
 )

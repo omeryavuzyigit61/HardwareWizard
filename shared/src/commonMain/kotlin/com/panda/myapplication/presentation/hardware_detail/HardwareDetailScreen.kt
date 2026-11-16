@@ -507,9 +507,9 @@ fun HardwareDetailContent(
                             }
                         }
 
-                        // Category-specific Polymorphic Technical Specifications Section
+                        // Category-specific Grouped Engineering Technical Specifications
                         item(key = "tech_specs") {
-                            PolymorphicTechnicalSpecsSection(item = item)
+                            GroupedTechnicalSpecsCard(item = item)
                         }
 
                         // Eşlikçi Yazılım & Sürücü Bulucu (Companion Software Hub)
@@ -731,6 +731,18 @@ private fun HeroHeaderCard(
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    var showLightbox by remember { mutableStateOf(false) }
+    var lightboxInitialPage by remember { mutableStateOf(0) }
+
+    if (showLightbox && item.effectiveImages.isNotEmpty()) {
+        DetailImageLightboxDialog(
+            images = item.effectiveImages,
+            initialPage = lightboxInitialPage,
+            displayName = item.displayName,
+            onDismiss = { showLightbox = false },
+        )
+    }
+
     FluidOrganicCard(
         modifier = modifier.fillMaxWidth(),
         accentColor = if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) NeonAmber else ElectricBlue,
@@ -746,6 +758,10 @@ private fun HeroHeaderCard(
                 imageUrl = item.effectiveImageUrl,
                 category = item.category,
                 displayName = item.displayName,
+                onImageClick = { page ->
+                    lightboxInitialPage = page
+                    showLightbox = true
+                },
             )
 
             Column(
@@ -805,6 +821,13 @@ private fun HeroHeaderCard(
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+
+                Spacer(modifier = Modifier.height(Spacing.small))
+                HeroSpecKpiStrip(item = item, isTr = isTr)
+                if (item.sourceProvenance.isNotEmpty() || !item.specVerifiedAt.isNullOrBlank()) {
+                    Spacer(modifier = Modifier.height(Spacing.small))
+                    SourceProvenanceStrip(item = item, isTr = isTr)
+                }
 
                 if (FeatureFlags.IS_PRICING_ENABLED && onPriceOverrideClick != null) {
                     Spacer(modifier = Modifier.height(Spacing.small))
@@ -1158,400 +1181,513 @@ private fun PerformancePowerSection(
                 }
 
                 is MouseSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
-                        currentValue = "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz} ms)",
-                        fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "8000 Hz e-spor tepe standardına göre", "Relative to 8000 Hz esports ceiling"),
-                    )
-                    val lightnessScore = ((120f - s.weightG) / 85f).coerceIn(0.1f, 1f)
-                    MetricProgressBar(
-                        title = tr(isTr, "Ultra Hafiflik Endeksi", "Ultralight Ergonomics Index"),
-                        currentValue = "${s.weightG} gram",
-                        fraction = lightnessScore,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = tr(isTr, "Düşük eylemsizlik ve hızlı flick kabiliyeti", "Low inertia and rapid flick agility"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Sensör Çözünürlüğü", "Sensor Resolution"),
-                        currentValue = "${s.maxDpi} DPI (${s.sensor})",
-                        fraction = (s.maxDpi / 44000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = tr(isTr, "Optik izleme hassasiyeti", "Optical tracking precision"),
-                    )
+                    if (s.pollingRateHz > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
+                            currentValue = "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz} ms)",
+                            fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = tr(isTr, "8000 Hz e-spor tepe standardına göre", "Relative to 8000 Hz esports ceiling"),
+                        )
+                    }
+                    if (s.weightG > 0) {
+                        val lightnessScore = ((120f - s.weightG) / 85f).coerceIn(0.1f, 1f)
+                        MetricProgressBar(
+                            title = tr(isTr, "Ultra Hafiflik Endeksi", "Ultralight Ergonomics Index"),
+                            currentValue = "${s.weightG} gram",
+                            fraction = lightnessScore,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = tr(isTr, "Düşük eylemsizlik ve hızlı flick kabiliyeti", "Low inertia and rapid flick agility"),
+                        )
+                    }
+                    if (s.maxDpi > 0 || s.sensor.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Sensör Çözünürlüğü", "Sensor Resolution"),
+                            currentValue = listOfNotNull(s.maxDpi.takeIf { it > 0 }?.let { "$it DPI" }, s.sensor.ifBlank { null }).joinToString(" • "),
+                            fraction = if (s.maxDpi > 0) (s.maxDpi / 44000f).coerceIn(0.2f, 1f) else 0.5f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = tr(isTr, "Optik izleme hassasiyeti", "Optical tracking precision"),
+                        )
+                    }
                 }
 
                 is KeyboardSpec -> {
-                    val actuationEff = ((2.2f - s.minActuationMm.toFloat()) / 2.1f).coerceIn(0.15f, 1f)
-                    MetricProgressBar(
-                        title = tr(isTr, "Tetikleme Mesafesi & Hızı", "Actuation Travel & Speed"),
-                        currentValue = "${s.minActuationMm} mm" + if (s.rapidTriggerSupported) " (Rapid Trigger)" else "",
-                        fraction = actuationEff,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "0.1 mm Hall Effect manyetik referansına göre", "Relative to 0.1mm magnetic rapid trigger"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
-                        currentValue = "${s.pollingRateHz} Hz",
-                        fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = if (isTr) "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)" else "Keystroke transmission latency (${1000.0 / s.pollingRateHz} ms)",
-                    )
+                    if (s.minActuationMm > 0) {
+                        val actuationEff = ((2.2f - s.minActuationMm.toFloat()) / 2.1f).coerceIn(0.15f, 1f)
+                        MetricProgressBar(
+                            title = tr(isTr, "Tetikleme Mesafesi & Hızı", "Actuation Travel & Speed"),
+                            currentValue = "${s.minActuationMm} mm" + if (s.rapidTriggerSupported) " (Rapid Trigger)" else "",
+                            fraction = actuationEff,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = tr(isTr, "0.1 mm Hall Effect manyetik referansına göre", "Relative to 0.1mm magnetic rapid trigger"),
+                        )
+                    }
+                    if (s.pollingRateHz > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
+                            currentValue = "${s.pollingRateHz} Hz",
+                            fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = if (isTr) "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)" else "Keystroke transmission latency (${1000.0 / s.pollingRateHz} ms)",
+                        )
+                    }
                 }
 
                 is HeadsetSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Sürücü Çapı & Akustik Güç", "Driver Size & Acoustic Power"),
-                        currentValue = "${s.driverSizeMm} mm (${s.driverType})",
-                        fraction = (s.driverSizeMm / 53f).coerceIn(0.3f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "Sahne genişliği ve bas derinliği", "Soundstage width and bass depth"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Empedans & Sürülebilirlik", "Impedance & Driveability"),
-                        currentValue = "${s.impedanceOhm} Ω",
-                        fraction = (s.impedanceOhm / 250f).coerceIn(0.12f, 1f),
-                        accentColor = if (s.dacAmpRequired) NeonAmber else MaterialTheme.colorScheme.secondary,
-                        subText = if (s.dacAmpRequired) tr(isTr, "Harici DAC/Amfi önerilir (Stüdyo sınıfı)", "Dedicated DAC/Amp recommended (Studio Grade)") else tr(isTr, "Anakart / Dongle ile doğrudan tam güç", "Easily driven directly by motherboard / dongle"),
-                    )
+                    if (s.driverSizeMm > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Sürücü Çapı & Akustik Güç", "Driver Size & Acoustic Power"),
+                            currentValue = listOfNotNull("${s.driverSizeMm} mm", s.driverType.ifBlank { null }.let { if (it != null) "($it)" else null }).joinToString(" "),
+                            fraction = (s.driverSizeMm / 53f).coerceIn(0.3f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = tr(isTr, "Sahne genişliği ve bas derinliği", "Soundstage width and bass depth"),
+                        )
+                    }
+                    if (s.impedanceOhm > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Empedans & Sürülebilirlik", "Impedance & Driveability"),
+                            currentValue = "${s.impedanceOhm} Ω",
+                            fraction = (s.impedanceOhm / 250f).coerceIn(0.12f, 1f),
+                            accentColor = if (s.dacAmpRequired) NeonAmber else MaterialTheme.colorScheme.secondary,
+                            subText = if (s.dacAmpRequired) tr(isTr, "Harici DAC/Amfi önerilir (Stüdyo sınıfı)", "Dedicated DAC/Amp recommended (Studio Grade)") else tr(isTr, "Anakart / Dongle ile doğrudan tam güç", "Easily driven directly by motherboard / dongle"),
+                        )
+                    }
                 }
 
                 is MonitorSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Yenileme Hızı (Akıcılık)", "Refresh Rate (Smoothness)"),
-                        currentValue = "${s.refreshRateHz} Hz",
-                        fraction = (s.refreshRateHz / 540f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "540 Hz e-spor tepe referansına göre", "Relative to 540 Hz esports reference"),
-                    )
-                    val respScore = if (s.responseSpeedGtGMs <= 0.05) 1.0f else (1f - (s.responseSpeedGtGMs.toFloat() / 5f)).coerceIn(0.2f, 0.9f)
-                    MetricProgressBar(
-                        title = tr(isTr, "Griden Griye Tepki Süresi (GtG)", "Gray-to-Gray Response (GtG)"),
-                        currentValue = "${s.responseSpeedGtGMs} ms (${s.panelType})",
-                        fraction = respScore,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = tr(isTr, "Ghosting ve hareket bulanıklığı direnci", "Resistance to ghosting and motion blur"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Keskinlik & Piksel Yoğunluğu", "Pixel Density (PPI)"),
-                        currentValue = "${s.ppi} PPI (${s.resolution})",
-                        fraction = (s.ppi / 165f).coerceIn(0.3f, 1f),
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = tr(isTr, "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği", "Text and image clarity on ${s.screenSizeInch}\" display"),
-                    )
+                    if (s.refreshRateHz > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Yenileme Hızı (Akıcılık)", "Refresh Rate (Smoothness)"),
+                            currentValue = "${s.refreshRateHz} Hz",
+                            fraction = (s.refreshRateHz / 540f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = tr(isTr, "540 Hz e-spor tepe referansına göre", "Relative to 540 Hz esports reference"),
+                        )
+                    }
+                    if (s.responseSpeedGtGMs > 0) {
+                        val respScore = if (s.responseSpeedGtGMs <= 0.05) 1.0f else (1f - (s.responseSpeedGtGMs.toFloat() / 5f)).coerceIn(0.2f, 0.9f)
+                        MetricProgressBar(
+                            title = tr(isTr, "Griden Griye Tepki Süresi (GtG)", "Gray-to-Gray Response (GtG)"),
+                            currentValue = listOfNotNull("${s.responseSpeedGtGMs} ms", s.panelType.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = respScore,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = tr(isTr, "Ghosting ve hareket bulanıklığı direnci", "Resistance to ghosting and motion blur"),
+                        )
+                    }
+                    if (s.ppi > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Keskinlik & Piksel Yoğunluğu", "Pixel Density (PPI)"),
+                            currentValue = listOfNotNull("${s.ppi} PPI", s.resolution.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = (s.ppi / 165f).coerceIn(0.3f, 1f),
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = tr(isTr, "${s.screenSizeInch}\" ekran boyutunda metin ve görüntü netliği", "Text and image clarity on ${s.screenSizeInch}\" display"),
+                        )
+                    }
                 }
 
                 is MicrophoneSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Maksimum Ses Basıncı Direnci (SPL)", "Max Sound Pressure Level (SPL)"),
-                        currentValue = "${s.maxSplDb} dB SPL",
-                        fraction = (s.maxSplDb / 150f).coerceIn(0.4f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "Yüksek sesli vokal ve yayınlarda seste bozulma (clipping) direnci", "Resistance to clipping during loud vocals and streaming"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Kapsül & Oda Gürültü İzolasyonu", "Capsule & Room Noise Isolation"),
-                        currentValue = "${s.capsuleType} (${s.polarPattern})",
-                        fraction = if (s.capsuleType.contains("Dinamik", ignoreCase = true)) 0.94f else 0.78f,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = s.connectivity,
-                    )
+                    if (s.maxSplDb > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Maksimum Ses Basıncı Direnci (SPL)", "Max Sound Pressure Level (SPL)"),
+                            currentValue = "${s.maxSplDb} dB SPL",
+                            fraction = (s.maxSplDb / 150f).coerceIn(0.4f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = tr(isTr, "Yüksek sesli vokal ve yayınlarda seste bozulma (clipping) direnci", "Resistance to clipping during loud vocals and streaming"),
+                        )
+                    }
+                    if (s.capsuleType.isNotBlank() || s.polarPattern.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Kapsül & Oda Gürültü İzolasyonu", "Capsule & Room Noise Isolation"),
+                            currentValue = listOfNotNull(s.capsuleType.ifBlank { null }, s.polarPattern.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = if (s.capsuleType.contains("Dinamik", ignoreCase = true) || s.capsuleType.contains("Dynamic", ignoreCase = true)) 0.94f else 0.78f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.connectivity.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is MousepadSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Durdurma Gücü (Stopping Power)", "Stopping Power & Flick Control"),
-                        currentValue = "${s.stoppingPowerScore}/10",
-                        fraction = (s.stoppingPowerScore / 10f).coerceIn(0.3f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.surfaceType} • ${s.speedGlideTier}",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Taban Stabilitesi & Kalınlık", "Base Stability & Thickness"),
-                        currentValue = "${s.thicknessMm} mm (${s.baseMaterial})",
-                        fraction = (s.thicknessMm.toFloat() / 6f).coerceIn(0.4f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.dimensionsMm} • ${s.humidityResistance}",
-                    )
+                    if (s.stoppingPowerScore > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Durdurma Gücü (Stopping Power)", "Stopping Power & Flick Control"),
+                            currentValue = "${s.stoppingPowerScore}/10",
+                            fraction = (s.stoppingPowerScore / 10f).coerceIn(0.3f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.surfaceType.ifBlank { null }, s.speedGlideTier.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.thicknessMm > 0 || s.dimensionsMm.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Taban Stabilitesi & Kalınlık", "Base Stability & Thickness"),
+                            currentValue = listOfNotNull(s.thicknessMm.takeIf { it > 0 }?.let { "$it mm" }, s.baseMaterial.ifBlank { null }?.let { "($it)" }).joinToString(" ").ifBlank { s.dimensionsMm },
+                            fraction = if (s.thicknessMm > 0) (s.thicknessMm.toFloat() / 6f).coerceIn(0.4f, 1f) else 0.7f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.dimensionsMm.ifBlank { null }, s.humidityResistance.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is WebcamSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Kare Hızı & Akış Akıcılığı", "Frame Rate & Stream Smoothness"),
-                        currentValue = "${s.maxResolution} @ ${s.maxFrameRateFps} FPS",
-                        fraction = (s.maxFrameRateFps / 60f).coerceIn(0.4f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.sensorModel} (${s.sensorSizeInch})",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Görüş Açısı (FOV) & Diyafram", "Field of View (FOV) & Aperture"),
-                        currentValue = "${s.fieldOfViewDeg}° • ${s.aperture}",
-                        fraction = (s.fieldOfViewDeg / 100f).coerceIn(0.5f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = s.focusType,
-                    )
+                    if (s.maxFrameRateFps > 0 || s.maxResolution.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Kare Hızı & Akış Akıcılığı", "Frame Rate & Stream Smoothness"),
+                            currentValue = listOfNotNull(s.maxResolution.ifBlank { null }, s.maxFrameRateFps.takeIf { it > 0 }?.let { "@ ${it} FPS" }).joinToString(" "),
+                            fraction = if (s.maxFrameRateFps > 0) (s.maxFrameRateFps / 60f).coerceIn(0.4f, 1f) else 0.6f,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.sensorModel.ifBlank { null }, s.sensorSizeInch.ifBlank { null }?.let { "($it)" }).joinToString(" ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.fieldOfViewDeg > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Görüş Açısı (FOV) & Diyafram", "Field of View (FOV) & Aperture"),
+                            currentValue = listOfNotNull("${s.fieldOfViewDeg}°", s.aperture.ifBlank { null }).joinToString(" • "),
+                            fraction = (s.fieldOfViewDeg / 100f).coerceIn(0.5f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.focusType.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is GamingChairSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "İskelet & Taşıma Kapasitesi", "Frame & Max Weight Capacity"),
-                        currentValue = "${s.maxWeightCapacityKg} kg (${s.gasLiftClass})",
-                        fraction = (s.maxWeightCapacityKg / 160f).coerceIn(0.5f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.recommendedHeightRange} • ${s.reclineAngleDeg}° Yatış",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Ortopedik Bel & Kolçak Ergonomisi", "Lumbar & Armrest Ergonomics"),
-                        currentValue = s.lumbarSupportType,
-                        fraction = 0.92f,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.upholsteryMaterial} • ${s.armrestType}",
-                    )
+                    if (s.maxWeightCapacityKg > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "İskelet & Taşıma Kapasitesi", "Frame & Max Weight Capacity"),
+                            currentValue = listOfNotNull("${s.maxWeightCapacityKg} kg", s.gasLiftClass.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = (s.maxWeightCapacityKg / 160f).coerceIn(0.5f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.recommendedHeightRange.ifBlank { null }, s.reclineAngleDeg.takeIf { it > 0 }?.let { "${it}° Yatış" }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.lumbarSupportType.isNotBlank() || s.upholsteryMaterial.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Ortopedik Bel & Kolçak Ergonomisi", "Lumbar & Armrest Ergonomics"),
+                            currentValue = s.lumbarSupportType.ifBlank { s.upholsteryMaterial },
+                            fraction = 0.92f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.upholsteryMaterial.ifBlank { null }, s.armrestType.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is PhoneSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "AnTuTu v10 Performansı", "AnTuTu v10 Performance"),
-                        currentValue = "${s.antutuScore?.let { formatPoints(it) } ?: "N/A"} Puan",
-                        fraction = ((s.antutuScore ?: 1500000) / 2500000f).coerceIn(0.1f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.chipset} (${s.cpuArch})",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Ekran & Akıcılık", "Display & Smoothness"),
-                        currentValue = "${s.peakBrightnessNit} Nit • ${s.refreshRateHz} Hz",
-                        fraction = (s.peakBrightnessNit / 3000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.displayTech} (${s.resolution})",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Batarya & Hızlı Şarj", "Battery & Charging"),
-                        currentValue = "${s.batteryMah} mAh (${s.wiredChargingWatt}W)",
-                        fraction = (s.batteryMah / 6000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = s.chargingTimeToFullMin?.let { tr(isTr, "%100 dolum süresi ~$it dk", "Full charge ~$it min") } ?: "${s.wiredChargingWatt}W Hızlı Şarj",
-                    )
+                    s.antutuScore?.let { antutu ->
+                        MetricProgressBar(
+                            title = tr(isTr, "AnTuTu v10 Performansı", "AnTuTu v10 Performance"),
+                            currentValue = "${formatPoints(antutu)} Puan",
+                            fraction = (antutu / 2500000f).coerceIn(0.1f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.chipset.ifBlank { null }, s.cpuArch.ifBlank { null }?.let { "($it)" }).joinToString(" ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.peakBrightnessNit > 0 || s.refreshRateHz > 0) {
+                        val dispText = listOfNotNull(
+                            s.peakBrightnessNit.takeIf { it > 0 }?.let { "$it Nit" },
+                            s.refreshRateHz.takeIf { it > 0 }?.let { "$it Hz" },
+                        ).joinToString(" • ")
+                        MetricProgressBar(
+                            title = tr(isTr, "Ekran & Akıcılık", "Display & Smoothness"),
+                            currentValue = dispText,
+                            fraction = when {
+                                s.peakBrightnessNit > 0 -> (s.peakBrightnessNit / 3000f).coerceIn(0.2f, 1f)
+                                else -> (s.refreshRateHz / 165f).coerceIn(0.3f, 1f)
+                            },
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.displayTech.ifBlank { null }, s.resolution.ifBlank { null }?.let { "($it)" }).joinToString(" ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.batteryMah > 0) {
+                        val wattTag = s.wiredChargingWatt.takeIf { it > 0 }?.let { " (${it}W)" }.orEmpty()
+                        MetricProgressBar(
+                            title = tr(isTr, "Batarya & Hızlı Şarj", "Battery & Charging"),
+                            currentValue = "${s.batteryMah} mAh$wattTag",
+                            fraction = (s.batteryMah / 6000f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = s.chargingTimeToFullMin?.let { tr(isTr, "%100 dolum süresi ~$it dk", "Full charge ~$it min") }
+                                ?: s.wiredChargingWatt.takeIf { it > 0 }?.let { "${it}W Hızlı Şarj" }
+                                ?: "-",
+                        )
+                    }
                 }
 
                 is TabletSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Hesaplama & Çoklu Görev Gücü", "Computing & Multitasking Power"),
-                        currentValue = "${s.chipset}",
-                        fraction = ((s.antutuScore ?: 1800000) / 3000000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "AnTuTu: ${s.antutuScore?.let { formatPoints(it) } ?: "N/A"} Puan",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Görsel Üretim & Panel", "Display & Creative Workspace"),
-                        currentValue = "${s.displaySizeInch}\" ${s.displayTech} (${s.refreshRateHz} Hz)",
-                        fraction = (s.displaySizeInch.toFloat() / 15f).coerceIn(0.3f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.stylusSupport} Desteği",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Batarya Kapasitesi", "Battery Capacity"),
-                        currentValue = "${s.batteryMah} mAh",
-                        fraction = (s.batteryMah / 12000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "${s.thicknessMm} mm Gövde • ${s.weightGrams}g",
-                    )
+                    s.antutuScore?.let { antutu ->
+                        MetricProgressBar(
+                            title = tr(isTr, "Hesaplama & Çoklu Görev Gücü", "Computing & Multitasking Power"),
+                            currentValue = s.chipset.ifBlank { "SoC" },
+                            fraction = (antutu / 3000000f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = "AnTuTu: ${formatPoints(antutu)} Puan",
+                        )
+                    }
+                    if (s.displaySizeInch > 0 || s.displayTech.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Görsel Üretim & Panel", "Display & Creative Workspace"),
+                            currentValue = listOfNotNull(
+                                s.displaySizeInch.takeIf { it > 0 }?.let { "${it}\"" },
+                                s.displayTech.ifBlank { null },
+                                s.refreshRateHz.takeIf { it > 0 }?.let { "(${it} Hz)" },
+                            ).joinToString(" "),
+                            fraction = if (s.displaySizeInch > 0) (s.displaySizeInch.toFloat() / 15f).coerceIn(0.3f, 1f) else 0.7f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.stylusSupport.ifBlank { "-" },
+                        )
+                    }
+                    if (s.batteryMah > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Batarya Kapasitesi", "Battery Capacity"),
+                            currentValue = "${s.batteryMah} mAh",
+                            fraction = (s.batteryMah / 12000f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = listOfNotNull(
+                                s.thicknessMm.takeIf { it > 0 }?.let { "${it} mm" },
+                                s.weightGrams.takeIf { it > 0 }?.let { "${it}g" },
+                            ).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is CaseFanSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Hava Akışı Performansı (Airflow)", "Airflow Performance"),
-                        currentValue = "${s.maxAirflowCfm} CFM",
-                        fraction = (s.maxAirflowCfm.toFloat() / 100f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.fanSizeMm} mm Fan • Maks. ${s.maxRpm} RPM",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Statik Basınç (Radyatör Direnci)", "Static Pressure"),
-                        currentValue = "${s.staticPressureMmH2o} mmH2O",
-                        fraction = (s.staticPressureMmH2o.toFloat() / 4.5f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = tr(isTr, "Radyatör ve filtre hava itiş kabiliyeti", "Push-through capability"),
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Akustik Seviye (Sessizlik)", "Acoustic Silence Rating"),
-                        currentValue = "${s.noiseLevelDba} dBA",
-                        fraction = ((40f - s.noiseLevelDba.toFloat()) / 25f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "${s.bearingType} • ${if (s.pwmPins == 4) "PWM 4-Pin" else "Sabit Voltaj"}",
-                    )
+                    if (s.maxAirflowCfm > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Hava Akışı Performansı (Airflow)", "Airflow Performance"),
+                            currentValue = "${s.maxAirflowCfm} CFM",
+                            fraction = (s.maxAirflowCfm.toFloat() / 100f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.fanSizeMm.takeIf { it > 0 }?.let { "$it mm" }, s.maxRpm.takeIf { it > 0 }?.let { "Maks. $it RPM" }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.staticPressureMmH2o > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Statik Basınç (Radyatör Direnci)", "Static Pressure"),
+                            currentValue = "${s.staticPressureMmH2o} mmH2O",
+                            fraction = (s.staticPressureMmH2o.toFloat() / 4.5f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = tr(isTr, "Radyatör ve filtre hava itiş kabiliyeti", "Push-through capability"),
+                        )
+                    }
+                    if (s.noiseLevelDba > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Akustik Seviye (Sessizlik)", "Acoustic Silence Rating"),
+                            currentValue = "${s.noiseLevelDba} dBA",
+                            fraction = ((40f - s.noiseLevelDba.toFloat()) / 25f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = listOfNotNull(s.bearingType.ifBlank { null }, if (s.pwmPins == 4) "PWM 4-Pin" else null).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is UpsSpec -> {
-                    val isPureSine = s.sinewaveType.contains("Tam Sinüs") || s.sinewaveType.contains("Pure Sine")
-                    MetricProgressBar(
-                        title = tr(isTr, "Aktif Çıkış Gücü Kapasitesi", "Power Output Capacity"),
-                        currentValue = "${s.wattCapacity}W (${s.vaRating} VA)",
-                        fraction = (s.wattCapacity.toFloat() / 2000f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.topology} • ${s.sinewaveType}",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Yedekleme Süresi (Yarı Yük)", "Backup Runtime (Half Load)"),
-                        currentValue = "~${s.runtimeMinHalfLoad} Dakika",
-                        fraction = (s.runtimeMinHalfLoad.toFloat() / 30f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "Tam Yükte: ~${s.runtimeMinFullLoad} dk (${s.batterySpecs})",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Dalga Formu & Koruma Teknolojisi", "Waveform & Protection"),
-                        currentValue = s.sinewaveType,
-                        fraction = if (isPureSine) 1.0f else 0.65f,
-                        accentColor = if (isPureSine) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.outline,
-                        subText = if (isPureSine) "Tam Sinüs (Active PFC PSU ile %100 Uyumlu)" else "Simüle Sinüs (Standart Güç)",
-                    )
+                    val isPureSine = s.sinewaveType.contains("Tam Sinüs", ignoreCase = true) || s.sinewaveType.contains("Pure Sine", ignoreCase = true)
+                    if (s.wattCapacity > 0 || s.vaRating > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Aktif Çıkış Gücü Kapasitesi", "Power Output Capacity"),
+                            currentValue = listOfNotNull(s.wattCapacity.takeIf { it > 0 }?.let { "${it}W" }, s.vaRating.takeIf { it > 0 }?.let { "(${it} VA)" }).joinToString(" "),
+                            fraction = ((s.wattCapacity.takeIf { it > 0 } ?: (s.vaRating * 0.6).toInt()).toFloat() / 2000f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.topology.ifBlank { null }, s.sinewaveType.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.runtimeMinHalfLoad > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Yedekleme Süresi (Yarı Yük)", "Backup Runtime (Half Load)"),
+                            currentValue = "~${s.runtimeMinHalfLoad} Dakika",
+                            fraction = (s.runtimeMinHalfLoad.toFloat() / 30f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.runtimeMinFullLoad.takeIf { it > 0 }?.let { "Tam Yük: ~$it dk" }, s.batterySpecs.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.sinewaveType.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Dalga Formu & Koruma Teknolojisi", "Waveform & Protection"),
+                            currentValue = s.sinewaveType,
+                            fraction = if (isPureSine) 1.0f else 0.65f,
+                            accentColor = if (isPureSine) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.outline,
+                            subText = if (isPureSine) "Tam Sinüs (Active PFC PSU ile %100 Uyumlu)" else "Simüle / Adımlı Sinüs",
+                        )
+                    }
                 }
 
                 is GamingDeskSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Çalışma Yüzeyi Boyutu", "Desk Surface Area"),
-                        currentValue = "${s.deskWidthCm} x ${s.deskDepthCm} cm",
-                        fraction = ((s.deskWidthCm.toFloat() * s.deskDepthCm.toFloat()) / 16000f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.surfaceFinish} Kaplama",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Taşıma Kapasitesi & Yük", "Load Capacity"),
-                        currentValue = "${s.maxLoadKg} kg Taşıma",
-                        fraction = (s.maxLoadKg.toFloat() / 160f).coerceIn(0.2f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = if (s.hasCableManagement) "Entegre Kablo Yönetimi Dahil" else "Standart Ayaklar",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Yükseklik Ayar Aralığı", "Height Adjustability"),
-                        currentValue = if (s.isMotorizedHeight) "${s.minHeightCm}-${s.maxHeightCm} cm (Motorlu)" else "Sabit ${s.minHeightCm} cm",
-                        fraction = if (s.isMotorizedHeight) 0.95f else 0.4f,
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = if (s.integratedMousepad) "Tam Boy Deskmat Dahil" else "Masa Yüzeyi",
-                    )
+                    if (s.deskWidthCm > 0 && s.deskDepthCm > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Çalışma Yüzeyi Boyutu", "Desk Surface Area"),
+                            currentValue = "${s.deskWidthCm} x ${s.deskDepthCm} cm",
+                            fraction = ((s.deskWidthCm.toFloat() * s.deskDepthCm.toFloat()) / 16000f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = s.surfaceFinish.ifBlank { "-" },
+                        )
+                    }
+                    if (s.maxLoadKg > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Taşıma Kapasitesi & Yük", "Load Capacity"),
+                            currentValue = "${s.maxLoadKg} kg Taşıma",
+                            fraction = (s.maxLoadKg.toFloat() / 160f).coerceIn(0.2f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = if (s.hasCableManagement) "Entegre Kablo Yönetimi Dahil" else "Standart İskelet",
+                        )
+                    }
+                    if (s.minHeightCm > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Yükseklik Ayar Aralığı", "Height Adjustability"),
+                            currentValue = if (s.isMotorizedHeight) "${s.minHeightCm}-${s.maxHeightCm} cm (Motorlu)" else "Sabit ${s.minHeightCm} cm",
+                            fraction = if (s.isMotorizedHeight) 0.95f else 0.4f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = if (s.integratedMousepad) "Tam Boy Deskmat Dahil" else "Masa Yüzeyi",
+                        )
+                    }
                 }
 
                 is GamingLightingSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Işık Akısı & Parlaklık", "Luminous Flux (Brightness)"),
-                        currentValue = "${s.maxLumens} Lümen",
-                        fraction = (s.maxLumens.toFloat() / 3000f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.formFactor} • ${s.colorTempKelvin}",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Renk Doğruluğu (CRI / Ra)", "Color Accuracy (CRI)"),
-                        currentValue = "CRI ${s.criScore} Ra",
-                        fraction = (s.criScore.toFloat() / 100f).coerceIn(0.5f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = s.powerSource,
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Ekran Senkronizasyonu & Ekosistem", "Sync & Ecosystem"),
-                        currentValue = if (s.hasScreenMirroring) "Reaktif Ekran Senkronu Var" else "Standart RGB",
-                        fraction = if (s.hasScreenMirroring) 1.0f else 0.5f,
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = s.supportedEcosystems,
-                    )
+                    if (s.maxLumens > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Işık Akısı & Parlaklık", "Luminous Flux (Brightness)"),
+                            currentValue = "${s.maxLumens} Lümen",
+                            fraction = (s.maxLumens.toFloat() / 3000f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = listOfNotNull(s.formFactor.ifBlank { null }, s.colorTempKelvin.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.criScore > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Renk Doğruluğu (CRI / Ra)", "Color Accuracy (CRI)"),
+                            currentValue = "CRI ${s.criScore} Ra",
+                            fraction = (s.criScore.toFloat() / 100f).coerceIn(0.5f, 1f),
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.powerSource.ifBlank { "-" },
+                        )
+                    }
+                    if (s.supportedEcosystems.isNotBlank() || s.hasScreenMirroring) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Ekran Senkronizasyonu & Ekosistem", "Sync & Ecosystem"),
+                            currentValue = if (s.hasScreenMirroring) "Reaktif Ekran Senkronu Var" else "Standart RGB",
+                            fraction = if (s.hasScreenMirroring) 1.0f else 0.5f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = s.supportedEcosystems.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is SmartwatchSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Pil Ömrü & Dayanıklılık", "Battery Life"),
-                        currentValue = "${s.batteryLifeDays} Gün Normal",
-                        fraction = (s.batteryLifeDays.toFloat() / 21f).coerceIn(0.15f, 1f),
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "Zirve Parlaklık: ${s.peakBrightnessNits} Nit",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Ekran & Gövde Tasarımı", "Display & Build"),
-                        currentValue = "${s.screenSizeInch}\" ${s.screenPanel}",
-                        fraction = (s.screenSizeInch.toFloat() / 2.0f).coerceIn(0.3f, 1f),
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.caseMaterial} • ${s.waterResistanceAtm} ATM Su Geçirmezlik",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Sağlık & Sensör Dizilimi", "Health & Sensors"),
-                        currentValue = s.osName,
-                        fraction = 0.9f,
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = s.sensorsList,
-                    )
+                    if (s.batteryLifeDays > 0) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Pil Ömrü & Dayanıklılık", "Battery Life"),
+                            currentValue = "${s.batteryLifeDays} Gün Normal",
+                            fraction = (s.batteryLifeDays.toFloat() / 21f).coerceIn(0.15f, 1f),
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = s.peakBrightnessNits.takeIf { it > 0 }?.let { "Zirve Parlaklık: $it Nit" } ?: "-",
+                        )
+                    }
+                    if (s.screenSizeInch > 0 || s.screenPanel.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Ekran & Gövde Tasarımı", "Display & Build"),
+                            currentValue = listOfNotNull(s.screenSizeInch.takeIf { it > 0 }?.let { "${it}\"" }, s.screenPanel.ifBlank { null }).joinToString(" "),
+                            fraction = if (s.screenSizeInch > 0) (s.screenSizeInch.toFloat() / 2.0f).coerceIn(0.3f, 1f) else 0.7f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.caseMaterial.ifBlank { null }, s.waterResistanceAtm.takeIf { it > 0 }?.let { "$it ATM" }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
+                    if (s.osName.isNotBlank() || s.sensorsList.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Sağlık & Sensör Dizilimi", "Health & Sensors"),
+                            currentValue = s.osName.ifBlank { "-" },
+                            fraction = 0.9f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = s.sensorsList.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is RouterSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Wi-Fi Hız Sınıfı & Bantlar", "Aggregated Wi-Fi Speed"),
-                        currentValue = "${s.speedClass} (${s.wifiStandard})",
-                        fraction = 0.9f,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = s.bands,
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Kablolu Ağ Port Kapasitesi", "Wired LAN/WAN Bandwidth"),
-                        currentValue = s.ethernetPorts,
-                        fraction = if (s.ethernetPorts.contains("10GbE")) 1.0f else if (s.ethernetPorts.contains("2.5GbE")) 0.75f else 0.5f,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = s.processorAndRam,
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Oyun QoS & Bufferbloat Koruması", "Gaming QoS & SQM"),
-                        currentValue = if (s.hasGamingQos && s.hasSqmBufferbloat) "Gaming QoS + SQM Aktif" else "Standart QoS",
-                        fraction = if (s.hasGamingQos && s.hasSqmBufferbloat) 1.0f else 0.6f,
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = s.usbSharingPorts,
-                    )
+                    if (s.speedClass.isNotBlank() || s.wifiStandard.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Wi-Fi Hız Sınıfı & Bantlar", "Aggregated Wi-Fi Speed"),
+                            currentValue = listOfNotNull(s.speedClass.ifBlank { null }, s.wifiStandard.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = 0.9f,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = s.bands.ifBlank { "-" },
+                        )
+                    }
+                    if (s.ethernetPorts.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Kablolu Ağ Port Kapasitesi", "Wired LAN/WAN Bandwidth"),
+                            currentValue = s.ethernetPorts,
+                            fraction = if (s.ethernetPorts.contains("10GbE")) 1.0f else if (s.ethernetPorts.contains("2.5GbE")) 0.75f else 0.5f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.processorAndRam.ifBlank { "-" },
+                        )
+                    }
+                    if (s.usbSharingPorts.isNotBlank() || s.hasGamingQos || s.hasSqmBufferbloat) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Oyun QoS & Bufferbloat Koruması", "Gaming QoS & SQM"),
+                            currentValue = if (s.hasGamingQos && s.hasSqmBufferbloat) "Gaming QoS + SQM Aktif" else if (s.hasSqmBufferbloat) "SQM Bufferbloat Aktif" else "Standart QoS",
+                            fraction = if (s.hasGamingQos && s.hasSqmBufferbloat) 1.0f else 0.6f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = s.usbSharingPorts.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is ModemSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "VDSL / Fiber Genişbant Standardı", "Broadband Profile"),
-                        currentValue = s.vdslProfile,
-                        fraction = 0.85f,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = if (s.fiberWanSupport) "Gigabit Fiber WAN Desteği Mevcut" else "Standart DSL",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Kablosuz Wi-Fi & Portlar", "Wi-Fi & LAN Ports"),
-                        currentValue = "${s.wifiStandard} • ${s.lanPorts}",
-                        fraction = 0.8f,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = "${s.chipset} • ${s.voipPorts}",
-                    )
+                    if (s.vdslProfile.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "VDSL / Fiber Genişbant Standardı", "Broadband Profile"),
+                            currentValue = s.vdslProfile,
+                            fraction = 0.85f,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = if (s.fiberWanSupport) "Gigabit Fiber WAN Desteği Mevcut" else "Standart DSL",
+                        )
+                    }
+                    if (s.wifiStandard.isNotBlank() || s.lanPorts.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Kablosuz Wi-Fi & Portlar", "Wi-Fi & LAN Ports"),
+                            currentValue = listOfNotNull(s.wifiStandard.ifBlank { null }, s.lanPorts.ifBlank { null }).joinToString(" • "),
+                            fraction = 0.8f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = listOfNotNull(s.chipset.ifBlank { null }, s.voipPorts.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is AccessPointSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Wi-Fi Standardı & Form Faktör", "Wi-Fi Standard & Form"),
-                        currentValue = "${s.wifiStandard} (${s.formFactor})",
-                        fraction = 0.9f,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "${s.maxClients}+ Eşzamanlı İstemci Kapasitesi",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "PoE Besleme & Uplink Hızı", "PoE Power & Uplink"),
-                        currentValue = "${s.poeSupport} • ${s.uplinkPort}",
-                        fraction = 0.85f,
-                        accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = s.muMimoStreams,
-                    )
+                    if (s.wifiStandard.isNotBlank() || s.formFactor.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Wi-Fi Standardı & Form Faktör", "Wi-Fi Standard & Form"),
+                            currentValue = listOfNotNull(s.wifiStandard.ifBlank { null }, s.formFactor.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = 0.9f,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = s.maxClients.takeIf { it > 0 }?.let { "${it}+ Eşzamanlı İstemci Kapasitesi" } ?: "-",
+                        )
+                    }
+                    if (s.poeSupport.isNotBlank() || s.uplinkPort.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "PoE Besleme & Uplink Hızı", "PoE Power & Uplink"),
+                            currentValue = listOfNotNull(s.poeSupport.ifBlank { null }, s.uplinkPort.ifBlank { null }).joinToString(" • "),
+                            fraction = 0.85f,
+                            accentColor = MaterialTheme.colorScheme.secondary,
+                            subText = s.muMimoStreams.ifBlank { "-" },
+                        )
+                    }
                 }
 
                 is RangeExtenderSpec -> {
-                    MetricProgressBar(
-                        title = tr(isTr, "Menzil Genişletme & Wi-Fi", "Extender Wi-Fi"),
-                        currentValue = "${s.extenderType} (${s.wifiStandard})",
-                        fraction = 0.85f,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = "~${s.coverageAreaM2} m² Kapsama Alanı",
-                    )
-                    MetricProgressBar(
-                        title = tr(isTr, "Mesh Omurgası & Ethernet", "Mesh Backhaul & Ports"),
-                        currentValue = s.meshProtocol,
-                        fraction = 0.8f,
-                        accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = "${s.dedicatedBackhaul} • ${s.ethernetPorts}",
-                    )
+                    if (s.extenderType.isNotBlank() || s.wifiStandard.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Menzil Genişletme & Wi-Fi", "Extender Wi-Fi"),
+                            currentValue = listOfNotNull(s.extenderType.ifBlank { null }, s.wifiStandard.ifBlank { null }?.let { "($it)" }).joinToString(" "),
+                            fraction = 0.85f,
+                            accentColor = MaterialTheme.colorScheme.primary,
+                            subText = s.coverageAreaM2.takeIf { it > 0 }?.let { "~${it} m² Kapsama Alanı" } ?: "-",
+                        )
+                    }
+                    if (s.meshProtocol.isNotBlank() || s.ethernetPorts.isNotBlank()) {
+                        MetricProgressBar(
+                            title = tr(isTr, "Mesh Omurgası & Ethernet", "Mesh Backhaul & Ports"),
+                            currentValue = s.meshProtocol.ifBlank { s.ethernetPorts },
+                            fraction = 0.8f,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = listOfNotNull(s.dedicatedBackhaul.ifBlank { null }, s.ethernetPorts.ifBlank { null }).joinToString(" • ").ifBlank { "-" },
+                        )
+                    }
                 }
             }
         }
@@ -2276,93 +2412,11 @@ private fun MetricStatBox(
     }
 }
 
-@Composable
-private fun PolymorphicTechnicalSpecsSection(
-    item: HardwareItem,
-    modifier: Modifier = Modifier,
-) {
-    val strings = LocalAppStrings.current
-    val rows = buildPolymorphicSpecRows(item, strings)
-
-    Card(
-        modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(Spacing.cardRadius),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(Spacing.medium),
-            verticalArrangement = Arrangement.spacedBy(Spacing.small),
-        ) {
-            @OptIn(ExperimentalLayoutApi::class)
-            FlowRow(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.padding(end = Spacing.small),
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .clip(CircleShape)
-                            .background(MaterialTheme.colorScheme.primary),
-                    )
-                    Spacer(modifier = Modifier.width(Spacing.small))
-                    Text(
-                        text = LocalAppStrings.current.detailTechSpecs,
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                    )
-                }
-                DetailBadge(
-                    text = item.category.localized(LocalAppStrings.current),
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                )
-            }
-
-            HorizontalDivider(color = MaterialTheme.colorScheme.outline, thickness = 1.dp)
-
-            rows.forEachIndexed { index, (label, value) ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(6.dp))
-                        .background(if (index % 2 == 0) MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f) else Color.Transparent)
-                        .padding(horizontal = Spacing.small, vertical = 10.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Text(
-                        text = label,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.weight(1f),
-                    )
-                    Text(
-                        text = value,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold,
-                        color = if (value == "Veri Bulunamadı" || value == "Belirtilmedi" || value == "Unspecified" || value == "Not Found") MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurface,
-                        modifier = Modifier.weight(1.3f),
-                    )
-                }
-            }
-        }
-    }
-}
-
 private fun getUnspecifiedText(isTr: Boolean): String = if (isTr) "Belirtilmedi" else "Unspecified"
 
 private fun tr(isTr: Boolean, trText: String, enText: String): String = if (isTr) trText else enText
 
-private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): List<Pair<String, String>> {
+internal fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): List<Pair<String, String>> {
     val isTr = strings.isTurkish
     val rows = mutableListOf<Pair<String, String>>()
     rows.add(strings.specBrand to item.brand)
@@ -3528,6 +3582,7 @@ fun HardwareDetailHeroImage(
     category: HardwareCategory,
     displayName: String,
     modifier: Modifier = Modifier,
+    onImageClick: ((Int) -> Unit)? = null,
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
@@ -3546,7 +3601,14 @@ fun HardwareDetailHeroImage(
             .height(340.dp)
             .clip(shape)
             .background(containerBg)
-            .border(1.dp, borderColor, shape),
+            .border(1.dp, borderColor, shape)
+            .let { base ->
+                if (effectiveList.isNotEmpty() && onImageClick != null && effectiveList.size == 1) {
+                    base.clickable { onImageClick(0) }
+                } else {
+                    base
+                }
+            },
         contentAlignment = Alignment.Center,
     ) {
         if (effectiveList.isEmpty()) {
@@ -3582,6 +3644,7 @@ fun HardwareDetailHeroImage(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
+                        .let { base -> if (onImageClick != null) base.clickable { onImageClick(page) } else base }
                         .padding(horizontal = 16.dp, vertical = 20.dp),
                     contentAlignment = Alignment.Center,
                 ) {

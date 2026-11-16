@@ -28,4 +28,7 @@ data class PsuRawDto(
     @SerialName("cybenetics_lambda") val cybeneticsLambda: String? = null,
     val imageUrl: String? = null,
     val images: List<String> = emptyList(),
+    @SerialName("extra_specs") val extraSpecs: Map<String, String> = emptyMap(),
+    @SerialName("source_provenance") val sourceProvenance: List<String> = emptyList(),
+    @SerialName("spec_verified_at") val specVerifiedAt: String? = null,
 )

@@ -18,6 +18,16 @@ data class CpuSpec(
     val coreTopology: String? = null,
     val powerLimits: String? = null,
     val igpuModel: String? = null,
+    val l1Cache: String? = null,
+    val dieSizeMm2: Double? = null,
+    val transistorsBillion: Double? = null,
+    val memoryChannels: Int? = null,
+    val eccSupport: Boolean? = null,
+    val pcieLanesDetail: String? = null,
+    val tjMaxCelsius: Int? = null,
+    val instructionSets: String? = null,
+    val npuTops: String? = null,
+    val releaseDate: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.CPU

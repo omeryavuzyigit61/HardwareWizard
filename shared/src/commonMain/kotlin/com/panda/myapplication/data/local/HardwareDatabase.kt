@@ -77,7 +77,7 @@ import kotlinx.coroutines.CoroutineDispatcher
         UserSessionEntity::class,
         AppSettingEntity::class,
     ],
-    version = 35,
+    version = 36,
     exportSchema = false,
 )
 @TypeConverters(HardwareTypeConverters::class)

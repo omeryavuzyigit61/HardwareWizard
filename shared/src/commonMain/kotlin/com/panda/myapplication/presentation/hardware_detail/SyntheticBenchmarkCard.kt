@@ -97,7 +97,7 @@ fun SyntheticBenchmarkCard(
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
-                            text = if (isCpu) tr(isTr, "Sentetik CPU Benchmark (CPU-Monkey)", "Synthetic CPU Benchmarks (CPU-Monkey)") else tr(isTr, "3DMark Sentetik Grafik Benchmark", "3DMark Synthetic Graphics Benchmarks"),
+                            text = if (isCpu) tr(isTr, "Çoklu Kaynak Sentetik CPU Testleri", "Multi-Source Synthetic CPU Benchmarks") else tr(isTr, "3DMark & PassMark Sentetik Grafik Testi", "3DMark & PassMark Synthetic GPU Tests"),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
@@ -226,6 +226,15 @@ fun SyntheticBenchmarkCard(
                         accentColor = MaterialTheme.colorScheme.secondary,
                         subText = tr(isTr, "3,800 pts referans modern mimari skoru", "3,800 pts modern architecture reference score"),
                     )
+                    cpuData?.passmarkSingle?.let { pmSingle ->
+                        SyntheticMetricRow(
+                            testName = "PassMark Single-Thread",
+                            score = pmSingle,
+                            referenceCeiling = 5200,
+                            accentColor = MaterialTheme.colorScheme.tertiary,
+                            subText = tr(isTr, "PassMark tek çekirdek IPC tepki referansı", "PassMark single-thread IPC reference"),
+                        )
+                    }
                 } else {
                     // Multi-Core Test Items
                     SyntheticMetricRow(
@@ -256,6 +265,24 @@ fun SyntheticBenchmarkCard(
                         accentColor = MaterialTheme.colorScheme.tertiary,
                         subText = tr(isTr, "70,000 pts global sentetik işlemci skoru", "70,000 pts global synthetic compute ceiling"),
                     )
+                    cpuData?.blenderScore?.let { b ->
+                        SyntheticMetricRow(
+                            testName = "Blender Benchmark",
+                            score = b,
+                            referenceCeiling = 1500,
+                            accentColor = NeonPurple,
+                            subText = tr(isTr, "Blender OpenData 3D Render puanı", "Blender OpenData 3D rendering score"),
+                        )
+                    }
+                    cpuData?.sevenZipMips?.let { sz ->
+                        SyntheticMetricRow(
+                            testName = "7-Zip Sıkıştırma (MIPS)",
+                            score = sz,
+                            referenceCeiling = 250000,
+                            accentColor = ElectricBlue,
+                            subText = tr(isTr, "Çok çekirdekli sıkıştırma / açma bant genişliği", "Multi-core compression throughput"),
+                        )
+                    }
                 }
             } else if (isGpu) {
                 val gpuData = benchmarkInfo?.gpuSynthetic
@@ -281,6 +308,33 @@ fun SyntheticBenchmarkCard(
                     accentColor = MaterialTheme.colorScheme.tertiary,
                     subText = tr(isTr, "Modern Cross-Platform Non-Raytracing saf raster skoru", "Modern cross-platform pure raster benchmark"),
                 )
+                gpuData?.portRoyal?.let { pr ->
+                    SyntheticMetricRow(
+                        testName = "3DMark Port Royal (Ray Tracing)",
+                        score = pr,
+                        referenceCeiling = 28000,
+                        accentColor = NeonPurple,
+                        subText = tr(isTr, "Donanımsal ışın izleme (RT) yük testi", "Real-time hardware ray tracing score"),
+                    )
+                }
+                gpuData?.speedWay?.let { sw ->
+                    SyntheticMetricRow(
+                        testName = "3DMark Speed Way (DX12 Ultimate)",
+                        score = sw,
+                        referenceCeiling = 16000,
+                        accentColor = NeonPurple,
+                        subText = tr(isTr, "DirectX 12 Ultimate Ray Tracing + Mesh Shaders", "DirectX 12 Ultimate ray tracing & mesh shader score"),
+                    )
+                }
+                gpuData?.passmarkG3d?.let { g3d ->
+                    SyntheticMetricRow(
+                        testName = "PassMark G3D Mark",
+                        score = g3d,
+                        referenceCeiling = 42000,
+                        accentColor = ElectricBlue,
+                        subText = tr(isTr, "PassMark GPU dünya sıralama endeksi", "Global PassMark G3D graphics index"),
+                    )
+                }
             }
         }
     }

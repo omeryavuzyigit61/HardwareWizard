@@ -79,7 +79,7 @@ internal class HardwareRepositoryImpl(
         seedMutex.withLock {
             if (isSeeded) return
             val seededVersion = hardwareDao.getSetting("catalog_seed_version")
-            val currentCatalogVersion = "3.0.0"
+            val currentCatalogVersion = "4.0.0"
             if (seededVersion == currentCatalogVersion) {
                 isSeeded = true
                 return

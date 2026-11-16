@@ -124,6 +124,16 @@ object HardwareMapper {
                     coreTopology = c.coreTopology,
                     powerLimits = c.powerLimits,
                     igpuModel = c.igpuModel,
+                    l1Cache = c.l1Cache,
+                    dieSizeMm2 = c.dieSizeMm2,
+                    transistorsBillion = c.transistorsBillion,
+                    memoryChannels = c.memoryChannels,
+                    eccSupport = c.eccSupport,
+                    pcieLanesDetail = c.pcieLanesDetail,
+                    tjMaxCelsius = c.tjMaxCelsius,
+                    instructionSets = c.instructionSets,
+                    npuTops = c.npuTops,
+                    releaseDate = c.releaseDate,
                 )
             }
             itemWithSpec.gpu != null -> {
@@ -151,6 +161,15 @@ object HardwareMapper {
                     rtCores = g.rtCores,
                     memorySpeedGbps = g.memorySpeedGbps,
                     bandwidthGbs = g.bandwidthGbs,
+                    tmus = g.tmus,
+                    rops = g.rops,
+                    l2CacheMb = g.l2CacheMb,
+                    fp32Tflops = g.fp32Tflops,
+                    pcieInterface = g.pcieInterface,
+                    upscalingTech = g.upscalingTech,
+                    mediaEngines = g.mediaEngines,
+                    gpuDie = g.gpuDie,
+                    releaseDate = g.releaseDate,
                 )
             }
             itemWithSpec.ram != null -> {
@@ -546,6 +565,11 @@ object HardwareMapper {
                     geekbenchSingle = p.geekbenchSingle,
                     geekbenchMulti = p.geekbenchMulti,
                     stabilityPercent = p.stabilityPercent,
+                    dxomarkCamera = p.dxomarkCamera,
+                    dxomarkSelfie = p.dxomarkSelfie,
+                    dxomarkDisplay = p.dxomarkDisplay,
+                    dxomarkBattery = p.dxomarkBattery,
+                    dxomarkAudio = p.dxomarkAudio,
                     displaySizeInch = p.displaySizeInch,
                     displayTech = p.displayTech,
                     resolution = p.resolution,
@@ -554,6 +578,7 @@ object HardwareMapper {
                     peakBrightnessNit = p.peakBrightnessNit,
                     glassProtection = p.glassProtection,
                     hdrSupport = p.hdrSupport,
+                    pwmDimmingHz = p.pwmDimmingHz,
                     mainCameraMp = p.mainCameraMp,
                     mainSensorSize = p.mainSensorSize,
                     mainAperture = p.mainAperture,
@@ -574,6 +599,8 @@ object HardwareMapper {
                     frameMaterial = p.frameMaterial,
                     waterResistance = p.waterResistance,
                     hasStylus = p.hasStylus,
+                    usbSpeed = p.usbSpeed,
+                    wifiBluetooth = p.wifiBluetooth,
                     osName = p.osName,
                     updateYears = p.updateYears,
                     pubgFpsSupport = p.pubgFpsSupport,
@@ -603,6 +630,7 @@ object HardwareMapper {
                     refreshRateHz = t.refreshRateHz,
                     peakBrightnessNit = t.peakBrightnessNit,
                     stylusSupport = t.stylusSupport,
+                    aspectRatio = t.aspectRatio,
                     mainCameraMp = t.mainCameraMp,
                     frontCameraMp = t.frontCameraMp,
                     speakerCount = t.speakerCount,
@@ -616,6 +644,8 @@ object HardwareMapper {
                     osName = t.osName,
                     updateYears = t.updateYears,
                     cellularOption = t.cellularOption,
+                    usbSpeed = t.usbSpeed,
+                    externalDisplaySupport = t.externalDisplaySupport,
                     variants = t.variants,
                 )
             }
@@ -664,6 +694,9 @@ object HardwareMapper {
             benchmarkInfo = null,
             imageUrl = cleanImage,
             images = entity.images.orEmpty().mapNotNull { com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(it) },
+            extraSpecs = entity.extraSpecs.orEmpty(),
+            sourceProvenance = entity.sourceProvenance.orEmpty(),
+            specVerifiedAt = entity.specVerifiedAt,
         )
 
         val isCpuOrGpu = entity.category == HardwareCategory.CPU || entity.category == HardwareCategory.GPU
@@ -744,6 +777,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = CpuSpecEntity(
             itemId = id,
@@ -764,6 +800,16 @@ object HardwareMapper {
             coreTopology = dto.coreTopology,
             powerLimits = dto.powerLimits,
             igpuModel = dto.igpuModel,
+            l1Cache = dto.l1Cache,
+            dieSizeMm2 = dto.dieSizeMm2,
+            transistorsBillion = dto.transistorsBillion,
+            memoryChannels = dto.memoryChannels,
+            eccSupport = dto.eccSupport,
+            pcieLanesDetail = dto.pcieLanesDetail,
+            tjMaxCelsius = dto.tjMaxCelsius,
+            instructionSets = dto.instructionSets,
+            npuTops = dto.npuTops,
+            releaseDate = dto.releaseDate,
         )
         return item to spec
     }
@@ -828,6 +874,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = GpuSpecEntity(
             itemId = id,
@@ -851,6 +900,15 @@ object HardwareMapper {
             rtCores = dto.rtCores,
             memorySpeedGbps = dto.memorySpeedGbps,
             bandwidthGbs = dto.bandwidthGbs,
+            tmus = dto.tmus,
+            rops = dto.rops,
+            l2CacheMb = dto.l2CacheMb,
+            fp32Tflops = dto.fp32Tflops,
+            pcieInterface = dto.pcieInterface,
+            upscalingTech = dto.upscalingTech,
+            mediaEngines = dto.mediaEngines,
+            gpuDie = dto.gpuDie,
+            releaseDate = dto.releaseDate,
         )
         return item to spec
     }
@@ -892,6 +950,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = RamSpecEntity(
             itemId = id,
@@ -970,6 +1031,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = MotherboardSpecEntity(
             itemId = id,
@@ -1038,6 +1102,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = PsuSpecEntity(
             itemId = id,
@@ -1108,6 +1175,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = StorageSpecEntity(
             itemId = id,
@@ -1150,6 +1220,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = CoolerSpecEntity(
             itemId = id,
@@ -1184,6 +1257,9 @@ object HardwareMapper {
             cachedAt = cachedAt,
             imageUrl = dto.imageUrl ?: dto.images.firstOrNull(),
             images = dto.images.takeIf { it.isNotEmpty() } ?: listOfNotNull(dto.imageUrl),
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = CaseSpecEntity(
             itemId = id,
@@ -1220,6 +1296,9 @@ object HardwareMapper {
             lowestPriceTry = dto.priceTry,
             highestPriceTry = dto.priceTry,
             benchmarkGamingIndex = dto.gamingScore,
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = LaptopSpecEntity(
             itemId = id,
@@ -1272,6 +1351,9 @@ object HardwareMapper {
             benchmarkGamingIndex = dto.gamingIndex ?: 80,
             imageUrl = effImg.takeIf { it.isNotBlank() },
             images = effImgs,
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = PhoneSpecEntity(
             itemId = dto.id,
@@ -1288,6 +1370,11 @@ object HardwareMapper {
             geekbenchSingle = s.geekbenchSingle,
             geekbenchMulti = s.geekbenchMulti,
             stabilityPercent = s.stabilityPercent,
+            dxomarkCamera = s.dxomarkCamera,
+            dxomarkSelfie = s.dxomarkSelfie,
+            dxomarkDisplay = s.dxomarkDisplay,
+            dxomarkBattery = s.dxomarkBattery,
+            dxomarkAudio = s.dxomarkAudio,
             displaySizeInch = s.displaySizeInch,
             displayTech = s.displayTech,
             resolution = s.resolution,
@@ -1296,6 +1383,7 @@ object HardwareMapper {
             peakBrightnessNit = s.peakBrightnessNit,
             glassProtection = s.glassProtection,
             hdrSupport = s.hdrSupport,
+            pwmDimmingHz = s.pwmDimmingHz,
             mainCameraMp = s.mainCameraMp,
             mainSensorSize = s.mainSensorSize,
             mainAperture = s.mainAperture,
@@ -1316,6 +1404,8 @@ object HardwareMapper {
             frameMaterial = s.frameMaterial,
             waterResistance = s.waterResistance,
             hasStylus = s.hasStylus,
+            usbSpeed = s.usbSpeed,
+            wifiBluetooth = s.wifiBluetooth,
             osName = s.osName,
             updateYears = s.updateYears,
             pubgFpsSupport = s.pubgFpsSupport,
@@ -1347,6 +1437,9 @@ object HardwareMapper {
             benchmarkGamingIndex = dto.gamingIndex ?: 80,
             imageUrl = effImg.takeIf { it.isNotBlank() },
             images = effImgs,
+            extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+            sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+            specVerifiedAt = dto.specVerifiedAt,
         )
         val spec = TabletSpecEntity(
             itemId = dto.id,
@@ -1369,6 +1462,7 @@ object HardwareMapper {
             refreshRateHz = s.refreshRateHz,
             peakBrightnessNit = s.peakBrightnessNit,
             stylusSupport = s.stylusSupport,
+            aspectRatio = s.aspectRatio,
             mainCameraMp = s.mainCameraMp,
             frontCameraMp = s.frontCameraMp,
             speakerCount = s.speakerCount,
@@ -1382,6 +1476,8 @@ object HardwareMapper {
             osName = s.osName,
             updateYears = s.updateYears,
             cellularOption = s.cellularOption,
+            usbSpeed = s.usbSpeed,
+            externalDisplaySupport = s.externalDisplaySupport,
             variants = s.variants,
         )
         return item to spec
@@ -1465,6 +1561,9 @@ object HardwareMapper {
                     benchmarkScore = dto.benchmarkScore,
                     benchmarkTier = dto.benchmarkTier,
                     benchmarkGamingIndex = dto.benchmarkScore,
+                    extraSpecs = dto.extraSpecs.takeIf { it.isNotEmpty() },
+                    sourceProvenance = dto.sourceProvenance.takeIf { it.isNotEmpty() },
+                    specVerifiedAt = dto.specVerifiedAt,
                 )
                 when (category) {
                     HardwareCategory.MOUSE -> {
@@ -2008,7 +2107,7 @@ object HardwareMapper {
 
         // 2. Modern AMD Whitelist: Ryzen (1000-9000, Threadripper) or Athlon 3000G/200GE on AM4/AM5/TR4/sTRX4/sWRX8/sTR5
         val isModernAmd = (u.contains("RYZEN") || u.contains("THREADRIPPER") || u.contains("3000G") || u.contains("200GE")) &&
-                (s.contains("AM4") || s.contains("AM5") || s.contains("TR4") || s.contains("STRX4") || s.contains("STR5") || s.contains("SWRX8") || s == "BELIRTILMEDI")
+                (s.contains("AM4") || s.contains("AM5") || s.contains("TR4") || s.contains("TRX4") || s.contains("STR5") || s.contains("WRX8") || s == "BELIRTILMEDI")
 
         // 3. Modern Intel Whitelist: Core Ultra or 10th-14th Gen Core on LGA1200 / LGA1700 / LGA1851
         val isModernIntel = (u.contains("CORE ULTRA") || u.contains("285K") || u.contains("275K") || u.contains("265K") || u.contains("255K") || u.contains("245K") ||

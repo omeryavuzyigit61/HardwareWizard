@@ -176,4 +176,7 @@ data class PeripheralRawDto(
     @SerialName("uplink_port") val uplinkPort: String? = null,
     @SerialName("dedicated_backhaul") val dedicatedBackhaul: String? = null,
     @SerialName("coverage_area_m2") val coverageAreaM2: Int? = null,
+    @SerialName("extra_specs") val extraSpecs: Map<String, String> = emptyMap(),
+    @SerialName("source_provenance") val sourceProvenance: List<String> = emptyList(),
+    @SerialName("spec_verified_at") val specVerifiedAt: String? = null,
 )

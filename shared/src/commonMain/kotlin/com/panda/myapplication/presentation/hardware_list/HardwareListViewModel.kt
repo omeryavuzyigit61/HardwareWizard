@@ -3,16 +3,34 @@ package com.panda.myapplication.presentation.hardware_list
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.model.AccessPointSpec
+import com.panda.myapplication.domain.model.CaseFanSpec
+import com.panda.myapplication.domain.model.CaseSpec
+import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.GamingDeskSpec
+import com.panda.myapplication.domain.model.GamingLightingSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
+import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.MousepadSpec
 import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
+import com.panda.myapplication.domain.model.RangeExtenderSpec
+import com.panda.myapplication.domain.model.RouterSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.TabletSpec
+import com.panda.myapplication.domain.model.UpsSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.usecase.GetHardwareListUseCase
@@ -343,6 +361,31 @@ class HardwareListViewModel(
                     if (filters.requireAtx3 && !s.isAtx3Compliant) return@filter false
                     if (filters.requirePcie5 && !s.supportsPcie5Power) return@filter false
                 }
+                is CoolerSpec -> {
+                    if (filters.coolerTypeFilter != null && s.type != filters.coolerTypeFilter) return@filter false
+                }
+                is MonitorSpec -> {
+                    if (filters.minMonitorRefreshHz != null && s.refreshRateHz < filters.minMonitorRefreshHz) return@filter false
+                    if (filters.monitorPanelFilter != null && !s.panelType.contains(filters.monitorPanelFilter, ignoreCase = true)) return@filter false
+                }
+                is MouseSpec -> {
+                    if (filters.maxMouseWeightG != null && (s.weightG <= 0 || s.weightG > filters.maxMouseWeightG)) return@filter false
+                }
+                is KeyboardSpec -> {
+                    if (filters.requireHallEffectKeyboard && !s.isHallEffect && !s.rapidTriggerSupported) return@filter false
+                }
+                is UpsSpec -> {
+                    if (filters.requirePureSineUps && !s.sinewaveType.contains("Tam Sinüs", ignoreCase = true) && !s.sinewaveType.contains("Pure Sine", ignoreCase = true)) return@filter false
+                }
+                is RouterSpec -> {
+                    if (filters.wifiStandardFilter != null && !s.wifiStandard.contains(filters.wifiStandardFilter, ignoreCase = true)) return@filter false
+                }
+                is PhoneSpec -> {
+                    if (filters.minMobileBatteryMah != null && s.batteryMah < filters.minMobileBatteryMah) return@filter false
+                }
+                is TabletSpec -> {
+                    if (filters.minMobileBatteryMah != null && s.batteryMah < filters.minMobileBatteryMah) return@filter false
+                }
                 else -> Unit
             }
             true
@@ -407,6 +450,49 @@ class HardwareListViewModel(
 
             // PSU
             HardwareSortOption.PSU_WATTAGE_DESC -> items.sortedByDescending { (it.spec as? PsuSpec)?.wattage?.watts ?: 0 }
+
+            // Cooling, Cases & Fans
+            HardwareSortOption.COOLER_TDP_DESC -> items.sortedByDescending { (it.spec as? CoolerSpec)?.maxCoolingTdp?.watts ?: 0 }
+            HardwareSortOption.COOLER_NOISE_ASC -> items.sortedBy {
+                (it.spec as? CoolerSpec)?.noiseDba
+                    ?: (it.spec as? CaseFanSpec)?.noiseLevelDba?.takeIf { d -> d > 0 }
+                    ?: Double.MAX_VALUE
+            }
+            HardwareSortOption.CASE_MAX_GPU_DESC -> items.sortedByDescending { (it.spec as? CaseSpec)?.maxGpuLengthMm ?: 0 }
+            HardwareSortOption.CASE_FAN_AIRFLOW_DESC -> items.sortedByDescending { (it.spec as? CaseFanSpec)?.maxAirflowCfm ?: 0.0 }
+
+            // Laptop & Monitor
+            HardwareSortOption.LAPTOP_GAMING_DESC -> items.sortedByDescending { (it.spec as? LaptopSpec)?.gamingScore ?: 0 }
+            HardwareSortOption.MONITOR_REFRESH_DESC -> items.sortedByDescending { (it.spec as? MonitorSpec)?.refreshRateHz ?: 0 }
+            HardwareSortOption.MONITOR_RESPONSE_ASC -> items.sortedBy {
+                (it.spec as? MonitorSpec)?.responseSpeedGtGMs?.takeIf { v -> v > 0 } ?: Double.MAX_VALUE
+            }
+
+            // Peripherals & Furniture
+            HardwareSortOption.MOUSE_WEIGHT_ASC -> items.sortedBy {
+                (it.spec as? MouseSpec)?.weightG?.takeIf { w -> w > 0 } ?: Int.MAX_VALUE
+            }
+            HardwareSortOption.MOUSE_DPI_DESC -> items.sortedByDescending { (it.spec as? MouseSpec)?.maxDpi ?: 0 }
+            HardwareSortOption.KEYBOARD_POLLING_DESC -> items.sortedByDescending {
+                (it.spec as? KeyboardSpec)?.pollingRateHz ?: (it.spec as? MouseSpec)?.pollingRateHz ?: 0
+            }
+            HardwareSortOption.HEADSET_WEIGHT_ASC -> items.sortedBy {
+                (it.spec as? HeadsetSpec)?.weightG?.takeIf { w -> w > 0 } ?: Int.MAX_VALUE
+            }
+            HardwareSortOption.MIC_SPL_DESC -> items.sortedByDescending { (it.spec as? MicrophoneSpec)?.maxSplDb ?: 0 }
+            HardwareSortOption.MOUSEPAD_THICKNESS_DESC -> items.sortedByDescending { (it.spec as? MousepadSpec)?.thicknessMm ?: 0.0 }
+            HardwareSortOption.WEBCAM_FPS_DESC -> items.sortedByDescending { (it.spec as? WebcamSpec)?.maxFrameRateFps ?: 0 }
+            HardwareSortOption.CHAIR_MAX_WEIGHT_DESC -> items.sortedByDescending { (it.spec as? GamingChairSpec)?.maxWeightCapacityKg ?: 0 }
+            HardwareSortOption.DESK_WIDTH_DESC -> items.sortedByDescending { (it.spec as? GamingDeskSpec)?.deskWidthCm ?: 0 }
+            HardwareSortOption.LIGHTING_LUMENS_DESC -> items.sortedByDescending { (it.spec as? GamingLightingSpec)?.maxLumens ?: 0 }
+
+            // UPS & Networking
+            HardwareSortOption.UPS_WATT_DESC -> items.sortedByDescending { (it.spec as? UpsSpec)?.wattCapacity ?: 0 }
+            HardwareSortOption.NET_COVERAGE_DESC -> items.sortedByDescending {
+                (it.spec as? AccessPointSpec)?.maxClients
+                    ?: (it.spec as? RangeExtenderSpec)?.coverageAreaM2
+                    ?: 0
+            }
         }
     }
 

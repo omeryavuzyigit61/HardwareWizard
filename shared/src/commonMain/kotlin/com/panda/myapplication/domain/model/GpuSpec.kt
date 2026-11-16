@@ -21,6 +21,15 @@ data class GpuSpec(
     val rtCores: Int? = null,
     val memorySpeedGbps: Double? = null,
     val bandwidthGbs: Double? = null,
+    val tmus: Int? = null,
+    val rops: Int? = null,
+    val l2CacheMb: Double? = null,
+    val fp32Tflops: Double? = null,
+    val pcieInterface: String? = null,
+    val upscalingTech: String? = null,
+    val mediaEngines: String? = null,
+    val gpuDie: String? = null,
+    val releaseDate: String? = null,
 ) : HardwareSpec {
 
     override val category: HardwareCategory get() = HardwareCategory.GPU

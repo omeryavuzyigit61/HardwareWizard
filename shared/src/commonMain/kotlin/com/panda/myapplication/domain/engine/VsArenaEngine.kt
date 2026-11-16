@@ -1407,7 +1407,7 @@ object VsArenaEngine {
     }
 
     private fun compareSmartphones(l: PhoneSpec, r: PhoneSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", "${l.chipset} (${l.processNodeNm}nm)", "${r.chipset} (${r.processNodeNm}nm)", isKeyMetric = true))
+        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", if (l.processNodeNm > 0) "${l.chipset} (${l.processNodeNm}nm)" else l.chipset, if (r.processNodeNm > 0) "${r.chipset} (${r.processNodeNm}nm)" else r.chipset, isKeyMetric = true))
         
         if (l.antutuScore != null || r.antutuScore != null) {
             add(
@@ -1522,8 +1522,8 @@ object VsArenaEngine {
 
         add(VsComparisonRow("Ekran Boyutu & Koruma", "${l.displaySizeInch}\" ${l.displayTech} (${l.glassProtection})", "${r.displaySizeInch}\" ${r.displayTech} (${r.glassProtection})"))
         
-        val lOis = if (l.hasOis) " (${l.oisType})" else ""
-        val rOis = if (r.hasOis) " (${r.oisType})" else ""
+        val lOis = if (l.hasOis && l.oisType.isNotBlank()) " (${l.oisType})" else if (l.hasOis) " (OIS)" else ""
+        val rOis = if (r.hasOis && r.oisType.isNotBlank()) " (${r.oisType})" else if (r.hasOis) " (OIS)" else ""
         add(VsComparisonRow("Ana Kamera Sensörü", "${l.mainCameraMp} MP • ${l.mainSensorSize}$lOis", "${r.mainCameraMp} MP • ${r.mainSensorSize}$rOis", isKeyMetric = true))
 
         if (l.opticalZoomX != null || r.opticalZoomX != null) {
@@ -1587,11 +1587,13 @@ object VsArenaEngine {
             )
         )
 
-        add(VsComparisonRow("Oyun Tavan Desteği", l.pubgFpsSupport, r.pubgFpsSupport))
+        if (l.pubgFpsSupport.isNotBlank() || r.pubgFpsSupport.isNotBlank()) {
+            add(VsComparisonRow("Oyun Tavan Desteği", l.pubgFpsSupport.ifBlank { UNSPECIFIED }, r.pubgFpsSupport.ifBlank { UNSPECIFIED }))
+        }
     }
 
     private fun compareTablets(l: TabletSpec, r: TabletSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", "${l.chipset} (${l.processNodeNm}nm)", "${r.chipset} (${r.processNodeNm}nm)", isKeyMetric = true))
+        add(VsComparisonRow("Yonga Seti (SoC) & Mimari", if (l.processNodeNm > 0) "${l.chipset} (${l.processNodeNm}nm)" else l.chipset, if (r.processNodeNm > 0) "${r.chipset} (${r.processNodeNm}nm)" else r.chipset, isKeyMetric = true))
 
         if (l.antutuScore != null || r.antutuScore != null) {
             add(

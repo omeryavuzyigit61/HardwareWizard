@@ -246,7 +246,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Kutup Deseni", s.polarPattern, isHighlighted = true))
                 badges.add(EngineeringBadge("Stüdyo Çözünürlüğü", s.sampleRateAndBit))
                 badges.add(EngineeringBadge("Bağlantı & Arayüz", s.connectivity, isHighlighted = s.connectivity.contains("XLR", ignoreCase = true)))
-                badges.add(EngineeringBadge("Maksimum SPL", "${s.maxSplDb} dB SPL"))
+                if (s.maxSplDb > 0) badges.add(EngineeringBadge("Maksimum SPL", "${s.maxSplDb} dB SPL"))
                 badges.add(EngineeringBadge("Donanımsal DSP", if (s.hasBuiltInDsp) "Entegre DSP & Limiter" else "Saf Analog Sinyal"))
             }
 

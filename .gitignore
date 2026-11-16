@@ -22,3 +22,5 @@ __pycache__/
 *.pyc
 admin_portal.html
 *admin*.html
+scripts/cache/
+*.db.tmp

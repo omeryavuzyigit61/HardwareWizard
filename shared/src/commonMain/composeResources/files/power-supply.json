@@ -26,7 +26,17 @@
       "https://down-my.img.susercontent.com/file/sg-11134201-821g4-mgxfgsf3ozd727",
       "https://down-my.img.susercontent.com/file/sg-11134201-7rfi1-m35uxwknrctl4e"
     ],
-    "outputs": "+12V: 52A (624W)"
+    "outputs": "+12V: 52A (624W)",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0200",
+      "IRONScale / SPL Tier": "E",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player ACK Bronze 750W",
@@ -55,7 +65,17 @@
       "https://down-my.img.susercontent.com/file/sg-11134201-821g4-mgxfgsf3ozd727",
       "https://www.cybenetics.com/photos/models/common/2740_1.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 51.18mV • Regülasyon: -0.53%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 51.18mV • Regülasyon: -0.53%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0600T\nATX 3.1 upt.",
+      "IRONScale / SPL Tier": "E",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player ACK Silver 750W",
@@ -84,7 +104,17 @@
       "https://down-id.img.susercontent.com/file/id-11134207-7rasb-m5judak0y6088d",
       "https://down-my.img.susercontent.com/file/sg-11134201-7rfi1-m35uxwknrctl4e"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 38.17mV • Regülasyon: -0.64%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 38.17mV • Regülasyon: -0.64%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0600T\nModified?",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player ACK Gold 750W",
@@ -113,7 +143,17 @@
       "https://down-my.img.susercontent.com/file/sg-11134201-821g4-mgxfgsf3ozd727",
       "https://mt-tecno.com/wp-content/uploads/2024/03/my-11134207-23010-98tr0u0o2xmv60.jpeg"
     ],
-    "outputs": "+12V: 62A (744W) • 12V Ripple: 22.08mV • Regülasyon: -0.59%"
+    "outputs": "+12V: 62A (744W) • 12V Ripple: 22.08mV • Regülasyon: -0.59%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0100GB",
+      "IRONScale / SPL Tier": "B-",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player NGDP Gold 750W",
@@ -142,7 +182,17 @@
       "https://cdn.mwave.com.au/images/400/1st_player_ngdp_atx_31_80_plus_gold_750w_modular_power_supply_black_ac90183_57428.jpg",
       "https://hwbusters.com/wp-content/uploads/2024/04/psu_quarter-3.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0800GB",
+      "IRONScale / SPL Tier": "A-",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player NGDP Platinum ATX 3.0 750W",
@@ -171,7 +221,12 @@
       "https://bermorzone.com.ph/wp-content/uploads/2024/10/NGDP-ATX-3.1-PLATINUM-btz-ph-5.webp",
       "https://cdn.mwave.com.au/images/400/1st_player_ngdp_atx_31_80_plus_gold_750w_modular_power_supply_black_ac90183_57428.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "1st Player NGDP Platinum ATX 3.1 750W",
@@ -200,7 +255,12 @@
       "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7b2039da-dc07-4630-8455-1c7de16d3eaa.__CR0,0,970,600_PT0_SX970_V1___.jpg",
       "https://down-ph.img.susercontent.com/file/ph-11134207-81ztl-mf253swq9c7c53"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.04mV • Regülasyon: -0.29%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Prime Bronze 750W",
@@ -229,7 +289,17 @@
       "https://thepcshop.co.za/wp-content/uploads/2026/03/PRIME-750B-BLACK_Asus-PRIME-750W-80-PLUS-Bronze-ATX-Non-modular-Power-Supply_wr_01a-720x720.jpg",
       "https://thepcshop.co.za/wp-content/uploads/2026/03/PRIME-750B-BLACK_Asus-PRIME-750W-80-PLUS-Bronze-ATX-Non-modular-Power-Supply_wr_03a.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: -1.24%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: -1.24%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPG",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Prime Gold 750W",
@@ -258,7 +328,17 @@
       "https://m.media-amazon.com/images/I/71An7HGx2yL._AC_.jpg",
       "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg"
     ],
-    "outputs": "+12V: 62A (744W) • 12V Ripple: 54mV • Regülasyon: -0.91%"
+    "outputs": "+12V: 62A (744W) • 12V Ripple: 54mV • Regülasyon: -0.91%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPX\n(ATX 3.0)",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Tuf Bronze 750W",
@@ -287,7 +367,17 @@
       "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
       "https://www.ardalzaeem.net/wp-content/uploads/2025/08/70b5fa9f1a41d20f52825f7e6c39bcb5-hi.jpg"
     ],
-    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%"
+    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
+    "extra_specs": {
+      "OEM Üretici": "Great Wall",
+      "İç Devre Platformu": "GW-ATXBL\n(Modified)",
+      "IRONScale / SPL Tier": "C+",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Tuf Bronze EVO 750W",
@@ -316,7 +406,17 @@
       "https://dlcdnwebimgs.asus.com/gain/d38ef86f-6abf-45ed-a19b-fb76f98f2e0a/w800",
       "https://nvs.tn-cdn.net/2026/03/asus-tuf-gaming-750w-bronze-evo-3.jpg"
     ],
-    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%"
+    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
+    "extra_specs": {
+      "OEM Üretici": "Great Wall?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Tuf Gold 750W",
@@ -345,7 +445,17 @@
       "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
       "https://ecommerce.datablitz.com.ph/cdn/shop/products/fwebp_2_13b3d6eb-2cdd-4316-815c-1bb641e12a5d_1024x.jpg?v=1676920510"
     ],
-    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%"
+    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
+    "extra_specs": {
+      "OEM Üretici": "Great Wall",
+      "İç Devre Platformu": "Hunters Fire",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Tuf Gold EVO 750W",
@@ -374,7 +484,17 @@
       "https://m.media-amazon.com/images/I/816nmJ86sKL._AC_SL1500_.jpg",
       "https://ecommerce.datablitz.com.ph/cdn/shop/files/image_74_cb11f304-9789-48af-9ec8-4451b179aa3b_1024x.jpg?v=1777788929"
     ],
-    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%"
+    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
+    "extra_specs": {
+      "OEM Üretici": "Great Wall",
+      "İç Devre Platformu": "Custom",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "AIGO GP 750W",
@@ -403,7 +523,17 @@
       "https://down-ph.img.susercontent.com/file/ph-11134207-7rasb-mawiqtjb3p2mab",
       "https://cdn.store-assets.com/s/358885/i/59090953.jpeg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 62.83mV • Regülasyon: -2.24%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 62.83mV • Regülasyon: -2.24%",
+    "extra_specs": {
+      "OEM Üretici": "GuangHaiDianZi",
+      "İç Devre Platformu": "GH258",
+      "IRONScale / SPL Tier": "E",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "AIGO AT 750W",
@@ -432,7 +562,17 @@
       "https://cdn.a2zmegastore.com/storage/products/Power-Supply/2026/06/58523/1782064073_5e62f5fc6ffb8ffd3280c639640fa9ea.webp",
       "https://topelectronics.gr/images/detailed/18/gre_pl_Aigo-AT750-trofodotiko-ypologisti-mayro-50359_3.jpg"
     ],
-    "outputs": "+12V: 54A (648W) • 12V Ripple: 57mV • Regülasyon: -2.14%"
+    "outputs": "+12V: 54A (648W) • 12V Ripple: 57mV • Regülasyon: -2.14%",
+    "extra_specs": {
+      "OEM Üretici": "GuangHaiDianZi",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "D",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BITFENIX BPA 750W",
@@ -461,7 +601,12 @@
       "https://www.bitfenix.com/wp-content/uploads/2025/06/overview-001.png",
       "https://pcper.com/wp-content/uploads/2018/08/ea94-6a-nameplate.jpg"
     ],
-    "outputs": "+12V: 46A (552W)"
+    "outputs": "+12V: 46A (552W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BITFENIX Bpab 750W",
@@ -490,7 +635,12 @@
       "https://www.bitfenix.com/wp-content/uploads/2025/11/p-0001-scaled.png",
       "https://www.bitfenix.com/wp-content/uploads/2025/11/BPAB_k_750W-3-1.png"
     ],
-    "outputs": "+12V: 46A (552W)"
+    "outputs": "+12V: 46A (552W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BITFENIX Bpab N ATX 2.x 750W",
@@ -519,7 +669,17 @@
       "https://www.bitfenix.com/wp-content/uploads/2025/11/p-0001-scaled.png",
       "https://www.bitfenix.com/wp-content/uploads/2025/11/BPAB_k_750W-3-1.png"
     ],
-    "outputs": "+12V: 62A (744W)"
+    "outputs": "+12V: 62A (744W)",
+    "extra_specs": {
+      "OEM Üretici": "GuangHaiDianZi",
+      "İç Devre Platformu": "GH359\n(modified)",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BITFENIX Bpab N ATX 3.x 750W",
@@ -548,7 +708,17 @@
       "https://www.bitfenix.com/wp-content/uploads/2025/11/p-0001-scaled.png",
       "https://www.bitfenix.com/wp-content/uploads/2025/11/BPAB_k_750W-3-1.png"
     ],
-    "outputs": "+12V: 62A (744W)"
+    "outputs": "+12V: 62A (744W)",
+    "extra_specs": {
+      "OEM Üretici": "GuangHaiDianZi",
+      "İç Devre Platformu": "GH359\n(modified)",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR CV 750W",
@@ -577,7 +747,17 @@
       "https://down-id.img.susercontent.com/file/9f3b7b7037c679a255aaf613259789f6",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 44A (528W) • 12V Ripple: 68mV • Regülasyon: -1.70%"
+    "outputs": "+12V: 44A (528W) • 12V Ripple: 68mV • Regülasyon: -1.70%",
+    "extra_specs": {
+      "OEM Üretici": "HEC",
+      "İç Devre Platformu": "Custom",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR VS Grey Label 750W",
@@ -606,7 +786,12 @@
       "https://m.media-amazon.com/images/I/71NcQsKlIvL._AC_.jpg",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%"
+    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR VS Orange Label 750W",
@@ -635,7 +820,12 @@
       "https://m.media-amazon.com/images/I/71NcQsKlIvL._AC_.jpg",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%"
+    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM Orange Label (2013) 750W",
@@ -664,7 +854,12 @@
       "https://down-id.img.susercontent.com/file/c5045b828c78a819fadf6bffd1fca69d",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%"
+    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM Black Label 750W",
@@ -693,7 +888,12 @@
       "https://m.media-amazon.com/images/I/71NcQsKlIvL._AC_.jpg",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 44A (528W) • Regülasyon: -1.46%"
+    "outputs": "+12V: 44A (528W) • Regülasyon: -1.46%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM Black Label (2021) 750W",
@@ -722,7 +922,12 @@
       "https://m.media-amazon.com/images/I/61tOgJ849GL._AC_.jpg",
       "https://pcper.com/wp-content/uploads/2019/08/10-box-7314.jpg"
     ],
-    "outputs": "+12V: 44A (528W) • Regülasyon: -1.46%"
+    "outputs": "+12V: 44A (528W) • Regülasyon: -1.46%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR CX (Non-Modular) Green Label V1 (2013) 750W",
@@ -751,7 +956,17 @@
       "https://tekdoon.com/wp-content/uploads/2025/10/corsair-cx750-750w-atx-non-modular-power-supply.jpg",
       "https://cdn.mwave.com.au/images/400/cp9020279au_ac71619_94824.jpg"
     ],
-    "outputs": "+12V: 54A (648W) • 12V Ripple: 45.61mV • Regülasyon: -0.67%"
+    "outputs": "+12V: 54A (648W) • 12V Ripple: 45.61mV • Regülasyon: -0.67%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "PUQ-B",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR CX (Non-Modular) Gray Label (2016) 750W",
@@ -780,7 +995,17 @@
       "https://assets.corsair.com/image/upload/f_auto,q_auto/v1/akamai/pdp/cxm-2021/images/cx750m_semimodular.png",
       "https://media.karousell.com/media/photos/products/2022/2/22/corsair_cx_series_750_watt_80__1645525603_1d1f2e14.jpg"
     ],
-    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%"
+    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR CX (Non-Modular) Black Label (2023) 750W",
@@ -809,7 +1034,17 @@
       "https://tekdoon.com/wp-content/uploads/2025/10/cx750-750w-non-modular-corsair-power-supply.jpg",
       "https://cdn.mwave.com.au/images/400/cp9020279au_ac71619_94824.jpg"
     ],
-    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%"
+    "outputs": "+12V: 32A (384W) • 12V Ripple: 25mV • Regülasyon: -1.42%",
+    "extra_specs": {
+      "OEM Üretici": "HEC",
+      "İç Devre Platformu": "CV\nModifiyeli",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "COUGAR GES ATX 3.1 750W",
@@ -838,7 +1073,17 @@
       "https://techarc.pk/wp-content/uploads/2026/01/cougar-ges-750w-80-plus-gold-non-modular-power-supply-1-techarc.pk_.webp",
       "https://techarc.pk/wp-content/uploads/2025/08/COUGAR-GES-80-PLUS-Gold-Non-modular-Power-Supply-1-techarc.pk_.webp"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 20mV • Regülasyon: -0.75%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 20mV • Regülasyon: -0.75%",
+    "extra_specs": {
+      "OEM Üretici": "XinWeiYe",
+      "İç Devre Platformu": "A09",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "COUGAR Atlas ATX 3.1 750W",
@@ -867,7 +1112,17 @@
       "https://www.jib.co.th/img_master/product/original/20260430162711_0000084512_477_1.jpg",
       "https://www.jib.co.th/img_master/product/original/20260430162713_0000084512_477_2.jpg"
     ],
-    "outputs": "+12V: 54.16A (649.9W) • 12V Ripple: 75mV • Regülasyon: %3.0+"
+    "outputs": "+12V: 54.16A (649.9W) • 12V Ripple: 75mV • Regülasyon: %3.0+",
+    "extra_specs": {
+      "OEM Üretici": "CE-Link",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 1000DB 750W",
@@ -896,7 +1151,12 @@
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg",
       "https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0406/users/a87cd0ff4ab10104b4ee9a42c39051c023dc20f6/i-img1200x1200-1686753353nufvr2642621.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A 3: 45A 4: 45A (1000W) • 12V Ripple: 22mV • Regülasyon: -2.38%"
+    "outputs": "+12V: 1: 45A 2: 45A 3: 45A 4: 45A (1000W) • 12V Ripple: 22mV • Regülasyon: -2.38%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 750FB 750W",
@@ -925,7 +1185,17 @@
       "https://cdn.jmt.bg/images/products/87000/500/358125/zahranvash-blok-delta-gps-750fb-750w-80-platinum-3.jpg",
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%"
+    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
+    "extra_specs": {
+      "OEM Üretici": "Delta",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "B*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 750HB 750W",
@@ -954,7 +1224,17 @@
       "https://www.qp.com.tr/pub/media/catalog/product/cache/6ff5005527a0dd788c36f13c4c09fac2/7/5/750_gold_2.jpg",
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg"
     ],
-    "outputs": "+12V: 62,5A (750W) • 12V Ripple: 22mV • Regülasyon: -1.40%"
+    "outputs": "+12V: 62,5A (750W) • 12V Ripple: 22mV • Regülasyon: -1.40%",
+    "extra_specs": {
+      "OEM Üretici": "Delta",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "B-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 850LB 750W",
@@ -983,7 +1263,12 @@
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg",
       "https://microdream.co.uk/media/catalog/product/cache/6e2c81f7ebc0d2d151ac17f111e7f81e/i/m/img_1690.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%"
+    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 850HB 750W",
@@ -1012,7 +1297,12 @@
       "https://techolay.net/sosyal/ek/1761138712769-webp.194806/",
       "https://cdnyauction.buyee.jp/images.auctions.yahoo.co.jp/image/dr000/auc0508/user/2ee6fb8cbae620cefbfd5f77eefe33a44d7194b44052281573b031d856918001/i-img1200x1200-172309831312072xmegp44530.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%"
+    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 650JB 750W",
@@ -1041,7 +1331,12 @@
       "https://i.ebayimg.com/images/g/skMAAOSw-Gxle6tu/s-l960.jpg",
       "https://i.ebayimg.com/images/g/fNIAAOSw~c1le6tr/s-l400.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%"
+    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Delta GPS 550LB 750W",
@@ -1070,7 +1365,12 @@
       "https://i.ebayimg.com/images/g/c3EAAOSwG5Jlg-eL/s-l1600.jpg",
       "https://microdream.co.uk/media/catalog/product/cache/6e2c81f7ebc0d2d151ac17f111e7f81e/i/m/img_1690.jpg"
     ],
-    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%"
+    "outputs": "+12V: 1: 45A 2: 45A (750W) • 12V Ripple: 22mV • Regülasyon: -1.81%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Maxpro III 750W",
@@ -1099,7 +1399,12 @@
       "https://m.media-amazon.com/images/I/61d2raCrjOL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
     ],
-    "outputs": "+12V: 56A (672W) • Regülasyon: -2.96%"
+    "outputs": "+12V: 56A (672W) • Regülasyon: -2.96%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Revolution D.F. X 750W",
@@ -1128,7 +1433,12 @@
       "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_DF12/REVOLUTION_DF_12_01_750.jpg",
       "https://cdn.thefpsreview.com/wp-content/uploads/2019/07/102_1012-scaled.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 34 mV • Regülasyon: -2.23%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 34 mV • Regülasyon: -2.23%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Revolution III 750W",
@@ -1157,7 +1467,17 @@
       "https://www.enermax.com/archive/products/item/PSU/REVOLUTION_DF12/REVOLUTION_DF_12_01_750.jpg",
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%",
+    "extra_specs": {
+      "OEM Üretici": "RSY",
+      "İç Devre Platformu": "A0159",
+      "IRONScale / SPL Tier": "B+*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Revolution III S 750W",
@@ -1186,7 +1506,12 @@
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
       "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 27.2mV • Regülasyon: -0.01%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX EB-C 750W",
@@ -1215,7 +1540,17 @@
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
       "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ],
-    "outputs": "+12V: 37.5A (450W)"
+    "outputs": "+12V: 37.5A (450W)",
+    "extra_specs": {
+      "OEM Üretici": "RSY?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Platimax DF II 750W",
@@ -1244,7 +1579,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/b8eec2ba376cbbd68178f2f48e719110.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/ffb0dcaddaa0f2c84a734265b9bb2eb6.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 23.46mV • Regülasyon: -0.62%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 23.46mV • Regülasyon: -0.62%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Cyberbron I 750W",
@@ -1273,7 +1613,12 @@
       "https://m.media-amazon.com/images/I/41nzAE4Z7rL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/394121af29fc8d3aca355d54a08f918b.1600.jpg"
     ],
-    "outputs": "+12V: 38A (456W) • 12V Ripple: 106mV • Regülasyon: -4.61%"
+    "outputs": "+12V: 38A (456W) • 12V Ripple: 106mV • Regülasyon: -4.61%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Cyberbron II 750W",
@@ -1302,7 +1647,12 @@
       "https://m.media-amazon.com/images/I/41nzAE4Z7rL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/394121af29fc8d3aca355d54a08f918b.1600.jpg"
     ],
-    "outputs": "+12V: 50A (600W) • 12V Ripple: 48.8mV • Regülasyon: -0.87%"
+    "outputs": "+12V: 50A (600W) • 12V Ripple: 48.8mV • Regülasyon: -0.87%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ENERMAX Cyberbron III 750W",
@@ -1331,7 +1681,17 @@
       "https://m.media-amazon.com/images/I/312XPF0wTxL.jpg",
       "https://m.media-amazon.com/images/I/31PwMRhxbIL.jpg"
     ],
-    "outputs": "+12V: 70A (840W) • Regülasyon: -0.57%"
+    "outputs": "+12V: 70A (840W) • Regülasyon: -0.57%",
+    "extra_specs": {
+      "OEM Üretici": "Jiumeng",
+      "İç Devre Platformu": "JM-670",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Endorfy Supremo Gold FM6 750W",
@@ -1360,7 +1720,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/089cae677a05ec17d24c85de9a616d6b.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/9e8071018c0f52bc1f130bb94020d7e5.1600.jpg"
     ],
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 42.03mV • Regülasyon: -0.66%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 42.03mV • Regülasyon: -0.66%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Everest EPS 4900B 750W",
@@ -1389,7 +1754,12 @@
       "https://www.segment.com.tr/images/productimages/EPS_4900B_05.jpg",
       "https://productimages.hepsiburada.net/s/33/424-600/10399106498610.jpg"
     ],
-    "outputs": "+12V: 17A (204W)"
+    "outputs": "+12V: 17A (204W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG - Gold 750W",
@@ -1418,7 +1788,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "ATX-0800GLV",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge Platinum 750W",
@@ -1447,7 +1827,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI RS-G 750W",
@@ -1476,7 +1861,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 25.02mV • Regülasyon: -1.11%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 25.02mV • Regülasyon: -1.11%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI BX-B / RB-B 750W",
@@ -1505,7 +1895,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/b82bb43d19813fb6086aafc365e65f36.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/ce0fce15b9003416feff3e59026d60ba.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 30mV • Regülasyon: −1.15%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 30mV • Regülasyon: −1.15%",
+    "extra_specs": {
+      "OEM Üretici": "Sanr",
+      "İç Devre Platformu": "S-850TZ",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI SP Gold V1 750W",
@@ -1534,7 +1934,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 62A (744W) • 12V Ripple: 29.58mV • Regülasyon: -0.63%"
+    "outputs": "+12V: 62A (744W) • 12V Ripple: 29.58mV • Regülasyon: -0.63%",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "SFX-0200",
+      "IRONScale / SPL Tier": "F",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI SP Gold V2 750W",
@@ -1563,7 +1973,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 70A (840W) • 12V Ripple: 20mV • Regülasyon: %0.41+"
+    "outputs": "+12V: 70A (840W) • 12V Ripple: 20mV • Regülasyon: %0.41+",
+    "extra_specs": {
+      "OEM Üretici": "Helly",
+      "İç Devre Platformu": "SFX-0200\nATX 3.1",
+      "IRONScale / SPL Tier": "B*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI SP P (Platinum) 750W",
@@ -1592,7 +2012,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/74a8106f89be795fead502bce4a8af17.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/5cef027c8804cb46a44f2257da85ccca.1600.jpg"
     ],
-    "outputs": "+12V: 62A (744W) • 12V Ripple: 29.58mV • Regülasyon: -0.63%"
+    "outputs": "+12V: 62A (744W) • 12V Ripple: 29.58mV • Regülasyon: -0.63%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI SX-P 750W",
@@ -1621,7 +2046,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/6cd392c0ddcb76b70bdf0b6ed14e34ca.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/849f751a4ea67f2ed2cfd4ab47fb23eb.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 24.40mV • Regülasyon: -0.25%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 24.40mV • Regülasyon: -0.25%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİTA BD 750W",
@@ -1650,7 +2080,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/c2afba437ec0566ad26c9a2cf5164e86.1600.jpg",
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg"
     ],
-    "outputs": "+12V: 45.8A (550W) • 12V Ripple: 32.7mV • Regülasyon: -0.49%"
+    "outputs": "+12V: 45.8A (550W) • 12V Ripple: 32.7mV • Regülasyon: -0.49%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "VİTA BD",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİTA GD 750W",
@@ -1679,7 +2119,17 @@
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ],
-    "outputs": "+12V: 54.17A (650W)"
+    "outputs": "+12V: 54.17A (650W)",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "VİTA GD",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİTA GM 750W",
@@ -1708,7 +2158,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/d29304b577cb0ddc88b358a2803d1751.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/9a489b703d7132a9dd1b92643f1d3e71.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 22.3 mV • Regülasyon: -0.61%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 22.3 mV • Regülasyon: -0.61%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "VİTA GM",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİC BD 750W",
@@ -1737,7 +2197,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/c2afba437ec0566ad26c9a2cf5164e86.1600.jpg",
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg"
     ],
-    "outputs": "+12V: 45.8A (549.6W) • Regülasyon: -1.16%"
+    "outputs": "+12V: 45.8A (549.6W) • Regülasyon: -1.16%",
+    "extra_specs": {
+      "OEM Üretici": "Zhong Yuan\nPower",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİC GD 750W",
@@ -1766,7 +2236,17 @@
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W)"
+    "outputs": "+12V: 70.8A (849.6W)",
+    "extra_specs": {
+      "OEM Üretici": "Zhong Yuan\nPower",
+      "İç Devre Platformu": "ZY009",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİC GM 750W",
@@ -1795,7 +2275,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/d29304b577cb0ddc88b358a2803d1751.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/9a489b703d7132a9dd1b92643f1d3e71.1600.jpg"
     ],
-    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 10.4mV • Regülasyon: -1.18%"
+    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 10.4mV • Regülasyon: -1.18%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "VİC-GM",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP VİC WD 750W",
@@ -1824,7 +2314,17 @@
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ],
-    "outputs": "+12V: 42A (504W)"
+    "outputs": "+12V: 42A (504W)",
+    "extra_specs": {
+      "OEM Üretici": "Zhong Yuan\nPower",
+      "İç Devre Platformu": "ZY002C",
+      "IRONScale / SPL Tier": "D-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro G 750W",
@@ -1853,7 +2353,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
       "https://m.media-amazon.com/images/I/41Ygmh0brES.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "HYDRO G",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro G PRO 750W",
@@ -1882,7 +2392,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
       "https://m.media-amazon.com/images/I/41Ygmh0brES.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "HYDRO G PRO",
+      "IRONScale / SPL Tier": "A-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.x 750W",
@@ -1911,7 +2431,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg",
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro PTM 750W",
@@ -1940,7 +2465,17 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "PTM",
+      "IRONScale / SPL Tier": "A-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro PTM PLUS (+) 750W",
@@ -1969,7 +2504,17 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "PTM\nModified?",
+      "IRONScale / SPL Tier": "B+*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro PTM PRO 750W",
@@ -1998,7 +2543,17 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "PTM PRO\nYüksek watt",
+      "IRONScale / SPL Tier": "A-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro PTM PRO ATX 3.0 750W",
@@ -2027,7 +2582,12 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 24.1mV • Regülasyon: -1.33%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro K 750W",
@@ -2056,7 +2616,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/05152e654808d05e4964f7051805118f.1600.jpg"
     ],
-    "outputs": "+12V: 58A (600W)"
+    "outputs": "+12V: 58A (600W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro K Pro ATX 2.x 750W",
@@ -2085,7 +2650,17 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro K Pro ATX 3.x 750W",
@@ -2114,7 +2689,17 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/8ceef7235402a7ac369757ecd4d9c90a.1600.jpg"
     ],
-    "outputs": "+12V: 58A (600W)"
+    "outputs": "+12V: 58A (600W)",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro M PRO 750W",
@@ -2143,7 +2728,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro MX 750W",
@@ -2172,7 +2762,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 53A (636W)"
+    "outputs": "+12V: 53A (636W)",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro GSM LİTE PRO 750W",
@@ -2201,7 +2801,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.88%"
+    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.88%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "GSM",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro S 750W",
@@ -2230,7 +2840,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.88%"
+    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.88%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "RA2",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro GE 750W",
@@ -2259,7 +2879,17 @@
       "https://images-fe.ssl-images-amazon.com/images/I/41RJGxgGotL.jpg",
       "https://m.media-amazon.com/images/I/51y6y7uabjL.jpg"
     ],
-    "outputs": "+12V: 54.16A (650W) • 12V Ripple: 71mV • Regülasyon: -0.50%"
+    "outputs": "+12V: 54.16A (650W) • 12V Ripple: 71mV • Regülasyon: -0.50%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "HGD\n/\nRA2-*W modded",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro X 750W",
@@ -2288,7 +2918,12 @@
       "https://m.media-amazon.com/images/I/41yOvlybQmL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/73165414d8701353a5ccddf54b3e9a9b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.6 mV • Regülasyon: -1.46%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro PRO 750W",
@@ -2317,7 +2952,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hyper 80+ PRO 750W",
@@ -2346,7 +2986,12 @@
       "https://m.media-amazon.com/images/I/51edzhvwa4L.jpg",
       "https://m.media-amazon.com/images/I/41w90bTj8uL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 20mV • Regülasyon: 1.00%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hyper K 750W",
@@ -2375,7 +3020,12 @@
       "https://m.media-amazon.com/images/I/51edzhvwa4L.jpg",
       "https://m.media-amazon.com/images/I/41w90bTj8uL.jpg"
     ],
-    "outputs": "+12V: 58A (600W)"
+    "outputs": "+12V: 58A (600W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP HEXA PLUS 750W",
@@ -2404,7 +3054,12 @@
       "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
       "https://m.media-amazon.com/images/I/51zt8YKPEtL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP HEXA 85+ 750W",
@@ -2433,7 +3088,12 @@
       "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e0bdf411849a97f3f9947c765f1c1b65.1600.jpg"
     ],
-    "outputs": "+12V: 37.5A (450W)"
+    "outputs": "+12V: 37.5A (450W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP HEXA 85+ PRO 750W",
@@ -2462,7 +3122,17 @@
       "https://m.media-amazon.com/images/I/41t+kAhuvcS.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e0bdf411849a97f3f9947c765f1c1b65.1600.jpg"
     ],
-    "outputs": "+12V: 37.5A (450W)"
+    "outputs": "+12V: 37.5A (450W)",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP HD 750W",
@@ -2491,7 +3161,12 @@
       "https://m.media-amazon.com/images/I/51RM+70bH6L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f81d2dff4a9ce525e7ee68bfd25ac049.1600.jpg"
     ],
-    "outputs": "+12V: 31.5A (378W) • Regülasyon: -2.67%"
+    "outputs": "+12V: 31.5A (378W) • Regülasyon: -2.67%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Raider 750W",
@@ -2520,7 +3195,17 @@
       "https://m.media-amazon.com/images/I/515bwuWMLdL.jpg",
       "https://m.media-amazon.com/images/I/51x7dD4MQ+L.jpg"
     ],
-    "outputs": "+12V: 60A (720W) • 12V Ripple: 87.6 mV • Regülasyon: -4.92%"
+    "outputs": "+12V: 60A (720W) • 12V Ripple: 87.6 mV • Regülasyon: -4.92%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Raider II 750W",
@@ -2549,7 +3234,17 @@
       "https://m.media-amazon.com/images/I/515bwuWMLdL.jpg",
       "https://m.media-amazon.com/images/I/51x7dD4MQ+L.jpg"
     ],
-    "outputs": "+12V: 60A (720W) • 12V Ripple: 87.6 mV • Regülasyon: -4.92%"
+    "outputs": "+12V: 60A (720W) • 12V Ripple: 87.6 mV • Regülasyon: -4.92%",
+    "extra_specs": {
+      "OEM Üretici": "FSP",
+      "İç Devre Platformu": "RA2",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Fazeon ATX 750W",
@@ -2578,7 +3273,17 @@
       "https://i0.shbdn.com/photos/35/49/96/x5_1283354996hgh.jpg",
       "https://shopcdnpro.grainajz.com/category/373019/2354/b10364caeb9e75137f20b2664a0b89d7/image.png"
     ],
-    "outputs": "+12V: 46A (552W)"
+    "outputs": "+12V: 46A (552W)",
+    "extra_specs": {
+      "OEM Üretici": "Xinghai\nElectronic?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "D*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Fazeon P1A-B 750W",
@@ -2607,7 +3312,12 @@
       "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
       "https://i0.shbdn.com/photos/35/49/96/x5_1283354996hgh.jpg"
     ],
-    "outputs": "+12V: 61.5A (738W)"
+    "outputs": "+12V: 61.5A (738W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Gamdias Helios M2-B 750W",
@@ -2636,7 +3346,17 @@
       "https://m.media-amazon.com/images/I/414oSoHoABL.jpg",
       "https://m.media-amazon.com/images/I/51Tkz1gZGfL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 30mV • Regülasyon: -0.50%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 30mV • Regülasyon: -0.50%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-822F",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Gamdias Helios P2-G 750W",
@@ -2665,7 +3385,17 @@
       "https://m.media-amazon.com/images/I/414oSoHoABL.jpg",
       "https://m.media-amazon.com/images/I/51Tkz1gZGfL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • Regülasyon: -2.00%??"
+    "outputs": "+12V: 62.5A (750W) • Regülasyon: -2.00%??",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-817",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Gametech GTP G Yarı Modüler 750W",
@@ -2694,7 +3424,17 @@
       "https://www.hesapliurunler.com/image/cache/catalog/urunres/ana-750w-min-jpg-900x900.jpg",
       "https://cdn.dsmcdn.com/ty79/product/media/images/20210330/10/76192586/124869566/1/1_org_zoom.jpg"
     ],
-    "outputs": "+12V: 54A (648W)"
+    "outputs": "+12V: 54A (648W)",
+    "extra_specs": {
+      "OEM Üretici": "KinPower",
+      "İç Devre Platformu": "ATX750B",
+      "IRONScale / SPL Tier": "E*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Gametech GTP 1000.0 750W",
@@ -2723,7 +3463,12 @@
       "https://www.idcmayoristas.com/wp-content/uploads/2025/03/gamemax-power-gp-750-pc-power-supply-unit-750w-gp-750-lal-1.png",
       "https://percdn.com/f/944607/cG96YWFtNG0vcUp3ZUdFOVU1NG5hQT09/p/gametech-gtp-600-600w-80-plus-green-bronzepowersupply-5-98386186-sw1280sh1280.png"
     ],
-    "outputs": "+12V: 54A (648W)"
+    "outputs": "+12V: 54A (648W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Green GP-A-GED (GED) V2.3 750W",
@@ -2752,7 +3497,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ],
-    "outputs": "+12V: 50A (600W)"
+    "outputs": "+12V: 50A (600W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Green GP-A-GED (GED) V3.1 750W",
@@ -2781,7 +3531,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ],
-    "outputs": "+12V: 50A (600W) • Regülasyon: −1.60%"
+    "outputs": "+12V: 50A (600W) • Regülasyon: −1.60%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Green GP-A-ECO (ECO) 750W",
@@ -2810,7 +3565,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ],
-    "outputs": "+12V: 26A (312W)"
+    "outputs": "+12V: 26A (312W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Green GP-B-HP EVO (EVO) 750W",
@@ -2839,7 +3599,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ],
-    "outputs": "+12V: 66.67A (800W)"
+    "outputs": "+12V: 66.67A (800W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Green GP-B-OCDG (OCDG) 750W",
@@ -2868,7 +3633,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51BKVhdfgoL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cc7a21e418bf090520e1b0042ad49cc4.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W)"
+    "outputs": "+12V: 100A (1200W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Havit HV-B 750W",
@@ -2897,7 +3667,12 @@
       "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-8b8c-9.jpg",
       "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-7-bbf1.jpg"
     ],
-    "outputs": "+12V: 37.5A (450W)"
+    "outputs": "+12V: 37.5A (450W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Havit HV-T 750W",
@@ -2926,7 +3701,17 @@
       "https://static.ticimax.cloud/64459/uploads/urunresimleri/buyuk/havit-gamenote-hv-t750w-power-supply-s-7-bbf1.jpg",
       "https://bilmeliyiz.com/product-files/havit-gamenote-hv-t750w-750w-guc-kaynagi-sessiz-ve-serin-performans-yuksek-verimlilik/havit-gamenote-hv-t750w-750w-guc-kaynagi-sessiz-ve-serin-performans-yuksek-verimlilik_33.webp"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "Jiumeng",
+      "İç Devre Platformu": "JM-670?",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Hawk HP 750W",
@@ -2955,7 +3740,17 @@
       "https://cdn11.bigcommerce.com/s-qfzamxn9kz/images/stencil/original/products/344629/511753/L84096-003_5__29230.1707508292.jpg?c=2",
       "https://www.vectordigitals.net/wp-content/uploads/2025/08/hp-750w-flex-slot-gold-hot-plug-power-supply-dubai.webp"
     ],
-    "outputs": "+12V: 54A (648W)"
+    "outputs": "+12V: 54A (648W)",
+    "extra_specs": {
+      "OEM Üretici": "Soeyi",
+      "İç Devre Platformu": "WT-6800?",
+      "IRONScale / SPL Tier": "E*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Performance GD ATX 3.0 750W",
@@ -2984,7 +3779,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-832D",
+      "IRONScale / SPL Tier": "A-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Performance FS 750W",
@@ -3013,7 +3818,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Performance GD 750W",
@@ -3042,7 +3852,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.98%"
+    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.98%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-817A",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Performance 750W",
@@ -3071,7 +3891,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ECO HP1-J 750W",
@@ -3100,7 +3925,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 50A (600W)"
+    "outputs": "+12V: 50A (600W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ASTRO PT 750W",
@@ -3129,7 +3959,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 68A (696W) • 12V Ripple: 24mV • Regülasyon: -1.58%"
+    "outputs": "+12V: 68A (696W) • 12V Ripple: 24mV • Regülasyon: -1.58%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-750",
+      "IRONScale / SPL Tier": "B+*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ASTRO PT F 750W",
@@ -3158,7 +3998,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 68A (696W) • 12V Ripple: 24mV • Regülasyon: -1.58%"
+    "outputs": "+12V: 68A (696W) • 12V Ripple: 24mV • Regülasyon: -1.58%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ASTRO GD 750W",
@@ -3187,7 +4032,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ASTRO GD II 750W",
@@ -3216,7 +4066,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 18 mV • Regülasyon: -1.57% 600W+",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power ASTRO Lite 750W",
@@ -3245,7 +4100,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-771",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Super GD 750W",
@@ -3274,7 +4139,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 70.9A (850W) • Regülasyon: -1.00%"
+    "outputs": "+12V: 70.9A (850W) • Regülasyon: -1.00%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-815",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Element GD-DD 750W",
@@ -3303,7 +4178,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-822F",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Element HP1-M BR 750W",
@@ -3332,7 +4217,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "HP1-MBR-H12S",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Element Revo 750W",
@@ -3361,7 +4256,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 40mV • Regülasyon: -2.00%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 40mV • Regülasyon: -2.00%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-823D\nATX 3.1 upt.",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Direct 12 BR II 750W",
@@ -3390,7 +4295,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Elite 230V BR 750W",
@@ -3419,7 +4329,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.90%"
+    "outputs": "+12V: 62.5A (750W) • Regülasyon: -0.90%",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-823B",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power HPS-GD-F12S 750W",
@@ -3448,7 +4368,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 70.9A (850W)"
+    "outputs": "+12V: 70.9A (850W)",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-781A",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "High Power Absolute HP-G14C 750W",
@@ -3477,7 +4407,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/273e9a1b20fdddfcb664ce46efc7e821.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7863ebed8fe861fc2fd209a25f87035f.1600.jpg"
     ],
-    "outputs": "+12V: 1: 25A 2: 25A (552W)"
+    "outputs": "+12V: 1: 25A 2: 25A (552W)",
+    "extra_specs": {
+      "OEM Üretici": "High Power",
+      "İç Devre Platformu": "NO-639",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A550BN 750W",
@@ -3506,7 +4446,12 @@
       "https://m.media-amazon.com/images/I/51VZJ8DVX-L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A650BN 750W",
@@ -3535,7 +4480,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-BN PCI-e 5.0 750W",
@@ -3564,7 +4514,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GSB",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-BN II 750W",
@@ -3593,7 +4553,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-BN III 750W",
@@ -3622,7 +4592,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {
+      "OEM Üretici": "Huntkey",
+      "İç Devre Platformu": "HK750/850-18PP",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-BNL Full Range 750W",
@@ -3651,7 +4631,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-BNL 230V 750W",
@@ -3680,7 +4665,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-DN Full Range 750W",
@@ -3709,7 +4699,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-DN 230V 750W",
@@ -3738,7 +4733,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-GL 750W",
@@ -3767,7 +4767,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 750W",
@@ -3796,7 +4801,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 30.6mV • Regülasyon: −0.91%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 30.6mV • Regülasyon: −0.91%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "CSZ\nKısılmış",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-GL PCI-e 5.0 II 750W",
@@ -3825,7 +4840,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "CSZ\nKısılmış",
+      "IRONScale / SPL Tier": "B",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-PLS 750W",
@@ -3854,7 +4879,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A-GLS 750W",
@@ -3883,7 +4913,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "Custom",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MPG A-GS PCIE5 750W",
@@ -3912,7 +4952,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI PRO A-PL 750W",
@@ -3941,7 +4986,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/f5e81b534007785a40d1bc850c6ace3d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 69mV • Regülasyon: -0.3%?",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MONTECH Gamma 750W",
@@ -3970,7 +5020,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
       "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ],
-    "outputs": "+12V: 53A (636W) • 12V Ripple: 75.2 mV • Regülasyon: %0.11+"
+    "outputs": "+12V: 53A (636W) • 12V Ripple: 75.2 mV • Regülasyon: %0.11+",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPS",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MONTECH Gamma II 750W",
@@ -3999,7 +5059,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
       "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ],
-    "outputs": "+12V: 53A (636W) • 12V Ripple: 75.2 mV • Regülasyon: %0.11+"
+    "outputs": "+12V: 53A (636W) • 12V Ripple: 75.2 mV • Regülasyon: %0.11+",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPS",
+      "IRONScale / SPL Tier": "C+",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MONTECH Alpha Bronze 750W",
@@ -4028,7 +5098,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
       "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W)"
+    "outputs": "+12V: 70.8A (849.6W)",
+    "extra_specs": {
+      "OEM Üretici": "XinWeiYe",
+      "İç Devre Platformu": "A16",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MONTECH Beta 2.0 750W",
@@ -4057,7 +5137,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
       "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • Regülasyon: -1.50%"
+    "outputs": "+12V: 70.8A (849.6W) • Regülasyon: -1.50%",
+    "extra_specs": {
+      "OEM Üretici": "XinWeiYe",
+      "İç Devre Platformu": "A16",
+      "IRONScale / SPL Tier": "C*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MONTECH Beta 750W",
@@ -4086,7 +5176,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/077f9e8de9568e193054b59a23d8d95a.1600.jpg",
       "https://m.media-amazon.com/images/I/41ehLaPDbXL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • Regülasyon: -1.50%"
+    "outputs": "+12V: 70.8A (849.6W) • Regülasyon: -1.50%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Monster MON-TG 750W",
@@ -4115,7 +5210,17 @@
       "https://admin.itti.com.np/storage/product/thermalright-tg-750w-80-gold-fully-moduler-power-supply-price-nepal/aef4001d-33f0-4580-b8fd-66f1cb61c7d3.webp",
       "https://img.drz.lazcdn.com/static/np/p/ef1fc651dbf4dd90e23b826eaefe4e39.jpg_720x720q80.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W)"
+    "outputs": "+12V: 70.8A (850W)",
+    "extra_specs": {
+      "OEM Üretici": "HEC?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "B-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Monster Model adı yok. Monster Tulpar TD3 V3.1.6 kasasında var. 750W",
@@ -4144,7 +5249,12 @@
       "https://cdn.monsternotebook.com.tr/mnresize/1600/-/monsternotebook-tr/UPLOAD/urun-gorselleri-yeni/Desktop/TD3V3/TD3V3.1.6-V3.1.7-V3.2.4/siyah/03.png",
       "https://cdn.monsternotebook.com.tr/mnresize/1600/-/monsternotebook-tr/UPLOAD/urun-gorselleri-yeni/Desktop/TD3V3/TD3V3.1.3-V3.1.4-V3.1.5-V3.2.2-V3.2.3/siyah/04.png"
     ],
-    "outputs": "+12V: 70.8A (850W)"
+    "outputs": "+12V: 70.8A (850W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Monster Bpab 750W",
@@ -4173,7 +5283,17 @@
       "https://bermorzone.com.ph/wp-content/uploads/2025/01/Gigabyte-P750BS-Power-supply-btz-ph-3.webp",
       "https://down-th.img.susercontent.com/file/th-11134201-7r990-lx5mxue91rjkb0"
     ],
-    "outputs": "+12V: 70.5A (846W)"
+    "outputs": "+12V: 70.5A (846W)",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPG",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Bronze V1 750W",
@@ -4202,7 +5322,17 @@
       "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ],
-    "outputs": "+12V: 45.5A (550W) • 12V Ripple: 23.6 mV • Regülasyon: %0.78+"
+    "outputs": "+12V: 45.5A (550W) • 12V Ripple: 23.6 mV • Regülasyon: %0.78+",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "CSB-A",
+      "IRONScale / SPL Tier": "C+",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Bronze V2 750W",
@@ -4231,7 +5361,17 @@
       "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21mV • Regülasyon: -1.64%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21mV • Regülasyon: -1.64%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPG",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Bronze V3 750W",
@@ -4260,7 +5400,17 @@
       "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.2 mV"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 21.2 mV",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GPG\nATX 3.1 upt.",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Gold V1 750W",
@@ -4289,7 +5439,17 @@
       "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/801406fa0cd02e64085d789fd7a0fd7d.1600.jpg"
     ],
-    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%"
+    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%",
+    "extra_specs": {
+      "OEM Üretici": "Seasonic",
+      "İç Devre Platformu": "Focus Gold",
+      "IRONScale / SPL Tier": "A",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Gold V2 (2022) 750W",
@@ -4318,7 +5478,17 @@
       "https://m.media-amazon.com/images/I/41g6qApoNpL.jpg",
       "https://m.media-amazon.com/images/I/41J-jng2DwL.jpg"
     ],
-    "outputs": "+12V: 83.5A (1005W) • 12V Ripple: 30mV • Regülasyon: -0.62%"
+    "outputs": "+12V: 83.5A (1005W) • 12V Ripple: 30mV • Regülasyon: -0.62%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "CSZ",
+      "IRONScale / SPL Tier": "A",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Gold ATX 3.0 (2023) 750W",
@@ -4347,7 +5517,12 @@
       "https://m.media-amazon.com/images/I/41T1P8UOZTL.jpg",
       "https://m.media-amazon.com/images/I/51tK1PigCZL.jpg"
     ],
-    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%"
+    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Gold ATX 3.1 (2024) 750W",
@@ -4376,7 +5551,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/c0060ae80a7b71686da1ca92324d0f68.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/b4b18aa0b5be85db9ae15621bee38be7.1600.jpg"
     ],
-    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%"
+    "outputs": "+12V: 70A (840W) • 12V Ripple: 17.3 mV • Regülasyon: -0.49%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NZXT C Gold Core 750W",
@@ -4405,7 +5585,17 @@
       "https://m.media-amazon.com/images/I/4151uu3pCpL.jpg",
       "https://m.media-amazon.com/images/I/41n2LafaCzL.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 29.95mV • Regülasyon: -0.93%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 29.95mV • Regülasyon: -0.93%",
+    "extra_specs": {
+      "OEM Üretici": "HEC",
+      "İç Devre Platformu": "Custom",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Ocypus Delta P (P-BD) 750W",
@@ -4434,7 +5624,17 @@
       "https://www.jib.co.th/img_master/product/original/2025100715480580563_3.jpg",
       "https://image.makewebeasy.net/makeweb/r_400x400/CHLreQe0A/PRODUCT/dd17f9564416a4c2305bd73269a830ec.png?v=202405291424"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 55.85mV • Regülasyon: -0.83%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 55.85mV • Regülasyon: -0.83%",
+    "extra_specs": {
+      "OEM Üretici": "Andyson",
+      "İç Devre Platformu": "P37",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Ocypus Delta P - S (PS-BD) 750W",
@@ -4463,7 +5663,17 @@
       "https://image.makewebeasy.net/makeweb/r_400x400/CHLreQe0A/PRODUCT/dd17f9564416a4c2305bd73269a830ec.png?v=202405291424",
       "https://www.ultratech.com.bd/image/cache/catalog/Ocypus/ocypus-delta-p750-750w-power-supply5-500x500.jpg"
     ],
-    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 55.85mV • Regülasyon: -0.83%"
+    "outputs": "+12V: 62.5A (750W) • 12V Ripple: 55.85mV • Regülasyon: -0.83%",
+    "extra_specs": {
+      "OEM Üretici": "Andyson?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C-*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Ocypus Gamma P-WD 750W",
@@ -4492,7 +5702,17 @@
       "https://down-my.img.susercontent.com/file/my-11134207-7rasa-m8ej9ej4pjpcd5",
       "https://bermorzone.com.ph/wp-content/uploads/2025/02/OCYPUS-GAMMA-850WATTS-80-PLUS-230V-4.webp-btzph.webp"
     ],
-    "outputs": "+12V: 54.1A (649.1W) • Regülasyon: −2.64%"
+    "outputs": "+12V: 54.1A (649.1W) • Regülasyon: −2.64%",
+    "extra_specs": {
+      "OEM Üretici": "GuangHaiDianZi",
+      "İç Devre Platformu": "GH359",
+      "IRONScale / SPL Tier": "D+*",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Ocypus Lota P (P-GF) 750W",
@@ -4521,7 +5741,17 @@
       "https://www.ultratech.com.bd/image/cache/catalog/Ocypus/ocypus-iota-p750-750w-power-supply-1000x1000.jpg",
       "https://www.jib.co.th/img_master/product/original/20260310164517_83819_477_1.jpg"
     ],
-    "outputs": "+12V: 83.3A (999.6W) • 12V Ripple: <10mV • Regülasyon: -0.66%"
+    "outputs": "+12V: 83.3A (999.6W) • 12V Ripple: <10mV • Regülasyon: -0.66%",
+    "extra_specs": {
+      "OEM Üretici": "Andyson",
+      "İç Devre Platformu": "P32A",
+      "IRONScale / SPL Tier": "A*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Ocypus Lota P - S (PS-GF) 750W",
@@ -4550,7 +5780,17 @@
       "https://bermorzone.com.ph/wp-content/uploads/2025/02/OCYPUS-GAMMA-850WATTS-80-PLUS-230V-4.webp-btzph.webp",
       "https://www.startech.com.bd/image/cache/catalog/power-supply/ocypus/iota-p750/iota-p750-01-500x500.webp"
     ],
-    "outputs": "+12V: 62.5A (750W)"
+    "outputs": "+12V: 62.5A (750W)",
+    "extra_specs": {
+      "OEM Üretici": "Andyson?",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "B+*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Raijintek Ampere 750W",
@@ -4579,7 +5819,12 @@
       "https://m.media-amazon.com/images/I/61HKFxtb1GL.jpg",
       "https://m.media-amazon.com/images/I/41998+pxBSL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W)"
+    "outputs": "+12V: 70.8A (849.6W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Raijintek Ampere II 750W",
@@ -4608,7 +5853,12 @@
       "https://m.media-amazon.com/images/I/61HKFxtb1GL.jpg",
       "https://m.media-amazon.com/images/I/41998+pxBSL.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W)"
+    "outputs": "+12V: 70.8A (849.6W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Raijintek Cratos 750W",
@@ -4637,7 +5887,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/74d35ddaaca9377e0a0536d43435c8bc.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/85b6773729f049607fc187d45361de4c.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 27.85mV • Regülasyon: -0.38%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 27.85mV • Regülasyon: -0.38%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Raijintek Cratos Lite 750W",
@@ -4666,7 +5921,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/74d35ddaaca9377e0a0536d43435c8bc.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/85b6773729f049607fc187d45361de4c.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 27.85mV • Regülasyon: -0.38%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 27.85mV • Regülasyon: -0.38%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "RAMPAGE RAGE P15 750W",
@@ -4695,7 +5955,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ],
-    "outputs": "+12V: 83.5A (1000W)"
+    "outputs": "+12V: 83.5A (1000W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "RAMPAGE RAGE P10 750W",
@@ -4724,7 +5989,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W)"
+    "outputs": "+12V: 70.8A (850W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "RAMPAGE Forza (FTX-1) 750W",
@@ -4753,7 +6023,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/36f7695e170ad21584a332452b323b27.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d74af8f15ae83811c0da087df974a51f.1600.jpg"
     ],
-    "outputs": "+12V: 98A (1176W)"
+    "outputs": "+12V: 98A (1176W)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEGOTEP BN ATX 3.0 750W",
@@ -4782,7 +6057,17 @@
       "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
       "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ],
-    "outputs": "+12V: 62A (744W) • Regülasyon: -2.96%"
+    "outputs": "+12V: 62A (744W) • Regülasyon: -2.96%",
+    "extra_specs": {
+      "OEM Üretici": "Segotep",
+      "İç Devre Platformu": "SMD850-EUP",
+      "IRONScale / SPL Tier": "D+*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEGOTEP BN ATX 3.1 750W",
@@ -4811,7 +6096,17 @@
       "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
       "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ],
-    "outputs": "+12V: 62A (744W)"
+    "outputs": "+12V: 62A (744W)",
+    "extra_specs": {
+      "OEM Üretici": "Segotep",
+      "İç Devre Platformu": "SMD850-EUP",
+      "IRONScale / SPL Tier": "D+*",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEGOTEP BN ATX 2.x 750W",
@@ -4840,7 +6135,12 @@
       "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
       "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ],
-    "outputs": "+12V: 62A (744W) • Regülasyon: -2.96%"
+    "outputs": "+12V: 62A (744W) • Regülasyon: -2.96%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEGOTEP AN 750W",
@@ -4869,7 +6169,17 @@
       "https://m.media-amazon.com/images/I/410e35Vh0bL.jpg",
       "https://m.media-amazon.com/images/I/51F777ShQDL.jpg"
     ],
-    "outputs": "+12V: 30A (360W) • Regülasyon: -1.65%"
+    "outputs": "+12V: 30A (360W) • Regülasyon: -1.65%",
+    "extra_specs": {
+      "OEM Üretici": "Segotep",
+      "İç Devre Platformu": "Bilinmiyor.",
+      "IRONScale / SPL Tier": "E",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SAMA P (XPH-AP) 750W",
@@ -4898,7 +6208,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/bb47802058a490e59cdeadda81002086.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg"
     ],
-    "outputs": "+12V: 100A (1200W) • 12V Ripple: 20.04mV • Regülasyon: -0.75%"
+    "outputs": "+12V: 100A (1200W) • 12V Ripple: 20.04mV • Regülasyon: -0.75%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SAMA G (HAT-yzB1G) 750W",
@@ -4927,7 +6242,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ],
-    "outputs": "+12V: 62.4A (748.8W) • 12V Ripple: 32.03mV • Regülasyon: -1.04%"
+    "outputs": "+12V: 62.4A (748.8W) • 12V Ripple: 32.03mV • Regülasyon: -1.04%",
+    "extra_specs": {
+      "OEM Üretici": "RSY",
+      "İç Devre Platformu": "A0172",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SAMA B (EPS-1BA3) 750W",
@@ -4956,7 +6281,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e81737b03f15f9d68443d480d0e4e2ff.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ],
-    "outputs": "+12V: 62.4A (748.8W) • 12V Ripple: 53.16mV • Regülasyon: -0.54%"
+    "outputs": "+12V: 62.4A (748.8W) • 12V Ripple: 53.16mV • Regülasyon: -0.54%",
+    "extra_specs": {
+      "OEM Üretici": "RSY",
+      "İç Devre Platformu": "A0200",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SAMA H 750W",
@@ -4985,7 +6320,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/99ed51760a854a4d8d5b2c4b304bc1c0.1600.jpg"
     ],
     "capacitors": "105°C Katı/Elektrolitik Kapasitör",
-    "outputs": "Tek +12V Rayı"
+    "outputs": "Tek +12V Rayı",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Sharkoon Rebel P20 Gold 750W",
@@ -5014,7 +6354,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/a469f53d39588d09c706ee356c02b458.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/156a6530abcf9ca190cf809d689662f7.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 17.10mV • Regülasyon: -0.99%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 17.10mV • Regülasyon: -0.99%",
+    "extra_specs": {
+      "OEM Üretici": "Andyson",
+      "İç Devre Platformu": "P32A",
+      "IRONScale / SPL Tier": "B+",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Sharkoon Rebel P20 Platinum (ATX) 750W",
@@ -5043,7 +6393,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/a469f53d39588d09c706ee356c02b458.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/156a6530abcf9ca190cf809d689662f7.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 17.10mV • Regülasyon: -0.99%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 17.10mV • Regülasyon: -0.99%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Adata XPG Pylon II 750W",
@@ -5072,7 +6427,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/acf5a2bebb7755b6c392d27a720ccc38.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/76460ae84caf54fbc17dbb87fa05a3dd.1600.jpg"
     ],
-    "outputs": "+12V: 54A (648W) • 12V Ripple: 52.40mV • Regülasyon: -1.31%"
+    "outputs": "+12V: 54A (648W) • 12V Ripple: 52.40mV • Regülasyon: -1.31%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "Bilinmiyor",
+      "IRONScale / SPL Tier": "C",
+      "ATX Standardı": "ATX 3.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Adata XPG Core Shift II VE 750W",
@@ -5101,7 +6466,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/9e9d7b460ca30ba78e9bba8a88fb4fe9.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/fb99406bb7791688169b588444541639.1600.jpg"
     ],
-    "outputs": "+12V: 54A (648W) • 12V Ripple: 52.40mV • Regülasyon: -1.31%"
+    "outputs": "+12V: 54A (648W) • 12V Ripple: 52.40mV • Regülasyon: -1.31%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM1000e (2023) ATX 3.0 1000W",
@@ -5130,7 +6500,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/ce27e414f67e9e8786401e4260bb85fa.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e1a0bb0ca24bc0c2d95fea57a8c2019d.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM850e (2023) ATX 3.0 850W",
@@ -5159,7 +6534,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/74e6caafd69bcc53d6e5060a3249248d.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fa3c80c1defc487364f6bdaf2670b1e.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM750e (2023) ATX 3.0 750W",
@@ -5188,7 +6568,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/336c7955df0312d04655dd3a13973c95.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/8307e191cd38a81dc5dcf709432e21e0.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 16.8 mV • Regülasyon: -1.05%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 16.8 mV • Regülasyon: -1.05%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM850x Shift ATX 3.0 850W",
@@ -5217,7 +6602,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/7882f867747759b989aa762208c899ed.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/a6cedc8c48e1ab371cc0c2f4aba3f76d.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM1000x Shift ATX 3.0 1000W",
@@ -5246,7 +6636,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/38942a1637e7445c59b8a274492115a5.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d03646603c57b9844719421c0543434c.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "CORSAIR RM1200x Shift ATX 3.0 1200W",
@@ -5275,7 +6670,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/b2a2e1bba61ace8fdb63cfb7e7874572.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
-    "outputs": "Tek +12V Rayı • <20mV Ripple • ATX 3.x"
+    "outputs": "Tek +12V Rayı • <20mV Ripple • ATX 3.x",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A850GL PCIE5 850W",
@@ -5304,7 +6704,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/79be60ce3783b8918a1c0940d3e4ff19.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/eef1b2e0ab31f6cbcbe01d162f44b952.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A750GL PCIE5 750W",
@@ -5333,7 +6738,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/d8f4d13ba49891eb3929bdddc3d87b4b.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/17294c7b6ef21cfb0b52097e46cfd9b3.1600.jpg"
     ],
-    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%"
+    "outputs": "+12V: 70.5A (846W) • 12V Ripple: 27.21mV • Regülasyon: -0.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MAG A650BN 650W",
@@ -5362,7 +6772,17 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/3148f884b77b2d7abee3a3e0ad72cf73.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7f83e981dac2486e2b852d6688630737.1600.jpg"
     ],
-    "outputs": "+12V: 54A (646W) • 12V Ripple: 13.3mV • Regülasyon: -2.64%"
+    "outputs": "+12V: 54A (646W) • 12V Ripple: 13.3mV • Regülasyon: -2.64%",
+    "extra_specs": {
+      "OEM Üretici": "CWT",
+      "İç Devre Platformu": "GSB",
+      "IRONScale / SPL Tier": "C-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MPG A850G PCIE5 850W",
@@ -5391,7 +6811,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "MSI MPG A1000G PCIE5 1000W",
@@ -5420,7 +6845,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e30f8fbb357a16391b3a15586b9aaec4.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/5bff625e69da1c7069c73f477b42ca41.1600.jpg"
     ],
-    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%"
+    "outputs": "+12V: 70.8A (849.6W) • 12V Ripple: 26.67mV • Regülasyon: -0.57%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS TUF Gaming 750G 750W",
@@ -5449,7 +6879,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/45c889b358290996d7737156b64146c0.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg"
     ],
-    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%"
+    "outputs": "+12V: 45.8A (549.6W) • 12V Ripple: 34.15mV • Regülasyon: -1.12%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS TUF Gaming 850G 850W",
@@ -5478,7 +6913,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/4f699d87a43e3c59ea964a1bf230301c.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg"
     ],
-    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%"
+    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS TUF Gaming 1000G 1000W",
@@ -5507,7 +6947,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/06eac4dd425e5a1d1e70735068c47072.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/6f6f30fe3667a292aee80208a58acb28.1600.jpg"
     ],
-    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%"
+    "outputs": "+12V: 70.83A (850W) • 12V Ripple: 36mV • Regülasyon: -0.82%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS ROG Thor 1000W Platinum II",
@@ -5536,7 +6981,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
-    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple"
+    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS ROG Thor 1200W Platinum II",
@@ -5565,7 +7015,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
-    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple"
+    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS ROG Thor 1600W Titanium",
@@ -5594,7 +7049,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/e80b8c30491ecacce783d79550aebdb9.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
-    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple"
+    "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "ASUS Pro WS 3000W Platinum",
@@ -5623,7 +7083,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/3fb2d887e5a452db696692c8205dd369.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
-    "outputs": "250A +12V Rayı (3000W Sürekli) • Sunucu Sınıfı Regülasyon"
+    "outputs": "250A +12V Rayı (3000W Sürekli) • Sunucu Sınıfı Regülasyon",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEASONIC Focus GX-850 ATX 3.0 850W",
@@ -5652,7 +7117,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/0d00cd0365aac0b1e9c2f3bbc1b8a670.1600.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
-    "outputs": "Tek +12V Rayı • <22mV Ripple"
+    "outputs": "Tek +12V Rayı • <22mV Ripple",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "SEASONIC Focus GX-1000 ATX 3.0 1000W",
@@ -5681,7 +7151,12 @@
       "https://m.media-amazon.com/images/I/41zLhprxqXL.jpg"
     ],
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
-    "outputs": "Tek +12V Rayı • <22mV Ripple"
+    "outputs": "Tek +12V Rayı • <22mV Ripple",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "DEEPCOOL PN750M ATX 3.1 750W",
@@ -5710,7 +7185,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/0ccfb276c4b37497ed9c21ef0aca236a.1600.jpg"
     ],
     "capacitors": "105°C Japon Ana Kapasitör + Tayvan İkincil",
-    "outputs": "Tek +12V Rayı • ATX 3.1 Hold-Up > 16ms"
+    "outputs": "Tek +12V Rayı • ATX 3.1 Hold-Up > 16ms",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "DEEPCOOL PN850M ATX 3.1 850W",
@@ -5739,7 +7219,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/0ccfb276c4b37497ed9c21ef0aca236a.1600.jpg"
     ],
     "capacitors": "105°C Japon Ana Kapasitör + Tayvan İkincil",
-    "outputs": "Tek +12V Rayı • ATX 3.1 Hold-Up > 16ms"
+    "outputs": "Tek +12V Rayı • ATX 3.1 Hold-Up > 16ms",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 850W",
@@ -5768,7 +7253,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/52e4516222c9b5bca3e053afded41848.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 83.33A (1000W) • 12V Ripple: 23.6mV • Regülasyon: -1.12%"
+    "outputs": "+12V: 83.33A (1000W) • 12V Ripple: 23.6mV • Regülasyon: -1.12%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FSP Hydro G PRO ATX 3.0 1000W",
@@ -5797,7 +7287,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/52e4516222c9b5bca3e053afded41848.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/de7d1c7b1b6206da83e8caf02eeaf2e2.1600.jpg"
     ],
-    "outputs": "+12V: 83.33A (1000W) • 12V Ripple: 23.6mV • Regülasyon: -1.12%"
+    "outputs": "+12V: 83.33A (1000W) • 12V Ripple: 23.6mV • Regülasyon: -1.12%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BE QUIET! Pure Power 12 M 750W",
@@ -5826,7 +7321,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/58f82e34238ad2132a69775300daa503.1600.jpg"
     ],
     "capacitors": "105°C Tayvan Teapo / Elite",
-    "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi"
+    "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "BE QUIET! Pure Power 12 M 850W",
@@ -5855,7 +7355,12 @@
       "https://cdna.pcpartpicker.com/static/forever/images/product/58f82e34238ad2132a69775300daa503.1600.jpg"
     ],
     "capacitors": "105°C Tayvan Teapo / Elite",
-    "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi"
+    "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Vertex GX-1000 ATX 3.0",
@@ -5895,7 +7400,12 @@
     "topology": "OEM: Seasonic (Vertex Platform) • Tam Köprü LLC + DC-DC • Aktif PFC",
     "capacitors": "%100 105°C Japon (Nichicon / Nippon Chemi-Con)",
     "outputs": "Tek +12V Rayı • <20mV Ripple • Hold-Up > 17ms",
-    "protections": "OPP, OVP, UVP, OCP, OTP, SCP"
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair RM1000x SHIFT ATX 3.0",
@@ -5929,7 +7439,12 @@
     "topology": "OEM: Chicony Power (Bilinmiyor) • Full Bridge • Aktif PFC • DC-DC",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "be quiet! Dark Power Pro 13 1300W",
@@ -5963,7 +7478,12 @@
     "topology": "OEM: CWT (CSZ Platform) • Dijital Tam Köprü LLC + DC-DC • Aktif PFC",
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
     "outputs": "6x Çoklu +12V Rayı (OC Anahtarı ile Tek Ray 108A)",
-    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP"
+    "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-1300 Platinum (Black)",
@@ -5994,7 +7514,12 @@
     "efficiency": "80+ Platinum",
     "sata_connectors": "12x SATA",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18.5ms",
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-1300 Platinum (White)",
@@ -6025,7 +7550,12 @@
     "efficiency": "80+ Platinum",
     "sata_connectors": "12x SATA",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18.5ms",
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (Black)",
@@ -6056,7 +7586,12 @@
     "efficiency": "80+ Platinum",
     "sata_connectors": "12x SATA",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18.5ms",
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-1000 Platinum (White)",
@@ -6087,7 +7622,12 @@
     "efficiency": "80+ Platinum",
     "sata_connectors": "12x SATA",
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 18.5ms",
-    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%"
+    "outputs": "+12V: 83A (996W) • 12V Ripple: 30.60mV • Regülasyon: -0.23%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (Black)",
@@ -6116,7 +7656,12 @@
     "price": null,
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
     "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%",
-    "type": "ATX (182mm x 150mm x 86mm)"
+    "type": "ATX (182mm x 150mm x 86mm)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI Edge EG-850 Gold (White)",
@@ -6145,7 +7690,12 @@
     "price": null,
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 20.1ms",
     "outputs": "+12V: 83A (996W) • 12V Ripple: 36.54mV • Regülasyon: -0.14%",
-    "type": "ATX (182mm x 150mm x 86mm)"
+    "type": "ATX (182mm x 150mm x 86mm)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "LIAN LI SP850 SFX Gold (Black)",
@@ -6172,7 +7722,12 @@
     "capacitors": "105°C Japon (Rubycon / Nichicon / Nippon Chemi-Con) • Hold-Up Time: 12.5ms",
     "outputs": "+12V: 62A (744W) • 12V Ripple: 29.58mV • Regülasyon: -0.63%",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO • IC: Grenergy GR8313",
-    "fan_size": "92mm Yate Loon D92LH-12B 12V, 0.60A (Double Ball Bearing)"
+    "fan_size": "92mm Yate Loon D92LH-12B 12V, 0.60A (Double Ball Bearing)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Vertex GX-1200 ATX 3.0",
@@ -6203,7 +7758,12 @@
     "capacitors": "%100 105°C Japon (Nichicon / Nippon Chemi-Con)",
     "outputs": "Tek +12V Rayı • <20mV Ripple • Hold-Up > 17ms",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "135mm FDB Akıllı Fan (Hibrit Kontrol)"
+    "fan_size": "135mm FDB Akıllı Fan (Hibrit Kontrol)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Focus GX-1000 ATX 3.0 V3",
@@ -6234,7 +7794,12 @@
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
     "outputs": "Tek +12V Rayı • <22mV Ripple",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan"
+    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Focus GX-850 ATX 3.0 V3",
@@ -6265,7 +7830,12 @@
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
     "outputs": "Tek +12V Rayı • <22mV Ripple",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan"
+    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Focus GX-750 ATX 3.0 V3",
@@ -6296,7 +7866,12 @@
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
     "outputs": "Tek +12V Rayı • <22mV Ripple",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan"
+    "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Seasonic Prime TX-1600 Titanium ATX 3.0",
@@ -6329,7 +7904,12 @@
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
     "outputs": "Tek +12V Rayı (133.3A / 1600W) • Mükemmel <%0.5 Regülasyon",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "135mm FDB Fan (Hibrit Sıfır RPM Modu)"
+    "fan_size": "135mm FDB Fan (Hibrit Sıfır RPM Modu)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "be quiet! Dark Power Pro 13 1300W Titanium",
@@ -6358,7 +7938,12 @@
     "outputs": "6x Çoklu +12V Rayı (OC Anahtarı ile Tek Ray 108A)",
     "type": "ATX (200 x 150 x 86 mm)",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
-    "fan_size": "135mm Çerçevesiz Silent Wings Fan"
+    "fan_size": "135mm Çerçevesiz Silent Wings Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "be quiet! Straight Power 12 1000W Platinum",
@@ -6387,7 +7972,12 @@
     "outputs": "Tek +12V Rayı (83.3A / 1000W) • Çok Düşük Ripple",
     "type": "ATX (160 x 150 x 86 mm)",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
-    "fan_size": "135mm Silent Wings 3 FDB Fan"
+    "fan_size": "135mm Silent Wings 3 FDB Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "be quiet! Pure Power 12 M 850W Gold",
@@ -6417,7 +8007,12 @@
     "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi",
     "type": "ATX (160 x 150 x 86 mm)",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
-    "fan_size": "120mm be quiet! Sessiz Fan"
+    "fan_size": "120mm be quiet! Sessiz Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "be quiet! Pure Power 12 M 750W Gold",
@@ -6448,7 +8043,12 @@
     "capacitors": "105°C Tayvan Teapo / Elite",
     "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
-    "fan_size": "120mm be quiet! Sessiz Fan"
+    "fan_size": "120mm be quiet! Sessiz Fan",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair RM1000x Shift Gold ATX 3.0",
@@ -6479,7 +8079,12 @@
     "efficiency": "80+ Gold",
     "sata_connectors": "11x SATA",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair RM850x Shift Gold ATX 3.0",
@@ -6510,7 +8115,12 @@
     "efficiency": "80+ Gold",
     "sata_connectors": "10x SATA",
     "capacitors": "105°C Katı/Elektrolitik Kapasitör • Hold-Up Time: 16.4ms",
-    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%"
+    "outputs": "+12V: 70.8A (850W) • 12V Ripple: 37.8 mV • Regülasyon: -1.55%",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair SF850 Platinum ATX 3.1",
@@ -6539,7 +8149,12 @@
     "outputs": "Tek +12V Rayı • <18mV Ripple • SFX Yüksek Yoğunluk",
     "type": "SFX (100 x 125 x 63.5 mm)",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "92mm FDB Fan (Sıfır RPM Modu)"
+    "fan_size": "92mm FDB Fan (Sıfır RPM Modu)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair SF750 Platinum",
@@ -6570,7 +8185,12 @@
     "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
     "outputs": "Tek +12V Rayı • <18mV Ripple • SFX Yüksek Yoğunluk",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
-    "fan_size": "92mm FDB Fan (Sıfır RPM Modu)"
+    "fan_size": "92mm FDB Fan (Sıfır RPM Modu)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Super Flower Leadex VII Gold 1000W ATX 3.0",
@@ -6600,7 +8220,12 @@
     "outputs": "Tek +12V Rayı (83.3A / 1000W) • <15mV Ripple",
     "type": "ATX (150 x 150 x 86 mm)",
     "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO, SIP",
-    "fan_size": "140mm FDB Fan (ECO Sıfır RPM Anahtarlı)"
+    "fan_size": "140mm FDB Fan (ECO Sıfır RPM Anahtarlı)",
+    "extra_specs": {},
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Corsair VS Gri Etiket 400W",
@@ -6626,6 +8251,16 @@
       "https://ironscalelabs.com/images/psu-auto/corsair-vs-gri-etiket-400w-2016-0/outside-v182.webp",
       "https://ironscalelabs.com/images/psu-auto/corsair-vs-gri-etiket-400w-2016-0/top-v182.webp",
       "https://ironscalelabs.com/images/psu-auto/corsair-vs-gri-etiket-400w-2016-0/fan.webp"
-    ]
+    ],
+    "extra_specs": {
+      "OEM Üretici": "HEC",
+      "İç Devre Platformu": "VS\nHigh Watt",
+      "IRONScale / SPL Tier": "D-",
+      "ATX Standardı": "ATX 2.x"
+    },
+    "source_provenance": [
+      "IRONScale Labs"
+    ],
+    "spec_verified_at": "2026-11-16"
   }
 ]

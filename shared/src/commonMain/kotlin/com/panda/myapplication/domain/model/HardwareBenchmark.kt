@@ -48,6 +48,15 @@ data class CpuSyntheticBenchmark(
 
     @SerialName("passmark_cpu_mark")
     val passmarkScore: Int? = null,
+
+    @SerialName("passmark_single")
+    val passmarkSingle: Int? = null,
+
+    @SerialName("blender_score")
+    val blenderScore: Int? = null,
+
+    @SerialName("seven_zip_mips")
+    val sevenZipMips: Int? = null,
 )
 
 @Immutable
@@ -61,6 +70,15 @@ data class GpuSyntheticBenchmark(
 
     @SerialName("steel_nomad")
     val steelNomad: Int? = null,
+
+    @SerialName("passmark_g3d_mark")
+    val passmarkG3d: Int? = null,
+
+    @SerialName("port_royal")
+    val portRoyal: Int? = null,
+
+    @SerialName("speed_way")
+    val speedWay: Int? = null,
 )
 
 @OptIn(ExperimentalSerializationApi::class)
