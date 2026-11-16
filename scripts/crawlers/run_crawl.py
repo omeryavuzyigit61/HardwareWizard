@@ -60,7 +60,7 @@ def main() -> int:
     if "images" in groups:
         gg_cnt = crawl_gaming_gen_store(http, state, max_pages_per_cat=6, delta_only=delta_only)
         gsm_cnt = crawl_gsmarena_galleries(http, state, delta_only=delta_only)
-        ito_cnt = crawl_itopya_targeted(http, state, max_fetch=1200, delta_only=delta_only)
+        ito_cnt = crawl_itopya_targeted(http, state, max_fetch=1650, delta_only=delta_only)
         print(f"[IMAGES] GamingGen={gg_cnt}, GSMArenaGallery={gsm_cnt}, Itopya={ito_cnt}")
 
     print("\n=== Crawl State Summary (category | source | count) ===")

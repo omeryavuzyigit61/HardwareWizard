@@ -213,6 +213,7 @@ def is_image_compatible_with_item(
         "cdna.pcpartpicker.com" in low_u
         or "m.media-amazon.com" in low_u
         or "images-na.ssl-images-amazon.com" in low_u
+        or "pisces.bbystatic.com" in low_u
         or re.match(r"^[0-9a-f\-_]{20,}$", stem)
         or re.match(r"^\d{1,3}\-[0-9a-f]{5,12}$", stem)
     )
@@ -285,8 +286,24 @@ def is_image_compatible_with_item(
 
     elif category == "CPU":
         if "raw.githubusercontent.com/omeryavuzyigit61/hardwarewizard/main/data/images/cpu/" in low_u:
-            if any(bad_s in stem for bad_s in ("_bottom", "_ihs_studio", "generic_")):
+            if any(bad_s in stem for bad_s in ("_bottom", "generic_")):
                 return False
+            if stem == "amd_am5_ihs_studio":
+                return ("amd" in t_low or "ryzen" in t_low) and "intel" not in t_low and "threadripper" not in t_low and (
+                    "am5" in t_low or bool(re.search(r"\b[789]\d{3}[a-z0-9]*\b", t_low))
+                )
+            if stem == "amd_am4_ihs_studio":
+                return ("amd" in t_low or "ryzen" in t_low) and "intel" not in t_low and "threadripper" not in t_low and (
+                    "am4" in t_low or bool(re.search(r"\b(?:[1-5]\d{3}[a-z0-9]*|3000g|200ge)\b", t_low))
+                )
+            if stem == "intel_lga1700_ihs_studio":
+                return "intel" in t_low and "amd" not in t_low and (
+                    "1700" in t_low or bool(re.search(r"\b1[234]\d{3}[a-z0-9]*\b", t_low))
+                )
+            if stem == "intel_lga1851_ihs_studio":
+                return "intel" in t_low and "amd" not in t_low and (
+                    "1851" in t_low or "ultra" in t_low or bool(re.search(r"\b2\d{2}[a-z0-9]*\b", t_low))
+                )
             stem_words = set(re.split(r"[^a-z0-9]+", stem))
             t_words = set(re.split(r"[^a-z0-9]+", t_low))
             sku_codes = {w for w in stem_words if re.match(r"^(?:\d{4,5}[a-z0-9]{0,4}|2[2345678][05]k?f?)$", w)}
@@ -527,7 +544,7 @@ def collect_repo_asset_urls() -> list[str]:
         if sub not in valid_subs or not fn.lower().endswith((".webp", ".png", ".jpg", ".jpeg")):
             continue
         low = fn.lower()
-        if any(bad in low for bad in ("_reference.", "_bottom.", "_ihs_studio.", "generic_")):
+        if any(bad in low for bad in ("_reference.", "_bottom.", "generic_")):
             continue
         urls.append(f"{_REPO_RAW_BASE}/data/images/{sub}/{fn}")
     return urls
@@ -890,6 +907,15 @@ def quarantine_cross_model_collisions(
                             _clear_item_img(it)
                 continue
 
+            pcp_sigs = [sk for sk, grp in sig_to_items.items() if any(it.get("_pcp_backed") for it in grp)]
+            if len(pcp_sigs) == 1 and len(sig_to_items[pcp_sigs[0]]) <= cap_limit:
+                winner_sig = pcp_sigs[0]
+                for skey, group_items in sig_to_items.items():
+                    if skey != winner_sig:
+                        for it in group_items:
+                            _clear_item_img(it)
+                continue
+
         # Dominant majority preservation for RAM (speed/capacity/timing kits share one visual line cleanly)
         if category == "RAM":
             largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
@@ -951,3 +977,4 @@ def quarantine_cross_model_collisions(
 
     for it in items:
         it.pop("_img_match_score", None)
+        it.pop("_pcp_backed", None)

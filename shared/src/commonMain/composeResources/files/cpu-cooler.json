@@ -739,15 +739,10 @@
       "LGA1700"
     ],
     "max_tdp": 250,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/157afeba59d05304fe181106745e6177.1600.jpg",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 240",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/157afeba59d05304fe181106745e6177.1600.jpg",
-      "https://m.media-amazon.com/images/I/515UNgTSWJL.jpg",
-      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/05/nzxt-kraken-240-aio-hero-2.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
@@ -1391,7 +1386,14 @@
     "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
     "fan_airflow": "66.17 CFM / 1.53 mmH2O Statik Basınç",
     "model": "Peerless Assassin 120 SE WHITE ARGB",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-6.jpg"
+    ],
     "height": 155,
     "type": "Air Cooler",
     "extra_specs": {},
@@ -1399,7 +1401,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/thermalright-assassin-x-120-refined-se-argb-white-amd-tl-c12cw-s-4-x-6mm-isi-borulu-amd-uyumlu-hava-sogutucu-2-yil-birebir-degisim-garantili-1.jpg"
   },
   {
     "name": "ARCTIC Liquid Freezer III Pro",
@@ -1602,17 +1605,11 @@
       "LGA1851"
     ],
     "max_tdp": 250,
-    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-a35769.png",
     "radiator_dimensions": "240mm x 27mm Standart Alüminyum Radyatör (Asetek 7. Nesil Pompa)",
     "fan_rpm": "500 - 1800 RPM (F120 RGB Core)",
     "fan_airflow": "78.86 CFM / 2.57 mmH2O Statik Basınç",
     "model": "Kraken 240 RGB",
-    "images": [
-      "https://img.yenieera22.com/cdn/1000/1-a35769.png",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/bfab77ca83ef76771001024cf039d47f.1600.jpg",
-      "https://m.media-amazon.com/images/I/51WFKhfnDvL._SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/515UNgTSWJL._SL1000_.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",

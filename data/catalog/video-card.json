@@ -366,7 +366,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "GeForce RTX 3080 VENTUS 3X 10G OC",
-    "images": [],
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6430/6430175_sd.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ab684e6fe63729f937ff112dac6be257.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -388,7 +392,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6430/6430175_sd.jpg"
   },
   {
     "name": "MSI RTX 3070 Ventus 3X OC",
@@ -706,7 +711,9 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 448.0,
     "model": "GeForce RTX 3070 Gaming X Trio",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/9921c03232084272f256dcd036802c4e.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.058",
       "PassMark GPU Sıralaması": "#78",
@@ -728,7 +735,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 29th, 2020",
     "fp32_tflops": 20.31,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9921c03232084272f256dcd036802c4e.1600.jpg"
   },
   {
     "name": "MSI GeForce RTX 3060 Gaming X12G",
@@ -1040,7 +1048,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "GeForce RTX 3090 TI GAMING X TRIO 24G",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bba9d8be3e2c922dd5dc2c9f4f3bb405.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.185",
       "PassMark GPU Sıralaması": "#24",
@@ -1062,7 +1072,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Mar 29th, 2022",
     "fp32_tflops": 40.0,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bba9d8be3e2c922dd5dc2c9f4f3bb405.1600.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5090 ROG Strix OC",
@@ -2682,7 +2693,9 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Windforce OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b593bb95ec0b9a1c2e4bf889f2a8dd32.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -2703,7 +2716,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b593bb95ec0b9a1c2e4bf889f2a8dd32.1600.jpg"
   },
   {
     "name": "GIGABYTE GeForce RTX 5080 Eagle OC",
@@ -5862,7 +5876,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 ROG Strix OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/59c719f5155104671c66994cc7d85c96.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -5883,7 +5899,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/59c719f5155104671c66994cc7d85c96.1600.jpg"
   },
   {
     "name": "ASUS RTX 4090 TUF Gaming OC",
@@ -6421,7 +6438,10 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 Windforce OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a2b379f45c9a469f67e9d1118193a4ca.1600.jpg",
+      "https://m.media-amazon.com/images/I/711vU2IrEuL.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -6442,7 +6462,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a2b379f45c9a469f67e9d1118193a4ca.1600.jpg"
   },
   {
     "name": "PALIT RTX 4090 GameRock OC",
@@ -6469,7 +6490,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 GameRock OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/177db22941a335fa1c051b40b1e04992.1600.jpg",
+      "https://www.techpowerup.com/review/palit-geforce-rtx-4090-gamerock-oc/images/rgb-front.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b39faa18a84a20bba9be322daf1e968d.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -6490,7 +6515,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/177db22941a335fa1c051b40b1e04992.1600.jpg"
   },
   {
     "name": "PALIT GeForce RTX 4090 JetStream OC",
@@ -9440,7 +9466,11 @@
     "memory_speed": 22.4,
     "bandwidth_gbs": 716.8,
     "model": "GeForce RTX 4080 Twin X2 OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ce81980ce070a83cbd0f836d6a89dd1d.1600.jpg",
+      "https://tpucdn.com/gpu-specs/images/b/11583-front.jpg",
+      "https://tpucdn.com/gpu-specs/images/b/9909-front.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "34.445",
       "PassMark GPU Sıralaması": "#7",
@@ -9461,7 +9491,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Nov 16th, 2022",
     "fp32_tflops": 48.74,
-    "brand": "INNO3D"
+    "brand": "INNO3D",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ce81980ce070a83cbd0f836d6a89dd1d.1600.jpg"
   },
   {
     "name": "ASUS RTX 4070 Ti SUPER ROG Strix OC",
@@ -11547,7 +11578,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "GeForce RTX 4070 Ti GameRock OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7ec57f1e90a60a5edade1180f634382c.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "31.511",
       "PassMark GPU Sıralaması": "#18",
@@ -11568,7 +11601,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 5th, 2023",
     "fp32_tflops": 40.09,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7ec57f1e90a60a5edade1180f634382c.1600.jpg"
   },
   {
     "name": "PALIT GeForce RTX 4070 Ti JetStream OC",
@@ -14287,7 +14321,10 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "GeForce RTX 4070 EX Gamer",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/416Sgr0tSLL.jpg",
+      "https://m.media-amazon.com/images/I/71Xjm47jFyL.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.850",
       "PassMark GPU Sıralaması": "#40",
@@ -14308,7 +14345,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Apr 13th, 2023",
     "fp32_tflops": 29.15,
-    "brand": "GALAX"
+    "brand": "GALAX",
+    "imageUrl": "https://m.media-amazon.com/images/I/416Sgr0tSLL.jpg"
   },
   {
     "name": "GALAX GeForce RTX 4070 1-Click OC",
@@ -14483,7 +14521,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 Gaming Twin Edge OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/13cc194d30e61677c2e2ec8726b35776.1600.jpg",
+      "https://m.media-amazon.com/images/I/81lFiSf7S2L._AC_SL1500_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cd249f96382c3c81f82b829154af3c8e.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.850",
       "PassMark GPU Sıralaması": "#40",
@@ -14504,7 +14546,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Apr 13th, 2023",
     "fp32_tflops": 29.15,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/13cc194d30e61677c2e2ec8726b35776.1600.jpg"
   },
   {
     "name": "INNO3D GeForce RTX 4070 iChill X3",
@@ -19084,7 +19127,9 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 448.0,
     "model": "GeForce RTX 3060 Ti Gaming OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f33448d0ecb8d5a3fff77efb98790d3a.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "20.206",
       "PassMark GPU Sıralaması": "#94",
@@ -19105,7 +19150,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 2nd, 2020",
     "fp32_tflops": 16.2,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f33448d0ecb8d5a3fff77efb98790d3a.1600.jpg"
   },
   {
     "name": "GIGABYTE GeForce RTX 3060 Ti Windforce OC",
@@ -19570,7 +19616,9 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 448.0,
     "model": "GeForce RTX 3060 Ti Twin Edge OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a8cb9c45c0811900f1bf78d9ec87b975.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "20.206",
       "PassMark GPU Sıralaması": "#94",
@@ -19591,7 +19639,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 2nd, 2020",
     "fp32_tflops": 16.2,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a8cb9c45c0811900f1bf78d9ec87b975.1600.jpg"
   },
   {
     "name": "INNO3D GeForce RTX 3060 Ti iChill X3",
@@ -20503,7 +20552,9 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 448.0,
     "model": "RTX 3070 Gaming Twin Edge OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dc5424bb67af9af9ea625e05bec1b164.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.058",
       "PassMark GPU Sıralaması": "#78",
@@ -20524,7 +20575,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 29th, 2020",
     "fp32_tflops": 20.31,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/dc5424bb67af9af9ea625e05bec1b164.1600.jpg"
   },
   {
     "name": "INNO3D GeForce RTX 3070 iChill X3",
@@ -20925,6 +20977,7 @@
     "model": "RTX 3080 Ventus 3X OC",
     "images": [
       "https://static1.salidzini.lv/img/37/eb/360/95737840806/msi_geforce_rtx_3080_ventus_3_x_plus_12_g_oc_lhr_spelu_.webp",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6430/6430175_sd.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/24f2250843caa631f82d234bc781e9d0.1600.jpg"
     ],
@@ -21031,6 +21084,7 @@
     "model": "RTX 3080 Aorus Master",
     "images": [
       "https://m.media-amazon.com/images/I/812sOZHqcyS._AC_.jpg",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6462/6462198_sd.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3b48514507cb494a63445b44ad4592ec.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/0d1d28281116c9f7c303f386a28f7355.1600.jpg"
     ],
@@ -21187,7 +21241,10 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Eagle OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a85f33401d41280354b2552a89b0cbef.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a3192df075922ee3bd6fe1e04301b624.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -21208,7 +21265,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a85f33401d41280354b2552a89b0cbef.1600.jpg"
   },
   {
     "name": "PALIT RTX 3080 GameRock OC",
@@ -21633,7 +21691,10 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "GeForce RTX 3080 iChill X3",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb16cd86ab27bdd2ae3054cfeb289f06.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2ac11241c0da587b257f81a893b1583a.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -21654,7 +21715,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "INNO3D"
+    "brand": "INNO3D",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bb16cd86ab27bdd2ae3054cfeb289f06.1600.jpg"
   },
   {
     "name": "INNO3D GeForce RTX 3080 Twin X2 OC",
@@ -22755,7 +22817,11 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 960.0,
     "model": "RX 7900 XTX Speedster MERC 310",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4b6e1666bdde2d084cb87b98ba5d8b30.1600.jpg",
+      "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/639736d43e89781c8b59f26d_03.jpg",
+      "https://assets-global.website-files.com/5d1911406ad3cbdb9924a753/639736d87941b951a71777a8_04.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "31.473",
       "PassMark GPU Sıralaması": "#19",
@@ -22776,7 +22842,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 13th, 2022",
     "fp32_tflops": 30.72,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4b6e1666bdde2d084cb87b98ba5d8b30.1600.jpg"
   },
   {
     "name": "XFX RX 7900 XTX Speedster QICK 319",
@@ -24113,7 +24180,11 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 800.0,
     "model": "Radeon RX 7900 XT Speedster MERC 310",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fb5921271006cb070bb968bb41488e5b.1600.jpg",
+      "https://assets-global.website-files.com/5d1911406ad3cbdb9924a753/6397210dcf4afb4f7f420421_03.jpg",
+      "https://assets-global.website-files.com/5d1911406ad3cbdb9924a753/63972112a075b74ddece82d6_04.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.125",
       "PassMark GPU Sıralaması": "#25",
@@ -24134,7 +24205,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 13th, 2022",
     "fp32_tflops": 25.8,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fb5921271006cb070bb968bb41488e5b.1600.jpg"
   },
   {
     "name": "XFX Radeon RX 7900 XT Speedster QICK 319",
@@ -24257,7 +24329,9 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 800.0,
     "model": "Radeon RX 7900 XT Taichi OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b70760ca85090cc821f30714e627a3d.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.125",
       "PassMark GPU Sıralaması": "#25",
@@ -24278,7 +24352,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 13th, 2022",
     "fp32_tflops": 25.8,
-    "brand": "ASROCK"
+    "brand": "ASROCK",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7b70760ca85090cc821f30714e627a3d.1600.jpg"
   },
   {
     "name": "ASROCK Radeon RX 7900 XT Phantom Gaming OC",
@@ -25242,7 +25317,11 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 576.0,
     "model": "RX 7900 GRE Speedster MERC 310",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ea392c27555f383750be1a63afec414.1600.jpg",
+      "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/639736d43e89781c8b59f26d_03.jpg",
+      "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/639736d87941b951a71777a8_04.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "27.475",
       "PassMark GPU Sıralaması": "#34",
@@ -25263,7 +25342,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jul 28th, 2023",
     "fp32_tflops": 22.99,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4ea392c27555f383750be1a63afec414.1600.jpg"
   },
   {
     "name": "XFX RX 7900 GRE Speedster QICK 319",
@@ -30085,7 +30165,11 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "Radeon RX 7600 Speedster SWFT 210",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41qsQY8oXcL.jpg",
+      "https://m.media-amazon.com/images/I/81XgnwQf-UL.jpg",
+      "https://m.media-amazon.com/images/I/71gv2U3IPZL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.425",
       "PassMark GPU Sıralaması": "#151",
@@ -30106,7 +30190,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "May 25th, 2023",
     "fp32_tflops": 10.87,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://m.media-amazon.com/images/I/41qsQY8oXcL.jpg"
   },
   {
     "name": "ASROCK Radeon RX 7600 Taichi OC",
@@ -31354,7 +31439,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "GeForce RTX 3090 Ti Gaming X Trio",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bba9d8be3e2c922dd5dc2c9f4f3bb405.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.185",
       "PassMark GPU Sıralaması": "#24",
@@ -31375,7 +31462,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Mar 29th, 2022",
     "fp32_tflops": 40.0,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bba9d8be3e2c922dd5dc2c9f4f3bb405.1600.jpg"
   },
   {
     "name": "MSI GeForce RTX 3090 Ti Ventus 3X OC",
@@ -31645,7 +31733,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "GeForce RTX 3090 Ti GameRock OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41W-05kuVbL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b39faa18a84a20bba9be322daf1e968d.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/aaf0730eb1939e06adc8970cb622564c.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.185",
       "PassMark GPU Sıralaması": "#24",
@@ -31666,7 +31758,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Mar 29th, 2022",
     "fp32_tflops": 40.0,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://m.media-amazon.com/images/I/41W-05kuVbL.jpg"
   },
   {
     "name": "PALIT GeForce RTX 3090 Ti JetStream OC",
@@ -31989,7 +32082,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "GeForce RTX 3090 Ti Twin X2 OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7c019122a43083d77d54e73ad20ca2d4.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.185",
       "PassMark GPU Sıralaması": "#24",
@@ -32010,7 +32105,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Mar 29th, 2022",
     "fp32_tflops": 40.0,
-    "brand": "INNO3D"
+    "brand": "INNO3D",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7c019122a43083d77d54e73ad20ca2d4.1600.jpg"
   },
   {
     "name": "ASUS GeForce RTX 3090 ROG Strix OC",
@@ -32243,7 +32339,9 @@
     "memory_speed": 19.5,
     "bandwidth_gbs": 936.0,
     "model": "GeForce RTX 3090 Ventus 3X OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/d7a861df21621aa83e6e1666be524948.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.455",
       "PassMark GPU Sıralaması": "#45",
@@ -32264,7 +32362,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 24th, 2020",
     "fp32_tflops": 35.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/d7a861df21621aa83e6e1666be524948.1600.jpg"
   },
   {
     "name": "MSI GeForce RTX 3090 Vanguard",
@@ -35481,13 +35580,17 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Aorus Master",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3b48514507cb494a63445b44ad4592ec.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0d1d28281116c9f7c303f386a28f7355.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3b48514507cb494a63445b44ad4592ec.1600.jpg"
   },
   {
     "name": "GIGABYTE RTX 3050 Gaming OC",
@@ -38617,7 +38720,9 @@
     "memory_speed": 16.0,
     "bandwidth_gbs": 512.0,
     "model": "Radeon RX 6800 XT Speedster MERC 310",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9161fee84858462d1519634cb6a73d4.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "25.116",
       "PassMark GPU Sıralaması": "#50",
@@ -38638,7 +38743,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Nov 18th, 2020",
     "fp32_tflops": 20.74,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a9161fee84858462d1519634cb6a73d4.1600.jpg"
   },
   {
     "name": "XFX Radeon RX 6800 XT Speedster QICK 319",
@@ -39304,7 +39410,9 @@
     "memory_speed": 16.0,
     "bandwidth_gbs": 384.0,
     "model": "Radeon RX 6700 XT Gaming X Slim",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0786070af7eabdd89ba8f815658c34bd.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "19.710",
       "PassMark GPU Sıralaması": "#100",
@@ -39325,7 +39433,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Mar 18th, 2021",
     "fp32_tflops": 13.21,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0786070af7eabdd89ba8f815658c34bd.1600.jpg"
   },
   {
     "name": "MSI Radeon RX 6700 XT Ventus 3X OC",
@@ -41876,7 +41985,11 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "Radeon RX 6600 Dual OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/410qPW+Em-L.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/59667fe806af75adbdce293b8f5fb626.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/23a1e1dd2f60fa785cdb2997371feabf.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "15.032",
       "PassMark GPU Sıralaması": "#174",
@@ -41897,7 +42010,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Oct 13th, 2021",
     "fp32_tflops": 8.93,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://m.media-amazon.com/images/I/410qPW+Em-L.jpg"
   },
   {
     "name": "ASUS Radeon RX 6600 ProArt OC",
@@ -42600,7 +42714,11 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "Radeon RX 6600 PULSE",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/31sjIyeTJJL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bb4fb586eae43c6dd135c6a5b97ddb52.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/476e6143a031380658f2fdb9d5a2126d.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "15.032",
       "PassMark GPU Sıralaması": "#174",
@@ -42621,7 +42739,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Oct 13th, 2021",
     "fp32_tflops": 8.93,
-    "brand": "SAPPHIRE"
+    "brand": "SAPPHIRE",
+    "imageUrl": "https://m.media-amazon.com/images/I/31sjIyeTJJL.jpg"
   },
   {
     "name": "SAPPHIRE Radeon RX 6600 PURE OC",
@@ -44475,7 +44594,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 Gaming X Slim White",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/5e1f03c9160700c369fac26b7f65529f.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -44496,7 +44617,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5e1f03c9160700c369fac26b7f65529f.1600.jpg"
   },
   {
     "name": "ZOTAC RTX 4090 Gaming Trinity OC White Edition",
@@ -46617,7 +46739,10 @@
     "memory_speed": 17.0,
     "bandwidth_gbs": 272.0,
     "model": "RTX 4060 Gaming X Slim White",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dd9ff46e24eaff8fb34fae14c40b5ecd.1600.jpg",
+      "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-4060-WHITE/RTX-4060-Ti-GAMING-X-SLIM-WHITE-16G/images/threeImage-1-3.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "19.476",
       "PassMark GPU Sıralaması": "#104",
@@ -46638,7 +46763,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Jun 29th, 2023",
     "fp32_tflops": 15.11,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/dd9ff46e24eaff8fb34fae14c40b5ecd.1600.jpg"
   },
   {
     "name": "MSI RTX 4060 Ventus 2X Black OC",
@@ -47015,7 +47141,10 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Ventus 2X White OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -47036,7 +47165,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg"
   },
   {
     "name": "ZOTAC RTX 3080 Gaming Trinity OC White Edition",
@@ -47063,7 +47193,10 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Gaming Trinity OC White Edition",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e5ef7c64cbea0e7a9f1561e2d6646725.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/967d2aa6f207bb1f9fe087217e65c7b7.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -47084,7 +47217,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/e5ef7c64cbea0e7a9f1561e2d6646725.1600.jpg"
   },
   {
     "name": "PALIT RTX 3080 GamingPro",
@@ -47510,7 +47644,10 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "RTX 3060 Dual White OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a6cfb4e58daecb7b49fb19b0f5268a56.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b479b4e0786fdadf541cfad257726361.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -47520,7 +47657,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a6cfb4e58daecb7b49fb19b0f5268a56.1600.jpg"
   },
   {
     "name": "MSI RTX 3060 Ventus 2X Black OC",
@@ -47549,6 +47687,7 @@
     "model": "RTX 3060 Ventus 2X Black OC",
     "images": [
       "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp",
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6462/6462173cv15d.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg"
     ],
@@ -55138,7 +55277,9 @@
     "core_clock": 2670,
     "boost_clock": 2740,
     "length": 260,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.105",
       "PassMark GPU Sıralaması": "#155",
@@ -55162,7 +55303,8 @@
     "cuda_cores": 2560,
     "bus_width": 192,
     "fp32_tflops": 14.03,
-    "brand": "Intel"
+    "brand": "Intel",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
   },
   {
     "name": "ONIX ODYSSEY",
@@ -57516,9 +57658,7 @@
     "core_clock": 2670,
     "boost_clock": null,
     "length": null,
-    "images": [
-      "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
-    ],
+    "images": [],
     "tmus": 160,
     "rops": 80,
     "pcie_interface": "PCIe 4.0 x8",
@@ -57541,8 +57681,7 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "Intel",
-    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
+    "brand": "Intel"
   },
   {
     "name": "Intel Arc B570",
@@ -57589,10 +57728,7 @@
     "core_clock": 2670,
     "boost_clock": null,
     "length": null,
-    "images": [
-      "https://img.yenieera22.com/cdn/1000/1-627ea2.png",
-      "https://tpucdn.com/gpu-specs/images-new/c/4244-front-list.jpg"
-    ],
+    "images": [],
     "tmus": 160,
     "rops": 80,
     "pcie_interface": "PCIe 4.0 x8",
@@ -57614,8 +57750,7 @@
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "NVIDIA RTX 4000 Ada Generation",

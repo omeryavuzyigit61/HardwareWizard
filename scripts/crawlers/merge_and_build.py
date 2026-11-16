@@ -21,6 +21,8 @@ if ROOT_DIR not in sys.path:
 
 from scripts.crawlers.http_client import PoliteHttpClient
 from scripts.crawlers.image_curator import (
+    AIB_SERIES_TOKENS,
+    _extract_gpu_sig,
     backfill_missing_via_wikimedia,
     build_gallery_index,
     clean_doubled_gpu_name,
@@ -206,6 +208,37 @@ def _apply_curated_gallery(
             item.pop("image_url", None)
 
 
+_CPU_SOCKET_IHS_URLS = {
+    "AM5": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am5_ihs_studio.webp",
+    "AM4": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_am4_ihs_studio.webp",
+    "LGA1700": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+    "1700": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1700_ihs_studio.webp",
+    "LGA1851": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+    "1851": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_lga1851_ihs_studio.webp",
+}
+
+
+def _infer_cpu_ihs_url(item: dict[str, Any], health_map: dict[str, bool]) -> str | None:
+    nm = str(item.get("name") or "")
+    up = nm.upper()
+    sock = str(item.get("socket") or "").upper()
+    u = None
+    if sock in _CPU_SOCKET_IHS_URLS:
+        u = _CPU_SOCKET_IHS_URLS[sock]
+    elif "RYZEN" in up and "THREADRIPPER" not in up:
+        if re.search(r"\b[789]\d{3}[A-Z0-9]*\b", up):
+            u = _CPU_SOCKET_IHS_URLS["AM5"]
+        elif re.search(r"\b(?:[1-5]\d{3}[A-Z0-9]*|3000G|200GE)\b", up):
+            u = _CPU_SOCKET_IHS_URLS["AM4"]
+    elif "CORE ULTRA" in up:
+        u = _CPU_SOCKET_IHS_URLS["LGA1851"]
+    elif re.search(r"\b1[234]\d{3}", up):
+        u = _CPU_SOCKET_IHS_URLS["LGA1700"]
+    if u and health_map.get(u, False) and is_image_compatible_with_item("CPU", nm.split()[0] if nm.split() else "", nm, sock, u):
+        return u
+    return None
+
+
 def _merge_cpus(
     state: CrawlStateManager,
     benchmarks: dict[str, Any],
@@ -329,7 +362,23 @@ def _merge_cpus(
         it.pop("_is_orig", None)
     cpus_final = enriched_list[:550]
     quarantine_cross_model_collisions(cpus_final, "CPU", image_key="imageUrl", max_allowed_variants=4)
+    for it in cpus_final:
+        if not it.get("images") and not it.get("imageUrl"):
+            ihs = _infer_cpu_ihs_url(it, health_map)
+            if ihs:
+                it["imageUrl"] = ihs
+                it["images"] = [ihs]
     return cpus_final
+
+
+def _gpu_pcp_sig_key(name: str, brand: str, chip: str) -> tuple[str, str, tuple[str, ...]] | None:
+    nm_l = re.sub(r"[^a-z0-9]+", " ", (name or "").lower())
+    br = (brand or (nm_l.split()[0] if nm_l.split() else "")).lower()
+    sig = _extract_gpu_sig(f"{name} {chip}")
+    if not br or not sig:
+        return None
+    aibs = tuple(sorted(s for s in AIB_SERIES_TOKENS if s.replace("_", " ") in nm_l))
+    return (br, sig, aibs)
 
 
 def _infer_gpu_brand(name: str, chipset: str = "") -> str:
@@ -430,6 +479,12 @@ def _merge_gpus(
             by_name[target_key]["imageUrl"] = imgs[0]
 
     gpu_bench_map = benchmarks.setdefault("gpus", {})
+    pcp_gpu_sigs = {
+        k
+        for rec in pcp.values()
+        for k in (_gpu_pcp_sig_key(rec["display_name"], rec.get("brand") or "", str(rec["payload"].get("chipset") or "")),)
+        if k is not None
+    }
     result: list[dict[str, Any]] = []
     for item in by_name.values():
         name = item["name"]
@@ -442,6 +497,8 @@ def _merge_gpus(
             prov.append("pc-part-dataset")
             if not item.get("length") and m_pcp["payload"].get("length"):
                 item["length"] = m_pcp["payload"]["length"]
+        pcp_sig_k = _gpu_pcp_sig_key(name, item.get("brand") or "", chip)
+        item["_pcp_backed"] = bool(m_pcp or (pcp_sig_k in pcp_gpu_sigs))
 
         m_tpu = _match_lookup(tpu, chip, name)
         if m_tpu:
@@ -651,6 +708,7 @@ def _merge_generic_pcp_category(
         if m:
             prov.append("pc-part-dataset")
             extra.update(m["extra_specs"])
+        item["_pcp_backed"] = bool(m)
 
         _apply_curated_gallery(item, cat_key, gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         item["extra_specs"] = extra
@@ -1128,7 +1186,7 @@ def run_merge_all() -> None:
     _save_json_both("hardware_benchmarks.json", benchmarks)
 
     manifest = {
-        "catalogVersion": "4.2.0",
+        "catalogVersion": "4.3.0",
         "verifiedAt": VERIFIED_DATE,
         "counts": {
             "cpu": len(cpus),

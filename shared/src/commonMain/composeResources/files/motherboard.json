@@ -513,13 +513,17 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897 (7.1 Surround)",
     "model": "Pro B650-S WiFi",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-078760.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a3020fc8322a2821927ed01af1155620.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-078760.png"
   },
   {
     "name": "MSI Pro B650M-P",
@@ -675,13 +679,16 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897 (7.1 Surround)",
     "model": "B650 Aorus Elite AX Ice",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7352b7865a2e77e70371d5c81a01f5a7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7352b7865a2e77e70371d5c81a01f5a7.1600.jpg"
   },
   {
     "name": "GIGABYTE B650 Gaming X AX",
@@ -803,13 +810,17 @@
     "network": "Gigabit / 2.5G LAN",
     "audio_codec": "Realtek High Definition Audio",
     "model": "A620M DS3H",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_a620m_ds3h_a620_soket_am5_ddr5_6400mhz_o_c_m_2_matx_anakart.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b4c62ce4f09448f9549c8f660c62654c.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/motherboard/gigabyte_a620m_ds3h_a620_soket_am5_ddr5_6400mhz_o_c_m_2_matx_anakart.webp"
   },
   {
     "name": "ASROCK X870 Steel Legend WiFi",
@@ -871,13 +882,16 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897 (7.1 Surround)",
     "model": "B650 Steel Legend WiFi",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f154f20635f7e56b180c01266156053f.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f154f20635f7e56b180c01266156053f.1600.jpg"
   },
   {
     "name": "ASROCK B650M Pro RS WiFi",
@@ -1181,13 +1195,16 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "ROG Strix Z790-E Gaming WiFi II",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ea9335fbc8a992cf112531ffec280ca5.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea9335fbc8a992cf112531ffec280ca5.1600.jpg"
   },
   {
     "name": "ASUS ROG Strix Z790-A Gaming WiFi II",
@@ -1212,13 +1229,16 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "ROG Strix Z790-A Gaming WiFi II",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f8ae5122cf0714c64af32c0d940ce6d7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f8ae5122cf0714c64af32c0d940ce6d7.1600.jpg"
   },
   {
     "name": "ASUS TUF Gaming Z790-Plus WiFi",
@@ -1414,13 +1434,21 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "MAG Z790 Tomahawk MAX WiFi",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0000_msi-mag_z790_tomahawk_wifi_box-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0003_msi-mag_z790_tomahawk_wifi_2d-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0002_msi-mag_z790_tomahawk_wifi_3d2-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0001_msi-mag_z790_tomahawk_wifi_3d3-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0005_msi-mag_z790_tomahawk_wifi_3d1-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0004_msi-mag_z790_tomahawk_wifi_io-5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2022/10/msi-mag-z790-tomahawk-wifi-ddr5-soket-1700-m-2-hdmi-dp-atx-anakart_0000_msi-mag_z790_tomahawk_wifi_box-1.jpg"
   },
   {
     "name": "MSI MAG B760 Tomahawk WiFi",
@@ -1631,13 +1659,16 @@
     "network": "Intel Killer 2.5G/5G LAN + Wi-Fi 7 & BT 5.4",
     "audio_codec": "Realtek ALC4080 (Hi-Fi DAC)",
     "model": "Z890 Aorus Elite WiFi7",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/c1cf44c1af8dfec51dc186c626c4325b.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c1cf44c1af8dfec51dc186c626c4325b.1600.jpg"
   },
   {
     "name": "GIGABYTE Z790 Aorus Elite AX",
@@ -2266,7 +2297,9 @@
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "interface_ports": "USB 3.2 Gen 2x2 Type-C (20Gbps), 2.5G LAN",
     "model": "Z790 EAGLE AX",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3d487ee6ea150ca534c123f409cbae68.1600.jpg"
+    ],
     "pcie_slots": 5,
     "sata_ports": 4,
     "extra_specs": {},
@@ -2274,7 +2307,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3d487ee6ea150ca534c123f409cbae68.1600.jpg"
   },
   {
     "name": "ASROCK B650M PG Lightning Wifi",
@@ -3001,7 +3035,9 @@
     "network": "Realtek 5G/2.5G LAN + Wi-Fi 7 (320MHz) & BT 5.4",
     "audio_codec": "Realtek ALC1220",
     "model": "X870E Taichi",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/23ef2a9c06fcdba69a77129c3df09ee6.1600.jpg"
+    ],
     "manufacturer": "ASRock",
     "wifi": "Wi-Fi 7 + Dual USB4 40Gbps + 5G LAN",
     "extra_specs": {},
@@ -3009,7 +3045,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/23ef2a9c06fcdba69a77129c3df09ee6.1600.jpg"
   },
   {
     "name": "ASROCK X870E Phantom Gaming Nova",
@@ -5410,12 +5447,16 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897 (7.1 Surround)",
     "model": "B650 PRO-A WIFI",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-078760.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1ebe7481f8913ec4a4ee845a71de622b.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-078760.png"
   },
   {
     "name": "GIGABYTE B650 AORUS Master",
@@ -8038,13 +8079,16 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "Z790 Gaming X AX",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a2cfa91e56327c615c297e6490708deb.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a2cfa91e56327c615c297e6490708deb.1600.jpg"
   },
   {
     "name": "ASROCK Z790 Taichi",
@@ -8069,13 +8113,16 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "Z790 Taichi",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/212a489ab7d6fa7162f084615fa0ba49.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/212a489ab7d6fa7162f084615fa0ba49.1600.jpg"
   },
   {
     "name": "ASROCK Z790 Phantom Gaming Nova",
@@ -8169,13 +8216,16 @@
     "network": "Intel 2.5G LAN + Wi-Fi 6E & BT 5.3",
     "audio_codec": "Realtek ALC1220 / ALC4080",
     "model": "Z790 LiveMixer",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f721f4424e3895646ab0d4a4df6eac02.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f721f4424e3895646ab0d4a4df6eac02.1600.jpg"
   },
   {
     "name": "ASROCK Z790 Pro RS",
@@ -8833,13 +8883,16 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897",
     "model": "B760 Pro RS",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fe967fa13b63205d6be3f8e7167f07e8.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fe967fa13b63205d6be3f8e7167f07e8.1600.jpg"
   },
   {
     "name": "ASROCK B760 Lightning",
@@ -9903,13 +9956,16 @@
     "network": "Gigabit / 2.5G LAN",
     "audio_codec": "Realtek High Definition Audio",
     "model": "X670 AORUS Elite AX",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ac3a77e0e11d610407a9ef39970b00d7.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ac3a77e0e11d610407a9ef39970b00d7.1600.jpg"
   },
   {
     "name": "GIGABYTE X670 AORUS Elite AX ICE",
@@ -10607,13 +10663,16 @@
     "network": "Realtek 2.5G LAN + Wi-Fi 6E",
     "audio_codec": "Realtek ALC897 (7.1 Surround)",
     "model": "B650 AORUS Pro AX",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6acd2774192249907129ce16f47594d6.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6acd2774192249907129ce16f47594d6.1600.jpg"
   },
   {
     "name": "ASROCK B650 Riptide WIFI",
@@ -17736,13 +17795,16 @@
     "network": "Realtek 1G/2.5G LAN",
     "audio_codec": "Realtek ALC897",
     "model": "ROG Strix B550-F Gaming WiFi II",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/923cae0c8159c98aaf91541a20f95dc9.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/923cae0c8159c98aaf91541a20f95dc9.1600.jpg"
   },
   {
     "name": "ASUS TUF Gaming B550-Plus WiFi II",
@@ -17898,13 +17960,17 @@
     "network": "Realtek 1G/2.5G LAN",
     "audio_codec": "Realtek ALC897",
     "model": "B550 Aorus Elite V2",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/h610m-h-v2-ddr5-b148e5.png",
+      "https://m.media-amazon.com/images/I/51Hz3u7PR0L.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/h610m-h-v2-ddr5-b148e5.png"
   },
   {
     "name": "GIGABYTE B450M K",
@@ -18102,7 +18168,10 @@
     "audio_codec": "Realtek ALC897",
     "interface_ports": "USB 3.2 Gen 2, HDMI, Gigabit LAN",
     "model": "MAG B550 TOMAHAWK MAX WIFI",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-619f5d.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cf20560e7e4a9e474fcb4c88238e4ffd.1600.jpg"
+    ],
     "pcie_slots": 4,
     "sata_ports": 6,
     "extra_specs": {},
@@ -18110,7 +18179,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-619f5d.png"
   },
   {
     "name": "GIGABYTE B550M AORUS ELITE AX",
@@ -18133,7 +18203,9 @@
     "audio_codec": "Realtek ALC897",
     "interface_ports": "USB 3.2 Gen 2, HDMI, Gigabit LAN",
     "model": "B550M AORUS ELITE AX",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bf6939e818d9dd155a2acf5199ef6720.1600.jpg"
+    ],
     "pcie_slots": 3,
     "sata_ports": 4,
     "extra_specs": {},
@@ -18141,7 +18213,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bf6939e818d9dd155a2acf5199ef6720.1600.jpg"
   },
   {
     "name": "MSI MPG B550 GAMING PLUS",

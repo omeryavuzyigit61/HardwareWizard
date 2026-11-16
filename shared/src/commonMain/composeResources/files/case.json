@@ -578,12 +578,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-h61fw-01_clipped_rev_1-dfca65.png",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-h61fw-01_clipped_rev_1-dfca65.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg",
       "https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-358-05.png",
       "https://support.nzxt.com/hc/article_attachments/28706683893147"
@@ -608,12 +609,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-h61fw-01_clipped_rev_1-dfca65.png",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow (White)",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-h61fw-01_clipped_rev_1-dfca65.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/0ff9e0317d9c4b1e99938a2f02ccb165.1600.jpg",
       "https://hyperpc.ae/images/catalog/hardware/cases/nzxt/h6-flow/nzxt-h6-flow-rgb-white.jpg",
       "https://media.ldlc.com/r1600/ld/products/00/06/07/91/LD0006079163.jpg"
@@ -642,7 +644,10 @@
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow RGB",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-h61fw-r1_clipped_rev_1-47223d.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "51.8 L"
     },
@@ -650,7 +655,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-h61fw-r1_clipped_rev_1-47223d.png"
   },
   {
     "name": "NZXT H6 Flow RGB (White)",
@@ -667,7 +673,10 @@
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow RGB (White)",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-h61fw-r1_clipped_rev_1-47223d.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "51.8 L"
     },
@@ -675,7 +684,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-h61fw-r1_clipped_rev_1-47223d.png"
   },
   {
     "name": "NZXT H5 Flow (2024)",
@@ -922,7 +932,10 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "6500X",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-9011258-ww_clipped_rev_1-cb5b86.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "78.3 L"
     },
@@ -930,7 +943,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-9011258-ww_clipped_rev_1-cb5b86.png"
   },
   {
     "name": "FRACTAL DESIGN North",
@@ -1097,7 +1111,9 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "King 95 Pro",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "63 L"
     },
@@ -1105,7 +1121,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
   },
   {
     "name": "MONTECH King 95 Pro (White)",
@@ -1122,7 +1139,9 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "King 95 Pro (White)",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "63 L"
     },
@@ -1130,7 +1149,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/6e645766ef331a1911f2c74016db9efa.1600.jpg"
   },
   {
     "name": "MONTECH Sky Two",
@@ -2933,7 +2953,10 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "6500X (White)",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-9011258-ww_clipped_rev_1-cb5b86.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "78.3 L"
     },
@@ -2941,7 +2964,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-9011258-ww_clipped_rev_1-cb5b86.png"
   },
   {
     "name": "Phanteks NV5",
@@ -3981,12 +4005,16 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Ters Konnektör Anakart Uyumlu)",
     "included_fans": "Dahili Fan Yok (iCUE LINK Uyumlu)",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 4x USB 3.0, Combo Audio",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-9011284-ww_clipped_rev_1-7abe38.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-9011284-ww_clipped_rev_1-7abe38.png"
   },
   {
     "name": "Corsair 2500X Micro ATX Dual Chamber",
