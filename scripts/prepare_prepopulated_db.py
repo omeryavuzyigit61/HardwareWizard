@@ -29,7 +29,7 @@ CATALOG_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeReso
 
 ROOM_SCHEMA_VERSION = 36
 ROOM_IDENTITY_HASH = "67974b2b98fd0fd519c42be66d6f74f3"
-CATALOG_SEED_VERSION = "4.1.0"
+CATALOG_SEED_VERSION = "4.2.0"
 
 MIN_VALID_TRY_PRICE = 250.0
 MAX_VALID_TRY_PRICE = 2_500_000.0
@@ -216,7 +216,7 @@ def _extract_brand_and_model(full_name: str) -> tuple[str, str]:
     for kb in KNOWN_BRANDS:
         if lower.startswith(kb.lower()):
             brand = trimmed[:len(kb)].strip()
-            model = trimmed[len(kb):].strip() or brand
+            model = trimmed[len(kb):].strip().lstrip(" _-.") or brand
             return brand, model
     if " " in trimmed:
         idx = trimmed.index(" ")
@@ -287,13 +287,15 @@ def _is_modern_cpu(name: str, socket: str) -> bool:
         return False
     if any(b in s for b in ("AM1", "AM2", "AM3", "FM1", "FM2", "775", "1156", "1155", "1150", "1151")):
         return False
+    if re.search(r"\b(?:\d{4}(?:U|HS|HX|H|V)|2[23568][68]V)\b", u) or "RYZEN Z1" in u or "RYZEN AI" in u:
+        return False
     is_modern_amd = any(k in u for k in ("RYZEN", "THREADRIPPER", "3000G", "200GE")) and (
         any(x in s for x in ("AM4", "AM5", "TR4", "TRX4", "STR5", "WRX8")) or s == "BELIRTILMEDI"
     )
     is_modern_intel = any(
         k in u
         for k in (
-            "CORE ULTRA", "285K", "275K", "265K", "255K", "245K",
+            "CORE ULTRA", "290K", "285K", "285", "275K", "265K", "265", "255K", "245K", "245", "235", "225",
             "14900", "14700", "14600", "14500", "14400", "14100",
             "13900", "13700", "13600", "13500", "13400", "13100",
             "12900", "12700", "12600", "12500", "12400", "12100",

@@ -24,7 +24,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "GeForce RTX 4070 SUPER Ventus 2X OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a29d4782e8c8663f147adeaa1620966.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -45,7 +47,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 17th, 2024",
     "fp32_tflops": 35.48,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a29d4782e8c8663f147adeaa1620966.1600.jpg"
   },
   {
     "name": "ASUS TUF GAMING OC GeForce RTX 4080 SUPER",
@@ -120,7 +123,11 @@
     "memory_speed": 19.5,
     "bandwidth_gbs": 624.0,
     "model": "PULSE Radeon RX 7800 XT",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41DfYxZXJqL.jpg",
+      "https://m.media-amazon.com/images/I/81LrgyAxfmL._AC_.jpg",
+      "https://m.media-amazon.com/images/I/81VpOvD9wJL._AC_SL1500_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.479",
       "PassMark GPU Sıralaması": "#56",
@@ -141,11 +148,12 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 6th, 2023",
     "fp32_tflops": 18.66,
-    "brand": "SAPPHIRE"
+    "brand": "SAPPHIRE",
+    "imageUrl": "https://m.media-amazon.com/images/I/41DfYxZXJqL.jpg"
   },
   {
     "name": "MSI GeForce RTX 3060 Ventus 2X 12G OC",
-    "price": null,
+    "price": 33870.0,
     "chipset": "GeForce RTX 3060",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -168,7 +176,11 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "GeForce RTX 3060 Ventus 2X 12G OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -179,7 +191,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp"
   },
   {
     "name": "ASUS Dual GeForce RTX 3060 V2 OC",
@@ -206,7 +219,14 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "Dual GeForce RTX 3060 V2 OC",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-5.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -217,7 +237,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti.jpg"
   },
   {
     "name": "MSI GeForce RTX 3060 Ti GAMING X",
@@ -336,7 +357,6 @@
     "slot_width": "2.5 Slot",
     "length": 285.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
     "architecture": "NVIDIA GA102 (Ampere)",
     "gpu_die": "NVIDIA GA102 (Ampere)",
     "process_node": "Samsung 8nm (28.3 Milyar Transistör)",
@@ -346,10 +366,7 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "GeForce RTX 3080 VENTUS 3X 10G OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ab684e6fe63729f937ff112dac6be257.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -635,7 +652,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "GeForce RTX 3080 GAMING X TRIO 10G",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/fileadmin/_processed_/1/e/csm_RTX_3080_Gaming_X_Trio_3_ed32407fb9.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ab684e6fe63729f937ff112dac6be257.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cbd2467d850794fdfbd30b440ad71ae8.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -657,7 +678,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://www.notebookcheck.net/fileadmin/_processed_/1/e/csm_RTX_3080_Gaming_X_Trio_3_ed32407fb9.jpg"
   },
   {
     "name": "MSI GeForce RTX 3070 Gaming X Trio",
@@ -869,7 +891,9 @@
     "memory_speed": 19.5,
     "bandwidth_gbs": 936.0,
     "model": "GeForce RTX 3090 GAMING X TRIO 24G",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/040a47c05260e04543aa712b56c462de.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.455",
       "PassMark GPU Sıralaması": "#45",
@@ -891,7 +915,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 24th, 2020",
     "fp32_tflops": 35.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/040a47c05260e04543aa712b56c462de.1600.jpg"
   },
   {
     "name": "MSI RTX 4090 VENTUS 3X 24G OC",
@@ -918,7 +943,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 VENTUS 3X 24G OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_4090_ventus_3x_24g_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/269a792b654d0460b5f5b132f0ec7003.1600.jpg",
+      "https://m.media-amazon.com/images/I/71YJgsAzWVL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -940,7 +969,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_4090_ventus_3x_24g_oc.webp"
   },
   {
     "name": "ASUS Phoenix GeForce RTX 3060 V2",
@@ -1107,14 +1137,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 TUF Gaming OC",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d85af27e38505651d2ad048fb72ee1fa.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
       "PassMark GPU Sıralaması": "#2",
@@ -1135,8 +1158,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 113.15,
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "ASUS GeForce RTX 5090 ProArt OC",
@@ -1154,7 +1176,7 @@
     "slot_width": "3.5 Slot",
     "length": 336.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/proart-rtx5090-o32g-1-d3ab73.png",
     "architecture": "NVIDIA GB202 (Blackwell)",
     "gpu_die": "NVIDIA GB202 (Blackwell)",
     "process_node": "TSMC 4NP (92 Milyar Transistör)",
@@ -1165,12 +1187,12 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 ProArt OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/proart-rtx5090-o32g-1-d3ab73.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0161407080353d18971dcccd15dc3722.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/06/asus-proart-geforce-rtx-5090-32gb-gddr7-oc-edition-512-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
@@ -1268,12 +1290,12 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 Suprim X",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_suprim_x.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ceb6bf84996a0c5d069a73e5b48c4d75.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
@@ -1296,7 +1318,7 @@
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 113.15,
     "brand": "MSI",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5090-32g-suprim-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_suprim_x.webp"
   },
   {
     "name": "MSI GeForce RTX 5090 Gaming X Trio",
@@ -1314,7 +1336,7 @@
     "slot_width": "3.5 Slot",
     "length": 336.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_gaming_x_trio.webp",
     "architecture": "NVIDIA GB202 (Blackwell)",
     "gpu_die": "NVIDIA GB202 (Blackwell)",
     "process_node": "TSMC 4NP (92 Milyar Transistör)",
@@ -1325,12 +1347,12 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 Gaming X Trio",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_gaming_x_trio.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/95f27af65a763da39cf414b23ee93a8f.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-gaming-trio-oc-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
@@ -1370,7 +1392,7 @@
     "slot_width": "3.5 Slot",
     "length": 336.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_ventus_3x_oc.webp",
     "architecture": "NVIDIA GB202 (Blackwell)",
     "gpu_die": "NVIDIA GB202 (Blackwell)",
     "process_node": "TSMC 4NP (92 Milyar Transistör)",
@@ -1381,12 +1403,12 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 Ventus 3X OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5090_ventus_3x_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bf765d1196075d80ad077b128f0d6189.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/msi-geforce-rtx-5090-32g-ventus-3x-32gb-gddr7-512-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
@@ -1436,6 +1458,7 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 AORUS Master",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/gv-n5090aorus-if-32gd-1-2768a7.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3b48514507cb494a63445b44ad4592ec.1600.jpg"
     ],
     "extra_specs": {
@@ -1459,7 +1482,7 @@
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 113.15,
     "brand": "GIGABYTE",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3b48514507cb494a63445b44ad4592ec.1600.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/gv-n5090aorus-if-32gd-1-2768a7.png"
   },
   {
     "name": "GIGABYTE GeForce RTX 5090 Gaming OC",
@@ -2081,7 +2104,10 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 ROG Strix OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5080_rog_strix_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/94f5fe9dfa12cf9590ae428b8ba3da53.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -2102,7 +2128,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5080_rog_strix_oc.webp"
   },
   {
     "name": "ASUS GeForce RTX 5080 TUF Gaming OC",
@@ -2120,7 +2147,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/tuf-rtx5080-o16g-gaming-1-cb0bf3.png",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -2131,11 +2158,12 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 TUF Gaming OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/tuf-rtx5080-o16g-gaming-1-cb0bf3.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a5d521869c682b9b728f2a33f3c555ac.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
@@ -2184,7 +2212,9 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Dual OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/94f5fe9dfa12cf9590ae428b8ba3da53.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -2205,7 +2235,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/94f5fe9dfa12cf9590ae428b8ba3da53.1600.jpg"
   },
   {
     "name": "ASUS GeForce RTX 5080 ProArt OC",
@@ -2233,12 +2264,12 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 ProArt OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/proart-rtx5080-o16g-1-5da971.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/577b94dc88c70f85b0f5c2f1c41e0994.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/577b94dc88c70f85b0f5c2f1c41e0994.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
@@ -2261,7 +2292,7 @@
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
     "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/proart-rtx5080-o16g-1-5da971.png"
   },
   {
     "name": "ASUS GeForce RTX 5080 Prime",
@@ -2288,14 +2319,7 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Prime",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-6.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -2316,8 +2340,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "MSI GeForce RTX 5080 Suprim X",
@@ -2395,7 +2418,10 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Gaming X Trio",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_gaming_x_trio.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b9d497b4a6cf3f7d1d475cb03ca001d3.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -2416,7 +2442,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_gaming_x_trio.webp"
   },
   {
     "name": "MSI GeForce RTX 5080 Ventus 3X OC",
@@ -2434,7 +2461,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_ventus_3x_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -2445,12 +2472,12 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Ventus 3X OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5080_ventus_3x_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b3e14fb33812db4cb9829a18b6066b2c.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5080-16g-ventus-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
@@ -2490,7 +2517,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0d1d28281116c9f7c303f386a28f7355.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aorus_master.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -2501,6 +2528,7 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 AORUS Master",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aorus_master.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/0d1d28281116c9f7c303f386a28f7355.1600.jpg"
     ],
     "extra_specs": {
@@ -2541,7 +2569,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f59f755822e537a84f21ec7920a76f83.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/gv-n5080gaming-oc-16gd-1-9c0e67.png",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -2552,6 +2580,7 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 GAMING OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/gv-n5080gaming-oc-16gd-1-9c0e67.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f59f755822e537a84f21ec7920a76f83.1600.jpg"
     ],
     "extra_specs": {
@@ -2592,7 +2621,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "White",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/81715ed28e3aae88fb103d7232adcc9f.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aero_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -2603,6 +2632,7 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 AERO OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5080_aero_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/81715ed28e3aae88fb103d7232adcc9f.1600.jpg"
     ],
     "extra_specs": {
@@ -3177,7 +3207,6 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3153ad2b631015aa63a19a222918b747.1600.jpg",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3187,9 +3216,7 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 iChill X3",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3153ad2b631015aa63a19a222918b747.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -3228,7 +3255,6 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/74aabc7c8eec3082d597c6000e893d70.1600.jpg",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3238,9 +3264,7 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Twin X2 OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/74aabc7c8eec3082d597c6000e893d70.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -3289,6 +3313,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti ROG Strix OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/56-94e6c4.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/b17fcb9e900098a2cc46c5fe2c2411a6.1600.jpg"
     ],
     "extra_specs": {
@@ -3312,7 +3337,7 @@
     "release_date": "Feb 20th, 2025",
     "fp32_tflops": 45.7,
     "brand": "ASUS",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b17fcb9e900098a2cc46c5fe2c2411a6.1600.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/56-94e6c4.png"
   },
   {
     "name": "ASUS GeForce RTX 5070 Ti TUF Gaming OC",
@@ -3330,7 +3355,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_tuf_gaming_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3341,11 +3366,12 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti TUF Gaming OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_tuf_gaming_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a9f549d5905f54cf6f3e43c9a38643d5.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
@@ -3385,7 +3411,6 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a9f549d5905f54cf6f3e43c9a38643d5.1600.jpg",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3395,9 +3420,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Dual OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/a9f549d5905f54cf6f3e43c9a38643d5.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -3436,7 +3459,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_proart_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3447,11 +3470,12 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti ProArt OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_ti_proart_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4ef7027e30f7af5661a10285e037f78b.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-2-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-3-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-4-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-5-1.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/asus-proart-geforce-rtx-5070-ti-oc-edition-16gb-gddr7-256-bit-dlss-4-ekran-karti-4-1.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
@@ -3491,7 +3515,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/prime-rtx5070ti-o16g_clipped_rev_1-f5599d.png",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3502,12 +3526,12 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Prime",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/prime-rtx5070ti-o16g_clipped_rev_1-f5599d.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/43191ac360269737064e20b57d60c9b6.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-ti-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-y4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
@@ -3557,6 +3581,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Suprim X",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_suprim_x.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7221b486502c1d25055ea2c4178c77c9.1600.jpg"
     ],
     "extra_specs": {
@@ -3580,7 +3605,7 @@
     "release_date": "Feb 20th, 2025",
     "fp32_tflops": 45.7,
     "brand": "MSI",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7221b486502c1d25055ea2c4178c77c9.1600.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_suprim_x.webp"
   },
   {
     "name": "MSI GeForce RTX 5070 Ti Gaming X Trio",
@@ -3598,7 +3623,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_gaming_x_trio.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3609,12 +3634,12 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Gaming X Trio",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_gaming_x_trio.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/370365e652c3b14625e18aedae953a7b.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5070-ti-16g-gaming-trio-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
@@ -3663,7 +3688,10 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Ventus 3X OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_ventus_3x_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/39f468764f322157ce781ad2c4fa803b.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -3684,7 +3712,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Feb 20th, 2025",
     "fp32_tflops": 45.7,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ti_ventus_3x_oc.webp"
   },
   {
     "name": "MSI GeForce RTX 5070 Ti Ventus 2X OC",
@@ -3750,7 +3779,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/5dd350d430e36107ffe5729dfd6630bd.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aorus_master.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3761,6 +3790,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti AORUS Master",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aorus_master.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/5dd350d430e36107ffe5729dfd6630bd.1600.jpg"
     ],
     "extra_specs": {
@@ -3801,7 +3831,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7286e3994f72346993fa78135c86ddbe.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_gaming_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3812,6 +3842,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Gaming OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_gaming_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/7286e3994f72346993fa78135c86ddbe.1600.jpg"
     ],
     "extra_specs": {
@@ -3862,6 +3893,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti AERO OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aero_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/87996fa1877095ab8f6db8fb7b6adf34.1600.jpg"
     ],
     "extra_specs": {
@@ -3885,7 +3917,7 @@
     "release_date": "Feb 20th, 2025",
     "fp32_tflops": 45.7,
     "brand": "GIGABYTE",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/87996fa1877095ab8f6db8fb7b6adf34.1600.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_aero_oc.webp"
   },
   {
     "name": "GIGABYTE GeForce RTX 5070 Ti Windforce OC",
@@ -3903,7 +3935,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/01f288f2abde496dcb1620b0da58df50.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_windforce_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3914,6 +3946,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Windforce OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_windforce_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/01f288f2abde496dcb1620b0da58df50.1600.jpg"
     ],
     "extra_specs": {
@@ -3954,7 +3987,7 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f909fab47cb20bea4096f4b62f3d3ccf.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_eagle_oc.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -3965,6 +3998,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Eagle OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_ti_eagle_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/f909fab47cb20bea4096f4b62f3d3ccf.1600.jpg"
     ],
     "extra_specs": {
@@ -4552,6 +4586,7 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 ROG Strix OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_rog_strix_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/590ab107d70cad5bd7d3fab689276c29.1600.jpg"
     ],
     "extra_specs": {
@@ -4575,7 +4610,7 @@
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
     "brand": "ASUS",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/590ab107d70cad5bd7d3fab689276c29.1600.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_rog_strix_oc.webp"
   },
   {
     "name": "ASUS GeForce RTX 5070 TUF Gaming OC",
@@ -4593,7 +4628,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/tuf-rtx5070-o12g-gaming_clipped_rev_1-db5a8d.png",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -4604,11 +4639,12 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 TUF Gaming OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/tuf-rtx5070-o12g-gaming_clipped_rev_1-db5a8d.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/468c069e4aca2de25f8d17145b61b51e.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -4658,12 +4694,12 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Dual OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_dual_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/67d42e78c9d3161b95b1e8290cdd4f20.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6-1.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4-3.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -4686,7 +4722,7 @@
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
     "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_dual_oc.webp"
   },
   {
     "name": "ASUS GeForce RTX 5070 ProArt OC",
@@ -4713,7 +4749,10 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 ProArt OC",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-901626.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fde7ea2fd82e40a1a6acb5297de68611.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -4734,7 +4773,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/5-901626.png"
   },
   {
     "name": "ASUS GeForce RTX 5070 Prime",
@@ -4752,7 +4792,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/5-4c2106.png",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -4763,12 +4803,12 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Prime",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/5-4c2106.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fde7ea2fd82e40a1a6acb5297de68611.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-yy4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -4817,9 +4857,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Suprim X",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/986e66c86f4581f1ee886ab54482f015.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -4840,8 +4878,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
-    "brand": "MSI",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/986e66c86f4581f1ee886ab54482f015.1600.jpg"
+    "brand": "MSI"
   },
   {
     "name": "MSI GeForce RTX 5070 Gaming X Trio",
@@ -4868,14 +4905,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Gaming X Trio",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -4896,8 +4926,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
-    "brand": "MSI",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/msi-geforce-rtx-5070-12g-gaming-trio-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "brand": "MSI"
   },
   {
     "name": "MSI GeForce RTX 5070 Ventus 3X OC",
@@ -4971,7 +5000,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ventus_2x_oc.webp",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -4982,12 +5011,12 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Ventus 2X OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5070_ventus_2x_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3b41941b9302f7e9095a49d681a27835.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-ventus-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-y4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -5027,7 +5056,6 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8e279aad8a3ba145c19e134a192db8e9.1600.jpg",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -5037,9 +5065,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 AORUS Master",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/8e279aad8a3ba145c19e134a192db8e9.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -5078,7 +5104,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8b33d7282e93c4ea9ccb468f8205c596.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_gaming_oc.webp",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -5089,6 +5115,7 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Gaming OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_gaming_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/8b33d7282e93c4ea9ccb468f8205c596.1600.jpg"
     ],
     "extra_specs": {
@@ -5129,7 +5156,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "White",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/901fa99081b3ba77db089d39fe92ab84.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-49f57c.png",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -5140,6 +5167,7 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 AERO OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-49f57c.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/901fa99081b3ba77db089d39fe92ab84.1600.jpg"
     ],
     "extra_specs": {
@@ -5180,7 +5208,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/136567e8e098d881d15de177db1e9243.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_windforce_oc.webp",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -5191,6 +5219,7 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Windforce OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_geforce_rtx_5070_windforce_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/136567e8e098d881d15de177db1e9243.1600.jpg"
     ],
     "extra_specs": {
@@ -5241,6 +5270,7 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 Eagle OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/gv-n5070eagle-oc-12gd_clipped_rev_1-d2c20c.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/a3192df075922ee3bd6fe1e04301b624.1600.jpg"
     ],
     "extra_specs": {
@@ -5264,7 +5294,7 @@
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
     "brand": "GIGABYTE",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a3192df075922ee3bd6fe1e04301b624.1600.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/gv-n5070eagle-oc-12gd_clipped_rev_1-d2c20c.png"
   },
   {
     "name": "PALIT GeForce RTX 5070 GameRock OC",
@@ -5771,7 +5801,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/9b1507147dd278c164e0e4c4d9b83565.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/inno3d_rtx_5070_twin_x2_oc_12gb_n50702_12d7x_195064n_gddr7_192bit.webp",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -5782,6 +5812,7 @@
     "bandwidth_gbs": 672.0,
     "model": "RTX 5070 TWIN X2 OC",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/inno3d_rtx_5070_twin_x2_oc_12gb_n50702_12d7x_195064n_gddr7_192bit.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/9b1507147dd278c164e0e4c4d9b83565.1600.jpg"
     ],
     "extra_specs": {
@@ -6184,7 +6215,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 1008.0,
     "model": "RTX 4090 Ventus 3X OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_4090_ventus_3x_24g_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/269a792b654d0460b5f5b132f0ec7003.1600.jpg",
+      "https://m.media-amazon.com/images/I/71YJgsAzWVL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "38.016",
       "PassMark GPU Sıralaması": "#3",
@@ -6205,7 +6240,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 82.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_4090_ventus_3x_24g_oc.webp"
   },
   {
     "name": "GIGABYTE RTX 4090 Aorus Master",
@@ -6853,7 +6889,7 @@
   },
   {
     "name": "ASUS RTX 4080 SUPER ROG Strix OC",
-    "price": null,
+    "price": 91677.0,
     "chipset": "GeForce RTX 4080 SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -7000,7 +7036,7 @@
   },
   {
     "name": "ASUS RTX 4080 SUPER ProArt OC",
-    "price": null,
+    "price": 78400.0,
     "chipset": "GeForce RTX 4080 SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -7100,7 +7136,7 @@
   },
   {
     "name": "MSI RTX 4080 SUPER Suprim X",
-    "price": null,
+    "price": 82580.0,
     "chipset": "GeForce RTX 4080 SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -7151,7 +7187,7 @@
   },
   {
     "name": "MSI RTX 4080 SUPER Gaming X Trio",
-    "price": null,
+    "price": 73870.0,
     "chipset": "GeForce RTX 4080 SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -7346,7 +7382,7 @@
   },
   {
     "name": "GIGABYTE RTX 4080 SUPER Aorus Master",
-    "price": null,
+    "price": 75060.0,
     "chipset": "GeForce RTX 4080 SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -7765,7 +7801,10 @@
     "memory_speed": 23.0,
     "bandwidth_gbs": 736.0,
     "model": "RTX 4080 SUPER SG 1-Click OC",
-    "images": [],
+    "images": [
+      "https://cdn.pcworth.com/products/gpu/ecomm/2082/images/geforce-rtx-4080-super-galax-sg-1-click-oc-16gb-gddr6x-triple-fan-1764748073692FEB2953645.png",
+      "https://tpucdn.com/gpu-specs/images/b/11588-angle.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "34.209",
       "PassMark GPU Sıralaması": "#9",
@@ -7786,7 +7825,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 31st, 2024",
     "fp32_tflops": 52.22,
-    "brand": "GALAX"
+    "brand": "GALAX",
+    "imageUrl": "https://cdn.pcworth.com/products/gpu/ecomm/2082/images/geforce-rtx-4080-super-galax-sg-1-click-oc-16gb-gddr6x-triple-fan-1764748073692FEB2953645.png"
   },
   {
     "name": "GALAX GeForce RTX 4080 SUPER EX Gamer",
@@ -9425,7 +9465,7 @@
   },
   {
     "name": "ASUS RTX 4070 Ti SUPER ROG Strix OC",
-    "price": null,
+    "price": 78900.0,
     "chipset": "GeForce RTX 4070 Ti SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -9575,7 +9615,7 @@
   },
   {
     "name": "ASUS RTX 4070 Ti SUPER ProArt OC",
-    "price": null,
+    "price": 48683.0,
     "chipset": "GeForce RTX 4070 Ti SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -9727,7 +9767,7 @@
   },
   {
     "name": "MSI RTX 4070 Ti SUPER Gaming X Trio",
-    "price": null,
+    "price": 59838.0,
     "chipset": "GeForce RTX 4070 Ti SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -9923,7 +9963,7 @@
   },
   {
     "name": "GIGABYTE RTX 4070 Ti SUPER Aorus Master",
-    "price": null,
+    "price": 61800.0,
     "chipset": "GeForce RTX 4070 Ti SUPER",
     "memory": 16,
     "memory_type": "GDDR6X",
@@ -12127,7 +12167,7 @@
   },
   {
     "name": "ASUS RTX 4070 SUPER Dual OC",
-    "price": null,
+    "price": 44258.0,
     "chipset": "GeForce RTX 4070 SUPER",
     "memory": 12,
     "memory_type": "GDDR6X",
@@ -12475,7 +12515,7 @@
   },
   {
     "name": "GIGABYTE RTX 4070 SUPER Aorus Master",
-    "price": null,
+    "price": 44100.0,
     "chipset": "GeForce RTX 4070 SUPER",
     "memory": 12,
     "memory_type": "GDDR6X",
@@ -12489,7 +12529,6 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/fa2affe890c6946afbee62a0d73afa2c.1600.jpg",
     "architecture": "NVIDIA AD104 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD104 (Ada Lovelace)",
     "process_node": "TSMC 4N (35.8 Milyar Transistör)",
@@ -12499,10 +12538,7 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Aorus Master",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fa2affe890c6946afbee62a0d73afa2c.1600.jpg",
-      "https://www.techpowerup.com/review/gigabyte-geforce-rtx-4070-super-aorus-master/images/card2.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -12541,7 +12577,6 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7af0232b466fe8d91b97fe92f295bb74.1600.jpg",
     "architecture": "NVIDIA AD104 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD104 (Ada Lovelace)",
     "process_node": "TSMC 4N (35.8 Milyar Transistör)",
@@ -12551,11 +12586,7 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Gaming OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/7af0232b466fe8d91b97fe92f295bb74.1600.jpg",
-      "https://m.media-amazon.com/images/I/71qIJjDVfzL._AC_.jpg",
-      "https://files.pccasegear.com/images/GV-N407SGAMING-OC-12GD-add4.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -12594,7 +12625,6 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "White",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0439500d0fccf12693a2934f1be5cf15.1600.jpg",
     "architecture": "NVIDIA AD104 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD104 (Ada Lovelace)",
     "process_node": "TSMC 4N (35.8 Milyar Transistör)",
@@ -12604,10 +12634,7 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Aero OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/0439500d0fccf12693a2934f1be5cf15.1600.jpg",
-      "https://m.media-amazon.com/images/I/71qIJjDVfzL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -12646,7 +12673,7 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/c17472cd578b7847c10089750b161a2f.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/2-88fc17.png",
     "architecture": "NVIDIA AD104 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD104 (Ada Lovelace)",
     "process_node": "TSMC 4N (35.8 Milyar Transistör)",
@@ -12657,6 +12684,7 @@
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Windforce OC",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/2-88fc17.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/c17472cd578b7847c10089750b161a2f.1600.jpg",
       "https://m.media-amazon.com/images/I/71qIJjDVfzL._AC_SL1500_.jpg",
       "https://geekawhat.com/wp-content/uploads/2024/01/FI_Gigabyte-RTX-4070-SUPER-WINDFORCE-OC.jpg"
@@ -12699,7 +12727,6 @@
     "slot_width": "2.5 Slot",
     "length": 260.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/a874baac410c902e21af01fa5ec03e70.1600.jpg",
     "architecture": "NVIDIA AD104 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD104 (Ada Lovelace)",
     "process_node": "TSMC 4N (35.8 Milyar Transistör)",
@@ -12709,10 +12736,7 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Eagle OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/a874baac410c902e21af01fa5ec03e70.1600.jpg",
-      "https://m.media-amazon.com/images/I/71qIJjDVfzL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -12856,7 +12880,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Dual",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7dc4e22c829a2eb9e8d7dc5d085f18e5.1600.jpg",
+      "https://geekawhat.com/wp-content/uploads/2024/01/FI_Palit-RTX-4070-SUPER-Dual-New.jpg",
+      "https://m.media-amazon.com/images/I/81JSzry2NrL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -12877,7 +12905,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 17th, 2024",
     "fp32_tflops": 35.48,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7dc4e22c829a2eb9e8d7dc5d085f18e5.1600.jpg"
   },
   {
     "name": "GALAX RTX 4070 SUPER SG 1-Click OC",
@@ -14160,7 +14189,8 @@
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 Dual",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1510b77b54680882afb041819a091a88.1600.jpg"
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1510b77b54680882afb041819a091a88.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/eb0be5a61790dc9106e6f8f7d7b46fac.1600.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "26.850",
@@ -14598,7 +14628,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/8196MD83TwL._AC_.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14608,9 +14637,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB ROG Strix OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/8196MD83TwL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14638,7 +14665,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://tpucdn.com/review/asus-geforce-rtx-4060-ti-tuf-oc/images/title.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14648,9 +14674,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB TUF Gaming OC",
-    "images": [
-      "https://tpucdn.com/review/asus-geforce-rtx-4060-ti-tuf-oc/images/title.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14715,7 +14739,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdn.cs.1worldsync.com/c4/74/c474a9ec-40b6-44c8-8507-d4b36daa6d5f.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14725,9 +14748,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB ProArt OC",
-    "images": [
-      "https://cdn.cs.1worldsync.com/c4/74/c474a9ec-40b6-44c8-8507-d4b36daa6d5f.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14792,7 +14813,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Silver / Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71tiJ3X8mGL._AC_.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14802,11 +14822,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Suprim X",
-    "images": [
-      "https://m.media-amazon.com/images/I/71tiJ3X8mGL._AC_.jpg",
-      "https://m.media-amazon.com/images/I/71nMVSPnl1L._AC_.jpg",
-      "https://m.media-amazon.com/images/I/71CuXyccSML._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14820,7 +14836,7 @@
   },
   {
     "name": "MSI RTX 4060 Ti 16GB Gaming X Trio",
-    "price": null,
+    "price": 29032.0,
     "chipset": "GeForce RTX 4060 Ti 16GB",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -14834,7 +14850,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://www.cybertek.fr/images_produits/7a1d1a27-edf6-43fd-ac5a-27fd6abec1d3.png",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14844,9 +14859,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Gaming X Trio",
-    "images": [
-      "https://www.cybertek.fr/images_produits/7a1d1a27-edf6-43fd-ac5a-27fd6abec1d3.png"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14874,7 +14887,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_168921651668601c4d66e2899d17d2e899ed9a460d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14884,11 +14896,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "GeForce RTX 4060 Ti 16GB Gaming X Slim",
-    "images": [
-      "https://asset.msi.com/resize/image/global/product/product_168921651668601c4d66e2899d17d2e899ed9a460d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
-      "https://asset.msi.com/resize/image/global/product/product_1684397602eb9f48f9a4cb8084634fb4ded7227345.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
-      "https://asset.msi.com/resize/image/global/product/product_168921651906a723cbb2f701b0029d3d4498d06bb3.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14916,7 +14924,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71U826jfF1L._AC_.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14926,9 +14933,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Ventus 3X OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/71U826jfF1L._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14956,7 +14961,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://www.gpu-monkey.com/gpu/msi_geforce_rtx_4060_ti_ventus_2x_black_16g_oc.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -14966,11 +14970,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "GeForce RTX 4060 Ti 16GB Ventus 2X OC",
-    "images": [
-      "https://www.gpu-monkey.com/gpu/msi_geforce_rtx_4060_ti_ventus_2x_black_16g_oc.jpg",
-      "https://m.media-amazon.com/images/I/71QvZTnJm+L._AC_.jpg",
-      "https://m.media-amazon.com/images/I/71U826jfF1L._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -14984,7 +14984,7 @@
   },
   {
     "name": "GIGABYTE RTX 4060 Ti 16GB Aorus Master",
-    "price": null,
+    "price": 28800.0,
     "chipset": "GeForce RTX 4060 Ti 16GB",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -15048,9 +15048,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Gaming OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/7104NyGiSML._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -15060,8 +15058,7 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "GIGABYTE",
-    "imageUrl": "https://m.media-amazon.com/images/I/7104NyGiSML._AC_.jpg"
+    "brand": "GIGABYTE"
   },
   {
     "name": "GIGABYTE RTX 4060 Ti 16GB Aero OC",
@@ -15394,7 +15391,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://www.jib.co.th/img_master/product/original/2023072910051761122_1.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15404,10 +15400,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "GeForce RTX 4060 Ti 16GB 1-Click OC",
-    "images": [
-      "https://www.jib.co.th/img_master/product/original/2023072910051761122_1.jpg",
-      "https://m.media-amazon.com/images/I/81H-aYZrH5L._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -15444,7 +15437,10 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Gaming Trinity OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/81LUlHjB9YL._AC_.jpg",
+      "https://m.media-amazon.com/images/I/81PRfCXfQAL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -15454,7 +15450,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://m.media-amazon.com/images/I/81LUlHjB9YL._AC_.jpg"
   },
   {
     "name": "ZOTAC GeForce RTX 4060 Ti 16GB AMP Extreme AIRO",
@@ -15633,7 +15630,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/bdca063101c9e66a0172e8a94fb40f8b.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15643,10 +15639,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti ROG Strix OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/bdca063101c9e66a0172e8a94fb40f8b.1600.jpg",
-      "https://m.media-amazon.com/images/I/810nXjVGMSL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -15674,7 +15667,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3527c47293bd212292bd25dd18cc59c0.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15684,10 +15676,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti TUF Gaming OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3527c47293bd212292bd25dd18cc59c0.1600.jpg",
-      "https://tpucdn.com/review/asus-geforce-rtx-4060-ti-tuf-oc/images/title.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -15752,7 +15741,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4ef11ab7f5c909bdf751b59b6a9d123f.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15762,9 +15750,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti ProArt OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4ef11ab7f5c909bdf751b59b6a9d123f.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -15792,7 +15778,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ce041b2e46ea2aa3ff31d4841e1cb726.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15802,10 +15787,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "GeForce RTX 4060 Ti Prime",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ce041b2e46ea2aa3ff31d4841e1cb726.1600.jpg",
-      "https://files.pccasegear.com/images/PRIME-RTX4060TI-O8G-thumb.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -15870,7 +15852,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/91379205090d9a0120f58b3bf2248d42.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15880,10 +15861,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti Gaming X Trio",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/91379205090d9a0120f58b3bf2248d42.1600.jpg",
-      "https://www.cybertek.fr/images_produits/7a1d1a27-edf6-43fd-ac5a-27fd6abec1d3.png"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -15948,7 +15926,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0e5cd834fb02871a8d87034a87bb77fe.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -15958,11 +15935,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti Ventus 3X OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/0e5cd834fb02871a8d87034a87bb77fe.1600.jpg",
-      "https://m.media-amazon.com/images/I/71U826jfF1L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71QvZTnJm+L._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -16325,7 +16298,10 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti Dual",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/190314684fd49fd0213dfbe1878de7e4.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ee323f1a0e6d3d9f1ed234fe07497301.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -16335,7 +16311,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/190314684fd49fd0213dfbe1878de7e4.1600.jpg"
   },
   {
     "name": "GALAX RTX 4060 Ti SG 1-Click OC",
@@ -18043,7 +18020,14 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "RTX 3060 Dual OC",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti-5.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -18053,7 +18037,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/07/asus-geforce-dual-rtx-3060-v-2-oc-12gb-gddr6-ekran-karti.jpg"
   },
   {
     "name": "MSI RTX 3060 Gaming X Trio",
@@ -18154,7 +18139,12 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "GeForce RTX 3060 Ventus 2X OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp",
+      "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -18164,7 +18154,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp"
   },
   {
     "name": "GIGABYTE RTX 3060 Aorus Master",
@@ -18310,6 +18301,7 @@
     "model": "RTX 3060 Eagle OC",
     "images": [
       "https://www.hwcooling.net/wp-content/uploads/2021/03/gigabyte-rtx-3060-eagle-oc-12g-05.jpg",
+      "https://m.media-amazon.com/images/I/71qOLn5UsaS.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/a3192df075922ee3bd6fe1e04301b624.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/a6bfce56e3fc8852e785b3e828bb8877.1600.jpg"
     ],
@@ -18460,7 +18452,11 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "RTX 3060 SG 1-Click OC",
-    "images": [],
+    "images": [
+      "https://www.pcstudio.in/wp-content/uploads/2025/01/GALAX-GeForce-RTX-3060-1-Click-OC-12GB-GDDR6-Graphic-Card-feature-1.webp",
+      "https://m.media-amazon.com/images/I/31g7zVRHQ-L.jpg",
+      "https://m.media-amazon.com/images/I/41SJAVy+1sL.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -18470,7 +18466,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "GALAX"
+    "brand": "GALAX",
+    "imageUrl": "https://www.pcstudio.in/wp-content/uploads/2025/01/GALAX-GeForce-RTX-3060-1-Click-OC-12GB-GDDR6-Graphic-Card-feature-1.webp"
   },
   {
     "name": "GALAX GeForce RTX 3060 EX Gamer",
@@ -18609,7 +18606,8 @@
     "bandwidth_gbs": 360.0,
     "model": "RTX 3060 Gaming Twin Edge OC",
     "images": [
-      "https://cdn.pcworth.com/products/gpu/ecomm/423/images/geforce-rtx-3060-zotac-twin-edge-oc-12gb-dual-fan-lhr-17643132266929488A0F7D5.png"
+      "https://cdn.pcworth.com/products/gpu/ecomm/423/images/geforce-rtx-3060-zotac-twin-edge-oc-12gb-dual-fan-lhr-17643132266929488A0F7D5.png",
+      "https://dinobyte.ar/wp-content/uploads/Video-Geforce-Zotac-Twin-Edge-RTX-3060-12GB.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
@@ -20160,7 +20158,6 @@
     "slot_width": "2.0 Slot",
     "length": 242.0,
     "color": "Black / Silver",
-    "imageUrl": "https://media.ldlc.com/bo/images/fiches/carte_graphique/palit/palit_rtx_gamerock_001.jpg",
     "architecture": "NVIDIA GA104 (Ampere)",
     "gpu_die": "NVIDIA GA104 (Ampere)",
     "process_node": "Samsung 8nm (17.4 Milyar Transistör)",
@@ -20170,11 +20167,7 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 448.0,
     "model": "RTX 3070 GameRock OC",
-    "images": [
-      "https://media.ldlc.com/bo/images/fiches/carte_graphique/palit/palit_rtx_gamerock_001.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b39faa18a84a20bba9be322daf1e968d.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/aaf0730eb1939e06adc8970cb622564c.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.058",
       "PassMark GPU Sıralaması": "#78",
@@ -20665,6 +20658,7 @@
     "model": "RTX 3080 ROG Strix OC",
     "images": [
       "https://cdn.pcworth.com/products/gpu/ecomm/592/images/geforce-rtx-3080-asus-rog-strix-o10g-v2-10gb-triple-fan-rgb-lhr-17631743956917E7FBA682E.png",
+      "https://m.media-amazon.com/images/I/81SzNmM27EL.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/b17fcb9e900098a2cc46c5fe2c2411a6.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/59c719f5155104671c66994cc7d85c96.1600.jpg"
     ],
@@ -20715,7 +20709,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 TUF Gaming OC",
-    "images": [],
+    "images": [
+      "https://files.pccasegear.com/UserFiles/TUF-RTX3080-O10G-GAMING-asus-tuf-geforce-rtx-3080-oc-10gb-product5.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e9c86626fb3594db6f083d3c70ededa.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a6cfb4e58daecb7b49fb19b0f5268a56.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -20736,7 +20734,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://files.pccasegear.com/UserFiles/TUF-RTX3080-O10G-GAMING-asus-tuf-geforce-rtx-3080-oc-10gb-product5.jpg"
   },
   {
     "name": "ASUS RTX 3080 Dual OC",
@@ -20819,6 +20818,7 @@
     "model": "RTX 3080 Suprim X",
     "images": [
       "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/GTX3090suprim/images/V389-SUPRIM.png",
+      "https://cdn.pcworth.com/products/gpu/ecomm/1218/images/geforce-rtx-3080-msi-suprim-x-10gb-triple-fan-rgb-lhr-1763535277691D69ADBE48A.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/cbd2467d850794fdfbd30b440ad71ae8.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/e38796bb94562c10185dd0155e04bf41.1600.jpg"
     ],
@@ -20869,7 +20869,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Gaming X Trio",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/fileadmin/_processed_/1/e/csm_RTX_3080_Gaming_X_Trio_3_ed32407fb9.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/ab684e6fe63729f937ff112dac6be257.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bba9d8be3e2c922dd5dc2c9f4f3bb405.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -20890,7 +20894,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://www.notebookcheck.net/fileadmin/_processed_/1/e/csm_RTX_3080_Gaming_X_Trio_3_ed32407fb9.jpg"
   },
   {
     "name": "MSI RTX 3080 Ventus 3X OC",
@@ -20970,7 +20975,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "GeForce RTX 3080 Ventus 2X OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -20991,7 +21000,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg"
   },
   {
     "name": "GIGABYTE RTX 3080 Aorus Master",
@@ -21071,7 +21081,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Gaming OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/71UStULnUyS._AC_SL1500_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a85f33401d41280354b2552a89b0cbef.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/867a636cde1c3c9762b06bde17acd022.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -21092,7 +21106,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://m.media-amazon.com/images/I/71UStULnUyS._AC_SL1500_.jpg"
   },
   {
     "name": "GIGABYTE RTX 3080 Windforce OC",
@@ -21110,7 +21125,6 @@
     "slot_width": "2.5 Slot",
     "length": 285.0,
     "color": "Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71UStULnUyS._AC_SL1500_.jpg",
     "architecture": "NVIDIA GA102 (Ampere)",
     "gpu_die": "NVIDIA GA102 (Ampere)",
     "process_node": "Samsung 8nm (28.3 Milyar Transistör)",
@@ -21121,9 +21135,9 @@
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Windforce OC",
     "images": [
-      "https://m.media-amazon.com/images/I/71UStULnUyS._AC_SL1500_.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b5efd683779ac37de1ac562745545713.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/136567e8e098d881d15de177db1e9243.1600.jpg"
+      "https://m.media-amazon.com/images/I/71CPFiLxiQL._AC_SL1500_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a85f33401d41280354b2552a89b0cbef.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b5efd683779ac37de1ac562745545713.1600.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
@@ -21145,7 +21159,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://m.media-amazon.com/images/I/71CPFiLxiQL._AC_SL1500_.jpg"
   },
   {
     "name": "GIGABYTE RTX 3080 Eagle OC",
@@ -21513,7 +21528,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Gaming Trinity OC",
-    "images": [],
+    "images": [
+      "https://thermalpad.eu/wp-content/uploads/2021/09/zotac-3080-trinity-oc.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/e5ef7c64cbea0e7a9f1561e2d6646725.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/967d2aa6f207bb1f9fe087217e65c7b7.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -21534,7 +21553,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://thermalpad.eu/wp-content/uploads/2021/09/zotac-3080-trinity-oc.jpg"
   },
   {
     "name": "ZOTAC RTX 3080 Gaming Twin Edge OC",
@@ -21561,7 +21581,10 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Gaming Twin Edge OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/cd249f96382c3c81f82b829154af3c8e.1600.jpg",
+      "https://m.media-amazon.com/images/I/31Qfpn4jBbL.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -21582,7 +21605,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/cd249f96382c3c81f82b829154af3c8e.1600.jpg"
   },
   {
     "name": "INNO3D GeForce RTX 3080 iChill X3",
@@ -22927,9 +22951,7 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 960.0,
     "model": "Radeon RX 7900 XTX Phantom Gaming OC",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d3d588536b23037ec14a155a67de9e4a.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "31.473",
       "PassMark GPU Sıralaması": "#19",
@@ -22950,8 +22972,7 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Dec 13th, 2022",
     "fp32_tflops": 30.72,
-    "brand": "ASROCK",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/d3d588536b23037ec14a155a67de9e4a.1600.jpg"
+    "brand": "ASROCK"
   },
   {
     "name": "ASROCK Radeon RX 7900 XTX Steel Legend OC",
@@ -25782,7 +25803,7 @@
   },
   {
     "name": "GIGABYTE RX 7800 XT Aorus Master",
-    "price": null,
+    "price": 30600.0,
     "chipset": "Radeon RX 7800 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -26093,7 +26114,11 @@
     "memory_speed": 19.5,
     "bandwidth_gbs": 624.0,
     "model": "RX 7800 XT Pulse",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/41DfYxZXJqL.jpg",
+      "https://tpucdn.com/gpu-specs/images/b/11402-top.jpg",
+      "https://m.media-amazon.com/images/I/81VpOvD9wJL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.479",
       "PassMark GPU Sıralaması": "#56",
@@ -26114,7 +26139,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 6th, 2023",
     "fp32_tflops": 18.66,
-    "brand": "SAPPHIRE"
+    "brand": "SAPPHIRE",
+    "imageUrl": "https://m.media-amazon.com/images/I/41DfYxZXJqL.jpg"
   },
   {
     "name": "SAPPHIRE RX 7800 XT Pure OC",
@@ -26922,7 +26948,7 @@
   },
   {
     "name": "GIGABYTE RX 7700 XT Aorus Master",
-    "price": null,
+    "price": 24600.0,
     "chipset": "Radeon RX 7700 XT",
     "memory": 12,
     "memory_type": "GDDR6",
@@ -28047,7 +28073,7 @@
   },
   {
     "name": "GIGABYTE RX 7600 XT Aorus Master",
-    "price": null,
+    "price": 19200.0,
     "chipset": "Radeon RX 7600 XT",
     "memory": 16,
     "memory_type": "GDDR6",
@@ -28550,7 +28576,10 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "Radeon RX 7600 XT Fighter",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/be0fd942c83b3ffa37991063b9c66274.1600.jpg",
+      "https://m.media-amazon.com/images/I/71PSxIuhYJL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "17.364",
       "PassMark GPU Sıralaması": "#129",
@@ -28571,7 +28600,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Jan 24th, 2024",
     "fp32_tflops": 11.28,
-    "brand": "POWERCOLOR"
+    "brand": "POWERCOLOR",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/be0fd942c83b3ffa37991063b9c66274.1600.jpg"
   },
   {
     "name": "XFX RX 7600 XT Speedster MERC 310",
@@ -29037,7 +29067,11 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RX 7600 Dual OC",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/dual-rx7600-o8g_clipped_rev_1-e43def.png",
+      "https://m.media-amazon.com/images/I/414SnAcfbtL.jpg",
+      "https://m.media-amazon.com/images/I/81QItJufypL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.425",
       "PassMark GPU Sıralaması": "#151",
@@ -29058,7 +29092,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "May 25th, 2023",
     "fp32_tflops": 10.87,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/dual-rx7600-o8g_clipped_rev_1-e43def.png"
   },
   {
     "name": "ASUS RX 7600 ProArt OC",
@@ -29398,7 +29433,7 @@
   },
   {
     "name": "GIGABYTE RX 7600 Aorus Master",
-    "price": null,
+    "price": 17161.0,
     "chipset": "Radeon RX 7600",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -30098,7 +30133,11 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "Radeon RX 7600 Taichi OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/35163463b989d1be13df38d5819cb039.1600.jpg",
+      "https://m.media-amazon.com/images/I/81asxT0eljL._AC_.jpg",
+      "https://m.media-amazon.com/images/I/71+Lh5QLfyL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.425",
       "PassMark GPU Sıralaması": "#151",
@@ -30119,7 +30158,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "May 25th, 2023",
     "fp32_tflops": 10.87,
-    "brand": "ASROCK"
+    "brand": "ASROCK",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/35163463b989d1be13df38d5819cb039.1600.jpg"
   },
   {
     "name": "ASROCK Radeon RX 7600 Phantom Gaming OC",
@@ -30251,7 +30291,11 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "Radeon RX 7600 Challenger OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_7600_challenger_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/35163463b989d1be13df38d5819cb039.1600.jpg",
+      "https://m.media-amazon.com/images/I/81asxT0eljL._AC_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.425",
       "PassMark GPU Sıralaması": "#151",
@@ -30272,7 +30316,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "May 25th, 2023",
     "fp32_tflops": 10.87,
-    "brand": "ASROCK"
+    "brand": "ASROCK",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_7600_challenger_oc.webp"
   },
   {
     "name": "ASUS GeForce RTX 5090 Astral",
@@ -30338,7 +30383,7 @@
     "slot_width": "3.5 Slot",
     "length": 336.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rtx-5090-32g-vanguard-oc-1-4dbae0.png",
     "architecture": "NVIDIA GB202 (Blackwell)",
     "gpu_die": "NVIDIA GB202 (Blackwell)",
     "process_node": "TSMC 4NP (92 Milyar Transistör)",
@@ -30349,12 +30394,12 @@
     "bandwidth_gbs": 1792.0,
     "model": "GeForce RTX 5090 Vanguard",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/rtx-5090-32g-vanguard-oc-1-4dbae0.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/fa792d05f5d00dd5f30f8d3f3a86e038.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy5.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy6.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy7.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy8.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy9.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5090-32g-vanguard-soc-32gb-gddr7-512-bit-dlss-4-ekran-karti-yy7.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
@@ -30493,7 +30538,6 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/43191ac360269737064e20b57d60c9b6.1600.jpg",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -30503,9 +30547,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Astral",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/43191ac360269737064e20b57d60c9b6.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -30554,6 +30596,7 @@
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070 Ti Vanguard",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-367ca8.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/ea2926175a006e1691e8c087805e9774.1600.jpg"
     ],
     "extra_specs": {
@@ -30577,7 +30620,7 @@
     "release_date": "Feb 20th, 2025",
     "fp32_tflops": 45.7,
     "brand": "MSI",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/ea2926175a006e1691e8c087805e9774.1600.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-367ca8.png"
   },
   {
     "name": "ASUS GeForce RTX 5070 Astral",
@@ -31064,7 +31107,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/11590869818e84fd09cd16daafbad031.1600.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -31074,11 +31116,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "GeForce RTX 4060 Ti Vanguard",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/11590869818e84fd09cd16daafbad031.1600.jpg",
-      "https://m.media-amazon.com/images/I/71ctFx4t8+L._AC_.jpg",
-      "https://m.media-amazon.com/images/I/71QvZTnJm+L._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -32154,7 +32192,9 @@
     "memory_speed": 19.5,
     "bandwidth_gbs": 936.0,
     "model": "GeForce RTX 3090 Gaming X Trio",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/040a47c05260e04543aa712b56c462de.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.455",
       "PassMark GPU Sıralaması": "#45",
@@ -32175,7 +32215,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 24th, 2020",
     "fp32_tflops": 35.58,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/040a47c05260e04543aa712b56c462de.1600.jpg"
   },
   {
     "name": "MSI GeForce RTX 3090 Ventus 3X OC",
@@ -35194,13 +35235,18 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 ROG Strix OC",
-    "images": [],
+    "images": [
+      "https://resim.epey.com/748166/t_asus-rog-strix-geforce-rtx-3050-oc-8gb-1.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b17fcb9e900098a2cc46c5fe2c2411a6.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a6cfb4e58daecb7b49fb19b0f5268a56.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://resim.epey.com/748166/t_asus-rog-strix-geforce-rtx-3050-oc-8gb-1.jpg"
   },
   {
     "name": "ASUS RTX 3050 TUF Gaming OC",
@@ -35227,13 +35273,17 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 TUF Gaming OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/4e9c86626fb3594db6f083d3c70ededa.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a6cfb4e58daecb7b49fb19b0f5268a56.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4e9c86626fb3594db6f083d3c70ededa.1600.jpg"
   },
   {
     "name": "ASUS RTX 3050 Dual OC",
@@ -35260,25 +35310,17 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Dual OC",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-5.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "MSI RTX 3050 Gaming X Trio",
-    "price": null,
+    "price": 3050.0,
     "chipset": "GeForce RTX 3050",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -35367,13 +35409,19 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "GeForce RTX 3050 Ventus 2X OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg",
+      "https://m.media-amazon.com/images/I/4160TRnJpqL.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_oc.webp"
   },
   {
     "name": "MSI GeForce RTX 3050 Vanguard",
@@ -35391,7 +35439,6 @@
     "slot_width": "2.0 Slot",
     "length": 200.0,
     "color": "Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/714J6o2Ug7L._AC_SL1500_.jpg",
     "architecture": "NVIDIA GA106 (Ampere)",
     "gpu_die": "NVIDIA GA106 (Ampere)",
     "process_node": "Samsung 8nm (12.0 Milyar Transistör)",
@@ -35401,11 +35448,7 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "GeForce RTX 3050 Vanguard",
-    "images": [
-      "https://m.media-amazon.com/images/I/714J6o2Ug7L._AC_SL1500_.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/fdebde50e80ae3a2912f7e5dd6ff7622.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
@@ -35415,7 +35458,7 @@
   },
   {
     "name": "GIGABYTE RTX 3050 Aorus Master",
-    "price": null,
+    "price": 27324.0,
     "chipset": "GeForce RTX 3050",
     "memory": 8,
     "memory_type": "GDDR6",
@@ -35547,13 +35590,18 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Eagle OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/61CtafcXweL._AC_SL1000_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a85f33401d41280354b2552a89b0cbef.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/a3192df075922ee3bd6fe1e04301b624.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://m.media-amazon.com/images/I/61CtafcXweL._AC_SL1000_.jpg"
   },
   {
     "name": "PALIT RTX 3050 GameRock OC",
@@ -35647,7 +35695,8 @@
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Dual",
     "images": [
-      "https://img.terabyteshop.com.br/produto/g/placa-de-video-palit-geforce-rtx-3050-dual-8gb-gddr6-dlss-ray-tracing-ne63050019p1-190ad_136072.png"
+      "https://img.terabyteshop.com.br/produto/g/placa-de-video-palit-geforce-rtx-3050-dual-8gb-gddr6-dlss-ray-tracing-ne63050019p1-190ad_136072.png",
+      "https://ua.gecid.com/data/video/202202080800-65932/img/02_palit_geforce_rtx_3050_dual_oc.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -35827,6 +35876,7 @@
     "model": "RTX 3050 Gaming Twin Edge OC",
     "images": [
       "https://m.media-amazon.com/images/I/31Qfpn4jBbL.jpg",
+      "https://elchapuzasinformatico.com/wp-content/uploads/2022/02/Zotac-GeForce-RTX-3050-Twin-Edge-05.jpg",
       "https://m.media-amazon.com/images/I/31i7e8-EdQL.jpg"
     ],
     "extra_specs": {},
@@ -42450,7 +42500,10 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "Radeon RX 6600 Eagle OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_6600_eagle_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/232dd1c4ff3c7494fae18e5e99c878ce.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "15.032",
       "PassMark GPU Sıralaması": "#174",
@@ -42471,7 +42524,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Oct 13th, 2021",
     "fp32_tflops": 8.93,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_6600_eagle_oc.webp"
   },
   {
     "name": "SAPPHIRE Radeon RX 6600 NITRO+ OC",
@@ -43113,7 +43167,6 @@
     "slot_width": "2.5 Slot",
     "length": 290.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/4fbe161d8b3204734dc5c964dc5443e4.1600.jpg",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -43123,9 +43176,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 896.0,
     "model": "GeForce RTX 5070Ti 16GB",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4fbe161d8b3204734dc5c964dc5443e4.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -43173,14 +43224,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 1792.0,
     "model": "TUF Gaming GeForce RTX 5090 OC 32GB",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/d85af27e38505651d2ad048fb72ee1fa.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
       "PassMark GPU Sıralaması": "#2",
@@ -43201,8 +43245,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 113.15,
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-tuf-gaming-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "ASUS DUAL GeForce RTX 5070 OC 12GB",
@@ -43229,14 +43272,7 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 672.0,
     "model": "DUAL GeForce RTX 5070 OC 12GB",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6-1.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -43257,8 +43293,7 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/asus-dual-geforce-rtx-5070-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "ASUS PRIME GeForce RTX 5080 OC 16GB",
@@ -43286,12 +43321,12 @@
     "bandwidth_gbs": 960.0,
     "model": "PRIME GeForce RTX 5080 OC 16GB",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/prime-rtx5080-o16g-1-53e5b4.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0c9d152472660eb1a3ac2551b15c8ada.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
@@ -43314,7 +43349,7 @@
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
     "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-prime-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/prime-rtx5080-o16g-1-53e5b4.png"
   },
   {
     "name": "ASUS DUAL GeForce RTX 3050 OC 6GB",
@@ -43341,21 +43376,13 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "DUAL GeForce RTX 3050 OC 6GB",
-    "images": [
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-1.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-2.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti-5.jpg"
-    ],
+    "images": [],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/asus-dual-geforce-rtx-3050-oc-6gb-gddr6-96-bit-ekran-karti.jpg"
+    "brand": "ASUS"
   },
   {
     "name": "ASUS ROG ASTRAL GeForce RTX 5090 32GB",
@@ -43382,7 +43409,10 @@
     "memory_speed": 28.0,
     "bandwidth_gbs": 1792.0,
     "model": "ROG ASTRAL GeForce RTX 5090 32GB",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_rog_astral_geforce_rtx_5090_32gb_gddr7_oc_edition_512bit.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0161407080353d18971dcccd15dc3722.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "39.030",
       "PassMark GPU Sıralaması": "#2",
@@ -43403,7 +43433,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 113.15,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_rog_astral_geforce_rtx_5090_32gb_gddr7_oc_edition_512bit.webp"
   },
   {
     "name": "ASUS ROG Strix GeForce RTX 5070 12GB",
@@ -43431,6 +43462,7 @@
     "bandwidth_gbs": 672.0,
     "model": "ROG Strix GeForce RTX 5070 12GB",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_rog_strix_oc.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/590ab107d70cad5bd7d3fab689276c29.1600.jpg"
     ],
     "extra_specs": {
@@ -43454,7 +43486,7 @@
     "release_date": "Mar 4th, 2025",
     "fp32_tflops": 30.84,
     "brand": "ASUS",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/590ab107d70cad5bd7d3fab689276c29.1600.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_geforce_rtx_5070_rog_strix_oc.webp"
   },
   {
     "name": "ASUS PROART GeForce RTX 5080 16GB",
@@ -43482,12 +43514,12 @@
     "bandwidth_gbs": 960.0,
     "model": "PROART GeForce RTX 5080 16GB",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/proart-rtx5080-o16g-1-5da971.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/577b94dc88c70f85b0f5c2f1c41e0994.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/577b94dc88c70f85b0f5c2f1c41e0994.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-y4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
@@ -43510,7 +43542,7 @@
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
     "brand": "ASUS",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-proart-geforce-rtx-5080-16gb-gddr7-oc-edition-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/proart-rtx5080-o16g-1-5da971.png"
   },
   {
     "name": "MSI GeForce RTX 3060 Ventus 2X 12G OC 12GB",
@@ -43537,7 +43569,12 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "GeForce RTX 3060 Ventus 2X 12G OC 12GB",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp",
+      "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -43547,7 +43584,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp"
   },
   {
     "name": "ASROCK Intel Arc B580 Taichi OC",
@@ -43984,9 +44022,7 @@
     "memory_speed": 16.0,
     "bandwidth_gbs": 512.0,
     "model": "Intel Arc A750 Taichi OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/71sO2CZL1UL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "12.628",
       "PassMark GPU Sıralaması": "#238",
@@ -44007,8 +44043,7 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Oct 12th, 2022",
     "fp32_tflops": 17.2,
-    "brand": "ASROCK",
-    "imageUrl": "https://m.media-amazon.com/images/I/71sO2CZL1UL._AC_.jpg"
+    "brand": "ASROCK"
   },
   {
     "name": "ASROCK Intel Arc A750 Phantom Gaming OC",
@@ -44174,7 +44209,7 @@
     "slot_width": "2.5 Slot",
     "length": 280.0,
     "color": "Black",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rtx-5070-12g-shadow-2x-oc_clipped_rev_1-0f44d8.png",
     "architecture": "NVIDIA GB205 (Blackwell)",
     "gpu_die": "NVIDIA GB205 (Blackwell)",
     "process_node": "TSMC 4NP (32 Milyar Transistör)",
@@ -44185,12 +44220,12 @@
     "bandwidth_gbs": 672.0,
     "model": "GeForce RTX 5070 12G SHADOW 2X OC 12GB",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/rtx-5070-12g-shadow-2x-oc_clipped_rev_1-0f44d8.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/986e66c86f4581f1ee886ab54482f015.1600.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/11/msi-geforce-rtx-5070-12g-shadow-2x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -44239,7 +44274,10 @@
     "memory_speed": 30.0,
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 16G GAMING TRIO OC 16GB",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/rtx-5080-16g-gam-trio-oc-1-663113.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/b9d497b4a6cf3f7d1d475cb03ca001d3.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -44260,7 +44298,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Jan 30th, 2025",
     "fp32_tflops": 56.34,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rtx-5080-16g-gam-trio-oc-1-663113.png"
   },
   {
     "name": "GALAX GeForce RTX 5080 1-Click OC White 16GB",
@@ -44334,7 +44373,7 @@
     "slot_width": "3.0 Slot",
     "length": 310.0,
     "color": "Black",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/14a08a5062ab999771a13a1fb5aa43cf.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/palit_geforce_rtx_5080_infinity_3_16gb_gddr7_256_bit_dlss_4_ekran_kart.webp",
     "architecture": "NVIDIA GB203 (Blackwell)",
     "gpu_die": "NVIDIA GB203 (Blackwell)",
     "process_node": "TSMC 4NP (45 Milyar Transistör)",
@@ -44345,6 +44384,7 @@
     "bandwidth_gbs": 960.0,
     "model": "GeForce RTX 5080 Infinity 3 16GB",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/palit_geforce_rtx_5080_infinity_3_16gb_gddr7_256_bit_dlss_4_ekran_kart.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/14a08a5062ab999771a13a1fb5aa43cf.1600.jpg"
     ],
     "extra_specs": {
@@ -44394,13 +44434,21 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "GeForce RTX 3050 Ventus 2X E OC 6G 6GB",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-6.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/04/msi-geforce-rtx-3050-ventus-2x-e-6g-oc-6gb-gddr6-96-bit-ekran-karti-1.jpg"
   },
   {
     "name": "MSI RTX 4090 Gaming X Slim White",
@@ -45400,7 +45448,9 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER Ventus 2X Black OC",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/0a29d4782e8c8663f147adeaa1620966.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -45421,7 +45471,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 17th, 2024",
     "fp32_tflops": 35.48,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0a29d4782e8c8663f147adeaa1620966.1600.jpg"
   },
   {
     "name": "MSI RTX 4070 SUPER Ventus 2X White OC",
@@ -45544,7 +45595,10 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 SUPER GamingPro",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/44eb928fde21411c1097095c94973d15.1600.jpg",
+      "https://www.palit.com/product/vga/picture/p04768/p04768_bigimage_813641036087189e.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "29.939",
       "PassMark GPU Sıralaması": "#22",
@@ -45565,7 +45619,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Jan 17th, 2024",
     "fp32_tflops": 35.48,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/44eb928fde21411c1097095c94973d15.1600.jpg"
   },
   {
     "name": "GALAX RTX 4070 SUPER EX Gamer White 1-Click OC",
@@ -45832,7 +45887,11 @@
     "memory_speed": 21.0,
     "bandwidth_gbs": 504.0,
     "model": "RTX 4070 Gaming Trinity OC White Edition",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7f33812aae49c97851959d556a27f2d7.1600.jpg",
+      "https://m.media-amazon.com/images/I/81dPKgT9HhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61xxLASCBiL._AC_SL1500_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.850",
       "PassMark GPU Sıralaması": "#40",
@@ -45853,7 +45912,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Apr 13th, 2023",
     "fp32_tflops": 29.15,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/7f33812aae49c97851959d556a27f2d7.1600.jpg"
   },
   {
     "name": "PALIT RTX 4070 GamingPro",
@@ -45971,7 +46031,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "White",
-    "imageUrl": "https://m.media-amazon.com/images/I/710DxdxoAgL._AC_.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -45981,10 +46040,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Dual White OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/710DxdxoAgL._AC_.jpg",
-      "https://www.gpu-monkey.com/gpu/asus_dual_geforce_rtx_4060_ti_evo_white_oc_edition_8gb.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -46086,7 +46142,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "White",
-    "imageUrl": "https://m.media-amazon.com/images/I/71UcbpPyPLL._AC_.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -46096,9 +46151,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Ventus 2X White OC",
-    "images": [
-      "https://m.media-amazon.com/images/I/71UcbpPyPLL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -46126,7 +46179,6 @@
     "slot_width": "2.0 Slot",
     "length": 240.0,
     "color": "White",
-    "imageUrl": "https://m.media-amazon.com/images/I/81PRfCXfQAL.jpg",
     "architecture": "NVIDIA AD106 (Ada Lovelace)",
     "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
     "process_node": "TSMC 4N (22.9 Milyar Transistör)",
@@ -46136,10 +46188,7 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti 16GB Gaming Trinity OC White Edition",
-    "images": [
-      "https://m.media-amazon.com/images/I/81PRfCXfQAL.jpg",
-      "https://m.media-amazon.com/images/I/81dPKgT9HhL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "PassMark G3D Mark": "22.517",
       "PassMark GPU Sıralaması": "#76"
@@ -46442,7 +46491,10 @@
     "memory_speed": 18.0,
     "bandwidth_gbs": 288.0,
     "model": "RTX 4060 Ti GamingPro",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/71afd12e59b87da25ecf09664c1ac349.1600.jpg",
+      "https://dh9cuahs6ezpz.cloudfront.net/images/products/bb/palit-NE6406T019P1-1060F-2_98651.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -46452,7 +46504,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/71afd12e59b87da25ecf09664c1ac349.1600.jpg"
   },
   {
     "name": "GALAX RTX 4060 Ti EX Gamer White 1-Click OC",
@@ -46708,7 +46761,10 @@
     "memory_speed": 17.0,
     "bandwidth_gbs": 272.0,
     "model": "RTX 4060 Gaming Trinity OC White Edition",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/2183d1922a42960f8ec413597b3a9667.1600.jpg",
+      "https://m.media-amazon.com/images/I/81Q3ICD6yiL._AC_SL1500_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "19.476",
       "PassMark GPU Sıralaması": "#104",
@@ -46729,7 +46785,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Jun 29th, 2023",
     "fp32_tflops": 15.11,
-    "brand": "ZOTAC"
+    "brand": "ZOTAC",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/2183d1922a42960f8ec413597b3a9667.1600.jpg"
   },
   {
     "name": "PALIT RTX 4060 GamingPro",
@@ -46756,7 +46813,11 @@
     "memory_speed": 17.0,
     "bandwidth_gbs": 272.0,
     "model": "RTX 4060 GamingPro",
-    "images": [],
+    "images": [
+      "https://cdna.pcpartpicker.com/static/forever/images/product/f20135acb4678dff09c133e685b17b84.1600.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy1UG0il-v12cCteO1tSEtQMo3LoDJn3JN3R4LhiaK_J08eN9n6LeHwSVbW5FSegLSOu_SD2hgC_ezdQGz1WjQ6mbSEbvUnTDrZt8_H07mRG-eVztmv3OAE4s2mjh8hEq-QXWGCi_RqD8DBj9A2HPeE9lGPLqsolaFsUY_bDlP0umNLoOYt-Ipo-ZU2fXP/s16000/Palit-GeForce-RTX-4060-Dual-8GB.jpg",
+      "https://www.techporn.ph/wp-content/uploads/Palit-RTX-4060-Dual-Photo-4.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "19.476",
       "PassMark GPU Sıralaması": "#104",
@@ -46777,7 +46838,8 @@
     "pcie_interface": "PCIe 4.0 x8",
     "release_date": "Jun 29th, 2023",
     "fp32_tflops": 15.11,
-    "brand": "PALIT"
+    "brand": "PALIT",
+    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/f20135acb4678dff09c133e685b17b84.1600.jpg"
   },
   {
     "name": "GALAX RTX 4060 EX Gamer White 1-Click OC",
@@ -46900,7 +46962,11 @@
     "memory_speed": 19.0,
     "bandwidth_gbs": 760.0,
     "model": "RTX 3080 Ventus 2X Black OC",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/3c166cd7b1f49475c3b8295799a11af5.1600.jpg",
+      "https://m.media-amazon.com/images/I/41EVtr+4tIL.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "24.969",
       "PassMark GPU Sıralaması": "#53",
@@ -46921,7 +46987,8 @@
     "pcie_interface": "PCIe 4.0 x16",
     "release_date": "Sep 17th, 2020",
     "fp32_tflops": 29.77,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://m.media-amazon.com/images/I/71tduSp8ooL._AC_.jpg"
   },
   {
     "name": "MSI RTX 3080 Ventus 2X White OC",
@@ -47480,7 +47547,11 @@
     "memory_speed": 15.0,
     "bandwidth_gbs": 360.0,
     "model": "RTX 3060 Ventus 2X Black OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.871",
       "PassMark GPU Sıralaması": "#138"
@@ -47490,7 +47561,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3060_ventus_2x_12g_oc.webp"
   },
   {
     "name": "MSI RTX 3060 Ventus 2X White OC",
@@ -47706,13 +47778,19 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Ventus 2X Black OC",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_oc.webp",
+      "https://www.hwcooling.net/wp-content/uploads/2022/09/msi-rtx-3050-ventus-2x-8g-oc_01.jpg",
+      "https://m.media-amazon.com/images/I/41EVtr+4tIL.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_3050_ventus_2x_oc.webp"
   },
   {
     "name": "MSI RTX 3050 Ventus 2X White OC",
@@ -47739,13 +47817,18 @@
     "memory_speed": 14.0,
     "bandwidth_gbs": 224.0,
     "model": "RTX 3050 Ventus 2X White OC",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-496e86.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/7b9e4bb96a252b55555f18709e698a94.1600.jpg",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-496e86.png"
   },
   {
     "name": "ZOTAC RTX 3050 Gaming Trinity OC White Edition",
@@ -48895,7 +48978,10 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 640.0,
     "model": "TUF Gaming Radeon RX 9070 XT OC 16GB",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-597d63.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -48916,7 +49002,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 6th, 2025",
     "fp32_tflops": 24.74,
-    "brand": "ASUS"
+    "brand": "ASUS",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-597d63.png"
   },
   {
     "name": "XFX Speedster MERC 319 Radeon RX 9070 XT 16GB",
@@ -49039,7 +49126,11 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 640.0,
     "model": "Gaming OC Radeon RX 9070 XT 16GB",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_xt_gaming_oc_16gb_rgb_lighting_256bit.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+      "https://m.media-amazon.com/images/I/717ap63hzdL._AC_SL1500_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -49060,7 +49151,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 6th, 2025",
     "fp32_tflops": 24.41,
-    "brand": "GIGABYTE"
+    "brand": "GIGABYTE",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx_9070_xt_gaming_oc_16gb_rgb_lighting_256bit.webp"
   },
   {
     "name": "ASRock Taichi Radeon RX 9070 XT OC 16GB",
@@ -49087,7 +49179,12 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 640.0,
     "model": "Taichi Radeon RX 9070 XT OC 16GB",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_taichi_oc.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/bcf42d8443748e76c05ddd0c993fb477.1600.jpg",
+      "https://m.media-amazon.com/images/I/81il2WdPPJL._AC_.jpg",
+      "https://m.media-amazon.com/images/I/81il2WdPPJL._AC_SL1500_.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -49108,7 +49205,8 @@
     "pcie_interface": "PCIe 5.0 x16",
     "release_date": "Mar 6th, 2025",
     "fp32_tflops": 24.9,
-    "brand": "ASRock"
+    "brand": "ASRock",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_taichi_oc.webp"
   },
   {
     "name": "AMD Radeon RX 9070 16GB",
@@ -49282,13 +49380,16 @@
     "memory_speed": 20.0,
     "bandwidth_gbs": 320.0,
     "model": "Radeon RX 9060 XT 12GB",
-    "images": [],
+    "images": [
+      "https://tpucdn.com/gpu-specs/images-new/c/4293-front-list.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "AMD"
+    "brand": "AMD",
+    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4293-front-list.jpg"
   },
   {
     "name": "AMD Radeon RX 7900 XTX 24GB",
@@ -51423,7 +51524,9 @@
     "core_clock": 2400,
     "boost_clock": 2970,
     "length": 298,
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_steel_legend_oc.webp"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -51447,7 +51550,8 @@
     "cuda_cores": 4096,
     "bus_width": 256,
     "fp32_tflops": 24.33,
-    "brand": "ASRock"
+    "brand": "ASRock",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asrock_radeon_rx_9070_xt_steel_legend_oc.webp"
   },
   {
     "name": "ASRock Taichi OC",
@@ -51531,7 +51635,9 @@
     "core_clock": 2317,
     "boost_clock": 2602,
     "length": 268,
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_asus_prime_geforce_rtx_5050_8gb_gddr6_oc_edition_8gb.webp"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "16.713",
       "PassMark GPU Sıralaması": "#142",
@@ -51555,7 +51661,8 @@
     "cuda_cores": 2560,
     "bus_width": 128,
     "fp32_tflops": 13.32,
-    "brand": "Asus"
+    "brand": "Asus",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/asus_asus_prime_geforce_rtx_5050_8gb_gddr6_oc_edition_8gb.webp"
   },
   {
     "name": "Asus ProArt",
@@ -51654,6 +51761,7 @@
     "boost_clock": null,
     "length": 358,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/rog-astral-rtx5090-o32-bt-1-d06973.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-astral-geforce-rtx-5090-32gb-gddr7-btf-oc-edition-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-astral-rtx5090-o32g-btf-gaming-32gb-gddr7-btf-oc-edition-512-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-astral-rtx5090-o32g-btf-gaming-32gb-gddr7-btf-oc-edition-512-bit-dlss-4-ekran-karti-3.jpg",
@@ -51683,7 +51791,7 @@
     "cuda_cores": 21760,
     "bus_width": 512,
     "fp32_tflops": 87.48,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-astral-geforce-rtx-5090-32gb-gddr7-btf-oc-edition-512-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rog-astral-rtx5090-o32-bt-1-d06973.png",
     "brand": "Asus"
   },
   {
@@ -51736,7 +51844,13 @@
     "core_clock": 2300,
     "boost_clock": 2790,
     "length": 358,
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -51760,7 +51874,8 @@
     "cuda_cores": 10752,
     "bus_width": 256,
     "fp32_tflops": 60.0,
-    "brand": "Asus"
+    "brand": "Asus",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-geforce-rtx-5080-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
   },
   {
     "name": "Asus ROG Astral OC HATSUNE MIKU EDITION",
@@ -51770,7 +51885,9 @@
     "core_clock": 2300,
     "boost_clock": 2790,
     "length": 358,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/rog-astral-rtx5080-o16mw-1-925792.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "35.660",
       "PassMark GPU Sıralaması": "#5",
@@ -51794,7 +51911,8 @@
     "cuda_cores": 10752,
     "bus_width": 256,
     "fp32_tflops": 60.0,
-    "brand": "Asus"
+    "brand": "Asus",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rog-astral-rtx5080-o16mw-1-925792.png"
   },
   {
     "name": "Asus ROG Astral LC",
@@ -51805,6 +51923,7 @@
     "boost_clock": null,
     "length": 288,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/rog-astral-lc-rtx5090-o32-1-1189a4.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-lc-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-sivi-sogutuculu-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-lc-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-sivi-sogutuculu-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-lc-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-sivi-sogutuculu-ekran-karti-3.jpg",
@@ -51834,7 +51953,7 @@
     "cuda_cores": 21760,
     "bus_width": 512,
     "fp32_tflops": 87.48,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/05/asus-rog-astral-lc-geforce-rtx-5090-32gb-gddr7-512-bit-dlss-4-sivi-sogutuculu-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rog-astral-lc-rtx5090-o32-1-1189a4.png",
     "brand": "Asus"
   },
   {
@@ -53265,7 +53384,9 @@
     "core_clock": 2541,
     "boost_clock": null,
     "length": 304,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-ebaf5d.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -53289,7 +53410,8 @@
     "cuda_cores": 8960,
     "bus_width": 256,
     "fp32_tflops": 45.53,
-    "brand": "Gigabyte"
+    "brand": "Gigabyte",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-ebaf5d.png"
   },
   {
     "name": "Gigabyte EAGLE OC SFF",
@@ -53299,7 +53421,9 @@
     "core_clock": 2542,
     "boost_clock": null,
     "length": 304,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/gv-n507teagle-oc-16gd_clipped_rev_1-bc1e07.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
       "PassMark GPU Sıralaması": "#15",
@@ -53323,7 +53447,8 @@
     "cuda_cores": 8960,
     "bus_width": 256,
     "fp32_tflops": 45.55,
-    "brand": "Gigabyte"
+    "brand": "Gigabyte",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/gv-n507teagle-oc-16gd_clipped_rev_1-bc1e07.png"
   },
   {
     "name": "Gigabyte GV-R79XT-20GC-B",
@@ -53401,7 +53526,9 @@
     "core_clock": 2400,
     "boost_clock": 2970,
     "length": 288,
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx9070xt_gaming_oc_gv_r9070xtgaming_oc_16gd_16gb_gddr6_256bit.webp"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -53425,7 +53552,8 @@
     "cuda_cores": 4096,
     "bus_width": 256,
     "fp32_tflops": 24.33,
-    "brand": "Gigabyte"
+    "brand": "Gigabyte",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/gigabyte_radeon_rx9070xt_gaming_oc_gv_r9070xtgaming_oc_16gd_16gb_gddr6_256bit.webp"
   },
   {
     "name": "Gigabyte GAMING OC V2",
@@ -53605,13 +53733,16 @@
     "core_clock": 2407,
     "boost_clock": 2602,
     "length": 250,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/n506t2-08d7-193075n_clipped_rev_1-df70a4.png"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "Inno3D"
+    "brand": "Inno3D",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/n506t2-08d7-193075n_clipped_rev_1-df70a4.png"
   },
   {
     "name": "Inno3D TWIN X2 OC WHITE",
@@ -53927,7 +54058,9 @@
     "core_clock": 2280,
     "boost_clock": 2512,
     "length": 204,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-0edb99.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "20.580",
       "PassMark GPU Sıralaması": "#90",
@@ -53951,7 +54084,8 @@
     "cuda_cores": 3840,
     "bus_width": 128,
     "fp32_tflops": 19.29,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-0edb99.png"
   },
   {
     "name": "MSI INSPIRE 3X",
@@ -54004,12 +54138,12 @@
     "boost_clock": 2467,
     "length": 288,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-b4ff1d.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-5.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "32.337",
@@ -54034,7 +54168,7 @@
     "cuda_cores": 8960,
     "bus_width": 256,
     "fp32_tflops": 44.21,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/msi-geforce-rtx-5070-ti-16g-inspire-3x-oc-16gb-gddr7-256-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-b4ff1d.png",
     "brand": "MSI"
   },
   {
@@ -54079,7 +54213,9 @@
     "core_clock": 2310,
     "boost_clock": 2550,
     "length": 307,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/rtx-4060-ti-ven-3x-e-8goc_clipped_rev_1-d81b50.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "22.596",
       "PassMark GPU Sıralaması": "#74"
@@ -54089,7 +54225,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/rtx-4060-ti-ven-3x-e-8goc_clipped_rev_1-d81b50.png"
   },
   {
     "name": "MSI RTX 4090 GAMING SLIM 24G",
@@ -54167,13 +54304,16 @@
     "core_clock": 2410,
     "boost_clock": 2587,
     "length": 204,
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_5060_ti_16g_inspire_2x_oc.webp"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_5060_ti_16g_inspire_2x_oc.webp"
   },
   {
     "name": "MSI RTX 5060 Ti 8G INSPIRE 2X",
@@ -54183,13 +54323,16 @@
     "core_clock": 2410,
     "boost_clock": 2587,
     "length": 204,
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_5060_ti_16g_inspire_2x_oc.webp"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_rtx_5060_ti_16g_inspire_2x_oc.webp"
   },
   {
     "name": "MSI SHADOW 2X",
@@ -54200,12 +54343,12 @@
     "boost_clock": 2587,
     "length": 197,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/6-908e6f.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-5.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "16.713",
@@ -54230,7 +54373,7 @@
     "cuda_cores": 2560,
     "bus_width": 128,
     "fp32_tflops": 13.25,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/07/msi-geforce-rtx-5050-8g-shadow-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/6-908e6f.png",
     "brand": "MSI"
   },
   {
@@ -54242,12 +54385,12 @@
     "boost_clock": null,
     "length": 303,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-301f0f.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
@@ -54272,7 +54415,7 @@
     "cuda_cores": 6144,
     "bus_width": 192,
     "fp32_tflops": 31.05,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5070-12g-shadow-3x-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-301f0f.png",
     "brand": "MSI"
   },
   {
@@ -54541,7 +54684,9 @@
     "core_clock": 2160,
     "boost_clock": null,
     "length": 338,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-0d3f9a.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -54565,7 +54710,8 @@
     "cuda_cores": 6144,
     "bus_width": 192,
     "fp32_tflops": 26.54,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-0d3f9a.png"
   },
   {
     "name": "MSI VANGUARD OC",
@@ -54575,7 +54721,14 @@
     "core_clock": 2160,
     "boost_clock": 2625,
     "length": 337,
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-6.jpg"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "28.682",
       "PassMark GPU Sıralaması": "#26",
@@ -54599,7 +54752,8 @@
     "cuda_cores": 6144,
     "bus_width": 192,
     "fp32_tflops": 32.26,
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/11/msi-geforce-rtx-5070-12g-vanguard-oc-12gb-gddr7-192-bit-dlss-4-ekran-karti-control-resonant-hediyeli-1-1.jpg"
   },
   {
     "name": "MSI VANGUARD SOC",
@@ -54609,13 +54763,16 @@
     "core_clock": 2410,
     "boost_clock": 2707,
     "length": 337,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-1d544c.png"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "MSI"
+    "brand": "MSI",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-1d544c.png"
   },
   {
     "name": "MSI VANGUARD SOC LAUNCH EDITION",
@@ -54668,12 +54825,12 @@
     "boost_clock": 2587,
     "length": 197,
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5050_8g_ventus_2x_oc_8gb_gddr6_128bit.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-5.jpg"
     ],
     "extra_specs": {
       "PassMark G3D Mark": "16.713",
@@ -54698,7 +54855,7 @@
     "cuda_cores": 2560,
     "bus_width": 128,
     "fp32_tflops": 13.25,
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-geforce-rtx-5050-8g-ventus-2x-oc-8gb-gddr6-128-bit-dlss-4-ekran-karti-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/msi_geforce_rtx_5050_8g_ventus_2x_oc_8gb_gddr6_128bit.webp",
     "brand": "MSI"
   },
   {
@@ -54764,19 +54921,19 @@
     "boost_clock": 2587,
     "length": 227,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-a3b5e3.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/msi-geforce-rtx-5060-ti-16g-ventus-2x-oc-plus-16gb-gddr7-128-bit-dlss-4-ekran-karti-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-a3b5e3.png",
     "brand": "MSI"
   },
   {
@@ -54788,19 +54945,19 @@
     "boost_clock": 2587,
     "length": 306,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-0f469f.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/05/msi-geforce-rtx-5060-ti-8g-ventus-3x-oc-8gb-gddr7-128-bit-dlss-4-ekran-karti-y1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-0f469f.png",
     "brand": "MSI"
   },
   {
@@ -56323,7 +56480,9 @@
     "core_clock": 1870,
     "boost_clock": 3100,
     "length": 360,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-3d81d3.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -56347,7 +56506,8 @@
     "cuda_cores": 4096,
     "bus_width": 256,
     "fp32_tflops": 25.4,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-3d81d3.png"
   },
   {
     "name": "XFX Mercury OC Magnetic Air RGB V2",
@@ -56357,7 +56517,9 @@
     "core_clock": 1870,
     "boost_clock": 3100,
     "length": 360,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-3d81d3.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -56381,7 +56543,8 @@
     "cuda_cores": 4096,
     "bus_width": 256,
     "fp32_tflops": 25.4,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-3d81d3.png"
   },
   {
     "name": "XFX Mercury OC RGB",
@@ -56663,7 +56826,9 @@
     "core_clock": 2400,
     "boost_clock": 2970,
     "length": 360,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/1-4221a1.png"
+    ],
     "extra_specs": {
       "PassMark G3D Mark": "26.927",
       "PassMark GPU Sıralaması": "#39",
@@ -56687,7 +56852,8 @@
     "cuda_cores": 4096,
     "bus_width": 256,
     "fp32_tflops": 24.33,
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-4221a1.png"
   },
   {
     "name": "XFX Speedster MERC 310",
@@ -56867,13 +57033,16 @@
     "core_clock": 2220,
     "boost_clock": 3320,
     "length": 290,
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/5-645ca6.png"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "pc-part-dataset"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "XFX"
+    "brand": "XFX",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/5-645ca6.png"
   },
   {
     "name": "Yeston Sakura Atlantis",
@@ -57311,7 +57480,9 @@
     "core_clock": 2500,
     "boost_clock": null,
     "length": null,
-    "images": [],
+    "images": [
+      "https://tpucdn.com/gpu-specs/images-new/c/4245-front-list.jpg"
+    ],
     "tmus": 144,
     "rops": 80,
     "pcie_interface": "PCIe 4.0 x8",
@@ -57334,7 +57505,8 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "brand": "Intel"
+    "brand": "Intel",
+    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4245-front-list.jpg"
   },
   {
     "name": "Arc B580",
@@ -57345,7 +57517,7 @@
     "boost_clock": null,
     "length": null,
     "images": [
-      "https://tpucdn.com/gpu-specs/images-new/c/4244-front-list.jpg"
+      "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
     ],
     "tmus": 160,
     "rops": 80,
@@ -57370,7 +57542,7 @@
     ],
     "spec_verified_at": "2026-11-16",
     "brand": "Intel",
-    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4244-front-list.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
   },
   {
     "name": "Intel Arc B570",
@@ -57381,7 +57553,9 @@
     "core_clock": 2500,
     "boost_clock": null,
     "length": null,
-    "images": [],
+    "images": [
+      "https://tpucdn.com/gpu-specs/images-new/c/4245-front-list.jpg"
+    ],
     "tmus": 144,
     "rops": 80,
     "pcie_interface": "PCIe 4.0 x8",
@@ -57403,7 +57577,8 @@
       "TechPowerUp DB",
       "PassMark"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4245-front-list.jpg"
   },
   {
     "name": "Intel Arc B580",
@@ -57415,6 +57590,7 @@
     "boost_clock": null,
     "length": null,
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-627ea2.png",
       "https://tpucdn.com/gpu-specs/images-new/c/4244-front-list.jpg"
     ],
     "tmus": 160,
@@ -57439,7 +57615,7 @@
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4244-front-list.jpg"
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-627ea2.png"
   },
   {
     "name": "NVIDIA RTX 4000 Ada Generation",
@@ -58800,7 +58976,9 @@
     "core_clock": 3130,
     "boost_clock": null,
     "length": null,
-    "images": [],
+    "images": [
+      "https://tpucdn.com/gpu-specs/images-new/c/4293-front-list.jpg"
+    ],
     "tmus": 128,
     "rops": 64,
     "pcie_interface": "PCIe 5.0 x16",
@@ -58819,7 +58997,8 @@
     "source_provenance": [
       "TechPowerUp DB"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://tpucdn.com/gpu-specs/images-new/c/4293-front-list.jpg"
   },
   {
     "name": "AMD Radeon RX 9060 XT 8 GB",
@@ -58886,6 +59065,124 @@
     },
     "source_provenance": [
       "TechPowerUp DB",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "SAPPHIRE PULSE Radeon RX 9060 XT 12GB",
+    "price": null,
+    "chipset": "Radeon RX 9060 XT",
+    "memory": 12,
+    "memory_type": "GDDR6",
+    "bus_width": 128,
+    "core_clock": 2320,
+    "boost_clock": 2820,
+    "tdp": 160,
+    "recommended_psu": 550,
+    "power_connectors": "1x 8-Pin PCIe",
+    "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1b",
+    "slot_width": "2.0 Slot",
+    "length": 260.0,
+    "color": "Black / Red Accent",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/sapphire_radeon_rx9060_xt_pulse_gddr6_8gb_128bit_fsr_4_amd.webp",
+    "architecture": "AMD Navi 44 (RDNA 4)",
+    "gpu_die": "AMD Navi 44 (RDNA 4)",
+    "process_node": "TSMC N4P (RDNA 4)",
+    "cuda_cores": 2560,
+    "rt_cores": 32,
+    "tensor_ai_tops": "64 AI Hızlandırıcı (FSR 4)",
+    "memory_speed": 20.0,
+    "bandwidth_gbs": 320.0,
+    "model": "PULSE Radeon RX 9060 XT 12GB",
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/gpu/sapphire_radeon_rx9060_xt_pulse_gddr6_8gb_128bit_fsr_4_amd.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/6e6784ed4f827d68ec9d0822ef24a10d.1600.jpg",
+      "https://m.media-amazon.com/images/I/81tvHo10s2L._AC_.jpg"
+    ],
+    "brand": "SAPPHIRE",
+    "extra_specs": {},
+    "source_provenance": [
+      "HardwareWizard Katalog"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 16GB",
+    "manufacturer": "Colorful",
+    "chipset": "GeForce RTX 4060 Ti 16GB",
+    "memory": 16,
+    "memory_type": "GDDR6",
+    "core_clock": 2310,
+    "boost_clock": 2535,
+    "tdp": 165,
+    "recommended_psu": 550,
+    "color": "Black / Red",
+    "length": 253.0,
+    "slot_width": 2.0,
+    "pcie_interface": "PCIe 4.0 x8",
+    "external_power": "1x 8-Pin PCIe",
+    "cooling_type": "Dual Fan Battle-Ax",
+    "images": [],
+    "architecture": "NVIDIA AD106 (Ada Lovelace)",
+    "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
+    "process_node": "TSMC 4N (22.9 Milyar Transistör)",
+    "cuda_cores": 4352,
+    "rt_cores": 34,
+    "tensor_ai_tops": "136 Tensor (353 AI TOPS)",
+    "memory_speed": 18.0,
+    "bus_width": 128,
+    "bandwidth_gbs": 288.0,
+    "power_connectors": "1x 8-Pin PCIe",
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null,
+    "brand": "Colorful",
+    "extra_specs": {
+      "PassMark G3D Mark": "22.517",
+      "PassMark GPU Sıralaması": "#76"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
+      "PassMark"
+    ],
+    "spec_verified_at": "2026-11-16"
+  },
+  {
+    "name": "Colorful GeForce RTX 4060 Ti Battle-Ax DUO 8GB",
+    "manufacturer": "Colorful",
+    "chipset": "GeForce RTX 4060 Ti",
+    "memory": 8,
+    "memory_type": "GDDR6",
+    "core_clock": 2310,
+    "boost_clock": 2535,
+    "tdp": 160,
+    "recommended_psu": 550,
+    "color": "Black / Red",
+    "length": 253.0,
+    "slot_width": 2.0,
+    "pcie_interface": "PCIe 4.0 x8",
+    "external_power": "1x 8-Pin PCIe",
+    "cooling_type": "Dual Fan Battle-Ax",
+    "images": [],
+    "architecture": "NVIDIA AD106 (Ada Lovelace)",
+    "gpu_die": "NVIDIA AD106 (Ada Lovelace)",
+    "process_node": "TSMC 4N (22.9 Milyar Transistör)",
+    "cuda_cores": 4352,
+    "rt_cores": 34,
+    "tensor_ai_tops": "136 Tensor (353 AI TOPS)",
+    "memory_speed": 18.0,
+    "bus_width": 128,
+    "bandwidth_gbs": 288.0,
+    "power_connectors": "1x 8-Pin PCIe",
+    "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+    "price": null,
+    "brand": "Colorful",
+    "extra_specs": {
+      "PassMark G3D Mark": "22.596",
+      "PassMark GPU Sıralaması": "#74"
+    },
+    "source_provenance": [
+      "HardwareWizard Katalog",
       "PassMark"
     ],
     "spec_verified_at": "2026-11-16"

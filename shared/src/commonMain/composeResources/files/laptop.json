@@ -54,7 +54,14 @@
     "brand": "ASUS",
     "priceTry": 159999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-5.jpg"
+    ],
     "cpuModel": "Intel Core i9-13980HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.60 GHz Tepe (Boost)",
@@ -87,7 +94,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_asus_rog_strix_scar_16_g634jyr_14900hx",
@@ -95,7 +103,10 @@
     "brand": "ASUS",
     "priceTry": 169999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -128,7 +139,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5"
   },
   {
     "id": "laptop_asus_rog_strix_scar_17_g733py_7945hx",
@@ -136,7 +148,10 @@
     "brand": "ASUS",
     "priceTry": 149999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "AMD Ryzen 9 7945HX",
     "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
     "cpuClockGhz": "2.50 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -169,7 +184,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp"
   },
   {
     "id": "laptop_asus_rog_strix_scar_17_x3d_7945hx3d",
@@ -177,7 +193,10 @@
     "brand": "ASUS",
     "priceTry": 174999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "AMD Ryzen 9 7945HX",
     "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
     "cpuClockGhz": "2.50 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -210,7 +229,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/982b43f2-03f0-4780-b552-cf2a58d515bf/v1/images/m-kv_1.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_duo_16_gx650py_çift_ekran",
@@ -264,7 +284,14 @@
     "brand": "ASUS",
     "priceTry": 189999.0,
     "url": "https://rog.asus.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-5.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -297,7 +324,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_acer_predator_helios_18_ph18_72_14900hx",
@@ -305,7 +333,9 @@
     "brand": "Acer",
     "priceTry": 159999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -338,7 +368,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_17_x_ptx17_71",
@@ -346,7 +377,9 @@
     "brand": "Acer",
     "priceTry": 169999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -379,7 +412,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_17_x_ptx17_71_13900hx_4090",
@@ -387,7 +421,9 @@
     "brand": "Acer",
     "priceTry": 189999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -420,7 +456,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://gamermatters.com/wp-content/uploads/2023/08/Predator-Triton-17-X_9.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_18_ph18_72_14900hx_4090",
@@ -428,7 +465,9 @@
     "brand": "Acer",
     "priceTry": 189999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -461,7 +500,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.notebookcheck.net/uploads/tx_nbc2/Acer_Predator_Helios_18_PH18-72__1_.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g911_1490_fx90x_c_14900hx_4090",
@@ -647,7 +687,10 @@
     "brand": "GIGABYTE",
     "priceTry": 154999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg",
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-2022-09-05t160245292-4c97ea.jpg"
+    ],
     "cpuModel": "Intel Core i9-13980HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.60 GHz Tepe (Boost)",
@@ -680,7 +723,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg"
   },
   {
     "id": "laptop_lenovo_legion_9i_16irx8_liquid",
@@ -734,7 +778,10 @@
     "brand": "Lenovo",
     "priceTry": 154999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -767,7 +814,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_msi_titan_18_hx_a14vig_14900hx",
@@ -1005,7 +1053,9 @@
     "brand": "Monster",
     "priceTry": 189999.0,
     "url": "https://www.monsternotebook.com.tr",
-    "images": [],
+    "images": [
+      "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -1038,7 +1088,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
   },
   {
     "id": "laptop_monster_semruk_s7_v9_3_1_14900hx_4090",
@@ -1046,7 +1097,9 @@
     "brand": "Monster",
     "priceTry": 199999.0,
     "url": "https://www.monsternotebook.com.tr",
-    "images": [],
+    "images": [
+      "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1079,7 +1132,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://cdn.akakce.com/z/monster/monster-semruk-s7-v9-3-i9-13980hx-32-gb-1-tb-ssd-rtx4090-17-notebook.jpg"
   },
   {
     "id": "laptop_razer_blade_16_2024_oled_240hz_14900hx",
@@ -1128,7 +1182,9 @@
     "brand": "Razer",
     "priceTry": 219999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1161,7 +1217,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
   },
   {
     "id": "laptop_razer_blade_18_2024_14900hx_4090_4k",
@@ -1169,7 +1226,9 @@
     "brand": "Razer",
     "priceTry": 229999.0,
     "url": "https://www.razer.com",
-    "images": [],
+    "images": [
+      "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1202,7 +1261,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://assets2.razerzone.com/images/pnx.assets/2b2c48b5335fde8d0fbf45931a854e48/razer-blade-18-2024-ogimage-1200x630.webp"
   },
   {
     "id": "laptop_xmg_neo_16_e24_liquid_cooling_4090",
@@ -1297,7 +1357,14 @@
     "brand": "ASUS",
     "priceTry": 144999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/asus-rog-strix-scar-18-g835-gaming-laptop-5.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1330,7 +1397,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/30B02883-1847-4CA8-80AC-393A69BB7CD2"
   },
   {
     "id": "laptop_gigabyte_aorus_17x_azf_14900hx_4090",
@@ -1338,7 +1406,10 @@
     "brand": "Gigabyte",
     "priceTry": 149999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg",
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-2022-09-05t160245292-4c97ea.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1371,7 +1442,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://assets-prd.ignimgs.com/2024/04/09/g17x-2024-button-1712670777409.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16irx9h",
@@ -1470,7 +1542,10 @@
     "brand": "MSI",
     "priceTry": 169999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1503,7 +1578,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_razer_blade_16_2024_14900hx_4080_oled",
@@ -1552,7 +1628,10 @@
     "brand": "ASUS",
     "priceTry": 129999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i9-13980HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.60 GHz Tepe (Boost)",
@@ -1585,7 +1664,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/3A5764D1-19AB-4CA1-90D9-F150226CF1D5"
   },
   {
     "id": "laptop_acer_predator_helios_16_ph16_72_14900hx_4080",
@@ -1593,7 +1673,9 @@
     "brand": "Acer",
     "priceTry": 114999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1626,7 +1708,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_alienware_m18_r2_14900hx_4080",
@@ -1770,7 +1853,10 @@
     "brand": "Lenovo",
     "priceTry": 114999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -1803,7 +1889,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7i_16irx9h_14900hx_4080",
@@ -1811,7 +1898,10 @@
     "brand": "Lenovo",
     "priceTry": 129999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -1844,7 +1934,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/02/lenovo-legion-pro-7i-gen-8-12.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_7_16irx8h_13900hx_4080",
@@ -1897,7 +1988,10 @@
     "brand": "MSI",
     "priceTry": 134999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-13980HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.60 GHz Tepe (Boost)",
@@ -1930,7 +2024,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1672908802e6dc93a38aafea06fc3188ccfcba12cf.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
   },
   {
     "id": "laptop_msi_vector_17_hx_a14vhg_14900hx_4080",
@@ -2066,7 +2161,10 @@
     "brand": "ASUS",
     "priceTry": 119999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -2099,7 +2197,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_m16_gu604vy_4090",
@@ -2695,7 +2794,10 @@
     "brand": "ASUS",
     "priceTry": 89999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i9-13980HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.60 GHz Tepe (Boost)",
@@ -2728,7 +2830,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/d5444a20-d912-40e3-9a48-bbacc1e3a4e6/v1/images/Strix_G18_KV_16x9.webp"
   },
   {
     "id": "laptop_asus_rog_zephyrus_m16_gu604vi_13900h_4070",
@@ -2782,7 +2885,9 @@
     "brand": "Acer",
     "priceTry": 79999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -2815,7 +2920,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_18_phn18_71_14900hx_4070",
@@ -2869,7 +2975,9 @@
     "brand": "Dell",
     "priceTry": 76999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dellal1-4-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -2902,7 +3010,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dellal1-4-1.jpg"
   },
   {
     "id": "laptop_alienware_m16_r2_ultra_9_185h_4070",
@@ -3307,7 +3416,10 @@
     "brand": "ASUS",
     "priceTry": 74999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i7-14650HX",
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
@@ -3340,7 +3452,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_acer_nitro_17_an17_41_7840hs_4070",
@@ -3394,7 +3507,9 @@
     "brand": "Acer",
     "priceTry": 72999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -3427,7 +3542,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2024/04/predator-helios-16-ph16-72-perkey-backlit-on-wp-logo-black-03-custom-scaled-e1714423450432.jpg"
   },
   {
     "id": "laptop_casper_excalibur_g911_1390_ex70x_c_13900hx_4070",
@@ -3435,7 +3551,9 @@
     "brand": "Casper Excalibur",
     "priceTry": 69999.0,
     "url": "https://www.casper.com.tr",
-    "images": [],
+    "images": [
+      "https://file.casper.com.tr/media/g915-liste-gorseli-guncel_op.webp"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -3468,7 +3586,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://file.casper.com.tr/media/g915-liste-gorseli-guncel_op.webp"
   },
   {
     "id": "laptop_dell_alienware_m16_r2_ultra_9_4070",
@@ -3696,7 +3815,10 @@
     "brand": "Lenovo",
     "priceTry": 74999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i7-14700HX",
     "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
@@ -3729,7 +3851,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_legion_7i_gen_9_16irx9_14900hx_4070_beyaz",
@@ -3828,7 +3951,10 @@
     "brand": "MSI",
     "priceTry": 99999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -3861,7 +3987,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/09/63/LD0006096399.jpg"
   },
   {
     "id": "laptop_msi_sword_17_hx_b14vgkg_14900hx_4070",
@@ -3869,7 +3996,10 @@
     "brand": "MSI",
     "priceTry": 81999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/Crosshair-17-HX-D14V/io01.png",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-14900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
@@ -3902,7 +4032,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/nb/2023_RPLS/Crosshair-17-HX-D14V/io01.png"
   },
   {
     "id": "laptop_msi_pulse_16_ai_c1vgkg_ultra_7_155h_4070",
@@ -3910,7 +4041,14 @@
     "brand": "MSI",
     "priceTry": 79999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/01/msi-prestige-16-ai-evo-b1mg-014tr-intel-core-ultra-7-155h-32gb-lpddr5-1tb-ssd-16-inc-qhd-w11-home-laptop.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/01/msi-prestige-16-ai-evo-b1mg-014tr-intel-core-ultra-7-155h-32gb-lpddr5-1tb-ssd-16-inc-qhd-w11-home-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/01/msi-prestige-16-ai-evo-b1mg-014tr-intel-core-ultra-7-155h-32gb-lpddr5-1tb-ssd-16-inc-qhd-w11-home-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/01/msi-prestige-16-ai-evo-b1mg-014tr-intel-core-ultra-7-155h-32gb-lpddr5-1tb-ssd-16-inc-qhd-w11-home-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/01/msi-prestige-16-ai-evo-b1mg-014tr-intel-core-ultra-7-155h-32gb-lpddr5-1tb-ssd-16-inc-qhd-w11-home-laptop-4.jpg"
+    ],
     "cpuModel": "Intel Core Ultra 7 155H",
     "cpuCores": "16 Çekirdek (6P + 8E + 2LP) / 22 İzlek",
     "cpuClockGhz": "1.40 GHz Taban / 4.80 GHz Tepe (Boost)",
@@ -3943,7 +4081,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g17_g713pi_7945hx",
@@ -3996,7 +4135,9 @@
     "brand": "Acer",
     "priceTry": 62999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
+    ],
     "cpuModel": "Intel Core i7-14700HX",
     "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
@@ -4029,7 +4170,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_18_phn18_71_14700hx_4070",
@@ -4083,7 +4225,9 @@
     "brand": "Dell",
     "priceTry": 67999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dellal1-4-1.jpg"
+    ],
     "cpuModel": "Intel Core i9-13900HX",
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.40 GHz Tepe (Boost)",
@@ -4116,7 +4260,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/dellal1-4-1.jpg"
   },
   {
     "id": "laptop_dell_alienware_m16_r1_13700hx_4070",
@@ -4475,7 +4620,10 @@
     "brand": "MSI",
     "priceTry": 79999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "cpuModel": "Intel Core Ultra 9 185H",
     "cpuCores": "16 Çekirdek (6P + 8E + 2LP) / 22 İzlek",
     "cpuClockGhz": "2.30 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -4508,7 +4656,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2024/01/1-35-e1704808952146.jpg"
   },
   {
     "id": "laptop_msi_sword_16_hx_b14vgkg_14700hx_4070",
@@ -4746,7 +4895,9 @@
     "brand": "Acer",
     "priceTry": 53999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
+    ],
     "cpuModel": "AMD Ryzen 7 7840HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -4779,7 +4930,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_acer_predator_triton_14_pt14_51_13700h_4070",
@@ -4787,7 +4939,9 @@
     "brand": "Acer",
     "priceTry": 89999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
+    ],
     "cpuModel": "Intel Core i7-13700H",
     "cpuCores": "14 Çekirdek / 20 İzlek",
     "cpuClockGhz": "2.50 GHz Taban / 5.00 GHz Tepe (Boost)",
@@ -4820,7 +4974,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
   },
   {
     "id": "laptop_gigabyte_aorus_15_bkr_13700h_4070",
@@ -5286,7 +5441,9 @@
     "brand": "Acer",
     "priceTry": 89999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
+    ],
     "cpuModel": "Intel Core i7-13700H",
     "cpuCores": "14 Çekirdek / 20 İzlek",
     "cpuClockGhz": "2.50 GHz Taban / 5.00 GHz Tepe (Boost)",
@@ -5319,7 +5476,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/12/7-6.jpg"
   },
   {
     "id": "laptop_gaminggen_5b5f1766",
@@ -6428,7 +6586,9 @@
     "brand": "HP",
     "priceTry": 89999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
+    ],
     "cpuModel": "Intel Core Ultra 9 185H",
     "cpuCores": "16 Çekirdek (6P + 8E + 2LP) / 22 İzlek",
     "cpuClockGhz": "2.30 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -6461,7 +6621,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15ahp9_8845hs_4070",
@@ -6469,7 +6630,10 @@
     "brand": "Lenovo",
     "priceTry": 48999.0,
     "url": "https://www.vatanbilgisayar.com",
-    "images": [],
+    "images": [
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg",
+      "https://img.yenieera22.com/cdn/1000/7-8289af.png"
+    ],
     "cpuModel": "AMD Ryzen 7 8845HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4 / Ryzen AI)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -6502,7 +6666,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578511ld.jpg"
   },
   {
     "id": "laptop_msi_katana_15_b13vgk_13620h_4070",
@@ -6693,7 +6858,9 @@
     "brand": "HP",
     "priceTry": 84999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
+    ],
     "cpuModel": "Intel Core Ultra 9 185H",
     "cpuCores": "16 Çekirdek (6P + 8E + 2LP) / 22 İzlek",
     "cpuClockGhz": "2.30 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -6726,7 +6893,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_legion_slim_5_16aph8_7840hs_4060",
@@ -6867,7 +7035,10 @@
     "brand": "ASUS",
     "priceTry": 54999.0,
     "url": "https://www.gaming.gen.tr",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      "https://img.yenieera22.com/cdn/1000/3-1cc644.png"
+    ],
     "cpuModel": "Intel Core i7-13650HX",
     "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
     "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
@@ -6900,7 +7071,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg"
   },
   {
     "id": "laptop_asus_rog_zephyrus_g14_ga402xv_4060",
@@ -7000,7 +7172,10 @@
     "brand": "ASUS",
     "priceTry": 47999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg",
+      "https://img.yenieera22.com/cdn/1000/asusz1-9dce94.png"
+    ],
     "cpuModel": "Intel Core i7-13650HX",
     "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
     "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
@@ -7033,7 +7208,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg"
   },
   {
     "id": "laptop_acer_predator_helios_neo_16_phn16_71_13700hx",
@@ -7041,7 +7217,9 @@
     "brand": "Acer",
     "priceTry": 48999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
+    ],
     "cpuModel": "Intel Core i7-13700HX",
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.00 GHz Tepe (Boost)",
@@ -7074,7 +7252,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_acer_nitro_16_an16_41_7840hs_4060",
@@ -7082,7 +7261,9 @@
     "brand": "Acer",
     "priceTry": 49999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
+    ],
     "cpuModel": "AMD Ryzen 7 7840HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -7115,7 +7296,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_acer_nitro_5_an515_58_12700h_3070ti",
@@ -7215,7 +7397,9 @@
     "brand": "Acer",
     "priceTry": 58999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
+    ],
     "cpuModel": "Intel Core i7-14700HX",
     "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
@@ -7248,7 +7432,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_dell_g15_5530_13650hx_4060",
@@ -7441,7 +7626,9 @@
     "brand": "HP",
     "priceTry": 48999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg"
+    ],
     "cpuModel": "Intel Core i7-14700HX",
     "cpuCores": "20 Çekirdek (8P + 12E) / 28 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.50 GHz Tepe (Boost)",
@@ -7474,7 +7661,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/785362251/785362251_2_MC/3c834353740443deb90b2e14b10962d1.jpg"
   },
   {
     "id": "laptop_hp_omen_16_wf0000nt_13700hx_4060",
@@ -7523,7 +7711,10 @@
     "brand": "Lenovo",
     "priceTry": 54999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i7-13700HX",
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.10 GHz Taban / 5.00 GHz Tepe (Boost)",
@@ -7556,7 +7747,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_legion_pro_5_16arx8_7745hx_4060",
@@ -7610,7 +7802,10 @@
     "brand": "Lenovo",
     "priceTry": 56999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i7-14650HX",
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
@@ -7643,7 +7838,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_lenovo_loq_15irx9_14700hx_4060",
@@ -7692,7 +7888,10 @@
     "brand": "Lenovo",
     "priceTry": 64999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg",
+      "https://img.yenieera22.com/cdn/1000/83cv008rtr-1-5ca4d7.png"
+    ],
     "cpuModel": "AMD Ryzen 7 7840HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -7725,7 +7924,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg"
   },
   {
     "id": "laptop_msi_crosshair_17_hx_d14vfkg_14700hx_4060",
@@ -7828,7 +8028,10 @@
     "brand": "ASUS",
     "priceTry": 46999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg",
+      "https://img.yenieera22.com/cdn/1000/asusz1-9dce94.png"
+    ],
     "cpuModel": "Intel Core i7-13650HX",
     "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
     "cpuClockGhz": "2.60 GHz Taban / 4.90 GHz Tepe (Boost)",
@@ -7861,7 +8064,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://s13emagst.akamaized.net/products/67353/67352867/images/res_a61e111fe2abf5bd76113b9dacec9e60.jpg"
   },
   {
     "id": "laptop_asus_rog_strix_g16_g614jv_13450hx_4060",
@@ -8002,7 +8206,10 @@
     "brand": "Lenovo",
     "priceTry": 59999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg",
+      "https://img.yenieera22.com/cdn/1000/83cv008rtr-1-5ca4d7.png"
+    ],
     "cpuModel": "AMD Ryzen 7 7840HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -8035,7 +8242,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.notebookcheck.net/typo3temp/_processed_/0/b/csm_legionslim514_2843b3fb17.jpg"
   },
   {
     "id": "laptop_lenovo_loq_16aph8_7840hs_4060",
@@ -8273,7 +8481,9 @@
     "brand": "Acer",
     "priceTry": 39999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
+    ],
     "cpuModel": "AMD Ryzen 7 7735HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 3+)",
     "cpuClockGhz": "3.20 GHz Taban / 4.75 GHz Tepe (Boost)",
@@ -8306,7 +8516,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_dell_alienware_x14_r2_13620h_4060",
@@ -8406,7 +8617,9 @@
     "brand": "HP",
     "priceTry": 38999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/7-8289af.png"
+    ],
     "cpuModel": "AMD Ryzen 7 7840HS",
     "cpuCores": "8 Çekirdek / 16 İzlek (Zen 4)",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
@@ -8439,7 +8652,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/7-8289af.png"
   },
   {
     "id": "laptop_hp_omen_transcend_14_ultra_7_155h_4060",
@@ -8447,7 +8661,9 @@
     "brand": "HP",
     "priceTry": 74999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
+    ],
     "cpuModel": "Intel Core Ultra 7 155H",
     "cpuCores": "16 Çekirdek (6P + 8E + 2LP) / 22 İzlek",
     "cpuClockGhz": "1.40 GHz Taban / 4.80 GHz Tepe (Boost)",
@@ -8480,7 +8696,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-transcend14-intel/ogh@2x.jpg"
   },
   {
     "id": "laptop_lenovo_loq_16irh8_13620h_4060",
@@ -10319,7 +10536,14 @@
     "gamingScore": 84,
     "fps1080p": 151,
     "fps1440p": 113,
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx-5060-8gb-115w-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-01.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-2-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-3-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-4-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-5-3.jpg"
+    ],
     "cpuCores": "16 Çekirdek / 32 İzlek (Zen 4)",
     "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Boost)",
     "screenResolution": "2560x1600 (WQXGA 16:10)",
@@ -10339,7 +10563,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg"
   },
   {
     "id": "laptop_itopya_77d17023",
@@ -10808,7 +11033,9 @@
     "brand": "Acer",
     "priceTry": 42999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
+    ],
     "cpuModel": "Intel Core i5-13500HX",
     "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
     "cpuClockGhz": "2.50 GHz Taban / 4.70 GHz Tepe (Boost)",
@@ -10841,7 +11068,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2023/04/csm_PREDATOR_HELIOS_NEO_16_PHN16_71_03_5ec1171282.jpg"
   },
   {
     "id": "laptop_gigabyte_g6_kf_13620h_4060",
@@ -11126,7 +11354,10 @@
     "brand": "Lenovo",
     "priceTry": 43999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg",
+      "https://img.yenieera22.com/cdn/1000/ffdd1-1b57ff.png"
+    ],
     "cpuModel": "Intel Core i5-13500HX",
     "cpuCores": "14 Çekirdek (6P + 8E) / 20 İzlek",
     "cpuClockGhz": "2.50 GHz Taban / 4.70 GHz Tepe (Boost)",
@@ -11159,7 +11390,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2025/06/3-6-e1749075434323.jpg"
   },
   {
     "id": "laptop_msi_cyborg_15_a13vf_13620h_4060",
@@ -11167,7 +11399,14 @@
     "brand": "MSI",
     "priceTry": 42999.0,
     "url": "https://www.itopya.com",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-4.jpg"
+    ],
     "cpuModel": "Intel Core i7-13620H",
     "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
     "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
@@ -11200,7 +11439,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg"
   },
   {
     "id": "laptop_asus_tuf_gaming_a15_fa507nu_7735hs_4050",
@@ -11360,9 +11600,7 @@
     "gamingScore": 81,
     "fps1080p": 105,
     "fps1440p": 68,
-    "images": [
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg"
-    ],
+    "images": [],
     "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
     "cpuClockGhz": "2.40 GHz Taban / 4.60 GHz Tepe (Boost)",
     "screenResolution": "1920x1080 (FHD 16:9)",
@@ -11382,8 +11620,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534467ld.jpg"
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "laptop_lenovo_loq_15ahp9_8645hs_4050",
@@ -11486,7 +11723,9 @@
     "brand": "Acer",
     "priceTry": 31999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
+    ],
     "cpuModel": "AMD Ryzen 5 7535HS",
     "cpuCores": "6 Çekirdek / 12 İzlek (Zen 3+)",
     "cpuClockGhz": "3.30 GHz Taban / 4.55 GHz Tepe (Boost)",
@@ -11519,7 +11758,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://laptopmedia.com/wp-content/uploads/2023/06/acer-nitro-16-an16-41-4-zone-backlit-on-wallpaper-logo-black-01.tif-custom-scaled-e1687244109970.jpg"
   },
   {
     "id": "laptop_hp_victus_16_r0000_13500h_4050",
@@ -11571,7 +11811,9 @@
     "brand": "HP",
     "priceTry": 30999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/7-8289af.png"
+    ],
     "cpuModel": "AMD Ryzen 5 7640HS",
     "cpuCores": "6 Çekirdek / 12 İzlek (Zen 4)",
     "cpuClockGhz": "4.30 GHz Taban / 5.00 GHz Tepe (Boost)",
@@ -11604,7 +11846,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/7-8289af.png"
   },
   {
     "id": "laptop_lenovo_loq_15irx9_13450hx_4050",
@@ -11799,7 +12042,14 @@
     "brand": "MSI",
     "priceTry": 36999.0,
     "url": "https://www.hepsiburada.com",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/04/msi-cyborg-15-a13vf-894xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-4060-8gb-15-6-inc-full-hd-freedos-laptop-4.jpg"
+    ],
     "cpuModel": "Intel Core i7-13620H",
     "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
     "cpuClockGhz": "2.40 GHz Taban / 4.90 GHz Tepe (Boost)",
@@ -11832,7 +12082,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/02/msi-cyborg-15-a13vf-895xtr-intel-core-i5-13420h-16gb-ddr5-1tb-ssd-rtx4060-8gb-15-6-inc-144hz-full-hd-freedos-gaming-laptop-1.jpg"
   },
   {
     "id": "laptop_gaminggen_297dbfac",
@@ -14222,7 +14473,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -14235,7 +14493,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_fc854685",
@@ -14258,7 +14517,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -14271,7 +14537,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_aac1d3ce",
@@ -14559,7 +14826,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -14573,7 +14847,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_e5585bfb",
@@ -15922,7 +16197,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -15936,7 +16218,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_3ea98669",
@@ -15959,7 +16242,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -15973,7 +16263,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_e889d3f6",
@@ -15996,7 +16287,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16010,7 +16308,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_83848141",
@@ -16033,7 +16332,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16047,7 +16353,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_89fdaf37",
@@ -16070,7 +16377,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16084,7 +16398,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_bf389764",
@@ -16107,7 +16422,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16120,7 +16442,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_be4e6ec0",
@@ -16143,7 +16466,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16156,7 +16486,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_47e1f82e",
@@ -16179,7 +16510,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16192,7 +16530,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_26e10cf3",
@@ -16215,7 +16554,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-flux-gr16-intel-core-i9-14900hx-geforce-rtx-5070-8gb-115w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-w11-home-gaming-laptop-canta-hediyeli-control-resonant-hediyeli-.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-04-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -16228,7 +16574,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-flux-gr16-intel-core-i9-14900hx-rtx-5070-8gb-115w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-1-300x300.jpg"
   },
   {
     "id": "laptop_gaminggen_1b5604d4",
@@ -16923,7 +17270,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -16936,7 +17285,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_b92b733f",
@@ -17612,7 +17962,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -17625,7 +17977,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_6cdd5322",
@@ -17689,7 +18042,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -17702,7 +18057,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_93c5b8c0",
@@ -17725,7 +18081,14 @@
     "fps1440p": 113,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-6.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "extra_specs": {
@@ -17737,7 +18100,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg"
   },
   {
     "id": "laptop_hb_f063c881",
@@ -17760,7 +18124,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -17773,7 +18139,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_3c35ca81",
@@ -18065,7 +18432,14 @@
     "fps1440p": 113,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-6.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "extra_specs": {
@@ -18077,7 +18451,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg"
   },
   {
     "id": "laptop_hb_486836e3",
@@ -18222,7 +18597,9 @@
     "fps1440p": 122,
     "cpuCores": "8 Çekirdek / 16 İzlek",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -18235,7 +18612,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
   },
   {
     "id": "laptop_hb_005cdfcc",
@@ -18427,7 +18805,14 @@
     "fps1440p": 113,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-gaming-laptop-6.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "extra_specs": {
@@ -18439,7 +18824,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/10/thunderobot-rs16-rs16-i7147hx56c1q300rb-h1.jpg"
   },
   {
     "id": "laptop_hb_cfe99916",
@@ -18958,7 +19344,14 @@
     "fps1440p": 113,
     "cpuCores": "8 Çekirdek / 16 İzlek",
     "cpuClockGhz": "3.50 GHz Taban / 5.00 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc6.jpg"
+    ],
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "screenSizeInch": 16.0,
@@ -18971,7 +19364,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc1-1.jpg"
   },
   {
     "id": "laptop_hb_2c9fa3d3",
@@ -19114,7 +19508,14 @@
     "fps1440p": 113,
     "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
     "cpuClockGhz": "2.40 GHz Taban / 5.20 GHz Tepe (Arrow Lake)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx-5060-8gb-115w-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-01.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-2-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-3-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-4-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-5-3.jpg"
+    ],
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "screenSizeInch": 16.0,
@@ -19122,7 +19523,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg"
   },
   {
     "id": "laptop_hb_b15f2e7c",
@@ -19294,7 +19696,14 @@
     "fps1440p": 113,
     "cpuCores": "24 Çekirdek (8P + 16E) / 24 İzlek",
     "cpuClockGhz": "2.70 GHz Taban / 5.40 GHz Tepe (Arrow Lake)",
-    "images": [],
+    "images": [
+      "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx-5060-8gb-115w-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-01.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-2-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-3-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-4-3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/07/lenovo-thinkbook-16p-g6-iax-intel-core-ultra-9-275hx-32gb-ddr5-1tb-ssd-rtx5060-8gb-16-inc-3-2k-165hz-ips-freedos-gaming-laptop-21r0001jtx-5-3.jpg"
+    ],
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 165,
     "screenSizeInch": 16.0,
@@ -19307,7 +19716,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WVX5zPaSL._AC_.jpg"
   },
   {
     "id": "laptop_hb_a1ee85d5",
@@ -19722,7 +20132,9 @@
     "fps1440p": 122,
     "cpuCores": "8 Çekirdek / 16 İzlek",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -19735,7 +20147,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
   },
   {
     "id": "laptop_hb_3ff76896",
@@ -19758,7 +20171,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-7-6.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -19772,7 +20192,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-canta-hediyeli-1.jpg"
   },
   {
     "id": "laptop_hb_77644c90",
@@ -19958,7 +20379,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -19971,7 +20394,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_1c8ed3f7",
@@ -20182,7 +20606,14 @@
     "fps1440p": 122,
     "cpuCores": "24 Çekirdek (8P + 16E) / 32 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-canta-hediyeli-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-3-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-4-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-5-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-6-7.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/09/gameraider-ignia-gr16-intel-core-i9-14900hx-rtx-5070ti-12gb-140w-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-7-6.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "refreshRateHz": 300,
     "screenSizeInch": 16.0,
@@ -20196,7 +20627,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/gameraider-ignia-gr16-intel-core-i9-14900hx-geforce-rtx-5070ti-12gb-140w-16gb-ddr5-1tb-ssd-16-inc-2-5k-qhd-300hz-freedos-gaming-laptop-canta-hediyeli-1.jpg"
   },
   {
     "id": "laptop_hb_735fb863",
@@ -20291,7 +20723,9 @@
     "fps1440p": 122,
     "cpuCores": "8 Çekirdek / 16 İzlek",
     "cpuClockGhz": "3.80 GHz Taban / 5.10 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -20304,7 +20738,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/01/msiste1-1.jpg"
   },
   {
     "id": "laptop_hb_1e7466ae",
@@ -20407,7 +20842,14 @@
     "fps1440p": 113,
     "cpuCores": "10 Çekirdek (6P + 4E) / 16 İzlek",
     "cpuClockGhz": "2.40 GHz Taban / 4.80 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc1-1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc3.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc4.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc5.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc6.jpg"
+    ],
     "screenResolution": "1920x1080 (FHD 16:9)",
     "refreshRateHz": 144,
     "screenSizeInch": 14.0,
@@ -20420,7 +20862,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/07/hp-hyperx-omen-15-gb0003nt-amd-ryzen-5-240-geforce-rtx-5060-8gb-gddr7-24gb-ddr5-512gb-ssd-15-3-inc-wuxga-165hz-6-5ms-ips-w11-home-gaming-laptop-d2qv8ea-fc1-1.jpg"
   },
   {
     "id": "laptop_hb_02d811ca",
@@ -20570,7 +21013,9 @@
     "fps1440p": 122,
     "cpuCores": "16 Çekirdek (8P + 8E) / 24 İzlek",
     "cpuClockGhz": "2.20 GHz Taban / 5.20 GHz Tepe (Boost)",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
+    ],
     "screenResolution": "2560x1440 (2K QHD 16:9)",
     "screenSizeInch": 18.0,
     "chargerWatt": 240,
@@ -20583,7 +21028,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/06/dellal1-1-1.jpg"
   },
   {
     "id": "laptop_hb_8f40ed54",

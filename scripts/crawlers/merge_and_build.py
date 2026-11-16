@@ -24,6 +24,7 @@ from scripts.crawlers.image_curator import (
     backfill_missing_via_wikimedia,
     build_gallery_index,
     clean_doubled_gpu_name,
+    collect_repo_asset_urls,
     dedupe_synthetic_peripheral_clones,
     filter_and_prune_item_images,
     find_best_gallery_match,
@@ -49,6 +50,26 @@ def _load_json(path: str, default: Any) -> Any:
         return default
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def _load_baseline_29c4a2e(filename: str) -> list[dict[str, Any]]:
+    """Loads baseline catalog products from commit 29c4a2e so no real products or images are ever dropped."""
+    try:
+        raw = subprocess.check_output(
+            ["git", "show", f"29c4a2e:shared/src/commonMain/composeResources/files/{filename}"],
+            cwd=ROOT_DIR,
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8")
+        data = json.loads(raw)
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+
+_MOBILE_CPU_RE = re.compile(
+    r"(?:\b\d{4}(?:U|HS|HX|H|V)\b|\b2[23568][68]V\b|\b1[0-6]\d(?:HL|UL|H|U)\b|\bRYZEN\s+(?:Z1|AI\s+MAX)\b|\bRYZEN\s+[357]\s+\d{2,3}\b)",
+    re.I,
+)
 
 
 def _save_json_both(filename: str, data: Any) -> None:
@@ -151,14 +172,22 @@ def _apply_curated_gallery(
     chipset = str(item.get("chipset") or "")
 
     existing_clean = filter_and_prune_item_images(item, category, health_map, image_key=image_key)
-    matched = find_best_gallery_match(category, brand, name, chipset, gallery_recs, health_map) if gallery_recs else []
+    score_holder: list[float] = []
+    matched = find_best_gallery_match(category, brand, name, chipset, gallery_recs, health_map, score_out=score_holder) if gallery_recs else []
+    best_score = score_holder[0] if score_holder else 0.0
 
     if prefer_gallery and matched:
         final = list(dict.fromkeys(matched + existing_clean))[:6]
+        if category in ("CPU", "GPU", "MOTHERBOARD", "RAM", "STORAGE", "COOLER", "CASE", "LAPTOP", "SMARTPHONE", "TABLET"):
+            item["_img_match_score"] = best_score
     elif not existing_clean and matched:
         final = matched[:6]
+        if category in ("CPU", "GPU", "MOTHERBOARD", "RAM", "STORAGE", "COOLER", "CASE", "LAPTOP", "SMARTPHONE", "TABLET"):
+            item["_img_match_score"] = best_score
     elif len(existing_clean) < 2 and matched:
         final = list(dict.fromkeys(existing_clean + matched))[:6]
+        if category in ("CPU", "GPU", "MOTHERBOARD", "RAM", "STORAGE", "COOLER", "CASE", "LAPTOP", "SMARTPHONE", "TABLET"):
+            item["_img_match_score"] = best_score
     else:
         final = existing_clean
 
@@ -184,23 +213,40 @@ def _merge_cpus(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "cpu.json"), [])
+    baseline = _load_baseline_29c4a2e("cpu.json")
+    baseline_keys = {
+        normalize_canonical_key(it.get("name") or "")
+        for it in baseline
+        if it.get("name")
+    }
     by_name: dict[str, dict[str, Any]] = {}
-    for item in existing:
+    for item in baseline + existing:
         nm = item.get("name") or ""
-        if nm and "EMBEDDED" not in nm.upper() and _is_modern_cpu_name(nm, str(item.get("socket") or "")):
-            by_name[normalize_canonical_key(nm)] = dict(item)
+        if not nm or "EMBEDDED" in nm.upper():
+            continue
+        ck = normalize_canonical_key(nm)
+        is_orig = ck in baseline_keys
+        if not is_orig and (_MOBILE_CPU_RE.search(nm) or not _is_modern_cpu_name(nm, str(item.get("socket") or ""))):
+            continue
+        if ck not in by_name:
+            by_name[ck] = dict(item)
+        else:
+            merged = by_name[ck]
+            for k, v in item.items():
+                if v not in (None, "", []) and not merged.get(k):
+                    merged[k] = v
 
     raw_src = _index_raw_by_source(state, "CPU")
     pcp = raw_src.get("pc-part-dataset", {})
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pm = raw_src.get("PassMark", {})
-    gg_gallery = build_gallery_index(state, "CPU", ("GamingGen Store API",))
+    gg_gallery = build_gallery_index(state, "CPU", ("GamingGen Store API", "Itopya Catalog", "Repo Assets"))
 
     for rec in list(pcp.values()) + list(tpu.values()):
         name = rec["display_name"]
         p = rec["payload"]
         sock = str(p.get("socket") or "")
-        if not _is_modern_cpu_name(name, sock):
+        if _MOBILE_CPU_RE.search(name) or not _is_modern_cpu_name(name, sock):
             continue
         ckey = normalize_canonical_key(name)
         if ckey not in by_name:
@@ -267,10 +313,21 @@ def _merge_cpus(
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov)) or ["Katalog Verisi"]
         item["spec_verified_at"] = VERIFIED_DATE
+        item["_is_orig"] = ckey in baseline_keys
         enriched_list.append(item)
 
-    enriched_list.sort(key=lambda x: (x.get("release_date") or "", x.get("name") or ""), reverse=True)
-    cpus_final = enriched_list[:450]
+    enriched_list.sort(
+        key=lambda x: (
+            1 if x.get("_is_orig") else 0,
+            1 if x.get("price") else 0,
+            x.get("release_date") or "",
+            x.get("name") or "",
+        ),
+        reverse=True,
+    )
+    for it in enriched_list:
+        it.pop("_is_orig", None)
+    cpus_final = enriched_list[:550]
     quarantine_cross_model_collisions(cpus_final, "CPU", image_key="imageUrl", max_allowed_variants=4)
     return cpus_final
 
@@ -297,16 +354,17 @@ def _merge_gpus(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "video-card.json"), [])
+    baseline = _load_baseline_29c4a2e("video-card.json")
     raw_src = _index_raw_by_source(state, "GPU")
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pm = raw_src.get("PassMark", {})
     pcp = raw_src.get("pc-part-dataset", {})
-    gg_gallery = build_gallery_index(state, "GPU", ("GamingGen Store API",))
+    gg_gallery = build_gallery_index(state, "GPU", ("GamingGen Store API", "Itopya Catalog", "Repo Assets"))
     tpu_gallery = build_gallery_index(state, "GPU", ("TechPowerUp Ajax",))
 
     by_name: dict[str, dict[str, Any]] = {}
     by_vram_trimmed: dict[str, str] = {}
-    for item in existing:
+    for item in existing + baseline:
         nm_raw = item.get("name") or ""
         ch = item.get("chipset") or ""
         nm = clean_doubled_gpu_name(nm_raw)
@@ -326,8 +384,14 @@ def _merge_gpus(
                     by_name[ckey] = it_clean
                     by_vram_trimmed[vtrim] = ckey
                 continue
-            by_name[ckey] = it_clean
-            by_vram_trimmed.setdefault(vtrim, ckey)
+            if ckey not in by_name:
+                by_name[ckey] = it_clean
+                by_vram_trimmed.setdefault(vtrim, ckey)
+            else:
+                prev = by_name[ckey]
+                for k, v in it_clean.items():
+                    if v not in (None, "", []) and not prev.get(k):
+                        prev[k] = v
 
     # Add modern discrete desktop cards from TPU (with real tpucdn.com photos) and major imaged pc-part-dataset entries
     for rec in list(tpu.values()) + list(pcp.values()):
@@ -408,8 +472,7 @@ def _merge_gpus(
                 if hw_id in gpu_bench_map:
                     gpu_bench_map[hw_id].setdefault("synthetic", {})["passmark_g3d_mark"] = g3d
 
-        # Strictly prefer GamingGen AIB photos first; fall back to TPU ONLY for real AMD/NVIDIA/Intel reference cards
-        brand_u = (item.get("brand") or name.split()[0]).upper()
+        # Strictly prefer GamingGen/Itopya/Repo AIB photos first; fall back to TPU ONLY for real AMD/NVIDIA/Intel reference cards
         first_word_u = (name.split()[0] if name.split() else "").upper()
         _apply_curated_gallery(item, "GPU", gg_gallery, health_map, image_key="imageUrl", prefer_gallery=True, prices_tr=prices_tr)
         if not item.get("images") and first_word_u in ("NVIDIA", "AMD", "INTEL", "RADEON", "GEFORCE", "ARC"):
@@ -418,21 +481,17 @@ def _merge_gpus(
         item["extra_specs"] = extra
         item["source_provenance"] = list(dict.fromkeys(prov)) or ["Katalog Verisi"]
         item["spec_verified_at"] = VERIFIED_DATE
-        # Prune synthetic phantom cards that exist in NO real dataset/store, have NO price, and have NO verified image
-        has_real_backing = bool(
-            item.get("price")
-            or (prices_tr and _hid("GPU", name) in prices_tr)
-            or item.get("images")
-            or m_pcp
-            or m_tpu
-            or brand_u in ("NVIDIA", "AMD", "INTEL")
-        )
-        if not has_real_backing:
-            continue
         result.append(item)
 
-    quarantine_cross_model_collisions(result, "GPU", image_key="imageUrl", max_allowed_variants=4)
+    quarantine_cross_model_collisions(result, "GPU", image_key="imageUrl", max_allowed_variants=6)
     return result
+
+
+_HANDHELD_NON_SSD_TOKENS = ("ayaneo", "steam deck", "rog ally", "legion go")
+
+
+def _clean_storage_name(name: str) -> str:
+    return re.sub(r"\bWD[_\-]+BLACK\b", "WD Black", name or "", flags=re.I).strip()
 
 
 def _merge_storage(
@@ -441,16 +500,32 @@ def _merge_storage(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "internal-hard-drive.json"), [])
+    baseline = _load_baseline_29c4a2e("internal-hard-drive.json")
     raw_src = _index_raw_by_source(state, "STORAGE")
     newmaxx = raw_src.get("NewMaxx SSD Sheet", {})
     tpu = raw_src.get("TechPowerUp Ajax", {})
     pcp = raw_src.get("pc-part-dataset", {})
-    gallery = build_gallery_index(state, "STORAGE", ("GamingGen Store API", "TechPowerUp Ajax"))
+    gallery = build_gallery_index(state, "STORAGE", ("GamingGen Store API", "Itopya Catalog", "Repo Assets", "TechPowerUp Ajax"))
 
-    by_key = {normalize_for_brand_match(it["name"]): dict(it) for it in existing if it.get("name")}
+    by_key: dict[str, dict[str, Any]] = {}
+    for it in existing + baseline:
+        raw_nm = _clean_storage_name(it.get("name") or "")
+        if not raw_nm or any(h in raw_nm.lower() for h in _HANDHELD_NON_SSD_TOKENS):
+            continue
+        bkey = normalize_for_brand_match(raw_nm)
+        cleaned = dict(it)
+        cleaned["name"] = raw_nm
+        if bkey not in by_key:
+            by_key[bkey] = cleaned
+        else:
+            for k, v in cleaned.items():
+                if v not in (None, "", []) and not by_key[bkey].get(k):
+                    by_key[bkey][k] = v
 
     for rec in list(tpu.values())[:180] + list(newmaxx.values())[:220]:
-        name = rec["display_name"]
+        name = _clean_storage_name(rec["display_name"])
+        if any(h in name.lower() for h in _HANDHELD_NON_SSD_TOKENS):
+            continue
         bkey = normalize_for_brand_match(name)
         p = rec["payload"]
         imgs = [u for u in (rec.get("images") or []) if health_map.get(u, False)]
@@ -502,15 +577,27 @@ def _merge_psu(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "power-supply.json"), [])
+    baseline_by_key = {
+        normalize_canonical_key(b.get("name") or ""): b
+        for b in _load_baseline_29c4a2e("power-supply.json")
+        if b.get("name")
+    }
     raw_src = _index_raw_by_source(state, "PSU")
     iron = raw_src.get("IRONScale Labs", {})
     pcp = raw_src.get("pc-part-dataset", {})
-    gallery = build_gallery_index(state, "PSU", ("GamingGen Store API", "IRONScale Labs"))
+    gallery = build_gallery_index(state, "PSU", ("GamingGen Store API", "Itopya Catalog", "Repo Assets", "IRONScale Labs"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
         name = item.get("name", "")
+        if not item.get("images") and not item.get("imageUrl"):
+            b = baseline_by_key.get(normalize_canonical_key(name))
+            if b and (b.get("imageUrl") or b.get("images")):
+                u = b.get("imageUrl") or (b.get("images") or [None])[0]
+                if u:
+                    item["imageUrl"] = u
+                    item["images"] = [u]
         prov = ["IRONScale Labs"]
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
         m_iron = _match_lookup(iron, name)
@@ -536,14 +623,26 @@ def _merge_generic_pcp_category(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, filename), [])
+    baseline_by_key = {
+        normalize_canonical_key(b.get("name") or ""): b
+        for b in _load_baseline_29c4a2e(filename)
+        if b.get("name")
+    }
     raw_src = _index_raw_by_source(state, cat_key)
     pcp = raw_src.get("pc-part-dataset", {})
-    gallery = build_gallery_index(state, cat_key, ("GamingGen Store API",))
+    gallery = build_gallery_index(state, cat_key, ("GamingGen Store API", "Itopya Catalog", "Repo Assets"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
         name = item.get("name", "")
+        if not item.get("images") and not item.get("imageUrl"):
+            b = baseline_by_key.get(normalize_canonical_key(name))
+            if b and (b.get("imageUrl") or b.get("images")):
+                u = b.get("imageUrl") or (b.get("images") or [None])[0]
+                if u:
+                    item["imageUrl"] = u
+                    item["images"] = [u]
         if cat_key == "MOTHERBOARD" and "sapphire" in name.lower() and "a520m" in name.lower():
             item["socket"] = "AM4"
         prov = ["HardwareWizard Katalog"]
@@ -583,6 +682,11 @@ def _merge_peripherals(
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "peripherals.json"), [])
     existing = [it for it in dedupe_synthetic_peripheral_clones(existing) if not _is_spare_accessory_misentry(it.get("category", ""), it.get("name", ""))]
+    baseline_by_id = {
+        b.get("id"): b
+        for b in _load_baseline_29c4a2e("peripherals.json")
+        if isinstance(b, dict) and b.get("id")
+    }
 
     sensor_fyi = _index_raw_by_source(state, "MOUSE").get("Sensor.fyi", {})
     autoeq = _index_raw_by_source(state, "HEADSET").get("AutoEq Acoustic DB", {})
@@ -606,7 +710,7 @@ def _merge_peripherals(
         galleries_by_cat[cat] = build_gallery_index(
             state,
             cat,
-            ("Keychron Official", "Pulsar Official", "Secretlab Official", "LethalGamingGear Official", "GamingGen Store API", "GSMArena Gallery"),
+            ("Keychron Official", "Pulsar Official", "Secretlab Official", "LethalGamingGear Official", "GamingGen Store API", "Itopya Catalog", "GSMArena Gallery"),
         )
 
     by_id: dict[str, dict[str, Any]] = {}
@@ -663,6 +767,14 @@ def _merge_peripherals(
             item["brand"] = "SteelSeries"
         elif br_low_per.endswith(" series") or item.get("brand") in ("ISO Keyboards", "Trackball Series"):
             item["brand"] = "Lemokey" if "lemokey" in name.lower() else "Keychron"
+
+        if not item.get("images") and not item.get("image_url") and not item.get("imageUrl"):
+            b_per = baseline_by_id.get(item.get("id"))
+            if b_per and (b_per.get("image_url") or b_per.get("imageUrl") or b_per.get("images")):
+                bu = b_per.get("image_url") or b_per.get("imageUrl") or (b_per.get("images") or [None])[0]
+                if bu:
+                    item["image_url"] = bu
+                    item["images"] = [bu]
 
         _apply_curated_gallery(item, cat, galleries_by_cat.get(cat, []), health_map, image_key="image_url", prefer_gallery=False, prices_tr=prices_tr)
         item["extra_specs"] = extra
@@ -741,6 +853,14 @@ def _append_new_peripherals(
         added += 1
 
 
+def _dedupe_leading_brand(brand: str, model: str) -> str:
+    br = (brand or "").strip()
+    md = (model or "").strip()
+    if br and md and md.lower().startswith(br.lower() + " "):
+        return md[len(br):].strip()
+    return md
+
+
 def _merge_mobile(
     state: CrawlStateManager,
     filename: str,
@@ -749,17 +869,41 @@ def _merge_mobile(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, filename), [])
+    baseline_by_id = {
+        b.get("id"): b
+        for b in _load_baseline_29c4a2e(filename)
+        if isinstance(b, dict) and b.get("id")
+    }
     raw_src = _index_raw_by_source(state, category)
     dxo = raw_src.get("DXOMARK", {})
     gsm = raw_src.get("GSMArena", {})
     nb_cpu = _index_raw_by_source(state, "CPU_MOBILE_REF").get("Notebookcheck", {})
-    gallery = build_gallery_index(state, category, ("GSMArena Gallery", "DXOMARK", "GSMArena", "GamingGen Store API"))
+    gallery = build_gallery_index(state, category, ("GSMArena Gallery", "DXOMARK", "GSMArena", "GamingGen Store API", "Itopya Catalog"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
         spec = dict(item.get("spec") or {})
-        name = item.get("name") or f"{item.get('brand', '')} {item.get('model', '')}".strip()
+        brand_str = str(item.get("brand") or "").strip()
+        clean_model = _dedupe_leading_brand(brand_str, str(item.get("model") or ""))
+        if clean_model:
+            item["model"] = clean_model
+        raw_name = item.get("name") or f"{brand_str} {clean_model}".strip()
+        name = re.sub(
+            rf"^{re.escape(brand_str)}\s+{re.escape(brand_str)}\b",
+            brand_str,
+            raw_name,
+            flags=re.I,
+        ).strip() if brand_str else raw_name
+        if "name" in item:
+            item["name"] = name
+        if not item.get("images") and not item.get("imageUrl") and not item.get("image_url"):
+            b_mob = baseline_by_id.get(item.get("id"))
+            if b_mob and (b_mob.get("imageUrl") or b_mob.get("image_url") or b_mob.get("images")):
+                bu = b_mob.get("imageUrl") or b_mob.get("image_url") or (b_mob.get("images") or [None])[0]
+                if bu:
+                    item["imageUrl"] = bu
+                    item["images"] = [bu]
         prov = ["HardwareWizard Katalog"]
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
 
@@ -805,12 +949,24 @@ def _merge_laptops(
     prices_tr: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     existing = _load_json(os.path.join(FILES_DIR, "laptop.json"), [])
+    baseline_by_id = {
+        b.get("id"): b
+        for b in _load_baseline_29c4a2e("laptop.json")
+        if isinstance(b, dict) and b.get("id")
+    }
     nb_cpu = _index_raw_by_source(state, "CPU_MOBILE_REF").get("Notebookcheck", {})
-    gallery = build_gallery_index(state, "LAPTOP", ("GamingGen Store API",))
+    gallery = build_gallery_index(state, "LAPTOP", ("GamingGen Store API", "Itopya Catalog"))
 
     out: list[dict[str, Any]] = []
     for raw_item in existing:
         item = dict(raw_item)
+        if not item.get("images") and not item.get("imageUrl") and not item.get("image_url"):
+            b_lap = baseline_by_id.get(item.get("id"))
+            if b_lap and (b_lap.get("imageUrl") or b_lap.get("image_url") or b_lap.get("images")):
+                bu = b_lap.get("imageUrl") or b_lap.get("image_url") or (b_lap.get("images") or [None])[0]
+                if bu:
+                    item["imageUrl"] = bu
+                    item["images"] = [bu]
         prov = ["HardwareWizard Katalog"]
         extra: dict[str, str] = dict(item.get("extra_specs") or {})
         cpu_model = item.get("cpuModel")
@@ -826,7 +982,7 @@ def _merge_laptops(
         item["spec_verified_at"] = VERIFIED_DATE
         out.append(item)
 
-    quarantine_cross_model_collisions(out, "LAPTOP", image_key="imageUrl", max_allowed_variants=5)
+    quarantine_cross_model_collisions(out, "LAPTOP", image_key="imageUrl", max_allowed_variants=15)
     return out
 
 
@@ -878,8 +1034,9 @@ def run_merge_all() -> None:
     all_urls: list[str] = []
     for (imgs_j,) in state.conn.execute("SELECT images_json FROM raw_records WHERE images_json != '[]'"):
         all_urls.extend(json.loads(imgs_j))
+    all_urls.extend(collect_repo_asset_urls())
     for fn in ("cpu.json", "video-card.json", "motherboard.json", "memory.json", "internal-hard-drive.json", "power-supply.json", "cpu-cooler.json", "case.json", "laptop.json", "peripherals.json", "smartphone.json", "tablet.json"):
-        for row in _load_json(os.path.join(FILES_DIR, fn), []):
+        for row in _load_json(os.path.join(FILES_DIR, fn), []) + _load_baseline_29c4a2e(fn):
             for k in ("imageUrl", "image_url"):
                 if row.get(k):
                     all_urls.append(row[k])
@@ -890,32 +1047,35 @@ def run_merge_all() -> None:
 
     benchmarks = _load_json(os.path.join(FILES_DIR, "hardware_benchmarks.json"), {"cpus": {}, "gpus": {}})
     prices_tr = _load_json(os.path.join(FILES_DIR, "prices_tr.json"), {})
-    # Re-seed HTTP-200 verified legacy prices_tr studio URLs from git HEAD so valid unique/series photos aren't lost across incremental rebuilds
-    try:
-        head_raw = subprocess.check_output(
-            ["git", "show", "HEAD:data/prices_tr.json"],
-            cwd=ROOT_DIR,
-            stderr=subprocess.DEVNULL,
-        ).decode("utf-8")
-        head_pt = json.loads(head_raw)
-        extra_urls = [
-            v.get("imageUrl")
-            for v in head_pt.values()
-            if isinstance(v, dict) and isinstance(v.get("imageUrl"), str) and v["imageUrl"].startswith("https://")
-            and v["imageUrl"] not in health_map
-        ]
-        if extra_urls:
-            health_map.update(verify_image_url_pool(state, extra_urls, max_workers=16))
-        for item_id, hv in head_pt.items():
-            if not isinstance(hv, dict):
-                continue
-            hu = hv.get("imageUrl")
-            if isinstance(hu, str) and health_map.get(hu, False):
-                cur_entry = prices_tr.get(item_id)
-                if isinstance(cur_entry, dict) and not cur_entry.get("imageUrl"):
-                    cur_entry["imageUrl"] = hu
-    except Exception:
-        pass
+    # Re-seed HTTP-200 verified legacy prices_tr studio URLs from git 29c4a2e and HEAD so valid unique/series photos aren't lost
+    for rev in ("HEAD", "29c4a2e"):
+        try:
+            rev_raw = subprocess.check_output(
+                ["git", "show", f"{rev}:data/prices_tr.json"],
+                cwd=ROOT_DIR,
+                stderr=subprocess.DEVNULL,
+            ).decode("utf-8")
+            rev_pt = json.loads(rev_raw)
+            extra_urls = [
+                v.get("imageUrl")
+                for v in rev_pt.values()
+                if isinstance(v, dict) and isinstance(v.get("imageUrl"), str) and v["imageUrl"].startswith("https://")
+                and v["imageUrl"] not in health_map
+            ]
+            if extra_urls:
+                health_map.update(verify_image_url_pool(state, extra_urls, max_workers=16))
+            for item_id, hv in rev_pt.items():
+                if not isinstance(hv, dict):
+                    continue
+                hu = hv.get("imageUrl")
+                if isinstance(hu, str) and health_map.get(hu, False):
+                    cur_entry = prices_tr.get(item_id)
+                    if cur_entry is None and rev == "29c4a2e":
+                        prices_tr[item_id] = dict(hv)
+                    elif isinstance(cur_entry, dict) and not cur_entry.get("imageUrl"):
+                        cur_entry["imageUrl"] = hu
+        except Exception:
+            pass
 
     print("  [1/4] Merging & matching studio galleries across all categories...", flush=True)
     cpus = _merge_cpus(state, benchmarks, health_map, prices_tr=prices_tr)
@@ -932,9 +1092,9 @@ def run_merge_all() -> None:
     laptops = _merge_laptops(state, health_map, prices_tr=prices_tr)
 
     print("  [2/4] Backfilling reference hardware photos cleanly (cached + high-precision Wikimedia)...", flush=True)
-    backfill_missing_via_wikimedia(state, tablets, "TABLET", http, health_map, max_queries=15)
-    backfill_missing_via_wikimedia(state, smartphones, "SMARTPHONE", http, health_map, max_queries=15)
-    backfill_missing_via_wikimedia(state, cpus, "CPU", http, health_map, max_queries=15)
+    backfill_missing_via_wikimedia(state, tablets, "TABLET", http, health_map, max_queries=40)
+    backfill_missing_via_wikimedia(state, smartphones, "SMARTPHONE", http, health_map, max_queries=45)
+    backfill_missing_via_wikimedia(state, cpus, "CPU", http, health_map, max_queries=55)
     print("  [3/4] Sanitizing prices_tr.json & exporting unified JSON catalogs...", flush=True)
 
     # Build authoritative catalog image map by item_id (explicitly recording None for cleared items so prices_tr never resurrects stale URLs)
@@ -968,7 +1128,7 @@ def run_merge_all() -> None:
     _save_json_both("hardware_benchmarks.json", benchmarks)
 
     manifest = {
-        "catalogVersion": "4.0.0",
+        "catalogVersion": "4.2.0",
         "verifiedAt": VERIFIED_DATE,
         "counts": {
             "cpu": len(cpus),

@@ -35,16 +35,11 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/95/54/LD0005955466.jpg",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO (White)",
-    "images": [
-      "https://media.ldlc.com/r1600/ld/products/00/05/95/54/LD0005955466.jpg",
-      "https://lian-li.com/wp-content/uploads/2023/12/O11DERGB-001.jpg",
-      "https://lian-li.com/wp-content/uploads/2021/12/o11d_evo-768x441.png"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "60.8 L"
     },
@@ -65,12 +60,13 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO XL",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
       "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
       "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1ec7a3be51497aa3abf33c2afcdbf5d0.1600.jpg"
@@ -95,12 +91,13 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO XL (White)",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_xl.webp",
       "https://lian-li.com/wp-content/uploads/2023/09/O11D-EVO-XL-009.webp",
       "https://basic-tutorials.de/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-02-at-21.31.52-2.jpeg",
       "https://media.ldlc.com/r1600/ld/products/00/06/06/93/LD0006069380.jpg"
@@ -125,20 +122,20 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/12/O11D-EVO-RBG_09.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO RGB",
     "images": [
-      "https://lian-li.com/wp-content/uploads/2023/12/O11D-EVO-RBG_09.webp",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1ec7a3be51497aa3abf33c2afcdbf5d0.1600.jpg"
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp",
+      "https://files.pccasegear.com/UserFiles/G99-O11DERGBW-00-prod5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp"
   },
   {
     "name": "LIAN LI O11 Dynamic EVO RGB (White)",
@@ -155,12 +152,16 @@
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic EVO RGB (White)",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp",
+      "https://files.pccasegear.com/UserFiles/G99-O11DERGBW-00-prod5.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_evo_rgb.webp"
   },
   {
     "name": "LIAN LI O11 Vision",
@@ -173,16 +174,11 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://lian-li.com/wp-content/uploads/2023/11/O11_Vision_06.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "O11 Vision",
-    "images": [
-      "https://lian-li.com/wp-content/uploads/2023/11/O11_Vision_06.webp",
-      "https://xiaomitoday.com/wp-content/uploads/2024/11/Lian-Li-O11-Vision-Review-50-scaled.jpg",
-      "https://lian-li.com/wp-content/uploads/2023/11/O11_Vision_02.webp"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "67.8 L"
     },
@@ -203,16 +199,11 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://i5.walmartimages.com/seo/LIAN-LI-O11-Vision-White-Aluminum-Steel-Tempered-Glass-ATX-Mid-Tower-Computer-Case-O11VW_8a75551b-e1fb-4b80-8cd4-a1db5126b46a.8bf544a2a9b5dedc9213b95788327938.jpeg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "O11 Vision (White)",
-    "images": [
-      "https://i5.walmartimages.com/seo/LIAN-LI-O11-Vision-White-Aluminum-Steel-Tempered-Glass-ATX-Mid-Tower-Computer-Case-O11VW_8a75551b-e1fb-4b80-8cd4-a1db5126b46a.8bf544a2a9b5dedc9213b95788327938.jpeg",
-      "https://lian-li.com/wp-content/uploads/2023/11/O11_Vision_06.webp",
-      "https://media.ldlc.com/r1600/ld/products/00/06/18/30/LD0006183058.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "67.8 L"
     },
@@ -233,12 +224,13 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://assets.caseking.de/1753446338867_A-PDP-en-Lian-Li-O11D-MINI-V2-_1_.png",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic Mini",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
       "https://assets.caseking.de/1753446338867_A-PDP-en-Lian-Li-O11D-MINI-V2-_1_.png",
       "https://assets.caseking.de/1753183156648_o11mini_v2_012.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/bf613e9d7fc5e9975f3e2609d985d9d9.1600.jpg"
@@ -263,12 +255,13 @@
     "max_cpu_cooler_height": 167,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://m.media-amazon.com/images/I/71iwoMQEfoL._AC_SL1500_.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (Modüler Çift Bölmeli)",
     "included_fans": "Dahili Fan Yok (Kullanıcı Tercihli Özel Hava Akışı)",
     "front_panel_usb": "1x USB 3.2 Gen 2x2 Type-C (20Gbps), 2x USB 3.0, HD Audio",
     "model": "O11 Dynamic Mini (White)",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_o11_dynamic_mini.webp",
       "https://m.media-amazon.com/images/I/71iwoMQEfoL._AC_SL1500_.jpg",
       "https://media.ldlc.com/r1600/ld/products/00/06/28/94/LD0006289424.jpg",
       "https://assets.caseking.de/1753183156648_o11mini_v2_012.jpg"
@@ -293,16 +286,11 @@
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool 216 RGB",
-    "images": [
-      "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/05/99/72/LD0005997299.jpg",
-      "https://m.media-amazon.com/images/I/71q26nT14fL._AC_SL1500_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "55.6 L"
     },
@@ -323,16 +311,11 @@
     "max_cpu_cooler_height": 180,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool 216 RGB (White)",
-    "images": [
-      "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997352.jpg",
-      "https://cdn.thepcenthusiast.com/wp-content/uploads/2022/11/lian-li-lancool-216-rgb-white-pc-build.jpg",
-      "https://pccaus.com/storage/media/WyHxS9VQaAxWWMV0yteXpEj8x1vE2iEatUKkqP90.jpeg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "55.6 L"
     },
@@ -353,16 +336,11 @@
     "max_cpu_cooler_height": 187,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool III RGB",
-    "images": [
-      "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/05/97/79/LD0005977948.jpg",
-      "https://geekawhat.com/wp-content/uploads/2022/07/Lancool-III-Cable-Management-Lancool-III-Case-Review.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "65.5 L"
     },
@@ -383,16 +361,11 @@
     "max_cpu_cooler_height": 187,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "Lancool III RGB (White)",
-    "images": [
-      "https://eezepc.com/wp-content/uploads/2022/08/Lian-Li-LANCOOL-III-RGB-8.jpg",
-      "https://lian-li.com/wp-content/uploads/2022/07/lan3-027.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/05/97/79/LD0005977926.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "65.5 L"
     },
@@ -472,16 +445,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Flow",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529623cv11d.jpg",
-      "https://media.overclock3d.net/2025/05/IMG_3854-scaled.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "76.7 L"
     },
@@ -502,16 +470,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Flow (White)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/0cda49e883ff1ea3cab69e0808746f27.1600.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529623cv11d.jpg",
-      "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2023/04/nzxt-h9-flow-case-side-panel-off-main-view-3.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "76.7 L"
     },
@@ -532,16 +495,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Elite",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529620_sd.jpg",
-      "https://i.redd.it/kgoo8z8zazea1.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "66.9 L"
     },
@@ -562,15 +520,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H7 Flow (2024)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/14/85/LD0006148579.jpg",
-      "https://m.media-amazon.com/images/I/819ZQMMOfAL._AC_.jpg"
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/nzxt_h7_flow_2024.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
     ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "55.8 L"
@@ -579,7 +535,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/nzxt_h7_flow_2024.webp"
   },
   {
     "name": "NZXT H7 Flow (2024) (White)",
@@ -592,15 +549,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 420,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H7 Flow (2024) (White)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/14/85/LD0006148579.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/df16bd7e-95f6-4983-a97e-c93ff5e524b4.jpg"
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/nzxt_h7_flow_2024.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"
     ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "55.8 L"
@@ -609,7 +564,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/nzxt_h7_flow_2024.webp"
   },
   {
     "name": "NZXT H6 Flow",
@@ -682,16 +638,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow RGB",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/01b0954f-0941-4280-b73b-6d285d2c2cb9.png",
-      "https://m.media-amazon.com/images/I/71YVEUXCEeL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "51.8 L"
     },
@@ -712,16 +663,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H6 Flow RGB (White)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/36fe212ae1df2ee3ea86f193354e27fb.1600.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/07/91/LD0006079163.jpg",
-      "https://m.media-amazon.com/images/I/71YVEUXCEeL._AC_.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "51.8 L"
     },
@@ -976,9 +922,7 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "6500X",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "78.3 L"
     },
@@ -986,8 +930,7 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "FRACTAL DESIGN North",
@@ -1460,18 +1403,18 @@
     "max_cpu_cooler_height": 160,
     "max_radiator_size": 240,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_100r_temperli_caml_120mm_argb_fanl_mid_tower.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG Forge 100R",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_100r_temperli_caml_120mm_argb_fanl_mid_tower.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-forge-100r-bilgisayar-muhafazasi-midi-dikey-tower-si-bilgisayar-kasasi-5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-forge-100r-bilgisayar-muhafazasi-midi-dikey-tower-si-bilgisayar-kasasi-5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -1491,18 +1434,18 @@
     "max_cpu_cooler_height": 160,
     "max_radiator_size": 240,
     "drive_bays": "2x 3.5 Inch, 2x 2.5 Inch",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_150a_650w_80_bronze_atx_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG Forge 112R",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_150a_650w_80_bronze_atx_kasa.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-7.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/09/msi-mag-forge-m100a-d60-600w-80-rgb-matx-kasa-4.jpg"
     ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "42.5 L"
@@ -1525,16 +1468,11 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/61eb5534e35ce8af07f25ff28197862b.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Flow (2023)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/61eb5534e35ce8af07f25ff28197862b.1600.jpg",
-      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529623cv11d.jpg",
-      "https://m.media-amazon.com/images/I/61reVzOIDjL.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "76.7 L"
     },
@@ -1618,15 +1556,13 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/8925e4a3aa61f5cea6249c6e18c54e9e.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H5 Flow RGB (2024)",
     "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/8925e4a3aa61f5cea6249c6e18c54e9e.1600.jpg",
-      "https://media.ldlc.com/r1600/ld/products/00/06/03/54/LD0006035474.jpg",
-      "https://www.awd-it.co.uk/media/wysiwyg/1722895854-h5-flow-rgb-h5-flow-rgb-primary-lg.png"
+      "https://img.yenieera22.com/cdn/1000/cc-h52fb-r1_clipped_rev_1-71deae.png",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/8925e4a3aa61f5cea6249c6e18c54e9e.1600.jpg"
     ],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "47 L"
@@ -1635,7 +1571,8 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-h52fb-r1_clipped_rev_1-71deae.png"
   },
   {
     "name": "NZXT H9 Flow RGB+ (2025)",
@@ -1649,12 +1586,13 @@
     "max_gpu_length": 400,
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/791f157d26538e32901a4b24f6744af7.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-95f808.png",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Flow RGB+ (2025)",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-95f808.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/791f157d26538e32901a4b24f6744af7.1600.jpg",
       "https://m.media-amazon.com/images/I/71GUYZWzSyL._AC_SL1500_.jpg",
       "https://c1.neweggimages.com/productimage/nb1280/AG1PD25052003MQT5EF.jpg"
@@ -1824,19 +1762,19 @@
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "A21 Plus ARGB",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_a21_plus_argb_temperli_cam_usb_3_2_matx_mesh_beyaz_mid_tower_gaming_kasa.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/07/asus-a21-plus-argb-temperli-cam-usb-3-2-matx-mesh-beyaz-mid-tower-gaming-kasa-y1.jpg"
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_a21_plus_argb_temperli_cam_usb_3_2_matx_mesh_beyaz_mid_tower_gaming_kasa.webp"
   },
   {
     "name": "ASUS ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
@@ -1848,18 +1786,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-siyah-usb-3-2-mid-tower-atx-gaming-kasa-f1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_proart_pa401_wood_edition_metal_panel_siyah_usb_3_2_mid_tower_atx_gaming_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ProArt PA401 Wood Edition Metal Panel Siyah USB 3.2 Mid Tower ATX",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/asus_proart_pa401_wood_edition_metal_panel_siyah_usb_3_2_mid_tower_atx_gaming_kasa.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-siyah-usb-3-2-mid-tower-atx-gaming-kasa-f1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-3.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-5.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-6.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2024/12/asus-proart-pa401-wood-edition-metal-panel-usb-3-0-mid-tower-siyah-kasa-5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -1910,12 +1848,20 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ROG Strix Hyperion GR701",
-    "images": [],
+    "images": [
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa-t2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa-h19.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa-h1.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa-h2.jpg",
+      "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa-h3.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2023/01/asus-rog-strix-hyperion-gr701-tempered-glass-argb-usb-3-2-high-tower-kasa.jpg"
   },
   {
     "name": "BITFENIX Grafi Black",
@@ -1956,18 +1902,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/cooler_master_masterframe_360_panaroma_siyah_ayna_efektli_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MasterFrame 360 Panaroma Siyah Ayna Efektli",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/cooler_master_masterframe_360_panaroma_siyah_ayna_efektli_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-ayna-efektli-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/05/cooler-master-masterframe-360-panaroma-siyah-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -2014,18 +1960,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/havn_hs_420_base_edition_black_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "HS 420 Base Edition Black",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/havn_hs_420_base_edition_black_temperli_cam_usb_3_2_mid_tower_atx_gaming_kasa.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/havn-hs-420-base-edition-black-temperli-cam-usb-3-2-mid-tower-atx-gaming-kasa-4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -2047,12 +1993,16 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "AX65 ARGB",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_ax65_argb_4x120mm_fan_atx_siyah_mid_tower.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_ax65_argb_4x120mm_fan_atx_siyah_mid_tower.webp"
   },
   {
     "name": "LIAN LI VECTOR V100R Beyaz ATX",
@@ -2064,12 +2014,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://down-my.img.susercontent.com/file/my-11134207-820li-mgkonyova6toa6",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_vector_v100r_beyaz_atx_kasa_g99_v100rw_01.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VECTOR V100R Beyaz ATX",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/lian_li_vector_v100r_beyaz_atx_kasa_g99_v100rw_01.webp",
       "https://down-my.img.susercontent.com/file/my-11134207-820li-mgkonyova6toa6",
       "https://cdna.pcpartpicker.com/static/forever/images/product/33c1bd4bd2b68730e185a80a0b6e7750.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/6de2a66396686e0d8ae87631e46fc6b4.1600.jpg"
@@ -2090,18 +2041,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-1.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_pano_130r_pz_4_x_argb_fan_usb_3_2_atx_tower.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG PANO 130R PZ",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_pano_130r_pz_4_x_argb_fan_usb_3_2_atx_tower.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/12/msi-mag-pano-130r-pz-black-4x120mm-argb-fan-temperli-cam-mid-tower-atx-gaming-kasa-4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -2119,12 +2070,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4200s_750w_80_tempered_glass_usb_3_0_rgb_atx_mid_tower_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VG4200S 750W 80+",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4200s_750w_80_tempered_glass_usb_3_0_rgb_atx_mid_tower_kasa.webp",
       "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg?revision=1760019643",
       "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/e030432b3eb14c11bfc62571c4599d4e.jpg?revision=1760019644",
       "https://www.perpaelektrik.com/idea/fl/09/myassets/products/795/dc86e6f6e6a24ac79c765aeb87a84346.jpg"
@@ -2145,12 +2097,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/gamebooster_m6001w_600w_seaview_tempered_glass_rainbow_beyaz_matx_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "M6001W 600W SeaView",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/gamebooster_m6001w_600w_seaview_tempered_glass_rainbow_beyaz_matx_kasa.webp",
       "https://images.hepsiburada.net/description-assets/description-prod-30/eeee2504-19e5-48e0-ae08-3bca0fb9a907.jpg",
       "https://ncrgame.com/images/prod/7092.jpg"
     ],
@@ -2451,12 +2404,16 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CX700 ARGB WHITE",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx700_argb_white_temperli_caml_type_c_x1_mid_tower_atx.webp",
+      "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
+    ],
     "extra_specs": {},
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx700_argb_white_temperli_caml_type_c_x1_mid_tower_atx.webp"
   },
   {
     "name": "ANTEC CX500M ARGB BLACK",
@@ -2468,12 +2425,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/1ec8cc07183e95ffa42108f24f37360c.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx500m_argb_black_temperli_caml_3x_argb_fanl_mini_tower.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "CX500M ARGB BLACK",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_cx500m_argb_black_temperli_caml_3x_argb_fanl_mini_tower.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1ec8cc07183e95ffa42108f24f37360c.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/d81c07208b12f15f65dc0ad3bf9596e5.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/47f5f80539aa5e8cc9f4d5ebe8cd1dd2.1600.jpg"
@@ -2494,12 +2452,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_c8_wood_temperli_caml_type_c_x1_dual_chamber_full_tower.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "C8 WOOD",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/antec_c8_wood_temperli_caml_type_c_x1_dual_chamber_full_tower.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg",
       "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/116f3b98eda96c45ac039d7b9361102d.1600.jpg"
@@ -2607,12 +2566,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4202fl_rainbow_fanl_temperli_caml_atx_gaming_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "VG4202FL Rainbow Fanlı",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/vento_vg4202fl_rainbow_fanl_temperli_caml_atx_gaming_kasa.webp",
       "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-4-1024x1024.png",
       "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-1024x1024.png",
       "https://ventocase.com/wp-content/uploads/2025/01/VG402FL-IMAGES-2-1024x1024.png"
@@ -2691,12 +2651,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://platincdn.com/3393/pictures/NJSUS19370_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/frisby_fc_8960g_400w_1x120mm_rgb_fanl_mid_tower_gaming_kasa.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "FC-8960G 400W",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/frisby_fc_8960g_400w_1x120mm_rgb_fanl_mid_tower_gaming_kasa.webp",
       "https://platincdn.com/3393/pictures/NJSUS19370_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg",
       "https://platincdn.com/3393/pictures/UDNTB191012_frisby-fc-8960g-400w-1xrgb-led-serit-g.jpg",
       "https://platincdn.com/3393/pictures/RKUTY19814_frisby-fc-8960g-400w-1xrgb-led-serit-ga.jpg"
@@ -2769,18 +2730,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_100r_temperli_caml_120mm_argb_fanl_mid_tower.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "MAG FORGE 100R",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_mag_forge_100r_temperli_caml_120mm_argb_fanl_mid_tower.webp",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2021/06/msi-mag-forge-100r-tempered-glass-argb-usb-3-2-mid-tower-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-forge-100r-bilgisayar-muhafazasi-midi-dikey-tower-si-bilgisayar-kasasi-5.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/4145e426378c801cc80da05d9ec6e8bf.1600.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/08/msi-mag-forge-100r-bilgisayar-muhafazasi-midi-dikey-tower-si-bilgisayar-kasasi-5.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -2828,12 +2789,13 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/3f987bc0dd827f7a9cb774024478dcea.1600.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_pro_shield_m100p_1x80mm_fanl_matx_bilgisayar_kasas.webp",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "PRO SHIELD M100P",
     "images": [
+      "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/case/msi_pro_shield_m100p_1x80mm_fanl_matx_bilgisayar_kasas.webp",
       "https://cdna.pcpartpicker.com/static/forever/images/product/3f987bc0dd827f7a9cb774024478dcea.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/71da8ca66086fde771b7f355b11ccf10.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/093453953d770cfdd2b0818450bb6089.1600.jpg"
@@ -2854,18 +2816,18 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 2x 2.5\"",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/1-9444a0.png",
     "radiator_support": "Üst: 240/280/360mm / Ön: 240/360mm",
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "ROG Strix Helios II GX601S",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/1-9444a0.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-usb-3-2-mid-tower-e-atx-gaming-kasa-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2025/08/asus-rog-strix-helios-ii-gx601s-black-edition-4x140mm-fan-mesh-cift-temperli-cam-mid-tower-e-atx-gaming-kasa-4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -2943,16 +2905,11 @@
     "max_cpu_cooler_height": 165,
     "max_radiator_size": 360,
     "drive_bays": "2x 3.5\" + 4x 2.5\"",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg",
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
     "model": "H9 Elite (White)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/b1bef448b0e5397e703971eef3a08e40.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/3343638ac7c51fa6e94ae27e5413fa37.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/ef210e01af6191ab58a81a1fa721e9a0.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "66.9 L"
     },
@@ -2976,9 +2933,7 @@
     "included_fans": "4x 120mm / 140mm ARGB PWM Dahili Fan",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
     "model": "6500X (White)",
-    "images": [
-      "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "78.3 L"
     },
@@ -2986,8 +2941,7 @@
       "HardwareWizard Katalog",
       "pc-part-dataset"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/164489b99e0aa91a4a732b0932943780.1600.jpg"
+    "spec_verified_at": "2026-11-16"
   },
   {
     "name": "Phanteks NV5",
@@ -4003,12 +3957,7 @@
     "radiator_support": "Üst: 360mm / Yan: 360mm / Alt: 360mm (0.8mm & 1.0mm Çelik Şasi)",
     "included_fans": "Dahili Fan Yok (Geniş Termal Alan)",
     "front_panel_usb": "1x Type-C 10Gbps, 2x USB 3.0, Mic/Audio",
-    "imageUrl": "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
-    "images": [
-      "https://m.media-amazon.com/images/I/51Ei0hzdY3L.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/733e7367fe45367fb76e6e94c306aa77.1600.jpg",
-      "https://cdna.pcpartpicker.com/static/forever/images/product/2a8206d7453adc8fd0dc0c9e848fd2d6.1600.jpg"
-    ],
+    "images": [],
     "extra_specs": {
       "Kasa İç Hacmi (Litre)": "66.9 L"
     },
@@ -4053,14 +4002,14 @@
     "radiator_support": "Üst: 360mm / Yan: 240mm / Alt: 360mm",
     "included_fans": "Dahili Fan Yok",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C, 2x USB 3.0",
-    "imageUrl": "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-1.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cc-9011266-ww_clipped_rev_1-bb20ac.png",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/cc-9011266-ww_clipped_rev_1-bb20ac.png",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-1.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-t2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-2.jpg",
       "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-3.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-4.jpg",
-      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-5.jpg"
+      "https://www.gaming.gen.tr/wp-content/uploads/2026/01/corsair-air-5400-rs-r-beyaz-3x120mm-argb-fan-mesh-temperli-cam-usb-3-2-triple-chamber-mid-tower-e-atx-gaming-kasa-cc-9011319-ww-4.jpg"
     ],
     "extra_specs": {},
     "source_provenance": [
@@ -4187,8 +4136,9 @@
     "radiator_support": "Üst: 360mm / Ön: 360mm / Yan: 360mm",
     "included_fans": "3x 120mm / 4x 140mm ARGB PWM Fan Dahili",
     "front_panel_usb": "1x USB 3.2 Gen 2 Type-C (10Gbps), 2x USB 3.0",
-    "imageUrl": "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
+    "imageUrl": "https://img.yenieera22.com/cdn/1000/cm-h72fb-r1_clipped_rev_1-3fc3ce.png",
     "images": [
+      "https://img.yenieera22.com/cdn/1000/cm-h72fb-r1_clipped_rev_1-3fc3ce.png",
       "https://cdna.pcpartpicker.com/static/forever/images/product/b751cc2a71f197645f86433d3321a1dd.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/c4c8b6dc19a005ed0da00b161cec7c1c.1600.jpg",
       "https://cdna.pcpartpicker.com/static/forever/images/product/1adad593d049169c8f3bb35a682a0fab.1600.jpg"

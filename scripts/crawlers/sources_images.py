@@ -45,26 +45,39 @@ GAMINGGEN_CATEGORY_MAP = [
 GSMARENA_BRAND_INDEXES = [
     ("Apple", "https://www.gsmarena.com/apple-phones-48.php"),
     ("Apple", "https://www.gsmarena.com/apple-phones-f-48-0-p2.php"),
+    ("Apple", "https://www.gsmarena.com/apple-phones-f-48-0-p3.php"),
     ("Samsung", "https://www.gsmarena.com/samsung-phones-9.php"),
     ("Samsung", "https://www.gsmarena.com/samsung-phones-f-9-0-p2.php"),
     ("Samsung", "https://www.gsmarena.com/samsung-phones-f-9-0-p3.php"),
+    ("Samsung", "https://www.gsmarena.com/samsung-phones-f-9-0-p4.php"),
+    ("Samsung", "https://www.gsmarena.com/samsung-phones-f-9-0-p5.php"),
+    ("Samsung", "https://www.gsmarena.com/samsung-phones-f-9-0-p6.php"),
     ("Xiaomi", "https://www.gsmarena.com/xiaomi-phones-80.php"),
     ("Xiaomi", "https://www.gsmarena.com/xiaomi-phones-f-80-0-p2.php"),
     ("Xiaomi", "https://www.gsmarena.com/xiaomi-phones-f-80-0-p3.php"),
+    ("Xiaomi", "https://www.gsmarena.com/xiaomi-phones-f-80-0-p4.php"),
     ("Google", "https://www.gsmarena.com/google-phones-107.php"),
     ("Google", "https://www.gsmarena.com/google-phones-f-107-0-p2.php"),
     ("OnePlus", "https://www.gsmarena.com/oneplus-phones-95.php"),
     ("OnePlus", "https://www.gsmarena.com/oneplus-phones-f-95-0-p2.php"),
+    ("OnePlus", "https://www.gsmarena.com/oneplus-phones-f-95-0-p3.php"),
     ("Huawei", "https://www.gsmarena.com/huawei-phones-58.php"),
     ("Huawei", "https://www.gsmarena.com/huawei-phones-f-58-0-p2.php"),
+    ("Huawei", "https://www.gsmarena.com/huawei-phones-f-58-0-p3.php"),
     ("Honor", "https://www.gsmarena.com/honor-phones-121.php"),
     ("Honor", "https://www.gsmarena.com/honor-phones-f-121-0-p2.php"),
+    ("Honor", "https://www.gsmarena.com/honor-phones-f-121-0-p3.php"),
     ("Oppo", "https://www.gsmarena.com/oppo-phones-82.php"),
     ("Oppo", "https://www.gsmarena.com/oppo-phones-f-82-0-p2.php"),
+    ("Oppo", "https://www.gsmarena.com/oppo-phones-f-82-0-p3.php"),
     ("Vivo", "https://www.gsmarena.com/vivo-phones-98.php"),
+    ("Vivo", "https://www.gsmarena.com/vivo-phones-f-98-0-p2.php"),
     ("Realme", "https://www.gsmarena.com/realme-phones-118.php"),
+    ("Realme", "https://www.gsmarena.com/realme-phones-f-118-0-p2.php"),
     ("Motorola", "https://www.gsmarena.com/motorola-phones-4.php"),
+    ("Motorola", "https://www.gsmarena.com/motorola-phones-f-4-0-p2.php"),
     ("Lenovo", "https://www.gsmarena.com/lenovo-phones-73.php"),
+    ("Lenovo", "https://www.gsmarena.com/lenovo-phones-f-73-0-p2.php"),
     ("ASUS", "https://www.gsmarena.com/asus-phones-46.php"),
     ("Sony", "https://www.gsmarena.com/sony-phones-7.php"),
 ]
@@ -193,7 +206,7 @@ def crawl_gsmarena_galleries(
         makers_m = re.search(r'<div class="makers">(.*?)</div>', html, re.S)
         section = makers_m.group(1) if makers_m else html
         cards = re.findall(
-            r'<a[^>]+href=["\']?([a-z0-9_.\-]+\.php)["\']?[^>]*>.*?<img[^>]+src=["\']?(https://fdn2\.gsmarena\.com/[^"\'\s>]+)["\']?[^>]*>.*?<strong><span>(.*?)</span></strong>',
+            r'<a[^>]+href=["\']?([a-z0-9_.\-]+\.php)["\']?[^>]*>.*?<img[^>]+src=["\']?(https://fdn2\.gsmarena\.com/[^"\'\s>]+)["\']?[^>]*>.*?(?:<strong>\s*)?<span>(.*?)</span>(?:\s*</strong>)?',
             section,
             re.S | re.I,
         )
@@ -332,3 +345,246 @@ def verify_image_url_pool(
         state.set_image_health_batch(batch)
 
     return {u: health.get(u, False) for u in unique_urls}
+
+
+_ITOPYA_CAT_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("CPU", re.compile(r"-(?:tray-)?islemci_u\d+$")),
+    ("GPU", re.compile(r"-ekran-karti_u\d+$")),
+    ("MOTHERBOARD", re.compile(r"-anakart_u\d+$")),
+    ("RAM", re.compile(r"-ram_u\d+$")),
+    ("STORAGE", re.compile(r"-(?:nvme-m2-ssd|m2-ssd|sata-ssd|ssd|okuma-[a-z0-9-]+-yazma|harddisk|tasinabilir-ssd)_u\d+$")),
+    ("UPS", re.compile(r"-(?:kesintisiz-guc-kaynagi|ups)_u\d+$")),
+    ("PSU", re.compile(r"-(?:guc-kaynagi|(?<!fanli-)psu)_u\d+$")),
+    ("COOLER", re.compile(r"-(?:sivi-sogutucu|islemci-sogutucu|sogutucu|kasa-fani)_u\d+$")),
+    ("CASE", re.compile(r"-(?:bilgisayar-kasasi|tower-kasa|gaming-kasa|kasa)_u\d+$")),
+    ("LAPTOP", re.compile(r"-(?:gaming-notebook|notebook|gaming-laptop|laptop|dizustu-bilgisayar)_u\d+$")),
+    ("ROUTER", re.compile(r"-router_u\d+$")),
+    ("PERIPHERALS", re.compile(r"-(?:monitor|mouse|klavye|kulaklik|gamepad|hoparlor|mikrofon|webcam|mouse-pad|oyuncu-koltugu)_u\d+$")),
+]
+
+_ITOPYA_STOP_TOKENS = {
+    "with", "edition", "gaming", "oc", "pro", "plus", "the", "for", "and",
+    "black", "white", "rgb", "argb", "bulk", "tray", "mpk", "kutusuz", "bit",
+    "gddr6", "gddr6x", "gddr7", "ddr5", "ddr4", "pcie", "nvme", "m2", "atx",
+    "matx", "micro", "mini", "itx", "wifi", "ekran", "karti", "anakart",
+    "islemci", "ram", "ssd", "sogutucu", "sivi", "kasa", "psu", "guc",
+    "kaynagi", "notebook", "laptop", "monitor", "klavye", "mouse", "kulaklik",
+    "router", "ups", "fanli",
+}
+
+_ITOPYA_BAD_IMG_SUBSTRS = (
+    "itopya-logo", "itopya.png", "/assets/", "yapay-zeka", "ai-paket",
+    "ai-super-bilgisayar", "kampanya", "banner", "hediye",
+)
+
+
+def _itopya_tokens(text: str) -> set[str]:
+    low = re.sub(r"[^a-z0-9]+", " ", (text or "").lower())
+    return {t for t in low.split() if len(t) >= 2 and t not in _ITOPYA_STOP_TOKENS}
+
+
+def _classify_itopya_url(url: str) -> tuple[str, str, set[str]] | None:
+    slug = url.rsplit("/", 1)[-1]
+    if "_u" not in slug:
+        return None
+    for cat, pat in _ITOPYA_CAT_PATTERNS:
+        if not pat.search(slug):
+            continue
+        if cat in ("CPU", "GPU", "MOTHERBOARD", "RAM") and any(
+            bad in slug for bad in ("-oyuncu-bilgisayari", "-masaustu-pc", "-tavsiye-sistem", "-gaming-pc")
+        ):
+            return None
+        if cat == "PSU" and ("kasa" in slug or "kesintisiz" in slug):
+            return None
+        if cat == "CASE" and ("kasa-fani" in slug):
+            return None
+        clean_slug = re.sub(r"_u\d+$", "", slug)
+        return cat, slug, _itopya_tokens(clean_slug)
+    return None
+
+
+def _load_itopya_missing_targets(state: CrawlStateManager) -> dict[str, list[set[str]]]:
+    import json
+    import os
+    import subprocess
+    from scripts.crawlers.state_manager import ROOT_DIR
+
+    files_dir = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
+    fn_to_cat = {
+        "cpu.json": "CPU",
+        "video-card.json": "GPU",
+        "motherboard.json": "MOTHERBOARD",
+        "memory.json": "RAM",
+        "internal-hard-drive.json": "STORAGE",
+        "power-supply.json": "PSU",
+        "cpu-cooler.json": "COOLER",
+        "case.json": "CASE",
+        "laptop.json": "LAPTOP",
+        "peripherals.json": "PERIPHERALS",
+    }
+    targets: dict[str, list[set[str]]] = {c: [] for c in fn_to_cat.values()}
+    targets["ROUTER"] = []
+    targets["UPS"] = []
+
+    for fn, cat in fn_to_cat.items():
+        p = os.path.join(files_dir, fn)
+        if not os.path.exists(p):
+            continue
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                arr = json.load(f)
+            for item in arr:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("image_url") or item.get("imageUrl"):
+                    continue
+                name = item.get("name") or item.get("displayName") or ""
+                toks = _itopya_tokens(name)
+                if len(toks) >= 2:
+                    targets[cat].append(toks)
+        except Exception:
+            continue
+
+    # Also prioritize real missing/dropped baseline products from commit 29c4a2e
+    for fn, cat in (("cpu.json", "CPU"), ("video-card.json", "GPU")):
+        try:
+            raw = subprocess.check_output(
+                ["git", "show", f"29c4a2e:shared/src/commonMain/composeResources/files/{fn}"],
+                cwd=ROOT_DIR,
+            )
+            for item in json.loads(raw):
+                name = item.get("name") or ""
+                toks = _itopya_tokens(name)
+                if len(toks) >= 2:
+                    targets[cat].append(toks)
+        except Exception:
+            pass
+
+    # Include missing-image ROUTER / UPS items directly from raw_records
+    for cat in ("ROUTER", "UPS"):
+        for r in state.load_records_for_category(cat):
+            toks = _itopya_tokens(r["display_name"] or "")
+            if len(toks) >= 2:
+                targets[cat].append(toks)
+
+    return targets
+
+
+def crawl_itopya_targeted(
+    http: PoliteHttpClient,
+    state: CrawlStateManager,
+    max_fetch: int = 900,
+    delta_only: bool = False,
+) -> int:
+    """Crawls standalone _u product pages from Itopya sitemaps matching catalog items."""
+    sitemap_urls: list[str] = []
+    for idx in range(8):
+        xml_url = f"https://www.itopya.com/xml/itopya_products_{idx}.xml"
+        try:
+            xml_text, _, _, _ = http.get_text(xml_url)
+            if xml_text:
+                sitemap_urls.extend(re.findall(r"<loc>(https?://[^<]+)</loc>", xml_text))
+        except Exception as exc:
+            if exc.__class__.__name__ == "BlockedAntiBotError":
+                raise
+            state.save_progress(f"itopya:xml:{idx}", "ERROR", note=str(exc))
+
+    if not sitemap_urls:
+        state.log_audit("IMAGES", "Itopya Catalog", "EMPTY", 0, "no sitemap URLs")
+        return 0
+
+    targets = _load_itopya_missing_targets(state)
+    core_cats = {"GPU", "CPU", "RAM", "MOTHERBOARD", "STORAGE", "LAPTOP", "ROUTER", "UPS", "PSU", "COOLER", "CASE"}
+    candidates: list[tuple[int, str, str, str]] = []
+
+    seen_url: set[str] = set()
+    for url in sitemap_urls:
+        if url in seen_url:
+            continue
+        seen_url.add(url)
+        classified = _classify_itopya_url(url)
+        if not classified:
+            continue
+        cat, slug, utoks = classified
+        task = f"itopya:u:{slug}"
+        prog = state.get_progress(task)
+        if prog and prog["status"] == "DONE" and (prog["cursor"] or delta_only):
+            continue
+
+        best_overlap = 0
+        for ttoks in targets.get(cat, []):
+            common = len(utoks & ttoks)
+            if common > best_overlap and common >= min(3, len(ttoks)):
+                best_overlap = common
+        score = best_overlap * 10 + (8 if cat in core_cats else 2)
+        if best_overlap > 0 or cat in ("GPU", "CPU", "RAM", "MOTHERBOARD", "STORAGE", "LAPTOP", "ROUTER", "UPS"):
+            candidates.append((score, cat, slug, url))
+
+    candidates.sort(key=lambda x: (-x[0], x[1], x[2]))
+    to_fetch = candidates[:max_fetch]
+
+    total_inserted = 0
+    batch: list[dict[str, Any]] = []
+    for _, cat, slug, url in to_fetch:
+        task = f"itopya:u:{slug}"
+        try:
+            html, status, _, _ = http.get_text(url)
+        except Exception as exc:
+            if exc.__class__.__name__ == "BlockedAntiBotError":
+                state.save_progress(task, "BLOCKED", note=str(exc))
+                break
+            state.save_progress(task, "ERROR", note=str(exc))
+            continue
+
+        if status != 200 or not html:
+            state.save_progress(task, "DONE", cursor="")
+            continue
+
+        og_m = re.search(
+            r'<meta\s+(?:property|name)=["\']og:image["\']\s+content=["\']([^"\']+)["\']',
+            html,
+            re.I,
+        )
+        if not og_m:
+            state.save_progress(task, "DONE", cursor="")
+            continue
+
+        img_url = og_m.group(1).strip()
+        if not img_url.startswith("https://") or any(b in img_url.lower() for b in _ITOPYA_BAD_IMG_SUBSTRS):
+            state.save_progress(task, "DONE", cursor="")
+            continue
+
+        h1_m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S | re.I)
+        name = _clean_text(h1_m.group(1)) if h1_m else re.sub(r"_u\d+$", "", slug).replace("-", " ").title()
+        if not name:
+            state.save_progress(task, "DONE", cursor="")
+            continue
+
+        sku_m = re.search(r'Ürün Kodu\s*[:<][^A-Za-z0-9]*([A-Za-z0-9\-/_.]+)', html, re.I)
+        sku = sku_m.group(1).strip() if sku_m else ""
+        brand = name.split()[0]
+
+        batch.append(
+            {
+                "category": cat,
+                "source_name": "Itopya Catalog",
+                "canonical_key": normalize_canonical_key(name),
+                "display_name": name,
+                "brand": brand,
+                "payload": {"slug": slug, "sku": sku},
+                "extra_specs": {"sku": sku} if sku else {},
+                "images": [img_url],
+                "source_url": url,
+            }
+        )
+        state.save_progress(task, "DONE", cursor=img_url)
+
+        if len(batch) >= 25:
+            total_inserted += state.upsert_raw_batch(batch)
+            batch.clear()
+
+    if batch:
+        total_inserted += state.upsert_raw_batch(batch)
+
+    state.log_audit("IMAGES", "Itopya Catalog", "OK", total_inserted, f"fetched={len(to_fetch)}")
+    return total_inserted

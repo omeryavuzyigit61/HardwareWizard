@@ -7227,7 +7227,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Fold 7",
     "priceTry": 98999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 3300000,
     "gamingIndex": 100,
@@ -7447,7 +7449,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-7-256gb",
@@ -7455,7 +7457,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Flip 7",
     "priceTry": 68999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip7.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 3100000,
     "gamingIndex": 98,
@@ -7716,7 +7720,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip7.jpg"
   },
   {
     "id": "phone-samsung-galaxy-s25-ultra-256gb",
@@ -9984,7 +9988,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Fold 6",
     "priceTry": 79999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 1950000,
     "gamingIndex": 97,
@@ -10245,7 +10251,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-6-256gb",
@@ -10253,7 +10259,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Flip 6",
     "priceTry": 49999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 1880000,
     "gamingIndex": 94,
@@ -10473,7 +10481,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-5-256gb",
@@ -10481,7 +10489,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Fold 5",
     "priceTry": 64999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1550000,
     "gamingIndex": 94,
@@ -10700,7 +10710,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-5-256gb",
@@ -10708,7 +10719,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Flip 5",
     "priceTry": 38999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip5-5g.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1480000,
     "gamingIndex": 90,
@@ -10927,7 +10940,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip5-5g.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-4-256gb",
@@ -10935,7 +10949,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Fold 4",
     "priceTry": 49999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1280000,
     "gamingIndex": 89,
@@ -11154,7 +11170,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4.jpg"
   },
   {
     "id": "phone-samsung-galaxy-z-flip-4-128gb",
@@ -11162,7 +11179,9 @@
     "brand": "Samsung",
     "model": "Galaxy Z Flip 4",
     "priceTry": 28999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1220000,
     "gamingIndex": 86,
@@ -11381,7 +11400,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg"
   },
   {
     "id": "phone-samsung-galaxy-s23-ultra-256gb",
@@ -12836,8 +12856,9 @@
     "brand": "Samsung",
     "model": "Galaxy S21 FE 5G (Snapdragon)",
     "priceTry": 18999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-105187/Samsung-Galaxy-S21-FE-5G-featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-fe-5g.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-fe-5g.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-105187/Samsung-Galaxy-S21-FE-5G-featured-image-packshot-review.jpg"
     ],
     "tier": "B+",
@@ -15428,7 +15449,9 @@
     "brand": "Samsung",
     "model": "Galaxy XCover 7 (Askeri Zırh)",
     "priceTry": 17999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-xcover7.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 430000,
     "gamingIndex": 63,
@@ -15648,7 +15671,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-xcover7.jpg"
   },
   {
     "id": "phone-xiaomi-15-ultra-512gb",
@@ -16403,8 +16426,9 @@
     "brand": "Xiaomi",
     "model": "14 Ultra",
     "priceTry": 74999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-167787/Xiaomi-14-Ultra_featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra-new.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra-new.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-167787/Xiaomi-14-Ultra_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
@@ -16872,8 +16896,9 @@
     "brand": "Xiaomi",
     "model": "14",
     "priceTry": 43999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-167814/Xiaomi-14-featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-new.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-new.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-167814/Xiaomi-14-featured-image-packshot-review.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-1.jpg",
@@ -18006,7 +18031,9 @@
     "brand": "Xiaomi",
     "model": "Mix Fold 4",
     "priceTry": 89999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold4.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2050000,
     "gamingIndex": 98,
@@ -18226,7 +18253,7 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold4.jpg"
   },
   {
     "id": "phone-xiaomi-mix-flip-512gb",
@@ -18234,7 +18261,9 @@
     "brand": "Xiaomi",
     "model": "Mix Flip",
     "priceTry": 64999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 1980000,
     "gamingIndex": 95,
@@ -18412,7 +18441,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg"
   },
   {
     "id": "phone-xiaomi-redmi-note-14-pro-plus-512gb",
@@ -19046,7 +19076,9 @@
     "brand": "Xiaomi",
     "model": "Redmi Note 13 4G",
     "priceTry": 10999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 340000,
     "gamingIndex": 60,
@@ -19265,13 +19297,14 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg"
   },
   {
     "id": "phone-poco-f7-pro-512gb",
-    "name": "POCO POCO F7 Pro",
+    "name": "POCO F7 Pro",
     "brand": "POCO",
-    "model": "POCO F7 Pro",
+    "model": "F7 Pro",
     "priceTry": 38999.0,
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-pro.jpg"
@@ -19458,9 +19491,9 @@
   },
   {
     "id": "phone-poco-f7-256gb",
-    "name": "POCO POCO F7",
+    "name": "POCO F7",
     "brand": "POCO",
-    "model": "POCO F7",
+    "model": "F7",
     "priceTry": 29999.0,
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-new.jpg"
@@ -19693,11 +19726,14 @@
   },
   {
     "id": "phone-poco-f6-pro-512gb",
-    "name": "POCO POCO F6 Pro",
+    "name": "POCO F6 Pro",
     "brand": "POCO",
-    "model": "POCO F6 Pro",
+    "model": "F6 Pro",
     "priceTry": 33999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6-pro.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1600000,
     "gamingIndex": 95,
@@ -19875,15 +19911,18 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6-pro.jpg"
   },
   {
     "id": "phone-poco-f6-256gb",
-    "name": "POCO POCO F6",
+    "name": "POCO F6",
     "brand": "POCO",
-    "model": "POCO F6",
+    "model": "F6",
     "priceTry": 24999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1520000,
     "gamingIndex": 93,
@@ -20102,13 +20141,14 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
   },
   {
     "id": "phone-poco-f5-pro-256gb",
-    "name": "POCO POCO F5 Pro",
+    "name": "POCO F5 Pro",
     "brand": "POCO",
-    "model": "POCO F5 Pro",
+    "model": "F5 Pro",
     "priceTry": 26999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-154144/POCO-F5-Pro.png",
     "images": [
@@ -20343,9 +20383,9 @@
   },
   {
     "id": "phone-poco-f5-256gb",
-    "name": "POCO POCO F5",
+    "name": "POCO F5",
     "brand": "POCO",
-    "model": "POCO F5",
+    "model": "F5",
     "priceTry": 19999.0,
     "images": [],
     "tier": "A+",
@@ -20570,9 +20610,9 @@
   },
   {
     "id": "phone-poco-f4-gt-256gb",
-    "name": "POCO POCO F4 GT (Manyetik Tetik)",
+    "name": "POCO F4 GT (Manyetik Tetik)",
     "brand": "POCO",
-    "model": "POCO F4 GT (Manyetik Tetik)",
+    "model": "F4 GT (Manyetik Tetik)",
     "priceTry": 21999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-116528/Poco-F4-GT_featured-image-packshot-review-Recovered.jpg",
     "images": [
@@ -20809,9 +20849,9 @@
   },
   {
     "id": "phone-poco-x7-pro-512gb",
-    "name": "POCO POCO X7 Pro",
+    "name": "POCO X7 Pro",
     "brand": "POCO",
-    "model": "POCO X7 Pro",
+    "model": "X7 Pro",
     "priceTry": 27999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",
     "images": [
@@ -20999,9 +21039,9 @@
   },
   {
     "id": "phone-poco-x6-pro-512gb",
-    "name": "POCO POCO X6 Pro 5G",
+    "name": "POCO X6 Pro 5G",
     "brand": "POCO",
-    "model": "POCO X6 Pro 5G",
+    "model": "X6 Pro 5G",
     "priceTry": 20999.0,
     "images": [],
     "tier": "A+",
@@ -21185,9 +21225,9 @@
   },
   {
     "id": "phone-poco-x6-256gb",
-    "name": "POCO POCO X6 5G",
+    "name": "POCO X6 5G",
     "brand": "POCO",
-    "model": "POCO X6 5G",
+    "model": "X6 5G",
     "priceTry": 15999.0,
     "images": [],
     "tier": "B+",
@@ -21412,9 +21452,9 @@
   },
   {
     "id": "phone-poco-x5-pro-256gb",
-    "name": "POCO POCO X5 Pro 5G",
+    "name": "POCO X5 Pro 5G",
     "brand": "POCO",
-    "model": "POCO X5 Pro 5G",
+    "model": "X5 Pro 5G",
     "priceTry": 14499.0,
     "images": [],
     "tier": "B+",
@@ -21639,9 +21679,9 @@
   },
   {
     "id": "phone-poco-m6-pro-512gb",
-    "name": "POCO POCO M6 Pro (G99 Ultra)",
+    "name": "POCO M6 Pro (G99 Ultra)",
     "brand": "POCO",
-    "model": "POCO M6 Pro (G99 Ultra)",
+    "model": "M6 Pro (G99 Ultra)",
     "priceTry": 12999.0,
     "images": [],
     "tier": "B",
@@ -21825,9 +21865,9 @@
   },
   {
     "id": "phone-poco-c75-256gb",
-    "name": "POCO POCO C75",
+    "name": "POCO C75",
     "brand": "POCO",
-    "model": "POCO C75",
+    "model": "C75",
     "priceTry": 8499.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-c75-.jpg",
     "images": [
@@ -22295,8 +22335,9 @@
     "brand": "Oppo",
     "model": "Find X8 Pro",
     "priceTry": 72999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-179939/Oppo-Find-X8-Pro_featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8-pro.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8-pro.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-179939/Oppo-Find-X8-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
@@ -22538,8 +22579,9 @@
     "brand": "Oppo",
     "model": "Find X8",
     "priceTry": 54999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-179937/Oppo-Find-X8_featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-179937/Oppo-Find-X8_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
@@ -22777,10 +22819,10 @@
     "brand": "Oppo",
     "model": "Find X7 Ultra (Çift Periskop)",
     "priceTry": 64999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-168145/Oppo-Find-X7-Ultra_featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-168145/Oppo-Find-X7-Ultra_featured-image-packshot-review.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-168145/Oppo-Find-X7-Ultra_featured-image-packshot-review.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-ultra-2.jpg"
     ],
@@ -22978,7 +23020,9 @@
     "brand": "Oppo",
     "model": "Find X7",
     "priceTry": 45999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2050000,
     "gamingIndex": 96,
@@ -23203,7 +23247,7 @@
       "Notebookcheck"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg"
   },
   {
     "id": "phone-oppo-find-n3-512gb",
@@ -24489,9 +24533,9 @@
   },
   {
     "id": "phone-oppo-a98-256gb",
-    "name": "Oppo Oppo A98 5G",
+    "name": "Oppo A98 5G",
     "brand": "Oppo",
-    "model": "Oppo A98 5G",
+    "model": "A98 5G",
     "priceTry": 12999.0,
     "images": [],
     "tier": "B",
@@ -24716,9 +24760,9 @@
   },
   {
     "id": "phone-oneplus-13-512gb",
-    "name": "OnePlus OnePlus 13",
+    "name": "OnePlus 13",
     "brand": "OnePlus",
-    "model": "OnePlus 13",
+    "model": "13",
     "priceTry": 69999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-13.jpg",
     "images": [
@@ -24952,9 +24996,9 @@
   },
   {
     "id": "phone-oneplus-12-512gb",
-    "name": "OnePlus OnePlus 12",
+    "name": "OnePlus 12",
     "brand": "OnePlus",
-    "model": "OnePlus 12",
+    "model": "12",
     "priceTry": 56999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
     "images": [
@@ -25154,9 +25198,9 @@
   },
   {
     "id": "phone-oneplus-12r-256gb",
-    "name": "OnePlus OnePlus 12R",
+    "name": "OnePlus 12R",
     "brand": "OnePlus",
-    "model": "OnePlus 12R",
+    "model": "12R",
     "priceTry": 34999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12r-new.jpg",
     "images": [
@@ -25387,9 +25431,9 @@
   },
   {
     "id": "phone-oneplus-open-512gb",
-    "name": "OnePlus OnePlus Open (Katlanabilir)",
+    "name": "OnePlus Open (Katlanabilir)",
     "brand": "OnePlus",
-    "model": "OnePlus Open (Katlanabilir)",
+    "model": "Open (Katlanabilir)",
     "priceTry": 78999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-162643/OnePlus-Open_featured-image-packshot-review.jpg",
     "images": [
@@ -25624,9 +25668,9 @@
   },
   {
     "id": "phone-oneplus-nord-4-256gb",
-    "name": "OnePlus OnePlus Nord 4 (Yekpare Metal)",
+    "name": "OnePlus Nord 4 (Yekpare Metal)",
     "brand": "OnePlus",
-    "model": "OnePlus Nord 4 (Yekpare Metal)",
+    "model": "Nord 4 (Yekpare Metal)",
     "priceTry": 24999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord4.jpg",
     "images": [
@@ -25854,9 +25898,9 @@
   },
   {
     "id": "phone-oneplus-nord-3-256gb",
-    "name": "OnePlus OnePlus Nord 3 5G",
+    "name": "OnePlus Nord 3 5G",
     "brand": "OnePlus",
-    "model": "OnePlus Nord 3 5G",
+    "model": "Nord 3 5G",
     "priceTry": 18999.0,
     "images": [],
     "tier": "A",
@@ -26081,9 +26125,9 @@
   },
   {
     "id": "phone-oneplus-nord-ce-4-128gb",
-    "name": "OnePlus OnePlus Nord CE4",
+    "name": "OnePlus Nord CE4",
     "brand": "OnePlus",
-    "model": "OnePlus Nord CE4",
+    "model": "Nord CE4",
     "priceTry": 15999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4-.jpg",
     "images": [
@@ -27146,8 +27190,9 @@
     "brand": "Honor",
     "model": "Magic V3 (Ultra İnce Katlanabilir)",
     "priceTry": 84999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-177719/Honor-Magic-V3_featured-image-packshot-review.png",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-magic-v3.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/honor-magic-v3.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-177719/Honor-Magic-V3_featured-image-packshot-review.png"
     ],
     "tier": "S+",
@@ -27575,11 +27620,12 @@
   },
   {
     "id": "phone-honor-200-pro-512gb",
-    "name": "Honor Honor 200 Pro (Harcourt Portre)",
+    "name": "Honor 200 Pro (Harcourt Portre)",
     "brand": "Honor",
-    "model": "Honor 200 Pro (Harcourt Portre)",
+    "model": "200 Pro (Harcourt Portre)",
     "priceTry": 34999.0,
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/honor-200-pro-.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-173311/honor_200_pro_featured_image_2.jpg"
     ],
     "tier": "S",
@@ -27769,15 +27815,16 @@
       "DXOMARK"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-173311/honor_200_pro_featured_image_2.jpg"
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-200-pro-.jpg"
   },
   {
     "id": "phone-honor-200-256gb",
-    "name": "Honor Honor 200",
+    "name": "Honor 200",
     "brand": "Honor",
-    "model": "Honor 200",
+    "model": "200",
     "priceTry": 24999.0,
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/honor-200-.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-174329/Honor-200_featured-image-packshot-review.jpg"
     ],
     "tier": "A",
@@ -28008,13 +28055,13 @@
       "DXOMARK"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-174329/Honor-200_featured-image-packshot-review.jpg"
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-200-.jpg"
   },
   {
     "id": "phone-honor-90-256gb",
-    "name": "Honor Honor 90 (200MP)",
+    "name": "Honor 90 (200MP)",
     "brand": "Honor",
-    "model": "Honor 90 (200MP)",
+    "model": "90 (200MP)",
     "priceTry": 17999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-150729/Honor-90_featured-image-packshot-review-Recovered.jpg",
     "images": [
@@ -28253,9 +28300,9 @@
   },
   {
     "id": "phone-honor-x9b-256gb",
-    "name": "Honor Honor X9b 5G (Kırılmaz Zırh)",
+    "name": "Honor X9b 5G (Kırılmaz Zırh)",
     "brand": "Honor",
-    "model": "Honor X9b 5G (Kırılmaz Zırh)",
+    "model": "X9b 5G (Kırılmaz Zırh)",
     "priceTry": 14999.0,
     "images": [],
     "tier": "B+",
@@ -28480,9 +28527,9 @@
   },
   {
     "id": "phone-huawei-mate-xt-ultimate-512gb",
-    "name": "Huawei Huawei Mate XT Ultimate (3'e Katlanabilir)",
+    "name": "Huawei Mate XT Ultimate (3'e Katlanabilir)",
     "brand": "Huawei",
-    "model": "Huawei Mate XT Ultimate (3'e Katlanabilir)",
+    "model": "Mate XT Ultimate (3'e Katlanabilir)",
     "priceTry": 139999.0,
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-xt-ultimate.jpg"
@@ -28710,9 +28757,9 @@
   },
   {
     "id": "phone-huawei-mate-70-pro-plus-512gb",
-    "name": "Huawei Huawei Mate 70 Pro+",
+    "name": "Huawei Mate 70 Pro+",
     "brand": "Huawei",
-    "model": "Huawei Mate 70 Pro+",
+    "model": "Mate 70 Pro+",
     "priceTry": 79999.0,
     "images": [],
     "tier": "S+",
@@ -28938,14 +28985,14 @@
   },
   {
     "id": "phone-huawei-pura-70-ultra-512gb",
-    "name": "Huawei Huawei Pura 70 Ultra",
+    "name": "Huawei Pura 70 Ultra",
     "brand": "Huawei",
-    "model": "Huawei Pura 70 Ultra",
+    "model": "Pura 70 Ultra",
     "priceTry": 69999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-172110/Huawei-Pura-70-Ultra_featured-image-packshot-review.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-172110/Huawei-Pura-70-Ultra_featured-image-packshot-review.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-172110/Huawei-Pura-70-Ultra_featured-image-packshot-review.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura70-ultra-2.jpg"
     ],
@@ -29176,11 +29223,13 @@
   },
   {
     "id": "phone-huawei-pura-70-pro-plus-512gb",
-    "name": "Huawei Huawei Pura 70 Pro+",
+    "name": "Huawei Pura 70 Pro+",
     "brand": "Huawei",
-    "model": "Huawei Pura 70 Pro+",
+    "model": "Pura 70 Pro+",
     "priceTry": 59999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/ed/HUAWEI_Pura_70_Pro_Black_Back.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "S",
     "benchmarkScore": 970000,
     "gamingIndex": 91,
@@ -29359,15 +29408,16 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/HUAWEI_Pura_70_Pro_Black_Back.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-huawei-pura-70-pro-512gb",
-    "name": "Huawei Huawei Pura 70 Pro",
+    "name": "Huawei Pura 70 Pro",
     "brand": "Huawei",
-    "model": "Huawei Pura 70 Pro",
+    "model": "Pura 70 Pro",
     "priceTry": 49999.0,
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-pro.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70-pro.jpg"
     ],
     "tier": "S",
@@ -29548,15 +29598,16 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70-pro.jpg"
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-pro.jpg"
   },
   {
     "id": "phone-huawei-pura-70-256gb",
-    "name": "Huawei Huawei Pura 70",
+    "name": "Huawei Pura 70",
     "brand": "Huawei",
-    "model": "Huawei Pura 70",
+    "model": "Pura 70",
     "priceTry": 39999.0,
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70.jpg"
     ],
     "tier": "A+",
@@ -29778,15 +29829,17 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70.jpg"
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70.jpg"
   },
   {
     "id": "phone-huawei-mate-60-rs-ultimate-512gb",
-    "name": "Huawei Huawei Mate 60 RS Ultimate Design",
+    "name": "Huawei Mate 60 RS Ultimate Design",
     "brand": "Huawei",
-    "model": "Huawei Mate 60 RS Ultimate Design",
+    "model": "Mate 60 RS Ultimate Design",
     "priceTry": 89999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60-rs-ultimate.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 930000,
     "gamingIndex": 94,
@@ -30006,13 +30059,13 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60-rs-ultimate.jpg"
   },
   {
     "id": "phone-huawei-mate-60-pro-plus-512gb",
-    "name": "Huawei Huawei Mate 60 Pro+",
+    "name": "Huawei Mate 60 Pro+",
     "brand": "Huawei",
-    "model": "Huawei Mate 60 Pro+",
+    "model": "Mate 60 Pro+",
     "priceTry": 69999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-164762/Huawei-Mate-60-Pro_featured-image-packshot-review.jpg",
     "images": [
@@ -30245,11 +30298,13 @@
   },
   {
     "id": "phone-huawei-mate-x5-512gb",
-    "name": "Huawei Huawei Mate X5 (Su Geçirmez Katlanabilir)",
+    "name": "Huawei Mate X5 (Su Geçirmez Katlanabilir)",
     "brand": "Huawei",
-    "model": "Huawei Mate X5 (Su Geçirmez Katlanabilir)",
+    "model": "Mate X5 (Su Geçirmez Katlanabilir)",
     "priceTry": 84999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 915000,
     "gamingIndex": 94,
@@ -30469,16 +30524,17 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg"
   },
   {
     "id": "phone-huawei-pocket-2-512gb",
-    "name": "Huawei Huawei Pocket 2 (Dikey Katlanabilir)",
+    "name": "Huawei Pocket 2 (Dikey Katlanabilir)",
     "brand": "Huawei",
-    "model": "Huawei Pocket 2 (Dikey Katlanabilir)",
+    "model": "Pocket 2 (Dikey Katlanabilir)",
     "priceTry": 49999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-177413/Huawei-Pocket-2_featured-image-packshot-review-Recovered.png",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pocket2.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-pocket2.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-177413/Huawei-Pocket-2_featured-image-packshot-review-Recovered.png"
     ],
     "tier": "S",
@@ -30667,9 +30723,9 @@
   },
   {
     "id": "phone-huawei-nova-13-pro-256gb",
-    "name": "Huawei Huawei Nova 13 Pro",
+    "name": "Huawei Nova 13 Pro",
     "brand": "Huawei",
-    "model": "Huawei Nova 13 Pro",
+    "model": "Nova 13 Pro",
     "priceTry": 26999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huavei-nova-13-pro.jpg",
     "images": [
@@ -34806,7 +34862,10 @@
     "brand": "Vivo",
     "model": "X Fold 3 Pro (Katlanabilir)",
     "priceTry": 78999.0,
-    "images": [],
+    "images": [
+      "https://www.dxomark.com/wp-content/uploads/medias/post-174053/Vivo-X-Fold3_featured-image-packshot-review-Recovered.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2100000,
     "gamingIndex": 98,
@@ -35025,13 +35084,14 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-174053/Vivo-X-Fold3_featured-image-packshot-review-Recovered.jpg"
   },
   {
     "id": "phone-vivo-v40-pro-256gb",
-    "name": "Vivo Vivo V40 Pro (Zeiss Portre)",
+    "name": "Vivo V40 Pro (Zeiss Portre)",
     "brand": "Vivo",
-    "model": "Vivo V40 Pro (Zeiss Portre)",
+    "model": "V40 Pro (Zeiss Portre)",
     "priceTry": 27999.0,
     "images": [],
     "tier": "S",
@@ -38331,11 +38391,13 @@
   },
   {
     "id": "phone-realme-gt-7-pro-512gb",
-    "name": "Realme Realme GT 7 Pro (Snapdragon 8 Elite)",
+    "name": "Realme GT 7 Pro (Snapdragon 8 Elite)",
     "brand": "Realme",
-    "model": "Realme GT 7 Pro (Snapdragon 8 Elite)",
+    "model": "GT 7 Pro (Snapdragon 8 Elite)",
     "priceTry": 49999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2910000,
     "gamingIndex": 100,
@@ -38513,13 +38575,14 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg"
   },
   {
     "id": "phone-realme-gt-6-512gb",
-    "name": "Realme Realme GT 6 (6000 Nit)",
+    "name": "Realme GT 6 (6000 Nit)",
     "brand": "Realme",
-    "model": "Realme GT 6 (6000 Nit)",
+    "model": "GT 6 (6000 Nit)",
     "priceTry": 31999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/realme-gt6.jpg",
     "images": [
@@ -38708,9 +38771,9 @@
   },
   {
     "id": "phone-realme-12-pro-plus-512gb",
-    "name": "Realme Realme 12 Pro+ 5G (Periskop)",
+    "name": "Realme 12 Pro+ 5G (Periskop)",
     "brand": "Realme",
-    "model": "Realme 12 Pro+ 5G (Periskop)",
+    "model": "12 Pro+ 5G (Periskop)",
     "priceTry": 22999.0,
     "images": [],
     "tier": "A",
@@ -38894,11 +38957,14 @@
   },
   {
     "id": "phone-motorola-razr-50-ultra-512gb",
-    "name": "Motorola Motorola Razr 50 Ultra (2024)",
+    "name": "Motorola Razr 50 Ultra (2024)",
     "brand": "Motorola",
-    "model": "Motorola Razr 50 Ultra (2024)",
+    "model": "Razr 50 Ultra (2024)",
     "priceTry": 49999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-razr-50-ultra.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1500000,
     "gamingIndex": 92,
@@ -39076,15 +39142,18 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/motorola-razr-50-ultra.jpg"
   },
   {
     "id": "phone-motorola-edge-50-ultra-512gb",
-    "name": "Motorola Motorola Edge 50 Ultra (Doğal Ahşap)",
+    "name": "Motorola Edge 50 Ultra (Doğal Ahşap)",
     "brand": "Motorola",
-    "model": "Motorola Edge 50 Ultra (Doğal Ahşap)",
+    "model": "Edge 50 Ultra (Doğal Ahşap)",
     "priceTry": 43999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1520000,
     "gamingIndex": 93,
@@ -39267,13 +39336,14 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
   },
   {
     "id": "phone-nothing-phone-2-256gb",
-    "name": "Nothing Nothing Phone (2)",
+    "name": "Nothing Phone (2)",
     "brand": "Nothing",
-    "model": "Nothing Phone (2)",
+    "model": "Phone (2)",
     "priceTry": 29999.0,
     "images": [],
     "tier": "A+",
@@ -39507,11 +39577,13 @@
   },
   {
     "id": "phone-nothing-phone-2a-plus-256gb",
-    "name": "Nothing Nothing Phone (2a) Plus",
+    "name": "Nothing Phone (2a) Plus",
     "brand": "Nothing",
-    "model": "Nothing Phone (2a) Plus",
+    "model": "Phone (2a) Plus",
     "priceTry": 21999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 810000,
     "gamingIndex": 80,
@@ -39731,13 +39803,13 @@
       "HardwareWizard Katalog"
     ],
     "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg"
   },
   {
     "id": "phone-nothing-phone-2a-128gb",
-    "name": "Nothing Nothing Phone (2a)",
+    "name": "Nothing Phone (2a)",
     "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
+    "model": "Phone (2a)",
     "priceTry": 17999.0,
     "images": [],
     "tier": "B+",
@@ -39971,9 +40043,9 @@
   },
   {
     "id": "phone-sony-xperia-1-vi-256gb",
-    "name": "Sony Sony Xperia 1 VI",
+    "name": "Sony Xperia 1 VI",
     "brand": "Sony",
-    "model": "Sony Xperia 1 VI",
+    "model": "Xperia 1 VI",
     "priceTry": 59999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-vi-red.jpg",
     "images": [
@@ -40204,12 +40276,13 @@
   },
   {
     "id": "phone-sony-xperia-1-v-256gb",
-    "name": "Sony Sony Xperia 1 V (4K HDR OLED)",
+    "name": "Sony Xperia 1 V (4K HDR OLED)",
     "brand": "Sony",
-    "model": "Sony Xperia 1 V (4K HDR OLED)",
+    "model": "Xperia 1 V (4K HDR OLED)",
     "priceTry": 45999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-32322/sonyxperia1.jpeg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-32322/sonyxperia1.jpeg",
       "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-vi.jpg",
       "https://fdn2.gsmarena.com/vv/pics/sony/sony-xperia-1-vi-1.jpg",
@@ -42775,9 +42848,9 @@
   },
   {
     "id": "phone-poco-f4-256gb",
-    "name": "POCO POCO F4 5G",
+    "name": "POCO F4 5G",
     "brand": "POCO",
-    "model": "POCO F4 5G",
+    "model": "F4 5G",
     "priceTry": 16999.0,
     "images": [],
     "tier": "A",
@@ -43002,9 +43075,9 @@
   },
   {
     "id": "phone-poco-x4-gt-256gb",
-    "name": "POCO POCO X4 GT (144Hz)",
+    "name": "POCO X4 GT (144Hz)",
     "brand": "POCO",
-    "model": "POCO X4 GT (144Hz)",
+    "model": "X4 GT (144Hz)",
     "priceTry": 15999.0,
     "images": [],
     "tier": "A",
@@ -43229,9 +43302,9 @@
   },
   {
     "id": "phone-poco-m5s-128gb",
-    "name": "POCO POCO M5s",
+    "name": "POCO M5s",
     "brand": "POCO",
-    "model": "POCO M5s",
+    "model": "M5s",
     "priceTry": 9499.0,
     "images": [],
     "tier": "B",
@@ -43456,9 +43529,9 @@
   },
   {
     "id": "phone-poco-c65-256gb",
-    "name": "POCO POCO C65",
+    "name": "POCO C65",
     "brand": "POCO",
-    "model": "POCO C65",
+    "model": "C65",
     "priceTry": 7999.0,
     "images": [],
     "tier": "C+",
@@ -43679,8 +43752,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oppo-find-x6-pro-256gb",
@@ -44152,9 +44224,9 @@
   },
   {
     "id": "phone-oppo-a78-256gb",
-    "name": "Oppo Oppo A78",
+    "name": "Oppo A78",
     "brand": "Oppo",
-    "model": "Oppo A78",
+    "model": "A78",
     "priceTry": 9999.0,
     "images": [],
     "tier": "B",
@@ -44375,14 +44447,13 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-16"
   },
   {
     "id": "phone-oneplus-11-256gb",
-    "name": "OnePlus OnePlus 11 5G",
+    "name": "OnePlus 11 5G",
     "brand": "OnePlus",
-    "model": "OnePlus 11 5G",
+    "model": "11 5G",
     "priceTry": 38999.0,
     "images": [],
     "tier": "S",
@@ -44607,9 +44678,9 @@
   },
   {
     "id": "phone-oneplus-10-pro-128gb",
-    "name": "OnePlus OnePlus 10 Pro 5G",
+    "name": "OnePlus 10 Pro 5G",
     "brand": "OnePlus",
-    "model": "OnePlus 10 Pro 5G",
+    "model": "10 Pro 5G",
     "priceTry": 26999.0,
     "images": [],
     "tier": "A+",
@@ -44834,9 +44905,9 @@
   },
   {
     "id": "phone-oneplus-10t-256gb",
-    "name": "OnePlus OnePlus 10T (150W Hızlı Şarj)",
+    "name": "OnePlus 10T (150W Hızlı Şarj)",
     "brand": "OnePlus",
-    "model": "OnePlus 10T (150W Hızlı Şarj)",
+    "model": "10T (150W Hızlı Şarj)",
     "priceTry": 23999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-10t-5g.jpg",
     "images": [
@@ -45064,9 +45135,9 @@
   },
   {
     "id": "phone-realme-gt-5-pro-512gb",
-    "name": "Realme Realme GT 5 Pro",
+    "name": "Realme GT 5 Pro",
     "brand": "Realme",
-    "model": "Realme GT 5 Pro",
+    "model": "GT 5 Pro",
     "priceTry": 37999.0,
     "images": [],
     "tier": "S+",
@@ -45250,9 +45321,9 @@
   },
   {
     "id": "phone-realme-11-pro-plus-512gb",
-    "name": "Realme Realme 11 Pro+ 5G (200MP)",
+    "name": "Realme 11 Pro+ 5G (200MP)",
     "brand": "Realme",
-    "model": "Realme 11 Pro+ 5G (200MP)",
+    "model": "11 Pro+ 5G (200MP)",
     "priceTry": 18999.0,
     "images": [],
     "tier": "A",
@@ -45436,9 +45507,9 @@
   },
   {
     "id": "phone-motorola-edge-40-pro-256gb",
-    "name": "Motorola Motorola Edge 40 Pro",
+    "name": "Motorola Edge 40 Pro",
     "brand": "Motorola",
-    "model": "Motorola Edge 40 Pro",
+    "model": "Edge 40 Pro",
     "priceTry": 28999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-144720/Motorola-Edge-40-Pro_featured-image-packshot-review.jpg",
     "images": [
@@ -45676,9 +45747,9 @@
   },
   {
     "id": "phone-nothing-phone-1-256gb",
-    "name": "Nothing Nothing Phone (1)",
+    "name": "Nothing Phone (1)",
     "brand": "Nothing",
-    "model": "Nothing Phone (1)",
+    "model": "Phone (1)",
     "priceTry": 16999.0,
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/8/8d/Nothing_phone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
@@ -45915,9 +45986,9 @@
   },
   {
     "id": "phone-huawei-mate-50-pro-256gb",
-    "name": "Huawei Huawei Mate 50 Pro (XMAGE)",
+    "name": "Huawei Mate 50 Pro (XMAGE)",
     "brand": "Huawei",
-    "model": "Huawei Mate 50 Pro (XMAGE)",
+    "model": "Mate 50 Pro (XMAGE)",
     "priceTry": 34999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-132257/Huawei-Mate-50-Pro_featured-image-packshot-review.jpg",
     "images": [
@@ -46158,12 +46229,13 @@
   },
   {
     "id": "phone-huawei-p60-pro-256gb",
-    "name": "Huawei Huawei P60 Pro (Rococo Pearl)",
+    "name": "Huawei P60 Pro (Rococo Pearl)",
     "brand": "Huawei",
-    "model": "Huawei P60 Pro (Rococo Pearl)",
+    "model": "P60 Pro (Rococo Pearl)",
     "priceTry": 39999.0,
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-147160/Huawei-P60-Pro_featured-image-packshot-review-Recovered.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-p60-pro.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-p60-pro.jpg",
       "https://www.dxomark.com/wp-content/uploads/medias/post-147160/Huawei-P60-Pro_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "S",
@@ -46399,11 +46471,13 @@
   },
   {
     "id": "phone-huawei-nova-12-pro-256gb",
-    "name": "Huawei Huawei Nova 12 Pro",
+    "name": "Huawei Nova 12 Pro",
     "brand": "Huawei",
-    "model": "Huawei Nova 12 Pro",
+    "model": "Nova 12 Pro",
     "priceTry": 22999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12-pro.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 690000,
     "gamingIndex": 77,
@@ -46622,15 +46696,18 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12-pro.jpg"
   },
   {
     "id": "phone-huawei-nova-12-se-256gb",
-    "name": "Huawei Huawei Nova 12 SE",
+    "name": "Huawei Nova 12 SE",
     "brand": "Huawei",
-    "model": "Huawei Nova 12 SE",
+    "model": "Nova 12 SE",
     "priceTry": 13999.0,
-    "images": [],
+    "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 315000,
     "gamingIndex": 62,
@@ -46849,7 +46926,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-16",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12.jpg"
   },
   {
     "id": "phone-infinix-note-30-pro-256gb",
@@ -49290,9 +49368,9 @@
   },
   {
     "id": "phone-oneplus-11r-256gb",
-    "name": "OnePlus OnePlus 11R 5G",
+    "name": "OnePlus 11R 5G",
     "brand": "OnePlus",
-    "model": "OnePlus 11R 5G",
+    "model": "11R 5G",
     "priceTry": 26999.0,
     "images": [],
     "tier": "A+",
@@ -50243,9 +50321,9 @@
   },
   {
     "id": "phone-vivo-v40-256gb",
-    "name": "Vivo Vivo V40 5G (Zeiss Aura Işık)",
+    "name": "Vivo V40 5G (Zeiss Aura Işık)",
     "brand": "Vivo",
-    "model": "Vivo V40 5G (Zeiss Aura Işık)",
+    "model": "V40 5G (Zeiss Aura Işık)",
     "priceTry": 22999.0,
     "images": [],
     "tier": "A",
@@ -50470,9 +50548,9 @@
   },
   {
     "id": "phone-vivo-v30-pro-512gb",
-    "name": "Vivo Vivo V30 Pro (Zeiss Üçlü 50MP)",
+    "name": "Vivo V30 Pro (Zeiss Üçlü 50MP)",
     "brand": "Vivo",
-    "model": "Vivo V30 Pro (Zeiss Üçlü 50MP)",
+    "model": "V30 Pro (Zeiss Üçlü 50MP)",
     "priceTry": 27999.0,
     "images": [],
     "tier": "A",
@@ -50656,9 +50734,9 @@
   },
   {
     "id": "phone-vivo-x90-pro-256gb",
-    "name": "Vivo Vivo X90 Pro (1 inç Zeiss T*)",
+    "name": "Vivo X90 Pro (1 inç Zeiss T*)",
     "brand": "Vivo",
-    "model": "Vivo X90 Pro (1 inç Zeiss T*)",
+    "model": "X90 Pro (1 inç Zeiss T*)",
     "priceTry": 41999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-136691/Vivo-X90-Pro_featured-image-packshot-review.jpg",
     "images": [
@@ -51125,9 +51203,9 @@
   },
   {
     "id": "phone-oneplus-10t-128gb",
-    "name": "OnePlus OnePlus 10T",
+    "name": "OnePlus 10T",
     "brand": "OnePlus",
-    "model": "OnePlus 10T",
+    "model": "10T",
     "priceTry": 22999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-10t-5g.jpg",
     "images": [
@@ -51356,9 +51434,9 @@
   },
   {
     "id": "phone-oneplus-nord-ce-4-256gb",
-    "name": "OnePlus OnePlus Nord CE 4",
+    "name": "OnePlus Nord CE 4",
     "brand": "OnePlus",
-    "model": "OnePlus Nord CE 4",
+    "model": "Nord CE 4",
     "priceTry": 14999.0,
     "images": [],
     "tier": "A",
@@ -51583,9 +51661,9 @@
   },
   {
     "id": "phone-oneplus-nord-ce-3-128gb",
-    "name": "OnePlus OnePlus Nord CE 3",
+    "name": "OnePlus Nord CE 3",
     "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3",
+    "model": "Nord CE 3",
     "priceTry": 12999.0,
     "images": [],
     "tier": "B+",
@@ -52424,9 +52502,9 @@
   },
   {
     "id": "phone-honor-70-128gb",
-    "name": "Honor Honor 70",
+    "name": "Honor 70",
     "brand": "Honor",
-    "model": "Honor 70",
+    "model": "70",
     "priceTry": 13499.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-120436/featured-image-packshot-review-1.png",
     "images": [
@@ -52668,9 +52746,9 @@
   },
   {
     "id": "phone-honor-x8b-128gb",
-    "name": "Honor Honor X8b",
+    "name": "Honor X8b",
     "brand": "Honor",
-    "model": "Honor X8b",
+    "model": "X8b",
     "priceTry": 8999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-x8b.jpg",
     "images": [
@@ -53146,8 +53224,9 @@
     "brand": "Xiaomi",
     "model": "Redmi Note 13 4G",
     "priceTry": 9999.0,
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13.jpg",
+    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg",
     "images": [
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg",
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-1.jpg",
       "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-2.jpg"
@@ -54988,9 +55067,9 @@
   },
   {
     "id": "phone-poco-m5-128gb",
-    "name": "POCO POCO M5",
+    "name": "POCO M5",
     "brand": "POCO",
-    "model": "POCO M5",
+    "model": "M5",
     "priceTry": 6999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m5.jpg",
     "images": [
@@ -55218,9 +55297,9 @@
   },
   {
     "id": "phone-vivo-v25-256gb",
-    "name": "Vivo Vivo V25 5G",
+    "name": "Vivo V25 5G",
     "brand": "Vivo",
-    "model": "Vivo V25 5G",
+    "model": "V25 5G",
     "priceTry": 12999.0,
     "images": [],
     "tier": "B",
@@ -55445,9 +55524,9 @@
   },
   {
     "id": "phone-vivo-y200-256gb",
-    "name": "Vivo Vivo Y200 5G",
+    "name": "Vivo Y200 5G",
     "brand": "Vivo",
-    "model": "Vivo Y200 5G",
+    "model": "Y200 5G",
     "priceTry": 10999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-y200-1.jpg",
     "images": [
@@ -55676,9 +55755,9 @@
   },
   {
     "id": "phone-oneplus-10r-256gb",
-    "name": "OnePlus OnePlus 10R",
+    "name": "OnePlus 10R",
     "brand": "OnePlus",
-    "model": "OnePlus 10R",
+    "model": "10R",
     "priceTry": 18999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-10r.jpg",
     "images": [
@@ -55908,9 +55987,9 @@
   },
   {
     "id": "phone-realme-11-pro-256gb",
-    "name": "Realme Realme 11 Pro 5G",
+    "name": "Realme 11 Pro 5G",
     "brand": "Realme",
-    "model": "Realme 11 Pro 5G",
+    "model": "11 Pro 5G",
     "priceTry": 14499.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/realme-11-pro.jpg",
     "images": [
@@ -56140,9 +56219,9 @@
   },
   {
     "id": "phone-realme-c67-128gb",
-    "name": "Realme Realme C67",
+    "name": "Realme C67",
     "brand": "Realme",
-    "model": "Realme C67",
+    "model": "C67",
     "priceTry": 6999.0,
     "images": [],
     "tier": "C+",
@@ -56367,9 +56446,9 @@
   },
   {
     "id": "phone-honor-90-lite-256gb",
-    "name": "Honor Honor 90 Lite",
+    "name": "Honor 90 Lite",
     "brand": "Honor",
-    "model": "Honor 90 Lite",
+    "model": "90 Lite",
     "priceTry": 9999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-153992/featured-image-packshot-review-1.png",
     "images": [
@@ -56607,9 +56686,9 @@
   },
   {
     "id": "phone-honor-x7b-128gb",
-    "name": "Honor Honor X7b",
+    "name": "Honor X7b",
     "brand": "Honor",
-    "model": "Honor X7b",
+    "model": "X7b",
     "priceTry": 7999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-163897/Honor-X7b_featured-image-packshot-review.jpg",
     "images": [

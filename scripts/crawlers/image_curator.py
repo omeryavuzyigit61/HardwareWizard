@@ -4,12 +4,19 @@ from __future__ import annotations
 
 import collections
 import json
+import os
 import re
+import subprocess
 from typing import Any
 from urllib.parse import unquote, urlparse
 
 from .sources_images import search_wikimedia_image, verify_image_url_pool
-from .state_manager import CrawlStateManager, normalize_canonical_key, normalize_for_brand_match
+from .state_manager import (
+    ROOT_DIR,
+    CrawlStateManager,
+    normalize_canonical_key,
+    normalize_for_brand_match,
+)
 
 KNOWN_BRAND_TOKENS = (
     "asus", "msi", "gigabyte", "asrock", "sapphire", "xfx", "powercolor",
@@ -55,6 +62,8 @@ CPU_SOCKET_NUMBERS = frozenset({
 
 GALLERY_SOURCE_PRIORITY = {
     "GamingGen Store API": 4,
+    "Itopya Catalog": 4,
+    "Repo Assets": 4,
     "GSMArena Gallery": 4,
     "Keychron Official": 4,
     "Pulsar Official": 4,
@@ -65,6 +74,19 @@ GALLERY_SOURCE_PRIORITY = {
     "DXOMARK": 2,
     "GSMArena": 1,
 }
+
+_REPO_IMAGE_SUBDIRS = {
+    "CPU": "cpu",
+    "GPU": "gpu",
+    "MOTHERBOARD": "motherboard",
+    "RAM": "ram",
+    "STORAGE": "storage",
+    "PSU": "psu",
+    "COOLER": "cooler",
+    "CASE": "case",
+}
+
+_REPO_RAW_BASE = "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main"
 
 GPU_CHIP_PATTERNS = (
     re.compile(r"\b(rtx|gtx|rx|arc)[_\-\s]*(\d{3,4})\s*(ti\s*super|super|xtx|xt|ti|gre)?\b", re.I),
@@ -93,6 +115,7 @@ def clean_doubled_gpu_name(name: str) -> str:
     )
     out = re.sub(r"\b(RX\s+\d{4})\s+\1\s+(XT|XTX|GRE)\b", r"\1 \2", out, flags=re.I)
     out = re.sub(r"\b(RTX\s+\d{4})\s+\1\s+(Ti\s+SUPER|Ti|SUPER)\b", r"\1 \2", out, flags=re.I)
+    out = re.sub(r"\bGeForce\s+(RTX\s+\d{4}(?:\s+(?:Ti\s+SUPER|Ti|SUPER))?)\s+GeForce\s+RTX\s+\d{4}\s*(?:Ti\s*SUPER|Ti|SUPER)?\b", r"GeForce \1", out, flags=re.I)
     return re.sub(r"\s+", " ", out).strip()
 
 
@@ -191,6 +214,7 @@ def is_image_compatible_with_item(
         or "m.media-amazon.com" in low_u
         or "images-na.ssl-images-amazon.com" in low_u
         or re.match(r"^[0-9a-f\-_]{20,}$", stem)
+        or re.match(r"^\d{1,3}\-[0-9a-f]{5,12}$", stem)
     )
 
     title_str = f"{brand} {model} {chipset}".strip()
@@ -260,16 +284,17 @@ def is_image_compatible_with_item(
                 return False
 
     elif category == "CPU":
-        # Reject generic local placeholder thumbnails applied to non-exact SKUs
         if "raw.githubusercontent.com/omeryavuzyigit61/hardwarewizard/main/data/images/cpu/" in low_u:
-            sku_slug = stem.replace("_", "")
-            # Must contain exact model code like 9800x3d, 7800x3d, 5800x3d, 285k, 14700k, 14400
-            m_sku = re.search(r"(9800x3d|7800x3d|5800x3d|285k|14700k|14400)", sku_slug)
-            if not m_sku or m_sku.group(1) not in t_flat:
+            if any(bad_s in stem for bad_s in ("_bottom", "_ihs_studio", "generic_")):
+                return False
+            stem_words = set(re.split(r"[^a-z0-9]+", stem))
+            t_words = set(re.split(r"[^a-z0-9]+", t_low))
+            sku_codes = {w for w in stem_words if re.match(r"^(?:\d{4,5}[a-z0-9]{0,4}|2[2345678][05]k?f?)$", w)}
+            if not sku_codes or not (sku_codes & t_words):
                 return False
         if not is_opaque_hash:
-            t_nums = set(re.findall(r"\b(\d{4,5}[a-z]{0,4})\b", t_low))
-            u_nums = set(re.findall(r"\b(\d{4,5}[a-z]{0,4})\b", re.sub(r"[-_/]", " ", path)))
+            t_nums = set(re.findall(r"(?:^|[^a-z0-9])(\d{4,5}[a-z0-9]{0,4}|2[2345678][05]k?f?)(?:$|[^a-z0-9])", t_low))
+            u_nums = set(re.findall(r"(?:^|[^a-z0-9])(\d{4,5}[a-z0-9]{0,4}|2[2345678][05]k?f?)(?:$|[^a-z0-9])", re.sub(r"[-_/]", " ", path)))
             bad = [
                 n for n in u_nums
                 if n not in CPU_SOCKET_NUMBERS
@@ -306,7 +331,10 @@ def is_image_compatible_with_item(
             slug_raw = re.sub(r"20[12]\d(?:[^a-z0-9]+\d{1,2}){1,2}[^a-z]*", " ", slug_raw)
             slug_raw = re.sub(r"[_\-]\d{3}$", "", slug_raw)
             slug = re.sub(r"(\-\d+)?\.(jpg|jpeg|png|webp)$", "", slug_raw)
-            t_norm = t_low.replace("+", " plus ").replace("10. nesil", "10th 2022").replace("9. nesil", "9th 2021 102")
+            slug = re.sub(r"\b(fold|flip|xcover|tab|pad)(\d)", r"\1-\2", slug)
+            t_norm = re.sub(r"\b(fold|flip|xcover|tab|pad)(\d)", r"\1 \2", t_low)
+            t_norm = re.sub(r"\b\d{4,5}\s*mah\b", " ", t_norm)
+            t_norm = t_norm.replace("+", " plus ").replace("10. nesil", "10th 2022").replace("9. nesil", "9th 2021 102")
             t_norm_flat = re.sub(r"[^a-z0-9]", "", t_norm)
             t_norm_words = set(re.findall(r"[a-z0-9]+", t_norm))
             # Tablet must NEVER display a smartphone photo (iphone / galaxy-s / xiaomi-14 / pura)
@@ -386,7 +414,7 @@ def is_image_compatible_with_item(
 
     elif category == "MOTHERBOARD":
         if not is_opaque_hash:
-            m_mb = re.search(r"\b([abxz]\d{3}[a-z]{0,2}(?:\-[a-z0-9]{1,2})?)\b", path)
+            m_mb = re.search(r"(?:^|[^a-z0-9])([abxz]\d{3}[a-z]{0,2}(?:[-_][a-z0-9]{1,2})?)(?:$|[^a-z0-9])", path)
             if m_mb:
                 mb_full = re.sub(r"[^a-z0-9]", "", m_mb.group(1))
                 mb_chip = re.match(r"([abxz]\d{3}[a-z]{0,2})", m_mb.group(1)).group(1)
@@ -463,8 +491,85 @@ def dedupe_synthetic_peripheral_clones(items: list[dict[str, Any]]) -> list[dict
     return kept
 
 
+def _iter_tracked_repo_images() -> list[tuple[str, str]]:
+    """Lists (subdir, filename) pairs for studio images tracked in origin/main data/images."""
+    try:
+        out = subprocess.check_output(
+            ["git", "ls-tree", "-r", "--name-only", "origin/main", "data/images"],
+            cwd=ROOT_DIR,
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8", errors="ignore")
+        pairs: list[tuple[str, str]] = []
+        for line in out.splitlines():
+            parts = line.strip().split("/")
+            if len(parts) >= 4:
+                pairs.append((parts[2], parts[-1]))
+        if pairs:
+            return pairs
+    except Exception:
+        pass
+    pairs = []
+    base = os.path.join(ROOT_DIR, "data", "images")
+    if os.path.isdir(base):
+        for sub in os.listdir(base):
+            sub_dir = os.path.join(base, sub)
+            if os.path.isdir(sub_dir):
+                for fn in os.listdir(sub_dir):
+                    pairs.append((sub, fn))
+    return pairs
+
+
+def collect_repo_asset_urls() -> list[str]:
+    """Returns all valid non-generic repo image URLs for batch health verification."""
+    urls: list[str] = []
+    valid_subs = set(_REPO_IMAGE_SUBDIRS.values())
+    for sub, fn in _iter_tracked_repo_images():
+        if sub not in valid_subs or not fn.lower().endswith((".webp", ".png", ".jpg", ".jpeg")):
+            continue
+        low = fn.lower()
+        if any(bad in low for bad in ("_reference.", "_bottom.", "_ihs_studio.", "generic_")):
+            continue
+        urls.append(f"{_REPO_RAW_BASE}/data/images/{sub}/{fn}")
+    return urls
+
+
+def build_repo_asset_gallery(category: str) -> list[dict[str, Any]]:
+    """Builds exact-slug studio gallery entries from tracked data/images/<category>/."""
+    target_sub = _REPO_IMAGE_SUBDIRS.get(category)
+    if not target_sub:
+        return []
+    records: list[dict[str, Any]] = []
+    for sub, fn in _iter_tracked_repo_images():
+        if sub != target_sub or not fn.lower().endswith((".webp", ".png", ".jpg", ".jpeg")):
+            continue
+        low = fn.lower()
+        if any(bad in low for bad in ("_reference.", "_bottom.", "_ihs_studio.", "generic_")):
+            continue
+        stem = os.path.splitext(fn)[0]
+        display = re.sub(r"\s+", " ", stem.replace("_", " ")).strip()
+        if not display:
+            continue
+        brand = display.split()[0]
+        url = f"{_REPO_RAW_BASE}/data/images/{sub}/{fn}"
+        records.append(
+            {
+                "source": "Repo Assets",
+                "priority": GALLERY_SOURCE_PRIORITY.get("Repo Assets", 4),
+                "display_name": display,
+                "brand": brand,
+                "ckey": normalize_canonical_key(display),
+                "bkey": normalize_for_brand_match(display),
+                "tokens": set(re.findall(r"[a-z0-9]{2,}", _clean_match_string(display))),
+                "images": [url],
+            }
+        )
+    return records
+
+
 def build_gallery_index(state: CrawlStateManager, category: str, sources: tuple[str, ...]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
+    if "Repo Assets" in sources:
+        records.extend(build_repo_asset_gallery(category))
     for row in state.load_records_for_category(category):
         if row["source_name"] not in sources:
             continue
@@ -493,6 +598,8 @@ def build_gallery_index(state: CrawlStateManager, category: str, sources: tuple[
 
 def _clean_match_string(s: str) -> str:
     low = (s or "").lower().replace("+", " plus ")
+    low = re.sub(r"\b(fold|flip|xcover|tab|pad)(\d)", r"\1 \2", low)
+    low = re.sub(r"\b\d{4,5}\s*mah\b", " ", low)
     low = low.replace("10. nesil", "10th 2022").replace("9. nesil", "9th 2021")
     low = low.replace("(katlanabilir)", "fold")
     low = re.sub(r"\((?:m1|m2|m3|m4|a15|a14|a16|20\d\d)\)", lambda m: f" {m.group(0)[1:-1]} ", low)
@@ -517,6 +624,7 @@ def find_best_gallery_match(
     chipset: str,
     gallery_records: list[dict[str, Any]],
     health_map: dict[str, bool],
+    score_out: list[float] | None = None,
 ) -> list[str]:
     """Finds the best token-verified studio gallery strictly matching brand & model code."""
     clean_name = _clean_match_string(name)
@@ -568,9 +676,27 @@ def find_best_gallery_match(
                 if not g1 or not g2 or g1 != g2:
                     continue
             if category == "CPU":
-                m_c1 = re.search(r"\b(\d{4,5}[a-z0-9]{0,4})\b", clean_name)
-                m_c2 = re.search(r"\b(\d{4,5}[a-z0-9]{0,4})\b", rec_clean)
-                if not (m_c1 and m_c2 and m_c1.group(1) == m_c2.group(1)):
+                m_c1 = re.findall(r"\b(\d{3,5}[a-z0-9]{0,4})\b", clean_name)
+                m_c2 = re.findall(r"\b(\d{3,5}[a-z0-9]{0,4})\b", rec_clean)
+                c1_set = {c for c in m_c1 if len(c) >= 4 or c.endswith(("k", "f", "x"))}
+                c2_set = {c for c in m_c2 if len(c) >= 4 or c.endswith(("k", "f", "x"))}
+                if not (c1_set and c2_set and (c1_set & c2_set)):
+                    continue
+            if category == "MOTHERBOARD":
+                mb1 = set(re.findall(r"(?:^|[^a-z0-9])([abxz]\d{3}[a-z]{0,2})", clean_name))
+                mb2 = set(re.findall(r"(?:^|[^a-z0-9])([abxz]\d{3}[a-z]{0,2})", rec_clean))
+                if mb1 and mb2 and not (mb1 & mb2):
+                    continue
+                mb_series = ("strix", "tuf", "prime", "proart", "aorus", "tomahawk", "mortar", "steel", "taichi", "phantom", "nova", "carbon", "ace", "godlike", "edge", "eagle", "hero", "apex", "crosshair", "lightning", "riptide")
+                ms1 = {s for s in mb_series if s in clean_name}
+                ms2 = {s for s in mb_series if s in rec_clean}
+                if ms1 and ms2 and not (ms1 & ms2):
+                    continue
+            if category == "STORAGE":
+                st_pat = r"\b(?:sn\d{3,4}[a-z]?|nm\d{3}|kc\d{4}|mp\d{3}|m\d{3}[a-z]?|t\d{3}|p\d{2,3}|[89]\d{2})\b"
+                s1 = set(re.findall(st_pat, clean_name))
+                s2 = set(re.findall(st_pat, rec_clean))
+                if s1 and s2 and not (s1 & s2):
                     continue
             if category == "LAPTOP":
                 # Match chassis code (g834, g634, 83jh, ph18, ge78, fa507, fx507, anv15, etc.) when present on both sides
@@ -583,7 +709,10 @@ def find_best_gallery_match(
             overlap = len(overlap_set)
             has_model_digit = any(re.search(r"\d", tok) for tok in overlap_set)
             min_req = 2 if (
-                category in ("CPU", "SMARTPHONE", "TABLET", "STORAGE", "PSU", "COOLER", "RAM", "CASE", "MOTHERBOARD")
+                category in (
+                    "CPU", "SMARTPHONE", "TABLET", "STORAGE", "PSU", "COOLER", "RAM", "CASE", "MOTHERBOARD",
+                    "ROUTER", "UPS", "MONITOR", "KEYBOARD", "MOUSE", "HEADSET",
+                )
                 and has_model_digit
             ) else 3
             if category == "GPU" and has_model_digit:
@@ -600,6 +729,8 @@ def find_best_gallery_match(
         if healthy:
             best_score = score
             best_imgs = healthy[:6]
+    if score_out is not None:
+        score_out[:] = [best_score]
     return best_imgs
 
 
@@ -680,28 +811,39 @@ def quarantine_cross_model_collisions(
             br = str(it.get("brand") or (nm.split()[0] if nm.split() else "")).lower()
             if nm.startswith(br + " "):
                 nm = nm[len(br):].strip()
-            core = re.sub(r"\b(?:\d+(?:gb|tb|mhz|mts|watt|w|va|oc|bit)|cl\d+)\b", "", nm)
+            core = re.sub(r"\b(?:\d+\s*(?:gb|tb|mhz|mts|watt|w|va|oc|bit)|cl\d+)\b", "", nm)
             core = re.sub(r"\([^)]*\)", "", core)
             if category == "RAM":
-                has_white = any(c in nm for c in ("white", "beyaz", "silver", "gümüş", "snow"))
                 has_rgb = "rgb" in nm
                 core = re.sub(r"\b(ddr[345])[\-\s]*\d{3,5}\b", "", core)
                 core = re.sub(r"\b(amd expo|intel xmp|xmp|expo|\d+\s*x\s*\d+|non-ecc|unbuffered|dimm|sodimm|u-dimm)\b", "", core)
-                core = re.sub(r"\b(white|black|silver|gray|grey|neo)\b", "", core)
+                core = re.sub(r"\b(white|beyaz|silver|black|gray|grey|neo)\b", "", core)
                 core = " ".join(w for w in re.findall(r"[a-z0-9]+", core) if len(w) >= 2)[:32]
-                skey = f"{br}|{core}|{'w' if has_white else 'd'}|{'rgb' if has_rgb else 'plain'}"
+                skey = f"{br}|{core}|{'rgb' if has_rgb else 'plain'}"
             elif category == "GPU":
                 gpu_toks = sorted(
                     t for t in re.findall(r"[a-z0-9]+", core)
-                    if len(t) >= 2 and t not in {"geforce", "radeon", "intel", "edition", "gaming", "oc"}
+                    if len(t) >= 2 and t not in {
+                        "geforce", "radeon", "intel", "edition", "gaming", "oc",
+                        "black", "v2", "12g", "16g", "24g", "8g", "10g",
+                    }
                 )
                 skey = f"{br}|{' '.join(gpu_toks[:6])}"
             elif category == "MOTHERBOARD":
                 mb_toks = sorted(
                     t for t in re.findall(r"[a-z0-9]+", core)
-                    if len(t) >= 2 and t not in {"wifi", "wi", "fi", "gaming", "ddr4", "ddr5", "atx", "matx", "micro"}
+                    if len(t) >= 2 and t not in {"wifi", "wi", "fi", "gaming", "ddr4", "ddr5", "atx", "matx", "micro", "v2", "rev", "csm"}
                 )
                 skey = f"{br}|{' '.join(mb_toks[:5])}"
+            elif category == "STORAGE":
+                st_core = re.sub(r"\b(?:nvme|pcie|gen\d|sata|ssd|internal|hard|drive|m\.?2|2280|2242|2230|heatsink|okuma|yazma|with|without|3\.0|4\.0|5\.0|x4)\b", "", core)
+                st_toks = [t for t in re.findall(r"[a-z0-9]+", st_core) if len(t) >= 2]
+                skey = f"{br}|{' '.join(st_toks[:5])}"
+            elif category == "LAPTOP":
+                lap_core = re.sub(r"\b(?:freedos|w11|win11|windows\s*\d*|home|pro|ubuntu|144hz|165hz|240hz|300hz|360hz|fhd|qhd|uhd|oled|ips)\b", "", core)
+                lap_core = re.sub(r"\d+(?:\.\d+)?\s*(?:inc|inç|\")", "", lap_core)
+                lap_toks = [t for t in re.findall(r"[a-z0-9]+", lap_core) if len(t) >= 2 and t not in {"laptop", "notebook", "gaming", "tasinabilir", "bilgisayar", "canta", "hediyeli"}]
+                skey = f"{br}|{' '.join(lap_toks[:3])}"
             else:
                 core = re.sub(r"\s+", " ", core).strip()
                 skey = f"{br}|{core[:32]}"
@@ -734,29 +876,68 @@ def quarantine_cross_model_collisions(
                             _clear_item_img(it)
                 continue
 
-        # Dominant majority preservation for RAM (speed/capacity/timing kits share one visual line cleanly)
-        if category == "RAM":
-            if len(sigs) == 1 and len(clist) <= 65:
-                continue
-            largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
-            if len(largest_items) >= 3 and (len(largest_items) / len(clist)) >= 0.55 and len(largest_items) <= 65:
+            # If one model won by a decisive gallery match score margin (e.g. exact canonical hit vs weak overlap), preserve winner cleanly
+            cap_limit = 10 if category == "STORAGE" else (15 if category == "LAPTOP" else (6 if category == "GPU" else max_allowed_variants))
+            ranked_sigs = sorted(
+                ((max(float(it.get("_img_match_score") or 0.0) for it in grp), sk, grp) for sk, grp in sig_to_items.items()),
+                key=lambda x: -x[0],
+            )
+            if len(ranked_sigs) >= 2 and ranked_sigs[0][0] >= 40.0 and (ranked_sigs[0][0] - ranked_sigs[1][0]) >= 10.0 and len(ranked_sigs[0][2]) <= cap_limit:
+                winner_sig = ranked_sigs[0][1]
                 for skey, group_items in sig_to_items.items():
-                    if skey != largest_sig:
+                    if skey != winner_sig:
                         for it in group_items:
                             _clear_item_img(it)
+                continue
+
+        # Dominant majority preservation for RAM (speed/capacity/timing kits share one visual line cleanly)
+        if category == "RAM":
+            largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
+            if len(largest_items) <= 75 and (len(sigs) == 1 or (len(largest_items) >= 2 and len(largest_items) / len(clist) >= 0.45)):
+                url_white = any(c in u.lower() for c in ("white", "beyaz", "silver"))
+                kept_color = [
+                    it for it in largest_items
+                    if any(c in str(it.get("name", "")).lower() for c in ("white", "beyaz", "silver", "gümüş", "snow")) == url_white
+                ]
+                keep_set = set(id(it) for it in (kept_color if kept_color else largest_items))
+                for it in clist:
+                    if id(it) not in keep_set:
+                        _clear_item_img(it)
                 continue
             for it in clist:
                 _clear_item_img(it)
             continue
 
         # Fallback: quarantine ambiguous collisions
-        if category in ("GPU", "LAPTOP", "SMARTPHONE", "TABLET", "CPU"):
+        if category == "LAPTOP":
+            if len(sigs) > 1 or len(clist) > 15:
+                largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
+                if len(largest_items) >= 2 and len(largest_items) <= 15 and (len(largest_items) / len(clist)) >= 0.65:
+                    for skey, group_items in sig_to_items.items():
+                        if skey != largest_sig:
+                            for it in group_items:
+                                _clear_item_img(it)
+                else:
+                    for it in clist:
+                        _clear_item_img(it)
+        elif category == "GPU":
+            if len(sigs) > 1 or len(clist) > 6:
+                largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
+                if len(largest_items) >= 2 and len(largest_items) <= 6 and (len(largest_items) / len(clist)) >= 0.65:
+                    for skey, group_items in sig_to_items.items():
+                        if skey != largest_sig:
+                            for it in group_items:
+                                _clear_item_img(it)
+                else:
+                    for it in clist:
+                        _clear_item_img(it)
+        elif category in ("SMARTPHONE", "TABLET", "CPU"):
             if len(sigs) > 1 or len(clist) > max_allowed_variants:
                 for it in clist:
                     _clear_item_img(it)
         elif len(sigs) >= 2:
             largest_sig, largest_items = max(sig_to_items.items(), key=lambda kv: len(kv[1]))
-            if category == "MOTHERBOARD" and len(largest_items) >= 2 and (len(largest_items) / len(clist)) >= 0.65:
+            if category == "MOTHERBOARD" and len(largest_items) >= 2 and (len(largest_items) / len(clist)) >= 0.55:
                 for skey, group_items in sig_to_items.items():
                     if skey != largest_sig:
                         for it in group_items:
@@ -764,6 +945,9 @@ def quarantine_cross_model_collisions(
             else:
                 for it in clist:
                     _clear_item_img(it)
-        elif len(clist) > max_allowed_variants:
+        elif len(clist) > (10 if category == "STORAGE" else max_allowed_variants):
             for it in clist:
                 _clear_item_img(it)
+
+    for it in items:
+        it.pop("_img_match_score", None)

@@ -46158,8 +46158,10 @@
     "name": "ASUS RT-AC68U",
     "brand": "ASUS",
     "model": "ASUS RT-AC68U",
-    "image_url": null,
-    "images": [],
+    "image_url": "https://img.yenieera22.com/cdn/1000/dsl-ac68u-asus-dsl-ac68u-dualband-ai-mesh-torrent-bulut-dlna-4g-vpn-adsl-vdsl-fiber-modem-router_c-f59cd9.png",
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/dsl-ac68u-asus-dsl-ac68u-dualband-ai-mesh-torrent-bulut-dlna-4g-vpn-adsl-vdsl-fiber-modem-router_c-f59cd9.png"
+    ],
     "extra_specs": {
       "OpenWrt 24.10 Desteği": "Resmi Destekli (CAKE SQM & OpenWrt Kernel)",
       "Hedef Mimari (Target)": "bcm53xx/generic",
@@ -46250,8 +46252,10 @@
     "name": "ASUS RT-AX53U",
     "brand": "ASUS",
     "model": "ASUS RT-AX53U",
-    "image_url": null,
-    "images": [],
+    "image_url": "https://img.yenieera22.com/cdn/1000/yeni-proje-2022-07-21t101041280-59f1d5.jpg",
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-2022-07-21t101041280-59f1d5.jpg"
+    ],
     "extra_specs": {
       "OpenWrt 24.10 Desteği": "Resmi Destekli (CAKE SQM & OpenWrt Kernel)",
       "Hedef Mimari (Target)": "ramips/mt7621",
@@ -46398,8 +46402,10 @@
     "name": "ASUS TUF-AX4200",
     "brand": "ASUS",
     "model": "ASUS TUF-AX4200",
-    "image_url": null,
-    "images": [],
+    "image_url": "https://img.yenieera22.com/cdn/1000/yeni-proje-615bd8.jpg",
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-615bd8.jpg"
+    ],
     "extra_specs": {
       "OpenWrt 24.10 Desteği": "Resmi Destekli (CAKE SQM & OpenWrt Kernel)",
       "Hedef Mimari (Target)": "mediatek/filogic",
@@ -46422,8 +46428,10 @@
     "name": "ASUS TUF-AX6000",
     "brand": "ASUS",
     "model": "ASUS TUF-AX6000",
-    "image_url": null,
-    "images": [],
+    "image_url": "https://img.yenieera22.com/cdn/1000/yeni-proje-5f0447.jpg",
+    "images": [
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-5f0447.jpg"
+    ],
     "extra_specs": {
       "OpenWrt 24.10 Desteği": "Resmi Destekli (CAKE SQM & OpenWrt Kernel)",
       "Hedef Mimari (Target)": "mediatek/filogic",
@@ -48852,7 +48860,8 @@
     "model": "Samsung Galaxy Watch 6 Classic 47mm Dönen Bezel",
     "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-active2-.jpg"
     ],
     "current_price_try": 9999,
     "lowest_price_try": 8999,
@@ -48888,7 +48897,8 @@
     "model": "Samsung Galaxy Watch 6 Classic 43mm Dönen Bezel",
     "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg",
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-active2-.jpg"
     ],
     "current_price_try": 8999,
     "lowest_price_try": 8099,
@@ -53574,7 +53584,8 @@
     "model": "TP-Link Archer BE800 Wi-Fi 7 BE19000 Çift 10G Portlu",
     "image_url": "https://down-th.img.susercontent.com/file/th-11134207-7rasa-m0jspcy58jay74",
     "images": [
-      "https://down-th.img.susercontent.com/file/th-11134207-7rasa-m0jspcy58jay74"
+      "https://down-th.img.susercontent.com/file/th-11134207-7rasa-m0jspcy58jay74",
+      "https://img.yenieera22.com/cdn/1000/archer-ax23-652656.png"
     ],
     "current_price_try": 25999,
     "lowest_price_try": 23399,
@@ -53609,7 +53620,8 @@
     "model": "TP-Link Archer GE800 Wi-Fi 7 Özel Oyun Portlu Router",
     "image_url": "https://cdn.mwave.com.au/images/400/tplink_archer_ge800_be19000_triband_wifi_7_rgb_gaming_router_ac72911_91955.jpg",
     "images": [
-      "https://cdn.mwave.com.au/images/400/tplink_archer_ge800_be19000_triband_wifi_7_rgb_gaming_router_ac72911_91955.jpg"
+      "https://cdn.mwave.com.au/images/400/tplink_archer_ge800_be19000_triband_wifi_7_rgb_gaming_router_ac72911_91955.jpg",
+      "https://img.yenieera22.com/cdn/1000/1-14a641.png"
     ],
     "current_price_try": 27999,
     "lowest_price_try": 25199,
@@ -53644,7 +53656,8 @@
     "model": "TP-Link Archer AXE75 Üç Bant Wi-Fi 6E Router",
     "image_url": "https://cdn.mos.cms.futurecdn.net/TKDykKRxRkk2JR62bYSrG3.jpg",
     "images": [
-      "https://cdn.mos.cms.futurecdn.net/TKDykKRxRkk2JR62bYSrG3.jpg"
+      "https://cdn.mos.cms.futurecdn.net/TKDykKRxRkk2JR62bYSrG3.jpg",
+      "https://img.yenieera22.com/cdn/1000/archer-ax23-652656.png"
     ],
     "current_price_try": 6499,
     "lowest_price_try": 5849,
@@ -53679,7 +53692,8 @@
     "model": "TP-Link Archer AX72 Pro 2.5G Portlu Wi-Fi 6 Router",
     "image_url": "https://static.tp-link.com/upload/image-line/Archer_AX72_Pro(US)_1.6-328X265X120mm-H-7022510023_normal_20221208074314t.png",
     "images": [
-      "https://static.tp-link.com/upload/image-line/Archer_AX72_Pro(US)_1.6-328X265X120mm-H-7022510023_normal_20221208074314t.png"
+      "https://static.tp-link.com/upload/image-line/Archer_AX72_Pro(US)_1.6-328X265X120mm-H-7022510023_normal_20221208074314t.png",
+      "https://img.yenieera22.com/cdn/1000/2-885f60.png"
     ],
     "current_price_try": 4699,
     "lowest_price_try": 4229,
@@ -53714,7 +53728,8 @@
     "model": "TP-Link Deco BE85 Wi-Fi 7 Mesh Sistemi (Tekli/İkili)",
     "image_url": "https://static.tp-link.com/upload/image-line/02_large_20240116060120u.jpg",
     "images": [
-      "https://static.tp-link.com/upload/image-line/02_large_20240116060120u.jpg"
+      "https://static.tp-link.com/upload/image-line/02_large_20240116060120u.jpg",
+      "https://img.yenieera22.com/cdn/1000/yeni-proje-2023-10-11t111351471-c33fe2.jpg"
     ],
     "current_price_try": 29999,
     "lowest_price_try": 26999,
@@ -53889,7 +53904,8 @@
     "model": "Keenetic Titan (KN-1811) AX3200 2.5G Portlu Router",
     "image_url": "https://www.incehesap.com/resim/urun/202510/68f93d81a11f1.webp",
     "images": [
-      "https://www.incehesap.com/resim/urun/202510/68f93d81a11f1.webp"
+      "https://www.incehesap.com/resim/urun/202510/68f93d81a11f1.webp",
+      "https://img.yenieera22.com/cdn/1000/3-52a80e.png"
     ],
     "current_price_try": 6299,
     "lowest_price_try": 5669,
@@ -53924,7 +53940,8 @@
     "model": "Keenetic Hero (KN-1011) AX1800 Gigabit Mesh Router",
     "image_url": "https://s13emagst.akamaized.net/products/47686/47685178/images/res_ba92ed4bf408e7e654085a95a90b875d.jpg",
     "images": [
-      "https://s13emagst.akamaized.net/products/47686/47685178/images/res_ba92ed4bf408e7e654085a95a90b875d.jpg"
+      "https://s13emagst.akamaized.net/products/47686/47685178/images/res_ba92ed4bf408e7e654085a95a90b875d.jpg",
+      "https://img.yenieera22.com/cdn/1000/kn-3610-01en-keenetic-hopper-dsl-ax1800-gigabit-mesh-vdsl2adsl2-modem-router_clipped_rev_1-9e8671.png"
     ],
     "current_price_try": 4199,
     "lowest_price_try": 3779,

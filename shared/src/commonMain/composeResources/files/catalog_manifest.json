@@ -1,10 +1,10 @@
 {
-  "catalogVersion": "4.0.0",
+  "catalogVersion": "4.2.0",
   "verifiedAt": "2026-11-16",
   "counts": {
-    "cpu": 450,
-    "gpu": 1302,
-    "storage": 546,
+    "cpu": 432,
+    "gpu": 1305,
+    "storage": 542,
     "psu": 227,
     "motherboard": 645,
     "ram": 664,

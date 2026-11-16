@@ -16,7 +16,11 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from scripts.crawlers.http_client import PoliteHttpClient
-from scripts.crawlers.sources_images import crawl_gaming_gen_store, crawl_gsmarena_galleries
+from scripts.crawlers.sources_images import (
+    crawl_gaming_gen_store,
+    crawl_gsmarena_galleries,
+    crawl_itopya_targeted,
+)
 from scripts.crawlers.sources_mobile_laptop import crawl_mobile_and_laptop
 from scripts.crawlers.sources_network_ups import crawl_networking_and_ups
 from scripts.crawlers.sources_pc import crawl_pc_components
@@ -54,9 +58,10 @@ def main() -> int:
         res = crawl_mobile_and_laptop(http, state, max_gsmarena_devices=args.gsmarena_limit, delta_only=delta_only)
         print(f"[MOBILE & LAPTOP] {res}")
     if "images" in groups:
-        gg_cnt = crawl_gaming_gen_store(http, state, max_pages_per_cat=3, delta_only=delta_only)
+        gg_cnt = crawl_gaming_gen_store(http, state, max_pages_per_cat=6, delta_only=delta_only)
         gsm_cnt = crawl_gsmarena_galleries(http, state, delta_only=delta_only)
-        print(f"[IMAGES] GamingGen={gg_cnt}, GSMArenaGallery={gsm_cnt}")
+        ito_cnt = crawl_itopya_targeted(http, state, max_fetch=1200, delta_only=delta_only)
+        print(f"[IMAGES] GamingGen={gg_cnt}, GSMArenaGallery={gsm_cnt}, Itopya={ito_cnt}")
 
     print("\n=== Crawl State Summary (category | source | count) ===")
     for cat, src, cnt in state.summary_counts():

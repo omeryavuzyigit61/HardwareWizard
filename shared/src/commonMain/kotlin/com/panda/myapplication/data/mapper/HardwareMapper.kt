@@ -1981,7 +1981,7 @@ object HardwareMapper {
         val matched = knownBrands.firstOrNull { trimmed.startsWith(it, ignoreCase = true) }
         return if (matched != null) {
             val brand = trimmed.substring(0, matched.length).trim()
-            val model = trimmed.substring(matched.length).trim().ifBlank { brand }
+            val model = trimmed.substring(matched.length).trim().trimStart('_', '-', ' ', '.').ifBlank { brand }
             brand to model
         } else {
             val firstSpace = trimmed.indexOf(' ')
@@ -2105,6 +2105,8 @@ object HardwareMapper {
             u.contains("ATHLON II") || u.contains("PHENOM") || u.contains("SEMPRON") || u.contains("OPTERON") ||
             u.contains("FX-") || u.contains("PENTIUM") || u.contains("CELERON") || u.contains("CORE 2") ||
             u.contains("XEON") || u.contains("CORE DUO") || u.contains("ATOM") || u.contains("EMBEDDED") ||
+            Regex("\\b(?:\\d{4}(?:U|HS|HX|H|V)|2[23568][68]V)\\b").containsMatchIn(u) ||
+            u.contains("RYZEN Z1") || u.contains("RYZEN AI") ||
             s.contains("AM1") || s.contains("AM2") || s.contains("AM3") || s.contains("FM1") || s.contains("FM2") ||
             s.contains("775") || s.contains("1156") || s.contains("1155") || s.contains("1150") || s.contains("1151")) {
             return false
@@ -2115,7 +2117,7 @@ object HardwareMapper {
                 (s.contains("AM4") || s.contains("AM5") || s.contains("TR4") || s.contains("TRX4") || s.contains("STR5") || s.contains("WRX8") || s == "BELIRTILMEDI")
 
         // 3. Modern Intel Whitelist: Core Ultra or 10th-14th Gen Core on LGA1200 / LGA1700 / LGA1851
-        val isModernIntel = (u.contains("CORE ULTRA") || u.contains("285K") || u.contains("275K") || u.contains("265K") || u.contains("255K") || u.contains("245K") ||
+        val isModernIntel = (u.contains("CORE ULTRA") || u.contains("290K") || u.contains("285K") || u.contains("275K") || u.contains("265K") || u.contains("255K") || u.contains("245K") || u.contains("235") || u.contains("225") ||
                 u.contains("14900") || u.contains("14700") || u.contains("14600") || u.contains("14500") || u.contains("14400") || u.contains("14100") ||
                 u.contains("13900") || u.contains("13700") || u.contains("13600") || u.contains("13500") || u.contains("13400") || u.contains("13100") ||
                 u.contains("12900") || u.contains("12700") || u.contains("12600") || u.contains("12500") || u.contains("12400") || u.contains("12100") ||

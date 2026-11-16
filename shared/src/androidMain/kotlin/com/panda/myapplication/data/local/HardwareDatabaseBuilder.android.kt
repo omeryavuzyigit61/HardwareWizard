@@ -5,7 +5,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import java.io.File
 
-private const val PREPOPULATED_DB_ASSET_VERSION = "4.1.0"
+private const val PREPOPULATED_DB_ASSET_VERSION = "4.2.0"
 
 fun hardwareDatabaseBuilder(context: Context): RoomDatabase.Builder<HardwareDatabase> {
     val appContext = context.applicationContext
