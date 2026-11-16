@@ -4,13 +4,24 @@ import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.GamingChairSpec
 import com.panda.myapplication.domain.model.GpuSpec
+import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.model.HeadsetSpec
+import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
+import com.panda.myapplication.domain.model.MicrophoneSpec
+import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
+import com.panda.myapplication.domain.model.MouseSpec
+import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.StorageSpec
+import com.panda.myapplication.domain.model.TabletSpec
+import com.panda.myapplication.domain.model.WebcamSpec
 
 data class EngineeringBadge(
     val label: String,
@@ -22,11 +33,9 @@ object HardwareEnrichmentEngine {
 
     fun getEngineeringBadges(item: HardwareItem): List<EngineeringBadge> {
         val badges = mutableListOf<EngineeringBadge>()
-        val fullName = item.displayName.uppercase()
-        val brand = item.brand.uppercase()
 
         // Benchmarks ONLY for CPU and GPU
-        if (item.category == com.panda.myapplication.domain.model.HardwareCategory.CPU || item.category == com.panda.myapplication.domain.model.HardwareCategory.GPU) {
+        if (item.category == HardwareCategory.CPU || item.category == HardwareCategory.GPU) {
             val bench = item.benchmarkInfo
             if (bench != null) {
                 val verifiedBadge = if (bench.isVerified) "Doğrulanmış Test" else "Simülasyon"
@@ -199,7 +208,7 @@ object HardwareEnrichmentEngine {
                 }
             }
 
-            is com.panda.myapplication.domain.model.MouseSpec -> {
+            is MouseSpec -> {
                 badges.add(EngineeringBadge("Optik Sensör", s.sensor, isHighlighted = true))
                 badges.add(EngineeringBadge("Raporlama Hızı", "${s.pollingRateHz} Hz", isHighlighted = s.pollingRateHz >= 4000))
                 badges.add(EngineeringBadge("Ağırlık", "${s.weightG}g Ultra-Hafif", isHighlighted = s.weightG <= 60))
@@ -208,7 +217,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Bağlantı", s.connectivity))
             }
 
-            is com.panda.myapplication.domain.model.KeyboardSpec -> {
+            is KeyboardSpec -> {
                 badges.add(EngineeringBadge("Anahtar Mimarisi", s.switchType, isHighlighted = true))
                 badges.add(EngineeringBadge("Rapid Trigger", if (s.rapidTriggerSupported) "Destekleniyor (${s.minActuationMm} mm)" else "Standart (${s.minActuationMm} mm)", isHighlighted = s.rapidTriggerSupported))
                 badges.add(EngineeringBadge("Raporlama Hızı", "${s.pollingRateHz} Hz"))
@@ -216,7 +225,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Hot-Swap", if (s.hotSwap) "Var" else "Sabit"))
             }
 
-            is com.panda.myapplication.domain.model.HeadsetSpec -> {
+            is HeadsetSpec -> {
                 badges.add(EngineeringBadge("Sürücü Mimarisi", "${s.driverSizeMm}mm ${s.driverType}", isHighlighted = true))
                 badges.add(EngineeringBadge("Empedans", "${s.impedanceOhm} Ω", isHighlighted = s.impedanceOhm >= 80))
                 badges.add(EngineeringBadge("DAC / Amfi", if (s.dacAmpRequired) "Harici DAC/Amfi Önerilir" else "Doğrudan Besleme", isHighlighted = s.dacAmpRequired))
@@ -224,7 +233,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Ağırlık", "${s.weightG}g"))
             }
 
-            is com.panda.myapplication.domain.model.MonitorSpec -> {
+            is MonitorSpec -> {
                 badges.add(EngineeringBadge("Panel Teknolojisi", s.panelType, isHighlighted = true))
                 badges.add(EngineeringBadge("Çözünürlük & Yenileme", "${s.resolution} @ ${s.refreshRateHz}Hz", isHighlighted = true))
                 badges.add(EngineeringBadge("Tepki Süresi", "${s.responseSpeedGtGMs} ms GtG"))
@@ -232,7 +241,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("HDR Standardı", s.hdrCertification))
             }
 
-            is com.panda.myapplication.domain.model.MicrophoneSpec -> {
+            is MicrophoneSpec -> {
                 badges.add(EngineeringBadge("Kapsül Mimarisi", s.capsuleType, isHighlighted = true))
                 badges.add(EngineeringBadge("Kutup Deseni", s.polarPattern, isHighlighted = true))
                 badges.add(EngineeringBadge("Stüdyo Çözünürlüğü", s.sampleRateAndBit))
@@ -241,7 +250,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Donanımsal DSP", if (s.hasBuiltInDsp) "Entegre DSP & Limiter" else "Saf Analog Sinyal"))
             }
 
-            is com.panda.myapplication.domain.model.MousepadSpec -> {
+            is MousepadSpec -> {
                 badges.add(EngineeringBadge("Yüzey Dokusu", s.surfaceType, isHighlighted = true))
                 badges.add(EngineeringBadge("Kayma Karakteri", s.speedGlideTier, isHighlighted = true))
                 badges.add(EngineeringBadge("Durdurma Gücü", "${s.stoppingPowerScore}/10 Kontrol Skoru"))
@@ -250,7 +259,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Nem Direnci", s.humidityResistance))
             }
 
-            is com.panda.myapplication.domain.model.WebcamSpec -> {
+            is WebcamSpec -> {
                 badges.add(EngineeringBadge("Video Çözünürlüğü", "${s.maxResolution} @ ${s.maxFrameRateFps} FPS", isHighlighted = true))
                 badges.add(EngineeringBadge("Görüntü Sensörü", "${s.sensorModel} (${s.sensorSizeInch})", isHighlighted = true))
                 badges.add(EngineeringBadge("Diyafram & Işık", s.aperture))
@@ -258,7 +267,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Otomatik Odak & AI", if (s.hasAiTracking) "${s.focusType} + AI Gimbal Takip" else s.focusType, isHighlighted = s.hasAiTracking))
             }
 
-            is com.panda.myapplication.domain.model.GamingChairSpec -> {
+            is GamingChairSpec -> {
                 badges.add(EngineeringBadge("Ergonomi Sınıfı", s.chairType, isHighlighted = true))
                 badges.add(EngineeringBadge("Döşeme Materyali", s.upholsteryMaterial, isHighlighted = true))
                 badges.add(EngineeringBadge("L4/L5 Bel Desteği", s.lumbarSupportType, isHighlighted = true))
@@ -267,7 +276,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("Önerilen Boy", "${s.recommendedHeightRange} • ${s.reclineAngleDeg}° Yatış"))
             }
 
-            is com.panda.myapplication.domain.model.PhoneSpec -> {
+            is PhoneSpec -> {
                 badges.add(EngineeringBadge("Yonga Seti (SoC)", s.chipset, isHighlighted = true))
                 s.antutuScore?.let { badges.add(EngineeringBadge("AnTuTu v10 Skoru", "${it} Puan", isHighlighted = true)) }
                 badges.add(EngineeringBadge("Ekran Paneli", "${s.displaySizeInch}\" ${s.displayTech} @ ${s.refreshRateHz}Hz (${s.peakBrightnessNit} Nit)", isHighlighted = true))
@@ -278,7 +287,7 @@ object HardwareEnrichmentEngine {
                 badges.add(EngineeringBadge("İşletim Sistemi", "${s.osName} (${s.updateYears} Yıl Güncelleme)"))
             }
 
-            is com.panda.myapplication.domain.model.TabletSpec -> {
+            is TabletSpec -> {
                 badges.add(EngineeringBadge("İşlemci / Yonga", s.chipset, isHighlighted = true))
                 s.antutuScore?.let { badges.add(EngineeringBadge("AnTuTu v10 Skoru", "${it} Puan", isHighlighted = true)) }
                 badges.add(EngineeringBadge("Ekran Mimarisi", "${s.displaySizeInch}\" ${s.displayTech} @ ${s.refreshRateHz}Hz (${s.peakBrightnessNit} Nit)", isHighlighted = true))

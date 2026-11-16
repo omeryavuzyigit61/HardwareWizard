@@ -615,7 +615,7 @@ fun CoolingLabScreen(
                                 color = NeonAmber,
                             )
                         }
-                        com.panda.myapplication.presentation.components.FluidInteractiveSlider(
+                        FluidInteractiveSlider(
                             value = ambientTempCelsius.toFloat(),
                             onValueChange = { ambientTempCelsius = it.roundToInt() },
                             valueRange = 18f..36f,
@@ -1041,7 +1041,6 @@ private fun CatalogCoolerPickerSheet(
     onSelectCooler: (HardwareItem, CoolerSpec) -> Unit,
 ) {
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var searchQuery by remember { mutableStateOf("") }
     val filtered = remember(coolers, searchQuery) {
         coolers.filter { item ->

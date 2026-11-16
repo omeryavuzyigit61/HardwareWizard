@@ -32,7 +32,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -101,7 +100,6 @@ fun UserProfileScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             ProfileTopBar(
-                isLoggedIn = isLoggedIn,
                 onNavigateBack = onNavigateBack,
                 onNavigateToSettings = onNavigateToSettings,
             )
@@ -341,7 +339,6 @@ fun UserProfileScreen(
 
 @Composable
 private fun ProfileTopBar(
-    isLoggedIn: Boolean,
     onNavigateBack: () -> Unit,
     onNavigateToSettings: () -> Unit = {},
 ) {

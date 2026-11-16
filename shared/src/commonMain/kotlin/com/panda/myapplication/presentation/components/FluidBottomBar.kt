@@ -108,7 +108,6 @@ fun FluidBottomBar(
                 .height(64.dp),
         ) {
             val totalWidthPx = constraints.maxWidth.toFloat()
-            val totalHeightPx = constraints.maxHeight.toFloat()
             val tabCount = tabs.size.coerceAtLeast(1)
             val tabWidthPx = totalWidthPx / tabCount
 

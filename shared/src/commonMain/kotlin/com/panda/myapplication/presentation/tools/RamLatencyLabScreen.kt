@@ -176,7 +176,6 @@ fun RamLatencyLabScreen(
                         HorizontalDivider(color = MaterialTheme.colorScheme.outline)
 
                         // Dynamic Platform Advice
-                        val hasAbove6000 = freqA > 6000 || freqB > 6000
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = NeonAmber.copy(alpha = 0.14f),

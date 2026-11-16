@@ -325,15 +325,6 @@ fun App() {
 
                         composable(route = Destinations.WIZARD) {
                             WizardRoute(
-                                onNavigateToCatalogWithCategory = { category ->
-                                    navController.navigate("${Destinations.HARDWARE_LIST}?category=${category.name}") {
-                                        popUpTo(navController.graph.findStartDestination().id) {
-                                            saveState = true
-                                        }
-                                        launchSingleTop = true
-                                        restoreState = true
-                                    }
-                                },
                                 onNavigateToItemDetail = { item ->
                                     navController.navigate("${Destinations.HARDWARE_DETAIL}/${item.id.value}")
                                 },

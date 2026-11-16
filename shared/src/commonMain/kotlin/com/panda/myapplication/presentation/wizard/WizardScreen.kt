@@ -157,7 +157,6 @@ private val WIZARD_SLOTS = listOf(
 @Suppress("DEPRECATION")
 @Composable
 fun WizardRoute(
-    onNavigateToCatalogWithCategory: (HardwareCategory) -> Unit,
     onNavigateToItemDetail: (HardwareItem) -> Unit,
     modifier: Modifier = Modifier,
     onOpenDrawer: (() -> Unit)? = null,

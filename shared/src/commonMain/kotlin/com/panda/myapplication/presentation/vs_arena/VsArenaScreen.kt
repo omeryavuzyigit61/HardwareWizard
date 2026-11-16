@@ -469,8 +469,6 @@ fun VsArenaScreen(
 
                     VsEmptyArenaCard(
 
-                        mode = state.mode,
-
                         activeCategory = state.activeCategory,
 
                         suggestedPair = state.suggestedPair,
@@ -1011,8 +1009,6 @@ private fun VsFighterSlotsCard(
 
     val strings = LocalAppStrings.current
 
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
-
 
 
     Row(
@@ -1140,8 +1136,6 @@ private fun VsFighterCornerCard(
 ) {
 
     val strings = LocalAppStrings.current
-
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
 
 
@@ -2515,8 +2509,6 @@ private fun VsComparisonMetricRow(
 
 private fun VsEmptyArenaCard(
 
-    mode: VsArenaMode,
-
     activeCategory: HardwareCategory,
 
     suggestedPair: Pair<HardwareItem, HardwareItem>?,
@@ -2718,8 +2710,6 @@ private fun VsProductPickerSheetContent(
 ) {
 
     val strings = LocalAppStrings.current
-
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
     Column(
 

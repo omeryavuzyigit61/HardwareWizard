@@ -50,7 +50,6 @@ fun FluidInteractiveSlider(
     modifier: Modifier = Modifier,
     valueRange: ClosedFloatingPointRange<Float> = 0f..1f,
     accentColor: Color = NeonCyan,
-    secondaryColor: Color? = null,
     inactiveTrackColor: Color? = null,
     enabled: Boolean = true,
 ) {

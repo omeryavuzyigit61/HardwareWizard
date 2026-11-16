@@ -348,7 +348,6 @@ fun WorkstationLabScreen(
             // 4. Kritik Darboğaz & Veri Güvenilirliği Başlığı
             item {
                 DataCitationBanner(
-                    app = profile.app,
                     citation = profile.dataCitation,
                     isTr = isTr,
                 )
@@ -699,7 +698,6 @@ private fun WorkloadConfigCard(
 
 @Composable
 private fun DataCitationBanner(
-    app: WorkstationApp,
     citation: String,
     isTr: Boolean,
 ) {

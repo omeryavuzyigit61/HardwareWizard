@@ -74,49 +74,6 @@ object SecurityUtils {
     )
 
     /**
-     * Whitelisted image CDN domains allowed for product imagery.
-     */
-    private val ALLOWED_IMAGE_DOMAINS = ALLOWED_STORE_DOMAINS + setOf(
-        "raw.githubusercontent.com",
-        "githubusercontent.com",
-        "github.com",
-        "akakce.net",
-        "hepsiburada.net",
-        "dsmcdn.com",
-        "media-amazon.com",
-        "ssl-images-amazon.com",
-        "m.media-amazon.com",
-        "images-na.ssl-images-amazon.com",
-        "pcpartpicker.com",
-        "cdna.pcpartpicker.com",
-        "cdnb.pcpartpicker.com",
-        "techpowerup.org",
-        "tpucdn.com",
-        "wikimedia.org",
-        "amd.com",
-        "nvidia.com",
-        "intel.com",
-        "asus.com",
-        "msi.com",
-        "gigabyte.com",
-        "asrock.com",
-        "corsair.com",
-        "kingston.com",
-        "gskill.com",
-        "samsung.com",
-        "nzxt.com",
-        "deepcool.com",
-        "lian-li.com",
-        "arctic.de",
-        "noctua.at",
-        "bequiet.com",
-        "seasonic.com",
-        "fsp-group.com",
-        "coolermaster.com",
-        "thermaltake.com",
-    )
-
-    /**
      * Validates and sanitizes an external store URL.
      * - Must start with `https://`
      * - Must not contain control characters, whitespace injection, or `@` userinfo spoofing

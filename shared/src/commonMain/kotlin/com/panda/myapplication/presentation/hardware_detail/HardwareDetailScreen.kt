@@ -98,7 +98,6 @@ import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
-import com.panda.myapplication.domain.model.Frequency
 import com.panda.myapplication.domain.model.GameCategory
 import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.GpuSpec
@@ -123,7 +122,6 @@ import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.StoreOffer
 import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.model.VerifiedLabBenchmarks
-import com.panda.myapplication.domain.model.Wattage
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.components.PriceOverrideDialog
 import com.panda.myapplication.presentation.hardware_list.Spacing
@@ -407,7 +405,6 @@ fun HardwareDetailContent(
                             item(key = "store_offers") {
                                 StoreOffersCard(
                                     offers = item.offers,
-                                    currentPriceTry = item.currentPriceTry,
                                     productName = item.displayName,
                                 )
                             }
@@ -438,7 +435,6 @@ fun HardwareDetailContent(
                         // 💬 Kullanıcı Yorumları & Topluluk Değerlendirmeleri
                         item(key = "community_reviews_and_comments") {
                             HardwareCommentsAndReviewsSection(
-                                hardwareName = item.displayName,
                                 tips = uiState.proTips,
                                 currentUserId = uiState.currentUser?.id,
                                 currentUsername = uiState.currentUser?.username,
@@ -662,7 +658,6 @@ private fun DetailTopBar(
     modifier: Modifier = Modifier,
     onAddToVsArenaClick: (() -> Unit)? = null,
 ) {
-    val strings = LocalAppStrings.current
     Surface(
         modifier = modifier
             .fillMaxWidth()
@@ -2287,7 +2282,6 @@ private fun PolymorphicTechnicalSpecsSection(
     modifier: Modifier = Modifier,
 ) {
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val rows = buildPolymorphicSpecRows(item, strings)
 
     Card(
@@ -3313,7 +3307,6 @@ private fun encodeSearchQuery(query: String): String {
 @Composable
 private fun StoreOffersCard(
     offers: List<StoreOffer>,
-    currentPriceTry: Double?,
     productName: String,
     modifier: Modifier = Modifier,
 ) {

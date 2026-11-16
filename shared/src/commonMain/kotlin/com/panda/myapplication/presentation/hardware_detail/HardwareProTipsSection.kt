@@ -63,7 +63,6 @@ fun HardwareCommentsAndReviewsSection(
     onAddTipClick: () -> Unit,
     onUpvoteClick: (String) -> Unit,
     modifier: Modifier = Modifier,
-    hardwareName: String = "",
     currentUserId: String? = null,
     currentUsername: String? = null,
     onReportClick: (HardwareProTip) -> Unit = {},

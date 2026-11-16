@@ -159,7 +159,7 @@ object VsArenaEngine {
                 left.spec is CaseSpec && right.spec is CaseSpec ->
                     addAll(compareCases(left.spec, right.spec))
                 left.spec is LaptopSpec && right.spec is LaptopSpec ->
-                    addAll(compareLaptops(left, left.spec, right, right.spec))
+                    addAll(compareLaptops(left.spec, right.spec))
                 left.spec is MouseSpec && right.spec is MouseSpec ->
                     addAll(compareMice(left.spec, right.spec))
                 left.spec is KeyboardSpec && right.spec is KeyboardSpec ->
@@ -889,9 +889,7 @@ object VsArenaEngine {
     }
 
     private fun compareLaptops(
-        leftItem: HardwareItem,
         l: LaptopSpec,
-        rightItem: HardwareItem,
         r: LaptopSpec,
     ): List<VsComparisonRow> = buildList {
         add(
@@ -1717,18 +1715,6 @@ object VsArenaEngine {
         PsuEfficiencyRating.SILVER -> 3
         PsuEfficiencyRating.BRONZE -> 2
         PsuEfficiencyRating.STANDARD -> 1
-    }
-
-    private fun formatAdvantageText(advantageTry: Double?, separatePriceTry: Double?): String {
-        if (advantageTry != null && separatePriceTry != null && separatePriceTry > 0.0) {
-            val sign = if (advantageTry >= 0) "+" else "-"
-            val label = if (advantageTry >= 0) "Kâr" else "Fark"
-            return "$sign${abs(advantageTry).formatPrice()} ₺ $label (Tek Tek: ${separatePriceTry.formatPrice()} ₺)"
-        }
-        if (separatePriceTry != null && separatePriceTry > 0.0) {
-            return "Tek Tek: ${separatePriceTry.formatPrice()} ₺"
-        }
-        return UNSPECIFIED
     }
 
     private fun extractFirstInt(text: String): Int? =

@@ -466,7 +466,6 @@ object WorkstationRequirementEngine {
 
         val is8k = resolution == WorkloadResolution.RAW_8K
         val is4k = resolution == WorkloadResolution.UHD_4K
-        val is2k = resolution == WorkloadResolution.QHD_2K
         val isRender = phase == WorkloadPhase.FINAL_RENDER
         val isSimOrAi = phase == WorkloadPhase.HEAVY_SIMULATION
 

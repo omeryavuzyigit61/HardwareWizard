@@ -297,7 +297,7 @@ object BenchmarkEngine {
         return when (val s = item.spec) {
             is CpuSpec -> simulateCpu(item, s)
             is GpuSpec -> simulateGpu(item, s)
-            else -> simulateGeneral(item)
+            else -> simulateGeneral()
         }
     }
 
@@ -443,7 +443,7 @@ object BenchmarkEngine {
         )
     }
 
-    private fun simulateGeneral(item: HardwareItem): HardwareBenchmarkInfo {
+    private fun simulateGeneral(): HardwareBenchmarkInfo {
         return HardwareBenchmarkInfo(
             score = 0,
             tier = "",

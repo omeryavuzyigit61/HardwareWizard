@@ -12,7 +12,6 @@ import androidx.compose.material.icons.rounded.BatteryChargingFull
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.CellTower
 import androidx.compose.material.icons.rounded.Chair
-import androidx.compose.material.icons.rounded.Computer
 import androidx.compose.material.icons.rounded.DeveloperBoard
 import androidx.compose.material.icons.rounded.Dns
 import androidx.compose.material.icons.rounded.GridOn

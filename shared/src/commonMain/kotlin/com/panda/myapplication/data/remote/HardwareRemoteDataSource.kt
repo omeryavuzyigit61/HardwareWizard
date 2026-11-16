@@ -213,7 +213,7 @@ class HardwareRemoteDataSource(
             url,
         )
         val jsonElement = json.parseToJsonElement(text)
-        if (jsonElement is kotlinx.serialization.json.JsonArray) {
+        if (jsonElement is JsonArray) {
             jsonElement.mapNotNull { element ->
                 try {
                     json.decodeFromJsonElement<T>(element)
