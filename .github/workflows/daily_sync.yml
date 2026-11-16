@@ -40,9 +40,9 @@ jobs:
         run: |
           python scripts/autonomous_hardware_discovery.py
 
-      - name: 2. Sync Deep Hardware Specs & Verified Kaynakca Feeds (Geekbench 6 & IRONScale Labs)
+      - name: 2. Sync Deep Hardware Specs & Verified Kaynakca Feeds (Delta-Only)
         run: |
-          python scripts/sync_deep_specs_and_benchmarks.py
+          python scripts/sync_deep_specs_and_benchmarks.py --delta-only
 
       - name: 3. Sync Global Technical Catalog & Multi-Angle Peripherals
         run: |
@@ -57,10 +57,15 @@ jobs:
         run: |
           python scripts/sync_systems_and_laptops.py --skip-live-crawl
 
-      - name: 6. Final Dual Directory Catalog Verification & Hash Integrity
+      - name: 6. Final Dual Directory Catalog Verification & Conditional DB Rebuild
         run: |
           python scripts/autonomous_hardware_discovery.py
-          python scripts/prepare_prepopulated_db.py
+          if [ -n "$(git status --porcelain data/catalog/ data/hardware_benchmarks.json)" ]; then
+            echo "Yeni donanım veya özellik değişikliği tespit edildi; hardware_wizard.db güncelleniyor..."
+            python scripts/prepare_prepopulated_db.py
+          else
+            echo "Katalogda yeni ürün veya özellik değişikliği yok; Room DB yenilemesi atlanıyor."
+          fi
 
       - name: Commit and push only if real data changes exist
         run: |

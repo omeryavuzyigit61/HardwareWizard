@@ -26,6 +26,7 @@ import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Any
 
 print = functools.partial(print, flush=True)
 
@@ -146,11 +147,15 @@ def fetch_ironscale_db() -> list[dict]:
         print(f"[!] IRONScale Labs veritabanı indirilemedi: {e}")
         return []
 
+def _clean_ws(val: Any) -> str:
+    return " ".join(str(val or "").split())
+
+
 def format_capacitor_info(rec: dict) -> str:
-    primary = rec.get("primary", {})
-    secondary = rec.get("secondary", {})
-    bulk = primary.get("bulk_capacitor", "")
-    sec_caps = secondary.get("electrolytic_caps", "")
+    primary = rec.get("primary", {}) or {}
+    secondary = rec.get("secondary", {}) or {}
+    bulk = _clean_ws(primary.get("bulk_capacitor", ""))
+    sec_caps = _clean_ws(secondary.get("electrolytic_caps", ""))
 
     all_caps_text = f"{bulk} {sec_caps}".lower()
     is_japanese = any(j in all_caps_text for j in ["rubycon", "nichicon", "nippon", "chemi-con", "toshin", "kyocera"])
@@ -165,27 +170,27 @@ def format_capacitor_info(rec: dict) -> str:
     elif is_chengx:
         cap_spec.append("85°C - 105°C Çin (ChengX / CapXon)")
     else:
-        # Extract temp if present
         m_temp = re.search(r'(105°C|85°C)', f"{bulk} {sec_caps}", re.I)
         temp = m_temp.group(1) if m_temp else "105°C"
         cap_spec.append(f"{temp} Katı/Elektrolitik Kapasitör")
 
-    # Add hold-up time if available
-    hold_up = primary.get("hold_up", "")
+    hold_up = _clean_ws(primary.get("hold_up", ""))
     if hold_up and hold_up != "-" and "ms" in hold_up:
-        cap_spec.append(f"Hold-Up Time: {hold_up.strip()}")
+        cap_spec.append(f"Hold-Up Time: {hold_up}")
 
     return " • ".join(cap_spec)
 
+
 def format_topology_info(rec: dict) -> str:
-    oem = rec.get("oem", "").strip() or "Belirtilmedi"
-    platform = rec.get("platform", "").strip()
-    primary = rec.get("primary", {})
-    topology = primary.get("topology", "").replace("\n", " ").strip()
-    pfc = primary.get("pfc_topology", "").replace("\n", " ").strip() or "Aktif PFC"
-    secondary = rec.get("secondary", {})
-    reg = secondary.get("regulation", "").replace("\n", " ").strip()
-    dc_dc = "DC-DC" if "dc" in reg.lower() or "senkron" in secondary.get("rectification", "").lower() else reg
+    oem = _clean_ws(rec.get("oem")) or "Belirtilmedi"
+    platform = _clean_ws(rec.get("platform"))
+    primary = rec.get("primary", {}) or {}
+    topology = _clean_ws(primary.get("topology"))
+    pfc = _clean_ws(primary.get("pfc_topology")) or "Aktif PFC"
+    secondary = rec.get("secondary", {}) or {}
+    reg = _clean_ws(secondary.get("regulation"))
+    rect = _clean_ws(secondary.get("rectification")).lower()
+    dc_dc = "DC-DC" if "dc" in reg.lower() or "senkron" in rect else reg
 
     parts = []
     if platform and platform != "-":
@@ -201,6 +206,152 @@ def format_topology_info(rec: dict) -> str:
 
     return " • ".join(parts[:4])
 
+
+def format_psu_outputs(rec: dict) -> str:
+    parts = []
+    dc = rec.get("dc") or {}
+    rail12 = dc.get("rail12") or {}
+    amps = _clean_ws(rail12.get("amps"))
+    watts = _clean_ws(rail12.get("watts"))
+    if amps and watts and amps != "-":
+        parts.append(f"+12V: {amps} ({watts})")
+    elif amps and amps != "-":
+        parts.append(f"+12V: {amps}")
+
+    full_load = (rec.get("performance") or {}).get("full_load") or {}
+    ripple12 = _clean_ws((full_load.get("ripple") or {}).get("12v"))
+    reg12 = _clean_ws((full_load.get("regulation") or {}).get("12v"))
+    if ripple12 and ripple12 != "-":
+        parts.append(f"12V Ripple: {ripple12}")
+    if reg12 and reg12 != "-":
+        parts.append(f"Regülasyon: {reg12}")
+    return " • ".join(parts)
+
+
+def format_psu_form_factor(rec: dict) -> str:
+    ff = _clean_ws(rec.get("form_factor")) or "ATX"
+    dims = rec.get("dimensions") or {}
+    l = _clean_ws(dims.get("length"))
+    w = _clean_ws(dims.get("width"))
+    h = _clean_ws(dims.get("height"))
+    if l and w and h and "-" not in (l, w, h):
+        return f"{ff} ({l} x {w} x {h})"
+    return ff
+
+
+def format_psu_protections(rec: dict) -> str:
+    prot = rec.get("protections") or {}
+    if not isinstance(prot, dict):
+        return _clean_ws(prot)
+    flags = [k.upper() for k in ("opp", "ovp", "uvp", "ocp", "otp", "scp", "nlo", "sip") if prot.get(k) is True]
+    sup = _clean_ws(prot.get("supervisor"))
+    opp = _clean_ws(prot.get("opp_hot") or prot.get("opp_cold"))
+    parts = []
+    if flags:
+        parts.append(", ".join(flags))
+    if sup and sup != "-":
+        parts.append(f"IC: {sup}")
+    if opp and opp != "-":
+        parts.append(f"OPP: {opp}")
+    return " • ".join(parts)
+
+
+def format_psu_fan(rec: dict) -> str:
+    fan = rec.get("fan") or {}
+    if not isinstance(fan, dict):
+        return _clean_ws(fan)
+    size = _clean_ws(fan.get("size"))
+    model = _clean_ws(fan.get("model"))
+    bearing = _clean_ws(fan.get("bearing"))
+    parts = [p for p in (size, model) if p and p != "-"]
+    head = " ".join(parts)
+    if bearing and bearing != "-":
+        return f"{head} ({bearing})".strip()
+    return head
+
+
+def build_psu_entry_from_ironscale(rec: dict) -> dict | None:
+    reviewed = _clean_ws(rec.get("reviewed_model"))
+    watt_match = re.search(r"(\d{3,4})\s*W", reviewed, re.I)
+    if not watt_match:
+        for opt in (rec.get("watt_options") or []):
+            watt_match = re.search(r"(\d{3,4})\s*W", str(opt), re.I)
+            if watt_match:
+                break
+    if not watt_match:
+        return None
+    watt = int(watt_match.group(1))
+    display_name = _clean_ws(rec.get("display_name") or f"{rec.get('brand', '')} {rec.get('series', '')}")
+    if not display_name:
+        return None
+    name = display_name if f"{watt}w" in display_name.lower() else f"{display_name} {watt}W"
+
+    eff_raw = _clean_ws(rec.get("efficiency")).lower()
+    if "titan" in eff_raw:
+        eff = "titanium"
+    elif "plat" in eff_raw:
+        eff = "platinum"
+    elif "gold" in eff_raw or "altın" in eff_raw:
+        eff = "gold"
+    elif "silver" in eff_raw or "gümüş" in eff_raw:
+        eff = "silver"
+    elif "bronz" in eff_raw:
+        eff = "bronze"
+    else:
+        eff = eff_raw or "gold"
+
+    mod_raw = _clean_ws(rec.get("modular")).lower()
+    if "tam" in mod_raw or "full" in mod_raw:
+        modular = "Tam Modüler (Full Modular)"
+    elif "yarı" in mod_raw or "semi" in mod_raw:
+        modular = "Yarı Modüler (Semi-Modular)"
+    elif "değil" in mod_raw or "non" in mod_raw:
+        modular = "Modüler Değil (Non-Modular)"
+    else:
+        modular = _clean_ws(rec.get("modular")) or None
+
+    cables = rec.get("cables") or {}
+    eps_c = _clean_ws((cables.get("cpu") or {}).get("count"))
+    pcie_c = _clean_ws((cables.get("pcie") or {}).get("count"))
+    sata_c = _clean_ws((cables.get("sata") or {}).get("count"))
+    hpwr_c = _clean_ws((cables.get("12vhpwr") or {}).get("count"))
+
+    tier_raw = _clean_ws(rec.get("tier"))
+    tier_label = TIER_LABELS.get(tier_raw, f"Tier {tier_raw}") if tier_raw else ""
+    desc = _clean_ws(rec.get("description"))
+    tier_val = f"{tier_label} ({desc})" if (tier_label and desc and len(desc) <= 120) else (tier_label or None)
+
+    imgs = rec.get("images") or {}
+    img_urls = []
+    for k in ("outside", "top", "fan"):
+        p = _clean_ws(imgs.get(k))
+        if p:
+            img_urls.append(f"{IRONSCALE_BASE_URL}/{p.lstrip('/')}")
+
+    return {
+        "name": name,
+        "brand": _clean_ws(rec.get("brand")),
+        "model": name.split(" ", 1)[1] if " " in name else name,
+        "type": format_psu_form_factor(rec),
+        "efficiency": eff,
+        "wattage": watt,
+        "modular": modular,
+        "tier": tier_val,
+        "atx_standard": _clean_ws(rec.get("atx_version")) or None,
+        "pcie_12vhpwr": f"{hpwr_c} 12VHPWR/12V-2x6" if hpwr_c and "yok" not in hpwr_c.lower() and hpwr_c != "-" else None,
+        "eps_connectors": f"{eps_c} EPS CPU" if eps_c and eps_c != "-" else None,
+        "pcie_connectors": f"{pcie_c} PCIe" if pcie_c and pcie_c != "-" else None,
+        "sata_connectors": sata_c if sata_c and sata_c != "-" else None,
+        "outputs": format_psu_outputs(rec) or None,
+        "topology": format_topology_info(rec) or None,
+        "capacitors": format_capacitor_info(rec) or None,
+        "protections": format_psu_protections(rec) or None,
+        "fan_size": format_psu_fan(rec) or None,
+        "imageUrl": img_urls[0] if img_urls else "",
+        "images": img_urls,
+    }
+
+
 def match_psu_to_ironscale(p: dict, iron_records: list[dict]) -> dict | None:
     pname = p.get("name", "").lower()
     pwatt = p.get("wattage")
@@ -209,26 +360,30 @@ def match_psu_to_ironscale(p: dict, iron_records: list[dict]) -> dict | None:
     best_score = 0
 
     for r in iron_records:
-        rbrand = r.get("brand", "").lower()
-        rseries = r.get("series", "").lower()
+        rbrand = r.get("brand", "").lower().strip()
+        rseries = _clean_ws(r.get("series")).lower()
         if not rbrand or rbrand not in pname:
             continue
 
         score = 10
-        # Match series tokens
-        stokens = [t for t in re.split(r'[\s\-]+', rseries) if len(t) >= 2]
+        stokens = [t for t in re.split(r'[\s\-()]+', rseries) if t]
         if stokens:
-            matched_tokens = sum(1 for st in stokens if st in pname)
+            matched_tokens = 0
+            for st in stokens:
+                if len(st) == 1:
+                    if re.search(r'\b' + re.escape(st) + r'\b', pname):
+                        matched_tokens += 1
+                elif st in pname:
+                    matched_tokens += 1
             if matched_tokens == len(stokens):
                 score += 30
-            elif matched_tokens > 0:
+            elif matched_tokens > 0 and len(stokens) > 1:
                 score += matched_tokens * 10
             else:
                 continue
         else:
             continue
 
-        # Match watt options if available
         watt_opts = [str(w).lower() for w in r.get("watt_options", [])]
         if pwatt:
             w_str = f"{pwatt}w"

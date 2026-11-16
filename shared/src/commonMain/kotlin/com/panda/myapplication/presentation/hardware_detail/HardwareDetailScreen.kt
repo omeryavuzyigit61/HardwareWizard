@@ -931,14 +931,30 @@ private fun PerformancePowerSection(
                         subText = tr(isTr, "Soğutucu gereksinim düzeyi", "Cooler requirement level"),
                     )
 
-                    val multiCoreIndex = ((s.coreCount * 250f + clockMhz) / 14000f).coerceIn(0f, 1f)
-                    MetricProgressBar(
-                        title = tr(isTr, "Sentetik Performans İndeksi", "Synthetic Compute Index"),
-                        currentValue = "${(multiCoreIndex * 100).toInt()}% Skoru",
-                        fraction = multiCoreIndex,
-                        accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "Hesaplama ve render gücü tahmini", "Estimated render and compute power"),
-                    )
+                    item.benchmarkInfo?.cpuSynthetic?.let { syn ->
+                        val gb6Multi = syn.geekbench6Multi
+                        val gb6Single = syn.geekbench6Single
+                        if (gb6Multi != null && gb6Multi > 0) {
+                            MetricProgressBar(
+                                title = tr(isTr, "Geekbench 6 (Çoklu / Tek Çekirdek)", "Geekbench 6 (Multi / Single-Core)"),
+                                currentValue = if (isTr) "$gb6Multi / ${gb6Single ?: 0} Puan" else "$gb6Multi / ${gb6Single ?: 0} Pts",
+                                fraction = (gb6Multi / 28000f).coerceIn(0f, 1f),
+                                accentColor = MaterialTheme.colorScheme.primary,
+                                subText = tr(isTr, "Geekbench 6 resmi çoklu çekirdek ölçümü", "Geekbench 6 official multi-core score"),
+                            )
+                        }
+                        val cbR23Multi = syn.cinebenchR23Multi
+                        val cbR23Single = syn.cinebenchR23Single
+                        if (cbR23Multi != null && cbR23Multi > 0) {
+                            MetricProgressBar(
+                                title = tr(isTr, "Cinebench R23 (Çoklu / Tek Çekirdek)", "Cinebench R23 (Multi / Single-Core)"),
+                                currentValue = if (isTr) "$cbR23Multi / ${cbR23Single ?: 0} Puan" else "$cbR23Multi / ${cbR23Single ?: 0} Pts",
+                                fraction = (cbR23Multi / 45000f).coerceIn(0f, 1f),
+                                accentColor = MaterialTheme.colorScheme.secondary,
+                                subText = tr(isTr, "CPU-Monkey & Cinebench R23 render puanı", "CPU-Monkey & Cinebench R23 render score"),
+                            )
+                        }
+                    }
                 }
 
                 is GpuSpec -> {
@@ -2375,6 +2391,20 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): L
             rows.add(strings.specPcieVersion to (s.pcieVersion ?: ""))
             rows.add(strings.specIgpu to (s.igpuModel ?: if (s.hasIntegratedGraphics) strings.specIgpuIncluded else strings.specIgpuRequired))
             rows.add(strings.specMultiplier to if (s.unlockedMultiplier == true) strings.specUnlocked else if (s.unlockedMultiplier == false) strings.specLocked else "")
+            item.benchmarkInfo?.cpuSynthetic?.let { syn ->
+                if (syn.geekbench6Single != null && syn.geekbench6Multi != null) {
+                    rows.add(tr(isTr, "Geekbench 6 (Tek / Çoklu Çekirdek)", "Geekbench 6 (Single / Multi-Core)") to "${formatPoints(syn.geekbench6Single)} / ${formatPoints(syn.geekbench6Multi)} ${if (isTr) "Puan" else "Pts"}")
+                }
+                if (syn.cinebenchR23Single != null && syn.cinebenchR23Multi != null) {
+                    rows.add(tr(isTr, "Cinebench R23 (Tek / Çoklu Çekirdek)", "Cinebench R23 (Single / Multi-Core)") to "${formatPoints(syn.cinebenchR23Single)} / ${formatPoints(syn.cinebenchR23Multi)} ${if (isTr) "Puan" else "Pts"}")
+                }
+                if (syn.cinebench2024Single != null && syn.cinebench2024Multi != null) {
+                    rows.add(tr(isTr, "Cinebench 2024 (Tek / Çoklu Çekirdek)", "Cinebench 2024 (Single / Multi-Core)") to "${formatPoints(syn.cinebench2024Single)} / ${formatPoints(syn.cinebench2024Multi)} ${if (isTr) "Puan" else "Pts"}")
+                }
+                syn.passmarkScore?.takeIf { it > 0 }?.let { pm ->
+                    rows.add("PassMark CPU Mark" to "${formatPoints(pm)} ${if (isTr) "Puan" else "Pts"}")
+                }
+            }
         }
 
         is GpuSpec -> {
@@ -2401,6 +2431,18 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): L
             rows.add(tr(isTr, "Kart Boyutları & Slot Kalınlığı", "Dimensions & Slot Thickness") to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • "))
             rows.add(tr(isTr, "Görüntü Çıkışları", "Display Outputs") to (s.displayOutputs ?: ""))
             rows.add(tr(isTr, "Parça Numarası (Part Number)", "Part Number (SKU)") to (s.partNumber ?: item.model))
+            item.benchmarkInfo?.gpuSynthetic?.let { syn ->
+                val tsParts = listOfNotNull(
+                    syn.timeSpyGraphics?.takeIf { it > 0 }?.let { formatPoints(it) },
+                    syn.timeSpyExtreme?.takeIf { it > 0 }?.let { formatPoints(it) },
+                )
+                if (tsParts.isNotEmpty()) {
+                    rows.add(tr(isTr, "3DMark Time Spy (Grafik / Extreme)", "3DMark Time Spy (Graphics / Extreme)") to "${tsParts.joinToString(" / ")} ${if (isTr) "Puan" else "Pts"}")
+                }
+                syn.steelNomad?.takeIf { it > 0 }?.let { sn ->
+                    rows.add("3DMark Steel Nomad (DX12 Ultimate)" to "${formatPoints(sn)} ${if (isTr) "Puan" else "Pts"}")
+                }
+            }
         }
 
         is MotherboardSpec -> {
@@ -2461,7 +2503,10 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): L
             rows.add(tr(isTr, "Cybenetics Lambda Gürültü Derecesi", "Cybenetics Lambda Noise Rating") to (s.cybeneticsLambda ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "ATX Standardı & Geçici Yük", "ATX Standard & Excursions") to (s.atxStandard ?: if (s.supportsPcie5Power) "ATX 3.0 / PCIe 5.0" else getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "12V-2x6 / 12VHPWR (600W) Çıkış", "12V-2x6 / 12VHPWR (600W) Output") to (s.pcie12Vhpwr ?: if (s.supportsPcie5Power) "Mevcut (12VHPWR / 12V-2x6)" else "Yok"))
-            rows.add(tr(isTr, "İç Topoloji & Kapasitör Standardı", "Internal Topology & Capacitors") to (s.topology ?: s.capacitors ?: getUnspecifiedText(isTr)))
+            rows.add(tr(isTr, "OEM Üretici & İç Devre Topolojisi", "OEM & Internal Topology") to (s.topology ?: ""))
+            rows.add(tr(isTr, "Kapasitör Kalitesi & Hold-Up Süresi", "Capacitors & Hold-Up Time") to (s.capacitors ?: ""))
+            rows.add(tr(isTr, "+12V Kanal Gücü, Ripple & Regülasyon", "+12V Rail, Ripple & Regulation") to (s.outputs ?: ""))
+            rows.add(tr(isTr, "Form Faktörü & Kasa Boyutları", "Form Factor & Dimensions") to (s.formFactor ?: ""))
             rows.add(tr(isTr, "Güvenlik & Koruma Devreleri", "Protections & Safety Circuits") to (s.protections ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "Modülerlik Yapısı", "Modularity") to (s.modularity ?: getUnspecifiedText(isTr)))
             rows.add(tr(isTr, "Soğutma Fanı & Boyut", "Cooling Fan & Dimensions") to (s.fanAndSize ?: getUnspecifiedText(isTr)))
@@ -2507,10 +2552,23 @@ private fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): L
             rows.add(tr(isTr, "Grafik Kartı & Gerçek TGP Gücü", "Graphics & Real TGP Power") to gpuDesc)
             rows.add(tr(isTr, "Grafik Anahtarı (MUX Switch)", "MUX Switch / Optimus") to s.muxSwitch)
             rows.add(tr(isTr, "İşlemci (CPU)", "Processor (CPU)") to s.cpuModel)
+            rows.add(tr(isTr, "İşlemci Çekirdek / İzlek Yapısı", "CPU Core / Thread Structure") to s.cpuCores)
+            rows.add(tr(isTr, "İşlemci Çalışma Frekansı", "CPU Clock Speed") to s.cpuClockGhz)
             rows.add(tr(isTr, "Ekran & Panel Standardı", "Display & Panel Standard") to s.displaySpec)
+            val panelDetail = listOfNotNull(
+                s.screenSizeInch.takeIf { it > 0.0 }?.let { "${it}\"" },
+                s.screenResolution.ifBlank { null },
+                s.refreshRateHz.takeIf { it > 0 }?.let { "${it} Hz" },
+                s.panelTech.ifBlank { null },
+                s.colorGamut.ifBlank { null },
+            ).joinToString(" • ")
+            rows.add(tr(isTr, "Panel Teknolojisi & Renk Gamutu", "Panel Tech & Color Gamut") to panelDetail)
             rows.add(tr(isTr, "Bellek Konfigürasyonu (RAM)", "Memory Configuration (RAM)") to s.ramSpec)
+            rows.add(tr(isTr, "Bellek Yuvası & Genişletme", "Memory Slots & Upgradeability") to s.ramSlots)
             rows.add(tr(isTr, "Yüksek Hızlı Depolama (SSD)", "High-Speed Storage (SSD)") to s.storageSpec)
+            rows.add(tr(isTr, "Depolama Yuvası & M.2", "Storage Slots & M.2") to s.storageSlots)
             rows.add(tr(isTr, "Batarya Kapasitesi", "Battery Capacity") to if (s.batteryWh > 0) "${s.batteryWh} Wh" else "")
+            rows.add(tr(isTr, "Güç Adaptörü", "Power Adapter") to if (s.chargerWatt > 0) "${s.chargerWatt} W" else "")
             rows.add(tr(isTr, "Gövde Ağırlığı", "Chassis Weight") to if (s.weightKg > 0.0) "${s.weightKg} kg" else "")
             rows.add(tr(isTr, "Termal Soğutma Mimarisi", "Thermal Architecture") to s.coolingTech)
             val fpsDesc = listOfNotNull(
@@ -3038,19 +3096,21 @@ private fun LaptopSpecialDetailsCard(
                     icon = "⚡",
                     title = if (isTr) "İşlemci (CPU)" else "Processor (CPU)",
                     mainText = spec.cpuModel,
-                    subText = "${spec.effectiveCpuCores} • ${spec.effectiveCpuClockGhz}",
+                    subText = listOf(spec.effectiveCpuCores, spec.effectiveCpuClockGhz)
+                        .filter { it.isNotBlank() }
+                        .joinToString(" • "),
                 ),
                 LaptopComponentItem(
                     icon = "🎮",
                     title = if (isTr) "Ekran Kartı (GPU & Güç)" else "Graphics Card (GPU & Power)",
-                    mainText = "${spec.gpuModel} (${spec.gpuWattTgp})",
-                    subText = "${spec.muxSwitch} " + if (isTr) "Desteği" else "Supported",
+                    mainText = if (spec.gpuWattTgp.isNotBlank()) "${spec.gpuModel} (${spec.gpuWattTgp})" else spec.gpuModel,
+                    subText = if (spec.muxSwitch.isNotBlank()) "${spec.muxSwitch} " + if (isTr) "Desteği" else "Supported" else "",
                 ),
                 LaptopComponentItem(
                     icon = "🖥️",
                     title = if (isTr) "Ekran (Panel)" else "Display (Panel)",
                     mainText = spec.effectivePanelDetails,
-                    subText = if (isTr) "Yüksek Yenileme Hızı & Düşük Gecikmeli Espor Paneli" else "High Refresh & Low Latency Esports Panel",
+                    subText = listOfNotNull(spec.panelTech.ifBlank { null }, spec.colorGamut.ifBlank { null }).joinToString(" • "),
                 ),
                 LaptopComponentItem(
                     icon = "🧠",
@@ -3067,7 +3127,11 @@ private fun LaptopSpecialDetailsCard(
                 LaptopComponentItem(
                     icon = "🔋",
                     title = if (isTr) "Gövde, Pil & Soğutma" else "Chassis, Battery & Cooling",
-                    mainText = "${spec.batteryWh} Wh " + (if (isTr) "Batarya" else "Battery") + " • ${spec.effectiveChargerWatt} • ${spec.weightKg} kg",
+                    mainText = listOfNotNull(
+                        spec.batteryWh.takeIf { it > 0 }?.let { "$it Wh " + (if (isTr) "Batarya" else "Battery") },
+                        spec.effectiveChargerWatt.ifBlank { null },
+                        spec.weightKg.takeIf { it > 0.0 }?.let { "$it kg" },
+                    ).joinToString(" • "),
                     subText = spec.coolingTech,
                 ),
             )

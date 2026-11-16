@@ -1,8 +1,10 @@
 package com.panda.myapplication.domain.model
 
 import androidx.compose.runtime.Immutable
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonNames
 import kotlin.math.roundToInt
 
 enum class DataSourceType {
@@ -61,12 +63,16 @@ data class GpuSyntheticBenchmark(
     val steelNomad: Int? = null,
 )
 
+@OptIn(ExperimentalSerializationApi::class)
 @Immutable
 @Serializable
 data class ResolutionFps(
-    val p1080: Double,
-    val p1440: Double,
-    val p4k: Double,
+    @JsonNames("1080p")
+    val p1080: Double = 0.0,
+    @JsonNames("1440p")
+    val p1440: Double = 0.0,
+    @JsonNames("4k")
+    val p4k: Double = 0.0,
     @SerialName("low1_1080p")
     val low1Pct1080: Double? = null,
     @SerialName("low1_1440p")

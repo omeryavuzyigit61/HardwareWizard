@@ -14,6 +14,7 @@ Hybrid Architecture:
   - 100% deterministic coverage for all products across all categories
 """
 
+import argparse
 import os
 import sys
 import json
@@ -533,6 +534,62 @@ CPU_ENGINEERING_MATRIX = {
         "igpu_model": "Yok (Harici GPU Gerekir)",
         "unlocked_multiplier": True,
         "bench": {"cb24_s": 130, "cb24_m": 1420, "cbr23_s": 2160, "cbr23_m": 25800, "gb6_s": 3150, "gb6_m": 16200, "pm": 41200, "gaming_rel": 0.88, "score": 88, "tier": "A-Tier"}
+    },
+    "285": {
+        "architecture": "Arrow Lake-S (LGA1851)",
+        "process_node": "TSMC N3B (Arrow Lake)",
+        "core_topology": "8P + 16E (24 Çekirdek / 24 İzlek)",
+        "core_clock": 2.5, "boost_clock": 5.6,
+        "l2_cache": 40.0, "l3_cache": 36,
+        "tdp": 65, "power_limits": "65W PBP / 182W MTP",
+        "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
+        "pcie_version": "PCIe 5.0 (24 Hat)",
+        "graphics": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "unlocked_multiplier": False,
+        "bench": {"cb24_s": 136, "cb24_m": 2120, "cbr23_s": 2240, "cbr23_m": 38900, "gb6_s": 3290, "gb6_m": 21200, "pm": 59200, "gaming_rel": 0.91, "score": 91, "tier": "A-Tier"}
+    },
+    "265": {
+        "architecture": "Arrow Lake-S (LGA1851)",
+        "process_node": "TSMC N3B (Arrow Lake)",
+        "core_topology": "8P + 12E (20 Çekirdek / 20 İzlek)",
+        "core_clock": 2.4, "boost_clock": 5.3,
+        "l2_cache": 36.0, "l3_cache": 30,
+        "tdp": 65, "power_limits": "65W PBP / 182W MTP",
+        "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
+        "pcie_version": "PCIe 5.0 (24 Hat)",
+        "graphics": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "unlocked_multiplier": False,
+        "bench": {"cb24_s": 131, "cb24_m": 1820, "cbr23_s": 2170, "cbr23_m": 33400, "gb6_s": 3180, "gb6_m": 18900, "pm": 51400, "gaming_rel": 0.89, "score": 89, "tier": "A-Tier"}
+    },
+    "245": {
+        "architecture": "Arrow Lake-S (LGA1851)",
+        "process_node": "TSMC N3B (Arrow Lake)",
+        "core_topology": "6P + 8E (14 Çekirdek / 14 İzlek)",
+        "core_clock": 3.5, "boost_clock": 5.1,
+        "l2_cache": 26.0, "l3_cache": 24,
+        "tdp": 65, "power_limits": "65W PBP / 121W MTP",
+        "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
+        "pcie_version": "PCIe 5.0 (24 Hat)",
+        "graphics": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "igpu_model": "Intel Arc Graphics (4 Xe Çekirdeği, Xe-LPG)",
+        "unlocked_multiplier": False,
+        "bench": {"cb24_s": 124, "cb24_m": 1290, "cbr23_s": 2080, "cbr23_m": 23400, "gb6_s": 3020, "gb6_m": 15100, "pm": 37600, "gaming_rel": 0.85, "score": 85, "tier": "A-Tier"}
+    },
+    "225": {
+        "architecture": "Arrow Lake-S (LGA1851)",
+        "process_node": "TSMC N3B (Arrow Lake)",
+        "core_topology": "6P + 4E (10 Çekirdek / 10 İzlek)",
+        "core_clock": 3.3, "boost_clock": 4.9,
+        "l2_cache": 22.0, "l3_cache": 20,
+        "tdp": 65, "power_limits": "65W PBP / 121W MTP",
+        "max_memory_speed": "DDR5-6400 MT/s Çift Kanal • XMP 3.0",
+        "pcie_version": "PCIe 5.0 (24 Hat)",
+        "graphics": "Intel Arc Graphics (2 Xe Çekirdeği, Xe-LPG)",
+        "igpu_model": "Intel Arc Graphics (2 Xe Çekirdeği, Xe-LPG)",
+        "unlocked_multiplier": False,
+        "bench": {"cb24_s": 116, "cb24_m": 960, "cbr23_s": 1950, "cbr23_m": 17600, "gb6_s": 2840, "gb6_m": 12800, "pm": 29800, "gaming_rel": 0.80, "score": 80, "tier": "B-Tier"}
     },
 
     # --- Intel 14th Gen (Raptor Lake Refresh LGA1700) ---
@@ -1063,6 +1120,56 @@ GPU_ENGINEERING_MATRIX = {
         "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
         "bench": {"rel_pct": 1.34, "score": 87, "tier": "A-Tier", "ts_gfx": 22400, "ts_ext": 10800, "steel_nomad": 5600, "cp2077": (138.0, 102.0, 60.0), "forza": (205.0, 164.0, 108.0), "cs2": (490.0, 395.0, 240.0)}
     },
+    "Radeon RX 9070 XT": {
+        "architecture": "AMD Navi 48 XT (RDNA 4)",
+        "process_node": "TSMC N4P (53.9 Milyar Transistör)",
+        "cuda_cores": 4096, "rt_cores": 64, "tensor_ai_tops": "128 AI Hızlandırıcı (778 TOPS)",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 20.0, "bus_width": 256, "bandwidth_gbs": 640.0,
+        "tdp": 304, "recommended_psu": 750, "power_connectors": "2x 8-Pin PCIe / 3x 8-Pin",
+        "slot_width": "2.5 Slot", "length": 300.0,
+        "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1b",
+        "bench": {"rel_pct": 1.65, "score": 93, "tier": "S-Tier", "ts_gfx": 28400, "ts_ext": 14100, "steel_nomad": 6950, "cp2077": (162.0, 124.0, 78.0), "forza": (250.0, 202.0, 140.0), "cs2": (580.0, 470.0, 295.0)}
+    },
+    "Radeon RX 9070 GRE": {
+        "architecture": "AMD Navi 48 XL (RDNA 4)",
+        "process_node": "TSMC N4P (RDNA 4)",
+        "cuda_cores": 3072, "rt_cores": 48, "tensor_ai_tops": "96 AI Hızlandırıcı (FSR 4)",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 18.0, "bus_width": 256, "bandwidth_gbs": 576.0,
+        "tdp": 220, "recommended_psu": 650, "power_connectors": "2x 8-Pin PCIe",
+        "slot_width": "2.5 Slot", "length": 280.0,
+        "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1b",
+        "bench": {"rel_pct": 1.38, "score": 88, "tier": "A-Tier", "ts_gfx": 22900, "ts_ext": 11100, "steel_nomad": 5750, "cp2077": (140.0, 104.0, 62.0), "forza": (210.0, 168.0, 112.0), "cs2": (505.0, 405.0, 248.0)}
+    },
+    "Radeon RX 9070": {
+        "architecture": "AMD Navi 48 XL (RDNA 4)",
+        "process_node": "TSMC N4P (RDNA 4)",
+        "cuda_cores": 3584, "rt_cores": 56, "tensor_ai_tops": "112 AI Hızlandırıcı (634 TOPS)",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 20.0, "bus_width": 256, "bandwidth_gbs": 640.0,
+        "tdp": 220, "recommended_psu": 650, "power_connectors": "2x 8-Pin PCIe",
+        "slot_width": "2.5 Slot", "length": 280.0,
+        "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1b",
+        "bench": {"rel_pct": 1.48, "score": 90, "tier": "A-Tier", "ts_gfx": 25200, "ts_ext": 12400, "steel_nomad": 6150, "cp2077": (148.0, 112.0, 69.0), "forza": (228.0, 182.0, 124.0), "cs2": (538.0, 430.0, 268.0)}
+    },
+    "Radeon RX 9060 XT": {
+        "architecture": "AMD Navi 44 (RDNA 4)",
+        "process_node": "TSMC N4P (RDNA 4)",
+        "cuda_cores": 2560, "rt_cores": 32, "tensor_ai_tops": "64 AI Hızlandırıcı (FSR 4)",
+        "vram": 12, "memory_type": "GDDR6", "memory_speed": 20.0, "bus_width": 128, "bandwidth_gbs": 320.0,
+        "tdp": 160, "recommended_psu": 550, "power_connectors": "1x 8-Pin PCIe",
+        "slot_width": "2.0 Slot", "length": 240.0,
+        "display_outputs": "2x DisplayPort 2.1a, 1x HDMI 2.1b",
+        "bench": {"rel_pct": 0.98, "score": 80, "tier": "B-Tier", "ts_gfx": 15400, "ts_ext": 7200, "steel_nomad": 3650, "cp2077": (104.0, 74.0, 41.0), "forza": (154.0, 120.0, 76.0), "cs2": (395.0, 310.0, 180.0)}
+    },
+    "Radeon RX 7650 GRE": {
+        "architecture": "AMD Navi 33 XT (RDNA 3)",
+        "process_node": "TSMC N6 (13.3 Milyar Transistör)",
+        "cuda_cores": 2048, "rt_cores": 32, "tensor_ai_tops": "64 AI Hızlandırıcı (43 TFLOPS)",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 18.0, "bus_width": 128, "bandwidth_gbs": 288.0,
+        "tdp": 170, "recommended_psu": 550, "power_connectors": "1x 8-Pin PCIe",
+        "slot_width": "2.0 Slot", "length": 240.0,
+        "display_outputs": "3x DisplayPort 2.1, 1x HDMI 2.1a",
+        "bench": {"rel_pct": 0.85, "score": 76, "tier": "B-Tier", "ts_gfx": 12100, "ts_ext": 5600, "steel_nomad": 2900, "cp2077": (91.0, 64.0, 34.0), "forza": (136.0, 105.0, 65.0), "cs2": (352.0, 276.0, 158.0)}
+    },
     "Radeon RX 7800 XT": {
         "architecture": "AMD Navi 32 (RDNA 3)",
         "process_node": "TSMC 5nm + 6nm (28.1 Milyar Transistör)",
@@ -1115,6 +1222,16 @@ GPU_ENGINEERING_MATRIX = {
         "display_outputs": "2x DisplayPort 1.4a, 1x HDMI 2.1, 1x USB Type-C",
         "bench": {"rel_pct": 1.35, "score": 87, "tier": "A-Tier", "ts_gfx": 22200, "ts_ext": 10500, "steel_nomad": 5400, "cp2077": (136.0, 98.0, 58.0), "forza": (202.0, 160.0, 104.0), "cs2": (480.0, 380.0, 230.0)}
     },
+    "Radeon RX 6900 XT": {
+        "architecture": "AMD Navi 21 XTX (RDNA 2)",
+        "process_node": "TSMC 7nm (26.8 Milyar Transistör)",
+        "cuda_cores": 5120, "rt_cores": 80, "tensor_ai_tops": "80 Ray Accelerator",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 16.0, "bus_width": 256, "bandwidth_gbs": 512.0,
+        "tdp": 300, "recommended_psu": 850, "power_connectors": "2x 8-Pin PCIe",
+        "slot_width": "2.5 Slot", "length": 267.0,
+        "display_outputs": "2x DisplayPort 1.4a, 1x HDMI 2.1, 1x USB Type-C",
+        "bench": {"rel_pct": 1.28, "score": 86, "tier": "A-Tier", "ts_gfx": 20800, "ts_ext": 9800, "steel_nomad": 5050, "cp2077": (130.0, 93.0, 54.0), "forza": (192.0, 152.0, 98.0), "cs2": (460.0, 365.0, 220.0)}
+    },
     "Radeon RX 6800 XT": {
         "architecture": "AMD Navi 21 XT (RDNA 2)",
         "process_node": "TSMC 7nm (26.8 Milyar Transistör)",
@@ -1125,6 +1242,26 @@ GPU_ENGINEERING_MATRIX = {
         "display_outputs": "2x DisplayPort 1.4a, 1x HDMI 2.1, 1x USB Type-C",
         "bench": {"rel_pct": 1.18, "score": 84, "tier": "B-Tier", "ts_gfx": 19200, "ts_ext": 9100, "steel_nomad": 4650, "cp2077": (120.0, 86.0, 48.0), "forza": (178.0, 140.0, 90.0), "cs2": (435.0, 345.0, 205.0)}
     },
+    "Radeon RX 6800": {
+        "architecture": "AMD Navi 21 XL (RDNA 2)",
+        "process_node": "TSMC 7nm (26.8 Milyar Transistör)",
+        "cuda_cores": 3840, "rt_cores": 60, "tensor_ai_tops": "60 Ray Accelerator",
+        "vram": 16, "memory_type": "GDDR6", "memory_speed": 16.0, "bus_width": 256, "bandwidth_gbs": 512.0,
+        "tdp": 250, "recommended_psu": 650, "power_connectors": "2x 8-Pin PCIe",
+        "slot_width": "2.0 Slot", "length": 267.0,
+        "display_outputs": "2x DisplayPort 1.4a, 1x HDMI 2.1, 1x USB Type-C",
+        "bench": {"rel_pct": 1.05, "score": 81, "tier": "B-Tier", "ts_gfx": 16200, "ts_ext": 7600, "steel_nomad": 3950, "cp2077": (108.0, 76.0, 42.0), "forza": (160.0, 125.0, 80.0), "cs2": (405.0, 318.0, 188.0)}
+    },
+    "Radeon RX 6750 XT": {
+        "architecture": "AMD Navi 22 KXT (RDNA 2)",
+        "process_node": "TSMC 7nm (17.2 Milyar Transistör)",
+        "cuda_cores": 2560, "rt_cores": 40, "tensor_ai_tops": "40 Ray Accelerator",
+        "vram": 12, "memory_type": "GDDR6", "memory_speed": 18.0, "bus_width": 192, "bandwidth_gbs": 432.0,
+        "tdp": 250, "recommended_psu": 650, "power_connectors": "1x 8-Pin + 1x 6-Pin",
+        "slot_width": "2.2 Slot", "length": 267.0,
+        "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1",
+        "bench": {"rel_pct": 0.94, "score": 79, "tier": "B-Tier", "ts_gfx": 13800, "ts_ext": 6300, "steel_nomad": 3300, "cp2077": (98.0, 68.0, 37.0), "forza": (146.0, 112.0, 70.0), "cs2": (378.0, 294.0, 168.0)}
+    },
     "Radeon RX 6700 XT": {
         "architecture": "AMD Navi 22 (RDNA 2)",
         "process_node": "TSMC 7nm (17.2 Milyar Transistör)",
@@ -1134,6 +1271,16 @@ GPU_ENGINEERING_MATRIX = {
         "slot_width": "2.0 Slot", "length": 267.0,
         "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1",
         "bench": {"rel_pct": 0.88, "score": 77, "tier": "B-Tier", "ts_gfx": 12800, "ts_ext": 5800, "steel_nomad": 3050, "cp2077": (92.0, 64.0, 34.0), "forza": (138.0, 106.0, 66.0), "cs2": (360.0, 280.0, 160.0)}
+    },
+    "Radeon RX 6650 XT": {
+        "architecture": "AMD Navi 23 KXT (RDNA 2)",
+        "process_node": "TSMC 7nm (11.06 Milyar Transistör)",
+        "cuda_cores": 2048, "rt_cores": 32, "tensor_ai_tops": "32 Ray Accelerator",
+        "vram": 8, "memory_type": "GDDR6", "memory_speed": 17.5, "bus_width": 128, "bandwidth_gbs": 280.0,
+        "tdp": 180, "recommended_psu": 550, "power_connectors": "1x 8-Pin PCIe",
+        "slot_width": "2.0 Slot", "length": 240.0,
+        "display_outputs": "3x DisplayPort 1.4a, 1x HDMI 2.1",
+        "bench": {"rel_pct": 0.74, "score": 72, "tier": "B-Tier", "ts_gfx": 10100, "ts_ext": 4600, "steel_nomad": 2400, "cp2077": (79.0, 54.0, 27.0), "forza": (118.0, 90.0, 53.0), "cs2": (315.0, 240.0, 134.0)}
     },
     "Radeon RX 6600": {
         "architecture": "AMD Navi 23 (RDNA 2)",
@@ -1156,6 +1303,16 @@ GPU_ENGINEERING_MATRIX = {
         "slot_width": "2.2 Slot", "length": 250.0,
         "display_outputs": "3x DisplayPort 2.1 (UHBR13.5), 1x HDMI 2.1",
         "bench": {"rel_pct": 0.88, "score": 77, "tier": "B-Tier", "ts_gfx": 13400, "ts_ext": 6100, "steel_nomad": 3200, "cp2077": (94.0, 66.0, 36.0), "forza": (140.0, 108.0, 68.0), "cs2": (365.0, 285.0, 165.0)}
+    },
+    "Intel Arc B570": {
+        "architecture": "Intel BMG-G21 (Battlemage)",
+        "process_node": "TSMC N5 / N4P (18 Xe2-Core)",
+        "cuda_cores": 2304, "rt_cores": 18, "tensor_ai_tops": "144 XMX (203 AI TOPS)",
+        "vram": 10, "memory_type": "GDDR6", "memory_speed": 19.0, "bus_width": 160, "bandwidth_gbs": 380.0,
+        "tdp": 150, "recommended_psu": 550, "power_connectors": "1x 8-Pin PCIe",
+        "slot_width": "2.0 Slot", "length": 240.0,
+        "display_outputs": "3x DisplayPort 2.1 (UHBR13.5), 1x HDMI 2.1",
+        "bench": {"rel_pct": 0.81, "score": 74, "tier": "B-Tier", "ts_gfx": 11900, "ts_ext": 5400, "steel_nomad": 2850, "cp2077": (86.0, 60.0, 31.0), "forza": (128.0, 99.0, 60.0), "cs2": (338.0, 262.0, 148.0)}
     },
     "Intel Arc A770": {
         "architecture": "Intel ACM-G10 (Alchemist)",
@@ -1190,34 +1347,193 @@ PSU_ENGINEERING_RULES = [
         "cybenetics_lambda": "Lambda A+ (<20 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "Tam Köprü LLC + DC-DC / %100 105°C Japon Kapasitörler (EPCOS / Nippon Chemi-Con)",
+        "topology": "OEM: Helly • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "105°C Japon (EPCOS / Nippon Chemi-Con)",
+        "outputs": "Tek +12V Raylı Tam Güç Çıkışı • <20mV Ripple",
+        "type": "ATX (L-Shape Çift Bölmeli Tasarım • 182mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
         "modular": "Tam Modüler (Full Modular)",
-        "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod) / 182mm (L-Shape Çift Bölmeli Tasarım)"
+        "fan_size": "120mm FDB Fan (Sıfır RPM Akıllı Mod)"
     },
     {
         "match": ["THOR", "ROG THOR"],
-        "tier": "Tier A (High-End)",
+        "tier": "Tier A+ (En Üst Seviye / Flagship)",
         "efficiency": "Cybenetics Platinum / 80 PLUS Titanium",
         "cybenetics_lambda": "Lambda A++ (<15 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "ROG Soğutuculu Tam Köprü LLC Resonant + DC-DC / %100 Japon 105°C Kapasitör",
+        "topology": "OEM: Seasonic • ROG Soğutuculu Tam Köprü LLC Resonant + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
+        "outputs": "Tek +12V Raylı Tam Güç • OLED Wattmetre • <15mV Ripple",
+        "type": "ATX (190 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
         "modular": "Tam Modüler (Full Modular)",
         "fan_size": "135mm Eksenel Kanatlı Manyetik Rulmanlı Fan (OLED Güç Ekranı)"
     },
     {
-        "match": ["RM1000", "RM850X", "RM750X", "RMX", "RM1000X"],
+        "match": ["PRO WS"],
+        "tier": "Tier A+ (İş İstasyonu / Flagship)",
+        "efficiency": "Cybenetics Platinum / 80 PLUS Platinum",
+        "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+        "atx_standard": "ATX 3.1 & PCIe 5.1 (Çift/Üçlü 12V-2x6 İş İstasyonu)",
+        "pcie_12vhpwr": "Çoklu 16-Pin 12V-2x6 Native Çıkış",
+        "topology": "OEM: CWT / Great Wall • Çift Transformatörlü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
+        "outputs": "250A +12V Rayı (3000W Sürekli) • Sunucu Sınıfı Regülasyon",
+        "type": "ATX / Workstation (240 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm Çift Bilyalı (Double Ball Bearing) Yüksek Basınç Fanı"
+    },
+    {
+        "match": ["PRIME TX"],
+        "tier": "Tier A+ (En Üst Seviye / Flagship)",
+        "efficiency": "Cybenetics Titanium / 80 PLUS Titanium",
+        "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0",
+        "pcie_12vhpwr": "2x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: Seasonic (Prime TX Platform) • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
+        "outputs": "Tek +12V Rayı (133.3A / 1600W) • Mükemmel <%0.5 Regülasyon",
+        "type": "ATX (210 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm FDB Fan (Hibrit Sıfır RPM Modu)"
+    },
+    {
+        "match": ["VERTEX GX"],
+        "tier": "Tier A+ (En Üst Seviye / Flagship)",
+        "efficiency": "Cybenetics Gold / 80 PLUS Gold",
+        "cybenetics_lambda": "Lambda A- (25-30 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0 (%200 Güç Sıçraması Dayanımı)",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: Seasonic (Vertex Platform) • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nichicon / Nippon Chemi-Con)",
+        "outputs": "Tek +12V Rayı • <20mV Ripple • Hold-Up > 17ms",
+        "type": "ATX (160 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm FDB Akıllı Fan (Hibrit Kontrol)"
+    },
+    {
+        "match": ["FOCUS GX"],
+        "tier": "Tier A (Üst Seviye / High-End)",
+        "efficiency": "Cybenetics Gold / 80 PLUS Gold",
+        "cybenetics_lambda": "Lambda Standard++ (25-30 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: Seasonic (Focus V3 Platform) • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
+        "outputs": "Tek +12V Rayı • <22mV Ripple",
+        "type": "ATX (140 x 150 x 86 mm Kompakt Kasa)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm FDB Sıvı Dinamik Rulmanlı Fan"
+    },
+    {
+        "match": ["DARK POWER PRO 13"],
+        "tier": "Tier A+ (En Üst Seviye / Flagship)",
+        "efficiency": "Cybenetics Titanium / 80 PLUS Titanium",
+        "cybenetics_lambda": "Lambda A++ (<15 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0",
+        "pcie_12vhpwr": "2x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: CWT (CSZ Platform) • Dijital Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
+        "outputs": "6x Çoklu +12V Rayı (OC Anahtarı ile Tek Ray 108A)",
+        "type": "ATX (200 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm Çerçevesiz Silent Wings Fan"
+    },
+    {
+        "match": ["STRAIGHT POWER 12"],
+        "tier": "Tier A (Üst Seviye / High-End)",
+        "efficiency": "Cybenetics Platinum / 80 PLUS Platinum",
+        "cybenetics_lambda": "Lambda A+ (<20 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: FSP • Tam Köprü LLC + SR + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
+        "outputs": "Tek +12V Rayı (83.3A / 1000W) • Çok Düşük Ripple",
+        "type": "ATX (160 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "135mm Silent Wings 3 FDB Fan"
+    },
+    {
+        "match": ["PURE POWER 12 M"],
+        "tier": "Tier A- (Üst-Orta Seviye)",
+        "efficiency": "Cybenetics Gold / 80 PLUS Gold",
+        "cybenetics_lambda": "Lambda A (20-25 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR (450W-600W Native)",
+        "topology": "OEM: HEC • LLC + SR + DC-DC • Aktif PFC",
+        "capacitors": "105°C Tayvan Teapo / Elite",
+        "outputs": "Çift +12V Rayı • ATX 3.0 Uyumlu Geçici Yük Tepkisi",
+        "type": "ATX (160 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "120mm be quiet! Sessiz Fan"
+    },
+    {
+        "match": ["SF850", "SF750"],
+        "tier": "Tier A+ (SFX Referans / Flagship)",
+        "efficiency": "Cybenetics Platinum / 80 PLUS Platinum",
+        "cybenetics_lambda": "Lambda A (20-25 dBA)",
+        "atx_standard": "ATX 3.1 & PCIe 5.1",
+        "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+        "topology": "OEM: Great Wall (SFX Platform) • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Nichicon)",
+        "outputs": "Tek +12V Rayı • <18mV Ripple • SFX Yüksek Yoğunluk",
+        "type": "SFX (100 x 125 x 63.5 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
+        "modular": "Tam Modüler (Örgülü Tip-5 Kablolar)",
+        "fan_size": "92mm FDB Fan (Sıfır RPM Modu)"
+    },
+    {
+        "match": ["LEADEX VII"],
+        "tier": "Tier A+ (En Üst Seviye / Flagship)",
+        "efficiency": "Cybenetics Platinum / 80 PLUS Gold",
+        "cybenetics_lambda": "Lambda A- (25-30 dBA)",
+        "atx_standard": "ATX 3.0 & PCIe 5.0 (%200 Güç Sıçraması Dayanımı)",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W Native)",
+        "topology": "OEM: Super Flower • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con)",
+        "outputs": "Tek +12V Rayı (83.3A / 1000W) • <15mV Ripple",
+        "type": "ATX (150 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, NLO, SIP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "140mm FDB Fan (ECO Sıfır RPM Anahtarlı)"
+    },
+    {
+        "match": ["PN750M", "PN850M"],
+        "tier": "Tier B+ (İleri Orta Seviye)",
+        "efficiency": "Cybenetics Gold / 80 PLUS Gold",
+        "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
+        "atx_standard": "ATX 3.1 & PCIe 5.1",
+        "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
+        "topology": "OEM: CWT (CSB/GPX Platform) • Half-Bridge LLC + DC-DC • Aktif PFC",
+        "capacitors": "105°C Japon Ana Kapasitör + Tayvan İkincil",
+        "outputs": "Tek +12V Rayı • ATX 3.1 Hold-Up > 16ms",
+        "type": "ATX (140 x 150 x 86 mm)",
+        "protections": "OPP, OVP, UVP, OCP, OTP, SCP, SIP, NLO",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "120mm FDB Dinamik Rulmanlı Fan"
+    },
+    {
+        "match": ["RM1200X", "RM1000", "RM850X", "RM750X", "RMX", "RM1000X", "SHIFT"],
         "tier": "Tier A (High-End)",
         "efficiency": "Cybenetics Gold / 80 PLUS Gold",
         "cybenetics_lambda": "Lambda A (<25 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "LLC Resonant + DC-DC / %100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
+        "topology": "OEM: CWT • LLC Resonant + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon Kapasitörler (Nippon Chemi-Con)",
+        "outputs": "Tek +12V Rayı • <20mV Ripple • ATX 3.x",
+        "type": "ATX (160/180 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
         "modular": "Tam Modüler (Full Modular)",
-        "fan_size": "135mm Manyetik Kaldırma (ML) Fan (Sıfır RPM Modu)"
+        "fan_size": "135mm / 140mm FDB / ML Fan (Sıfır RPM Modu)"
     },
     {
         "match": ["A1000G", "A850GL", "A750GL", "MAG A", "MEG AI"],
@@ -1226,7 +1542,10 @@ PSU_ENGINEERING_RULES = [
         "cybenetics_lambda": "Lambda Standard++ (30-35 dBA)",
         "atx_standard": "ATX 3.0 & PCIe 5.0",
         "pcie_12vhpwr": "1x 16-Pin 12VHPWR (600W Native)",
-        "topology": "Half-Bridge LLC + DC-DC / %100 105°C Japon Kapasitörler",
+        "topology": "OEM: CWT • Half-Bridge LLC + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon Kapasitörler",
+        "outputs": "Tek +12V Rayı • <25mV Ripple",
+        "type": "ATX (140/150 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
         "modular": "Tam Modüler (Full Modular)",
         "fan_size": "120mm / 135mm FDB Sıvı Dinamik Rulmanlı Fan"
@@ -1238,7 +1557,10 @@ PSU_ENGINEERING_RULES = [
         "cybenetics_lambda": "Lambda A- (25-30 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "Tam Köprü LLC + DC-DC / Conformal Coating Koruyucu Kaplama + Japon Kapasitör",
+        "topology": "OEM: FSP • Tam Köprü LLC + DC-DC + Conformal Coating • Aktif PFC",
+        "capacitors": "%100 105°C Japon (Nippon Chemi-Con / Rubycon)",
+        "outputs": "Tek +12V Rayı • Neme Karşı Koruyucu Kaplama",
+        "type": "ATX (150 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
         "modular": "Tam Modüler (Full Modular)",
         "fan_size": "120mm FDB Fan (Yarı Pasif Mod Düğmeli)"
@@ -1250,22 +1572,43 @@ PSU_ENGINEERING_RULES = [
         "cybenetics_lambda": "Lambda A- (25-30 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1 (%200 Güç Sıçraması Dayanımı)",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "LLC Resonant + DC-DC / %100 105°C Japon Kapasitörler",
+        "topology": "OEM: FSP • LLC Resonant + DC-DC • Aktif PFC",
+        "capacitors": "%100 105°C Japon Kapasitörler",
+        "outputs": "Tek +12V Rayı • ATX 3.1 Native 12V-2x6",
+        "type": "ATX (140 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
         "modular": "Tam Modüler (Full Modular)",
         "fan_size": "120mm FDB Kompakt Fan (140mm Kasa Uzunluğu)"
     },
     {
-        "match": ["NGDP", "1ST PLAYER"],
-        "tier": "Tier B (Mid-Range)",
+        "match": ["NGDP"],
+        "tier": "Tier A- (Üst-Orta Seviye)",
         "efficiency": "Cybenetics Platinum / 80 PLUS Gold",
         "cybenetics_lambda": "Lambda Standard+ (35-40 dBA)",
         "atx_standard": "ATX 3.1 & PCIe 5.1",
         "pcie_12vhpwr": "1x 16-Pin 12V-2x6 (600W Native)",
-        "topology": "Tam Köprü LLC + DC-DC / 105°C Japon Ana Kapasitör",
+        "topology": "OEM: Helly • Tam Köprü LLC + DC-DC • Aktif PFC",
+        "capacitors": "105°C Japon Ana Kapasitör (Nichicon / Rubycon)",
+        "outputs": "Tek +12V Rayı • ATX 3.1 Uyumlu",
+        "type": "ATX (140 x 150 x 86 mm)",
         "protections": "OPP, OVP, UVP, OCP, OTP, SCP",
         "modular": "Tam Modüler (Full Modular)",
         "fan_size": "120mm FDB Sessiz Fan"
+    },
+    {
+        "match": ["SAMA H"],
+        "tier": "Tier C-* (Giriş-Orta Seviye)",
+        "efficiency": "80 PLUS Gold",
+        "cybenetics_lambda": "Lambda Standard",
+        "atx_standard": "ATX 3.0 / 3.1",
+        "pcie_12vhpwr": "1x 16-Pin 12VHPWR",
+        "topology": "OEM: SAMA • Active Clamp Forward / LLC + DC-DC • Aktif PFC",
+        "capacitors": "105°C Çin / Tayvan Karışık Kapasitör",
+        "outputs": "Tek +12V Rayı",
+        "type": "ATX",
+        "protections": "OPP, OVP, UVP, OCP, SCP",
+        "modular": "Tam Modüler (Full Modular)",
+        "fan_size": "120mm Fan"
     }
 ]
 
@@ -1394,6 +1737,30 @@ def enrich_storage(item: Dict[str, Any]) -> Dict[str, Any]:
         item["seq_write"] = item.get("seq_write") or 1600
         item["random_iops"] = "350K / 350K IOPS"
         item["endurance_tbw"] = cap * 400 // 1000
+    elif "PLATINUM P41" in name:
+        item["controller"] = "SK Hynix Aries (ACNS075 12nm)"
+        item["dram_cache"] = f"{min(2, max(1, cap // 1000))}GB LPDDR4 DRAM Cache"
+        item["nand_type"] = "SK Hynix 176-Katman 4D V7 TLC NAND"
+        item["seq_read"] = item.get("seq_read") or 7000
+        item["seq_write"] = item.get("seq_write") or 6500
+        item["random_iops"] = "1400K / 1300K IOPS"
+        item["endurance_tbw"] = item.get("endurance_tbw") or (cap * 600 // 1000)
+    elif "T500" in name:
+        item["controller"] = "Phison PS5025-E25 (12nm TSMC)"
+        item["dram_cache"] = f"{min(2, max(1, cap // 1000))}GB LPDDR4 DRAM Cache"
+        item["nand_type"] = "Micron 232-Katman 3D TLC NAND (B58R)"
+        item["seq_read"] = item.get("seq_read") or 7400
+        item["seq_write"] = item.get("seq_write") or 7000
+        item["random_iops"] = "1180K / 1440K IOPS"
+        item["endurance_tbw"] = item.get("endurance_tbw") or (cap * 600 // 1000)
+    elif "MP44" in name:
+        item["controller"] = "Maxio MAP1602A (12nm DRAM-less)"
+        item["dram_cache"] = "HMB (Host Memory Buffer - DRAM-less)"
+        item["nand_type"] = "YMTC 232-Katman Xtacking 3.0 3D TLC"
+        item["seq_read"] = item.get("seq_read") or 7400
+        item["seq_write"] = item.get("seq_write") or 7000
+        item["random_iops"] = "650K / 660K IOPS"
+        item["endurance_tbw"] = item.get("endurance_tbw") or (cap * 1250 // 1000)
     else:
         # Sıfır Halüsinasyon: Bilinmeyen SSD modellerinde sahte kontrolcü veya hız uydurma
         item["controller"] = item.get("controller")
@@ -1432,6 +1799,13 @@ def enrich_cooler(item: Dict[str, Any]) -> Dict[str, Any]:
         item["fan_rpm"] = "500 - 1800 RPM (F120 RGB Core)"
         item["fan_airflow"] = "78.86 CFM / 2.57 mmH2O Statik Basınç"
         item["noise_level"] = 28.5
+    elif "HYDROSHIFT" in name or "HYDRO SHIFT" in name:
+        rad_mm = size or 360
+        item["max_tdp"] = 320 if rad_mm >= 360 else 280
+        item["radiator_dimensions"] = f"{rad_mm}mm x 31mm Alüminyum Radyatör (Gizli Yan Boru + 2.88\" IPS LCD)"
+        item["fan_rpm"] = "200 - 2400 RPM (PWM / UNI FAN)"
+        item["fan_airflow"] = "79.9 CFM / 3.26 mmH2O Statik Basınç"
+        item["noise_level"] = 30.0
     else:
         item["max_tdp"] = item.get("max_tdp")
         item["radiator_dimensions"] = item.get("radiator_dimensions")
@@ -1477,15 +1851,16 @@ def normalize_key(s: str) -> str:
 
 def match_cpu_ref(name: str) -> Optional[Tuple[str, Dict[str, Any]]]:
     n = name.upper()
-    for key, data in CPU_ENGINEERING_MATRIX.items():
-        # Match exact model suffix (e.g. 9950X, 9800X3D, 285K, 14900KS, 14900K)
+    sorted_keys = sorted(CPU_ENGINEERING_MATRIX.keys(), key=lambda k: -len(k))
+    for key in sorted_keys:
+        # Match exact model suffix (e.g. 9950X, 9800X3D, 285K before 285, 14900KS before 14900K)
         pattern = r"\b" + re.escape(key) + r"\b"
         if re.search(pattern, n):
-            return key, data
+            return key, CPU_ENGINEERING_MATRIX[key]
     # Fallback to substring matching
-    for key, data in CPU_ENGINEERING_MATRIX.items():
+    for key in sorted_keys:
         if key in n:
-            return key, data
+            return key, CPU_ENGINEERING_MATRIX[key]
     return None
 
 def match_gpu_ref(name: str, chipset: Optional[str]) -> Optional[Tuple[str, Dict[str, Any]]]:
@@ -1539,6 +1914,9 @@ def build_12_game_fps_matrix(
         a1440 = max(14, int(round(p1440)))
         a4k = max(10, int(round(p4k)))
         return {
+            "p1080": a1080,
+            "p1440": a1440,
+            "p4k": a4k,
             "1080p": a1080,
             "1440p": a1440,
             "4k": a4k,
@@ -1671,7 +2049,39 @@ def load_psu_lab_helpers():
     return sync_psu_specs
 
 
-def sync_mobile_geekbench(gb_mobile_index: Dict[str, Dict[str, Any]]) -> Tuple[int, int]:
+def save_json_if_changed(filepath: str, data: Any) -> bool:
+    """Write formatted JSON only if the content actually changed."""
+    serialized = json.dumps(data, indent=2, ensure_ascii=False)
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                if f.read() == serialized:
+                    return False
+        except Exception:
+            pass
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(serialized)
+    return True
+
+
+def copy_if_changed(src: str, dst: str) -> bool:
+    """Mirror a file only when target differs or does not exist."""
+    if not os.path.exists(src):
+        return False
+    if os.path.exists(dst):
+        try:
+            with open(src, "rb") as fs, open(dst, "rb") as fd:
+                if fs.read() == fd.read():
+                    return False
+        except Exception:
+            pass
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    shutil.copy2(src, dst)
+    return True
+
+
+def sync_mobile_geekbench(gb_mobile_index: Dict[str, Dict[str, Any]], delta_only: bool = False) -> Tuple[int, int]:
     """Update smartphone.json and tablet.json with live Geekbench 6 single/multi scores."""
     if not gb_mobile_index:
         return 0, 0
@@ -1684,6 +2094,12 @@ def sync_mobile_geekbench(gb_mobile_index: Dict[str, Dict[str, Any]]) -> Tuple[i
             items = json.load(f)
         updated = 0
         for item in items:
+            spec = item.get("spec")
+            has_gb = bool(item.get("geekbench6Single") and item.get("geekbench6Multi"))
+            if isinstance(spec, dict):
+                has_gb = has_gb and bool(spec.get("geekbenchSingle") and spec.get("geekbenchMulti"))
+            if delta_only and has_gb:
+                continue
             matched = match_geekbench_entry(gb_mobile_index, item.get("name"), item.get("model"))
             if not matched:
                 continue
@@ -1691,20 +2107,20 @@ def sync_mobile_geekbench(gb_mobile_index: Dict[str, Dict[str, Any]]) -> Tuple[i
             gb_m = int(matched["multicore_score"])
             item["geekbench6Single"] = gb_s
             item["geekbench6Multi"] = gb_m
-            spec = item.get("spec")
             if isinstance(spec, dict):
                 spec["geekbenchSingle"] = gb_s
                 spec["geekbenchMulti"] = gb_m
             updated += 1
-        with open(fpath, "w", encoding="utf-8") as f:
-            json.dump(items, f, indent=2, ensure_ascii=False)
+        if updated > 0 or not delta_only:
+            save_json_if_changed(fpath, items)
         counts[idx] = updated
     return counts[0], counts[1]
 
 
-def main():
+def main(delta_only: bool = False):
     print("=" * 80)
     print(" HARDWAREWIZARD LABORATORY DATA & BENCHMARK SYNCHRONIZATION ENGINE")
+    print(f" Mode: {'DELTA-ONLY (Yeni / Eksik Ürünler)' if delta_only else 'FULL MULTI-SOURCE COMBINE'}")
     print(" Standards: CPU-Monkey, TechPowerUp, Geekbench 6, Cybenetics, IRONScale Labs")
     print("=" * 80)
 
@@ -1731,7 +2147,7 @@ def main():
     stats = {
         "cpu_specs": 0, "cpu_benchmarks": 0, "cpu_gb6_live": 0,
         "gpu_specs": 0, "gpu_benchmarks": 0,
-        "psu_specs": 0, "psu_ironscale_live": 0,
+        "psu_specs": 0, "psu_ironscale_live": 0, "psu_new": 0,
         "motherboard_specs": 0,
         "ram_specs": 0,
         "storage_specs": 0,
@@ -1751,6 +2167,12 @@ def main():
         for item in cpus:
             if item.get("price") is not None and float(item.get("price", 0)) < 1500.0:
                 item["price"] = None
+            bench_id = "cpu_" + re.sub(r"[^a-z0-9]+", "_", item["name"].lower()).strip("_")
+            has_specs = bool(item.get("microarchitecture") and item.get("core_topology") and item.get("process_node"))
+            has_bench = bench_id in benchmarks_data.get("cpus", {})
+            if delta_only and has_specs and has_bench:
+                continue
+
             gb_cpu_match = match_geekbench_entry(gb_cpu_index, item.get("name"), item.get("model"))
             match = match_cpu_ref(item["name"])
             if match:
@@ -1771,9 +2193,7 @@ def main():
                 item["unlocked_multiplier"] = ref["unlocked_multiplier"]
                 stats["cpu_specs"] += 1
 
-                # Benchmark synchronization (12-Game Matrix + 1% Low FPS)
                 b = ref["bench"]
-                bench_id = "cpu_" + re.sub(r"[^a-z0-9]+", "_", item["name"].lower()).strip("_")
                 gb6_s = int(gb_cpu_match["score"]) if gb_cpu_match else b["gb6_s"]
                 gb6_m = int(gb_cpu_match["multicore_score"]) if gb_cpu_match else b["gb6_m"]
                 if gb_cpu_match:
@@ -1804,15 +2224,13 @@ def main():
                 }
                 stats["cpu_benchmarks"] += 1
             elif gb_cpu_match:
-                bench_id = "cpu_" + re.sub(r"[^a-z0-9]+", "_", item["name"].lower()).strip("_")
                 existing_cpu_bench = benchmarks_data.get("cpus", {}).get(bench_id)
                 if isinstance(existing_cpu_bench, dict) and isinstance(existing_cpu_bench.get("synthetic"), dict):
                     existing_cpu_bench["synthetic"]["geekbench_6_single"] = int(gb_cpu_match["score"])
                     existing_cpu_bench["synthetic"]["geekbench_6_multi"] = int(gb_cpu_match["multicore_score"])
                     stats["cpu_gb6_live"] += 1
 
-        with open(cpu_path, "w", encoding="utf-8") as f:
-            json.dump(cpus, f, indent=2, ensure_ascii=False)
+        save_json_if_changed(cpu_path, cpus)
 
     # --------------------------------------------------------------------------
     # Process GPUs
@@ -1824,6 +2242,12 @@ def main():
         for item in gpus:
             if item.get("price") is not None and float(item.get("price", 0)) < 3000.0:
                 item["price"] = None
+            item_bench_id = "gpu_" + re.sub(r"[^a-z0-9]+", "_", item.get("name", "").lower()).strip("_")
+            has_specs = bool(item.get("architecture") and item.get("cuda_cores") and item.get("bandwidth_gbs"))
+            has_bench = item_bench_id in benchmarks_data.get("gpus", {})
+            if delta_only and has_specs and has_bench:
+                continue
+
             match = match_gpu_ref(item.get("name", ""), item.get("chipset"))
             if match:
                 ref_key, ref = match
@@ -1846,11 +2270,9 @@ def main():
                 item["length"] = item.get("length") or ref["length"]
                 stats["gpu_specs"] += 1
 
-                # Benchmark synchronization (12-Game Matrix + 1% Low FPS)
                 b = ref["bench"]
                 bench_id = "gpu_" + re.sub(r"[^a-z0-9]+", "_", ref_key.lower()).strip("_")
                 alias_id = re.sub(r"[^a-z0-9]+", "_", ref_key.lower().replace("geforce_", "").replace("radeon_", "")).strip("_")
-                item_bench_id = "gpu_" + re.sub(r"[^a-z0-9]+", "_", item.get("name", "").lower()).strip("_")
                 entry = {
                     "relative_performance_pct": b["rel_pct"],
                     "score": b["score"],
@@ -1874,21 +2296,41 @@ def main():
                     benchmarks_data["gpus"][item_bench_id] = entry
                 stats["gpu_benchmarks"] += 1
 
-        with open(gpu_path, "w", encoding="utf-8") as f:
-            json.dump(gpus, f, indent=2, ensure_ascii=False)
-        # Mirror to video-card.json
-        shutil.copy2(gpu_path, os.path.join(DATA_CATALOG_DIR, "video-card.json"))
+        if save_json_if_changed(gpu_path, gpus):
+            copy_if_changed(gpu_path, os.path.join(DATA_CATALOG_DIR, "video-card.json"))
 
     # --------------------------------------------------------------------------
-    # Process PSUs (IRONScale Labs Cybenetics/Cultists Live Feed + Matrix Fallback)
+    # Process PSUs (IRONScale Labs Cybenetics/Cultists Live Feed + Discovery + Matrix)
     # --------------------------------------------------------------------------
     psu_path = os.path.join(DATA_CATALOG_DIR, "psu.json")
     if os.path.exists(psu_path):
         with open(psu_path, "r", encoding="utf-8") as f:
             psus = json.load(f)
+
+        # Delta discovery: append new PSU models reviewed by IRONScale Labs if missing from catalog
+        if psu_helpers and ironscale_records:
+            existing_names = {re.sub(r"[^a-z0-9]+", "", str(p.get("name") or "").lower()) for p in psus}
+            for rec in ironscale_records:
+                if any(psu_helpers.match_psu_to_ironscale(p, [rec]) is not None for p in psus):
+                    continue
+                new_psu = psu_helpers.build_psu_entry_from_ironscale(rec)
+                if not new_psu:
+                    continue
+                norm_new = re.sub(r"[^a-z0-9]+", "", new_psu["name"].lower())
+                if norm_new and norm_new not in existing_names:
+                    psus.append(new_psu)
+                    existing_names.add(norm_new)
+                    stats["psu_new"] += 1
+
         for item in psus:
             if item.get("price") is not None and float(item.get("price", 0)) < 1200.0:
                 item["price"] = None
+            has_all_psu = bool(
+                item.get("tier") and item.get("topology") and item.get("capacitors") and item.get("outputs") and item.get("type")
+            )
+            if delta_only and has_all_psu:
+                continue
+
             iron_match = (
                 psu_helpers.match_psu_to_ironscale(item, ironscale_records)
                 if psu_helpers and ironscale_records
@@ -1896,13 +2338,25 @@ def main():
             )
             ref = match_psu_ref(item.get("name", ""))
             if iron_match is not None:
-                tier_raw = str(iron_match.get("tier") or "").strip()
+                tier_raw = psu_helpers._clean_ws(iron_match.get("tier"))
                 if tier_raw:
                     tier_label = psu_helpers.TIER_LABELS.get(tier_raw, f"Tier {tier_raw}")
-                    desc = str(iron_match.get("description") or "").replace("\n", " ").strip()
+                    desc = psu_helpers._clean_ws(iron_match.get("description"))
                     item["tier"] = f"{tier_label} ({desc})" if desc and len(desc) <= 120 else tier_label
                 item["topology"] = psu_helpers.format_topology_info(iron_match)
                 item["capacitors"] = psu_helpers.format_capacitor_info(iron_match)
+                lab_outputs = psu_helpers.format_psu_outputs(iron_match)
+                if lab_outputs:
+                    item["outputs"] = lab_outputs
+                lab_ff = psu_helpers.format_psu_form_factor(iron_match)
+                if lab_ff:
+                    item["type"] = lab_ff
+                lab_prot = psu_helpers.format_psu_protections(iron_match)
+                if lab_prot:
+                    item["protections"] = lab_prot
+                lab_fan = psu_helpers.format_psu_fan(iron_match)
+                if lab_fan:
+                    item["fan_size"] = lab_fan
                 stats["psu_ironscale_live"] += 1
                 if ref is not None:
                     item["cybenetics"] = item.get("cybenetics") or ref["efficiency"]
@@ -1912,6 +2366,8 @@ def main():
                     item["protections"] = item.get("protections") or ref["protections"]
                     item["modular"] = item.get("modular") or ref["modular"]
                     item["fan_size"] = item.get("fan_size") or ref["fan_size"]
+                    if not item.get("outputs") and ref.get("outputs"):
+                        item["outputs"] = ref["outputs"]
             elif ref is not None:
                 item["tier"] = ref["tier"]
                 item["cybenetics"] = ref["efficiency"]
@@ -1919,14 +2375,19 @@ def main():
                 item["atx_standard"] = ref["atx_standard"]
                 item["pcie_12vhpwr"] = ref["pcie_12vhpwr"]
                 item["topology"] = ref["topology"]
+                if ref.get("capacitors"):
+                    item["capacitors"] = ref["capacitors"]
+                if ref.get("outputs"):
+                    item["outputs"] = ref["outputs"]
+                if ref.get("type"):
+                    item["type"] = ref["type"]
                 item["protections"] = ref["protections"]
                 item["modular"] = ref["modular"]
                 item["fan_size"] = item.get("fan_size") or ref["fan_size"]
             stats["psu_specs"] += 1
 
-        with open(psu_path, "w", encoding="utf-8") as f:
-            json.dump(psus, f, indent=2, ensure_ascii=False)
-        shutil.copy2(psu_path, os.path.join(DATA_CATALOG_DIR, "power-supply.json"))
+        if save_json_if_changed(psu_path, psus):
+            copy_if_changed(psu_path, os.path.join(DATA_CATALOG_DIR, "power-supply.json"))
 
     # --------------------------------------------------------------------------
     # Process Motherboards
@@ -1940,9 +2401,7 @@ def main():
                 item["price"] = None
             enrich_motherboard(item)
             stats["motherboard_specs"] += 1
-
-        with open(mobo_path, "w", encoding="utf-8") as f:
-            json.dump(mobos, f, indent=2, ensure_ascii=False)
+        save_json_if_changed(mobo_path, mobos)
 
     # --------------------------------------------------------------------------
     # Process RAM
@@ -1954,12 +2413,12 @@ def main():
         for item in rams:
             if item.get("price") is not None and float(item.get("price", 0)) < 600.0:
                 item["price"] = None
+            if delta_only and item.get("first_word_latency"):
+                continue
             enrich_ram(item)
             stats["ram_specs"] += 1
-
-        with open(ram_path, "w", encoding="utf-8") as f:
-            json.dump(rams, f, indent=2, ensure_ascii=False)
-        shutil.copy2(ram_path, os.path.join(DATA_CATALOG_DIR, "memory.json"))
+        if save_json_if_changed(ram_path, rams):
+            copy_if_changed(ram_path, os.path.join(DATA_CATALOG_DIR, "memory.json"))
 
     # --------------------------------------------------------------------------
     # Process Storage (SSD)
@@ -1971,12 +2430,12 @@ def main():
         for item in storages:
             if item.get("price") is not None and float(item.get("price", 0)) < 600.0:
                 item["price"] = None
+            if delta_only and item.get("controller") and item.get("dram_cache"):
+                continue
             enrich_storage(item)
             stats["storage_specs"] += 1
-
-        with open(storage_path, "w", encoding="utf-8") as f:
-            json.dump(storages, f, indent=2, ensure_ascii=False)
-        shutil.copy2(storage_path, os.path.join(DATA_CATALOG_DIR, "internal-hard-drive.json"))
+        if save_json_if_changed(storage_path, storages):
+            copy_if_changed(storage_path, os.path.join(DATA_CATALOG_DIR, "internal-hard-drive.json"))
 
     # --------------------------------------------------------------------------
     # Process Coolers
@@ -1988,12 +2447,12 @@ def main():
         for item in coolers:
             if item.get("price") is not None and float(item.get("price", 0)) < 400.0:
                 item["price"] = None
+            if delta_only and item.get("max_tdp") and item.get("radiator_dimensions"):
+                continue
             enrich_cooler(item)
             stats["cooler_specs"] += 1
-
-        with open(cooler_path, "w", encoding="utf-8") as f:
-            json.dump(coolers, f, indent=2, ensure_ascii=False)
-        shutil.copy2(cooler_path, os.path.join(DATA_CATALOG_DIR, "cpu-cooler.json"))
+        if save_json_if_changed(cooler_path, coolers):
+            copy_if_changed(cooler_path, os.path.join(DATA_CATALOG_DIR, "cpu-cooler.json"))
 
     # --------------------------------------------------------------------------
     # Process Cases
@@ -2005,14 +2464,14 @@ def main():
         for item in cases:
             if item.get("price") is not None and float(item.get("price", 0)) < 1000.0:
                 item["price"] = None
+            if delta_only and item.get("max_gpu_length"):
+                continue
             enrich_case(item)
             stats["case_specs"] += 1
-
-        with open(case_path, "w", encoding="utf-8") as f:
-            json.dump(cases, f, indent=2, ensure_ascii=False)
+        save_json_if_changed(case_path, cases)
 
     # --------------------------------------------------------------------------
-    # Upgrade any remaining CPU/GPU entries in benchmarks_data to full 12-game matrix
+    # Ensure p1080/p1440/p4k keys & 12-game matrix completeness for Kotlin ResolutionFps
     # --------------------------------------------------------------------------
     def extract_res_tuple(g_dict: Dict[str, Any], key: str) -> Optional[Tuple[float, float, float]]:
         item_g = g_dict.get(key)
@@ -2025,15 +2484,26 @@ def main():
             return (float(p1080), float(p1440), float(p4k))
         return None
 
+    def normalize_game_keys(games_map: Dict[str, Any]) -> None:
+        for res_dict in games_map.values():
+            if isinstance(res_dict, dict):
+                if "1080p" in res_dict and "p1080" not in res_dict:
+                    res_dict["p1080"] = res_dict["1080p"]
+                if "1440p" in res_dict and "p1440" not in res_dict:
+                    res_dict["p1440"] = res_dict["1440p"]
+                if "4k" in res_dict and "p4k" not in res_dict:
+                    res_dict["p4k"] = res_dict["4k"]
+
     for cpu_k, cpu_v in list(benchmarks_data.get("cpus", {}).items()):
         if isinstance(cpu_v, dict):
-            gb_match = match_geekbench_entry(
-                gb_cpu_index,
-                cpu_k[4:].replace("_", " ") if cpu_k.startswith("cpu_") else cpu_k.replace("_", " "),
-            )
-            if gb_match and isinstance(cpu_v.get("synthetic"), dict):
-                cpu_v["synthetic"]["geekbench_6_single"] = int(gb_match["score"])
-                cpu_v["synthetic"]["geekbench_6_multi"] = int(gb_match["multicore_score"])
+            if not delta_only or not (cpu_v.get("synthetic") or {}).get("geekbench_6_single"):
+                gb_match = match_geekbench_entry(
+                    gb_cpu_index,
+                    cpu_k[4:].replace("_", " ") if cpu_k.startswith("cpu_") else cpu_k.replace("_", " "),
+                )
+                if gb_match and isinstance(cpu_v.get("synthetic"), dict):
+                    cpu_v["synthetic"]["geekbench_6_single"] = int(gb_match["score"])
+                    cpu_v["synthetic"]["geekbench_6_multi"] = int(gb_match["multicore_score"])
         games_map = cpu_v.get("games", {})
         if len(games_map) < 12 or "low1_1080p" not in games_map.get("cyberpunk_2077", {}):
             sc = int(cpu_v.get("score") or 75)
@@ -2044,6 +2514,8 @@ def main():
                 cs2=extract_res_tuple(games_map, "counter_strike_2"),
                 is_cpu=True,
             )
+        else:
+            normalize_game_keys(games_map)
 
     for gpu_k, gpu_v in list(benchmarks_data.get("gpus", {}).items()):
         games_map = gpu_v.get("games", {})
@@ -2056,23 +2528,21 @@ def main():
                 cs2=extract_res_tuple(games_map, "counter_strike_2"),
                 is_cpu=False,
             )
+        else:
+            normalize_game_keys(games_map)
 
     # --------------------------------------------------------------------------
     # Process Smartphones & Tablets (Geekbench 6 Mobile Official Bulk JSON)
     # --------------------------------------------------------------------------
-    phone_gb_count, tablet_gb_count = sync_mobile_geekbench(gb_mobile_index)
+    phone_gb_count, tablet_gb_count = sync_mobile_geekbench(gb_mobile_index, delta_only=delta_only)
     stats["smartphone_gb6_live"] = phone_gb_count
     stats["tablet_gb6_live"] = tablet_gb_count
 
     # --------------------------------------------------------------------------
-    # Save Benchmarks File
+    # Save Benchmarks & Mirror Only Changed Catalog Files
     # --------------------------------------------------------------------------
-    with open(DATA_BENCHMARKS_PATH, "w", encoding="utf-8") as f:
-        json.dump(benchmarks_data, f, indent=2, ensure_ascii=False)
+    bench_changed = save_json_if_changed(DATA_BENCHMARKS_PATH, benchmarks_data)
 
-    # --------------------------------------------------------------------------
-    # Mirror all catalog and benchmark files to Compose Resources (shared/.../files)
-    # --------------------------------------------------------------------------
     os.makedirs(SHARED_FILES_DIR, exist_ok=True)
     all_catalog_files = [
         "cpu.json", "video-card.json",
@@ -2081,13 +2551,15 @@ def main():
         "internal-hard-drive.json", "cpu-cooler.json",
         "case.json", "smartphone.json", "tablet.json"
     ]
+    mirrored_count = 0
     for filename in all_catalog_files:
         src = os.path.join(DATA_CATALOG_DIR, filename)
         dst = os.path.join(SHARED_FILES_DIR, filename)
-        if os.path.exists(src):
-            shutil.copy2(src, dst)
+        if copy_if_changed(src, dst):
+            mirrored_count += 1
 
-    shutil.copy2(DATA_BENCHMARKS_PATH, SHARED_BENCHMARKS_PATH)
+    if bench_changed or not os.path.exists(SHARED_BENCHMARKS_PATH):
+        copy_if_changed(DATA_BENCHMARKS_PATH, SHARED_BENCHMARKS_PATH)
 
     # --------------------------------------------------------------------------
     # Summary Report
@@ -2106,18 +2578,27 @@ def main():
     print(f"  • İşlemci (CPU) Benchmark Puanları         : {stats['cpu_benchmarks']} model")
     print(f"  • Ekran Kartı (GPU) Teknik Veri Güncellemesi: {stats['gpu_specs']} ürün")
     print(f"  • Ekran Kartı (GPU) Benchmark Puanları     : {stats['gpu_benchmarks']} model")
-    print(f"  • Güç Kaynağı (PSU) Cybenetics & Tier      : {stats['psu_specs']} ürün (Canlı IRONScale Labs: {stats['psu_ironscale_live']})")
+    print(f"  • Güç Kaynağı (PSU) Cybenetics & Tier      : {stats['psu_specs']} ürün (Canlı IRONScale Labs: {stats['psu_ironscale_live']}, Yeni Keşif: {stats['psu_new']})")
     print(f"  • Mobil/Tablet Canlı Geekbench 6 Eşleşmesi : {stats['smartphone_gb6_live']} telefon / {stats['tablet_gb6_live']} tablet")
     print(f"  • Anakart (Motherboard) VRM & PCB Katmanı  : {stats['motherboard_specs']} ürün")
     print(f"  • RAM (Bellek) Die Tipi & True Latency     : {stats['ram_specs']} ürün")
     print(f"  • Depolama (SSD) Kontrolcü & DRAM Cache    : {stats['storage_specs']} ürün")
     print(f"  • Soğutucu (Cooler) Radyatör & Fan CFM/dBA : {stats['cooler_specs']} ürün")
     print(f"  • Kasa (Case) Radyatör & GPU Uzunluğu      : {stats['case_specs']} ürün")
+    print(f"  • Değişen / Aynalanan Dosya Sayısı         : {mirrored_count} katalog dosyası (Benchmarks değişti: {bench_changed})")
     print("-" * 80)
-    print(f"  TOPLAM TEKNİK VERİSİ GÜNCELLENEN ÜRÜN       : {total_specs} adet (%100 Kapsam)")
+    print(f"  TOPLAM TEKNİK VERİSİ İŞLENEN ÜRÜN          : {total_specs} adet")
     print(f"  TOPLAM GÜNCELLENEN BENCHMARK KAYDI          : {total_benchmarks} adet")
     print(f"  HEDEF DİZİNLER                             : data/catalog/ & shared/.../files/")
     print("=" * 80)
 
+
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Hardware Wizard Multi-Source Spec & Benchmark Synchronizer")
+    parser.add_argument(
+        "--delta-only",
+        action="store_true",
+        help="Only process new items or items missing deep specs/benchmarks; leave complete items untouched.",
+    )
+    args = parser.parse_args()
+    main(delta_only=args.delta_only)

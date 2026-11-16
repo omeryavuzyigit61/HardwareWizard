@@ -283,16 +283,20 @@ abstract class HardwareDao {
 
     // endregion
 
+    @Query("DELETE FROM hardware_items")
+    protected abstract suspend fun deleteAllHardwareItems()
+
     /** Spec rows are removed via `ON DELETE CASCADE`. */
     @Query("DELETE FROM hardware_items WHERE cached_at < :threshold")
     protected abstract suspend fun deleteItemsCachedBefore(threshold: Instant)
 
     /**
-     * Atomically upserts the snapshot and evicts rows not refreshed in this sync.
+     * Atomically purges stale rows, upserts the snapshot, and evicts rows not refreshed in this sync.
      * All snapshot items must share the same [syncedAt] as their `cachedAt`.
      */
     @Transaction
     open suspend fun replaceCatalog(snapshot: HardwareCatalogSnapshot, syncedAt: Instant) {
+        deleteAllHardwareItems()
         val chunkSize = 500
         snapshot.items.chunked(chunkSize).forEach { upsertItems(it) }
         snapshot.cpus.chunked(chunkSize).forEach { upsertCpuSpecs(it) }

@@ -1553,7 +1553,8 @@ def main():
         pid = lp["id"]
         price = safe_float(lp.get("priceTry"))
         store_name = lp.pop("_storeName", "Hepsiburada")
-        if price is not None and price > 0:
+        price_sync_enabled = os.environ.get("ENABLE_PRICE_SYNC", "false").lower() == "true"
+        if price_sync_enabled and price is not None and price > 0:
             prev_entry = existing_prices.get(pid, {})
             history = upsert_daily_cheapest_history(
                 existing_history=prev_entry.get("priceHistory", []),
@@ -1582,24 +1583,33 @@ def main():
                 ]
             }
 
-    # 6. Dosyaları Kaydet (data/catalog/ ve shared/.../composeResources/files/)
+    # 6. Dosyaları Kaydet (data/catalog/ ve shared/.../composeResources/files/) - Sadece değişiklik varsa yaz
     print("\n[+] 4. Adım: Dosyalar senkronize ediliyor...")
     targets = [
         ("laptop.json", final_laptops),
     ]
     for fname, data in targets:
+        serialized = json.dumps(data, indent=2, ensure_ascii=False)
         for d in [CATALOG_DIR, FILES_DIR]:
             os.makedirs(d, exist_ok=True)
             p = os.path.join(d, fname)
+            if os.path.exists(p):
+                with open(p, "r", encoding="utf-8") as rf:
+                    if rf.read() == serialized:
+                        print(f"  [=] {os.path.basename(d)}/{fname} değişmedi ({len(data)} ürün).")
+                        continue
             with open(p, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
+                f.write(serialized)
             print(f"  [OK] {os.path.basename(d)}/{fname} kaydedildi ({len(data)} ürün).")
 
-    for p_file in TARGET_PRICE_FILES:
-        os.makedirs(os.path.dirname(p_file), exist_ok=True)
-        with open(p_file, "w", encoding="utf-8") as f:
-            json.dump(existing_prices, f, indent=2, ensure_ascii=False)
-        print(f"  [OK] {os.path.basename(p_file)} güncellendi ({len(existing_prices)} toplam ürün).")
+    if os.environ.get("ENABLE_PRICE_SYNC", "false").lower() == "true":
+        for p_file in TARGET_PRICE_FILES:
+            os.makedirs(os.path.dirname(p_file), exist_ok=True)
+            with open(p_file, "w", encoding="utf-8") as f:
+                json.dump(existing_prices, f, indent=2, ensure_ascii=False)
+            print(f"  [OK] {os.path.basename(p_file)} güncellendi ({len(existing_prices)} toplam ürün).")
+    else:
+        print("  • Fiyat senkronizasyonu devre dışı (ENABLE_PRICE_SYNC != true); prices_tr.json güncellenmedi.")
 
     print("\n================================================================================")
     print(f"   BAŞARILI: {len(final_laptops)} Gaming Laptop Eşitlendi! ")

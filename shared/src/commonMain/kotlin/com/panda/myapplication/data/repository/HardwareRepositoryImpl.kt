@@ -79,55 +79,24 @@ internal class HardwareRepositoryImpl(
         seedMutex.withLock {
             if (isSeeded) return
             val seededVersion = hardwareDao.getSetting("catalog_seed_version")
-            val currentCatalogVersion = "2.1.0"
+            val currentCatalogVersion = "3.0.0"
             if (seededVersion == currentCatalogVersion) {
                 isSeeded = true
                 return
             }
 
+            // Upgrade or initial seed: purge stale Room catalog rows and re-seed from bundled assets.
+            localDataSource.seedDatabaseIfEmpty()
+
             val counts = hardwareDao.getCategoryCounts().associate { it.category to it.cnt }
-            val hasCpus = (counts[HardwareCategory.CPU] ?: 0) > 0
-            val hasGpus = (counts[HardwareCategory.GPU] ?: 0) > 0
-            val laptopCount = counts[HardwareCategory.LAPTOP] ?: 0
-            val phoneCount = counts[HardwareCategory.SMARTPHONE] ?: 0
-            val tabletCount = counts[HardwareCategory.TABLET] ?: 0
-            val caseCount = counts[HardwareCategory.CASE] ?: 0
-            val coolerCount = counts[HardwareCategory.COOLER] ?: 0
-            val moboCount = counts[HardwareCategory.MOTHERBOARD] ?: 0
-            val micCount = counts[HardwareCategory.MICROPHONE] ?: 0
-            val padCount = counts[HardwareCategory.MOUSEPAD] ?: 0
-            val camCount = counts[HardwareCategory.WEBCAM] ?: 0
-            val chairCount = counts[HardwareCategory.GAMING_CHAIR] ?: 0
-            val fanCount = counts[HardwareCategory.CASE_FAN] ?: 0
-            val upsCount = counts[HardwareCategory.UPS] ?: 0
-            val deskCount = counts[HardwareCategory.GAMING_DESK] ?: 0
-            val lightCount = counts[HardwareCategory.GAMING_LIGHTING] ?: 0
-            val swCount = counts[HardwareCategory.SMARTWATCH] ?: 0
-            val routerCount = counts[HardwareCategory.ROUTER] ?: 0
-            val modemCount = counts[HardwareCategory.MODEM] ?: 0
-            val apCount = counts[HardwareCategory.ACCESS_POINT] ?: 0
-            val reCount = counts[HardwareCategory.RANGE_EXTENDER] ?: 0
-
-            val peripheralCount = (counts[HardwareCategory.KEYBOARD] ?: 0) +
-                (counts[HardwareCategory.MOUSE] ?: 0) +
-                (counts[HardwareCategory.HEADSET] ?: 0) +
-                (counts[HardwareCategory.MONITOR] ?: 0)
-
-            val isMissingCore = !hasCpus || !hasGpus ||
-                laptopCount < 300 || phoneCount < 200 || tabletCount < 30 || peripheralCount < 950 || caseCount < 150 || coolerCount < 140 ||
-                moboCount < 640 || micCount < 120 || padCount < 190 || camCount < 75 || chairCount < 140 ||
-                fanCount < 180 || upsCount < 140 || deskCount < 100 || lightCount < 90 ||
-                swCount < 180 || routerCount < 140 || modemCount < 60 || apCount < 80 || reCount < 80
-
-            if (counts.isEmpty() || isMissingCore) {
-                localDataSource.seedDatabaseIfEmpty()
-            }
-            hardwareDao.saveSetting(
-                com.panda.myapplication.data.local.entity.AppSettingEntity(
-                    key = "catalog_seed_version",
-                    value = currentCatalogVersion,
+            if (counts.isNotEmpty()) {
+                hardwareDao.saveSetting(
+                    com.panda.myapplication.data.local.entity.AppSettingEntity(
+                        key = "catalog_seed_version",
+                        value = currentCatalogVersion,
+                    )
                 )
-            )
+            }
             isSeeded = true
         }
     }
@@ -772,9 +741,7 @@ internal class HardwareRepositoryImpl(
             }
             val allBenchmarks = localBenchmarks.toMutableMap().apply {
                 remoteBenchmarks.forEach { (key, remoteInfo) ->
-                    if (!containsKey(key)) {
-                        this[key] = remoteInfo
-                    }
+                    this[key] = remoteInfo
                 }
             }
 

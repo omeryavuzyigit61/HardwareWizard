@@ -75,9 +75,19 @@ def load_json(filepath):
         return None
 
 def save_json(filepath, data):
+    serialized = json.dumps(data, indent=2, ensure_ascii=False)
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                if f.read() == serialized:
+                    return False
+        except Exception:
+            pass
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write(serialized)
     print(f"Saved: {filepath} ({len(data)} items)")
+    return True
 
 def enrich_laptops():
     """
@@ -228,12 +238,14 @@ def sync_peripherals():
         if pid not in existing_dict:
             existing_dict[pid] = item
         else:
-            # Merge spec fields while preserving verified images if present
-            imgs = existing_dict[pid].get("images") or item.get("images") or []
-            existing_dict[pid].update(item)
-            if imgs:
-                existing_dict[pid]["images"] = imgs
-                existing_dict[pid]["image_url"] = imgs[0]
+            # Sadece eksik alanları ve görselleri tamamla; mevcut zengin veriyi ezme
+            cur = existing_dict[pid]
+            for k, v in item.items():
+                if v is not None and v != "" and cur.get(k) in (None, "", []):
+                    cur[k] = v
+            if not cur.get("images") and item.get("images"):
+                cur["images"] = item["images"]
+                cur["image_url"] = item["images"][0]
 
     result = list(existing_dict.values())
     for p in result:
@@ -311,8 +323,11 @@ def main():
 
 
 
-    num_prices = sync_prices_tr()
-    print(f"✓ Canlı TR Mağaza Fiyat Veritabanı: {num_prices} ürün")
+    if os.environ.get("ENABLE_PRICE_SYNC", "false").lower() == "true":
+        num_prices = sync_prices_tr()
+        print(f"✓ Canlı TR Mağaza Fiyat Veritabanı: {num_prices} ürün")
+    else:
+        print("• Fiyat senkronizasyonu devre dışı (ENABLE_PRICE_SYNC != true); prices_tr.json korunuyor.")
 
     print("\n[OK] Tüm küresel teknik özellikler ve görsel galerileri başarıyla güncellendi!")
 

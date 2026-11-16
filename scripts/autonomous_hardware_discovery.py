@@ -1781,34 +1781,56 @@ def load_json(path):
 def save_json(path, data):
     basename = os.path.basename(path)
     if os.path.dirname(os.path.abspath(path)) == os.path.abspath(COMPOSE_DIR) and basename in ("gpu.json", "psu.json", "storage.json", "cooler.json", "ram.json"):
-        return
+        return False
+    serialized = json.dumps(data, ensure_ascii=False, indent=2)
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                if f.read() == serialized:
+                    return False
+        except Exception:
+            pass
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write(serialized)
+    return True
 
 def generate_catalog_sha256_manifest():
-    """Tüm katalog JSON dosyalarının SHA-256 bütünlük manifestosunu üretir."""
+    """Tüm katalog JSON dosyalarının SHA-256 bütünlük manifestosunu üretir; değişiklik yoksa zaman damgasını değiştirmez."""
     DUPLICATE_FILES = {"gpu.json", "ram.json", "psu.json", "storage.json", "cooler.json"}
-    for fname in os.listdir(CATALOG_DIR):
-        if fname.endswith(".json") and fname != "catalog_manifest.json" and fname not in DUPLICATE_FILES:
-            src = os.path.join(CATALOG_DIR, fname)
+    files_hashes = {}
+    for fname in sorted(os.listdir(CATALOG_DIR)):
+        if not fname.endswith(".json") or fname == "catalog_manifest.json":
+            continue
+        src = os.path.join(CATALOG_DIR, fname)
+        with open(src, "rb") as f:
+            src_hash = hashlib.sha256(f.read()).hexdigest()
+        files_hashes[fname] = src_hash
+        if fname not in DUPLICATE_FILES:
             dst = os.path.join(COMPOSE_DIR, fname)
-            shutil.copy2(src, dst)
+            dst_hash = None
+            if os.path.exists(dst):
+                with open(dst, "rb") as df:
+                    dst_hash = hashlib.sha256(df.read()).hexdigest()
+            if dst_hash != src_hash:
+                shutil.copy2(src, dst)
+
+    manifest_path_data = os.path.join(CATALOG_DIR, "catalog_manifest.json")
+    manifest_path_comp = os.path.join(COMPOSE_DIR, "catalog_manifest.json")
+    existing_manifest = load_json(manifest_path_data)
+    if (
+        isinstance(existing_manifest, dict)
+        and existing_manifest.get("files") == files_hashes
+        and os.path.exists(manifest_path_comp)
+    ):
+        print(f"🔒 SHA-256 Bütünlük Manifestosu Güncel ({len(files_hashes)} dosya değişmedi).")
+        return
 
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "version": "2.0.0",
-        "files": {}
+        "files": files_hashes,
     }
-    for fname in os.listdir(CATALOG_DIR):
-        if fname.endswith(".json") and fname != "catalog_manifest.json":
-            fpath = os.path.join(CATALOG_DIR, fname)
-            with open(fpath, "rb") as f:
-                h = hashlib.sha256(f.read()).hexdigest()
-                manifest["files"][fname] = h
-
-    manifest_path_data = os.path.join(CATALOG_DIR, "catalog_manifest.json")
-    manifest_path_comp = os.path.join(COMPOSE_DIR, "catalog_manifest.json")
     save_json(manifest_path_data, manifest)
     save_json(manifest_path_comp, manifest)
     print(f"🔒 SHA-256 Bütünlük Manifestosu Üretildi: {len(manifest['files'])} dosya doğrulandı.")
@@ -1816,7 +1838,7 @@ def generate_catalog_sha256_manifest():
 def merge_and_sync(filename_catalog, filename_compose, new_items, key_field="name"):
     """
     Belirtilen yeni donanım öğelerini mevcut katalog ile Zero-Trust kurallarına göre birleştirir,
-    hem data/catalog hem de composeResources dizinlerine yazar.
+    hem data/catalog hem de composeResources dizinlerine yazar. Mevcut dolu özellikleri ezmez.
     """
     cat_path = os.path.join(CATALOG_DIR, filename_catalog)
     comp_path = os.path.join(COMPOSE_DIR, filename_compose)
@@ -1846,9 +1868,15 @@ def merge_and_sync(filename_catalog, filename_compose, new_items, key_field="nam
             continue
 
         if k in existing_keys:
-            # Güncelle
-            existing_keys[k].update(item)
-            updated_count += 1
+            # Sadece eksik/boş alanları tamamla; Kaynakça'dan gelen zengin veriyi ezme
+            cur = existing_keys[k]
+            item_changed = False
+            for fk, fv in item.items():
+                if fv is not None and fv != "" and fv != [] and cur.get(fk) in (None, "", []):
+                    cur[fk] = fv
+                    item_changed = True
+            if item_changed:
+                updated_count += 1
         else:
             # Yeni ekle
             existing.append(item)

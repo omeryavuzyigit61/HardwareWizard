@@ -161,7 +161,7 @@
     "type": "AIO Liquid Cooler",
     "size": 360,
     "color": "White",
-    "fan_rpm": 2000,
+    "fan_rpm": "200 - 1800 RPM (PWM) • VRM Fanı: 400 - 2500 RPM",
     "noise_level": 22.5,
     "sockets": [
       "AM5",
@@ -352,7 +352,7 @@
     "type": "Dual Tower Air Cooler",
     "size": null,
     "color": "All-Black Anodized / ARGB Rim",
-    "fan_rpm": 2150,
+    "fan_rpm": "1500 RPM ± %10 (PWM Kontrollü TL-C12B V2)",
     "noise_level": 25.6,
     "sockets": [
       "AM5",
@@ -3026,18 +3026,18 @@
     "size": 360,
     "color": "Black",
     "height": null,
-    "fan_rpm": "500 - 2600 RPM",
-    "noise_level": 31.0,
+    "fan_rpm": "200 - 2400 RPM (PWM / UNI FAN)",
+    "noise_level": 30.0,
     "sockets": [
       "AM5",
       "AM4",
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350,
+    "max_tdp": 320,
     "imageUrl": "https://i.ebayimg.com/images/g/FnEAAeSwMXhqzNjV/s-l1600.jpg",
-    "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "radiator_dimensions": "360mm x 31mm Alüminyum Radyatör (Gizli Yan Boru + 2.88\" IPS LCD)",
+    "fan_airflow": "79.9 CFM / 3.26 mmH2O Statik Basınç",
     "model": "HydroShift LCD 360",
     "images": [
       "https://i.ebayimg.com/images/g/FnEAAeSwMXhqzNjV/s-l1600.jpg",
@@ -3053,18 +3053,18 @@
     "size": 360,
     "color": "White",
     "height": 62,
-    "fan_rpm": "500 - 2600 RPM",
-    "noise_level": 31.0,
+    "fan_rpm": "200 - 2400 RPM (PWM / UNI FAN)",
+    "noise_level": 30.0,
     "sockets": [
       "AM5",
       "AM4",
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 350,
+    "max_tdp": 320,
     "imageUrl": "https://lian-li.com/wp-content/uploads/2025/05/HS2_m_001.webp",
-    "radiator_dimensions": "360mm x 27mm Alüminyum Radyatör",
-    "fan_airflow": "62.5 CFM / 2.1 mmH2O Statik Basınç",
+    "radiator_dimensions": "360mm x 31mm Alüminyum Radyatör (Gizli Yan Boru + 2.88\" IPS LCD)",
+    "fan_airflow": "79.9 CFM / 3.26 mmH2O Statik Basınç",
     "model": "HydroShift LCD 360 (White)",
     "images": [
       "https://lian-li.com/wp-content/uploads/2025/05/HS2_m_001.webp",
@@ -3510,17 +3510,17 @@
     "type": "Liquid",
     "color": "Black",
     "height": 52,
-    "fan_rpm": "200-2600 RPM (UNI FAN TL)",
-    "noise_level": 26.5,
+    "fan_rpm": "200 - 2400 RPM (PWM / UNI FAN)",
+    "noise_level": 30.0,
     "sockets": [
       "AM5",
       "AM4",
       "LGA1700",
       "LGA1851"
     ],
-    "max_tdp": 340,
-    "radiator_dimensions": "403 x 124.5 x 27 mm (Gizli Boru Tasarımı & 2.88 inç IPS LCD)",
-    "fan_airflow": "90.1 CFM",
+    "max_tdp": 320,
+    "radiator_dimensions": "360mm x 31mm Alüminyum Radyatör (Gizli Yan Boru + 2.88\" IPS LCD)",
+    "fan_airflow": "79.9 CFM / 3.26 mmH2O Statik Basınç",
     "imageUrl": "https://lian-li.com/wp-content/uploads/2024/06/HydroShift-01.webp",
     "images": [
       "https://lian-li.com/wp-content/uploads/2024/06/HydroShift-01.webp",
@@ -3873,8 +3873,8 @@
     "type": "360mm Gizli Hortum Tasarımlı LCD AIO",
     "radiator_size": 360,
     "color": "Black",
-    "fan_rpm": "2500 RPM",
-    "noise_level": "29.8 dBA",
+    "fan_rpm": "200 - 2400 RPM (PWM / UNI FAN)",
+    "noise_level": 30.0,
     "imageUrl": "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
@@ -3884,8 +3884,8 @@
     "model": "HydroShift LCD 360RGB",
     "brand": "LIAN LI",
     "image_url": "https://m.media-amazon.com/images/I/61r59C39TPL.jpg",
-    "max_tdp": null,
-    "radiator_dimensions": null,
-    "fan_airflow": null
+    "max_tdp": 320,
+    "radiator_dimensions": "360mm x 31mm Alüminyum Radyatör (Gizli Yan Boru + 2.88\" IPS LCD)",
+    "fan_airflow": "79.9 CFM / 3.26 mmH2O Statik Basınç"
   }
 ]
