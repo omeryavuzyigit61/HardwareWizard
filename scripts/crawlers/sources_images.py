@@ -279,7 +279,7 @@ def search_wikimedia_image(http: PoliteHttpClient, query: str) -> str | None:
             for bad in (
                 "logo", "icon", "diagram", "die_shot", "screenshot", "chart", "map",
                 "unboxing", "comparison", "vergleich", "teardown", "_shop", "_store",
-                "geekerwan",
+                "geekerwan", "unterseite", "backside", "bottom", "pins",
             )
         ) or re.search(r"\b\d{2}\.\d{2}\.\d{2}\b", title_l):
             continue
@@ -292,43 +292,90 @@ def search_wikimedia_image(http: PoliteHttpClient, query: str) -> str | None:
 def verify_image_url_pool(
     state: CrawlStateManager,
     urls: list[str],
-    max_workers: int = 24,
+    max_workers: int = 16,
     recheck_failed: bool = False,
+    recheck_transient: bool = True,
 ) -> dict[str, bool]:
     """Verifies HTTP 200 image reachability on Android UA with cached persistence in image_health."""
+    import threading
+    import time
+
     health = state.load_image_health_map()
+    transient_urls: set[str] = set()
+    if recheck_transient and not recheck_failed:
+        transient_urls = {
+            r[0]
+            for r in state.conn.execute(
+                "SELECT url FROM image_health WHERE ok = 0 AND status_code IN (0, 429)"
+            ).fetchall()
+        }
     unique_urls = [u for u in dict.fromkeys(urls) if isinstance(u, str) and u.startswith("https://")]
-    to_check = [u for u in unique_urls if (u not in health) or (recheck_failed and not health[u])]
+    to_check = [
+        u for u in unique_urls
+        if (u not in health)
+        or (recheck_failed and not health[u])
+        or (u in transient_urls)
+    ]
     if not to_check:
         return {u: health.get(u, False) for u in unique_urls}
 
     ssl_ctx = ssl.create_default_context()
-    headers = {
+    base_headers = {
         "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 14)",
         "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*,*/*;q=0.8",
     }
+    wiki_headers = {
+        "User-Agent": "HardwareWizard/1.0 (https://github.com/omeryavuzyigit61/HardwareWizard)",
+        "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*,*/*;q=0.8",
+    }
+    host_locks: dict[str, threading.Lock] = {}
+    host_last: dict[str, float] = {}
+    map_lock = threading.Lock()
+
+    def _pace(u: str) -> None:
+        host = urllib.parse.urlparse(u).netloc.lower()
+        delay = 0.35 if "wikimedia.org" in host else (0.12 if "gaming.gen.tr" in host else 0.0)
+        if delay <= 0:
+            return
+        with map_lock:
+            lk = host_locks.setdefault(host, threading.Lock())
+        with lk:
+            now = time.monotonic()
+            prev = host_last.get(host, 0.0)
+            if now - prev < delay:
+                time.sleep(delay - (now - prev))
+            host_last[host] = time.monotonic()
 
     def _probe(u: str) -> tuple[str, bool, int, str]:
-        for method in ("HEAD", "GET"):
-            try:
-                hdrs = dict(headers)
-                if method == "GET":
-                    hdrs["Range"] = "bytes=0-1023"
-                req = urllib.request.Request(u, headers=hdrs, method=method)
-                with urllib.request.urlopen(req, timeout=6, context=ssl_ctx) as resp:
-                    ct = str(resp.headers.get("Content-Type") or "").lower()
-                    ok_ct = (not ct) or ct.startswith(("image/", "application/octet-stream", "binary/"))
-                    if resp.status in (200, 206) and ok_ct and "svg" not in ct:
-                        return (u, True, resp.status, ct)
-                    if method == "HEAD" and resp.status in (403, 405):
+        hdr_base = wiki_headers if "wikimedia.org" in u.lower() else base_headers
+        for attempt in range(2):
+            for method in ("HEAD", "GET"):
+                try:
+                    _pace(u)
+                    hdrs = dict(hdr_base)
+                    if method == "GET":
+                        hdrs["Range"] = "bytes=0-1023"
+                    req = urllib.request.Request(u, headers=hdrs, method=method)
+                    with urllib.request.urlopen(req, timeout=10, context=ssl_ctx) as resp:
+                        ct = str(resp.headers.get("Content-Type") or "").lower()
+                        ok_ct = (not ct) or ct.startswith(("image/", "application/octet-stream", "binary/"))
+                        if resp.status in (200, 206) and ok_ct and "svg" not in ct:
+                            return (u, True, resp.status, ct)
+                        if method == "HEAD" and resp.status in (403, 405):
+                            continue
+                        return (u, False, resp.status, ct)
+                except urllib.error.HTTPError as he:
+                    if method == "HEAD" and he.code in (400, 403, 405, 501):
                         continue
-                    return (u, False, resp.status, ct)
-            except urllib.error.HTTPError as he:
-                if method == "HEAD" and he.code in (400, 403, 405, 501):
-                    continue
-                return (u, False, int(he.code), "")
-            except Exception:
-                return (u, False, 0, "")
+                    if he.code == 429 and attempt == 0:
+                        time.sleep(1.5)
+                        break
+                    return (u, False, int(he.code), "")
+                except Exception:
+                    if attempt == 0:
+                        time.sleep(0.5)
+                        break
+                    return (u, False, 0, "")
         return (u, False, 0, "")
 
     batch: list[tuple[str, bool, int, str]] = []

@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "4.3.0",
-  "verifiedAt": "2026-11-16",
+  "catalogVersion": "4.5.0",
+  "verifiedAt": "2026-11-17",
   "counts": {
     "cpu": 432,
     "gpu": 1305,

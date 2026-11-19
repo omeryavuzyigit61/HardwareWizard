@@ -113,7 +113,14 @@ object SecurityUtils {
         if (FORBIDDEN_SCHEMES.any { lower.startsWith(it) }) return null
         if (lower.contains(".svg") || lower.contains("svg%20") || lower.contains("<svg")) return null
         if (lower.contains("placeholder") || lower.contains("blank.gif") || lower.contains("no-image") || lower.contains("no_image")) return null
-        if (lower.contains("roundnew") || lower.contains("logo_2020")) return null
+        if (lower.contains("roundnew") || lower.contains("logo_2020") || lower.contains("itopya-logo") || lower.contains("5-year-qr")) return null
+        if (lower.contains("_ihs_studio") || lower.contains("_reference.") || lower.contains("_bottom.") || lower.contains("generic_cpu")) return null
+        if (
+            lower.contains("teknobiyotik.com") || lower.contains("profesionalreview.com") ||
+            lower.contains("pc-builds.com/logo") || lower.contains("getsview.com") ||
+            lower.contains("modemly.com") || lower.contains("192-168-1-1-ip.co") ||
+            lower.contains("genericrouter") || lower.contains("_logo_") || lower.contains("ricardostatic.")
+        ) return null
 
         val normalizedHttps = when {
             lower.startsWith("https://") -> trimmed

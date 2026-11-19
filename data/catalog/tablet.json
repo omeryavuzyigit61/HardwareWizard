@@ -214,7 +214,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-pro-11-m4-256gb",
@@ -431,7 +431,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-pro-12-9-m2-128gb",
@@ -651,7 +651,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg"
   },
   {
@@ -872,7 +872,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2022.jpg"
   },
   {
@@ -1095,7 +1095,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-air-11-m2-128gb",
@@ -1317,7 +1317,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-air-5-m1-64gb",
@@ -1496,7 +1496,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2022.jpg"
   },
   {
@@ -1669,7 +1669,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-9th-gen-64gb",
@@ -1843,7 +1843,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-102-2021-1.jpg"
   },
   {
@@ -1852,12 +1852,7 @@
     "brand": "Apple",
     "model": "iPad mini 7 (A17 Pro)",
     "priceTry": 23999.0,
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2024.jpg",
-    "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2024.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2024-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-mini-2024-2.jpg"
-    ],
+    "images": [],
     "tier": "S",
     "benchmarkScore": 1520000,
     "gamingIndex": 92,
@@ -2021,7 +2016,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-apple-ipad-mini-6-a15-64gb",
@@ -2195,7 +2190,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2021.jpg"
   },
   {
@@ -2419,7 +2414,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s10-plus-256gb",
@@ -2639,7 +2634,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s10-plus.jpg"
   },
   {
@@ -2857,7 +2852,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-samsung-galaxy-tab-s9-plus-256gb",
@@ -3072,7 +3067,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-plus.jpg"
   },
   {
@@ -3288,7 +3283,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-5g.jpg"
   },
   {
@@ -3463,7 +3458,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-plus-1.jpg"
   },
   {
@@ -3638,7 +3633,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s9-fe-1.jpg"
   },
   {
@@ -3854,7 +3849,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-ultra.jpg"
   },
   {
@@ -4029,7 +4024,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-plus.jpg"
   },
   {
@@ -4204,7 +4199,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8.jpg"
   },
   {
@@ -4379,7 +4374,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9-plus.jpg"
   },
   {
@@ -4554,7 +4549,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9.jpg"
   },
   {
@@ -4773,7 +4768,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-xiaomi-pad-6-pro-256gb",
@@ -4781,7 +4776,9 @@
     "brand": "Xiaomi",
     "model": "Pad 6 Pro",
     "priceTry": 20999.0,
-    "images": [],
+    "images": [
+      "https://www.vopmart.com/media/magefan_blog/Xiaomi_Pad_6_Pro.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1300000,
     "gamingIndex": 88,
@@ -4945,7 +4942,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.vopmart.com/media/magefan_blog/Xiaomi_Pad_6_Pro.jpg"
   },
   {
     "id": "tablet-xiaomi-pad-6-128gb",
@@ -4953,7 +4951,9 @@
     "brand": "Xiaomi",
     "model": "Pad 6",
     "priceTry": 13999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f0/Xiaomi_Pad_6_display.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "A",
     "benchmarkScore": 785000,
     "gamingIndex": 80,
@@ -5117,8 +5117,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Xiaomi_Pad_6_display.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "tablet-xiaomi-redmi-pad-pro-128gb",
@@ -5292,7 +5292,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-pad-pro.jpg"
   },
   {
@@ -5302,7 +5302,9 @@
     "model": "Redmi Pad SE",
     "priceTry": 6999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-black-shark-pad-se.jpg"
+      "https://www.lowyat.net/wp-content/uploads/2023/08/Xiaomi-Redmi-Pad-SE-launch-Europe-1.jpeg",
+      "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-pad-SE/PC/35985c5644d6bdeafa5166636065c278.png",
+      "https://mynexttablet.com/wp-content/uploads/2023/09/xiaomi-redmi-pad-se-review.jpg"
     ],
     "tier": "C+",
     "benchmarkScore": 290000,
@@ -5467,8 +5469,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-black-shark-pad-se.jpg"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.lowyat.net/wp-content/uploads/2023/08/Xiaomi-Redmi-Pad-SE-launch-Europe-1.jpeg"
   },
   {
     "id": "tablet-oneplus-pad-2-256gb",
@@ -5643,7 +5645,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-oneplus-pad-128gb",
@@ -5817,7 +5819,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad.jpg"
   },
   {
@@ -5992,7 +5994,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-pad-go.jpg"
   },
   {
@@ -6208,7 +6210,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-pro-132.jpg"
   },
   {
@@ -6217,7 +6219,9 @@
     "brand": "Huawei",
     "model": "MatePad 11.5S (PaperMatte)",
     "priceTry": 18999.0,
-    "images": [],
+    "images": [
+      "https://www.technobaboy.com/wp-content/uploads/huawei-matepad-11-5-S-price-philippines.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 880000,
     "gamingIndex": 82,
@@ -6381,7 +6385,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.technobaboy.com/wp-content/uploads/huawei-matepad-11-5-S-price-philippines.jpg"
   },
   {
     "id": "tablet-huawei-matepad-pro-11-2024-256gb",
@@ -6558,7 +6563,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-huawei-matepad-se-11-128gb",
@@ -6735,7 +6740,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-lenovo-legion-y700-2023-256gb",
@@ -6912,7 +6917,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-lenovo-tab-p12-128gb",
@@ -7088,7 +7093,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-honor-magicpad-2-256gb",
@@ -7263,7 +7268,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "tablet-honor-pad-9-128gb",
@@ -7271,7 +7276,9 @@
     "brand": "Honor",
     "model": "Pad 9",
     "priceTry": 11999.0,
-    "images": [],
+    "images": [
+      "https://rmtibd.com/wp-content/uploads/2025/10/Honor-Pad-9-Official-Gray.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 510000,
     "gamingIndex": 71,
@@ -7435,6 +7442,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://rmtibd.com/wp-content/uploads/2025/10/Honor-Pad-9-Official-Gray.jpg"
   }
 ]

@@ -449,4 +449,28 @@ class HardwareEnrichmentAndStorageTest {
         kotlin.test.assertNotNull(estimatedResult.info.cpuSynthetic?.cinebenchR23Multi)
         kotlin.test.assertNotNull(estimatedResult.info.gameFps?.cyberpunk2077)
     }
+
+    @Test
+    fun remoteVersionGate_rejectsOlderRemoteCatalogVersions() {
+        assertFalse(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast(null, "4.5.0"))
+        assertFalse(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast("4.3.0", "4.5.0"))
+        assertFalse(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast("4.4.9", "4.5.0"))
+        assertTrue(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast("4.5.0", "4.5.0"))
+        assertTrue(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast("4.10.0", "4.5.0"))
+        assertTrue(com.panda.myapplication.data.repository.HardwareRepositoryImpl.isRemoteVersionAtLeast("5.0.0", "4.5.0"))
+    }
+
+    @Test
+    fun sanitizeImageUrl_rejectsSyntheticLogosWatermarksAndClipart() {
+        val sanitize = com.panda.myapplication.domain.util.SecurityUtils::sanitizeImageUrl
+        kotlin.test.assertNull(sanitize("https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/am5_ihs_studio.webp"))
+        kotlin.test.assertNull(sanitize("https://www.teknobiyotik.com/media/catalog/product/case.jpg"))
+        kotlin.test.assertNull(sanitize("https://cdn.modemly.com/login-page/8devices-Jalapeno-router-setup.jpg"))
+        kotlin.test.assertNull(sanitize("https://openwrt.org/_media/media/example/genericrouter1.png?cache="))
+        kotlin.test.assertNull(sanitize("https://images.pc-builds.com/logo/cpu/1eg/intel-core-i9-12900h.png"))
+        assertEquals(
+            "https://cdna.pcpartpicker.com/static/forever/images/product/5dd350d430e36107ffe5729dfd6630bd.1600.jpg",
+            sanitize("https://cdna.pcpartpicker.com/static/forever/images/product/5dd350d430e36107ffe5729dfd6630bd.1600.jpg"),
+        )
+    }
 }

@@ -6,7 +6,9 @@
     "model": "iPhone 18 Pro Max",
     "priceTry": 109999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone18-pro-max.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone18-pro-max.jpg",
+      "https://cdn.beebom.com/content/2026/03/iphone-18-pro-beebom-gadgets.jpg",
+      "https://www.pricekeeda.com/uploads/posts/2025/Apple-iPhone-18-Pro-Max.webp"
     ],
     "tier": "S+",
     "benchmarkScore": 2450000,
@@ -282,7 +284,7 @@
       "GSMArena",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone18-pro-max.jpg"
   },
   {
@@ -572,7 +574,7 @@
       "GSMArena",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone18-pro.jpg"
   },
   {
@@ -581,7 +583,10 @@
     "brand": "Apple",
     "model": "iPhone 18 Air",
     "priceTry": 82999.0,
-    "images": [],
+    "images": [
+      "https://mobileinto.com/images/largepic/large_apple-iphone-18-air_2.jpg",
+      "https://mobileinto.com/images/Apple-iPhone-18-Air.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 2150000,
     "gamingIndex": 96,
@@ -841,7 +846,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://mobileinto.com/images/largepic/large_apple-iphone-18-air_2.jpg"
   },
   {
     "id": "phone-apple-iphone-18-128gb",
@@ -849,7 +855,9 @@
     "brand": "Apple",
     "model": "iPhone 18",
     "priceTry": 69999.0,
-    "images": [],
+    "images": [
+      "https://cdn.wccftech.com/wp-content/uploads/2025/06/iPhone-18-2-1.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 2120000,
     "gamingIndex": 95,
@@ -1068,7 +1076,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://cdn.wccftech.com/wp-content/uploads/2025/06/iPhone-18-2-1.jpg"
   },
   {
     "id": "phone-apple-iphone-fold-512gb",
@@ -1076,7 +1085,10 @@
     "brand": "Apple",
     "model": "iPhone Fold (Katlanabilir)",
     "priceTry": 129999.0,
-    "images": [],
+    "images": [
+      "https://www.geeky-gadgets.com/wp-content/uploads/2025/12/iphone-fold-advanced-hinge-technology.webp",
+      "https://www.geeky-gadgets.com/wp-content/uploads/2026/01/apple-iphone-fold-2026-design-concept_optimized.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2420000,
     "gamingIndex": 100,
@@ -1300,7 +1312,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.geeky-gadgets.com/wp-content/uploads/2025/12/iphone-fold-advanced-hinge-technology.webp"
   },
   {
     "id": "phone-apple-iphone-17-pro-max-256gb",
@@ -1591,7 +1604,7 @@
       "GSMArena",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-17-pro-256gb",
@@ -1600,7 +1613,8 @@
     "model": "iPhone 17 Pro",
     "priceTry": 84999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg",
+      "https://phoneshopkenya.co.ke/wp-content/uploads/2025/07/Apple-iPhone-17-Pro-Orange.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2120000,
@@ -1882,7 +1896,7 @@
       "GSMArena",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg"
   },
   {
@@ -2156,7 +2170,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-17-128gb",
@@ -2408,7 +2422,7 @@
       "GSMArena",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-se-4-128gb",
@@ -2416,7 +2430,10 @@
     "brand": "Apple",
     "model": "iPhone SE 4 (2025)",
     "priceTry": 39999.0,
-    "images": [],
+    "images": [
+      "https://www.letemsvetemapplem.eu/wp-content/uploads/2024/10/iPhone-SE-4-2.jpeg",
+      "https://www.gadgetinsiders.com/wp-content/uploads/2024/03/Breaking-News-Apples-Latest-Creation-the-iPhone-SE-4-Promises-Big-Features-at-Small-Prices-for-2025-.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1580000,
     "gamingIndex": 88,
@@ -2640,7 +2657,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.letemsvetemapplem.eu/wp-content/uploads/2024/10/iPhone-SE-4-2.jpeg"
   },
   {
     "id": "phone-apple-iphone-16-pro-max-256gb",
@@ -2927,7 +2945,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-16-pro-256gb",
@@ -3212,7 +3230,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-16-plus-256gb",
@@ -3449,7 +3467,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-16-128gb",
@@ -3693,7 +3711,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-15-pro-max-256gb",
@@ -3980,7 +3998,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-15-pro-128gb",
@@ -4226,7 +4244,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-15-plus-128gb",
@@ -4470,7 +4488,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-15-128gb",
@@ -4714,7 +4732,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-14-pro-max-128gb",
@@ -4959,7 +4977,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-14-pro-128gb",
@@ -5205,7 +5223,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-14-plus-128gb",
@@ -5451,7 +5469,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-14-128gb",
@@ -5697,7 +5715,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-13-pro-max-128gb",
@@ -5943,7 +5961,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-13-128gb",
@@ -6188,7 +6206,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-apple-iphone-se-2022-64gb",
@@ -6432,7 +6450,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s26-ultra-256gb",
@@ -6711,7 +6729,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s26-plus-256gb",
@@ -6719,7 +6737,10 @@
     "brand": "Samsung",
     "model": "Galaxy S26+",
     "priceTry": 79999.0,
-    "images": [],
+    "images": [
+      "https://www.geeky-gadgets.com/wp-content/uploads/2025/11/S26-Series.webp",
+      "https://cdn.smart-gsm.com/blog/wp-content/uploads/2025/11/Samsung-Galaxy-S26-Plus-AH-render-1-scaled.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2950000,
     "gamingIndex": 99,
@@ -6984,7 +7005,8 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.geeky-gadgets.com/wp-content/uploads/2025/11/S26-Series.webp"
   },
   {
     "id": "phone-samsung-galaxy-s26-128gb",
@@ -6993,7 +7015,8 @@
     "model": "Galaxy S26",
     "priceTry": 66999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s26.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s26.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-193024/Samsung-galaxy-S26.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2850000,
@@ -7218,7 +7241,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s26.jpg"
   },
   {
@@ -7228,7 +7251,8 @@
     "model": "Galaxy Z Fold 7",
     "priceTry": 98999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-186323/Samsung-Galaxy-Z-Fold7.png"
     ],
     "tier": "S+",
     "benchmarkScore": 3300000,
@@ -7448,7 +7472,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg"
   },
   {
@@ -7458,7 +7482,8 @@
     "model": "Galaxy Z Flip 7",
     "priceTry": 68999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip7.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip7.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-186323/Samsung-Galaxy-Z-Flip7.png"
     ],
     "tier": "S+",
     "benchmarkScore": 3100000,
@@ -7719,7 +7744,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip7.jpg"
   },
   {
@@ -7999,7 +8024,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s25-plus-256gb",
@@ -8008,7 +8033,8 @@
     "model": "Galaxy S25+",
     "priceTry": 67999.0,
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-182255/Samsung-Galaxy-S25_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182255/Samsung-Galaxy-S25_featured-image-packshot-review.jpg",
+      "https://www.sammyfans.com/wp-content/uploads/2025/01/galaxy-s25-plus-official-img.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2550000,
@@ -8274,7 +8300,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-182255/Samsung-Galaxy-S25_featured-image-packshot-review.jpg"
   },
   {
@@ -8509,7 +8535,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-sm-s931.jpg"
   },
   {
@@ -8741,7 +8767,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s24-ultra-256gb",
@@ -9027,7 +9053,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s24-plus-256gb",
@@ -9036,7 +9062,8 @@
     "model": "Galaxy S24+",
     "priceTry": 52999.0,
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-166686/Samsung-Galaxy-S24-Plus_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-166686/Samsung-Galaxy-S24-Plus_featured-image-packshot-review.jpg",
+      "https://images.samsung.com/fr/smartphones/galaxy-s24/images/galaxy-s24-share-image.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1750000,
@@ -9267,7 +9294,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-166686/Samsung-Galaxy-S24-Plus_featured-image-packshot-review.jpg"
   },
   {
@@ -9512,7 +9539,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-5g-sm-s921.jpg"
   },
   {
@@ -9523,7 +9550,9 @@
     "priceTry": 34999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-178742/Samsung-Galaxy-S24-FE_featured-image-packshot-review-1.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-178742/Samsung-Galaxy-S24-FE_featured-image-packshot-review-1.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-178742/Samsung-Galaxy-S24-FE_featured-image-packshot-review-1.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2024/09/SAMSUNG-Galaxy-S24-FE-large.jpg",
+      "https://www.sammyfans.com/wp-content/uploads/2024/09/galaxy-s24-fe-ftrd-img.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1620000,
@@ -9750,7 +9779,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-special-edition-512gb",
@@ -9760,7 +9789,8 @@
     "priceTry": 99999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold-special-edition.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold-special-edition.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold-special-edition.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/10/Samsung-Galaxy-Z-Fold-Special-Edition-official-image-featured-scaled.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2020000,
@@ -9980,7 +10010,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-z-fold-6-256gb",
@@ -9989,7 +10019,8 @@
     "model": "Galaxy Z Fold 6",
     "priceTry": 79999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-174935/Samsung-Galaxy-Z-Fold6_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1950000,
@@ -10250,7 +10281,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg"
   },
   {
@@ -10260,7 +10291,8 @@
     "model": "Galaxy Z Flip 6",
     "priceTry": 49999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-174937/Samsung-Galaxy-Z-Flip6_featured-image-packshot-review.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1880000,
@@ -10480,7 +10512,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg"
   },
   {
@@ -10490,7 +10522,8 @@
     "model": "Galaxy Z Fold 5",
     "priceTry": 64999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-154336/Samsung-Galaxy-Z-Fold5_screen_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1550000,
@@ -10710,7 +10743,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg"
   },
   {
@@ -10720,7 +10753,9 @@
     "model": "Galaxy Z Flip 5",
     "priceTry": 38999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip5-5g.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip5-5g.jpg",
+      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/07/galaxy-z-flip-5-flex-mode-apricots.jpg",
+      "https://www.stuff.tv/wp-content/uploads/sites/2/2023/07/Samsung-Galaxy-Z-Flip-5-hands-on-in-hand-closed.jpg?resize=820"
     ],
     "tier": "S",
     "benchmarkScore": 1480000,
@@ -10940,7 +10975,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip5-5g.jpg"
   },
   {
@@ -10950,7 +10985,8 @@
     "model": "Galaxy Z Fold 4",
     "priceTry": 49999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-126641/Samsung-Galaxy-Z-Fold4_featured-image-packshot-review.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1280000,
@@ -11170,7 +11206,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4.jpg"
   },
   {
@@ -11180,7 +11216,8 @@
     "model": "Galaxy Z Flip 4",
     "priceTry": 28999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-129187/Samsung-Galaxy-Z-Flip4_A_featured-image-packshot-review-Recovered.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1220000,
@@ -11400,7 +11437,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg"
   },
   {
@@ -11647,7 +11684,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s23-plus-256gb",
@@ -11655,7 +11692,11 @@
     "brand": "Samsung",
     "model": "Galaxy S23+",
     "priceTry": 41999.0,
-    "images": [],
+    "images": [
+      "https://images.samsung.com/is/image/samsung/assets/my/smartphones/galaxy-s23/images/galaxy-s23-highlights-kv.jpg",
+      "https://www.mobilebd.co/wp-content/uploads/2023/01/Samsung-Galaxy-S23-Official-Image.png",
+      "https://m.media-amazon.com/images/I/61bM8Mojf6L._SL1500_.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1530000,
     "gamingIndex": 92,
@@ -11885,7 +11926,8 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://images.samsung.com/is/image/samsung/assets/my/smartphones/galaxy-s23/images/galaxy-s23-highlights-kv.jpg"
   },
   {
     "id": "phone-samsung-galaxy-s23-128gb",
@@ -11894,7 +11936,8 @@
     "model": "Galaxy S23",
     "priceTry": 31999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-5g.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-5g.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-140900/Samsung-Galaxy-S23_-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1500000,
@@ -12125,7 +12168,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-5g.jpg"
   },
   {
@@ -12368,7 +12411,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s22-ultra-256gb",
@@ -12609,7 +12652,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s22-128gb",
@@ -12847,7 +12890,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-108382/Samsung-Galaxy-S22-Exynos-featured-image-packshot-review-Recovered.jpg"
   },
   {
@@ -13092,7 +13135,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a55-256gb",
@@ -13331,7 +13374,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a54-128gb",
@@ -13572,7 +13615,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a35-128gb",
@@ -13582,7 +13625,9 @@
     "priceTry": 14999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-168239/Samsung-Galaxy-A35-5G_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-168239/Samsung-Galaxy-A35-5G_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-168239/Samsung-Galaxy-A35-5G_featured-image-packshot-review.jpg",
+      "https://mobilityarena.com/wp-content/uploads/2024/02/Samsung-Galaxy-A35.webp",
+      "https://english.onlinekhabar.com/wp-content/uploads/2024/03/image-113.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 605000,
@@ -13811,7 +13856,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a34-128gb",
@@ -13821,7 +13866,9 @@
     "priceTry": 12999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-142157/Samsung-Galaxy-A34-5G_featured-image-packshot-review-1.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-142157/Samsung-Galaxy-A34-5G_featured-image-packshot-review-1.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-142157/Samsung-Galaxy-A34-5G_featured-image-packshot-review-1.jpg",
+      "https://borgiphones.com/wp-content/uploads/2021/08/samsung-galaxy-a34-5g.png",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/03/Samsung-Galaxy-A34-5G-large.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 580000,
@@ -14050,7 +14097,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a25-128gb",
@@ -14060,7 +14107,9 @@
     "priceTry": 11499.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-163874/Samsung-Galaxy-A25-5G.png",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-163874/Samsung-Galaxy-A25-5G.png"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-163874/Samsung-Galaxy-A25-5G.png",
+      "https://sevensense.in/wp-content/uploads/2023/06/samsung-a25-5g-website.jpg",
+      "https://www.gizmochina.com/wp-content/uploads/2023/11/Samsung-Galaxy-A25-5G-yello.png"
     ],
     "tier": "B",
     "benchmarkScore": 480000,
@@ -14285,7 +14334,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a15-5g-128gb",
@@ -14523,7 +14572,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a15-128gb",
@@ -14531,7 +14580,10 @@
     "brand": "Samsung",
     "model": "Galaxy A15 4G",
     "priceTry": 8499.0,
-    "images": [],
+    "images": [
+      "https://fdn.gsmarena.com/imgroot/news/23/11/samsung-galaxy-a15-4g-nbtc-certified/gsmarena_001.jpg?w=1200",
+      "https://www.sammobile.com/wp-content/uploads/2023/09/Galaxy-A15-leak-1.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 410000,
     "gamingIndex": 61,
@@ -14750,7 +14802,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://fdn.gsmarena.com/imgroot/news/23/11/samsung-galaxy-a15-4g-nbtc-certified/gsmarena_001.jpg?w=1200"
   },
   {
     "id": "phone-samsung-galaxy-a05s-128gb",
@@ -14986,7 +15039,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-m55-256gb",
@@ -14994,7 +15047,9 @@
     "brand": "Samsung",
     "model": "Galaxy M55 5G",
     "priceTry": 18499.0,
-    "images": [],
+    "images": [
+      "https://images.techeblog.com/wp-content/uploads/2024/03/22075854/samsung-galaxy-m55-5g-smartphone-leak-2.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 670000,
     "gamingIndex": 75,
@@ -15213,7 +15268,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://images.techeblog.com/wp-content/uploads/2024/03/22075854/samsung-galaxy-m55-5g-smartphone-leak-2.jpg"
   },
   {
     "id": "phone-samsung-galaxy-m35-128gb",
@@ -15221,7 +15277,9 @@
     "brand": "Samsung",
     "model": "Galaxy M35 5G (6000 mAh)",
     "priceTry": 13999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/18/Galaxy_M35_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "B+",
     "benchmarkScore": 600000,
     "gamingIndex": 72,
@@ -15440,8 +15498,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Galaxy_M35_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-samsung-galaxy-xcover7-128gb",
@@ -15450,7 +15508,8 @@
     "model": "Galaxy XCover 7 (Askeri Zırh)",
     "priceTry": 17999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-xcover7.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-xcover7.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/01/Samsung-Galaxy-Xcover-7-official-2-jpg.webp"
     ],
     "tier": "B",
     "benchmarkScore": 430000,
@@ -15670,7 +15729,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-xcover7.jpg"
   },
   {
@@ -15909,7 +15968,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-15-pro-256gb",
@@ -15919,7 +15978,9 @@
     "priceTry": 66999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-pro.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-pro.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-pro.jpg",
+      "https://www.mobiledokan.com/media/xiaomi-15-pro-black-official-image_1.webp",
+      "https://tautekno.id/wp-content/uploads/2024/10/Xiaomi-15-Pro-and-Xiaomi-15-are-official-heres-what-makes-these-amazing.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2850000,
@@ -16180,7 +16241,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-15-256gb",
@@ -16418,7 +16479,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-14-ultra-512gb",
@@ -16658,7 +16719,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-14-pro-256gb",
@@ -16667,7 +16728,8 @@
     "model": "14 Pro",
     "priceTry": 54999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro-5g.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro-5g.jpg",
+      "https://arafatelecom.com/wp-content/uploads/2024/01/Xiaomi-Redmi-Note-14-Pro-All-Color.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2050000,
@@ -16887,7 +16949,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro-5g.jpg"
   },
   {
@@ -17133,7 +17195,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-14t-pro-512gb",
@@ -17339,7 +17401,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-14t-256gb",
@@ -17582,7 +17644,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-13t-pro-512gb",
@@ -17592,7 +17654,8 @@
     "priceTry": 32999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-158018/Xiaomi-13T-Pro_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-158018/Xiaomi-13T-Pro_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-158018/Xiaomi-13T-Pro_featured-image-packshot-review.jpg",
+      "https://inovi.pk/wp-content/uploads/2023/11/13t-pro.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -17782,7 +17845,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-13t-256gb",
@@ -17792,7 +17855,8 @@
     "priceTry": 23999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-155619/Xiaomi-13T_featured-image-packshot-review-Recovered-Recovered.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-155619/Xiaomi-13T_featured-image-packshot-review-Recovered-Recovered.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-155619/Xiaomi-13T_featured-image-packshot-review-Recovered-Recovered.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/09/Xiaomi-13T-large.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 900000,
@@ -18023,7 +18087,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-mix-fold-4-512gb",
@@ -18032,7 +18096,9 @@
     "model": "Mix Fold 4",
     "priceTry": 89999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold4.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold4.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/07/Xiaomi-Mix-Fold-4-official-1.webp",
+      "https://mobileinto.com/images/largepic/large_xiaomi-mix-fold-4_4.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2050000,
@@ -18252,7 +18318,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold4.jpg"
   },
   {
@@ -18262,7 +18328,9 @@
     "model": "Mix Flip",
     "priceTry": 64999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/07/Xiaomi-Mix-Flip-official-1.webp",
+      "https://www.lowyat.net/wp-content/uploads/2024/07/Xiaomi-Mix-Flip-officially-revealed-2.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 1980000,
@@ -18441,7 +18509,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg"
   },
   {
@@ -18452,11 +18520,7 @@
     "priceTry": 26999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-181351/Xiaomi-Redmi-Note-14-Pro-Plus-5G-_Featured-image-packshot-review-2.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-181351/Xiaomi-Redmi-Note-14-Pro-Plus-5G-_Featured-image-packshot-review-2.jpg",
-      "https://www.dxomark.com/wp-content/uploads/medias/post-181461/Xiaomi-Redmi-Note-14_featured-image-packshot-review.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-2.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-181351/Xiaomi-Redmi-Note-14-Pro-Plus-5G-_Featured-image-packshot-review-2.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 810000,
@@ -18635,7 +18699,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-pro-plus-512gb",
@@ -18644,7 +18708,9 @@
     "model": "Redmi Note 13 Pro+ 5G",
     "priceTry": 22999.0,
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-164163/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164163/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg",
+      "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-note-13-pro-plus-5g/pc/38c91037333e6412aebe0954985af359.jpg",
+      "https://i02.appmifile.com/520_operator_sg/03/01/2024/fa139703d84c8960ea41b9e85e0d9394.png"
     ],
     "tier": "A",
     "benchmarkScore": 780000,
@@ -18830,7 +18896,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-164163/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg"
   },
   {
@@ -19067,7 +19133,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-164973/Xiaomi-Redmi-Note-13-Pro-5G_featured-image-packshot-review.jpg"
   },
   {
@@ -19297,7 +19363,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg"
   },
   {
@@ -19307,7 +19373,9 @@
     "model": "F7 Pro",
     "priceTry": 38999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-pro.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-pro.jpg",
+      "https://i02.appmifile.com/mi-com-product/fly-birds/poco-f7-pro/pc/1e7c743971c5d34b1d27e82b5c070da1.jpg",
+      "https://i02.appmifile.com/551_operator_sg/12/03/2025/de183c9fe0f4b74c5eeaf488d552601d.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2820000,
@@ -19486,7 +19554,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-pro.jpg"
   },
   {
@@ -19496,7 +19564,9 @@
     "model": "F7",
     "priceTry": 29999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-new.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-new.jpg",
+      "https://www.mobiledokan.com/media/xiaomi-poco-f7-silver-official-image.webp",
+      "https://www.wazzup.ph/wp-content/uploads/2025/06/45503b24-9092-4141-956a-e884567b74b2.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2750000,
@@ -19721,7 +19791,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f7-new.jpg"
   },
   {
@@ -19732,7 +19802,8 @@
     "priceTry": 33999.0,
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6-pro.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+      "https://i02.appmifile.com/mi-com-product/fly-birds/poco-f6-pro/PC/f63963c40f1916d4291b9451b97f0027.jpg",
+      "https://i02.appmifile.com/mi-com-product/fly-birds/poco-f6-pro/PC/45791062e1826df6b4de319dd199be97.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1600000,
@@ -19911,7 +19982,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6-pro.jpg"
   },
   {
@@ -19921,7 +19992,8 @@
     "model": "F6",
     "priceTry": 24999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg",
+      "https://i02.appmifile.com/755_operator_sg/07/05/2024/6533de660f0c9a493e343af0dc4285be.png"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -20141,7 +20213,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6.jpg"
   },
   {
@@ -20152,7 +20224,8 @@
     "priceTry": 26999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-154144/POCO-F5-Pro.png",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-154144/POCO-F5-Pro.png"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-154144/POCO-F5-Pro.png",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/05/POCO-F5-Pro-large.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1300000,
@@ -20379,7 +20452,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-poco-f5-256gb",
@@ -20387,7 +20460,9 @@
     "brand": "POCO",
     "model": "F5",
     "priceTry": 19999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/05/POCO-F5-smartphone.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1130000,
     "gamingIndex": 86,
@@ -20606,7 +20681,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2023/05/POCO-F5-smartphone.jpg"
   },
   {
     "id": "phone-poco-f4-gt-256gb",
@@ -20845,7 +20921,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-poco-x7-pro-512gb",
@@ -20856,7 +20932,8 @@
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7.jpg"
+      "https://www.mobiledokan.com/media/xiaomi-poco-x7-pro-yellow-official-image.webp",
+      "https://i02.appmifile.com/mi-com-product/fly-birds/poco-x7-pro/pc/1a097d170ec6940798552eee961fc641.png"
     ],
     "tier": "S",
     "benchmarkScore": 1850000,
@@ -21035,7 +21112,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-poco-x6-pro-512gb",
@@ -21043,7 +21120,11 @@
     "brand": "POCO",
     "model": "X6 Pro 5G",
     "priceTry": 20999.0,
-    "images": [],
+    "images": [
+      "https://i02.appmifile.com/117_operator_sg/11/12/2023/9beac802a13acc28e63b66a240607bde.png",
+      "https://i02.appmifile.com/181_operatorx_operatorx_xm/08/01/2024/8eeed46fdb1339678c0fbf6b07245413.jpg",
+      "https://i02.appmifile.com/567_operatorx_operatorx_xm/08/01/2024/6c0583d5826b96a0c0baa738684e3189.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1400000,
     "gamingIndex": 88,
@@ -21221,7 +21302,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://i02.appmifile.com/117_operator_sg/11/12/2023/9beac802a13acc28e63b66a240607bde.png"
   },
   {
     "id": "phone-poco-x6-256gb",
@@ -21448,7 +21530,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-poco-x5-pro-256gb",
@@ -21456,7 +21538,11 @@
     "brand": "POCO",
     "model": "X5 Pro 5G",
     "priceTry": 14499.0,
-    "images": [],
+    "images": [
+      "https://i02.appmifile.com/796_operator_sg/09/01/2023/298be3a9e161369fc0874bb23d839939.png",
+      "https://basic-tutorials.com/wp-content/uploads/2023/02/POCO-X5-Pro-5G.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/02/POCO-X5-Pro-5G.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 600000,
     "gamingIndex": 74,
@@ -21675,7 +21761,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://i02.appmifile.com/796_operator_sg/09/01/2023/298be3a9e161369fc0874bb23d839939.png"
   },
   {
     "id": "phone-poco-m6-pro-512gb",
@@ -21683,7 +21770,9 @@
     "brand": "POCO",
     "model": "M6 Pro (G99 Ultra)",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://i02.appmifile.com/341_operator_sg/11/12/2023/5e021d12cad6a36161884c036dc37e60.png"
+    ],
     "tier": "B",
     "benchmarkScore": 450000,
     "gamingIndex": 65,
@@ -21861,7 +21950,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://i02.appmifile.com/341_operator_sg/11/12/2023/5e021d12cad6a36161884c036dc37e60.png"
   },
   {
     "id": "phone-poco-c75-256gb",
@@ -21871,7 +21961,8 @@
     "priceTry": 8499.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-c75-.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-c75-.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-c75-.jpg",
+      "https://mobilemaya.net/wp-content/uploads/2025/02/xiaomi-poco-c75-green-official-image_1.webp"
     ],
     "tier": "C+",
     "benchmarkScore": 280000,
@@ -22091,7 +22182,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-find-x8-ultra-512gb",
@@ -22327,7 +22418,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-find-x8-pro-512gb",
@@ -22571,7 +22662,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-find-x8-256gb",
@@ -22811,7 +22902,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-find-x7-ultra-512gb",
@@ -23012,7 +23103,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-find-x7-256gb",
@@ -23021,7 +23112,9 @@
     "model": "Find X7",
     "priceTry": 45999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg",
+      "https://www.vopmart.com/media/catalog/product/cache/ee14c5ab36c97d39d331f867fa3bee63/f/i/find-x7.jpg",
+      "https://mobileinto.com/images/largepic/large_oppo-find-x7_2.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 2050000,
@@ -23246,7 +23339,7 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg"
   },
   {
@@ -23255,7 +23348,9 @@
     "brand": "Oppo",
     "model": "Find N3 (Katlanabilir)",
     "priceTry": 79999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4c/OPPO_Find_N3%EF%BC%882024%E5%B9%B42%E6%9C%8820%E6%97%A5%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "S+",
     "benchmarkScore": 1580000,
     "gamingIndex": 97,
@@ -23474,8 +23569,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/OPPO_Find_N3%EF%BC%882024%E5%B9%B42%E6%9C%8820%E6%97%A5%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-oppo-find-n3-flip-256gb",
@@ -23483,7 +23578,11 @@
     "brand": "Oppo",
     "model": "Find N3 Flip",
     "priceTry": 47999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/22/OPPO_Find_N3_Flip%EF%BC%882024%E5%B9%B42%E6%9C%8820%E6%97%A5%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/find-n3-flip-en/specs/find-n3-flip.png",
+      "https://www.oppo.com/content/dam/oppo/en/mkt/newsroom/press/oppo-find-n3-series-global-launch/main.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1450000,
     "gamingIndex": 92,
@@ -23702,8 +23801,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/OPPO_Find_N3_Flip%EF%BC%882024%E5%B9%B42%E6%9C%8820%E6%97%A5%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-oppo-reno-12-pro-512gb",
@@ -23711,7 +23810,9 @@
     "brand": "Oppo",
     "model": "Reno 12 Pro 5G",
     "priceTry": 26999.0,
-    "images": [],
+    "images": [
+      "https://www.greentelcom.ph/wp-content/uploads/2024/07/OPPO-RENO-12-PRO-5G-1-min.png"
+    ],
     "tier": "A",
     "benchmarkScore": 710000,
     "gamingIndex": 79,
@@ -23889,7 +23990,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.greentelcom.ph/wp-content/uploads/2024/07/OPPO-RENO-12-PRO-5G-1-min.png"
   },
   {
     "id": "phone-oppo-reno-12-256gb",
@@ -23897,7 +23999,9 @@
     "brand": "Oppo",
     "model": "Reno 12 5G",
     "priceTry": 21999.0,
-    "images": [],
+    "images": [
+      "https://www.greentelcom.ph/wp-content/uploads/2024/07/OPPO-RENO-12-5G-min.png"
+    ],
     "tier": "A",
     "benchmarkScore": 700000,
     "gamingIndex": 77,
@@ -24116,7 +24220,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.greentelcom.ph/wp-content/uploads/2024/07/OPPO-RENO-12-5G-min.png"
   },
   {
     "id": "phone-oppo-reno-11-pro-512gb",
@@ -24124,7 +24229,9 @@
     "brand": "Oppo",
     "model": "Reno 11 Pro 5G",
     "priceTry": 22999.0,
-    "images": [],
+    "images": [
+      "https://thetomorrowtechnology.co.ke/wp-content/uploads/2024/05/Oppo-Reno-11-Pro-2.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 910000,
     "gamingIndex": 82,
@@ -24302,7 +24409,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://thetomorrowtechnology.co.ke/wp-content/uploads/2024/05/Oppo-Reno-11-Pro-2.jpg"
   },
   {
     "id": "phone-oppo-reno-10-pro-plus-256gb",
@@ -24310,7 +24418,10 @@
     "brand": "Oppo",
     "model": "Reno 10 Pro+ 5G",
     "priceTry": 24999.0,
-    "images": [],
+    "images": [
+      "https://manilashaker.com/wp-content/uploads/2023/07/OPPO-Reno10-Pro-5G.webp",
+      "https://mobileinto.com/images/Oppo-Reno-10-Pro-Plus.jpg"
+    ],
     "tier": "A+",
     "benchmarkScore": 1280000,
     "gamingIndex": 87,
@@ -24529,7 +24640,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://manilashaker.com/wp-content/uploads/2023/07/OPPO-Reno10-Pro-5G.webp"
   },
   {
     "id": "phone-oppo-a98-256gb",
@@ -24537,7 +24649,11 @@
     "brand": "Oppo",
     "model": "A98 5G",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://image.oppo.com/content/dam/oppo/product-asset-library/specs/a98-5g/a98-5g-bb.png",
+      "https://www.revu.com.ph/wp-content/uploads/2023/09/OPPO-A98-5G-preorder-mechanics-and-freebie-via-Revu-Philippines.jpg",
+      "https://www.mobileocta.com/wp-content/uploads/2023/05/OPPO-A98-5G-RD-1.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 410000,
     "gamingIndex": 63,
@@ -24756,7 +24872,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://image.oppo.com/content/dam/oppo/product-asset-library/specs/a98-5g/a98-5g-bb.png"
   },
   {
     "id": "phone-oneplus-13-512gb",
@@ -24992,7 +25109,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-12-512gb",
@@ -25194,7 +25311,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-12r-256gb",
@@ -25427,7 +25544,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-open-512gb",
@@ -25664,7 +25781,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-nord-4-256gb",
@@ -25674,7 +25791,9 @@
     "priceTry": 24999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord4.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord4.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord4.jpg",
+      "https://oasis.opstatics.com/content/dam/oasis/page/2024/global/product/avalon/black.png",
+      "https://oasis.opstatics.com/content/dam/oasis/page/2024/global/product/avalon/green.png"
     ],
     "tier": "A+",
     "benchmarkScore": 1420000,
@@ -25894,7 +26013,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-nord-3-256gb",
@@ -25902,7 +26021,11 @@
     "brand": "OnePlus",
     "model": "Nord 3 5G",
     "priceTry": 18999.0,
-    "images": [],
+    "images": [
+      "https://oasis.opstatics.com/content/dam/oasis/page/2023/global/product/vitamin/vitamin-spec-green.png",
+      "https://oasis.opstatics.com/content/dam/oasis/page/2023/global/product/vitamin/vitamin-spec-black.png",
+      "https://www.lowyat.net/wp-content/uploads/2023/07/OnePlus-Nord-3-1.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 1050000,
     "gamingIndex": 83,
@@ -26121,7 +26244,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://oasis.opstatics.com/content/dam/oasis/page/2023/global/product/vitamin/vitamin-spec-green.png"
   },
   {
     "id": "phone-oneplus-nord-ce-4-128gb",
@@ -26131,7 +26255,8 @@
     "priceTry": 15999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4-.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4-.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4-.jpg",
+      "https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:630/plain/https://s3-newsifier.ams3.digitaloceanspaces.com/gizchina.com/images/2025-06/imagem-2024-03-28-003924809.png"
     ],
     "tier": "B+",
     "benchmarkScore": 820000,
@@ -26351,7 +26476,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-magic-7-pro-512gb",
@@ -26359,7 +26484,11 @@
     "brand": "Honor",
     "model": "Magic 7 Pro",
     "priceTry": 74999.0,
-    "images": [],
+    "images": [
+      "https://www.techreviewer.de/wp-content/uploads/2024/10/honor-magic-7-pro-hero.jpg",
+      "https://teloji.com/wp-content/uploads/2024/11/honor-magic-7-pro-2.jpg",
+      "https://root-nation.com/wp-content/uploads/2025/02/5875258495354391325-e1739648085582.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2900000,
     "gamingIndex": 100,
@@ -26578,7 +26707,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.techreviewer.de/wp-content/uploads/2024/10/honor-magic-7-pro-hero.jpg"
   },
   {
     "id": "phone-honor-magic-7-256gb",
@@ -26586,7 +26716,9 @@
     "brand": "Honor",
     "model": "Magic 7",
     "priceTry": 56999.0,
-    "images": [],
+    "images": [
+      "https://mobileinto.com/images/largepic/large_honor-magic-7_7.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2820000,
     "gamingIndex": 98,
@@ -26805,7 +26937,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://mobileinto.com/images/largepic/large_honor-magic-7_7.jpg"
   },
   {
     "id": "phone-honor-magic-6-pro-512gb",
@@ -26996,7 +27129,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-magic-6-rsr-1tb",
@@ -27004,7 +27137,11 @@
     "brand": "Honor",
     "model": "Magic 6 RSR Porsche Design",
     "priceTry": 89999.0,
-    "images": [],
+    "images": [
+      "https://spec.pk/uploads/2024/03/Honor-Magic-6-RSR-Porsche-Design.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/03/Porsche-Design-HONOR-Magic6-RSR-image-1-jpg.webp",
+      "https://www.vopmart.com/media/wysiwyg/Honor/magic-6-rsr-protect-cover.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2150000,
     "gamingIndex": 100,
@@ -27182,7 +27319,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://spec.pk/uploads/2024/03/Honor-Magic-6-RSR-Porsche-Design.jpg"
   },
   {
     "id": "phone-honor-magic-v3-512gb",
@@ -27190,11 +27328,7 @@
     "brand": "Honor",
     "model": "Magic V3 (Ultra İnce Katlanabilir)",
     "priceTry": 84999.0,
-    "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-magic-v3.jpg",
-    "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/honor-magic-v3.jpg",
-      "https://www.dxomark.com/wp-content/uploads/medias/post-177719/Honor-Magic-V3_featured-image-packshot-review.png"
-    ],
+    "images": [],
     "tier": "S+",
     "benchmarkScore": 2050000,
     "gamingIndex": 99,
@@ -27420,7 +27554,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-magic-v2-512gb",
@@ -27430,7 +27564,9 @@
     "priceTry": 64999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-167258/Honor-Magic-V2_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-167258/Honor-Magic-V2_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-167258/Honor-Magic-V2_featured-image-packshot-review.jpg",
+      "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/li-honor-magic-v2-box.png",
+      "https://www.techreviewer.de/wp-content/uploads/2024/01/honor-magic-v2-news-hero.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1550000,
@@ -27616,7 +27752,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-200-pro-512gb",
@@ -27814,7 +27950,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-200-pro-.jpg"
   },
   {
@@ -28054,7 +28190,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/honor-200-.jpg"
   },
   {
@@ -28065,7 +28201,8 @@
     "priceTry": 17999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-150729/Honor-90_featured-image-packshot-review-Recovered.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-150729/Honor-90_featured-image-packshot-review-Recovered.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-150729/Honor-90_featured-image-packshot-review-Recovered.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/08/HONOR-90-5G-Emerald-Green.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 710000,
@@ -28296,7 +28433,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-x9b-256gb",
@@ -28304,7 +28441,10 @@
     "brand": "Honor",
     "model": "X9b 5G (Kırılmaz Zırh)",
     "priceTry": 14999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2024/01/HONOR-X9b-5G.jpg",
+      "https://www.whatmobile.com.pk/admin/images/Honor/X9b/Honor-X9b-Image-2.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 510000,
     "gamingIndex": 71,
@@ -28523,7 +28663,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2024/01/HONOR-X9b-5G.jpg"
   },
   {
     "id": "phone-huawei-mate-xt-ultimate-512gb",
@@ -28532,7 +28673,9 @@
     "model": "Mate XT Ultimate (3'e Katlanabilir)",
     "priceTry": 139999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-xt-ultimate.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-xt-ultimate.jpg",
+      "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/homepage-x/new/spring-2025-huawei-innovative-product-launch/shelfbanner/smartphone/mate-xt-ultimate-design.jpg",
+      "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/admin-image/phones/mate-xt-ultimate-design/specs/red.png"
     ],
     "tier": "S+",
     "benchmarkScore": 1050000,
@@ -28752,7 +28895,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-xt-ultimate.jpg"
   },
   {
@@ -28761,7 +28904,11 @@
     "brand": "Huawei",
     "model": "Mate 70 Pro+",
     "priceTry": 79999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5b/HUAWEI_Mate_70_Pro%2B_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://www.noypigeeks.com/wp-content/uploads/2024/11/HUAWEI-Mate-70-Pro-RS-Ultimate.jpg",
+      "https://cdn-media.sforum.vn/storage/app/media/chibao/Chi-bao-chat-luong-cao/Huawei-Mate-70-pro-plus/can-canh-huawei-mate-70-pro-plus-7.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 1450000,
     "gamingIndex": 98,
@@ -28980,8 +29127,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/HUAWEI_Mate_70_Pro%2B_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-huawei-pura-70-ultra-512gb",
@@ -29219,7 +29366,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-huawei-pura-70-pro-plus-512gb",
@@ -29228,7 +29375,9 @@
     "model": "Pura 70 Pro+",
     "priceTry": 59999.0,
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/e/ed/HUAWEI_Pura_70_Pro_Black_Back.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      "https://upload.wikimedia.org/wikipedia/commons/e/ed/HUAWEI_Pura_70_Pro_Black_Back.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://mobileinto.com/images/Huawei-Pura-70-Pro-Plus.jpg",
+      "https://www.dokanmobile.com/images/products/Huawei-Pura-70-Pro+.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 970000,
@@ -29407,7 +29556,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/HUAWEI_Pura_70_Pro_Black_Back.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
@@ -29597,7 +29746,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-pro.jpg"
   },
   {
@@ -29828,7 +29977,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70.jpg"
   },
   {
@@ -29838,7 +29987,9 @@
     "model": "Mate 60 RS Ultimate Design",
     "priceTry": 89999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60-rs-ultimate.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60-rs-ultimate.jpg",
+      "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/Huawei-Mate-60-RS-Ultimate-Design-1.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2023/09/Huawei-Mate-60-RS-Ultimate-Design-image-1-jpeg.webp"
     ],
     "tier": "S+",
     "benchmarkScore": 930000,
@@ -30058,7 +30209,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60-rs-ultimate.jpg"
   },
   {
@@ -30069,7 +30220,8 @@
     "priceTry": 69999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-164762/Huawei-Mate-60-Pro_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-164762/Huawei-Mate-60-Pro_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-164762/Huawei-Mate-60-Pro_featured-image-packshot-review.jpg",
+      "https://mobileinto.com/images/Huawei-Mate-60-Pro-Plus.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 920000,
@@ -30294,7 +30446,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-huawei-mate-x5-512gb",
@@ -30303,7 +30455,9 @@
     "model": "Mate X5 (Su Geçirmez Katlanabilir)",
     "priceTry": 84999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg",
+      "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-x5/img/kv/huawei-mate-x5-key-vision-xs.jpg",
+      "https://www.4gltemall.com/media/catalog/product/cache/1/image/650x650/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_mate_x5_2_.jpg"
     ],
     "tier": "S+",
     "benchmarkScore": 915000,
@@ -30523,7 +30677,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg"
   },
   {
@@ -30719,7 +30873,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-huawei-nova-13-pro-256gb",
@@ -30729,8 +30883,7 @@
     "priceTry": 26999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huavei-nova-13-pro.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/huavei-nova-13-pro.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/huavei-nova-13.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/huavei-nova-13-pro.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 710000,
@@ -30950,7 +31103,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-infinix-gt-20-pro-256gb",
@@ -31182,7 +31335,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-infinix-gt-10-pro-256gb",
@@ -31409,7 +31562,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-infinix-note-40-pro-plus-256gb",
@@ -31417,7 +31570,11 @@
     "brand": "Infinix",
     "model": "NOTE 40 Pro+ 5G (MagCharge)",
     "priceTry": 19999.0,
-    "images": [],
+    "images": [
+      "https://cdn.getminto.com/mobiles/Infinix/Note-40-Pro-Plus-5G-Racing-Edition-4.jpg",
+      "https://cdn.beebom.com/mobile/infinix-note-40-pro-plus-5g-front-and-back-2.png",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2024/04/Infinix-NOTE-40-Pro-PLUS-5G-large.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 480000,
     "gamingIndex": 75,
@@ -31636,7 +31793,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://cdn.getminto.com/mobiles/Infinix/Note-40-Pro-Plus-5G-Racing-Edition-4.jpg"
   },
   {
     "id": "phone-infinix-note-40-pro-256gb",
@@ -31644,7 +31802,10 @@
     "brand": "Infinix",
     "model": "NOTE 40 Pro 4G",
     "priceTry": 15999.0,
-    "images": [],
+    "images": [
+      "https://www.mobilebd.co/wp-content/uploads/2024/04/Infinix-Note-40-Pro-4G-Official-Image.png",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2024/05/Infinix-NOTE-40-Pro-large.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 425000,
     "gamingIndex": 68,
@@ -31863,7 +32024,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.mobilebd.co/wp-content/uploads/2024/04/Infinix-Note-40-Pro-4G-Official-Image.png"
   },
   {
     "id": "phone-infinix-zero-40-5g-512gb",
@@ -31871,7 +32033,9 @@
     "brand": "Infinix",
     "model": "ZERO 40 5G (4K 60FPS Ön Kamera)",
     "priceTry": 24999.0,
-    "images": [],
+    "images": [
+      "https://www.thetechoutlook.com/wp-content/uploads/2024/08/Infinix-Zero-40-specs-1.jpeg"
+    ],
     "tier": "A",
     "benchmarkScore": 940000,
     "gamingIndex": 82,
@@ -32049,7 +32213,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.thetechoutlook.com/wp-content/uploads/2024/08/Infinix-Zero-40-specs-1.jpeg"
   },
   {
     "id": "phone-infinix-hot-50-pro-plus-256gb",
@@ -32276,7 +32441,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-tecno-phantom-v-fold-2-512gb",
@@ -32467,7 +32632,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-tecno-phantom-v-flip-2-256gb",
@@ -32475,7 +32640,9 @@
     "brand": "Tecno",
     "model": "Phantom V Flip 2 5G",
     "priceTry": 38999.0,
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2024/09/Tecno-PHANTOM-V-Flip-2.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 760000,
     "gamingIndex": 85,
@@ -32694,7 +32861,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2024/09/Tecno-PHANTOM-V-Flip-2.jpg"
   },
   {
     "id": "phone-tecno-camon-30-premier-512gb",
@@ -32702,7 +32870,10 @@
     "brand": "Tecno",
     "model": "Camon 30 Premier 5G",
     "priceTry": 27999.0,
-    "images": [],
+    "images": [
+      "https://d13pvy8xd75yde.cloudfront.net/global/phones/camon/camon30premier5g/loewe.png",
+      "https://images.priceoye.pk/tecno-camon-30-premier-5g-pakistan-priceoye-sdeym.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 960000,
     "gamingIndex": 84,
@@ -32880,7 +33051,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://d13pvy8xd75yde.cloudfront.net/global/phones/camon/camon30premier5g/loewe.png"
   },
   {
     "id": "phone-tecno-camon-30-pro-512gb",
@@ -33066,7 +33238,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-tecno-pova-6-pro-256gb",
@@ -33293,7 +33465,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-tecno-spark-20-pro-plus-256gb",
@@ -33525,7 +33697,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-vivo-x200-ultra-512gb",
@@ -33534,7 +33706,9 @@
     "model": "X200 Ultra",
     "priceTry": 82999.0,
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-182397/Vivo-X200-Ultra.png"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-182397/Vivo-X200-Ultra.png",
+      "https://www.gizmochina.com/wp-content/uploads/2025/04/Vivo-X200-Ultra-silver-.jpg?x70461",
+      "https://www.mobiledokan.co/wp-content/uploads/2024/12/Vivo-X200-Ultra-Red.webp"
     ],
     "tier": "S+",
     "benchmarkScore": 2920000,
@@ -33761,7 +33935,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-182397/Vivo-X200-Ultra.png"
   },
   {
@@ -33770,7 +33944,10 @@
     "brand": "Vivo",
     "model": "X200 Pro",
     "priceTry": 69999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d8/Vivo_X200_Pro_blue.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/10/Vivo-X200-Pro-colors-image-1.webp"
+    ],
     "tier": "S+",
     "benchmarkScore": 2880000,
     "gamingIndex": 99,
@@ -33994,8 +34171,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Vivo_X200_Pro_blue.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-vivo-x200-pro-mini-256gb",
@@ -34003,7 +34180,9 @@
     "brand": "Vivo",
     "model": "X200 Pro mini",
     "priceTry": 58999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/e4/Vivo_X200_Pro_mini_pink.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "S+",
     "benchmarkScore": 2840000,
     "gamingIndex": 98,
@@ -34227,8 +34406,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Vivo_X200_Pro_mini_pink.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-vivo-x200-256gb",
@@ -34236,7 +34415,9 @@
     "brand": "Vivo",
     "model": "X200",
     "priceTry": 49999.0,
-    "images": [],
+    "images": [
+      "https://www.gizmochina.com/wp-content/uploads/2024/10/Vivo-X200-image.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2800000,
     "gamingIndex": 97,
@@ -34460,7 +34641,8 @@
       "HardwareWizard Katalog",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.gizmochina.com/wp-content/uploads/2024/10/Vivo-X200-image.jpg"
   },
   {
     "id": "phone-vivo-x100-ultra-512gb",
@@ -34469,7 +34651,8 @@
     "model": "X100 Ultra",
     "priceTry": 64999.0,
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/b/bf/Vivo_X100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      "https://www.vopmart.com/media/catalog/product/cache/ee14c5ab36c97d39d331f867fa3bee63/v/i/vivo_x100_ultra.jpg",
+      "https://ae.mobileinto.com/sm_images/vivo-x100-ultra.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2140000,
@@ -34648,8 +34831,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Vivo_X100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.vopmart.com/media/catalog/product/cache/ee14c5ab36c97d39d331f867fa3bee63/v/i/vivo_x100_ultra.jpg"
   },
   {
     "id": "phone-vivo-x100-pro-512gb",
@@ -34854,7 +35037,7 @@
       "DXOMARK",
       "Notebookcheck"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-vivo-x-fold-3-pro-512gb",
@@ -34863,8 +35046,9 @@
     "model": "X Fold 3 Pro (Katlanabilir)",
     "priceTry": 78999.0,
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-174053/Vivo-X-Fold3_featured-image-packshot-review-Recovered.jpg",
-      "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg"
+      "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1727347302153/zip/img/vivo-x-fold3-pro-kv-in-pc.jpg",
+      "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1727347302153/zip/img/vivo-x-fold3-pro-kv-in-mobile.jpg",
+      "https://www.androidheadlines.com/wp-content/uploads/2024/06/Vivo-X-Fold-3-Pro-global-image-2.webp"
     ],
     "tier": "S+",
     "benchmarkScore": 2100000,
@@ -35084,8 +35268,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-174053/Vivo-X-Fold3_featured-image-packshot-review-Recovered.jpg"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1727347302153/zip/img/vivo-x-fold3-pro-kv-in-pc.jpg"
   },
   {
     "id": "phone-vivo-v40-pro-256gb",
@@ -35093,7 +35277,10 @@
     "brand": "Vivo",
     "model": "V40 Pro (Zeiss Portre)",
     "priceTry": 27999.0,
-    "images": [],
+    "images": [
+      "https://www.mobiledokan.com/media/vivo-v40-pro-official-image.webp",
+      "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg"
+    ],
     "tier": "S",
     "benchmarkScore": 1500000,
     "gamingIndex": 92,
@@ -35312,7 +35499,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.mobiledokan.com/media/vivo-v40-pro-official-image.webp"
   },
   {
     "id": "phone-google-pixel-10-pro-xl-256gb",
@@ -35591,7 +35779,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-9-pro-xl-256gb",
@@ -35831,7 +36019,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-9-pro-128gb",
@@ -36067,7 +36255,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-9-128gb",
@@ -36305,7 +36493,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-9-pro-fold-256gb",
@@ -36584,7 +36772,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-9a-128gb",
@@ -36822,7 +37010,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-8-pro-128gb",
@@ -37068,7 +37256,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-rog-phone-9-pro-512gb",
@@ -37301,7 +37489,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-rog-phone-9-256gb",
@@ -37311,7 +37499,8 @@
     "priceTry": 56999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-9.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-9.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-9.jpg",
+      "https://dlcdnwebimgs.asus.com/gain/62116F18-859B-460F-BF77-38994DC3548B/w1000/h732"
     ],
     "tier": "S+",
     "benchmarkScore": 2900000,
@@ -37531,7 +37720,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-rog-phone-8-pro-512gb",
@@ -37722,7 +37911,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-rog-phone-7-ultimate-512gb",
@@ -37732,7 +37921,9 @@
     "priceTry": 44999.0,
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-7-ultimate.jpg",
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-7-ultimate.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-7-ultimate.jpg",
+      "https://dlcdnwebimgs.asus.com/gain/D39D600A-BBCB-4A3B-9AD3-6B8B48EEE5B7/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/files/media/2FB39932-532C-4338-B71B-8C0E3E9B7370/v1/features/images/large/1x/animation/kv/phone_right.png"
     ],
     "tier": "S",
     "benchmarkScore": 1600000,
@@ -37911,7 +38102,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-zenfone-11-ultra-256gb",
@@ -38149,7 +38340,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-zenfone-10-256gb",
@@ -38387,7 +38578,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-realme-gt-7-pro-512gb",
@@ -38396,7 +38587,9 @@
     "model": "GT 7 Pro (Snapdragon 8 Elite)",
     "priceTry": 49999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg",
+      "https://cdn.beebom.com/mobile/realme-gt-7-pro/realme-gt7-pro-orange.png",
+      "https://image01.realme.net/general/20250604/17490272803486c65a696070840179c9d28937ce84eef.png"
     ],
     "tier": "S+",
     "benchmarkScore": 2910000,
@@ -38575,7 +38768,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg"
   },
   {
@@ -38767,7 +38960,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-realme-12-pro-plus-512gb",
@@ -38775,7 +38968,11 @@
     "brand": "Realme",
     "model": "12 Pro+ 5G (Periskop)",
     "priceTry": 22999.0,
-    "images": [],
+    "images": [
+      "https://image01.realme.net/general/20240322/171107641071885db53e588fe466f814f201866cfe611.jpg",
+      "https://www.revu.com.ph/wp-content/uploads/2024/01/realme-12-Pro-Plus-5G-price-and-specs-via-Revu-Philippines-b.jpg",
+      "https://image01.realme.net/general/20240529/1716946927395629fe5f3c6234ad5b7ecef7ed4cfc466.png"
+    ],
     "tier": "A",
     "benchmarkScore": 610000,
     "gamingIndex": 79,
@@ -38953,7 +39150,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://image01.realme.net/general/20240322/171107641071885db53e588fe466f814f201866cfe611.jpg"
   },
   {
     "id": "phone-motorola-razr-50-ultra-512gb",
@@ -39142,7 +39340,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/motorola-razr-50-ultra.jpg"
   },
   {
@@ -39152,7 +39350,8 @@
     "model": "Edge 50 Ultra (Doğal Ahşap)",
     "priceTry": 43999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg",
+      "https://www.dxomark.com/wp-content/uploads/medias/post-175418/Motorola-Edge-50-Ultra-featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -39336,7 +39535,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-50-ultra.jpg"
   },
   {
@@ -39573,7 +39772,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-nothing-phone-2a-plus-256gb",
@@ -39582,7 +39781,9 @@
     "model": "Phone (2a) Plus",
     "priceTry": 21999.0,
     "images": [
-      "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg"
+      "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg",
+      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/07/nothing-phone-2a-plus-official-imagery-1.jpg",
+      "https://static1.pocketlintimages.com/wordpress/wp-content/uploads/wm/2024/07/nothing-phone-2a-plus.jpg"
     ],
     "tier": "A",
     "benchmarkScore": 810000,
@@ -39802,7 +40003,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg"
   },
   {
@@ -40039,7 +40240,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-sony-xperia-1-vi-256gb",
@@ -40272,7 +40473,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-sony-xperia-1-v-256gb",
@@ -40283,10 +40484,7 @@
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg",
     "images": [
       "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg",
-      "https://www.dxomark.com/wp-content/uploads/medias/post-32322/sonyxperia1.jpeg",
-      "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-vi.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/sony/sony-xperia-1-vi-1.jpg",
-      "https://fdn2.gsmarena.com/vv/pics/sony/sony-xperia-1-vi-2.jpg"
+      "https://en.shiftdelete.net/wp-content/uploads/2023/04/sony-xperia-1-v-1.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1520000,
@@ -40506,7 +40704,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s22-plus-256gb",
@@ -40514,7 +40712,9 @@
     "brand": "Samsung",
     "model": "Galaxy S22+",
     "priceTry": 27999.0,
-    "images": [],
+    "images": [
+      "https://mobilecity-live.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2023/01/11013632/s22_plus_.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 1180000,
     "gamingIndex": 85,
@@ -40742,7 +40942,8 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://mobilecity-live.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2023/01/11013632/s22_plus_.jpg"
   },
   {
     "id": "phone-samsung-galaxy-a73-5g-128gb",
@@ -40972,7 +41173,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a53-5g-128gb",
@@ -41214,7 +41415,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a33-5g-128gb",
@@ -41454,7 +41655,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-m14-5g-128gb",
@@ -41462,7 +41663,11 @@
     "brand": "Samsung",
     "model": "Galaxy M14 5G",
     "priceTry": 7999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Samsung_Galaxy_M14_5G_in_Navy_Blue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/galaxy-a/galaxy-m14-5g/GalaxyM14-MO-Sky.jpg?imbypass=true",
+      "https://cdn.gadgetbytenepal.com/wp-content/uploads/2023/03/Samsung-Galaxy-M14-5G-Price-In-Nepal.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 410000,
     "gamingIndex": 60,
@@ -41681,8 +41886,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Samsung_Galaxy_M14_5G_in_Navy_Blue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-xiaomi-13-ultra-512gb",
@@ -41692,7 +41897,9 @@
     "priceTry": 51999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-149039/Xiaomi-13-Ultra_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-149039/Xiaomi-13-Ultra_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-149039/Xiaomi-13-Ultra_featured-image-packshot-review.jpg",
+      "https://www.lowyat.net/wp-content/uploads/2023/04/Xiaomi-13-Ultra-design-first-look-2.jpg",
+      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/xiaomi-13-ultra-white.jpeg"
     ],
     "tier": "S+",
     "benchmarkScore": 1580000,
@@ -41884,7 +42091,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-13-pro-256gb",
@@ -41894,7 +42101,9 @@
     "priceTry": 42999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-139229/Xiaomi-13-Pro_featured-image-packshot-review-Recovered.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-139229/Xiaomi-13-Pro_featured-image-packshot-review-Recovered.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-139229/Xiaomi-13-Pro_featured-image-packshot-review-Recovered.jpg",
+      "https://www.thetechoutlook.com/wp-content/uploads/2023/03/Xiaomi-13-Pro-1.jpg",
+      "https://cdn.beebom.com/mobile/xiaomi-13-pro-front-back-3.png"
     ],
     "tier": "S+",
     "benchmarkScore": 1540000,
@@ -42125,7 +42334,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-13-256gb",
@@ -42366,7 +42575,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-12t-pro-256gb",
@@ -42376,7 +42585,9 @@
     "priceTry": 27999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-130950/Xiaomi-12T-Pro_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-130950/Xiaomi-12T-Pro_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-130950/Xiaomi-12T-Pro_featured-image-packshot-review.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2022/11/Xiaomi-12T-Pro-large.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2022/11/Xiaomi-12T-Pro.jpg"
     ],
     "tier": "A+",
     "benchmarkScore": 1290000,
@@ -42607,7 +42818,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-redmi-note-12-pro-plus-256gb",
@@ -42617,7 +42828,9 @@
     "priceTry": 16999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-145957/Xiaomi-Redmi-Note-12-Pro-5G-Plain_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-145957/Xiaomi-Redmi-Note-12-Pro-5G-Plain_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-145957/Xiaomi-Redmi-Note-12-Pro-5G-Plain_featured-image-packshot-review.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/04/Xiaomi-Redmi-Note-12-Pro-Plus-5G-large.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/04/Xiaomi-Redmi-Note-12-Pro-Plus-5G.jpg"
     ],
     "tier": "B+",
     "benchmarkScore": 580000,
@@ -42844,7 +43057,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-poco-f4-256gb",
@@ -42852,7 +43065,11 @@
     "brand": "POCO",
     "model": "F4 5G",
     "priceTry": 16999.0,
-    "images": [],
+    "images": [
+      "https://i02.appmifile.com/142_operator_sg/20/06/2022/e3fcd19ac9ecd3c93cca4042771387ba.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2022/06/POCO-F4-large.jpg",
+      "https://www.technobugg.com/wp-content/uploads/2022/06/Poco-F4-5G-.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 820000,
     "gamingIndex": 80,
@@ -43071,7 +43288,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://i02.appmifile.com/142_operator_sg/20/06/2022/e3fcd19ac9ecd3c93cca4042771387ba.jpg"
   },
   {
     "id": "phone-poco-x4-gt-256gb",
@@ -43079,7 +43297,9 @@
     "brand": "POCO",
     "model": "X4 GT (144Hz)",
     "priceTry": 15999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2022/06/POCO-X4-GT.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 880000,
     "gamingIndex": 79,
@@ -43298,7 +43518,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2022/06/POCO-X4-GT.jpg"
   },
   {
     "id": "phone-poco-m5s-128gb",
@@ -43306,7 +43527,9 @@
     "brand": "POCO",
     "model": "M5s",
     "priceTry": 9499.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2022/09/POCO-M5s-large.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 380000,
     "gamingIndex": 62,
@@ -43525,7 +43748,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2022/09/POCO-M5s-large.jpg"
   },
   {
     "id": "phone-poco-c65-256gb",
@@ -43533,7 +43757,9 @@
     "brand": "POCO",
     "model": "C65",
     "priceTry": 7999.0,
-    "images": [],
+    "images": [
+      "https://www.yugatech.com/wp-content/uploads/2023/11/poco-65.jpg"
+    ],
     "tier": "C+",
     "benchmarkScore": 265000,
     "gamingIndex": 48,
@@ -43752,7 +43978,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.yugatech.com/wp-content/uploads/2023/11/poco-65.jpg"
   },
   {
     "id": "phone-oppo-find-x6-pro-256gb",
@@ -43993,7 +44220,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oppo-reno-10-256gb",
@@ -44001,7 +44228,9 @@
     "brand": "Oppo",
     "model": "Reno 10 5G",
     "priceTry": 17999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/07/OPPO-Reno-10-5G-large.jpg"
+    ],
     "tier": "B+",
     "benchmarkScore": 560000,
     "gamingIndex": 73,
@@ -44220,7 +44449,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2023/07/OPPO-Reno-10-5G-large.jpg"
   },
   {
     "id": "phone-oppo-a78-256gb",
@@ -44228,7 +44458,9 @@
     "brand": "Oppo",
     "model": "A78",
     "priceTry": 9999.0,
-    "images": [],
+    "images": [
+      "https://www.oppo.com/content/dam/oppo/product-asset-library/specs/a78-4g/a78-bg.png"
+    ],
     "tier": "B",
     "benchmarkScore": 310000,
     "gamingIndex": 61,
@@ -44447,7 +44679,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.oppo.com/content/dam/oppo/product-asset-library/specs/a78-4g/a78-bg.png"
   },
   {
     "id": "phone-oneplus-11-256gb",
@@ -44455,7 +44688,9 @@
     "brand": "OnePlus",
     "model": "11 5G",
     "priceTry": 38999.0,
-    "images": [],
+    "images": [
+      "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/green-img.png"
+    ],
     "tier": "S",
     "benchmarkScore": 1540000,
     "gamingIndex": 93,
@@ -44674,7 +44909,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/green-img.png"
   },
   {
     "id": "phone-oneplus-10-pro-128gb",
@@ -44901,7 +45137,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-10t-256gb",
@@ -45131,7 +45367,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-realme-gt-5-pro-512gb",
@@ -45139,7 +45375,9 @@
     "brand": "Realme",
     "model": "GT 5 Pro",
     "priceTry": 37999.0,
-    "images": [],
+    "images": [
+      "https://www.thetechoutlook.com/wp-content/uploads/2023/11/Realme-Gt-5-Pro.jpg"
+    ],
     "tier": "S+",
     "benchmarkScore": 2080000,
     "gamingIndex": 96,
@@ -45317,7 +45555,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.thetechoutlook.com/wp-content/uploads/2023/11/Realme-Gt-5-Pro.jpg"
   },
   {
     "id": "phone-realme-11-pro-plus-512gb",
@@ -45325,7 +45564,9 @@
     "brand": "Realme",
     "model": "11 Pro+ 5G (200MP)",
     "priceTry": 18999.0,
-    "images": [],
+    "images": [
+      "https://www.lionheartv.net/wp-content/uploads/2023/08/realme-11-pro-5G-FI.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 570000,
     "gamingIndex": 78,
@@ -45503,7 +45744,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.lionheartv.net/wp-content/uploads/2023/08/realme-11-pro-5G-FI.jpg"
   },
   {
     "id": "phone-motorola-edge-40-pro-256gb",
@@ -45513,8 +45755,7 @@
     "priceTry": 28999.0,
     "imageUrl": "https://www.dxomark.com/wp-content/uploads/medias/post-144720/Motorola-Edge-40-Pro_featured-image-packshot-review.jpg",
     "images": [
-      "https://www.dxomark.com/wp-content/uploads/medias/post-144720/Motorola-Edge-40-Pro_featured-image-packshot-review.jpg",
-      "https://www.dxomark.com/wp-content/uploads/medias/post-160092/Motorola-Edge-40-Neo_featured-image-packshot-review.jpg"
+      "https://www.dxomark.com/wp-content/uploads/medias/post-144720/Motorola-Edge-40-Pro_featured-image-packshot-review.jpg"
     ],
     "tier": "S",
     "benchmarkScore": 1530000,
@@ -45743,7 +45984,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-nothing-phone-1-256gb",
@@ -45981,7 +46222,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Nothing_phone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
@@ -46225,7 +46466,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-huawei-p60-pro-256gb",
@@ -46467,7 +46708,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-huawei-nova-12-pro-256gb",
@@ -46696,7 +46937,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12-pro.jpg"
   },
   {
@@ -46926,7 +47167,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
+    "spec_verified_at": "2026-11-17",
     "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-12.jpg"
   },
   {
@@ -46935,7 +47176,9 @@
     "brand": "Infinix",
     "model": "NOTE 30 Pro (Kablosuz Şarjlı)",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://arafatelecom.com/wp-content/uploads/2023/05/note-30-pro.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 415000,
     "gamingIndex": 67,
@@ -47154,7 +47397,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://arafatelecom.com/wp-content/uploads/2023/05/note-30-pro.jpg"
   },
   {
     "id": "phone-infinix-zero-30-5g-256gb",
@@ -47162,7 +47406,9 @@
     "brand": "Infinix",
     "model": "ZERO 30 5G (4K 60FPS Ön Kamera)",
     "priceTry": 17999.0,
-    "images": [],
+    "images": [
+      "https://unboxdiaries.com/wp-content/uploads/2023/08/infinix-zero-30-5g-copy.webp"
+    ],
     "tier": "B+",
     "benchmarkScore": 740000,
     "gamingIndex": 78,
@@ -47381,7 +47627,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://unboxdiaries.com/wp-content/uploads/2023/08/infinix-zero-30-5g-copy.webp"
   },
   {
     "id": "phone-infinix-zero-ultra-256gb",
@@ -47389,7 +47636,9 @@
     "brand": "Infinix",
     "model": "ZERO ULTRA (200MP & 180W)",
     "priceTry": 19999.0,
-    "images": [],
+    "images": [
+      "https://www.yugatech.com/wp-content/uploads/2022/10/infinix-zero-ultra_1.png"
+    ],
     "tier": "B+",
     "benchmarkScore": 520000,
     "gamingIndex": 74,
@@ -47608,7 +47857,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.yugatech.com/wp-content/uploads/2022/10/infinix-zero-ultra_1.png"
   },
   {
     "id": "phone-infinix-hot-40-pro-256gb",
@@ -47616,7 +47866,9 @@
     "brand": "Infinix",
     "model": "HOT 40 Pro",
     "priceTry": 9999.0,
-    "images": [],
+    "images": [
+      "https://www.phoneworld.com.pk/price/wp-content/uploads/2023/12/Infinix-Hot-40-Pro.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 420000,
     "gamingIndex": 64,
@@ -47835,7 +48087,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.phoneworld.com.pk/price/wp-content/uploads/2023/12/Infinix-Hot-40-Pro.jpg"
   },
   {
     "id": "phone-tecno-phantom-v-flip-256gb",
@@ -47843,7 +48096,9 @@
     "brand": "Tecno",
     "model": "Phantom V Flip 5G",
     "priceTry": 29999.0,
-    "images": [],
+    "images": [
+      "https://www.chooseyourmobile.com/wp-content/uploads/2023/09/Tecno-Phantom-V-Flip-5G-Images.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 740000,
     "gamingIndex": 83,
@@ -48062,7 +48317,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.chooseyourmobile.com/wp-content/uploads/2023/09/Tecno-Phantom-V-Flip-5G-Images.jpg"
   },
   {
     "id": "phone-tecno-camon-30-5g-256gb",
@@ -48070,7 +48326,9 @@
     "brand": "Tecno",
     "model": "Camon 30 5G",
     "priceTry": 17999.0,
-    "images": [],
+    "images": [
+      "https://d13pvy8xd75yde.cloudfront.net/global/phones/camon/30_5g/1.png"
+    ],
     "tier": "B+",
     "benchmarkScore": 470000,
     "gamingIndex": 73,
@@ -48289,7 +48547,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://d13pvy8xd75yde.cloudfront.net/global/phones/camon/30_5g/1.png"
   },
   {
     "id": "phone-tecno-camon-20-premier-512gb",
@@ -48297,7 +48556,9 @@
     "brand": "Tecno",
     "model": "Camon 20 Premier 5G",
     "priceTry": 21999.0,
-    "images": [],
+    "images": [
+      "https://www.mobigyaan.com/wp-content/uploads/2023/07/TECNO-CAMON-20-Premier-5G-India-Features.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 760000,
     "gamingIndex": 80,
@@ -48475,7 +48736,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.mobigyaan.com/wp-content/uploads/2023/07/TECNO-CAMON-20-Premier-5G-India-Features.jpg"
   },
   {
     "id": "phone-tecno-spark-20-pro-256gb",
@@ -48483,7 +48745,11 @@
     "brand": "Tecno",
     "model": "Spark 20 Pro",
     "priceTry": 10999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/12/TECNO-SPARK-20-Pro.jpg",
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2023/12/TECNO-SPARK-20-Pro-large.jpg",
+      "https://www.yugatech.com/wp-content/uploads/2023/12/tecno-spark-20-pro-magic-skin-green.jpg"
+    ],
     "tier": "B",
     "benchmarkScore": 420000,
     "gamingIndex": 63,
@@ -48702,8 +48968,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2023/12/TECNO-SPARK-20-Pro.jpg"
   },
   {
     "id": "phone-asus-rog-phone-7-256gb",
@@ -48945,7 +49211,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-rog-phone-6-pro-512gb",
@@ -49134,7 +49400,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-asus-zenfone-9-128gb",
@@ -49364,7 +49630,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-11r-256gb",
@@ -49372,7 +49638,9 @@
     "brand": "OnePlus",
     "model": "11R 5G",
     "priceTry": 26999.0,
-    "images": [],
+    "images": [
+      "https://oasis.opstatics.com/content/dam/oasis/page/2023/in/product/11r/11r-red.png"
+    ],
     "tier": "A+",
     "benchmarkScore": 1290000,
     "gamingIndex": 88,
@@ -49591,7 +49859,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://oasis.opstatics.com/content/dam/oasis/page/2023/in/product/11r/11r-red.png"
   },
   {
     "id": "phone-google-pixel-8a-128gb",
@@ -49829,7 +50098,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-7-pro-128gb",
@@ -50073,7 +50342,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-google-pixel-7-128gb",
@@ -50317,7 +50586,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-vivo-v40-256gb",
@@ -50325,7 +50594,9 @@
     "brand": "Vivo",
     "model": "V40 5G (Zeiss Aura Işık)",
     "priceTry": 22999.0,
-    "images": [],
+    "images": [
+      "https://www.pinoytechnoguide.com/wp-content/uploads/2024/09/vivo-V40-5G-large.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 820000,
     "gamingIndex": 82,
@@ -50544,7 +50815,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.pinoytechnoguide.com/wp-content/uploads/2024/09/vivo-V40-5G-large.jpg"
   },
   {
     "id": "phone-vivo-v30-pro-512gb",
@@ -50552,7 +50824,10 @@
     "brand": "Vivo",
     "model": "V30 Pro (Zeiss Üçlü 50MP)",
     "priceTry": 27999.0,
-    "images": [],
+    "images": [
+      "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1707271114842/8c16535bfaaa1627bfe897d6c27da385.png",
+      "https://fdn2.gsmarena.com/vv/bigpic/vivo-x100-pro.jpg"
+    ],
     "tier": "A",
     "benchmarkScore": 960000,
     "gamingIndex": 84,
@@ -50730,7 +51005,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1707271114842/8c16535bfaaa1627bfe897d6c27da385.png"
   },
   {
     "id": "phone-vivo-x90-pro-256gb",
@@ -50972,7 +51248,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-cmf-phone-1-128gb",
@@ -50980,7 +51256,9 @@
     "brand": "Nothing",
     "model": "CMF Phone 1 by Nothing",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://www.mobiledokan.co/wp-content/uploads/2024/06/Nothing-CMF-Phone-1-Orange.webp"
+    ],
     "tier": "B+",
     "benchmarkScore": 670000,
     "gamingIndex": 73,
@@ -51199,7 +51477,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.mobiledokan.co/wp-content/uploads/2024/06/Nothing-CMF-Phone-1-Orange.webp"
   },
   {
     "id": "phone-oneplus-10t-128gb",
@@ -51430,7 +51709,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-nord-ce-4-256gb",
@@ -51438,7 +51717,9 @@
     "brand": "OnePlus",
     "model": "Nord CE 4",
     "priceTry": 14999.0,
-    "images": [],
+    "images": [
+      "https://oasis.opstatics.com/content/dam/oasis/page/2024/global/product/avalon/green.png"
+    ],
     "tier": "A",
     "benchmarkScore": 820000,
     "gamingIndex": 79,
@@ -51657,7 +51938,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://oasis.opstatics.com/content/dam/oasis/page/2024/global/product/avalon/green.png"
   },
   {
     "id": "phone-oneplus-nord-ce-3-128gb",
@@ -51665,7 +51947,9 @@
     "brand": "OnePlus",
     "model": "Nord CE 3",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://www.androidheadlines.com/wp-content/uploads/2023/06/OnePlus-nord-3-official-image-1.webp"
+    ],
     "tier": "B+",
     "benchmarkScore": 650000,
     "gamingIndex": 74,
@@ -51884,7 +52168,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://www.androidheadlines.com/wp-content/uploads/2023/06/OnePlus-nord-3-official-image-1.webp"
   },
   {
     "id": "phone-honor-magic-6-ultimate-512gb",
@@ -52075,7 +52360,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-magic-5-pro-512gb",
@@ -52266,7 +52551,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-magic-4-pro-256gb",
@@ -52498,7 +52783,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-70-128gb",
@@ -52742,7 +53027,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-x8b-128gb",
@@ -52974,7 +53259,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-12t-128gb",
@@ -53216,7 +53501,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-redmi-note-13-4g-128gb",
@@ -53449,7 +53734,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-xiaomi-redmi-note-12-4g-128gb",
@@ -53457,7 +53742,9 @@
     "brand": "Xiaomi",
     "model": "Redmi Note 12 4G",
     "priceTry": 8499.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/be/Redmi_Note_12_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    ],
     "tier": "C+",
     "benchmarkScore": 320000,
     "gamingIndex": 52,
@@ -53676,8 +53963,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Redmi_Note_12_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-xiaomi-redmi-12-128gb",
@@ -53910,7 +54197,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-s21-fe-2022-128gb",
@@ -54143,7 +54430,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a24-128gb",
@@ -54373,7 +54660,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-a14-128gb",
@@ -54603,7 +54890,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-m34-128gb",
@@ -54835,7 +55122,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-samsung-galaxy-m14-128gb",
@@ -54843,7 +55130,11 @@
     "brand": "Samsung",
     "model": "Galaxy M14 5G",
     "priceTry": 7999.0,
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Samsung_Galaxy_M14_5G_in_Navy_Blue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/galaxy-a/galaxy-m14-5g/GalaxyM14-MO-Sky.jpg?imbypass=true",
+      "https://cdn.gadgetbytenepal.com/wp-content/uploads/2023/03/Samsung-Galaxy-M14-5G-Price-In-Nepal.jpg"
+    ],
     "tier": "C+",
     "benchmarkScore": 410000,
     "gamingIndex": 56,
@@ -55062,8 +55353,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16",
-    "image_url": null
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Samsung_Galaxy_M14_5G_in_Navy_Blue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   },
   {
     "id": "phone-poco-m5-128gb",
@@ -55293,7 +55584,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-vivo-v25-256gb",
@@ -55301,7 +55592,9 @@
     "brand": "Vivo",
     "model": "V25 5G",
     "priceTry": 12999.0,
-    "images": [],
+    "images": [
+      "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1661949308401/b33e825ee43675aab0ad116e7e907305.png"
+    ],
     "tier": "B",
     "benchmarkScore": 480000,
     "gamingIndex": 65,
@@ -55520,7 +55813,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1661949308401/b33e825ee43675aab0ad116e7e907305.png"
   },
   {
     "id": "phone-vivo-y200-256gb",
@@ -55751,7 +56045,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-oneplus-10r-256gb",
@@ -55983,7 +56277,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-realme-11-pro-256gb",
@@ -56215,7 +56509,7 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-realme-c67-128gb",
@@ -56223,7 +56517,9 @@
     "brand": "Realme",
     "model": "C67",
     "priceTry": 6999.0,
-    "images": [],
+    "images": [
+      "https://image01.realme.net/general/20250109/17363958058965ffd1c9369f646f0859b1e58bbc47d4c.png"
+    ],
     "tier": "C+",
     "benchmarkScore": 320000,
     "gamingIndex": 52,
@@ -56442,7 +56738,8 @@
     "source_provenance": [
       "HardwareWizard Katalog"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17",
+    "imageUrl": "https://image01.realme.net/general/20250109/17363958058965ffd1c9369f646f0859b1e58bbc47d4c.png"
   },
   {
     "id": "phone-honor-90-lite-256gb",
@@ -56682,7 +56979,7 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   },
   {
     "id": "phone-honor-x7b-128gb",
@@ -56920,6 +57217,6 @@
       "HardwareWizard Katalog",
       "DXOMARK"
     ],
-    "spec_verified_at": "2026-11-16"
+    "spec_verified_at": "2026-11-17"
   }
 ]

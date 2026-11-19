@@ -1858,10 +1858,15 @@ object HardwareMapper {
                     ?: (gpuKey?.let { benchmarks["gpu_$it"] ?: benchmarks[it] })
             } else null
 
-            val rawImage = item.imageUrl ?: priceData?.imageUrl ?: existingImages[item.id]
-            val resolvedImage = sanitizeImageUrl(rawImage)
+            val rawImage = item.imageUrl ?: priceData?.imageUrl
+            val cleanedImagesList = (item.images.orEmpty())
+                .mapNotNull { sanitizeImageUrl(it) }
+                .distinct()
+            val resolvedPrimary = sanitizeImageUrl(rawImage)
+                ?: cleanedImagesList.firstOrNull()
                 ?: resolveDefaultHardwareImage(item.category, item.model, item.brand)
-                ?: existingImages[item.id]?.let { sanitizeImageUrl(it) }
+            val effectiveImagesList = cleanedImagesList.ifEmpty { listOfNotNull(resolvedPrimary) }
+            val resolvedImage = resolvedPrimary ?: effectiveImagesList.firstOrNull()
 
             val cleanCurrentTry = com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(
                 priceData?.currentPriceTry ?: item.currentPriceTry
@@ -1883,9 +1888,6 @@ object HardwareMapper {
                 ?.filter { com.panda.myapplication.domain.util.SecurityUtils.sanitizeTryPrice(it.effectivePrice) != null }
                 ?.distinctBy { it.date.take(10) }
                 ?.sortedBy { it.date }
-
-            val effectiveImagesList = item.images?.takeIf { it.isNotEmpty() }
-                ?: listOfNotNull(resolvedImage)
 
             item.copy(
                 cachedAt = syncedAt,
@@ -1942,25 +1944,7 @@ object HardwareMapper {
     fun sanitizeImageUrl(url: String?): String? =
         com.panda.myapplication.domain.util.SecurityUtils.sanitizeImageUrl(url)
 
-    fun resolveDefaultHardwareImage(category: HardwareCategory, model: String, brand: String): String? {
-        if (category != HardwareCategory.CPU) return null
-        val upper = "${brand.uppercase()} ${model.uppercase()}"
-        return when {
-            upper.contains("9800X3D") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
-            upper.contains("7800X3D") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-            upper.contains("5800X3D") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
-            upper.contains("285K") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
-            upper.contains("14700K") && !upper.contains("KF") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
-            upper.contains("14400") && !upper.contains("14400T") ->
-                "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
-            else -> null
-        }
-    }
+    fun resolveDefaultHardwareImage(category: HardwareCategory, model: String, brand: String): String? = null
 
     // region DTO -> Domain Helpers
 

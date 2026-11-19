@@ -29,7 +29,7 @@ CATALOG_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeReso
 
 ROOM_SCHEMA_VERSION = 36
 ROOM_IDENTITY_HASH = "67974b2b98fd0fd519c42be66d6f74f3"
-CATALOG_SEED_VERSION = "4.3.0"
+CATALOG_SEED_VERSION = "4.5.0"
 
 MIN_VALID_TRY_PRICE = 250.0
 MAX_VALID_TRY_PRICE = 2_500_000.0
@@ -164,7 +164,8 @@ def _sanitize_image_url(raw_url: Any) -> str | None:
         for bad in (
             ".svg", "svg%20", "<svg", "placeholder", "blank.gif", "no-image", "no_image",
             "roundnew", "logo_2020", "/static/stores/", "/stores/amazon-", "iconic-features",
-            "static0.gamerantimages.com", "images.unsplash.com",
+            "static0.gamerantimages.com", "images.unsplash.com", "itopya-logo", "5-year-qr",
+            "_ihs_studio", "_reference.", "_bottom.", "generic_cpu",
         )
     ):
         return None
@@ -236,21 +237,6 @@ def _is_stock_code(text: str) -> bool:
 
 
 def _resolve_default_image(category: str, model: str, brand: str) -> str | None:
-    if category != "CPU":
-        return None
-    upper = f"{brand.upper()} {model.upper()}"
-    if "9800X3D" in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_9800x3d.webp"
-    if "7800X3D" in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_7800x3d.webp"
-    if "5800X3D" in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/amd_ryzen_7_5800x3d.webp"
-    if "285K" in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_ultra_9_285k.webp"
-    if "14700K" in upper and "KF" not in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i7_14700k.webp"
-    if "14400" in upper and "14400T" not in upper:
-        return "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/intel_core_i5_14400.webp"
     return None
 
 

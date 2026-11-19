@@ -23,6 +23,13 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class RemoteCatalogManifest(
+    val catalogVersion: String = "0.0.0",
+    val verifiedAt: String = "",
+)
 
 data class RemoteHardwareCatalog(
     val cpus: List<CpuRawDto> = emptyList(),
@@ -47,6 +54,23 @@ class HardwareRemoteDataSource(
     },
     private val baseUrl: String = DEFAULT_BASE_URL,
 ) {
+
+    suspend fun fetchCatalogManifest(): Result<RemoteCatalogManifest> = withContext(ioDispatcher) {
+        try {
+            val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
+                httpClient.get(bustCacheUrl("$baseUrl/catalog_manifest.json")) {
+                    header("Cache-Control", "no-cache")
+                    header("Pragma", "no-cache")
+                }.bodyAsText(),
+                "catalog_manifest.json",
+            )
+            Result.success(json.decodeFromString<RemoteCatalogManifest>(text))
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 
     suspend fun fetchAllHardware(): Result<RemoteHardwareCatalog> = withContext(ioDispatcher) {
         try {

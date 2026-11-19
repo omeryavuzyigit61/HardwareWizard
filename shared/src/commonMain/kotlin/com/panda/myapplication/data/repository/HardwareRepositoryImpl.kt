@@ -79,7 +79,7 @@ internal class HardwareRepositoryImpl(
         seedMutex.withLock {
             if (isSeeded) return
             val seededVersion = hardwareDao.getSetting("catalog_seed_version")
-            val currentCatalogVersion = "4.3.0"
+            val currentCatalogVersion = CURRENT_CATALOG_VERSION
             if (seededVersion == currentCatalogVersion) {
                 isSeeded = true
                 return
@@ -716,26 +716,16 @@ internal class HardwareRepositoryImpl(
             if (remoteVerified.isNotEmpty()) {
                 com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
             }
-            val remoteSmartphones: List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto> = runCatching {
-                val res = remoteDataSource.fetchSmartphonesJson()
-                if (res.isSuccess) {
-                    json.decodeFromString<List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>>(res.getOrThrow())
-                } else emptyList()
-            }.getOrDefault(emptyList())
+            val remoteManifest = remoteDataSource.fetchCatalogManifest().getOrNull()
+            val remoteIsUpToDate = remoteManifest != null && isRemoteVersionAtLeast(remoteManifest.catalogVersion, CURRENT_CATALOG_VERSION)
 
-            val remoteTablets: List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto> = runCatching {
-                val res = remoteDataSource.fetchTabletsJson()
-                if (res.isSuccess) {
-                    json.decodeFromString<List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>>(res.getOrThrow())
-                } else emptyList()
-            }.getOrDefault(emptyList())
             val localPrices = localDataSource.loadLocalPricesTr()
             val localBenchmarks = localDataSource.loadLocalBenchmarks()
             val allPrices = localPrices.toMutableMap().apply {
                 remotePrices.forEach { (key, remoteInfo) ->
                     val localInfo = this[key]
                     if (localInfo == null || (remoteInfo.currentPriceTry != null && (localInfo.currentPriceTry == null || remoteInfo.offers.isNotEmpty()))) {
-                        this[key] = remoteInfo
+                        this[key] = if (remoteIsUpToDate) remoteInfo else remoteInfo.copy(imageUrl = localInfo?.imageUrl)
                     }
                 }
             }
@@ -748,7 +738,24 @@ internal class HardwareRepositoryImpl(
             val existing = hardwareDao.getAllHardwareItems()
             val existingImages = existing.associate { it.id to it.imageUrl }
 
-            val catalogResult = remoteDataSource.fetchAllHardware()
+            val catalogResult = if (remoteIsUpToDate) remoteDataSource.fetchAllHardware() else Result.failure(IllegalStateException("Remote catalog is older than bundled $CURRENT_CATALOG_VERSION"))
+            val remoteSmartphones: List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto> = if (remoteIsUpToDate) {
+                runCatching {
+                    val res = remoteDataSource.fetchSmartphonesJson()
+                    if (res.isSuccess) {
+                        json.decodeFromString<List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>>(res.getOrThrow())
+                    } else emptyList()
+                }.getOrDefault(emptyList())
+            } else emptyList()
+
+            val remoteTablets: List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto> = if (remoteIsUpToDate) {
+                runCatching {
+                    val res = remoteDataSource.fetchTabletsJson()
+                    if (res.isSuccess) {
+                        json.decodeFromString<List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>>(res.getOrThrow())
+                    } else emptyList()
+                }.getOrDefault(emptyList())
+            } else emptyList()
             if (catalogResult.isSuccess) {
                 val catalog = catalogResult.getOrThrow()
                 val snapshot = HardwareMapper.buildCatalogSnapshot(
@@ -832,6 +839,24 @@ internal class HardwareRepositoryImpl(
         } catch (e: Exception) {
             if (e is kotlinx.coroutines.CancellationException) throw e
             DomainResult.Failure(DomainError.Network)
+        }
+    }
+
+    companion object {
+        const val CURRENT_CATALOG_VERSION = "4.5.0"
+
+        internal fun isRemoteVersionAtLeast(remoteVersion: String?, minVersion: String): Boolean {
+            if (remoteVersion.isNullOrBlank()) return false
+            val rParts = remoteVersion.trim().split(".").map { it.toIntOrNull() ?: 0 }
+            val mParts = minVersion.trim().split(".").map { it.toIntOrNull() ?: 0 }
+            val maxLen = maxOf(rParts.size, mParts.size)
+            for (i in 0 until maxLen) {
+                val r = rParts.getOrElse(i) { 0 }
+                val m = mParts.getOrElse(i) { 0 }
+                if (r > m) return true
+                if (r < m) return false
+            }
+            return true
         }
     }
 }
