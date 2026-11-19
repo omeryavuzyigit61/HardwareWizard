@@ -892,7 +892,89 @@ def run_seed_from_room(client: SupabaseAdminClient, force: bool = False) -> int:
     return 0
 
 
-def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_new_per_run: int = 100) -> int:
+# Modern-generation regex filters so daily delta NEVER imports 2011-2021 legacy hardware (e.g. AMD Sempron/A10/FX/DDR3)
+_MODERN_CPU_RE = re.compile(
+    r"(?:"
+    r"RYZEN\s+(?:[3579]|AI\s+MAX)\s+(?:[789]\d{3}|10\d{3})|"
+    r"THREADRIPPER\s+(?:PRO\s+)?[79]\d{3}|"
+    r"CORE\s+ULTRA\s+[579]\s+[234]\d{2}|"
+    r"CORE\s+I[3579]-1[34]\d{3}"
+    r")",
+    re.I,
+)
+_LEGACY_OR_MOBILE_CPU_RE = re.compile(
+    r"(?:\b(?:ATHLON|SEMPRON|FX-|OPTERON|PENTIUM|CELERON|A[468]-|A10-|A12-|CORE\s+2|XEON\s+E[357])\b|\b\d{4}(?:U|HS|HX|H|V)\b)",
+    re.I,
+)
+_MODERN_GPU_RE = re.compile(
+    r"(?:RTX\s*(?:40|50|60)\d{2}|RX\s*(?:7[6-9]|8\d|90)\d{2}|ARC\s*[BC][57]\d{2}|RTX\s*PRO\s*[456]000)",
+    re.I,
+)
+_MODERN_MOBO_CHIPSET_RE = re.compile(
+    r"\b(?:X870E?|B850|B840|Z890|B860|H810|X670E?|B650E?|Z790|B760|TRX50|WRX90)\b",
+    re.I,
+)
+_FLAGSHIP_LAUNCH_RE = re.compile(
+    r"(?:RTX\s*(?:50|60)\d{2}|RX\s*90\d{2}|RYZEN\s+[579]\s+(?:9|10)\d{3}|CORE\s+ULTRA\s+[579]\s+[234]\d{2}|ARC\s*B[57]\d{2})",
+    re.I,
+)
+
+
+def passes_modern_quality_gate(
+    category: str,
+    brand: str,
+    model: str,
+    spec: dict[str, Any],
+    verified_image_count: int,
+) -> bool:
+    """Strict delta quality gate: admits ONLY modern-generation, clean hardware items."""
+    full_name = f"{brand} {model}"
+    if category == "CPU":
+        if _LEGACY_OR_MOBILE_CPU_RE.search(full_name):
+            return False
+        if not _MODERN_CPU_RE.search(full_name):
+            return False
+        return verified_image_count >= 1 or bool(_FLAGSHIP_LAUNCH_RE.search(full_name))
+    if category == "GPU":
+        chip_full = f"{full_name} {spec.get('chipset') or ''}"
+        if not _MODERN_GPU_RE.search(chip_full):
+            return False
+        if int(spec.get("vram_mb") or 0) < 8192 or int(spec.get("tdp_watts") or 0) < 100:
+            return False
+        return verified_image_count >= 1 or bool(_FLAGSHIP_LAUNCH_RE.search(chip_full))
+    if category == "MOTHERBOARD":
+        sock = str(spec.get("socket") or "").upper()
+        if sock not in ("AM5", "LGA1851", "LGA1700", "STR5"):
+            return False
+        if not _MODERN_MOBO_CHIPSET_RE.search(f"{full_name} {spec.get('chipset') or ''}"):
+            return False
+        return verified_image_count >= 1
+    if category == "RAM":
+        if str(spec.get("generation") or "") != "DDR5":
+            return False
+        if int(spec.get("speed_mts") or 0) < 5600 or int(spec.get("capacity_mb") or 0) < 16384:
+            return False
+        return verified_image_count >= 1
+    if category == "PSU":
+        if int(spec.get("wattage") or 0) < 650 or not spec.get("is_atx3_compliant"):
+            return False
+        if str(spec.get("efficiency") or "") not in ("GOLD", "PLATINUM", "TITANIUM"):
+            return False
+        return verified_image_count >= 1
+    if category == "STORAGE":
+        if str(spec.get("storage_interface") or "") != "NVME":
+            return False
+        if str(spec.get("pcie_generation") or "") not in ("GEN4", "GEN5"):
+            return False
+        if int(spec.get("capacity_mb") or 0) < 1_000_000:
+            return False
+        return verified_image_count >= 1
+    if category in ("COOLER", "CASE", "CASE_FAN"):
+        return verified_image_count >= 1
+    return False
+
+
+def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_new_per_run: int = 50) -> int:
     """True delta-only discovery: fetches only existing keys from Supabase and inserts ONLY brand-new products."""
     meta = client.get_catalog_meta()
     current_rev = int(meta.get("latest_revision") or 0)
@@ -974,12 +1056,17 @@ def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_ne
             if (cat, candidate["canonical_key"]) in existing_ckeys or (cat, candidate["canonical_key"]) in seen_new_ckeys:
                 continue
 
-            # Verify live HTTP 200 image URLs ONLY for truly new candidates
+            # Verify live HTTP 200 image URLs ONLY for truly new candidates that pass initial modern checks
+            if not passes_modern_quality_gate(cat, candidate["brand"], candidate["model"], candidate["spec_payload"], verified_image_count=len(candidate["images"])):
+                continue
+
             verified_imgs: list[str] = []
             for img_u in candidate["images"][:5]:
                 ok, _, _ = http.check_image_url(img_u)
                 if ok:
                     verified_imgs.append(img_u)
+            if not passes_modern_quality_gate(cat, candidate["brand"], candidate["model"], candidate["spec_payload"], verified_image_count=len(verified_imgs)):
+                continue
             candidate["images"] = verified_imgs
             candidate["image_url"] = verified_imgs[0] if verified_imgs else None
 
