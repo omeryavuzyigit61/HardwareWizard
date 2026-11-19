@@ -15,7 +15,7 @@
 
 <br/>
 
-**Hardware Wizard**, modern bilgisayar donanımı meraklıları, sistem toplayıcıları ve espor oyuncuları için geliştirilmiş, yüksek performanslı ve çift platformlu (**Android & iOS**) bir donanım ekosistemidir. 5.000'den fazla donanım bileşenini, **3 açılı stüdyo görselleri**, **fizik tabanlı interaktif mühendislik simülatörleri**, **canlı cihaz teşhisi** ve **doğrulanmış hız aşırtma/voltaj düşürme (OC/UV) silikon kasası** ile tek bir modern arayüzde bir araya getirir.
+**Hardware Wizard**, modern bilgisayar donanımı meraklıları, sistem toplayıcıları ve espor oyuncuları için geliştirilmiş, yüksek performanslı ve çift platformlu (**Android & iOS**) bir donanım ekosistemidir. **7.500'den fazla** donanım bileşenini, **çok açılı gerçek ürün stüdyo galerileri**, **10 yerleşik stüdyo ve oyun teması**, **fizik tabanlı interaktif mühendislik simülatörleri**, **canlı cihaz teşhisi** ve **doğrulanmış hız aşırtma/voltaj düşürme (OC/UV) silikon kasası** ile tek bir modern arayüzde bir araya getirir.
 
 ---
 
@@ -39,12 +39,12 @@
 
 <div align="center">
 
-### 📱 1. Donanım Kataloğu, Işık Hızında Arama & 3 Açılı Stüdyo Galerisi
+### 📱 1. Donanım Kataloğu, Işık Hızında Arama & Çok Açılı Stüdyo Galerisi
 
-| Donanım Kataloğu & Ekosistem | Işık Hızında Anlık Arama | 3 Açılı Stüdyo Galerisi (Hero) | Açı 2: Kutu & Perspektif |
+| Donanım Kataloğu & Ekosistem | Işık Hızında Anlık Arama | Çok Açılı Stüdyo Galerisi (Hero) | Açı 3: Stüdyo Perspektif Görünümü |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/01_live_catalog_home.png" width="220" alt="Hardware Catalog" /> | <img src="docs/screenshots/02_live_search_and_filter.png" width="220" alt="Instant Search" /> | <img src="docs/screenshots/03_live_hardware_detail_3images.png" width="220" alt="3-Angle Studio Gallery" /> | <img src="docs/screenshots/03b_live_hardware_detail_angle2.png" width="220" alt="Gallery Angle 2" /> |
-| *4.004 Parça, Ekosistem Sekmeleri & Kategori Çipleri* | *RTX 4090 arama sorgusu ve anlık teknik özellik kartları* | *3 Açılı stüdyo fotoğrafçılığı rozeti (`📷 1 / 3`) & Fiyat Analizi* | *Parmak hareketiyle kaydırılabilen açı 2 kutu ve perspektif görünümü* |
+| <img src="docs/screenshots/01_live_catalog_home.png" width="220" alt="Hardware Catalog" /> | <img src="docs/screenshots/02_live_search_and_filter.png" width="220" alt="Instant Search" /> | <img src="docs/screenshots/03_live_hardware_detail_3images.png" width="220" alt="Multi-Angle Studio Gallery" /> | <img src="docs/screenshots/03b_live_hardware_detail_angle2.png" width="220" alt="Gallery Perspective Angle" /> |
+| *4.327 PC parçası (toplam 7.571 bileşen), Ekosistem Sekmeleri & Kategori Çipleri* | *"Ryzen 7" anlık arama sonuçları, teknik özellikler ve `+ VS` hızlı ekleme* | *GIGABYTE RTX 5080 AORUS Master (`📷 1 / 3`), doğrulanmış veri kaynakları & FPS simülasyonu* | *Parmak hareketiyle kaydırılabilen açı 3 (`📷 3 / 3`) şeffaf 3D perspektif görünümü* |
 
 <br/>
 
@@ -53,20 +53,29 @@
 | PC Sihirbazı Kokpit HUD & AI Teşhis | VS Arena Kafa Kafaya Kıyaslama |
 |:---:|:---:|
 | <img src="docs/screenshots/08_live_pc_builder_wizard.png" width="340" alt="PC Builder Wizard" /> | <img src="docs/screenshots/07_live_vs_arena_comparison.png" width="340" alt="VS Arena Battle" /> |
-| *Canlı TDP hesabı, önerilen PSU, AI Sistem Doktoru (0-100), darboğaz dengesi ve kasa sığma radarı* | *MSI RTX 5070 Ti vs Gigabyte RX 6600, F/P şampiyonu (+%172) ve 12 oyunluk FPS simülasyon matrisi* |
+| *AM5 (Ryzen 7 9800X3D + RTX 5090): Canlı `695W` TDP, `1000W` PSU, AI Sistem Doktoru (`100 / 100`) & darboğaz dengesi* | *MSI RTX 5090 Suprim X vs GIGABYTE RTX 5080 AORUS Master (`+%23`), `1440p` 12 oyun FPS & %1 Low matrisi* |
 
 <br/>
 
-### 🔬 3. 11 İnteraktif Mühendislik Laboratuvarı & Termal Simülasyon
+### 🔬 3. İnteraktif Mühendislik Laboratuvarları & Termal Simülasyon
 
-| 11 Mühendislik Laboratuvar Menüsü | Thermal Lab (Termal Simülasyon) |
+| Mühendislik Laboratuvar Menüsü | Thermal Lab (Termal Simülasyon) |
 |:---:|:---:|
 | <img src="docs/screenshots/04_live_engineering_labs_drawer.png" width="340" alt="Engineering Labs Drawer" /> | <img src="docs/screenshots/05_live_thermal_simulation_lab.png" width="340" alt="Thermal Simulation Lab" /> |
-| *Thermal Lab, Memory Lab, Power Lab, Esports Latency Lab, Studio & Ergonomics ve 11 aktif araç* | *İşlemci TDP yükü, ortam sıcaklığı, hava akışı ve radyatör ısı yayılım grafikleri* |
+| *Thermal Lab, Memory Lab, Power Lab, Esports Lab, Studio & Ergonomics ve tüm mühendislik araçları* | *Katalogdan işlemci (`332`) & soğutucu (`142`) seçimi, TDP/PPT tepe güç yükü ve termal kapasite analizi* |
 
 <br/>
 
-### 🛡️ 4. Sıfır Güven (Zero-Trust), 2FA Güvenlik & Canlı Moderasyon
+### 🎨 4. Ayarlar & Çoklu Tema Motoru (10 Özel Stüdyo & Oyun Teması)
+
+| Ayarlar & 10 Tema Paleti | Pure Slate (Açık Tema) | Cyberpunk Neon Teması |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/09_live_settings.png" width="260" alt="Settings and Theme Picker" /> | <img src="docs/screenshots/10_live_theme_light.png" width="260" alt="Pure Slate Light Theme" /> | <img src="docs/screenshots/11_live_theme_cyberpunk.png" width="260" alt="Cyberpunk Neon Theme" /> |
+| *10 tema (`Obsidian`, `Slate`, `Ahşap`, `OLED`, `Cyberpunk`, `Sistem`, `Valorant`, `CS2`, `GTA Vice`, `The Witcher`), dil & uzman modu* | *Tema değiştirildiğinde anlık uygulanan yüksek kontrastlı **Pure Slate** açık arayüz görünümü* | *Gece moru ve asit sarısı vurgularla dinamik **Cyberpunk Neon** arayüz görünümü* |
+
+<br/>
+
+### 🛡️ 5. Sıfır Güven (Zero-Trust), 2FA Güvenlik & Canlı Moderasyon
 
 | 2FA Güvenlik Konsolu | Canlı Yönetici & Moderasyon Paneli |
 |:---:|:---:|
@@ -198,7 +207,7 @@ flowchart TD
 
 ### Teknoloji Yığını
 - **Çekirdek:** Kotlin 2.0+ (Kotlin Multiplatform)
-- **Kullanıcı Arayüzü:** Compose Multiplatform (Material Design 3, Dark Neon Cyberpunk Teması)
+- **Kullanıcı Arayüzü:** Compose Multiplatform (Material Design 3, 10 Özel Tema Motoru: Obsidian, Pure Slate, Cyber-Wood, Midnight OLED, Cyberpunk Neon, VALORANT, CS2, GTA Vice, The Witcher & Sistem)
 - **Yerel Veritabanı:** AndroidX Room Multiplatform + SQLite Driver
 - **Ağ & Arka Yüz:** Ktor Client, Supabase Kotlin SDK (PostgREST, Auth, Realtime, Storage)
 - **Görsel Yükleme:** Coil 3 Multiplatform (Asenkron önbellekleme & donanım hızlandırma)
