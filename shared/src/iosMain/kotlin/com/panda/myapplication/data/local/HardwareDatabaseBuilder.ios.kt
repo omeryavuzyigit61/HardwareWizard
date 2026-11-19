@@ -3,14 +3,30 @@ package com.panda.myapplication.data.local
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import kotlinx.cinterop.ExperimentalForeignApi
+import platform.Foundation.NSBundle
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 
-fun hardwareDatabaseBuilder(): RoomDatabase.Builder<HardwareDatabase> =
-    Room.databaseBuilder<HardwareDatabase>(
-        name = "${documentDirectory()}/${HardwareDatabase.DATABASE_NAME}",
+@OptIn(ExperimentalForeignApi::class)
+fun hardwareDatabaseBuilder(): RoomDatabase.Builder<HardwareDatabase> {
+    val dbPath = "${documentDirectory()}/${HardwareDatabase.DATABASE_NAME}"
+    val fileManager = NSFileManager.defaultManager
+    if (!fileManager.fileExistsAtPath(dbPath)) {
+        val bundledPath = NSBundle.mainBundle.pathForResource(
+            name = HardwareDatabase.DATABASE_NAME.removeSuffix(".db"),
+            ofType = "db",
+        )
+        if (bundledPath != null) {
+            runCatching {
+                fileManager.copyItemAtPath(bundledPath, toPath = dbPath, error = null)
+            }
+        }
+    }
+    return Room.databaseBuilder<HardwareDatabase>(
+        name = dbPath,
     )
+}
 
 @OptIn(ExperimentalForeignApi::class)
 private fun documentDirectory(): String {

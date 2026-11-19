@@ -1,0 +1,78 @@
+name: Weekly Room DB Snapshot & Initial Supabase Seed
+
+on:
+  schedule:
+    # Her Pazar Türkiye saatiyle 04:00 (UTC 01:00) — APK/IPA içine gömülen hazır Room DB'yi Supabase'ten günceller.
+    - cron: '0 1 * * 0'
+  workflow_dispatch:
+    inputs:
+      seed_supabase_first:
+        description: 'İlk kurulum: Mevcut 7.571 ürünlük Room DB verisini Supabase hardware_catalog tablosuna aktar'
+        type: boolean
+        required: false
+        default: false
+      force_reseed:
+        description: 'Supabase dolu olsa bile mevcut Room DB ile üzerine yaz (dikkatli kullanın)'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-room-snapshot
+  cancel-in-progress: false
+
+jobs:
+  sync-room-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'requirements.txt'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 1. Optional One-Time Seed Room DB -> Supabase
+        if: ${{ github.event.inputs.seed_supabase_first == 'true' }}
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.force_reseed }}" = "true" ]; then
+            python scripts/supabase_catalog_sync.py --action seed-from-room --force
+          else
+            python scripts/supabase_catalog_sync.py --action seed-from-room
+          fi
+
+      - name: 2. Rebuild Pre-populated Room v36 DB from Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          python scripts/supabase_catalog_sync.py --action build-room-snapshot
+
+      - name: 3. Commit & Push hardware_wizard.db Only If Revision Changed
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet androidApp/src/main/assets/databases/hardware_wizard.db; then
+            echo "Room DB üzerinde değişiklik yok; commit atlanıyor."
+          else
+            git add androidApp/src/main/assets/databases/hardware_wizard.db
+            git commit -m "chore(db): weekly pre-populated Room snapshot from Supabase [skip ci]"
+            git push
+          fi

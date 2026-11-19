@@ -275,7 +275,8 @@ def _crawl_gsmarena_polite(
         for slug, label in device_links[:12]:
             if crawled_count >= max_devices:
                 break
-            title = f"{brand} {re.sub(r'<[^>]+>|\\s+', ' ', label).strip()}"
+            clean_label = re.sub(r"<[^>]+>|\s+", " ", label).strip()
+            title = f"{brand} {clean_label}"
             ckey = normalize_canonical_key(title)
             if delta_only and state.has_source_key(cat, "GSMArena", ckey):
                 continue

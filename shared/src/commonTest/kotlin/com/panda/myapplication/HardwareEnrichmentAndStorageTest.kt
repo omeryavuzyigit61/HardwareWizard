@@ -473,4 +473,116 @@ class HardwareEnrichmentAndStorageTest {
             sanitize("https://cdna.pcpartpicker.com/static/forever/images/product/5dd350d430e36107ffe5729dfd6630bd.1600.jpg"),
         )
     }
+
+    @Test
+    fun supabaseDeltaGate_fetchesOnlyWhenNewRevisionOrEmptyRoom() {
+        val shouldFetch = com.panda.myapplication.data.repository.HardwareRepositoryImpl::shouldFetchDelta
+        // Remote not seeded yet -> never fetch
+        assertFalse(shouldFetch(0L, 0L, 0))
+        assertFalse(shouldFetch(0L, 1L, 7571))
+        // Local up to date -> skip delta download (0 egress)
+        assertFalse(shouldFetch(1L, 1L, 7571))
+        assertFalse(shouldFetch(3L, 5L, 7571))
+        // New hardware revision published -> fetch delta
+        assertTrue(shouldFetch(2L, 1L, 7571))
+        assertTrue(shouldFetch(10L, 9L, 7571))
+        // Empty local Room (e.g. fresh iOS without bundled DB) -> bootstrap from Supabase
+        assertTrue(shouldFetch(1L, 0L, 0))
+    }
+
+    @Test
+    fun supabaseCatalogMapper_decodesMultiCategoryDeltaRowsAndSanitizesImages() {
+        val rawRowsJson = """
+            [
+                {
+                    "id": "gpu_nvidia_rtx_6090_fe",
+                    "category": "GPU",
+                    "brand": "NVIDIA",
+                    "model": "GeForce RTX 6090 Founders Edition",
+                    "canonical_key": "nvidia_rtx_6090_fe",
+                    "spec_table": "gpu_specs",
+                    "spec_payload": {
+                        "chipset": "GeForce RTX 6090",
+                        "vram_mb": 32768,
+                        "memory_type": "GDDR7",
+                        "core_clock_mhz": 2400,
+                        "boost_clock_mhz": 2950,
+                        "tdp_watts": 600,
+                        "recommended_psu_watts": 1000,
+                        "bus_width_bits": 512,
+                        "length_mm": 304
+                    },
+                    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/valid_gpu.1600.jpg",
+                    "images": [
+                        "https://cdna.pcpartpicker.com/static/forever/images/product/valid_gpu.1600.jpg",
+                        "https://raw.githubusercontent.com/omeryavuzyigit61/HardwareWizard/main/data/images/cpu/am5_ihs_studio.webp"
+                    ],
+                    "extra_specs": {"Mimari": "Blackwell Refresh"},
+                    "source_provenance": ["HardwareWizard Katalog", "TechPowerUp DB"],
+                    "spec_verified_at": "2026-11-19",
+                    "catalog_revision": 2
+                },
+                {
+                    "id": "cpu_amd_ryzen_7_10800x3d",
+                    "category": "CPU",
+                    "brand": "AMD",
+                    "model": "Ryzen 7 10800X3D",
+                    "canonical_key": "amd_ryzen_7_10800x3d",
+                    "spec_table": "cpu_specs",
+                    "spec_payload": {
+                        "socket": "AM5",
+                        "core_count": 8,
+                        "thread_count": 16,
+                        "base_clock_mhz": 4800,
+                        "boost_clock_mhz": 5600,
+                        "tdp_watts": 120,
+                        "has_integrated_graphics": true,
+                        "l3_cache_mb": 96
+                    },
+                    "catalog_revision": 2
+                },
+                {
+                    "id": "router_asus_rt_be96u",
+                    "category": "ROUTER",
+                    "brand": "ASUS",
+                    "model": "RT-BE96U Wi-Fi 7",
+                    "canonical_key": "asus_rt_be96u",
+                    "spec_table": "router_specs",
+                    "spec_payload": {
+                        "wifi_standard": "Wi-Fi 7 (802.11be)",
+                        "speed_class": "BE19000",
+                        "bands": "Tri-Band (2.4/5/6 GHz)",
+                        "ethernet_ports": "2x 10G + 4x 1G",
+                        "has_gaming_qos": true,
+                        "has_sqm_bufferbloat": true
+                    },
+                    "catalog_revision": 2
+                }
+            ]
+        """.trimIndent()
+
+        val rows = json.decodeFromString<List<com.panda.myapplication.data.model.dto.SupabaseHardwareCatalogRowDto>>(rawRowsJson)
+        val snapshot = com.panda.myapplication.data.mapper.SupabaseCatalogMapper.toCatalogSnapshot(
+            rows = rows,
+            syncedAt = kotlin.time.Instant.DISTANT_PAST,
+        )
+
+        assertEquals(3, snapshot.items.size)
+        assertEquals(1, snapshot.gpus.size)
+        assertEquals(1, snapshot.cpus.size)
+        assertEquals(1, snapshot.routers.size)
+
+        // Verify GPU spec + image sanitization stripped synthetic _ihs_studio URL
+        val gpuItem = snapshot.items.first { it.id == "gpu_nvidia_rtx_6090_fe" }
+        assertEquals("https://cdna.pcpartpicker.com/static/forever/images/product/valid_gpu.1600.jpg", gpuItem.imageUrl)
+        assertEquals(1, gpuItem.images?.size)
+        assertEquals(600, snapshot.gpus.first().tdpWatts)
+        assertEquals(32768, snapshot.gpus.first().vramMb)
+
+        // Verify CPU + Router specs decoded losslessly
+        assertEquals("AM5", snapshot.cpus.first().socket)
+        assertEquals(96, snapshot.cpus.first().l3CacheMb)
+        assertTrue(snapshot.routers.first().hasGamingQos)
+        assertEquals("Wi-Fi 7 (802.11be)", snapshot.routers.first().wifiStandard)
+    }
 }

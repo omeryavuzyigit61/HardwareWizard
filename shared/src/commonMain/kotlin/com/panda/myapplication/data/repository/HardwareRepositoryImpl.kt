@@ -4,6 +4,7 @@ import com.panda.myapplication.data.local.HardwareLocalDataSource
 import com.panda.myapplication.data.local.dao.HardwareDao
 import com.panda.myapplication.data.local.entity.UserPriceOverrideEntity
 import com.panda.myapplication.data.mapper.HardwareMapper
+import com.panda.myapplication.data.mapper.SupabaseCatalogMapper
 import com.panda.myapplication.data.remote.HardwareRemoteDataSource
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
@@ -42,58 +43,52 @@ internal class HardwareRepositoryImpl(
     private var isSeeded = false
     private val memoryCache = MutableStateFlow<List<HardwareItem>?>(null)
 
-
-    private inline fun <T> mergeCatalogs(remote: List<T>, local: List<T>, keySelector: (T) -> String?): List<T> {
-        if (remote.isEmpty()) return local
-        if (local.isEmpty()) return remote
-        val remoteKeys = remote.mapNotNull { keySelector(it)?.trim()?.lowercase() }.toSet()
-        val missingLocals = local.filter { item ->
-            val key = keySelector(item)?.trim()?.lowercase()
-            key != null && !remoteKeys.contains(key)
-        }
-        return remote + missingLocals
-    }
-
-    private fun mergePeripherals(
-        remote: List<com.panda.myapplication.data.model.dto.PeripheralRawDto>,
-        local: List<com.panda.myapplication.data.model.dto.PeripheralRawDto>,
-    ): List<com.panda.myapplication.data.model.dto.PeripheralRawDto> {
-        if (remote.isEmpty()) return local
-        if (local.isEmpty()) return remote
-        val localByKey = local.associateBy { it.name.trim().lowercase() }
-        val enrichedRemote = remote.map { rem ->
-            val loc = localByKey[rem.name.trim().lowercase()]
-            if (loc != null && loc.images.size >= 3 && rem.images.size < 3) {
-                rem.copy(images = loc.images, imageUrl = loc.imageUrl ?: rem.imageUrl)
-            } else {
-                rem
-            }
-        }
-        val remoteKeys = enrichedRemote.map { it.name.trim().lowercase() }.toSet()
-        val missingLocals = local.filter { it.name.trim().lowercase() !in remoteKeys }
-        return enrichedRemote + missingLocals
-    }
-
     private suspend fun ensureSeeded() {
         if (isSeeded) return
         seedMutex.withLock {
             if (isSeeded) return
-            val seededVersion = hardwareDao.getSetting("catalog_seed_version")
-            val currentCatalogVersion = CURRENT_CATALOG_VERSION
-            if (seededVersion == currentCatalogVersion) {
+            // Load lightweight bundled verified lab benchmarks (40 KB)
+            runCatching {
+                val verified = localDataSource.loadLocalVerifiedBenchmarks()
+                if (verified.isNotEmpty()) {
+                    com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(verified)
+                }
+            }
+
+            // Fast path: Pre-populated Room DB already contains the full offline catalog (0ms startup)
+            val existingCount = hardwareDao.getTotalItemCount()
+            if (existingCount > 0) {
+                if (hardwareDao.getSetting(SETTING_CATALOG_VERSION) != CURRENT_CATALOG_VERSION) {
+                    hardwareDao.saveSetting(
+                        com.panda.myapplication.data.local.entity.AppSettingEntity(
+                            key = SETTING_CATALOG_VERSION,
+                            value = CURRENT_CATALOG_VERSION,
+                        )
+                    )
+                }
+                if (hardwareDao.getSetting(SETTING_CATALOG_REVISION) == null) {
+                    hardwareDao.saveSetting(
+                        com.panda.myapplication.data.local.entity.AppSettingEntity(
+                            key = SETTING_CATALOG_REVISION,
+                            value = INITIAL_BUNDLED_REVISION.toString(),
+                        )
+                    )
+                }
                 isSeeded = true
                 return
             }
 
-            // Upgrade or initial seed: purge stale Room catalog rows and re-seed from bundled assets.
-            localDataSource.seedDatabaseIfEmpty()
-
-            val counts = hardwareDao.getCategoryCounts().associate { it.category to it.cnt }
-            if (counts.isNotEmpty()) {
+            // Empty Room fallback (e.g., fresh iOS install without bundled DB): bootstrap once from Supabase
+            val bootstrapped = syncDeltaFromSupabase(forceBootstrap = true)
+            if (!bootstrapped) {
+                // Legacy fallback if bundled JSON assets are ever present in a test/custom build
+                localDataSource.seedDatabaseIfEmpty()
+            }
+            if (hardwareDao.getTotalItemCount() > 0) {
                 hardwareDao.saveSetting(
                     com.panda.myapplication.data.local.entity.AppSettingEntity(
-                        key = "catalog_seed_version",
-                        value = currentCatalogVersion,
+                        key = SETTING_CATALOG_VERSION,
+                        value = CURRENT_CATALOG_VERSION,
                     )
                 )
             }
@@ -704,146 +699,106 @@ internal class HardwareRepositoryImpl(
     override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
         ensureSeeded()
         val now = Clock.System.now()
-        val lastSyncStr = hardwareDao.getSetting("last_remote_sync_at")
-        val lastSyncMillis = lastSyncStr?.toLongOrNull()
-        if (lastSyncMillis != null && (now.toEpochMilliseconds() - lastSyncMillis) < 24 * 3600 * 1000L) {
+        val localCount = hardwareDao.getTotalItemCount()
+        val lastSyncMillis = hardwareDao.getSetting(SETTING_LAST_REMOTE_SYNC_AT)?.toLongOrNull()
+        if (localCount > 0 && lastSyncMillis != null && (now.toEpochMilliseconds() - lastSyncMillis) < DELTA_SYNC_INTERVAL_MS) {
             return@withContext DomainResult.Success(Unit)
         }
         try {
-            val remotePrices = remoteDataSource.fetchPricesTr().getOrDefault(emptyMap())
-            val remoteBenchmarks = remoteDataSource.fetchBenchmarks().getOrDefault(emptyMap())
-            val remoteVerified = remoteDataSource.fetchVerifiedLabBenchmarks().getOrDefault(emptyList())
-            if (remoteVerified.isNotEmpty()) {
-                com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
-            }
-            val remoteManifest = remoteDataSource.fetchCatalogManifest().getOrNull()
-            val remoteIsUpToDate = remoteManifest != null && isRemoteVersionAtLeast(remoteManifest.catalogVersion, CURRENT_CATALOG_VERSION)
-
-            val localPrices = localDataSource.loadLocalPricesTr()
-            val localBenchmarks = localDataSource.loadLocalBenchmarks()
-            val allPrices = localPrices.toMutableMap().apply {
-                remotePrices.forEach { (key, remoteInfo) ->
-                    val localInfo = this[key]
-                    if (localInfo == null || (remoteInfo.currentPriceTry != null && (localInfo.currentPriceTry == null || remoteInfo.offers.isNotEmpty()))) {
-                        this[key] = if (remoteIsUpToDate) remoteInfo else remoteInfo.copy(imageUrl = localInfo?.imageUrl)
-                    }
-                }
-            }
-            val allBenchmarks = localBenchmarks.toMutableMap().apply {
-                remoteBenchmarks.forEach { (key, remoteInfo) ->
-                    this[key] = remoteInfo
+            // Optional lightweight verified lab benchmarks refresh (40 KB)
+            runCatching {
+                val remoteVerified = remoteDataSource.fetchVerifiedLabBenchmarks().getOrDefault(emptyList())
+                if (remoteVerified.isNotEmpty()) {
+                    com.panda.myapplication.domain.model.VerifiedLabBenchmarks.updateRemoteTests(remoteVerified)
                 }
             }
 
-            val existing = hardwareDao.getAllHardwareItems()
-            val existingImages = existing.associate { it.id to it.imageUrl }
+            // Authoritative Supabase Delta Sync: checks 200-byte catalog_meta first,
+            // then pulls & upserts ONLY newly added rows (catalog_revision > local_revision).
+            syncDeltaFromSupabase(forceBootstrap = localCount == 0)
 
-            val catalogResult = if (remoteIsUpToDate) remoteDataSource.fetchAllHardware() else Result.failure(IllegalStateException("Remote catalog is older than bundled $CURRENT_CATALOG_VERSION"))
-            val remoteSmartphones: List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto> = if (remoteIsUpToDate) {
-                runCatching {
-                    val res = remoteDataSource.fetchSmartphonesJson()
-                    if (res.isSuccess) {
-                        json.decodeFromString<List<com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto>>(res.getOrThrow())
-                    } else emptyList()
-                }.getOrDefault(emptyList())
-            } else emptyList()
-
-            val remoteTablets: List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto> = if (remoteIsUpToDate) {
-                runCatching {
-                    val res = remoteDataSource.fetchTabletsJson()
-                    if (res.isSuccess) {
-                        json.decodeFromString<List<com.panda.myapplication.data.model.dto.TabletCatalogItemDto>>(res.getOrThrow())
-                    } else emptyList()
-                }.getOrDefault(emptyList())
-            } else emptyList()
-            if (catalogResult.isSuccess) {
-                val catalog = catalogResult.getOrThrow()
-                val snapshot = HardwareMapper.buildCatalogSnapshot(
-                    cpus = mergeCatalogs(catalog.cpus, localDataSource.loadLocalCpus()) { it.name },
-                    gpus = mergeCatalogs(catalog.gpus, localDataSource.loadLocalGpus()) { it.name },
-                    rams = mergeCatalogs(catalog.rams, localDataSource.loadLocalRams()) { it.name },
-                    motherboards = mergeCatalogs(catalog.motherboards, localDataSource.loadLocalMotherboards()) { it.name },
-                    psus = mergeCatalogs(catalog.psus, localDataSource.loadLocalPsus()) { it.name },
-                    storages = mergeCatalogs(catalog.storages, localDataSource.loadLocalStorages()) { it.name },
-                    coolers = mergeCatalogs(catalog.coolers, localDataSource.loadLocalCoolers()) { it.name },
-                    cases = mergeCatalogs(catalog.cases, localDataSource.loadLocalCases()) { it.name },
-                    laptops = mergeCatalogs(catalog.laptops, localDataSource.loadLocalLaptops()) { it.name },
-                    peripherals = mergePeripherals(catalog.peripherals, localDataSource.loadLocalPeripherals()),
-                    smartphones = mergeCatalogs(remoteSmartphones, localDataSource.loadLocalSmartphones()) { it.id },
-                    tablets = mergeCatalogs(remoteTablets, localDataSource.loadLocalTablets()) { it.id },
-                    pricesTr = allPrices,
-                    benchmarks = allBenchmarks,
-                    existingImages = existingImages,
-                    syncedAt = now,
-                )
-                if (snapshot.items.isNotEmpty()) {
-                    hardwareDao.replaceCatalog(snapshot, syncedAt = now)
-                } else if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
-                    val updated = existing.map { item ->
-                        val priceData = allPrices[item.id]
-                        val gpuKey = if (item.category == HardwareCategory.GPU) {
-                            com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
-                        } else null
-                        val benchData = allBenchmarks[item.id] ?: (gpuKey?.let { allBenchmarks["gpu_$it"] ?: allBenchmarks[it] })
-                        item.copy(
-                            currentPriceTry = priceData?.currentPriceTry ?: item.currentPriceTry,
-                            lowestPriceTry = priceData?.lowestPriceTry ?: item.lowestPriceTry,
-                            highestPriceTry = priceData?.highestPriceTry ?: item.highestPriceTry,
-                            offers = priceData?.offers ?: item.offers,
-                            priceHistory = priceData?.priceHistory ?: item.priceHistory,
-                            benchmarkScore = benchData?.score ?: item.benchmarkScore,
-                            benchmarkTier = benchData?.tier ?: item.benchmarkTier,
-                            benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
-                            benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
-                            cpuSynthetic = benchData?.cpuSynthetic ?: item.cpuSynthetic,
-                            gpuSynthetic = benchData?.gpuSynthetic ?: item.gpuSynthetic,
-                            gameFps = benchData?.gameFps ?: item.gameFps,
-                        )
-                    }
-                    hardwareDao.upsertHardwareItems(updated)
-                }
-            } else {
-                // If remote catalog fetch fails (offline or 404), update existing Room items with any available prices & benchmarks
-                if (existing.isNotEmpty() && (allPrices.isNotEmpty() || allBenchmarks.isNotEmpty())) {
-                    val updated = existing.map { item ->
-                        val priceData = allPrices[item.id]
-                        val gpuKey = if (item.category == HardwareCategory.GPU) {
-                            com.panda.myapplication.domain.engine.BenchmarkEngine.normalizeGpuChipsetKey(item.model)
-                        } else null
-                        val benchData = allBenchmarks[item.id] ?: (gpuKey?.let { allBenchmarks["gpu_$it"] ?: allBenchmarks[it] })
-                        item.copy(
-                            currentPriceTry = priceData?.currentPriceTry ?: item.currentPriceTry,
-                            lowestPriceTry = priceData?.lowestPriceTry ?: item.lowestPriceTry,
-                            highestPriceTry = priceData?.highestPriceTry ?: item.highestPriceTry,
-                            offers = priceData?.offers ?: item.offers,
-                            priceHistory = priceData?.priceHistory ?: item.priceHistory,
-                            benchmarkScore = benchData?.score ?: item.benchmarkScore,
-                            benchmarkTier = benchData?.tier ?: item.benchmarkTier,
-                            benchmarkTestSuite = benchData?.testSuite ?: item.benchmarkTestSuite,
-                            benchmarkGamingIndex = benchData?.gamingIndex ?: item.benchmarkGamingIndex,
-                            cpuSynthetic = benchData?.cpuSynthetic ?: item.cpuSynthetic,
-                            gpuSynthetic = benchData?.gpuSynthetic ?: item.gpuSynthetic,
-                            gameFps = benchData?.gameFps ?: item.gameFps,
-                        )
-                    }
-                    hardwareDao.upsertHardwareItems(updated)
-                }
-            }
             hardwareDao.saveSetting(
                 com.panda.myapplication.data.local.entity.AppSettingEntity(
-                    key = "last_remote_sync_at",
+                    key = SETTING_LAST_REMOTE_SYNC_AT,
                     value = now.toEpochMilliseconds().toString(),
                 )
             )
             DomainResult.Success(Unit)
         } catch (e: Exception) {
             if (e is kotlinx.coroutines.CancellationException) throw e
-            DomainResult.Failure(DomainError.Network)
+            // Offline-first guarantee: never break the app when offline if Room already has items
+            if (localCount > 0) DomainResult.Success(Unit) else DomainResult.Failure(DomainError.Network)
         }
     }
 
+    /**
+     * Checks Supabase `catalog_meta` (~120 bytes). Only downloads rows when `latest_revision > local_revision`
+     * (or when Room is empty), then merges them incrementally into Room via `upsertDeltaCatalog`.
+     */
+    private suspend fun syncDeltaFromSupabase(forceBootstrap: Boolean): Boolean {
+        val localCount = hardwareDao.getTotalItemCount()
+        val localRevision = if (forceBootstrap || localCount == 0) {
+            0L
+        } else {
+            hardwareDao.getSetting(SETTING_CATALOG_REVISION)?.toLongOrNull() ?: INITIAL_BUNDLED_REVISION
+        }
+
+        val meta = remoteDataSource.fetchSupabaseCatalogMeta().getOrNull() ?: return false
+        if (!shouldFetchDelta(meta.latestRevision, localRevision, localCount)) {
+            return true
+        }
+
+        val deltaRows = remoteDataSource.fetchSupabaseCatalogDelta(afterRevision = localRevision).getOrNull()
+            ?: return false
+        if (deltaRows.isEmpty()) {
+            if (meta.latestRevision > localRevision) {
+                hardwareDao.saveSetting(
+                    com.panda.myapplication.data.local.entity.AppSettingEntity(
+                        key = SETTING_CATALOG_REVISION,
+                        value = meta.latestRevision.toString(),
+                    )
+                )
+            }
+            return true
+        }
+
+        val syncedAt = Clock.System.now()
+        val snapshot = SupabaseCatalogMapper.toCatalogSnapshot(deltaRows, syncedAt)
+        if (snapshot.items.isNotEmpty()) {
+            hardwareDao.upsertDeltaCatalog(snapshot)
+            memoryCache.value = null // Trigger clean emission of newly merged items from Room Flows
+        }
+
+        val appliedRevision = maxOf(
+            meta.latestRevision,
+            deltaRows.maxOfOrNull { it.catalogRevision } ?: localRevision,
+        )
+        hardwareDao.saveSetting(
+            com.panda.myapplication.data.local.entity.AppSettingEntity(
+                key = SETTING_CATALOG_REVISION,
+                value = appliedRevision.toString(),
+            )
+        )
+        return true
+    }
+
     companion object {
-        const val CURRENT_CATALOG_VERSION = "4.5.0"
+        const val CURRENT_CATALOG_VERSION = "5.0.0"
+        private const val INITIAL_BUNDLED_REVISION = 1L
+        private const val DELTA_SYNC_INTERVAL_MS = 12 * 3600 * 1000L
+        private const val SETTING_CATALOG_VERSION = "catalog_seed_version"
+        private const val SETTING_CATALOG_REVISION = "catalog_revision"
+        private const val SETTING_LAST_REMOTE_SYNC_AT = "last_remote_sync_at"
+
+        internal fun shouldFetchDelta(
+            remoteRevision: Long,
+            localRevision: Long,
+            localItemCount: Int,
+        ): Boolean {
+            if (remoteRevision <= 0L) return false
+            if (localItemCount <= 0) return true
+            return remoteRevision > localRevision
+        }
 
         internal fun isRemoteVersionAtLeast(remoteVersion: String?, minVersion: String): Boolean {
             if (remoteVersion.isNullOrBlank()) return false

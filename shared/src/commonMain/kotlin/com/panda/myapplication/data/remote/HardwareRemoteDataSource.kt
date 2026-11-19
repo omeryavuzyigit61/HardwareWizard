@@ -10,10 +10,14 @@ import com.panda.myapplication.data.model.dto.PeripheralRawDto
 import com.panda.myapplication.data.model.dto.PsuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
+import com.panda.myapplication.data.model.dto.SupabaseCatalogMetaDto
+import com.panda.myapplication.data.model.dto.SupabaseHardwareCatalogRowDto
+import com.panda.myapplication.data.remote.SupabaseConfig.applySupabaseHeaders
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
+import io.ktor.http.isSuccess
 import kotlin.time.Clock
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
@@ -54,6 +58,89 @@ class HardwareRemoteDataSource(
     },
     private val baseUrl: String = DEFAULT_BASE_URL,
 ) {
+
+    suspend fun fetchSupabaseCatalogMeta(): Result<SupabaseCatalogMetaDto> = withContext(ioDispatcher) {
+        try {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_CATALOG_META}?select=latest_revision,total_items,last_delta_at&limit=1"
+            val response = httpClient.get(url) {
+                applySupabaseHeaders()
+                header("Cache-Control", "no-cache")
+            }
+            if (!response.status.isSuccess()) {
+                return@withContext Result.failure(IllegalStateException("Supabase catalog_meta HTTP ${response.status.value}"))
+            }
+            val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
+                response.bodyAsText(),
+                "supabase/catalog_meta",
+            )
+            val list = json.decodeFromString<List<SupabaseCatalogMetaDto>>(text)
+            val meta = list.firstOrNull() ?: SupabaseCatalogMetaDto()
+            Result.success(meta)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    /**
+     * Fetches ONLY newly added/updated hardware catalog rows whose `catalog_revision > afterRevision`.
+     * Uses paginated PostgREST range queries to keep bandwidth and memory minimal.
+     */
+    suspend fun fetchSupabaseCatalogDelta(
+        afterRevision: Long,
+        pageSize: Int = 500,
+    ): Result<List<SupabaseHardwareCatalogRowDto>> = withContext(ioDispatcher) {
+        try {
+            val allRows = mutableListOf<SupabaseHardwareCatalogRowDto>()
+            var offset = 0
+            val maxPages = 40 // safety cap: 20,000 rows max for initial bootstrap
+            for (page in 0 until maxPages) {
+                val url = buildString {
+                    append(SupabaseConfig.restApiUrl)
+                    append("/")
+                    append(SupabaseConfig.TABLE_HARDWARE_CATALOG)
+                    append("?select=id,category,brand,model,canonical_key,spec_table,spec_payload,")
+                    append("benchmark_score,benchmark_tier,benchmark_test_suite,benchmark_gaming_index,")
+                    append("cpu_synthetic,gpu_synthetic,game_fps,image_url,images,extra_specs,")
+                    append("source_provenance,spec_verified_at,catalog_revision")
+                    append("&is_active=eq.true")
+                    append("&catalog_revision=gt.$afterRevision")
+                    append("&order=catalog_revision.asc,id.asc")
+                    append("&limit=$pageSize&offset=$offset")
+                }
+                val response = httpClient.get(url) {
+                    applySupabaseHeaders()
+                    header("Cache-Control", "no-cache")
+                }
+                if (!response.status.isSuccess()) {
+                    return@withContext Result.failure(
+                        IllegalStateException("Supabase hardware_catalog delta HTTP ${response.status.value}")
+                    )
+                }
+                val text = com.panda.myapplication.domain.util.SecurityUtils.requireSafeJsonPayload(
+                    response.bodyAsText(),
+                    "supabase/hardware_catalog?offset=$offset",
+                )
+                val element = json.parseToJsonElement(text)
+                val batch = if (element is JsonArray) {
+                    element.mapNotNull { itemEl ->
+                        runCatching { json.decodeFromJsonElement<SupabaseHardwareCatalogRowDto>(itemEl) }.getOrNull()
+                    }
+                } else {
+                    emptyList()
+                }
+                allRows.addAll(batch)
+                if (batch.size < pageSize) break
+                offset += pageSize
+            }
+            Result.success(allRows)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 
     suspend fun fetchCatalogManifest(): Result<RemoteCatalogManifest> = withContext(ioDispatcher) {
         try {

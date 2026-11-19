@@ -910,27 +910,35 @@ private fun SourcesDetailsDialog(
                     "💾 ${tr(isTr, "Anakart, Bellek (RAM) & Depolama (SSD)", "Motherboards, Memory (RAM) & Storage (SSD)")}",
                     tr(
                         isTr,
-                        "TechPowerUp SSD Veritabanı, Üretici Resmi QVL & VRM Veri Sayfaları",
-                        "TechPowerUp SSD Database, Official Vendor QVL & VRM Datasheets",
+                        "NewMaxx SSD Veritabanı, TechPowerUp SSD DB, pc-part-dataset & Üretici Resmi QVL/VRM Sayfaları",
+                        "NewMaxx SSD Spreadsheet, TechPowerUp SSD DB, pc-part-dataset & Official Vendor QVL/VRM Datasheets",
                     ),
                 )
                 SourceItemTile(
                     "📱 ${tr(isTr, "Mobil, Tablet, Laptop & Akıllı Saat", "Mobile, Tablet, Laptop & Smartwatches")}",
                     tr(
                         isTr,
-                        "GSMArena, Kimovil, Geekbench 6 Resmi Mobil JSON, AnTuTu v10 ve DXOMARK",
-                        "GSMArena, Kimovil, Geekbench 6 Official Mobile JSON, AnTuTu v10, and DXOMARK",
+                        "GSMArena, Notebookcheck, Geekbench 6 Resmi Mobil JSON, AnTuTu v10 ve DXOMARK",
+                        "GSMArena, Notebookcheck, Geekbench 6 Official Mobile JSON, AnTuTu v10, and DXOMARK",
                     ),
                 )
                 SourceItemTile(
-                    "📡 ${tr(isTr, "Ağ & Kablosuz Ekipmanlar", "Networking & Wireless Hardware")}",
+                    "📡 ${tr(isTr, "Ağ & Güç Yedekleme (UPS)", "Networking & UPS Power Backup")}",
                     tr(
                         isTr,
-                        "OpenWrt Table of Hardware (ToH), WikiDevi (TechInfoDepot) & Üretici Veri Sayfaları",
-                        "OpenWrt Table of Hardware (ToH), WikiDevi (TechInfoDepot) & Official Vendor Datasheets",
+                        "OpenWrt Table of Hardware (ToH), NUT UPS Hardware Compatibility (DDL) & Üretici Veri Sayfaları",
+                        "OpenWrt Table of Hardware (ToH), NUT UPS Hardware Compatibility (DDL) & Official Vendor Datasheets",
                     ),
                 )
                 SourceItemTile("📸 ${tr(isTr, "Ürün Stüdyo Görselleri", "Product Studio Imagery")}", strings.sourcesImagesDesc)
+                SourceItemTile(
+                    "☁️ ${tr(isTr, "Merkezi Bulut & Çevrimdışı Senkronizasyon", "Cloud Single-Source & Offline Delta Sync")}",
+                    tr(
+                        isTr,
+                        "Supabase PostgreSQL (değişmez doğrulanmış özellikler) + Yerel Room SQLite. Uygulama internetsiz 0ms hızda çalışır; yeni donanım çıktığında yalnızca delta güncellemesi indirilir.",
+                        "Supabase PostgreSQL (immutable verified specs) + local Room SQLite. Runs 100% offline at 0ms; downloads only newly released hardware deltas.",
+                    ),
+                )
                 if (FeatureFlags.IS_PRICING_ENABLED) {
                     SourceItemTile("💰 ${tr(isTr, "Piyasa & Fiyat Listeleme", "Market & Price Aggregators")}", strings.sourcesPricesDesc)
                 }

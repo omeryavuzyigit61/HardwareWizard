@@ -43,6 +43,9 @@ object SupabaseConfig {
     var supabaseAnonKey: String = SecurityUtils.deobfuscate(ENCODED_ANON_KEY, 0x73)
 
     // Tablolar
+    const val TABLE_HARDWARE_CATALOG = "hardware_catalog"
+    const val TABLE_CATALOG_META = "catalog_meta"
+    const val TABLE_HARDWARE_PRICES = "hardware_prices"
     const val TABLE_COMMUNITY_DEALS = "community_deals"
     const val TABLE_TUNING_PROFILES = "tuning_profiles"
     const val TABLE_TUNING_COMMENTS = "tuning_comments"

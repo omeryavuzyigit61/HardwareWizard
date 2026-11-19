@@ -52,6 +52,9 @@ abstract class HardwareDao {
     @Query("SELECT category, COUNT(*) AS cnt FROM hardware_items GROUP BY category")
     abstract suspend fun getCategoryCounts(): List<CategoryCountTuple>
 
+    @Query("SELECT COUNT(*) FROM hardware_items")
+    abstract suspend fun getTotalItemCount(): Int
+
     // region Reads
 
     @Query("SELECT * FROM hardware_items WHERE category = :category ORDER BY CASE WHEN current_price_try IS NULL THEN 1 ELSE 0 END, current_price_try ASC, brand ASC, model ASC")
@@ -297,6 +300,21 @@ abstract class HardwareDao {
     @Transaction
     open suspend fun replaceCatalog(snapshot: HardwareCatalogSnapshot, syncedAt: Instant) {
         deleteAllHardwareItems()
+        upsertCatalogSnapshotChunks(snapshot)
+        deleteItemsCachedBefore(syncedAt)
+    }
+
+    /**
+     * Atomically merges ONLY newly arrived delta rows from Supabase into the existing
+     * offline Room database without wiping or rewriting existing hardware rows.
+     */
+    @Transaction
+    open suspend fun upsertDeltaCatalog(snapshot: HardwareCatalogSnapshot) {
+        if (snapshot.items.isEmpty()) return
+        upsertCatalogSnapshotChunks(snapshot)
+    }
+
+    private suspend fun upsertCatalogSnapshotChunks(snapshot: HardwareCatalogSnapshot) {
         val chunkSize = 500
         snapshot.items.chunked(chunkSize).forEach { upsertItems(it) }
         snapshot.cpus.chunked(chunkSize).forEach { upsertCpuSpecs(it) }
@@ -327,7 +345,6 @@ abstract class HardwareDao {
         snapshot.rangeExtenders.chunked(chunkSize).forEach { upsertRangeExtenderSpecs(it) }
         snapshot.phones.chunked(chunkSize).forEach { upsertPhoneSpecs(it) }
         snapshot.tablets.chunked(chunkSize).forEach { upsertTabletSpecs(it) }
-        deleteItemsCachedBefore(syncedAt)
     }
 
     // endregion

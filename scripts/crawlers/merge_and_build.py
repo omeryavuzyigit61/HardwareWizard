@@ -42,8 +42,8 @@ from scripts.crawlers.state_manager import (
     normalize_for_brand_match,
 )
 
-FILES_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
 DATA_CATALOG_DIR = os.path.join(ROOT_DIR, "data", "catalog")
+FILES_DIR = DATA_CATALOG_DIR  # Catalog JSONs live in data/catalog/ only (never duplicated into composeResources/files)
 DATA_DIR = os.path.join(ROOT_DIR, "data")
 VERIFIED_DATE = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -56,17 +56,9 @@ def _load_json(path: str, default: Any) -> Any:
 
 
 def _load_baseline_29c4a2e(filename: str) -> list[dict[str, Any]]:
-    """Loads baseline catalog products from commit 29c4a2e so no real products or images are ever dropped."""
-    try:
-        raw = subprocess.check_output(
-            ["git", "show", f"29c4a2e:shared/src/commonMain/composeResources/files/{filename}"],
-            cwd=ROOT_DIR,
-            stderr=subprocess.DEVNULL,
-        ).decode("utf-8")
-        data = json.loads(raw)
-        return data if isinstance(data, list) else []
-    except Exception:
-        return []
+    """Loads existing catalog JSON from data/catalog as safe local baseline (no shallow-clone git dependency)."""
+    fallback = _load_json(os.path.join(DATA_CATALOG_DIR, filename), [])
+    return fallback if isinstance(fallback, list) else []
 
 
 _MOBILE_CPU_RE = re.compile(
@@ -76,11 +68,10 @@ _MOBILE_CPU_RE = re.compile(
 
 
 def _save_json_both(filename: str, data: Any) -> None:
-    for folder in (FILES_DIR, DATA_CATALOG_DIR):
-        os.makedirs(folder, exist_ok=True)
-        out_path = os.path.join(folder, filename)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    os.makedirs(DATA_CATALOG_DIR, exist_ok=True)
+    out_path = os.path.join(DATA_CATALOG_DIR, filename)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def _index_raw_by_source(state: CrawlStateManager, category: str) -> dict[str, dict[str, dict[str, Any]]]:
@@ -1198,37 +1189,8 @@ def run_merge_all() -> None:
     if missing_probe:
         health_map.update(verify_image_url_pool(state, missing_probe, max_workers=16))
 
-    benchmarks = _load_json(os.path.join(FILES_DIR, "hardware_benchmarks.json"), {"cpus": {}, "gpus": {}})
-    prices_tr = _load_json(os.path.join(FILES_DIR, "prices_tr.json"), {})
-    # Re-seed HTTP-200 verified legacy prices_tr studio URLs from git 29c4a2e and HEAD so valid unique/series photos aren't lost
-    for rev in ("HEAD", "29c4a2e"):
-        try:
-            rev_raw = subprocess.check_output(
-                ["git", "show", f"{rev}:data/prices_tr.json"],
-                cwd=ROOT_DIR,
-                stderr=subprocess.DEVNULL,
-            ).decode("utf-8")
-            rev_pt = json.loads(rev_raw)
-            extra_urls = [
-                v.get("imageUrl")
-                for v in rev_pt.values()
-                if isinstance(v, dict) and isinstance(v.get("imageUrl"), str) and v["imageUrl"].startswith("https://")
-                and v["imageUrl"] not in health_map
-            ]
-            if extra_urls:
-                health_map.update(verify_image_url_pool(state, extra_urls, max_workers=16))
-            for item_id, hv in rev_pt.items():
-                if not isinstance(hv, dict):
-                    continue
-                hu = hv.get("imageUrl")
-                if isinstance(hu, str) and health_map.get(hu, False):
-                    cur_entry = prices_tr.get(item_id)
-                    if cur_entry is None and rev == "29c4a2e":
-                        prices_tr[item_id] = dict(hv)
-                    elif isinstance(cur_entry, dict) and not cur_entry.get("imageUrl"):
-                        cur_entry["imageUrl"] = hu
-        except Exception:
-            pass
+    benchmarks = _load_json(os.path.join(DATA_DIR, "hardware_benchmarks.json"), {"cpus": {}, "gpus": {}})
+    prices_tr = _load_json(os.path.join(DATA_DIR, "prices_tr.json"), {})
 
     print("  [1/4] Merging & matching studio galleries across all categories...", flush=True)
     cpus = _merge_cpus(state, benchmarks, health_map, prices_tr=prices_tr, pcp_gallery=pcp_galleries.get("CPU"))

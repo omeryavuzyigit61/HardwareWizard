@@ -1,33 +1,37 @@
-name: Autonomous Daily Hardware Catalog & TR Price Sync
+name: Autonomous Daily Hardware Delta Sync (Supabase)
 
 on:
   schedule:
-    # Her gün Türkiye saatiyle 03:20 (UTC 00:20 - GitHub Actions 00:00 tepe yük kuyruk gecikmesini engellemek için)
+    # Her gün Türkiye saatiyle 03:20 (UTC 00:20) — Yalnızca yeni çıkan ürünleri tespit edip Supabase'e ekler.
+    # Git deposuna her gün gereksiz 50 MB JSON/SQLite commit'i atmaz!
     - cron: '20 0 * * *'
   workflow_dispatch:
+    inputs:
+      gsmarena_limit:
+        description: 'Maksimum GSMArena cihaz sayfası (anti-bot güvenli limit)'
+        required: false
+        default: '10'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: daily-hardware-sync
+  group: daily-hardware-delta-sync
   cancel-in-progress: false
 
 jobs:
-  autonomous-daily-sync:
+  supabase-delta-sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
-    env:
-      ENABLE_PRICE_SYNC: 'false'
+    timeout-minutes: 25
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
           cache: 'pip'
           cache-dependency-path: 'requirements.txt'
 
@@ -36,46 +40,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore crawler checkpoint cache (scripts/cache)
-        uses: actions/cache@v4
-        with:
-          path: scripts/cache
-          key: crawler-state-${{ github.run_id }}
-          restore-keys: |
-            crawler-state-
-
-      - name: 1. Multi-Source Checkpointed Crawler (Delta Mode)
+      - name: Run Delta-Only New Hardware Discovery -> Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
-          python -m scripts.crawlers.run_crawl --mode delta --gsmarena-limit 15
-
-      - name: 2. Merge Multi-Source Catalogs & Verify Provenance
-        run: |
-          python -m scripts.crawlers.merge_and_build
-
-      - name: 3. Check TR Store Price Changes & Stock Status
-        if: env.ENABLE_PRICE_SYNC == 'true'
-        run: |
-          python scripts/update_prices.py
-
-      - name: 4. Conditional Room v36 SQLite DB Rebuild
-        run: |
-          if [ -n "$(git status --porcelain data/ shared/src/commonMain/composeResources/files/)" ]; then
-            echo "Yeni donanım veya özellik değişikliği tespit edildi; hardware_wizard.db güncelleniyor..."
-            python scripts/prepare_prepopulated_db.py
-          else
-            echo "Katalogda yeni ürün veya özellik değişikliği yok; Room DB yenilemesi atlanıyor."
-          fi
-
-      - name: Commit and push only if real data changes exist
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-          if git diff -I '"lastUpdated":\|"verifiedAt":\|"spec_verified_at":' --quiet data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/; then
-            echo "Gerçek veri değişikliği yok (yalnızca zaman damgası). Commit atlanıyor."
-            git checkout -- data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
-          else
-            git add data/ shared/src/commonMain/composeResources/files/ androidApp/src/main/assets/databases/
-            git commit -m "chore(catalog): autonomous daily multi-source delta catalog sync [skip ci]"
-            git push
-          fi
+          python scripts/supabase_catalog_sync.py \
+            --action delta \
+            --gsmarena-limit "${{ github.event.inputs.gsmarena_limit || '10' }}"

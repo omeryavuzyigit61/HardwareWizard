@@ -25,11 +25,11 @@ if hasattr(sys.stdout, "reconfigure"):
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSETS_DB_DIR = os.path.join(ROOT_DIR, "androidApp", "src", "main", "assets", "databases")
 TARGET_DB_PATH = os.path.join(ASSETS_DB_DIR, "hardware_wizard.db")
-CATALOG_DIR = os.path.join(ROOT_DIR, "shared", "src", "commonMain", "composeResources", "files")
+CATALOG_DIR = os.path.join(ROOT_DIR, "data", "catalog")
 
 ROOM_SCHEMA_VERSION = 36
 ROOM_IDENTITY_HASH = "67974b2b98fd0fd519c42be66d6f74f3"
-CATALOG_SEED_VERSION = "4.5.0"
+CATALOG_SEED_VERSION = "5.0.0"
 
 MIN_VALID_TRY_PRICE = 250.0
 MAX_VALID_TRY_PRICE = 2_500_000.0
