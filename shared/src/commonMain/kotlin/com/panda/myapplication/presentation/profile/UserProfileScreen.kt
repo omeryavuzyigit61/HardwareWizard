@@ -118,7 +118,7 @@ fun UserProfileScreen(
             ) {
                 Surface(
                     shape = CircleShape,
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, GlassBorder),
                     modifier = Modifier.size(90.dp),
                 ) {
@@ -228,7 +228,7 @@ fun UserProfileScreen(
                     Surface(
                         onClick = onNavigateToSettings,
                         shape = RoundedCornerShape(14.dp),
-                        color = CardSurfaceElevated,
+                        color = MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.35f)),
                         modifier = Modifier.fillMaxWidth(),
                     ) {
@@ -286,7 +286,7 @@ fun UserProfileScreen(
                         item(key = "no_deals") {
                             Surface(
                                 shape = RoundedCornerShape(12.dp),
-                                color = CardSurfaceElevated,
+                                color = MaterialTheme.colorScheme.surfaceVariant,
                                 border = BorderStroke(0.5.dp, GlassBorder),
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
@@ -365,7 +365,7 @@ private fun ProfileTopBar(
             Surface(
                 onClick = onNavigateBack,
                 shape = RoundedCornerShape(10.dp),
-                color = CardSurfaceElevated,
+                color = MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(1.dp, GlassBorder),
             ) {
                 Row(
@@ -396,7 +396,7 @@ private fun ProfileTopBar(
             Surface(
                 onClick = onNavigateToSettings,
                 shape = RoundedCornerShape(10.dp),
-                color = CardSurfaceElevated,
+                color = MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(1.dp, GlassBorder),
             ) {
                 Text(
@@ -430,7 +430,7 @@ private fun ProfileHeroCard(
                 // Spirit Avatar
                 Surface(
                     shape = CircleShape,
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(2.dp, Color(user.spiritHardware.colorHex)),
                     modifier = Modifier.size(68.dp),
                 ) {
@@ -505,7 +505,7 @@ private fun ProfileHeroCard(
                         // Cinsiyet
                         Surface(
                             shape = RoundedCornerShape(6.dp),
-                            color = CardSurfaceElevated,
+                            color = MaterialTheme.colorScheme.surfaceVariant,
                             border = BorderStroke(0.5.dp, GlassBorder),
                         ) {
                             Text(
@@ -531,7 +531,7 @@ private fun SpiritHardwareShowcaseCard(user: UserProfile) {
 
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurfaceElevated.copy(alpha = 0.7f),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7f),
         border = BorderStroke(1.dp, spiritColor.copy(alpha = 0.5f)),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -581,7 +581,7 @@ private fun CommunityStatsSection(
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog" 
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurface,
+        color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, GlassBorder),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -659,7 +659,7 @@ private fun UserDealItemCard(
 
     Surface(
         shape = RoundedCornerShape(10.dp),
-        color = CardSurfaceElevated,
+        color = MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(0.5.dp, GlassBorder),
         modifier = Modifier.fillMaxWidth(),
     ) {

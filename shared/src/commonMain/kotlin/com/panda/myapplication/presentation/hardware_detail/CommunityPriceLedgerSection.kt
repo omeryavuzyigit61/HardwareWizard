@@ -184,7 +184,7 @@ fun CommunityPriceLedgerSection(
                 Spacer(modifier = Modifier.height(Spacing.small))
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated.copy(alpha = 0.7f),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7f),
                     border = BorderStroke(1.dp, GlassBorder),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -334,7 +334,7 @@ private fun CommunityDealTickerRow(
 
     Surface(
         shape = RoundedCornerShape(8.dp),
-        color = CardSurfaceElevated.copy(alpha = 0.45f),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
         border = BorderStroke(0.5.dp, GlassBorder),
         modifier = Modifier
             .fillMaxWidth()
@@ -460,7 +460,7 @@ fun CommunityDealDetailDialog(
                 // Price & Type Banner
                 Surface(
                     shape = RoundedCornerShape(12.dp),
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.5f)),
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -755,9 +755,9 @@ fun SubmitCommunityDealSheet(
                 )
             }
 
-            if (errorMessage != null) {
+            errorMessage?.let { err ->
                 Text(
-                    text = errorMessage!!,
+                    text = err,
                     style = MaterialTheme.typography.bodySmall,
                     color = NeonRose,
                     fontWeight = FontWeight.Bold,

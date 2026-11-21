@@ -292,6 +292,10 @@ abstract class HardwareDao {
     @Query("DELETE FROM hardware_items")
     protected abstract suspend fun deleteAllHardwareItems()
 
+    /** Deletes specific tombstoned/deactivated hardware IDs (spec rows cascade-delete). */
+    @Query("DELETE FROM hardware_items WHERE id IN (:ids)")
+    abstract suspend fun deleteHardwareItemsByIds(ids: List<String>)
+
     /** Spec rows are removed via `ON DELETE CASCADE`. */
     @Query("DELETE FROM hardware_items WHERE cached_at < :threshold")
     protected abstract suspend fun deleteItemsCachedBefore(threshold: Instant)

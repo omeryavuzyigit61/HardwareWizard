@@ -23,6 +23,7 @@ import io.ktor.http.contentType
 import io.ktor.http.isSuccess
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -61,9 +62,10 @@ internal class UserRepositoryImpl(
     )
 
     private val _registeredAccounts = mutableMapOf<String, AccountCredential>()
+    private val repoScope = CoroutineScope(SupervisorJob() + ioDispatcher)
 
     init {
-        CoroutineScope(ioDispatcher).launch {
+        repoScope.launch {
             runCatching {
                 // 1. Önce donanım tabanlı SecureStorage (Keystore/Keychain) kontrol edilir
                 val secureJson = secureStorage?.get(KEY_USER_SESSION)

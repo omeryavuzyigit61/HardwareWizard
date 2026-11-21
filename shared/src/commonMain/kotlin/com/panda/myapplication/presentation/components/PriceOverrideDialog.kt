@@ -36,6 +36,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
@@ -133,7 +134,7 @@ fun PriceOverrideDialog(
                 Surface(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(10.dp),
-                    color = CardSurfaceElevated,
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 ) {
                     Row(
@@ -282,7 +283,7 @@ fun PriceOverrideDialog(
                     ) {
                         Text(
                             text = if (isTr) "Kaydet" else "Save",
-                            color = SlateDarkBackground,
+                            color = Color.Black,
                             fontWeight = FontWeight.ExtraBold,
                         )
                     }

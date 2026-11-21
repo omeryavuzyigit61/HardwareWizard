@@ -152,9 +152,6 @@ fun HardwareGlossaryScreen(
                 val fileName = if (isTurkish) "files/hardware_glossary.json" else "files/hardware_glossary_en.json"
                 val bytes = Res.readBytes(fileName)
                 glossaryJson.decodeFromString<List<GlossaryTermDto>>(bytes.decodeToString())
-            }.onFailure { err ->
-                println("GLOSSARY PARSE ERROR: $err")
-                err.printStackTrace()
             }.getOrDefault(emptyList())
         }
         allTerms = loaded

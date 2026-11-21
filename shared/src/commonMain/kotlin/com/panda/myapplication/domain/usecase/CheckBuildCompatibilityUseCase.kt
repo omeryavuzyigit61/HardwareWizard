@@ -176,9 +176,10 @@ class CheckBuildCompatibilityUseCase(
             val raw = caseType?.trim()?.uppercase()?.takeIf { it.isNotBlank() } ?: return true
             val caseMaxTier = when {
                 raw.contains("FULL TOWER") || raw.contains("SUPER TOWER") || raw.contains("E-ATX") || raw.contains("EATX") -> 4
-                raw.contains("MID TOWER") || (raw.contains("ATX") && !raw.contains("MICRO") && !raw.contains("MATX") && !raw.contains("MINI")) -> 3
+                // Must check MICRO/MATX before MID TOWER so "Micro ATX Mid Tower" / "MicroATX Mid Tower" is Tier 2, not Tier 3
                 raw.contains("MICRO") || raw.contains("MATX") || raw.contains("M-ATX") -> 2
-                raw.contains("MINI") || raw.contains("ITX") || raw.contains("SFF") -> 1
+                raw.contains("MINI ITX") || raw.contains("MINI-ITX") || raw.contains("ITX") || raw.contains("SFF") -> 1
+                raw.contains("MID TOWER") || raw.contains("ATX") -> 3
                 else -> 4 // Unknown/custom chassis type -> do not false-reject
             }
             val moboTier = when (moboFormFactor) {

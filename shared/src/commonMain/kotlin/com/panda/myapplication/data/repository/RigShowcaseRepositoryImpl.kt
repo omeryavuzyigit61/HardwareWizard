@@ -18,6 +18,7 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
+import io.ktor.http.isSuccess
 import kotlin.time.Clock
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -266,14 +267,18 @@ internal class RigShowcaseRepositoryImpl(
     override suspend fun deleteShowcase(showcaseId: String): DomainResult<Unit> = withContext(ioDispatcher) {
         runCatching {
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_RIG_SHOWCASES}?id=eq.$showcaseId"
-            httpClient.delete(url) {
-                applySupabaseHeaders()
+            val response = httpClient.delete(url) {
+                applySupabaseHeaders(preferMinimal = true)
+            }
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Sistem vitrini sunucudan silinemedi (HTTP ${response.status.value}).")),
+                )
             }
             _showcases.update { list -> list.filterNot { it.id == showcaseId } }
             DomainResult.Success(Unit)
         }.getOrElse {
-            _showcases.update { list -> list.filterNot { it.id == showcaseId } }
-            DomainResult.Success(Unit)
+            DomainResult.Failure(DomainError.Unknown(it))
         }
     }
 }

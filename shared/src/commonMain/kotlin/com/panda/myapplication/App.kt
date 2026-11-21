@@ -313,6 +313,7 @@ fun App() {
                                 runCatching { HardwareCategory.valueOf(it) }.getOrNull()
                             }
                             val initialQuery = backStackEntry.arguments?.read { getStringOrNull("q") }
+                                ?.let { decodeNavQueryParam(it) }
 
                             HardwareListRoute(
                                 initialCategory = initialCategory,
@@ -465,7 +466,8 @@ fun App() {
                                 onNavigateBack = { navController.popBackStack() },
                                 onOpenDrawer = openDrawer,
                                 onNavigateToCatalogWithFilter = { query, category ->
-                                    navController.navigate("${Destinations.HARDWARE_LIST}?category=${category.name}&q=${query}")
+                                    val encoded = encodeNavQueryParam(query)
+                                    navController.navigate("${Destinations.HARDWARE_LIST}?category=${category.name}&q=$encoded")
                                 },
                             )
                         }
@@ -1129,4 +1131,48 @@ private fun HardwareBottomBar(
         },
         modifier = modifier,
     )
+}
+
+internal fun encodeNavQueryParam(raw: String): String {
+    val hex = "0123456789ABCDEF"
+    val sb = StringBuilder(raw.length)
+    for (byte in raw.encodeToByteArray()) {
+        val c = byte.toInt() and 0xFF
+        val isUnreserved = (c in 'A'.code..'Z'.code) ||
+            (c in 'a'.code..'z'.code) ||
+            (c in '0'.code..'9'.code) ||
+            c == '-'.code || c == '_'.code || c == '.'.code || c == '~'.code
+        if (isUnreserved) {
+            sb.append(c.toChar())
+        } else {
+            sb.append('%')
+            sb.append(hex[c ushr 4])
+            sb.append(hex[c and 0x0F])
+        }
+    }
+    return sb.toString()
+}
+
+internal fun decodeNavQueryParam(encoded: String): String {
+    val bytes = mutableListOf<Byte>()
+    var i = 0
+    while (i < encoded.length) {
+        val ch = encoded[i]
+        if (ch == '%' && i + 2 < encoded.length) {
+            val hi = encoded[i + 1].digitToIntOrNull(16)
+            val lo = encoded[i + 2].digitToIntOrNull(16)
+            if (hi != null && lo != null) {
+                bytes.add(((hi shl 4) or lo).toByte())
+                i += 3
+                continue
+            }
+        }
+        if (ch == '+') {
+            bytes.add(' '.code.toByte())
+        } else {
+            bytes.addAll(ch.toString().encodeToByteArray().toList())
+        }
+        i++
+    }
+    return bytes.toByteArray().decodeToString()
 }

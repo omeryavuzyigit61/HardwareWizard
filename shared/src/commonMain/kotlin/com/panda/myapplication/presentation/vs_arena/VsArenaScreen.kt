@@ -507,23 +507,17 @@ fun VsArenaScreen(
 
             ) {
 
+            state.activePickerSlot?.let { activeSlot ->
                 VsProductPickerSheetContent(
-
-                    slot = state.activePickerSlot!!,
-
+                    slot = activeSlot,
                     category = state.activeCategory,
-
                     searchQuery = state.pickerSearchQuery,
-
                     onSearchChange = viewModel::updatePickerSearch,
-
                     items = state.pickerItems,
-
-                    selectedId = if (state.activePickerSlot == VsSlot.LEFT) state.leftItem?.id else state.rightItem?.id,
-
+                    selectedId = if (activeSlot == VsSlot.LEFT) state.leftItem?.id else state.rightItem?.id,
                     onSelectItem = viewModel::selectItemForActiveSlot,
-
                 )
+            }
 
             }
 

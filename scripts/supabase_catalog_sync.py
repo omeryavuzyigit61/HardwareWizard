@@ -714,7 +714,12 @@ def _build_new_item_row(
             return None
         vram_mb = int(mem_gb * 1024) if mem_gb < 256 else int(mem_gb)
         u = f"{clean_name} {chipset}".upper()
-        mem_type = "GDDR7" if "RTX 50" in u else ("GDDR6X" if any(k in u for k in ("4090", "4080", "4070 TI", "4070 SUPER", "3090", "3080")) else "GDDR6")
+        is_blackwell_gddr7 = bool(re.search(r"\bRTX\s*50[5-9]0\b", u)) or "RTX PRO 6000" in u or "RTX PRO 5000" in u
+        mem_type = (
+            "GDDR7"
+            if is_blackwell_gddr7
+            else ("GDDR6X" if any(k in u for k in ("4090", "4080", "4070 TI", "4070 SUPER", "3090", "3080")) else "GDDR6")
+        )
         core_clk = int(float(payload.get("core_clock") or 1800))
         boost_clk = int(float(payload.get("boost_clock") or 0)) or None
         tdp_val, psu_val = infer_gpu_tdp_and_psu(f"{brand} {model} {chipset}", vram_mb)
@@ -910,9 +915,10 @@ _LEGACY_OR_MOBILE_CPU_RE = re.compile(
     re.I,
 )
 _MODERN_GPU_RE = re.compile(
-    r"(?:RTX\s*(?:40|50|60)\d{2}|RX\s*(?:7[6-9]|8\d|90)\d{2}|ARC\s*[BC][57]\d{2}|RTX\s*PRO\s*[456]000)",
+    r"(?:RTX\s*(?:40|50|60)[5-9]0|RX\s*(?:7[6-9]|8\d|90)\d{2}|ARC\s*[BC][57]\d{2}|RTX\s*[456]000\s*ADA|RTX\s*PRO\s*[456]000)",
     re.I,
 )
+_LEGACY_QUADRO_RE = re.compile(r"\bQUADRO\b", re.I)
 _MODERN_MOBO_CHIPSET_RE = re.compile(
     r"\b(?:X870E?|B850|B840|Z890|B860|H810|X670E?|B650E?|Z790|B760|TRX50|WRX90)\b",
     re.I,
@@ -927,6 +933,8 @@ _FLAGSHIP_LAUNCH_RE = re.compile(
 IMAGE_ONLY_RETAIL_SOURCES = {
     "gaminggen store api",
     "gaminggen",
+    "hepsiburada",
+    "trendyol",
     "itopya",
     "itopya store",
     "vatan",
@@ -966,6 +974,8 @@ def passes_modern_quality_gate(
         return verified_image_count >= 1 or bool(_FLAGSHIP_LAUNCH_RE.search(full_name))
     if category == "GPU":
         chip_full = f"{full_name} {spec.get('chipset') or ''}"
+        if _LEGACY_QUADRO_RE.search(chip_full):
+            return False
         if not _MODERN_GPU_RE.search(chip_full):
             return False
         if int(spec.get("vram_mb") or 0) < 8192 or int(spec.get("tdp_watts") or 0) < 100:

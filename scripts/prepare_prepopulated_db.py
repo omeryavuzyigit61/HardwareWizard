@@ -214,6 +214,13 @@ def _gen_hardware_id(category: str, name: str) -> str:
 def _extract_brand_and_model(full_name: str) -> tuple[str, str]:
     trimmed = full_name.strip()
     lower = trimmed.lower()
+    # Map chip sub-brands to canonical manufacturers so filters never show bogus "GeForce" / "Radeon" brands
+    if lower.startswith("geforce "):
+        return "NVIDIA", trimmed
+    if lower.startswith("radeon "):
+        return "AMD", trimmed
+    if lower.startswith("arc ") and any(k in lower for k in ("a3", "a5", "a7", "b5", "b7")):
+        return "Intel", trimmed
     for kb in KNOWN_BRANDS:
         if lower.startswith(kb.lower()):
             brand = trimmed[:len(kb)].strip()

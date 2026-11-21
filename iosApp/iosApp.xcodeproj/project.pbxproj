@@ -152,7 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "DB_SRC=\"$SRCROOT/../androidApp/src/main/assets/databases/hardware_wizard.db\"\nRES_DIR=\"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\nif [ -f \"$DB_SRC\" ] && [ -n \"$UNLOCALIZED_RESOURCES_FOLDER_PATH\" ]; then\n  mkdir -p \"$RES_DIR\"\n  cp -f \"$DB_SRC\" \"$RES_DIR/hardware_wizard.db\"\nfi\nif [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

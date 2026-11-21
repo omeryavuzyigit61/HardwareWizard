@@ -13,10 +13,10 @@
     kotlinx.serialization.KSerializer serializer(...);
 }
 
-# Keep only @Serializable classes and their generated serializers (allow R8 to obfuscate internal logic/security)
+# Keep all @Serializable classes and custom KSerializers across all app packages (DTOs, Remote, Tools/Glossary, Domain)
 -keep,includedescriptorclasses class com.panda.myapplication.**$$serializer { *; }
--keep @kotlinx.serialization.Serializable class com.panda.myapplication.data.model.dto.** { *; }
--keep @kotlinx.serialization.Serializable class com.panda.myapplication.domain.model.** { *; }
+-keep @kotlinx.serialization.Serializable class com.panda.myapplication.** { *; }
+-keep class * implements kotlinx.serialization.KSerializer { *; }
 -keepclassmembers @kotlinx.serialization.Serializable class com.panda.myapplication.** {
     *** Companion;
 }
@@ -26,6 +26,7 @@
 
 # Room Database & SQLite Bundled Driver
 -keep class * extends androidx.room.RoomDatabase { *; }
+-keep class * implements androidx.room.RoomDatabaseConstructor { *; }
 -keep @androidx.room.Entity class com.panda.myapplication.data.local.entity.** { *; }
 -keep @androidx.room.Dao interface com.panda.myapplication.data.local.dao.** { *; }
 -keep class com.panda.myapplication.data.local.**_Impl { *; }

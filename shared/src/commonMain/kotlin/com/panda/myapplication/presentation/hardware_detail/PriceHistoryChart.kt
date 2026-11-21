@@ -259,7 +259,7 @@ fun PriceHistoryCard(
                             .weight(1f)
                             .clickable { selectedRange = range },
                         shape = RoundedCornerShape(8.dp),
-                        color = if (isSelected) NeonCyan.copy(alpha = 0.15f) else CardSurfaceElevated,
+                        color = if (isSelected) NeonCyan.copy(alpha = 0.15f) else MaterialTheme.colorScheme.surfaceVariant,
                         border = BorderStroke(
                             1.dp,
                             if (isSelected) NeonCyan else MaterialTheme.colorScheme.outline,
@@ -334,6 +334,8 @@ fun PriceHistoryChart(
     val minPrice = remember(points) { points.minOf { it.effectivePrice } }
     val maxPrice = remember(points) { points.maxOf { it.effectivePrice } }
     val priceDelta = remember(minPrice, maxPrice) { (maxPrice - minPrice).coerceAtLeast(100.0) }
+
+    val chartSurfaceColor = MaterialTheme.colorScheme.surface
 
     Box(modifier = modifier) {
         Canvas(
@@ -519,7 +521,7 @@ fun PriceHistoryChart(
                     )
                     // Center dot
                     drawCircle(
-                        color = SlateDarkBackground,
+                        color = chartSurfaceColor,
                         radius = 2.5.dp.toPx(),
                         center = coord,
                     )
@@ -546,7 +548,7 @@ fun PriceHistoryChart(
             ) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = SlateDarkBackground,
+                    color = MaterialTheme.colorScheme.surface,
                     border = BorderStroke(1.dp, NeonCyan),
                     shadowElevation = 6.dp,
                 ) {

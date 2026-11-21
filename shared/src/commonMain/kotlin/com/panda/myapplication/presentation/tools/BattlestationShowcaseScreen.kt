@@ -1204,7 +1204,7 @@ private fun ShareRigShowcaseDialog(
 
                     Spacer(modifier = Modifier.height(14.dp))
 
-                    if (uploadError != null) {
+                    uploadError?.let { errText ->
                         Surface(
                             shape = RoundedCornerShape(8.dp),
                             color = NeonRose.copy(alpha = 0.15f),
@@ -1212,7 +1212,7 @@ private fun ShareRigShowcaseDialog(
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             Text(
-                                text = uploadError!!,
+                                text = errText,
                                 fontSize = 12.sp,
                                 color = NeonRose,
                                 modifier = Modifier.padding(10.dp),

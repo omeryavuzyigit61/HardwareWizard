@@ -563,12 +563,13 @@ fun HardwareDetailContent(
         )
     }
 
-    if (FeatureFlags.IS_PRICING_ENABLED && selectedDealForDetail != null) {
-        val currentDeal = selectedDealForDetail!!
-        CommunityDealDetailDialog(
-            deal = currentDeal,
-            onDismiss = { selectedDealForDetail = null },
-        )
+    if (FeatureFlags.IS_PRICING_ENABLED) {
+        selectedDealForDetail?.let { currentDeal ->
+            CommunityDealDetailDialog(
+                deal = currentDeal,
+                onDismiss = { selectedDealForDetail = null },
+            )
+        }
     }
 
 

@@ -41,6 +41,7 @@ import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.RangeExtenderSpec
 import com.panda.myapplication.domain.model.ResolutionTarget
+import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.RouterSpec
 import com.panda.myapplication.domain.model.SmartwatchSpec
 import com.panda.myapplication.domain.model.SpiritHardware
@@ -525,5 +526,109 @@ class AuditVerificationTest {
         assertEquals(2026, y)
         assertEquals(11, m)
         assertEquals(21, d)
+    }
+
+    @Test
+    fun microAtxMidTowerRejectsFullAtxMotherboardButAcceptsMicroAtx() {
+        assertFalse(
+            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(MotherboardFormFactor.ATX, "Micro ATX Mid Tower"),
+            "Micro ATX Mid Tower must reject full ATX motherboards",
+        )
+        assertFalse(
+            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(MotherboardFormFactor.ATX, "MicroATX Mid Tower"),
+            "MicroATX Mid Tower must reject full ATX motherboards",
+        )
+        assertTrue(
+            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(MotherboardFormFactor.MICRO_ATX, "Micro ATX Mid Tower"),
+        )
+        assertTrue(
+            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(MotherboardFormFactor.ATX, "ATX Mid Tower"),
+        )
+        assertTrue(
+            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(MotherboardFormFactor.ATX, "Mid Tower (Dual Chamber)"),
+        )
+    }
+
+    @Test
+    fun hardwareSearchEngineIndexesPhoneRouterUpsCaseAndNormalizesTurkish() {
+        val phone = HardwareItem(
+            id = HardwareId("p1"),
+            brand = "Samsung",
+            model = "Galaxy S26 Ultra",
+            price = null,
+            spec = PhoneSpec(
+                chipset = "Snapdragon 8 Elite",
+                cpuArch = "Oryon",
+                gpuModel = "Adreno 830",
+                processNodeNm = 3,
+                ramGb = 12,
+                ramType = "LPDDR5X",
+                storageGb = 512,
+                storageType = "UFS 4.0",
+                hasMicroSd = false,
+                displaySizeInch = 6.9,
+                displayTech = "Dynamic AMOLED 2X",
+                resolution = "3120x1440",
+                ppi = 505,
+                refreshRateHz = 120,
+                peakBrightnessNit = 2600,
+                glassProtection = "Gorilla Armor",
+                hdrSupport = "HDR10+",
+                mainCameraMp = 200,
+                mainSensorSize = "1/1.3\"",
+                mainAperture = "f/1.7",
+                hasOis = true,
+                oisType = "OIS",
+                videoResolution = "8K@30fps",
+                selfieCameraMp = 12,
+                batteryMah = 5000,
+                wiredChargingWatt = 45,
+                hasReverseCharging = true,
+                weightGrams = 218,
+                thicknessMm = 8.2,
+                frameMaterial = "Titanium",
+                waterResistance = "IP68",
+                hasStylus = true,
+                osName = "Android 16",
+                updateYears = 7,
+                pubgFpsSupport = "120 FPS",
+                genshinStabilityScore = "60 FPS",
+            ),
+        )
+        val router = HardwareItem(
+            id = HardwareId("rt1"),
+            brand = "ASUS",
+            model = "ROG GT-BE98",
+            price = null,
+            spec = RouterSpec(wifiStandard = "Wi-Fi 7", speedClass = "BE25000", bands = "Quad-Band", hasGamingQos = true),
+        )
+        val cooler = HardwareItem(
+            id = HardwareId("c1"),
+            brand = "Intel",
+            model = "Liquid Freezer III",
+            price = null,
+            spec = CoolerSpec(type = CoolerType.LIQUID, radiatorSizeMm = 360, maxCoolingTdp = Wattage(320), supportedSockets = listOf("LGA1700")),
+        )
+
+        assertTrue(com.panda.myapplication.domain.engine.HardwareSearchEngine.matches(phone, "Snapdragon 5000mah"))
+        assertTrue(com.panda.myapplication.domain.engine.HardwareSearchEngine.matches(router, "Wi-Fi 7 qos"))
+        assertTrue(com.panda.myapplication.domain.engine.HardwareSearchEngine.matches(cooler, "İntel sivi"))
+    }
+
+    @Test
+    fun navQueryParamRoundTripAndTombstoneDto() {
+        val raw = "4070 Ti Super & C++/AI?"
+        val encoded = encodeNavQueryParam(raw)
+        assertFalse(encoded.contains(" "))
+        assertFalse(encoded.contains("&"))
+        assertFalse(encoded.contains("?"))
+        assertEquals(raw, decodeNavQueryParam(encoded))
+
+        val json = kotlinx.serialization.json.Json { ignoreUnknownKeys = true }
+        val dto = json.decodeFromString<com.panda.myapplication.data.model.dto.SupabaseHardwareCatalogRowDto>(
+            """{"id":"laptop_gaminggen_1","category":"LAPTOP","brand":"Dell","model":"X","catalog_revision":4,"is_active":false}"""
+        )
+        assertFalse(dto.isActive)
+        assertEquals(4L, dto.catalogRevision)
     }
 }

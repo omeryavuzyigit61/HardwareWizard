@@ -427,7 +427,7 @@ private fun CategorySelectorTabs(
 
             Surface(
                 shape = RoundedCornerShape(12.dp),
-                color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else CardSurfaceElevated,
+                color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
                     color = if (isSelected) NeonCyan else GlassBorder,
@@ -749,7 +749,7 @@ private fun HardwareTierCard(
     Card(
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isFeatured) CardSurfaceElevated else CardSurface,
+            containerColor = if (isFeatured) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface,
         ),
         border = BorderStroke(
             width = if (isFeatured) 1.5.dp else 1.dp,

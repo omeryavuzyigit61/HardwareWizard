@@ -44,4 +44,5 @@ data class SupabaseHardwareCatalogRowDto(
     @SerialName("source_provenance") val sourceProvenance: List<String> = emptyList(),
     @SerialName("spec_verified_at") val specVerifiedAt: String? = null,
     @SerialName("catalog_revision") val catalogRevision: Long = 1L,
+    @SerialName("is_active") val isActive: Boolean = true,
 )

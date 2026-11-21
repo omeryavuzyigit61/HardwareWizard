@@ -11,7 +11,6 @@ import com.panda.myapplication.domain.model.TuningProfile
 import com.panda.myapplication.domain.model.TuningReactionType
 import com.panda.myapplication.domain.model.TuningStatus
 import com.panda.myapplication.domain.model.TuningType
-import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.TuningVaultRepository
 import com.panda.myapplication.domain.util.ProfanityFilter
 import kotlin.time.Clock
@@ -26,6 +25,7 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
+import io.ktor.http.isSuccess
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -58,6 +58,7 @@ internal class TuningVaultRepositoryImpl(
     private val _tuningProfiles = MutableStateFlow<List<TuningProfile>>(emptyList())
     private val _comments = MutableStateFlow<Map<String, List<TuningComment>>>(emptyMap())
     private val _proTips = MutableStateFlow<List<HardwareProTip>>(emptyList())
+    private val _upvotedTipIds = MutableStateFlow<Set<String>>(emptySet())
     private val _priceAlerts = MutableStateFlow<List<PriceDropAlert>>(emptyList())
 
     private val repoScope = CoroutineScope(SupervisorJob() + ioDispatcher)
@@ -200,7 +201,7 @@ internal class TuningVaultRepositoryImpl(
                         userBadge = badge,
                         tipText = tipText,
                         upvotesCount = upvotes,
-                        isUpvotedByMe = false,
+                        isUpvotedByMe = _upvotedTipIds.value.contains(id),
                         createdAtEpochMs = epochMs,
                         rating = rating,
                     )
@@ -364,6 +365,7 @@ internal class TuningVaultRepositoryImpl(
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
     }
 
+    @Suppress("UNUSED_PARAMETER")
     private suspend fun patchUserProfileStats(
         userId: String,
         pointsDelta: Int = 0,
@@ -371,46 +373,9 @@ internal class TuningVaultRepositoryImpl(
         tuningsDelta: Int = 0,
         tipsDelta: Int = 0,
     ) {
-        if (userId.isBlank() || userId.startsWith("guest")) return
-        runCatching {
-            val safeCols = "reputation_score,total_deals_count,total_tunings_count,total_tips_count,badge_title"
-            val getUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.$userId&select=$safeCols"
-            val res = httpClient.get(getUrl) {
-                applySupabaseHeaders()
-            }
-            if (res.status == HttpStatusCode.OK) {
-                val arr = json.parseToJsonElement(res.bodyAsText()).jsonArray
-                if (arr.isNotEmpty()) {
-                    val uObj = arr[0].jsonObject
-                    val curScore = uObj["reputation_score"]?.jsonPrimitive?.intOrNull ?: 0
-                    val curDeals = uObj["total_deals_count"]?.jsonPrimitive?.intOrNull ?: 0
-                    val curTunings = uObj["total_tunings_count"]?.jsonPrimitive?.intOrNull ?: 0
-                    val curTips = uObj["total_tips_count"]?.jsonPrimitive?.intOrNull ?: 0
-
-                    val newScore = maxOf(0, curScore + pointsDelta)
-                    val newDeals = maxOf(0, curDeals + dealsDelta)
-                    val newTunings = maxOf(0, curTunings + tuningsDelta)
-                    val newTips = maxOf(0, curTips + tipsDelta)
-
-                    val newBadge = UserProfile.calculateBadgeTitle(newScore)
-
-                    val patchUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.$userId"
-                    val patchBody = buildJsonObject {
-                        put("reputation_score", newScore)
-                        put("total_deals_count", newDeals)
-                        put("total_tunings_count", newTunings)
-                        put("total_tips_count", newTips)
-                        put("badge_title", newBadge)
-                    }
-
-                    httpClient.patch(patchUrl) {
-                        applySupabaseHeaders()
-                        contentType(ContentType.Application.Json)
-                        setBody(patchBody.toString())
-                    }
-                }
-            }
-        }
+        // Reputation score, contribution counters, and badge_title are now computed atomically
+        // server-side via SECURITY DEFINER PostgreSQL triggers on community tables so anon clients
+        // cannot tamper with user_profiles while legitimate interactions award points reliably.
     }
 
     override suspend fun toggleReaction(tuningId: String, reactionType: TuningReactionType, userId: String): DomainResult<Unit> = withContext(ioDispatcher) {
@@ -519,14 +484,11 @@ internal class TuningVaultRepositoryImpl(
     }
 
     override fun observeComments(tuningId: String): Flow<List<TuningComment>> {
-        CoroutineScope(ioDispatcher).launch {
+        repoScope.launch {
             runCatching {
                 val endpoint = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_TUNING_COMMENTS}?tuning_id=eq.$tuningId&order=created_at_epoch_ms.asc"
                 val response = httpClient.get(endpoint) {
-                    headers {
-                        append("apikey", SupabaseConfig.supabaseAnonKey)
-                        append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                    }
+                    applySupabaseHeaders()
                 }
                 if (response.status == HttpStatusCode.OK) {
                     val body = response.bodyAsText()
@@ -572,13 +534,15 @@ internal class TuningVaultRepositoryImpl(
                 put("created_at_epoch_ms", comment.createdAtEpochMs)
             }
 
-            httpClient.post(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val postRes = httpClient.post(url) {
+                applySupabaseHeaders(preferMinimal = true)
                 contentType(ContentType.Application.Json)
                 setBody(payload.toString())
+            }
+            if (!postRes.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Yorum gönderilemedi (HTTP ${postRes.status.value}).")),
+                )
             }
 
             val maskedComment = comment.copy(commentText = maskedText)
@@ -593,16 +557,13 @@ internal class TuningVaultRepositoryImpl(
             }
 
             val patchTuningUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_TUNING_PROFILES}?id=eq.${comment.tuningId}"
-            httpClient.patch(patchTuningUrl) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+            runCatching {
+                httpClient.patch(patchTuningUrl) {
+                    applySupabaseHeaders(preferMinimal = true)
+                    contentType(ContentType.Application.Json)
+                    setBody(buildJsonObject { put("comments_count", newCount) }.toString())
                 }
-                contentType(ContentType.Application.Json)
-                setBody(buildJsonObject { put("comments_count", newCount) }.toString())
             }
-
-            patchUserProfileStats(userId = comment.userId, pointsDelta = 2)
 
             DomainResult.Success(Unit)
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
@@ -658,17 +619,18 @@ internal class TuningVaultRepositoryImpl(
                 put("created_at_epoch_ms", tip.createdAtEpochMs)
             }
 
-            httpClient.post(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val response = httpClient.post(url) {
+                applySupabaseHeaders(preferMinimal = true)
                 contentType(ContentType.Application.Json)
                 setBody(payload.toString())
             }
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("İnceleme kaydedilemedi (HTTP ${response.status.value}).")),
+                )
+            }
 
             _proTips.update { listOf(tip.copy(tipText = maskedText)) + it }
-            patchUserProfileStats(userId = tip.userId, pointsDelta = 10, tipsDelta = 1)
 
             DomainResult.Success(Unit)
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
@@ -677,17 +639,19 @@ internal class TuningVaultRepositoryImpl(
     override suspend fun deleteTip(tipId: String): DomainResult<Unit> = withContext(ioDispatcher) {
         runCatching {
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?id=eq.$tipId"
-            httpClient.delete(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val response = httpClient.delete(url) {
+                applySupabaseHeaders(preferMinimal = true)
+            }
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("İnceleme sunucudan silinemedi (HTTP ${response.status.value}).")),
+                )
             }
             _proTips.update { list -> list.filterNot { it.id == tipId } }
+            _upvotedTipIds.update { it - tipId }
             DomainResult.Success(Unit)
         }.getOrElse {
-            _proTips.update { list -> list.filterNot { it.id == tipId } }
-            DomainResult.Success(Unit)
+            DomainResult.Failure(DomainError.Unknown(it))
         }
     }
 
@@ -746,15 +710,15 @@ internal class TuningVaultRepositoryImpl(
             }
 
             val patchTipUrl = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?id=eq.$tipId"
-            httpClient.patch(patchTipUrl) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+            runCatching {
+                httpClient.patch(patchTipUrl) {
+                    applySupabaseHeaders(preferMinimal = true)
+                    contentType(ContentType.Application.Json)
+                    setBody(buildJsonObject { put("upvotes_count", newVotes) }.toString())
                 }
-                contentType(ContentType.Application.Json)
-                setBody(buildJsonObject { put("upvotes_count", newVotes) }.toString())
             }
 
+            _upvotedTipIds.update { current -> if (alreadyVoted) current - tipId else current + tipId }
             _proTips.update { list ->
                 list.map { if (it.id == tipId) it.copy(upvotesCount = newVotes, isUpvotedByMe = !alreadyVoted) else it }
             }
@@ -776,13 +740,15 @@ internal class TuningVaultRepositoryImpl(
                 put("is_triggered", alert.isTriggered)
             }
 
-            httpClient.post(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val response = httpClient.post(url) {
+                applySupabaseHeaders(preferMinimal = true)
                 contentType(ContentType.Application.Json)
                 setBody(payload.toString())
+            }
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Fiyat alarmı kaydedilemedi (HTTP ${response.status.value}).")),
+                )
             }
 
             _priceAlerts.update { listOf(alert) + it }
@@ -796,11 +762,13 @@ internal class TuningVaultRepositoryImpl(
     override suspend fun deletePriceAlert(alertId: String): DomainResult<Unit> = withContext(ioDispatcher) {
         runCatching {
             val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_PRICE_DROP_ALERTS}?id=eq.$alertId"
-            httpClient.delete(url) {
-                headers {
-                    append("apikey", SupabaseConfig.supabaseAnonKey)
-                    append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
-                }
+            val response = httpClient.delete(url) {
+                applySupabaseHeaders(preferMinimal = true)
+            }
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Fiyat alarmı silinemedi (HTTP ${response.status.value}).")),
+                )
             }
             _priceAlerts.update { list -> list.filterNot { it.id == alertId } }
             DomainResult.Success(Unit)

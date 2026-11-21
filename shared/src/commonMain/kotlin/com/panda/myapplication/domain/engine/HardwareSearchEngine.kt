@@ -1,15 +1,28 @@
 package com.panda.myapplication.domain.engine
 
+import com.panda.myapplication.domain.model.AccessPointSpec
+import com.panda.myapplication.domain.model.CaseFanSpec
+import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
+import com.panda.myapplication.domain.model.GamingDeskSpec
+import com.panda.myapplication.domain.model.GamingLightingSpec
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.GamingChairSpec
+import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MicrophoneSpec
+import com.panda.myapplication.domain.model.ModemSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.PhoneSpec
+import com.panda.myapplication.domain.model.RangeExtenderSpec
+import com.panda.myapplication.domain.model.RouterSpec
+import com.panda.myapplication.domain.model.SmartwatchSpec
+import com.panda.myapplication.domain.model.TabletSpec
+import com.panda.myapplication.domain.model.UpsSpec
 import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
@@ -47,10 +60,32 @@ object HardwareSearchEngine {
     private val UNIT_SUFFIX_REGEX = Regex("""^(\d+)(w|watt|gb|mb|tb|ghz|mhz|mts)$""", RegexOption.IGNORE_CASE)
 
     /**
+     * Normalizes Turkish diacritics and dotted/dotless I (`İ`, `ı`, `ş`, `ğ`, `ü`, `ö`, `ç`)
+     * into ASCII lowercase so queries like `"İntel"`, `"sogutucu"`, or `"sivi"` match reliably.
+     */
+    fun normalizeForSearch(text: String): String {
+        if (text.isEmpty()) return ""
+        val sb = StringBuilder(text.length)
+        for (ch in text) {
+            when (ch) {
+                'İ', 'I', 'ı' -> sb.append('i')
+                'Ş', 'ş' -> sb.append('s')
+                'Ğ', 'ğ' -> sb.append('g')
+                'Ü', 'ü' -> sb.append('u')
+                'Ö', 'ö' -> sb.append('o')
+                'Ç', 'ç' -> sb.append('c')
+                '\u0307' -> Unit // strip combining dot above from NFD 'İ'
+                else -> sb.append(ch.lowercaseChar())
+            }
+        }
+        return sb.toString()
+    }
+
+    /**
      * Splits and normalizes user query into searchable tokens with hardware aliases expanded.
      */
     fun tokenize(query: String): List<String> {
-        val clean = query.trim().lowercase()
+        val clean = normalizeForSearch(query.trim())
         if (clean.isBlank()) return emptyList()
 
         val rawTokens = clean.split(Regex("""[\s\-+/,]+""")).filter { it.isNotBlank() }
@@ -240,10 +275,129 @@ object HardwareSearchEngine {
                 parts.add("${s.maxWeightCapacityKg}kg")
                 parts.add("koltuk sandalye chair ergonomi")
             }
-            else -> Unit
+            is CaseSpec -> {
+                s.type?.let { parts.add(it) }
+                s.maxGpuLengthMm?.let { parts.add("${it}mm") }
+                s.maxCpuCoolerHeightMm?.let { parts.add("${it}mm") }
+                s.maxRadiatorSizeMm?.let { parts.add("${it}mm") }
+                s.sidePanel?.let { parts.add(it) }
+                s.includedFans?.let { parts.add(it) }
+                parts.add("kasa case chassis")
+            }
+            is LaptopSpec -> {
+                parts.add(s.cpuModel)
+                parts.add(s.gpuModel)
+                parts.add(s.gpuWattTgp)
+                parts.add(s.ramSpec)
+                parts.add(s.storageSpec)
+                parts.add(s.displaySpec)
+                parts.add(s.panelTech)
+                parts.add(s.screenResolution)
+                if (s.refreshRateHz > 0) parts.add("${s.refreshRateHz}hz")
+                if (s.muxSwitch.isNotBlank()) parts.add("mux ${s.muxSwitch}")
+                parts.add("laptop notebook dizustu")
+            }
+            is PhoneSpec -> {
+                parts.add(s.chipset)
+                parts.add(s.gpuModel)
+                parts.add("${s.ramGb}gb")
+                parts.add("${s.storageGb}gb")
+                parts.add(s.displayTech)
+                parts.add(s.resolution)
+                parts.add("${s.refreshRateHz}hz")
+                parts.add("${s.mainCameraMp}mp")
+                parts.add("${s.batteryMah}mah")
+                parts.add(s.osName)
+                if (s.hasStylus) parts.add("stylus kalem s-pen")
+                parts.add("telefon smartphone cep telefonu")
+            }
+            is TabletSpec -> {
+                parts.add(s.chipset)
+                parts.add(s.gpuModel)
+                parts.add("${s.ramGb}gb")
+                parts.add("${s.storageGb}gb")
+                parts.add(s.displayTech)
+                parts.add(s.resolution)
+                parts.add("${s.refreshRateHz}hz")
+                parts.add("${s.batteryMah}mah")
+                parts.add(s.stylusSupport)
+                parts.add(s.osName)
+                parts.add(s.cellularOption)
+                parts.add("tablet ipad")
+            }
+            is CaseFanSpec -> {
+                parts.add("${s.fanSizeMm}mm")
+                parts.add("${s.maxRpm}rpm")
+                parts.add(s.bearingType)
+                parts.add(s.argbType)
+                if (s.isDaisyChain) parts.add("daisy chain")
+                parts.add("fan kasa fani pwm")
+            }
+            is UpsSpec -> {
+                parts.add("${s.vaRating}va")
+                parts.add("${s.wattCapacity}w")
+                parts.add(s.topology)
+                parts.add(s.sinewaveType)
+                parts.add("ups guc kaynagi kesintisiz")
+            }
+            is GamingDeskSpec -> {
+                parts.add("${s.deskWidthCm}cm")
+                parts.add("${s.maxLoadKg}kg")
+                parts.add(s.surfaceFinish)
+                if (s.isMotorizedHeight) parts.add("motorlu yukseklik ayarli standing desk")
+                parts.add("masa desk oyuncu masasi")
+            }
+            is GamingLightingSpec -> {
+                parts.add(s.formFactor)
+                parts.add("${s.maxLumens}lm")
+                parts.add(s.colorTempKelvin)
+                parts.add(s.supportedEcosystems)
+                if (s.hasScreenMirroring) parts.add("ambilight sync ekran senkron")
+                parts.add("isik aydinlatma rgb led")
+            }
+            is SmartwatchSpec -> {
+                parts.add(s.screenPanel)
+                parts.add(s.osName)
+                parts.add(s.caseMaterial)
+                parts.add(s.sensorsList)
+                parts.add("${s.batteryLifeDays} gun")
+                if (s.hasCellularLte) parts.add("lte esim")
+                parts.add("akilli saat smartwatch watch")
+            }
+            is RouterSpec -> {
+                parts.add(s.wifiStandard)
+                parts.add(s.speedClass)
+                parts.add(s.bands)
+                parts.add(s.ethernetPorts)
+                if (s.hasGamingQos) parts.add("gaming qos")
+                if (s.hasSqmBufferbloat) parts.add("sqm bufferbloat")
+                parts.add("router yonlendirici wifi")
+            }
+            is ModemSpec -> {
+                parts.add(s.vdslProfile)
+                parts.add(s.wifiStandard)
+                parts.add(s.lanPorts)
+                parts.add(s.chipset)
+                if (s.fiberWanSupport) parts.add("fiber wan")
+                parts.add("modem vdsl adsl")
+            }
+            is AccessPointSpec -> {
+                parts.add(s.formFactor)
+                parts.add(s.wifiStandard)
+                parts.add(s.poeSupport)
+                parts.add(s.uplinkPort)
+                parts.add("access point ap erisim noktasi poe")
+            }
+            is RangeExtenderSpec -> {
+                parts.add(s.extenderType)
+                parts.add(s.wifiStandard)
+                parts.add(s.meshProtocol)
+                parts.add("${s.coverageAreaM2}m2")
+                parts.add("menzil genisletici repeater mesh extender")
+            }
         }
 
-        return parts.joinToString(" ").lowercase()
+        return normalizeForSearch(parts.joinToString(" "))
     }
 
     /**
@@ -260,7 +414,7 @@ object HardwareSearchEngine {
 
         // Group tokens that are sub-parts: e.g. for "9900x", having "9900x" OR ("9900" AND "x") matches
         // Check if all primary query concepts are matched
-        val rawWords = query.trim().lowercase().split(Regex("""[\s\-+/,]+""")).filter { it.isNotBlank() }
+        val rawWords = normalizeForSearch(query.trim()).split(Regex("""[\s\-+/,]+""")).filter { it.isNotBlank() }
 
         for (raw in rawWords) {
             val alias = PREFIX_ALIASES[raw]
@@ -304,13 +458,13 @@ object HardwareSearchEngine {
      * Exact name / model matches receive massive bonuses.
      */
     fun calculateScore(item: HardwareItem, query: String): Int {
-        val cleanQuery = query.trim().lowercase()
+        val cleanQuery = normalizeForSearch(query.trim())
         if (cleanQuery.isBlank()) return 0
 
         var score = 0
-        val nameLower = item.displayName.lowercase()
-        val modelLower = item.model.lowercase()
-        val brandLower = item.brand.lowercase()
+        val nameLower = normalizeForSearch(item.displayName)
+        val modelLower = normalizeForSearch(item.model)
+        val brandLower = normalizeForSearch(item.brand)
         val searchable = buildSearchableText(item)
 
         // Exact matches

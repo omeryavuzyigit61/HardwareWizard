@@ -786,10 +786,26 @@ internal class HardwareRepositoryImpl(
         }
 
         val syncedAt = Clock.System.now()
-        val snapshot = SupabaseCatalogMapper.toCatalogSnapshot(deltaRows, syncedAt)
-        if (snapshot.items.isNotEmpty()) {
-            hardwareDao.upsertDeltaCatalog(snapshot)
-            memoryCache.value = null // Trigger clean emission of newly merged items from Room Flows
+        val (activeRows, inactiveRows) = deltaRows.partition { it.isActive }
+        var catalogChanged = false
+
+        if (inactiveRows.isNotEmpty()) {
+            inactiveRows.map { it.id }.chunked(200).forEach { idChunk ->
+                hardwareDao.deleteHardwareItemsByIds(idChunk)
+            }
+            catalogChanged = true
+        }
+
+        if (activeRows.isNotEmpty()) {
+            val snapshot = SupabaseCatalogMapper.toCatalogSnapshot(activeRows, syncedAt)
+            if (snapshot.items.isNotEmpty()) {
+                hardwareDao.upsertDeltaCatalog(snapshot)
+                catalogChanged = true
+            }
+        }
+
+        if (catalogChanged) {
+            memoryCache.value = null // Trigger clean emission of newly merged/purged items from Room Flows
         }
 
         val appliedRevision = maxOf(

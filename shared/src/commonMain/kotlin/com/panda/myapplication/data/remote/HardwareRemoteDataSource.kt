@@ -103,8 +103,10 @@ class HardwareRemoteDataSource(
                     append("?select=id,category,brand,model,canonical_key,spec_table,spec_payload,")
                     append("benchmark_score,benchmark_tier,benchmark_test_suite,benchmark_gaming_index,")
                     append("cpu_synthetic,gpu_synthetic,game_fps,image_url,images,extra_specs,")
-                    append("source_provenance,spec_verified_at,catalog_revision")
-                    append("&is_active=eq.true")
+                    append("source_provenance,spec_verified_at,catalog_revision,is_active")
+                    if (afterRevision <= 0L) {
+                        append("&is_active=eq.true")
+                    }
                     append("&catalog_revision=gt.$afterRevision")
                     append("&order=catalog_revision.asc,id.asc")
                     append("&limit=$pageSize&offset=$offset")
