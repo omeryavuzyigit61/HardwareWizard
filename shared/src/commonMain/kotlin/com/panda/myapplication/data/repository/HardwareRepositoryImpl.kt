@@ -11,6 +11,7 @@ import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
+import com.panda.myapplication.domain.repository.CatalogSyncStatus
 import com.panda.myapplication.domain.repository.HardwareRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
@@ -21,6 +22,7 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -596,9 +598,9 @@ internal class HardwareRepositoryImpl(
         emitAll(
             domainItemsFlow
                 .map { items ->
-                    val currentMem = memoryCache.value.orEmpty()
-                    val otherCats = currentMem.filter { it.category != category }
-                    memoryCache.value = otherCats + items
+                    memoryCache.update { current ->
+                        current.orEmpty().filter { it.category != category } + items
+                    }
                     DomainResult.Success(items) as DomainResult<List<HardwareItem>>
                 }
                 .catch {
@@ -696,12 +698,25 @@ internal class HardwareRepositoryImpl(
         }
     }
 
-    override suspend fun refreshHardwareItems(): DomainResult<Unit> = withContext(ioDispatcher) {
+    override suspend fun getCatalogSyncStatus(): CatalogSyncStatus = withContext(ioDispatcher) {
+        ensureSeeded()
+        val count = hardwareDao.getTotalItemCount()
+        val rev = hardwareDao.getSetting(SETTING_CATALOG_REVISION)?.toLongOrNull() ?: INITIAL_BUNDLED_REVISION
+        CatalogSyncStatus(itemCount = count, revision = rev)
+    }
+
+    override suspend fun clearRuntimeCache() = withContext(ioDispatcher) {
+        memoryCache.value = null
+        runCatching { hardwareDao.deleteSetting(SETTING_LAST_REMOTE_SYNC_AT) }
+        Unit
+    }
+
+    override suspend fun refreshHardwareItems(force: Boolean): DomainResult<Unit> = withContext(ioDispatcher) {
         ensureSeeded()
         val now = Clock.System.now()
         val localCount = hardwareDao.getTotalItemCount()
         val lastSyncMillis = hardwareDao.getSetting(SETTING_LAST_REMOTE_SYNC_AT)?.toLongOrNull()
-        if (localCount > 0 && lastSyncMillis != null && (now.toEpochMilliseconds() - lastSyncMillis) < DELTA_SYNC_INTERVAL_MS) {
+        if (!force && localCount > 0 && lastSyncMillis != null && (now.toEpochMilliseconds() - lastSyncMillis) < DELTA_SYNC_INTERVAL_MS) {
             return@withContext DomainResult.Success(Unit)
         }
         try {
@@ -715,19 +730,27 @@ internal class HardwareRepositoryImpl(
 
             // Authoritative Supabase Delta Sync: checks 200-byte catalog_meta first,
             // then pulls & upserts ONLY newly added rows (catalog_revision > local_revision).
-            syncDeltaFromSupabase(forceBootstrap = localCount == 0)
+            val syncedOk = syncDeltaFromSupabase(forceBootstrap = localCount == 0)
 
-            hardwareDao.saveSetting(
-                com.panda.myapplication.data.local.entity.AppSettingEntity(
-                    key = SETTING_LAST_REMOTE_SYNC_AT,
-                    value = now.toEpochMilliseconds().toString(),
+            // Only stamp throttle timestamp if Supabase actually responded cleanly!
+            // Never lock out sync for 12 hours when offline or when a transient network error occurred.
+            if (syncedOk) {
+                hardwareDao.saveSetting(
+                    com.panda.myapplication.data.local.entity.AppSettingEntity(
+                        key = SETTING_LAST_REMOTE_SYNC_AT,
+                        value = now.toEpochMilliseconds().toString(),
+                    )
                 )
-            )
-            DomainResult.Success(Unit)
+                DomainResult.Success(Unit)
+            } else if (force || localCount == 0) {
+                DomainResult.Failure(DomainError.Network)
+            } else {
+                DomainResult.Success(Unit)
+            }
         } catch (e: Exception) {
             if (e is kotlinx.coroutines.CancellationException) throw e
-            // Offline-first guarantee: never break the app when offline if Room already has items
-            if (localCount > 0) DomainResult.Success(Unit) else DomainResult.Failure(DomainError.Network)
+            // Offline-first guarantee: background sync succeeds silently when local DB has items; manual refresh reports network error
+            if (!force && localCount > 0) DomainResult.Success(Unit) else DomainResult.Failure(DomainError.Network)
         }
     }
 

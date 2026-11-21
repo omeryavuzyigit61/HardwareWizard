@@ -232,9 +232,16 @@ fun DeskSetupLabScreen(
 
                         Text(
                             text = when {
-                                ppi >= 135 -> strings.deskPpiRetina.replace("%d", ppi.toString()).replace("%%d", res.gpuLoadPercent.toString())
-                                ppi >= 100 -> strings.deskPpiBalanced.replace("%d", ppi.toString())
-                                else -> strings.deskPpiLow.replace("%d", ppi.toString()).replace("%s", "${screenInch}\"").replace("%s", res.label).replace("%d", idealDistanceCm.toString())
+                                ppi >= 135 -> strings.deskPpiRetina
+                                    .replaceFirst("%d", ppi.toString())
+                                    .replaceFirst("%%d", "%${res.gpuLoadPercent}")
+                                    .replaceFirst("%d", res.gpuLoadPercent.toString())
+                                ppi >= 100 -> strings.deskPpiBalanced.replaceFirst("%d", ppi.toString())
+                                else -> strings.deskPpiLow
+                                    .replaceFirst("%d", ppi.toString())
+                                    .replaceFirst("%s", "${screenInch}\"")
+                                    .replaceFirst("%s", res.label)
+                                    .replaceFirst("%d", idealDistanceCm.toString())
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -476,9 +483,11 @@ fun DeskSetupLabScreen(
                             Column(modifier = Modifier.padding(12.dp)) {
                                 Text(
                                     text = if (needsDac) {
-                                        strings.deskAudioDacNeeded.replace("%d", selectedImpedanceOhm.toString()).replace("%s", activeCodecName)
+                                        strings.deskAudioDacNeeded
+                                            .replaceFirst("%d", selectedImpedanceOhm.toString())
+                                            .replaceFirst("%s", activeCodecName)
                                     } else {
-                                        strings.deskAudioDacOk.replace("%d", selectedImpedanceOhm.toString())
+                                        strings.deskAudioDacOk.replaceFirst("%d", selectedImpedanceOhm.toString())
                                     },
                                     style = MaterialTheme.typography.labelLarge,
                                     fontWeight = FontWeight.Black,
@@ -486,9 +495,15 @@ fun DeskSetupLabScreen(
                                 )
                                 Text(
                                     text = if (needsDac) {
-                                        strings.deskAudioDacNeededDesc.replace("%s", activeCodecName).replace("%s", activeCodec.vrmsOutput).replace("%d", selectedImpedanceOhm.toString())
+                                        strings.deskAudioDacNeededDesc
+                                            .replaceFirst("%s", activeCodecName)
+                                            .replaceFirst("%s", activeCodec.vrmsOutput)
+                                            .replaceFirst("%d", selectedImpedanceOhm.toString())
                                     } else {
-                                        strings.deskAudioDacOkDesc.replace("%s", activeCodecName).replace("%s", activeCodec.vrmsOutput).replace("%d", selectedImpedanceOhm.toString())
+                                        strings.deskAudioDacOkDesc
+                                            .replaceFirst("%s", activeCodecName)
+                                            .replaceFirst("%s", activeCodec.vrmsOutput)
+                                            .replaceFirst("%d", selectedImpedanceOhm.toString())
                                     },
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurface,

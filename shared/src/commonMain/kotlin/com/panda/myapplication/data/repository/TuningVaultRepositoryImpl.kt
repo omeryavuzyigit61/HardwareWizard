@@ -28,6 +28,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -59,13 +60,15 @@ internal class TuningVaultRepositoryImpl(
     private val _proTips = MutableStateFlow<List<HardwareProTip>>(emptyList())
     private val _priceAlerts = MutableStateFlow<List<PriceDropAlert>>(emptyList())
 
+    private val repoScope = CoroutineScope(SupervisorJob() + ioDispatcher)
+
     init {
-        CoroutineScope(ioDispatcher).launch {
+        repoScope.launch {
             fetchRemoteTunings()
             fetchRemoteTips()
             // Lifecycle-aware senkronizasyon: Yalnızca aktif UI abonesi varken bulut sorgusu yap
             while (true) {
-                delay(8000.milliseconds)
+                delay(15_000.milliseconds)
                 if (_tuningProfiles.subscriptionCount.value > 0) {
                     fetchRemoteTunings()
                 }
@@ -165,7 +168,7 @@ internal class TuningVaultRepositoryImpl(
 
     private suspend fun fetchRemoteTips() {
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?select=*&order=upvotes_count.desc"
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?hardware_id=not.like.REPORT:*&select=*&order=upvotes_count.desc"
             val response = httpClient.get(url) {
                 headers {
                     append("apikey", SupabaseConfig.supabaseAnonKey)
@@ -178,6 +181,7 @@ internal class TuningVaultRepositoryImpl(
                     val obj = element.jsonObject
                     val id = obj["id"]?.jsonPrimitive?.content ?: return@mapNotNull null
                     val hardwareId = obj["hardware_id"]?.jsonPrimitive?.content ?: return@mapNotNull null
+                    if (hardwareId.startsWith("REPORT:", ignoreCase = true)) return@mapNotNull null
                     val hardwareName = obj["hardware_name"]?.jsonPrimitive?.content ?: ""
                     val userId = obj["user_id"]?.jsonPrimitive?.content ?: ""
                     val userName = obj["user_display_name"]?.jsonPrimitive?.content ?: ""

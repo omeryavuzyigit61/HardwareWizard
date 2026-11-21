@@ -31,8 +31,8 @@ class CheckBuildCompatibilityUseCase(
         // 1. Socket Check (CPU vs Motherboard)
         var socketMismatch: String? = null
         if (cpuSpec != null && moboSpec != null) {
-            if (!cpuSpec.socket.equals(moboSpec.socket, ignoreCase = true)) {
-                socketMismatch = "Soket Uyuşmazlığı: İşlemci (${cpuSpec.socket}) ile Anakart (${moboSpec.socket}) fiziksel olarak uyumsuz!"
+            if (!socketsMatch(cpuSpec.socket, moboSpec.socket)) {
+                socketMismatch = "Soket Uyuşmazlığı: İşlemci (${normalizeSocketName(cpuSpec.socket)}) ile Anakart (${normalizeSocketName(moboSpec.socket)}) fiziksel olarak uyumsuz!"
                 warnings.add(socketMismatch)
             }
         }
@@ -61,9 +61,9 @@ class CheckBuildCompatibilityUseCase(
         // 3. Cooler Mounting Check (Cooler vs CPU Socket)
         var coolerMismatch: String? = null
         if (coolerSpec != null && cpuSpec != null && coolerSpec.supportedSockets.isNotEmpty()) {
-            val supported = coolerSpec.supportedSockets.any { it.equals(cpuSpec.socket, ignoreCase = true) }
+            val supported = coolerSpec.supportedSockets.any { socketsMatch(it, cpuSpec.socket) }
             if (!supported) {
-                coolerMismatch = "Soğutucu Uyarısı: Soğutucu montaj kiti ${cpuSpec.socket} soketini içermiyor olabilir."
+                coolerMismatch = "Soğutucu Uyarısı: Soğutucu montaj kiti ${normalizeSocketName(cpuSpec.socket)} soketini içermiyor olabilir."
                 warnings.add(coolerMismatch)
             }
         }
@@ -132,6 +132,42 @@ class CheckBuildCompatibilityUseCase(
     }
 
     companion object {
+        private val INTEL_NUMERIC_SOCKETS = setOf(
+            "1851", "1700", "1200", "1151", "1150", "1155", "1156", "2066", "2011", "2011V3", "4677",
+        )
+
+        /**
+         * Canonicalizes CPU/Motherboard/Cooler socket labels so Intel numeric labels
+         * ("1700", "1851", "1200", "FCLGA1700", "LGA 1700") match "LGA1700"/"LGA1851"/"LGA1200".
+         */
+        fun normalizeSocketName(raw: String?): String {
+            val trimmed = raw?.trim().orEmpty()
+            if (trimmed.isEmpty()) return ""
+            val compact = trimmed
+                .uppercase()
+                .replace("SOCKET", "")
+                .replace("FCLGA", "LGA")
+                .replace(" ", "")
+                .replace("-", "")
+                .replace("_", "")
+                .trim()
+            return when {
+                compact in INTEL_NUMERIC_SOCKETS -> "LGA$compact"
+                compact == "TR4" || compact == "STR4" -> "STR4"
+                compact == "TRX4" || compact == "STRX4" -> "STRX4"
+                compact == "WRX8" || compact == "SWRX8" -> "SWRX8"
+                compact == "TR5" || compact == "STR5" -> "STR5"
+                else -> compact
+            }
+        }
+
+        fun socketsMatch(socketA: String?, socketB: String?): Boolean {
+            val normA = normalizeSocketName(socketA)
+            val normB = normalizeSocketName(socketB)
+            if (normA.isEmpty() || normB.isEmpty()) return false
+            return normA == normB
+        }
+
         /**
          * Determines whether a case's form-factor descriptor physically supports the given motherboard form factor.
          * Defaults to true when case type is unspecified to avoid false rejections.

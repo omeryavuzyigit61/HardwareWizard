@@ -184,11 +184,14 @@ object BuildAnalysisEngine {
             )
         }
 
-        val socket = cpu?.socket ?: mobo?.socket ?: "Bilinmeyen Soket"
+        val rawSocket = cpu?.socket ?: mobo?.socket
+        val socket = rawSocket?.let {
+            com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.normalizeSocketName(it).ifBlank { it }
+        } ?: "Bilinmeyen Soket"
         val ramGen = mobo?.memoryGeneration?.name ?: ram?.generation?.name ?: "DDR"
 
         val socketMatch = if (cpu != null && mobo != null) {
-            cpu.socket.equals(mobo.socket, ignoreCase = true)
+            com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.socketsMatch(cpu.socket, mobo.socket)
         } else true
 
         val ramMatch = if (mobo != null && ram != null) {
@@ -198,7 +201,7 @@ object BuildAnalysisEngine {
         val isFullyCompatible = socketMatch && ramMatch
 
         val statusText = when {
-            !socketMatch -> "Soket Uyuşmazlığı (${cpu?.socket} != ${mobo?.socket})"
+            !socketMatch -> "Soket Uyuşmazlığı (${com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.normalizeSocketName(cpu?.socket)} != ${com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.normalizeSocketName(mobo?.socket)})"
             !ramMatch -> "Bellek Nesli Uyuşmazlığı (${mobo?.memoryGeneration} != ${ram?.generation})"
             cpu != null && mobo != null && ram != null -> "$socket + $ramGen Platformu - %100 Uyumlu"
             cpu != null && mobo != null -> "$socket Mimarisi - Soket Uyumlu"

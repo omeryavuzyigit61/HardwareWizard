@@ -35,7 +35,13 @@ private data class PreservedUserData(
     val userSettings: List<Pair<String, String>> = emptyList(),
 )
 
-private val CATALOG_INTERNAL_KEYS = setOf("catalog_version", "catalog_revision")
+private val CATALOG_INTERNAL_KEYS = setOf(
+    "catalog_version",
+    "catalog_seed_version",
+    "catalog_revision",
+    "last_remote_sync_at",
+    "catalog_synced_source",
+)
 
 private fun readPreservedUserData(dbFile: File): PreservedUserData {
     if (!dbFile.exists() || dbFile.length() == 0L) return PreservedUserData()

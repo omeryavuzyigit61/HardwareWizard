@@ -2,11 +2,15 @@ package com.panda.myapplication.domain.engine
 
 import androidx.compose.runtime.Immutable
 import com.panda.myapplication.domain.config.FeatureFlags
+import com.panda.myapplication.domain.model.AccessPointSpec
+import com.panda.myapplication.domain.model.CaseFanSpec
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CoolerType
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.GameCategory
+import com.panda.myapplication.domain.model.GamingDeskSpec
+import com.panda.myapplication.domain.model.GamingLightingSpec
 import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.GpuSpec
 import com.panda.myapplication.domain.model.HardwareCategory
@@ -16,8 +20,13 @@ import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.GamingChairSpec
 import com.panda.myapplication.domain.model.MicrophoneSpec
+import com.panda.myapplication.domain.model.ModemSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MousepadSpec
+import com.panda.myapplication.domain.model.RangeExtenderSpec
+import com.panda.myapplication.domain.model.RouterSpec
+import com.panda.myapplication.domain.model.SmartwatchSpec
+import com.panda.myapplication.domain.model.UpsSpec
 import com.panda.myapplication.domain.model.WebcamSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
@@ -180,6 +189,24 @@ object VsArenaEngine {
                     addAll(compareSmartphones(left.spec, right.spec))
                 left.spec is TabletSpec && right.spec is TabletSpec ->
                     addAll(compareTablets(left.spec, right.spec))
+                left.spec is CaseFanSpec && right.spec is CaseFanSpec ->
+                    addAll(compareCaseFans(left.spec, right.spec))
+                left.spec is UpsSpec && right.spec is UpsSpec ->
+                    addAll(compareUps(left.spec, right.spec))
+                left.spec is GamingDeskSpec && right.spec is GamingDeskSpec ->
+                    addAll(compareGamingDesks(left.spec, right.spec))
+                left.spec is GamingLightingSpec && right.spec is GamingLightingSpec ->
+                    addAll(compareGamingLighting(left.spec, right.spec))
+                left.spec is SmartwatchSpec && right.spec is SmartwatchSpec ->
+                    addAll(compareSmartwatches(left.spec, right.spec))
+                left.spec is RouterSpec && right.spec is RouterSpec ->
+                    addAll(compareRouters(left.spec, right.spec))
+                left.spec is ModemSpec && right.spec is ModemSpec ->
+                    addAll(compareModems(left.spec, right.spec))
+                left.spec is AccessPointSpec && right.spec is AccessPointSpec ->
+                    addAll(compareAccessPoints(left.spec, right.spec))
+                left.spec is RangeExtenderSpec && right.spec is RangeExtenderSpec ->
+                    addAll(compareRangeExtenders(left.spec, right.spec))
             }
         }
 
@@ -1088,9 +1115,9 @@ object VsArenaEngine {
             }
             is MouseSpec -> {
                 val itemBench = item.benchmarkScore?.toDouble()
-                val pollingBonus = (s.pollingRateHz / 1000.0) * 1.5
-                val weightBonus = ((100 - s.weightG).coerceAtLeast(0)) * 0.45
-                val dpiScore = (s.maxDpi / 1000.0).coerceAtMost(45.0)
+                val pollingBonus = if (s.pollingRateHz > 0) (s.pollingRateHz / 1000.0) * 1.5 else 1.5
+                val weightBonus = if (s.weightG > 0) ((100 - s.weightG).coerceAtLeast(0)) * 0.45 else 12.0
+                val dpiScore = if (s.maxDpi > 0) (s.maxDpi / 1000.0).coerceAtMost(45.0) else 16.0
                 itemBench ?: (40.0 + pollingBonus + weightBonus + dpiScore * 0.5).coerceIn(40.0, 100.0)
             }
             is KeyboardSpec -> {
@@ -1147,54 +1174,131 @@ object VsArenaEngine {
                 val antutu = s.antutuScore?.toDouble() ?: 1800000.0
                 (antutu / 25000.0).coerceIn(30.0, 120.0)
             }
-            else -> item.benchmarkScore?.toDouble() ?: 75.0
+            is CaseFanSpec -> {
+                val airflowScore = (s.maxAirflowCfm * 0.55).coerceAtMost(55.0)
+                val pressureScore = (s.staticPressureMmH2o * 6.0).coerceAtMost(24.0)
+                val quietBonus = if (s.noiseLevelDba > 0.0) ((40.0 - s.noiseLevelDba).coerceAtLeast(0.0) * 0.7) else 8.0
+                val daisyBonus = if (s.isDaisyChain) 5.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (25.0 + airflowScore + pressureScore + quietBonus + daisyBonus).coerceIn(35.0, 105.0)
+            }
+            is UpsSpec -> {
+                val wattScore = (s.wattCapacity / 22.0).coerceAtMost(55.0)
+                val vaScore = (s.vaRating / 50.0).coerceAtMost(35.0)
+                val sineBonus = if (s.sinewaveType.contains("Sinüs", ignoreCase = true) || s.sinewaveType.contains("Pure", ignoreCase = true)) 14.0 else 4.0
+                val onlineBonus = if (s.topology.contains("Online", ignoreCase = true)) 12.0 else 4.0
+                item.benchmarkScore?.toDouble() ?: (20.0 + wattScore + vaScore * 0.35 + sineBonus + onlineBonus).coerceIn(35.0, 115.0)
+            }
+            is GamingDeskSpec -> {
+                val widthScore = (s.deskWidthCm / 4.0).coerceAtMost(45.0)
+                val loadScore = (s.maxLoadKg * 0.25).coerceAtMost(30.0)
+                val motorBonus = if (s.isMotorizedHeight) 18.0 else 4.0
+                val cableBonus = if (s.hasCableManagement) 6.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (20.0 + widthScore + loadScore + motorBonus + cableBonus).coerceIn(35.0, 105.0)
+            }
+            is GamingLightingSpec -> {
+                val lumenScore = (s.maxLumens / 25.0).coerceAtMost(45.0)
+                val criScore = if (s.criScore > 0) ((s.criScore - 70).coerceAtLeast(0) * 1.1) else 15.0
+                val mirrorBonus = if (s.hasScreenMirroring) 12.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (30.0 + lumenScore + criScore + mirrorBonus).coerceIn(35.0, 105.0)
+            }
+            is SmartwatchSpec -> {
+                val battScore = (s.batteryLifeDays * 2.4).coerceAtMost(35.0)
+                val brightScore = (s.peakBrightnessNits / 80.0).coerceAtMost(30.0)
+                val waterScore = (s.waterResistanceAtm * 1.5).coerceAtMost(15.0)
+                val lteBonus = if (s.hasCellularLte) 8.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (35.0 + battScore + brightScore + waterScore + lteBonus).coerceIn(40.0, 105.0)
+            }
+            is RouterSpec -> {
+                val wifiScore = wifiStandardRank(s.wifiStandard) * 14.0
+                val speedScore = (extractSpeedMbps(s.speedClass) / 300.0).coerceAtMost(35.0)
+                val qosBonus = (if (s.hasGamingQos) 6.0 else 0.0) + (if (s.hasSqmBufferbloat) 6.0 else 0.0)
+                item.benchmarkScore?.toDouble() ?: (25.0 + wifiScore + speedScore + qosBonus).coerceIn(35.0, 115.0)
+            }
+            is ModemSpec -> {
+                val wifiScore = wifiStandardRank(s.wifiStandard) * 14.0
+                val fiberBonus = if (s.fiberWanSupport) 14.0 else 0.0
+                val vdslBonus = if (s.vdslProfile.contains("35b", ignoreCase = true)) 12.0 else 6.0
+                item.benchmarkScore?.toDouble() ?: (35.0 + wifiScore + fiberBonus + vdslBonus).coerceIn(35.0, 105.0)
+            }
+            is AccessPointSpec -> {
+                val wifiScore = wifiStandardRank(s.wifiStandard) * 14.0
+                val clientScore = (s.maxClients / 15.0).coerceAtMost(30.0)
+                val poeBonus = if (s.poeSupport.isNotBlank()) 8.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (28.0 + wifiScore + clientScore + poeBonus).coerceIn(35.0, 110.0)
+            }
+            is RangeExtenderSpec -> {
+                val wifiScore = wifiStandardRank(s.wifiStandard) * 14.0
+                val covScore = (s.coverageAreaM2 / 8.0).coerceAtMost(32.0)
+                val meshBonus = if (s.meshProtocol.isNotBlank()) 8.0 else 0.0
+                item.benchmarkScore?.toDouble() ?: (28.0 + wifiScore + covScore + meshBonus).coerceIn(35.0, 105.0)
+            }
         }
     }
 
+    private fun formatPollingRate(hz: Int): String {
+        if (hz <= 0) return UNSPECIFIED
+        val msRounded = ((1000.0 / hz) * 1000.0).roundToInt() / 1000.0
+        return "$hz Hz ($msRounded ms)"
+    }
+
+    private fun wifiStandardRank(std: String): Int = when {
+        std.contains("Wi-Fi 7", ignoreCase = true) || std.contains("802.11be", ignoreCase = true) -> 5
+        std.contains("Wi-Fi 6E", ignoreCase = true) -> 4
+        std.contains("Wi-Fi 6", ignoreCase = true) || std.contains("802.11ax", ignoreCase = true) -> 3
+        std.contains("Wi-Fi 5", ignoreCase = true) || std.contains("802.11ac", ignoreCase = true) -> 2
+        std.isNotBlank() -> 1
+        else -> 0
+    }
+
+    private fun extractSpeedMbps(speedClass: String): Int =
+        Regex("""(\d{3,5})""").find(speedClass)?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 0
+
     private fun compareMice(l: MouseSpec, r: MouseSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Optik Sensör", l.sensor, r.sensor, isKeyMetric = true))
+        add(VsComparisonRow("Optik Sensör", l.sensor.ifBlank { UNSPECIFIED }, r.sensor.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Polling Rate (Raporlama Hızı)",
-                leftVal = l.pollingRateHz.toDouble(),
-                rightVal = r.pollingRateHz.toDouble(),
-                leftText = "${l.pollingRateHz} Hz (${1000.0 / l.pollingRateHz} ms)",
-                rightText = "${r.pollingRateHz} Hz (${1000.0 / r.pollingRateHz} ms)",
+                leftVal = l.pollingRateHz.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.pollingRateHz.takeIf { it > 0 }?.toDouble(),
+                leftText = formatPollingRate(l.pollingRateHz),
+                rightText = formatPollingRate(r.pollingRateHz),
                 badgeSuffix = "Daha Hızlı Tepki",
                 isKey = true,
             )
         )
+        val lWeight = l.weightG.takeIf { it > 0 }
+        val rWeight = r.weightG.takeIf { it > 0 }
         add(
-            compareLowerBetter(
+            compareLowerBetterNullable(
                 label = "Ağırlık (Ultra-Light)",
-                leftVal = l.weightG.toDouble(),
-                rightVal = r.weightG.toDouble(),
-                leftText = "${l.weightG} g",
-                rightText = "${r.weightG} g",
-                customDelta = if (l.weightG != r.weightG) "-${abs(l.weightG - r.weightG)}g Daha Hafif" else null,
+                leftVal = lWeight?.toDouble(),
+                rightVal = rWeight?.toDouble(),
+                leftText = lWeight?.let { "$it g" } ?: UNSPECIFIED,
+                rightText = rWeight?.let { "$it g" } ?: UNSPECIFIED,
+                customDelta = if (lWeight != null && rWeight != null && lWeight != rWeight) "-${abs(lWeight - rWeight)}g Daha Hafif" else null,
                 isKey = true,
             )
         )
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Maksimum DPI Hassasiyeti",
-                leftVal = l.maxDpi.toDouble(),
-                rightVal = r.maxDpi.toDouble(),
-                leftText = "${l.maxDpi} DPI",
-                rightText = "${r.maxDpi} DPI",
+                leftVal = l.maxDpi.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxDpi.takeIf { it > 0 }?.toDouble(),
+                leftText = l.maxDpi.takeIf { it > 0 }?.let { "$it DPI" } ?: UNSPECIFIED,
+                rightText = r.maxDpi.takeIf { it > 0 }?.let { "$it DPI" } ?: UNSPECIFIED,
                 badgeSuffix = "DPI",
             )
         )
-        add(VsComparisonRow("Switch Teknolojisi", l.switchType, r.switchType))
-        add(VsComparisonRow("Bağlantı Modu", l.connectivity, r.connectivity))
+        add(VsComparisonRow("Switch Teknolojisi", l.switchType.ifBlank { UNSPECIFIED }, r.switchType.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Bağlantı Modu", l.connectivity.ifBlank { UNSPECIFIED }, r.connectivity.ifBlank { UNSPECIFIED }))
         add(
             compareHigherBetterNullable(
                 label = "Batarya Ömrü",
-                leftVal = l.batteryHours?.toDouble(),
-                rightVal = r.batteryHours?.toDouble(),
-                leftText = l.batteryHours?.let { "$it Saat" } ?: "Kablolu",
-                rightText = r.batteryHours?.let { "$it Saat" } ?: "Kablolu",
-                customDelta = if (l.batteryHours != null && r.batteryHours != null && l.batteryHours != r.batteryHours) {
+                leftVal = l.batteryHours?.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.batteryHours?.takeIf { it > 0 }?.toDouble(),
+                leftText = l.batteryHours?.takeIf { it > 0 }?.let { "$it Saat" } ?: "Kablolu",
+                rightText = r.batteryHours?.takeIf { it > 0 }?.let { "$it Saat" } ?: "Kablolu",
+                customDelta = if (l.batteryHours != null && r.batteryHours != null && l.batteryHours > 0 && r.batteryHours > 0 && l.batteryHours != r.batteryHours) {
                     "+${abs(l.batteryHours - r.batteryHours)} Saat"
                 } else null,
             )
@@ -1202,7 +1306,7 @@ object VsArenaEngine {
     }
 
     private fun compareKeyboards(l: KeyboardSpec, r: KeyboardSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Switch Mimarisi", l.switchType, r.switchType, isKeyMetric = true))
+        add(VsComparisonRow("Switch Mimarisi", l.switchType.ifBlank { UNSPECIFIED }, r.switchType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
             compareHigherBetter(
                 label = "Rapid Trigger (Dinamik Sıfırlama)",
@@ -1215,27 +1319,27 @@ object VsArenaEngine {
             )
         )
         add(
-            compareLowerBetter(
+            compareLowerBetterNullable(
                 label = "Minimum Tetikleme Mesafesi",
-                leftVal = l.minActuationMm,
-                rightVal = r.minActuationMm,
-                leftText = "${l.minActuationMm} mm",
-                rightText = "${r.minActuationMm} mm",
+                leftVal = l.minActuationMm.takeIf { it > 0.0 },
+                rightVal = r.minActuationMm.takeIf { it > 0.0 },
+                leftText = l.minActuationMm.takeIf { it > 0.0 }?.let { "$it mm" } ?: UNSPECIFIED,
+                rightText = r.minActuationMm.takeIf { it > 0.0 }?.let { "$it mm" } ?: UNSPECIFIED,
                 badgeSuffix = "Daha Çabuk Tetikleme",
                 isKey = true,
             )
         )
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Polling Rate (Tepki Frekansı)",
-                leftVal = l.pollingRateHz.toDouble(),
-                rightVal = r.pollingRateHz.toDouble(),
-                leftText = "${l.pollingRateHz} Hz",
-                rightText = "${r.pollingRateHz} Hz",
+                leftVal = l.pollingRateHz.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.pollingRateHz.takeIf { it > 0 }?.toDouble(),
+                leftText = formatPollingRate(l.pollingRateHz),
+                rightText = formatPollingRate(r.pollingRateHz),
                 badgeSuffix = "Hz",
             )
         )
-        add(VsComparisonRow("Tuş Dizilimi (Layout)", l.layout, r.layout))
+        add(VsComparisonRow("Tuş Dizilimi (Layout)", l.layout.ifBlank { UNSPECIFIED }, r.layout.ifBlank { UNSPECIFIED }))
         add(
             VsComparisonRow(
                 label = "Hot-Swap (Lehimsiz Switch Değişimi)",
@@ -1243,40 +1347,44 @@ object VsArenaEngine {
                 rightValue = if (r.hotSwap) "Var" else "Yok",
             )
         )
-        add(VsComparisonRow("Bağlantı", l.connectivity, r.connectivity))
+        add(VsComparisonRow("Bağlantı", l.connectivity.ifBlank { UNSPECIFIED }, r.connectivity.ifBlank { UNSPECIFIED }))
     }
 
     private fun compareHeadsets(l: HeadsetSpec, r: HeadsetSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Sürücü Teknolojisi", l.driverType, r.driverType, isKeyMetric = true))
+        add(VsComparisonRow("Sürücü Teknolojisi", l.driverType.ifBlank { UNSPECIFIED }, r.driverType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        val lDrv = l.driverSizeMm.takeIf { it > 0 }
+        val rDrv = r.driverSizeMm.takeIf { it > 0 }
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Sürücü Çapı (mm)",
-                leftVal = l.driverSizeMm.toDouble(),
-                rightVal = r.driverSizeMm.toDouble(),
-                leftText = "${l.driverSizeMm} mm",
-                rightText = "${r.driverSizeMm} mm",
-                customDelta = if (l.driverSizeMm != r.driverSizeMm) "+${abs(l.driverSizeMm - r.driverSizeMm)} mm Sürücü" else null,
+                leftVal = lDrv?.toDouble(),
+                rightVal = rDrv?.toDouble(),
+                leftText = lDrv?.let { "$it mm" } ?: UNSPECIFIED,
+                rightText = rDrv?.let { "$it mm" } ?: UNSPECIFIED,
+                customDelta = if (lDrv != null && rDrv != null && lDrv != rDrv) "+${abs(lDrv - rDrv)} mm Sürücü" else null,
                 isKey = true,
             )
         )
         add(
             VsComparisonRow(
                 label = "Empedans & DAC/Amp Gereksinimi",
-                leftValue = "${l.impedanceOhm} Ω (${if (l.dacAmpRequired) "DAC/Amp Önerilir" else "Doğrudan Sürülebilir"})",
-                rightValue = "${r.impedanceOhm} Ω (${if (r.dacAmpRequired) "DAC/Amp Önerilir" else "Doğrudan Sürülebilir"})",
+                leftValue = if (l.impedanceOhm > 0) "${l.impedanceOhm} Ω (${if (l.dacAmpRequired) "DAC/Amp Önerilir" else "Doğrudan Sürülebilir"})" else UNSPECIFIED,
+                rightValue = if (r.impedanceOhm > 0) "${r.impedanceOhm} Ω (${if (r.dacAmpRequired) "DAC/Amp Önerilir" else "Doğrudan Sürülebilir"})" else UNSPECIFIED,
                 isKeyMetric = true,
             )
         )
-        add(VsComparisonRow("Frekans Tepkisi", l.frequencyResponse, r.frequencyResponse))
-        add(VsComparisonRow("Mikrofon Tipi", l.micType, r.micType))
+        add(VsComparisonRow("Frekans Tepkisi", l.frequencyResponse.ifBlank { UNSPECIFIED }, r.frequencyResponse.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Mikrofon Tipi", l.micType.ifBlank { UNSPECIFIED }, r.micType.ifBlank { UNSPECIFIED }))
+        val lW = l.weightG.takeIf { it > 0 }
+        val rW = r.weightG.takeIf { it > 0 }
         add(
-            compareLowerBetter(
+            compareLowerBetterNullable(
                 label = "Ağırlık (Konfor)",
-                leftVal = l.weightG.toDouble(),
-                rightVal = r.weightG.toDouble(),
-                leftText = "${l.weightG} g",
-                rightText = "${r.weightG} g",
-                customDelta = if (l.weightG != r.weightG) "-${abs(l.weightG - r.weightG)}g Daha Hafif" else null,
+                leftVal = lW?.toDouble(),
+                rightVal = rW?.toDouble(),
+                leftText = lW?.let { "$it g" } ?: UNSPECIFIED,
+                rightText = rW?.let { "$it g" } ?: UNSPECIFIED,
+                customDelta = if (lW != null && rW != null && lW != rW) "-${abs(lW - rW)}g Daha Hafif" else null,
             )
         )
     }
@@ -1708,6 +1816,298 @@ object VsArenaEngine {
 
         add(VsComparisonRow("İşletim Sistemi & Verimlilik", "${l.osName} (${l.updateYears} Yıl)", "${r.osName} (${r.updateYears} Yıl)"))
         add(VsComparisonRow("Bağlantı & Hücresel", l.cellularOption, r.cellularOption))
+    }
+
+    private fun compareCaseFans(l: CaseFanSpec, r: CaseFanSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Fan Çapı", l.fanSizeMm.takeIf { it > 0 }?.let { "$it mm" } ?: UNSPECIFIED, r.fanSizeMm.takeIf { it > 0 }?.let { "$it mm" } ?: UNSPECIFIED, isKeyMetric = true))
+        add(
+            compareHigherBetterNullable(
+                label = "Hava Akışı (CFM)",
+                leftVal = l.maxAirflowCfm.takeIf { it > 0.0 },
+                rightVal = r.maxAirflowCfm.takeIf { it > 0.0 },
+                leftText = l.maxAirflowCfm.takeIf { it > 0.0 }?.let { "$it CFM" } ?: UNSPECIFIED,
+                rightText = r.maxAirflowCfm.takeIf { it > 0.0 }?.let { "$it CFM" } ?: UNSPECIFIED,
+                badgeSuffix = "Hava Akışı",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Statik Basınç (mmH₂O)",
+                leftVal = l.staticPressureMmH2o.takeIf { it > 0.0 },
+                rightVal = r.staticPressureMmH2o.takeIf { it > 0.0 },
+                leftText = l.staticPressureMmH2o.takeIf { it > 0.0 }?.let { "$it mmH₂O" } ?: UNSPECIFIED,
+                rightText = r.staticPressureMmH2o.takeIf { it > 0.0 }?.let { "$it mmH₂O" } ?: UNSPECIFIED,
+                badgeSuffix = "Basınç",
+            )
+        )
+        add(
+            compareLowerBetterNullable(
+                label = "Gürültü Seviyesi (dBA)",
+                leftVal = l.noiseLevelDba.takeIf { it > 0.0 },
+                rightVal = r.noiseLevelDba.takeIf { it > 0.0 },
+                leftText = l.noiseLevelDba.takeIf { it > 0.0 }?.let { "$it dBA" } ?: UNSPECIFIED,
+                rightText = r.noiseLevelDba.takeIf { it > 0.0 }?.let { "$it dBA" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Sessiz",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Maksimum Devir (RPM)",
+                leftVal = l.maxRpm.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxRpm.takeIf { it > 0 }?.toDouble(),
+                leftText = l.maxRpm.takeIf { it > 0 }?.let { "$it RPM" } ?: UNSPECIFIED,
+                rightText = r.maxRpm.takeIf { it > 0 }?.let { "$it RPM" } ?: UNSPECIFIED,
+                badgeSuffix = "RPM",
+            )
+        )
+        add(VsComparisonRow("Rulman & Aydınlatma", listOfNotNull(l.bearingType.ifBlank { null }, l.argbType.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }, listOfNotNull(r.bearingType.ifBlank { null }, r.argbType.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareUps(l: UpsSpec, r: UpsSpec): List<VsComparisonRow> = buildList {
+        add(
+            compareHigherBetterNullable(
+                label = "Aktif Güç Kapasitesi (Watt)",
+                leftVal = l.wattCapacity.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.wattCapacity.takeIf { it > 0 }?.toDouble(),
+                leftText = l.wattCapacity.takeIf { it > 0 }?.let { "$it W" } ?: UNSPECIFIED,
+                rightText = r.wattCapacity.takeIf { it > 0 }?.let { "$it W" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Yüksek Güç",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Görünür Güç (VA)",
+                leftVal = l.vaRating.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.vaRating.takeIf { it > 0 }?.toDouble(),
+                leftText = l.vaRating.takeIf { it > 0 }?.let { "$it VA" } ?: UNSPECIFIED,
+                rightText = r.vaRating.takeIf { it > 0 }?.let { "$it VA" } ?: UNSPECIFIED,
+                badgeSuffix = "VA",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Topoloji & Dalga Tipi", listOfNotNull(l.topology.ifBlank { null }, l.sinewaveType.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }, listOfNotNull(r.topology.ifBlank { null }, r.sinewaveType.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(
+            compareHigherBetterNullable(
+                label = "Priz Sayısı",
+                leftVal = l.outletCount.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.outletCount.takeIf { it > 0 }?.toDouble(),
+                leftText = l.outletCount.takeIf { it > 0 }?.let { "$it Priz" } ?: UNSPECIFIED,
+                rightText = r.outletCount.takeIf { it > 0 }?.let { "$it Priz" } ?: UNSPECIFIED,
+                badgeSuffix = "Çıkış",
+            )
+        )
+        add(VsComparisonRow("Batarya Yapısı", l.batterySpecs.ifBlank { UNSPECIFIED }, r.batterySpecs.ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareGamingDesks(l: GamingDeskSpec, r: GamingDeskSpec): List<VsComparisonRow> = buildList {
+        add(
+            compareHigherBetterNullable(
+                label = "Masa Genişliği (cm)",
+                leftVal = l.deskWidthCm.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.deskWidthCm.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.deskWidthCm > 0) "${l.deskWidthCm} x ${l.deskDepthCm} cm" else UNSPECIFIED,
+                rightText = if (r.deskWidthCm > 0) "${r.deskWidthCm} x ${r.deskDepthCm} cm" else UNSPECIFIED,
+                badgeSuffix = "Daha Geniş",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Taşıma Kapasitesi (kg)",
+                leftVal = l.maxLoadKg.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxLoadKg.takeIf { it > 0 }?.toDouble(),
+                leftText = l.maxLoadKg.takeIf { it > 0 }?.let { "$it kg" } ?: UNSPECIFIED,
+                rightText = r.maxLoadKg.takeIf { it > 0 }?.let { "$it kg" } ?: UNSPECIFIED,
+                badgeSuffix = "Kapasite",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetter(
+                label = "Motorlu Yükseklik Ayarı",
+                leftVal = if (l.isMotorizedHeight) 1.0 else 0.0,
+                rightVal = if (r.isMotorizedHeight) 1.0 else 0.0,
+                leftText = if (l.isMotorizedHeight) "Motorlu (${l.minHeightCm}-${l.maxHeightCm} cm)" else "Sabit",
+                rightText = if (r.isMotorizedHeight) "Motorlu (${r.minHeightCm}-${r.maxHeightCm} cm)" else "Sabit",
+                customDelta = "Ergonomi Avantajı",
+            )
+        )
+        add(VsComparisonRow("Yüzey Kaplaması", l.surfaceFinish.ifBlank { UNSPECIFIED }, r.surfaceFinish.ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareGamingLighting(l: GamingLightingSpec, r: GamingLightingSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Form Faktörü", l.formFactor.ifBlank { UNSPECIFIED }, r.formFactor.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(
+            compareHigherBetterNullable(
+                label = "Parlaklık (Lümen)",
+                leftVal = l.maxLumens.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxLumens.takeIf { it > 0 }?.toDouble(),
+                leftText = l.maxLumens.takeIf { it > 0 }?.let { "$it lm" } ?: UNSPECIFIED,
+                rightText = r.maxLumens.takeIf { it > 0 }?.let { "$it lm" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Parlak",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Renk Doğruluğu (CRI)",
+                leftVal = l.criScore.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.criScore.takeIf { it > 0 }?.toDouble(),
+                leftText = l.criScore.takeIf { it > 0 }?.let { "Ra $it" } ?: UNSPECIFIED,
+                rightText = r.criScore.takeIf { it > 0 }?.let { "Ra $it" } ?: UNSPECIFIED,
+                badgeSuffix = "CRI",
+            )
+        )
+        add(VsComparisonRow("Renk Sıcaklığı & Ekosistem", listOfNotNull(l.colorTempKelvin.ifBlank { null }, l.supportedEcosystems.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }, listOfNotNull(r.colorTempKelvin.ifBlank { null }, r.supportedEcosystems.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareSmartwatches(l: SmartwatchSpec, r: SmartwatchSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("Ekran Paneli", if (l.screenSizeInch > 0.0) "${l.screenSizeInch}\" ${l.screenPanel}".trim() else l.screenPanel.ifBlank { UNSPECIFIED }, if (r.screenSizeInch > 0.0) "${r.screenSizeInch}\" ${r.screenPanel}".trim() else r.screenPanel.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(
+            compareHigherBetterNullable(
+                label = "Pil Ömrü (Gün)",
+                leftVal = l.batteryLifeDays.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.batteryLifeDays.takeIf { it > 0 }?.toDouble(),
+                leftText = l.batteryLifeDays.takeIf { it > 0 }?.let { "$it Gün" } ?: UNSPECIFIED,
+                rightText = r.batteryLifeDays.takeIf { it > 0 }?.let { "$it Gün" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Uzun Pil",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Tepe Parlaklık (Nit)",
+                leftVal = l.peakBrightnessNits.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.peakBrightnessNits.takeIf { it > 0 }?.toDouble(),
+                leftText = l.peakBrightnessNits.takeIf { it > 0 }?.let { "$it Nit" } ?: UNSPECIFIED,
+                rightText = r.peakBrightnessNits.takeIf { it > 0 }?.let { "$it Nit" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Parlak",
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Su Geçirmezlik (ATM)",
+                leftVal = l.waterResistanceAtm.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.waterResistanceAtm.takeIf { it > 0 }?.toDouble(),
+                leftText = l.waterResistanceAtm.takeIf { it > 0 }?.let { "$it ATM" } ?: UNSPECIFIED,
+                rightText = r.waterResistanceAtm.takeIf { it > 0 }?.let { "$it ATM" } ?: UNSPECIFIED,
+                badgeSuffix = "ATM",
+            )
+        )
+        add(VsComparisonRow("İşletim Sistemi & Kasa", listOfNotNull(l.osName.ifBlank { null }, l.caseMaterial.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }, listOfNotNull(r.osName.ifBlank { null }, r.caseMaterial.ifBlank { null }).joinToString(" • ").ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareRouters(l: RouterSpec, r: RouterSpec): List<VsComparisonRow> = buildList {
+        add(
+            compareHigherBetterNullable(
+                label = "Wi-Fi Standardı",
+                leftVal = wifiStandardRank(l.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                rightVal = wifiStandardRank(r.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                leftText = l.wifiStandard.ifBlank { UNSPECIFIED },
+                rightText = r.wifiStandard.ifBlank { UNSPECIFIED },
+                customDelta = "Daha Yeni Nesil Wi-Fi",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Hız Sınıfı",
+                leftVal = extractSpeedMbps(l.speedClass).takeIf { it > 0 }?.toDouble(),
+                rightVal = extractSpeedMbps(r.speedClass).takeIf { it > 0 }?.toDouble(),
+                leftText = l.speedClass.ifBlank { UNSPECIFIED },
+                rightText = r.speedClass.ifBlank { UNSPECIFIED },
+                badgeSuffix = "Bant Genişliği",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Ethernet Portları", l.ethernetPorts.ifBlank { UNSPECIFIED }, r.ethernetPorts.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Frekans Bantları", l.bands.ifBlank { UNSPECIFIED }, r.bands.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("İşlemci & Bellek", l.processorAndRam.ifBlank { UNSPECIFIED }, r.processorAndRam.ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareModems(l: ModemSpec, r: ModemSpec): List<VsComparisonRow> = buildList {
+        add(VsComparisonRow("DSL / Hat Profili", l.vdslProfile.ifBlank { UNSPECIFIED }, r.vdslProfile.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(
+            compareHigherBetterNullable(
+                label = "Wi-Fi Standardı",
+                leftVal = wifiStandardRank(l.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                rightVal = wifiStandardRank(r.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                leftText = l.wifiStandard.ifBlank { UNSPECIFIED },
+                rightText = r.wifiStandard.ifBlank { UNSPECIFIED },
+                customDelta = "Daha Yeni Wi-Fi",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetter(
+                label = "Fiber WAN Desteği",
+                leftVal = if (l.fiberWanSupport) 1.0 else 0.0,
+                rightVal = if (r.fiberWanSupport) 1.0 else 0.0,
+                leftText = if (l.fiberWanSupport) "Destekliyor" else "Yok",
+                rightText = if (r.fiberWanSupport) "Destekliyor" else "Yok",
+                customDelta = "Fiber Hazır",
+            )
+        )
+        add(VsComparisonRow("LAN Portları", l.lanPorts.ifBlank { UNSPECIFIED }, r.lanPorts.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Yonga Seti (SoC)", l.chipset.ifBlank { UNSPECIFIED }, r.chipset.ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareAccessPoints(l: AccessPointSpec, r: AccessPointSpec): List<VsComparisonRow> = buildList {
+        add(
+            compareHigherBetterNullable(
+                label = "Wi-Fi Standardı",
+                leftVal = wifiStandardRank(l.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                rightVal = wifiStandardRank(r.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                leftText = l.wifiStandard.ifBlank { UNSPECIFIED },
+                rightText = r.wifiStandard.ifBlank { UNSPECIFIED },
+                customDelta = "Daha Yeni Wi-Fi",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Maksimum İstemci Kapasitesi",
+                leftVal = l.maxClients.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxClients.takeIf { it > 0 }?.toDouble(),
+                leftText = l.maxClients.takeIf { it > 0 }?.let { "$it+ İstemci" } ?: UNSPECIFIED,
+                rightText = r.maxClients.takeIf { it > 0 }?.let { "$it+ İstemci" } ?: UNSPECIFIED,
+                badgeSuffix = "Kapasite",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("PoE Güç Desteği", l.poeSupport.ifBlank { UNSPECIFIED }, r.poeSupport.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Uplink Portu", l.uplinkPort.ifBlank { UNSPECIFIED }, r.uplinkPort.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("MU-MIMO Akışı", l.muMimoStreams.ifBlank { UNSPECIFIED }, r.muMimoStreams.ifBlank { UNSPECIFIED }))
+    }
+
+    private fun compareRangeExtenders(l: RangeExtenderSpec, r: RangeExtenderSpec): List<VsComparisonRow> = buildList {
+        add(
+            compareHigherBetterNullable(
+                label = "Wi-Fi Standardı",
+                leftVal = wifiStandardRank(l.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                rightVal = wifiStandardRank(r.wifiStandard).takeIf { it > 0 }?.toDouble(),
+                leftText = l.wifiStandard.ifBlank { UNSPECIFIED },
+                rightText = r.wifiStandard.ifBlank { UNSPECIFIED },
+                customDelta = "Daha Yeni Wi-Fi",
+                isKey = true,
+            )
+        )
+        add(
+            compareHigherBetterNullable(
+                label = "Kapsama Alanı (m²)",
+                leftVal = l.coverageAreaM2.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.coverageAreaM2.takeIf { it > 0 }?.toDouble(),
+                leftText = l.coverageAreaM2.takeIf { it > 0 }?.let { "$it m²" } ?: UNSPECIFIED,
+                rightText = r.coverageAreaM2.takeIf { it > 0 }?.let { "$it m²" } ?: UNSPECIFIED,
+                badgeSuffix = "Daha Geniş Kapsama",
+                isKey = true,
+            )
+        )
+        add(VsComparisonRow("Mesh Protokolü", l.meshProtocol.ifBlank { UNSPECIFIED }, r.meshProtocol.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Ethernet Portu", l.ethernetPorts.ifBlank { UNSPECIFIED }, r.ethernetPorts.ifBlank { UNSPECIFIED }))
     }
 
     private fun psuEfficiencyRank(rating: PsuEfficiencyRating): Int = when (rating) {

@@ -42,17 +42,18 @@ class GetCompatibleHardwareForSlotUseCase {
 
                 when {
                     requiredSocket != null -> {
-                        constraintDesc = "Anakart soketine kilitlendi: $requiredSocket"
+                        val normRequired = CheckBuildCompatibilityUseCase.normalizeSocketName(requiredSocket)
+                        constraintDesc = "Anakart soketine kilitlendi: $normRequired"
                         candidates.filter { item ->
                             val s = item.spec as? CpuSpec ?: return@filter false
-                            s.socket.equals(requiredSocket, ignoreCase = true)
+                            CheckBuildCompatibilityUseCase.socketsMatch(s.socket, requiredSocket)
                         }
                     }
                     coolerRequiredSocket != null && coolerRequiredSocket.isNotEmpty() -> {
                         constraintDesc = "Seçili soğutucu soketlerine kilitlendi (${coolerRequiredSocket.joinToString(", ")})"
                         candidates.filter { item ->
                             val s = item.spec as? CpuSpec ?: return@filter false
-                            coolerRequiredSocket.any { it.equals(s.socket, ignoreCase = true) }
+                            coolerRequiredSocket.any { CheckBuildCompatibilityUseCase.socketsMatch(it, s.socket) }
                         }
                     }
                     else -> candidates
@@ -67,7 +68,7 @@ class GetCompatibleHardwareForSlotUseCase {
                 val selectedCaseType = caseSpec?.type?.takeIf { it.isNotBlank() }
 
                 val parts = mutableListOf<String>()
-                if (requiredSocket != null) parts.add("$requiredSocket Soket")
+                if (requiredSocket != null) parts.add("${CheckBuildCompatibilityUseCase.normalizeSocketName(requiredSocket)} Soket")
                 if (requiredRamGen != null) parts.add(requiredRamGen.name)
                 if (requiredRamModules != null && requiredRamModules > 2) parts.add("≥${requiredRamModules} RAM Slotu")
                 if (selectedCaseType != null) parts.add("$selectedCaseType Kasa")
@@ -80,7 +81,7 @@ class GetCompatibleHardwareForSlotUseCase {
                 } else {
                     candidates.filter { item ->
                         val m = item.spec as? MotherboardSpec ?: return@filter false
-                        val socketOk = requiredSocket == null || m.socket.equals(requiredSocket, ignoreCase = true)
+                        val socketOk = requiredSocket == null || CheckBuildCompatibilityUseCase.socketsMatch(m.socket, requiredSocket)
                         val ramGenOk = requiredRamGen == null || m.memoryGeneration == requiredRamGen
                         val slotsOk = requiredRamModules == null || m.ramSlots <= 0 || m.ramSlots >= requiredRamModules
                         val capOk = requiredRamGb == null || m.maxMemoryGb == null || m.maxMemoryGb <= 0 || m.maxMemoryGb >= requiredRamGb
@@ -92,8 +93,9 @@ class GetCompatibleHardwareForSlotUseCase {
             }
 
             HardwareCategory.RAM -> {
-                val cpuInferredGen = when (cpuSpec?.socket?.uppercase()?.trim()) {
-                    "AM5", "LGA1851" -> DdrGeneration.DDR5
+                val normalizedCpuSocket = CheckBuildCompatibilityUseCase.normalizeSocketName(cpuSpec?.socket)
+                val cpuInferredGen = when (normalizedCpuSocket) {
+                    "AM5", "LGA1851", "STR5" -> DdrGeneration.DDR5
                     "AM4", "LGA1200", "LGA1151" -> DdrGeneration.DDR4
                     else -> null
                 }
@@ -105,7 +107,7 @@ class GetCompatibleHardwareForSlotUseCase {
                 if (requiredGen != null) {
                     parts.add(
                         if (moboSpec != null) "Anakart: ${requiredGen.name}"
-                        else "Soket (${cpuSpec?.socket}): ${requiredGen.name}",
+                        else "Soket ($normalizedCpuSocket): ${requiredGen.name}",
                     )
                 }
                 if (maxSlots != null) parts.add("Max $maxSlots Modül")
@@ -147,7 +149,7 @@ class GetCompatibleHardwareForSlotUseCase {
                 val maxAirHeight = caseSpec?.maxCpuCoolerHeightMm?.takeIf { it > 0 }
 
                 val parts = mutableListOf<String>()
-                if (requiredSocket != null) parts.add("Soket: $requiredSocket")
+                if (requiredSocket != null) parts.add("Soket: ${CheckBuildCompatibilityUseCase.normalizeSocketName(requiredSocket)}")
                 if (maxRad != null) parts.add("Radyatör ≤${maxRad}mm")
                 if (maxAirHeight != null) parts.add("Kule ≤${maxAirHeight}mm")
                 if (parts.isNotEmpty()) {
@@ -161,7 +163,7 @@ class GetCompatibleHardwareForSlotUseCase {
                         val c = item.spec as? CoolerSpec ?: return@filter false
                         val socketOk = requiredSocket == null ||
                             c.supportedSockets.isEmpty() ||
-                            c.supportedSockets.any { it.equals(requiredSocket, ignoreCase = true) }
+                            c.supportedSockets.any { CheckBuildCompatibilityUseCase.socketsMatch(it, requiredSocket) }
                         val radOk = maxRad == null || c.type != CoolerType.LIQUID || (c.radiatorSizeMm ?: 0) <= maxRad
                         val heightOk = maxAirHeight == null ||
                             c.type != CoolerType.AIR ||

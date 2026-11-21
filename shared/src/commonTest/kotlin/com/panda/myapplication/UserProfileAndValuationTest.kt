@@ -20,22 +20,23 @@ class UserProfileAndValuationTest {
 
     @Test
     fun testUserAgeCalculation() {
+        val (curYear, curMonth, curDay) = UserProfile.currentCalendarDate()
         val user1 = UserProfile(
             id = "u1",
             email = "test@domain.com",
             username = "dombikpanda",
-            birthDateIso = "2000-05-14",
+            birthDateIso = "2000-01-01",
         )
-        // 2026 - 2000 = 26
-        assertEquals(26, user1.age)
+        assertEquals(curYear - 2000, user1.age)
 
-        val user2 = UserProfile(
+        val userFutureBirthday = UserProfile(
             id = "u2",
             email = "young@domain.com",
             username = "gamer06",
-            birthDateIso = "2006-11-20", // Kasım > Ekim -> 2026 - 2006 - 1 = 19
+            birthDateIso = "2006-12-31",
         )
-        assertEquals(19, user2.age)
+        val expectedFuture = if (curMonth == 12 && curDay == 31) curYear - 2006 else curYear - 2006 - 1
+        assertEquals(expectedFuture, userFutureBirthday.age)
 
         val user3 = UserProfile(
             id = "u3",
@@ -43,7 +44,7 @@ class UserProfileAndValuationTest {
             username = "hardcore90",
             birthDateIso = "1990-01-01",
         )
-        assertEquals(36, user3.age)
+        assertEquals(curYear - 1990, user3.age)
     }
 
     @Test

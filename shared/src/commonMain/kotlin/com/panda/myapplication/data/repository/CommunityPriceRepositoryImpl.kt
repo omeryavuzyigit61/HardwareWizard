@@ -4,6 +4,7 @@ import com.panda.myapplication.data.remote.SecurityUtils
 import com.panda.myapplication.data.remote.SupabaseConfig
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
@@ -22,6 +23,7 @@ import io.ktor.http.contentType
 import io.ktor.http.isSuccess
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -50,14 +52,15 @@ internal class CommunityPriceRepositoryImpl(
 
     private val _deals = MutableStateFlow<List<CommunityDeal>>(emptyList())
     private val _isAdminLoggedIn = MutableStateFlow(false)
+    private val repoScope = CoroutineScope(SupervisorJob() + ioDispatcher)
 
     init {
-        if (autoFetchRemote) {
-            CoroutineScope(ioDispatcher).launch {
+        if (autoFetchRemote && FeatureFlags.IS_PRICING_ENABLED) {
+            repoScope.launch {
                 fetchRemoteDealsFromSupabase()
                 // Lifecycle-aware senkronizasyon: Yalnızca aktif ekran dinleyicisi varken buluttan veri çek
                 while (true) {
-                    kotlinx.coroutines.delay(8000.milliseconds)
+                    kotlinx.coroutines.delay(15_000.milliseconds)
                     if (_deals.subscriptionCount.value > 0) {
                         fetchRemoteDealsFromSupabase()
                     }
@@ -78,7 +81,8 @@ internal class CommunityPriceRepositoryImpl(
 
     private suspend fun fetchRemoteDealsFromSupabase() {
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_DEALS}?select=*&order=created_at_epoch_ms.desc"
+            val safeDealCols = "id,hardware_id,hardware_name,price_try,deal_type,note,proof_url,user_display_name,created_at_epoch_ms,status,review_note,reviewed_by,reviewed_at_epoch_ms"
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_DEALS}?select=$safeDealCols&order=created_at_epoch_ms.desc"
             val response = httpClient.get(url) {
                 headers {
                     append("apikey", SupabaseConfig.supabaseAnonKey)
@@ -152,8 +156,8 @@ internal class CommunityPriceRepositoryImpl(
 
     override fun observeDealsForHardware(hardwareId: String): Flow<List<CommunityDeal>> {
         val targetNorm = normalizeHardwareId(hardwareId)
-        if (autoFetchRemote) {
-            CoroutineScope(ioDispatcher).launch {
+        if (autoFetchRemote && FeatureFlags.IS_PRICING_ENABLED) {
+            repoScope.launch {
                 fetchRemoteDealsFromSupabase()
             }
         }
@@ -179,8 +183,8 @@ internal class CommunityPriceRepositoryImpl(
     }
 
     override fun observeAllPendingDeals(): Flow<List<CommunityDeal>> {
-        if (autoFetchRemote) {
-            CoroutineScope(ioDispatcher).launch {
+        if (autoFetchRemote && FeatureFlags.IS_PRICING_ENABLED) {
+            repoScope.launch {
                 fetchRemoteDealsFromSupabase()
             }
         }
@@ -192,8 +196,8 @@ internal class CommunityPriceRepositoryImpl(
     }
 
     override fun observeAllDeals(): Flow<List<CommunityDeal>> {
-        if (autoFetchRemote) {
-            CoroutineScope(ioDispatcher).launch {
+        if (autoFetchRemote && FeatureFlags.IS_PRICING_ENABLED) {
+            repoScope.launch {
                 fetchRemoteDealsFromSupabase()
             }
         }

@@ -21,6 +21,7 @@ import io.ktor.http.contentType
 import kotlin.time.Clock
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -49,11 +50,13 @@ internal class RigShowcaseRepositoryImpl(
     private val _showcases = MutableStateFlow<List<RigShowcase>>(emptyList())
     private val _userLikes = MutableStateFlow<Set<String>>(emptySet())
 
+    private val repoScope = CoroutineScope(SupervisorJob() + ioDispatcher)
+
     init {
-        CoroutineScope(ioDispatcher).launch {
+        repoScope.launch {
             fetchRemoteShowcases()
             while (true) {
-                delay(12000.milliseconds)
+                delay(15_000.milliseconds)
                 if (_showcases.subscriptionCount.value > 0) {
                     fetchRemoteShowcases()
                 }

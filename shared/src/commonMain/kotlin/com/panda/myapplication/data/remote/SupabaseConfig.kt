@@ -56,6 +56,7 @@ object SupabaseConfig {
     const val TABLE_USER_PROFILES = "user_profiles"
     const val TABLE_COMMUNITY_RIG_SHOWCASES = "community_rig_showcases"
     const val TABLE_SHOWCASE_LIKES = "showcase_likes"
+    const val TABLE_CONTENT_REPORTS = "content_reports"
 
     // Güvenli RPC Fonksiyonları
     const val RPC_AUTHENTICATE_USER = "rpc/authenticate_user"

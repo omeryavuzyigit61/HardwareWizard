@@ -501,7 +501,7 @@ class HardwareListViewModel(
             if (isManual) {
                 isRefreshing.value = true
             }
-            when (repository.refreshHardwareItems()) {
+            when (repository.refreshHardwareItems(force = isManual)) {
                 is DomainResult.Success -> {
                     isRefreshing.value = false
                     errorMessage.value = null

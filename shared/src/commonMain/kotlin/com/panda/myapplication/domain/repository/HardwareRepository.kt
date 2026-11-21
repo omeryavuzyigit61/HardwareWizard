@@ -6,6 +6,11 @@ import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import kotlinx.coroutines.flow.Flow
 
+data class CatalogSyncStatus(
+    val itemCount: Int = 0,
+    val revision: Long = 1L,
+)
+
 /**
  * Offline-first contract: `observe*` streams emit from the local cache (SSOT),
  * while [refreshHardwareItems] syncs remote data into that cache.
@@ -21,7 +26,11 @@ interface HardwareRepository {
 
     fun observeBrands(category: HardwareCategory? = null): Flow<DomainResult<List<String>>>
 
-    suspend fun refreshHardwareItems(): DomainResult<Unit>
+    suspend fun refreshHardwareItems(force: Boolean = false): DomainResult<Unit>
+
+    suspend fun getCatalogSyncStatus(): CatalogSyncStatus = CatalogSyncStatus()
+
+    suspend fun clearRuntimeCache() {}
 
     suspend fun setCustomPrice(id: HardwareId, customPriceTry: Double, note: String? = null): DomainResult<Unit>
 

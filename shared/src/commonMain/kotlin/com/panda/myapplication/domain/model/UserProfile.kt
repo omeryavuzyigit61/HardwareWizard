@@ -149,10 +149,28 @@ data class UserProfile(
             score >= 51 -> "Silikon Meraklısı"
             else -> fallback.ifBlank { "Lehim Çırağı" }
         }
+
+        /**
+         * Pure-KMP civil UTC date `(year, month, day)` derived dynamically from system clock
+         * using Howard Hinnant's civil-from-days algorithm (zero external date library needed).
+         */
+        fun currentCalendarDate(epochMillis: Long = Clock.System.now().toEpochMilliseconds()): Triple<Int, Int, Int> {
+            val z = (epochMillis / 86_400_000L) + 719_468L
+            val era = (if (z >= 0) z else z - 146_096L) / 146_097L
+            val doe = z - era * 146_097L
+            val yoe = (doe - doe / 1460L + doe / 36_524L - doe / 146_096L) / 365L
+            val y = yoe + era * 400L
+            val doy = doe - (365L * yoe + yoe / 4L - yoe / 100L)
+            val mp = (5L * doy + 2L) / 153L
+            val d = doy - (153L * mp + 2L) / 5L + 1L
+            val m = mp + (if (mp < 10L) 3L else -9L)
+            val year = (y + if (m <= 2L) 1L else 0L).toInt()
+            return Triple(year, m.toInt(), d.toInt())
+        }
     }
 
     /**
-     * Doğum tarihinden (YYYY-AA-GG) güncel tarihi baz alarak kullanıcının kesin yaşını hesaplar.
+     * Doğum tarihinden (YYYY-AA-GG) güncel sistem saatini baz alarak kullanıcının kesin yaşını hesaplar.
      */
     val age: Int
         get() {
@@ -162,9 +180,7 @@ data class UserProfile(
                 val birthMonth = parts.getOrNull(1)?.toIntOrNull() ?: 1
                 val birthDay = parts.getOrNull(2)?.toIntOrNull() ?: 1
 
-                val currentYear = 2026
-                val currentMonth = 10
-                val currentDay = 19
+                val (currentYear, currentMonth, currentDay) = currentCalendarDate()
                 var calculatedAge = currentYear - birthYear
                 if (currentMonth < birthMonth || (currentMonth == birthMonth && currentDay < birthDay)) {
                     calculatedAge--

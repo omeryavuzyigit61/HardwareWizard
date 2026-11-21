@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
@@ -50,12 +51,22 @@ class HardwareDetailViewModel(
     val effects = effectChannel.receiveAsFlow()
 
     private val tuningCommentsJobs = mutableMapOf<String, Job>()
+    private val loadJobs = mutableListOf<Job>()
 
     init {
 
         viewModelScope.launch {
             userRepository.currentUser.collect { user ->
                 _uiState.update { it.copy(currentUser = user, isLoggedIn = user != null) }
+            }
+        }
+        viewModelScope.launch {
+            activeBuildRepository.activeBuild.collect { build ->
+                val currentItemId = _uiState.value.item?.id ?: return@collect
+                val inBuild = build.items.any { it.id == currentItemId }
+                if (_uiState.value.isAddedToBuild != inBuild) {
+                    _uiState.update { it.copy(isAddedToBuild = inBuild) }
+                }
             }
         }
     }
@@ -66,7 +77,13 @@ class HardwareDetailViewModel(
             return
         }
 
-        viewModelScope.launch {
+        // Cancel any previously active collectors / polling loops to avoid Job leaks
+        loadJobs.forEach { it.cancel() }
+        loadJobs.clear()
+        tuningCommentsJobs.values.forEach { it.cancel() }
+        tuningCommentsJobs.clear()
+
+        loadJobs += viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, errorMessage = null) }
             getHardwareDetailUseCase(HardwareId(id)).collect { result ->
                 when (result) {
@@ -100,15 +117,17 @@ class HardwareDetailViewModel(
             }
         }
 
-        // Topluluk Fırsat Akışını (Deals) Dinle
-        viewModelScope.launch {
-            communityPriceRepository.observeDealsForHardware(id).collect { deals ->
-                _uiState.update { it.copy(communityDeals = deals) }
+        // Topluluk Fırsat Akışını (Deals) yalnızca fiyatlandırma açıkken dinle
+        if (FeatureFlags.IS_PRICING_ENABLED) {
+            loadJobs += viewModelScope.launch {
+                communityPriceRepository.observeDealsForHardware(id).collect { deals ->
+                    _uiState.update { it.copy(communityDeals = deals) }
+                }
             }
         }
 
         // Topluluk OC/UV Ayarlarını Dinle
-        viewModelScope.launch {
+        loadJobs += viewModelScope.launch {
             tuningVaultRepository.observeTuningsForHardware(id).collect { tunings ->
                 _uiState.update { it.copy(tuningProfiles = tunings) }
                 tunings.forEach { profile ->
@@ -126,18 +145,20 @@ class HardwareDetailViewModel(
         }
 
         // Topluluk Mikro İpuçlarını Dinle
-        viewModelScope.launch {
+        loadJobs += viewModelScope.launch {
             tuningVaultRepository.observeTipsForHardware(id).collect { tips ->
                 _uiState.update { it.copy(proTips = tips) }
             }
         }
 
-        // Canlı Arka Plan Senkronizasyonu: Desktop Admin veya Supabase'deki onayları anında yakala
-        viewModelScope.launch {
-            communityPriceRepository.refreshDeals()
-            while (isActive) {
-                delay(5000)
+        // Arka plan fiyat polling'ini yalnızca fiyat motoru aktifken çalıştır (15sn aralık)
+        if (FeatureFlags.IS_PRICING_ENABLED) {
+            loadJobs += viewModelScope.launch {
                 communityPriceRepository.refreshDeals()
+                while (isActive) {
+                    delay(15_000)
+                    communityPriceRepository.refreshDeals()
+                }
             }
         }
     }

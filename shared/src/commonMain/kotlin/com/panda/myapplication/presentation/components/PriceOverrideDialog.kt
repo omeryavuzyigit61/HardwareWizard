@@ -174,8 +174,8 @@ fun PriceOverrideDialog(
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedBorderColor = NeonCyan,
                         unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                        focusedContainerColor = CardSurfaceElevated,
-                        unfocusedContainerColor = CardSurfaceElevated,
+                        focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                     ),
                 )
 
@@ -198,8 +198,8 @@ fun PriceOverrideDialog(
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedBorderColor = NeonCyan,
                         unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                        focusedContainerColor = CardSurfaceElevated,
-                        unfocusedContainerColor = CardSurfaceElevated,
+                        focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                     ),
                 )
 

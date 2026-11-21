@@ -2,6 +2,7 @@ package com.panda.myapplication.presentation.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.AppCurrency
 import com.panda.myapplication.domain.model.AppLanguage
 import com.panda.myapplication.domain.model.AppSettings
@@ -10,15 +11,38 @@ import com.panda.myapplication.domain.model.LengthUnit
 import com.panda.myapplication.domain.model.ResolutionTarget
 import com.panda.myapplication.domain.model.TemperatureUnit
 import com.panda.myapplication.domain.model.ThemeMode
+import com.panda.myapplication.domain.repository.CatalogSyncStatus
+import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.repository.SettingsRepository
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(
     private val settingsRepository: SettingsRepository,
+    private val hardwareRepository: HardwareRepository,
 ) : ViewModel() {
 
     val settings: StateFlow<AppSettings> = settingsRepository.settings
+
+    private val _catalogStatus = MutableStateFlow(CatalogSyncStatus())
+    val catalogStatus: StateFlow<CatalogSyncStatus> = _catalogStatus.asStateFlow()
+
+    private val _isSyncingCatalog = MutableStateFlow(false)
+    val isSyncingCatalog: StateFlow<Boolean> = _isSyncingCatalog.asStateFlow()
+
+    init {
+        refreshCatalogStatus()
+    }
+
+    private fun refreshCatalogStatus() {
+        viewModelScope.launch {
+            runCatching {
+                _catalogStatus.value = hardwareRepository.getCatalogSyncStatus()
+            }
+        }
+    }
 
     fun onThemeModeChanged(mode: ThemeMode) {
         viewModelScope.launch {
@@ -74,9 +98,22 @@ class SettingsViewModel(
         }
     }
 
+    fun onSyncCatalogNow(onResult: (Boolean, CatalogSyncStatus) -> Unit) {
+        if (_isSyncingCatalog.value) return
+        viewModelScope.launch {
+            _isSyncingCatalog.value = true
+            val res = hardwareRepository.refreshHardwareItems(force = true)
+            val updated = runCatching { hardwareRepository.getCatalogSyncStatus() }.getOrDefault(_catalogStatus.value)
+            _catalogStatus.value = updated
+            _isSyncingCatalog.value = false
+            onResult(res is DomainResult.Success, updated)
+        }
+    }
+
     fun onClearCache(onDone: () -> Unit) {
         viewModelScope.launch {
             settingsRepository.clearCache()
+            hardwareRepository.clearRuntimeCache()
             onDone()
         }
     }

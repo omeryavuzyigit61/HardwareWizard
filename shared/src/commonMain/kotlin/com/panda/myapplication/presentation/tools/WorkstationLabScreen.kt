@@ -123,7 +123,7 @@ fun WorkstationLabScreen(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = SlateDarkBackground,
+        containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             TopAppBar(
@@ -161,7 +161,7 @@ fun WorkstationLabScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = SlateDarkBackground,
+                    containerColor = MaterialTheme.colorScheme.background,
                 ),
             )
         },
@@ -209,8 +209,8 @@ fun WorkstationLabScreen(
                     singleLine = true,
                     shape = RoundedCornerShape(12.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = CardSurfaceElevated,
-                        unfocusedContainerColor = CardSurface,
+                        focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
                         focusedBorderColor = NeonCyan,
                         unfocusedBorderColor = GlassBorder,
                     ),
@@ -517,7 +517,7 @@ private fun WorkloadConfigCard(
 ) {
     Card(
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, GlassBorder),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -1026,7 +1026,7 @@ private fun TechnicalTakeawayCard(
 ) {
     Card(
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = CardSurfaceElevated),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, GlassBorder),
         modifier = Modifier.fillMaxWidth(),
     ) {

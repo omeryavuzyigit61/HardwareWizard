@@ -690,7 +690,8 @@ def _build_new_item_row(
         elif "RYZEN" in u:
             socket = "AM4"
         else:
-            socket = _clean_str(payload.get("socket")) or "AM5"
+            raw_sock = (_clean_str(payload.get("socket")) or "AM5").upper().replace(" ", "").replace("SOCKET", "")
+            socket = f"LGA{raw_sock}" if raw_sock in ("1851", "1700", "1200", "1151", "1150", "1155", "2066") else raw_sock
         spec = {
             "socket": socket,
             "core_count": cores,
@@ -751,9 +752,11 @@ def _build_new_item_row(
             "first_word_latency_ns": payload.get("first_word_latency"),
         }
     elif category == "MOTHERBOARD":
-        sock = _clean_str(payload.get("socket"))
-        if not sock:
+        raw_sock = _clean_str(payload.get("socket"))
+        if not raw_sock:
             return None
+        compact_sock = raw_sock.upper().replace(" ", "").replace("SOCKET", "")
+        sock = f"LGA{compact_sock}" if compact_sock in ("1851", "1700", "1200", "1151", "1150", "1155", "2066") else raw_sock
         ff_raw = str(payload.get("form_factor") or "ATX").upper()
         ff = "E_ATX" if "E-ATX" in ff_raw or "EATX" in ff_raw else ("MINI_ITX" if "ITX" in ff_raw else ("MICRO_ATX" if "MICRO" in ff_raw else "ATX"))
         ddr = "DDR5" if any(k in sock.upper() for k in ("AM5", "LGA1851")) else "DDR4"

@@ -1201,9 +1201,10 @@ private fun PerformancePowerSection(
 
                 is MouseSpec -> {
                     if (s.pollingRateHz > 0) {
+                        val msRounded = ((1000.0 / s.pollingRateHz) * 1000.0).toInt() / 1000.0
                         MetricProgressBar(
                             title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
-                            currentValue = "${s.pollingRateHz} Hz (${1000.0 / s.pollingRateHz} ms)",
+                            currentValue = "${s.pollingRateHz} Hz ($msRounded ms)",
                             fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
                             accentColor = MaterialTheme.colorScheme.primary,
                             subText = tr(isTr, "8000 Hz e-spor tepe standardına göre", "Relative to 8000 Hz esports ceiling"),
@@ -1242,12 +1243,13 @@ private fun PerformancePowerSection(
                         )
                     }
                     if (s.pollingRateHz > 0) {
+                        val msRounded = ((1000.0 / s.pollingRateHz) * 1000.0).toInt() / 1000.0
                         MetricProgressBar(
                             title = tr(isTr, "Raporlama Hızı (Polling Rate)", "Polling Rate"),
                             currentValue = "${s.pollingRateHz} Hz",
                             fraction = (s.pollingRateHz / 8000f).coerceIn(0.12f, 1f),
                             accentColor = MaterialTheme.colorScheme.secondary,
-                            subText = if (isTr) "Tuş basım iletim gecikmesi (${1000.0 / s.pollingRateHz} ms)" else "Keystroke transmission latency (${1000.0 / s.pollingRateHz} ms)",
+                            subText = if (isTr) "Tuş basım iletim gecikmesi ($msRounded ms)" else "Keystroke transmission latency ($msRounded ms)",
                         )
                     }
                 }

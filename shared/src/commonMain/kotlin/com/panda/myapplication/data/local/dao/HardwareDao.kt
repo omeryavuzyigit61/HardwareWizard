@@ -284,6 +284,9 @@ abstract class HardwareDao {
     @Query("SELECT * FROM app_settings")
     abstract suspend fun getAllSettings(): List<AppSettingEntity>
 
+    @Query("DELETE FROM app_settings WHERE `key` = :key")
+    abstract suspend fun deleteSetting(key: String)
+
     // endregion
 
     @Query("DELETE FROM hardware_items")

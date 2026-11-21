@@ -49,8 +49,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.Gender
 import com.panda.myapplication.domain.model.SpiritHardware
+import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.CardSurface
@@ -123,10 +125,15 @@ fun AuthSheet(
                         color = NeonCyan,
                     )
                     Text(
-                        text = if (selectedTabIndex == 0)
-                            tr(isTr, "Hesabınızla giriş yapın, fırsat bildirin ve sisteminizi değerlendirin.", "Sign in to submit deals, track builds, and participate in community discussions.")
-                        else
-                            tr(isTr, "Kendi donanım ruhunuzu seçin ve Hardware Wizard topluluğuna katılın.", "Choose your hardware persona and join the Hardware Wizard community."),
+                        text = if (selectedTabIndex == 0) {
+                            if (FeatureFlags.IS_PRICING_ENABLED) {
+                                tr(isTr, "Hesabınızla giriş yapın, fırsat bildirin ve sisteminizi değerlendirin.", "Sign in to submit deals, track builds, and participate in community discussions.")
+                            } else {
+                                tr(isTr, "Hesabınızla giriş yapın, sisteminizi paylaşın ve topluluk tartışmalarına katılın.", "Sign in to share your rig, publish tuning profiles, and join community discussions.")
+                            }
+                        } else {
+                            tr(isTr, "Kendi donanım ruhunuzu seçin ve Hardware Wizard topluluğuna katılın.", "Choose your hardware persona and join the Hardware Wizard community.")
+                        },
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -136,7 +143,7 @@ fun AuthSheet(
             // Tabs: Giriş Yap / Kayıt Ol
             PrimaryTabRow(
                 selectedTabIndex = selectedTabIndex,
-                containerColor = CardSurfaceElevated,
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 contentColor = NeonCyan,
                 indicator = {
                     TabRowDefaults.PrimaryIndicator(
@@ -333,9 +340,10 @@ fun AuthSheet(
 
                     // Otomatik Yaş Önizleme Rozeti
                     val previewAge = remember(birthDateText) {
+                        val currentYear = UserProfile.currentCalendarDate().first
                         val birthYear = birthDateText.split("-").firstOrNull()?.toIntOrNull()
-                        if (birthYear != null && birthYear in 1940..2025) {
-                            (2026 - birthYear).coerceAtLeast(0)
+                        if (birthYear != null && birthYear in 1940..currentYear) {
+                            (currentYear - birthYear).coerceAtLeast(0)
                         } else null
                     }
                     Surface(
@@ -395,7 +403,7 @@ fun AuthSheet(
 
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = if (isSelected) spiritColor.copy(alpha = 0.18f) else CardSurface.copy(alpha = 0.4f),
+                            color = if (isSelected) spiritColor.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
                             border = BorderStroke(if (isSelected) 1.5.dp else 0.5.dp, if (isSelected) spiritColor else GlassBorder),
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -469,7 +477,8 @@ fun AuthSheet(
                                     onDismiss()
                                 }
                                 is DomainResult.Failure -> {
-                                    errorMessage = strings.authRegisterFailed
+                                    errorMessage = (result.error as? DomainError.Unknown)?.cause?.message
+                                        ?: strings.authRegisterFailed
                                 }
                             }
                         }

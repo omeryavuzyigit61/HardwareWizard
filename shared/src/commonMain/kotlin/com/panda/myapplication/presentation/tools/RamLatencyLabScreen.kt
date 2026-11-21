@@ -150,15 +150,23 @@ fun RamLatencyLabScreen(
                         )
 
                         val latencyWinner = when {
-                            trueLatencyA < trueLatencyB -> strings.ramLatencyWinnerA.replace("%s", trueLatencyA.toString()).replace("%s", (((trueLatencyB - trueLatencyA) * 100).roundToInt() / 100.0).toString())
-                            trueLatencyB < trueLatencyA -> strings.ramLatencyWinnerB.replace("%s", trueLatencyB.toString()).replace("%s", (((trueLatencyA - trueLatencyB) * 100).roundToInt() / 100.0).toString())
-                            else -> strings.ramLatencyEqual.replace("%s", trueLatencyA.toString())
+                            trueLatencyA < trueLatencyB -> strings.ramLatencyWinnerA
+                                .replaceFirst("%s", trueLatencyA.toString())
+                                .replaceFirst("%s", (((trueLatencyB - trueLatencyA) * 100).roundToInt() / 100.0).toString())
+                            trueLatencyB < trueLatencyA -> strings.ramLatencyWinnerB
+                                .replaceFirst("%s", trueLatencyB.toString())
+                                .replaceFirst("%s", (((trueLatencyA - trueLatencyB) * 100).roundToInt() / 100.0).toString())
+                            else -> strings.ramLatencyEqual.replaceFirst("%s", trueLatencyA.toString())
                         }
 
                         val bwWinner = when {
-                            bandwidthA > bandwidthB -> strings.ramBwWinnerA.replace("%s", bandwidthA.toString()).replace("%s", (((bandwidthA - bandwidthB) * 10).roundToInt() / 10.0).toString())
-                            bandwidthB > bandwidthA -> strings.ramBwWinnerB.replace("%s", bandwidthB.toString()).replace("%s", (((bandwidthB - bandwidthA) * 10).roundToInt() / 10.0).toString())
-                            else -> strings.ramBwEqual.replace("%s", bandwidthA.toString())
+                            bandwidthA > bandwidthB -> strings.ramBwWinnerA
+                                .replaceFirst("%s", bandwidthA.toString())
+                                .replaceFirst("%s", (((bandwidthA - bandwidthB) * 10).roundToInt() / 10.0).toString())
+                            bandwidthB > bandwidthA -> strings.ramBwWinnerB
+                                .replaceFirst("%s", bandwidthB.toString())
+                                .replaceFirst("%s", (((bandwidthB - bandwidthA) * 10).roundToInt() / 10.0).toString())
+                            else -> strings.ramBwEqual.replaceFirst("%s", bandwidthA.toString())
                         }
 
                         Text(

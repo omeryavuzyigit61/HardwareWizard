@@ -29,16 +29,28 @@ internal class SettingsRepositoryImpl(
 
     private val scope = CoroutineScope(SupervisorJob() + ioDispatcher)
 
-    // Synchronously read initial values from fast platform storage (instantaneous on startup)
+    // Synchronously read all 9 initial values from fast platform storage (zero cold-start flicker)
     private val initialTheme = fastSettingsStore?.getString(KEY_THEME_MODE)?.let { ThemeMode.fromString(it) } ?: ThemeMode.DARK
     private val initialLang = fastSettingsStore?.getString(KEY_LANGUAGE)?.let { AppLanguage.fromCode(it) } ?: AppLanguage.TR
     private val initialCurr = fastSettingsStore?.getString(KEY_CURRENCY)?.let { AppCurrency.fromCode(it) } ?: AppCurrency.TRY
+    private val initialDataSaver = fastSettingsStore?.getString(KEY_DATA_SAVER)?.toBooleanStrictOrNull() ?: false
+    private val initialTempUnit = fastSettingsStore?.getString(KEY_TEMPERATURE_UNIT)?.let { TemperatureUnit.fromString(it) } ?: TemperatureUnit.CELSIUS
+    private val initialLengthUnit = fastSettingsStore?.getString(KEY_LENGTH_UNIT)?.let { LengthUnit.fromString(it) } ?: LengthUnit.METRIC
+    private val initialResolution = fastSettingsStore?.getString(KEY_RESOLUTION)?.let { ResolutionTarget.fromString(it) } ?: ResolutionTarget.QHD_1440P
+    private val initialFps = fastSettingsStore?.getString(KEY_FPS)?.let { FpsTarget.fromString(it) } ?: FpsTarget.FPS_144
+    private val initialEnthusiast = fastSettingsStore?.getString(KEY_ENTHUSIAST_MODE)?.toBooleanStrictOrNull() ?: true
 
     private val _settings = MutableStateFlow(
         AppSettings(
             themeMode = initialTheme,
             language = initialLang,
             currency = initialCurr,
+            dataSaver = initialDataSaver,
+            temperatureUnit = initialTempUnit,
+            lengthUnit = initialLengthUnit,
+            defaultResolution = initialResolution,
+            defaultFps = initialFps,
+            enthusiastMode = initialEnthusiast,
         )
     )
     override val settings: StateFlow<AppSettings> = _settings.asStateFlow()
@@ -67,19 +79,22 @@ internal class SettingsRepositoryImpl(
                     themeMode = ThemeMode.fromString(themeStr),
                     language = AppLanguage.fromCode(langStr),
                     currency = AppCurrency.fromCode(currStr),
-                    dataSaver = map[KEY_DATA_SAVER]?.toBooleanStrictOrNull() ?: false,
-                    temperatureUnit = TemperatureUnit.fromString(map[KEY_TEMPERATURE_UNIT]),
-                    lengthUnit = LengthUnit.fromString(map[KEY_LENGTH_UNIT]),
-                    defaultResolution = ResolutionTarget.fromString(map[KEY_RESOLUTION]),
-                    defaultFps = FpsTarget.fromString(map[KEY_FPS]),
-                    enthusiastMode = map[KEY_ENTHUSIAST_MODE]?.toBooleanStrictOrNull() ?: true,
+                    dataSaver = (map[KEY_DATA_SAVER] ?: fastSettingsStore?.getString(KEY_DATA_SAVER))?.toBooleanStrictOrNull() ?: false,
+                    temperatureUnit = TemperatureUnit.fromString(map[KEY_TEMPERATURE_UNIT] ?: fastSettingsStore?.getString(KEY_TEMPERATURE_UNIT)),
+                    lengthUnit = LengthUnit.fromString(map[KEY_LENGTH_UNIT] ?: fastSettingsStore?.getString(KEY_LENGTH_UNIT)),
+                    defaultResolution = ResolutionTarget.fromString(map[KEY_RESOLUTION] ?: fastSettingsStore?.getString(KEY_RESOLUTION)),
+                    defaultFps = FpsTarget.fromString(map[KEY_FPS] ?: fastSettingsStore?.getString(KEY_FPS)),
+                    enthusiastMode = (map[KEY_ENTHUSIAST_MODE] ?: fastSettingsStore?.getString(KEY_ENTHUSIAST_MODE))?.toBooleanStrictOrNull() ?: true,
                 )
                 _settings.value = loaded
 
-                // Keep fast settings store in sync
-                map[KEY_THEME_MODE]?.let { fastSettingsStore?.setString(KEY_THEME_MODE, it) }
-                map[KEY_LANGUAGE]?.let { fastSettingsStore?.setString(KEY_LANGUAGE, it) }
-                map[KEY_CURRENCY]?.let { fastSettingsStore?.setString(KEY_CURRENCY, it) }
+                // Keep fast settings store in sync for all 9 keys
+                listOf(
+                    KEY_THEME_MODE, KEY_LANGUAGE, KEY_CURRENCY, KEY_DATA_SAVER,
+                    KEY_TEMPERATURE_UNIT, KEY_LENGTH_UNIT, KEY_RESOLUTION, KEY_FPS, KEY_ENTHUSIAST_MODE,
+                ).forEach { k ->
+                    map[k]?.let { fastSettingsStore?.setString(k, it) }
+                }
             } catch (e: Throwable) {
                 if (e is kotlinx.coroutines.CancellationException) throw e
                 // Keep default/fast settings if loading fails
@@ -144,7 +159,10 @@ internal class SettingsRepositoryImpl(
     }
 
     override suspend fun clearCache(): Boolean = withContext(ioDispatcher) {
-        true
+        runCatching {
+            hardwareDao?.deleteSetting("last_remote_sync_at")
+            true
+        }.getOrDefault(false)
     }
 
     companion object {

@@ -379,7 +379,9 @@ fun CoolingLabScreen(
                                             overflow = TextOverflow.Ellipsis,
                                         )
                                         Text(
-                                            text = strings.coolingCpuSpecsFormat.replace("%dW", "${cpu.baseTdpWatts}W").replace("%dW", "${cpu.peakPptMtpWatts}W"),
+                                            text = strings.coolingCpuSpecsFormat
+                                                .replaceFirst("%dW", "${cpu.baseTdpWatts}W")
+                                                .replaceFirst("%dW", "${cpu.peakPptMtpWatts}W"),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurface,
                                         )

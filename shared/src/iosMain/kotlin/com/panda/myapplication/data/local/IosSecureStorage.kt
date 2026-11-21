@@ -7,6 +7,7 @@ import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
 import kotlinx.cinterop.ptr
 import kotlinx.cinterop.value
+import platform.CoreFoundation.CFRelease
 import platform.CoreFoundation.kCFBooleanFalse
 import platform.CoreFoundation.kCFBooleanTrue
 import platform.CoreFoundation.CFTypeRefVar
@@ -57,7 +58,12 @@ class IosSecureStorage : SecureStorage {
             kSecAttrSynchronizable to kCFBooleanFalse,
         )
 
-        SecItemAdd(CFBridgingRetain(query) as platform.CoreFoundation.CFDictionaryRef, null)
+        val cfQuery = CFBridgingRetain(query) ?: return
+        try {
+            SecItemAdd(cfQuery as platform.CoreFoundation.CFDictionaryRef, null)
+        } finally {
+            CFRelease(cfQuery)
+        }
     }
 
     override suspend fun get(key: String): String? {
@@ -70,19 +76,24 @@ class IosSecureStorage : SecureStorage {
             kSecAttrSynchronizable to kCFBooleanFalse,
         )
 
-        memScoped {
-            val result = alloc<CFTypeRefVar>()
-            val status = SecItemCopyMatching(
-                CFBridgingRetain(query) as platform.CoreFoundation.CFDictionaryRef,
-                result.ptr
-            )
+        val cfQuery = CFBridgingRetain(query) ?: return null
+        try {
+            memScoped {
+                val result = alloc<CFTypeRefVar>()
+                val status = SecItemCopyMatching(
+                    cfQuery as platform.CoreFoundation.CFDictionaryRef,
+                    result.ptr
+                )
 
-            if (status == errSecSuccess && result.value != null) {
-                val data = CFBridgingRelease(result.value) as? NSData
-                if (data != null) {
-                    return NSString.create(data, NSUTF8StringEncoding)?.toString()
+                if (status == errSecSuccess && result.value != null) {
+                    val data = CFBridgingRelease(result.value) as? NSData
+                    if (data != null) {
+                        return NSString.create(data, NSUTF8StringEncoding)?.toString()
+                    }
                 }
             }
+        } finally {
+            CFRelease(cfQuery)
         }
         return null
     }
@@ -94,7 +105,12 @@ class IosSecureStorage : SecureStorage {
             kSecAttrAccount to key,
             kSecAttrSynchronizable to kCFBooleanFalse,
         )
-        SecItemDelete(CFBridgingRetain(query) as platform.CoreFoundation.CFDictionaryRef)
+        val cfQuery = CFBridgingRetain(query) ?: return
+        try {
+            SecItemDelete(cfQuery as platform.CoreFoundation.CFDictionaryRef)
+        } finally {
+            CFRelease(cfQuery)
+        }
     }
 
     override suspend fun clear() {
@@ -103,6 +119,11 @@ class IosSecureStorage : SecureStorage {
             kSecAttrService to serviceName,
             kSecAttrSynchronizable to kCFBooleanFalse,
         )
-        SecItemDelete(CFBridgingRetain(query) as platform.CoreFoundation.CFDictionaryRef)
+        val cfQuery = CFBridgingRetain(query) ?: return
+        try {
+            SecItemDelete(cfQuery as platform.CoreFoundation.CFDictionaryRef)
+        } finally {
+            CFRelease(cfQuery)
+        }
     }
 }

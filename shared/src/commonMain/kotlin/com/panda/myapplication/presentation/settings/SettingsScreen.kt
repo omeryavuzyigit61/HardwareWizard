@@ -49,6 +49,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil3.SingletonImageLoader
+import coil3.compose.LocalPlatformContext
 import com.panda.myapplication.domain.model.AppCurrency
 import com.panda.myapplication.domain.model.AppLanguage
 import com.panda.myapplication.domain.model.FpsTarget
@@ -66,6 +68,9 @@ fun SettingsScreen(
     modifier: Modifier = Modifier,
 ) {
     val settings by viewModel.settings.collectAsState()
+    val catalogStatus by viewModel.catalogStatus.collectAsState()
+    val isSyncingCatalog by viewModel.isSyncingCatalog.collectAsState()
+    val platformContext = LocalPlatformContext.current
     val strings = remember(settings.language) { getAppStrings(settings.language) }
     val isTr = settings.language == com.panda.myapplication.domain.model.AppLanguage.TR
     val snackbarHostState = remember { SnackbarHostState() }
@@ -413,6 +418,75 @@ fun SettingsScreen(
                         modifier = Modifier.padding(vertical = 8.dp),
                     )
 
+                    // Manual Supabase Delta Sync
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Column(modifier = Modifier.weight(1f).padding(end = 12.dp)) {
+                            Text(
+                                text = tr(isTr, "Katalog Delta Senkronizasyonu", "Catalog Delta Sync"),
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = if (catalogStatus.itemCount > 0) {
+                                    tr(
+                                        isTr,
+                                        "Yerel Room DB: ${catalogStatus.itemCount} ürün • Rev ${catalogStatus.revision}",
+                                        "Local Room DB: ${catalogStatus.itemCount} items • Rev ${catalogStatus.revision}",
+                                    )
+                                } else {
+                                    tr(isTr, "Yeni donanım kayıtlarını buluttan kontrol et", "Check cloud for newly added hardware items")
+                                },
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        Button(
+                            enabled = !isSyncingCatalog,
+                            onClick = {
+                                viewModel.onSyncCatalogNow { ok, status ->
+                                    scope.launch {
+                                        val msg = if (ok) {
+                                            tr(
+                                                isTr,
+                                                "✓ Katalog güncel: ${status.itemCount} ürün (Rev ${status.revision})",
+                                                "✓ Catalog up to date: ${status.itemCount} items (Rev ${status.revision})",
+                                            )
+                                        } else {
+                                            tr(
+                                                isTr,
+                                                "⚠️ Buluta bağlanılamadı — çevrimdışı veritabanı aktif.",
+                                                "⚠️ Could not reach cloud — offline database remains active.",
+                                            )
+                                        }
+                                        snackbarHostState.showSnackbar(msg)
+                                    }
+                                }
+                            },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                                contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                            ),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Text(
+                                text = if (isSyncingCatalog) tr(isTr, "Kontrol...", "Syncing...") else tr(isTr, "Güncelle", "Sync Now"),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp,
+                            )
+                        }
+                    }
+
+                    HorizontalDivider(
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
+                        modifier = Modifier.padding(vertical = 8.dp),
+                    )
+
                     // Cache clear
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -435,6 +509,11 @@ fun SettingsScreen(
                         }
                         Button(
                             onClick = {
+                                runCatching {
+                                    val loader = SingletonImageLoader.get(platformContext)
+                                    loader.memoryCache?.clear()
+                                    loader.diskCache?.clear()
+                                }
                                 viewModel.onClearCache {
                                     scope.launch {
                                         snackbarHostState.showSnackbar(strings.cacheClearedMessage)
@@ -483,7 +562,7 @@ fun SettingsScreen(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Text(
-                            text = "v2.4.0 (Global 2026 Edition)",
+                            text = "v5.0.0 (Offline-First 2026 Edition)",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary,
@@ -512,7 +591,7 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Text(
-                        text = tr(isTr, "Açık Kaynak: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase GoTrue.", "Open Source: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase GoTrue."),
+                        text = tr(isTr, "Açık Kaynak: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase PostgREST & RLS.", "Open Source: Compose Multiplatform, Coil 3, Koin, Room SQLite, Ktor, Supabase PostgREST & RLS."),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                     )
