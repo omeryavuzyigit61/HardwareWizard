@@ -59,7 +59,14 @@ val dataModule = module {
         )
     }
 
-    single<ActiveBuildRepository> { ActiveBuildRepositoryImpl() }
+    single<ActiveBuildRepository> {
+        ActiveBuildRepositoryImpl(
+            hardwareRepository = get(),
+            fastSettingsStore = getOrNull(),
+            json = get(),
+            ioDispatcher = get(),
+        )
+    }
     single<com.panda.myapplication.domain.repository.VsArenaRepository> {
         com.panda.myapplication.data.repository.VsArenaRepositoryImpl()
     }

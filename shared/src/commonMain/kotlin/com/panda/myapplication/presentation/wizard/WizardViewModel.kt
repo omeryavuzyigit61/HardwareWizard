@@ -10,6 +10,7 @@ import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.HardwareRepository
+import com.panda.myapplication.domain.repository.SettingsRepository
 import com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase
 import com.panda.myapplication.domain.usecase.GetCompatibleHardwareForSlotUseCase
 import kotlinx.coroutines.Dispatchers
@@ -22,6 +23,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
@@ -30,6 +32,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import com.panda.myapplication.presentation.util.formatPrice
+import com.panda.myapplication.presentation.util.toResolutionOption
 
 sealed interface WizardEffect {
     data class ShowToast(val message: String, val messageEn: String? = null) : WizardEffect
@@ -48,12 +51,15 @@ class WizardViewModel(
     private val hardwareRepository: HardwareRepository,
     private val checkBuildCompatibilityUseCase: CheckBuildCompatibilityUseCase,
     private val getCompatibleHardwareForSlotUseCase: GetCompatibleHardwareForSlotUseCase,
+    private val settingsRepository: SettingsRepository,
 ) : ViewModel() {
 
     private val effectChannel = Channel<WizardEffect>(Channel.BUFFERED)
     val effects = effectChannel.receiveAsFlow()
 
-    private val _selectedResolution = MutableStateFlow(ResolutionOption.P1440)
+    private val _selectedResolution = MutableStateFlow(
+        settingsRepository.settings.value.defaultResolution.toResolutionOption(),
+    )
     private val _selectedPreset = MutableStateFlow(com.panda.myapplication.domain.engine.QualityPreset.HIGH)
     private val _selectedUpscaling = MutableStateFlow(com.panda.myapplication.domain.engine.UpscalingMode.OFF)
     private val _isPickerOpen = MutableStateFlow(false)
@@ -68,6 +74,15 @@ class WizardViewModel(
         .flowOn(Dispatchers.Default)
 
     init {
+        viewModelScope.launch {
+            settingsRepository.settings
+                .map { it.defaultResolution }
+                .distinctUntilChanged()
+                .drop(1)
+                .collect { targetRes ->
+                    _selectedResolution.value = targetRes.toResolutionOption()
+                }
+        }
         viewModelScope.launch {
             hardwareRepository.observeHardwareItems().collect { result ->
                 if (result is DomainResult.Success) {

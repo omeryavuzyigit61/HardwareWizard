@@ -9,6 +9,7 @@ import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import io.ktor.client.HttpClient
+import io.ktor.client.request.delete
 import io.ktor.client.request.get
 import io.ktor.client.request.headers
 import io.ktor.client.request.patch
@@ -18,6 +19,7 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
+import io.ktor.http.isSuccess
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
@@ -331,8 +333,27 @@ internal class CommunityPriceRepositoryImpl(
     }
 
     override suspend fun deleteDeal(dealId: String): DomainResult<Unit> = withContext(ioDispatcher) {
-        _deals.update { current -> current.filterNot { it.id == dealId } }
-        DomainResult.Success(Unit)
+        try {
+            if (SupabaseConfig.supabaseUrl.isNotBlank() && autoFetchRemote) {
+                val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_DEALS}?id=eq.$dealId"
+                val response = httpClient.delete(url) {
+                    headers {
+                        append("apikey", SupabaseConfig.supabaseAnonKey)
+                        append("Authorization", "Bearer ${SupabaseConfig.supabaseAnonKey}")
+                        append("Prefer", "return=minimal")
+                    }
+                }
+                if (!response.status.isSuccess()) {
+                    return@withContext DomainResult.Failure(
+                        DomainError.Unknown(IllegalStateException("Fiyat bildirimi sunucudan silinemedi (HTTP ${response.status.value}).")),
+                    )
+                }
+            }
+            _deals.update { current -> current.filterNot { it.id == dealId } }
+            DomainResult.Success(Unit)
+        } catch (e: Exception) {
+            DomainResult.Failure(DomainError.Unknown(e))
+        }
     }
 
     override fun loginAdmin(pin: String): Boolean {

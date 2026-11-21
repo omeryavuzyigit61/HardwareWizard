@@ -138,7 +138,11 @@ import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.AppStrings
 import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
+import com.panda.myapplication.presentation.util.LocalAppSettings
+import com.panda.myapplication.presentation.util.meetsTarget
+import com.panda.myapplication.presentation.util.minFpsThreshold
 import com.panda.myapplication.presentation.util.openSafeStoreUrl
+import com.panda.myapplication.presentation.util.toGamingResolution
 import kotlinx.coroutines.launch
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.compose.koinInject
@@ -730,14 +734,22 @@ private fun HeroHeaderCard(
     onPriceOverrideClick: (() -> Unit)? = null,
 ) {
     val strings = LocalAppStrings.current
+    val appSettings = LocalAppSettings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     var showLightbox by remember { mutableStateOf(false) }
     var lightboxInitialPage by remember { mutableStateOf(0) }
+    val visibleImages = remember(item.effectiveImages, appSettings.dataSaver) {
+        if (appSettings.dataSaver && item.effectiveImages.size > 1) {
+            item.effectiveImages.take(1)
+        } else {
+            item.effectiveImages
+        }
+    }
 
-    if (showLightbox && item.effectiveImages.isNotEmpty()) {
+    if (showLightbox && visibleImages.isNotEmpty()) {
         DetailImageLightboxDialog(
-            images = item.effectiveImages,
-            initialPage = lightboxInitialPage,
+            images = visibleImages,
+            initialPage = lightboxInitialPage.coerceIn(0, visibleImages.lastIndex),
             displayName = item.displayName,
             onDismiss = { showLightbox = false },
         )
@@ -754,7 +766,7 @@ private fun HeroHeaderCard(
             modifier = Modifier.fillMaxWidth(),
         ) {
             HardwareDetailHeroImage(
-                images = item.effectiveImages,
+                images = visibleImages,
                 imageUrl = item.effectiveImageUrl,
                 category = item.category,
                 displayName = item.displayName,
@@ -784,6 +796,13 @@ private fun HeroHeaderCard(
                             containerColor = MaterialTheme.colorScheme.primaryContainer,
                             contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                         )
+                        if (appSettings.dataSaver && item.effectiveImages.size > 1) {
+                            DetailBadge(
+                                text = if (isTr) "📶 Veri Tasarrufu (1/${item.effectiveImages.size})" else "📶 Data Saver (1/${item.effectiveImages.size})",
+                                containerColor = NeonCyan.copy(alpha = 0.16f),
+                                contentColor = NeonCyan,
+                            )
+                        }
                         if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) {
                             DetailBadge(
                                 text = strings.detailCustomPriceTag,
@@ -1766,6 +1785,7 @@ private fun MultiGameFpsSimulationCard(
     modifier: Modifier = Modifier,
 ) {
     val strings = LocalAppStrings.current
+    val appSettings = LocalAppSettings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val gameMatrix = remember(item.id) { BenchmarkEngine.resolveGameFpsForItem(item) } ?: return
 
@@ -1773,9 +1793,13 @@ private fun MultiGameFpsSimulationCard(
     val hasLabTest = remember(labTests, item.id) { VerifiedLabBenchmarks.hasVerifiedLabTest(item) }
 
     var selectedMode by remember(item.id) { mutableStateOf(GameBenchmarkMode.SIMULATED) }
-    var selectedResolution by remember { mutableStateOf(GamingResolution.P1080) }
+    var selectedResolution by remember(appSettings.defaultResolution) {
+        mutableStateOf(appSettings.defaultResolution.toGamingResolution())
+    }
     var selectedCategoryFilter by remember { mutableStateOf<GameCategory?>(null) }
     var selectedLabTestIndex by remember { mutableStateOf(0) }
+    val fpsTarget = appSettings.defaultFps
+    val targetThreshold = fpsTarget.minFpsThreshold()
 
     val allEntries = remember(gameMatrix) {
         gameMatrix.toSimulationEntries()
@@ -1988,9 +2012,10 @@ private fun MultiGameFpsSimulationCard(
                     val maxFpsVal = game.fps.maxFps(selectedResolution)
                     val low1FpsVal = game.fps.low1PctFps(selectedResolution)
                     val minFpsVal = game.fps.minFps(selectedResolution)
+                    val meetsUserTarget = fpsTarget.meetsTarget(avgFpsVal)
                     val fpsColor = when {
-                        avgFpsVal >= 120 -> NeonEmerald
-                        avgFpsVal >= 60 -> NeonCyan
+                        meetsUserTarget -> NeonEmerald
+                        avgFpsVal >= (targetThreshold * 0.65f) || avgFpsVal >= 60 -> NeonCyan
                         else -> NeonAmber
                     }
                     val barCeiling = if (game.category == GameCategory.ESPORTS) 1100f else 300f
@@ -2041,10 +2066,10 @@ private fun MultiGameFpsSimulationCard(
                                     }
                                 }
                                 Text(
-                                    text = "${selectedResolution.label} • ${game.presetSubtitle}",
+                                    text = "${selectedResolution.label} • ${if (meetsUserTarget) "✓ ${fpsTarget.displayName}" else game.presetSubtitle}",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontSize = 10.sp,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    color = if (meetsUserTarget) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
                                     maxLines = 1,
                                 )
                             }

@@ -95,8 +95,13 @@ import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
+import com.panda.myapplication.domain.model.AppSettings
+import com.panda.myapplication.domain.model.LengthUnit
 import com.panda.myapplication.presentation.util.AppStrings
+import com.panda.myapplication.presentation.util.LocalAppSettings
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.formatLengthMm
+import com.panda.myapplication.presentation.util.formatTemperature
 
 private data class HeroKpiPill(val label: String, val value: String, val accent: Color)
 
@@ -237,7 +242,8 @@ fun HeroSpecKpiStrip(
     isTr: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    val pills = remember(item, isTr) { buildHeroKpiPills(item, isTr) }
+    val lengthUnit = LocalAppSettings.current.lengthUnit
+    val pills = remember(item, isTr, lengthUnit) { buildHeroKpiPills(item, isTr, lengthUnit) }
     if (pills.isEmpty()) return
 
     FlowRow(
@@ -347,8 +353,9 @@ fun GroupedTechnicalSpecsCard(
     modifier: Modifier = Modifier,
 ) {
     val strings = LocalAppStrings.current
+    val appSettings = LocalAppSettings.current
     val isTr = strings.isTurkish
-    val groups = remember(item, isTr) { buildGroupedSpecSections(item, strings, isTr) }
+    val groups = remember(item, isTr, appSettings) { buildGroupedSpecSections(item, strings, isTr, appSettings) }
 
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -485,7 +492,11 @@ private fun cleanSpecRows(raw: List<Pair<String, String>>): List<Pair<String, St
         !t.startsWith(" ()")
 }
 
-private fun buildHeroKpiPills(item: HardwareItem, isTr: Boolean): List<HeroKpiPill> {
+private fun buildHeroKpiPills(
+    item: HardwareItem,
+    isTr: Boolean,
+    lengthUnit: LengthUnit = LengthUnit.METRIC,
+): List<HeroKpiPill> {
     val raw = when (val s = item.spec) {
         is CpuSpec -> listOfNotNull(
             HeroKpiPill(if (isTr) "Soket" else "Socket", s.socket, ElectricBlue),
@@ -527,15 +538,15 @@ private fun buildHeroKpiPills(item: HardwareItem, isTr: Boolean): List<HeroKpiPi
         is CoolerSpec -> listOfNotNull(
             HeroKpiPill(if (isTr) "Tip" else "Type", s.type.displayName, ElectricBlue),
             HeroKpiPill("Max TDP", "${s.maxCoolingTdp.watts}W", NeonCyan),
-            s.radiatorSizeMm?.let { HeroKpiPill("Rad", "${it}mm", NeonPurple) }
-                ?: s.heightMm?.let { HeroKpiPill(if (isTr) "Yükseklik" else "Height", "${it}mm", NeonPurple) },
+            s.radiatorSizeMm?.let { HeroKpiPill("Rad", formatLengthMm(it, lengthUnit), NeonPurple) }
+                ?: s.heightMm?.let { HeroKpiPill(if (isTr) "Yükseklik" else "Height", formatLengthMm(it, lengthUnit), NeonPurple) },
             s.noiseDba?.let { HeroKpiPill(if (isTr) "Ses" else "Noise", "$it dBA", NeonAmber) },
         )
         is CaseSpec -> listOfNotNull(
             s.type?.let { HeroKpiPill("Form", it, ElectricBlue) },
-            s.maxGpuLengthMm?.let { HeroKpiPill("Max GPU", "${it}mm", NeonCyan) },
-            s.maxCpuCoolerHeightMm?.let { HeroKpiPill("Max Cooler", "${it}mm", NeonPurple) },
-            s.maxRadiatorSizeMm?.let { HeroKpiPill("Max Rad", "${it}mm", NeonAmber) },
+            s.maxGpuLengthMm?.let { HeroKpiPill("Max GPU", formatLengthMm(it, lengthUnit), NeonCyan) },
+            s.maxCpuCoolerHeightMm?.let { HeroKpiPill("Max Cooler", formatLengthMm(it, lengthUnit), NeonPurple) },
+            s.maxRadiatorSizeMm?.let { HeroKpiPill("Max Rad", formatLengthMm(it, lengthUnit), NeonAmber) },
         )
         is PhoneSpec -> listOfNotNull(
             HeroKpiPill("SoC", s.chipset, ElectricBlue),
@@ -657,8 +668,12 @@ private fun buildGroupedSpecSections(
     item: HardwareItem,
     strings: AppStrings,
     isTr: Boolean,
+    appSettings: AppSettings = AppSettings(),
 ): List<SpecAccordionGroup> {
     val badgeLabel = if (isTr) "özellik" else "specs"
+    val isEnthusiast = appSettings.enthusiastMode
+    val tempUnit = appSettings.temperatureUnit
+    val lengthUnit = appSettings.lengthUnit
     val extraMutable = item.extraSpecs.toMutableMap()
     fun popExtra(vararg keys: String): List<Pair<String, String>> = keys.mapNotNull { k ->
         extraMutable.remove(k)?.takeIf { it.isNotBlank() }?.let { k to it }
@@ -675,12 +690,12 @@ private fun buildGroupedSpecSections(
                     strings.specSocket to s.socket,
                     strings.specCoreTopology to (s.coreTopology ?: "${s.coreCount} ${strings.specCoresLabel} / ${s.threadCount} ${strings.specThreadsLabel}"),
                     strings.specArchNode to listOfNotNull(s.architecture, s.processNode).joinToString(" • "),
-                    s.dieSizeMm2?.let { (if (isTr) "Silikon Zar Alanı (Die)" else "Die Size") to "$it mm²" },
-                    s.transistorsBillion?.let { (if (isTr) "Transistör Sayısı" else "Transistors") to "$it Milyar" },
-                    s.l1Cache?.let { "L1 Önbellek" to it },
+                    if (isEnthusiast) s.dieSizeMm2?.let { (if (isTr) "Silikon Zar Alanı (Die)" else "Die Size") to "$it mm²" } else null,
+                    if (isEnthusiast) s.transistorsBillion?.let { (if (isTr) "Transistör Sayısı" else "Transistors") to "$it Milyar" } else null,
+                    if (isEnthusiast) s.l1Cache?.let { "L1 Önbellek" to it } else null,
                     strings.specL2L3Cache to listOfNotNull(s.l2CacheMb?.let { "$it MB L2" }, s.l3CacheMb?.let { "$it MB L3" }).joinToString(" • "),
                     s.releaseDate?.let { (if (isTr) "Çıkış Tarihi" else "Release Date") to it },
-                ) + popExtra("Silikon Kod Adı (Codename)", "Üretim Teknolojisi (Litografi)", "Çıkış Tarihi (Release)")
+                ) + if (isEnthusiast) popExtra("Silikon Kod Adı (Codename)", "Üretim Teknolojisi (Litografi)", "Çıkış Tarihi (Release)") else emptyList()
             )
             if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "⚡ Silikon, Mimari & Önbellek" else "⚡ Silicon & Cache", badgeLabel, ElectricBlue, archRows, true)
 
@@ -691,8 +706,8 @@ private fun buildGroupedSpecSections(
                         s.boostClock?.mhz?.takeIf { it > 0 }?.let { "${it / 1000f} GHz" },
                     ).joinToString(" / "),
                     strings.specTdpPowerLimits to (s.powerLimits ?: "${s.tdp.watts} W TDP"),
-                    s.tjMaxCelsius?.let { (if (isTr) "Maks. Çalışma Sıcaklığı (TjMax)" else "TjMax Temp") to "$it °C" },
-                    s.instructionSets?.let { (if (isTr) "Komut Setleri (ISA)" else "Instruction Sets") to it },
+                    s.tjMaxCelsius?.let { (if (isTr) "Maks. Çalışma Sıcaklığı (TjMax)" else "TjMax Temp") to formatTemperature(it, tempUnit) },
+                    if (isEnthusiast) s.instructionSets?.let { (if (isTr) "Komut Setleri (ISA)" else "Instruction Sets") to it } else null,
                     s.npuTops?.let { "AI NPU Performansı" to it },
                     strings.specMultiplier to when (s.unlockedMultiplier) {
                         true -> strings.specUnlocked
@@ -707,7 +722,7 @@ private fun buildGroupedSpecSections(
                 listOfNotNull(
                     strings.specMemController to (s.maxMemorySpeed ?: ""),
                     s.memoryChannels?.let { (if (isTr) "Bellek Kanal Sayısı" else "Memory Channels") to "$it Kanal" },
-                    s.eccSupport?.let { "ECC Bellek Desteği" to if (it) "Var" else "Yok" },
+                    if (isEnthusiast) s.eccSupport?.let { "ECC Bellek Desteği" to if (it) "Var" else "Yok" } else null,
                     strings.specPcieVersion to (s.pcieLanesDetail ?: s.pcieVersion.orEmpty()),
                     strings.specIgpu to (s.igpuModel ?: if (s.hasIntegratedGraphics) strings.specIgpuIncluded else strings.specIgpuRequired),
                 )
@@ -719,20 +734,20 @@ private fun buildGroupedSpecSections(
             val archRows = cleanSpecRows(
                 listOfNotNull(
                     strings.specBrand to item.brand,
-                    strings.specGpuArch to listOfNotNull(s.chipset, s.architecture, s.gpuDie).joinToString(" • "),
+                    strings.specGpuArch to listOfNotNull(s.chipset, s.architecture, if (isEnthusiast) s.gpuDie else null).joinToString(" • "),
                     strings.specProcessNode to (s.processNode ?: ""),
                     strings.specShadersRtTensor to listOfNotNull(
                         s.cudaCores?.let { "$it Shader/CUDA" },
-                        s.tmus?.let { "$it TMU" },
-                        s.rops?.let { "$it ROP" },
+                        if (isEnthusiast) s.tmus?.let { "$it TMU" } else null,
+                        if (isEnthusiast) s.rops?.let { "$it ROP" } else null,
                         s.rtCores?.let { "$it RT" },
                         s.tensorAiTops,
                     ).joinToString(" • "),
-                    s.fp32Tflops?.let { "FP32 Saf Hesaplama Gücü" to "$it TFLOPS" },
+                    if (isEnthusiast) s.fp32Tflops?.let { "FP32 Saf Hesaplama Gücü" to "$it TFLOPS" } else null,
                     s.upscalingTech?.let { "Upscaling & Frame Gen" to it },
                     s.mediaEngines?.let { "Medya / Video Kodlayıcı" to it },
                     s.releaseDate?.let { (if (isTr) "Çıkış Tarihi" else "Release Date") to it },
-                ) + popExtra("GPU Silikon Çekirdeği (Die)", "Shaders / TMUs / ROPs", "FP32 Tek Duyarlıklı Güç", "Çıkış Tarihi (Release)")
+                ) + if (isEnthusiast) popExtra("GPU Silikon Çekirdeği (Die)", "Shaders / TMUs / ROPs", "FP32 Tek Duyarlıklı Güç", "Çıkış Tarihi (Release)") else emptyList()
             )
             if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "⚡ GPU Mimarisi & Matematik Birimleri" else "⚡ GPU Architecture", badgeLabel, ElectricBlue, archRows, true)
 
@@ -747,7 +762,7 @@ private fun buildGroupedSpecSections(
                         s.busWidthBits?.let { "$it-Bit" },
                         s.bandwidthGbs?.let { "$it GB/s" },
                     ).joinToString(" • "),
-                    s.l2CacheMb?.let { "GPU L2 Önbellek" to "$it MB" },
+                    if (isEnthusiast) s.l2CacheMb?.let { "GPU L2 Önbellek" to "$it MB" } else null,
                 )
             )
             if (memRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🧠 Bellek (VRAM) & Veri Yolu" else "🧠 Memory Subsystem", badgeLabel, NeonPurple, memRows, true)
@@ -761,10 +776,10 @@ private fun buildGroupedSpecSections(
                     s.pcieInterface?.let { "PCIe Veri Yolu" to it },
                     (if (isTr) "TGP / Önerilen PSU" else "TGP / PSU") to "${s.tdp.watts}W / ${s.recommendedPsu.watts}W PSU",
                     (if (isTr) "Güç Girişleri" else "Power Connectors") to (s.powerConnectors ?: ""),
-                    (if (isTr) "Boyut & Kalınlık" else "Dimensions") to listOfNotNull(s.lengthMm?.let { "$it mm" }, s.slotWidth).joinToString(" • "),
+                    (if (isTr) "Boyut & Kalınlık" else "Dimensions") to listOfNotNull(s.lengthMm?.let { formatLengthMm(it, lengthUnit) }, s.slotWidth).joinToString(" • "),
                     (if (isTr) "Görüntü Çıkışları" else "Display Outputs") to (s.displayOutputs ?: ""),
                     (if (isTr) "Parça No (SKU)" else "Part Number") to (s.partNumber ?: item.model),
-                ) + popExtra("PCIe Veri Yolu Arayüzü")
+                ) + if (isEnthusiast) popExtra("PCIe Veri Yolu Arayüzü") else emptyList()
             )
             if (physRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🔌 Frekans, Güç & Fiziksel Ölçüler" else "🔌 Clocks, Power & Board", badgeLabel, NeonCyan, physRows, true)
         }
@@ -870,11 +885,11 @@ private fun buildGroupedSpecSections(
         }
     }
 
-    // Remaining multi-source extra specs (auto-harvested from TPU, PassMark, NewMaxx, Sensor.fyi, AutoEq, OpenWrt, NUT, DXOMARK, GSMArena, Notebookcheck, Shopify)
+    // Remaining multi-source extra specs (only expanded/shown in Enthusiast / Geek Mode)
     val remainingExtras = extraMutable.entries
         .filter { (k, v) -> k.isNotBlank() && v.isNotBlank() }
         .map { it.key to it.value }
-    if (remainingExtras.isNotEmpty()) {
+    if (isEnthusiast && remainingExtras.isNotEmpty()) {
         groups += SpecAccordionGroup(
             title = if (isTr) "🔬 Ek Mühendislik & Kaynak Verileri" else "🔬 Extended Engineering Telemetry",
             badge = badgeLabel,

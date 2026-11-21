@@ -123,6 +123,7 @@ import com.panda.myapplication.presentation.settings.SettingsScreen
 import com.panda.myapplication.presentation.settings.SettingsViewModel
 import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
+import com.panda.myapplication.presentation.util.LocalAppSettings
 import com.panda.myapplication.presentation.util.getAppStrings
 import androidx.compose.runtime.CompositionLocalProvider
 
@@ -185,6 +186,7 @@ fun App() {
             CompositionLocalProvider(
                 LocalAppStrings provides appStrings,
                 LocalAppCurrency provides appSettings.currency,
+                LocalAppSettings provides appSettings,
             ) {
                 val navController = rememberNavController()
             val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -1027,29 +1029,31 @@ private fun HardwareEngineeringDrawerContent(
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            // Footer Info Card
-            Surface(
-                shape = RoundedCornerShape(12.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
-                border = BorderStroke(1.dp, GlassBorder.copy(alpha = 0.6f)),
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Column(
-                    modifier = Modifier.padding(12.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp),
+            // Footer Info Card (Only shown when pricing engine is active)
+            if (FeatureFlags.IS_PRICING_ENABLED) {
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
+                    border = BorderStroke(1.dp, GlassBorder.copy(alpha = 0.6f)),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
-                    Text(
-                        text = strings.drawerCustomPriceTitle,
-                        style = MaterialTheme.typography.labelMedium,
-                        color = NeonAmber,
-                        fontWeight = FontWeight.Bold,
-                    )
-                    Text(
-                        text = strings.drawerCustomPriceDesc,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        lineHeight = 15.sp,
-                    )
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        Text(
+                            text = strings.drawerCustomPriceTitle,
+                            style = MaterialTheme.typography.labelMedium,
+                            color = NeonAmber,
+                            fontWeight = FontWeight.Bold,
+                        )
+                        Text(
+                            text = strings.drawerCustomPriceDesc,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            lineHeight = 15.sp,
+                        )
+                    }
                 }
             }
         }

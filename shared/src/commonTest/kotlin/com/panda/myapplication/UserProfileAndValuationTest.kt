@@ -63,6 +63,7 @@ class UserProfileAndValuationTest {
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
+            remoteSyncEnabled = false,
         )
 
         repo.signUp(
@@ -90,6 +91,7 @@ class UserProfileAndValuationTest {
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
+            remoteSyncEnabled = false,
         )
 
         repo.signUp(
@@ -115,6 +117,7 @@ class UserProfileAndValuationTest {
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
+            remoteSyncEnabled = false,
         )
 
         val signUpResult = repo.signUp(
@@ -146,6 +149,7 @@ class UserProfileAndValuationTest {
             httpClient = HttpClient(),
             json = Json { ignoreUnknownKeys = true },
             ioDispatcher = Dispatchers.Unconfined,
+            remoteSyncEnabled = false,
         )
 
         val resultWrongPass = repo.login("dombikpanda", "WrongPassword123")

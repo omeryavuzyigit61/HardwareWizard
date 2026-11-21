@@ -152,22 +152,13 @@ data class AnalysisState(
 
 object BuildAnalysisEngine {
 
+    private val sharedPsuCalculator = com.panda.myapplication.domain.usecase.CalculatePsuRequirementUseCase()
+
     fun calculateWattageCockpit(build: ActiveBuild): WattageCockpitInfo {
-        val cpuTdp = (build.cpu?.spec as? CpuSpec)?.tdp?.watts ?: 0
-        val gpuTdp = (build.gpu?.spec as? GpuSpec)?.tdp?.watts ?: 0
-        val baseBoardOverhead = if (build.motherboard != null) 50 else 0
-        val ramOverhead = (build.ram?.spec as? RamSpec)?.let { it.moduleCount * 8 } ?: if (build.ram != null) 16 else 0
-        val storageOverhead = if (build.storage != null) 10 else 0
-        val coolerOverhead = if (build.cooler != null) 15 else 0
-        val caseOverhead = if (build.case != null) 10 else 0
-
-        val tdpSum = cpuTdp + gpuTdp + baseBoardOverhead + ramOverhead + storageOverhead + coolerOverhead + caseOverhead
-        val peakTdp = if (tdpSum > 0) (tdpSum * 1.20).roundToInt() else 0
-
-        val gpuRec = (build.gpu?.spec as? GpuSpec)?.recommendedPsu?.watts ?: 0
-        val calculatedRec = if (peakTdp > 0) ((peakTdp + 49) / 50) * 50 else 0
-        val recommendedPsu = maxOf(calculatedRec, gpuRec)
-
+        val psuReq = sharedPsuCalculator(build.items)
+        val tdpSum = psuReq.estimatedLoad.watts
+        val peakTdp = if (tdpSum > 0) (tdpSum * 1.25).roundToInt() else 0
+        val recommendedPsu = psuReq.recommendedWattage.watts
         val currentPsu = (build.psu?.spec as? PsuSpec)?.wattage?.watts
         val isSufficient = currentPsu == null || currentPsu >= recommendedPsu
 
@@ -222,10 +213,12 @@ object BuildAnalysisEngine {
     }
 
     fun calculateBottleneckForResolution(build: ActiveBuild, resolution: ResolutionOption): BottleneckAnalysis {
-        val cpu = build.cpu?.spec as? CpuSpec
-        val gpu = build.gpu?.spec as? GpuSpec
+        val cpuItem = build.cpu
+        val gpuItem = build.gpu
+        val cpu = cpuItem?.spec as? CpuSpec
+        val gpu = gpuItem?.spec as? GpuSpec
 
-        if (cpu == null || gpu == null) {
+        if (cpuItem == null || gpuItem == null || cpu == null || gpu == null) {
             return BottleneckAnalysis(
                 percentage = 0,
                 type = BottleneckType.BALANCED,
@@ -233,41 +226,53 @@ object BuildAnalysisEngine {
             )
         }
 
-        // Estimate relative power tier (1 to 100)
-        val cpuClock = (cpu.boostClock?.mhz ?: cpu.baseClock.mhz).toDouble()
-        val l3Bonus = (cpu.l3CacheMb ?: 16) * 0.4
-        val cpuPowerRaw = ((cpu.coreCount * (cpuClock / 1000.0) * 1.5) + l3Bonus).coerceIn(10.0, 100.0)
+        // Use calibrated BenchmarkEngine gaming indices on the same 15..125 scale
+        val cpuEval = BenchmarkEngine.evaluate(cpuItem).info
+        val gpuEval = BenchmarkEngine.evaluate(gpuItem).info
 
-        val gpuTdp = gpu.tdp.watts.toDouble()
-        val gpuVram = gpu.vram.megabytes.toDouble() / 1024.0
-        val gpuClock = (gpu.boostClock?.mhz ?: gpu.coreClock.mhz).toDouble()
-        val gpuPowerRaw = ((gpuTdp * 0.22) + (gpuVram * 2.8) + (gpuClock / 100.0)).coerceIn(10.0, 100.0)
+        // CPU gaming index (15..125 scale; X3D and modern IPC properly outrank legacy high-core CPUs)
+        val cpuPower = (
+            cpuEval.gamingRelativeIndex?.takeIf { it > 0.0 }?.times(100.0)
+                ?: cpuEval.gamingIndex?.toDouble()
+                ?: cpuEval.score.toDouble()
+            ).coerceIn(15.0, 125.0)
 
-        // Resolution scaling: 1080p stresses CPU more, 4K is massively GPU bound
-        val (cpuPower, gpuPower) = when (resolution) {
-            ResolutionOption.P1080 -> (cpuPowerRaw * 0.88) to (gpuPowerRaw * 1.15)
-            ResolutionOption.P1440 -> cpuPowerRaw to gpuPowerRaw
-            ResolutionOption.P2160 -> (cpuPowerRaw * 1.25) to (gpuPowerRaw * 0.82)
+        // GPU true gaming tier (15..125 scale; preserves real gap between RTX 4060 Ti vs RTX 4080 vs RTX 5090)
+        val gpuPower = (
+            gpuEval.relativePerformanceIndex.takeIf { it > 0.0 }
+                ?: gpuEval.effectiveTimeSpy?.let { it / 310.0 }
+                ?: gpuEval.score.toDouble()
+            ).coerceIn(15.0, 125.0)
+
+        // Resolution weight:
+        // - 1080p: CPU-sensitive; weak CPU falls behind strong GPU more sharply, but equal flagship tiers stay balanced
+        // - 1440p: Neutral sweet spot
+        // - 4K: GPU-heavy; CPU pressure drops, weak GPU lags behind strong CPU
+        val rawGap = (cpuPower - gpuPower) / maxOf(cpuPower, gpuPower)
+        val effectiveGap = when (resolution) {
+            ResolutionOption.P1080 -> if (rawGap < 0) rawGap * 1.25 else rawGap * 0.75
+            ResolutionOption.P1440 -> rawGap
+            ResolutionOption.P2160 -> if (rawGap < 0) rawGap * 0.55 else rawGap * 1.20
         }
 
-        val delta = ((cpuPower - gpuPower) / maxOf(cpuPower, gpuPower)) * 100.0
-        val absDelta = abs(delta).roundToInt().coerceIn(1, 55)
+        // If both parts are top flagship tier (>=92) at 1080p/1440p/4K, avoid artificial false bottleneck alerts
+        val pct = (abs(effectiveGap) * 100.0).roundToInt().coerceIn(0, 60)
 
         return when {
-            absDelta <= 8 -> BottleneckAnalysis(
-                percentage = absDelta,
+            pct <= 10 -> BottleneckAnalysis(
+                percentage = pct.coerceAtLeast(1),
                 type = BottleneckType.BALANCED,
-                message = "%$absDelta - Mükemmel Denge (${resolution.label})",
+                message = "%${pct.coerceAtLeast(1)} - Mükemmel Denge (${resolution.label})",
             )
-            delta < -8 -> BottleneckAnalysis(
-                percentage = absDelta,
+            effectiveGap < 0 -> BottleneckAnalysis(
+                percentage = pct,
                 type = BottleneckType.CPU_BOTTLENECK,
-                message = "%$absDelta - CPU Darboğazı Riski (${resolution.label})",
+                message = "%$pct - CPU Darboğazı Riski (${resolution.label})",
             )
             else -> BottleneckAnalysis(
-                percentage = absDelta,
+                percentage = pct,
                 type = BottleneckType.GPU_BOTTLENECK,
-                message = "%$absDelta - GPU Limitli / Tam Yükte (${resolution.label})",
+                message = "%$pct - GPU Limitli / Tam Yükte (${resolution.label})",
             )
         }
     }

@@ -107,7 +107,7 @@ object BenchmarkEngine {
         val r = ratio.coerceIn(0.15, 1.40)
         val x3dEsportsBoost = if (isX3d) 1.28 else 1.0
         val x3dAaaBoost = if (isX3d) 1.18 else 1.0
-        val lowRatioEsports = if (isCpu) (if (isX3d) 0.345 else 0.310) else (if (isX3d) 0.85 else 0.78)
+        val lowRatioEsports = if (isCpu) (if (isX3d) 0.74 else 0.68) else (if (isX3d) 0.85 else 0.78)
         val lowRatioAaa = if (isCpu) (if (isX3d) 0.76 else 0.73) else (if (isX3d) 0.84 else 0.79)
 
         fun makeFps(base1080: Double, base1440: Double, base4k: Double, lowFactor: Double, override: ResolutionFps?): ResolutionFps {
@@ -325,17 +325,20 @@ object BenchmarkEngine {
         val singleCore = (boostGhz * 380.0 * archMultiplier).toInt().coerceAtLeast(1000)
         val multiCore = ((s.coreCount * boostGhz * 280.0 + s.tdp.watts * 30.0) * archMultiplier).toInt().coerceAtLeast(4000)
 
-        // Raw productivity index (rendering/compute)
-        val rawProductivityIndex = (((singleCore * 0.4 + multiCore * 0.0025) / 12.0 * 10.0)).coerceIn(20.0, 115.0)
+        // Raw productivity index (20..115 scale; properly separates entry 4-core CPUs from flagship 16-core CPUs)
+        val rawProductivityIndex = (
+            (singleCore / 25.0) * 0.72 +
+                (multiCore / 350.0).coerceAtMost(100.0) * 0.28
+            ).coerceIn(20.0, 115.0)
 
         // Calibrated Gaming Index: 3D V-Cache massive boost vs Arrow Lake tile memory latency penalty
         val gamingCacheMultiplier = when {
-            isX3d -> 1.30
+            isX3d -> 1.38
             isArrowLake -> 0.94
             else -> 1.0
         }
-        val gamingRelativeIndex = (rawProductivityIndex * gamingCacheMultiplier).coerceIn(20.0, 135.0)
-        val score = (if (isX3d) (rawProductivityIndex * 1.15) else rawProductivityIndex).toInt().coerceIn(10, 100)
+        val gamingRelativeIndex = (rawProductivityIndex * gamingCacheMultiplier).coerceIn(20.0, 125.0)
+        val score = (if (isX3d) (rawProductivityIndex * 1.20) else rawProductivityIndex).toInt().coerceIn(10, 100)
         val tier = when {
             score >= 95 -> "S-Tier"
             score >= 85 -> "A-Tier"

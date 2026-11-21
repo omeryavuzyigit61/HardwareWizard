@@ -10,9 +10,11 @@ import com.panda.myapplication.domain.model.GamingResolution
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.HardwareRepository
+import com.panda.myapplication.domain.repository.SettingsRepository
 import com.panda.myapplication.domain.repository.VsArenaMode
 import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.repository.VsSlot
+import com.panda.myapplication.presentation.util.toGamingResolution
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +23,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
@@ -35,9 +39,14 @@ private data class LocalArenaControls(
 class VsArenaViewModel(
     private val hardwareRepository: HardwareRepository,
     private val vsArenaRepository: VsArenaRepository,
+    private val settingsRepository: SettingsRepository,
 ) : ViewModel() {
 
-    private val localControls = MutableStateFlow(LocalArenaControls())
+    private val localControls = MutableStateFlow(
+        LocalArenaControls(
+            selectedResolution = settingsRepository.settings.value.defaultResolution.toGamingResolution(),
+        ),
+    )
     private val _pickerSearchQuery = MutableStateFlow("")
 
     private val debouncedSearchQuery = _pickerSearchQuery
@@ -117,6 +126,17 @@ class VsArenaViewModel(
     )
 
     init {
+        viewModelScope.launch {
+            settingsRepository.settings
+                .map { it.defaultResolution }
+                .distinctUntilChanged()
+                .drop(1)
+                .collect { targetRes ->
+                    localControls.value = localControls.value.copy(
+                        selectedResolution = targetRes.toGamingResolution(),
+                    )
+                }
+        }
         viewModelScope.launch {
             hardwareRepository.refreshHardwareItems()
         }

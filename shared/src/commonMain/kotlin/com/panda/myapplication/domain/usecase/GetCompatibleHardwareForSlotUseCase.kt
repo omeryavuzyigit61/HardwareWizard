@@ -62,30 +62,32 @@ class GetCompatibleHardwareForSlotUseCase {
             HardwareCategory.MOTHERBOARD -> {
                 val requiredSocket = cpuSpec?.socket
                 val requiredRamGen = ramSpec?.generation
+                val requiredRamModules = ramSpec?.moduleCount?.takeIf { it > 0 }
+                val requiredRamGb = ramSpec?.capacity?.megabytes?.div(1024)?.takeIf { it > 0 }
+                val selectedCaseType = caseSpec?.type?.takeIf { it.isNotBlank() }
 
-                when {
-                    requiredSocket != null && requiredRamGen != null -> {
-                        constraintDesc = "Kilitlendi: $requiredSocket Soket + ${requiredRamGen.name}"
-                        candidates.filter { item ->
-                            val m = item.spec as? MotherboardSpec ?: return@filter false
-                            m.socket.equals(requiredSocket, ignoreCase = true) && m.memoryGeneration == requiredRamGen
-                        }
+                val parts = mutableListOf<String>()
+                if (requiredSocket != null) parts.add("$requiredSocket Soket")
+                if (requiredRamGen != null) parts.add(requiredRamGen.name)
+                if (requiredRamModules != null && requiredRamModules > 2) parts.add("≥${requiredRamModules} RAM Slotu")
+                if (selectedCaseType != null) parts.add("$selectedCaseType Kasa")
+                if (parts.isNotEmpty()) {
+                    constraintDesc = "Kilitlendi: ${parts.joinToString(" + ")}"
+                }
+
+                if (parts.isEmpty()) {
+                    candidates
+                } else {
+                    candidates.filter { item ->
+                        val m = item.spec as? MotherboardSpec ?: return@filter false
+                        val socketOk = requiredSocket == null || m.socket.equals(requiredSocket, ignoreCase = true)
+                        val ramGenOk = requiredRamGen == null || m.memoryGeneration == requiredRamGen
+                        val slotsOk = requiredRamModules == null || m.ramSlots <= 0 || m.ramSlots >= requiredRamModules
+                        val capOk = requiredRamGb == null || m.maxMemoryGb == null || m.maxMemoryGb <= 0 || m.maxMemoryGb >= requiredRamGb
+                        val formFactorOk = selectedCaseType == null ||
+                            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(m.formFactor, selectedCaseType)
+                        socketOk && ramGenOk && slotsOk && capOk && formFactorOk
                     }
-                    requiredSocket != null -> {
-                        constraintDesc = "İşlemci soketine kilitlendi: $requiredSocket"
-                        candidates.filter { item ->
-                            val m = item.spec as? MotherboardSpec ?: return@filter false
-                            m.socket.equals(requiredSocket, ignoreCase = true)
-                        }
-                    }
-                    requiredRamGen != null -> {
-                        constraintDesc = "RAM nesline kilitlendi: ${requiredRamGen.name}"
-                        candidates.filter { item ->
-                            val m = item.spec as? MotherboardSpec ?: return@filter false
-                            m.memoryGeneration == requiredRamGen
-                        }
-                    }
-                    else -> candidates
                 }
             }
 
@@ -96,18 +98,32 @@ class GetCompatibleHardwareForSlotUseCase {
                     else -> null
                 }
                 val requiredGen = moboSpec?.memoryGeneration ?: cpuInferredGen
+                val maxSlots = moboSpec?.ramSlots?.takeIf { it > 0 }
+                val maxGb = moboSpec?.maxMemoryGb?.takeIf { it > 0 }
+
+                val parts = mutableListOf<String>()
                 if (requiredGen != null) {
-                    constraintDesc = if (moboSpec != null) {
-                        "Anakart nesline kilitlendi: ${requiredGen.name}"
-                    } else {
-                        "İşlemci soketine (${cpuSpec?.socket}) göre kilitlendi: ${requiredGen.name}"
-                    }
+                    parts.add(
+                        if (moboSpec != null) "Anakart: ${requiredGen.name}"
+                        else "Soket (${cpuSpec?.socket}): ${requiredGen.name}",
+                    )
+                }
+                if (maxSlots != null) parts.add("Max $maxSlots Modül")
+                if (maxGb != null) parts.add("Max ${maxGb}GB")
+                if (parts.isNotEmpty()) {
+                    constraintDesc = "Kilitlendi: ${parts.joinToString(" • ")}"
+                }
+
+                if (requiredGen == null && maxSlots == null && maxGb == null) {
+                    candidates
+                } else {
                     candidates.filter { item ->
                         val r = item.spec as? RamSpec ?: return@filter false
-                        r.generation == requiredGen
+                        val genOk = requiredGen == null || r.generation == requiredGen
+                        val slotsOk = maxSlots == null || r.moduleCount <= 0 || r.moduleCount <= maxSlots
+                        val capOk = maxGb == null || (r.capacity.megabytes / 1024) <= maxGb
+                        genOk && slotsOk && capOk
                     }
-                } else {
-                    candidates
                 }
             }
 
@@ -127,63 +143,66 @@ class GetCompatibleHardwareForSlotUseCase {
 
             HardwareCategory.COOLER -> {
                 val requiredSocket = cpuSpec?.socket
-                val maxRad = caseSpec?.maxRadiatorSizeMm
+                val maxRad = caseSpec?.maxRadiatorSizeMm?.takeIf { it > 0 }
+                val maxAirHeight = caseSpec?.maxCpuCoolerHeightMm?.takeIf { it > 0 }
 
-                when {
-                    requiredSocket != null && maxRad != null -> {
-                        constraintDesc = "Soket: $requiredSocket | Kasa Radyatör Sınırı: ${maxRad}mm"
-                        candidates.filter { item ->
-                            val c = item.spec as? CoolerSpec ?: return@filter false
-                            val socketOk = c.supportedSockets.isEmpty() || c.supportedSockets.any { it.equals(requiredSocket, ignoreCase = true) }
-                            val radOk = c.type != CoolerType.LIQUID || (c.radiatorSizeMm ?: 0) <= maxRad
-                            socketOk && radOk
-                        }
+                val parts = mutableListOf<String>()
+                if (requiredSocket != null) parts.add("Soket: $requiredSocket")
+                if (maxRad != null) parts.add("Radyatör ≤${maxRad}mm")
+                if (maxAirHeight != null) parts.add("Kule ≤${maxAirHeight}mm")
+                if (parts.isNotEmpty()) {
+                    constraintDesc = parts.joinToString(" | ")
+                }
+
+                if (parts.isEmpty()) {
+                    candidates
+                } else {
+                    candidates.filter { item ->
+                        val c = item.spec as? CoolerSpec ?: return@filter false
+                        val socketOk = requiredSocket == null ||
+                            c.supportedSockets.isEmpty() ||
+                            c.supportedSockets.any { it.equals(requiredSocket, ignoreCase = true) }
+                        val radOk = maxRad == null || c.type != CoolerType.LIQUID || (c.radiatorSizeMm ?: 0) <= maxRad
+                        val heightOk = maxAirHeight == null ||
+                            c.type != CoolerType.AIR ||
+                            c.heightMm == null ||
+                            c.heightMm <= 0 ||
+                            c.heightMm <= maxAirHeight
+                        socketOk && radOk && heightOk
                     }
-                    requiredSocket != null -> {
-                        constraintDesc = "İşlemci soketine kilitlendi: $requiredSocket"
-                        candidates.filter { item ->
-                            val c = item.spec as? CoolerSpec ?: return@filter false
-                            c.supportedSockets.isEmpty() || c.supportedSockets.any { it.equals(requiredSocket, ignoreCase = true) }
-                        }
-                    }
-                    maxRad != null -> {
-                        constraintDesc = "Kasa radyatör sınırına kilitlendi: max ${maxRad}mm"
-                        candidates.filter { item ->
-                            val c = item.spec as? CoolerSpec ?: return@filter false
-                            c.type != CoolerType.LIQUID || (c.radiatorSizeMm ?: 0) <= maxRad
-                        }
-                    }
-                    else -> candidates
                 }
             }
 
             HardwareCategory.CASE -> {
-                val requiredGpuLength = gpuSpec?.lengthMm ?: 0
-                val liquidRadiator = if (coolerSpec?.type == CoolerType.LIQUID) coolerSpec.radiatorSizeMm ?: 0 else 0
+                val requiredGpuLength = gpuSpec?.lengthMm?.takeIf { it > 0 } ?: 0
+                val liquidRadiator = if (coolerSpec?.type == CoolerType.LIQUID) coolerSpec.radiatorSizeMm?.takeIf { it > 0 } ?: 0 else 0
+                val airCoolerHeight = if (coolerSpec?.type == CoolerType.AIR) coolerSpec.heightMm?.takeIf { it > 0 } ?: 0 else 0
+                val requiredMoboFormFactor = moboSpec?.formFactor
 
-                when {
-                    requiredGpuLength > 0 && liquidRadiator > 0 -> {
-                        constraintDesc = "GPU (≥${requiredGpuLength}mm) & Radyatör (≥${liquidRadiator}mm) desteği"
-                        candidates.filter { item ->
-                            val cs = item.spec as? CaseSpec ?: return@filter false
-                            (cs.maxGpuLengthMm ?: 0) >= requiredGpuLength && (cs.maxRadiatorSizeMm ?: 0) >= liquidRadiator
-                        }
+                val parts = mutableListOf<String>()
+                if (requiredMoboFormFactor != null) parts.add("${requiredMoboFormFactor.displayName} Anakart")
+                if (requiredGpuLength > 0) parts.add("GPU ≥${requiredGpuLength}mm")
+                if (liquidRadiator > 0) parts.add("Radyatör ≥${liquidRadiator}mm")
+                if (airCoolerHeight > 0) parts.add("Soğutucu ≥${airCoolerHeight}mm")
+                if (parts.isNotEmpty()) {
+                    constraintDesc = "Kasa Desteği: ${parts.joinToString(" • ")}"
+                }
+
+                if (parts.isEmpty()) {
+                    candidates
+                } else {
+                    candidates.filter { item ->
+                        val cs = item.spec as? CaseSpec ?: return@filter false
+                        val gpuOk = requiredGpuLength == 0 || (cs.maxGpuLengthMm ?: 0) >= requiredGpuLength
+                        val radOk = liquidRadiator == 0 || (cs.maxRadiatorSizeMm ?: 0) >= liquidRadiator
+                        val airOk = airCoolerHeight == 0 ||
+                            cs.maxCpuCoolerHeightMm == null ||
+                            cs.maxCpuCoolerHeightMm <= 0 ||
+                            cs.maxCpuCoolerHeightMm >= airCoolerHeight
+                        val moboOk = requiredMoboFormFactor == null ||
+                            CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(requiredMoboFormFactor, cs.type)
+                        gpuOk && radOk && airOk && moboOk
                     }
-                    requiredGpuLength > 0 -> {
-                        constraintDesc = "GPU boyu desteğine kilitlendi: ≥${requiredGpuLength}mm"
-                        candidates.filter { item ->
-                            val cs = item.spec as? CaseSpec ?: return@filter false
-                            (cs.maxGpuLengthMm ?: 0) >= requiredGpuLength
-                        }
-                    }
-                    liquidRadiator > 0 -> {
-                        constraintDesc = "Sıvı soğutucu radyatörüne kilitlendi: ≥${liquidRadiator}mm"
-                        candidates.filter { item ->
-                            val cs = item.spec as? CaseSpec ?: return@filter false
-                            (cs.maxRadiatorSizeMm ?: 0) >= liquidRadiator
-                        }
-                    }
-                    else -> candidates
                 }
             }
 

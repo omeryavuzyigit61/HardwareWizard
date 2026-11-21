@@ -20,6 +20,7 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
+import io.ktor.http.isSuccess
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -45,6 +46,7 @@ internal class UserRepositoryImpl(
     private val hardwareDao: HardwareDao? = null,
     private val secureStorage: SecureStorage? = null,
     private val ioDispatcher: CoroutineDispatcher,
+    private val remoteSyncEnabled: Boolean = true,
 ) : UserRepository {
 
     private val _currentUser = MutableStateFlow<UserProfile?>(null)
@@ -170,7 +172,7 @@ internal class UserRepositoryImpl(
 
         val hashedPassword = SecurityUtils.hashPassword(password)
         val profile = UserProfile(
-            id = "usr-${kotlin.random.Random.nextInt(100000, 999999)}",
+            id = generateSecureUserId(),
             email = trimmedEmail,
             username = trimmedUsername,
             birthDateIso = birthDateIso.ifBlank { "2001-01-01" },
@@ -179,22 +181,55 @@ internal class UserRepositoryImpl(
             createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
         )
 
-        runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}"
-            val body = buildJsonObject {
-                put("id", profile.id)
-                put("username", profile.username)
-                put("email", profile.email)
-                put("password_hash", hashedPassword)
-                put("birth_date_iso", profile.birthDateIso)
-                put("gender", profile.gender.name)
-                put("spirit_hardware", profile.spiritHardware.name)
-                put("created_at_epoch_ms", profile.createdAtEpochMs)
+        if (remoteSyncEnabled) {
+            val remoteResponse = try {
+                val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}"
+                val body = buildJsonObject {
+                    put("id", profile.id)
+                    put("username", profile.username)
+                    put("email", profile.email)
+                    put("password_hash", hashedPassword)
+                    put("birth_date_iso", profile.birthDateIso)
+                    put("gender", profile.gender.name)
+                    put("spirit_hardware", profile.spiritHardware.name)
+                    put("created_at_epoch_ms", profile.createdAtEpochMs)
+                }
+                httpClient.post(url) {
+                    contentType(ContentType.Application.Json)
+                    applySupabaseHeaders(preferMinimal = true)
+                    setBody(body.toString())
+                }
+            } catch (e: Exception) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(
+                        IllegalStateException("Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edip tekrar deneyin.", e),
+                    ),
+                )
             }
-            httpClient.post(url) {
-                contentType(ContentType.Application.Json)
-                applySupabaseHeaders(preferMinimal = true)
-                setBody(body.toString())
+
+            if (remoteResponse.status == HttpStatusCode.Conflict) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Bu e-posta adresi veya kullanıcı adı zaten kayıtlı.")),
+                )
+            }
+            if (!remoteResponse.status.isSuccess()) {
+                val errDetail = runCatching { remoteResponse.bodyAsText() }.getOrDefault("")
+                val isDuplicate = errDetail.contains("duplicate key", ignoreCase = true) ||
+                    errDetail.contains("23505", ignoreCase = true)
+                val msg = if (isDuplicate) {
+                    "Bu e-posta adresi veya kullanıcı adı zaten kayıtlı."
+                } else {
+                    "Kayıt işlemi sunucu tarafından reddedildi (HTTP ${remoteResponse.status.value})."
+                }
+                return@withContext DomainResult.Failure(DomainError.Unknown(IllegalStateException(msg)))
+            }
+        } else {
+            if (_registeredAccounts.containsKey(trimmedUsername.lowercase()) ||
+                _registeredAccounts.containsKey(trimmedEmail.lowercase())
+            ) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Bu e-posta adresi veya kullanıcı adı zaten kayıtlı.")),
+                )
             }
         }
 
@@ -297,26 +332,50 @@ internal class UserRepositoryImpl(
     }
 
     override suspend fun updateProfile(profile: UserProfile): DomainResult<Unit> = withContext(ioDispatcher) {
-        _currentUser.value = profile
-        persistSession(profile)
-
-        runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.${profile.id}"
-            val body = buildJsonObject {
-                put("username", profile.username)
-                put("email", profile.email)
-                put("birth_date_iso", profile.birthDateIso)
-                put("gender", profile.gender.name)
-                put("spirit_hardware", profile.spiritHardware.name)
+        if (remoteSyncEnabled) {
+            val response = try {
+                val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_USER_PROFILES}?id=eq.${profile.id}"
+                val body = buildJsonObject {
+                    put("username", profile.username)
+                    put("email", profile.email)
+                    put("birth_date_iso", profile.birthDateIso)
+                    put("gender", profile.gender.name)
+                    put("spirit_hardware", profile.spiritHardware.name)
+                }
+                httpClient.patch(url) {
+                    contentType(ContentType.Application.Json)
+                    applySupabaseHeaders(preferMinimal = true)
+                    setBody(body.toString())
+                }
+            } catch (e: Exception) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Profil güncellenemedi: internet bağlantınızı kontrol edin.", e)),
+                )
             }
-            httpClient.patch(url) {
-                contentType(ContentType.Application.Json)
-                applySupabaseHeaders(preferMinimal = true)
-                setBody(body.toString())
+
+            if (!response.status.isSuccess()) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Profil güncellemesi sunucu tarafından reddedildi (HTTP ${response.status.value}).")),
+                )
             }
         }
 
+        _currentUser.value = profile
+        persistSession(profile)
         DomainResult.Success(Unit)
+    }
+
+    private fun generateSecureUserId(): String {
+        val bytes = kotlin.random.Random.nextBytes(8)
+        val hexDigits = "0123456789abcdef"
+        val sb = StringBuilder(20)
+        sb.append("usr-")
+        for (b in bytes) {
+            val v = b.toInt() and 0xFF
+            sb.append(hexDigits[v ushr 4])
+            sb.append(hexDigits[v and 0x0F])
+        }
+        return sb.toString()
     }
 
     override suspend fun refreshCurrentUserStats() = withContext(ioDispatcher) {

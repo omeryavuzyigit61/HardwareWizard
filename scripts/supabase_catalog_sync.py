@@ -919,6 +919,27 @@ _FLAGSHIP_LAUNCH_RE = re.compile(
     re.I,
 )
 
+# Retail stores that only publish marketing titles + product photos (no structured specs).
+# They are used EXCLUSIVELY for image gallery enrichment (`gallery_by_key`), NEVER for creating new catalog rows.
+IMAGE_ONLY_RETAIL_SOURCES = {
+    "gaminggen store api",
+    "gaminggen",
+    "itopya",
+    "itopya store",
+    "vatan",
+    "sinerji",
+    "incehesap",
+}
+
+_RETAIL_SEO_TITLE_RE = re.compile(
+    r"(?:EKRAN\s+KART|İŞLEMCİ\s+(?:SIVI|HAVA)?\s*SOĞUT|INTEL-AMD\s+UYUML|DLSS\s*4\b|\bBULK\b|\b128\s*BIT\b|\b256\s*BIT\b|\b192\s*BIT\b|OYUNCU\s+KASAS)",
+    re.I,
+)
+
+
+def is_image_only_retail_source(source_name: str) -> bool:
+    return (source_name or "").strip().lower() in IMAGE_ONLY_RETAIL_SOURCES
+
 
 def passes_modern_quality_gate(
     category: str,
@@ -926,9 +947,14 @@ def passes_modern_quality_gate(
     model: str,
     spec: dict[str, Any],
     verified_image_count: int,
+    source_name: str = "",
 ) -> bool:
-    """Strict delta quality gate: admits ONLY modern-generation, clean hardware items."""
-    full_name = f"{brand} {model}"
+    """Strict delta quality gate: admits ONLY modern-generation, clean, structured hardware items."""
+    if is_image_only_retail_source(source_name):
+        return False
+    full_name = f"{brand} {model}".strip()
+    if len(full_name) > 85 or _RETAIL_SEO_TITLE_RE.search(full_name):
+        return False
     if category == "CPU":
         if _LEGACY_OR_MOBILE_CPU_RE.search(full_name):
             return False
@@ -969,8 +995,14 @@ def passes_modern_quality_gate(
         if int(spec.get("capacity_mb") or 0) < 1_000_000:
             return False
         return verified_image_count >= 1
-    if category in ("COOLER", "CASE", "CASE_FAN"):
-        return verified_image_count >= 1
+    if category == "COOLER":
+        has_structured = bool(spec.get("radiator_size_mm") or spec.get("height_mm"))
+        return has_structured and verified_image_count >= 1
+    if category == "CASE":
+        has_structured = bool(spec.get("max_gpu_length_mm") and spec.get("max_cpu_cooler_height_mm"))
+        return has_structured and verified_image_count >= 1
+    if category == "CASE_FAN":
+        return int(spec.get("fan_size_mm") or 0) >= 80 and verified_image_count >= 1
     return False
 
 
@@ -1031,10 +1063,15 @@ def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_ne
     # (prevents unverified noise from entering production catalog without full specs)
     for cat in ("CPU", "GPU", "RAM", "MOTHERBOARD", "PSU", "STORAGE", "COOLER", "CASE", "CASE_FAN"):
         for rec in state.load_records_for_category(cat):
+            # Never create new catalog entries from retail-only SEO stores (they only supply gallery images)
+            if is_image_only_retail_source(rec["source_name"]):
+                continue
             ckey = rec["canonical_key"]
             if (cat, ckey) in existing_ckeys or (cat, ckey) in seen_new_ckeys:
                 continue
             payload = _safe_json_loads(rec["payload_json"], {})
+            if not payload:
+                continue
             extra = _safe_json_loads(rec["extra_specs_json"], {})
             imgs = _safe_json_loads(rec["images_json"], []) + gallery_by_key.get((cat, ckey), [])
 
@@ -1057,7 +1094,14 @@ def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_ne
                 continue
 
             # Verify live HTTP 200 image URLs ONLY for truly new candidates that pass initial modern checks
-            if not passes_modern_quality_gate(cat, candidate["brand"], candidate["model"], candidate["spec_payload"], verified_image_count=len(candidate["images"])):
+            if not passes_modern_quality_gate(
+                cat,
+                candidate["brand"],
+                candidate["model"],
+                candidate["spec_payload"],
+                verified_image_count=len(candidate["images"]),
+                source_name=rec["source_name"],
+            ):
                 continue
 
             verified_imgs: list[str] = []
@@ -1065,7 +1109,14 @@ def run_delta_sync(client: SupabaseAdminClient, gsmarena_limit: int = 10, max_ne
                 ok, _, _ = http.check_image_url(img_u)
                 if ok:
                     verified_imgs.append(img_u)
-            if not passes_modern_quality_gate(cat, candidate["brand"], candidate["model"], candidate["spec_payload"], verified_image_count=len(verified_imgs)):
+            if not passes_modern_quality_gate(
+                cat,
+                candidate["brand"],
+                candidate["model"],
+                candidate["spec_payload"],
+                verified_image_count=len(verified_imgs),
+                source_name=rec["source_name"],
+            ):
                 continue
             candidate["images"] = verified_imgs
             candidate["image_url"] = verified_imgs[0] if verified_imgs else None
@@ -1151,7 +1202,7 @@ def main() -> int:
     )
     parser.add_argument("--force", action="store_true", help="Force re-seed even if Supabase already has rows")
     parser.add_argument("--gsmarena-limit", type=int, default=10, help="Max GSMArena pages in delta mode")
-    parser.add_argument("--max-new", type=int, default=100, help="Safety cap on new items per daily run")
+    parser.add_argument("--max-new", type=int, default=50, help="Safety cap on new items per daily run")
     parser.add_argument("--output-db", default=TARGET_DB_PATH, help="Target Room SQLite DB path")
     args = parser.parse_args()
 

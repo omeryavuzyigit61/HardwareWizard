@@ -99,7 +99,10 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
+import com.panda.myapplication.presentation.util.LocalAppSettings
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
+import com.panda.myapplication.presentation.util.formatTemperature
+import com.panda.myapplication.presentation.util.formatTemperatureCompact
 import kotlinx.coroutines.flow.map
 import org.koin.compose.koinInject
 import kotlin.math.roundToInt
@@ -437,8 +440,16 @@ fun CoolingLabScreen(
                             }
                         }
                         Spacer(modifier = Modifier.height(Spacing.small))
+                        val tempUnit = LocalAppSettings.current.temperatureUnit
+                        val tjMaxFormatted = formatTemperatureCompact(cpu.tjMaxCelsius, tempUnit)
                         Text(
-                            text = strings.coolingRatedTdpTemplate.replaceFirst("%s", cpu.socket).replaceFirst("%d", cpu.baseTdpWatts.toString()).replaceFirst("%d", cpu.peakPptMtpWatts.toString()).replaceFirst("%d", cpu.tjMaxCelsius.toString()),
+                            text = strings.coolingRatedTdpTemplate
+                                .replaceFirst("%s", cpu.socket)
+                                .replaceFirst("%d", cpu.baseTdpWatts.toString())
+                                .replaceFirst("%d", cpu.peakPptMtpWatts.toString())
+                                .replace("%d°C", tjMaxFormatted)
+                                .replace("%d °C", tjMaxFormatted)
+                                .replaceFirst("%d", cpu.tjMaxCelsius.toString()),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface,
@@ -608,8 +619,9 @@ fun CoolingLabScreen(
                                 style = MaterialTheme.typography.labelMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
+                            val roomTempUnit = LocalAppSettings.current.temperatureUnit
                             Text(
-                                text = "$ambientTempCelsius °C",
+                                text = formatTemperature(ambientTempCelsius, roomTempUnit),
                                 style = MaterialTheme.typography.labelLarge,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonAmber,
@@ -727,11 +739,21 @@ fun CoolingLabScreen(
 
                     Spacer(modifier = Modifier.height(Spacing.small))
 
+                    val warnTempUnit = LocalAppSettings.current.temperatureUnit
                     Text(
                         text = if (isThrottling) {
-                            strings.coolingWarningDesc.replace("%s", cpu.name).replace("%dW", "${cpu.peakPptMtpWatts}W").replace("%s", cooler.name).replace("%dW", "${cooler.maxDissipationWatts}W").replace("%d°C", "${cpu.tjMaxCelsius}°C")
+                            strings.coolingWarningDesc
+                                .replaceFirst("%s", cpu.name)
+                                .replaceFirst("%dW", "${cpu.peakPptMtpWatts}W")
+                                .replaceFirst("%s", cooler.name)
+                                .replaceFirst("%dW", "${cooler.maxDissipationWatts}W")
+                                .replace("%d°C", formatTemperatureCompact(cpu.tjMaxCelsius, warnTempUnit))
                         } else {
-                            strings.coolingSafeDesc.replace("%s", cooler.name).replace("%s", cpu.name).replace("%dW", "${cpu.peakPptMtpWatts}W").replace("%dW", "${headroomWatts}W")
+                            strings.coolingSafeDesc
+                                .replaceFirst("%s", cooler.name)
+                                .replaceFirst("%s", cpu.name)
+                                .replaceFirst("%dW", "${cpu.peakPptMtpWatts}W")
+                                .replaceFirst("%dW", "${headroomWatts}W")
                         },
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -818,6 +840,7 @@ private fun ThermalTempRow(
     )
 
     val displayedTemp = animatedTempFloat.roundToInt()
+    val tempUnit = LocalAppSettings.current.temperatureUnit
 
     Column(modifier = Modifier.fillMaxWidth()) {
         Row(
@@ -831,7 +854,7 @@ private fun ThermalTempRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             Text(
-                text = "$displayedTemp °C / $tjMax °C",
+                text = "${formatTemperature(displayedTemp, tempUnit)} / ${formatTemperature(tjMax, tempUnit)}",
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Black,
                 color = animatedColor,

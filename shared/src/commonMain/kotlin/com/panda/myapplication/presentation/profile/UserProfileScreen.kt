@@ -40,6 +40,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.panda.myapplication.domain.config.FeatureFlags
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.UserProfile
@@ -76,18 +77,17 @@ fun UserProfileScreen(
     val currentUser by userRepository.currentUser.collectAsState()
     val isLoggedIn by userRepository.isLoggedIn.collectAsState()
     val allDeals by communityPriceRepository.observeAllDeals().collectAsState(initial = emptyList())
+    val isAdminSession by communityPriceRepository.isAdminLoggedIn.collectAsState()
 
     val user = currentUser
-    val isMasterAdmin = user?.email?.equals("yavuzyigitomer52@gmail.com", ignoreCase = true) == true ||
-            user?.username?.equals("dombikpanda", ignoreCase = true) == true
+    val isMasterAdmin = isAdminSession
 
     // Kullanıcıya ait bildirimler
     val userDeals = remember(user, allDeals) {
         if (user == null) emptyList()
         else allDeals.filter { deal ->
             deal.userDisplayName.equals(user.username, ignoreCase = true) ||
-                    deal.userEmail?.equals(user.email, ignoreCase = true) == true ||
-                    (isMasterAdmin && (deal.userDisplayName.contains("dombik", ignoreCase = true) || deal.userDisplayName.contains("Ömer", ignoreCase = true)))
+                deal.userEmail?.equals(user.email, ignoreCase = true) == true
         }
     }
 
@@ -135,7 +135,11 @@ fun UserProfileScreen(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = tr(isTr, "Fiyat bildirimlerinizi takip etmek, onay/ret istatistiklerinizi görmek ve donanım ruhunuzu belirlemek için giriş yapın veya kayıt olun.", "Sign in or register to track price reports, view approval stats, and customize your hardware profile."),
+                    text = if (FeatureFlags.IS_PRICING_ENABLED) {
+                        tr(isTr, "Fiyat bildirimlerinizi takip etmek, onay/ret istatistiklerinizi görmek ve donanım ruhunuzu belirlemek için giriş yapın veya kayıt olun.", "Sign in or register to track price reports, view approval stats, and customize your hardware profile.")
+                    } else {
+                        tr(isTr, "Donanım ruhunuzu belirlemek, topluluk tuning profillerine ve sistem vitrinine katılmak için giriş yapın veya kayıt olun.", "Sign in or register to customize your hardware profile and join community tuning profiles and rig showcases.")
+                    },
                     style = MaterialTheme.typography.bodyMedium,
                     color = TextSecondary,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -176,14 +180,16 @@ fun UserProfileScreen(
                     SpiritHardwareShowcaseCard(user = user)
                 }
 
-                // 3. Price Submission Statistics Grid (Onaylanan, Bekleyen, Reddedilen)
-                item(key = "stats_grid") {
-                    CommunityStatsSection(
-                        totalCount = totalCount,
-                        approvedCount = approvedCount,
-                        pendingCount = pendingCount,
-                        rejectedCount = rejectedCount,
-                    )
+                // 3. Price Submission Statistics Grid (Only shown when pricing engine is active)
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+                    item(key = "stats_grid") {
+                        CommunityStatsSection(
+                            totalCount = totalCount,
+                            approvedCount = approvedCount,
+                            pendingCount = pendingCount,
+                            rejectedCount = rejectedCount,
+                        )
+                    }
                 }
 
                 // 4. Admin Portal Info (PC Web Portal Notice)
@@ -258,56 +264,57 @@ fun UserProfileScreen(
                     }
                 }
 
-                // 5. User Submission History Header
-                item(key = "history_header") {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(
-                            text = "${tr(isTr, "FİYAT BİLDİRİM GEÇMİŞİM", "MY PRICE SUBMISSION HISTORY")} (${userDeals.size})",
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.Black,
-                            color = NeonCyan,
-                            letterSpacing = 0.8.sp,
-                        )
-                    }
-                }
-
-                // 6. User Deals List
-                if (userDeals.isEmpty()) {
-                    item(key = "no_deals") {
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = CardSurfaceElevated,
-                            border = BorderStroke(0.5.dp, GlassBorder),
+                // 5-6. User Submission History & Deals List (Only shown when pricing engine is active)
+                if (FeatureFlags.IS_PRICING_ENABLED) {
+                    item(key = "history_header") {
+                        Row(
                             modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically,
                         ) {
-                            Column(
-                                modifier = Modifier.padding(20.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                            ) {
-                                Text("🏷️", fontSize = 32.sp)
-                                Spacer(modifier = Modifier.height(6.dp))
-                                Text(
-                                    text = tr(isTr, "Henüz fiyat bildiriminde bulunmadınız.", "You have not submitted any price reports yet."),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = TextSecondary,
-                                )
-                                Text(
-                                    text = tr(isTr, "Ürün detay sayfalarındaki 'Fiyat Bildir' butonunu kullanarak ilk fırsatınızı paylaşabilirsiniz.", "Use the 'Report Price' button on product detail pages to share your first deal."),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = NeonCyan,
-                                )
-                            }
+                            Text(
+                                text = "${tr(isTr, "FİYAT BİLDİRİM GEÇMİŞİM", "MY PRICE SUBMISSION HISTORY")} (${userDeals.size})",
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Black,
+                                color = NeonCyan,
+                                letterSpacing = 0.8.sp,
+                            )
                         }
                     }
-                } else {
-                    items(userDeals, key = { it.id }) { deal ->
-                        UserDealItemCard(deal = deal, onOpenUrl = { url ->
-                            runCatching { uriHandler.openUri(url) }
-                        })
+
+                    if (userDeals.isEmpty()) {
+                        item(key = "no_deals") {
+                            Surface(
+                                shape = RoundedCornerShape(12.dp),
+                                color = CardSurfaceElevated,
+                                border = BorderStroke(0.5.dp, GlassBorder),
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(20.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                ) {
+                                    Text("🏷️", fontSize = 32.sp)
+                                    Spacer(modifier = Modifier.height(6.dp))
+                                    Text(
+                                        text = tr(isTr, "Henüz fiyat bildiriminde bulunmadınız.", "You have not submitted any price reports yet."),
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = TextSecondary,
+                                    )
+                                    Text(
+                                        text = tr(isTr, "Ürün detay sayfalarındaki 'Fiyat Bildir' butonunu kullanarak ilk fırsatınızı paylaşabilirsiniz.", "Use the 'Report Price' button on product detail pages to share your first deal."),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = NeonCyan,
+                                    )
+                                }
+                            }
+                        }
+                    } else {
+                        items(userDeals, key = { it.id }) { deal ->
+                            UserDealItemCard(deal = deal, onOpenUrl = { url ->
+                                runCatching { uriHandler.openUri(url) }
+                            })
+                        }
                     }
                 }
 

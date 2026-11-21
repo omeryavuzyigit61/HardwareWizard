@@ -89,9 +89,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.panda.myapplication.presentation.util.formatLengthDeltaMm
+import com.panda.myapplication.presentation.util.formatLengthMm
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.LocalAppStrings
 import com.panda.myapplication.presentation.util.LocalAppCurrency
+import com.panda.myapplication.presentation.util.LocalAppSettings
+import com.panda.myapplication.presentation.util.meetsTarget
 import com.panda.myapplication.domain.engine.BottleneckAnalysis
 import com.panda.myapplication.domain.engine.BottleneckType
 import com.panda.myapplication.domain.engine.BuildDoctorReport
@@ -704,6 +708,7 @@ private fun ClearanceRadarSection(
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val lengthUnit = LocalAppSettings.current.lengthUnit
 
     val radarAccent = if (radar.hasClearanceIssue) NeonRose else NeonCyan
     val radarSecondary = if (radar.hasClearanceIssue) NeonAmber else ElectricBlue
@@ -767,8 +772,8 @@ private fun ClearanceRadarSection(
                 // GPU Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Ekran Kartı Uzunluğu", "GPU Length"),
-                    currentValue = radar.gpuLengthMm?.let { "${it}mm" } ?: tr(isTr, "GPU Yok", "No GPU"),
-                    maxValue = "${radar.maxGpuLengthMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.gpuLengthMm?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "GPU Yok", "No GPU"),
+                    maxValue = "${formatLengthMm(radar.maxGpuLengthMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.gpuClearanceMm,
                 )
 
@@ -777,8 +782,8 @@ private fun ClearanceRadarSection(
                 // Cooler Height Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Hava Soğutucu Yüksekliği", "Air Cooler Height"),
-                    currentValue = radar.coolerHeightMm?.let { "~${it}mm" } ?: tr(isTr, "Hava Soğutma Yok", "No Air Cooler"),
-                    maxValue = "${radar.maxCoolerHeightMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.coolerHeightMm?.let { "~${formatLengthMm(it, lengthUnit)}" } ?: tr(isTr, "Hava Soğutma Yok", "No Air Cooler"),
+                    maxValue = "${formatLengthMm(radar.maxCoolerHeightMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.coolerClearanceMm,
                 )
 
@@ -787,8 +792,8 @@ private fun ClearanceRadarSection(
                 // Radiator Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Sıvı Soğutma Radyatörü", "Liquid Cooler Radiator"),
-                    currentValue = radar.coolerRadiatorMm?.let { "${it}mm" } ?: tr(isTr, "Sıvı Soğutma Yok", "No AIO Cooler"),
-                    maxValue = "${radar.maxRadiatorMm ?: 0}mm ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.coolerRadiatorMm?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "Sıvı Soğutma Yok", "No AIO Cooler"),
+                    maxValue = "${formatLengthMm(radar.maxRadiatorMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
                     marginMm = radar.radiatorClearanceMm,
                 )
 
@@ -931,6 +936,7 @@ private fun ClearanceMetricRow(
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val lengthUnit = LocalAppSettings.current.lengthUnit
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -960,7 +966,7 @@ private fun ClearanceMetricRow(
                 border = BorderStroke(1.dp, badgeColor),
             ) {
                 Text(
-                    text = if (isFit) "+${marginMm}mm ${tr(isTr, "Boşluk", "Clearance")}" else "${marginMm}mm ${tr(isTr, "Taşıyor!", "Exceeds!")}",
+                    text = if (isFit) "${formatLengthDeltaMm(marginMm, lengthUnit)} ${tr(isTr, "Boşluk", "Clearance")}" else "${formatLengthDeltaMm(marginMm, lengthUnit)} ${tr(isTr, "Taşıyor!", "Exceeds!")}",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
                     color = badgeColor,
@@ -1667,6 +1673,8 @@ private fun GamingSimulationSection(
 private fun GameFpsCard(game: GameFpsEstimate) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val fpsTarget = LocalAppSettings.current.defaultFps
+    val meetsFpsTarget = fpsTarget.meetsTarget(game.fps)
 
     Surface(
         modifier = Modifier.fillMaxWidth(),
@@ -1697,9 +1705,9 @@ private fun GameFpsCard(game: GameFpsEstimate) {
                     )
                 }
                 Text(
-                    text = game.settings,
+                    text = "${game.settings} • ${if (meetsFpsTarget) "✓ ${fpsTarget.displayName}" else "${tr(isTr, "Hedef", "Target")}: ${fpsTarget.displayName}"}",
                     style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = if (meetsFpsTarget) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
 
@@ -1709,7 +1717,11 @@ private fun GameFpsCard(game: GameFpsEstimate) {
                         text = "~${game.fps}",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Black,
-                        color = if (game.fps >= 60) NeonEmerald else NeonAmber,
+                        color = when {
+                            meetsFpsTarget -> NeonEmerald
+                            game.fps >= 60 -> NeonCyan
+                            else -> NeonAmber
+                        },
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
