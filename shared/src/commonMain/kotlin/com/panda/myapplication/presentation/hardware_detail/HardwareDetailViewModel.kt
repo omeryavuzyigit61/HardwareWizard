@@ -231,8 +231,17 @@ class HardwareDetailViewModel(
     }
 
     fun onDeleteTip(tipId: String) {
+        val currentUserId = _uiState.value.currentUser?.id.orEmpty()
         viewModelScope.launch {
-            tuningVaultRepository.deleteTip(tipId)
+            when (val res = tuningVaultRepository.deleteTip(tipId, currentUserId)) {
+                is DomainResult.Success -> {
+                    effectChannel.send(HardwareDetailEffect.ShowToast("İncelemeniz yayından kaldırıldı.", "Your review has been removed."))
+                }
+                is DomainResult.Failure -> {
+                    val msg = (res.error as? DomainError.Unknown)?.cause?.message ?: "İnceleme silinemedi."
+                    effectChannel.send(HardwareDetailEffect.ShowToast(msg))
+                }
+            }
         }
     }
 

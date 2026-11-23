@@ -336,6 +336,7 @@ fun PriceHistoryChart(
     val priceDelta = remember(minPrice, maxPrice) { (maxPrice - minPrice).coerceAtLeast(100.0) }
 
     val chartSurfaceColor = MaterialTheme.colorScheme.surface
+    val chartGridColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)
 
     Box(modifier = modifier) {
         Canvas(
@@ -381,7 +382,7 @@ fun PriceHistoryChart(
             for (i in 0..gridLines) {
                 val y = padTop + (usableHeight * (i.toFloat() / gridLines))
                 drawLine(
-                    color = Color(0xFF1F2937),
+                    color = chartGridColor,
                     start = Offset(padX, y),
                     end = Offset(width - padX, y),
                     strokeWidth = 1.dp.toPx(),

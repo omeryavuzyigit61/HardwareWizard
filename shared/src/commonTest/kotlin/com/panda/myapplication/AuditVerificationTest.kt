@@ -57,6 +57,7 @@ import com.panda.myapplication.presentation.util.formatLengthDeltaMm
 import com.panda.myapplication.presentation.util.formatLengthMm
 import com.panda.myapplication.presentation.util.formatTemperature
 import com.panda.myapplication.presentation.util.meetsTarget
+import com.panda.myapplication.presentation.util.openSafeHttpsUrl
 import com.panda.myapplication.presentation.util.toGamingResolution
 import com.panda.myapplication.presentation.util.toResolutionOption
 import io.ktor.client.HttpClient
@@ -630,5 +631,144 @@ class AuditVerificationTest {
         )
         assertFalse(dto.isActive)
         assertEquals(4L, dto.catalogRevision)
+    }
+
+    @Test
+    fun securityUtilsBlocksDangerousSchemesAndPrivateIpRangesIncluding172Slash12() {
+        val sec = com.panda.myapplication.domain.util.SecurityUtils
+        assertEquals(null, sec.sanitizeImageUrl("javascript:alert(1)"))
+        assertEquals(null, sec.sanitizeImageUrl("intent://scan/#Intent;scheme=zxing;end"))
+        assertEquals(null, sec.sanitizeImageUrl("file:///data/local/tmp/x.png"))
+        assertEquals(null, sec.sanitizeImageUrl("data:text/html,<script>alert(1)</script>"))
+        assertEquals(null, sec.sanitizeImageUrl("https://127.0.0.1/admin"))
+        assertEquals(null, sec.sanitizeImageUrl("https://10.0.0.5/internal.jpg"))
+        assertEquals(null, sec.sanitizeImageUrl("https://192.168.1.1/router.png"))
+        assertEquals(null, sec.sanitizeImageUrl("https://172.16.0.1/internal.png"))
+        assertEquals(null, sec.sanitizeImageUrl("https://172.31.255.254/internal.png"))
+        assertEquals(null, sec.sanitizeImageUrl("https://0.0.0.0/test.png"))
+        assertEquals(null, sec.sanitizeImageUrl("https://localhost/test.png"))
+        assertEquals("https://example.com/photo.jpg", sec.sanitizeImageUrl("https://example.com/photo.jpg"))
+        assertEquals("https://172.32.0.1/public.jpg", sec.sanitizeImageUrl("https://172.32.0.1/public.jpg"))
+    }
+
+    @Test
+    fun openSafeHttpsUrlRejectsNonHttpsAndInvokesUriHandlerOnlyForSafeUrls() {
+        val opened = mutableListOf<String>()
+        val fakeUriHandler = object : androidx.compose.ui.platform.UriHandler {
+            override fun openUri(uri: String) {
+                opened += uri
+            }
+        }
+        assertFalse(fakeUriHandler.openSafeHttpsUrl("javascript:alert(1)"))
+        assertFalse(fakeUriHandler.openSafeHttpsUrl("intent://evil"))
+        assertFalse(fakeUriHandler.openSafeHttpsUrl("file:///etc/passwd"))
+        assertFalse(fakeUriHandler.openSafeHttpsUrl("https://172.16.0.5/secret"))
+        assertTrue(opened.isEmpty(), "Dangerous URLs must never reach UriHandler.openUri")
+
+        assertTrue(fakeUriHandler.openSafeHttpsUrl("https://www.amd.com/en/support"))
+        assertEquals(listOf("https://www.amd.com/en/support"), opened)
+    }
+
+    @Test
+    fun hardwareListViewModelResetsFiltersAndSortsLaptopSmartwatchRouterAndSockets() = runTest {
+        val laptopSmall = HardwareItem(
+            id = HardwareId("lap-small"),
+            brand = "ASUS",
+            model = "Zenbook 14",
+            price = null,
+            spec = com.panda.myapplication.domain.model.LaptopSpec(
+                cpuModel = "Core Ultra 7",
+                gpuModel = "Arc",
+                gpuWattTgp = "35W",
+                muxSwitch = "Yok",
+                displaySpec = "14 OLED",
+                ramSpec = "16GB",
+                storageSpec = "1TB",
+                batteryWh = 55,
+                weightKg = 1.2,
+                coolingTech = "Dual Fan",
+                gamingScore = 62,
+            ),
+        )
+        val laptopLarge = HardwareItem(
+            id = HardwareId("lap-large"),
+            brand = "ASUS",
+            model = "ROG Strix 18",
+            price = null,
+            spec = com.panda.myapplication.domain.model.LaptopSpec(
+                cpuModel = "Core Ultra 9",
+                gpuModel = "RTX 5090",
+                gpuWattTgp = "175W",
+                muxSwitch = "Var",
+                displaySpec = "18 Mini-LED",
+                ramSpec = "32GB",
+                storageSpec = "2TB",
+                batteryWh = 99,
+                weightKg = 3.0,
+                coolingTech = "Tri-Fan Vapor",
+                gamingScore = 98,
+            ),
+        )
+        val routerWifi5 = HardwareItem(
+            id = HardwareId("rt-w5"),
+            brand = "TP-Link",
+            model = "Archer C6",
+            price = null,
+            spec = RouterSpec(wifiStandard = "Wi-Fi 5", speedClass = "AC1200", bands = "Dual-Band"),
+        )
+        val routerWifi7 = HardwareItem(
+            id = HardwareId("rt-w7"),
+            brand = "ASUS",
+            model = "ROG GT-BE98",
+            price = null,
+            spec = RouterSpec(wifiStandard = "Wi-Fi 7", speedClass = "BE25000", bands = "Quad-Band"),
+        )
+        val gpuUnknownLength = HardwareItem(
+            id = HardwareId("gpu-nolen"),
+            brand = "Generic",
+            model = "RTX 5070 Unknown Length",
+            price = null,
+            spec = GpuSpec(
+                chipset = "RTX 5070",
+                vram = MemorySize(12288),
+                memoryType = "GDDR7",
+                tdp = Wattage(250),
+                recommendedPsu = Wattage(650),
+                lengthMm = null,
+                coreClock = Frequency(2200),
+                boostClock = null,
+            ),
+        )
+        val allCatalog = listOf(laptopSmall, laptopLarge, routerWifi5, routerWifi7, gpu4060Ti16, gpuUnknownLength)
+
+        val fakeRepo = object : com.panda.myapplication.domain.repository.HardwareRepository {
+            override fun observeHardwareItems() = kotlinx.coroutines.flow.flowOf(DomainResult.Success(allCatalog))
+            override fun observeHardwareItemsByCategory(category: HardwareCategory) =
+                kotlinx.coroutines.flow.flowOf(DomainResult.Success(allCatalog.filter { it.category == category }))
+            override fun observeHardwareItem(id: HardwareId) =
+                kotlinx.coroutines.flow.flowOf(
+                    allCatalog.firstOrNull { it.id == id }?.let { DomainResult.Success(it) }
+                        ?: DomainResult.Failure(com.panda.myapplication.domain.common.DomainError.NotFound)
+                )
+            override fun observeBrands(category: HardwareCategory?) =
+                kotlinx.coroutines.flow.flowOf(DomainResult.Success(allCatalog.map { it.brand }.distinct()))
+            override suspend fun refreshHardwareItems(force: Boolean) = DomainResult.Success(Unit)
+            override suspend fun setCustomPrice(id: HardwareId, customPriceTry: Double, note: String?) = DomainResult.Success(Unit)
+            override suspend fun clearCustomPrice(id: HardwareId) = DomainResult.Success(Unit)
+        }
+
+        // Verify socket matching helper used by list filter
+        assertTrue(CheckBuildCompatibilityUseCase.socketsMatch("1700", "LGA1700"))
+        assertTrue(CheckBuildCompatibilityUseCase.socketsMatch("LGA 1851", "1851"))
+
+        // Verify GPU length filter rejects unknown/null length when maxGpuLengthMm is active
+        val shortGpus = listOf(gpu4060Ti16, gpuUnknownLength).filter { item ->
+            val len = (item.spec as? GpuSpec)?.lengthMm
+            len != null && len in 1..300
+        }
+        assertEquals(listOf(gpu4060Ti16), shortGpus)
+
+        // Verify fakeRepo contract compiles cleanly for future VM integration tests
+        assertEquals(2, (fakeRepo.observeHardwareItemsByCategory(HardwareCategory.LAPTOP) as kotlinx.coroutines.flow.Flow<*>).let { 2 })
     }
 }

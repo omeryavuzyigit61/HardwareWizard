@@ -60,6 +60,8 @@ object SupabaseConfig {
 
     // Güvenli RPC Fonksiyonları
     const val RPC_AUTHENTICATE_USER = "rpc/authenticate_user"
+    const val RPC_DELETE_OWN_PRO_TIP = "rpc/delete_own_pro_tip"
+    const val RPC_DELETE_OWN_RIG_SHOWCASE = "rpc/delete_own_rig_showcase"
 
     // Storage Bucket
     const val STORAGE_BUCKET_TUNING = "tuning-proofs"

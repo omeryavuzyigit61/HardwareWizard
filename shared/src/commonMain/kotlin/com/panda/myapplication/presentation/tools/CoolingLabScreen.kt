@@ -872,6 +872,9 @@ private fun ThermalTempRow(
             }
         }
 
+        val trackBgColor = MaterialTheme.colorScheme.surfaceVariant
+        val trackOutlineColor = MaterialTheme.colorScheme.outlineVariant
+
         Canvas(
             modifier = Modifier
                 .fillMaxWidth()
@@ -883,14 +886,14 @@ private fun ThermalTempRow(
             val centerY = h / 2f
             val cornerR = h / 2f
 
-            // 1. Inactive Track (Dark frosted glass pill)
+            // 1. Inactive Track (Theme-adaptive pill)
             drawRoundRect(
-                color = Color(0xFF0F172A).copy(alpha = 0.85f),
+                color = trackBgColor,
                 size = Size(w, h),
                 cornerRadius = CornerRadius(cornerR, cornerR),
             )
             drawRoundRect(
-                color = Color.White.copy(alpha = 0.08f),
+                color = trackOutlineColor.copy(alpha = 0.55f),
                 size = Size(w, h),
                 cornerRadius = CornerRadius(cornerR, cornerR),
                 style = Stroke(width = 1.dp.toPx()),

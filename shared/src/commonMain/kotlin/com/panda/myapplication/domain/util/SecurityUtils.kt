@@ -130,11 +130,34 @@ object SecurityUtils {
 
         val host = extractHost(normalizedHttps) ?: return null
         if (!host.contains('.')) return null
-        if (host == "localhost" || host.startsWith("127.") || host.startsWith("10.") || host.startsWith("192.168.") || host.startsWith("169.254.") || host.endsWith(".local") || host.endsWith(".internal")) {
+        if (isPrivateOrLoopbackHost(host)) {
             return null
         }
 
         return normalizedHttps
+    }
+
+    private fun isPrivateOrLoopbackHost(host: String): Boolean {
+        if (
+            host == "localhost" ||
+            host == "0.0.0.0" ||
+            host == "::1" ||
+            host == "[::1]" ||
+            host.startsWith("127.") ||
+            host.startsWith("10.") ||
+            host.startsWith("192.168.") ||
+            host.startsWith("169.254.") ||
+            host.endsWith(".local") ||
+            host.endsWith(".internal")
+        ) {
+            return true
+        }
+        // RFC 1918 172.16.0.0/12 (172.16.* .. 172.31.*)
+        if (host.startsWith("172.")) {
+            val secondOctet = host.substringAfter("172.").substringBefore('.').toIntOrNull()
+            if (secondOctet != null && secondOctet in 16..31) return true
+        }
+        return false
     }
 
     /**

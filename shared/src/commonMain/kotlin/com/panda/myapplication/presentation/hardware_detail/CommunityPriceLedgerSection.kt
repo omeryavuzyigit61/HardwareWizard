@@ -56,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.model.CommunityDeal
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.openSafeHttpsUrl
 import com.panda.myapplication.domain.model.CommunityDealType
 import com.panda.myapplication.domain.model.DealStatus
 import com.panda.myapplication.domain.model.UserProfile
@@ -554,9 +555,8 @@ fun CommunityDealDetailDialog(
                 if (!deal.proofUrl.isNullOrBlank()) {
                     OutlinedButton(
                         onClick = {
-                            runCatching {
-                                uriHandler.openUri(deal.proofUrl)
-                            }.onFailure {
+                            val opened = uriHandler.openSafeHttpsUrl(deal.proofUrl)
+                            if (!opened) {
                                 clipboardManager.setText(AnnotatedString(deal.proofUrl))
                             }
                         },

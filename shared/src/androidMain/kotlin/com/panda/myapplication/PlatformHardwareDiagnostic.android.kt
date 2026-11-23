@@ -1,6 +1,17 @@
 package com.panda.myapplication.domain.util
 
+import android.app.ActivityManager
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.hardware.display.DisplayManager
+import android.os.BatteryManager
 import android.os.Build
+import android.view.Display
+import org.koin.mp.KoinPlatformTools
+import java.io.File
+import kotlin.math.round
+import kotlin.math.roundToInt
 
 actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
     val manufacturer = Build.MANUFACTURER.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
@@ -15,14 +26,13 @@ actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
         resolveFriendlySocName("", hardware)
     }
 
-    val maxMemoryMb = (Runtime.getRuntime().maxMemory() / (1024 * 1024)).toDouble()
-    val totalRamGb = when {
-        maxMemoryMb > 5000 -> 16.0
-        maxMemoryMb > 3000 -> 12.0
-        maxMemoryMb > 1500 -> 8.0
-        else -> 6.0
-    }
-    val freeRamGb = (totalRamGb * 0.45).let { kotlin.math.round(it * 10) / 10.0 }
+    val appContext: Context? = runCatching {
+        KoinPlatformTools.defaultContext().getOrNull()?.getOrNull<Context>()
+    }.getOrNull()
+
+    val (totalRamGb, freeRamGb) = readRealMemoryGb(appContext)
+    val (batteryPercent, isCharging) = readRealBatteryInfo(appContext)
+    val refreshRateHz = readRealRefreshRateHz(appContext)
 
     return MyDeviceDiagnostic(
         modelName = friendlyModel,
@@ -30,12 +40,95 @@ actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
         socName = socName,
         totalRamGb = totalRamGb,
         availableRamGb = freeRamGb,
-        refreshRateHz = 120,
-        batteryPercent = 85,
-        isCharging = false,
-        catalogPercentile = 94,
+        refreshRateHz = refreshRateHz,
+        batteryPercent = batteryPercent,
+        isCharging = isCharging,
+        catalogPercentile = estimateDevicePercentile(totalRamGb, refreshRateHz),
         matchedCatalogName = "$manufacturer $friendlyModel",
     )
+}
+
+private fun readRealMemoryGb(context: Context?): Pair<Double, Double> {
+    // 1. Primary: Android ActivityManager.getMemoryInfo (zero permissions, real physical RAM)
+    if (context != null) {
+        runCatching {
+            val am = context.getSystemService(Context.ACTIVITY_SERVICE) as? ActivityManager
+            if (am != null) {
+                val info = ActivityManager.MemoryInfo()
+                am.getMemoryInfo(info)
+                if (info.totalMem > 0L) {
+                    val bytesPerGb = 1024.0 * 1024.0 * 1024.0
+                    val totalGb = round((info.totalMem / bytesPerGb) * 10.0) / 10.0
+                    val availGb = round((info.availMem / bytesPerGb) * 10.0) / 10.0
+                    return totalGb to availGb.coerceAtLeast(0.0)
+                }
+            }
+        }
+    }
+    // 2. Fallback: /proc/meminfo (works on Linux/Android even without Context)
+    runCatching {
+        var totalKb = 0L
+        var availKb = 0L
+        File("/proc/meminfo").useLines { lines ->
+            lines.forEach { line ->
+                when {
+                    line.startsWith("MemTotal:") -> totalKb = line.filter { it.isDigit() }.toLongOrNull() ?: 0L
+                    line.startsWith("MemAvailable:") -> availKb = line.filter { it.isDigit() }.toLongOrNull() ?: 0L
+                }
+            }
+        }
+        if (totalKb > 0L) {
+            val kbPerGb = 1024.0 * 1024.0
+            val totalGb = round((totalKb / kbPerGb) * 10.0) / 10.0
+            val freeGb = round((availKb / kbPerGb) * 10.0) / 10.0
+            return totalGb to freeGb.coerceAtLeast(0.0)
+        }
+    }
+    return 8.0 to 3.6
+}
+
+private fun readRealBatteryInfo(context: Context?): Pair<Int, Boolean> {
+    if (context != null) {
+        runCatching {
+            val bm = context.getSystemService(Context.BATTERY_SERVICE) as? BatteryManager
+            val cap = bm?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
+            val chargingFromBm = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                bm?.isCharging
+            } else null
+
+            val intent = context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+            val level = intent?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: -1
+            val scale = intent?.getIntExtra(BatteryManager.EXTRA_SCALE, -1) ?: -1
+            val intentPct = if (level >= 0 && scale > 0) ((level * 100f) / scale).roundToInt() else null
+            val status = intent?.getIntExtra(BatteryManager.EXTRA_STATUS, -1) ?: -1
+            val chargingFromIntent = status == BatteryManager.BATTERY_STATUS_CHARGING ||
+                status == BatteryManager.BATTERY_STATUS_FULL
+
+            val finalPct = (cap?.takeIf { it in 1..100 } ?: intentPct ?: 100).coerceIn(0, 100)
+            val finalCharging = chargingFromBm ?: chargingFromIntent
+            return finalPct to finalCharging
+        }
+    }
+    return 100 to false
+}
+
+private fun readRealRefreshRateHz(context: Context?): Int {
+    if (context != null) {
+        runCatching {
+            val dm = context.getSystemService(Context.DISPLAY_SERVICE) as? DisplayManager
+            val hz = dm?.getDisplay(Display.DEFAULT_DISPLAY)?.refreshRate?.roundToInt()
+            if (hz != null && hz in 30..240) return hz
+        }
+    }
+    return 60
+}
+
+private fun estimateDevicePercentile(totalRamGb: Double, refreshRateHz: Int): Int = when {
+    totalRamGb >= 12.0 && refreshRateHz >= 120 -> 95
+    totalRamGb >= 8.0 && refreshRateHz >= 120 -> 88
+    totalRamGb >= 8.0 -> 80
+    totalRamGb >= 6.0 -> 68
+    else -> 55
 }
 
 private fun resolveFriendlyModelName(rawModel: String): String {

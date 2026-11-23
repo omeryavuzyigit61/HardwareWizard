@@ -441,7 +441,11 @@ private fun MicrophoneAcousticSimulatorTab(
 
             LabMetricRow(
                 label = if (isTr) "Kapsül Arka Plan Reddi (Off-Axis Rejection)" else "Capsule Off-Axis Noise Rejection",
-                value = if (isDynamic) "-${capsuleRejectionDb.roundToInt()} dB (Dinamik İzolasyon)" else "-${capsuleRejectionDb.roundToInt()} dB (Geniş Kondenser)",
+                value = if (isDynamic) {
+                    if (isTr) "-${capsuleRejectionDb.roundToInt()} dB (Dinamik İzolasyon)" else "-${capsuleRejectionDb.roundToInt()} dB (Dynamic Isolation)"
+                } else {
+                    if (isTr) "-${capsuleRejectionDb.roundToInt()} dB (Geniş Kondenser)" else "-${capsuleRejectionDb.roundToInt()} dB (Wide Condenser)"
+                },
                 valueColor = if (isDynamic) NeonEmerald else NeonAmber,
             )
             LabMetricRow(
@@ -484,7 +488,7 @@ private fun MousepadFrictionPhysicsTab(
     val mouseSpec = selectedMouse?.spec as? MouseSpec
     val padSpec = selectedMousepad?.spec as? MousepadSpec
 
-    val mouseWeightG = mouseSpec?.weightG ?: 54
+    val mouseWeightG = mouseSpec?.weightG?.takeIf { it > 0 } ?: 54
     var skateMaterialIdx by remember { mutableStateOf(0) } // 0: %100 Virgin PTFE, 1: Dot PTFE, 2: Temperli Cam Skatez
 
     val isGlassPad = padSpec?.surfaceType?.contains("Cam", ignoreCase = true) == true ||
@@ -521,7 +525,13 @@ private fun MousepadFrictionPhysicsTab(
         emoji = "🖱️",
         label = if (isTr) "Seçili Oyuncu Mouse (${mouseWeightG}g)" else "Selected Gaming Mouse (${mouseWeightG}g)",
         selectedName = selectedMouse?.displayName ?: (if (isTr) "54g Ultra-Hafif Referans Mouse (Katalogdan Seç)" else "54g Ultra-Light Reference Mouse (Tap to Pick)"),
-        selectedSub = mouseSpec?.let { "${it.sensor} • ${it.weightG}g • ${it.pollingRateHz}Hz" }
+        selectedSub = mouseSpec?.let {
+            listOfNotNull(
+                it.sensor.ifBlank { null },
+                it.weightG.takeIf { w -> w > 0 }?.let { w -> "${w}g" },
+                it.pollingRateHz.takeIf { hz -> hz > 0 }?.let { hz -> "${hz}Hz" },
+            ).joinToString(" • ").ifBlank { if (isTr) "Referans 54g profili kullanılıyor" else "Using 54g reference profile" }
+        }
             ?: (if (isTr) "Mouse ağırlığını hesaba katmak için katalogdan seçin" else "Pick mouse from catalog to factor weight into friction"),
         accentColor = NeonCyan,
         isTr = isTr,
@@ -623,7 +633,7 @@ private fun MousepadFrictionPhysicsTab(
             )
             LabMetricRow(
                 label = if (isTr) "Flick Durdurma Gücü (Stopping Power)" else "Flick Stopping Power",
-                value = "$stoppingPower / 10 Puan",
+                value = if (isTr) "$stoppingPower / 10 Puan" else "$stoppingPower / 10 pts",
                 valueColor = NeonAmber,
             )
             LabMetricRow(
@@ -650,7 +660,10 @@ private fun WebcamFovAndLightSimulatorTab(
 ) {
     val camSpec = selectedWebcam?.spec as? WebcamSpec
 
-    var fovDeg by remember(camSpec) { mutableStateOf((camSpec?.fieldOfViewDeg ?: 82).toFloat()) }
+    var fovDeg by remember(camSpec) {
+        val rawFov = camSpec?.fieldOfViewDeg?.takeIf { it > 0 } ?: 82
+        mutableStateOf(rawFov.toFloat().coerceIn(60f, 120f))
+    }
     var distanceCm by remember { mutableStateOf(60f) }
     var roomLuxIdx by remember { mutableStateOf(1) } // 0: Karanlık (30 Lux), 1: Oda Işığı (150 Lux), 2: Stüdyo Key Light (500 Lux)
 
@@ -711,7 +724,7 @@ private fun WebcamFovAndLightSimulatorTab(
             Slider(
                 value = fovDeg,
                 onValueChange = { fovDeg = it },
-                valueRange = 60f..95f,
+                valueRange = 60f..120f,
                 colors = SliderDefaults.colors(thumbColor = ElectricBlue, activeTrackColor = ElectricBlue),
             )
 
@@ -808,7 +821,7 @@ private fun WebcamFovAndLightSimulatorTab(
             )
             LabMetricRow(
                 label = if (isTr) "60 FPS Akıcı Yayın Enstantane Önerisi" else "Recommended 60 FPS Shutter Speed",
-                value = "1/120 sn (50Hz Titreme Önleyici Anti-Flicker)",
+                value = if (isTr) "1/120 sn (50Hz Titreme Önleyici Anti-Flicker)" else "1/120s (Anti-Flicker Sync)",
                 valueColor = NeonCyan,
             )
         }
@@ -837,14 +850,21 @@ private fun ChairErgonomicsWizardTab(
     val deskDeltaCm = (deskHeightCm - idealDeskElbowHeightCm).roundToInt()
     val needsFootrest = deskDeltaCm >= 3
 
-    val maxCapKg = chairSpec?.maxWeightCapacityKg ?: 130
+    val reportedCapKg = chairSpec?.maxWeightCapacityKg?.takeIf { it > 0 }
+    val maxCapKg = reportedCapKg ?: 130
     val weightSafe = userWeightKg <= maxCapKg
 
     LabPickerCard(
         emoji = "🪑",
         label = if (isTr) "Seçili Oyuncu & Ergonomi Koltuğu" else "Selected Gaming & Ergonomic Chair",
         selectedName = selectedChair?.displayName ?: (if (isTr) "Secretlab TITAN Evo / Herman Miller Embody (Seç)" else "Secretlab TITAN Evo / Embody (Tap to Pick)"),
-        selectedSub = chairSpec?.let { "${it.chairType} • ${it.lumbarSupportType} • Max ${it.maxWeightCapacityKg}kg" }
+        selectedSub = chairSpec?.let {
+            listOfNotNull(
+                it.chairType.ifBlank { null },
+                it.lumbarSupportType.ifBlank { null },
+                reportedCapKg?.let { cap -> "Max ${cap}kg" } ?: (if (isTr) "Ref. ~130kg" else "Ref. ~130kg"),
+            ).joinToString(" • ")
+        }
             ?: (if (isTr) "Koltuk taşıma kapasitesi ve boy uyumluluğunu denetlemek için seçin" else "Pick chair from catalog to check capacity & height fit"),
         accentColor = NeonPurple,
         isTr = isTr,
@@ -919,7 +939,7 @@ private fun ChairErgonomicsWizardTab(
 
             LabMetricRow(
                 label = if (isTr) "İdeal Koltuk Oturma Yüksekliği (Yerden)" else "Ideal Seat Pan Height (From Floor)",
-                value = "$idealSeatPanHeightCm cm (Diz 90°-95° Açıda)",
+                value = if (isTr) "$idealSeatPanHeightCm cm (Diz 90°-95° Açıda)" else "$idealSeatPanHeightCm cm (Knee 90°-95°)",
                 valueColor = NeonEmerald,
             )
             LabMetricRow(
@@ -929,7 +949,7 @@ private fun ChairErgonomicsWizardTab(
             )
             LabMetricRow(
                 label = if (isTr) "Monitör Üst Çerçeve Göz Hizası" else "Monitor Top Bezel Eye Level",
-                value = "$idealMonitorTopCm cm (Yerden)",
+                value = if (isTr) "$idealMonitorTopCm cm (Yerden)" else "$idealMonitorTopCm cm (From Floor)",
                 valueColor = ElectricBlue,
             )
             LabMetricRow(

@@ -139,7 +139,7 @@ fun UndervoltGuideScreen(
                         }
                         Column(modifier = Modifier.weight(1f, fill = false)) {
                             Text(
-                                text = "⚡ Topluluk Silikon Kasası (OC/UV)",
+                                text = if (isTurkish) "⚡ Topluluk Silikon Kasası (OC/UV)" else "⚡ Community Silicon Vault (OC/UV)",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
@@ -147,7 +147,11 @@ fun UndervoltGuideScreen(
                                 overflow = TextOverflow.Ellipsis,
                             )
                             Text(
-                                text = "Doğrulanmış ayarları inceleyin veya kendi sistem donanım profilinizi paylaşın.",
+                                text = if (isTurkish) {
+                                    "Doğrulanmış ayarları inceleyin veya kendi sistem donanım profilinizi paylaşın."
+                                } else {
+                                    "Explore verified community tuning profiles or share your own OC/UV settings."
+                                },
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 maxLines = 1,

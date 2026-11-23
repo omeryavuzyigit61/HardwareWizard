@@ -46,7 +46,6 @@ import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
-import com.panda.myapplication.presentation.theme.TextSecondary
 import kotlin.math.roundToInt
 
 data class SecondHandValuationItem(
@@ -178,7 +177,7 @@ fun SecondHandValuationScreen(
                         Text(
                             text = strings.valComponentsCountFormat.replace("%d", valuationItems.size.toString()),
                             style = MaterialTheme.typography.labelSmall,
-                            color = TextSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                 }
@@ -379,7 +378,7 @@ private fun TierColumnBox(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.labelSmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 9.sp,
             )
             Spacer(modifier = Modifier.height(6.dp))
@@ -421,7 +420,7 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                     Text(
                         text = "${valItem.item.category.displayName} • " + strings.valNewPriceLabel.replace("%s", formatTry(valItem.newPriceTry)),
                         style = MaterialTheme.typography.labelSmall,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
 
@@ -451,15 +450,15 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column {
-                    Text(strings.valQuickCash, style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
+                    Text(strings.valQuickCash, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
                     Text(formatTry(valItem.quickSellTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = NeonAmber)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(strings.valMarketValue, style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
+                    Text(strings.valMarketValue, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
                     Text(formatTry(valItem.marketMedianTry), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Black, color = NeonEmerald)
                 }
                 Column(horizontalAlignment = Alignment.End) {
-                    Text("Kutulu Vitrin", style = MaterialTheme.typography.labelSmall, color = TextSecondary, fontSize = 10.sp)
+                    Text("Kutulu Vitrin", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
                     Text(formatTry(valItem.showcaseMintTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = ElectricBlue)
                 }
             }
@@ -536,7 +535,7 @@ private fun SellingTipRow(icon: String, title: String, description: String) {
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }

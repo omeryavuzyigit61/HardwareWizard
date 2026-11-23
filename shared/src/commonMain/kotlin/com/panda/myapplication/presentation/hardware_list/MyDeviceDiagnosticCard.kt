@@ -56,12 +56,14 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.Spacing
+import com.panda.myapplication.presentation.util.LocalAppStrings
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun MyDeviceDiagnosticCard(
     modifier: Modifier = Modifier,
 ) {
+    val isTr = LocalAppStrings.current.isTurkish
     val diagnostic = remember { getMyDeviceDiagnostic() }
     var isExpanded by remember { mutableStateOf(false) }
 
@@ -101,7 +103,7 @@ fun MyDeviceDiagnosticCard(
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.PhoneAndroid,
-                        contentDescription = "Cihazım",
+                        contentDescription = if (isTr) "Cihazım" else "My Device",
                         tint = NeonCyan,
                         modifier = Modifier.size(20.dp),
                     )
@@ -117,7 +119,7 @@ fun MyDeviceDiagnosticCard(
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
                         Text(
-                            text = "📱 CİHAZIM DONANIM TEŞHİSİ",
+                            text = if (isTr) "📱 CİHAZIM DONANIM TEŞHİSİ" else "📱 MY DEVICE DIAGNOSTIC",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -128,7 +130,7 @@ fun MyDeviceDiagnosticCard(
                             color = NeonEmerald.copy(alpha = 0.18f),
                         ) {
                             Text(
-                                text = "CANLI SİSTEM",
+                                text = if (isTr) "CANLI SİSTEM" else "LIVE SYSTEM",
                                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
                                 fontWeight = FontWeight.Bold,
                                 color = NeonEmerald,
@@ -167,7 +169,11 @@ fun MyDeviceDiagnosticCard(
                                 modifier = Modifier.size(11.dp),
                             )
                             Text(
-                                text = "Katalogda İlk %${100 - diagnostic.catalogPercentile} Dilimde",
+                                text = if (isTr) {
+                                    "Katalogda İlk %${(100 - diagnostic.catalogPercentile).coerceAtLeast(1)} Dilimde"
+                                } else {
+                                    "Top ${(100 - diagnostic.catalogPercentile).coerceAtLeast(1)}% in Catalog"
+                                },
                                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
                                 fontWeight = FontWeight.Bold,
                                 color = NeonAmber,
@@ -188,7 +194,11 @@ fun MyDeviceDiagnosticCard(
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.ChevronRight,
-                        contentDescription = if (isExpanded) "Daralt" else "Genişlet",
+                        contentDescription = if (isExpanded) {
+                            if (isTr) "Daralt" else "Collapse"
+                        } else {
+                            if (isTr) "Genişlet" else "Expand"
+                        },
                         tint = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier
                             .size(18.dp)
@@ -207,26 +217,30 @@ fun MyDeviceDiagnosticCard(
                     ) {
                         DiagChip(
                             icon = Icons.Rounded.Bolt,
-                            label = "Yonga Seti",
+                            label = if (isTr) "Yonga Seti" else "Chipset",
                             value = diagnostic.socName,
                             color = NeonCyan,
                         )
                         DiagChip(
                             icon = Icons.Rounded.Memory,
-                            label = "Bellek",
-                            value = "${diagnostic.totalRamGb.toInt()} GB RAM (${diagnostic.availableRamGb} GB Boş)",
+                            label = if (isTr) "Bellek" else "Memory",
+                            value = if (isTr) {
+                                "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Boş)"
+                            } else {
+                                "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Free)"
+                            },
                             color = NeonPurple,
                         )
                         DiagChip(
                             icon = Icons.Rounded.Speed,
-                            label = "Ekran Hızı",
-                            value = "${diagnostic.refreshRateHz} Hz Akıcı Panel",
+                            label = if (isTr) "Ekran Hızı" else "Display",
+                            value = "${diagnostic.refreshRateHz} Hz",
                             color = NeonEmerald,
                         )
                         DiagChip(
                             icon = if (diagnostic.isCharging) Icons.Rounded.BatteryChargingFull else Icons.Rounded.BatteryStd,
-                            label = "Pil",
-                            value = "%${diagnostic.batteryPercent}",
+                            label = if (isTr) "Pil" else "Battery",
+                            value = if (isTr) "%${diagnostic.batteryPercent}" else "${diagnostic.batteryPercent}%",
                             color = ElectricBlue,
                         )
                     }
@@ -247,7 +261,11 @@ fun MyDeviceDiagnosticCard(
                         ) {
                             Text(text = "📊", fontSize = 16.sp)
                             Text(
-                                text = "Cihazınız katalogdaki 500+ mobil amiral gemisi ve orta segment cihazla kıyaslandı. Çoklu çekirdek ve grafik çıktısında üstün performans sergiliyor.",
+                                text = if (isTr) {
+                                    "Cihazınızın canlı bellek, ekran tazeleme hızı ve donanım profili anlık olarak okundu."
+                                } else {
+                                    "Live memory, display refresh rate, and hardware profile read directly from this device."
+                                },
                                 style = MaterialTheme.typography.labelSmall.copy(lineHeight = 14.sp),
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )

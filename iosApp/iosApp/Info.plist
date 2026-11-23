@@ -4,5 +4,9 @@
 <dict>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Hardware Wizard uses the camera to capture hardware setup photos and benchmark proof images for community sharing.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Hardware Wizard accesses your photo library so you can select setup photos and benchmark proof images to share.</string>
 </dict>
 </plist>

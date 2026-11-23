@@ -83,15 +83,17 @@ class WizardViewModel(
                     _selectedResolution.value = targetRes.toResolutionOption()
                 }
         }
-        viewModelScope.launch {
-            hardwareRepository.observeHardwareItems().collect { result ->
-                if (result is DomainResult.Success) {
-                    val mapById = result.data.associateBy { it.id }
-                    val currentBuild = activeBuildRepository.activeBuild.value
-                    currentBuild.items.forEach { slotItem ->
-                        val updated = mapById[slotItem.id]
-                        if (updated != null && (updated.currentPriceTry != slotItem.currentPriceTry || updated.customPriceNote != slotItem.customPriceNote)) {
-                            activeBuildRepository.setComponent(updated)
+        if (com.panda.myapplication.domain.config.FeatureFlags.IS_PRICING_ENABLED) {
+            viewModelScope.launch {
+                hardwareRepository.observeHardwareItems().collect { result ->
+                    if (result is DomainResult.Success) {
+                        val mapById = result.data.associateBy { it.id }
+                        val currentBuild = activeBuildRepository.activeBuild.value
+                        currentBuild.items.forEach { slotItem ->
+                            val updated = mapById[slotItem.id]
+                            if (updated != null && (updated.currentPriceTry != slotItem.currentPriceTry || updated.customPriceNote != slotItem.customPriceNote)) {
+                                activeBuildRepository.setComponent(updated)
+                            }
                         }
                     }
                 }
@@ -150,7 +152,7 @@ class WizardViewModel(
         }
     }
 
-    val uiState: StateFlow<WizardUiState> = combine(
+    private val computedUiState = combine(
         buildAnalysisFlow,
         pickerParamsFlow,
         pickerRawItemsFlow,
@@ -172,7 +174,8 @@ class WizardViewModel(
             emptyList<HardwareItem>() to null
         }
 
-        val shareText = if (isShareOpen) generateShareSummary(analysis) else ""
+        val isTr = settingsRepository.settings.value.language == com.panda.myapplication.domain.model.AppLanguage.TR
+        val shareText = if (isShareOpen) generateShareSummary(analysis, isTr = isTr) else ""
 
         WizardUiState(
             activeBuild = analysis.build,
@@ -195,7 +198,14 @@ class WizardViewModel(
             isShareDialogOpen = isShareOpen,
             shareCardText = shareText,
         )
-    }.flowOn(Dispatchers.Default).stateIn(
+    }.flowOn(Dispatchers.Default)
+
+    val uiState: StateFlow<WizardUiState> = combine(
+        computedUiState,
+        _pickerSearchQuery,
+    ) { state, rawQuery ->
+        if (state.pickerSearchQuery == rawQuery) state else state.copy(pickerSearchQuery = rawQuery)
+    }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000L),
         initialValue = WizardUiState(),
@@ -328,8 +338,10 @@ class WizardViewModel(
                     appendLine("• ${rec.title}: ${rec.expectedGain} (${if (isTr) "F/P" else "ROI"}: ${rec.roiScore}/10)")
                 }
             }
-            appendLine()
-            appendLine("${if (isTr) "Toplam Maliyet" else "Total Cost"}: $priceFormatted")
+            if (com.panda.myapplication.domain.config.FeatureFlags.IS_PRICING_ENABLED) {
+                appendLine()
+                appendLine("${if (isTr) "Toplam Maliyet" else "Total Cost"}: $priceFormatted")
+            }
             appendLine("═════════════════════════════════")
             appendLine("Built with Hardware Wizard 🛠️")
         }

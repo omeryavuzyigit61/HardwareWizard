@@ -39,6 +39,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import com.panda.myapplication.presentation.util.localized
+import com.panda.myapplication.presentation.util.openSafeHttpsUrl
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -2733,17 +2734,17 @@ internal fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): 
             rows.add(tr(isTr, "Durdurma Gücü (Stopping Power)", "Stopping Power") to "${s.stoppingPowerScore} / 10")
             rows.add(tr(isTr, "Alt Taban Teknolojisi", "Base Material") to s.baseMaterial)
             rows.add(tr(isTr, "Boyutlar (En x Boy)", "Dimensions") to s.dimensionsMm)
-            rows.add(tr(isTr, "Kalınlık", "Thickness") to "${s.thicknessMm} mm")
+            rows.add(tr(isTr, "Kalınlık", "Thickness") to if (s.thicknessMm > 0.0) "${s.thicknessMm} mm" else "")
             rows.add(tr(isTr, "Kenar Dikişi (Stitched Edges)", "Stitched Edges") to if (s.stitchedEdges) tr(isTr, "Alçak Profil Dikişli", "Low-Profile Stitched") else tr(isTr, "Dikişsiz / Cam Kenar", "Unstitched / CNC Edge"))
             rows.add(tr(isTr, "Nem & Ter Direnci", "Humidity Resistance") to s.humidityResistance)
         }
 
         is WebcamSpec -> {
             rows.add(tr(isTr, "Maksimum Video Çözünürlüğü", "Max Video Resolution") to s.maxResolution)
-            rows.add(tr(isTr, "Maksimum Kare Hızı", "Max Frame Rate") to "${s.maxFrameRateFps} FPS")
+            rows.add(tr(isTr, "Maksimum Kare Hızı", "Max Frame Rate") to if (s.maxFrameRateFps > 0) "${s.maxFrameRateFps} FPS" else "")
             rows.add(tr(isTr, "Görüntü Sensörü", "Image Sensor") to "${s.sensorModel} (${s.sensorSizeInch})")
             rows.add(tr(isTr, "Diyafram Açıklığı (Lens)", "Lens Aperture") to s.aperture)
-            rows.add(tr(isTr, "Görüş Açısı (FOV)", "Field of View (FOV)") to "${s.fieldOfViewDeg}°")
+            rows.add(tr(isTr, "Görüş Açısı (FOV)", "Field of View (FOV)") to if (s.fieldOfViewDeg > 0) "${s.fieldOfViewDeg}°" else "")
             rows.add(tr(isTr, "Odaklama Sistemi", "Focus System") to s.focusType)
             rows.add(tr(isTr, "Yapay Zeka (AI) Kadraj Takibi", "AI Auto-Framing / Tracking") to if (s.hasAiTracking) tr(isTr, "Destekleniyor", "Supported") else tr(isTr, "Standart Sabit Kadraj", "Standard Fixed Frame"))
             rows.add(tr(isTr, "Donanımsal HDR", "Hardware HDR") to if (s.hasHardwareHdr) tr(isTr, "Destekleniyor", "Supported") else tr(isTr, "Standart SDR", "Standard SDR"))
@@ -2757,9 +2758,9 @@ internal fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): 
             rows.add(tr(isTr, "L4-L5 Bel Desteği Mimarisi", "Lumbar Support System") to s.lumbarSupportType)
             rows.add(tr(isTr, "Kolçak (Armrest) Mekanizması", "Armrest Type") to s.armrestType)
             rows.add(tr(isTr, "Amortisör (Gas Lift) Sınıfı", "Gas Lift Class") to s.gasLiftClass)
-            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Weight Capacity") to "${s.maxWeightCapacityKg} kg")
+            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Weight Capacity") to if (s.maxWeightCapacityKg > 0) "${s.maxWeightCapacityKg} kg" else "")
             rows.add(tr(isTr, "Önerilen Kullanıcı Boyu", "Recommended User Height") to s.recommendedHeightRange)
-            rows.add(tr(isTr, "Maksimum Sırt Yatış Açısı", "Max Recline Angle") to "${s.reclineAngleDeg}°")
+            rows.add(tr(isTr, "Maksimum Sırt Yatış Açısı", "Max Recline Angle") to if (s.reclineAngleDeg > 0) "${s.reclineAngleDeg}°" else "")
             rows.add(tr(isTr, "Salınım & Tilt Mekanizması", "Tilt Mechanism") to s.tiltMechanism)
         }
 
@@ -2831,10 +2832,10 @@ internal fun buildPolymorphicSpecRows(item: HardwareItem, strings: AppStrings): 
         }
 
         is GamingDeskSpec -> {
-            rows.add(tr(isTr, "Masa Ölçüleri (G x D)", "Dimensions (W x D)") to "${s.deskWidthCm} x ${s.deskDepthCm} cm")
-            rows.add(tr(isTr, "Yükseklik Aralığı", "Height Range") to "${s.minHeightCm} - ${s.maxHeightCm} cm")
-            rows.add(tr(isTr, "Yükseklik Ayar Tipi", "Adjustment Mechanism") to if (s.isMotorizedHeight) "Elektrikli Motorlu Standing Desk" else "Sabit Yükseklik")
-            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Load Capacity") to "${s.maxLoadKg} kg")
+            rows.add(tr(isTr, "Masa Ölçüleri (G x D)", "Dimensions (W x D)") to if (s.deskWidthCm > 0 && s.deskDepthCm > 0) "${s.deskWidthCm} x ${s.deskDepthCm} cm" else "")
+            rows.add(tr(isTr, "Yükseklik Aralığı", "Height Range") to if (s.minHeightCm > 0 && s.maxHeightCm > 0) "${s.minHeightCm} - ${s.maxHeightCm} cm" else "")
+            rows.add(tr(isTr, "Yükseklik Ayar Tipi", "Adjustment Mechanism") to if (s.isMotorizedHeight) tr(isTr, "Elektrikli Motorlu Standing Desk", "Motorized Standing Desk") else tr(isTr, "Sabit Yükseklik", "Fixed Height"))
+            rows.add(tr(isTr, "Maksimum Taşıma Kapasitesi", "Max Load Capacity") to if (s.maxLoadKg > 0) "${s.maxLoadKg} kg" else "")
             rows.add(tr(isTr, "Yüzey Kaplaması", "Desktop Material") to s.surfaceFinish)
             rows.add(tr(isTr, "Kablo Yönetimi", "Cable Management") to if (s.hasCableManagement) "Var (Entegre Kanal / Tepsi)" else "Yok")
             rows.add(tr(isTr, "Özel Kesim Deskmat", "Integrated Deskmat") to if (s.integratedMousepad) "Tam Boy Mousepad Dahil" else "Yok")
@@ -3946,6 +3947,7 @@ private fun CompanionSoftwareCard(
     modifier: Modifier = Modifier,
 ) {
     val uriHandler = LocalUriHandler.current
+    val isTr = LocalAppStrings.current.isTurkish
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(Spacing.cardRadius),
@@ -3985,7 +3987,7 @@ private fun CompanionSoftwareCard(
                     }
                     Column {
                         Text(
-                            text = "Eşlikçi Yazılım & Sürücü Bulucu",
+                            text = if (isTr) "Eşlikçi Yazılım & Sürücü Bulucu" else "Companion Software & Driver Hub",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.SemiBold,
@@ -4049,9 +4051,7 @@ private fun CompanionSoftwareCard(
             ) {
                 Button(
                     onClick = {
-                        try {
-                            uriHandler.openUri(software.officialDownloadUrl)
-                        } catch (_: Exception) {}
+                        uriHandler.openSafeHttpsUrl(software.officialDownloadUrl)
                     },
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(8.dp),
@@ -4061,7 +4061,7 @@ private fun CompanionSoftwareCard(
                     contentPadding = PaddingValues(vertical = 10.dp, horizontal = 12.dp),
                 ) {
                     Text(
-                        text = "Resmi Sürücüyü İndir",
+                        text = if (isTr) "Resmi Sürücüyü İndir" else "Download Official Driver",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
                     )
@@ -4070,16 +4070,14 @@ private fun CompanionSoftwareCard(
                 if (software.webConfiguratorUrl != null) {
                     OutlinedButton(
                         onClick = {
-                            try {
-                                uriHandler.openUri(software.webConfiguratorUrl)
-                            } catch (_: Exception) {}
+                            uriHandler.openSafeHttpsUrl(software.webConfiguratorUrl)
                         },
                         shape = RoundedCornerShape(8.dp),
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
                         contentPadding = PaddingValues(vertical = 10.dp, horizontal = 12.dp),
                     ) {
                         Text(
-                            text = "Tarayıcıdan Yönet (WebHID)",
+                            text = if (isTr) "Tarayıcıdan Yönet (WebHID)" else "Web Configurator (WebHID)",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary,

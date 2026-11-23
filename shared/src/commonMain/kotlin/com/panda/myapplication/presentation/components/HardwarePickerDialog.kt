@@ -61,6 +61,7 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import kotlinx.coroutines.flow.combine
 
 @Composable
 fun HardwarePickerDialog(
@@ -76,8 +77,17 @@ fun HardwarePickerDialog(
     var searchQuery by remember { mutableStateOf("") }
     val compatibilityUseCase = remember { GetCompatibleHardwareForSlotUseCase() }
 
-    val allItemsResult by remember(hardwareRepository) {
-        hardwareRepository.observeHardwareItems()
+    // Yalnızca istenen hedef kategorilerin tablolarını sorgula (tüm 28 tabloyu belleğe çekme).
+    val allItemsResult by remember(hardwareRepository, targetCategories) {
+        val distinctCats = targetCategories.distinct()
+        when {
+            distinctCats.isEmpty() -> hardwareRepository.observeHardwareItems()
+            distinctCats.size == 1 -> hardwareRepository.observeHardwareItemsByCategory(distinctCats.first())
+            else -> combine(distinctCats.map { hardwareRepository.observeHardwareItemsByCategory(it) }) { results ->
+                val merged = results.flatMap { (it as? DomainResult.Success)?.data.orEmpty() }
+                DomainResult.Success(merged)
+            }
+        }
     }.collectAsState(initial = DomainResult.Success(emptyList()))
 
     val (filteredItems, constraintDescription) = remember(allItemsResult, targetCategories, activeBuild, searchQuery) {

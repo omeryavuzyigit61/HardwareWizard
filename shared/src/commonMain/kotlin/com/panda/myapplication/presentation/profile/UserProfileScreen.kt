@@ -48,15 +48,12 @@ import com.panda.myapplication.domain.repository.CommunityPriceRepository
 import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.TextSecondary
+import com.panda.myapplication.presentation.util.openSafeHttpsUrl
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
@@ -119,7 +116,7 @@ fun UserProfileScreen(
                 Surface(
                     shape = CircleShape,
                     color = MaterialTheme.colorScheme.surfaceVariant,
-                    border = BorderStroke(1.dp, GlassBorder),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.size(90.dp),
                 ) {
                     Box(contentAlignment = Alignment.Center) {
@@ -141,7 +138,7 @@ fun UserProfileScreen(
                         tr(isTr, "Donanım ruhunuzu belirlemek, topluluk tuning profillerine ve sistem vitrinine katılmak için giriş yapın veya kayıt olun.", "Sign in or register to customize your hardware profile and join community tuning profiles and rig showcases.")
                     },
                     style = MaterialTheme.typography.bodyMedium,
-                    color = TextSecondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                 )
                 Spacer(modifier = Modifier.height(24.dp))
@@ -250,7 +247,7 @@ fun UserProfileScreen(
                                     Text(
                                         text = tr(isTr, "Tema, 7 Dil, Para Birimi, Uzman Modu, Kaynakça", "Theme, 7 Languages, Currency, Expert Mode, Sources"),
                                         style = MaterialTheme.typography.bodySmall,
-                                        color = TextSecondary,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }
                             }
@@ -287,7 +284,7 @@ fun UserProfileScreen(
                             Surface(
                                 shape = RoundedCornerShape(12.dp),
                                 color = MaterialTheme.colorScheme.surfaceVariant,
-                                border = BorderStroke(0.5.dp, GlassBorder),
+                                border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
                                 Column(
@@ -299,7 +296,7 @@ fun UserProfileScreen(
                                     Text(
                                         text = tr(isTr, "Henüz fiyat bildiriminde bulunmadınız.", "You have not submitted any price reports yet."),
                                         style = MaterialTheme.typography.bodyMedium,
-                                        color = TextSecondary,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                     Text(
                                         text = tr(isTr, "Ürün detay sayfalarındaki 'Fiyat Bildir' butonunu kullanarak ilk fırsatınızı paylaşabilirsiniz.", "Use the 'Report Price' button on product detail pages to share your first deal."),
@@ -312,7 +309,7 @@ fun UserProfileScreen(
                     } else {
                         items(userDeals, key = { it.id }) { deal ->
                             UserDealItemCard(deal = deal, onOpenUrl = { url ->
-                                runCatching { uriHandler.openUri(url) }
+                                uriHandler.openSafeHttpsUrl(url)
                             })
                         }
                     }
@@ -366,7 +363,7 @@ private fun ProfileTopBar(
                 onClick = onNavigateBack,
                 shape = RoundedCornerShape(10.dp),
                 color = MaterialTheme.colorScheme.surfaceVariant,
-                border = BorderStroke(1.dp, GlassBorder),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
             ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
@@ -397,7 +394,7 @@ private fun ProfileTopBar(
                 onClick = onNavigateToSettings,
                 shape = RoundedCornerShape(10.dp),
                 color = MaterialTheme.colorScheme.surfaceVariant,
-                border = BorderStroke(1.dp, GlassBorder),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
             ) {
                 Text(
                     text = "⚙️",
@@ -475,7 +472,7 @@ private fun ProfileHeroCard(
                     Text(
                         text = user.email,
                         style = MaterialTheme.typography.bodySmall,
-                        color = TextSecondary,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
@@ -506,7 +503,7 @@ private fun ProfileHeroCard(
                         Surface(
                             shape = RoundedCornerShape(6.dp),
                             color = MaterialTheme.colorScheme.surfaceVariant,
-                            border = BorderStroke(0.5.dp, GlassBorder),
+                            border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
                         ) {
                             Text(
                                 text = "${user.gender.emoji} ${user.gender.displayName}",
@@ -564,7 +561,7 @@ private fun SpiritHardwareShowcaseCard(user: UserProfile) {
             Text(
                 text = "“${spirit.motto}”",
                 style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }
@@ -582,7 +579,7 @@ private fun CommunityStatsSection(
     Surface(
         shape = RoundedCornerShape(12.dp),
         color = MaterialTheme.colorScheme.surface,
-        border = BorderStroke(1.dp, GlassBorder),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
@@ -639,7 +636,7 @@ private fun StatMetricColumn(
         Text(
             text = title,
             style = MaterialTheme.typography.labelSmall,
-            color = TextSecondary,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
 }
@@ -660,7 +657,7 @@ private fun UserDealItemCard(
     Surface(
         shape = RoundedCornerShape(10.dp),
         color = MaterialTheme.colorScheme.surfaceVariant,
-        border = BorderStroke(0.5.dp, GlassBorder),
+        border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
@@ -703,7 +700,7 @@ private fun UserDealItemCard(
                 Text(
                     text = "${deal.dealType.emoji} ${deal.dealType.localizedTitle(isTr)}",
                     style = MaterialTheme.typography.bodySmall,
-                    color = TextSecondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Text(
                     text = "${deal.priceTry.roundToInt()} ₺",

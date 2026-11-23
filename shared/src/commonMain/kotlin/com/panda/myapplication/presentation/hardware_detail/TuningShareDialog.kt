@@ -81,6 +81,7 @@ import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.domain.model.HardwareId
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.RamSpec
@@ -98,6 +99,7 @@ import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 
@@ -169,15 +171,13 @@ fun TuningShareDialog(
     var activePickerSlot by remember { mutableStateOf<ComponentPickerSlot?>(null) }
 
     val activeBuild by activeBuildRepository.activeBuild.collectAsState()
-    val allCatalogResult by remember(hardwareRepository) {
-        hardwareRepository.observeHardwareItems()
-    }.collectAsState(initial = DomainResult.Success(emptyList()))
 
-    // Başlangıçta hardwareId verilmişse katalogdan gerçek HardwareItem nesnesini bul (Soket/DDR kilidi için)
-    LaunchedEffect(hardwareId, allCatalogResult) {
+    // Başlangıçta hardwareId verilmişse yalnızca tek satırlık O(1) sorgu ile HardwareItem yükle
+    // (tüm 28 tablo / 7.300+ ürün belleğe çekilmez).
+    LaunchedEffect(hardwareId) {
         if (hardwareId.isNotBlank() && selectedTargetItem == null) {
-            val items = (allCatalogResult as? DomainResult.Success)?.data.orEmpty()
-            val match = items.firstOrNull { it.id.value == hardwareId }
+            val result = hardwareRepository.observeHardwareItem(HardwareId(hardwareId)).firstOrNull()
+            val match = (result as? DomainResult.Success)?.data
             if (match != null) {
                 selectedTargetItem = match
                 selectedCategory = match.category.name

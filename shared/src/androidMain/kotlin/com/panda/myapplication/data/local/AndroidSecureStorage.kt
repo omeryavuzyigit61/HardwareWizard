@@ -20,25 +20,39 @@ import javax.crypto.spec.GCMParameterSpec
 class AndroidSecureStorage(private val context: Context) : SecureStorage {
 
     private val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+    private val keyLock = Any()
 
     override suspend fun put(key: String, value: String): Unit = withContext(Dispatchers.IO) {
-        try {
-            val secretKey = getOrCreateSecretKey()
-            val cipher = Cipher.getInstance(TRANSFORMATION)
-            cipher.init(Cipher.ENCRYPT_MODE, secretKey)
-            val iv = cipher.iv
-            val cipherText = cipher.doFinal(value.toByteArray(Charsets.UTF_8))
-
-            val combined = ByteArray(iv.size + cipherText.size)
-            System.arraycopy(iv, 0, combined, 0, iv.size)
-            System.arraycopy(cipherText, 0, combined, iv.size, cipherText.size)
-
-            val base64Encoded = Base64.encodeToString(combined, Base64.NO_WRAP)
-            prefs.edit().putString(key, base64Encoded).apply()
-        } catch (e: Exception) {
-            // Hata durumunda anahtarı sıfırla
+        val encoded = encryptWithRecovery(value)
+        if (encoded != null) {
+            prefs.edit().putString(key, encoded).apply()
+        } else {
             prefs.edit().remove(key).apply()
         }
+    }
+
+    private fun encryptWithRecovery(value: String): String? {
+        repeat(2) { attempt ->
+            try {
+                val secretKey = getOrCreateSecretKey(forceRecreate = attempt > 0)
+                val cipher = Cipher.getInstance(TRANSFORMATION)
+                cipher.init(Cipher.ENCRYPT_MODE, secretKey)
+                val iv = cipher.iv
+                val cipherText = cipher.doFinal(value.toByteArray(Charsets.UTF_8))
+
+                val combined = ByteArray(iv.size + cipherText.size)
+                System.arraycopy(iv, 0, combined, 0, iv.size)
+                System.arraycopy(cipherText, 0, combined, iv.size, cipherText.size)
+
+                return Base64.encodeToString(combined, Base64.NO_WRAP)
+            } catch (_: Exception) {
+                if (attempt == 0) {
+                    // Keystore alias invalidated/corrupted -> recreate cleanly and retry once
+                    resetKeystoreAlias()
+                }
+            }
+        }
+        return null
     }
 
     override suspend fun get(key: String): String? = withContext(Dispatchers.IO) {
@@ -52,15 +66,15 @@ class AndroidSecureStorage(private val context: Context) : SecureStorage {
             System.arraycopy(combined, 0, iv, 0, GCM_IV_LENGTH_BYTES)
             System.arraycopy(combined, GCM_IV_LENGTH_BYTES, cipherText, 0, cipherText.size)
 
-            val secretKey = getOrCreateSecretKey()
+            val secretKey = getOrCreateSecretKey(forceRecreate = false)
             val cipher = Cipher.getInstance(TRANSFORMATION)
             val spec = GCMParameterSpec(GCM_TAG_LENGTH_BITS, iv)
             cipher.init(Cipher.DECRYPT_MODE, secretKey, spec)
 
             val plainText = cipher.doFinal(cipherText)
             String(plainText, Charsets.UTF_8)
-        } catch (e: Exception) {
-            // Çözme başarısız olursa veriyi sil ve null dön (sessiz çökme yok)
+        } catch (_: Exception) {
+            // Çözme başarısız olursa bozuk kaydı temizle ve null dön (sessiz çökme yok)
             prefs.edit().remove(key).apply()
             null
         }
@@ -74,23 +88,45 @@ class AndroidSecureStorage(private val context: Context) : SecureStorage {
         prefs.edit().clear().apply()
     }
 
-    private fun getOrCreateSecretKey(): SecretKey {
-        val keyStore = KeyStore.getInstance(KEYSTORE_PROVIDER).apply { load(null) }
-        if (!keyStore.containsAlias(KEY_ALIAS)) {
-            val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, KEYSTORE_PROVIDER)
-            val keyGenSpec = KeyGenParameterSpec.Builder(
-                KEY_ALIAS,
-                KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT
-            )
-                .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
-                .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
-                .setKeySize(256)
-                .build()
-            keyGenerator.init(keyGenSpec)
-            keyGenerator.generateKey()
+    private fun resetKeystoreAlias() = synchronized(keyLock) {
+        runCatching {
+            val keyStore = KeyStore.getInstance(KEYSTORE_PROVIDER).apply { load(null) }
+            if (keyStore.containsAlias(KEY_ALIAS)) {
+                keyStore.deleteEntry(KEY_ALIAS)
+            }
         }
-        val entry = keyStore.getEntry(KEY_ALIAS, null) as KeyStore.SecretKeyEntry
-        return entry.secretKey
+    }
+
+    private fun getOrCreateSecretKey(forceRecreate: Boolean): SecretKey = synchronized(keyLock) {
+        val keyStore = KeyStore.getInstance(KEYSTORE_PROVIDER).apply { load(null) }
+        if (forceRecreate && keyStore.containsAlias(KEY_ALIAS)) {
+            runCatching { keyStore.deleteEntry(KEY_ALIAS) }
+        }
+        if (!keyStore.containsAlias(KEY_ALIAS)) {
+            generateMasterKey()
+        }
+        val entry = runCatching { keyStore.getEntry(KEY_ALIAS, null) as? KeyStore.SecretKeyEntry }.getOrNull()
+        if (entry != null) {
+            entry.secretKey
+        } else {
+            runCatching { keyStore.deleteEntry(KEY_ALIAS) }
+            generateMasterKey()
+            (keyStore.getEntry(KEY_ALIAS, null) as KeyStore.SecretKeyEntry).secretKey
+        }
+    }
+
+    private fun generateMasterKey() {
+        val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, KEYSTORE_PROVIDER)
+        val keyGenSpec = KeyGenParameterSpec.Builder(
+            KEY_ALIAS,
+            KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT,
+        )
+            .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
+            .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
+            .setKeySize(256)
+            .build()
+        keyGenerator.init(keyGenSpec)
+        keyGenerator.generateKey()
     }
 
     companion object {

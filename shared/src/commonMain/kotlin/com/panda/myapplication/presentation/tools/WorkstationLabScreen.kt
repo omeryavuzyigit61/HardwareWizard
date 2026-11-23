@@ -71,15 +71,11 @@ import com.panda.myapplication.domain.engine.WorkstationApp
 import com.panda.myapplication.domain.engine.WorkstationCategory
 import com.panda.myapplication.domain.engine.WorkstationRequirementEngine
 import com.panda.myapplication.domain.model.HardwareCategory
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
 import com.panda.myapplication.presentation.theme.ElectricBlue
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
-import com.panda.myapplication.presentation.theme.SlateDarkBackground
 import com.panda.myapplication.presentation.util.LocalAppStrings
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -146,7 +142,7 @@ fun WorkstationLabScreen(
                     IconButton(onClick = onNavigateBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-                            contentDescription = "Geri",
+                            contentDescription = if (isTr) "Geri" else "Back",
                             tint = MaterialTheme.colorScheme.onSurface,
                         )
                     }
@@ -155,7 +151,7 @@ fun WorkstationLabScreen(
                     IconButton(onClick = onOpenDrawer) {
                         Icon(
                             imageVector = Icons.Rounded.Menu,
-                            contentDescription = "Menü",
+                            contentDescription = if (isTr) "Menü" else "Menu",
                             tint = MaterialTheme.colorScheme.onSurface,
                         )
                     }
@@ -199,7 +195,7 @@ fun WorkstationLabScreen(
                             IconButton(onClick = { appSearchQuery = "" }) {
                                 Icon(
                                     imageVector = Icons.Rounded.Clear,
-                                    contentDescription = "Temizle",
+                                    contentDescription = if (isTr) "Temizle" else "Clear",
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                     modifier = Modifier.size(16.dp),
                                 )
@@ -212,7 +208,7 @@ fun WorkstationLabScreen(
                         focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                         unfocusedContainerColor = MaterialTheme.colorScheme.surface,
                         focusedBorderColor = NeonCyan,
-                        unfocusedBorderColor = GlassBorder,
+                        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                     ),
                     modifier = Modifier.fillMaxWidth(),
                 )
@@ -273,7 +269,7 @@ fun WorkstationLabScreen(
                         if (filteredApps.isEmpty()) {
                             Surface(
                                 shape = RoundedCornerShape(12.dp),
-                                color = CardSurface,
+                                color = MaterialTheme.colorScheme.surfaceVariant,
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
                                 Text(
@@ -294,10 +290,10 @@ fun WorkstationLabScreen(
                                     val isSelected = app.id == selectedAppId
                                     Surface(
                                         shape = RoundedCornerShape(10.dp),
-                                        color = if (isSelected) ElectricBlue.copy(alpha = 0.24f) else CardSurface,
+                                        color = if (isSelected) ElectricBlue.copy(alpha = 0.24f) else MaterialTheme.colorScheme.surfaceVariant,
                                         border = BorderStroke(
                                             width = if (isSelected) 1.5.dp else 1.dp,
-                                            color = if (isSelected) ElectricBlue else GlassBorder,
+                                            color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outlineVariant,
                                         ),
                                         modifier = Modifier
                                             .clip(RoundedCornerShape(10.dp))
@@ -322,7 +318,7 @@ fun WorkstationLabScreen(
                                                 text = app.name,
                                                 style = MaterialTheme.typography.bodySmall,
                                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                                color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                                                color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.onSurface,
                                             )
                                         }
                                     }
@@ -430,7 +426,7 @@ private fun CategorySelectorTabs(
                 color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
-                    color = if (isSelected) NeonCyan else GlassBorder,
+                    color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.outlineVariant,
                 ),
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
@@ -474,10 +470,10 @@ private fun AppSelectorChips(
             val isSelected = app.id == selectedAppId
             Surface(
                 shape = RoundedCornerShape(10.dp),
-                color = if (isSelected) ElectricBlue.copy(alpha = 0.22f) else CardSurface,
+                color = if (isSelected) ElectricBlue.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
-                    color = if (isSelected) ElectricBlue else GlassBorder.copy(alpha = 0.5f),
+                    color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.7f),
                 ),
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp))
@@ -492,13 +488,13 @@ private fun AppSelectorChips(
                         modifier = Modifier
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(if (isSelected) ElectricBlue else Color.Gray),
+                            .background(if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outline),
                     )
                     Text(
                         text = app.shortName,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                        color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                        color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.onSurface,
                     )
                 }
             }
@@ -518,7 +514,7 @@ private fun WorkloadConfigCard(
     Card(
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, GlassBorder),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
@@ -601,7 +597,7 @@ private fun WorkloadConfigCard(
                 }
             }
 
-            HorizontalDivider(color = GlassBorder.copy(alpha = 0.5f))
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
 
             // Çözünürlük ve Proje Ölçeği Seçimi
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -621,10 +617,10 @@ private fun WorkloadConfigCard(
                         val isSelected = res == selectedResolution
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = if (isSelected) NeonCyan.copy(alpha = 0.2f) else CardSurface,
+                            color = if (isSelected) NeonCyan.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant,
                             border = BorderStroke(
                                 width = if (isSelected) 1.5.dp else 1.dp,
-                                color = if (isSelected) NeonCyan else GlassBorder.copy(alpha = 0.6f),
+                                color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f),
                             ),
                             modifier = Modifier
                                 .clip(RoundedCornerShape(10.dp))
@@ -666,10 +662,10 @@ private fun WorkloadConfigCard(
                         val isSelected = phase == selectedPhase
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = if (isSelected) ElectricBlue.copy(alpha = 0.2f) else CardSurface,
+                            color = if (isSelected) ElectricBlue.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceVariant,
                             border = BorderStroke(
                                 width = if (isSelected) 1.5.dp else 1.dp,
-                                color = if (isSelected) ElectricBlue else GlassBorder.copy(alpha = 0.6f),
+                                color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f),
                             ),
                             modifier = Modifier
                                 .clip(RoundedCornerShape(10.dp))
@@ -703,8 +699,8 @@ private fun DataCitationBanner(
 ) {
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = CardSurface,
-        border = BorderStroke(1.dp, GlassBorder.copy(alpha = 0.6f)),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Row(
@@ -753,7 +749,7 @@ private fun HardwareTierCard(
         ),
         border = BorderStroke(
             width = if (isFeatured) 1.5.dp else 1.dp,
-            color = if (isFeatured) tierColor else GlassBorder,
+            color = if (isFeatured) tierColor else MaterialTheme.colorScheme.outlineVariant,
         ),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -791,7 +787,7 @@ private fun HardwareTierCard(
                     border = BorderStroke(0.5.dp, NeonEmerald.copy(alpha = 0.4f)),
                 ) {
                     Text(
-                        text = "${recommendation.benchmarkConfidenceScore}% GÜVEN SKORU",
+                        text = if (isTr) "${recommendation.benchmarkConfidenceScore}% GÜVEN SKORU" else "${recommendation.benchmarkConfidenceScore}% CONFIDENCE",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
                         color = NeonEmerald,
@@ -801,7 +797,7 @@ private fun HardwareTierCard(
                 }
             }
 
-            HorizontalDivider(color = GlassBorder.copy(alpha = 0.4f))
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
 
             // 1. İşlemci (CPU) Bölümü
             HardwareComponentRow(
@@ -814,7 +810,7 @@ private fun HardwareTierCard(
                 isTr = isTr,
             )
 
-            HorizontalDivider(color = GlassBorder.copy(alpha = 0.3f))
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f))
 
             // 2. Ekran Kartı (GPU) Bölümü
             HardwareComponentRow(
@@ -827,7 +823,7 @@ private fun HardwareTierCard(
                 isTr = isTr,
             )
 
-            HorizontalDivider(color = GlassBorder.copy(alpha = 0.3f))
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f))
 
             // 3. Bellek (RAM) ve Depolama (SSD)
             Row(
@@ -838,7 +834,7 @@ private fun HardwareTierCard(
                 Surface(
                     shape = RoundedCornerShape(12.dp),
                     color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
-                    border = BorderStroke(0.5.dp, GlassBorder),
+                    border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.weight(1f),
                 ) {
                     Column(
@@ -877,7 +873,7 @@ private fun HardwareTierCard(
                 Surface(
                     shape = RoundedCornerShape(12.dp),
                     color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
-                    border = BorderStroke(0.5.dp, GlassBorder),
+                    border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.weight(1f),
                 ) {
                     Column(
@@ -1027,7 +1023,7 @@ private fun TechnicalTakeawayCard(
     Card(
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, GlassBorder),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Row(

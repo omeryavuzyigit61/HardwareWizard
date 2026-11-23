@@ -18,6 +18,7 @@ import com.panda.myapplication.domain.model.HeadsetSpec
 import com.panda.myapplication.domain.model.KeyboardSpec
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.MicrophoneSpec
+import com.panda.myapplication.domain.model.ModemSpec
 import com.panda.myapplication.domain.model.MonitorSpec
 import com.panda.myapplication.domain.model.MotherboardSpec
 import com.panda.myapplication.domain.model.MouseSpec
@@ -27,6 +28,7 @@ import com.panda.myapplication.domain.model.PsuSpec
 import com.panda.myapplication.domain.model.RamSpec
 import com.panda.myapplication.domain.model.RangeExtenderSpec
 import com.panda.myapplication.domain.model.RouterSpec
+import com.panda.myapplication.domain.model.SmartwatchSpec
 import com.panda.myapplication.domain.model.StorageSpec
 import com.panda.myapplication.domain.model.TabletSpec
 import com.panda.myapplication.domain.model.UpsSpec
@@ -151,10 +153,8 @@ class HardwareListViewModel(
                     CatalogSegmentMode.MOBILE -> null
                 }
                 selectedCategory.value = nextCategory
-                filterOptions.value = filterOptions.value.copy(
-                    selectedBrands = emptySet(),
-                    sortOption = HardwareSortOption.DEFAULT,
-                )
+                displayedLimit.value = pageSize
+                filterOptions.value = HardwareFilterOptions()
                 _uiState.update {
                     it.copy(
                         segmentMode = event.mode,
@@ -182,16 +182,15 @@ class HardwareListViewModel(
                 }
                 segmentMode.value = inferredMode
                 selectedCategory.value = targetCategory
+                displayedLimit.value = pageSize
                 val validSorts = HardwareSortOption.optionsForCategory(targetCategory)
                 val nextSort = if (validSorts.contains(filterOptions.value.sortOption)) {
                     filterOptions.value.sortOption
                 } else {
                     HardwareSortOption.DEFAULT
                 }
-                filterOptions.value = filterOptions.value.copy(
-                    selectedBrands = emptySet(),
-                    sortOption = nextSort,
-                )
+                // Reset category-specific filters cleanly so stale CPU/GPU filters never linger on other categories
+                filterOptions.value = HardwareFilterOptions(sortOption = nextSort)
                 _uiState.update {
                     it.copy(
                         segmentMode = inferredMode,
@@ -232,10 +231,12 @@ class HardwareListViewModel(
                 _uiState.update { it.copy(isFilterSheetVisible = next) }
             }
             is HardwareListUiEvent.OnFiltersChanged -> {
+                displayedLimit.value = pageSize
                 filterOptions.value = event.filters
                 _uiState.update { it.copy(filters = event.filters) }
             }
             HardwareListUiEvent.OnResetFilters -> {
+                displayedLimit.value = pageSize
                 filterOptions.value = HardwareFilterOptions()
                 _uiState.update { it.copy(filters = HardwareFilterOptions()) }
             }
@@ -331,14 +332,14 @@ class HardwareListViewModel(
             // 2. Category Filters
             when (val s = item.spec) {
                 is CpuSpec -> {
-                    if (filters.cpuSocket != null && !s.socket.equals(filters.cpuSocket, ignoreCase = true)) return@filter false
+                    if (filters.cpuSocket != null && !com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.socketsMatch(s.socket, filters.cpuSocket)) return@filter false
                     if (filters.minCoreCount != null && s.coreCount < filters.minCoreCount) return@filter false
                     if (filters.maxTdpWatts != null && s.tdp.watts > filters.maxTdpWatts) return@filter false
                 }
                 is GpuSpec -> {
                     if (filters.minVramGb != null && (s.vram.megabytes / 1024) < filters.minVramGb) return@filter false
                     if (filters.gpuBrand != null && !item.brand.contains(filters.gpuBrand, ignoreCase = true) && !s.chipset.contains(filters.gpuBrand, ignoreCase = true)) return@filter false
-                    if (filters.maxGpuLengthMm != null && (s.lengthMm ?: 0) > filters.maxGpuLengthMm) return@filter false
+                    if (filters.maxGpuLengthMm != null && (s.lengthMm == null || s.lengthMm <= 0 || s.lengthMm > filters.maxGpuLengthMm)) return@filter false
                 }
                 is RamSpec -> {
                     if (filters.ramGeneration != null && s.generation != filters.ramGeneration) return@filter false
@@ -351,7 +352,7 @@ class HardwareListViewModel(
                     if (filters.minStorageCapacityGb != null && (s.capacity.megabytes / 1024) < filters.minStorageCapacityGb) return@filter false
                 }
                 is MotherboardSpec -> {
-                    if (filters.motherboardSocket != null && !s.socket.equals(filters.motherboardSocket, ignoreCase = true)) return@filter false
+                    if (filters.motherboardSocket != null && !com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.socketsMatch(s.socket, filters.motherboardSocket)) return@filter false
                     if (filters.motherboardFormFactor != null && s.formFactor != filters.motherboardFormFactor) return@filter false
                     if (filters.minM2Slots != null && (s.m2Slots ?: 0) < filters.minM2Slots) return@filter false
                 }
@@ -378,6 +379,15 @@ class HardwareListViewModel(
                     if (filters.requirePureSineUps && !s.sinewaveType.contains("Tam Sinüs", ignoreCase = true) && !s.sinewaveType.contains("Pure Sine", ignoreCase = true)) return@filter false
                 }
                 is RouterSpec -> {
+                    if (filters.wifiStandardFilter != null && !s.wifiStandard.contains(filters.wifiStandardFilter, ignoreCase = true)) return@filter false
+                }
+                is ModemSpec -> {
+                    if (filters.wifiStandardFilter != null && !s.wifiStandard.contains(filters.wifiStandardFilter, ignoreCase = true)) return@filter false
+                }
+                is AccessPointSpec -> {
+                    if (filters.wifiStandardFilter != null && !s.wifiStandard.contains(filters.wifiStandardFilter, ignoreCase = true)) return@filter false
+                }
+                is RangeExtenderSpec -> {
                     if (filters.wifiStandardFilter != null && !s.wifiStandard.contains(filters.wifiStandardFilter, ignoreCase = true)) return@filter false
                 }
                 is PhoneSpec -> {
@@ -420,9 +430,17 @@ class HardwareListViewModel(
             HardwareSortOption.PRICE_DESC -> items.sortedByDescending { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: -1.0 }
             HardwareSortOption.NAME_ASC -> items.sortedBy { it.displayName }
 
-            // Mobil & Tablet
+            // Mobil, Tablet, Laptop & Smartwatch Batarya
             HardwareSortOption.ANTUTU_SCORE_DESC -> items.sortedByDescending { (it.spec as? PhoneSpec)?.antutuScore ?: (it.spec as? TabletSpec)?.antutuScore ?: 0 }
-            HardwareSortOption.BATTERY_DESC -> items.sortedByDescending { (it.spec as? PhoneSpec)?.batteryMah ?: (it.spec as? TabletSpec)?.batteryMah ?: 0 }
+            HardwareSortOption.BATTERY_DESC -> items.sortedByDescending {
+                when (val s = it.spec) {
+                    is PhoneSpec -> s.batteryMah
+                    is TabletSpec -> s.batteryMah
+                    is LaptopSpec -> s.batteryWh
+                    is SmartwatchSpec -> s.batteryLifeDays
+                    else -> 0
+                }
+            }
 
             // CPU
             HardwareSortOption.CPU_CORES_DESC -> items.sortedByDescending { (it.spec as? CpuSpec)?.coreCount ?: 0 }
@@ -489,12 +507,28 @@ class HardwareListViewModel(
             // UPS & Networking
             HardwareSortOption.UPS_WATT_DESC -> items.sortedByDescending { (it.spec as? UpsSpec)?.wattCapacity ?: 0 }
             HardwareSortOption.NET_COVERAGE_DESC -> items.sortedByDescending {
-                (it.spec as? AccessPointSpec)?.maxClients
-                    ?: (it.spec as? RangeExtenderSpec)?.coverageAreaM2
-                    ?: 0
+                when (val s = it.spec) {
+                    is AccessPointSpec -> s.maxClients
+                    is RangeExtenderSpec -> s.coverageAreaM2
+                    is RouterSpec -> wifiGenRank(s.wifiStandard) * 100_000 + extractMbps(s.speedClass)
+                    is ModemSpec -> wifiGenRank(s.wifiStandard) * 100_000 + (if (s.fiberWanSupport) 10_000 else 0) + (if (s.vdslProfile.contains("35b", ignoreCase = true)) 1_000 else 0)
+                    else -> 0
+                }
             }
         }
     }
+
+    private fun wifiGenRank(std: String): Int = when {
+        std.contains("Wi-Fi 7", ignoreCase = true) || std.contains("802.11be", ignoreCase = true) -> 5
+        std.contains("Wi-Fi 6E", ignoreCase = true) -> 4
+        std.contains("Wi-Fi 6", ignoreCase = true) || std.contains("802.11ax", ignoreCase = true) -> 3
+        std.contains("Wi-Fi 5", ignoreCase = true) || std.contains("802.11ac", ignoreCase = true) -> 2
+        std.isNotBlank() -> 1
+        else -> 0
+    }
+
+    private fun extractMbps(speedClass: String): Int =
+        Regex("""(\d{3,5})""").find(speedClass)?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 0
 
     private fun refresh(isManual: Boolean = false) {
         viewModelScope.launch {

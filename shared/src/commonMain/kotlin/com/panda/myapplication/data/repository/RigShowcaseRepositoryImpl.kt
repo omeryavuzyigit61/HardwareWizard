@@ -264,15 +264,32 @@ internal class RigShowcaseRepositoryImpl(
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
     }
 
-    override suspend fun deleteShowcase(showcaseId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+    override suspend fun deleteShowcase(showcaseId: String, userId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+        if (userId.isBlank()) {
+            return@withContext DomainResult.Failure(
+                DomainError.Unknown(IllegalStateException("Vitrini kaldırmak için oturum açmanız gerekir.")),
+            )
+        }
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_COMMUNITY_RIG_SHOWCASES}?id=eq.$showcaseId"
-            val response = httpClient.delete(url) {
-                applySupabaseHeaders(preferMinimal = true)
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.RPC_DELETE_OWN_RIG_SHOWCASE}"
+            val payload = buildJsonObject {
+                put("p_showcase_id", showcaseId)
+                put("p_user_id", userId)
+            }
+            val response = httpClient.post(url) {
+                applySupabaseHeaders()
+                contentType(ContentType.Application.Json)
+                setBody(payload.toString())
             }
             if (!response.status.isSuccess()) {
                 return@withContext DomainResult.Failure(
                     DomainError.Unknown(IllegalStateException("Sistem vitrini sunucudan silinemedi (HTTP ${response.status.value}).")),
+                )
+            }
+            val deleted = response.bodyAsText().trim().equals("true", ignoreCase = true)
+            if (!deleted) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Yalnızca kendi vitrin paylaşımınızı kaldırabilirsiniz.")),
                 )
             }
             _showcases.update { list -> list.filterNot { it.id == showcaseId } }

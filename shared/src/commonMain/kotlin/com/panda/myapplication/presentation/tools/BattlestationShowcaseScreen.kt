@@ -596,11 +596,20 @@ fun BattlestationShowcaseScreen(
                     )
                     reportRepository.submitReport(report)
                     if (isSelf) {
-                        rigShowcaseRepository.deleteShowcase(target.id)
-                        snackbarHostState.showSnackbar(
-                            if (isTr) "Sistem vitrini paylaşımınız yayından kaldırıldı."
-                            else "Your setup showcase has been retracted."
-                        )
+                        when (val delRes = rigShowcaseRepository.deleteShowcase(target.id, currentUser?.id.orEmpty())) {
+                            is DomainResult.Success -> {
+                                snackbarHostState.showSnackbar(
+                                    if (isTr) "Sistem vitrini paylaşımınız yayından kaldırıldı."
+                                    else "Your setup showcase has been retracted."
+                                )
+                            }
+                            is DomainResult.Failure -> {
+                                val errMsg = (delRes.error as? com.panda.myapplication.domain.common.DomainError.Unknown)?.cause?.message
+                                snackbarHostState.showSnackbar(
+                                    errMsg ?: if (isTr) "Vitrin kaldırılamadı." else "Failed to retract showcase."
+                                )
+                            }
+                        }
                     } else {
                         snackbarHostState.showSnackbar(
                             if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."

@@ -45,8 +45,8 @@ interface TuningVaultRepository {
     /** Yeni mikro ipucu / kullanıcı yorumu paylaşır. */
     suspend fun submitTip(tip: HardwareProTip): DomainResult<Unit>
 
-    /** Belirtilen kullanıcı yorumunu / mikro ipucunu siler veya yayından kaldırır. */
-    suspend fun deleteTip(tipId: String): DomainResult<Unit>
+    /** Belirtilen kullanıcı yorumunu / mikro ipucunu yalnızca sahibi tarafından siler. */
+    suspend fun deleteTip(tipId: String, userId: String = ""): DomainResult<Unit>
 
     /** Mikro ipucuna faydalı (upvote) oyu verir. */
     suspend fun upvoteTip(tipId: String, userId: String): DomainResult<Unit>

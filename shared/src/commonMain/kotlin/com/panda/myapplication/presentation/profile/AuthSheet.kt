@@ -55,9 +55,6 @@ import com.panda.myapplication.domain.model.SpiritHardware
 import com.panda.myapplication.domain.model.UserProfile
 import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.presentation.hardware_list.Spacing
-import com.panda.myapplication.presentation.theme.CardSurface
-import com.panda.myapplication.presentation.theme.CardSurfaceElevated
-import com.panda.myapplication.presentation.theme.GlassBorder
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
@@ -404,7 +401,7 @@ fun AuthSheet(
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = if (isSelected) spiritColor.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.55f),
-                            border = BorderStroke(if (isSelected) 1.5.dp else 0.5.dp, if (isSelected) spiritColor else GlassBorder),
+                            border = BorderStroke(if (isSelected) 1.5.dp else 0.5.dp, if (isSelected) spiritColor else MaterialTheme.colorScheme.outlineVariant),
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable { selectedSpiritHardware = spirit },

@@ -636,15 +636,32 @@ internal class TuningVaultRepositoryImpl(
         }.getOrElse { DomainResult.Failure(DomainError.Unknown(it)) }
     }
 
-    override suspend fun deleteTip(tipId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+    override suspend fun deleteTip(tipId: String, userId: String): DomainResult<Unit> = withContext(ioDispatcher) {
+        if (userId.isBlank()) {
+            return@withContext DomainResult.Failure(
+                DomainError.Unknown(IllegalStateException("Yorumu silmek için oturum açmanız gerekir.")),
+            )
+        }
         runCatching {
-            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_HARDWARE_PRO_TIPS}?id=eq.$tipId"
-            val response = httpClient.delete(url) {
-                applySupabaseHeaders(preferMinimal = true)
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.RPC_DELETE_OWN_PRO_TIP}"
+            val payload = buildJsonObject {
+                put("p_tip_id", tipId)
+                put("p_user_id", userId)
+            }
+            val response = httpClient.post(url) {
+                applySupabaseHeaders()
+                contentType(ContentType.Application.Json)
+                setBody(payload.toString())
             }
             if (!response.status.isSuccess()) {
                 return@withContext DomainResult.Failure(
                     DomainError.Unknown(IllegalStateException("İnceleme sunucudan silinemedi (HTTP ${response.status.value}).")),
+                )
+            }
+            val deleted = response.bodyAsText().trim().equals("true", ignoreCase = true)
+            if (!deleted) {
+                return@withContext DomainResult.Failure(
+                    DomainError.Unknown(IllegalStateException("Yalnızca kendi yazdığınız incelemeyi silebilirsiniz.")),
                 )
             }
             _proTips.update { list -> list.filterNot { it.id == tipId } }

@@ -13,6 +13,7 @@ import com.panda.myapplication.domain.usecase.GetCompatibleHardwareForSlotUseCas
 import com.panda.myapplication.domain.usecase.GetHardwareDetailUseCase
 import com.panda.myapplication.domain.usecase.GetHardwareListUseCase
 import io.ktor.client.HttpClient
+import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
@@ -36,6 +37,11 @@ val dataModule = module {
         HttpClient {
             install(ContentNegotiation) {
                 json(get())
+            }
+            install(HttpTimeout) {
+                connectTimeoutMillis = 15_000L
+                requestTimeoutMillis = 30_000L
+                socketTimeoutMillis = 20_000L
             }
             install(Logging) {
                 level = LogLevel.NONE

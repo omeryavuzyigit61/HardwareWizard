@@ -98,6 +98,28 @@ fun UriHandler.openSafeStoreUrl(
 }
 
 /**
+ * Opens an external user-provided proof/reference URL ONLY if it is a safe public HTTPS URL
+ * (rejects `javascript:`, `file:`, `intent:`, `tel:`, private IPs, and control characters).
+ */
+fun UriHandler.openSafeHttpsUrl(
+    rawUrl: String?,
+    onBlocked: (() -> Unit)? = null,
+): Boolean {
+    val safeUrl = SecurityUtils.sanitizeImageUrl(rawUrl)
+    if (safeUrl == null || !safeUrl.startsWith("https://", ignoreCase = true)) {
+        onBlocked?.invoke()
+        return false
+    }
+    return runCatching {
+        this.openUri(safeUrl)
+        true
+    }.getOrElse {
+        onBlocked?.invoke()
+        false
+    }
+}
+
+/**
  * Centralized category accent color mapping used across Catalog, Detail, Wizard, and VS Arena.
  */
 fun HardwareCategory.accentColor(): Color = when (this) {

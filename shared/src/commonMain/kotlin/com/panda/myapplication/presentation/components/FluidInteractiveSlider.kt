@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -165,7 +166,7 @@ fun FluidInteractiveSlider(
                 )
             },
     ) {
-        val defaultInactiveBg = Color(0xFF1E293B).copy(alpha = 0.55f)
+        val defaultInactiveBg = MaterialTheme.colorScheme.surfaceVariant
         val finalInactiveColor = inactiveTrackColor ?: defaultInactiveBg
 
         Canvas(modifier = Modifier.matchParentSize()) {

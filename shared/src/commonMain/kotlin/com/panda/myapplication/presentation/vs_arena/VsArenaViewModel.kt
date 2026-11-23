@@ -16,6 +16,7 @@ import com.panda.myapplication.domain.repository.VsArenaRepository
 import com.panda.myapplication.domain.repository.VsSlot
 import com.panda.myapplication.presentation.util.toGamingResolution
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -24,6 +25,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -35,7 +37,7 @@ private data class LocalArenaControls(
     val activePickerSlot: VsSlot? = null,
 )
 
-@OptIn(FlowPreview::class)
+@OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 class VsArenaViewModel(
     private val hardwareRepository: HardwareRepository,
     private val vsArenaRepository: VsArenaRepository,
@@ -54,9 +56,16 @@ class VsArenaViewModel(
         .distinctUntilChanged()
         .flowOn(Dispatchers.Default)
 
-    val uiState: StateFlow<VsArenaUiState> = combine(
+    private val activeCategoryItemsFlow = vsArenaRepository.state
+        .map { it.activeCategory }
+        .distinctUntilChanged()
+        .flatMapLatest { category ->
+            hardwareRepository.observeHardwareItemsByCategory(category)
+        }
+
+    private val computedState = combine(
         vsArenaRepository.state,
-        hardwareRepository.observeHardwareItems(),
+        activeCategoryItemsFlow,
         localControls,
         debouncedSearchQuery,
     ) { arenaState, domainResult, controls, debouncedQuery ->
@@ -119,7 +128,14 @@ class VsArenaViewModel(
             suggestedPair = suggestedPair,
             isLoadingCatalog = isLoading,
         )
-    }.flowOn(Dispatchers.Default).stateIn(
+    }.flowOn(Dispatchers.Default)
+
+    val uiState: StateFlow<VsArenaUiState> = combine(
+        computedState,
+        _pickerSearchQuery,
+    ) { state, rawQuery ->
+        if (state.pickerSearchQuery == rawQuery) state else state.copy(pickerSearchQuery = rawQuery)
+    }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
         initialValue = VsArenaUiState(isLoadingCatalog = true),
