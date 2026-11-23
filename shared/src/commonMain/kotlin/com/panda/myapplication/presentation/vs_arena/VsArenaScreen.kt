@@ -342,9 +342,21 @@ fun VsArenaScreen(
 
                             accentColor = ElectricBlue,
 
-                            iconVector = Icons.Rounded.EmojiEvents,
+                            iconVector = if (report.category == HardwareCategory.CPU) {
+                                Icons.Rounded.SportsEsports
+                            } else {
+                                Icons.Rounded.EmojiEvents
+                            },
 
                         )
+
+                        report.productivityChampion?.let { prodChamp ->
+                            VsChampionBannerCard(
+                                summary = prodChamp,
+                                accentColor = NeonPurple,
+                                iconVector = Icons.Rounded.LocalFireDepartment,
+                            )
+                        }
 
                         if (FeatureFlags.IS_PRICING_ENABLED) {
 
@@ -371,6 +383,8 @@ fun VsArenaScreen(
                     item(key = "vs_game_fps_matrix") {
 
                         VsGameFpsMatrixCard(
+
+                            category = report.category,
 
                             leftName = report.leftItem.model,
 
@@ -1692,6 +1706,8 @@ private fun VsChampionBannerCard(
 
 private fun VsGameFpsMatrixCard(
 
+    category: HardwareCategory,
+
     leftName: String,
 
     rightName: String,
@@ -1784,11 +1800,17 @@ private fun VsGameFpsMatrixCard(
 
                     Text(
 
-                        text = tr(isTr, "Rekabetçi E-Spor (5) & AAA Ağır Grafik (7) gerçek katsayı kıyası", "Competitive Esports (5) & AAA Graphics (7) verified benchmark delta"),
+                        text = when (category) {
+                            HardwareCategory.CPU -> strings.gameBenchReferenceRigCpu
+                            HardwareCategory.LAPTOP -> strings.gameBenchReferenceRigLaptop
+                            else -> strings.gameBenchReferenceRigGpu
+                        },
 
                         style = MaterialTheme.typography.labelSmall,
 
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        color = NeonCyan,
+
+                        fontWeight = FontWeight.Bold,
 
                     )
 

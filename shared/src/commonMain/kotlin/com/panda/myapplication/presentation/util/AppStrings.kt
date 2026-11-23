@@ -370,6 +370,8 @@ interface AppStrings {
 
     val gameBenchReferenceRigGpu: String
 
+    val gameBenchReferenceRigLaptop: String
+
     val gameBenchAvgMinLabel: String
 
     val gameBenchCurrentHardware: String
@@ -1255,6 +1257,8 @@ private class AppStringsTR : AppStrings {
 
     override val gameBenchReferenceRigGpu = "🔬 Referans CPU: Ryzen 7 9800X3D (Sıfır Darboğaz)"
 
+    override val gameBenchReferenceRigLaptop = "🔬 Dahili Mobil Sistem (Laptop CPU + GPU @ TGP)"
+
     override val gameBenchAvgMinLabel = "Ortalama ve Minimum FPS"
 
     override val gameBenchCurrentHardware = "Mevcut Ürün"
@@ -2131,6 +2135,8 @@ private class AppStringsEN : AppStrings {
     override val gameBenchReferenceRigCpu = "🔬 Reference GPU: RTX 5090 32GB (Zero Bottleneck)"
 
     override val gameBenchReferenceRigGpu = "🔬 Reference CPU: Ryzen 7 9800X3D (Zero Bottleneck)"
+
+    override val gameBenchReferenceRigLaptop = "🔬 Built-in Mobile System (Laptop CPU + GPU @ TGP)"
 
     override val gameBenchAvgMinLabel = "Average & Minimum FPS"
 
@@ -3011,6 +3017,8 @@ private class AppStringsDE : AppStrings {
 
     override val gameBenchReferenceRigGpu = "🔬 Referenz-CPU: Ryzen 7 9800X3D (Kein Bottleneck)"
 
+    override val gameBenchReferenceRigLaptop = "🔬 Integriertes Mobilsystem (Laptop CPU + GPU @ TGP)"
+
     override val gameBenchAvgMinLabel = "Durchschnittliche und Minimale FPS"
 
     override val gameBenchCurrentHardware = "Aktuelles Modell"
@@ -3889,6 +3897,8 @@ private class AppStringsES : AppStrings {
     override val gameBenchReferenceRigCpu = "🔬 GPU de Referencia: RTX 5090 32GB (Cero Cuello de Botella)"
 
     override val gameBenchReferenceRigGpu = "🔬 CPU de Referencia: Ryzen 7 9800X3D (Cero Cuello de Botella)"
+
+    override val gameBenchReferenceRigLaptop = "🔬 Sistema Móvil Integrado (CPU + GPU Portátil @ TGP)"
 
     override val gameBenchAvgMinLabel = "FPS Promedio y Mínimo"
 
@@ -4769,6 +4779,8 @@ private class AppStringsFR : AppStrings {
 
     override val gameBenchReferenceRigGpu = "🔬 CPU de Référence : Ryzen 7 9800X3D (Zéro Goulot d'Étranglement)"
 
+    override val gameBenchReferenceRigLaptop = "🔬 Système Mobile Intégré (CPU + GPU Portable @ TGP)"
+
     override val gameBenchAvgMinLabel = "FPS Moyen et Minimum"
 
     override val gameBenchCurrentHardware = "Matériel Actuel"
@@ -5648,6 +5660,8 @@ private class AppStringsRU : AppStrings {
 
     override val gameBenchReferenceRigGpu = "🔬 Эталонный CPU: Ryzen 7 9800X3D (Без Узких Мест)"
 
+    override val gameBenchReferenceRigLaptop = "🔬 Встроенная Мобильная Система (Ноутбук CPU + GPU @ TGP)"
+
     override val gameBenchAvgMinLabel = "Средний и Минимальный FPS"
 
     override val gameBenchCurrentHardware = "Текущая Модель"
@@ -6526,6 +6540,8 @@ private class AppStringsJA : AppStrings {
     override val gameBenchReferenceRigCpu = "🔬 基準GPU: RTX 5090 32GB (ボトルネックなし)"
 
     override val gameBenchReferenceRigGpu = "🔬 基準CPU: Ryzen 7 9800X3D (ボトルネックなし)"
+
+    override val gameBenchReferenceRigLaptop = "🔬 内蔵モバイルシステム (ノートPC CPU + GPU @ TGP)"
 
     override val gameBenchAvgMinLabel = "平均および最小FPS"
 

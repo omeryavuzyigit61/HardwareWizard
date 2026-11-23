@@ -286,9 +286,10 @@ data class HardwareBenchmarkInfo(
         get() = gpuSynthetic?.timeSpyGraphics ?: gpuSynthetic?.timeSpyExtreme
 
     val effectiveGamingIndex: Int
-        get() = (gamingRelativeIndex?.let { (it * 100.0).toInt() }
+        get() = (gamingIndex
+            ?: gamingRelativeIndex?.let { (it * 100.0).toInt() }
             ?: relativePerformancePct?.let { (it * 100.0).toInt() }
-            ?: relativePerformanceIndex.toInt()).coerceIn(10, 100)
+            ?: relativePerformanceIndex.toInt()).coerceIn(5, 220)
 }
 
 @Immutable

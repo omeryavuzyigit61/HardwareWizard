@@ -703,23 +703,43 @@ object HardwareMapper {
         val benchmarkInfo = if (isCpuOrGpu) {
             if (entity.benchmarkScore != null) {
                 val relPct = (entity.benchmarkGamingIndex ?: entity.benchmarkScore).toDouble()
-                val enrichedGames = entity.gameFps ?: com.panda.myapplication.domain.engine.BenchmarkEngine.buildFull12GameMatrix(
-                    ratio = relPct / 100.0,
-                    isCpu = entity.category == HardwareCategory.CPU,
-                    isX3d = entity.model.contains("X3D", ignoreCase = true),
-                    existing = entity.gameFps,
-                )
-                HardwareBenchmarkInfo(
+                val hasStoredGames = entity.gameFps != null
+                val prodIdx = if (entity.category == HardwareCategory.CPU) {
+                    val cbMulti = entity.cpuSynthetic?.cinebenchR23Multi?.takeIf { it > 0 }
+                    val pm = entity.cpuSynthetic?.passmarkScore?.takeIf { it > 0 }
+                    when {
+                        cbMulti != null -> kotlin.math.round(cbMulti / 432.0).toInt().coerceIn(10, 280)
+                        pm != null -> kotlin.math.round(pm / 655.0).toInt().coerceIn(10, 280)
+                        else -> null
+                    }
+                } else null
+                val seedInfo = HardwareBenchmarkInfo(
                     score = entity.benchmarkScore,
                     tier = entity.benchmarkTier ?: "A-Tier",
                     gamingIndex = entity.benchmarkGamingIndex,
+                    productivityIndex = prodIdx,
                     testSuite = entity.benchmarkTestSuite ?: "Donanım Benchmark Laboratuvarı",
                     relativePerformanceIndex = relPct,
                     cpuSynthetic = entity.cpuSynthetic,
                     gpuSynthetic = entity.gpuSynthetic,
-                    gameFps = enrichedGames,
-                    dataSource = com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name,
+                    gameFps = entity.gameFps,
+                    dataSource = if (hasStoredGames) {
+                        com.panda.myapplication.domain.model.DataSourceType.VERIFIED_BENCHMARK.name
+                    } else {
+                        com.panda.myapplication.domain.model.DataSourceType.ESTIMATED_SIMULATION.name
+                    },
                 )
+                if (hasStoredGames) {
+                    seedInfo
+                } else {
+                    val withSeed = intermediateItem.copy(benchmarkInfo = seedInfo)
+                    val simGames = if (entity.category == HardwareCategory.CPU) {
+                        com.panda.myapplication.domain.engine.UnifiedFpsSimulator.simulateForCpuDetail(withSeed)
+                    } else {
+                        com.panda.myapplication.domain.engine.UnifiedFpsSimulator.simulateForGpuDetail(withSeed)
+                    }
+                    seedInfo.copy(gameFps = simGames)
+                }
             } else {
                 null
             }

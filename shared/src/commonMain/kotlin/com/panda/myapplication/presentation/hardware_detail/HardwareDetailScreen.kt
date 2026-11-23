@@ -1864,7 +1864,11 @@ private fun MultiGameFpsSimulationCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = if (item.category == HardwareCategory.CPU) strings.gameBenchReferenceRigCpu else strings.gameBenchReferenceRigGpu,
+                        text = when (item.category) {
+                            HardwareCategory.CPU -> strings.gameBenchReferenceRigCpu
+                            HardwareCategory.LAPTOP -> strings.gameBenchReferenceRigLaptop
+                            else -> strings.gameBenchReferenceRigGpu
+                        },
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = NeonCyan,
@@ -2011,11 +2015,12 @@ private fun MultiGameFpsSimulationCard(
                     }
                 }
 
+                val isHighCacheCpu = item.category == HardwareCategory.CPU &&
+                    com.panda.myapplication.domain.engine.UnifiedFpsSimulator.resolveCpuProfile(item).isX3d
+
                 visibleEntries.forEach { game ->
                     val avgFpsVal = game.fps.avgFps(selectedResolution)
-                    val maxFpsVal = game.fps.maxFps(selectedResolution)
-                    val low1FpsVal = game.fps.low1PctFps(selectedResolution)
-                    val minFpsVal = game.fps.minFps(selectedResolution)
+                    val low1FpsVal = game.fps.low1PctFps(selectedResolution, isHighCache = isHighCacheCpu)
                     val meetsUserTarget = fpsTarget.meetsTarget(avgFpsVal)
                     val fpsColor = when {
                         meetsUserTarget -> NeonEmerald
@@ -2080,35 +2085,23 @@ private fun MultiGameFpsSimulationCard(
 
                             Spacer(modifier = Modifier.height(6.dp))
 
-                            // 4-Metric Data Strip: En Yüksek | Ortalama | %1 Low | En Düşük
+                            // Clean 2-Metric Data Strip: Ortalama FPS | %1 Low FPS (consistent with VS Arena & PC Wizard)
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
                             ) {
                                 MetricStatBox(
-                                    modifier = Modifier.weight(1f),
-                                    label = tr(isTr, "En Yüksek", "Max FPS"),
-                                    value = "$maxFpsVal",
-                                    color = NeonPurple,
-                                )
-                                MetricStatBox(
-                                    modifier = Modifier.weight(1.05f),
-                                    label = tr(isTr, "Ortalama", "Average"),
-                                    value = "$avgFpsVal",
+                                    modifier = Modifier.weight(1.1f),
+                                    label = tr(isTr, "Ortalama FPS", "Average FPS"),
+                                    value = "$avgFpsVal FPS",
                                     color = fpsColor,
                                     isHighlighted = true,
                                 )
                                 MetricStatBox(
                                     modifier = Modifier.weight(1f),
-                                    label = tr(isTr, "%1 Low", "1% Low"),
-                                    value = "$low1FpsVal",
+                                    label = tr(isTr, "%1 Low (Akıcılık)", "1% Low (Smoothness)"),
+                                    value = "$low1FpsVal FPS",
                                     color = NeonAmber,
-                                )
-                                MetricStatBox(
-                                    modifier = Modifier.weight(1f),
-                                    label = tr(isTr, "En Düşük", "Min FPS"),
-                                    value = "$minFpsVal",
-                                    color = NeonRose,
                                 )
                             }
 

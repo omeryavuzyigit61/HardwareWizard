@@ -771,4 +771,250 @@ class AuditVerificationTest {
         // Verify fakeRepo contract compiles cleanly for future VM integration tests
         assertEquals(2, (fakeRepo.observeHardwareItemsByCategory(HardwareCategory.LAPTOP) as kotlinx.coroutines.flow.Flow<*>).let { 2 })
     }
+
+    @Test
+    fun ryzen9800X3dVs9900XDualChampionsAndCcdTopology() {
+        val r79800x3d = HardwareItem(
+            id = HardwareId("cpu_9800x3d"),
+            brand = "AMD",
+            model = "Ryzen 7 9800X3D",
+            price = null,
+            spec = CpuSpec(
+                socket = "AM5",
+                coreCount = 8,
+                threadCount = 16,
+                baseClock = Frequency(4700),
+                boostClock = Frequency(5200),
+                tdp = Wattage(120),
+                hasIntegratedGraphics = true,
+                architecture = "Zen 5",
+                l3CacheMb = 96,
+            ),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 80,
+                tier = "S+-Tier",
+                gamingIndex = 100,
+                productivityIndex = 56,
+                relativePerformanceIndex = 100.0,
+                cpuSynthetic = com.panda.myapplication.domain.model.CpuSyntheticBenchmark(
+                    cinebenchR23Single = 2240,
+                    cinebenchR23Multi = 24200,
+                    passmarkScore = 44200,
+                ),
+                testSuite = "TechPowerUp & Cinebench Calibrated v6 (Ref: RTX 5090)",
+            ),
+        )
+        val r99900x = HardwareItem(
+            id = HardwareId("cpu_9900x"),
+            brand = "AMD",
+            model = "Ryzen 9 9900X",
+            price = null,
+            spec = CpuSpec(
+                socket = "AM5",
+                coreCount = 12,
+                threadCount = 24,
+                baseClock = Frequency(4400),
+                boostClock = Frequency(5600),
+                tdp = Wattage(120),
+                hasIntegratedGraphics = true,
+                architecture = "Zen 5",
+                l3CacheMb = 64,
+            ),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 78,
+                tier = "S-Tier",
+                gamingIndex = 78,
+                productivityIndex = 79,
+                relativePerformanceIndex = 78.0,
+                cpuSynthetic = com.panda.myapplication.domain.model.CpuSyntheticBenchmark(
+                    cinebenchR23Single = 2280,
+                    cinebenchR23Multi = 34200,
+                    passmarkScore = 54800,
+                ),
+                testSuite = "TechPowerUp & Cinebench Calibrated v6 (Ref: RTX 5090)",
+            ),
+        )
+
+        val report = VsArenaEngine.compare(r79800x3d, r99900x, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+
+        // 1. Gaming Champion MUST be 9800X3D by >= +20%
+        assertEquals(ComparisonWinner.LEFT, report.performanceChampion.winner)
+        assertTrue(report.performanceChampion.badgeText.contains("28"), "Expected +28% gaming lead, got: ${report.performanceChampion.badgeText}")
+
+        // 2. Productivity/Render Champion MUST be 9900X by >= +35%
+        val prod = report.productivityChampion
+        assertTrue(prod != null, "CPU comparison must include productivityChampion")
+        assertEquals(ComparisonWinner.RIGHT, prod.winner)
+        assertTrue(prod.badgeText.contains("41"), "Expected +41% render lead, got: ${prod.badgeText}")
+
+        // 3. CCD & 3D V-Cache architecture row MUST award 9800X3D
+        val ccdRow = report.rows.first { it.label.contains("CCD") }
+        assertEquals(ComparisonWinner.LEFT, ccdRow.winner)
+        assertTrue(ccdRow.leftValue.contains("Tek CCD") && ccdRow.leftValue.contains("3D V-Cache"))
+        assertTrue(ccdRow.rightValue.contains("Çift CCD") && ccdRow.rightValue.contains("32+32"))
+
+        // 4. Boost clock row across X3D vs non-X3D MUST be NEUTRAL (no misleading GHz winner)
+        val boostRow = report.rows.first { it.label.contains("Boost Frekansı") }
+        assertEquals(ComparisonWinner.NEUTRAL, boostRow.winner)
+
+        // 5. Game FPS gap at 1080p Cyberpunk MUST reflect real >= +20% avg and >= +35% 1% Low
+        val cp = report.gameRows.first { it.gameId == "cyberpunk_2077" }
+        val lAvg = cp.leftFps.avgFps(com.panda.myapplication.domain.model.GamingResolution.P1080)
+        val rAvg = cp.rightFps.avgFps(com.panda.myapplication.domain.model.GamingResolution.P1080)
+        val lLow = cp.leftFps.low1PctFps(com.panda.myapplication.domain.model.GamingResolution.P1080, cp.leftIsHighCache)
+        val rLow = cp.rightFps.low1PctFps(com.panda.myapplication.domain.model.GamingResolution.P1080, cp.rightIsHighCache)
+        assertTrue(lAvg >= rAvg * 1.20, "9800X3D ($lAvg) must beat 9900X ($rAvg) by >= 20% at 1080p Cyberpunk")
+        assertTrue(lLow >= rLow * 1.35, "9800X3D 1% Low ($lLow) must beat 9900X 1% Low ($rLow) by >= 35%")
+    }
+
+    @Test
+    fun threeScreenIdentityFor9800X3dAndRtx5090AndNoFake9900xX3dInWizard() {
+        val cpu9800x3d = HardwareItem(
+            id = HardwareId("cpu_9800x3d"),
+            brand = "AMD",
+            model = "Ryzen 7 9800X3D",
+            price = null,
+            spec = CpuSpec("AM5", 8, 16, Frequency(4700), Frequency(5200), Wattage(120), true, architecture = "Zen 5", l3CacheMb = 96),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 80, tier = "S+-Tier", gamingIndex = 100, productivityIndex = 56,
+                relativePerformanceIndex = 100.0, testSuite = "TechPowerUp & Cinebench Calibrated v6 (Ref: RTX 5090)",
+            ),
+        )
+        val cpu9900x = HardwareItem(
+            id = HardwareId("cpu_9900x"),
+            brand = "AMD",
+            model = "Ryzen 9 9900X",
+            price = null,
+            spec = CpuSpec("AM5", 12, 24, Frequency(4400), Frequency(5600), Wattage(120), true, architecture = "Zen 5", l3CacheMb = 64),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 78, tier = "S-Tier", gamingIndex = 78, productivityIndex = 79,
+                relativePerformanceIndex = 78.0, testSuite = "TechPowerUp & Cinebench Calibrated v6 (Ref: RTX 5090)",
+            ),
+        )
+        val gpu5090 = HardwareItem(
+            id = HardwareId("gpu_5090"),
+            brand = "NVIDIA",
+            model = "GeForce RTX 5090 Founders Edition",
+            price = null,
+            spec = GpuSpec("GeForce RTX 5090", MemorySize(32768), "GDDR7", Frequency(2017), Frequency(2407), Wattage(575), Wattage(1000), busWidthBits = 512),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 100, tier = "S+-Tier", gamingIndex = 133, relativePerformanceIndex = 133.0,
+                testSuite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            ),
+        )
+
+        val cpuDetailCp = com.panda.myapplication.domain.engine.BenchmarkEngine.resolveGameFpsForItem(cpu9800x3d)!!.cyberpunk2077!!
+        val gpuDetailCp = com.panda.myapplication.domain.engine.BenchmarkEngine.resolveGameFpsForItem(gpu5090)!!.cyberpunk2077!!
+        val wizard9800 = com.panda.myapplication.domain.engine.BuildAnalysisEngine.calculateGamingSimulation(
+            build = ActiveBuild(cpu = cpu9800x3d, gpu = gpu5090),
+            resolution = com.panda.myapplication.domain.engine.ResolutionOption.P1080,
+            preset = com.panda.myapplication.domain.engine.QualityPreset.HIGH,
+            upscaling = com.panda.myapplication.domain.engine.UpscalingMode.OFF,
+        ).games.first { it.gameName.contains("Cyberpunk") }
+        val wizard9900 = com.panda.myapplication.domain.engine.BuildAnalysisEngine.calculateGamingSimulation(
+            build = ActiveBuild(cpu = cpu9900x, gpu = gpu5090),
+            resolution = com.panda.myapplication.domain.engine.ResolutionOption.P1080,
+            preset = com.panda.myapplication.domain.engine.QualityPreset.HIGH,
+            upscaling = com.panda.myapplication.domain.engine.UpscalingMode.OFF,
+        ).games.first { it.gameName.contains("Cyberpunk") }
+
+        // Exact 3-screen identity for (9800X3D + RTX 5090)
+        assertEquals(cpuDetailCp.avgFps(com.panda.myapplication.domain.model.GamingResolution.P1080), gpuDetailCp.avgFps(com.panda.myapplication.domain.model.GamingResolution.P1080))
+        assertEquals(cpuDetailCp.avgFps(com.panda.myapplication.domain.model.GamingResolution.P1080), wizard9800.fps)
+        assertEquals(cpuDetailCp.low1PctFps(com.panda.myapplication.domain.model.GamingResolution.P1080, true), wizard9800.low1PctFps)
+
+        // PC Wizard MUST NOT give 9900X fake X3D bonus (old l3>=64 bug gave 0% difference!)
+        assertTrue(wizard9800.fps >= wizard9900.fps * 1.20, "Wizard 9800X3D (${wizard9800.fps}) must beat 9900X (${wizard9900.fps}) by >= 20%")
+        assertTrue(wizard9800.low1PctFps >= wizard9900.low1PctFps * 1.35, "Wizard 9800X3D 1%L (${wizard9800.low1PctFps}) must beat 9900X (${wizard9900.low1PctFps}) by >= 35%")
+    }
+
+    @Test
+    fun flagshipGpusUncappedNo100TieAndCrossArchClockNeutral() {
+        val rtx5090 = HardwareItem(
+            id = HardwareId("g5090"), brand = "ASUS", model = "RTX 5090 Astral", price = null,
+            spec = GpuSpec("GeForce RTX 5090", MemorySize(32768), "GDDR7", Frequency(2017), Frequency(2600), Wattage(575), Wattage(1000), busWidthBits = 512),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 100, tier = "S+-Tier", gamingIndex = 135, relativePerformanceIndex = 135.0,
+                testSuite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            ),
+        )
+        val rtx4090 = HardwareItem(
+            id = HardwareId("g4090"), brand = "ASUS", model = "RTX 4090 Matrix", price = null,
+            spec = GpuSpec("GeForce RTX 4090", MemorySize(24576), "GDDR6X", Frequency(2235), Frequency(2700), Wattage(450), Wattage(850), busWidthBits = 384),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 75, tier = "S+-Tier", gamingIndex = 100, relativePerformanceIndex = 100.0,
+                testSuite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            ),
+        )
+        val rtx5080 = HardwareItem(
+            id = HardwareId("g5080"), brand = "ASUS", model = "RTX 5080 Astral", price = null,
+            spec = GpuSpec("GeForce RTX 5080", MemorySize(16384), "GDDR7", Frequency(2300), Frequency(2670), Wattage(360), Wattage(850), busWidthBits = 256),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 65, tier = "S-Tier", gamingIndex = 86, relativePerformanceIndex = 86.0,
+                testSuite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            ),
+        )
+        val rx9070xt = HardwareItem(
+            id = HardwareId("g9070xt"), brand = "AMD", model = "Radeon RX 9070 XT", price = null,
+            spec = GpuSpec("Radeon RX 9070 XT", MemorySize(16384), "GDDR6", Frequency(2400), Frequency(3060), Wattage(304), Wattage(750), busWidthBits = 256),
+            benchmarkInfo = com.panda.myapplication.domain.model.HardwareBenchmarkInfo(
+                score = 56, tier = "S-Tier", gamingIndex = 75, relativePerformanceIndex = 75.0,
+                testSuite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            ),
+        )
+
+        val rep5090vs4090 = VsArenaEngine.compare(rtx5090, rtx4090, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+        assertEquals(ComparisonWinner.LEFT, rep5090vs4090.performanceChampion.winner)
+        assertTrue(rep5090vs4090.performanceChampion.badgeText.contains("35"))
+
+        val rep4090vs5080 = VsArenaEngine.compare(rtx4090, rtx5080, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+        assertEquals(ComparisonWinner.LEFT, rep4090vs5080.performanceChampion.winner)
+        assertTrue(rep4090vs5080.performanceChampion.badgeText.contains("16"))
+
+        val rep5090vs9070xt = VsArenaEngine.compare(rtx5090, rx9070xt, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+        val boostRow = rep5090vs9070xt.rows.first { it.label.contains("Boost Saat Hızı") }
+        assertEquals(ComparisonWinner.NEUTRAL, boostRow.winner)
+    }
+
+    @Test
+    fun ddr4Cl16VsDdr5Cl30TrueNanosecondLatencyIsTieAndZeroGuardsWork() {
+        val ddr4 = HardwareItem(
+            id = HardwareId("ram_d4"), brand = "Corsair", model = "Vengeance DDR4-3200 CL16", price = null,
+            spec = RamSpec(DdrGeneration.DDR4, Frequency(3200), casLatency = 16, capacity = MemorySize(32768), moduleCount = 2, firstWordLatencyNs = 10.0),
+        )
+        val ddr5 = HardwareItem(
+            id = HardwareId("ram_d5"), brand = "Corsair", model = "Dominator DDR5-6000 CL30", price = null,
+            spec = RamSpec(DdrGeneration.DDR5, Frequency(6000), casLatency = 30, capacity = MemorySize(32768), moduleCount = 2, firstWordLatencyNs = 10.0),
+        )
+        val ramReport = VsArenaEngine.compare(ddr4, ddr5, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+        val clRow = ramReport.rows.first { it.label.contains("CAS Gecikme") }
+        val nsRow = ramReport.rows.first { it.label.contains("İlk Kelime") }
+        assertEquals(ComparisonWinner.NEUTRAL, clRow.winner)
+        assertEquals(ComparisonWinner.TIE, nsRow.winner)
+        assertEquals(ComparisonWinner.RIGHT, ramReport.performanceChampion.winner)
+
+        // Zero-value guard on Mousepad & Gaming Chair
+        val padZero = HardwareItem(
+            id = HardwareId("mp1"), brand = "BrandA", model = "Pad A", price = null,
+            spec = com.panda.myapplication.domain.model.MousepadSpec("Cloth", "Control", "Rubber", "490x420", 4.0, true, 0, "High"),
+        )
+        val padValid = HardwareItem(
+            id = HardwareId("mp2"), brand = "BrandB", model = "Pad B", price = null,
+            spec = com.panda.myapplication.domain.model.MousepadSpec("Cloth", "Speed", "Poron", "490x420", 4.0, true, 8, "High"),
+        )
+        val padReport = VsArenaEngine.compare(padZero, padValid, com.panda.myapplication.domain.repository.VsArenaMode.COMPONENT_VS_COMPONENT)
+        val stopRow = padReport.rows.first { it.label.contains("Stopping Power") }
+        assertEquals("Belirtilmedi", stopRow.leftValue)
+        assertEquals(ComparisonWinner.NEUTRAL, stopRow.winner)
+
+        // Laptop Reference Rig banner string & Intel HX must NOT be treated as X3D
+        assertFalse(com.panda.myapplication.presentation.util.StringsTR.gameBenchReferenceRigLaptop.contains("9800X3D"))
+        val hxLaptop = com.panda.myapplication.domain.model.LaptopSpec(
+            cpuModel = "Intel Core i9-14900HX", gpuModel = "RTX 4080", gpuWattTgp = "175W",
+            muxSwitch = "Var", displaySpec = "16 QHD", ramSpec = "32GB", storageSpec = "1TB",
+            batteryWh = 90, weightKg = 2.5, coolingTech = "Vapor", gamingScore = 90,
+        )
+        val (mobCpu, _) = com.panda.myapplication.domain.engine.UnifiedFpsSimulator.resolveLaptopProfiles(hxLaptop)
+        assertFalse(mobCpu.isX3d, "Intel HX laptop CPU must never be falsely flagged as AMD 3D V-Cache")
+    }
 }

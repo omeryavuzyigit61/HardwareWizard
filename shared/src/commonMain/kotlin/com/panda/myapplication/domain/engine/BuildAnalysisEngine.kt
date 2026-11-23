@@ -229,53 +229,58 @@ object BuildAnalysisEngine {
             )
         }
 
-        // Use calibrated BenchmarkEngine gaming indices on the same 15..125 scale
-        val cpuEval = BenchmarkEngine.evaluate(cpuItem).info
-        val gpuEval = BenchmarkEngine.evaluate(gpuItem).info
-
-        // CPU gaming index (15..125 scale; X3D and modern IPC properly outrank legacy high-core CPUs)
-        val cpuPower = (
-            cpuEval.gamingRelativeIndex?.takeIf { it > 0.0 }?.times(100.0)
-                ?: cpuEval.gamingIndex?.toDouble()
-                ?: cpuEval.score.toDouble()
-            ).coerceIn(15.0, 125.0)
-
-        // GPU true gaming tier (15..125 scale; preserves real gap between RTX 4060 Ti vs RTX 4080 vs RTX 5090)
-        val gpuPower = (
-            gpuEval.relativePerformanceIndex.takeIf { it > 0.0 }
-                ?: gpuEval.effectiveTimeSpy?.let { it / 310.0 }
-                ?: gpuEval.score.toDouble()
-            ).coerceIn(15.0, 125.0)
-
-        // Resolution weight:
-        // - 1080p: CPU-sensitive; weak CPU falls behind strong GPU more sharply, but equal flagship tiers stay balanced
-        // - 1440p: Neutral sweet spot
-        // - 4K: GPU-heavy; CPU pressure drops, weak GPU lags behind strong CPU
-        val rawGap = (cpuPower - gpuPower) / maxOf(cpuPower, gpuPower)
-        val effectiveGap = when (resolution) {
-            ResolutionOption.P1080 -> if (rawGap < 0) rawGap * 1.25 else rawGap * 0.75
-            ResolutionOption.P1440 -> rawGap
-            ResolutionOption.P2160 -> if (rawGap < 0) rawGap * 0.55 else rawGap * 1.20
+        // Physical CPU vs GPU frame-time share analysis using UnifiedFpsSimulator
+        val cpuProfile = UnifiedFpsSimulator.resolveCpuProfile(cpuItem)
+        val gpuProfile = UnifiedFpsSimulator.resolveGpuProfile(gpuItem)
+        val ramFactor = UnifiedFpsSimulator.computeRamFactor(build.ram?.spec as? RamSpec)
+        val gamingRes = when (resolution) {
+            ResolutionOption.P1080 -> GamingResolution.P1080
+            ResolutionOption.P1440 -> GamingResolution.P1440
+            ResolutionOption.P2160 -> GamingResolution.P4K
         }
 
-        // If both parts are top flagship tier (>=92) at 1080p/1440p/4K, avoid artificial false bottleneck alerts
-        val pct = (abs(effectiveGap) * 100.0).roundToInt().coerceIn(0, 60)
+        // Compute average CPU pipeline share across representative AAA & E-Sport titles
+        val samples = UnifiedFpsSimulator.GAME_PROFILES.map { game ->
+            game.category to UnifiedFpsSimulator.simulateSingleGameAtResolution(
+                game = game,
+                cpu = cpuProfile,
+                gpu = gpuProfile,
+                resolution = gamingRes,
+                ramFactor = ramFactor,
+            )
+        }
+        // Weight AAA titles 75% and E-Sports 25% so flagship rigs aren't falsely flagged by 900 FPS Valorant/CS2
+        val aaaShare = samples.filter { it.first == GameCategory.AAA }.map { it.second.cpuShare }.average()
+        val espShare = samples.filter { it.first == GameCategory.ESPORTS }.map { it.second.cpuShare }.average()
+        val avgCpuShare = aaaShare * 0.75 + espShare * 0.25
+
+        // Resolution-specific balanced ideal CPU share (at 1080p CPU naturally works harder; at 4K GPU dominates)
+        val idealCpuShare = when (resolution) {
+            ResolutionOption.P1080 -> 0.50
+            ResolutionOption.P1440 -> 0.36
+            ResolutionOption.P2160 -> 0.22
+        }
+
+        // Top-of-market flagship CPU (>=90) + flagship GPU (>=85) is inherently balanced across all resolutions
+        val bothFlagship = cpuProfile.gamingIndex >= 90.0 && gpuProfile.relativeIndex >= 85.0
+        val delta = avgCpuShare - idealCpuShare
+        val rawPct = (abs(delta) * 115.0).roundToInt().coerceIn(0, 60)
 
         return when {
-            pct <= 10 -> BottleneckAnalysis(
-                percentage = pct.coerceAtLeast(1),
+            bothFlagship || abs(delta) <= 0.12 || rawPct <= 10 -> BottleneckAnalysis(
+                percentage = rawPct.coerceIn(1, 9),
                 type = BottleneckType.BALANCED,
-                message = "%${pct.coerceAtLeast(1)} - Mükemmel Denge (${resolution.label})",
+                message = "%${rawPct.coerceIn(1, 9)} - Mükemmel Denge (${resolution.label})",
             )
-            effectiveGap < 0 -> BottleneckAnalysis(
-                percentage = pct,
+            delta > 0.0 -> BottleneckAnalysis(
+                percentage = rawPct,
                 type = BottleneckType.CPU_BOTTLENECK,
-                message = "%$pct - CPU Darboğazı Riski (${resolution.label})",
+                message = "%$rawPct - CPU Darboğazı Riski (${resolution.label})",
             )
             else -> BottleneckAnalysis(
-                percentage = pct,
+                percentage = rawPct,
                 type = BottleneckType.GPU_BOTTLENECK,
-                message = "%$pct - GPU Limitli / Tam Yükte (${resolution.label})",
+                message = "%$rawPct - GPU Limitli / Tam Yükte (${resolution.label})",
             )
         }
     }
@@ -575,17 +580,15 @@ object BuildAnalysisEngine {
             )
         }
 
-        // Base GPU power indexing
-        val gpuTdp = gpu.tdp.watts.toDouble().coerceAtLeast(50.0)
-        val gpuVramGb = (gpu.vram.megabytes.toDouble() / 1024.0).coerceAtLeast(4.0)
-        val gpuClock = (gpu.boostClock?.mhz ?: gpu.coreClock.mhz).toDouble().coerceAtLeast(1200.0)
+        val cpuProfile = UnifiedFpsSimulator.resolveCpuProfile(cpuItem)
+        val gpuProfile = UnifiedFpsSimulator.resolveGpuProfile(gpuItem)
+        val ramFactor = UnifiedFpsSimulator.computeRamFactor(build.ram?.spec as? RamSpec)
 
         val timeSpyScore = gpuItem.benchmarkInfo?.effectiveTimeSpy
-            ?: ((gpuTdp * 58.0) + (gpuVramGb * 850.0) + (gpuClock * 2.8)).roundToInt().coerceIn(3500, 39500)
+            ?: (gpuProfile.relativeIndex * 365.0).roundToInt().coerceIn(3000, 55000)
 
-        val cpuClock = (cpu.boostClock?.mhz ?: cpu.baseClock.mhz).toDouble().coerceAtLeast(2000.0)
         val cinebenchScore = cpuItem.benchmarkInfo?.effectiveMultiCore
-            ?: (cpu.coreCount * (cpuClock / 1000.0) * 440.0).roundToInt().coerceIn(4000, 42000)
+            ?: (cpuProfile.productivityIndex * 432.0).roundToInt().coerceIn(3000, 120000)
 
         val gamingRes = when (resolution) {
             ResolutionOption.P1080 -> GamingResolution.P1080
@@ -593,36 +596,23 @@ object BuildAnalysisEngine {
             ResolutionOption.P2160 -> GamingResolution.P4K
         }
 
-        // CPU influence factor (X3D cache / high clock boost particularly at 1080p & E-Sports)
-        val cpuScore = (cpuItem.benchmarkScore ?: 75).coerceIn(35, 100)
-        val x3dBonus = if ((cpu.l3CacheMb ?: 0) >= 64) 1.10 else 1.0
-        val cpuEsportsFactor = (((cpuScore / 82.0) * x3dBonus)).coerceIn(0.78, 1.18)
-        val cpuAaaFactor = (((cpuScore / 85.0) * (if (x3dBonus > 1.0) 1.04 else 1.0))).coerceIn(0.84, 1.10)
-
-        val gpuMatrix = BenchmarkEngine.resolveGameFpsForItem(gpuItem)
-            ?: BenchmarkEngine.buildFull12GameMatrix(ratio = (gpuItem.benchmarkScore ?: 75) / 100.0, isCpu = false)
-
-        val entries = gpuMatrix.toSimulationEntries()
-
-        val totalMultiplier = (preset.fpsMultiplier * upscaling.fpsMultiplier).toDouble()
-
-        val games = entries.map { entry ->
-            val factor = if (entry.category == GameCategory.ESPORTS) cpuEsportsFactor else cpuAaaFactor
-            val resDampenedFactor = when (resolution) {
-                ResolutionOption.P1080 -> factor
-                ResolutionOption.P1440 -> 1.0 + (factor - 1.0) * 0.65
-                ResolutionOption.P2160 -> 1.0 + (factor - 1.0) * 0.30
-            }
-            val rawAvg = entry.fps.avgFps(gamingRes) * resDampenedFactor * totalMultiplier
-            val avg = rawAvg.roundToInt().coerceAtLeast(18)
-            val rawLow1 = entry.fps.low1PctFps(gamingRes, x3dBonus > 1.0) * resDampenedFactor * totalMultiplier
-            val low1 = rawLow1.roundToInt().coerceIn(12, avg - 2)
+        // Single Source of Truth: exact same L_p physical frame-time pipeline as CPU/GPU Detail & VS Arena!
+        val games = UnifiedFpsSimulator.GAME_PROFILES.map { gameProfile ->
+            val sample = UnifiedFpsSimulator.simulateSingleGameAtResolution(
+                game = gameProfile,
+                cpu = cpuProfile,
+                gpu = gpuProfile,
+                resolution = gamingRes,
+                preset = preset,
+                upscaling = upscaling,
+                ramFactor = ramFactor,
+            )
             GameFpsEstimate(
-                gameName = entry.title,
-                fps = avg,
-                low1PctFps = low1,
+                gameName = gameProfile.title,
+                fps = sample.avgFps,
+                low1PctFps = sample.low1PctFps,
                 settings = "${preset.label} • ${upscaling.label}",
-                isEsports = entry.category == GameCategory.ESPORTS,
+                isEsports = gameProfile.category == GameCategory.ESPORTS,
             )
         }
 

@@ -116,17 +116,21 @@ data class VsComparisonReport(
     val leftItem: HardwareItem,
     val rightItem: HardwareItem,
     val performanceChampion: VsChampionSummary,
+    val productivityChampion: VsChampionSummary? = null,
     val valueChampion: VsChampionSummary,
     val rows: List<VsComparisonRow>,
     val gameRows: List<VsGameComparisonRow>,
 )
 
 /**
- * Head-to-Head Mathematical Comparison Engine ("VS Arena" - Faz 2).
+ * Head-to-Head Mathematical Comparison Engine ("VS Arena" - v2).
  *
  * Strictly adheres to the Zero-Hallucination (Honest Data) principle:
  * - Missing specs are shown as `"Belirtilmedi"` and excluded from false winner claims.
  * - Missing prices are shown as `"Stok / Fiyat Yok"`.
+ * - CPUs report BOTH Gaming Champion (3D V-Cache / CCD-aware) AND Productivity/Render Champion.
+ * - GPUs use uncapped TechPowerUp relative performance (RTX 4090 = 100, RTX 5090 = 133).
+ * - Cross-architecture clock MHz and cross-generation raw CL cycles never award misleading badges.
  */
 object VsArenaEngine {
 
@@ -141,6 +145,9 @@ object VsArenaEngine {
         val rightScore = computeCompositePerformanceScore(right)
 
         val perfChampion = buildPerformanceChampion(left, right, leftScore, rightScore)
+        val prodChampion = if (left.spec is CpuSpec && right.spec is CpuSpec) {
+            buildCpuProductivityChampion(left, right)
+        } else null
         val valueChampion = buildValueChampion(left, right, leftScore, rightScore)
 
         val rows = buildList {
@@ -218,9 +225,45 @@ object VsArenaEngine {
             leftItem = left,
             rightItem = right,
             performanceChampion = perfChampion,
+            productivityChampion = prodChampion,
             valueChampion = valueChampion,
             rows = rows,
             gameRows = gameRows,
+        )
+    }
+
+    private fun buildCpuProductivityChampion(
+        left: HardwareItem,
+        right: HardwareItem,
+    ): VsChampionSummary {
+        val lProd = UnifiedFpsSimulator.resolveCpuProfile(left).productivityIndex
+        val rProd = UnifiedFpsSimulator.resolveCpuProfile(right).productivityIndex
+        val diff = abs(lProd - rProd)
+        val base = min(lProd, rProd).coerceAtLeast(1.0)
+        val pct = ((diff / base) * 100.0).roundToInt()
+
+        val winner = when {
+            pct < 2 -> ComparisonWinner.TIE
+            lProd > rProd -> ComparisonWinner.LEFT
+            else -> ComparisonWinner.RIGHT
+        }
+        val winnerName = when (winner) {
+            ComparisonWinner.LEFT -> left.displayName
+            ComparisonWinner.RIGHT -> right.displayName
+            else -> "Baş Başa Çoklu Çekirdek (Eşit)"
+        }
+        val badge = when (winner) {
+            ComparisonWinner.LEFT, ComparisonWinner.RIGHT -> "+%$pct Render & Çoklu Çekirdek"
+            else -> "%0 Fark (Eşit)"
+        }
+        return VsChampionSummary(
+            title = "İŞ / RENDER & ÇOKLU ÇEKİRDEK ŞAMPİYONU",
+            winner = winner,
+            winnerName = winnerName,
+            badgeText = badge,
+            subtitle = "Cinebench R23 Multi & Üretkenlik Endeksi (9950X = 100)",
+            leftMetricText = "${lProd.roundToInt()} Puan",
+            rightMetricText = "${rProd.roundToInt()} Puan",
         )
     }
 
@@ -247,14 +290,20 @@ object VsArenaEngine {
         }
 
         val badge = when (winner) {
-            ComparisonWinner.LEFT, ComparisonWinner.RIGHT -> "+%$pct Daha Güçlü"
+            ComparisonWinner.LEFT, ComparisonWinner.RIGHT -> when (left.category) {
+                HardwareCategory.CPU -> "+%$pct Daha Yüksek Oyun Gücü"
+                HardwareCategory.GPU -> "+%$pct Daha Yüksek Grafik Gücü"
+                else -> "+%$pct Daha Güçlü"
+            }
             else -> "%0 Fark (Eşit)"
         }
 
         val unitLabel = when (left.category) {
-            HardwareCategory.CPU, HardwareCategory.GPU, HardwareCategory.LAPTOP -> "Performans Endeksi"
+            HardwareCategory.CPU -> "1080p Oyun Endeksi (Ref: RTX 5090 • 9800X3D = 100)"
+            HardwareCategory.GPU -> "4K/Raster Bağıl Endeksi (Ref: 9800X3D • RTX 4090 = 100)"
+            HardwareCategory.LAPTOP -> "Mobil Oyun Performans Endeksi"
             HardwareCategory.PSU -> "Güç & Tier Endeksi"
-            HardwareCategory.RAM -> "Bellek Hız/Gecikme Endeksi"
+            HardwareCategory.RAM -> "Bellek Hız & Gerçek Gecikme Endeksi"
             HardwareCategory.STORAGE -> "NVMe G/Ç Endeksi"
             HardwareCategory.MOTHERBOARD -> "Platform & Genişleme Endeksi"
             HardwareCategory.COOLER -> "Termal Kapasite Endeksi"
@@ -279,14 +328,24 @@ object VsArenaEngine {
 
         }
 
+        val championTitle = when (left.category) {
+            HardwareCategory.CPU -> "OYUN PERFORMANSI ŞAMPİYONU"
+            HardwareCategory.GPU -> "SAF GRAFİK & OYUN ŞAMPİYONU"
+            else -> "SAF PERFORMANS KAZANANI"
+        }
+
+        val metricSuffix = if (left.category == HardwareCategory.CPU || left.category == HardwareCategory.GPU) "%" else ""
+        val leftMetric = if (metricSuffix.isNotEmpty()) "%${leftScore.roundToInt()}" else "${leftScore.roundToInt()} Puan"
+        val rightMetric = if (metricSuffix.isNotEmpty()) "%${rightScore.roundToInt()}" else "${rightScore.roundToInt()} Puan"
+
         return VsChampionSummary(
-            title = "SAF PERFORMANS KAZANANI",
+            title = championTitle,
             winner = winner,
             winnerName = winnerName,
             badgeText = badge,
             subtitle = unitLabel,
-            leftMetricText = "${leftScore.roundToInt()} Puan",
-            rightMetricText = "${rightScore.roundToInt()} Puan",
+            leftMetricText = leftMetric,
+            rightMetricText = rightMetric,
         )
     }
 
@@ -402,15 +461,55 @@ object VsArenaEngine {
     ): List<VsComparisonRow> = buildList {
         val lBench = BenchmarkEngine.evaluate(leftItem).info
         val rBench = BenchmarkEngine.evaluate(rightItem).info
+        val lProf = UnifiedFpsSimulator.resolveCpuProfile(leftItem)
+        val rProf = UnifiedFpsSimulator.resolveCpuProfile(rightItem)
 
         add(
             compareHigherBetter(
-                label = "Oyun & Genel Performans Endeksi",
-                leftVal = lBench.relativePerformanceIndex,
-                rightVal = rBench.relativePerformanceIndex,
-                leftText = "%${lBench.relativePerformanceIndex.roundToInt()} (${lBench.tier})",
-                rightText = "%${rBench.relativePerformanceIndex.roundToInt()} (${rBench.tier})",
-                badgeSuffix = "Daha Hızlı",
+                label = "Oyun Performans Endeksi (1080p • Ref: RTX 5090)",
+                leftVal = lProf.gamingIndex,
+                rightVal = rProf.gamingIndex,
+                leftText = "%${lProf.gamingIndex.roundToInt()} (${lBench.tier})",
+                rightText = "%${rProf.gamingIndex.roundToInt()} (${rBench.tier})",
+                badgeSuffix = "Daha Yüksek Oyun",
+                isKey = true,
+            )
+        )
+
+        add(
+            compareHigherBetter(
+                label = "Üretkenlik & Render Endeksi (Çoklu Çekirdek)",
+                leftVal = lProf.productivityIndex,
+                rightVal = rProf.productivityIndex,
+                leftText = "%${lProf.productivityIndex.roundToInt()}",
+                rightText = "%${rProf.productivityIndex.roundToInt()}",
+                badgeSuffix = "Render Gücü",
+                isKey = true,
+            )
+        )
+
+        // Architectural CCD & 3D V-Cache row: explains why Single-CCD 96 MB 3D V-Cache beats Dual-CCD split L3!
+        val lCacheScore = lProf.effectiveL3PerCcdMb.toDouble() +
+            (if (lProf.isSingleCcdX3d) 40.0 else if (lProf.isX3d) 25.0 else 0.0) -
+            (if (lProf.isDualCcdNonX3d) 12.0 else 0.0)
+        val rCacheScore = rProf.effectiveL3PerCcdMb.toDouble() +
+            (if (rProf.isSingleCcdX3d) 40.0 else if (rProf.isX3d) 25.0 else 0.0) -
+            (if (rProf.isDualCcdNonX3d) 12.0 else 0.0)
+        val cacheDeltaText = when {
+            lProf.isX3d != rProf.isX3d -> "3D V-Cache Oyun Avantajı"
+            lProf.ccdCount != rProf.ccdCount -> "Düşük Çapraz-CCD Gecikmesi"
+            lProf.effectiveL3PerCcdMb != rProf.effectiveL3PerCcdMb ->
+                "+${abs(lProf.effectiveL3PerCcdMb - rProf.effectiveL3PerCcdMb)} MB Yerel L3"
+            else -> null
+        }
+        add(
+            compareHigherBetter(
+                label = "Önbellek & CCD Mimarisi (Oyun Gecikmesi)",
+                leftVal = lCacheScore,
+                rightVal = rCacheScore,
+                leftText = lProf.topologySummaryTr,
+                rightText = rProf.topologySummaryTr,
+                customDelta = cacheDeltaText,
                 isKey = true,
             )
         )
@@ -460,26 +559,42 @@ object VsArenaEngine {
 
         val lBoost = (l.boostClock?.mhz ?: l.baseClock.mhz) / 1000.0
         val rBoost = (r.boostClock?.mhz ?: r.baseClock.mhz) / 1000.0
-        add(
-            compareHigherBetter(
-                label = "Maksimum Boost Frekansı",
-                leftVal = lBoost,
-                rightVal = rBoost,
-                leftText = "$lBoost GHz (Taban: ${l.baseClock.mhz / 1000.0} GHz)",
-                rightText = "$rBoost GHz (Taban: ${r.baseClock.mhz / 1000.0} GHz)",
-                badgeSuffix = "Saat Hızı",
+        val sameCpuArch = !l.architecture.isNullOrBlank() &&
+            l.architecture.equals(r.architecture, ignoreCase = true) &&
+            lProf.isX3d == rProf.isX3d
+        if (sameCpuArch) {
+            add(
+                compareHigherBetter(
+                    label = "Maksimum Boost Frekansı",
+                    leftVal = lBoost,
+                    rightVal = rBoost,
+                    leftText = "$lBoost GHz (Taban: ${l.baseClock.mhz / 1000.0} GHz)",
+                    rightText = "$rBoost GHz (Taban: ${r.baseClock.mhz / 1000.0} GHz)",
+                    badgeSuffix = "Saat Hızı",
+                )
             )
-        )
+        } else {
+            // Different IPC/cache architectures: clock MHz alone is NOT directly comparable
+            add(
+                VsComparisonRow(
+                    label = "Maksimum Boost Frekansı (Farklı Mimari)",
+                    leftValue = "$lBoost GHz (Taban: ${l.baseClock.mhz / 1000.0} GHz)",
+                    rightValue = "$rBoost GHz (Taban: ${r.baseClock.mhz / 1000.0} GHz)",
+                    winner = ComparisonWinner.NEUTRAL,
+                    deltaBadge = "Farklı IPC / Önbellek",
+                )
+            )
+        }
 
         add(
-            compareHigherBetterNullable(
-                label = "L3 Önbellek (3D V-Cache / SmartCache)",
-                leftVal = l.l3CacheMb?.toDouble(),
-                rightVal = r.l3CacheMb?.toDouble(),
-                leftText = l.l3CacheMb?.let { "$it MB" } ?: UNSPECIFIED,
-                rightText = r.l3CacheMb?.let { "$it MB" } ?: UNSPECIFIED,
-                customDelta = if (l.l3CacheMb != null && r.l3CacheMb != null && l.l3CacheMb != r.l3CacheMb) {
-                    "+${abs(l.l3CacheMb - r.l3CacheMb)} MB L3"
+            compareHigherBetter(
+                label = "Toplam L3 Önbellek (3D V-Cache / SmartCache)",
+                leftVal = lProf.l3CacheMb.toDouble(),
+                rightVal = rProf.l3CacheMb.toDouble(),
+                leftText = "${lProf.l3CacheMb} MB" + if (lProf.ccdCount >= 2 && !lProf.isX3d) " (CCD başı ${lProf.effectiveL3PerCcdMb} MB)" else "",
+                rightText = "${rProf.l3CacheMb} MB" + if (rProf.ccdCount >= 2 && !rProf.isX3d) " (CCD başı ${rProf.effectiveL3PerCcdMb} MB)" else "",
+                customDelta = if (lProf.l3CacheMb != rProf.l3CacheMb) {
+                    "+${abs(lProf.l3CacheMb - rProf.l3CacheMb)} MB L3"
                 } else null,
                 isKey = true,
             )
@@ -521,14 +636,16 @@ object VsArenaEngine {
     ): List<VsComparisonRow> = buildList {
         val lBench = BenchmarkEngine.evaluate(leftItem).info
         val rBench = BenchmarkEngine.evaluate(rightItem).info
+        val lProf = UnifiedFpsSimulator.resolveGpuProfile(leftItem)
+        val rProf = UnifiedFpsSimulator.resolveGpuProfile(rightItem)
 
         add(
             compareHigherBetter(
-                label = "Bağıl Raster & Oyun Gücü Endeksi",
-                leftVal = lBench.relativePerformanceIndex,
-                rightVal = rBench.relativePerformanceIndex,
-                leftText = "%${lBench.relativePerformanceIndex.roundToInt()} (${lBench.tier})",
-                rightText = "%${rBench.relativePerformanceIndex.roundToInt()} (${rBench.tier})",
+                label = "Bağıl Raster & Oyun Gücü (RTX 4090 = %100)",
+                leftVal = lProf.relativeIndex,
+                rightVal = rProf.relativeIndex,
+                leftText = "%${lProf.relativeIndex.roundToInt()} (${lBench.tier})",
+                rightText = "%${rProf.relativeIndex.roundToInt()} (${rBench.tier})",
                 badgeSuffix = "Daha Hızlı",
                 isKey = true,
             )
@@ -579,16 +696,30 @@ object VsArenaEngine {
 
         val lClock = l.boostClock?.mhz ?: l.coreClock.mhz
         val rClock = r.boostClock?.mhz ?: r.coreClock.mhz
-        add(
-            compareHigherBetter(
-                label = "GPU Boost Saat Hızı",
-                leftVal = lClock.toDouble(),
-                rightVal = rClock.toDouble(),
-                leftText = "$lClock MHz",
-                rightText = "$rClock MHz",
-                badgeSuffix = "Frekans",
+        val sameChipset = l.chipset.isNotBlank() && l.chipset.equals(r.chipset, ignoreCase = true)
+        if (sameChipset && lClock > 0 && rClock > 0) {
+            add(
+                compareHigherBetter(
+                    label = "GPU Boost Saat Hızı (Aynı Çipset OC)",
+                    leftVal = lClock.toDouble(),
+                    rightVal = rClock.toDouble(),
+                    leftText = "$lClock MHz",
+                    rightText = "$rClock MHz",
+                    badgeSuffix = "Fabrika OC",
+                )
             )
-        )
+        } else {
+            // Cross-architecture MHz is NOT comparable (e.g. RX 9070 XT 3060 MHz vs RTX 5090 2600 MHz)
+            add(
+                VsComparisonRow(
+                    label = "GPU Boost Saat Hızı (Farklı Mimari)",
+                    leftValue = if (lClock > 0) "$lClock MHz" else UNSPECIFIED,
+                    rightValue = if (rClock > 0) "$rClock MHz" else UNSPECIFIED,
+                    winner = ComparisonWinner.NEUTRAL,
+                    deltaBadge = "Farklı Mimari",
+                )
+            )
+        }
 
         add(
             compareLowerBetter(
@@ -692,28 +823,57 @@ object VsArenaEngine {
                 isKey = true,
             )
         )
-        add(
-            compareLowerBetter(
-                label = "CAS Gecikme Değeri (CL)",
-                leftVal = l.casLatency.toDouble(),
-                rightVal = r.casLatency.toDouble(),
-                leftText = "CL${l.casLatency}",
-                rightText = "CL${r.casLatency}",
-                customDelta = if (l.casLatency != r.casLatency) "-${abs(l.casLatency - r.casLatency)} CL Daha Düşük Gecikme" else null,
-                isKey = true,
+        val lNs = l.firstWordLatencyNs?.takeIf { it > 0.0 } ?: ((l.casLatency * 2000.0) / l.speed.mhz.coerceAtLeast(1))
+        val rNs = r.firstWordLatencyNs?.takeIf { it > 0.0 } ?: ((r.casLatency * 2000.0) / r.speed.mhz.coerceAtLeast(1))
+        val lNsRound = (lNs * 10.0).roundToInt() / 10.0
+        val rNsRound = (rNs * 10.0).roundToInt() / 10.0
+        val sameDdrGen = l.generation == r.generation
+        if (sameDdrGen) {
+            add(
+                compareLowerBetter(
+                    label = "CAS Gecikme Değeri (CL)",
+                    leftVal = l.casLatency.toDouble(),
+                    rightVal = r.casLatency.toDouble(),
+                    leftText = "CL${l.casLatency} ($lNsRound ns)",
+                    rightText = "CL${r.casLatency} ($rNsRound ns)",
+                    customDelta = if (l.casLatency != r.casLatency) "-${abs(l.casLatency - r.casLatency)} CL Daha Düşük Gecikme" else null,
+                    isKey = true,
+                )
             )
-        )
-        val lNs = l.firstWordLatencyNs ?: ((l.casLatency * 2000.0) / l.speed.mhz.coerceAtLeast(1))
-        val rNs = r.firstWordLatencyNs ?: ((r.casLatency * 2000.0) / r.speed.mhz.coerceAtLeast(1))
-        add(
-            compareLowerBetter(
-                label = "İlk Kelime Tepki Süresi (ns)",
-                leftVal = lNs,
-                rightVal = rNs,
-                leftText = "${(lNs * 10.0).roundToInt() / 10.0} ns",
-                rightText = "${(rNs * 10.0).roundToInt() / 10.0} ns",
-                badgeSuffix = "Daha Düşük Tepki",
+        } else {
+            // Cross-generation (DDR4 vs DDR5): raw CL cycles are NOT comparable — compare true nanoseconds!
+            add(
+                VsComparisonRow(
+                    label = "CAS Gecikme Döngüsü (Farklı DDR Nesli)",
+                    leftValue = "CL${l.casLatency} (${l.generation.displayName})",
+                    rightValue = "CL${r.casLatency} (${r.generation.displayName})",
+                    winner = ComparisonWinner.NEUTRAL,
+                    deltaBadge = "Gerçek Gecikme (ns) Esas Alınır",
+                )
             )
+        }
+        val nsDiff = abs(lNsRound - rNsRound)
+        add(
+            if (nsDiff < 0.15) {
+                VsComparisonRow(
+                    label = "Gerçek Gecikme — İlk Kelime (ns)",
+                    leftValue = "$lNsRound ns",
+                    rightValue = "$rNsRound ns",
+                    winner = ComparisonWinner.TIE,
+                    deltaBadge = "Eşit ($lNsRound ns)",
+                    isKeyMetric = true,
+                )
+            } else {
+                compareLowerBetter(
+                    label = "Gerçek Gecikme — İlk Kelime (ns)",
+                    leftVal = lNs,
+                    rightVal = rNs,
+                    leftText = "$lNsRound ns",
+                    rightText = "$rNsRound ns",
+                    badgeSuffix = "Daha Düşük Tepki",
+                    isKey = true,
+                )
+            }
         )
         add(
             VsComparisonRow(
@@ -977,13 +1137,15 @@ object VsArenaEngine {
             )
         )
 
+        val lFpsSum = (l.fps1080p.takeIf { it > 0 }?.let { it + l.fps1440p.coerceAtLeast(0) })?.toDouble()
+        val rFpsSum = (r.fps1080p.takeIf { it > 0 }?.let { it + r.fps1440p.coerceAtLeast(0) })?.toDouble()
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "1080p & 1440p Ortalama Oyun FPS",
-                leftVal = (l.fps1080p + l.fps1440p).toDouble(),
-                rightVal = (r.fps1080p + r.fps1440p).toDouble(),
-                leftText = "1080p: ${l.fps1080p} FPS • 2K: ${l.fps1440p} FPS",
-                rightText = "1080p: ${r.fps1080p} FPS • 2K: ${r.fps1440p} FPS",
+                leftVal = lFpsSum,
+                rightVal = rFpsSum,
+                leftText = if (l.fps1080p > 0) "1080p: ${l.fps1080p} FPS • 2K: ${l.fps1440p} FPS" else UNSPECIFIED,
+                rightText = if (r.fps1080p > 0) "1080p: ${r.fps1080p} FPS • 2K: ${r.fps1440p} FPS" else UNSPECIFIED,
                 badgeSuffix = "Daha Yüksek FPS",
                 isKey = true,
             )
@@ -1043,8 +1205,12 @@ object VsArenaEngine {
         val rightGames = BenchmarkEngine.resolveGameFpsForItem(right)?.toSimulationEntries().orEmpty().associateBy { it.id }
         if (leftGames.isEmpty() || rightGames.isEmpty()) return emptyList()
 
-        val leftHighCache = left.model.contains("X3D", ignoreCase = true) || ((left.spec as? CpuSpec)?.l3CacheMb ?: 0) >= 96
-        val rightHighCache = right.model.contains("X3D", ignoreCase = true) || ((right.spec as? CpuSpec)?.l3CacheMb ?: 0) >= 96
+        val leftHighCache = (left.spec as? CpuSpec)?.let {
+            UnifiedFpsSimulator.resolveCpuProfile(left).isX3d
+        } ?: left.model.contains("X3D", ignoreCase = true)
+        val rightHighCache = (right.spec as? CpuSpec)?.let {
+            UnifiedFpsSimulator.resolveCpuProfile(right).isX3d
+        } ?: right.model.contains("X3D", ignoreCase = true)
 
         return leftGames.mapNotNull { lEntry ->
             val rEntry = rightGames[lEntry.id] ?: return@mapNotNull null
@@ -1068,8 +1234,11 @@ object VsArenaEngine {
 
     fun computeCompositePerformanceScore(item: HardwareItem): Double {
         return when (val s = item.spec) {
-            is CpuSpec, is GpuSpec -> {
-                BenchmarkEngine.evaluate(item).info.relativePerformanceIndex.coerceAtLeast(10.0)
+            is CpuSpec -> {
+                UnifiedFpsSimulator.resolveCpuProfile(item).gamingIndex.coerceAtLeast(10.0)
+            }
+            is GpuSpec -> {
+                UnifiedFpsSimulator.resolveGpuProfile(item).relativeIndex.coerceAtLeast(8.0)
             }
             is LaptopSpec -> {
                 val tgpBonus = (extractFirstInt(s.gpuWattTgp) ?: 100) * 0.08
@@ -1080,8 +1249,10 @@ object VsArenaEngine {
             is RamSpec -> {
                 val capGb = s.capacity.megabytes / 1024.0
                 val speedScore = s.speed.mhz / 100.0
-                val latencyPenalty = s.casLatency * 0.8
-                (speedScore + capGb * 0.7 - latencyPenalty).coerceIn(20.0, 120.0)
+                val trueNs = s.firstWordLatencyNs?.takeIf { it > 0.0 }
+                    ?: ((s.casLatency * 2000.0) / s.speed.mhz.coerceAtLeast(1))
+                val latencyPenalty = trueNs * 1.4
+                (speedScore + capGb * 0.7 - latencyPenalty).coerceIn(20.0, 140.0)
             }
             is StorageSpec -> {
                 val readScore = s.sequentialReadMbps / 100.0
@@ -1428,90 +1599,92 @@ object VsArenaEngine {
     }
 
     private fun compareMicrophones(l: MicrophoneSpec, r: MicrophoneSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Kapsül Mimarisi", l.capsuleType, r.capsuleType, isKeyMetric = true))
-        add(VsComparisonRow("Kutup Deseni (Polar Pattern)", l.polarPattern, r.polarPattern, isKeyMetric = true))
-        add(VsComparisonRow("Örnekleme & Bit Derinliği", l.sampleRateAndBit, r.sampleRateAndBit, isKeyMetric = true))
-        add(VsComparisonRow("Bağlantı Arayüzü", l.connectivity, r.connectivity, isKeyMetric = true))
+        add(VsComparisonRow("Kapsül Mimarisi", l.capsuleType.ifBlank { UNSPECIFIED }, r.capsuleType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Kutup Deseni (Polar Pattern)", l.polarPattern.ifBlank { UNSPECIFIED }, r.polarPattern.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Örnekleme & Bit Derinliği", l.sampleRateAndBit.ifBlank { UNSPECIFIED }, r.sampleRateAndBit.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Bağlantı Arayüzü", l.connectivity.ifBlank { UNSPECIFIED }, r.connectivity.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Maksimum Ses Basıncı (Max SPL)",
-                leftVal = l.maxSplDb.toDouble(),
-                rightVal = r.maxSplDb.toDouble(),
-                leftText = "${l.maxSplDb} dB SPL",
-                rightText = "${r.maxSplDb} dB SPL",
+                leftVal = l.maxSplDb.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxSplDb.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.maxSplDb > 0) "${l.maxSplDb} dB SPL" else UNSPECIFIED,
+                rightText = if (r.maxSplDb > 0) "${r.maxSplDb} dB SPL" else UNSPECIFIED,
                 badgeSuffix = "Daha Yüksek Ses Direnci",
             )
         )
-        add(VsComparisonRow("Frekans Tepkisi", l.frequencyResponse, r.frequencyResponse))
+        add(VsComparisonRow("Frekans Tepkisi", l.frequencyResponse.ifBlank { UNSPECIFIED }, r.frequencyResponse.ifBlank { UNSPECIFIED }))
         add(VsComparisonRow("Dahili DSP İşleme", if (l.hasBuiltInDsp) "Var" else "Yok", if (r.hasBuiltInDsp) "Var" else "Yok"))
     }
 
     private fun compareMousepads(l: MousepadSpec, r: MousepadSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Yüzey Teknolojisi", l.surfaceType, r.surfaceType, isKeyMetric = true))
-        add(VsComparisonRow("Kayma Hızı & Karakter", l.speedGlideTier, r.speedGlideTier, isKeyMetric = true))
+        add(VsComparisonRow("Yüzey Teknolojisi", l.surfaceType.ifBlank { UNSPECIFIED }, r.surfaceType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Kayma Hızı & Karakter", l.speedGlideTier.ifBlank { UNSPECIFIED }, r.speedGlideTier.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Durdurma Gücü (Stopping Power)",
-                leftVal = l.stoppingPowerScore.toDouble(),
-                rightVal = r.stoppingPowerScore.toDouble(),
-                leftText = "${l.stoppingPowerScore}/10 Puan",
-                rightText = "${r.stoppingPowerScore}/10 Puan",
+                leftVal = l.stoppingPowerScore.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.stoppingPowerScore.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.stoppingPowerScore > 0) "${l.stoppingPowerScore}/10 Puan" else UNSPECIFIED,
+                rightText = if (r.stoppingPowerScore > 0) "${r.stoppingPowerScore}/10 Puan" else UNSPECIFIED,
                 badgeSuffix = "Daha Keskin Flick Kontrolü",
                 isKey = true,
             )
         )
-        add(VsComparisonRow("Taban Materyali", l.baseMaterial, r.baseMaterial, isKeyMetric = true))
-        add(VsComparisonRow("Boyutlar", l.dimensionsMm, r.dimensionsMm))
-        add(VsComparisonRow("Kalınlık", "${l.thicknessMm} mm", "${r.thicknessMm} mm"))
-        add(VsComparisonRow("Nem & Ter Direnci", l.humidityResistance, r.humidityResistance))
+        add(VsComparisonRow("Taban Materyali", l.baseMaterial.ifBlank { UNSPECIFIED }, r.baseMaterial.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Boyutlar", l.dimensionsMm.ifBlank { UNSPECIFIED }, r.dimensionsMm.ifBlank { UNSPECIFIED }))
+        add(VsComparisonRow("Kalınlık", if (l.thicknessMm > 0.0) "${l.thicknessMm} mm" else UNSPECIFIED, if (r.thicknessMm > 0.0) "${r.thicknessMm} mm" else UNSPECIFIED))
+        add(VsComparisonRow("Nem & Ter Direnci", l.humidityResistance.ifBlank { UNSPECIFIED }, r.humidityResistance.ifBlank { UNSPECIFIED }))
     }
 
     private fun compareWebcams(l: WebcamSpec, r: WebcamSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Maksimum Çözünürlük", l.maxResolution, r.maxResolution, isKeyMetric = true))
+        add(VsComparisonRow("Maksimum Çözünürlük", l.maxResolution.ifBlank { UNSPECIFIED }, r.maxResolution.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Kare Hızı (FPS)",
-                leftVal = l.maxFrameRateFps.toDouble(),
-                rightVal = r.maxFrameRateFps.toDouble(),
-                leftText = "${l.maxFrameRateFps} FPS",
-                rightText = "${r.maxFrameRateFps} FPS",
+                leftVal = l.maxFrameRateFps.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxFrameRateFps.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.maxFrameRateFps > 0) "${l.maxFrameRateFps} FPS" else UNSPECIFIED,
+                rightText = if (r.maxFrameRateFps > 0) "${r.maxFrameRateFps} FPS" else UNSPECIFIED,
                 badgeSuffix = "FPS Daha Akıcı",
                 isKey = true,
             )
         )
-        add(VsComparisonRow("Sensör & Boyut", "${l.sensorModel} (${l.sensorSizeInch})", "${r.sensorModel} (${r.sensorSizeInch})", isKeyMetric = true))
-        add(VsComparisonRow("Diyafram Açıklığı", l.aperture, r.aperture, isKeyMetric = true))
+        add(VsComparisonRow("Sensör & Boyut", "${l.sensorModel.ifBlank { UNSPECIFIED }} (${l.sensorSizeInch.ifBlank { "-" }})", "${r.sensorModel.ifBlank { UNSPECIFIED }} (${r.sensorSizeInch.ifBlank { "-" }})", isKeyMetric = true))
+        add(VsComparisonRow("Diyafram Açıklığı", l.aperture.ifBlank { UNSPECIFIED }, r.aperture.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Görüş Açısı (FOV)",
-                leftVal = l.fieldOfViewDeg.toDouble(),
-                rightVal = r.fieldOfViewDeg.toDouble(),
-                leftText = "${l.fieldOfViewDeg}°",
-                rightText = "${r.fieldOfViewDeg}°",
+                leftVal = l.fieldOfViewDeg.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.fieldOfViewDeg.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.fieldOfViewDeg > 0) "${l.fieldOfViewDeg}°" else UNSPECIFIED,
+                rightText = if (r.fieldOfViewDeg > 0) "${r.fieldOfViewDeg}°" else UNSPECIFIED,
                 badgeSuffix = "Daha Geniş Kadraj",
             )
         )
-        add(VsComparisonRow("Otomatik Odak & AI Takip", if (l.hasAiTracking) "${l.focusType} + AI Takip" else l.focusType, if (r.hasAiTracking) "${r.focusType} + AI Takip" else r.focusType))
+        add(VsComparisonRow("Otomatik Odak & AI Takip", if (l.hasAiTracking) "${l.focusType} + AI Takip" else l.focusType.ifBlank { UNSPECIFIED }, if (r.hasAiTracking) "${r.focusType} + AI Takip" else r.focusType.ifBlank { UNSPECIFIED }))
     }
 
     private fun compareGamingChairs(l: GamingChairSpec, r: GamingChairSpec): List<VsComparisonRow> = buildList {
-        add(VsComparisonRow("Koltuk Mimarisi", l.chairType, r.chairType, isKeyMetric = true))
-        add(VsComparisonRow("Döşeme Kumaşı / Deri", l.upholsteryMaterial, r.upholsteryMaterial, isKeyMetric = true))
-        add(VsComparisonRow("L4/L5 Bel Desteği", l.lumbarSupportType, r.lumbarSupportType, isKeyMetric = true))
+        add(VsComparisonRow("Koltuk Mimarisi", l.chairType.ifBlank { UNSPECIFIED }, r.chairType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("Döşeme Kumaşı / Deri", l.upholsteryMaterial.ifBlank { UNSPECIFIED }, r.upholsteryMaterial.ifBlank { UNSPECIFIED }, isKeyMetric = true))
+        add(VsComparisonRow("L4/L5 Bel Desteği", l.lumbarSupportType.ifBlank { UNSPECIFIED }, r.lumbarSupportType.ifBlank { UNSPECIFIED }, isKeyMetric = true))
         add(
-            compareHigherBetter(
+            compareHigherBetterNullable(
                 label = "Maksimum Taşıma Kapasitesi",
-                leftVal = l.maxWeightCapacityKg.toDouble(),
-                rightVal = r.maxWeightCapacityKg.toDouble(),
-                leftText = "${l.maxWeightCapacityKg} kg",
-                rightText = "${r.maxWeightCapacityKg} kg",
+                leftVal = l.maxWeightCapacityKg.takeIf { it > 0 }?.toDouble(),
+                rightVal = r.maxWeightCapacityKg.takeIf { it > 0 }?.toDouble(),
+                leftText = if (l.maxWeightCapacityKg > 0) "${l.maxWeightCapacityKg} kg" else UNSPECIFIED,
+                rightText = if (r.maxWeightCapacityKg > 0) "${r.maxWeightCapacityKg} kg" else UNSPECIFIED,
                 badgeSuffix = "kg Daha Dayanıklı",
                 isKey = true,
             )
         )
-        add(VsComparisonRow("Kolçak Tipi", l.armrestType, r.armrestType))
-        add(VsComparisonRow("Mekanizma & Yatış Açısı", "${l.tiltMechanism} (${l.reclineAngleDeg}°)", "${r.tiltMechanism} (${r.reclineAngleDeg}°)"))
-        add(VsComparisonRow("Önerilen Kullanıcı Boyu", l.recommendedHeightRange, r.recommendedHeightRange))
+        add(VsComparisonRow("Kolçak Tipi", l.armrestType.ifBlank { UNSPECIFIED }, r.armrestType.ifBlank { UNSPECIFIED }))
+        val lReclineText = if (l.reclineAngleDeg > 0) "${l.tiltMechanism.ifBlank { "-" }} (${l.reclineAngleDeg}°)" else l.tiltMechanism.ifBlank { UNSPECIFIED }
+        val rReclineText = if (r.reclineAngleDeg > 0) "${r.tiltMechanism.ifBlank { "-" }} (${r.reclineAngleDeg}°)" else r.tiltMechanism.ifBlank { UNSPECIFIED }
+        add(VsComparisonRow("Mekanizma & Yatış Açısı", lReclineText, rReclineText))
+        add(VsComparisonRow("Önerilen Kullanıcı Boyu", l.recommendedHeightRange.ifBlank { UNSPECIFIED }, r.recommendedHeightRange.ifBlank { UNSPECIFIED }))
     }
 
     private fun compareSmartphones(l: PhoneSpec, r: PhoneSpec): List<VsComparisonRow> = buildList {

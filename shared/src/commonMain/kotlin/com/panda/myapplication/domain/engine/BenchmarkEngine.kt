@@ -13,6 +13,7 @@ import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.LaptopSpec
 import com.panda.myapplication.domain.model.ResolutionFps
 import kotlin.math.round
+import kotlin.math.roundToInt
 
 object BenchmarkEngine {
 
@@ -21,9 +22,9 @@ object BenchmarkEngine {
         verifiedBenchmarks: Map<String, HardwareBenchmarkInfo> = emptyMap(),
     ): BenchmarkResult {
         val isCpu = item.category == HardwareCategory.CPU
-        val isX3d = item.model.contains("X3D", ignoreCase = true)
+        val isGpu = item.category == HardwareCategory.GPU
 
-        val gpuChipsetKey = if (item.category == HardwareCategory.GPU) {
+        val gpuChipsetKey = if (isGpu) {
             val chipset = (item.spec as? GpuSpec)?.chipset ?: item.model
             normalizeGpuChipsetKey(chipset, item.model)
         } else null
@@ -32,19 +33,71 @@ object BenchmarkEngine {
             ?: (gpuChipsetKey?.let { verifiedBenchmarks["gpu_$it"] ?: verifiedBenchmarks[it] })
             ?: item.benchmarkInfo?.takeIf { it.isVerified }
 
-        if (verified != null) {
-            val ratio = (verified.relativePerformanceIndex / 100.0).coerceIn(0.15, 1.35)
-            val enrichedGames = buildFull12GameMatrix(
-                ratio = ratio,
-                isCpu = isCpu,
-                isX3d = isX3d,
-                existing = verified.gameFps,
+        if (isCpu) {
+            val profile = UnifiedFpsSimulator.resolveCpuProfile(item)
+            val games = verified?.gameFps ?: UnifiedFpsSimulator.simulateForCpuDetail(item)
+            if (verified != null) {
+                return BenchmarkResult(
+                    info = verified.copy(
+                        gamingIndex = verified.gamingIndex ?: profile.gamingIndex.roundToInt(),
+                        productivityIndex = verified.productivityIndex ?: profile.productivityIndex.roundToInt(),
+                        gameFps = games,
+                        dataSource = DataSourceType.VERIFIED_BENCHMARK.name,
+                    ),
+                    dataSource = DataSourceType.VERIFIED_BENCHMARK,
+                )
+            }
+            val baseSyn = simulateCpuSynthetic(item, item.spec as? CpuSpec, profile)
+            val info = HardwareBenchmarkInfo(
+                score = profile.overallScore100,
+                tier = UnifiedFpsSimulator.tierForCpu(profile.gamingIndex, profile.productivityIndex),
+                gamingIndex = profile.gamingIndex.roundToInt(),
+                productivityIndex = profile.productivityIndex.roundToInt(),
+                gamingRelativeIndex = round1(profile.gamingIndex) / 100.0,
+                relativePerformanceIndex = round1(profile.gamingIndex),
+                cpuSynthetic = baseSyn,
+                gameFps = games,
+                dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
+                testSuite = "ML Log-Ridge Calibrated v6 (Ref: RTX 5090)",
             )
+            return BenchmarkResult(info = info, dataSource = DataSourceType.ESTIMATED_SIMULATION)
+        }
+
+        if (isGpu) {
+            val profile = UnifiedFpsSimulator.resolveGpuProfile(item)
+            val games = verified?.gameFps ?: UnifiedFpsSimulator.simulateForGpuDetail(item)
+            if (verified != null) {
+                return BenchmarkResult(
+                    info = verified.copy(
+                        gamingIndex = verified.gamingIndex ?: profile.relativeIndex.roundToInt(),
+                        gameFps = games,
+                        dataSource = DataSourceType.VERIFIED_BENCHMARK.name,
+                    ),
+                    dataSource = DataSourceType.VERIFIED_BENCHMARK,
+                )
+            }
+            val baseSyn = GpuSyntheticBenchmark(
+                timeSpyGraphics = (profile.relativeIndex * 365.0).roundToInt(),
+                timeSpyExtreme = (profile.relativeIndex * 185.0).roundToInt(),
+                steelNomad = (profile.relativeIndex * 96.0).roundToInt(),
+            )
+            val info = HardwareBenchmarkInfo(
+                score = profile.score100,
+                tier = UnifiedFpsSimulator.tierForGpuRelativeIndex(profile.relativeIndex),
+                gamingIndex = profile.relativeIndex.roundToInt(),
+                relativePerformancePct = round1(profile.relativeIndex) / 100.0,
+                relativePerformanceIndex = round1(profile.relativeIndex),
+                gpuSynthetic = baseSyn,
+                gameFps = games,
+                dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
+                testSuite = "ML Log-Ridge Calibrated v6 (Ref: Ryzen 7 9800X3D)",
+            )
+            return BenchmarkResult(info = info, dataSource = DataSourceType.ESTIMATED_SIMULATION)
+        }
+
+        if (verified != null) {
             return BenchmarkResult(
-                info = verified.copy(
-                    gameFps = enrichedGames,
-                    dataSource = DataSourceType.VERIFIED_BENCHMARK.name,
-                ),
+                info = verified.copy(dataSource = DataSourceType.VERIFIED_BENCHMARK.name),
                 dataSource = DataSourceType.VERIFIED_BENCHMARK,
             )
         }
@@ -58,39 +111,27 @@ object BenchmarkEngine {
 
     /**
      * Resolves a complete 12-game FPS matrix (5 E-Spor + 7 AAA) across 1080p, 1440p, and 4K
-     * with Average FPS and 1% Low FPS for GPU, CPU, and Gaming Laptop items.
+     * using the Unified Physical Frame-Time Engine (Single Source of Truth across Detail, Wizard & VS Arena).
      */
     fun resolveGameFpsForItem(item: HardwareItem): GameFpsBenchmark? {
         return when (val s = item.spec) {
             is GpuSpec -> {
-                val existing = item.benchmarkInfo?.gameFps
-                val ratio = ((item.benchmarkInfo?.relativePerformanceIndex ?: simulateGpu(item, s).relativePerformanceIndex) / 100.0)
-                    .coerceIn(0.18, 1.35)
-                buildFull12GameMatrix(ratio = ratio, isCpu = false, isX3d = false, existing = existing)
+                val bench = item.benchmarkInfo
+                if (bench?.gameFps != null && bench.testSuite.contains("v6", ignoreCase = true)) {
+                    bench.gameFps
+                } else {
+                    UnifiedFpsSimulator.simulateForGpuDetail(item)
+                }
             }
             is CpuSpec -> {
-                val existing = item.benchmarkInfo?.gameFps
-                val isX3d = item.model.contains("X3D", ignoreCase = true) || (s.l3CacheMb ?: 0) >= 96
-                val ratio = ((item.benchmarkInfo?.relativePerformanceIndex ?: simulateCpu(item, s).relativePerformanceIndex) / 100.0)
-                    .coerceIn(0.25, 1.25)
-                buildFull12GameMatrix(ratio = ratio, isCpu = true, isX3d = isX3d, existing = existing)
+                val bench = item.benchmarkInfo
+                if (bench?.gameFps != null && bench.testSuite.contains("v6", ignoreCase = true)) {
+                    bench.gameFps
+                } else {
+                    UnifiedFpsSimulator.simulateForCpuDetail(item)
+                }
             }
-            is LaptopSpec -> {
-                val base1080 = s.fps1080p.takeIf { it > 0 }?.toDouble()
-                val base1440 = s.fps1440p.takeIf { it > 0 }?.toDouble()
-                val hasMux = s.muxSwitch.contains("Var", ignoreCase = true) || s.muxSwitch.contains("Advanced Optimus", ignoreCase = true)
-                val muxBonus = if (hasMux) 1.04 else 0.97
-                val scoreRatio = if (s.gamingScore > 0) ((s.gamingScore / 100.0) * muxBonus).coerceIn(0.22, 1.15) else 0.65
-                val ratio1080 = base1080?.let { (it / 155.0).coerceIn(0.22, 1.20) } ?: scoreRatio
-                val ratio1440 = base1440?.let { (it / 115.0).coerceIn(0.20, 1.18) } ?: (ratio1080 * 0.92)
-                val ratio4k = (ratio1440 * 0.82).coerceIn(0.15, 1.10)
-                buildFull12GameMatrixByResolutionRatios(
-                    r1080 = ratio1080,
-                    r1440 = ratio1440,
-                    r4k = ratio4k,
-                    isX3d = s.cpuModel.contains("X3D", ignoreCase = true) || s.cpuModel.contains("HX", ignoreCase = true),
-                )
-            }
+            is LaptopSpec -> UnifiedFpsSimulator.simulateForLaptopDetail(s)
             else -> null
         }
     }
@@ -301,132 +342,55 @@ object BenchmarkEngine {
         }
     }
 
-    private fun simulateCpu(item: HardwareItem, s: CpuSpec): HardwareBenchmarkInfo {
-        val archMultiplier = when {
-            s.architecture?.contains("Zen 5", ignoreCase = true) == true -> 1.25
-            s.architecture?.contains("Zen 4", ignoreCase = true) == true -> 1.15
-            s.architecture?.contains("Zen 3", ignoreCase = true) == true -> 1.00
-            s.architecture?.contains("Raptor", ignoreCase = true) == true -> 1.18
-            s.architecture?.contains("Alder", ignoreCase = true) == true -> 1.08
-            s.socket.equals("AM5", ignoreCase = true) -> 1.15
-            s.socket.equals("LGA1700", ignoreCase = true) -> 1.10
-            else -> 0.90
-        }
-
-        val isX3d = item.model.contains("X3D", ignoreCase = true) || (s.l3CacheMb ?: 0) >= 96
-        val isArrowLake = s.architecture?.contains("Arrow", ignoreCase = true) == true ||
-                item.model.contains("285K", ignoreCase = true) ||
-                item.model.contains("265", ignoreCase = true) ||
-                item.model.contains("245", ignoreCase = true) ||
-                item.model.contains("225", ignoreCase = true) ||
-                s.socket.contains("1851", ignoreCase = true)
-
-        val boostGhz = (s.boostClock?.mhz ?: 4000) / 1000.0
-        val singleCore = (boostGhz * 380.0 * archMultiplier).toInt().coerceAtLeast(1000)
-        val multiCore = ((s.coreCount * boostGhz * 280.0 + s.tdp.watts * 30.0) * archMultiplier).toInt().coerceAtLeast(4000)
-
-        // Raw productivity index (20..115 scale; properly separates entry 4-core CPUs from flagship 16-core CPUs)
-        val rawProductivityIndex = (
-            (singleCore / 25.0) * 0.72 +
-                (multiCore / 350.0).coerceAtMost(100.0) * 0.28
-            ).coerceIn(20.0, 115.0)
-
-        // Calibrated Gaming Index: 3D V-Cache massive boost vs Arrow Lake tile memory latency penalty
-        val gamingCacheMultiplier = when {
-            isX3d -> 1.38
-            isArrowLake -> 0.94
-            else -> 1.0
-        }
-        val gamingRelativeIndex = (rawProductivityIndex * gamingCacheMultiplier).coerceIn(20.0, 125.0)
-        val score = (if (isX3d) (rawProductivityIndex * 1.20) else rawProductivityIndex).toInt().coerceIn(10, 100)
-        val tier = when {
-            score >= 95 -> "S-Tier"
-            score >= 85 -> "A-Tier"
-            score >= 70 -> "B-Tier"
-            else -> "C-Tier"
-        }
-
-        val gameFps = buildFull12GameMatrix(ratio = gamingRelativeIndex / 100.0, isCpu = true, isX3d = isX3d)
-
-        val cb2024Single = (singleCore / 16.5).toInt().coerceAtLeast(60)
-        val cb2024Multi = (multiCore / 15.2).toInt().coerceAtLeast(800)
-        val gb6Single = (singleCore * 1.52).toInt().coerceAtLeast(1500)
-        val gb6Multi = (multiCore * 0.62).toInt().coerceAtLeast(6000)
-        val passmark = (multiCore * 1.63).toInt().coerceAtLeast(15000)
-
-        val cpuSynthetic = CpuSyntheticBenchmark(
+    private fun simulateCpuSynthetic(
+        item: HardwareItem,
+        s: CpuSpec?,
+        profile: UnifiedFpsSimulator.CpuSimProfile,
+    ): CpuSyntheticBenchmark {
+        val cbMulti = (profile.productivityIndex * 432.0).roundToInt().coerceAtLeast(3000)
+        val cores = (s?.coreCount ?: profile.cores).coerceAtLeast(2)
+        val cbSingle = (profile.gamingIndex * 22.0).roundToInt().coerceIn(850, 2500)
+        val cb2024Single = (cbSingle / 16.5).roundToInt().coerceAtLeast(55)
+        val cb2024Multi = (cbMulti / 18.0).roundToInt().coerceAtLeast(350)
+        val gb6Single = (cbSingle * 1.48).roundToInt().coerceAtLeast(1200)
+        val gb6Multi = (cbMulti * 0.55).roundToInt().coerceAtLeast(4500)
+        val passmark = (cbMulti * 1.54).roundToInt().coerceAtLeast(cores * 1200)
+        return CpuSyntheticBenchmark(
             cinebench2024Single = cb2024Single,
             cinebench2024Multi = cb2024Multi,
-            cinebenchR23Single = singleCore,
-            cinebenchR23Multi = multiCore,
+            cinebenchR23Single = cbSingle,
+            cinebenchR23Multi = cbMulti,
             geekbench6Single = gb6Single,
             geekbench6Multi = gb6Multi,
             passmarkScore = passmark,
         )
+    }
+
+    private fun simulateCpu(item: HardwareItem, s: CpuSpec): HardwareBenchmarkInfo {
+        val profile = UnifiedFpsSimulator.resolveCpuProfile(item)
+        val gameFps = UnifiedFpsSimulator.simulateForCpuDetail(item)
+        val cpuSynthetic = simulateCpuSynthetic(item, s, profile)
 
         return HardwareBenchmarkInfo(
-            score = score,
-            tier = tier,
-            gamingRelativeIndex = round1(gamingRelativeIndex) / 100.0,
-            relativePerformanceIndex = round1(rawProductivityIndex),
+            score = profile.overallScore100,
+            tier = UnifiedFpsSimulator.tierForCpu(profile.gamingIndex, profile.productivityIndex),
+            gamingIndex = profile.gamingIndex.roundToInt(),
+            productivityIndex = profile.productivityIndex.roundToInt(),
+            gamingRelativeIndex = round1(profile.gamingIndex) / 100.0,
+            relativePerformanceIndex = round1(profile.gamingIndex),
             cpuSynthetic = cpuSynthetic,
             gameFps = gameFps,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
-            testSuite = "Kalibre Edilmiş IPC & 3D V-Cache Simülasyonu",
+            testSuite = "ML Log-Ridge Kalibreli IPC & 3D V-Cache Simülasyonu (v6)",
         )
     }
 
     private fun simulateGpu(item: HardwareItem, s: GpuSpec): HardwareBenchmarkInfo {
-        val vramGb = s.vram.megabytes / 1024.0
-        val tdp = s.tdp.watts.toDouble()
-        val clockMhz = s.boostClock?.mhz ?: s.coreClock.mhz
-        val cores = (s.cudaCores ?: 0).toDouble()
-        val busBits = (s.busWidthBits ?: 128).toDouble()
-
-        val chipsetBase = when (normalizeGpuChipsetKey(s.chipset, item.model)) {
-            "rtx_5090" -> 115.0
-            "rtx_4090", "rtx_5080" -> 100.0
-            "rx_7900_xtx", "rtx_5070_ti" -> 93.0
-            "rtx_4080_super" -> 91.0
-            "rtx_4080", "rx_7900_xt" -> 88.0
-            "rtx_4070_ti_super", "rx_9070_xt", "rtx_5070" -> 83.0
-            "rtx_4070_ti", "rx_7900_gre", "rx_9070" -> 79.0
-            "rtx_4070_super" -> 76.0
-            "rx_7800_xt", "rtx_4070" -> 70.0
-            "rx_7700_xt", "rtx_4060_ti", "rtx_5060_ti" -> 61.0
-            "rx_6800_xt", "rtx_3080" -> 68.0
-            "rx_6700_xt", "rtx_3070" -> 56.0
-            "rtx_4060", "rx_7600_xt", "arc_b580" -> 52.0
-            "rx_7600", "rtx_3060" -> 45.0
-            else -> null
-        }
-
-        val formulaIndex = (
-            tdp * 0.14 +
-                vramGb * 2.1 +
-                (clockMhz / 1000.0) * 8.5 +
-                (cores / 1000.0) * 1.8 +
-                (busBits / 64.0) * 2.2
-            ).coerceIn(18.0, 115.0)
-
-        val relativeIndex = if (chipsetBase != null) {
-            (chipsetBase * 0.85 + formulaIndex * 0.15).coerceIn(18.0, 115.0)
-        } else {
-            formulaIndex
-        }
-        val score = relativeIndex.toInt().coerceIn(15, 100)
-        val timeSpyGfx = (relativeIndex * 310.0).toInt()
-        val timeSpyExt = (timeSpyGfx * 0.49).toInt()
-        val steelNomad = (timeSpyGfx * 0.238).toInt()
-        val tier = when {
-            score >= 90 -> "S-Tier"
-            score >= 75 -> "A-Tier"
-            score >= 55 -> "B-Tier"
-            else -> "C-Tier"
-        }
-
-        val gpuRatio = relativeIndex / 100.0
-        val gameFps = buildFull12GameMatrix(ratio = gpuRatio, isCpu = false, isX3d = false)
+        val profile = UnifiedFpsSimulator.resolveGpuProfile(item)
+        val timeSpyGfx = (profile.relativeIndex * 365.0).roundToInt()
+        val timeSpyExt = (timeSpyGfx * 0.51).roundToInt()
+        val steelNomad = (profile.relativeIndex * 96.0).roundToInt()
+        val gameFps = UnifiedFpsSimulator.simulateForGpuDetail(item)
 
         val gpuSynthetic = GpuSyntheticBenchmark(
             timeSpyGraphics = timeSpyGfx,
@@ -435,14 +399,15 @@ object BenchmarkEngine {
         )
 
         return HardwareBenchmarkInfo(
-            score = score,
-            tier = tier,
-            relativePerformancePct = round1(relativeIndex) / 100.0,
-            relativePerformanceIndex = round1(relativeIndex),
+            score = profile.score100,
+            tier = UnifiedFpsSimulator.tierForGpuRelativeIndex(profile.relativeIndex),
+            gamingIndex = profile.relativeIndex.roundToInt(),
+            relativePerformancePct = round1(profile.relativeIndex) / 100.0,
+            relativePerformanceIndex = round1(profile.relativeIndex),
             gpuSynthetic = gpuSynthetic,
             gameFps = gameFps,
             dataSource = DataSourceType.ESTIMATED_SIMULATION.name,
-            testSuite = "Matematiksel TFLOPS & Raster Simülasyonu",
+            testSuite = "ML Log-Ridge Kalibreli Raster & VRAM Simülasyonu (v6)",
         )
     }
 
