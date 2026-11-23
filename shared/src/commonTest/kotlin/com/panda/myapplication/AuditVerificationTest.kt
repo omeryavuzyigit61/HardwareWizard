@@ -1017,4 +1017,64 @@ class AuditVerificationTest {
         val (mobCpu, _) = com.panda.myapplication.domain.engine.UnifiedFpsSimulator.resolveLaptopProfiles(hxLaptop)
         assertFalse(mobCpu.isX3d, "Intel HX laptop CPU must never be falsely flagged as AMD 3D V-Cache")
     }
+
+    @Test
+    fun workstationLabParametricEngineDifferentiatesAppsResolutionsPhasesAndPhysics() {
+        val engine = com.panda.myapplication.domain.engine.WorkstationRequirementEngine
+        val resFhd = com.panda.myapplication.domain.engine.WorkloadResolution.FHD_1080P
+        val res2k = com.panda.myapplication.domain.engine.WorkloadResolution.QHD_2K
+        val res4k = com.panda.myapplication.domain.engine.WorkloadResolution.UHD_4K
+        val res8k = com.panda.myapplication.domain.engine.WorkloadResolution.RAW_8K
+        val preview = com.panda.myapplication.domain.engine.WorkloadPhase.REALTIME_PREVIEW
+        val render = com.panda.myapplication.domain.engine.WorkloadPhase.FINAL_RENDER
+        val sim = com.panda.myapplication.domain.engine.WorkloadPhase.HEAVY_SIMULATION
+
+        // 1. All 35 apps produce valid weights summing to 100, non-empty calculated badges, and no bogus bugs
+        assertEquals(35, engine.supportedApps.size)
+        engine.supportedApps.forEach { app ->
+            val p = engine.calculateRequirements(app.id, app.supportedResolutions.first(), app.supportedPhases.first())
+            val w = p.workloadWeights
+            assertEquals(100, w.cpuSinglePct + w.cpuMultiPct + w.gpuComputePct + w.memoryIoPct, "Weights must sum to 100 for ${app.id}")
+            listOf(p.minimumTier, p.recommendedTier, p.studioTier).forEach { tier ->
+                assertTrue(tier.calculatedMetricBadgeTr.isNotBlank(), "Empty metric badge for ${app.id}")
+                assertTrue(tier.calculatedNumericMetric > 0.0, "Metric must be >0 for ${app.id}")
+                assertFalse(tier.cpuSpecsSummary.contains("80MB L3", ignoreCase = true), "9950X L3 is 64 MB, not 80 MB!")
+                assertFalse(tier.targetCpuChipset.contains("7800X3D", ignoreCase = true), "Gaming X3D must not be recommended as CAD/Workstation CPU")
+                if (tier.targetCpuChipset.contains("Ryzen", ignoreCase = true)) {
+                    assertFalse(tier.cpuSpecsSummary.contains("QuickSync", ignoreCase = true), "AMD CPU must never list Intel QuickSync")
+                }
+            }
+        }
+
+        // 2. 1080p vs 2K vs 4K vs 8K strictly differ for DaVinci Resolve
+        val dv1080 = engine.calculateRequirements("davinci_resolve", resFhd, preview)
+        val dv2k = engine.calculateRequirements("davinci_resolve", res2k, preview)
+        val dv4k = engine.calculateRequirements("davinci_resolve", res4k, render)
+        val dv8k = engine.calculateRequirements("davinci_resolve", res8k, render)
+        assertTrue(dv2k.recommendedTier.vramRequirementGb >= dv1080.recommendedTier.vramRequirementGb)
+        assertTrue(dv4k.recommendedTier.vramRequirementGb > dv1080.recommendedTier.vramRequirementGb)
+        assertTrue(dv8k.studioTier.vramRequirementGb >= 24)
+        assertTrue(dv1080.recommendedTier.targetGpuChipset != dv8k.recommendedTier.targetGpuChipset)
+
+        // 3. Different apps at the same 4K resolution produce distinct profiles (Photoshop vs DaVinci vs Houdini vs FL Studio)
+        val ps4k = engine.calculateRequirements("photoshop", res4k, preview)
+        val houdini4k = engine.calculateRequirements("houdini", res4k, sim)
+        val fl4k = engine.calculateRequirements("fl_studio", res4k, preview)
+        assertTrue(ps4k.workloadWeights.cpuSinglePct > dv4k.workloadWeights.cpuSinglePct)
+        assertTrue(dv4k.workloadWeights.gpuComputePct > ps4k.workloadWeights.gpuComputePct)
+        assertTrue(houdini4k.studioTier.targetCpuChipset.contains("Threadripper"))
+        assertTrue(houdini4k.recommendedTier.targetRamCapacityGb >= 64)
+
+        // 4. Local LLM 70B Q4 (RAW_8K) physically requires 48 GB VRAM (RTX 6000 Ada), never 24 GB RTX 4090!
+        val llm70b = engine.calculateRequirements("local_llm", res8k, sim)
+        assertTrue(llm70b.recommendedTier.vramRequirementGb >= 48, "70B Q4 requires >=48GB VRAM, got ${llm70b.recommendedTier.vramRequirementGb}")
+        assertTrue(llm70b.studioTier.targetGpuChipset.contains("6000 Ada") || llm70b.studioTier.vramRequirementGb >= 48)
+        assertTrue(llm70b.studioTier.calculatedMetricBadgeTr.contains("70B Q4") && llm70b.studioTier.calculatedMetricBadgeTr.contains("tok/s"))
+
+        // 5. Audio DAWs (FL Studio / Ableton / Cubase) never waste budget on RTX 4080/5080 and never cite SPECworkstation
+        assertTrue(fl4k.studioTier.vramRequirementGb <= 8, "DAW Studio tier must not waste budget on high-VRAM gaming GPU")
+        assertFalse(fl4k.studioTier.targetGpuChipset.contains("4080") || fl4k.studioTier.targetGpuChipset.contains("5080"))
+        assertFalse(fl4k.dataCitation.contains("SPECworkstation", ignoreCase = true))
+        assertTrue(fl4k.studioTier.calculatedNumericMetric > fl4k.minimumTier.calculatedNumericMetric)
+    }
 }

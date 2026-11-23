@@ -67,6 +67,7 @@ import androidx.compose.ui.unit.sp
 import com.panda.myapplication.domain.engine.HardwareRecommendation
 import com.panda.myapplication.domain.engine.WorkloadPhase
 import com.panda.myapplication.domain.engine.WorkloadResolution
+import com.panda.myapplication.domain.engine.WorkloadWeights
 import com.panda.myapplication.domain.engine.WorkstationApp
 import com.panda.myapplication.domain.engine.WorkstationCategory
 import com.panda.myapplication.domain.engine.WorkstationRequirementEngine
@@ -333,6 +334,7 @@ fun WorkstationLabScreen(
             item {
                 WorkloadConfigCard(
                     app = profile.app,
+                    weights = profile.workloadWeights,
                     selectedResolution = selectedResolution,
                     selectedPhase = selectedPhase,
                     onResolutionSelect = { selectedResolution = it },
@@ -505,6 +507,7 @@ private fun AppSelectorChips(
 @Composable
 private fun WorkloadConfigCard(
     app: WorkstationApp,
+    weights: WorkloadWeights,
     selectedResolution: WorkloadResolution,
     selectedPhase: WorkloadPhase,
     onResolutionSelect: (WorkloadResolution) -> Unit,
@@ -593,6 +596,47 @@ private fun WorkloadConfigCard(
                             color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = FontWeight.Medium,
                         )
+                    }
+                }
+            }
+
+            // Uygulama Bazlı Gerçek Donanım Ağırlık Dağılımı
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                val pills = listOf(
+                    Triple(if (isTr) "Tek Çek." else "1T CPU", weights.cpuSinglePct, NeonCyan),
+                    Triple(if (isTr) "Çoklu" else "MT CPU", weights.cpuMultiPct, ElectricBlue),
+                    Triple(if (isTr) "GPU/VRAM" else "GPU/VRAM", weights.gpuComputePct, NeonEmerald),
+                    Triple(if (isTr) "RAM/SSD" else "RAM/IO", weights.memoryIoPct, NeonAmber),
+                )
+                pills.forEach { (title, pct, tint) ->
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = tint.copy(alpha = 0.10f),
+                        border = BorderStroke(0.5.dp, tint.copy(alpha = 0.35f)),
+                        modifier = Modifier.weight(1f),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(vertical = 5.dp, horizontal = 4.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text(
+                                text = title,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontSize = 9.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                            )
+                            Text(
+                                text = "%$pct",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Black,
+                                color = tint,
+                                fontSize = 11.sp,
+                            )
+                        }
                     }
                 }
             }
@@ -716,7 +760,7 @@ private fun DataCitationBanner(
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = if (isTr) "Şeffaf ve Onaylı Test Verisi" else "Verified Benchmark Protocol",
+                    text = if (isTr) "Parametrik İş İstasyonu Kalibrasyon Modeli" else "Parametric Workstation Calibration Model",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     color = NeonEmerald,
@@ -764,6 +808,7 @@ private fun HardwareTierCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
                 Row(
+                    modifier = Modifier.weight(1f),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
@@ -778,21 +823,27 @@ private fun HardwareTierCard(
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Black,
                         color = tierColor,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
 
+                Spacer(modifier = Modifier.width(8.dp))
+
                 Surface(
                     shape = RoundedCornerShape(6.dp),
-                    color = NeonEmerald.copy(alpha = 0.12f),
-                    border = BorderStroke(0.5.dp, NeonEmerald.copy(alpha = 0.4f)),
+                    color = tierColor.copy(alpha = 0.14f),
+                    border = BorderStroke(0.5.dp, tierColor.copy(alpha = 0.45f)),
                 ) {
                     Text(
-                        text = if (isTr) "${recommendation.benchmarkConfidenceScore}% GÜVEN SKORU" else "${recommendation.benchmarkConfidenceScore}% CONFIDENCE",
+                        text = if (isTr) recommendation.calculatedMetricBadgeTr else recommendation.calculatedMetricBadgeEn,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black,
-                        color = NeonEmerald,
-                        fontSize = 9.sp,
-                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                        color = tierColor,
+                        fontSize = 10.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp),
                     )
                 }
             }

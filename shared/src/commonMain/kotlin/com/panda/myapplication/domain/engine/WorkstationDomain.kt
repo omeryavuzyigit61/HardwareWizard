@@ -1,8 +1,8 @@
 package com.panda.myapplication.domain.engine
 
 /**
- * Profesyonel İş İstasyonu & Yaratıcı Donanım Laboratuvarı (Workstation Lab) Domain Modelleri.
- * pre_prompt_kmp.md standartlarına uygun: Saf Kotlin, Android/Java bağımsız.
+ * Profesyonel İş İstasyonu & Yaratıcı Donanım Laboratuvarı (Workstation Lab v2) Domain Modelleri.
+ * Saf Kotlin (KMP commonMain), Android/Java bağımsız.
  */
 
 enum class WorkstationCategory(
@@ -30,29 +30,29 @@ enum class WorkloadResolution(
         labelTr = "1080p FHD / Standart Proje",
         labelEn = "1080p FHD / Standard Project",
         badge = "FHD",
-        descriptionTr = "Standart 8-bit H.264 / Hafif 3D / 32 Kanal DAW / Temel CAD",
-        descriptionEn = "Standard 8-bit H.264 / Light 3D / 32-Track DAW / Basic CAD",
+        descriptionTr = "8-bit H.264 • Hafif 3D • 8B Q4 LLM • 32 Kanal DAW • Temel CAD",
+        descriptionEn = "8-bit H.264 • Light 3D • 8B Q4 LLM • 32-Track DAW • Basic CAD",
     ),
     QHD_2K(
         labelTr = "2K QHD (1440p) / Orta Ölçek",
         labelEn = "2K QHD (1440p) / Mid Project",
         badge = "2K",
-        descriptionTr = "Yüksek bit hızlı H.265 / ProRes Proxy / 64 Kanal DAW / Orta Montaj",
-        descriptionEn = "High bitrate H.265 / ProRes Proxy / 64-Track DAW / Mid Assemblies",
+        descriptionTr = "Yüksek Bitrate H.265 / ProRes • 14B Q4 LLM • 64 Kanal DAW • Orta Montaj",
+        descriptionEn = "High-Bitrate H.265 / ProRes • 14B Q4 LLM • 64-Track DAW • Mid Assemblies",
     ),
     UHD_4K(
         labelTr = "4K UHD (2160p) / Ağır Üretim",
         labelEn = "4K UHD (2160p) / Heavy Pro",
         badge = "4K",
-        descriptionTr = "10-bit 4:2:2 All-Intra / Nanite & Işın İzleme / 100+ Kanal Orkestra / FEA",
-        descriptionEn = "10-bit 4:2:2 All-Intra / Nanite & RT / 100+ Orchestral Tracks / FEA",
+        descriptionTr = "10-bit 4:2:2 All-Intra • 32B Q4 LLM • Nanite/RT • 128 Kanal Orkestra • FEA",
+        descriptionEn = "10-bit 4:2:2 All-Intra • 32B Q4 LLM • Nanite/RT • 128-Track Orchestra • FEA",
     ),
     RAW_8K(
         labelTr = "8K Cinema RAW / Extreme Stüdyo",
         labelEn = "8K Cinema RAW / Studio Extreme",
         badge = "8K",
-        descriptionTr = "8K RED/ARRIRAW / Hollywood VFX & Houdini Sim / 70B LLM & Flux.1",
-        descriptionEn = "8K RED/ARRIRAW / Hollywood VFX & Houdini / 70B LLM & Flux.1",
+        descriptionTr = "8K RED/ARRIRAW • 70B Q4 LLM (48GB VRAM) • Houdini FX • 250+ Senfonik Kanal",
+        descriptionEn = "8K RED/ARRIRAW • 70B Q4 LLM (48GB VRAM) • Houdini FX • 250+ Symphonic Tracks",
     ),
 }
 
@@ -71,8 +71,8 @@ enum class WorkloadPhase(
     FINAL_RENDER(
         labelTr = "Final Dışa Aktarma & Render (Export / Mixdown)",
         labelEn = "Final Export & Baking / Mixdown",
-        descriptionTr = "Çoklu çekirdekleri, çift NVENC ve QuickSync motorlarını zorlayan nihai çıktı süreci",
-        descriptionEn = "Full multithreaded, dual-NVENC and QuickSync accelerated final output pipeline",
+        descriptionTr = "Çoklu çekirdekleri, çift/üçlü NVENC ve QuickSync motorlarını zorlayan nihai çıktı süreci",
+        descriptionEn = "Full multithreaded, multi-NVENC and QuickSync accelerated final output pipeline",
     ),
     HEAVY_SIMULATION(
         labelTr = "Ağır Simülasyon, Işın İzleme & AI Çıkarım",
@@ -100,6 +100,26 @@ enum class HardwareTier(val titleTr: String, val titleEn: String, val badgeColor
     ),
 }
 
+enum class WorkstationMetricKind {
+    PUGET_SCORE,
+    BLENDER_OPTIX_SPM,
+    LLM_TOKENS_PER_SEC,
+    AI_IT_PER_SEC,
+    CAD_IPC_INDEX,
+    ENGINE_VIEWPORT_BUILD,
+    DAW_TRACK_HEADROOM,
+}
+
+/**
+ * Uygulama bazlı gerçek darboğaz ağırlık vektörü (toplamı normalize edilerek UI'da da gösterilir).
+ */
+data class WorkloadWeights(
+    val cpuSinglePct: Int,
+    val cpuMultiPct: Int,
+    val gpuComputePct: Int,
+    val memoryIoPct: Int,
+)
+
 data class HardwareRecommendation(
     val tier: HardwareTier,
     val targetCpuChipset: String,
@@ -114,7 +134,13 @@ data class HardwareRecommendation(
     val vramRequirementGb: Int,
     val estimatedExperienceNoteTr: String,
     val estimatedExperienceNoteEn: String,
-    val benchmarkConfidenceScore: Int = 98,
+    /** Gerçek formülle hesaplanmış çıktı metriği (örn. "PugetBench ~11.850", "~71 tok/s (32B Q4)", "~15.800 smp/dk"). */
+    val calculatedMetricBadgeTr: String,
+    val calculatedMetricBadgeEn: String,
+    /** Sayısal karşılaştırma ve regresyon testleri için ham hesaplanan skor/değer. */
+    val calculatedNumericMetric: Double,
+    /** Eski uyumluluk alanı: artık sahte 98-100 yerine hesaplanan kademe yeterlilik skoru (0..100). */
+    val benchmarkConfidenceScore: Int,
 )
 
 data class WorkstationApp(
@@ -134,6 +160,7 @@ data class WorkstationRequirementProfile(
     val app: WorkstationApp,
     val resolution: WorkloadResolution,
     val phase: WorkloadPhase,
+    val workloadWeights: WorkloadWeights,
     val minimumTier: HardwareRecommendation,
     val recommendedTier: HardwareRecommendation,
     val studioTier: HardwareRecommendation,
