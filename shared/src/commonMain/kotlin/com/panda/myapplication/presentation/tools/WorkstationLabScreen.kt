@@ -23,17 +23,51 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material.icons.rounded.Air
+import androidx.compose.material.icons.rounded.Animation
+import androidx.compose.material.icons.rounded.Apartment
+import androidx.compose.material.icons.rounded.Architecture
+import androidx.compose.material.icons.rounded.AutoAwesome
+import androidx.compose.material.icons.rounded.AutoAwesomeMotion
+import androidx.compose.material.icons.rounded.Brush
 import androidx.compose.material.icons.rounded.ChevronRight
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Computer
 import androidx.compose.material.icons.rounded.DeveloperBoard
+import androidx.compose.material.icons.rounded.Domain
+import androidx.compose.material.icons.rounded.Draw
+import androidx.compose.material.icons.rounded.FormatPaint
+import androidx.compose.material.icons.rounded.Functions
+import androidx.compose.material.icons.rounded.GraphicEq
+import androidx.compose.material.icons.rounded.Handyman
+import androidx.compose.material.icons.rounded.HighQuality
+import androidx.compose.material.icons.rounded.Hub
+import androidx.compose.material.icons.rounded.Layers
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material.icons.rounded.Memory
+import androidx.compose.material.icons.rounded.MovieCreation
+import androidx.compose.material.icons.rounded.MovieFilter
+import androidx.compose.material.icons.rounded.MusicNote
+import androidx.compose.material.icons.rounded.Palette
+import androidx.compose.material.icons.rounded.PhotoCamera
+import androidx.compose.material.icons.rounded.PhotoLibrary
+import androidx.compose.material.icons.rounded.Piano
 import androidx.compose.material.icons.rounded.PrecisionManufacturing
+import androidx.compose.material.icons.rounded.Psychology
+import androidx.compose.material.icons.rounded.ScatterPlot
 import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material.icons.rounded.SmartToy
 import androidx.compose.material.icons.rounded.Speed
+import androidx.compose.material.icons.rounded.SportsEsports
 import androidx.compose.material.icons.rounded.Storage
+import androidx.compose.material.icons.rounded.Autorenew
+import androidx.compose.material.icons.rounded.Tune
 import androidx.compose.material.icons.rounded.Verified
+import androidx.compose.material.icons.rounded.Videocam
+import androidx.compose.material.icons.rounded.ViewInAr
+import androidx.compose.material.icons.rounded.Villa
+import androidx.compose.material.icons.rounded.Waves
+import androidx.compose.material.icons.rounded.WbSunny
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -72,12 +106,72 @@ import com.panda.myapplication.domain.engine.WorkstationApp
 import com.panda.myapplication.domain.engine.WorkstationCategory
 import com.panda.myapplication.domain.engine.WorkstationRequirementEngine
 import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.presentation.components.ModernSoftIcon
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
+import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.LocalAppStrings
+
+private fun WorkstationCategory.iconVector(): ImageVector = when (this) {
+    WorkstationCategory.VIDEO_EDITING -> Icons.Rounded.MovieFilter
+    WorkstationCategory.VFX_3D -> Icons.Rounded.ViewInAr
+    WorkstationCategory.GAME_DEV_ARCHVIZ -> Icons.Rounded.SportsEsports
+    WorkstationCategory.CAD_ENGINEERING -> Icons.Rounded.Architecture
+    WorkstationCategory.LOCAL_AI -> Icons.Rounded.Psychology
+    WorkstationCategory.GRAPHIC_DESIGN -> Icons.Rounded.Palette
+    WorkstationCategory.AUDIO_PRODUCTION -> Icons.Rounded.GraphicEq
+}
+
+private fun WorkstationCategory.accentColor(): Color = when (this) {
+    WorkstationCategory.VIDEO_EDITING -> NeonRose
+    WorkstationCategory.VFX_3D -> NeonPurple
+    WorkstationCategory.GAME_DEV_ARCHVIZ -> NeonEmerald
+    WorkstationCategory.CAD_ENGINEERING -> ElectricBlue
+    WorkstationCategory.LOCAL_AI -> NeonCyan
+    WorkstationCategory.GRAPHIC_DESIGN -> NeonAmber
+    WorkstationCategory.AUDIO_PRODUCTION -> NeonCyan
+}
+
+private fun WorkstationApp.iconVector(): ImageVector = when (iconName) {
+    "video_camera" -> Icons.Rounded.Videocam
+    "palette" -> Icons.Rounded.Palette
+    "auto_awesome_motion" -> Icons.Rounded.AutoAwesomeMotion
+    "layers" -> Icons.Rounded.Layers
+    "scatter_plot" -> Icons.Rounded.ScatterPlot
+    "movie_creation" -> Icons.Rounded.MovieCreation
+    "view_in_ar" -> Icons.Rounded.ViewInAr
+    "3d_rotation" -> Icons.Rounded.Autorenew
+    "animation" -> Icons.Rounded.Animation
+    "tsunami" -> Icons.Rounded.Waves
+    "brush" -> Icons.Rounded.Brush
+    "format_paint" -> Icons.Rounded.FormatPaint
+    "sports_esports" -> Icons.Rounded.SportsEsports
+    "developer_board" -> Icons.Rounded.DeveloperBoard
+    "wb_sunny" -> Icons.Rounded.WbSunny
+    "villa" -> Icons.Rounded.Villa
+    "apartment" -> Icons.Rounded.Apartment
+    "smart_toy" -> Icons.Rounded.SmartToy
+    "precision_manufacturing" -> Icons.Rounded.PrecisionManufacturing
+    "architecture" -> Icons.Rounded.Architecture
+    "domain" -> Icons.Rounded.Domain
+    "handyman" -> Icons.Rounded.Handyman
+    "air" -> Icons.Rounded.Air
+    "functions" -> Icons.Rounded.Functions
+    "auto_awesome" -> Icons.Rounded.AutoAwesome
+    "psychology" -> Icons.Rounded.Psychology
+    "hub" -> Icons.Rounded.Hub
+    "high_quality" -> Icons.Rounded.HighQuality
+    "camera_roll" -> Icons.Rounded.PhotoLibrary
+    "draw" -> Icons.Rounded.Draw
+    "photo_camera" -> Icons.Rounded.PhotoCamera
+    "graphic_eq" -> Icons.Rounded.GraphicEq
+    "music_note" -> Icons.Rounded.MusicNote
+    "piano" -> Icons.Rounded.Piano
+    else -> category.iconVector()
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -310,11 +404,17 @@ fun WorkstationLabScreen(
                                             },
                                     ) {
                                         Row(
-                                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp),
                                             verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                            horizontalArrangement = Arrangement.spacedBy(8.dp),
                                         ) {
-                                            Text(text = app.category.emoji, fontSize = 14.sp)
+                                            ModernSoftIcon(
+                                                icon = app.iconVector(),
+                                                accentColor = app.category.accentColor(),
+                                                size = 24.dp,
+                                                iconSize = 14.dp,
+                                                shape = RoundedCornerShape(7.dp),
+                                            )
                                             Text(
                                                 text = app.name,
                                                 style = MaterialTheme.typography.bodySmall,
@@ -353,14 +453,26 @@ fun WorkstationLabScreen(
 
             // 5. Üçlü Donanım Kademesi (Minimum, Önerilen Pro, Ağır Stüdyo)
             item {
-                Text(
-                    text = if (isTr) "🎯 HESAPLANAN SİSTEM GEREKSİNİMLERİ" else "🎯 CALCULATED SYSTEM TIERS",
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.Black,
-                    color = NeonEmerald,
-                    letterSpacing = 1.sp,
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.padding(start = 4.dp),
-                )
+                ) {
+                    ModernSoftIcon(
+                        icon = Icons.Rounded.Tune,
+                        accentColor = NeonEmerald,
+                        size = 24.dp,
+                        iconSize = 14.dp,
+                        shape = RoundedCornerShape(7.dp),
+                    )
+                    Text(
+                        text = if (isTr) "HESAPLANAN SİSTEM GEREKSİNİMLERİ" else "CALCULATED SYSTEM TIERS",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Black,
+                        color = NeonEmerald,
+                        letterSpacing = 1.sp,
+                    )
+                }
             }
 
             item {
@@ -418,33 +530,42 @@ private fun CategorySelectorTabs(
     ) {
         WorkstationCategory.entries.forEach { category ->
             val isSelected = category == selectedCategory
+            val catAccent = category.accentColor()
             val title = if (isTr) category.titleTr else category.titleEn
             val appCount = remember(category) {
                 WorkstationRequirementEngine.supportedApps.count { it.category == category }
             }
 
             Surface(
-                shape = RoundedCornerShape(12.dp),
-                color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                shape = RoundedCornerShape(14.dp),
+                color = if (isSelected) catAccent.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
-                    color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.outlineVariant,
+                    color = if (isSelected) catAccent else MaterialTheme.colorScheme.outlineVariant,
                 ),
                 modifier = Modifier
-                    .clip(RoundedCornerShape(12.dp))
+                    .clip(RoundedCornerShape(14.dp))
                     .clickable { onCategorySelect(category) },
             ) {
                 Row(
-                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 9.dp),
+                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp),
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    Text(text = category.emoji, fontSize = 14.sp)
+                    ModernSoftIcon(
+                        icon = category.iconVector(),
+                        accentColor = if (isSelected) catAccent else MaterialTheme.colorScheme.onSurfaceVariant,
+                        size = 26.dp,
+                        iconSize = 15.dp,
+                        shape = RoundedCornerShape(8.dp),
+                        bgAlpha = if (isSelected) 0.22f else 0.10f,
+                        borderAlpha = if (isSelected) 0.45f else 0.20f,
+                    )
                     Text(
                         text = "$title ($appCount)",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = if (isSelected) FontWeight.Black else FontWeight.Medium,
-                        color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                        color = if (isSelected) catAccent else MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
@@ -470,33 +591,34 @@ private fun AppSelectorChips(
     ) {
         apps.forEach { app ->
             val isSelected = app.id == selectedAppId
+            val appAccent = app.category.accentColor()
             Surface(
                 shape = RoundedCornerShape(10.dp),
-                color = if (isSelected) ElectricBlue.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant,
+                color = if (isSelected) appAccent.copy(alpha = 0.20f) else MaterialTheme.colorScheme.surfaceVariant,
                 border = BorderStroke(
                     width = if (isSelected) 1.5.dp else 1.dp,
-                    color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.7f),
+                    color = if (isSelected) appAccent else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.7f),
                 ),
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp))
                     .clickable { onAppSelect(app.id) },
             ) {
                 Row(
-                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                    modifier = Modifier.padding(horizontal = 11.dp, vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .clip(CircleShape)
-                            .background(if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outline),
+                    Icon(
+                        imageVector = app.iconVector(),
+                        contentDescription = null,
+                        tint = if (isSelected) appAccent else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(15.dp),
                     )
                     Text(
                         text = app.shortName,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                        color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.onSurface,
+                        color = if (isSelected) appAccent else MaterialTheme.colorScheme.onSurface,
                     )
                 }
             }
@@ -532,9 +654,15 @@ private fun WorkloadConfigCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
-                    Text(text = app.category.emoji, fontSize = 20.sp)
+                    ModernSoftIcon(
+                        icon = app.iconVector(),
+                        accentColor = app.category.accentColor(),
+                        size = 38.dp,
+                        iconSize = 20.dp,
+                        shape = RoundedCornerShape(11.dp),
+                    )
                     Column {
                         Text(
                             text = app.name,
@@ -997,20 +1125,13 @@ private fun HardwareComponentRow(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Surface(
-                shape = CircleShape,
-                color = iconTint.copy(alpha = 0.16f),
-                modifier = Modifier.size(34.dp),
-            ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = icon,
-                        contentDescription = null,
-                        tint = iconTint,
-                        modifier = Modifier.size(18.dp),
-                    )
-                }
-            }
+            ModernSoftIcon(
+                icon = icon,
+                accentColor = iconTint,
+                size = 36.dp,
+                iconSize = 18.dp,
+                shape = RoundedCornerShape(10.dp),
+            )
 
             Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
@@ -1082,20 +1203,13 @@ private fun TechnicalTakeawayCard(
             verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Surface(
-                shape = CircleShape,
-                color = NeonCyan.copy(alpha = 0.16f),
-                modifier = Modifier.size(36.dp),
-            ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = Icons.Rounded.PrecisionManufacturing,
-                        contentDescription = null,
-                        tint = NeonCyan,
-                        modifier = Modifier.size(20.dp),
-                    )
-                }
-            }
+            ModernSoftIcon(
+                icon = Icons.Rounded.PrecisionManufacturing,
+                accentColor = NeonCyan,
+                size = 38.dp,
+                iconSize = 20.dp,
+                shape = RoundedCornerShape(11.dp),
+            )
 
             Column(
                 modifier = Modifier.weight(1f),
