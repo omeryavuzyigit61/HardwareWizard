@@ -82,6 +82,7 @@ data class ClearanceRadarResult(
     val radiatorSupportSummary: String? = null,
     val ramClearanceStatus: String? = null,
     val fanCapacitySummary: String? = null,
+    val isCoolerHeightEstimated: Boolean = false,
 )
 
 @Immutable
@@ -318,9 +319,11 @@ object BuildAnalysisEngine {
 
         var coolerMargin: Int? = null
         var estimatedAirHeight: Int? = null
+        var isHeightEstimated = false
         val maxCooler = case.maxCpuCoolerHeightMm
         if (cooler != null && cooler.type == CoolerType.AIR && maxCooler != null) {
-            estimatedAirHeight = cooler.heightMm ?: 158 // Average tower air cooler height
+            isHeightEstimated = cooler.heightMm == null
+            estimatedAirHeight = cooler.heightMm ?: 158
             coolerMargin = maxCooler - estimatedAirHeight
         }
 
@@ -331,6 +334,7 @@ object BuildAnalysisEngine {
             radMargin = maxRad - coolerRad
         }
 
+        val mobo = build.motherboard?.spec as? MotherboardSpec
         val issues = mutableListOf<String>()
         if (gpuMargin != null && gpuMargin < 0) {
             issues.add("GPU ${abs(gpuMargin)}mm uzun (Kasaya sığmıyor!)")
@@ -340,6 +344,9 @@ object BuildAnalysisEngine {
         }
         if (radMargin != null && radMargin < 0) {
             issues.add("Radyatör ${cooler?.radiatorSizeMm}mm > Kasa ${case.maxRadiatorSizeMm}mm")
+        }
+        if (mobo != null && !com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.isMotherboardSupportedByCase(mobo.formFactor, case.type)) {
+            issues.add("${mobo.formFactor.displayName} anakart, ${case.type ?: "seçili"} kasaya sığmıyor!")
         }
 
         val radSupportSummary = case.radiatorSupport?.takeIf { it.isNotBlank() }
@@ -370,6 +377,7 @@ object BuildAnalysisEngine {
             radiatorSupportSummary = radSupportSummary,
             ramClearanceStatus = ramClearance,
             fanCapacitySummary = fanSummary,
+            isCoolerHeightEstimated = isHeightEstimated,
         )
     }
 
@@ -379,7 +387,9 @@ object BuildAnalysisEngine {
         val mobo = build.motherboard?.spec as? MotherboardSpec
         val ram = build.ram?.spec as? RamSpec
         val psu = build.psu?.spec as? PsuSpec
+        val cooler = build.cooler?.spec as? CoolerSpec
 
+        val (_, compatReport) = com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase(sharedPsuCalculator)(build)
         val missingCore = build.cpu == null || build.gpu == null
         val resBottlenecks = ResolutionOption.entries.associateWith { res ->
             calculateBottleneckForResolution(build, res)
@@ -390,14 +400,27 @@ object BuildAnalysisEngine {
         val platform = calculatePlatformStatus(build)
 
         if (missingCore) {
+            val earlyPenalty = (compatReport.warnings.size * 15).coerceAtMost(35)
+            val basePartialScore = if (build.totalCount > 0) (45 - earlyPenalty).coerceAtLeast(15) else 0
             return BuildDoctorReport(
-                healthScore = if (build.totalCount > 0) 45 else 0,
-                statusText = if (build.totalCount > 0) "Eksik Temel Bileşenler (CPU/GPU bekleniyor)" else "Sistem Boş",
-                weakestLinkComponent = if (build.cpu == null) "İşlemci (CPU) Eklenmedi" else "Ekran Kartı (GPU) Eklenmedi",
+                healthScore = basePartialScore,
+                statusText = if (compatReport.warnings.isNotEmpty()) {
+                    "Uyumsuzluk Uyarısı Mevcut (Temel Bileşenler Eksik)"
+                } else if (build.totalCount > 0) {
+                    "Eksik Temel Bileşenler (CPU/GPU bekleniyor)"
+                } else {
+                    "Sistem Boş"
+                },
+                weakestLinkComponent = compatReport.warnings.firstOrNull()
+                    ?: if (build.cpu == null) "İşlemci (CPU) Eklenmedi" else "Ekran Kartı (GPU) Eklenmedi",
                 weakestLinkCategory = if (build.cpu == null) com.panda.myapplication.domain.model.HardwareCategory.CPU else com.panda.myapplication.domain.model.HardwareCategory.GPU,
                 resolutionBottlenecks = resBottlenecks,
                 upgradeRecommendations = emptyList(),
-                doctorDiagnosis = "Sistem sağlığı ve darboğaz analizi için öncelikle CPU ve GPU bileşenlerini seçin.",
+                doctorDiagnosis = if (compatReport.warnings.isNotEmpty()) {
+                    compatReport.warnings.first()
+                } else {
+                    "Sistem sağlığı ve darboğaz analizi için öncelikle CPU ve GPU bileşenlerini seçin."
+                },
             )
         }
 
@@ -406,44 +429,111 @@ object BuildAnalysisEngine {
         var weakestLink = "Yok (Bileşenler dengeli)"
         var weakestCategory: com.panda.myapplication.domain.model.HardwareCategory? = null
 
-        // 1. Compatibility check
-        if (!platform.isCompatible) {
+        val normSocket = com.panda.myapplication.domain.usecase.CheckBuildCompatibilityUseCase.normalizeSocketName(cpu?.socket)
+
+        // 1. Socket & RAM Platform Compatibility check
+        if (!platform.isCompatible || compatReport.ramMismatch != null) {
             healthScore -= 40
-            weakestLink = "Platform / Soket Uyuşmazlığı"
-            weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.MOTHERBOARD
+            weakestLink = compatReport.socketMismatch ?: compatReport.ramMismatch ?: "Platform / Soket Uyuşmazlığı"
+            if (compatReport.socketMismatch != null) {
+                weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.MOTHERBOARD
+                val suggestedBoard = when {
+                    normSocket.contains("AM5") -> "B650 / B850 / X870 (AM5) Anakart"
+                    normSocket.contains("AM4") -> "B550 / X570 (AM4) Anakart"
+                    normSocket.contains("1851") -> "B860 / Z890 (LGA1851) Anakart"
+                    normSocket.contains("1700") -> "B760 / Z790 (LGA1700) Anakart"
+                    else -> "$normSocket Uyumlu Anakart"
+                }
+                recommendations.add(
+                    UpgradeRecommendation(
+                        priority = 1,
+                        title = "Anakart / İşlemci Soketini Eşitleyin",
+                        targetCategory = com.panda.myapplication.domain.model.HardwareCategory.MOTHERBOARD,
+                        expectedGain = "Sistem Çalışabilirlik",
+                        roiScore = 10.0,
+                        explanation = "Seçilen işlemci (${cpu?.socket}) ile anakart (${mobo?.socket}) soketleri birbiriyle fiziksel olarak uyumlu değil.",
+                        suggestedModels = listOf(suggestedBoard),
+                    )
+                )
+            } else if (compatReport.ramMismatch != null) {
+                weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.RAM
+                val targetDdr = mobo?.memoryGeneration?.name ?: "DDR5"
+                val suggestedRamByBoard = if (targetDdr == "DDR4") {
+                    "2x16GB (32GB) DDR4-3600 CL16 (${mobo?.ramSlots ?: 2} slota uygun)"
+                } else {
+                    "2x16GB (32GB) DDR5-6000 CL30 (${mobo?.ramSlots ?: 2} slota uygun)"
+                }
+                recommendations.add(
+                    UpgradeRecommendation(
+                        priority = 1,
+                        title = "Uyumlu Bellek (RAM) Kiti Seçin",
+                        targetCategory = com.panda.myapplication.domain.model.HardwareCategory.RAM,
+                        expectedGain = " Anakart Bellek Uyumluluğu",
+                        roiScore = 10.0,
+                        explanation = compatReport.ramMismatch.replace("\n", " "),
+                        suggestedModels = listOf(suggestedRamByBoard),
+                    )
+                )
+            }
+        }
+
+        // 1b. Cooler Socket Mounting check
+        if (compatReport.coolerMismatch != null) {
+            healthScore -= 15
+            if (weakestCategory == null) {
+                weakestLink = "Soğutucu Montaj Soketi Uyumsuz ($normSocket)"
+                weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.COOLER
+            }
             recommendations.add(
                 UpgradeRecommendation(
-                    priority = 1,
-                    title = "Anakart / İşlemci Soketini Eşitleyin",
-                    targetCategory = com.panda.myapplication.domain.model.HardwareCategory.MOTHERBOARD,
-                    expectedGain = "Sistem Çalışabilirlik",
-                    roiScore = 10.0,
-                    explanation = "Seçilen işlemci (${cpu?.socket}) ile anakart (${mobo?.socket}) soketleri birbiriyle fiziksel olarak uyumlu değil.",
-                    suggestedModels = listOf(if (cpu?.socket?.contains("AM5", ignoreCase = true) == true) "B650 / X670 Anakart" else "B760 / Z790 Anakart"),
+                    priority = 2,
+                    title = "$normSocket Uyumlu İşlemci Soğutucu Seçin",
+                    targetCategory = com.panda.myapplication.domain.model.HardwareCategory.COOLER,
+                    expectedGain = "Doğru Termal Temas & Montaj Uyumu",
+                    roiScore = 9.4,
+                    explanation = compatReport.coolerMismatch,
+                    suggestedModels = listOf(
+                        if ((cpu?.tdp?.watts ?: 65) >= 125) "360mm AIO Sıvı Soğutucu ($normSocket)"
+                        else "Çift Kule Hava Soğutucu ($normSocket)"
+                    ),
                 )
             )
         }
 
-        // 2. Power check
+        // 2. Power & ATX 3.0 / 12V-2x6 check
         if (!cockpit.isSufficient) {
             healthScore -= 25
             val needed = cockpit.recommendedPsuWattage
             weakestLink = "Yetersiz Güç Kaynağı (${psu?.wattage?.watts ?: 0}W < ${needed}W)"
             weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.PSU
+            val targetWatt = maxOf(needed, 750)
             recommendations.add(
                 UpgradeRecommendation(
                     priority = 2,
                     title = "Güç Kaynağını (PSU) Yükseltin",
                     targetCategory = com.panda.myapplication.domain.model.HardwareCategory.PSU,
-                    expectedGain = "Sistem Kararlılığı & Aşırı Yük Koruması",
+                    expectedGain = "Sistem Kararlılığı & Ani Yük Koruması",
                     roiScore = 9.2,
-                    explanation = "Sistem yük altında ani tepe güç tüketimine ulaştığında kapanma veya kararsızlık yaşanabilir.",
-                    suggestedModels = listOf("${needed}W 80+ Gold veya 850W ATX 3.0 PSU"),
+                    explanation = "Sistem yük altında ani tepe güç tüketimine (${cockpit.peakTdpWithTolerance}W) ulaştığında kapanma veya kararsızlık yaşanabilir.",
+                    suggestedModels = listOf("${targetWatt}W+ 80+ Gold ATX 3.1 / PCIe 5.1 PSU"),
+                )
+            )
+        } else if (compatReport.psuWarning != null && cooler != null) {
+            healthScore -= 8
+            recommendations.add(
+                UpgradeRecommendation(
+                    priority = 3,
+                    title = "ATX 3.0 / 12V-2x6 Destekli PSU Tercih Edin",
+                    targetCategory = com.panda.myapplication.domain.model.HardwareCategory.PSU,
+                    expectedGain = "Doğrudan Tek Kablo 12V-2x6 Güvenliği",
+                    roiScore = 8.4,
+                    explanation = compatReport.psuWarning,
+                    suggestedModels = listOf("${maxOf(cockpit.recommendedPsuWattage, 850)}W ATX 3.1 80+ Gold PSU"),
                 )
             )
         }
 
-        // 3. Physical clearance
+        // 3. Physical clearance & Motherboard/Case form factor
         if (clearance.hasClearanceIssue) {
             healthScore -= 20
             weakestLink = "Fiziksel Boyut / Kasa Sığmama Sorunu"
@@ -456,7 +546,7 @@ object BuildAnalysisEngine {
                     expectedGain = "Fiziksel Montaj Uyumluluğu",
                     roiScore = 8.8,
                     explanation = clearance.issueMessage ?: "Kasa içi boyut kısıtlamaları aşıldı.",
-                    suggestedModels = listOf("400mm+ GPU destekli Mid-Tower / Full-Tower Kasa"),
+                    suggestedModels = listOf("ATX / E-ATX Uyumlu, 400mm+ GPU & 360mm Radyatör Destekli Kasa"),
                 )
             )
         }
@@ -467,15 +557,12 @@ object BuildAnalysisEngine {
             weakestLink = "${build.cpu.displayName} (%${defaultBottleneck.percentage} Darboğaz)"
             weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.CPU
 
-            val isAm4 = cpu?.socket?.contains("AM4", ignoreCase = true) == true
-            val isAm5 = cpu?.socket?.contains("AM5", ignoreCase = true) == true
-            val isIntel = cpu?.socket?.contains("1700", ignoreCase = true) == true
-
             val suggestedCpu = when {
-                isAm4 -> listOf("AMD Ryzen 7 5700X3D", "AMD Ryzen 7 5800X3D")
-                isAm5 -> listOf("AMD Ryzen 7 7800X3D", "AMD Ryzen 7 9800X3D")
-                isIntel -> listOf("Intel Core i7-14700KF", "Intel Core i5-14600KF")
-                else -> listOf("Daha yüksek çekirdek / saat hızlı modern işlemci")
+                normSocket.contains("AM4") -> listOf("AMD Ryzen 7 5700X3D", "AMD Ryzen 7 5800X3D")
+                normSocket.contains("AM5") -> listOf("AMD Ryzen 7 9800X3D", "AMD Ryzen 7 7800X3D")
+                normSocket.contains("1851") -> listOf("Intel Core Ultra 7 265K", "Intel Core Ultra 9 285K")
+                normSocket.contains("1700") -> listOf("Intel Core i7-14700K", "Intel Core i5-14600K")
+                else -> listOf("Daha yüksek IPC / L3 önbellekli modern işlemci")
             }
 
             recommendations.add(
@@ -490,23 +577,32 @@ object BuildAnalysisEngine {
                 )
             )
         } else if (defaultBottleneck.type == BottleneckType.GPU_BOTTLENECK && defaultBottleneck.percentage >= 20) {
-            healthScore -= 10
-            weakestLink = "${build.gpu.displayName} (%${defaultBottleneck.percentage} GPU Limitli)"
-            weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.GPU
-            recommendations.add(
-                UpgradeRecommendation(
-                    priority = 5,
-                    title = "Ekran Kartını (GPU) Üst Seviyeye Taşıyın",
-                    targetCategory = com.panda.myapplication.domain.model.HardwareCategory.GPU,
-                    expectedGain = "+%25-45 Oyun Grafik & FPS Artışı",
-                    roiScore = 8.0,
-                    explanation = "İşlemciniz çok güçlü, daha yüksek grafik ayarları ve 2K/4K için GPU yükseltmesi yüksek getiri sağlar.",
-                    suggestedModels = listOf("NVIDIA GeForce RTX 4070 SUPER", "AMD Radeon RX 7800 XT", "RTX 4070 Ti SUPER"),
+            val gpuRelIndex = UnifiedFpsSimulator.resolveGpuProfile(build.gpu).relativeIndex
+            // Only suggest an upgrade if the GPU isn't already a top-tier flagship (>= 85 index = RTX 5080 / 4090 / 5090)
+            if (gpuRelIndex < 85.0) {
+                healthScore -= 10
+                weakestLink = "${build.gpu.displayName} (%${defaultBottleneck.percentage} GPU Limitli)"
+                weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.GPU
+                val suggestedGpus = when {
+                    gpuRelIndex < 45.0 -> listOf("NVIDIA GeForce RTX 5070", "AMD Radeon RX 9070", "NVIDIA GeForce RTX 4070 SUPER")
+                    gpuRelIndex < 68.0 -> listOf("NVIDIA GeForce RTX 5070 Ti", "AMD Radeon RX 9070 XT", "NVIDIA GeForce RTX 4080 SUPER")
+                    else -> listOf("NVIDIA GeForce RTX 5080", "NVIDIA GeForce RTX 4090", "NVIDIA GeForce RTX 5090")
+                }
+                recommendations.add(
+                    UpgradeRecommendation(
+                        priority = 5,
+                        title = "Ekran Kartını (GPU) Üst Seviyeye Taşıyın",
+                        targetCategory = com.panda.myapplication.domain.model.HardwareCategory.GPU,
+                        expectedGain = "+%25-45 Oyun Grafik & FPS Artışı",
+                        roiScore = 8.0,
+                        explanation = "İşlemciniz çok güçlü; daha yüksek grafik ayarları ve 2K/4K için üst segment GPU yüksek getiri sağlar.",
+                        suggestedModels = suggestedGpus,
+                    )
                 )
-            )
+            }
         }
 
-        // 5. RAM capacity check
+        // 5. RAM capacity check (strictly DDR-generation aware)
         val ramCapacityGb = (ram?.capacity?.megabytes ?: 0) / 1024
         if (ram != null && ramCapacityGb < 16) {
             healthScore -= 15
@@ -514,15 +610,21 @@ object BuildAnalysisEngine {
                 weakestLink = "Düşük RAM Kapasitesi (${ramCapacityGb} GB)"
                 weakestCategory = com.panda.myapplication.domain.model.HardwareCategory.RAM
             }
+            val activeDdr = mobo?.memoryGeneration ?: ram.generation
+            val ramRec = if (activeDdr == com.panda.myapplication.domain.model.DdrGeneration.DDR4) {
+                listOf("2x16GB (32GB) DDR4-3600MHz CL16", "2x8GB (16GB) DDR4-3600MHz CL16")
+            } else {
+                listOf("2x16GB (32GB) DDR5-6000MHz CL30", "2x24GB (48GB) DDR5-6000MHz CL30")
+            }
             recommendations.add(
                 UpgradeRecommendation(
                     priority = 6,
-                    title = "RAM Kapasitesini En Az 16GB veya 32GB'a Çıkarın",
+                    title = "RAM Kapasitesini En Az 32GB'a Çıkarın",
                     targetCategory = com.panda.myapplication.domain.model.HardwareCategory.RAM,
                     expectedGain = "Oyun İçi Takılmaların (Stutter) Önlenmesi",
                     roiScore = 9.5,
-                    explanation = "Modern oyunlar ve Windows arka plan servisleri için 16GB asgari, 32GB ise ideal kapasitedir.",
-                    suggestedModels = listOf("2x16GB 32GB DDR5 6000MHz CL30", "2x8GB 16GB DDR4 3600MHz CL16"),
+                    explanation = "Modern AAA oyunlar ve arka plan görevleri için 16GB alt sınır, 32GB (${activeDdr.name}) ise ideal kapasitedir.",
+                    suggestedModels = ramRec,
                 )
             )
         }

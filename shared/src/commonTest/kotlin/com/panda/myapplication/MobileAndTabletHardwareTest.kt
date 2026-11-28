@@ -2,8 +2,8 @@ package com.panda.myapplication
 
 import com.panda.myapplication.data.mapper.HardwareMapper
 import com.panda.myapplication.data.model.dto.SmartphoneCatalogItemDto
-import com.panda.myapplication.domain.engine.HardwareEnrichmentEngine
 import com.panda.myapplication.domain.engine.VsArenaEngine
+import com.panda.myapplication.presentation.hardware_detail.hasMobileHardwareRayTracing
 import com.panda.myapplication.domain.model.ActiveBuild
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareId
@@ -118,20 +118,24 @@ class MobileAndTabletHardwareTest {
     }
 
     @Test
-    fun testHardwareEnrichmentEngineForMobile() {
+    fun testMobileRayTracingAndVsArenaMobileCategories() {
         val iphone = createSamplePhone()
-        val badges = HardwareEnrichmentEngine.getEngineeringBadges(iphone)
-        assertTrue(badges.isNotEmpty(), "Phone must generate enrichment badges")
-        assertTrue(badges.any { it.label.contains("Yonga Seti") && it.value.contains("Apple A18 Pro") })
-        assertTrue(badges.any { it.label.contains("AnTuTu") && it.value.contains("1820000") })
-        assertTrue(badges.any { it.label.contains("Ekran") && it.value.contains("120Hz") })
-        assertTrue(badges.any { it.label.contains("Batarya") && it.value.contains("4685") })
+        val phoneSpec = iphone.spec as PhoneSpec
+        assertTrue(hasMobileHardwareRayTracing(phoneSpec.chipset))
+        assertEquals(1820000, phoneSpec.antutuScore)
+        assertEquals(120, phoneSpec.refreshRateHz)
+        assertEquals(4685, phoneSpec.batteryMah)
 
         val ipad = createSampleTablet()
-        val tabletBadges = HardwareEnrichmentEngine.getEngineeringBadges(ipad)
-        assertTrue(tabletBadges.any { it.label.contains("Yonga") && it.value.contains("Apple M4") })
-        assertTrue(tabletBadges.any { it.label.contains("Stylus") && it.value.contains("Apple Pencil Pro") })
-        assertTrue(tabletBadges.any { it.label.contains("Ses") && it.value.contains("4 Hoparlör") })
+        val tabletSpec = ipad.spec as TabletSpec
+        assertTrue(hasMobileHardwareRayTracing(tabletSpec.chipset))
+        assertEquals("Apple Pencil Pro", tabletSpec.stylusSupport)
+        assertEquals(4, tabletSpec.speakerCount)
+
+        val mobileCats = com.panda.myapplication.presentation.vs_arena.VsArenaUiState.MOBILE_CATEGORIES
+        assertTrue(mobileCats.contains(HardwareCategory.SMARTPHONE))
+        assertTrue(mobileCats.contains(HardwareCategory.TABLET))
+        assertTrue(mobileCats.contains(HardwareCategory.SMARTWATCH))
     }
 
     @Test
@@ -216,9 +220,16 @@ class MobileAndTabletHardwareTest {
     }
 
     @Test
-    fun testVsArenaUiStateComponentCategoriesIncludesMobile() {
-        val categories = com.panda.myapplication.presentation.vs_arena.VsArenaUiState.COMPONENT_CATEGORIES
-        assertTrue(categories.contains(HardwareCategory.SMARTPHONE), "VS Arena must include SMARTPHONE in selectable categories")
-        assertTrue(categories.contains(HardwareCategory.TABLET), "VS Arena must include TABLET in selectable categories")
+    fun testVsArenaUiStateMobileCategoriesIncludesMobileAndTablet() {
+        val mobileCategories = com.panda.myapplication.presentation.vs_arena.VsArenaUiState.MOBILE_CATEGORIES
+        assertTrue(mobileCategories.contains(HardwareCategory.SMARTPHONE), "VS Arena MOBILE_CATEGORIES must include SMARTPHONE")
+        assertTrue(mobileCategories.contains(HardwareCategory.TABLET), "VS Arena MOBILE_CATEGORIES must include TABLET")
+        assertTrue(mobileCategories.contains(HardwareCategory.SMARTWATCH), "VS Arena MOBILE_CATEGORIES must include SMARTWATCH")
+
+        val tabletState = com.panda.myapplication.presentation.vs_arena.VsArenaUiState(
+            mode = com.panda.myapplication.domain.repository.VsArenaMode.MOBILE_VS_MOBILE,
+            componentCategory = HardwareCategory.TABLET,
+        )
+        assertEquals(HardwareCategory.TABLET, tabletState.activeCategory)
     }
 }

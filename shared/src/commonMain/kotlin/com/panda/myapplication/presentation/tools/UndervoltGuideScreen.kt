@@ -25,6 +25,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForwardIos
 import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.DeveloperBoard
+import androidx.compose.material.icons.rounded.Memory
+import androidx.compose.material.icons.rounded.ReportProblem
+import androidx.compose.material.icons.rounded.Timer
+import androidx.compose.material.icons.rounded.Tune
+import androidx.compose.material.icons.rounded.VideogameAsset
+import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
@@ -41,10 +48,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.ElectricBlue
@@ -55,11 +62,11 @@ import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.AppStrings
 import com.panda.myapplication.presentation.util.LocalAppStrings
 
-private enum class UndervoltTab(val emoji: String) {
-    CPU("🔥"),
-    GPU("🎮"),
-    RAM("⚡"),
-    CLEAR_CMOS("🚨");
+private enum class UndervoltTab(val icon: ImageVector) {
+    CPU(Icons.Rounded.Memory),
+    GPU(Icons.Rounded.VideogameAsset),
+    RAM(Icons.Rounded.Bolt),
+    CLEAR_CMOS(Icons.Rounded.ReportProblem);
 
     fun getTitle(strings: AppStrings): String = when (this) {
         CPU -> strings.uvTabCpu
@@ -103,7 +110,6 @@ fun UndervoltGuideScreen(
         ) {
             Spacer(modifier = Modifier.height(Spacing.small))
 
-            // Action Banner to Community Tuning Vault
             Surface(
                 shape = RoundedCornerShape(14.dp),
                 color = NeonCyan.copy(alpha = 0.12f),
@@ -139,7 +145,7 @@ fun UndervoltGuideScreen(
                         }
                         Column(modifier = Modifier.weight(1f, fill = false)) {
                             Text(
-                                text = if (isTurkish) "⚡ Topluluk Silikon Kasası (OC/UV)" else "⚡ Community Silicon Vault (OC/UV)",
+                                text = if (isTurkish) "Topluluk Silikon Kasası (OC/UV)" else "Community Silicon Vault (OC/UV)",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = NeonCyan,
@@ -170,7 +176,6 @@ fun UndervoltGuideScreen(
 
             Spacer(modifier = Modifier.height(Spacing.small))
 
-            // Tab Selector Chips (Horizontally Scrollable)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -180,12 +185,26 @@ fun UndervoltGuideScreen(
             ) {
                 UndervoltTab.entries.forEach { tab ->
                     val isSelected = selectedTab == tab
+                    val tabTint = when (tab) {
+                        UndervoltTab.CPU -> NeonAmber
+                        UndervoltTab.GPU -> ElectricBlue
+                        UndervoltTab.RAM -> NeonEmerald
+                        UndervoltTab.CLEAR_CMOS -> NeonRose
+                    }
                     FilterChip(
                         selected = isSelected,
                         onClick = { selectedTab = tab },
+                        leadingIcon = {
+                            Icon(
+                                imageVector = tab.icon,
+                                contentDescription = null,
+                                tint = if (isSelected) tabTint else MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(15.dp),
+                            )
+                        },
                         label = {
                             Text(
-                                text = "${tab.emoji} ${tab.getTitle(strings)}",
+                                text = tab.getTitle(strings),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                 maxLines = 1,
@@ -193,18 +212,8 @@ fun UndervoltGuideScreen(
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = when (tab) {
-                                UndervoltTab.CPU -> NeonAmber.copy(alpha = 0.2f)
-                                UndervoltTab.GPU -> ElectricBlue.copy(alpha = 0.2f)
-                                UndervoltTab.RAM -> NeonEmerald.copy(alpha = 0.2f)
-                                UndervoltTab.CLEAR_CMOS -> NeonRose.copy(alpha = 0.2f)
-                            },
-                            selectedLabelColor = when (tab) {
-                                UndervoltTab.CPU -> NeonAmber
-                                UndervoltTab.GPU -> ElectricBlue
-                                UndervoltTab.RAM -> NeonEmerald
-                                UndervoltTab.CLEAR_CMOS -> NeonRose
-                            },
+                            selectedContainerColor = tabTint.copy(alpha = 0.2f),
+                            selectedLabelColor = tabTint,
                         ),
                     )
                 }
@@ -232,7 +241,7 @@ fun UndervoltGuideScreen(
                         item(key = "cpu_intel_13_14") {
                             val data = UndervoltGuideContent.getIntelSection(isTurkish)
                             GuideSectionCard(
-                                icon = "🔵",
+                                icon = Icons.Rounded.Memory,
                                 data = data,
                                 accentColor = NeonAmber,
                                 secondaryColor = ElectricBlue,
@@ -242,7 +251,7 @@ fun UndervoltGuideScreen(
                         item(key = "cpu_amd_ryzen") {
                             val data = UndervoltGuideContent.getAmdRyzenSection(isTurkish)
                             GuideSectionCard(
-                                icon = "🔴",
+                                icon = Icons.Rounded.Tune,
                                 data = data,
                                 accentColor = NeonEmerald,
                                 secondaryColor = NeonAmber,
@@ -266,7 +275,7 @@ fun UndervoltGuideScreen(
                         item(key = "gpu_nvidia") {
                             val data = UndervoltGuideContent.getGpuNvidiaSection(isTurkish)
                             GuideSectionCard(
-                                icon = "🟢",
+                                icon = Icons.Rounded.VideogameAsset,
                                 data = data,
                                 accentColor = ElectricBlue,
                                 secondaryColor = NeonEmerald,
@@ -276,7 +285,7 @@ fun UndervoltGuideScreen(
                         item(key = "gpu_amd") {
                             val data = UndervoltGuideContent.getGpuAmdSection(isTurkish)
                             GuideSectionCard(
-                                icon = "🔴",
+                                icon = Icons.Rounded.DeveloperBoard,
                                 data = data,
                                 accentColor = NeonRose,
                                 secondaryColor = NeonAmber,
@@ -300,7 +309,7 @@ fun UndervoltGuideScreen(
                         item(key = "ram_ddr5_vs_ddr4") {
                             val data = UndervoltGuideContent.getRamVoltagesSection(isTurkish)
                             GuideSectionCard(
-                                icon = "⚡",
+                                icon = Icons.Rounded.Bolt,
                                 data = data,
                                 accentColor = NeonEmerald,
                                 secondaryColor = ElectricBlue,
@@ -310,7 +319,7 @@ fun UndervoltGuideScreen(
                         item(key = "ram_subtimings") {
                             val data = UndervoltGuideContent.getRamSubtimingsSection(isTurkish)
                             GuideSectionCard(
-                                icon = "⏱️",
+                                icon = Icons.Rounded.Timer,
                                 data = data,
                                 accentColor = NeonRose,
                                 secondaryColor = NeonAmber,
@@ -326,7 +335,7 @@ fun UndervoltGuideScreen(
                         item(key = "clear_cmos_guide") {
                             val data = UndervoltGuideContent.getClearCmosSection(isTurkish)
                             GuideSectionCard(
-                                icon = "🚨",
+                                icon = Icons.Rounded.ReportProblem,
                                 data = data,
                                 accentColor = NeonRose,
                                 secondaryColor = NeonAmber,
@@ -342,7 +351,7 @@ fun UndervoltGuideScreen(
 
 @Composable
 private fun GuideSectionCard(
-    icon: String,
+    icon: ImageVector,
     data: GuideSectionData,
     accentColor: Color,
     secondaryColor: Color,
@@ -356,7 +365,20 @@ private fun GuideSectionCard(
     ) {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(icon, style = MaterialTheme.typography.titleMedium)
+                Box(
+                    modifier = Modifier
+                        .size(28.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(titleColor.copy(alpha = 0.16f)),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = titleColor,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
                 Spacer(modifier = Modifier.width(Spacing.small))
                 Text(
                     text = data.title,
@@ -444,7 +466,8 @@ private fun GuideShortcutCard(data: GuideShortcutData) {
             )
             Surface(
                 shape = RoundedCornerShape(8.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant,
+                color = NeonEmerald.copy(alpha = 0.14f),
+                border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.45f)),
                 modifier = Modifier.padding(vertical = 4.dp),
             ) {
                 Text(
@@ -524,7 +547,14 @@ private fun GuideWarningBanner(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.Top,
         ) {
-            Text("⚠️", fontSize = 20.sp, modifier = Modifier.padding(top = 2.dp, end = 8.dp))
+            Icon(
+                imageVector = Icons.Rounded.Warning,
+                contentDescription = null,
+                tint = accentColor,
+                modifier = Modifier
+                    .padding(top = 2.dp, end = 8.dp)
+                    .size(20.dp),
+            )
             Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
                     text = title,

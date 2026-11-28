@@ -1,5 +1,9 @@
 package com.panda.myapplication.presentation.hardware_detail
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.SportsEsports
+import com.panda.myapplication.presentation.components.ModernSoftIcon
+
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
@@ -199,7 +203,7 @@ fun HardwareDetailRoute(
         uiState = uiState,
         onNavigateBack = onNavigateBack,
         onAddToBuildClick = viewModel::onAddToBuild,
-        onAddToVsArenaClick = viewModel::onAddToVsArena,
+        onAddToVsArenaClick = { selectedItem -> viewModel.onAddToVsArena(selectedItem) },
         onSaveCustomPrice = viewModel::onSaveCustomPrice,
         onClearCustomPrice = viewModel::onClearCustomPrice,
         onSubmitCommunityDeal = viewModel::onSubmitCommunityDeal,
@@ -223,7 +227,7 @@ fun HardwareDetailContent(
     onNavigateBack: () -> Unit,
     onAddToBuildClick: () -> Unit,
     modifier: Modifier = Modifier,
-    onAddToVsArenaClick: () -> Unit = {},
+    onAddToVsArenaClick: (HardwareItem?) -> Unit = {},
     onSaveCustomPrice: (Double, String?) -> Unit = { _, _ -> },
     onClearCustomPrice: () -> Unit = {},
     onSubmitCommunityDeal: (Double, CommunityDealType, String?, String?, String) -> Unit = { _, _, _, _, _ -> },
@@ -238,7 +242,6 @@ fun HardwareDetailContent(
     reportRepository: CommunityReportRepository = koinInject(),
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
 ) {
-    var showPriceDropAlertDialog by remember { mutableStateOf(false) }
     var showAddProTipDialog by remember { mutableStateOf(false) }
     var showTuningShareDialog by remember { mutableStateOf(false) }
     var reportingTargetReview by remember { mutableStateOf<com.panda.myapplication.domain.model.HardwareProTip?>(null) }
@@ -268,20 +271,19 @@ fun HardwareDetailContent(
             DetailTopBar(
                 title = activeItem?.displayName ?: activeItem?.brand ?: (if (isTr) "Donanım Detayı" else "Hardware Details"),
                 onNavigateBack = onNavigateBack,
-                onAddToVsArenaClick = if (activeItem != null) onAddToVsArenaClick else null,
+                onAddToVsArenaClick = if (activeItem != null) ({ onAddToVsArenaClick(activeItem) }) else null,
             )
         },
         bottomBar = {
             if (activeItem != null) {
                 DetailBottomBar(
                     isAddedToBuild = uiState.isAddedToBuild,
-                    isLaptop = activeItem.spec is LaptopSpec,
-                    isMobile = activeItem.category.isMobile,
+                    isWizardCompatible = activeItem.category.isWizardCompatible,
                     isCustomPrice = activeItem.isCustomPrice,
                     customPriceNote = activeItem.customPriceNote,
                     priceText = activeItem.currentPriceTry.formatPriceWithCurrency(currency, strings.noPriceFallback),
                     onAddToBuildClick = onAddToBuildClick,
-                    onAddToVsArenaClick = onAddToVsArenaClick,
+                    onAddToVsArenaClick = { onAddToVsArenaClick(activeItem) },
                     onPriceOverrideClick = { showPriceDialog = true },
                 )
             }
@@ -573,19 +575,6 @@ fun HardwareDetailContent(
         }
     }
 
-
-    if (FeatureFlags.IS_PRICING_ENABLED && showPriceDropAlertDialog) {
-        PriceDropAlertDialog(
-            hardwareName = activeItem?.displayName ?: "",
-            currentPriceTry = activeItem?.currentPriceTry,
-            onDismiss = { showPriceDropAlertDialog = false },
-            onSaveAlert = { targetPrice ->
-                onCreatePriceDropAlert(targetPrice)
-                showPriceDropAlertDialog = false
-            },
-        )
-    }
-
     if (showAddProTipDialog) {
         AddProductReviewDialog(
             hardwareName = activeItem?.displayName ?: "",
@@ -800,7 +789,7 @@ private fun HeroHeaderCard(
                         )
                         if (appSettings.dataSaver && item.effectiveImages.size > 1) {
                             DetailBadge(
-                                text = if (isTr) "📶 Veri Tasarrufu (1/${item.effectiveImages.size})" else "📶 Data Saver (1/${item.effectiveImages.size})",
+                                text = if (isTr) "Veri Tasarrufu (1/${item.effectiveImages.size})" else "Data Saver (1/${item.effectiveImages.size})",
                                 containerColor = NeonCyan.copy(alpha = 0.16f),
                                 contentColor = NeonCyan,
                             )
@@ -1793,10 +1782,14 @@ private fun MultiGameFpsSimulationCard(
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
     val gameMatrix = remember(item.id) { BenchmarkEngine.resolveGameFpsForItem(item) } ?: return
 
-    val labTests = remember(item.id) { VerifiedLabBenchmarks.getLabTestsForItem(item) }
-    val hasLabTest = remember(labTests, item.id) { VerifiedLabBenchmarks.hasVerifiedLabTest(item) }
+    val allRemoteLabTests by VerifiedLabBenchmarks.testsFlow.collectAsStateWithLifecycle()
+    val labTests = remember(item.id, allRemoteLabTests) {
+        VerifiedLabBenchmarks.getLabTestsForItem(item, allRemoteLabTests)
+    }
+    val hasLabTest = labTests.isNotEmpty()
 
     var selectedMode by remember(item.id) { mutableStateOf(GameBenchmarkMode.SIMULATED) }
+    val effectiveMode = if (hasLabTest) selectedMode else GameBenchmarkMode.SIMULATED
     var selectedResolution by remember(appSettings.defaultResolution) {
         mutableStateOf(appSettings.defaultResolution.toGamingResolution())
     }
@@ -1830,7 +1823,12 @@ private fun MultiGameFpsSimulationCard(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(text = "🎮", fontSize = 20.sp)
+                    ModernSoftIcon(
+                        icon = Icons.Rounded.SportsEsports,
+                        accentColor = NeonCyan,
+                        size = 34.dp,
+                        iconSize = 19.dp,
+                    )
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column {
                         Text(
@@ -1840,7 +1838,7 @@ private fun MultiGameFpsSimulationCard(
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                         Text(
-                            text = if (selectedMode == GameBenchmarkMode.SIMULATED) {
+                            text = if (effectiveMode == GameBenchmarkMode.SIMULATED) {
                                 tr(isTr, "Kalibre Edilmiş IPC & 3D V-Cache Algoritmik Modeli", "Calibrated IPC & 3D V-Cache Algorithmic Model")
                             } else {
                                 tr(isTr, "Bağımsız Laboratuvar Ölçümleri • Gerçek Oyun & Güç Tüketimi", "Independent Lab Benchmarks • Real Gameplay & Power Draw")
@@ -1877,59 +1875,59 @@ private fun MultiGameFpsSimulationCard(
                 }
             }
 
-            // Segmented 2-Tab Mode Switcher (Madde 3: Simüle vs Gerçek Test)
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                // Tab 1: Simüle Test
-                val isSimSelected = selectedMode == GameBenchmarkMode.SIMULATED
-                Surface(
-                    onClick = { selectedMode = GameBenchmarkMode.SIMULATED },
-                    modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(10.dp),
-                    color = if (isSimSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
-                    border = BorderStroke(1.dp, if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.outline),
+            // Segmented 2-Tab Mode Switcher (Option B: Only displayed for desktop CPUs/GPUs with verified lab benchmarks)
+            if (hasLabTest) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center,
+                    // Tab 1: Simüle Test
+                    val isSimSelected = effectiveMode == GameBenchmarkMode.SIMULATED
+                    Surface(
+                        onClick = { selectedMode = GameBenchmarkMode.SIMULATED },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (isSimSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.outline),
                     ) {
-                        Text(
-                            text = strings.gameBenchTabSimulated,
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = if (isSimSelected) FontWeight.Black else FontWeight.Medium,
-                            color = if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
-                            fontSize = 11.sp,
-                            maxLines = 1,
-                        )
+                        Row(
+                            modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
+                            Text(
+                                text = strings.gameBenchTabSimulated,
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = if (isSimSelected) FontWeight.Black else FontWeight.Medium,
+                                color = if (isSimSelected) NeonCyan else MaterialTheme.colorScheme.onSurface,
+                                fontSize = 11.sp,
+                                maxLines = 1,
+                            )
+                        }
                     }
-                }
 
-                // Tab 2: Doğrulanmış Gerçek Test
-                val isRealSelected = selectedMode == GameBenchmarkMode.VERIFIED
-                Surface(
-                    onClick = { selectedMode = GameBenchmarkMode.VERIFIED },
-                    modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(10.dp),
-                    color = if (isRealSelected) NeonRose.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
-                    border = BorderStroke(1.dp, if (isRealSelected) NeonRose else MaterialTheme.colorScheme.outline),
-                ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center,
+                    // Tab 2: Doğrulanmış Gerçek Test
+                    val isRealSelected = effectiveMode == GameBenchmarkMode.VERIFIED
+                    Surface(
+                        onClick = { selectedMode = GameBenchmarkMode.VERIFIED },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (isRealSelected) NeonRose.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                        border = BorderStroke(1.dp, if (isRealSelected) NeonRose else MaterialTheme.colorScheme.outline),
                     ) {
-                        Text(
-                            text = strings.gameBenchTabVerified,
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = if (isRealSelected) FontWeight.Black else FontWeight.Medium,
-                            color = if (isRealSelected) NeonRose else MaterialTheme.colorScheme.onSurface,
-                            fontSize = 11.sp,
-                            maxLines = 1,
-                        )
-                        if (hasLabTest) {
+                        Row(
+                            modifier = Modifier.padding(vertical = 8.dp, horizontal = 6.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
+                            Text(
+                                text = strings.gameBenchTabVerified,
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = if (isRealSelected) FontWeight.Black else FontWeight.Medium,
+                                color = if (isRealSelected) NeonRose else MaterialTheme.colorScheme.onSurface,
+                                fontSize = 11.sp,
+                                maxLines = 1,
+                            )
                             Spacer(modifier = Modifier.width(4.dp))
                             Box(
                                 modifier = Modifier
@@ -1944,7 +1942,7 @@ private fun MultiGameFpsSimulationCard(
 
             HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), thickness = 1.dp)
 
-            if (selectedMode == GameBenchmarkMode.SIMULATED) {
+            if (effectiveMode == GameBenchmarkMode.SIMULATED) {
                 // -------------------------------------------------------------
                 // SEKME 1: SİMÜLE EDİLMİŞ 12-OYUN LİSTESİ
                 // -------------------------------------------------------------
@@ -2168,7 +2166,7 @@ private fun MultiGameFpsSimulationCard(
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
                                 Text(
-                                    text = "${activeLabTest.gameTitle} • ${activeLabTest.cleanSettings}",
+                                    text = "${activeLabTest.gameTitle} • ${activeLabTest.cleanSettingsLocalized(isTr)}",
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurface,
@@ -2196,7 +2194,7 @@ private fun MultiGameFpsSimulationCard(
                             }
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
-                                text = "Tezgâh: ${activeLabTest.rigGpuOrCpu} • ${activeLabTest.rigRam}",
+                                text = "${tr(isTr, "Tezgâh", "Test Rig")}: ${activeLabTest.rigGpuOrCpu} • ${activeLabTest.rigRam}",
                                 style = MaterialTheme.typography.labelSmall,
                                 fontSize = 9.5.sp,
                                 color = NeonCyan,
@@ -2206,7 +2204,7 @@ private fun MultiGameFpsSimulationCard(
                         }
                     }
 
-                    // Benchmark Bars: AMD (Red) vs Intel (Blue) (Videodaki yatay çift bar grafiği)
+                    // Benchmark Bars: AMD (Red) vs Intel (Blue) vs NVIDIA (Green)
                     val maxAvgFps = activeLabTest.entries.maxOfOrNull { it.avgFps } ?: 1000.0
 
                     Column(
@@ -2214,7 +2212,7 @@ private fun MultiGameFpsSimulationCard(
                         verticalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
                         activeLabTest.entries.forEach { entry ->
-                            val isCurrent = entry.matchesItem(item)
+                            val isCurrent = entry.matchesItem(item, activeLabTest.isCpuTest)
                             val isNvidia = entry.fullModelName.contains("NVIDIA", ignoreCase = true) || entry.modelName.startsWith("RTX", ignoreCase = true) || entry.modelName.startsWith("GTX", ignoreCase = true)
                             val isIntel = entry.fullModelName.contains("Intel", ignoreCase = true) || entry.modelName.startsWith("Arc", ignoreCase = true) || entry.fullModelName.contains("Core", ignoreCase = true)
                             val mainBarColor = when {
@@ -2924,8 +2922,7 @@ private fun DetailBottomBar(
     modifier: Modifier = Modifier,
     onAddToVsArenaClick: () -> Unit = {},
     onPriceOverrideClick: () -> Unit = {},
-    isLaptop: Boolean = false,
-    isMobile: Boolean = false,
+    isWizardCompatible: Boolean = true,
     isCustomPrice: Boolean = false,
     customPriceNote: String? = null,
 ) {
@@ -3009,7 +3006,7 @@ private fun DetailBottomBar(
                     )
                 }
 
-                if (!isLaptop && !isMobile) {
+                if (isWizardCompatible) {
                     val buttonContainerColor by animateColorAsState(
                         targetValue = if (isAddedToBuild) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
                     )

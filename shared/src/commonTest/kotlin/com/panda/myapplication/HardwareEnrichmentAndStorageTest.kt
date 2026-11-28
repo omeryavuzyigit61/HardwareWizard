@@ -3,7 +3,7 @@ package com.panda.myapplication
 import com.panda.myapplication.data.model.dto.GpuRawDto
 import com.panda.myapplication.data.model.dto.RamRawDto
 import com.panda.myapplication.data.model.dto.StorageRawDto
-import com.panda.myapplication.domain.engine.HardwareEnrichmentEngine
+import com.panda.myapplication.domain.model.CompanionSoftwareRegistry
 import com.panda.myapplication.domain.model.CpuSpec
 import com.panda.myapplication.domain.model.DdrGeneration
 import com.panda.myapplication.domain.model.Frequency
@@ -101,8 +101,9 @@ class HardwareEnrichmentAndStorageTest {
     }
 
     @Test
-    fun hardwareEnrichmentEngine_generatesDeepEngineeringBadgesForAllCategories() {
-        val psu = HardwareItem(
+    fun companionSoftwareAndWizardCompatibility_filterStrictlyByCategoryAndSortOptions() {
+        // Non-iCUE Corsair PSU must NOT receive Corsair iCUE audio/peripheral driver suggestion
+        val corsairPsu = HardwareItem(
             id = HardwareId("psu-1"),
             brand = "Corsair",
             model = "RM850x Shift ATX 3.0",
@@ -115,71 +116,38 @@ class HardwareEnrichmentAndStorageTest {
                 modularity = "Full Modüler",
             ),
         )
+        kotlin.test.assertNull(CompanionSoftwareRegistry.resolveFor(corsairPsu))
 
-        val psuBadges = HardwareEnrichmentEngine.getEngineeringBadges(psu)
-        assertTrue(psuBadges.any { it.label == "Güç Değeri" && it.value.contains("850W") })
-        assertTrue(psuBadges.any { it.label == "Güç Standardı" && it.value.contains("ATX 3.0") })
-        assertTrue(psuBadges.any { it.label == "Kablo Tasarımı" && it.value == "Full Modüler" })
-
-        val cpu = HardwareItem(
-            id = HardwareId("cpu-1"),
-            brand = "AMD",
-            model = "Ryzen 7 7800X3D",
-            price = Money(44900L, "USD"),
-            spec = CpuSpec(
-                socket = "AM5",
-                coreCount = 8,
-                threadCount = 16,
-                baseClock = Frequency(4200),
-                boostClock = Frequency(5000),
-                tdp = Wattage(120),
-                hasIntegratedGraphics = true,
-                l3CacheMb = 96,
-                architecture = "Zen 4",
+        // Corsair Mouse MUST receive Corsair iCUE 5
+        val corsairMouse = HardwareItem(
+            id = HardwareId("mouse-1"),
+            brand = "Corsair",
+            model = "M75 Air Wireless",
+            price = null,
+            spec = com.panda.myapplication.domain.model.MouseSpec(
+                sensor = "Marksman",
+                pollingRateHz = 2000,
+                weightG = 60,
+                maxDpi = 26000,
             ),
         )
+        val resolvedSoftware = CompanionSoftwareRegistry.resolveFor(corsairMouse)
+        kotlin.test.assertNotNull(resolvedSoftware)
+        assertTrue(resolvedSoftware.name.contains("iCUE"))
 
-        val cpuBadges = HardwareEnrichmentEngine.getEngineeringBadges(cpu)
-        assertTrue(cpuBadges.any { it.label == "İşlemci Soketi" && it.value == "AM5" })
-        assertTrue(cpuBadges.any { it.label == "L3 Önbellek" && it.value.contains("96 MB") })
+        // Wizard compatibility flag hides unsupported networking/backup/furniture categories
+        assertTrue(HardwareCategory.CPU.isWizardCompatible)
+        assertTrue(HardwareCategory.GPU.isWizardCompatible)
+        assertTrue(HardwareCategory.MONITOR.isWizardCompatible)
+        assertFalse(HardwareCategory.ROUTER.isWizardCompatible)
+        assertFalse(HardwareCategory.UPS.isWizardCompatible)
+        assertFalse(HardwareCategory.LAPTOP.isWizardCompatible)
+        assertFalse(HardwareCategory.SMARTPHONE.isWizardCompatible)
 
-        val ram = HardwareItem(
-            id = HardwareId("ram-1"),
-            brand = "G.Skill",
-            model = "Trident Z5 Neo RGB 32GB DDR5-6000 CL30",
-            price = Money(12000L, "USD"),
-            spec = RamSpec(
-                generation = DdrGeneration.DDR5,
-                speed = Frequency(6000),
-                casLatency = 30,
-                capacity = MemorySize(32768),
-                moduleCount = 2,
-            ),
-        )
-
-        val ramBadges = HardwareEnrichmentEngine.getEngineeringBadges(ram)
-        assertTrue(ramBadges.any { it.label == "Bellek Standardı" && it.value.contains("DDR5") })
-        assertTrue(ramBadges.any { it.label == "Frekans Değeri" && it.value.contains("6000") })
-
-        val ssd = HardwareItem(
-            id = HardwareId("ssd-1"),
-            brand = "Samsung",
-            model = "990 Pro 2TB NVMe M.2",
-            price = Money(17999L, "USD"),
-            spec = StorageSpec(
-                mediaType = StorageMediaType.SSD,
-                storageInterface = StorageInterface.NVME,
-                formFactor = StorageFormFactor.M2_2280,
-                pcieGeneration = PcieGeneration.GEN4,
-                capacity = MemorySize(2000000),
-                sequentialReadMbps = 7450,
-                sequentialWriteMbps = 6900,
-            ),
-        )
-
-        val ssdBadges = HardwareEnrichmentEngine.getEngineeringBadges(ssd)
-        assertTrue(ssdBadges.any { it.label == "Depolama Tipi" && it.value.contains("NVME") })
-        assertTrue(ssdBadges.any { it.label == "Sıralı Okuma" && it.value.contains("7450") })
+        // New performance sort options exist on CPU & GPU
+        assertTrue(HardwareSortOption.optionsForCategory(HardwareCategory.CPU).contains(HardwareSortOption.CPU_GAMING_PERF_DESC))
+        assertTrue(HardwareSortOption.optionsForCategory(HardwareCategory.CPU).contains(HardwareSortOption.CPU_RENDER_PERF_DESC))
+        assertTrue(HardwareSortOption.optionsForCategory(HardwareCategory.GPU).contains(HardwareSortOption.GPU_PERF_DESC))
     }
 
     @Test

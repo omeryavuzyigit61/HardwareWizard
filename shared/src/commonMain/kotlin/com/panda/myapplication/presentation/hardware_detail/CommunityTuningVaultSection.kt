@@ -265,9 +265,9 @@ fun CommunityTuningVaultSection(
                     ) {
                         Text(
                             text = if (isTr) {
-                                "Bu donanım için ilk OC/UV profilini paylaşarak +50 itibar puanı kazanın!"
+                                "Bu donanım için ilk OC/UV profilini paylaşarak +15 itibar puanı kazanın!"
                             } else {
-                                "Share the first OC/UV profile for this hardware and earn +50 reputation!"
+                                "Share the first OC/UV profile for this hardware and earn +15 reputation!"
                             },
                             style = MaterialTheme.typography.labelSmall,
                             color = NeonAmber,

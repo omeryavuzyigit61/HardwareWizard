@@ -20,19 +20,23 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Analytics
 import androidx.compose.material.icons.rounded.BatteryChargingFull
 import androidx.compose.material.icons.rounded.BatteryStd
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.ChevronRight
 import androidx.compose.material.icons.rounded.Memory
 import androidx.compose.material.icons.rounded.PhoneAndroid
+import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Speed
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -48,6 +52,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.domain.model.PhoneSpec
+import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.util.getMyDeviceDiagnostic
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.theme.ElectricBlue
@@ -57,6 +65,9 @@ import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.Spacing
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import kotlinx.coroutines.flow.firstOrNull
+import org.koin.mp.KoinPlatformTools
+import kotlin.math.roundToInt
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -64,8 +75,47 @@ fun MyDeviceDiagnosticCard(
     modifier: Modifier = Modifier,
 ) {
     val isTr = LocalAppStrings.current.isTurkish
-    val diagnostic = remember { getMyDeviceDiagnostic() }
+    var diagnostic by remember { mutableStateOf(getMyDeviceDiagnostic()) }
     var isExpanded by remember { mutableStateOf(false) }
+    var realCatalogPercentile by remember { mutableStateOf<Int?>(null) }
+
+    val hardwareRepository = remember {
+        runCatching { KoinPlatformTools.defaultContext().getOrNull()?.getOrNull<HardwareRepository>() }.getOrNull()
+    }
+
+    LaunchedEffect(diagnostic.modelName, diagnostic.totalRamGb, diagnostic.refreshRateHz, hardwareRepository) {
+        val repo = hardwareRepository ?: return@LaunchedEffect
+        val phonesRes = repo.observeHardwareItemsByCategory(HardwareCategory.SMARTPHONE).firstOrNull()
+        val phones = (phonesRes as? DomainResult.Success)?.data.orEmpty()
+        if (phones.size >= 10) {
+            val deviceScore = estimateDeviceDiagnosticTierScore(
+                socName = diagnostic.socName,
+                ramGb = diagnostic.totalRamGb,
+                refreshHz = diagnostic.refreshRateHz,
+            )
+            val catalogScores = phones.mapNotNull { item ->
+                val spec = item.spec as? PhoneSpec ?: return@mapNotNull null
+                estimateCatalogMobileScore(spec)
+            }.sorted()
+            if (catalogScores.isNotEmpty()) {
+                val beatenCount = catalogScores.count { it <= deviceScore }
+                realCatalogPercentile = ((beatenCount.toDouble() / catalogScores.size.toDouble()) * 100.0)
+                    .roundToInt()
+                    .coerceIn(5, 99)
+            }
+        }
+    }
+
+    val effectivePercentile = realCatalogPercentile ?: diagnostic.catalogPercentile
+    val topSlicePercent = (100 - effectivePercentile).coerceIn(1, 95)
+
+    val fullModelTitle = remember(diagnostic.manufacturer, diagnostic.modelName) {
+        if (diagnostic.modelName.startsWith(diagnostic.manufacturer, ignoreCase = true)) {
+            diagnostic.modelName
+        } else {
+            "${diagnostic.manufacturer} ${diagnostic.modelName}".trim()
+        }
+    }
 
     val chevronRotation by animateFloatAsState(
         targetValue = if (isExpanded) 270f else 90f,
@@ -85,7 +135,6 @@ fun MyDeviceDiagnosticCard(
                 .fillMaxWidth()
                 .clickable { isExpanded = !isExpanded },
         ) {
-            // Header Row (Never squishes, fully weighted)
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -119,7 +168,7 @@ fun MyDeviceDiagnosticCard(
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
                         Text(
-                            text = if (isTr) "📱 CİHAZIM DONANIM TEŞHİSİ" else "📱 MY DEVICE DIAGNOSTIC",
+                            text = if (isTr) "CİHAZIM DONANIM TEŞHİSİ" else "MY DEVICE DIAGNOSTIC",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Black,
                             color = NeonCyan,
@@ -142,7 +191,7 @@ fun MyDeviceDiagnosticCard(
                     Spacer(modifier = Modifier.height(2.dp))
 
                     Text(
-                        text = "${diagnostic.manufacturer} ${diagnostic.modelName}",
+                        text = fullModelTitle,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface,
@@ -170,9 +219,9 @@ fun MyDeviceDiagnosticCard(
                             )
                             Text(
                                 text = if (isTr) {
-                                    "Katalogda İlk %${(100 - diagnostic.catalogPercentile).coerceAtLeast(1)} Dilimde"
+                                    "Katalogda İlk %$topSlicePercent Dilimde"
                                 } else {
-                                    "Top ${(100 - diagnostic.catalogPercentile).coerceAtLeast(1)}% in Catalog"
+                                    "Top $topSlicePercent% in Catalog"
                                 },
                                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
                                 fontWeight = FontWeight.Bold,
@@ -182,9 +231,20 @@ fun MyDeviceDiagnosticCard(
                     }
                 }
 
-                Spacer(modifier = Modifier.width(6.dp))
+                IconButton(
+                    onClick = { diagnostic = getMyDeviceDiagnostic() },
+                    modifier = Modifier.size(30.dp),
+                ) {
+                    Icon(
+                        imageVector = Icons.Rounded.Refresh,
+                        contentDescription = if (isTr) "Yenile" else "Refresh",
+                        tint = NeonCyan,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
 
-                // Expand / Collapse Chevron indicator
+                Spacer(modifier = Modifier.width(4.dp))
+
                 Box(
                     modifier = Modifier
                         .size(30.dp)
@@ -209,7 +269,16 @@ fun MyDeviceDiagnosticCard(
 
             AnimatedVisibility(visible = isExpanded) {
                 Column(modifier = Modifier.padding(top = 12.dp)) {
-                    // Quick Specs Chips Matrix
+                    val ramText = if (diagnostic.isAvailableRamMeasured) {
+                        if (isTr) {
+                            "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Boş)"
+                        } else {
+                            "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Free)"
+                        }
+                    } else {
+                        "${diagnostic.totalRamGb} GB RAM"
+                    }
+
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -224,11 +293,7 @@ fun MyDeviceDiagnosticCard(
                         DiagChip(
                             icon = Icons.Rounded.Memory,
                             label = if (isTr) "Bellek" else "Memory",
-                            value = if (isTr) {
-                                "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Boş)"
-                            } else {
-                                "${diagnostic.totalRamGb} GB RAM (${diagnostic.availableRamGb} GB Free)"
-                            },
+                            value = ramText,
                             color = NeonPurple,
                         )
                         DiagChip(
@@ -247,7 +312,6 @@ fun MyDeviceDiagnosticCard(
 
                     Spacer(modifier = Modifier.height(10.dp))
 
-                    // Performance Percentile Explanation
                     Surface(
                         shape = RoundedCornerShape(10.dp),
                         color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
@@ -259,12 +323,17 @@ fun MyDeviceDiagnosticCard(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                         ) {
-                            Text(text = "📊", fontSize = 16.sp)
+                            Icon(
+                                imageVector = Icons.Rounded.Analytics,
+                                contentDescription = null,
+                                tint = NeonCyan,
+                                modifier = Modifier.size(16.dp),
+                            )
                             Text(
                                 text = if (isTr) {
-                                    "Cihazınızın canlı bellek, ekran tazeleme hızı ve donanım profili anlık olarak okundu."
+                                    "Cihazınızın canlı sistem telemetrisi okundu ve katalogdaki akıllı telefonlarla kıyaslandı."
                                 } else {
-                                    "Live memory, display refresh rate, and hardware profile read directly from this device."
+                                    "Live system telemetry read from this device and ranked against smartphones in the catalog."
                                 },
                                 style = MaterialTheme.typography.labelSmall.copy(lineHeight = 14.sp),
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -275,6 +344,39 @@ fun MyDeviceDiagnosticCard(
             }
         }
     }
+}
+
+private fun estimateDeviceDiagnosticTierScore(
+    socName: String,
+    ramGb: Double,
+    refreshHz: Int,
+): Double {
+    val lower = socName.lowercase()
+    val socPoints = when {
+        lower.contains("8 elite") || lower.contains("a18 pro") || lower.contains("dimensity 9400") || lower.contains("m-series") -> 96.0
+        lower.contains("8 gen 3") || lower.contains("a17 pro") || lower.contains("a18") || lower.contains("dimensity 9300") || lower.contains("exynos 2500") -> 90.0
+        lower.contains("exynos 2400") && !lower.contains("2400e") -> 86.0
+        lower.contains("8 gen 2") || lower.contains("2400e") || lower.contains("dimensity 9200") || lower.contains("a16") || lower.contains("pro bionic") -> 82.0
+        lower.contains("8+ gen 1") || lower.contains("8 gen 1") || lower.contains("8s gen 3") || lower.contains("7+ gen 3") || lower.contains("tensor g4") || lower.contains("a15") -> 75.0
+        lower.contains("tensor g3") || lower.contains("dimensity 8300") || lower.contains("dimensity 8200") || lower.contains("7 gen 3") -> 68.0
+        lower.contains("bionic") || lower.contains("snapdragon 7") || lower.contains("dimensity 7") || lower.contains("exynos 1480") || lower.contains("exynos 1380") -> 60.0
+        else -> 50.0
+    }
+    val ramPoints = (ramGb.coerceIn(3.0, 16.0) / 16.0) * 20.0
+    val displayPoints = if (refreshHz >= 120) 10.0 else if (refreshHz >= 90) 6.0 else 3.0
+    return socPoints + ramPoints + displayPoints
+}
+
+private fun estimateCatalogMobileScore(spec: PhoneSpec): Double {
+    val antutu = spec.antutuScore?.toDouble()
+    val socPoints = if (antutu != null && antutu > 100_000) {
+        ((antutu / 2_800_000.0) * 96.0).coerceIn(30.0, 98.0)
+    } else {
+        estimateDeviceDiagnosticTierScore(spec.chipset, spec.ramGb.toDouble(), spec.refreshRateHz) - 20.0
+    }
+    val ramPoints = (spec.ramGb.coerceIn(3, 16).toDouble() / 16.0) * 20.0
+    val displayPoints = if (spec.refreshRateHz >= 120) 10.0 else if (spec.refreshRateHz >= 90) 6.0 else 3.0
+    return socPoints + ramPoints + displayPoints
 }
 
 @Composable

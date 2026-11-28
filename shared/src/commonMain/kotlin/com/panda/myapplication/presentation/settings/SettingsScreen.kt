@@ -59,7 +59,10 @@ import com.panda.myapplication.domain.model.ResolutionTarget
 import com.panda.myapplication.domain.model.TemperatureUnit
 import com.panda.myapplication.domain.model.ThemeMode
 import com.panda.myapplication.presentation.util.getAppStrings
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @Composable
 fun SettingsScreen(
@@ -509,14 +512,18 @@ fun SettingsScreen(
                         }
                         Button(
                             onClick = {
-                                runCatching {
-                                    val loader = SingletonImageLoader.get(platformContext)
-                                    loader.memoryCache?.clear()
-                                    loader.diskCache?.clear()
-                                }
-                                viewModel.onClearCache {
-                                    scope.launch {
-                                        snackbarHostState.showSnackbar(strings.cacheClearedMessage)
+                                scope.launch {
+                                    runCatching {
+                                        val loader = SingletonImageLoader.get(platformContext)
+                                        loader.memoryCache?.clear()
+                                        withContext(Dispatchers.IO) {
+                                            loader.diskCache?.clear()
+                                        }
+                                    }
+                                    viewModel.onClearCache {
+                                        scope.launch {
+                                            snackbarHostState.showSnackbar(strings.cacheClearedMessage)
+                                        }
                                     }
                                 }
                             },

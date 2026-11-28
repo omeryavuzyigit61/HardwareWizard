@@ -5,7 +5,11 @@ import androidx.lifecycle.viewModelScope
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.engine.AnalysisState
 import com.panda.myapplication.domain.engine.BuildAnalysisEngine
+import com.panda.myapplication.domain.engine.CpuPlatformPreference
 import com.panda.myapplication.domain.engine.ResolutionOption
+import com.panda.myapplication.domain.engine.SmartBuildGeneratorEngine
+import com.panda.myapplication.domain.engine.SmartBuildTier
+import com.panda.myapplication.domain.engine.SmartBuildUseCase
 import com.panda.myapplication.domain.model.HardwareCategory
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.repository.ActiveBuildRepository
@@ -24,6 +28,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
@@ -67,6 +72,7 @@ class WizardViewModel(
     private val _pickerSearchQuery = MutableStateFlow("")
     private val _isPickerLoading = MutableStateFlow(false)
     private val _isShareDialogOpen = MutableStateFlow(false)
+    private val _isGeneratingSmartBuild = MutableStateFlow(false)
 
     private val debouncedPickerSearchQuery = _pickerSearchQuery
         .debounce(300L)
@@ -203,13 +209,54 @@ class WizardViewModel(
     val uiState: StateFlow<WizardUiState> = combine(
         computedUiState,
         _pickerSearchQuery,
-    ) { state, rawQuery ->
-        if (state.pickerSearchQuery == rawQuery) state else state.copy(pickerSearchQuery = rawQuery)
+        _isGeneratingSmartBuild,
+    ) { state, rawQuery, isGenerating ->
+        state.copy(
+            pickerSearchQuery = rawQuery,
+            isGeneratingSmartBuild = isGenerating,
+        )
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000L),
         initialValue = WizardUiState(),
     )
+
+    fun onGenerateSmartBuild(
+        useCase: SmartBuildUseCase,
+        tier: SmartBuildTier,
+        platformPreference: CpuPlatformPreference,
+    ) {
+        if (_isGeneratingSmartBuild.value) return
+        viewModelScope.launch(Dispatchers.Default) {
+            _isGeneratingSmartBuild.value = true
+            try {
+                val allRes = hardwareRepository.observeHardwareItems().firstOrNull()
+                val items = (allRes as? DomainResult.Success)?.data.orEmpty()
+                val generated = SmartBuildGeneratorEngine.generateBuild(
+                    allItems = items,
+                    useCase = useCase,
+                    tier = tier,
+                    platformPreference = platformPreference,
+                )
+                if (generated != null) {
+                    _selectedResolution.value = generated.recommendedResolution
+                    generated.build.items.forEach { part ->
+                        activeBuildRepository.setComponent(part)
+                    }
+                    effectChannel.send(WizardEffect.ShowToast(generated.summaryTr, generated.summaryEn))
+                } else {
+                    effectChannel.send(
+                        WizardEffect.ShowToast(
+                            "Katalog verisi henüz hazır değil, lütfen tekrar deneyin.",
+                            "Catalog data is not ready yet, please retry.",
+                        )
+                    )
+                }
+            } finally {
+                _isGeneratingSmartBuild.value = false
+            }
+        }
+    }
 
     fun onSlotClicked(category: HardwareCategory) {
         _pickerCategory.value = category
@@ -314,6 +361,23 @@ class WizardViewModel(
             appendLine("• ${if (isTr) "Soğutucu" else "Cooler"}:  ${b.cooler?.displayName ?: notSelected}")
             appendLine("• ${if (isTr) "Kasa" else "Case"}:      ${b.case?.displayName ?: notSelected}")
             appendLine("• PSU:       ${b.psu?.displayName ?: notSelected}")
+            val selectedPeripherals = listOfNotNull(
+                b.monitor?.let { (if (isTr) "Monitör" else "Monitor") to it.displayName },
+                b.mouse?.let { "Mouse" to it.displayName },
+                b.keyboard?.let { (if (isTr) "Klavye" else "Keyboard") to it.displayName },
+                b.headset?.let { (if (isTr) "Kulaklık" else "Headset") to it.displayName },
+                b.microphone?.let { (if (isTr) "Mikrofon" else "Microphone") to it.displayName },
+                b.mousepad?.let { "Mousepad" to it.displayName },
+                b.webcam?.let { "Webcam" to it.displayName },
+                b.gamingChair?.let { (if (isTr) "Koltuk" else "Chair") to it.displayName },
+            )
+            if (selectedPeripherals.isNotEmpty()) {
+                appendLine()
+                appendLine(if (isTr) "ÇEVRE BİRİMLERİ & EKİPMAN:" else "PERIPHERALS & GEAR:")
+                selectedPeripherals.forEach { (label, name) ->
+                    appendLine("• $label: $name")
+                }
+            }
             appendLine()
             appendLine(if (isTr) "KOKPİT GÖSTERGELERİ:" else "COCKPIT METRICS:")
             appendLine("• ${if (isTr) "Güç" else "Power"}: ${analysis.cockpitInfo.componentTdpSum}W TDP (${if (isTr) "Tepe" else "Peak"}: ${analysis.cockpitInfo.peakTdpWithTolerance}W) | ${if (isTr) "Önerilen PSU" else "Recommended PSU"}: ${analysis.cockpitInfo.recommendedPsuWattage}W")

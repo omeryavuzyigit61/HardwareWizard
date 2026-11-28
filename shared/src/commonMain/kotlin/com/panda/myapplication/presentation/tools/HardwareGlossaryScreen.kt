@@ -147,6 +147,7 @@ fun HardwareGlossaryScreen(
     val isTurkish = strings.isTurkish
 
     LaunchedEffect(isTurkish) {
+        selectedCategory = null
         val loaded = withContext(Dispatchers.Default) {
             runCatching {
                 val fileName = if (isTurkish) "files/hardware_glossary.json" else "files/hardware_glossary_en.json"
@@ -164,16 +165,31 @@ fun HardwareGlossaryScreen(
     }
 
     val filteredEntries = remember(allTerms, debouncedQuery, selectedCategory) {
-        allTerms.filter { entry ->
+        val q = debouncedQuery
+        val qTokens = q.split(Regex("""[\s/&()\-•,]+""")).filter { it.length >= 2 }
+        val baseMatches = allTerms.filter { entry ->
             val matchesCat = selectedCategory == null || entry.category == selectedCategory
-            val q = debouncedQuery
-            val matchesQuery = q.isEmpty() ||
-                entry.term.lowercase().contains(q) ||
+            if (!matchesCat) return@filter false
+            if (q.isEmpty()) return@filter true
+            val termLower = entry.term.lowercase()
+            val directHit = termLower.contains(q) ||
                 entry.shortDescription.lowercase().contains(q) ||
                 entry.detailedExplanation.lowercase().contains(q) ||
-                entry.keyMetrics.any { it.lowercase().contains(q) } ||
-                entry.relatedTerms.any { it.lowercase().contains(q) }
-            matchesCat && matchesQuery
+                entry.keyMetrics.any { it.lowercase().contains(q) }
+            val tokenHit = qTokens.isNotEmpty() && qTokens.all { tok ->
+                termLower.contains(tok) || entry.shortDescription.lowercase().contains(tok)
+            }
+            directHit || tokenHit
+        }
+        if (baseMatches.isNotEmpty() || q.isEmpty()) {
+            baseMatches
+        } else {
+            // Fallback partial token overlap so shorthand relatedTerms chips ALWAYS jump to target entries
+            allTerms.filter { entry ->
+                val matchesCat = selectedCategory == null || entry.category == selectedCategory
+                val hay = "${entry.term} ${entry.shortDescription}".lowercase()
+                matchesCat && qTokens.any { tok -> tok.length >= 3 && hay.contains(tok) }
+            }
         }
     }
 
@@ -288,13 +304,13 @@ fun HardwareGlossaryScreen(
                     ) { entry ->
                         val categoryAccent = when (entry.category) {
                             "Anakart & Güç", "VRM & Güç", "Motherboard & Power", "VRM & Power" -> NeonAmber
-                            "İşlemci & Çiplet", "İşlemci & Bellek", "CPU & Architecture", "CPU & Memory" -> ElectricBlue
-                            "Bellek & RAM", "RAM & Memory" -> NeonPurple
+                            "İşlemci & Çiplet", "İşlemci & Bellek", "CPU & Architecture", "CPU & Chiplet", "CPU & Memory" -> ElectricBlue
+                            "Bellek & RAM", "RAM & Memory", "Memory & RAM" -> NeonPurple
                             "Ekran Kartı & Grafik", "GPU & Graphics" -> NeonRose
-                            "Depolama (SSD)", "Storage (SSD/NVMe)" -> NeonCyan
+                            "Depolama (SSD)", "Storage (SSD/NVMe)", "Storage (SSD)" -> NeonCyan
                             "Soğutma & Kasa", "Soğutma", "Cooling & Chassis", "Thermal Solutions" -> NeonCyan
-                            "Monitör & Panel", "Ekran & Panel", "Display & Panel" -> ElectricBlue
-                            "Çevre Birimleri", "Peripherals & Input" -> NeonEmerald
+                            "Monitör & Panel", "Ekran & Panel", "Display & Panel", "Monitor & Display" -> ElectricBlue
+                            "Çevre Birimleri", "Peripherals & Input", "Peripherals" -> NeonEmerald
                             else -> NeonCyan
                         }
                         FluidOrganicCard(
@@ -310,14 +326,14 @@ fun HardwareGlossaryScreen(
                                 ) {
                                     Surface(
                                         shape = RoundedCornerShape(6.dp),
-                                        color = NeonCyan.copy(alpha = 0.16f),
-                                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.5f)),
+                                        color = categoryAccent.copy(alpha = 0.16f),
+                                        border = BorderStroke(1.dp, categoryAccent.copy(alpha = 0.5f)),
                                     ) {
                                         Text(
                                             text = entry.category,
                                             style = MaterialTheme.typography.labelSmall,
                                             fontWeight = FontWeight.Black,
-                                            color = NeonCyan,
+                                            color = categoryAccent,
                                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                                         )
                                     }

@@ -1077,4 +1077,176 @@ class AuditVerificationTest {
         assertFalse(fl4k.dataCitation.contains("SPECworkstation", ignoreCase = true))
         assertTrue(fl4k.studioTier.calculatedNumericMetric > fl4k.minimumTier.calculatedNumericMetric)
     }
+
+    @Test
+    fun thermalUpsRamSmartBuildOptionBAndSiliconLotteryEnginesPassPhysicsValidation() {
+        // 1. ThermalSimulationEngine: 7800X3D + 235W Dual-Tower Air Cooler must NOT false-throttle!
+        val cpu7800x3d = HardwareItem(
+            id = HardwareId("cpu_7800x3d"),
+            brand = "AMD",
+            model = "Ryzen 7 7800X3D",
+            price = null,
+            spec = CpuSpec("AM5", 8, 16, Frequency(4200), Frequency(5000), Wattage(120), true, l3CacheMb = 96, tjMaxCelsius = 89),
+        )
+        val dualTowerAir = HardwareItem(
+            id = HardwareId("cl_pa120"),
+            brand = "Thermalright",
+            model = "Peerless Assassin 120 SE",
+            price = null,
+            spec = CoolerSpec(type = CoolerType.AIR, maxCoolingTdp = Wattage(235), radiatorSizeMm = null, heightMm = 155, supportedSockets = listOf("AM5", "LGA1700")),
+        )
+        val stockCooler = HardwareItem(
+            id = HardwareId("cl_stock"),
+            brand = "AMD",
+            model = "Wraith Stealth",
+            price = null,
+            spec = CoolerSpec(type = CoolerType.AIR, maxCoolingTdp = Wattage(65), radiatorSizeMm = null, heightMm = 54, supportedSockets = listOf("AM4")),
+        )
+        val cpuProf = com.panda.myapplication.domain.engine.ThermalSimulationEngine.fromCatalogCpu(
+            cpu7800x3d,
+            cpu7800x3d.spec as CpuSpec,
+        )
+        val goodCoolerProf = com.panda.myapplication.domain.engine.ThermalSimulationEngine.fromCatalogCooler(
+            dualTowerAir,
+            dualTowerAir.spec as CoolerSpec,
+        )
+        val badCoolerProf = com.panda.myapplication.domain.engine.ThermalSimulationEngine.fromCatalogCooler(
+            stockCooler,
+            stockCooler.spec as CoolerSpec,
+        )
+        val simGood = com.panda.myapplication.domain.engine.ThermalSimulationEngine.simulate(
+            cpu = cpuProf,
+            cooler = goodCoolerProf,
+            ambientTempCelsius = 24,
+        )
+        val simBadSocket = com.panda.myapplication.domain.engine.ThermalSimulationEngine.simulate(
+            cpu = cpuProf,
+            cooler = badCoolerProf,
+            ambientTempCelsius = 24,
+        )
+        assertFalse(simGood.isThrottling, "7800X3D on 235W Peerless Assassin must NOT throttle (renderTemp=${simGood.renderTempCelsius}°C)")
+        assertTrue(simGood.renderTempCelsius <= 84)
+        assertFalse(simBadSocket.isSocketCompatible, "AM4-only stock cooler must flag socket incompatibility on AM5 CPU")
+        assertTrue(simGood.idleTempCelsius < simBadSocket.idleTempCelsius, "Idle temp must respond physically to cooler thermal resistance")
+
+        // 2. UpsSizingEngine: Peukert non-linear scaling + Active PFC Pure Sine rule + catalog matcher
+        val ups1500Sine = HardwareItem(
+            id = HardwareId("ups_1500"),
+            brand = "APC",
+            model = "Smart-UPS 1500VA",
+            price = null,
+            spec = UpsSpec(
+                vaRating = 1500,
+                wattCapacity = 1000,
+                topology = "Line-Interactive",
+                sinewaveType = "Pure Sine Wave",
+                outletCount = 8,
+                hasUsbInterface = true,
+            ),
+        )
+        val minsLight = com.panda.myapplication.domain.engine.UpsSizingEngine.estimatePeukertRuntimeMinutes(216, 200, 900)
+        val minsHeavy = com.panda.myapplication.domain.engine.UpsSizingEngine.estimatePeukertRuntimeMinutes(216, 600, 900)
+        assertTrue(minsHeavy < (minsLight / 3.2), "Peukert exponent must penalize heavy discharge super-linearly: light=${minsLight}m, heavy=${minsHeavy}m")
+        val upsReport = com.panda.myapplication.domain.engine.UpsSizingEngine.calculate(550, 45, listOf(ups1500Sine))
+        assertTrue(upsReport.requiresPureSineForActivePfc)
+        assertEquals(1, upsReport.matchingCatalogUps.size)
+
+        // 3. RamLatencyEngine: Clamps impossible DDR5 CL14 and scales Dual vs Single channel bandwidth
+        val ddr5Impossible = com.panda.myapplication.domain.engine.RamLatencyEngine.analyzeKit(
+            generation = DdrGeneration.DDR5,
+            freqMts = 6000,
+            casLatency = 14,
+            channelMode = com.panda.myapplication.domain.engine.MemoryChannelMode.DUAL,
+        )
+        val ddr5Single = com.panda.myapplication.domain.engine.RamLatencyEngine.analyzeKit(
+            generation = DdrGeneration.DDR5,
+            freqMts = 6000,
+            casLatency = 30,
+            channelMode = com.panda.myapplication.domain.engine.MemoryChannelMode.SINGLE,
+        )
+        assertTrue(ddr5Impossible.casLatency >= 26, "DDR5 CAS must clamp >= 26 (no fake CL14 DDR5)")
+        assertTrue(ddr5Impossible.peakBandwidthGbs > ddr5Single.peakBandwidthGbs * 1.9, "Dual-channel must double Single-channel bandwidth")
+
+        // 4. VerifiedLabBenchmarks Option B: Exact SKU matching + Laptop/unlisted exclusion
+        val gpuBenchSample = com.panda.myapplication.domain.model.VerifiedLabGameTest(
+            id = "gpu_cp2077_1440p",
+            gameTitle = "Cyberpunk 2077",
+            resolutionSettings = "1440P • Ultra Ayarlar",
+            rigSummary = "9800X3D",
+            rigGpuOrCpu = "AMD Ryzen 7 9800X3D",
+            rigRam = "DDR5-6000",
+            isCpuTest = false,
+            entries = listOf(
+                com.panda.myapplication.domain.model.VerifiedLabTestEntry("RTX 4070 Super", "NVIDIA GeForce RTX 4070 Super", "220W", false, 99.0, 80.0, listOf("RTX 4070 Super")),
+                com.panda.myapplication.domain.model.VerifiedLabTestEntry("RTX 4070", "NVIDIA GeForce RTX 4070", "200W", false, 85.0, 68.0, listOf("RTX 4070")),
+            ),
+        )
+        val rtx4070SuperItem = HardwareItem(
+            HardwareId("g4070s"), "ASUS", "Dual GeForce RTX 4070 Super", null,
+            spec = GpuSpec("GeForce RTX 4070 Super", MemorySize(12288), "GDDR6X", Frequency(1980), Frequency(2505), Wattage(220), Wattage(650)),
+        )
+        val gtx1650Item = HardwareItem(
+            HardwareId("g1650"), "MSI", "GeForce GTX 1650 Ventus", null,
+            spec = GpuSpec("GeForce GTX 1650", MemorySize(4096), "GDDR6", Frequency(1410), Frequency(1620), Wattage(75), Wattage(350)),
+        )
+        val laptopItem = HardwareItem(
+            HardwareId("lap1"), "ASUS", "ROG Strix RTX 4070 Laptop", null,
+            spec = com.panda.myapplication.domain.model.LaptopSpec(
+                cpuModel = "i9-14900HX",
+                gpuModel = "RTX 4070",
+                gpuWattTgp = "140W",
+                muxSwitch = "Var",
+                displaySpec = "16 QHD",
+                ramSpec = "32GB",
+                storageSpec = "1TB",
+                batteryWh = 90,
+                weightKg = 2.5,
+                coolingTech = "Vapor",
+                gamingScore = 85,
+            ),
+        )
+        assertTrue(gpuBenchSample.entries[0].matchesItem(rtx4070SuperItem, false))
+        assertFalse(gpuBenchSample.entries[1].matchesItem(rtx4070SuperItem, false), "RTX 4070 Super must NOT match plain RTX 4070 row!")
+        assertTrue(com.panda.myapplication.domain.model.VerifiedLabBenchmarks.getLabTestsForItem(rtx4070SuperItem, listOf(gpuBenchSample)).isNotEmpty())
+        assertTrue(com.panda.myapplication.domain.model.VerifiedLabBenchmarks.getLabTestsForItem(gtx1650Item, listOf(gpuBenchSample)).isEmpty(), "Unlisted GTX 1650 must hide Tab 2 (Option B)")
+        assertTrue(com.panda.myapplication.domain.model.VerifiedLabBenchmarks.getLabTestsForItem(laptopItem, listOf(gpuBenchSample)).isEmpty(), "Laptops must never show desktop GPU lab tests")
+
+        // 5. SmartBuildGeneratorEngine: Generates a 100% physically compatible 8-part build
+        val catalogPool = listOf(
+            cpu9800X3D,
+            cpu7800x3d,
+            HardwareItem(HardwareId("mb_b650"), "MSI", "MAG B650 Tomahawk WiFi", null, spec = MotherboardSpec("AM5", "B650", MotherboardFormFactor.ATX, DdrGeneration.DDR5, 4, PcieGeneration.GEN4, 192, 3, hasWifi = true)),
+            HardwareItem(HardwareId("ram_6000"), "G.Skill", "Trident Z5 Neo 32GB DDR5-6000", null, spec = RamSpec(DdrGeneration.DDR5, Frequency(6000), 30, MemorySize(32768), 2)),
+            gpu4060Ti16,
+            gpu5090,
+            HardwareItem(HardwareId("ssd_2tb"), "Samsung", "990 Pro 2TB", null, spec = com.panda.myapplication.domain.model.StorageSpec(com.panda.myapplication.domain.model.StorageMediaType.SSD, com.panda.myapplication.domain.model.StorageInterface.NVME, com.panda.myapplication.domain.model.StorageFormFactor.M2_2280, PcieGeneration.GEN4, MemorySize(2048000), 7450, 6900, dramCache = "2GB LPDDR4")),
+            dualTowerAir,
+            HardwareItem(HardwareId("aio_360"), "Arctic", "Liquid Freezer III 360", null, spec = CoolerSpec(type = CoolerType.LIQUID, maxCoolingTdp = Wattage(310), radiatorSizeMm = 360, supportedSockets = listOf("AM5", "LGA1700"))),
+            HardwareItem(HardwareId("case_atx"), "Lian Li", "Lancool 216", null, spec = CaseSpec("ATX Mid Tower", maxGpuLengthMm = 392, maxCpuCoolerHeightMm = 180, maxRadiatorSizeMm = 360)),
+            HardwareItem(HardwareId("psu_850"), "Corsair", "RM850e ATX 3.0", null, spec = PsuSpec(Wattage(850), PsuEfficiencyRating.GOLD, isAtx3Compliant = true, supportsPcie5Power = true)),
+            HardwareItem(HardwareId("psu_1200"), "Corsair", "RM1200x Shift ATX 3.0", null, spec = PsuSpec(Wattage(1200), PsuEfficiencyRating.GOLD, isAtx3Compliant = true, supportsPcie5Power = true)),
+        )
+        val generated = com.panda.myapplication.domain.engine.SmartBuildGeneratorEngine.generateBuild(
+            allItems = catalogPool,
+            useCase = com.panda.myapplication.domain.engine.SmartBuildUseCase.ULTRA_4K,
+            tier = com.panda.myapplication.domain.engine.SmartBuildTier.FLAGSHIP_EXTREME,
+            platformPreference = com.panda.myapplication.domain.engine.CpuPlatformPreference.AMD,
+        )
+        assertNotNull(generated)
+        assertTrue(generated.isFullyCompatible, "SmartBuildGeneratorEngine output must pass CheckBuildCompatibilityUseCase")
+        assertEquals(8, generated.build.totalCount)
+
+        // 6. SiliconLotteryTier rejects positive overvoltage & Mobile Hardware RT rejects Snapdragon 888
+        val fakeOvervoltProfile = com.panda.myapplication.domain.model.TuningProfile(
+            id = "t1", hardwareId = "cpu1", hardwareName = "9800X3D", hardwareCategory = "CPU",
+            tuningType = com.panda.myapplication.domain.model.TuningType.OVERCLOCK,
+            profileTitle = "+150mV Overvolt", voltageOffsetMv = 150.0,
+            userId = "u1", userDisplayName = "User",
+        )
+        assertEquals(com.panda.myapplication.domain.model.SiliconLotteryTier.VERIFIED, fakeOvervoltProfile.siliconLotteryTier)
+        assertFalse(com.panda.myapplication.presentation.hardware_detail.hasMobileHardwareRayTracing("Snapdragon 888 5G"))
+        assertFalse(com.panda.myapplication.presentation.hardware_detail.hasMobileHardwareRayTracing("Dimensity 9000"))
+        assertTrue(com.panda.myapplication.presentation.hardware_detail.hasMobileHardwareRayTracing("Snapdragon 8 Elite"))
+        assertTrue(com.panda.myapplication.presentation.hardware_detail.hasMobileHardwareRayTracing("Apple A17 Pro"))
+    }
 }

@@ -1037,7 +1037,7 @@ fun HardwareCard(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     CategoryBadge(category = item.category)
-                    if (item.isCustomPrice) {
+                    if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) {
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(4.dp))

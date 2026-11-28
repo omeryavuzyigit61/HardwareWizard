@@ -18,9 +18,24 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Analytics
+import androidx.compose.material.icons.rounded.AutoAwesome
+import androidx.compose.material.icons.rounded.BatteryChargingFull
+import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.CameraFront
+import androidx.compose.material.icons.rounded.CenterFocusStrong
+import androidx.compose.material.icons.rounded.Draw
+import androidx.compose.material.icons.rounded.PhotoCamera
+import androidx.compose.material.icons.rounded.Smartphone
+import androidx.compose.material.icons.rounded.SportsEsports
+import androidx.compose.material.icons.rounded.Thermostat
+import androidx.compose.material.icons.rounded.Verified
+import androidx.compose.material.icons.rounded.VolumeUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,18 +44,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.panda.myapplication.domain.model.HardwareItem
 import com.panda.myapplication.domain.model.PhoneSpec
 import com.panda.myapplication.domain.model.TabletSpec
+import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
-import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.util.LocalAppStrings
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -50,7 +67,7 @@ fun MobileBenchmarkCard(
     modifier: Modifier = Modifier,
 ) {
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val isTr = strings.isTurkish
 
     val phoneSpec = item.spec as? PhoneSpec
     val tabletSpec = item.spec as? TabletSpec
@@ -75,7 +92,7 @@ fun MobileBenchmarkCard(
             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
         ),
         border = CardDefaults.outlinedCardBorder().copy(
-            brush = androidx.compose.ui.graphics.SolidColor(ElectricBlue.copy(alpha = 0.35f)),
+            brush = SolidColor(ElectricBlue.copy(alpha = 0.35f)),
         ),
     ) {
         Column(
@@ -83,7 +100,6 @@ fun MobileBenchmarkCard(
                 .fillMaxWidth()
                 .padding(Spacing.medium),
         ) {
-            // Header
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -100,7 +116,12 @@ fun MobileBenchmarkCard(
                             .background(ElectricBlue.copy(alpha = 0.15f)),
                         contentAlignment = Alignment.Center,
                     ) {
-                        Text("📊", style = MaterialTheme.typography.titleMedium)
+                        Icon(
+                            imageVector = Icons.Rounded.Analytics,
+                            contentDescription = null,
+                            tint = ElectricBlue,
+                            modifier = Modifier.size(20.dp),
+                        )
                     }
                     Spacer(modifier = Modifier.width(Spacing.small))
                     Column(modifier = Modifier.weight(1f)) {
@@ -124,7 +145,6 @@ fun MobileBenchmarkCard(
 
                 Spacer(modifier = Modifier.width(Spacing.small))
 
-                // Official Verified Pill
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(6.dp))
@@ -132,14 +152,25 @@ fun MobileBenchmarkCard(
                         .border(1.dp, NeonEmerald.copy(alpha = 0.4f), RoundedCornerShape(6.dp))
                         .padding(horizontal = 8.dp, vertical = 4.dp),
                 ) {
-                    Text(
-                        text = if (isTr) "✓ Doğrulanmış" else "✓ Verified",
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = NeonEmerald,
-                        maxLines = 1,
-                        softWrap = false,
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(3.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Verified,
+                            contentDescription = null,
+                            tint = NeonEmerald,
+                            modifier = Modifier.size(12.dp),
+                        )
+                        Text(
+                            text = if (isTr) "Doğrulanmış" else "Verified",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonEmerald,
+                            maxLines = 1,
+                            softWrap = false,
+                        )
+                    }
                 }
             }
 
@@ -147,7 +178,6 @@ fun MobileBenchmarkCard(
             HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f))
             Spacer(modifier = Modifier.height(Spacing.medium))
 
-            // AnTuTu v10 Master Banner
             if (antutuScore != null) {
                 Box(
                     modifier = Modifier
@@ -195,7 +225,7 @@ fun MobileBenchmarkCard(
                             }
                             Spacer(modifier = Modifier.height(4.dp))
                             Text(
-                                text = "${formatPoints(antutuScore)} Puan",
+                                text = "${formatPoints(antutuScore)} ${if (isTr) "Puan" else "pts"}",
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Black,
                                 color = MaterialTheme.colorScheme.onSurface,
@@ -204,13 +234,12 @@ fun MobileBenchmarkCard(
 
                         Spacer(modifier = Modifier.width(Spacing.small))
 
-                        // Tier Badge
                         val tierText = when {
-                            antutuScore >= 2000000 -> "S++ Amiral"
-                            antutuScore >= 1600000 -> "S+ Amiral"
-                            antutuScore >= 1200000 -> "S Üst Seviye"
-                            antutuScore >= 800000 -> "A Orta-Üst"
-                            else -> "B Giriş-Orta"
+                            antutuScore >= 2_000_000 -> if (isTr) "S++ Amiral" else "S++ Flagship"
+                            antutuScore >= 1_600_000 -> if (isTr) "S+ Amiral" else "S+ Flagship"
+                            antutuScore >= 1_200_000 -> if (isTr) "S Üst Seviye" else "S High-End"
+                            antutuScore >= 800_000 -> if (isTr) "A Orta-Üst" else "A Upper-Mid"
+                            else -> if (isTr) "B Giriş-Orta" else "B Entry-Mid"
                         }
                         Box(
                             modifier = Modifier
@@ -232,19 +261,17 @@ fun MobileBenchmarkCard(
                 Spacer(modifier = Modifier.height(Spacing.small))
             }
 
-            // Geekbench 6 Dual Scores
             if (geekSingle != null && geekMulti != null) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(Spacing.small),
                 ) {
-                    // Single Core
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(10.dp),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(
-                            brush = androidx.compose.ui.graphics.SolidColor(NeonCyan.copy(alpha = 0.25f)),
+                            brush = SolidColor(NeonCyan.copy(alpha = 0.25f)),
                         ),
                     ) {
                         Column(modifier = Modifier.padding(Spacing.small)) {
@@ -268,13 +295,12 @@ fun MobileBenchmarkCard(
                         }
                     }
 
-                    // Multi Core
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(10.dp),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(
-                            brush = androidx.compose.ui.graphics.SolidColor(NeonPurple.copy(alpha = 0.25f)),
+                            brush = SolidColor(NeonPurple.copy(alpha = 0.25f)),
                         ),
                     ) {
                         Column(modifier = Modifier.padding(Spacing.small)) {
@@ -301,7 +327,6 @@ fun MobileBenchmarkCard(
                 Spacer(modifier = Modifier.height(Spacing.small))
             }
 
-            // 3DMark Thermal Stability Gauge
             if (stabilityPct != null) {
                 Box(
                     modifier = Modifier
@@ -317,7 +342,12 @@ fun MobileBenchmarkCard(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("🌡️", style = MaterialTheme.typography.labelMedium)
+                                Icon(
+                                    imageVector = Icons.Rounded.Thermostat,
+                                    contentDescription = null,
+                                    tint = if (stabilityPct >= 70) NeonEmerald else NeonAmber,
+                                    modifier = Modifier.size(15.dp),
+                                )
                                 Spacer(modifier = Modifier.width(4.dp))
                                 Text(
                                     text = if (isTr) "3DMark Termal Kararlılık (Wild Life Extreme)" else "3DMark Thermal Stability",
@@ -327,7 +357,7 @@ fun MobileBenchmarkCard(
                                 )
                             }
                             Text(
-                                text = "%$stabilityPct",
+                                text = if (isTr) "%$stabilityPct" else "$stabilityPct%",
                                 style = MaterialTheme.typography.labelLarge,
                                 fontWeight = FontWeight.Black,
                                 color = if (stabilityPct >= 70) NeonEmerald else NeonAmber,
@@ -368,7 +398,6 @@ fun MobileBenchmarkCard(
                 Spacer(modifier = Modifier.height(Spacing.small))
             }
 
-            // Official Game Modes & Hardware Badges
             Text(
                 text = if (isTr) "Resmi Oyun Desteği & Donanım Rozetleri" else "Official Game Capabilities & Badges",
                 style = MaterialTheme.typography.labelMedium,
@@ -382,67 +411,77 @@ fun MobileBenchmarkCard(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                // DXOMARK Sub-Scores (when verified)
                 phoneSpec?.dxomarkCamera?.let { cam ->
-                    GameCapabilityChip(emoji = "📷", text = "DXOMARK Kamera: $cam", accentColor = NeonEmerald)
+                    GameCapabilityChip(
+                        icon = Icons.Rounded.PhotoCamera,
+                        text = if (isTr) "DXOMARK Kamera: $cam" else "DXOMARK Camera: $cam",
+                        accentColor = NeonEmerald,
+                    )
                 }
                 phoneSpec?.dxomarkSelfie?.let { sf ->
-                    GameCapabilityChip(emoji = "🤳", text = "DXOMARK Selfie: $sf", accentColor = NeonCyan)
+                    GameCapabilityChip(
+                        icon = Icons.Rounded.CameraFront,
+                        text = "DXOMARK Selfie: $sf",
+                        accentColor = NeonCyan,
+                    )
                 }
                 phoneSpec?.dxomarkDisplay?.let { dp ->
-                    GameCapabilityChip(emoji = "🖥️", text = "DXOMARK Ekran: $dp", accentColor = ElectricBlue)
+                    GameCapabilityChip(
+                        icon = Icons.Rounded.Smartphone,
+                        text = if (isTr) "DXOMARK Ekran: $dp" else "DXOMARK Display: $dp",
+                        accentColor = ElectricBlue,
+                    )
                 }
                 phoneSpec?.dxomarkBattery?.let { bt ->
-                    GameCapabilityChip(emoji = "🔋", text = "DXOMARK Pil: $bt", accentColor = NeonAmber)
+                    GameCapabilityChip(
+                        icon = Icons.Rounded.BatteryChargingFull,
+                        text = if (isTr) "DXOMARK Pil: $bt" else "DXOMARK Battery: $bt",
+                        accentColor = NeonAmber,
+                    )
                 }
                 phoneSpec?.dxomarkAudio?.let { au ->
-                    GameCapabilityChip(emoji = "🔊", text = "DXOMARK Ses: $au", accentColor = NeonPurple)
+                    GameCapabilityChip(
+                        icon = Icons.Rounded.VolumeUp,
+                        text = if (isTr) "DXOMARK Ses: $au" else "DXOMARK Audio: $au",
+                        accentColor = NeonPurple,
+                    )
                 }
 
-                // PUBG Mobile Badge (only if known)
                 if (pubgFps != null) {
                     GameCapabilityChip(
-                        emoji = "🎯",
+                        icon = Icons.Rounded.SportsEsports,
                         text = "PUBG Mobile: $pubgFps",
                         accentColor = NeonEmerald,
                     )
                 }
 
-                // High Refresh Display Badge
                 val hz = (phoneSpec?.refreshRateHz ?: tabletSpec?.refreshRateHz ?: 0)
                 if (hz >= 90) {
                     GameCapabilityChip(
-                        emoji = "⚡",
-                        text = "${hz}Hz Akıcı Panel",
+                        icon = Icons.Rounded.Bolt,
+                        text = if (isTr) "${hz}Hz Akıcı Panel" else "${hz}Hz Smooth Display",
                         accentColor = ElectricBlue,
                     )
                 }
 
-                // Ray Tracing Badge
-                if (chipset.contains("A18", ignoreCase = true) ||
-                    chipset.contains("A19", ignoreCase = true) ||
-                    chipset.contains("Snapdragon 8", ignoreCase = true) ||
-                    chipset.contains("Dimensity 9", ignoreCase = true) ||
-                    chipset.contains("M4", ignoreCase = true)
-                ) {
+                if (hasMobileHardwareRayTracing(chipset)) {
                     GameCapabilityChip(
-                        emoji = "✨",
-                        text = "Donanımsal Ray Tracing",
+                        icon = Icons.Rounded.AutoAwesome,
+                        text = if (isTr) "Donanımsal Ray Tracing" else "Hardware Ray Tracing",
                         accentColor = NeonPurple,
                     )
                 }
 
-                // Tablet Stylus / Phone OIS
                 if (phoneSpec?.hasOis == true && phoneSpec.oisType.isNotBlank()) {
                     GameCapabilityChip(
-                        emoji = "📸",
+                        icon = Icons.Rounded.CenterFocusStrong,
                         text = phoneSpec.oisType,
                         accentColor = NeonCyan,
                     )
                 }
                 if (tabletSpec != null && tabletSpec.stylusSupport.isNotBlank()) {
                     GameCapabilityChip(
-                        emoji = "✏️",
+                        icon = Icons.Rounded.Draw,
                         text = tabletSpec.stylusSupport,
                         accentColor = NeonAmber,
                     )
@@ -452,9 +491,28 @@ fun MobileBenchmarkCard(
     }
 }
 
+internal fun hasMobileHardwareRayTracing(chipset: String): Boolean {
+    val c = chipset.lowercase()
+    return c.contains("a17 pro") ||
+        c.contains("a18") ||
+        c.contains("a19") ||
+        c.contains("m3") ||
+        c.contains("m4") ||
+        c.contains("8 gen 2") ||
+        c.contains("8 gen 3") ||
+        c.contains("8s gen 3") ||
+        c.contains("8 elite") ||
+        c.contains("dimensity 9200") ||
+        c.contains("dimensity 9300") ||
+        c.contains("dimensity 9400") ||
+        c.contains("exynos 2200") ||
+        c.contains("exynos 2400") ||
+        c.contains("exynos 2500")
+}
+
 @Composable
 private fun GameCapabilityChip(
-    emoji: String,
+    icon: ImageVector,
     text: String,
     accentColor: Color,
 ) {
@@ -466,7 +524,12 @@ private fun GameCapabilityChip(
             .padding(horizontal = 8.dp, vertical = 4.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(emoji, style = MaterialTheme.typography.labelSmall)
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = accentColor,
+                modifier = Modifier.size(13.dp),
+            )
             Spacer(modifier = Modifier.width(4.dp))
             Text(
                 text = text,

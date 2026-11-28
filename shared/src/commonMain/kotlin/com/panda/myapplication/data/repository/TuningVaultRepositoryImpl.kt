@@ -12,6 +12,7 @@ import com.panda.myapplication.domain.model.TuningReactionType
 import com.panda.myapplication.domain.model.TuningStatus
 import com.panda.myapplication.domain.model.TuningType
 import com.panda.myapplication.domain.repository.TuningVaultRepository
+import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.domain.util.ProfanityFilter
 import kotlin.time.Clock
 import io.ktor.client.HttpClient
@@ -53,6 +54,7 @@ internal class TuningVaultRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,
+    private val userRepository: UserRepository? = null,
 ) : TuningVaultRepository {
 
     private val _tuningProfiles = MutableStateFlow<List<TuningProfile>>(emptyList())
@@ -65,6 +67,17 @@ internal class TuningVaultRepositoryImpl(
 
     init {
         repoScope.launch {
+            userRepository?.currentUser?.collect { user ->
+                val uid = user?.id
+                if (uid.isNullOrBlank() || uid.startsWith("guest")) {
+                    _upvotedTipIds.value = emptySet()
+                    _proTips.update { list -> list.map { it.copy(isUpvotedByMe = false) } }
+                } else {
+                    syncUserUpvotes(uid)
+                }
+            }
+        }
+        repoScope.launch {
             fetchRemoteTunings()
             fetchRemoteTips()
             // Lifecycle-aware senkronizasyon: Yalnızca aktif UI abonesi varken bulut sorgusu yap
@@ -76,6 +89,20 @@ internal class TuningVaultRepositoryImpl(
                 if (_proTips.subscriptionCount.value > 0) {
                     fetchRemoteTips()
                 }
+            }
+        }
+    }
+
+    private suspend fun syncUserUpvotes(userId: String) {
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_PRO_TIP_UPVOTES}?user_id=eq.$userId&select=tip_id"
+            val response = httpClient.get(url) { applySupabaseHeaders() }
+            if (response.status == HttpStatusCode.OK) {
+                val ids = json.parseToJsonElement(response.bodyAsText()).jsonArray.mapNotNull { elem ->
+                    elem.jsonObject["tip_id"]?.jsonPrimitive?.contentOrNull
+                }.toSet()
+                _upvotedTipIds.value = ids
+                _proTips.update { list -> list.map { it.copy(isUpvotedByMe = ids.contains(it.id)) } }
             }
         }
     }

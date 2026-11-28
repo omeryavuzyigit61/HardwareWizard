@@ -49,6 +49,13 @@ enum class HardwareCategory(val displayName: String) {
     val isPowerBackup: Boolean
         get() = this == UPS
 
+    val isWizardCompatible: Boolean
+        get() = when (this) {
+            CPU, GPU, RAM, MOTHERBOARD, PSU, STORAGE, COOLER, CASE,
+            MONITOR, MOUSE, KEYBOARD, HEADSET, MICROPHONE, MOUSEPAD, WEBCAM, GAMING_CHAIR -> true
+            else -> false
+        }
+
     val englishName: String
         get() = when (this) {
             CPU -> "Processor (CPU)"

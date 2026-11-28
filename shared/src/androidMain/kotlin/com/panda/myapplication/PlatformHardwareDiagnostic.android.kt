@@ -21,9 +21,9 @@ actual fun getMyDeviceDiagnostic(): MyDeviceDiagnostic {
     val friendlyModel = resolveFriendlyModelName(rawModel)
     val socName = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
         val soc = Build.SOC_MODEL
-        resolveFriendlySocName(soc, hardware)
+        resolveFriendlySocName(soc, hardware, rawModel)
     } else {
-        resolveFriendlySocName("", hardware)
+        resolveFriendlySocName("", hardware, rawModel)
     }
 
     val appContext: Context? = runCatching {
@@ -123,17 +123,31 @@ private fun readRealRefreshRateHz(context: Context?): Int {
     return 60
 }
 
-private fun estimateDevicePercentile(totalRamGb: Double, refreshRateHz: Int): Int = when {
-    totalRamGb >= 12.0 && refreshRateHz >= 120 -> 95
-    totalRamGb >= 8.0 && refreshRateHz >= 120 -> 88
-    totalRamGb >= 8.0 -> 80
-    totalRamGb >= 6.0 -> 68
-    else -> 55
+private fun estimateDevicePercentile(totalRamGb: Double, refreshRateHz: Int): Int {
+    // Account for OS/modem reserved carveouts (8GB physical RAM reports ~7.3-7.6 GiB in MemTotal)
+    val marketedRamGb = when {
+        totalRamGb >= 14.2 -> 16
+        totalRamGb >= 10.4 -> 12
+        totalRamGb >= 7.0 -> 8
+        totalRamGb >= 5.1 -> 6
+        else -> 4
+    }
+    return when {
+        marketedRamGb >= 16 && refreshRateHz >= 120 -> 97
+        marketedRamGb >= 12 && refreshRateHz >= 120 -> 93
+        marketedRamGb >= 8 && refreshRateHz >= 120 -> 86
+        marketedRamGb >= 8 -> 78
+        marketedRamGb >= 6 -> 66
+        else -> 52
+    }
 }
 
 private fun resolveFriendlyModelName(rawModel: String): String {
     val upper = rawModel.uppercase().trim()
     return when {
+        upper.startsWith("SM-S938") -> "Galaxy S25 Ultra ($rawModel)"
+        upper.startsWith("SM-S936") -> "Galaxy S25+ ($rawModel)"
+        upper.startsWith("SM-S931") -> "Galaxy S25 ($rawModel)"
         upper.startsWith("SM-S721") -> "Galaxy S24 FE ($rawModel)"
         upper.startsWith("SM-S921") -> "Galaxy S24 ($rawModel)"
         upper.startsWith("SM-S926") -> "Galaxy S24+ ($rawModel)"
@@ -157,11 +171,13 @@ private fun resolveFriendlyModelName(rawModel: String): String {
     }
 }
 
-private fun resolveFriendlySocName(rawSoc: String, hardware: String): String {
+private fun resolveFriendlySocName(rawSoc: String, hardware: String, rawModel: String = ""): String {
     val soc = rawSoc.lowercase().trim()
     val hw = hardware.lowercase().trim()
+    val modelUpper = rawModel.uppercase().trim()
     return when {
-        soc == "s5e9945" || hw.contains("s5e9945") -> "Exynos 2400e"
+        soc == "s5e9955" || hw.contains("s5e9955") -> "Exynos 2500"
+        soc == "s5e9945" || hw.contains("s5e9945") -> if (modelUpper.startsWith("SM-S721")) "Exynos 2400e" else "Exynos 2400"
         soc == "s5e9935" || hw.contains("s5e9935") -> "Exynos 2400"
         soc == "s5e9925" || hw.contains("s5e9925") -> "Exynos 2200"
         soc == "s5e9840" || hw.contains("s5e9840") -> "Exynos 2100"

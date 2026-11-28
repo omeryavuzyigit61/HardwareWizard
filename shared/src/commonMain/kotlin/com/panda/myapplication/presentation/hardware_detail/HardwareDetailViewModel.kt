@@ -1,5 +1,7 @@
 package com.panda.myapplication.presentation.hardware_detail
 
+import com.panda.myapplication.domain.model.HardwareItem
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panda.myapplication.domain.common.DomainError
@@ -310,8 +312,8 @@ class HardwareDetailViewModel(
         }
     }
 
-    fun onAddToVsArena() {
-        val item = _uiState.value.item ?: return
+    fun onAddToVsArena(overrideItem: HardwareItem? = null) {
+        val item = overrideItem ?: _uiState.value.item ?: return
         val feedback = vsArenaRepository.addQuickItemBilingual(item)
         viewModelScope.launch {
             effectChannel.send(HardwareDetailEffect.ShowVsAddedToast(feedback.messageTr, feedback.messageEn))

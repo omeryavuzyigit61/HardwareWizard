@@ -145,19 +145,21 @@ fun SyntheticBenchmarkCard(
                         )
                     }
 
-                    val tier = benchmarkInfo?.tier ?: "A-Tier"
-                    Box(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(6.dp))
-                            .background(MaterialTheme.colorScheme.secondaryContainer)
-                            .padding(horizontal = Spacing.small, vertical = 2.dp),
-                    ) {
-                        Text(
-                            text = tier,
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onSecondaryContainer,
-                        )
+                    val tier = benchmarkInfo?.tier?.takeIf { it.isNotBlank() }
+                    if (tier != null) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(6.dp))
+                                .background(MaterialTheme.colorScheme.secondaryContainer)
+                                .padding(horizontal = Spacing.small, vertical = 2.dp),
+                        ) {
+                            Text(
+                                text = tier,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                            )
+                        }
                     }
                 }
             }
@@ -204,13 +206,13 @@ fun SyntheticBenchmarkCard(
                 Spacer(modifier = Modifier.height(Spacing.extraSmall))
 
                 if (selectedCpuTab == 0) {
-                    // Single-Core Test Items
+                    // Single-Core Test Items (2025/2026 ceilings)
                     SyntheticMetricRow(
                         testName = "Cinebench 2024 (Single-Core)",
                         score = cpuData?.cinebench2024Single,
-                        referenceCeiling = 180,
+                        referenceCeiling = 165,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "180 pts referans tepe tek çekirdek performansı", "180 pts reference peak single-core performance"),
+                        subText = tr(isTr, "165 pts masaüstü tek çekirdek tavan referansı", "165 pts desktop peak single-core reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Cinebench R23 (Single-Core)",
@@ -222,9 +224,9 @@ fun SyntheticBenchmarkCard(
                     SyntheticMetricRow(
                         testName = "Geekbench 6 (Single-Core)",
                         score = cpuData?.geekbench6Single,
-                        referenceCeiling = 3800,
+                        referenceCeiling = 3500,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = tr(isTr, "3,800 pts referans modern mimari skoru", "3,800 pts modern architecture reference score"),
+                        subText = tr(isTr, "3,500 pts referans modern mimari skoru", "3,500 pts modern architecture reference score"),
                     )
                     cpuData?.passmarkSingle?.let { pmSingle ->
                         SyntheticMetricRow(
@@ -240,36 +242,36 @@ fun SyntheticBenchmarkCard(
                     SyntheticMetricRow(
                         testName = "Cinebench 2024 (Multi-Core)",
                         score = cpuData?.cinebench2024Multi,
-                        referenceCeiling = 3000,
+                        referenceCeiling = 6500,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "3,000 pts tepe iş istasyonu render referansı", "3,000 pts peak workstation render reference"),
+                        subText = tr(isTr, "6,500 pts tepe iş istasyonu render referansı", "6,500 pts peak workstation render reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Cinebench R23 (Multi-Core)",
                         score = cpuData?.cinebenchR23Multi,
-                        referenceCeiling = 45000,
+                        referenceCeiling = 65000,
                         accentColor = MaterialTheme.colorScheme.primary,
-                        subText = tr(isTr, "45,000 pts çoklu çekirdek tepe referansı", "45,000 pts multi-core peak ceiling reference"),
+                        subText = tr(isTr, "65,000 pts çoklu çekirdek tepe referansı", "65,000 pts multi-core peak ceiling reference"),
                     )
                     SyntheticMetricRow(
                         testName = "Geekbench 6 (Multi-Core)",
                         score = cpuData?.geekbench6Multi,
-                        referenceCeiling = 25000,
+                        referenceCeiling = 28000,
                         accentColor = MaterialTheme.colorScheme.secondary,
-                        subText = tr(isTr, "25,000 pts genel işlem kapasitesi referansı", "25,000 pts general compute capacity reference"),
+                        subText = tr(isTr, "28,000 pts genel işlem kapasitesi referansı", "28,000 pts general compute capacity reference"),
                     )
                     SyntheticMetricRow(
                         testName = "PassMark CPU Mark",
                         score = cpuData?.passmarkScore,
-                        referenceCeiling = 70000,
+                        referenceCeiling = 95000,
                         accentColor = MaterialTheme.colorScheme.tertiary,
-                        subText = tr(isTr, "70,000 pts global sentetik işlemci skoru", "70,000 pts global synthetic compute ceiling"),
+                        subText = tr(isTr, "95,000 pts global sentetik işlemci skoru", "95,000 pts global synthetic compute ceiling"),
                     )
                     cpuData?.blenderScore?.let { b ->
                         SyntheticMetricRow(
                             testName = "Blender Benchmark",
                             score = b,
-                            referenceCeiling = 1500,
+                            referenceCeiling = 1800,
                             accentColor = NeonPurple,
                             subText = tr(isTr, "Blender OpenData 3D Render puanı", "Blender OpenData 3D rendering score"),
                         )
@@ -278,7 +280,7 @@ fun SyntheticBenchmarkCard(
                         SyntheticMetricRow(
                             testName = "7-Zip Sıkıştırma (MIPS)",
                             score = sz,
-                            referenceCeiling = 250000,
+                            referenceCeiling = 260000,
                             accentColor = ElectricBlue,
                             subText = tr(isTr, "Çok çekirdekli sıkıştırma / açma bant genişliği", "Multi-core compression throughput"),
                         )
@@ -290,29 +292,29 @@ fun SyntheticBenchmarkCard(
                 SyntheticMetricRow(
                     testName = "3DMark Time Spy Graphics",
                     score = gpuData?.timeSpyGraphics,
-                    referenceCeiling = 38000,
+                    referenceCeiling = 50000,
                     accentColor = MaterialTheme.colorScheme.primary,
-                    subText = tr(isTr, "DirectX 12 1440p (38,000 pts tepe grafik gücü referansı)", "DirectX 12 1440p (38,000 pts peak graphics reference)"),
+                    subText = tr(isTr, "DirectX 12 1440p (50,000 pts RTX 5090 tavan referansı)", "DirectX 12 1440p (50,000 pts RTX 5090 peak reference)"),
                 )
                 SyntheticMetricRow(
                     testName = "3DMark Time Spy Extreme",
                     score = gpuData?.timeSpyExtreme,
-                    referenceCeiling = 20000,
+                    referenceCeiling = 28000,
                     accentColor = MaterialTheme.colorScheme.secondary,
-                    subText = tr(isTr, "DirectX 12 4K UHD (20,000 pts tepe çözünürlük referansı)", "DirectX 12 4K UHD (20,000 pts peak 4K resolution reference)"),
+                    subText = tr(isTr, "DirectX 12 4K UHD (28,000 pts tepe 4K referansı)", "DirectX 12 4K UHD (28,000 pts peak 4K reference)"),
                 )
                 SyntheticMetricRow(
                     testName = "3DMark Steel Nomad",
                     score = gpuData?.steelNomad,
-                    referenceCeiling = 10000,
+                    referenceCeiling = 15500,
                     accentColor = MaterialTheme.colorScheme.tertiary,
-                    subText = tr(isTr, "Modern Cross-Platform Non-Raytracing saf raster skoru", "Modern cross-platform pure raster benchmark"),
+                    subText = tr(isTr, "Modern Cross-Platform saf raster skoru (15,500 pts tavan)", "Modern cross-platform pure raster benchmark (15,500 pts ceiling)"),
                 )
                 gpuData?.portRoyal?.let { pr ->
                     SyntheticMetricRow(
                         testName = "3DMark Port Royal (Ray Tracing)",
                         score = pr,
-                        referenceCeiling = 28000,
+                        referenceCeiling = 38000,
                         accentColor = NeonPurple,
                         subText = tr(isTr, "Donanımsal ışın izleme (RT) yük testi", "Real-time hardware ray tracing score"),
                     )
@@ -321,7 +323,7 @@ fun SyntheticBenchmarkCard(
                     SyntheticMetricRow(
                         testName = "3DMark Speed Way (DX12 Ultimate)",
                         score = sw,
-                        referenceCeiling = 16000,
+                        referenceCeiling = 18000,
                         accentColor = NeonPurple,
                         subText = tr(isTr, "DirectX 12 Ultimate Ray Tracing + Mesh Shaders", "DirectX 12 Ultimate ray tracing & mesh shader score"),
                     )
@@ -330,7 +332,7 @@ fun SyntheticBenchmarkCard(
                     SyntheticMetricRow(
                         testName = "PassMark G3D Mark",
                         score = g3d,
-                        referenceCeiling = 42000,
+                        referenceCeiling = 46000,
                         accentColor = ElectricBlue,
                         subText = tr(isTr, "PassMark GPU dünya sıralama endeksi", "Global PassMark G3D graphics index"),
                     )

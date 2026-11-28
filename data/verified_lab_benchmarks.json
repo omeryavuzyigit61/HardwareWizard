@@ -3,9 +3,9 @@
     "id": "cpu_cs2_1080p_low",
     "gameTitle": "Counter-Strike 2",
     "resolutionSettings": "1080P • Düşük Detay (Rekabetçi)",
-    "rigSummary": "RTX 5090 32GB • DDR5 Hızlı Bellek • Sıfır GPU Darboğazı",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
     "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "Intel: DDR5 6400MTs CL30 / AMD: DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": true,
     "entries": [
       {
@@ -13,54 +13,43 @@
         "fullModelName": "AMD Ryzen 7 9800X3D",
         "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 926.0,
+        "avgFps": 880.0,
         "minFps": 318.0,
         "modelKeywords": [
           "9800X3D"
         ]
       },
       {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
         "isAmd": true,
-        "avgFps": 897.0,
-        "minFps": 260.0,
+        "avgFps": 871.0,
+        "minFps": 313.0,
         "modelKeywords": [
-          "9700X"
+          "9950X3D"
         ]
       },
       {
         "modelName": "7800X3D",
         "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 871.0,
-        "minFps": 303.0,
+        "avgFps": 805.0,
+        "minFps": 297.0,
         "modelKeywords": [
           "7800X3D"
         ]
       },
       {
-        "modelName": "9500F",
-        "fullModelName": "AMD Ryzen 5 9500F",
-        "wattLabel": "65W",
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 787.0,
-        "minFps": 246.0,
+        "avgFps": 792.0,
+        "minFps": 291.0,
         "modelKeywords": [
-          "9500F"
-        ]
-      },
-      {
-        "modelName": "7500X3D",
-        "fullModelName": "AMD Ryzen 5 7500X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 778.0,
-        "minFps": 274.0,
-        "modelKeywords": [
-          "7500X3D"
+          "7950X3D"
         ]
       },
       {
@@ -68,34 +57,87 @@
         "fullModelName": "Intel Core i9-14900K",
         "wattLabel": "253W",
         "isAmd": false,
-        "avgFps": 735.0,
-        "minFps": 230.0,
+        "avgFps": 752.0,
+        "minFps": 259.0,
         "modelKeywords": [
-          "14900K",
-          "i9-14900K"
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 735.0,
+        "minFps": 258.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 735.0,
+        "minFps": 253.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 730.0,
+        "minFps": 256.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 717.0,
+        "minFps": 251.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 713.0,
+        "minFps": 250.0,
+        "modelKeywords": [
+          "9900X"
         ]
       },
       {
         "modelName": "285K",
         "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
+        "wattLabel": "250W",
         "isAmd": false,
-        "avgFps": 726.0,
-        "minFps": 225.0,
+        "avgFps": 708.0,
+        "minFps": 248.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "285K"
         ]
       },
       {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 696.0,
-        "minFps": 232.0,
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 704.0,
+        "minFps": 245.0,
         "modelKeywords": [
-          "7500F"
+          "14600K"
         ]
       },
       {
@@ -103,22 +145,54 @@
         "fullModelName": "AMD Ryzen 7 5800X3D",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 680.0,
-        "minFps": 240.0,
+        "avgFps": 691.0,
+        "minFps": 259.0,
         "modelKeywords": [
           "5800X3D"
         ]
       },
       {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 686.0,
+        "minFps": 242.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 682.0,
+        "minFps": 238.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
         "modelName": "13600K",
         "fullModelName": "Intel Core i5-13600K",
-        "wattLabel": "125W",
+        "wattLabel": "181W",
         "isAmd": false,
-        "avgFps": 645.0,
-        "minFps": 215.0,
+        "avgFps": 678.0,
+        "minFps": 237.0,
         "modelKeywords": [
-          "13600K",
-          "i5-13600K"
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 669.0,
+        "minFps": 235.0,
+        "modelKeywords": [
+          "7600X"
         ]
       },
       {
@@ -126,46 +200,54 @@
         "fullModelName": "AMD Ryzen 7 5700X3D",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 640.0,
-        "minFps": 228.0,
+        "avgFps": 656.0,
+        "minFps": 246.0,
         "modelKeywords": [
           "5700X3D"
         ]
       },
       {
-        "modelName": "265F",
-        "fullModelName": "Intel Core Ultra 7 265F",
+        "modelName": "7500F",
+        "fullModelName": "AMD Ryzen 5 7500F",
         "wattLabel": "65W",
-        "isAmd": false,
-        "avgFps": 620.0,
-        "minFps": 212.0,
+        "isAmd": true,
+        "avgFps": 647.0,
+        "minFps": 227.0,
         "modelKeywords": [
-          "265F",
-          "Ultra 7 265F"
+          "7500F"
         ]
       },
       {
-        "modelName": "245KF",
-        "fullModelName": "Intel Core Ultra 5 245KF",
-        "wattLabel": "125W",
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
         "isAmd": false,
-        "avgFps": 592.0,
-        "minFps": 202.0,
+        "avgFps": 642.0,
+        "minFps": 224.0,
         "modelKeywords": [
-          "245KF",
-          "Ultra 5 245KF"
+          "245K"
         ]
       },
       {
-        "modelName": "225F",
-        "fullModelName": "Intel Core Ultra 5 225F",
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
         "wattLabel": "65W",
         "isAmd": false,
-        "avgFps": 525.0,
+        "avgFps": 550.0,
+        "minFps": 191.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 541.0,
         "minFps": 189.0,
         "modelKeywords": [
-          "225F",
-          "Ultra 5 225F"
+          "5600X"
         ]
       }
     ]
@@ -174,9 +256,9 @@
     "id": "cpu_cyberpunk_1080p_ultra",
     "gameTitle": "Cyberpunk 2077",
     "resolutionSettings": "1080P • Ultra Ayarlar (RT Kapalı)",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
     "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": true,
     "entries": [
       {
@@ -191,25 +273,36 @@
         ]
       },
       {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 240.0,
+        "minFps": 181.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
         "modelName": "7800X3D",
         "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 224.0,
+        "avgFps": 221.0,
         "minFps": 172.0,
         "modelKeywords": [
           "7800X3D"
         ]
       },
       {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 215.0,
-        "minFps": 158.0,
+        "avgFps": 218.0,
+        "minFps": 168.0,
         "modelKeywords": [
-          "9700X"
+          "7950X3D"
         ]
       },
       {
@@ -217,56 +310,87 @@
         "fullModelName": "Intel Core i9-14900K",
         "wattLabel": "253W",
         "isAmd": false,
-        "avgFps": 218.0,
-        "minFps": 155.0,
+        "avgFps": 207.0,
+        "minFps": 150.0,
         "modelKeywords": [
-          "14900K",
-          "i9-14900K"
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 202.0,
+        "minFps": 149.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 202.0,
+        "minFps": 146.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 201.0,
+        "minFps": 148.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 197.0,
+        "minFps": 145.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 196.0,
+        "minFps": 144.0,
+        "modelKeywords": [
+          "9900X"
         ]
       },
       {
         "modelName": "285K",
         "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
+        "wattLabel": "250W",
         "isAmd": false,
-        "avgFps": 208.0,
-        "minFps": 152.0,
+        "avgFps": 195.0,
+        "minFps": 144.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "285K"
         ]
       },
       {
-        "modelName": "7500X3D",
-        "fullModelName": "AMD Ryzen 5 7500X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 198.0,
-        "minFps": 150.0,
-        "modelKeywords": [
-          "7500X3D"
-        ]
-      },
-      {
-        "modelName": "9500F",
-        "fullModelName": "AMD Ryzen 5 9500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 188.0,
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 194.0,
         "minFps": 142.0,
         "modelKeywords": [
-          "9500F"
-        ]
-      },
-      {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 172.0,
-        "minFps": 130.0,
-        "modelKeywords": [
-          "7500F"
+          "14600K"
         ]
       },
       {
@@ -274,113 +398,65 @@
         "fullModelName": "AMD Ryzen 7 5800X3D",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 168.0,
-        "minFps": 128.0,
+        "avgFps": 190.0,
+        "minFps": 150.0,
         "modelKeywords": [
           "5800X3D"
         ]
       },
       {
-        "modelName": "13600K",
-        "fullModelName": "Intel Core i5-13600K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 165.0,
-        "minFps": 122.0,
-        "modelKeywords": [
-          "13600K",
-          "i5-13600K"
-        ]
-      },
-      {
-        "modelName": "245KF",
-        "fullModelName": "Intel Core Ultra 5 245KF",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 158.0,
-        "minFps": 118.0,
-        "modelKeywords": [
-          "245KF",
-          "Ultra 5 245KF"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cpu_wukong_1080p_high",
-    "gameTitle": "Black Myth: Wukong",
-    "resolutionSettings": "1080P • Çok Yüksek Grafik",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
-    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
-    "isCpuTest": true,
-    "entries": [
-      {
-        "modelName": "9800X3D",
-        "fullModelName": "AMD Ryzen 7 9800X3D",
-        "wattLabel": "120W",
-        "isAmd": true,
-        "avgFps": 198.0,
-        "minFps": 156.0,
-        "modelKeywords": [
-          "9800X3D"
-        ]
-      },
-      {
-        "modelName": "7800X3D",
-        "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 185.0,
-        "minFps": 148.0,
-        "modelKeywords": [
-          "7800X3D"
-        ]
-      },
-      {
-        "modelName": "14900K",
-        "fullModelName": "Intel Core i9-14900K",
-        "wattLabel": "253W",
-        "isAmd": false,
-        "avgFps": 182.0,
-        "minFps": 140.0,
-        "modelKeywords": [
-          "14900K",
-          "i9-14900K"
-        ]
-      },
-      {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 178.0,
+        "avgFps": 189.0,
+        "minFps": 140.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 188.0,
+        "minFps": 138.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 186.0,
+        "minFps": 137.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 184.0,
         "minFps": 136.0,
         "modelKeywords": [
-          "9700X"
+          "7600X"
         ]
       },
       {
-        "modelName": "285K",
-        "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 174.0,
-        "minFps": 134.0,
-        "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
-        ]
-      },
-      {
-        "modelName": "7500X3D",
-        "fullModelName": "AMD Ryzen 5 7500X3D",
-        "wattLabel": "65W",
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 168.0,
-        "minFps": 132.0,
+        "avgFps": 180.0,
+        "minFps": 143.0,
         "modelKeywords": [
-          "7500X3D"
+          "5700X3D"
         ]
       },
       {
@@ -388,22 +464,43 @@
         "fullModelName": "AMD Ryzen 5 7500F",
         "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 152.0,
-        "minFps": 118.0,
+        "avgFps": 178.0,
+        "minFps": 132.0,
         "modelKeywords": [
           "7500F"
         ]
       },
       {
-        "modelName": "13600K",
-        "fullModelName": "Intel Core i5-13600K",
-        "wattLabel": "125W",
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
         "isAmd": false,
-        "avgFps": 148.0,
-        "minFps": 114.0,
+        "avgFps": 177.0,
+        "minFps": 130.0,
         "modelKeywords": [
-          "13600K",
-          "i5-13600K"
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 151.0,
+        "minFps": 110.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 149.0,
+        "minFps": 109.0,
+        "modelKeywords": [
+          "5600X"
         ]
       }
     ]
@@ -411,10 +508,10 @@
   {
     "id": "cpu_baldurs_gate_3_1080p_ultra",
     "gameTitle": "Baldur's Gate 3",
-    "resolutionSettings": "1080P • Ultra (Act 3 Şehir İçi Yoğun Draw-Call)",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
+    "resolutionSettings": "1080P • Ultra Ayarlar (Act 3)",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
     "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": true,
     "entries": [
       {
@@ -422,21 +519,43 @@
         "fullModelName": "AMD Ryzen 7 9800X3D",
         "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 178.0,
+        "avgFps": 196.0,
         "minFps": 142.0,
         "modelKeywords": [
           "9800X3D"
         ]
       },
       {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 194.0,
+        "minFps": 140.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
         "modelName": "7800X3D",
         "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 164.0,
-        "minFps": 130.0,
+        "avgFps": 179.0,
+        "minFps": 133.0,
         "modelKeywords": [
           "7800X3D"
+        ]
+      },
+      {
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 176.0,
+        "minFps": 130.0,
+        "modelKeywords": [
+          "7950X3D"
         ]
       },
       {
@@ -444,34 +563,87 @@
         "fullModelName": "Intel Core i9-14900K",
         "wattLabel": "253W",
         "isAmd": false,
-        "avgFps": 152.0,
+        "avgFps": 168.0,
         "minFps": 116.0,
         "modelKeywords": [
-          "14900K",
-          "i9-14900K"
+          "14900K"
         ]
       },
       {
         "modelName": "9700X",
         "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
+        "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 148.0,
-        "minFps": 114.0,
+        "avgFps": 164.0,
+        "minFps": 115.0,
         "modelKeywords": [
           "9700X"
         ]
       },
       {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 164.0,
+        "minFps": 113.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 163.0,
+        "minFps": 114.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 160.0,
+        "minFps": 112.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 159.0,
+        "minFps": 111.0,
+        "modelKeywords": [
+          "9900X"
+        ]
+      },
+      {
         "modelName": "285K",
         "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
+        "wattLabel": "250W",
         "isAmd": false,
-        "avgFps": 144.0,
-        "minFps": 110.0,
+        "avgFps": 158.0,
+        "minFps": 111.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "285K"
+        ]
+      },
+      {
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 157.0,
+        "minFps": 109.0,
+        "modelKeywords": [
+          "14600K"
         ]
       },
       {
@@ -479,10 +651,65 @@
         "fullModelName": "AMD Ryzen 7 5800X3D",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 136.0,
-        "minFps": 108.0,
+        "avgFps": 154.0,
+        "minFps": 116.0,
         "modelKeywords": [
           "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 153.0,
+        "minFps": 108.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 152.0,
+        "minFps": 106.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 151.0,
+        "minFps": 106.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 149.0,
+        "minFps": 105.0,
+        "modelKeywords": [
+          "7600X"
+        ]
+      },
+      {
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 146.0,
+        "minFps": 110.0,
+        "modelKeywords": [
+          "5700X3D"
         ]
       },
       {
@@ -490,22 +717,43 @@
         "fullModelName": "AMD Ryzen 5 7500F",
         "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 126.0,
-        "minFps": 94.0,
+        "avgFps": 144.0,
+        "minFps": 102.0,
         "modelKeywords": [
           "7500F"
         ]
       },
       {
-        "modelName": "13600K",
-        "fullModelName": "Intel Core i5-13600K",
-        "wattLabel": "125W",
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 143.0,
+        "minFps": 100.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
         "isAmd": false,
         "avgFps": 122.0,
-        "minFps": 90.0,
+        "minFps": 85.0,
         "modelKeywords": [
-          "13600K",
-          "i5-13600K"
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 121.0,
+        "minFps": 84.0,
+        "modelKeywords": [
+          "5600X"
         ]
       }
     ]
@@ -513,10 +761,10 @@
   {
     "id": "cpu_valorant_1080p_low",
     "gameTitle": "Valorant",
-    "resolutionSettings": "1080P • Düşük / Rekabetçi",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
+    "resolutionSettings": "1080P • Düşük Detay (Rekabetçi)",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
     "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": true,
     "entries": [
       {
@@ -524,32 +772,43 @@
         "fullModelName": "AMD Ryzen 7 9800X3D",
         "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 1050.0,
-        "minFps": 460.0,
+        "avgFps": 940.0,
+        "minFps": 415.0,
         "modelKeywords": [
           "9800X3D"
         ]
       },
       {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 931.0,
+        "minFps": 409.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
         "modelName": "7800X3D",
         "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 980.0,
-        "minFps": 430.0,
+        "avgFps": 860.0,
+        "minFps": 388.0,
         "modelKeywords": [
           "7800X3D"
         ]
       },
       {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 940.0,
-        "minFps": 390.0,
+        "avgFps": 846.0,
+        "minFps": 380.0,
         "modelKeywords": [
-          "9700X"
+          "7950X3D"
         ]
       },
       {
@@ -557,125 +816,153 @@
         "fullModelName": "Intel Core i9-14900K",
         "wattLabel": "253W",
         "isAmd": false,
-        "avgFps": 890.0,
-        "minFps": 370.0,
+        "avgFps": 804.0,
+        "minFps": 338.0,
         "modelKeywords": [
-          "14900K",
-          "i9-14900K"
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 785.0,
+        "minFps": 336.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 785.0,
+        "minFps": 330.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 780.0,
+        "minFps": 334.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 766.0,
+        "minFps": 328.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 761.0,
+        "minFps": 326.0,
+        "modelKeywords": [
+          "9900X"
         ]
       },
       {
         "modelName": "285K",
         "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
+        "wattLabel": "250W",
         "isAmd": false,
-        "avgFps": 860.0,
-        "minFps": 355.0,
+        "avgFps": 757.0,
+        "minFps": 324.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "285K"
         ]
       },
       {
-        "modelName": "7500X3D",
-        "fullModelName": "AMD Ryzen 5 7500X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 870.0,
-        "minFps": 380.0,
-        "modelKeywords": [
-          "7500X3D"
-        ]
-      },
-      {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 790.0,
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 752.0,
         "minFps": 320.0,
         "modelKeywords": [
-          "7500F"
+          "14600K"
+        ]
+      },
+      {
+        "modelName": "5800X3D",
+        "fullModelName": "AMD Ryzen 7 5800X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 738.0,
+        "minFps": 338.0,
+        "modelKeywords": [
+          "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 733.0,
+        "minFps": 315.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 728.0,
+        "minFps": 311.0,
+        "modelKeywords": [
+          "265K"
         ]
       },
       {
         "modelName": "13600K",
         "fullModelName": "Intel Core i5-13600K",
-        "wattLabel": "125W",
+        "wattLabel": "181W",
         "isAmd": false,
-        "avgFps": 740.0,
-        "minFps": 305.0,
+        "avgFps": 724.0,
+        "minFps": 309.0,
         "modelKeywords": [
-          "13600K",
-          "i5-13600K"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cpu_rdr2_1080p_ultra",
-    "gameTitle": "Red Dead Redemption 2",
-    "resolutionSettings": "1080P • Ultra Ayarlar",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
-    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
-    "isCpuTest": true,
-    "entries": [
-      {
-        "modelName": "9800X3D",
-        "fullModelName": "AMD Ryzen 7 9800X3D",
-        "wattLabel": "120W",
-        "isAmd": true,
-        "avgFps": 238.0,
-        "minFps": 176.0,
-        "modelKeywords": [
-          "9800X3D"
+          "13600K"
         ]
       },
       {
-        "modelName": "7800X3D",
-        "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 222.0,
-        "minFps": 164.0,
-        "modelKeywords": [
-          "7800X3D"
-        ]
-      },
-      {
-        "modelName": "14900K",
-        "fullModelName": "Intel Core i9-14900K",
-        "wattLabel": "253W",
-        "isAmd": false,
-        "avgFps": 214.0,
-        "minFps": 150.0,
-        "modelKeywords": [
-          "14900K",
-          "i9-14900K"
-        ]
-      },
-      {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
         "wattLabel": "105W",
         "isAmd": true,
-        "avgFps": 210.0,
-        "minFps": 152.0,
+        "avgFps": 714.0,
+        "minFps": 307.0,
         "modelKeywords": [
-          "9700X"
+          "7600X"
         ]
       },
       {
-        "modelName": "285K",
-        "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 202.0,
-        "minFps": 146.0,
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 700.0,
+        "minFps": 322.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "5700X3D"
         ]
       },
       {
@@ -683,10 +970,549 @@
         "fullModelName": "AMD Ryzen 5 7500F",
         "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 180.0,
-        "minFps": 130.0,
+        "avgFps": 691.0,
+        "minFps": 297.0,
         "modelKeywords": [
           "7500F"
+        ]
+      },
+      {
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 686.0,
+        "minFps": 293.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 588.0,
+        "minFps": 249.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 578.0,
+        "minFps": 247.0,
+        "modelKeywords": [
+          "5600X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cpu_wukong_1080p_high",
+    "gameTitle": "Black Myth: Wukong",
+    "resolutionSettings": "1080P • Yüksek Ayarlar",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
+    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
+    "rigRam": "32GB DDR5-6000 CL30",
+    "isCpuTest": true,
+    "entries": [
+      {
+        "modelName": "9800X3D",
+        "fullModelName": "AMD Ryzen 7 9800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 168.0,
+        "minFps": 128.0,
+        "modelKeywords": [
+          "9800X3D"
+        ]
+      },
+      {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 166.0,
+        "minFps": 126.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
+        "modelName": "7800X3D",
+        "fullModelName": "AMD Ryzen 7 7800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 154.0,
+        "minFps": 120.0,
+        "modelKeywords": [
+          "7800X3D"
+        ]
+      },
+      {
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 151.0,
+        "minFps": 117.0,
+        "modelKeywords": [
+          "7950X3D"
+        ]
+      },
+      {
+        "modelName": "14900K",
+        "fullModelName": "Intel Core i9-14900K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 144.0,
+        "minFps": 104.0,
+        "modelKeywords": [
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 140.0,
+        "minFps": 104.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 140.0,
+        "minFps": 102.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 139.0,
+        "minFps": 103.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 137.0,
+        "minFps": 101.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 136.0,
+        "minFps": 100.0,
+        "modelKeywords": [
+          "9900X"
+        ]
+      },
+      {
+        "modelName": "285K",
+        "fullModelName": "Intel Core Ultra 9 285K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 135.0,
+        "minFps": 100.0,
+        "modelKeywords": [
+          "285K"
+        ]
+      },
+      {
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 134.0,
+        "minFps": 99.0,
+        "modelKeywords": [
+          "14600K"
+        ]
+      },
+      {
+        "modelName": "5800X3D",
+        "fullModelName": "AMD Ryzen 7 5800X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 132.0,
+        "minFps": 104.0,
+        "modelKeywords": [
+          "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 131.0,
+        "minFps": 97.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 130.0,
+        "minFps": 96.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 129.0,
+        "minFps": 95.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 128.0,
+        "minFps": 95.0,
+        "modelKeywords": [
+          "7600X"
+        ]
+      },
+      {
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 125.0,
+        "minFps": 99.0,
+        "modelKeywords": [
+          "5700X3D"
+        ]
+      },
+      {
+        "modelName": "7500F",
+        "fullModelName": "AMD Ryzen 5 7500F",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 123.0,
+        "minFps": 92.0,
+        "modelKeywords": [
+          "7500F"
+        ]
+      },
+      {
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 123.0,
+        "minFps": 90.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 105.0,
+        "minFps": 77.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 103.0,
+        "minFps": 76.0,
+        "modelKeywords": [
+          "5600X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cpu_warzone_1080p_comp",
+    "gameTitle": "Call of Duty: Warzone",
+    "resolutionSettings": "1080P • Rekabetçi Ayarlar",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
+    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
+    "rigRam": "32GB DDR5-6000 CL30",
+    "isCpuTest": true,
+    "entries": [
+      {
+        "modelName": "9800X3D",
+        "fullModelName": "AMD Ryzen 7 9800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 285.0,
+        "minFps": 204.0,
+        "modelKeywords": [
+          "9800X3D"
+        ]
+      },
+      {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 282.0,
+        "minFps": 201.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
+        "modelName": "7800X3D",
+        "fullModelName": "AMD Ryzen 7 7800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 261.0,
+        "minFps": 191.0,
+        "modelKeywords": [
+          "7800X3D"
+        ]
+      },
+      {
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 256.0,
+        "minFps": 187.0,
+        "modelKeywords": [
+          "7950X3D"
+        ]
+      },
+      {
+        "modelName": "14900K",
+        "fullModelName": "Intel Core i9-14900K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 244.0,
+        "minFps": 166.0,
+        "modelKeywords": [
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 238.0,
+        "minFps": 165.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 238.0,
+        "minFps": 162.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 237.0,
+        "minFps": 164.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 232.0,
+        "minFps": 161.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 231.0,
+        "minFps": 160.0,
+        "modelKeywords": [
+          "9900X"
+        ]
+      },
+      {
+        "modelName": "285K",
+        "fullModelName": "Intel Core Ultra 9 285K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 229.0,
+        "minFps": 159.0,
+        "modelKeywords": [
+          "285K"
+        ]
+      },
+      {
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 228.0,
+        "minFps": 157.0,
+        "modelKeywords": [
+          "14600K"
+        ]
+      },
+      {
+        "modelName": "5800X3D",
+        "fullModelName": "AMD Ryzen 7 5800X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 224.0,
+        "minFps": 166.0,
+        "modelKeywords": [
+          "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 222.0,
+        "minFps": 155.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 221.0,
+        "minFps": 153.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 219.0,
+        "minFps": 152.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 217.0,
+        "minFps": 151.0,
+        "modelKeywords": [
+          "7600X"
+        ]
+      },
+      {
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 212.0,
+        "minFps": 158.0,
+        "modelKeywords": [
+          "5700X3D"
+        ]
+      },
+      {
+        "modelName": "7500F",
+        "fullModelName": "AMD Ryzen 5 7500F",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 209.0,
+        "minFps": 146.0,
+        "modelKeywords": [
+          "7500F"
+        ]
+      },
+      {
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 208.0,
+        "minFps": 144.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 178.0,
+        "minFps": 122.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 175.0,
+        "minFps": 121.0,
+        "modelKeywords": [
+          "5600X"
         ]
       }
     ]
@@ -695,9 +1521,9 @@
     "id": "cpu_forza5_1080p_extreme",
     "gameTitle": "Forza Horizon 5",
     "resolutionSettings": "1080P • Ekstrem Ayarlar",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
     "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": true,
     "entries": [
       {
@@ -705,258 +1531,43 @@
         "fullModelName": "AMD Ryzen 7 9800X3D",
         "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 288.0,
-        "minFps": 230.0,
+        "avgFps": 268.0,
+        "minFps": 206.0,
         "modelKeywords": [
           "9800X3D"
         ]
       },
       {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 265.0,
+        "minFps": 203.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
         "modelName": "7800X3D",
         "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 270.0,
-        "minFps": 218.0,
-        "modelKeywords": [
-          "7800X3D"
-        ]
-      },
-      {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
-        "isAmd": true,
-        "avgFps": 255.0,
-        "minFps": 198.0,
-        "modelKeywords": [
-          "9700X"
-        ]
-      },
-      {
-        "modelName": "14900K",
-        "fullModelName": "Intel Core i9-14900K",
-        "wattLabel": "253W",
-        "isAmd": false,
-        "avgFps": 252.0,
-        "minFps": 194.0,
-        "modelKeywords": [
-          "14900K",
-          "i9-14900K"
-        ]
-      },
-      {
-        "modelName": "285K",
-        "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 244.0,
-        "minFps": 190.0,
-        "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
-        ]
-      },
-      {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 215.0,
-        "minFps": 168.0,
-        "modelKeywords": [
-          "7500F"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cpu_alan_wake_2_1080p_high",
-    "gameTitle": "Alan Wake 2",
-    "resolutionSettings": "1080P • Yüksek Ayarlar",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
-    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
-    "isCpuTest": true,
-    "entries": [
-      {
-        "modelName": "9800X3D",
-        "fullModelName": "AMD Ryzen 7 9800X3D",
         "wattLabel": "120W",
-        "isAmd": true,
-        "avgFps": 155.0,
-        "minFps": 118.0,
-        "modelKeywords": [
-          "9800X3D"
-        ]
-      },
-      {
-        "modelName": "7800X3D",
-        "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 146.0,
-        "minFps": 110.0,
-        "modelKeywords": [
-          "7800X3D"
-        ]
-      },
-      {
-        "modelName": "14900K",
-        "fullModelName": "Intel Core i9-14900K",
-        "wattLabel": "253W",
-        "isAmd": false,
-        "avgFps": 142.0,
-        "minFps": 102.0,
-        "modelKeywords": [
-          "14900K",
-          "i9-14900K"
-        ]
-      },
-      {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
-        "isAmd": true,
-        "avgFps": 138.0,
-        "minFps": 100.0,
-        "modelKeywords": [
-          "9700X"
-        ]
-      },
-      {
-        "modelName": "285K",
-        "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 135.0,
-        "minFps": 98.0,
-        "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
-        ]
-      },
-      {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 120.0,
-        "minFps": 86.0,
-        "modelKeywords": [
-          "7500F"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cpu_warzone_1080p_comp",
-    "gameTitle": "Call of Duty: Warzone",
-    "resolutionSettings": "1080P • Rekabetçi Dengeli",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
-    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
-    "isCpuTest": true,
-    "entries": [
-      {
-        "modelName": "9800X3D",
-        "fullModelName": "AMD Ryzen 7 9800X3D",
-        "wattLabel": "120W",
-        "isAmd": true,
-        "avgFps": 345.0,
-        "minFps": 225.0,
-        "modelKeywords": [
-          "9800X3D"
-        ]
-      },
-      {
-        "modelName": "7800X3D",
-        "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
-        "isAmd": true,
-        "avgFps": 320.0,
-        "minFps": 208.0,
-        "modelKeywords": [
-          "7800X3D"
-        ]
-      },
-      {
-        "modelName": "14900K",
-        "fullModelName": "Intel Core i9-14900K",
-        "wattLabel": "253W",
-        "isAmd": false,
-        "avgFps": 295.0,
-        "minFps": 188.0,
-        "modelKeywords": [
-          "14900K",
-          "i9-14900K"
-        ]
-      },
-      {
-        "modelName": "9700X",
-        "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
-        "isAmd": true,
-        "avgFps": 285.0,
-        "minFps": 180.0,
-        "modelKeywords": [
-          "9700X"
-        ]
-      },
-      {
-        "modelName": "285K",
-        "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
-        "isAmd": false,
-        "avgFps": 275.0,
-        "minFps": 172.0,
-        "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
-        ]
-      },
-      {
-        "modelName": "7500F",
-        "fullModelName": "AMD Ryzen 5 7500F",
-        "wattLabel": "65W",
         "isAmd": true,
         "avgFps": 245.0,
-        "minFps": 155.0,
+        "minFps": 193.0,
         "modelKeywords": [
-          "7500F"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cpu_apex_1080p_high",
-    "gameTitle": "Apex Legends",
-    "resolutionSettings": "1080P • Yüksek Ayarlar",
-    "rigSummary": "RTX 5090 32GB • 32GB DDR5 6000MTs CL28",
-    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
-    "rigRam": "32GB DDR5 6000MTs CL28",
-    "isCpuTest": true,
-    "entries": [
-      {
-        "modelName": "9800X3D",
-        "fullModelName": "AMD Ryzen 7 9800X3D",
-        "wattLabel": "120W",
-        "isAmd": true,
-        "avgFps": 298.0,
-        "minFps": 210.0,
-        "modelKeywords": [
-          "9800X3D"
+          "7800X3D"
         ]
       },
       {
-        "modelName": "7800X3D",
-        "fullModelName": "AMD Ryzen 7 7800X3D",
-        "wattLabel": "65W",
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
         "isAmd": true,
-        "avgFps": 282.0,
-        "minFps": 198.0,
+        "avgFps": 241.0,
+        "minFps": 188.0,
         "modelKeywords": [
-          "7800X3D"
+          "7950X3D"
         ]
       },
       {
@@ -964,34 +1575,153 @@
         "fullModelName": "Intel Core i9-14900K",
         "wattLabel": "253W",
         "isAmd": false,
-        "avgFps": 265.0,
-        "minFps": 182.0,
+        "avgFps": 229.0,
+        "minFps": 168.0,
         "modelKeywords": [
-          "14900K",
-          "i9-14900K"
+          "14900K"
         ]
       },
       {
         "modelName": "9700X",
         "fullModelName": "AMD Ryzen 7 9700X",
-        "wattLabel": "105W",
+        "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 260.0,
-        "minFps": 178.0,
+        "avgFps": 224.0,
+        "minFps": 167.0,
         "modelKeywords": [
           "9700X"
         ]
       },
       {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 224.0,
+        "minFps": 164.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 222.0,
+        "minFps": 166.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 218.0,
+        "minFps": 163.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 217.0,
+        "minFps": 162.0,
+        "modelKeywords": [
+          "9900X"
+        ]
+      },
+      {
         "modelName": "285K",
         "fullModelName": "Intel Core Ultra 9 285K",
-        "wattLabel": "125W",
+        "wattLabel": "250W",
         "isAmd": false,
-        "avgFps": 250.0,
-        "minFps": 170.0,
+        "avgFps": 216.0,
+        "minFps": 161.0,
         "modelKeywords": [
-          "285K",
-          "Ultra 9 285K"
+          "285K"
+        ]
+      },
+      {
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 214.0,
+        "minFps": 159.0,
+        "modelKeywords": [
+          "14600K"
+        ]
+      },
+      {
+        "modelName": "5800X3D",
+        "fullModelName": "AMD Ryzen 7 5800X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 210.0,
+        "minFps": 168.0,
+        "modelKeywords": [
+          "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 209.0,
+        "minFps": 157.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 208.0,
+        "minFps": 154.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 206.0,
+        "minFps": 153.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 204.0,
+        "minFps": 152.0,
+        "modelKeywords": [
+          "7600X"
+        ]
+      },
+      {
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 200.0,
+        "minFps": 160.0,
+        "modelKeywords": [
+          "5700X3D"
         ]
       },
       {
@@ -999,10 +1729,296 @@
         "fullModelName": "AMD Ryzen 5 7500F",
         "wattLabel": "65W",
         "isAmd": true,
-        "avgFps": 225.0,
-        "minFps": 150.0,
+        "avgFps": 197.0,
+        "minFps": 147.0,
         "modelKeywords": [
           "7500F"
+        ]
+      },
+      {
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 196.0,
+        "minFps": 145.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 168.0,
+        "minFps": 124.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 165.0,
+        "minFps": 123.0,
+        "modelKeywords": [
+          "5600X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cpu_rdr2_1080p_ultra",
+    "gameTitle": "Red Dead Redemption 2",
+    "resolutionSettings": "1080P • Ultra Ayarlar",
+    "rigSummary": "RTX 5090 32GB • DDR5-6000 CL30 • Sıfır GPU Darboğazı",
+    "rigGpuOrCpu": "NVIDIA GeForce RTX 5090 32GB",
+    "rigRam": "32GB DDR5-6000 CL30",
+    "isCpuTest": true,
+    "entries": [
+      {
+        "modelName": "9800X3D",
+        "fullModelName": "AMD Ryzen 7 9800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 214.0,
+        "minFps": 162.0,
+        "modelKeywords": [
+          "9800X3D"
+        ]
+      },
+      {
+        "modelName": "9950X3D",
+        "fullModelName": "AMD Ryzen 9 9950X3D",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 212.0,
+        "minFps": 160.0,
+        "modelKeywords": [
+          "9950X3D"
+        ]
+      },
+      {
+        "modelName": "7800X3D",
+        "fullModelName": "AMD Ryzen 7 7800X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 196.0,
+        "minFps": 151.0,
+        "modelKeywords": [
+          "7800X3D"
+        ]
+      },
+      {
+        "modelName": "7950X3D",
+        "fullModelName": "AMD Ryzen 9 7950X3D",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 193.0,
+        "minFps": 148.0,
+        "modelKeywords": [
+          "7950X3D"
+        ]
+      },
+      {
+        "modelName": "14900K",
+        "fullModelName": "Intel Core i9-14900K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 183.0,
+        "minFps": 132.0,
+        "modelKeywords": [
+          "14900K"
+        ]
+      },
+      {
+        "modelName": "9700X",
+        "fullModelName": "AMD Ryzen 7 9700X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 179.0,
+        "minFps": 131.0,
+        "modelKeywords": [
+          "9700X"
+        ]
+      },
+      {
+        "modelName": "14700K",
+        "fullModelName": "Intel Core i7-14700K",
+        "wattLabel": "253W",
+        "isAmd": false,
+        "avgFps": 179.0,
+        "minFps": 129.0,
+        "modelKeywords": [
+          "14700K"
+        ]
+      },
+      {
+        "modelName": "9950X",
+        "fullModelName": "AMD Ryzen 9 9950X",
+        "wattLabel": "170W",
+        "isAmd": true,
+        "avgFps": 178.0,
+        "minFps": 130.0,
+        "modelKeywords": [
+          "9950X"
+        ]
+      },
+      {
+        "modelName": "9600X",
+        "fullModelName": "AMD Ryzen 5 9600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 174.0,
+        "minFps": 128.0,
+        "modelKeywords": [
+          "9600X"
+        ]
+      },
+      {
+        "modelName": "9900X",
+        "fullModelName": "AMD Ryzen 9 9900X",
+        "wattLabel": "120W",
+        "isAmd": true,
+        "avgFps": 173.0,
+        "minFps": 127.0,
+        "modelKeywords": [
+          "9900X"
+        ]
+      },
+      {
+        "modelName": "285K",
+        "fullModelName": "Intel Core Ultra 9 285K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 172.0,
+        "minFps": 126.0,
+        "modelKeywords": [
+          "285K"
+        ]
+      },
+      {
+        "modelName": "14600K",
+        "fullModelName": "Intel Core i5-14600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 171.0,
+        "minFps": 125.0,
+        "modelKeywords": [
+          "14600K"
+        ]
+      },
+      {
+        "modelName": "5800X3D",
+        "fullModelName": "AMD Ryzen 7 5800X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 168.0,
+        "minFps": 132.0,
+        "modelKeywords": [
+          "5800X3D"
+        ]
+      },
+      {
+        "modelName": "7700X",
+        "fullModelName": "AMD Ryzen 7 7700X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 167.0,
+        "minFps": 123.0,
+        "modelKeywords": [
+          "7700X"
+        ]
+      },
+      {
+        "modelName": "265K",
+        "fullModelName": "Intel Core Ultra 7 265K",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 166.0,
+        "minFps": 122.0,
+        "modelKeywords": [
+          "265K"
+        ]
+      },
+      {
+        "modelName": "13600K",
+        "fullModelName": "Intel Core i5-13600K",
+        "wattLabel": "181W",
+        "isAmd": false,
+        "avgFps": 165.0,
+        "minFps": 121.0,
+        "modelKeywords": [
+          "13600K"
+        ]
+      },
+      {
+        "modelName": "7600X",
+        "fullModelName": "AMD Ryzen 5 7600X",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 163.0,
+        "minFps": 120.0,
+        "modelKeywords": [
+          "7600X"
+        ]
+      },
+      {
+        "modelName": "5700X3D",
+        "fullModelName": "AMD Ryzen 7 5700X3D",
+        "wattLabel": "105W",
+        "isAmd": true,
+        "avgFps": 159.0,
+        "minFps": 126.0,
+        "modelKeywords": [
+          "5700X3D"
+        ]
+      },
+      {
+        "modelName": "7500F",
+        "fullModelName": "AMD Ryzen 5 7500F",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 157.0,
+        "minFps": 116.0,
+        "modelKeywords": [
+          "7500F"
+        ]
+      },
+      {
+        "modelName": "245K",
+        "fullModelName": "Intel Core Ultra 5 245K",
+        "wattLabel": "159W",
+        "isAmd": false,
+        "avgFps": 156.0,
+        "minFps": 114.0,
+        "modelKeywords": [
+          "245K"
+        ]
+      },
+      {
+        "modelName": "12400F",
+        "fullModelName": "Intel Core i5-12400F",
+        "wattLabel": "65W",
+        "isAmd": false,
+        "avgFps": 134.0,
+        "minFps": 97.0,
+        "modelKeywords": [
+          "12400F"
+        ]
+      },
+      {
+        "modelName": "5600X",
+        "fullModelName": "AMD Ryzen 5 5600X",
+        "wattLabel": "65W",
+        "isAmd": true,
+        "avgFps": 132.0,
+        "minFps": 96.0,
+        "modelKeywords": [
+          "5600X"
         ]
       }
     ]
@@ -1010,34 +2026,21 @@
   {
     "id": "gpu_cyberpunk_1440p_ultra",
     "gameTitle": "Cyberpunk 2077",
-    "resolutionSettings": "1440P • Ultra Ayarlar (Ray Tracing Kapalı)",
-    "rigSummary": "Ryzen 7 9800X3D • 32GB DDR5 6000MTs • Sıfır CPU Darboğazı",
+    "resolutionSettings": "1440P • Ultra Ayarlar (RT Kapalı)",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
     "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": false,
     "entries": [
       {
         "modelName": "RTX 5090",
         "fullModelName": "NVIDIA GeForce RTX 5090",
-        "wattLabel": "600W",
+        "wattLabel": "575W",
         "isAmd": false,
-        "avgFps": 210.0,
-        "minFps": 165.0,
+        "avgFps": 184.0,
+        "minFps": 141.0,
         "modelKeywords": [
-          "5090",
           "RTX 5090"
-        ]
-      },
-      {
-        "modelName": "RTX 5080",
-        "fullModelName": "NVIDIA GeForce RTX 5080",
-        "wattLabel": "400W",
-        "isAmd": false,
-        "avgFps": 172.0,
-        "minFps": 138.0,
-        "modelKeywords": [
-          "5080",
-          "RTX 5080"
         ]
       },
       {
@@ -1045,11 +2048,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4090",
         "wattLabel": "450W",
         "isAmd": false,
-        "avgFps": 156.0,
-        "minFps": 125.0,
+        "avgFps": 138.0,
+        "minFps": 108.0,
         "modelKeywords": [
-          "4090",
           "RTX 4090"
+        ]
+      },
+      {
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
+        "isAmd": false,
+        "avgFps": 119.0,
+        "minFps": 94.0,
+        "modelKeywords": [
+          "RTX 5080"
         ]
       },
       {
@@ -1057,11 +2070,10 @@
         "fullModelName": "AMD Radeon RX 7900 XTX",
         "wattLabel": "355W",
         "isAmd": true,
-        "avgFps": 142.0,
-        "minFps": 114.0,
+        "avgFps": 112.0,
+        "minFps": 87.0,
         "modelKeywords": [
-          "7900 XTX",
-          "7900XTX"
+          "RX 7900 XTX"
         ]
       },
       {
@@ -1069,11 +2081,43 @@
         "fullModelName": "NVIDIA GeForce RTX 4080 Super",
         "wattLabel": "320W",
         "isAmd": false,
-        "avgFps": 136.0,
-        "minFps": 108.0,
+        "avgFps": 106.0,
+        "minFps": 84.0,
         "modelKeywords": [
-          "4080 Super",
-          "4080"
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 104.0,
+        "minFps": 82.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 102.0,
+        "minFps": 80.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 100.0,
+        "minFps": 79.0,
+        "modelKeywords": [
+          "RX 9070 XT"
         ]
       },
       {
@@ -1081,11 +2125,10 @@
         "fullModelName": "AMD Radeon RX 7900 XT",
         "wattLabel": "315W",
         "isAmd": true,
-        "avgFps": 122.0,
-        "minFps": 96.0,
+        "avgFps": 95.0,
+        "minFps": 74.0,
         "modelKeywords": [
-          "7900 XT",
-          "7900XT"
+          "RX 7900 XT"
         ]
       },
       {
@@ -1093,22 +2136,43 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
         "wattLabel": "285W",
         "isAmd": false,
-        "avgFps": 118.0,
-        "minFps": 94.0,
+        "avgFps": 92.0,
+        "minFps": 72.0,
         "modelKeywords": [
-          "4070 Ti Super",
-          "4070 Ti"
+          "RTX 4070 Ti Super"
         ]
       },
       {
-        "modelName": "RX 7800 XT",
-        "fullModelName": "AMD Radeon RX 7800 XT",
-        "wattLabel": "263W",
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
         "isAmd": true,
-        "avgFps": 104.0,
-        "minFps": 82.0,
+        "avgFps": 88.0,
+        "minFps": 70.0,
         "modelKeywords": [
-          "7800 XT"
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 85.0,
+        "minFps": 66.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 82.0,
+        "minFps": 64.0,
+        "modelKeywords": [
+          "RTX 5070"
         ]
       },
       {
@@ -1116,10 +2180,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Super",
         "wattLabel": "220W",
         "isAmd": false,
-        "avgFps": 102.0,
-        "minFps": 81.0,
+        "avgFps": 80.0,
+        "minFps": 63.0,
         "modelKeywords": [
-          "4070 Super"
+          "RTX 4070 Super"
+        ]
+      },
+      {
+        "modelName": "RX 7800 XT",
+        "fullModelName": "AMD Radeon RX 7800 XT",
+        "wattLabel": "263W",
+        "isAmd": true,
+        "avgFps": 74.0,
+        "minFps": 57.0,
+        "modelKeywords": [
+          "RX 7800 XT"
         ]
       },
       {
@@ -1127,8 +2202,8 @@
         "fullModelName": "NVIDIA GeForce RTX 4070",
         "wattLabel": "200W",
         "isAmd": false,
-        "avgFps": 88.0,
-        "minFps": 70.0,
+        "avgFps": 69.0,
+        "minFps": 55.0,
         "modelKeywords": [
           "RTX 4070"
         ]
@@ -1138,10 +2213,10 @@
         "fullModelName": "AMD Radeon RX 7700 XT",
         "wattLabel": "245W",
         "isAmd": true,
-        "avgFps": 86.0,
-        "minFps": 68.0,
+        "avgFps": 62.0,
+        "minFps": 48.0,
         "modelKeywords": [
-          "7700 XT"
+          "RX 7700 XT"
         ]
       },
       {
@@ -1149,10 +2224,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
         "wattLabel": "160W",
         "isAmd": false,
-        "avgFps": 68.0,
-        "minFps": 54.0,
+        "avgFps": 56.0,
+        "minFps": 43.0,
         "modelKeywords": [
-          "4060 Ti"
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 52.0,
+        "minFps": 40.0,
+        "modelKeywords": [
+          "Arc B580"
         ]
       },
       {
@@ -1160,10 +2246,10 @@
         "fullModelName": "AMD Radeon RX 7600 XT",
         "wattLabel": "190W",
         "isAmd": true,
-        "avgFps": 58.0,
-        "minFps": 46.0,
+        "avgFps": 48.0,
+        "minFps": 37.0,
         "modelKeywords": [
-          "7600 XT"
+          "RX 7600 XT"
         ]
       },
       {
@@ -1171,8 +2257,8 @@
         "fullModelName": "NVIDIA GeForce RTX 4060",
         "wattLabel": "115W",
         "isAmd": false,
-        "avgFps": 54.0,
-        "minFps": 42.0,
+        "avgFps": 46.0,
+        "minFps": 36.0,
         "modelKeywords": [
           "RTX 4060"
         ]
@@ -1182,34 +2268,21 @@
   {
     "id": "gpu_cs2_1440p_very_high",
     "gameTitle": "Counter-Strike 2",
-    "resolutionSettings": "1440P • Çok Yüksek Grafik",
-    "rigSummary": "Ryzen 7 9800X3D • 32GB DDR5 6000MTs • Sıfır CPU Darboğazı",
+    "resolutionSettings": "1440P • Çok Yüksek Ayarlar",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
     "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": false,
     "entries": [
       {
         "modelName": "RTX 5090",
         "fullModelName": "NVIDIA GeForce RTX 5090",
-        "wattLabel": "600W",
+        "wattLabel": "575W",
         "isAmd": false,
-        "avgFps": 640.0,
-        "minFps": 310.0,
+        "avgFps": 605.0,
+        "minFps": 325.0,
         "modelKeywords": [
-          "5090",
           "RTX 5090"
-        ]
-      },
-      {
-        "modelName": "RTX 5080",
-        "fullModelName": "NVIDIA GeForce RTX 5080",
-        "wattLabel": "400W",
-        "isAmd": false,
-        "avgFps": 560.0,
-        "minFps": 285.0,
-        "modelKeywords": [
-          "5080",
-          "RTX 5080"
         ]
       },
       {
@@ -1217,11 +2290,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4090",
         "wattLabel": "450W",
         "isAmd": false,
-        "avgFps": 520.0,
-        "minFps": 270.0,
+        "avgFps": 455.0,
+        "minFps": 248.0,
         "modelKeywords": [
-          "4090",
           "RTX 4090"
+        ]
+      },
+      {
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
+        "isAmd": false,
+        "avgFps": 394.0,
+        "minFps": 216.0,
+        "modelKeywords": [
+          "RTX 5080"
         ]
       },
       {
@@ -1229,11 +2312,10 @@
         "fullModelName": "AMD Radeon RX 7900 XTX",
         "wattLabel": "355W",
         "isAmd": true,
-        "avgFps": 480.0,
-        "minFps": 255.0,
+        "avgFps": 371.0,
+        "minFps": 200.0,
         "modelKeywords": [
-          "7900 XTX",
-          "7900XTX"
+          "RX 7900 XTX"
         ]
       },
       {
@@ -1241,11 +2323,54 @@
         "fullModelName": "NVIDIA GeForce RTX 4080 Super",
         "wattLabel": "320W",
         "isAmd": false,
-        "avgFps": 470.0,
-        "minFps": 250.0,
+        "avgFps": 350.0,
+        "minFps": 192.0,
         "modelKeywords": [
-          "4080 Super",
-          "4080"
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 341.0,
+        "minFps": 187.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 337.0,
+        "minFps": 185.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 330.0,
+        "minFps": 181.0,
+        "modelKeywords": [
+          "RX 9070 XT"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XT",
+        "fullModelName": "AMD Radeon RX 7900 XT",
+        "wattLabel": "315W",
+        "isAmd": true,
+        "avgFps": 314.0,
+        "minFps": 170.0,
+        "modelKeywords": [
+          "RX 7900 XT"
         ]
       },
       {
@@ -1253,22 +2378,43 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
         "wattLabel": "285W",
         "isAmd": false,
-        "avgFps": 420.0,
-        "minFps": 230.0,
+        "avgFps": 303.0,
+        "minFps": 166.0,
         "modelKeywords": [
-          "4070 Ti Super",
-          "4070 Ti"
+          "RTX 4070 Ti Super"
         ]
       },
       {
-        "modelName": "RX 7800 XT",
-        "fullModelName": "AMD Radeon RX 7800 XT",
-        "wattLabel": "263W",
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
         "isAmd": true,
-        "avgFps": 380.0,
-        "minFps": 215.0,
+        "avgFps": 291.0,
+        "minFps": 160.0,
         "modelKeywords": [
-          "7800 XT"
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 280.0,
+        "minFps": 153.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 271.0,
+        "minFps": 148.0,
+        "modelKeywords": [
+          "RTX 5070"
         ]
       },
       {
@@ -1276,10 +2422,43 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Super",
         "wattLabel": "220W",
         "isAmd": false,
-        "avgFps": 375.0,
-        "minFps": 210.0,
+        "avgFps": 264.0,
+        "minFps": 145.0,
         "modelKeywords": [
-          "4070 Super"
+          "RTX 4070 Super"
+        ]
+      },
+      {
+        "modelName": "RX 7800 XT",
+        "fullModelName": "AMD Radeon RX 7800 XT",
+        "wattLabel": "263W",
+        "isAmd": true,
+        "avgFps": 243.0,
+        "minFps": 131.0,
+        "modelKeywords": [
+          "RX 7800 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070",
+        "fullModelName": "NVIDIA GeForce RTX 4070",
+        "wattLabel": "200W",
+        "isAmd": false,
+        "avgFps": 228.0,
+        "minFps": 125.0,
+        "modelKeywords": [
+          "RTX 4070"
+        ]
+      },
+      {
+        "modelName": "RX 7700 XT",
+        "fullModelName": "AMD Radeon RX 7700 XT",
+        "wattLabel": "245W",
+        "isAmd": true,
+        "avgFps": 205.0,
+        "minFps": 110.0,
+        "modelKeywords": [
+          "RX 7700 XT"
         ]
       },
       {
@@ -1287,10 +2466,32 @@
         "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
         "wattLabel": "160W",
         "isAmd": false,
-        "avgFps": 290.0,
-        "minFps": 180.0,
+        "avgFps": 184.0,
+        "minFps": 99.0,
         "modelKeywords": [
-          "4060 Ti"
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 173.0,
+        "minFps": 92.0,
+        "modelKeywords": [
+          "Arc B580"
+        ]
+      },
+      {
+        "modelName": "RX 7600 XT",
+        "fullModelName": "AMD Radeon RX 7600 XT",
+        "wattLabel": "190W",
+        "isAmd": true,
+        "avgFps": 159.0,
+        "minFps": 86.0,
+        "modelKeywords": [
+          "RX 7600 XT"
         ]
       },
       {
@@ -1298,8 +2499,8 @@
         "fullModelName": "NVIDIA GeForce RTX 4060",
         "wattLabel": "115W",
         "isAmd": false,
-        "avgFps": 240.0,
-        "minFps": 155.0,
+        "avgFps": 152.0,
+        "minFps": 82.0,
         "modelKeywords": [
           "RTX 4060"
         ]
@@ -1309,34 +2510,21 @@
   {
     "id": "gpu_wukong_1440p_cinematic",
     "gameTitle": "Black Myth: Wukong",
-    "resolutionSettings": "1440P • Sinematik Ayarlar",
-    "rigSummary": "Ryzen 7 9800X3D • 32GB DDR5 6000MTs • Sıfır CPU Darboğazı",
+    "resolutionSettings": "1440P • Yüksek Ayarlar (Native)",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
     "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": false,
     "entries": [
       {
         "modelName": "RTX 5090",
         "fullModelName": "NVIDIA GeForce RTX 5090",
-        "wattLabel": "600W",
+        "wattLabel": "575W",
         "isAmd": false,
-        "avgFps": 148.0,
-        "minFps": 118.0,
+        "avgFps": 141.0,
+        "minFps": 110.0,
         "modelKeywords": [
-          "5090",
           "RTX 5090"
-        ]
-      },
-      {
-        "modelName": "RTX 5080",
-        "fullModelName": "NVIDIA GeForce RTX 5080",
-        "wattLabel": "400W",
-        "isAmd": false,
-        "avgFps": 118.0,
-        "minFps": 94.0,
-        "modelKeywords": [
-          "5080",
-          "RTX 5080"
         ]
       },
       {
@@ -1344,23 +2532,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4090",
         "wattLabel": "450W",
         "isAmd": false,
-        "avgFps": 105.0,
+        "avgFps": 106.0,
         "minFps": 84.0,
         "modelKeywords": [
-          "4090",
           "RTX 4090"
         ]
       },
       {
-        "modelName": "RTX 4080 Super",
-        "fullModelName": "NVIDIA GeForce RTX 4080 Super",
-        "wattLabel": "320W",
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
         "isAmd": false,
-        "avgFps": 88.0,
-        "minFps": 70.0,
+        "avgFps": 92.0,
+        "minFps": 73.0,
         "modelKeywords": [
-          "4080 Super",
-          "4080"
+          "RTX 5080"
         ]
       },
       {
@@ -1368,11 +2554,65 @@
         "fullModelName": "AMD Radeon RX 7900 XTX",
         "wattLabel": "355W",
         "isAmd": true,
-        "avgFps": 84.0,
-        "minFps": 66.0,
+        "avgFps": 86.0,
+        "minFps": 68.0,
         "modelKeywords": [
-          "7900 XTX",
-          "7900XTX"
+          "RX 7900 XTX"
+        ]
+      },
+      {
+        "modelName": "RTX 4080 Super",
+        "fullModelName": "NVIDIA GeForce RTX 4080 Super",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 82.0,
+        "minFps": 65.0,
+        "modelKeywords": [
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 80.0,
+        "minFps": 63.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 78.0,
+        "minFps": 63.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 77.0,
+        "minFps": 61.0,
+        "modelKeywords": [
+          "RX 9070 XT"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XT",
+        "fullModelName": "AMD Radeon RX 7900 XT",
+        "wattLabel": "315W",
+        "isAmd": true,
+        "avgFps": 73.0,
+        "minFps": 58.0,
+        "modelKeywords": [
+          "RX 7900 XT"
         ]
       },
       {
@@ -1380,11 +2620,43 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
         "wattLabel": "285W",
         "isAmd": false,
-        "avgFps": 76.0,
-        "minFps": 60.0,
+        "avgFps": 70.0,
+        "minFps": 56.0,
         "modelKeywords": [
-          "4070 Ti Super",
-          "4070 Ti"
+          "RTX 4070 Ti Super"
+        ]
+      },
+      {
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
+        "isAmd": true,
+        "avgFps": 68.0,
+        "minFps": 54.0,
+        "modelKeywords": [
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 65.0,
+        "minFps": 52.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 63.0,
+        "minFps": 50.0,
+        "modelKeywords": [
+          "RTX 5070"
         ]
       },
       {
@@ -1392,10 +2664,10 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Super",
         "wattLabel": "220W",
         "isAmd": false,
-        "avgFps": 66.0,
-        "minFps": 52.0,
+        "avgFps": 61.0,
+        "minFps": 49.0,
         "modelKeywords": [
-          "4070 Super"
+          "RTX 4070 Super"
         ]
       },
       {
@@ -1403,10 +2675,65 @@
         "fullModelName": "AMD Radeon RX 7800 XT",
         "wattLabel": "263W",
         "isAmd": true,
-        "avgFps": 62.0,
-        "minFps": 48.0,
+        "avgFps": 57.0,
+        "minFps": 45.0,
         "modelKeywords": [
-          "7800 XT"
+          "RX 7800 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070",
+        "fullModelName": "NVIDIA GeForce RTX 4070",
+        "wattLabel": "200W",
+        "isAmd": false,
+        "avgFps": 53.0,
+        "minFps": 42.0,
+        "modelKeywords": [
+          "RTX 4070"
+        ]
+      },
+      {
+        "modelName": "RX 7700 XT",
+        "fullModelName": "AMD Radeon RX 7700 XT",
+        "wattLabel": "245W",
+        "isAmd": true,
+        "avgFps": 48.0,
+        "minFps": 37.0,
+        "modelKeywords": [
+          "RX 7700 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4060 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
+        "wattLabel": "160W",
+        "isAmd": false,
+        "avgFps": 43.0,
+        "minFps": 34.0,
+        "modelKeywords": [
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 40.0,
+        "minFps": 31.0,
+        "modelKeywords": [
+          "Arc B580"
+        ]
+      },
+      {
+        "modelName": "RX 7600 XT",
+        "fullModelName": "AMD Radeon RX 7600 XT",
+        "wattLabel": "190W",
+        "isAmd": true,
+        "avgFps": 37.0,
+        "minFps": 29.0,
+        "modelKeywords": [
+          "RX 7600 XT"
         ]
       },
       {
@@ -1426,33 +2753,20 @@
     "id": "gpu_forza5_1440p_extreme",
     "gameTitle": "Forza Horizon 5",
     "resolutionSettings": "1440P • Ekstrem Ayarlar",
-    "rigSummary": "Ryzen 7 9800X3D • 32GB DDR5 6000MTs • Sıfır CPU Darboğazı",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
     "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": false,
     "entries": [
       {
         "modelName": "RTX 5090",
         "fullModelName": "NVIDIA GeForce RTX 5090",
-        "wattLabel": "600W",
+        "wattLabel": "575W",
         "isAmd": false,
-        "avgFps": 275.0,
-        "minFps": 235.0,
+        "avgFps": 271.0,
+        "minFps": 212.0,
         "modelKeywords": [
-          "5090",
           "RTX 5090"
-        ]
-      },
-      {
-        "modelName": "RTX 5080",
-        "fullModelName": "NVIDIA GeForce RTX 5080",
-        "wattLabel": "400W",
-        "isAmd": false,
-        "avgFps": 228.0,
-        "minFps": 195.0,
-        "modelKeywords": [
-          "5080",
-          "RTX 5080"
         ]
       },
       {
@@ -1460,11 +2774,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4090",
         "wattLabel": "450W",
         "isAmd": false,
-        "avgFps": 212.0,
-        "minFps": 180.0,
+        "avgFps": 204.0,
+        "minFps": 162.0,
         "modelKeywords": [
-          "4090",
           "RTX 4090"
+        ]
+      },
+      {
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
+        "isAmd": false,
+        "avgFps": 176.0,
+        "minFps": 141.0,
+        "modelKeywords": [
+          "RTX 5080"
         ]
       },
       {
@@ -1472,11 +2796,10 @@
         "fullModelName": "AMD Radeon RX 7900 XTX",
         "wattLabel": "355W",
         "isAmd": true,
-        "avgFps": 202.0,
-        "minFps": 172.0,
+        "avgFps": 166.0,
+        "minFps": 130.0,
         "modelKeywords": [
-          "7900 XTX",
-          "7900XTX"
+          "RX 7900 XTX"
         ]
       },
       {
@@ -1484,11 +2807,98 @@
         "fullModelName": "NVIDIA GeForce RTX 4080 Super",
         "wattLabel": "320W",
         "isAmd": false,
-        "avgFps": 184.0,
-        "minFps": 156.0,
+        "avgFps": 157.0,
+        "minFps": 126.0,
         "modelKeywords": [
-          "4080 Super",
-          "4080"
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 153.0,
+        "minFps": 122.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 151.0,
+        "minFps": 121.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 148.0,
+        "minFps": 118.0,
+        "modelKeywords": [
+          "RX 9070 XT"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XT",
+        "fullModelName": "AMD Radeon RX 7900 XT",
+        "wattLabel": "315W",
+        "isAmd": true,
+        "avgFps": 141.0,
+        "minFps": 111.0,
+        "modelKeywords": [
+          "RX 7900 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti Super",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 136.0,
+        "minFps": 109.0,
+        "modelKeywords": [
+          "RTX 4070 Ti Super"
+        ]
+      },
+      {
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
+        "isAmd": true,
+        "avgFps": 131.0,
+        "minFps": 104.0,
+        "modelKeywords": [
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 125.0,
+        "minFps": 100.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 121.0,
+        "minFps": 96.0,
+        "modelKeywords": [
+          "RTX 5070"
         ]
       },
       {
@@ -1496,10 +2906,10 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Super",
         "wattLabel": "220W",
         "isAmd": false,
-        "avgFps": 148.0,
-        "minFps": 125.0,
+        "avgFps": 118.0,
+        "minFps": 95.0,
         "modelKeywords": [
-          "4070 Super"
+          "RTX 4070 Super"
         ]
       },
       {
@@ -1507,10 +2917,65 @@
         "fullModelName": "AMD Radeon RX 7800 XT",
         "wattLabel": "263W",
         "isAmd": true,
-        "avgFps": 142.0,
-        "minFps": 120.0,
+        "avgFps": 109.0,
+        "minFps": 86.0,
         "modelKeywords": [
-          "7800 XT"
+          "RX 7800 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070",
+        "fullModelName": "NVIDIA GeForce RTX 4070",
+        "wattLabel": "200W",
+        "isAmd": false,
+        "avgFps": 102.0,
+        "minFps": 82.0,
+        "modelKeywords": [
+          "RTX 4070"
+        ]
+      },
+      {
+        "modelName": "RX 7700 XT",
+        "fullModelName": "AMD Radeon RX 7700 XT",
+        "wattLabel": "245W",
+        "isAmd": true,
+        "avgFps": 92.0,
+        "minFps": 72.0,
+        "modelKeywords": [
+          "RX 7700 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4060 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
+        "wattLabel": "160W",
+        "isAmd": false,
+        "avgFps": 83.0,
+        "minFps": 65.0,
+        "modelKeywords": [
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 78.0,
+        "minFps": 60.0,
+        "modelKeywords": [
+          "Arc B580"
+        ]
+      },
+      {
+        "modelName": "RX 7600 XT",
+        "fullModelName": "AMD Radeon RX 7600 XT",
+        "wattLabel": "190W",
+        "isAmd": true,
+        "avgFps": 71.0,
+        "minFps": 56.0,
+        "modelKeywords": [
+          "RX 7600 XT"
         ]
       },
       {
@@ -1518,8 +2983,8 @@
         "fullModelName": "NVIDIA GeForce RTX 4060",
         "wattLabel": "115W",
         "isAmd": false,
-        "avgFps": 85.0,
-        "minFps": 72.0,
+        "avgFps": 68.0,
+        "minFps": 53.0,
         "modelKeywords": [
           "RTX 4060"
         ]
@@ -1530,33 +2995,20 @@
     "id": "gpu_rdr2_1440p_ultra",
     "gameTitle": "Red Dead Redemption 2",
     "resolutionSettings": "1440P • Ultra Ayarlar",
-    "rigSummary": "Ryzen 7 9800X3D • 32GB DDR5 6000MTs • Sıfır CPU Darboğazı",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
     "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
-    "rigRam": "32GB DDR5 6000MTs CL28",
+    "rigRam": "32GB DDR5-6000 CL30",
     "isCpuTest": false,
     "entries": [
       {
         "modelName": "RTX 5090",
         "fullModelName": "NVIDIA GeForce RTX 5090",
-        "wattLabel": "600W",
+        "wattLabel": "575W",
         "isAmd": false,
-        "avgFps": 215.0,
-        "minFps": 175.0,
+        "avgFps": 223.0,
+        "minFps": 173.0,
         "modelKeywords": [
-          "5090",
           "RTX 5090"
-        ]
-      },
-      {
-        "modelName": "RTX 5080",
-        "fullModelName": "NVIDIA GeForce RTX 5080",
-        "wattLabel": "400W",
-        "isAmd": false,
-        "avgFps": 178.0,
-        "minFps": 145.0,
-        "modelKeywords": [
-          "5080",
-          "RTX 5080"
         ]
       },
       {
@@ -1564,11 +3016,21 @@
         "fullModelName": "NVIDIA GeForce RTX 4090",
         "wattLabel": "450W",
         "isAmd": false,
-        "avgFps": 162.0,
+        "avgFps": 168.0,
         "minFps": 132.0,
         "modelKeywords": [
-          "4090",
           "RTX 4090"
+        ]
+      },
+      {
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
+        "isAmd": false,
+        "avgFps": 145.0,
+        "minFps": 115.0,
+        "modelKeywords": [
+          "RTX 5080"
         ]
       },
       {
@@ -1576,11 +3038,10 @@
         "fullModelName": "AMD Radeon RX 7900 XTX",
         "wattLabel": "355W",
         "isAmd": true,
-        "avgFps": 150.0,
-        "minFps": 122.0,
+        "avgFps": 137.0,
+        "minFps": 106.0,
         "modelKeywords": [
-          "7900 XTX",
-          "7900XTX"
+          "RX 7900 XTX"
         ]
       },
       {
@@ -1588,11 +3049,98 @@
         "fullModelName": "NVIDIA GeForce RTX 4080 Super",
         "wattLabel": "320W",
         "isAmd": false,
-        "avgFps": 140.0,
-        "minFps": 114.0,
+        "avgFps": 129.0,
+        "minFps": 102.0,
         "modelKeywords": [
-          "4080 Super",
-          "4080"
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 126.0,
+        "minFps": 100.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 124.0,
+        "minFps": 98.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 122.0,
+        "minFps": 96.0,
+        "modelKeywords": [
+          "RX 9070 XT"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XT",
+        "fullModelName": "AMD Radeon RX 7900 XT",
+        "wattLabel": "315W",
+        "isAmd": true,
+        "avgFps": 116.0,
+        "minFps": 90.0,
+        "modelKeywords": [
+          "RX 7900 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti Super",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 112.0,
+        "minFps": 88.0,
+        "modelKeywords": [
+          "RTX 4070 Ti Super"
+        ]
+      },
+      {
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
+        "isAmd": true,
+        "avgFps": 108.0,
+        "minFps": 85.0,
+        "modelKeywords": [
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 103.0,
+        "minFps": 81.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 100.0,
+        "minFps": 79.0,
+        "modelKeywords": [
+          "RTX 5070"
         ]
       },
       {
@@ -1600,10 +3148,10 @@
         "fullModelName": "NVIDIA GeForce RTX 4070 Super",
         "wattLabel": "220W",
         "isAmd": false,
-        "avgFps": 110.0,
-        "minFps": 90.0,
+        "avgFps": 97.0,
+        "minFps": 77.0,
         "modelKeywords": [
-          "4070 Super"
+          "RTX 4070 Super"
         ]
       },
       {
@@ -1611,10 +3159,65 @@
         "fullModelName": "AMD Radeon RX 7800 XT",
         "wattLabel": "263W",
         "isAmd": true,
-        "avgFps": 105.0,
-        "minFps": 85.0,
+        "avgFps": 90.0,
+        "minFps": 70.0,
         "modelKeywords": [
-          "7800 XT"
+          "RX 7800 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070",
+        "fullModelName": "NVIDIA GeForce RTX 4070",
+        "wattLabel": "200W",
+        "isAmd": false,
+        "avgFps": 84.0,
+        "minFps": 67.0,
+        "modelKeywords": [
+          "RTX 4070"
+        ]
+      },
+      {
+        "modelName": "RX 7700 XT",
+        "fullModelName": "AMD Radeon RX 7700 XT",
+        "wattLabel": "245W",
+        "isAmd": true,
+        "avgFps": 76.0,
+        "minFps": 59.0,
+        "modelKeywords": [
+          "RX 7700 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4060 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
+        "wattLabel": "160W",
+        "isAmd": false,
+        "avgFps": 68.0,
+        "minFps": 53.0,
+        "modelKeywords": [
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 64.0,
+        "minFps": 49.0,
+        "modelKeywords": [
+          "Arc B580"
+        ]
+      },
+      {
+        "modelName": "RX 7600 XT",
+        "fullModelName": "AMD Radeon RX 7600 XT",
+        "wattLabel": "190W",
+        "isAmd": true,
+        "avgFps": 59.0,
+        "minFps": 46.0,
+        "modelKeywords": [
+          "RX 7600 XT"
         ]
       },
       {
@@ -1622,8 +3225,250 @@
         "fullModelName": "NVIDIA GeForce RTX 4060",
         "wattLabel": "115W",
         "isAmd": false,
-        "avgFps": 62.0,
+        "avgFps": 56.0,
+        "minFps": 44.0,
+        "modelKeywords": [
+          "RTX 4060"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpu_alan_wake_2_1440p_high",
+    "gameTitle": "Alan Wake 2",
+    "resolutionSettings": "1440P • Yüksek Ayarlar (RT Kapalı)",
+    "rigSummary": "AMD Ryzen 7 9800X3D • 32GB DDR5-6000 CL30",
+    "rigGpuOrCpu": "AMD Ryzen 7 9800X3D",
+    "rigRam": "32GB DDR5-6000 CL30",
+    "isCpuTest": false,
+    "entries": [
+      {
+        "modelName": "RTX 5090",
+        "fullModelName": "NVIDIA GeForce RTX 5090",
+        "wattLabel": "575W",
+        "isAmd": false,
+        "avgFps": 157.0,
+        "minFps": 123.0,
+        "modelKeywords": [
+          "RTX 5090"
+        ]
+      },
+      {
+        "modelName": "RTX 4090",
+        "fullModelName": "NVIDIA GeForce RTX 4090",
+        "wattLabel": "450W",
+        "isAmd": false,
+        "avgFps": 118.0,
+        "minFps": 94.0,
+        "modelKeywords": [
+          "RTX 4090"
+        ]
+      },
+      {
+        "modelName": "RTX 5080",
+        "fullModelName": "NVIDIA GeForce RTX 5080",
+        "wattLabel": "360W",
+        "isAmd": false,
+        "avgFps": 102.0,
+        "minFps": 82.0,
+        "modelKeywords": [
+          "RTX 5080"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XTX",
+        "fullModelName": "AMD Radeon RX 7900 XTX",
+        "wattLabel": "355W",
+        "isAmd": true,
+        "avgFps": 96.0,
+        "minFps": 76.0,
+        "modelKeywords": [
+          "RX 7900 XTX"
+        ]
+      },
+      {
+        "modelName": "RTX 4080 Super",
+        "fullModelName": "NVIDIA GeForce RTX 4080 Super",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 91.0,
+        "minFps": 73.0,
+        "modelKeywords": [
+          "RTX 4080 Super"
+        ]
+      },
+      {
+        "modelName": "RTX 4080",
+        "fullModelName": "NVIDIA GeForce RTX 4080",
+        "wattLabel": "320W",
+        "isAmd": false,
+        "avgFps": 88.0,
+        "minFps": 71.0,
+        "modelKeywords": [
+          "RTX 4080"
+        ]
+      },
+      {
+        "modelName": "RTX 5070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 5070 Ti",
+        "wattLabel": "300W",
+        "isAmd": false,
+        "avgFps": 87.0,
+        "minFps": 70.0,
+        "modelKeywords": [
+          "RTX 5070 Ti"
+        ]
+      },
+      {
+        "modelName": "RX 9070 XT",
+        "fullModelName": "AMD Radeon RX 9070 XT",
+        "wattLabel": "304W",
+        "isAmd": true,
+        "avgFps": 86.0,
+        "minFps": 69.0,
+        "modelKeywords": [
+          "RX 9070 XT"
+        ]
+      },
+      {
+        "modelName": "RX 7900 XT",
+        "fullModelName": "AMD Radeon RX 7900 XT",
+        "wattLabel": "315W",
+        "isAmd": true,
+        "avgFps": 81.0,
+        "minFps": 64.0,
+        "modelKeywords": [
+          "RX 7900 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti Super",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti Super",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 78.0,
+        "minFps": 63.0,
+        "modelKeywords": [
+          "RTX 4070 Ti Super"
+        ]
+      },
+      {
+        "modelName": "RX 9070",
+        "fullModelName": "AMD Radeon RX 9070",
+        "wattLabel": "220W",
+        "isAmd": true,
+        "avgFps": 76.0,
+        "minFps": 61.0,
+        "modelKeywords": [
+          "RX 9070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Ti",
+        "wattLabel": "285W",
+        "isAmd": false,
+        "avgFps": 73.0,
+        "minFps": 58.0,
+        "modelKeywords": [
+          "RTX 4070 Ti"
+        ]
+      },
+      {
+        "modelName": "RTX 5070",
+        "fullModelName": "NVIDIA GeForce RTX 5070",
+        "wattLabel": "250W",
+        "isAmd": false,
+        "avgFps": 70.0,
+        "minFps": 56.0,
+        "modelKeywords": [
+          "RTX 5070"
+        ]
+      },
+      {
+        "modelName": "RTX 4070 Super",
+        "fullModelName": "NVIDIA GeForce RTX 4070 Super",
+        "wattLabel": "220W",
+        "isAmd": false,
+        "avgFps": 68.0,
+        "minFps": 55.0,
+        "modelKeywords": [
+          "RTX 4070 Super"
+        ]
+      },
+      {
+        "modelName": "RX 7800 XT",
+        "fullModelName": "AMD Radeon RX 7800 XT",
+        "wattLabel": "263W",
+        "isAmd": true,
+        "avgFps": 63.0,
         "minFps": 50.0,
+        "modelKeywords": [
+          "RX 7800 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4070",
+        "fullModelName": "NVIDIA GeForce RTX 4070",
+        "wattLabel": "200W",
+        "isAmd": false,
+        "avgFps": 59.0,
+        "minFps": 47.0,
+        "modelKeywords": [
+          "RTX 4070"
+        ]
+      },
+      {
+        "modelName": "RX 7700 XT",
+        "fullModelName": "AMD Radeon RX 7700 XT",
+        "wattLabel": "245W",
+        "isAmd": true,
+        "avgFps": 53.0,
+        "minFps": 42.0,
+        "modelKeywords": [
+          "RX 7700 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4060 Ti",
+        "fullModelName": "NVIDIA GeForce RTX 4060 Ti",
+        "wattLabel": "160W",
+        "isAmd": false,
+        "avgFps": 48.0,
+        "minFps": 38.0,
+        "modelKeywords": [
+          "RTX 4060 Ti"
+        ]
+      },
+      {
+        "modelName": "Arc B580",
+        "fullModelName": "Intel Arc B580",
+        "wattLabel": "190W",
+        "isAmd": false,
+        "avgFps": 45.0,
+        "minFps": 35.0,
+        "modelKeywords": [
+          "Arc B580"
+        ]
+      },
+      {
+        "modelName": "RX 7600 XT",
+        "fullModelName": "AMD Radeon RX 7600 XT",
+        "wattLabel": "190W",
+        "isAmd": true,
+        "avgFps": 41.0,
+        "minFps": 32.0,
+        "modelKeywords": [
+          "RX 7600 XT"
+        ]
+      },
+      {
+        "modelName": "RTX 4060",
+        "fullModelName": "NVIDIA GeForce RTX 4060",
+        "wattLabel": "115W",
+        "isAmd": false,
+        "avgFps": 40.0,
+        "minFps": 31.0,
         "modelKeywords": [
           "RTX 4060"
         ]

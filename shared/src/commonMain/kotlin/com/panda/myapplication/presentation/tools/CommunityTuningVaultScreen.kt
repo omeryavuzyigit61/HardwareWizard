@@ -72,6 +72,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -113,7 +114,12 @@ import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonPurple
 import com.panda.myapplication.presentation.theme.NeonRose
+import com.panda.myapplication.domain.util.SecurityUtils
+import com.panda.myapplication.domain.model.TemperatureUnit
+import com.panda.myapplication.presentation.util.LocalAppSettings
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.formatTemperature
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 import kotlin.math.roundToInt
@@ -266,10 +272,17 @@ fun CommunityTuningVaultScreen(
 
                         Button(
                             onClick = {
-                                if (isLoggedIn) {
-                                    showShareDialog = true
-                                } else {
+                                if (!isLoggedIn || currentUser == null) {
                                     onOpenAuthSheet()
+                                } else if (currentUser?.isSuspended == true) {
+                                    coroutineScope.launch {
+                                        snackbarHostState.showSnackbar(
+                                            currentUser?.remainingSuspensionText
+                                                ?: (if (isTr) "Hesabınız askıya alınmıştır." else "Account suspended.")
+                                        )
+                                    }
+                                } else {
+                                    showShareDialog = true
                                 }
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = NeonCyan, contentColor = Color.Black),
@@ -401,6 +414,12 @@ fun CommunityTuningVaultScreen(
 
             Spacer(modifier = Modifier.height(6.dp))
 
+            val languageBaseCount = remember(approvedProfiles, selectedLanguageFilter) {
+                approvedProfiles.count {
+                    selectedLanguageFilter == "ALL" || it.languageCode.equals(selectedLanguageFilter, ignoreCase = true)
+                }
+            }
+
             // 3. Filter Chips (My Rig Match, Category & Soft-Rounded Tuning Types)
             Row(
                 modifier = Modifier
@@ -419,7 +438,7 @@ fun CommunityTuningVaultScreen(
                     },
                     label = {
                         Text(
-                            text = if (isTr) "Tümü (${approvedProfiles.size})" else "All (${approvedProfiles.size})",
+                            text = if (isTr) "Tümü ($languageBaseCount)" else "All ($languageBaseCount)",
                             style = MaterialTheme.typography.labelSmall,
                         )
                     },
@@ -568,9 +587,9 @@ fun CommunityTuningVaultScreen(
                         )
                         Text(
                             text = if (isTr) {
-                                "Kendi donanım ayarlarınızı 'Ayarını Paylaş' butonuna tıklayarak ilk siz ekleyin ve +50 itibar puanı kazanın!"
+                                "Kendi donanım ayarlarınızı 'Ayarını Paylaş' butonuna tıklayarak ilk siz ekleyin ve +15 itibar puanı kazanın!"
                             } else {
-                                "Share your verified hardware settings first and earn +50 reputation points!"
+                                "Share your verified hardware settings first and earn +15 reputation points!"
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -604,12 +623,16 @@ fun CommunityTuningVaultScreen(
                         CommunityTuningCard(
                             profile = profile,
                             isTr = isTr,
-                            onProofImageClick = { activeProofImageUrl = profile.proofImageUrl },
+                            onProofImageClick = {
+                                activeProofImageUrl = SecurityUtils.sanitizeImageUrl(profile.proofImageUrl)
+                            },
                             onDiscussionClick = { activeDiscussionTuning = profile },
                             onReportClick = { reportingTargetTuning = profile },
                             onToggleReaction = { type ->
-                                val userId = currentUser?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}"
-                                if (profile.userId == userId || profile.userDisplayName == currentUser?.username) {
+                                val activeUser = currentUser
+                                if (!isLoggedIn || activeUser == null) {
+                                    onOpenAuthSheet()
+                                } else if (profile.userId == activeUser.id) {
                                     coroutineScope.launch {
                                         snackbarHostState.showSnackbar(
                                             if (isTr) "Kendi paylaştığınız ayara tepki veremezsiniz." else "You cannot react to your own tuning profile."
@@ -617,7 +640,7 @@ fun CommunityTuningVaultScreen(
                                     }
                                 } else {
                                     coroutineScope.launch {
-                                        val res = tuningVaultRepository.toggleReaction(profile.id, type, userId)
+                                        val res = tuningVaultRepository.toggleReaction(profile.id, type, activeUser.id)
                                         if (res is com.panda.myapplication.domain.common.DomainResult.Failure) {
                                             snackbarHostState.showSnackbar(
                                                 if (isTr) "İşlem gerçekleştirilemedi." else "Action could not be completed."
@@ -867,16 +890,19 @@ fun CommunityTuningVaultScreen(
 
                     Button(
                         onClick = {
-                            if (newCommentText.isNotBlank() && !isPosting) {
+                            val user = currentUser
+                            if (!isLoggedIn || user == null) {
+                                activeDiscussionTuning = null
+                                onOpenAuthSheet()
+                            } else if (newCommentText.isNotBlank() && !isPosting) {
                                 isPosting = true
-                                val user = currentUser
                                 val comment = TuningComment(
                                     id = "com-${com.panda.myapplication.domain.util.currentEpochMillis()}-${(100..999).random()}",
                                     tuningId = tuning.id,
-                                    userId = user?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}",
-                                    userDisplayName = user?.username ?: (if (isTr) "Topluluk Üyesi" else "Community Member"),
-                                    userBadge = user?.effectiveBadge ?: "Lehim Çırağı",
-                                    userReputation = user?.reputationScore ?: 10,
+                                    userId = user.id,
+                                    userDisplayName = user.username,
+                                    userBadge = user.effectiveBadge,
+                                    userReputation = user.reputationScore,
                                     commentText = newCommentText.trim(),
                                     createdAtEpochMs = com.panda.myapplication.domain.util.currentEpochMillis(),
                                 )
@@ -904,11 +930,12 @@ fun CommunityTuningVaultScreen(
     }
 
     // Tuning Share Dialog (Full System Rig Registration)
-    if (showShareDialog) {
+    val sharingUser = currentUser
+    if (showShareDialog && sharingUser != null) {
         TuningShareDialog(
-            userId = currentUser?.id ?: "guest-${com.panda.myapplication.domain.util.currentEpochMillis()}",
-            userDisplayName = currentUser?.username ?: (if (isTr) "Topluluk Üyesi" else "Community Member"),
-            userBadge = currentUser?.effectiveBadge ?: "Lehim Çırağı",
+            userId = sharingUser.id,
+            userDisplayName = sharingUser.username,
+            userBadge = sharingUser.effectiveBadge,
             hardwareRepository = hardwareRepository,
             activeBuildRepository = activeBuildRepository,
             tuningVaultRepository = tuningVaultRepository,
@@ -923,9 +950,9 @@ fun CommunityTuningVaultScreen(
                     } else {
                         snackbarHostState.showSnackbar(
                             if (isTr) {
-                                "Ayarınız moderasyon onayına gönderildi! Onaylandığında +50 puan profilinize eklenecektir."
+                                "Ayarınız moderasyon onayına gönderildi! +15 itibar puanı profilinize tanımlandı."
                             } else {
-                                "Your tuning profile was sent for moderation! You will earn +50 reputation upon approval."
+                                "Your tuning profile was submitted for moderation! +15 reputation points granted."
                             }
                         )
                     }
@@ -936,7 +963,7 @@ fun CommunityTuningVaultScreen(
 
     reportingTargetTuning?.let { target ->
         val userId = currentUser?.id ?: ""
-        val isSelf = (userId.isNotBlank() && target.userId == userId) || target.userDisplayName == currentUser?.username
+        val isSelf = userId.isNotBlank() && target.userId == userId
         ReportContentDialog(
             targetType = ReportTargetType.TUNING_PROFILE,
             targetTitle = "${target.hardwareName} - ${target.profileTitle}",
@@ -1204,9 +1231,11 @@ private fun CommunityTuningCard(
                 }
 
                 profile.tempDelta?.let { delta ->
+                    val tempUnit = LocalAppSettings.current.temperatureUnit
+                    val scaledDelta = if (tempUnit == TemperatureUnit.FAHRENHEIT) (delta * 9.0 / 5.0).roundToInt() else delta.toInt()
                     MetricChip(
                         label = if (isTr) "Sıcaklık Farkı" else "Temp Delta",
-                        value = "${if (delta > 0) "+" else ""}${delta.toInt()} °C",
+                        value = "${if (scaledDelta > 0) "+" else ""}$scaledDelta ${tempUnit.symbol}",
                         color = if (delta <= 0) NeonEmerald else NeonRose,
                         modifier = Modifier.weight(1f),
                     )
@@ -1298,10 +1327,10 @@ private fun CommunityTuningCard(
             }
 
             // Interactions Row (5 Reactions + Comments Drawer Trigger)
-            Row(
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
@@ -1436,9 +1465,11 @@ private fun VisualBeforeAfterDeltaCard(
             val tBefore = profile.tempBeforeC
             val tAfter = profile.tempAfterC
             if (tBefore != null && tAfter != null && tBefore > 0) {
+                val tempUnit = LocalAppSettings.current.temperatureUnit
                 val ratio = (tAfter / tBefore).toFloat().coerceIn(0.25f, 1f)
                 val animatedRatio by animateFloatAsState(targetValue = ratio, animationSpec = tween(550))
                 val delta = tAfter - tBefore
+                val scaledDelta = if (tempUnit == TemperatureUnit.FAHRENHEIT) (delta * 9.0 / 5.0).roundToInt() else delta.toInt()
                 val barColor = if (delta <= 0) NeonEmerald else NeonRose
 
                 Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
@@ -1464,7 +1495,7 @@ private fun VisualBeforeAfterDeltaCard(
                             )
                         }
                         Text(
-                            text = "${tBefore.toInt()}°C → ${tAfter.toInt()}°C (${if (delta > 0) "+" else ""}${delta.toInt()}°C)",
+                            text = "${formatTemperature(tBefore.roundToInt(), tempUnit)} → ${formatTemperature(tAfter.roundToInt(), tempUnit)} (${if (scaledDelta > 0) "+" else ""}$scaledDelta${tempUnit.symbol})",
                             style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp, fontWeight = FontWeight.Black),
                             color = barColor,
                         )
@@ -1605,6 +1636,12 @@ private fun ReactionPill(
     onClick: () -> Unit,
 ) {
     var pressed by remember { mutableStateOf(false) }
+    LaunchedEffect(pressed) {
+        if (pressed) {
+            delay(160)
+            pressed = false
+        }
+    }
     val scale by animateFloatAsState(
         targetValue = if (pressed) 1.15f else 1f,
         animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
@@ -1624,7 +1661,7 @@ private fun ReactionPill(
             }
             .clip(RoundedCornerShape(8.dp))
             .clickable {
-                pressed = !pressed
+                pressed = true
                 onClick()
             },
     ) {

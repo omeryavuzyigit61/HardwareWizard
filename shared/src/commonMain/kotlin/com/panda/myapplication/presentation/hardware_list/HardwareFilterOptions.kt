@@ -21,12 +21,15 @@ enum class HardwareSortOption(val displayName: String) {
     NAME_ASC("İsim: A-Z"),
 
     // CPU
+    CPU_GAMING_PERF_DESC("Oyun Performansı: En Yüksek"),
+    CPU_RENDER_PERF_DESC("Üretkenlik & Render: En Yüksek"),
     CPU_CORES_DESC("Çekirdek: Çoktan Aza"),
     CPU_CLOCK_DESC("Saat Hızı: En Yüksek"),
     CPU_TDP_ASC("TDP: En Düşük"),
     CPU_TDP_DESC("TDP: En Yüksek"),
 
     // GPU
+    GPU_PERF_DESC("Oyun Performansı: En Yüksek"),
     GPU_VRAM_DESC("VRAM: En Yüksek"),
     GPU_TDP_ASC("Güç Tüketimi: En Düşük"),
     GPU_TDP_DESC("Güç Tüketimi: En Yüksek"),
@@ -85,10 +88,13 @@ enum class HardwareSortOption(val displayName: String) {
             PRICE_ASC -> strings.sortPriceAsc
             PRICE_DESC -> strings.sortPriceDesc
             NAME_ASC -> strings.sortNameAsc
+            CPU_GAMING_PERF_DESC -> if (isTr) "Oyun Performansı: En Yüksek" else "Gaming Performance: Highest"
+            CPU_RENDER_PERF_DESC -> if (isTr) "Üretkenlik & Render: En Yüksek" else "Multi-Core / Render: Highest"
             CPU_CORES_DESC -> strings.sortCpuCoresDesc
             CPU_CLOCK_DESC -> strings.sortCpuClockDesc
             CPU_TDP_ASC -> strings.sortCpuTdpAsc
             CPU_TDP_DESC -> strings.sortCpuTdpDesc
+            GPU_PERF_DESC -> if (isTr) "Grafik Performansı: En Yüksek" else "GPU Performance: Highest"
             GPU_VRAM_DESC -> strings.sortGpuVramDesc
             GPU_TDP_ASC -> strings.sortGpuTdpAsc
             GPU_TDP_DESC -> strings.sortGpuTdpDesc
@@ -135,8 +141,8 @@ enum class HardwareSortOption(val displayName: String) {
             }
             return when (category) {
                 null -> common
-                HardwareCategory.CPU -> common + listOf(CPU_CORES_DESC, CPU_CLOCK_DESC, CPU_TDP_ASC, CPU_TDP_DESC)
-                HardwareCategory.GPU -> common + listOf(GPU_VRAM_DESC, GPU_TDP_ASC, GPU_TDP_DESC)
+                HardwareCategory.CPU -> common + listOf(CPU_GAMING_PERF_DESC, CPU_RENDER_PERF_DESC, CPU_CORES_DESC, CPU_CLOCK_DESC, CPU_TDP_ASC, CPU_TDP_DESC)
+                HardwareCategory.GPU -> common + listOf(GPU_PERF_DESC, GPU_VRAM_DESC, GPU_TDP_ASC, GPU_TDP_DESC)
                 HardwareCategory.RAM -> common + listOf(RAM_SPEED_DESC, RAM_CL_ASC, RAM_CAPACITY_DESC)
                 HardwareCategory.STORAGE -> common + listOf(STORAGE_CAPACITY_DESC, STORAGE_READ_SPEED_DESC)
                 HardwareCategory.MOTHERBOARD -> common + listOf(MOTHERBOARD_M2_SLOTS_DESC, MOTHERBOARD_RAM_SLOTS_DESC)

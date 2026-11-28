@@ -27,10 +27,22 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Analytics
+import androidx.compose.material.icons.rounded.BatteryChargingFull
+import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.Cable
 import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.DeveloperBoard
 import androidx.compose.material.icons.rounded.ExpandLess
 import androidx.compose.material.icons.rounded.ExpandMore
+import androidx.compose.material.icons.rounded.Memory
+import androidx.compose.material.icons.rounded.PhotoCamera
+import androidx.compose.material.icons.rounded.RocketLaunch
+import androidx.compose.material.icons.rounded.Science
+import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.rounded.Thermostat
 import androidx.compose.material.icons.rounded.Verified
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -107,6 +119,7 @@ private data class HeroKpiPill(val label: String, val value: String, val accent:
 
 private data class SpecAccordionGroup(
     val title: String,
+    val icon: ImageVector,
     val badge: String,
     val accentColor: Color,
     val rows: List<Pair<String, String>>,
@@ -384,11 +397,19 @@ fun GroupedTechnicalSpecsCard(
                         ) {
                             Box(
                                 modifier = Modifier
-                                    .size(8.dp)
-                                    .clip(CircleShape)
-                                    .background(group.accentColor),
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
+                                    .size(28.dp)
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(group.accentColor.copy(alpha = 0.14f)),
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                Icon(
+                                    imageVector = group.icon,
+                                    contentDescription = null,
+                                    tint = group.accentColor,
+                                    modifier = Modifier.size(16.dp),
+                                )
+                            }
+                            Spacer(modifier = Modifier.width(10.dp))
                             Text(
                                 text = group.title,
                                 style = MaterialTheme.typography.titleSmall,
@@ -550,22 +571,22 @@ private fun buildHeroKpiPills(
         )
         is PhoneSpec -> listOfNotNull(
             HeroKpiPill("SoC", s.chipset, ElectricBlue),
-            if (s.displaySizeInch > 0 && s.refreshRateHz > 0) HeroKpiPill("Ekran", "${s.displaySizeInch}\" ${s.refreshRateHz}Hz", NeonCyan) else null,
+            if (s.displaySizeInch > 0 && s.refreshRateHz > 0) HeroKpiPill(if (isTr) "Ekran" else "Display", "${s.displaySizeInch}\" ${s.refreshRateHz}Hz", NeonCyan) else null,
             s.dxomarkCamera?.let { HeroKpiPill("DXOMARK", "$it pts", NeonEmerald) }
-                ?: if (s.mainCameraMp > 0) HeroKpiPill("Kamera", "${s.mainCameraMp} MP", NeonPurple) else null,
-            if (s.batteryMah > 0) HeroKpiPill("Pil", "${s.batteryMah} mAh", NeonAmber) else null,
+                ?: if (s.mainCameraMp > 0) HeroKpiPill(if (isTr) "Kamera" else "Camera", "${s.mainCameraMp} MP", NeonPurple) else null,
+            if (s.batteryMah > 0) HeroKpiPill(if (isTr) "Pil" else "Battery", "${s.batteryMah} mAh", NeonAmber) else null,
         )
         is TabletSpec -> listOfNotNull(
             HeroKpiPill("SoC", s.chipset, ElectricBlue),
-            if (s.displaySizeInch > 0) HeroKpiPill("Ekran", "${s.displaySizeInch}\" ${s.refreshRateHz.takeIf { it > 0 }?.let { "${it}Hz" } ?: ""}".trim(), NeonCyan) else null,
-            if (s.ramGb > 0) HeroKpiPill("Bellek", "${s.ramGb}GB / ${s.storageGb}GB", NeonPurple) else null,
-            if (s.batteryMah > 0) HeroKpiPill("Pil", "${s.batteryMah} mAh", NeonAmber) else null,
+            if (s.displaySizeInch > 0) HeroKpiPill(if (isTr) "Ekran" else "Display", "${s.displaySizeInch}\" ${s.refreshRateHz.takeIf { it > 0 }?.let { "${it}Hz" } ?: ""}".trim(), NeonCyan) else null,
+            if (s.ramGb > 0) HeroKpiPill(if (isTr) "Bellek" else "Memory", "${s.ramGb}GB / ${s.storageGb}GB", NeonPurple) else null,
+            if (s.batteryMah > 0) HeroKpiPill(if (isTr) "Pil" else "Battery", "${s.batteryMah} mAh", NeonAmber) else null,
         )
         is LaptopSpec -> listOfNotNull(
             if (s.cpuModel.isNotBlank()) HeroKpiPill("CPU", s.cpuModel, ElectricBlue) else null,
             if (s.gpuModel.isNotBlank()) HeroKpiPill("GPU", s.gpuModel, NeonCyan) else null,
             if (s.gpuWattTgp.isNotBlank()) HeroKpiPill("TGP", s.gpuWattTgp, NeonPurple) else null,
-            if (s.batteryWh > 0) HeroKpiPill("Pil", "${s.batteryWh} Wh", NeonAmber) else null,
+            if (s.batteryWh > 0) HeroKpiPill(if (isTr) "Pil" else "Battery", "${s.batteryWh} Wh", NeonAmber) else null,
         )
         is MonitorSpec -> listOfNotNull(
             if (s.screenSizeInch > 0) HeroKpiPill(if (isTr) "Boyut" else "Size", "${s.screenSizeInch}\"", ElectricBlue) else null,
@@ -583,7 +604,7 @@ private fun buildHeroKpiPills(
             if (s.layout.isNotBlank()) HeroKpiPill("Layout", s.layout, ElectricBlue) else null,
             if (s.switchType.isNotBlank()) HeroKpiPill("Switch", s.switchType, NeonCyan) else null,
             if (s.pollingRateHz > 0) HeroKpiPill("Polling", "${s.pollingRateHz}Hz", NeonPurple) else null,
-            if (s.isHallEffect) HeroKpiPill("Manyetik", "Hall Effect", NeonEmerald) else null,
+            if (s.isHallEffect) HeroKpiPill(if (isTr) "Manyetik" else "Magnetic", "Hall Effect", NeonEmerald) else null,
         )
         is HeadsetSpec -> listOfNotNull(
             if (s.driverType.isNotBlank()) HeroKpiPill("Form", s.driverType, ElectricBlue) else null,
@@ -601,7 +622,7 @@ private fun buildHeroKpiPills(
             if (s.surfaceType.isNotBlank()) HeroKpiPill(if (isTr) "Yüzey" else "Surface", s.surfaceType, ElectricBlue) else null,
             if (s.speedGlideTier.isNotBlank()) HeroKpiPill(if (isTr) "Hız" else "Glide", s.speedGlideTier, NeonCyan) else null,
             if (s.dimensionsMm.isNotBlank()) HeroKpiPill(if (isTr) "Ölçü" else "Size", s.dimensionsMm, NeonPurple) else null,
-            if (s.thicknessMm > 0) HeroKpiPill(if (isTr) "Kalınlık" else "Thick", "${s.thicknessMm}mm", NeonAmber) else null,
+            if (s.thicknessMm > 0) HeroKpiPill(if (isTr) "Kalınlık" else "Thick", formatLengthMm(s.thicknessMm.toInt(), lengthUnit), NeonAmber) else null,
         )
         is WebcamSpec -> listOfNotNull(
             if (s.maxResolution.isNotBlank()) HeroKpiPill("Video", s.maxResolution, ElectricBlue) else null,
@@ -615,10 +636,10 @@ private fun buildHeroKpiPills(
             if (s.maxWeightCapacityKg > 0) HeroKpiPill("Max", "${s.maxWeightCapacityKg} kg", NeonAmber) else null,
         )
         is CaseFanSpec -> listOfNotNull(
-            if (s.fanSizeMm > 0) HeroKpiPill(if (isTr) "Boyut" else "Size", "${s.fanSizeMm} mm", ElectricBlue) else null,
+            if (s.fanSizeMm > 0) HeroKpiPill(if (isTr) "Boyut" else "Size", formatLengthMm(s.fanSizeMm, lengthUnit), ElectricBlue) else null,
             if (s.maxRpm > 0) HeroKpiPill("Max RPM", "${s.maxRpm}", NeonCyan) else null,
             if (s.maxAirflowCfm > 0) HeroKpiPill("Airflow", "${s.maxAirflowCfm} CFM", NeonPurple) else null,
-            if (s.noiseLevelDba > 0) HeroKpiPill("Ses", "${s.noiseLevelDba} dBA", NeonAmber) else null,
+            if (s.noiseLevelDba > 0) HeroKpiPill(if (isTr) "Ses" else "Noise", "${s.noiseLevelDba} dBA", NeonAmber) else null,
         )
         is UpsSpec -> listOfNotNull(
             if (s.vaRating > 0) HeroKpiPill("VA", "${s.vaRating} VA", ElectricBlue) else null,
@@ -628,37 +649,37 @@ private fun buildHeroKpiPills(
         is GamingDeskSpec -> listOfNotNull(
             if (s.deskWidthCm > 0) HeroKpiPill(if (isTr) "Ölçü" else "Size", "${s.deskWidthCm}x${s.deskDepthCm}cm", ElectricBlue) else null,
             if (s.maxLoadKg > 0) HeroKpiPill(if (isTr) "Kapasite" else "Load", "${s.maxLoadKg} kg", NeonCyan) else null,
-            HeroKpiPill("Motor", if (s.isMotorizedHeight) "Motorlu" else "Sabit", NeonAmber),
+            HeroKpiPill(if (isTr) "Motor" else "Height", if (s.isMotorizedHeight) (if (isTr) "Motorlu" else "Motorized") else (if (isTr) "Sabit" else "Fixed"), NeonAmber),
         )
         is GamingLightingSpec -> listOfNotNull(
             if (s.formFactor.isNotBlank()) HeroKpiPill("Form", s.formFactor, ElectricBlue) else null,
-            if (s.maxLumens > 0) HeroKpiPill("Lümen", "${s.maxLumens} lm", NeonCyan) else null,
+            if (s.maxLumens > 0) HeroKpiPill(if (isTr) "Lümen" else "Lumens", "${s.maxLumens} lm", NeonCyan) else null,
             if (s.criScore > 0) HeroKpiPill("CRI", "Ra ${s.criScore}", NeonEmerald) else null,
         )
         is SmartwatchSpec -> listOfNotNull(
-            if (s.screenSizeInch > 0) HeroKpiPill("Ekran", "${s.screenSizeInch}\"", ElectricBlue) else null,
-            if (s.batteryLifeDays > 0) HeroKpiPill("Pil", "${s.batteryLifeDays} Gün", NeonCyan) else null,
-            if (s.waterResistanceAtm > 0) HeroKpiPill("Su", "${s.waterResistanceAtm} ATM", NeonPurple) else null,
+            if (s.screenSizeInch > 0) HeroKpiPill(if (isTr) "Ekran" else "Display", "${s.screenSizeInch}\"", ElectricBlue) else null,
+            if (s.batteryLifeDays > 0) HeroKpiPill(if (isTr) "Pil" else "Battery", "${s.batteryLifeDays} ${if (isTr) "Gün" else "Days"}", NeonCyan) else null,
+            if (s.waterResistanceAtm > 0) HeroKpiPill(if (isTr) "Su" else "Water", "${s.waterResistanceAtm} ATM", NeonPurple) else null,
         )
         is RouterSpec -> listOfNotNull(
             if (s.wifiStandard.isNotBlank()) HeroKpiPill("Wi-Fi", s.wifiStandard, ElectricBlue) else null,
-            if (s.speedClass.isNotBlank()) HeroKpiPill("Hız", s.speedClass, NeonCyan) else null,
-            if (s.ethernetPorts.isNotBlank()) HeroKpiPill("Portlar", s.ethernetPorts, NeonPurple) else null,
+            if (s.speedClass.isNotBlank()) HeroKpiPill(if (isTr) "Hız" else "Speed", s.speedClass, NeonCyan) else null,
+            if (s.ethernetPorts.isNotBlank()) HeroKpiPill(if (isTr) "Portlar" else "Ports", s.ethernetPorts, NeonPurple) else null,
         )
         is ModemSpec -> listOfNotNull(
-            if (s.vdslProfile.isNotBlank()) HeroKpiPill("Hat", s.vdslProfile, ElectricBlue) else null,
+            if (s.vdslProfile.isNotBlank()) HeroKpiPill(if (isTr) "Hat" else "Line", s.vdslProfile, ElectricBlue) else null,
             if (s.wifiStandard.isNotBlank()) HeroKpiPill("Wi-Fi", s.wifiStandard, NeonCyan) else null,
             if (s.chipset.isNotBlank()) HeroKpiPill("SoC", s.chipset, NeonPurple) else null,
         )
         is AccessPointSpec -> listOfNotNull(
             if (s.wifiStandard.isNotBlank()) HeroKpiPill("Wi-Fi", s.wifiStandard, ElectricBlue) else null,
             if (s.poeSupport.isNotBlank()) HeroKpiPill("PoE", s.poeSupport, NeonCyan) else null,
-            if (s.maxClients > 0) HeroKpiPill("İstemci", "${s.maxClients}+", NeonAmber) else null,
+            if (s.maxClients > 0) HeroKpiPill(if (isTr) "İstemci" else "Clients", "${s.maxClients}+", NeonAmber) else null,
         )
         is RangeExtenderSpec -> listOfNotNull(
             if (s.wifiStandard.isNotBlank()) HeroKpiPill("Wi-Fi", s.wifiStandard, ElectricBlue) else null,
             if (s.meshProtocol.isNotBlank()) HeroKpiPill("Mesh", s.meshProtocol, NeonCyan) else null,
-            if (s.coverageAreaM2 > 0) HeroKpiPill("Alan", "${s.coverageAreaM2} m²", NeonEmerald) else null,
+            if (s.coverageAreaM2 > 0) HeroKpiPill(if (isTr) "Alan" else "Area", "${s.coverageAreaM2} m²", NeonEmerald) else null,
         )
     }
     return raw.filter { it.value.isNotBlank() }.take(4)
@@ -691,13 +712,13 @@ private fun buildGroupedSpecSections(
                     strings.specCoreTopology to (s.coreTopology ?: "${s.coreCount} ${strings.specCoresLabel} / ${s.threadCount} ${strings.specThreadsLabel}"),
                     strings.specArchNode to listOfNotNull(s.architecture, s.processNode).joinToString(" • "),
                     if (isEnthusiast) s.dieSizeMm2?.let { (if (isTr) "Silikon Zar Alanı (Die)" else "Die Size") to "$it mm²" } else null,
-                    if (isEnthusiast) s.transistorsBillion?.let { (if (isTr) "Transistör Sayısı" else "Transistors") to "$it Milyar" } else null,
-                    if (isEnthusiast) s.l1Cache?.let { "L1 Önbellek" to it } else null,
+                    if (isEnthusiast) s.transistorsBillion?.let { (if (isTr) "Transistör Sayısı" else "Transistors") to "$it ${if (isTr) "Milyar" else "B"}" } else null,
+                    if (isEnthusiast) s.l1Cache?.let { (if (isTr) "L1 Önbellek" else "L1 Cache") to it } else null,
                     strings.specL2L3Cache to listOfNotNull(s.l2CacheMb?.let { "$it MB L2" }, s.l3CacheMb?.let { "$it MB L3" }).joinToString(" • "),
                     s.releaseDate?.let { (if (isTr) "Çıkış Tarihi" else "Release Date") to it },
                 ) + if (isEnthusiast) popExtra("Silikon Kod Adı (Codename)", "Üretim Teknolojisi (Litografi)", "Çıkış Tarihi (Release)") else emptyList()
             )
-            if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "⚡ Silikon, Mimari & Önbellek" else "⚡ Silicon & Cache", badgeLabel, ElectricBlue, archRows, true)
+            if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Silikon, Mimari & Önbellek" else "Silicon & Cache", Icons.Rounded.Memory, badgeLabel, ElectricBlue, archRows, true)
 
             val clockPowerRows = cleanSpecRows(
                 listOfNotNull(
@@ -708,7 +729,7 @@ private fun buildGroupedSpecSections(
                     strings.specTdpPowerLimits to (s.powerLimits ?: "${s.tdp.watts} W TDP"),
                     s.tjMaxCelsius?.let { (if (isTr) "Maks. Çalışma Sıcaklığı (TjMax)" else "TjMax Temp") to formatTemperature(it, tempUnit) },
                     if (isEnthusiast) s.instructionSets?.let { (if (isTr) "Komut Setleri (ISA)" else "Instruction Sets") to it } else null,
-                    s.npuTops?.let { "AI NPU Performansı" to it },
+                    s.npuTops?.let { (if (isTr) "AI NPU Performansı" else "AI NPU Performance") to it },
                     strings.specMultiplier to when (s.unlockedMultiplier) {
                         true -> strings.specUnlocked
                         false -> strings.specLocked
@@ -716,18 +737,18 @@ private fun buildGroupedSpecSections(
                     },
                 )
             )
-            if (clockPowerRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🔥 Frekans, Komut Seti & Termal" else "🔥 Clocks, ISA & Thermal", badgeLabel, NeonAmber, clockPowerRows, true)
+            if (clockPowerRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Frekans, Komut Seti & Termal" else "Clocks, ISA & Thermal", Icons.Rounded.Thermostat, badgeLabel, NeonAmber, clockPowerRows, true)
 
             val ioRows = cleanSpecRows(
                 listOfNotNull(
                     strings.specMemController to (s.maxMemorySpeed ?: ""),
-                    s.memoryChannels?.let { (if (isTr) "Bellek Kanal Sayısı" else "Memory Channels") to "$it Kanal" },
-                    if (isEnthusiast) s.eccSupport?.let { "ECC Bellek Desteği" to if (it) "Var" else "Yok" } else null,
+                    s.memoryChannels?.let { (if (isTr) "Bellek Kanal Sayısı" else "Memory Channels") to "$it ${if (isTr) "Kanal" else "Ch"}" },
+                    if (isEnthusiast) s.eccSupport?.let { (if (isTr) "ECC Bellek Desteği" else "ECC Memory Support") to if (it) (if (isTr) "Var" else "Yes") else (if (isTr) "Yok" else "No") } else null,
                     strings.specPcieVersion to (s.pcieLanesDetail ?: s.pcieVersion.orEmpty()),
                     strings.specIgpu to (s.igpuModel ?: if (s.hasIntegratedGraphics) strings.specIgpuIncluded else strings.specIgpuRequired),
                 )
             )
-            if (ioRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🔌 Bellek Kontrolcü & PCIe G/Ç" else "🔌 Memory & PCIe I/O", badgeLabel, NeonCyan, ioRows, true)
+            if (ioRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Bellek Kontrolcü & PCIe G/Ç" else "Memory & PCIe I/O", Icons.Rounded.Cable, badgeLabel, NeonCyan, ioRows, true)
         }
 
         is GpuSpec -> {
@@ -743,13 +764,13 @@ private fun buildGroupedSpecSections(
                         s.rtCores?.let { "$it RT" },
                         s.tensorAiTops,
                     ).joinToString(" • "),
-                    if (isEnthusiast) s.fp32Tflops?.let { "FP32 Saf Hesaplama Gücü" to "$it TFLOPS" } else null,
+                    if (isEnthusiast) s.fp32Tflops?.let { (if (isTr) "FP32 Saf Hesaplama Gücü" else "FP32 Compute") to "$it TFLOPS" } else null,
                     s.upscalingTech?.let { "Upscaling & Frame Gen" to it },
-                    s.mediaEngines?.let { "Medya / Video Kodlayıcı" to it },
+                    s.mediaEngines?.let { (if (isTr) "Medya / Video Kodlayıcı" else "Media Engines") to it },
                     s.releaseDate?.let { (if (isTr) "Çıkış Tarihi" else "Release Date") to it },
                 ) + if (isEnthusiast) popExtra("GPU Silikon Çekirdeği (Die)", "Shaders / TMUs / ROPs", "FP32 Tek Duyarlıklı Güç", "Çıkış Tarihi (Release)") else emptyList()
             )
-            if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "⚡ GPU Mimarisi & Matematik Birimleri" else "⚡ GPU Architecture", badgeLabel, ElectricBlue, archRows, true)
+            if (archRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "GPU Mimarisi & Matematik Birimleri" else "GPU Architecture", Icons.Rounded.Bolt, badgeLabel, ElectricBlue, archRows, true)
 
             val memRows = cleanSpecRows(
                 listOfNotNull(
@@ -762,10 +783,10 @@ private fun buildGroupedSpecSections(
                         s.busWidthBits?.let { "$it-Bit" },
                         s.bandwidthGbs?.let { "$it GB/s" },
                     ).joinToString(" • "),
-                    if (isEnthusiast) s.l2CacheMb?.let { "GPU L2 Önbellek" to "$it MB" } else null,
+                    if (isEnthusiast) s.l2CacheMb?.let { (if (isTr) "GPU L2 Önbellek" else "GPU L2 Cache") to "$it MB" } else null,
                 )
             )
-            if (memRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🧠 Bellek (VRAM) & Veri Yolu" else "🧠 Memory Subsystem", badgeLabel, NeonPurple, memRows, true)
+            if (memRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Bellek (VRAM) & Veri Yolu" else "Memory Subsystem", Icons.Rounded.DeveloperBoard, badgeLabel, NeonPurple, memRows, true)
 
             val physRows = cleanSpecRows(
                 listOfNotNull(
@@ -773,7 +794,7 @@ private fun buildGroupedSpecSections(
                         s.coreClock.mhz.takeIf { it > 0 }?.let { "$it MHz" },
                         s.boostClock?.mhz?.takeIf { it > 0 }?.let { "$it MHz" },
                     ).joinToString(" / "),
-                    s.pcieInterface?.let { "PCIe Veri Yolu" to it },
+                    s.pcieInterface?.let { (if (isTr) "PCIe Veri Yolu" else "PCIe Interface") to it },
                     (if (isTr) "TGP / Önerilen PSU" else "TGP / PSU") to "${s.tdp.watts}W / ${s.recommendedPsu.watts}W PSU",
                     (if (isTr) "Güç Girişleri" else "Power Connectors") to (s.powerConnectors ?: ""),
                     (if (isTr) "Boyut & Kalınlık" else "Dimensions") to listOfNotNull(s.lengthMm?.let { formatLengthMm(it, lengthUnit) }, s.slotWidth).joinToString(" • "),
@@ -781,10 +802,11 @@ private fun buildGroupedSpecSections(
                     (if (isTr) "Parça No (SKU)" else "Part Number") to (s.partNumber ?: item.model),
                 ) + if (isEnthusiast) popExtra("PCIe Veri Yolu Arayüzü") else emptyList()
             )
-            if (physRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🔌 Frekans, Güç & Fiziksel Ölçüler" else "🔌 Clocks, Power & Board", badgeLabel, NeonCyan, physRows, true)
+            if (physRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Frekans, Güç & Fiziksel Ölçüler" else "Clocks, Power & Board", Icons.Rounded.Cable, badgeLabel, NeonCyan, physRows, true)
         }
 
         is PhoneSpec -> {
+            val ptsUnit = if (isTr) "Puan" else "pts"
             val perfRows = cleanSpecRows(
                 listOfNotNull(
                     (if (isTr) "Yonga Seti (SoC)" else "Chipset") to if (s.processNodeNm > 0) "${s.chipset} (${s.processNodeNm}nm)" else s.chipset,
@@ -794,43 +816,43 @@ private fun buildGroupedSpecSections(
                         s.ramGb.takeIf { it > 0 }?.let { "${it}GB ${s.ramType}".trim() },
                         s.storageGb.takeIf { it > 0 }?.let { "${it}GB ${s.storageType}".trim() },
                     ).joinToString(" • "),
-                    s.dxomarkCamera?.let { "DXOMARK Arka Kamera" to "$it Puan" },
-                    s.dxomarkSelfie?.let { "DXOMARK Selfie" to "$it Puan" },
-                    s.dxomarkDisplay?.let { "DXOMARK Ekran" to "$it Puan" },
-                    s.dxomarkBattery?.let { "DXOMARK Batarya" to "$it Puan" },
-                    s.dxomarkAudio?.let { "DXOMARK Ses" to "$it Puan" },
+                    s.dxomarkCamera?.let { (if (isTr) "DXOMARK Arka Kamera" else "DXOMARK Rear Camera") to "$it $ptsUnit" },
+                    s.dxomarkSelfie?.let { "DXOMARK Selfie" to "$it $ptsUnit" },
+                    s.dxomarkDisplay?.let { (if (isTr) "DXOMARK Ekran" else "DXOMARK Display") to "$it $ptsUnit" },
+                    s.dxomarkBattery?.let { (if (isTr) "DXOMARK Batarya" else "DXOMARK Battery") to "$it $ptsUnit" },
+                    s.dxomarkAudio?.let { (if (isTr) "DXOMARK Ses" else "DXOMARK Audio") to "$it $ptsUnit" },
                 ) + popExtra("DXOMARK Arka Kamera Puanı", "DXOMARK Selfie (Ön) Kamera Puanı", "DXOMARK Ekran Kalite Puanı", "DXOMARK Batarya Performans Puanı", "DXOMARK Ses / Hoparlör Puanı")
             )
-            if (perfRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🚀 Yonga, Bellek & DXOMARK" else "🚀 SoC, Memory & DXOMARK", badgeLabel, ElectricBlue, perfRows, true)
+            if (perfRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Yonga, Bellek & DXOMARK" else "SoC, Memory & DXOMARK", Icons.Rounded.RocketLaunch, badgeLabel, ElectricBlue, perfRows, true)
 
             val dispCamRows = cleanSpecRows(
                 listOfNotNull(
                     (if (isTr) "Ekran Paneli" else "Display") to listOfNotNull(s.displaySizeInch.takeIf { it > 0 }?.let { "$it\"" }, s.displayTech.ifBlank { null }, s.refreshRateHz.takeIf { it > 0 }?.let { "$it Hz" }).joinToString(" "),
                     (if (isTr) "Çözünürlük & Yoğunluk" else "Resolution") to listOfNotNull(s.resolution.ifBlank { null }, s.ppi.takeIf { it > 0 }?.let { "$it PPI" }).joinToString(" • "),
                     (if (isTr) "Parlaklık & Cam Koruma" else "Brightness & Glass") to listOfNotNull(s.peakBrightnessNit.takeIf { it > 0 }?.let { "$it Nit" }, s.glassProtection.ifBlank { null }).joinToString(" • "),
-                    s.pwmDimmingHz?.let { "PWM Göz Koruma Frekansı" to "${it}Hz" },
+                    s.pwmDimmingHz?.let { (if (isTr) "PWM Göz Koruma Frekansı" else "PWM Dimming") to "${it}Hz" },
                     (if (isTr) "Ana Kamera" else "Main Camera") to listOfNotNull(s.mainCameraMp.takeIf { it > 0 }?.let { "$it MP" }, s.mainSensorSize.ifBlank { null }, s.mainAperture.ifBlank { null }, if (s.hasOis) s.oisType.ifBlank { "OIS" } else null).joinToString(" • "),
-                    s.opticalZoomX?.let { "Telefoto Zoom" to "${s.telephotoMp ?: 0} MP • ${it}x Optik" },
-                    s.ultraWideMp?.let { "Ultra Geniş" to "$it MP" },
+                    s.opticalZoomX?.let { (if (isTr) "Telefoto Zoom" else "Telephoto Zoom") to "${s.telephotoMp ?: 0} MP • ${it}x ${if (isTr) "Optik" else "Optical"}" },
+                    s.ultraWideMp?.let { (if (isTr) "Ultra Geniş" else "Ultra-Wide") to "$it MP" },
                     (if (isTr) "Video Kayıt" else "Video") to s.videoResolution,
                 )
             )
-            if (dispCamRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "📸 Ekran & Kamera Mühendisliği" else "📸 Display & Camera", badgeLabel, NeonPurple, dispCamRows, true)
+            if (dispCamRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Ekran & Kamera Mühendisliği" else "Display & Camera", Icons.Rounded.PhotoCamera, badgeLabel, NeonPurple, dispCamRows, true)
 
             val connBattRows = cleanSpecRows(
                 listOfNotNull(
                     (if (isTr) "Batarya & Şarj" else "Battery") to listOfNotNull(
                         s.batteryMah.takeIf { it > 0 }?.let { "$it mAh" },
-                        s.wiredChargingWatt.takeIf { it > 0 }?.let { "${it}W Kablolu" },
-                        s.wirelessChargingWatt?.let { "${it}W Kablosuz" },
+                        s.wiredChargingWatt.takeIf { it > 0 }?.let { "${it}W ${if (isTr) "Kablolu" else "Wired"}" },
+                        s.wirelessChargingWatt?.let { "${it}W ${if (isTr) "Kablosuz" else "Wireless"}" },
                     ).joinToString(" • "),
-                    s.usbSpeed?.let { "USB Port Hızı" to it },
+                    s.usbSpeed?.let { (if (isTr) "USB Port Hızı" else "USB Speed") to it },
                     s.wifiBluetooth?.let { "Wi-Fi & Bluetooth" to it },
                     (if (isTr) "Kasa & Dayanıklılık" else "Build") to listOfNotNull(s.frameMaterial.ifBlank { null }, s.waterResistance.ifBlank { null }, s.weightGrams.takeIf { it > 0 }?.let { "${it}g" }).joinToString(" • "),
-                    (if (isTr) "İşletim Sistemi" else "OS") to if (s.updateYears > 0) "${s.osName} (${s.updateYears} Yıl Güncelleme)" else s.osName,
+                    (if (isTr) "İşletim Sistemi" else "OS") to if (s.updateYears > 0) "${s.osName} (${s.updateYears} ${if (isTr) "Yıl Güncelleme" else "Yrs Updates"})" else s.osName,
                 )
             )
-            if (connBattRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "🔋 Batarya, Kasa & Bağlantı" else "🔋 Battery & Connectivity", badgeLabel, NeonCyan, connBattRows, true)
+            if (connBattRows.isNotEmpty()) groups += SpecAccordionGroup(if (isTr) "Batarya, Kasa & Bağlantı" else "Battery & Connectivity", Icons.Rounded.BatteryChargingFull, badgeLabel, NeonCyan, connBattRows, true)
         }
 
         else -> {
@@ -838,7 +860,8 @@ private fun buildGroupedSpecSections(
             val coreRows = buildPolymorphicSpecRows(item, strings)
             if (coreRows.isNotEmpty()) {
                 groups += SpecAccordionGroup(
-                    title = if (isTr) "⚙️ Çekirdek Teknik Özellikler" else "⚙️ Core Technical Specs",
+                    title = if (isTr) "Çekirdek Teknik Özellikler" else "Core Technical Specs",
+                    icon = Icons.Rounded.Settings,
                     badge = badgeLabel,
                     accentColor = ElectricBlue,
                     rows = coreRows,
@@ -864,7 +887,7 @@ private fun buildGroupedSpecSections(
             c.passmarkScore?.let { benchRows += "PassMark CPU Mark" to "${formatPoints(it)} pts" }
             c.passmarkSingle?.let { benchRows += "PassMark Single Thread" to "${formatPoints(it)} pts" }
             c.blenderScore?.let { benchRows += "Blender Benchmark" to "${formatPoints(it)} samples/m" }
-            c.sevenZipMips?.let { benchRows += "7-Zip Sıkıştırma" to "${formatPoints(it)} MIPS" }
+            c.sevenZipMips?.let { benchRows += (if (isTr) "7-Zip Sıkıştırma" else "7-Zip Compression") to "${formatPoints(it)} MIPS" }
         }
         bench.gpuSynthetic?.let { g ->
             g.timeSpyGraphics?.let { benchRows += "3DMark Time Spy Graphics" to "${formatPoints(it)} pts" }
@@ -876,7 +899,8 @@ private fun buildGroupedSpecSections(
         }
         if (benchRows.isNotEmpty() && (item.spec is CpuSpec || item.spec is GpuSpec)) {
             groups += SpecAccordionGroup(
-                title = if (isTr) "📊 Doğrulanmış Sentetik Benchmarklar" else "📊 Verified Synthetic Benchmarks",
+                title = if (isTr) "Doğrulanmış Sentetik Benchmarklar" else "Verified Synthetic Benchmarks",
+                icon = Icons.Rounded.Analytics,
                 badge = if (isTr) "skor" else "scores",
                 accentColor = NeonPurple,
                 rows = benchRows,
@@ -891,7 +915,8 @@ private fun buildGroupedSpecSections(
         .map { it.key to it.value }
     if (isEnthusiast && remainingExtras.isNotEmpty()) {
         groups += SpecAccordionGroup(
-            title = if (isTr) "🔬 Ek Mühendislik & Kaynak Verileri" else "🔬 Extended Engineering Telemetry",
+            title = if (isTr) "Ek Mühendislik & Kaynak Verileri" else "Extended Engineering Telemetry",
+            icon = Icons.Rounded.Science,
             badge = badgeLabel,
             accentColor = NeonEmerald,
             rows = remainingExtras,

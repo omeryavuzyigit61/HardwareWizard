@@ -23,6 +23,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import com.panda.myapplication.presentation.util.LocalAppStrings
+import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -94,14 +95,20 @@ fun SecondHandValuationScreen(
             }
 
             val marketMedian = if (dealsForItem.isNotEmpty()) {
-                dealsForItem.map { it.priceTry }.average()
+                val sorted = dealsForItem.map { it.priceTry }.sorted()
+                val mid = sorted.size / 2
+                if (sorted.size % 2 == 1) sorted[mid] else (sorted[mid - 1] + sorted[mid]) / 2.0
             } else {
                 basePrice * baseRetentionFactor
             }
 
-            val quickSell = marketMedian * 0.83 // Hızlı nakit: %17 indirimli
-            val showcaseMint = marketMedian * 1.13 // Vitrin / Kusursuz kutulu faturalı: %13 primli
-            val retention = ((marketMedian / basePrice.coerceAtLeast(1.0)) * 100).roundToInt().coerceIn(40, 95)
+            val quickSell = marketMedian * 0.83
+            val showcaseMint = marketMedian * 1.13
+            val retention = if (basePrice > 0.0) {
+                ((marketMedian / basePrice) * 100).roundToInt().coerceIn(40, 95)
+            } else {
+                0
+            }
 
             SecondHandValuationItem(
                 item = item,
@@ -327,8 +334,8 @@ private fun TotalValuationTiersCard(
 
                 // 2. Gerçekçi Piyasa Medyanı (Önerilen)
                 TierColumnBox(
-                    title = "🎯 " + strings.valMarketValue,
-                    subtitle = "Dengeli Piyasa",
+                    title = strings.valMarketValue,
+                    subtitle = strings.valMarketValueDesc,
                     price = marketMedian,
                     color = NeonEmerald,
                     isPrimary = true,
@@ -337,8 +344,8 @@ private fun TotalValuationTiersCard(
 
                 // 3. Vitrin / Kusursuz
                 TierColumnBox(
-                    title = "✨ Vitrin / Kusursuz",
-                    subtitle = "Kutulu & Garantili",
+                    title = strings.valMintBoxed,
+                    subtitle = strings.valMintBoxedDesc,
                     price = showcaseMint,
                     color = ElectricBlue,
                     modifier = Modifier.weight(1f),
@@ -418,26 +425,28 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
                         overflow = TextOverflow.Ellipsis,
                     )
                     Text(
-                        text = "${valItem.item.category.displayName} • " + strings.valNewPriceLabel.replace("%s", formatTry(valItem.newPriceTry)),
+                        text = "${valItem.item.category.localizedName(strings.isTurkish)} • " + strings.valNewPriceLabel.replace("%s", formatValuationPrice(valItem.newPriceTry)),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
 
-                Surface(
-                    shape = RoundedCornerShape(6.dp),
-                    color = NeonEmerald.copy(alpha = 0.15f),
-                    border = BorderStroke(0.5.dp, NeonEmerald.copy(alpha = 0.4f)),
-                ) {
-                    Text(
-                        text = "%${valItem.retentionPercentage} Koruma",
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = NeonEmerald,
-                        maxLines = 1,
-                        softWrap = false,
-                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
-                    )
+                if (valItem.retentionPercentage > 0) {
+                    Surface(
+                        shape = RoundedCornerShape(6.dp),
+                        color = NeonEmerald.copy(alpha = 0.15f),
+                        border = BorderStroke(0.5.dp, NeonEmerald.copy(alpha = 0.4f)),
+                    ) {
+                        Text(
+                            text = if (strings.isTurkish) "%${valItem.retentionPercentage} Koruma" else "${valItem.retentionPercentage}% Retained",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = NeonEmerald,
+                            maxLines = 1,
+                            softWrap = false,
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+                        )
+                    }
                 }
             }
 
@@ -451,15 +460,15 @@ private fun ComponentValuationCard(valItem: SecondHandValuationItem) {
             ) {
                 Column {
                     Text(strings.valQuickCash, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
-                    Text(formatTry(valItem.quickSellTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = NeonAmber)
+                    Text(formatValuationPrice(valItem.quickSellTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = NeonAmber)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(strings.valMarketValue, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
-                    Text(formatTry(valItem.marketMedianTry), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Black, color = NeonEmerald)
+                    Text(formatValuationPrice(valItem.marketMedianTry), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Black, color = NeonEmerald)
                 }
                 Column(horizontalAlignment = Alignment.End) {
-                    Text("Kutulu Vitrin", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
-                    Text(formatTry(valItem.showcaseMintTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = ElectricBlue)
+                    Text(strings.valMintBoxed, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp)
+                    Text(formatValuationPrice(valItem.showcaseMintTry), style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = ElectricBlue)
                 }
             }
 
@@ -502,7 +511,7 @@ private fun SecondHandSellingTipsCard() {
 
             SellingTipRow(
                 icon = "📦",
-                title = "Kutu & Fatura Etkisi (+%10-15)",
+                title = strings.valTip1Title,
                 description = strings.valTip1Desc,
             )
 
@@ -514,7 +523,7 @@ private fun SecondHandSellingTipsCard() {
 
             SellingTipRow(
                 icon = "✨",
-                title = "Temizlik ve Termal Macun",
+                title = strings.valTip3Title,
                 description = strings.valTip3Desc,
             )
         }
@@ -585,8 +594,15 @@ private fun EmptyBuildValuationPrompt(onNavigateToWizard: () -> Unit) {
     }
 }
 
+@Composable
+private fun formatValuationPrice(amount: Double): String {
+    val currency = com.panda.myapplication.presentation.util.LocalAppCurrency.current
+    val fallback = LocalAppStrings.current.noPriceFallback
+    return amount.takeIf { it > 0.0 }.formatPriceWithCurrency(currency, fallback)
+}
+
 private fun formatTry(amount: Double): String {
-    val rounded = amount.roundToInt()
+    val rounded = amount.coerceAtLeast(0.0).roundToInt()
     val formatted = rounded.toString().reversed().chunked(3).joinToString(".").reversed()
     return "$formatted ₺"
 }

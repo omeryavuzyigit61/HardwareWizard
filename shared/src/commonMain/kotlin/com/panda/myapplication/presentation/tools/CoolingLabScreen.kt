@@ -102,7 +102,12 @@ import com.panda.myapplication.presentation.theme.NeonRose
 import com.panda.myapplication.presentation.util.LocalAppSettings
 import com.panda.myapplication.presentation.util.formatPriceWithCurrency
 import com.panda.myapplication.presentation.util.formatTemperature
+import com.panda.myapplication.domain.engine.CoolerThermalProfile
+import com.panda.myapplication.domain.engine.CpuThermalProfile
+import com.panda.myapplication.domain.engine.ThermalSimulationEngine
+import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.presentation.util.formatTemperatureCompact
+import androidx.compose.ui.graphics.luminance
 import kotlinx.coroutines.flow.map
 import org.koin.compose.koinInject
 import kotlin.math.roundToInt
@@ -112,110 +117,14 @@ private val SafeGreenTempColor = Color(0xFF00E676)
 private val WarningYellowTempColor = Color(0xFFFFD600)
 private val DangerRedTempColor = Color(0xFFFF1744)
 
-private data class CpuThermalPreset(
-    val id: String,
-    val name: String,
-    val socket: String,
-    val baseTdpWatts: Int,
-    val peakPptMtpWatts: Int,
-    val tjMaxCelsius: Int,
-    val notesTr: String,
-    val notesEn: String,
-    val isFromCatalog: Boolean = false,
-) {
-    fun localizedNotes(isTr: Boolean): String = if (isTr) notesTr else notesEn
-}
+private val CPU_PRESETS: List<CpuThermalProfile> = ThermalSimulationEngine.CPU_PRESETS
+private val COOLER_PRESETS: List<CoolerThermalProfile> = ThermalSimulationEngine.COOLER_PRESETS
 
-private data class CoolerThermalPreset(
-    val id: String,
-    val name: String,
-    val typeLabel: String,
-    val maxDissipationWatts: Int,
-    val noiseDba: Double,
-    val isFromCatalog: Boolean = false,
-)
+private fun mapCatalogCpuToThermalPreset(item: HardwareItem, spec: CpuSpec): CpuThermalProfile =
+    ThermalSimulationEngine.fromCatalogCpu(item, spec)
 
-private val CPU_PRESETS = listOf(
-    CpuThermalPreset("preset_7500f", "AMD Ryzen 5 7500F", "AM5", 65, 88, 95, "6 Çekirdek • Düşük PPT, stok veya tek kule soğutucu ile serin çalışır.", "6 Cores • Low PPT, runs cool with stock or single-tower cooler."),
-    CpuThermalPreset("preset_7800x3d", "AMD Ryzen 7 7800X3D", "AM5", 120, 162, 89, "3D V-Cache katmanı nedeniyle ısı yoğunluğu yüksektir (TjMax 89°C).", "High thermal density due to stacked 3D V-Cache layer (TjMax 89°C)."),
-    CpuThermalPreset("preset_9800x3d", "AMD Ryzen 7 9800X3D", "AM5", 120, 162, 95, "2. Nesil V-Cache altta konumlandığı için 7800X3D'den ~6°C daha serindir.", "2nd Gen 3D V-Cache under CCD runs ~6°C cooler than 7800X3D."),
-    CpuThermalPreset("preset_9950x", "AMD Ryzen 9 9950X", "AM5", 170, 230, 95, "16 Çekirdek • Ağır render yükünde 230W PPT çeker, 360mm AIO önerilir.", "16 Cores • Heavy render pulls 230W PPT, 360mm AIO recommended."),
-    CpuThermalPreset("preset_14600k", "Intel Core i5-14600K", "LGA1700", 125, 181, 100, "PL2 tam yükte 181W MTP çeker; çift kule hava veya 240mm sıvı soğutma şarttır.", "PL2 full load pulls 181W MTP; dual-tower air or 240mm AIO required."),
-    CpuThermalPreset("preset_14700k", "Intel Core i7-14700K", "LGA1700", 125, 253, 100, "20 Çekirdek • PL2 253W MTP sınırında hava soğutucuları doygunluğa ulaştırır.", "20 Cores • 253W MTP pushes air coolers to thermal saturation."),
-    CpuThermalPreset("preset_14900k", "Intel Core i9-14900K", "LGA1700", 125, 285, 100, "Ekstrem termal yoğunluk • 360mm/420mm üst sınıf AIO olmadan Thermal Throttling kaçınılmazdır.", "Extreme thermal density • Throttling without premium 360mm/420mm AIO."),
-    CpuThermalPreset("preset_285k", "Intel Core Ultra 9 285K", "LGA1851", 125, 250, 105, "Arrow Lake TSMC N3B • 14900K'ya kıyasla daha verimli, 360mm AIO ile tam stabil.", "Arrow Lake TSMC N3B • More efficient than 14900K, stable with 360mm AIO."),
-)
-
-private val COOLER_PRESETS = listOf(
-    CoolerThermalPreset("preset_stock", "Stock Cooler (Wraith Stealth / Laminar)", "Stock Air Cooler", 95, 36.5),
-    CoolerThermalPreset("preset_ak120", "Thermalright Assassin King 120 SE", "120mm Single Tower Air", 180, 25.6),
-    CoolerThermalPreset("preset_pa120", "Thermalright Peerless Assassin 120 SE", "Dual Tower (6 Heatpipes)", 235, 26.5),
-    CoolerThermalPreset("preset_nhd15", "Noctua NH-D15 G2", "Flagship Dual Tower Air", 260, 24.8),
-    CoolerThermalPreset("preset_lf240", "Arctic Liquid Freezer III 240", "240mm Liquid Cooler (AIO)", 250, 27.0),
-    CoolerThermalPreset("preset_lf360", "Arctic Liquid Freezer III 360", "360mm Liquid (38mm Radiator)", 310, 28.5),
-    CoolerThermalPreset("preset_lf420", "Arctic Liquid Freezer III 420", "420mm Extreme Liquid AIO", 350, 29.0),
-)
-
-private fun mapCatalogCpuToThermalPreset(item: HardwareItem, spec: CpuSpec): CpuThermalPreset {
-    val baseTdp = spec.tdp.watts.coerceAtLeast(35)
-    val upperName = item.displayName.uppercase()
-    val socketUpper = spec.socket.uppercase()
-    val isAmd = socketUpper.contains("AM5") || socketUpper.contains("AM4") || item.brand.contains("AMD", ignoreCase = true)
-
-    val peakPpt = when {
-        upperName.contains("14900") || upperName.contains("13900") -> maxOf((baseTdp * 2.15).roundToInt(), 280)
-        upperName.contains("285K") -> 250
-        upperName.contains("14700") || upperName.contains("13700") -> maxOf((baseTdp * 1.95).roundToInt(), 253)
-        upperName.contains("14600") || upperName.contains("13600") -> maxOf((baseTdp * 1.45).roundToInt(), 181)
-        isAmd -> (baseTdp * 1.35).roundToInt()
-        else -> (baseTdp * 1.48).roundToInt()
-    }
-
-    val tjMax = when {
-        upperName.contains("7800X3D") || upperName.contains("5800X3D") || upperName.contains("5700X3D") -> 89
-        socketUpper.contains("1851") -> 105
-        isAmd -> 95
-        else -> 100
-    }
-
-    val cacheNote = spec.l3CacheMb?.let { "${it}MB L3 • " } ?: ""
-    return CpuThermalPreset(
-        id = item.id.value,
-        name = item.displayName,
-        socket = spec.socket,
-        baseTdpWatts = baseTdp,
-        peakPptMtpWatts = peakPpt,
-        tjMaxCelsius = tjMax,
-        notesTr = "Katalogdan Seçildi • ${spec.coreCount} Çekirdek / ${spec.threadCount} İzlek • ${cacheNote}Gerçek PPT/MTP: ${peakPpt}W",
-        notesEn = "Selected from Catalog • ${spec.coreCount}C / ${spec.threadCount}T • ${cacheNote}Actual PPT/MTP: ${peakPpt}W",
-        isFromCatalog = true,
-    )
-}
-
-private fun mapCatalogCoolerToThermalPreset(item: HardwareItem, spec: CoolerSpec): CoolerThermalPreset {
-    val estimatedWatts = when {
-        spec.maxCoolingTdp.watts > 50 -> spec.maxCoolingTdp.watts
-        spec.radiatorSizeMm != null && spec.radiatorSizeMm >= 420 -> 350
-        spec.radiatorSizeMm != null && spec.radiatorSizeMm >= 360 -> 300
-        spec.radiatorSizeMm != null && spec.radiatorSizeMm >= 280 -> 270
-        spec.radiatorSizeMm != null && spec.radiatorSizeMm >= 240 -> 245
-        spec.type == CoolerType.LIQUID -> 240
-        else -> 195
-    }
-    val typeLabel = if (spec.type == CoolerType.LIQUID) {
-        "${spec.radiatorSizeMm ?: 240}mm Liquid Cooler (AIO)"
-    } else {
-        "Air Cooler (${spec.heightMm ?: 155}mm)"
-    }
-    return CoolerThermalPreset(
-        id = item.id.value,
-        name = item.displayName,
-        typeLabel = typeLabel,
-        maxDissipationWatts = estimatedWatts,
-        noiseDba = spec.noiseDba ?: 27.5,
-        isFromCatalog = true,
-    )
-}
+private fun mapCatalogCoolerToThermalPreset(item: HardwareItem, spec: CoolerSpec): CoolerThermalProfile =
+    ThermalSimulationEngine.fromCatalogCooler(item, spec)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -225,8 +134,11 @@ fun CoolingLabScreen(
     modifier: Modifier = Modifier,
 ) {
     val repository: HardwareRepository = koinInject()
+    val activeBuildRepository: ActiveBuildRepository = koinInject()
+    val activeBuild by activeBuildRepository.activeBuild.collectAsStateWithLifecycle()
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val isTr = strings.isTurkish
+    val isLightTheme = MaterialTheme.colorScheme.background.luminance() > 0.5f
 
     val catalogCpus by remember {
         repository.observeHardwareItemsByCategory(HardwareCategory.CPU).map { res ->
@@ -241,10 +153,10 @@ fun CoolingLabScreen(
     }.collectAsStateWithLifecycle(initialValue = emptyList())
 
     var selectedCpuIndex by remember { mutableIntStateOf(1) } // 7800X3D default
-    var customCatalogCpu by remember { mutableStateOf<CpuThermalPreset?>(null) }
+    var customCatalogCpu by remember { mutableStateOf<CpuThermalProfile?>(null) }
 
     var selectedCoolerIndex by remember { mutableIntStateOf(2) } // Peerless Assassin default
-    var customCatalogCooler by remember { mutableStateOf<CoolerThermalPreset?>(null) }
+    var customCatalogCooler by remember { mutableStateOf<CoolerThermalProfile?>(null) }
 
     var ambientTempCelsius by remember { mutableIntStateOf(24) }
     var isCpuPickerOpen by remember { mutableStateOf(false) }
@@ -253,38 +165,33 @@ fun CoolingLabScreen(
     val cpu = customCatalogCpu ?: CPU_PRESETS[selectedCpuIndex]
     val cooler = customCatalogCooler ?: COOLER_PRESETS[selectedCoolerIndex]
 
-    // Thermal Physics Simulation
-    val saturationRatio = cpu.peakPptMtpWatts.toFloat() / cooler.maxDissipationWatts.coerceAtLeast(1).toFloat()
-    val headroomWatts = cooler.maxDissipationWatts - cpu.peakPptMtpWatts
-    val x3dDensityOffset = when {
-        cpu.name.contains("7800X3D", ignoreCase = true) || cpu.name.contains("5800X3D", ignoreCase = true) -> 7
-        cpu.name.contains("9800X3D", ignoreCase = true) || cpu.name.contains("X3D", ignoreCase = true) -> 3
-        else -> 0
+    // First-Principles Thermal Resistance Simulation (ThermalSimulationEngine)
+    val sim = remember(cpu, cooler, ambientTempCelsius) {
+        ThermalSimulationEngine.simulate(cpu, cooler, ambientTempCelsius)
     }
+    val saturationRatio = sim.saturationRatio
+    val headroomWatts = sim.headroomWatts
+    val idleTemp = sim.idleTempCelsius
+    val gamingWatts = sim.gamingWatts
+    val gamingTemp = sim.gamingTempCelsius
+    val renderTemp = sim.renderTempCelsius
+    val isThrottling = sim.isThrottling
 
-    val maxLimit = cpu.tjMaxCelsius.coerceAtLeast(60)
-    val idleTemp = (ambientTempCelsius + 11 + (cpu.baseTdpWatts * 0.05)).roundToInt().coerceIn(20, maxLimit)
-    val gamingWatts = (cpu.peakPptMtpWatts * 0.62).roundToInt()
-    val gamingRatio = gamingWatts.toFloat() / cooler.maxDissipationWatts.toFloat()
-    val calculatedGamingTemp = (ambientTempCelsius + 22 + (gamingRatio * 48f) + x3dDensityOffset).roundToInt()
-    val minGaming = (idleTemp + 4).coerceAtMost(maxLimit)
-    val gamingTemp = calculatedGamingTemp.coerceIn(minGaming, maxLimit)
-
-    val renderTempRaw = (ambientTempCelsius + 26 + (saturationRatio * 62f) + x3dDensityOffset).roundToInt()
-    val isThrottling = renderTempRaw >= maxLimit || saturationRatio > 1.02f
-    val minRender = (gamingTemp + 2).coerceAtMost(maxLimit)
-    val renderTemp = renderTempRaw.coerceIn(minRender, maxLimit)
+    val safeColorAdaptive = if (isLightTheme) Color(0xFF059669) else SafeGreenTempColor
+    val warnColorAdaptive = if (isLightTheme) Color(0xFFD97706) else WarningYellowTempColor
+    val dangerColorAdaptive = if (isLightTheme) Color(0xFFDC2626) else DangerRedTempColor
 
     val statusColor by animateColorAsState(
         targetValue = when {
-            isThrottling || renderTemp >= 90 -> DangerRedTempColor
-            saturationRatio > 0.85f || renderTemp >= 80 -> WarningYellowTempColor
-            else -> SafeGreenTempColor
+            isThrottling || !sim.isSocketCompatible -> dangerColorAdaptive
+            saturationRatio > 0.85f || renderTemp >= cpu.tjMaxCelsius - 6 -> warnColorAdaptive
+            else -> safeColorAdaptive
         },
         animationSpec = tween(350),
         label = "statusColor",
     )
     val statusBadgeText = when {
+        !sim.isSocketCompatible -> if (isTr) "SOKET MONTAJ UYUMSUZLUĞU (${cpu.socket})" else "SOCKET MOUNT MISMATCH (${cpu.socket})"
         isThrottling -> LocalAppStrings.current.coolingThrottleStatus
         saturationRatio > 0.85f -> LocalAppStrings.current.coolingWarningStatus
         else -> LocalAppStrings.current.coolingSafeStatus
@@ -312,6 +219,48 @@ fun CoolingLabScreen(
             contentPadding = PaddingValues(Spacing.medium),
             verticalArrangement = Arrangement.spacedBy(Spacing.medium),
         ) {
+            // Optional Load from ActiveBuild Banner
+            if (activeBuild.cpu != null || activeBuild.cooler != null) {
+                item {
+                    Surface(
+                        onClick = {
+                            activeBuild.cpu?.let { item ->
+                                (item.spec as? CpuSpec)?.let { customCatalogCpu = mapCatalogCpuToThermalPreset(item, it) }
+                            }
+                            activeBuild.cooler?.let { item ->
+                                (item.spec as? CoolerSpec)?.let { customCatalogCooler = mapCatalogCoolerToThermalPreset(item, it) }
+                            }
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                        color = NeonCyan.copy(alpha = 0.12f),
+                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.55f)),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = if (isTr) "Sihirbazdaki CPU & Soğutucuyu Yükle" else "Load Wizard CPU & Cooler",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = NeonCyan,
+                                )
+                                Text(
+                                    text = listOfNotNull(activeBuild.cpu?.displayName, activeBuild.cooler?.displayName).joinToString(" • "),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
             // 1. CPU Selector
             item {
                 Card(
@@ -532,7 +481,7 @@ fun CoolingLabScreen(
                                             overflow = TextOverflow.Ellipsis,
                                         )
                                         Text(
-                                            text = "${cooler.typeLabel} • ${cooler.maxDissipationWatts}W ${strings.coolingCapacitySuffix}",
+                                            text = "${cooler.localizedType(isTr)} • ${cooler.maxDissipationWatts}W ${strings.coolingCapacitySuffix} • ${cooler.ratedNoiseDba} dBA",
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurface,
                                         )
@@ -594,7 +543,7 @@ fun CoolingLabScreen(
                                                 overflow = TextOverflow.Ellipsis,
                                             )
                                             Text(
-                                                text = "${item.typeLabel} • ${strings.coolingNoiseLabel}: ${item.noiseDba} dBA",
+                                                text = "${item.localizedType(isTr)} • ${strings.coolingNoiseLabel}: ${item.ratedNoiseDba} dBA",
                                                 style = MaterialTheme.typography.labelSmall,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                             )
@@ -724,7 +673,7 @@ fun CoolingLabScreen(
                         label = strings.coolingIdleLoad,
                         tempCelsius = idleTemp,
                         tjMax = cpu.tjMaxCelsius,
-                        powerWatts = 28,
+                        powerWatts = sim.idleWatts,
                     )
                     ThermalTempRow(
                         label = strings.coolingGamingLoad,
@@ -740,6 +689,20 @@ fun CoolingLabScreen(
                     )
 
                     Spacer(modifier = Modifier.height(Spacing.small))
+
+                    // Acoustic & Thermal Impedance Telemetry Row
+                    Text(
+                        text = if (isTr) {
+                            "Isıl Direnç: ${sim.coolerThermalResistanceCw} °C/W • Tahmini Akustik: Oyunda ~${sim.estimatedGamingNoiseDba} dBA / Tam Yükte ~${sim.estimatedStressNoiseDba} dBA"
+                        } else {
+                            "Thermal Impedance: ${sim.coolerThermalResistanceCw} °C/W • Est. Acoustics: Gaming ~${sim.estimatedGamingNoiseDba} dBA / Stress ~${sim.estimatedStressNoiseDba} dBA"
+                        },
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = NeonCyan,
+                    )
+
+                    Spacer(modifier = Modifier.height(6.dp))
 
                     val warnTempUnit = LocalAppSettings.current.temperatureUnit
                     Text(
@@ -797,11 +760,12 @@ private fun ThermalTempRow(
 ) {
     // Dynamic Temperature Color Rules:
     // <65°C Ice Blue (#00E5FF), 65-79°C Safe Green (#00E676), 80-89°C Warning Yellow (#FFD600), 90°C+ Danger Red (#FF1744)
+    val isLight = MaterialTheme.colorScheme.background.luminance() > 0.5f
     val targetColor = when {
-        tempCelsius >= 90 -> DangerRedTempColor
-        tempCelsius >= 80 -> WarningYellowTempColor
-        tempCelsius >= 65 -> SafeGreenTempColor
-        else -> IceBlueTempColor
+        tempCelsius >= 90 -> if (isLight) Color(0xFFDC2626) else DangerRedTempColor
+        tempCelsius >= 80 -> if (isLight) Color(0xFFD97706) else WarningYellowTempColor
+        tempCelsius >= 65 -> if (isLight) Color(0xFF059669) else SafeGreenTempColor
+        else -> if (isLight) Color(0xFF0284C7) else IceBlueTempColor
     }
 
     val animatedColor by animateColorAsState(
@@ -1146,7 +1110,7 @@ private fun CatalogCoolerPickerSheet(
                                     overflow = TextOverflow.Ellipsis,
                                 )
                                 Text(
-                                    text = "${mapped.typeLabel} • ${strings.coolingCapacitySuffix}: ${mapped.maxDissipationWatts}W",
+                                    text = "${mapped.localizedType(strings.isTurkish)} • ${strings.coolingCapacitySuffix}: ${mapped.maxDissipationWatts}W",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = NeonCyan,
                                     fontWeight = FontWeight.SemiBold,
@@ -1177,12 +1141,13 @@ internal fun ToolTopBar(
     onOpenDrawer: () -> Unit,
 ) {
     val headerIconVector = when {
-        icon.contains("❄") -> Icons.Rounded.AcUnit
+        icon.contains("❄") || icon.contains("🌡") -> Icons.Rounded.AcUnit
         icon.contains("🔋") -> Icons.Rounded.BatteryChargingFull
-        icon.contains("🎯") -> Icons.Rounded.SportsEsports
+        icon.contains("🎯") || icon.contains("🖱") -> Icons.Rounded.SportsEsports
         icon.contains("📚") -> Icons.AutoMirrored.Rounded.MenuBook
-        icon.contains("🔄") -> Icons.Rounded.Autorenew
-        icon.contains("⚡") -> Icons.Rounded.Bolt
+        icon.contains("🔄") || icon.contains("🏷") -> Icons.Rounded.Autorenew
+        icon == "MEMORY" -> Icons.Rounded.Bolt
+        icon.contains("⚡") -> Icons.Rounded.Tune
         else -> Icons.Rounded.Tune
     }
 

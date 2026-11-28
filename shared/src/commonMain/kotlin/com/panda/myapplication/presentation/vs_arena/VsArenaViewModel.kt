@@ -79,8 +79,13 @@ class VsArenaViewModel(
         val categoryItems = allItems
             .filter { it.category == activeCategory }
             .sortedWith(
-                compareByDescending<HardwareItem> { it.currentPriceTry != null }
-                    .thenByDescending { VsArenaEngine.computeCompositePerformanceScore(it) }
+                if (com.panda.myapplication.domain.config.FeatureFlags.IS_PRICING_ENABLED) {
+                    compareByDescending<HardwareItem> { it.currentPriceTry != null }
+                        .thenByDescending { VsArenaEngine.computeCompositePerformanceScore(it) }
+                } else {
+                    compareByDescending<HardwareItem> { VsArenaEngine.computeCompositePerformanceScore(it) }
+                        .thenBy { it.displayName.lowercase() }
+                }
             )
 
         // Ensure slot items stay enriched with the latest catalog data if their IDs match

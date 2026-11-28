@@ -849,6 +849,16 @@ def _build_new_item_row(
         return None
 
     primary_img, gallery_imgs = sanitize_item_images(images[0] if images else None, images)
+
+    # Auto-calibrate newly discovered CPUs & GPUs via Unified ML Log-Ridge + Physical L_p Pipeline
+    calibrated_bench: dict[str, Any] = {}
+    if category in ("CPU", "GPU"):
+        try:
+            from scripts.calibrate_benchmarks_ml import auto_calibrate_single_item
+            calibrated_bench = auto_calibrate_single_item(category, brand, model, spec)
+        except Exception as exc:
+            print(f"  [WARN] ML auto-calibration skipped for {brand} {model}: {exc}")
+
     return {
         "id": item_id,
         "category": category,
@@ -857,13 +867,13 @@ def _build_new_item_row(
         "canonical_key": normalize_canonical_key(f"{brand} {model}"),
         "spec_table": spec_table,
         "spec_payload": spec,
-        "benchmark_score": None,
-        "benchmark_tier": None,
-        "benchmark_test_suite": None,
-        "benchmark_gaming_index": None,
-        "cpu_synthetic": None,
-        "gpu_synthetic": None,
-        "game_fps": None,
+        "benchmark_score": calibrated_bench.get("benchmark_score"),
+        "benchmark_tier": calibrated_bench.get("benchmark_tier"),
+        "benchmark_test_suite": calibrated_bench.get("benchmark_test_suite"),
+        "benchmark_gaming_index": calibrated_bench.get("benchmark_gaming_index"),
+        "cpu_synthetic": calibrated_bench.get("cpu_synthetic"),
+        "gpu_synthetic": calibrated_bench.get("gpu_synthetic"),
+        "game_fps": calibrated_bench.get("game_fps"),
         "image_url": primary_img,
         "images": gallery_imgs,
         "extra_specs": extra_specs or {},

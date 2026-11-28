@@ -209,60 +209,102 @@ object CompanionSoftwareRegistry {
         val brandNorm = item.brand.trim().lowercase()
         val nameNorm = item.model.lowercase()
 
-        // 1. Direct Brand Match
-        for ((key, sw) in SOFTWARE_CATALOG) {
-            if (brandNorm.contains(key) || nameNorm.contains(key)) {
-                return sw
-            }
+        fun hasBrandOrWord(token: String): Boolean {
+            if (brandNorm == token || brandNorm.startsWith("$token ") || brandNorm.endsWith(" $token")) return true
+            val re = Regex("""\b${Regex.escape(token)}\b""")
+            return re.containsMatchIn(brandNorm) || re.containsMatchIn(nameNorm)
         }
 
-        // 2. Specialized Peripheral Category Defaults
+        // Category-strict resolution prevents false positives (e.g. non-RGB PSU/SSD getting headset/RGB suite)
         return when (item.category) {
-            HardwareCategory.KEYBOARD -> {
-                if (brandNorm.contains("wooting")) SOFTWARE_CATALOG["wooting"]
-                else if (brandNorm.contains("keychron") || brandNorm.contains("monsgeek") || brandNorm.contains("epomaker") || brandNorm.contains("akko")) SOFTWARE_CATALOG["keychron"]
-                else if (brandNorm.contains("glorious")) SOFTWARE_CATALOG["glorious"]
-                else null
+            HardwareCategory.KEYBOARD -> when {
+                hasBrandOrWord("wooting") -> SOFTWARE_CATALOG["wooting"]
+                hasBrandOrWord("keychron") || hasBrandOrWord("monsgeek") || hasBrandOrWord("epomaker") || hasBrandOrWord("akko") -> SOFTWARE_CATALOG["keychron"]
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                hasBrandOrWord("logitech") -> SOFTWARE_CATALOG["logitech"]
+                hasBrandOrWord("steelseries") -> SOFTWARE_CATALOG["steelseries"]
+                hasBrandOrWord("corsair") -> SOFTWARE_CATALOG["corsair"]
+                hasBrandOrWord("asus") || hasBrandOrWord("rog") -> SOFTWARE_CATALOG["asus"]
+                hasBrandOrWord("glorious") -> SOFTWARE_CATALOG["glorious"]
+                hasBrandOrWord("hyperx") -> HYPERX_NGENUITY
+                else -> null
             }
-            HardwareCategory.WEBCAM -> {
-                if (brandNorm.contains("elgato")) SOFTWARE_CATALOG["elgato"]
-                else if (brandNorm.contains("logitech")) SOFTWARE_CATALOG["logitech"]
-                else if (brandNorm.contains("razer")) SOFTWARE_CATALOG["razer"]
-                else null
+            HardwareCategory.MOUSE -> when {
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                hasBrandOrWord("logitech") -> SOFTWARE_CATALOG["logitech"]
+                hasBrandOrWord("steelseries") -> SOFTWARE_CATALOG["steelseries"]
+                hasBrandOrWord("corsair") -> SOFTWARE_CATALOG["corsair"]
+                hasBrandOrWord("asus") || hasBrandOrWord("rog") -> SOFTWARE_CATALOG["asus"]
+                hasBrandOrWord("glorious") -> SOFTWARE_CATALOG["glorious"]
+                hasBrandOrWord("hyperx") -> HYPERX_NGENUITY
+                else -> null
             }
-            HardwareCategory.MICROPHONE -> {
-                if (brandNorm.contains("shure")) SOFTWARE_CATALOG["shure"]
-                else if (brandNorm.contains("elgato")) SOFTWARE_CATALOG["elgato"]
-                else if (brandNorm.contains("hyperx")) CompanionSoftware(
-                    id = "hyperx-ngenuity",
-                    name = "HyperX NGENUITY",
-                    developer = "HP Inc. / HyperX",
-                    latestVersion = "",
-                    officialDownloadUrl = "https://hyperx.com/pages/ngenuity",
-                    ramFootprintMb = null,
-                    description = "Dahili kazanç, polar patern ve QuadCast LED aydınlatma kontrolü.",
-                    capabilities = listOf("RGB Aydınlatma", "Kazanç Ayarı", "Mikrofon İzleme"),
-                )
-                else null
+            HardwareCategory.HEADSET -> when {
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                hasBrandOrWord("logitech") -> SOFTWARE_CATALOG["logitech"]
+                hasBrandOrWord("steelseries") -> SOFTWARE_CATALOG["steelseries"]
+                hasBrandOrWord("corsair") -> SOFTWARE_CATALOG["corsair"]
+                hasBrandOrWord("asus") || hasBrandOrWord("rog") -> SOFTWARE_CATALOG["asus"]
+                hasBrandOrWord("hyperx") -> HYPERX_NGENUITY
+                else -> null
             }
-            HardwareCategory.UPS -> {
-                if (brandNorm.contains("apc") || brandNorm.contains("schneider")) SOFTWARE_CATALOG["apc"]
-                else if (brandNorm.contains("cyberpower")) SOFTWARE_CATALOG["cyberpower"]
-                else null
+            HardwareCategory.WEBCAM -> when {
+                hasBrandOrWord("elgato") -> SOFTWARE_CATALOG["elgato"]
+                hasBrandOrWord("logitech") -> SOFTWARE_CATALOG["logitech"]
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                else -> null
             }
-            HardwareCategory.GAMING_LIGHTING -> {
-                if (brandNorm.contains("govee")) SOFTWARE_CATALOG["govee"]
-                else if (brandNorm.contains("hue") || brandNorm.contains("philips")) SOFTWARE_CATALOG["philips"]
-                else if (brandNorm.contains("nanoleaf")) SOFTWARE_CATALOG["nanoleaf"]
-                else null
+            HardwareCategory.MICROPHONE -> when {
+                hasBrandOrWord("shure") -> SOFTWARE_CATALOG["shure"]
+                hasBrandOrWord("elgato") -> SOFTWARE_CATALOG["elgato"]
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                hasBrandOrWord("logitech") || hasBrandOrWord("blue") -> SOFTWARE_CATALOG["logitech"]
+                hasBrandOrWord("steelseries") -> SOFTWARE_CATALOG["steelseries"]
+                hasBrandOrWord("hyperx") -> HYPERX_NGENUITY
+                else -> null
             }
-            HardwareCategory.CASE_FAN -> {
-                if (brandNorm.contains("lian")) SOFTWARE_CATALOG["lian li"]
-                else if (brandNorm.contains("corsair")) SOFTWARE_CATALOG["corsair"]
-                else if (brandNorm.contains("nzxt")) SOFTWARE_CATALOG["nzxt"]
-                else null
+            HardwareCategory.UPS -> when {
+                hasBrandOrWord("apc") || hasBrandOrWord("schneider") -> SOFTWARE_CATALOG["apc"]
+                hasBrandOrWord("cyberpower") -> SOFTWARE_CATALOG["cyberpower"]
+                else -> null
+            }
+            HardwareCategory.GAMING_LIGHTING -> when {
+                hasBrandOrWord("govee") -> SOFTWARE_CATALOG["govee"]
+                hasBrandOrWord("hue") || hasBrandOrWord("philips") -> SOFTWARE_CATALOG["philips"]
+                hasBrandOrWord("nanoleaf") -> SOFTWARE_CATALOG["nanoleaf"]
+                hasBrandOrWord("corsair") || hasBrandOrWord("elgato") -> SOFTWARE_CATALOG["corsair"]
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                else -> null
+            }
+            HardwareCategory.CASE_FAN, HardwareCategory.COOLER, HardwareCategory.CASE -> when {
+                hasBrandOrWord("lian li") || hasBrandOrWord("uni fan") -> SOFTWARE_CATALOG["lian li"]
+                hasBrandOrWord("nzxt") || hasBrandOrWord("kraken") -> SOFTWARE_CATALOG["nzxt"]
+                hasBrandOrWord("corsair") && (nameNorm.contains("icue") || nameNorm.contains("rgb") || nameNorm.contains("capellix") || nameNorm.contains("titan") || item.category == HardwareCategory.CASE_FAN) -> SOFTWARE_CATALOG["corsair"]
+                (hasBrandOrWord("asus") || hasBrandOrWord("rog")) && (nameNorm.contains("ryujin") || nameNorm.contains("ryuo") || nameNorm.contains("argb")) -> SOFTWARE_CATALOG["asus"]
+                else -> null
+            }
+            HardwareCategory.MOTHERBOARD, HardwareCategory.LAPTOP -> when {
+                hasBrandOrWord("asus") || hasBrandOrWord("rog") || hasBrandOrWord("tuf") -> SOFTWARE_CATALOG["asus"]
+                hasBrandOrWord("razer") -> SOFTWARE_CATALOG["razer"]
+                hasBrandOrWord("nzxt") -> SOFTWARE_CATALOG["nzxt"]
+                else -> null
+            }
+            HardwareCategory.RAM -> when {
+                hasBrandOrWord("corsair") && (nameNorm.contains("rgb") || nameNorm.contains("dominator")) -> SOFTWARE_CATALOG["corsair"]
+                else -> null
             }
             else -> null
         }
     }
+
+    private val HYPERX_NGENUITY = CompanionSoftware(
+        id = "hyperx-ngenuity",
+        name = "HyperX NGENUITY",
+        developer = "HP Inc. / HyperX",
+        latestVersion = "",
+        officialDownloadUrl = "https://hyperx.com/pages/ngenuity",
+        ramFootprintMb = null,
+        description = "DPI hassasiyeti, tuş makroları, mikrofon kazancı ve RGB aydınlatma profili yönetimi.",
+        capabilities = listOf("RGB Aydınlatma", "Sensör & Makro", "Mikrofon İzleme"),
+    )
 }

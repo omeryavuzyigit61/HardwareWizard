@@ -68,7 +68,9 @@ fun HardwareCommentsAndReviewsSection(
     onReportClick: (HardwareProTip) -> Unit = {},
 ) {
     val strings = LocalAppStrings.current
-    val avgRating = if (tips.isNotEmpty()) tips.map { it.rating.toDouble() }.average() else 5.0
+    val isTr = strings.isTurkish
+    val hasReviews = tips.isNotEmpty()
+    val avgRating = if (hasReviews) tips.map { it.rating.toDouble() }.average() else 0.0
     val formattedAvg = ((avgRating * 10).roundToInt() / 10.0).toString()
 
     FluidOrganicCard(
@@ -181,11 +183,17 @@ fun HardwareCommentsAndReviewsSection(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
+                        Icon(
+                            imageVector = if (hasReviews) Icons.Rounded.Star else Icons.Rounded.StarBorder,
+                            contentDescription = null,
+                            tint = if (hasReviews) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(15.dp),
+                        )
                         Text(
-                            text = "⭐ $formattedAvg / 5.0",
+                            text = if (hasReviews) "$formattedAvg / 5.0" else (if (isTr) "Henüz Puanlanmadı" else "No Ratings Yet"),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = NeonAmber,
+                            color = if (hasReviews) NeonAmber else MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Text(
                             text = "•",

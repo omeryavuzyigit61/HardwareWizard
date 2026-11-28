@@ -37,9 +37,9 @@ if hasattr(sys.stdout, "reconfigure"):
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 ROOM_DB_PATH = ROOT_DIR / "androidApp" / "src" / "main" / "assets" / "databases" / "hardware_wizard.db"
-SQL_OUT_PATH = ROOT_DIR / "supabase_benchmark_v6_calibration.sql"
+SQL_OUT_PATH = ROOT_DIR / "supabase_catalog_v8_quality_and_workstation.sql"
 
-TARGET_CATALOG_REVISION = 7
+TARGET_CATALOG_REVISION = 8
 FRAME_TIME_P = 3.2  # DX12/Vulkan pipelined CPU-GPU norm exponent
 
 
@@ -49,7 +49,8 @@ FRAME_TIME_P = 3.2  # DX12/Vulkan pipelined CPU-GPU norm exponent
 #    Fields: (canonical_key, tpu_rel_4k, time_spy_graphics, steel_nomad, ref_boost_mhz, vram_gb, bus_bits, tdp_w, arch_tier)
 # ==============================================================================
 GPU_ANCHORS: list[tuple[str, float, int, int, int, int, int, int, float]] = [
-    # NVIDIA Blackwell (RTX 50)
+    # NVIDIA Blackwell (RTX 50 + RTX PRO Blackwell)
+    ("rtx pro 6000",     136.0, 50200, 15100, 2617, 96, 512, 600, 1.33),
     ("rtx 5090",         133.0, 48500, 14400, 2407, 32, 512, 575, 1.32),
     ("rtx 5090 d v2",    122.0, 44500, 13200, 2407, 24, 384, 575, 1.30),
     ("rtx 5090 d",       131.0, 47800, 14100, 2407, 32, 512, 575, 1.32),
@@ -99,7 +100,8 @@ GPU_ANCHORS: list[tuple[str, float, int, int, int, int, int, int, float]] = [
     ("rx 9060 xt",        45.0, 16200,  4000, 3130,  8, 128, 160, 1.22),
     ("rx 9060",           37.0, 13100,  3150, 2900,  8, 128, 150, 1.20),
 
-    # AMD RDNA 3 (RX 7000)
+    # AMD RDNA 3 (RX 7000 + Radeon PRO W7000)
+    ("radeon pro w7900",  72.0, 27200,  6800, 2495, 48, 384, 295, 1.12),
     ("rx 7900 xtx",       80.0, 29800,  7350, 2500, 24, 384, 355, 1.12),
     ("rx 7900 xt",        68.0, 25600,  6150, 2400, 20, 320, 315, 1.12),
     ("rx 7900 gre",       59.0, 22400,  5300, 2245, 16, 256, 260, 1.11),
@@ -633,6 +635,453 @@ def tier_for_cpu(gaming_idx: float, prod_idx: float) -> str:
 
 
 # ==============================================================================
+# 6.5. SINGLE-ITEM AUTO-CALIBRATION FOR DELTA SYNC & WORKSTATION SEEDING
+# ==============================================================================
+_CACHED_ML_WEIGHTS: tuple[list[float], list[float], list[float]] | None = None
+
+
+def _get_cached_ml_weights() -> tuple[list[float], list[float], list[float]]:
+    global _CACHED_ML_WEIGHTS
+    if _CACHED_ML_WEIGHTS is None:
+        gw, _ = train_gpu_ml_model()
+        cwg, _, cwp, _ = train_cpu_ml_models()
+        _CACHED_ML_WEIGHTS = (gw, cwg, cwp)
+    return _CACHED_ML_WEIGHTS
+
+
+def auto_calibrate_single_item(
+    category: str,
+    brand: str,
+    model: str,
+    spec: dict[str, Any],
+) -> dict[str, Any]:
+    """
+    Computes ML-calibrated benchmark_score, tier, gaming_index, synthetic JSON & 12-game FPS matrix
+    for newly discovered CPUs or GPUs during daily Supabase delta sync.
+    """
+    gpu_w, cpu_wg, cpu_wp = _get_cached_ml_weights()
+    cat = (category or "").upper()
+
+    if cat == "GPU":
+        vram_gb = max((spec.get("vram_mb") or 8192) / 1024.0, 2.0)
+        boost_mhz = int(spec.get("boost_clock_mhz") or 0)
+        tdp = int(spec.get("tdp_watts") or 150)
+        bus = int(spec.get("bus_width_bits") or (256 if vram_gb >= 16 else 128))
+        arch = str(spec.get("architecture") or "").lower()
+        chipset = str(spec.get("chipset") or model)
+
+        anchor = match_gpu_anchor(chipset, model, vram_gb)
+        if anchor is not None:
+            _, base_rel, ts_g, steel_nomad, ref_boost, _, _, _, _ = anchor
+            oc_delta = (
+                max(-0.015, min(0.025, ((boost_mhz - ref_boost) / ref_boost) * 0.35))
+                if (boost_mhz > 800 and ref_boost > 800)
+                else 0.0
+            )
+            rel_idx = round(base_rel * (1.0 + oc_delta), 1)
+            syn = {
+                "time_spy_graphics": int(round(ts_g * (1.0 + oc_delta))),
+                "steel_nomad": int(round(steel_nomad * (1.0 + oc_delta))),
+            }
+            suite = "TechPowerUp & ML Calibrated v6 (Ref: Ryzen 7 9800X3D)"
+        else:
+            arch_tier = (
+                1.28 if ("blackwell" in arch or "rtx 50" in chipset.lower()) else
+                1.24 if ("ada" in arch or "rtx 40" in chipset.lower() or "rx 90" in chipset.lower()) else
+                1.10 if ("rdna 3" in arch or "rx 7" in chipset.lower() or "arc b" in chipset.lower()) else
+                1.00
+            )
+            pred = math.exp(predict_linear(gpu_w, [
+                1.0, math.log(vram_gb), math.log(max(bus, 64)), math.log(max(tdp, 40)), math.log(arch_tier)
+            ]))
+            rel_idx = round(max(8.0, min(145.0, pred)), 1)
+            syn = {
+                "time_spy_graphics": int(round(rel_idx * 355.0)),
+                "steel_nomad": int(round(rel_idx * 92.0)),
+            }
+            suite = "ML Log-Ridge Calibrated v6 (Ref: Ryzen 7 9800X3D)"
+
+        return {
+            "benchmark_score": max(5, min(100, int(round((rel_idx / 133.0) * 100.0)))),
+            "benchmark_gaming_index": max(5, int(round(rel_idx))),
+            "benchmark_tier": tier_for_gpu_index(rel_idx),
+            "benchmark_test_suite": suite,
+            "cpu_synthetic": None,
+            "gpu_synthetic": syn,
+            "game_fps": build_12_game_matrix(
+                gpu_index=rel_idx,
+                gpu_vram_gb=vram_gb,
+                cpu_gaming_index=REF_CPU_GAMING,
+                cpu_is_x3d=REF_CPU_X3D,
+                cpu_ccd_count=REF_CPU_CCD,
+                cpu_cores=REF_CPU_CORES,
+            ),
+        }
+
+    if cat == "CPU":
+        cores = int(spec.get("core_count") or 8)
+        boost_mhz = int(spec.get("boost_clock_mhz") or spec.get("base_clock_mhz") or 4600)
+        tdp = int(spec.get("tdp_watts") or 65)
+        l3_mb = int(spec.get("l3_cache_mb") or 32)
+        arch = str(spec.get("architecture") or "")
+        socket = str(spec.get("socket") or "")
+
+        anchor = match_cpu_anchor(model)
+        if anchor is not None:
+            _, g_idx, p_idx, cb_s, cb_m, pm, l3_fix, ccd_count, is_x3d = anchor
+            if l3_fix is not None:
+                spec["l3_cache_mb"] = l3_fix
+            syn = {
+                "cinebench_r23_single": cb_s,
+                "cinebench_r23_multi": cb_m,
+                "passmark_cpu_mark": pm,
+            }
+            suite = "TechPowerUp & Cinebench Calibrated v6 (Ref: RTX 5090)"
+        else:
+            ipc_proxy, _, is_x3d = infer_cpu_arch_ipc(arch, socket, model)
+            is_tr = "threadripper" in model.lower() or (cores >= 24 and "amd" in brand.lower())
+            ccd_count = max(2, cores // 8) if is_tr else (2 if ("amd" in brand.lower() and cores >= 12) else 1)
+            eff_l3 = max(l3_mb, 16) / float(max(ccd_count, 1))
+            dual_non_x3d = 1.0 if (ccd_count >= 2 and not is_x3d) else 0.0
+            arrow_lake = 1.0 if ("arrow lake" in arch.lower() or "lga1851" in socket.lower()) else 0.0
+            pm_raw = int(cores * (boost_mhz / 1000.0) * (ipc_proxy / 2.2))
+            cb_s = max(600, int(round(ipc_proxy * (boost_mhz / 5000.0) ** 0.55)))
+            cb_m = max(3000, int(round(pm_raw * 0.64)))
+            syn = {
+                "cinebench_r23_single": cb_s,
+                "cinebench_r23_multi": cb_m,
+                "passmark_cpu_mark": pm_raw,
+            }
+            pred_g = math.exp(predict_linear(cpu_wg, [
+                1.0, math.log(max(cb_s, 800)), math.log(max(eff_l3, 8.0)),
+                1.0 if is_x3d else 0.0, dual_non_x3d, arrow_lake,
+            ]))
+            if is_tr:
+                pred_g *= 0.86
+            if tdp <= 40:
+                pred_g *= 0.88
+            g_idx = round(max(22.0, min(98.0, pred_g)), 1)
+            pred_p = math.exp(predict_linear(cpu_wp, [1.0, math.log(cb_m), math.log(max(pm_raw, 5000))]))
+            p_idx = round(max(12.0, min(260.0, pred_p)), 1)
+            suite = "ML Log-Ridge Calibrated v6 (Ref: RTX 5090)"
+
+        overall_100 = max(10, min(100, int(round(0.55 * g_idx + 0.45 * min(100.0, p_idx)))))
+        return {
+            "benchmark_score": overall_100,
+            "benchmark_gaming_index": max(15, min(105, int(round(g_idx)))),
+            "benchmark_tier": tier_for_cpu(g_idx, p_idx),
+            "benchmark_test_suite": suite,
+            "cpu_synthetic": syn,
+            "gpu_synthetic": None,
+            "game_fps": build_12_game_matrix(
+                gpu_index=REF_GPU_INDEX,
+                gpu_vram_gb=REF_GPU_VRAM,
+                cpu_gaming_index=g_idx,
+                cpu_is_x3d=is_x3d,
+                cpu_ccd_count=ccd_count,
+                cpu_cores=cores,
+            ),
+        }
+
+    return {}
+
+
+WORKSTATION_GPU_SEEDS: list[dict[str, Any]] = [
+    {
+        "id": "gpu_nvidia_rtx_pro_6000_blackwell_96gb",
+        "brand": "NVIDIA",
+        "model": "RTX PRO 6000 Blackwell Workstation Edition 96GB",
+        "canonical_key": "nvidia_rtx_pro_6000_blackwell_workstation_edition_96gb",
+        "spec": {
+            "chipset": "RTX PRO 6000 Blackwell",
+            "vram_mb": 98304,
+            "memory_type": "GDDR7 ECC",
+            "core_clock_mhz": 2120,
+            "boost_clock_mhz": 2617,
+            "tdp_watts": 600,
+            "recommended_psu_watts": 1000,
+            "bus_width_bits": 512,
+            "length_mm": 304,
+            "power_connectors": "1x 16-pin (12V-2x6)",
+            "display_outputs": "4x DisplayPort 2.1b",
+            "slot_width": "2-Slot",
+            "architecture": "Blackwell",
+            "process_node": "TSMC 4N",
+            "cuda_cores": 24064,
+            "tensor_ai_tops": "752 Tensor Cores (5th Gen)",
+            "rt_cores": 188,
+            "memory_speed_gbps": 28.0,
+            "bandwidth_gbs": 1792.0,
+            "l2_cache_mb": 128.0,
+            "fp32_tflops": 125.9,
+            "pcie_interface": "PCIe 5.0 x16",
+            "upscaling_tech": "DLSS 4 + Multi Frame Generation",
+            "media_engines": "3x NVENC (9th Gen) + 3x NVDEC",
+            "gpu_die": "GB202",
+            "release_date": "2025-03",
+        },
+    },
+    {
+        "id": "gpu_nvidia_rtx_6000_ada_48gb",
+        "brand": "NVIDIA",
+        "model": "RTX 6000 Ada Generation 48GB",
+        "canonical_key": "nvidia_rtx_6000_ada_generation_48gb",
+        "spec": {
+            "chipset": "RTX 6000 Ada",
+            "vram_mb": 49152,
+            "memory_type": "GDDR6 ECC",
+            "core_clock_mhz": 915,
+            "boost_clock_mhz": 2505,
+            "tdp_watts": 300,
+            "recommended_psu_watts": 750,
+            "bus_width_bits": 384,
+            "length_mm": 267,
+            "power_connectors": "1x 16-pin (12VHPWR)",
+            "display_outputs": "4x DisplayPort 1.4a",
+            "slot_width": "2-Slot Blower",
+            "architecture": "Ada Lovelace",
+            "process_node": "TSMC 4N",
+            "cuda_cores": 18176,
+            "tensor_ai_tops": "568 Tensor Cores (4th Gen)",
+            "rt_cores": 142,
+            "memory_speed_gbps": 20.0,
+            "bandwidth_gbs": 960.0,
+            "l2_cache_mb": 96.0,
+            "fp32_tflops": 91.1,
+            "pcie_interface": "PCIe 4.0 x16",
+            "upscaling_tech": "DLSS 3.5",
+            "media_engines": "3x NVENC (8th Gen) + 3x NVDEC",
+            "gpu_die": "AD102",
+            "release_date": "2022-12",
+        },
+    },
+    {
+        "id": "gpu_nvidia_rtx_5000_ada_32gb",
+        "brand": "NVIDIA",
+        "model": "RTX 5000 Ada Generation 32GB",
+        "canonical_key": "nvidia_rtx_5000_ada_generation_32gb",
+        "spec": {
+            "chipset": "RTX 5000 Ada",
+            "vram_mb": 32768,
+            "memory_type": "GDDR6 ECC",
+            "core_clock_mhz": 1155,
+            "boost_clock_mhz": 2550,
+            "tdp_watts": 250,
+            "recommended_psu_watts": 650,
+            "bus_width_bits": 256,
+            "length_mm": 267,
+            "power_connectors": "1x 16-pin (12VHPWR)",
+            "display_outputs": "4x DisplayPort 1.4a",
+            "slot_width": "2-Slot Blower",
+            "architecture": "Ada Lovelace",
+            "process_node": "TSMC 4N",
+            "cuda_cores": 12800,
+            "tensor_ai_tops": "400 Tensor Cores (4th Gen)",
+            "rt_cores": 100,
+            "memory_speed_gbps": 18.0,
+            "bandwidth_gbs": 576.0,
+            "l2_cache_mb": 64.0,
+            "fp32_tflops": 65.3,
+            "pcie_interface": "PCIe 4.0 x16",
+            "upscaling_tech": "DLSS 3.5",
+            "media_engines": "2x NVENC (8th Gen) + 2x NVDEC",
+            "gpu_die": "AD102",
+            "release_date": "2023-08",
+        },
+    },
+    {
+        "id": "gpu_amd_radeon_pro_w7900_48gb",
+        "brand": "AMD",
+        "model": "Radeon PRO W7900 48GB",
+        "canonical_key": "amd_radeon_pro_w7900_48gb",
+        "spec": {
+            "chipset": "Radeon PRO W7900",
+            "vram_mb": 49152,
+            "memory_type": "GDDR6 ECC",
+            "core_clock_mhz": 1855,
+            "boost_clock_mhz": 2495,
+            "tdp_watts": 295,
+            "recommended_psu_watts": 750,
+            "bus_width_bits": 384,
+            "length_mm": 280,
+            "power_connectors": "2x 8-pin PCIe",
+            "display_outputs": "3x DisplayPort 2.1 + 1x Mini-DP 2.1",
+            "slot_width": "3-Slot",
+            "architecture": "RDNA 3",
+            "process_node": "TSMC 5nm + 6nm MCD",
+            "cuda_cores": 6144,
+            "rt_cores": 96,
+            "memory_speed_gbps": 18.0,
+            "bandwidth_gbs": 864.0,
+            "l2_cache_mb": 96.0,
+            "fp32_tflops": 61.3,
+            "pcie_interface": "PCIe 4.0 x16",
+            "upscaling_tech": "FSR 3.1",
+            "media_engines": "Dual AV1 Encode/Decode",
+            "gpu_die": "Navi 31",
+            "release_date": "2023-04",
+        },
+    },
+]
+
+PHONE_SPEC_FIXES: list[tuple[str, str, int, str, int, int, int]] = [
+    (
+        "phone-samsung-galaxy-s25-ultra-256gb",
+        "Snapdragon 8 Elite for Galaxy",
+        3,
+        "Adreno 830",
+        3180,
+        10050,
+        2950000,
+    ),
+    (
+        "phone-samsung-galaxy-z-fold-7-512gb",
+        "Snapdragon 8 Elite for Galaxy",
+        3,
+        "Adreno 830",
+        3140,
+        9920,
+        2880000,
+    ),
+    (
+        "phone-samsung-galaxy-z-flip-7-256gb",
+        "Samsung Exynos 2500",
+        3,
+        "Samsung Xclipse 950 (RDNA 3.5)",
+        2420,
+        8250,
+        2150000,
+    ),
+]
+
+
+def seed_workstation_and_fix_mobile_in_room(cur: sqlite3.Cursor) -> tuple[int, int, int]:
+    """
+    1. Inserts the 4 enterprise Workstation GPUs referenced by WorkstationRequirementEngine if absent.
+    2. Fixes inaccurate Samsung flagship SoC/Geekbench rows in phone_specs.
+    3. Enriches missing image_url from exact same-brand + same-chipset/socket/generation sibling SKUs.
+    """
+    ws_inserted = 0
+    for ws in WORKSTATION_GPU_SEEDS:
+        exists = cur.execute("SELECT 1 FROM hardware_items WHERE id = ?", (ws["id"],)).fetchone()
+        if not exists:
+            cur.execute(
+                """
+                INSERT INTO hardware_items (
+                    id, brand, model, category, currency_code, cached_at,
+                    extra_specs, source_provenance, spec_verified_at
+                ) VALUES (?, ?, ?, 'GPU', 'TRY', 1795400000000, '{}', ?, '2026-11-28')
+                """,
+                (
+                    ws["id"],
+                    ws["brand"],
+                    ws["model"],
+                    json.dumps(["TechPowerUp GPU DB", "Manufacturer Datasheet"]),
+                ),
+            )
+            sp = ws["spec"]
+            cols = ["item_id"] + list(sp.keys())
+            placeholders = ", ".join(["?"] * len(cols))
+            cur.execute(
+                f"INSERT INTO gpu_specs ({', '.join(cols)}) VALUES ({placeholders})",
+                [ws["id"]] + [sp[k] for k in sp.keys()],
+            )
+            ws_inserted += 1
+
+    phones_fixed = 0
+    for pid, chip, nm, gpu_m, gb_s, gb_m, antutu in PHONE_SPEC_FIXES:
+        cur.execute(
+            """
+            UPDATE phone_specs
+            SET chipset = ?, process_node_nm = ?, gpu_model = ?,
+                geekbench_single = ?, geekbench_multi = ?, antutu_score = ?
+            WHERE item_id = ?
+            """,
+            (chip, nm, gpu_m, gb_s, gb_m, antutu, pid),
+        )
+        phones_fixed += cur.rowcount
+
+    # Same-brand, same-chipset/socket/gen sibling image inheritance (strictly verified HTTPS URLs)
+    imgs_enriched = 0
+    sibling_queries = [
+        """
+        UPDATE hardware_items
+        SET image_url = (
+            SELECT h2.image_url
+            FROM hardware_items h2
+            JOIN gpu_specs g2 ON g2.item_id = h2.id
+            JOIN gpu_specs g1 ON g1.item_id = hardware_items.id
+            WHERE h2.category = 'GPU'
+              AND LOWER(h2.brand) = LOWER(hardware_items.brand)
+              AND LOWER(g2.chipset) = LOWER(g1.chipset)
+              AND h2.image_url LIKE 'https://%'
+            LIMIT 1
+        )
+        WHERE category = 'GPU' AND (image_url IS NULL OR image_url = '')
+        """,
+        """
+        UPDATE hardware_items
+        SET image_url = (
+            SELECT h2.image_url
+            FROM hardware_items h2
+            JOIN motherboard_specs m2 ON m2.item_id = h2.id
+            JOIN motherboard_specs m1 ON m1.item_id = hardware_items.id
+            WHERE h2.category = 'MOTHERBOARD'
+              AND LOWER(h2.brand) = LOWER(hardware_items.brand)
+              AND LOWER(m2.chipset) = LOWER(m1.chipset)
+              AND m2.form_factor = m1.form_factor
+              AND h2.image_url LIKE 'https://%'
+            LIMIT 1
+        )
+        WHERE category = 'MOTHERBOARD' AND (image_url IS NULL OR image_url = '')
+        """,
+        """
+        UPDATE hardware_items
+        SET image_url = (
+            SELECT h2.image_url
+            FROM hardware_items h2
+            JOIN ram_specs r2 ON r2.item_id = h2.id
+            JOIN ram_specs r1 ON r1.item_id = hardware_items.id
+            WHERE h2.category = 'RAM'
+              AND LOWER(h2.brand) = LOWER(hardware_items.brand)
+              AND r2.generation = r1.generation
+              AND r2.module_count = r1.module_count
+              AND h2.image_url LIKE 'https://%'
+            LIMIT 1
+        )
+        WHERE category = 'RAM' AND (image_url IS NULL OR image_url = '')
+        """,
+        """
+        UPDATE hardware_items
+        SET image_url = (
+            SELECT h2.image_url
+            FROM hardware_items h2
+            JOIN cpu_specs c2 ON c2.item_id = h2.id
+            JOIN cpu_specs c1 ON c1.item_id = hardware_items.id
+            WHERE h2.category = 'CPU'
+              AND LOWER(h2.brand) = LOWER(hardware_items.brand)
+              AND LOWER(c2.socket) = LOWER(c1.socket)
+              AND h2.image_url LIKE 'https://%'
+            LIMIT 1
+        )
+        WHERE category = 'CPU' AND (image_url IS NULL OR image_url = '')
+        """,
+    ]
+    for q in sibling_queries:
+        cur.execute(q)
+        imgs_enriched += cur.rowcount
+    # Keep images JSON array synced when image_url was populated from sibling
+    cur.execute(
+        """
+        UPDATE hardware_items
+        SET images = '["' || image_url || '"]'
+        WHERE image_url LIKE 'https://%' AND (images IS NULL OR images = '' OR images = '[]')
+        """
+    )
+    return ws_inserted, phones_fixed, imgs_enriched
+
+
+# ==============================================================================
 # 7. MAIN CALIBRATION ENGINE
 # ==============================================================================
 def calibrate_all(db_path: Path, apply_room: bool, emit_sql: Path | None) -> None:
@@ -650,6 +1099,10 @@ def calibrate_all(db_path: Path, apply_room: bool, emit_sql: Path | None) -> Non
     conn = sqlite3.connect(str(db_path))
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
+
+    if apply_room:
+        ws_ins, ph_fix, img_enr = seed_workstation_and_fix_mobile_in_room(cur)
+        print(f"  [ENRICHMENT] Workstation GPUs added: {ws_ins}, Flagship phones fixed: {ph_fix}, Sibling images enriched: {img_enr}")
 
     gpu_updates: list[dict[str, Any]] = []
     cpu_updates: list[dict[str, Any]] = []
@@ -1045,8 +1498,34 @@ def calibrate_all(db_path: Path, apply_room: bool, emit_sql: Path | None) -> Non
             "  RETURN res;",
             "END; $$;",
             "",
-            "-- 2. Fix corrupted L3 cache & topology in spec_payload (Ryzen 9 9950X3D & 9900X3D -> 128 MB, etc.)",
+            "-- 2. Seed 4 Enterprise Workstation GPUs & Fix Samsung Flagship Phone Specs",
         ]
+        for ws in WORKSTATION_GPU_SEEDS:
+            sp_json = json.dumps(ws["spec"], ensure_ascii=False).replace("'", "''")
+            cal = auto_calibrate_single_item("GPU", ws["brand"], ws["model"], dict(ws["spec"]))
+            gsyn_json = json.dumps(cal["gpu_synthetic"], separators=(",", ":")).replace("'", "''")
+            gfps_json = json.dumps(cal["game_fps"], separators=(",", ":")).replace("'", "''")
+            lines.append(
+                f"INSERT INTO public.hardware_catalog (id, category, brand, model, canonical_key, spec_table, spec_payload, "
+                f"benchmark_score, benchmark_gaming_index, benchmark_tier, benchmark_test_suite, gpu_synthetic, game_fps, "
+                f"source_provenance, spec_verified_at, spec_locked, is_active, catalog_revision) VALUES ("
+                f"{sql_str(ws['id'])}, 'GPU', {sql_str(ws['brand'])}, {sql_str(ws['model'])}, {sql_str(ws['canonical_key'])}, "
+                f"'gpu_specs', '{sp_json}'::jsonb, {cal['benchmark_score']}, {cal['benchmark_gaming_index']}, "
+                f"{sql_str(cal['benchmark_tier'])}, {sql_str(cal['benchmark_test_suite'])}, '{gsyn_json}'::jsonb, '{gfps_json}'::jsonb, "
+                f"'[\"TechPowerUp GPU DB\",\"Manufacturer Datasheet\"]'::jsonb, '2026-11-28', TRUE, TRUE, {TARGET_CATALOG_REVISION}) "
+                f"ON CONFLICT (id) DO UPDATE SET spec_payload = EXCLUDED.spec_payload, benchmark_score = EXCLUDED.benchmark_score, "
+                f"benchmark_gaming_index = EXCLUDED.benchmark_gaming_index, benchmark_tier = EXCLUDED.benchmark_tier, "
+                f"gpu_synthetic = EXCLUDED.gpu_synthetic, game_fps = EXCLUDED.game_fps, catalog_revision = {TARGET_CATALOG_REVISION}, updated_at = NOW();"
+            )
+        for pid, chip, nm, gpu_m, gb_s, gb_m, antutu in PHONE_SPEC_FIXES:
+            lines.append(
+                f"UPDATE public.hardware_catalog SET spec_payload = spec_payload || jsonb_build_object("
+                f"'chipset', {sql_str(chip)}, 'process_node_nm', {nm}, 'gpu_model', {sql_str(gpu_m)}, "
+                f"'geekbench_single', {gb_s}, 'geekbench_multi', {gb_m}, 'antutu_score', {antutu}), "
+                f"catalog_revision = {TARGET_CATALOG_REVISION}, updated_at = NOW() WHERE id = {sql_str(pid)};"
+            )
+        lines.append("")
+        lines.append("-- 2.5. Fix corrupted L3 cache & topology in spec_payload (Ryzen 9 9950X3D & 9900X3D -> 128 MB, etc.)")
         for item_id, l3_fix, topo in cpu_spec_fixes:
             esc_id = item_id.replace("'", "''")
             esc_topo = topo.replace("'", "''")
@@ -1128,8 +1607,22 @@ def calibrate_all(db_path: Path, apply_room: bool, emit_sql: Path | None) -> Non
             "FROM computed_gpu cg",
             "WHERE hc.id = cg.id;",
             "",
-            "-- 5. Bump catalog_meta.latest_revision to 7 so mobile clients pull the calibrated delta",
-            f"UPDATE public.catalog_meta SET latest_revision = {TARGET_CATALOG_REVISION}, last_delta_at = NOW(), last_checked_at = NOW() WHERE id = 1;",
+            "-- 5. Enrich missing image_url from exact same-brand & same-chipset/socket/gen sibling SKUs",
+            "UPDATE public.hardware_catalog hc SET image_url = sub.img, images = jsonb_build_array(sub.img), catalog_revision = 8, updated_at = NOW()",
+            "FROM (",
+            "  SELECT DISTINCT ON (h1.id) h1.id, h2.image_url AS img",
+            "  FROM public.hardware_catalog h1",
+            "  JOIN public.hardware_catalog h2 ON h2.category = h1.category AND LOWER(h2.brand) = LOWER(h1.brand)",
+            "    AND h2.image_url LIKE 'https://%'",
+            "    AND ((h1.category = 'GPU' AND LOWER(h1.spec_payload->>'chipset') = LOWER(h2.spec_payload->>'chipset'))",
+            "      OR (h1.category = 'MOTHERBOARD' AND LOWER(h1.spec_payload->>'chipset') = LOWER(h2.spec_payload->>'chipset') AND h1.spec_payload->>'form_factor' = h2.spec_payload->>'form_factor')",
+            "      OR (h1.category = 'RAM' AND h1.spec_payload->>'generation' = h2.spec_payload->>'generation' AND h1.spec_payload->>'module_count' = h2.spec_payload->>'module_count')",
+            "      OR (h1.category = 'CPU' AND LOWER(h1.spec_payload->>'socket') = LOWER(h2.spec_payload->>'socket')))",
+            "  WHERE h1.is_active = TRUE AND (h1.image_url IS NULL OR h1.image_url = '')",
+            ") sub WHERE hc.id = sub.id;",
+            "",
+            "-- 6. Bump catalog_meta.latest_revision to 8 so mobile clients pull the calibrated delta",
+            f"UPDATE public.catalog_meta SET latest_revision = {TARGET_CATALOG_REVISION}, total_items = (SELECT COUNT(*) FROM public.hardware_catalog WHERE is_active = TRUE), last_delta_at = NOW(), last_checked_at = NOW() WHERE id = 1;",
             "COMMIT;",
             "",
         ])

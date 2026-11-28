@@ -21,14 +21,23 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
         _state.update { current ->
             if (current.mode == mode) return@update current
             val targetCategory = when (mode) {
-                VsArenaMode.COMPONENT_VS_COMPONENT -> current.componentCategory
+                VsArenaMode.COMPONENT_VS_COMPONENT -> if (current.componentCategory.isMobile || current.componentCategory == HardwareCategory.LAPTOP) {
+                    HardwareCategory.GPU
+                } else {
+                    current.componentCategory
+                }
                 VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
-                VsArenaMode.MOBILE_VS_MOBILE -> if (current.componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
+                VsArenaMode.MOBILE_VS_MOBILE -> if (current.componentCategory.isMobile) {
+                    current.componentCategory
+                } else {
+                    HardwareCategory.SMARTPHONE
+                }
             }
             val keepLeft = current.leftItem?.takeIf { it.category == targetCategory }
             val keepRight = current.rightItem?.takeIf { it.category == targetCategory }
             current.copy(
                 mode = mode,
+                componentCategory = if (mode == VsArenaMode.LAPTOP_VS_LAPTOP) current.componentCategory else targetCategory,
                 leftItem = keepLeft,
                 rightItem = keepRight,
             )
@@ -36,12 +45,20 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
     }
 
     override fun selectComponentCategory(category: HardwareCategory) {
-        if (category == HardwareCategory.LAPTOP) return
+        if (category == HardwareCategory.LAPTOP) {
+            selectMode(VsArenaMode.LAPTOP_VS_LAPTOP)
+            return
+        }
+        val targetMode = if (category.isMobile) {
+            VsArenaMode.MOBILE_VS_MOBILE
+        } else {
+            VsArenaMode.COMPONENT_VS_COMPONENT
+        }
         _state.update { current ->
             val keepLeft = current.leftItem?.takeIf { it.category == category }
             val keepRight = current.rightItem?.takeIf { it.category == category }
             current.copy(
-                mode = VsArenaMode.COMPONENT_VS_COMPONENT,
+                mode = targetMode,
                 componentCategory = category,
                 leftItem = keepLeft,
                 rightItem = keepRight,
@@ -77,15 +94,15 @@ internal class VsArenaRepositoryImpl : VsArenaRepository {
         var feedbackTr = ""
         var feedbackEn = ""
         _state.update { current ->
-            val targetMode = when (item.category) {
-                HardwareCategory.LAPTOP -> VsArenaMode.LAPTOP_VS_LAPTOP
-                HardwareCategory.SMARTPHONE, HardwareCategory.TABLET -> VsArenaMode.MOBILE_VS_MOBILE
+            val targetMode = when {
+                item.category == HardwareCategory.LAPTOP -> VsArenaMode.LAPTOP_VS_LAPTOP
+                item.category.isMobile -> VsArenaMode.MOBILE_VS_MOBILE
                 else -> VsArenaMode.COMPONENT_VS_COMPONENT
             }
-            val newComponentCategory = if (targetMode == VsArenaMode.COMPONENT_VS_COMPONENT) {
-                item.category
-            } else {
+            val newComponentCategory = if (targetMode == VsArenaMode.LAPTOP_VS_LAPTOP) {
                 current.componentCategory
+            } else {
+                item.category
             }
 
             val sameCategoryLeft = current.leftItem?.takeIf { it.category == item.category }

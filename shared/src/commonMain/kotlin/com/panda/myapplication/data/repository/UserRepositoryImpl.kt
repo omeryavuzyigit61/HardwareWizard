@@ -123,6 +123,7 @@ internal class UserRepositoryImpl(
                     val banReason = obj["ban_reason"]?.jsonPrimitive?.contentOrNull
                     val banEscalationTier = obj["ban_escalation_tier"]?.jsonPrimitive?.intOrNull ?: 0
 
+                    var syncedProfile: UserProfile? = null
                     _currentUser.update { current ->
                         current?.copy(
                             reputationScore = repScore,
@@ -135,8 +136,9 @@ internal class UserRepositoryImpl(
                             bannedUntilEpochMs = bannedUntil,
                             banReason = banReason,
                             banEscalationTier = banEscalationTier,
-                        )
+                        ).also { syncedProfile = it }
                     }
+                    syncedProfile?.let { persistSession(it) }
                 }
             }
         }

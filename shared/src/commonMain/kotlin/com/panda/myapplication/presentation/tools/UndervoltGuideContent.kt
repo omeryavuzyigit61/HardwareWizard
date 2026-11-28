@@ -58,38 +58,38 @@ object UndervoltGuideContent {
 
     fun getRamWarning(isTurkish: Boolean): GuideWarningData = if (isTurkish) {
         GuideWarningData(
-            title = "⚠️ DİKKAT: RAM Bit-Rot & Sessiz Veri Bozulması Riski",
+            title = "DİKKAT: RAM Bit-Rot & Sessiz Veri Bozulması Riski",
             description = "Kararsız bellek ayarları oyun çökmelerine ek olarak Windows sistem dosyalarını ve kayıt dosyalarınızı sessizce bozabilir (Bit-Rot). TM5 ile 0 error doğrulanmalıdır.",
         )
     } else {
         GuideWarningData(
-            title = "⚠️ CAUTION: RAM Bit-Rot & Silent Data Corruption",
+            title = "CAUTION: RAM Bit-Rot & Silent Data Corruption",
             description = "Unstable memory sub-timings cause silent corruption in Windows system files and save data (Bit-Rot) beyond simple game crashes. Always verify 0 errors with TM5.",
         )
     }
 
     fun getIntelSection(isTurkish: Boolean): GuideSectionData = if (isTurkish) {
         GuideSectionData(
-            title = "Intel 13. & 14. Nesil (Raptor Lake & Refresh)",
-            subtitle = "Vmin Shift & Yüksek Voltaj Aşınması (Degradation) Önleme",
-            description = "13700K/14700K ve 13900K/14900K işlemcilerde anakartların varsayılan olarak 1.50V+ basması silikon kanallarında mikroskobik hasara yol açmaktadır. Bu adımları uygulayarak işlemcinizin ömrünü uzatıp 15-20°C daha serin çalışmasını sağlayın:",
+            title = "Intel Core Ultra 200S (Arrow Lake) & 13./14. Nesil",
+            subtitle = "DLVR / Microcode 0x12B & Vmin Shift Önleme",
+            description = "13700K/14700K ve 13900K/14900K işlemcilerde yüksek Vcore aşınmasını önlemek ve Core Ultra 200S (285K/265K) serisinde DLVR verimliliğini artırmak için:",
             steps = listOf(
-                GuideStepItem("1. Adım", "Microcode 0x12B BIOS Güncellemesi", "Anakart üreticinizin web sitesinden en güncel BIOS sürümünü (Microcode 0x12B içeren) kesinlikle yükleyin."),
-                GuideStepItem("2. Adım", "Intel Default Settings Profilini Seçin", "BIOS'ta 'Intel Baseline / Default' profilini açın. ICCMax değerini 307A veya 400A limitinde tutun."),
-                GuideStepItem("3. Adım", "CPU Lite Load (AC/DC Loadline) Düşürme", "MSI anakartlarda CPU Lite Load Mode 12'den Mode 6 veya Mode 7'ye çekin. ASUS'ta SVID Behavior 'Typical' yapın."),
-                GuideStepItem("4. Adım", "Negatif Vcore Voltaj Offseti", "Core Voltage Mode: Adaptive + Offset seçin. Negatif (-) 0.050V (-50mV) ile başlayın, Cinebench stabilse -0.075V (-75mV)'a kadar inin."),
+                GuideStepItem("1. Adım", "Güncel BIOS & Microcode 0x12B+", "Anakart üreticinizin sitesinden en güncel BIOS sürümünü yükleyin (13/14. nesilde Microcode 0x12B, Z890'da güncel ME/DLVR yaması)."),
+                GuideStepItem("2. Adım", "Intel Default Settings Profili", "BIOS'ta 'Intel Default Settings (Performance)' seçin. 14900K/285K için PL2=250-253W ve ICCMax=307A-400A sınırını koruyun."),
+                GuideStepItem("3. Adım", "CPU Lite Load / AC Loadline İnce Ayarı", "MSI anakartlarda CPU Lite Load değerini Mode 6-8 aralığına düşürün; ASUS'ta SVID Behavior 'Typical Scenario' seçin."),
+                GuideStepItem("4. Adım", "Adaptive Negatif Vcore Offset", "Core Voltage Mode: Adaptive + Offset (-). -0.050V (-50mV) ile başlayıp kararlılık testine göre -0.070V seviyesine inin (Core Ultra 200S'te DLVR aktif tutun)."),
             ),
         )
     } else {
         GuideSectionData(
-            title = "Intel 13th & 14th Gen (Raptor Lake & Refresh)",
-            subtitle = "Vmin Shift & High-Voltage Degradation Prevention",
-            description = "Default motherboard profiles often push 1.50V+ on 13700K/14700K and 13900K/14900K chips, causing microscopic degradation in silicon vias. Follow these steps to safeguard CPU longevity and run 15-20°C cooler:",
+            title = "Intel Core Ultra 200S (Arrow Lake) & 13th/14th Gen",
+            subtitle = "DLVR Tuning, Microcode 0x12B & Degradation Prevention",
+            description = "Prevent high-voltage Vmin degradation on 13th/14th Gen Raptor Lake and optimize DLVR efficiency on Core Ultra 200S (285K/265K):",
             steps = listOf(
-                GuideStepItem("Step 1", "Microcode 0x12B BIOS Update", "Install the latest BIOS update containing Microcode 0x12B directly from your motherboard manufacturer's support portal."),
-                GuideStepItem("Step 2", "Select Intel Default Settings Profile", "Enable 'Intel Baseline / Default' profile in BIOS. Enforce ICCMax limit at 307A or 400A."),
-                GuideStepItem("Step 3", "Lower CPU Lite Load (AC/DC Loadline)", "On MSI motherboards, drop CPU Lite Load from Mode 12 down to Mode 6 or 7. On ASUS, configure SVID Behavior to 'Typical'."),
-                GuideStepItem("Step 4", "Negative Vcore Voltage Offset", "Select Core Voltage Mode: Adaptive + Offset. Start at negative (-) 0.050V (-50mV), stepping down to -0.075V (-75mV) if Cinebench passes."),
+                GuideStepItem("Step 1", "Latest BIOS & Microcode 0x12B+", "Flash the newest motherboard BIOS (Microcode 0x12B+ for LGA1700, latest ME/DLVR microcode for Z890 LGA1851)."),
+                GuideStepItem("Step 2", "Intel Default Settings Profile", "Enable 'Intel Default Settings (Performance)' in BIOS. Keep PL2 at 250-253W and ICCMax at 307A-400A."),
+                GuideStepItem("Step 3", "Lower CPU Lite Load (AC/DC Loadline)", "Drop MSI CPU Lite Load down to Mode 6-8, or set ASUS SVID Behavior to 'Typical Scenario'."),
+                GuideStepItem("Step 4", "Adaptive Negative Vcore Offset", "Use Adaptive + Negative Offset (-0.050V to -0.070V) while keeping DLVR Power Gate enabled on Core Ultra 200S."),
             ),
         )
     }
@@ -140,50 +140,50 @@ object UndervoltGuideContent {
 
     fun getGpuNvidiaSection(isTurkish: Boolean): GuideSectionData = if (isTurkish) {
         GuideSectionData(
-            title = "NVIDIA GeForce RTX 4000 & 3000 (MSI Afterburner)",
-            subtitle = "Voltaj / Frekans Eğrisi (V/F Curve Editor) Ayarı",
-            description = "MSI Afterburner ile voltaj/frekans eğrisini optimize ederek aynı performansta %25-35 güç tasarrufu sağlayın:",
+            title = "NVIDIA GeForce RTX 5000 / 4000 / 3000 (MSI Afterburner)",
+            subtitle = "Voltaj / Frekans Eğrisi (V/F Curve Editor) Platolama",
+            description = "MSI Afterburner V/F eğrisi ile RTX 5000 (Blackwell) ve RTX 4000 kartlarda performansı koruyarak %20-35 güç tasarrufu sağlayın:",
             steps = listOf(
-                GuideStepItem("1. Adım", "MSI Afterburner Curve Editor Açılışı", "MSI Afterburner ana ekranında Core Clock kaydırıcısını -150MHz yapın. Ardından klavyeden 'Ctrl + F' tuşlarına basarak V/F Curve ekranını açın."),
-                GuideStepItem("2. Adım", "Tatlı Noktayı Seçme (Sweet Spot)", "RTX 4070/4080/4090 için: 925mV veya 950mV sütunundaki noktayı bulun. Bu noktayı kartınızın boost frekansına (örn: 2650-2750 MHz) yukarı çekin."),
-                GuideStepItem("3. Adım", "Eğriyi Düzleştirme (L Tuşu ile Kilitleme)", "Seçtiğiniz noktanın sağında kalan tüm voltaj noktalarını 'L' tuşu ile veya Shift ile seçerek düz bir yatay çizgi haline getirin. Ana ekranda Apply (✓) butonuna basın."),
-                GuideStepItem("Sonuç", "Sıcaklıkta 10-15°C Düşüş, %25-35 Güç Tasarrufu", "Oyun performansınız (FPS) aynı kalırken veya artarken fan sesiniz neredeyse tamamen kesilir."),
+                GuideStepItem("1. Adım", "MSI Afterburner Curve Editor Açılışı", "Ana ekranda Core Clock kaydırıcısını -200MHz çekip 'Ctrl + F' ile V/F Curve grafiğini açın (veya Shift basılı tutarak tüm eğriyi aşağı indirin)."),
+                GuideStepItem("2. Adım", "Tatlı Nokta Voltajını Seçme", "RTX 5080/5090 için 890-925mV (~2800-2900 MHz), RTX 4070/4080/4090 için 925-950mV (~2700 MHz) sütunundaki noktayı hedef frekansınıza yukarı sürükleyin."),
+                GuideStepItem("3. Adım", "Sağ Tarafı Düzleştirme (L Tuşuna Basmayın!)", "Shift tuşuna basılı tutarak seçtiğiniz noktanın sağındaki tüm noktaları tarayın ve hedef frekansın altına çekip Apply (✓) deyin ('L' tuşuna basmayın; 'L' kartı sabit voltaja kilitleyip boşta güç tasarrufunu kapatır!)."),
+                GuideStepItem("Sonuç", "Sıcaklıkta 10-15°C Düşüş, %20-35 Güç Tasarrufu", "Oyun FPS değeriniz korunurken veya artarken kart çok daha serin ve sessiz çalışır."),
             ),
         )
     } else {
         GuideSectionData(
-            title = "NVIDIA GeForce RTX 4000 & 3000 (MSI Afterburner)",
-            subtitle = "Voltage / Frequency Curve (V/F Curve Editor) Setup",
-            description = "Optimize the V/F curve in MSI Afterburner to preserve full gaming framerates while cutting 25-35% power draw:",
+            title = "NVIDIA GeForce RTX 5000 / 4000 / 3000 (MSI Afterburner)",
+            subtitle = "Voltage / Frequency Curve (V/F Curve Editor) Plateau Setup",
+            description = "Flatten the V/F curve in MSI Afterburner on RTX 5000 (Blackwell) and RTX 4000 GPUs to cut 20-35% power draw at full gaming speed:",
             steps = listOf(
-                GuideStepItem("Step 1", "Open MSI Afterburner Curve Editor", "Offset Core Clock by -150MHz on the main screen, then press 'Ctrl + F' to bring up the Voltage/Frequency curve graph."),
-                GuideStepItem("Step 2", "Select the Sweet Spot Voltage", "For RTX 4070/4080/4090: Locate the 925mV or 950mV column. Drag this point up to your GPU target boost clock (e.g. 2650-2750 MHz)."),
-                GuideStepItem("Step 3", "Flatten Plateau & Apply", "Select all voltage points to the right and flatten them into a horizontal ceiling. Click Apply (✓) on the main interface."),
-                GuideStepItem("Result", "10-15°C Cooler with 25-35% Less Power", "FPS remains identical or slightly higher, while fan noise drops to whisper-quiet levels."),
+                GuideStepItem("Step 1", "Open MSI Afterburner Curve Editor", "Lower Core Clock by -200MHz on the main window, then press 'Ctrl + F' to open the Voltage/Frequency curve editor."),
+                GuideStepItem("Step 2", "Pick the Sweet-Spot Voltage", "For RTX 5080/5090 pick 890-925mV (~2800-2900 MHz); for RTX 4070/4080/4090 pick 925-950mV (~2700 MHz) and drag that node up to target boost."),
+                GuideStepItem("Step 3", "Shift-Highlight & Flatten Right Side", "Hold Shift and drag across all voltage nodes to the right, pull them below your target clock, and click Apply (✓) so they form a flat ceiling (do NOT press 'L', which locks idle voltage)."),
+                GuideStepItem("Result", "10-15°C Cooler with 20-35% Lower Wattage", "Gaming FPS stays identical or higher while coil whine and fan RPM drop dramatically."),
             ),
         )
     }
 
     fun getGpuAmdSection(isTurkish: Boolean): GuideSectionData = if (isTurkish) {
         GuideSectionData(
-            title = "AMD Radeon RX 7000 (RDNA3) & RX 6000 (RDNA2)",
-            subtitle = "AMD Software Adrenalin Dahili Tuning Rehberi",
-            description = "Adrenalin yazılımı üzerinden harici programa ihtiyaç duymadan GPU voltajını düşürün:",
+            title = "AMD Radeon RX 9000 (RDNA4) & RX 7000 / 6000",
+            subtitle = "AMD Software Adrenalin Dahili Voltaj & Frekans Offseti",
+            description = "Adrenalin yazılımı üzerinden harici araca gerek kalmadan RDNA4 ve RDNA3 kartlarda verimliliği artırın:",
             steps = listOf(
-                GuideStepItem("Performans Sekmesi", "Performans -> Ayarlanıyor (Custom Tuning)", "Adrenalin yazılımını açın. 'Özel' (Custom) ayarı seçin ve GPU Ayarı ile Voltaj kaydırıcılarını açın."),
-                GuideStepItem("Voltaj Kaydırıcısı", "Milivolt (mV) Düşürme", "Varsayılan 1150mV olan voltajı -50mV azaltarak 1100mV yapın. RX 7800 XT / 7900 GRE gibi modellerde 1025mV - 1050mV arası çok kararlıdır."),
-                GuideStepItem("Min-Max Frekans Kuralı", "Takılmaları Önleme (Min Clock Gap)", "Minimum frekansı, maksimum frekansın 100MHz altına ayarlayın (Örn: Maks 2600 ise Min 2500). Bu ayar FPS droplarını engeller."),
+                GuideStepItem("Performans Sekmesi", "Performans -> Ayarlanıyor -> Özel (Custom)", "Adrenalin yazılımında GPU Ayarı (GPU Tuning) ve Gelişmiş Kontrol anahtarlarını etkinleştirin."),
+                GuideStepItem("Voltaj Offseti", "Negatif Milivolt (-mV) Ayarı", "RX 9070 XT / 9070 (RDNA4) modellerinde 'Voltaj Offseti' kaydırıcısını -40mV ile -75mV arasına çekin. RX 7800 XT / 7900 serisinde voltajı 1040-1080mV seviyesine düşürün."),
+                GuideStepItem("Frekans & Güç Sınırı", "RDNA4 Dinamik Boost vs RDNA3 Min-Max", "RX 9000 serisinde dinamik eğri otomatik çalışır (-5% Power Limit ile 50W tasarruf edilir). RX 7000/6000 serisinde ise Min Frekansı Maks Frekansın 100MHz altına sabitleyin."),
             ),
         )
     } else {
         GuideSectionData(
-            title = "AMD Radeon RX 7000 (RDNA3) & RX 6000 (RDNA2)",
-            subtitle = "AMD Software Adrenalin Built-in Tuning Guide",
-            description = "Tune GPU voltage directly within AMD Software without third-party utilities:",
+            title = "AMD Radeon RX 9000 (RDNA4) & RX 7000 / 6000",
+            subtitle = "AMD Software Adrenalin Voltage & Frequency Offset Guide",
+            description = "Tune RDNA4 and RDNA3 efficiency natively inside AMD Software Adrenalin:",
             steps = listOf(
-                GuideStepItem("Performance Tab", "Performance -> Tuning -> Custom", "Launch AMD Adrenalin. Select 'Custom' tuning and toggle GPU Tuning and Voltage sliders to Enabled."),
-                GuideStepItem("Voltage Slider", "Lower Voltage (mV)", "Step down default 1150mV by -50mV increments to 1100mV. RX 7800 XT and 7900 GRE typically sustain 1025-1050mV rock-solid."),
-                GuideStepItem("Min-Max Clock Rule", "Prevent Stutters (100MHz Gap)", "Set Minimum Frequency within 100MHz of Maximum (e.g. Max 2600MHz / Min 2500MHz) to eliminate frametime dips."),
+                GuideStepItem("Performance Tab", "Performance -> Tuning -> Custom", "Open AMD Adrenalin, enable Custom GPU Tuning and toggle Advanced Control."),
+                GuideStepItem("Voltage Offset", "Apply Negative Millivolts (-mV)", "On RX 9070 XT / 9070 (RDNA4), set Voltage Offset between -40mV and -75mV. On RX 7800 XT / 7900 (RDNA3), lower target voltage to 1040-1080mV."),
+                GuideStepItem("Clock & Power Limit", "RDNA4 Dynamic Curve vs RDNA3 100MHz Rule", "RX 9000 uses dynamic curve boosting (pair with -5% Power Limit to save ~50W). On RX 7000/6000, set Min Frequency 100MHz below Max Frequency."),
             ),
         )
     }

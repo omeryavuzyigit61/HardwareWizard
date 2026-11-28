@@ -263,32 +263,45 @@ private fun MicrophoneAcousticSimulatorTab(
     onPickMic: () -> Unit,
 ) {
     val micSpec = selectedMic?.spec as? MicrophoneSpec
-    val isDynamicDefault = micSpec?.capsuleType?.contains("Dinamik", ignoreCase = true) ?: true
+    val isDynamicDefault = micSpec?.capsuleType?.let { cap ->
+        cap.contains("Dynamic", ignoreCase = true) || cap.contains("Dinamik", ignoreCase = true)
+    } ?: true
 
     var micDistanceCm by remember { mutableStateOf(12f) }
     var roomTreatmentLevel by remember { mutableStateOf(1) } // 0: Boş Yankılı Oda, 1: Standart Ev Odası, 2: Akustik Yalıtımlı
     var keyboardLoudness by remember { mutableStateOf(1) } // 0: Sessiz/Linear, 1: Mekanik/Manyetik, 2: Clicky/Gürültülü
 
     val isDynamic = isDynamicDefault
-    val isXlr = micSpec?.connectivity?.contains("XLR", ignoreCase = true) ?: true
+    val connUpper = micSpec?.connectivity?.uppercase().orEmpty()
+    val isXlr = if (micSpec == null) true else connUpper.contains("XLR")
+    val isUsbOrWireless = connUpper.contains("USB") || connUpper.contains("WIRELESS") || connUpper.contains("2.4") || connUpper.contains("BLUETOOTH")
     val hasBuiltInPreampOrDsp = (micSpec?.hasBuiltInDsp == true) ||
         (selectedMic?.displayName?.contains("SM7dB", ignoreCase = true) == true)
+    val needsPhantom48v = (micSpec?.requiresPhantomPower == true) || (isXlr && !isDynamic)
 
-    // Inverse Square Law & Room Rejection Math
-    val proximityBonusDb = (25f - micDistanceCm).coerceAtLeast(-15f) * 0.65f
-    val capsuleRejectionDb = if (isDynamic) 18f else 7f
+    // Polar pattern off-axis rejection + Logarithmic Inverse Square Law: ΔL = 20 * log10(20 / d)
+    val polarUpper = micSpec?.polarPattern?.uppercase().orEmpty()
+    val capsuleRejectionDb = when {
+        polarUpper.contains("OMNI") -> 3f
+        polarUpper.contains("SHOTGUN") -> 22f
+        polarUpper.contains("SUPERCARDIOID") || polarUpper.contains("HYPERCARDIOID") -> if (isDynamic) 20f else 13f
+        isDynamic -> 18f
+        else -> 9f
+    }
+    val proximityBonusDb = (20.0 * kotlin.math.log10(20.0 / micDistanceCm.coerceAtLeast(5f).toDouble())).toFloat()
     val roomEchoPenaltyDb = when (roomTreatmentLevel) {
         0 -> if (isDynamic) 6f else 15f
         1 -> if (isDynamic) 3f else 8f
         else -> 1f
     }
-    val keyboardNoiseDb = when (keyboardLoudness) {
-        0 -> 34f
-        1 -> 44f
-        else -> 54f
-    } - capsuleRejectionDb - (if (micDistanceCm <= 12f) 6f else 0f)
+    val rawKeyboardSpl = when (keyboardLoudness) {
+        0 -> 38f
+        1 -> 48f
+        else -> 58f
+    }
+    val keyboardNoiseDb = (rawKeyboardSpl - capsuleRejectionDb).coerceAtLeast(16f)
 
-    val snrScore = (78f + proximityBonusDb + capsuleRejectionDb - roomEchoPenaltyDb - (keyboardNoiseDb * 0.35f))
+    val snrScore = (76f + proximityBonusDb * 0.7f + capsuleRejectionDb * 0.65f - roomEchoPenaltyDb - (keyboardNoiseDb - 18f) * 0.45f)
         .roundToInt()
         .coerceIn(35, 99)
 
@@ -461,10 +474,14 @@ private fun MicrophoneAcousticSimulatorTab(
             LabMetricRow(
                 label = if (isTr) "Ses Kartı & Preamp Gereksinimi" else "Audio Interface & Preamp Advice",
                 value = when {
-                    isXlr && !hasBuiltInPreampOrDsp && isDynamic ->
-                        if (isTr) "60dB+ Gain veya Cloudlifter (+48V) Önerilir" else "60dB+ Gain or Inline Preamp Recommended"
+                    isXlr && isUsbOrWireless ->
+                        if (isTr) "Hibrit XLR / USB-C (Her İki Mod Destekli)" else "Hybrid XLR / USB-C Dual Mode"
                     isXlr && hasBuiltInPreampOrDsp ->
-                        if (isTr) "Dahili Preamp Aktif (Standart XLR Yeterli)" else "Built-in Preamp Active (Standard XLR OK)"
+                        if (isTr) "Dahili Preamp Aktif (+48V Standart XLR Yeterli)" else "Built-in Preamp Active (+48V XLR OK)"
+                    isXlr && isDynamic ->
+                        if (isTr) "60dB+ Gain Ses Kartı veya Inline Preamp Önerilir" else "60dB+ Gain Interface or Inline Preamp Recommended"
+                    isXlr && needsPhantom48v ->
+                        if (isTr) "+48V Phantom Power Destekli XLR Ses Kartı Zorunlu" else "XLR Audio Interface with +48V Phantom Power Required"
                     else ->
                         if (isTr) "Tak-Çalıştır USB-C Dijital ADC" else "Plug & Play USB-C Digital ADC"
                 },
@@ -517,7 +534,13 @@ private fun MousepadFrictionPhysicsTab(
     val muStatic = (baseMuS * skateMod * (1f + (mouseWeightG - 55) * 0.002f)).coerceIn(0.05f, 0.38f)
     val muKinetic = (baseMuK * skateMod * (1f + (mouseWeightG - 55) * 0.0015f)).coerceIn(0.04f, 0.32f)
 
-    val stoppingPower = padSpec?.stoppingPowerScore ?: (if (isGlassPad) 5 else if (isSpeedHybrid) 8 else 9)
+    val baseStop = padSpec?.stoppingPowerScore?.takeIf { it > 0 } ?: (if (isGlassPad) 4 else if (isSpeedHybrid) 7 else 9)
+    val skateStopDelta = when (skateMaterialIdx) {
+        0 -> 0
+        1 -> -1
+        else -> -2
+    }
+    val stoppingPower = (baseStop + skateStopDelta).coerceIn(2, 10)
     val microAdjustScore = ((1f - (muStatic / 0.38f)) * 100f).roundToInt().coerceIn(55, 99)
     val glassOnGlassWarning = isGlassPad && skateMaterialIdx == 2
 
@@ -542,7 +565,13 @@ private fun MousepadFrictionPhysicsTab(
         emoji = "🎯",
         label = if (isTr) "Seçili Oyuncu Mousepad Yüzeyi" else "Selected Gaming Mousepad Surface",
         selectedName = selectedMousepad?.displayName ?: (if (isTr) "Artisan Ninja FX Zero XSoft XL (Katalogdan Seç)" else "Artisan Ninja FX Zero XSoft XL (Tap to Pick)"),
-        selectedSub = padSpec?.let { "${it.surfaceType} • ${it.speedGlideTier} • ${it.baseMaterial}" }
+        selectedSub = padSpec?.let {
+            listOfNotNull(
+                it.surfaceType.ifBlank { null },
+                it.speedGlideTier.ifBlank { null },
+                it.baseMaterial.ifBlank { null },
+            ).joinToString(" • ").ifBlank { if (isTr) "Standart kumaş kontrol yüzeyi" else "Standard cloth control surface" }
+        }
             ?: (if (isTr) "Yüzey dokusu ve durdurma gücünü test etmek için seçin" else "Pick mousepad from catalog to test glide & stopping power"),
         accentColor = NeonEmerald,
         isTr = isTr,
@@ -671,8 +700,15 @@ private fun WebcamFovAndLightSimulatorTab(
     val halfAngleRad = (fovDeg / 2.0) * (PI / 180.0)
     val horizontalFrameWidthCm = (2.0 * distanceCm * tan(halfAngleRad)).roundToInt()
 
-    val isLargeSensor = camSpec?.sensorSizeInch?.let {
-        it.contains("1/1.2") || it.contains("1/1.5") || it.contains("1/1.8") || it.contains("1/2\"")
+    val isLargeSensor = camSpec?.sensorSizeInch?.let { s ->
+        s.contains("APS-C", ignoreCase = true) ||
+            s.contains("Full", ignoreCase = true) ||
+            s.contains("1\"", ignoreCase = true) ||
+            s.contains("1/1.2") ||
+            s.contains("1/1.3") ||
+            s.contains("1/1.5") ||
+            s.contains("1/1.8") ||
+            s.contains("1/2\"")
     } ?: false
 
     val noiseLevelText = when (roomLuxIdx) {
@@ -735,22 +771,25 @@ private fun WebcamFovAndLightSimulatorTab(
                 colors = SliderDefaults.colors(thumbColor = NeonCyan, activeTrackColor = NeonCyan),
             )
 
-            // 2D FOV Cone Visualization Canvas
+            // 2D FOV Cone Visualization Canvas (Dark viewport ensures high contrast in both Light & Dark themes)
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(130.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color.Black.copy(alpha = 0.3f)),
+                    .background(Color(0xFF0F172A)),
                 contentAlignment = Alignment.Center,
             ) {
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     val w = size.width
                     val h = size.height
-                    val camPos = Offset(w / 2f, 16f)
-                    val spreadRatio = ((fovDeg - 50f) / 55f).coerceIn(0.25f, 0.92f)
-                    val leftEnd = Offset(w * (0.5f - spreadRatio * 0.45f), h - 18f)
-                    val rightEnd = Offset(w * (0.5f + spreadRatio * 0.45f), h - 18f)
+                    val camPos = Offset(w / 2f, 14f)
+                    val depthRatio = ((distanceCm - 40f) / 60f).coerceIn(0f, 1f)
+                    val coneBottomY = 58f + depthRatio * (h - 74f)
+                    val spreadRatio = ((fovDeg - 60f) / 60f).coerceIn(0f, 1f)
+                    val halfSpanFactor = (0.18f + spreadRatio * 0.30f) * (0.68f + depthRatio * 0.32f)
+                    val leftEnd = Offset(w * (0.5f - halfSpanFactor), coneBottomY)
+                    val rightEnd = Offset(w * (0.5f + halfSpanFactor), coneBottomY)
 
                     val conePath = Path().apply {
                         moveTo(camPos.x, camPos.y)
@@ -820,8 +859,8 @@ private fun WebcamFovAndLightSimulatorTab(
                 valueColor = if (roomLuxIdx == 0 && !isLargeSensor) NeonAmber else NeonEmerald,
             )
             LabMetricRow(
-                label = if (isTr) "60 FPS Akıcı Yayın Enstantane Önerisi" else "Recommended 60 FPS Shutter Speed",
-                value = if (isTr) "1/120 sn (50Hz Titreme Önleyici Anti-Flicker)" else "1/120s (Anti-Flicker Sync)",
+                label = if (isTr) "Akıcı Yayın Enstantane & Anti-Flicker" else "Recommended Shutter & Anti-Flicker",
+                value = if (isTr) "50Hz Şebeke: 1/100 sn • 60Hz: 1/120 sn" else "50Hz Mains: 1/100s • 60Hz: 1/120s",
                 valueColor = NeonCyan,
             )
         }
@@ -953,22 +992,26 @@ private fun ChairErgonomicsWizardTab(
                 valueColor = ElectricBlue,
             )
             LabMetricRow(
-                label = if (isTr) "Ayak Desteği (Footrest) Analizi" else "Footrest Ergonomic Analysis",
-                value = if (needsFootrest) {
-                    if (isTr) "Önerilir (+${deskDeltaCm}cm Masa Farkı Telafisi)" else "Recommended (+${deskDeltaCm}cm Desk Offset)"
-                } else {
-                    if (isTr) "Gerekmez (Masa Yüksekliği Boyunuza Uygun)" else "Not Needed (Desk Height Matches Stature)"
+                label = if (isTr) "Masa & Ayak Desteği (Footrest) Analizi" else "Desk & Footrest Ergonomic Analysis",
+                value = when {
+                    needsFootrest -> if (isTr) "Ayak Desteği Önerilir (+${deskDeltaCm}cm Masa Yüksek)" else "Footrest Recommended (+${deskDeltaCm}cm High Desk)"
+                    deskDeltaCm <= -4 -> if (isTr) "Masa Alçak (${deskDeltaCm}cm) • Yükseklik Ayarlı Masa Önerilir" else "Desk Too Low (${deskDeltaCm}cm) • Riser / Standing Desk Advised"
+                    else -> if (isTr) "İdeal Uyum (Masa Yüksekliği Boyunuza Uygun)" else "Optimal Fit (Desk Height Matches Stature)"
                 },
-                valueColor = if (needsFootrest) NeonAmber else NeonEmerald,
+                valueColor = if (needsFootrest || deskDeltaCm <= -4) NeonAmber else NeonEmerald,
             )
             LabMetricRow(
                 label = if (isTr) "Amortisör & Taşıma Kapasitesi Uyumu" else "Gas Lift & Weight Capacity Fit",
-                value = if (weightSafe) {
-                    if (isTr) "✅ Güvenli (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)" else "✅ Safe (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)"
-                } else {
-                    if (isTr) "⚠️ Kapasite Sınırında (XL / Heavy-Duty Koltuk Seçin)" else "⚠️ Near Capacity (Pick XL / Heavy-Duty Chair)"
+                value = when {
+                    !weightSafe -> if (isTr) "Kapasite Aşıldı! (${userWeightKg.roundToInt()} kg > Max $maxCapKg kg • XL Seçin)" else "Exceeds Max Load! (${userWeightKg.roundToInt()} kg > $maxCapKg kg • Pick XL)"
+                    userWeightKg >= maxCapKg * 0.90f -> if (isTr) "Sınıra Yakın (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)" else "Near Limit (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)"
+                    else -> if (isTr) "Güvenli (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)" else "Safe (${userWeightKg.roundToInt()} kg / Max $maxCapKg kg)"
                 },
-                valueColor = if (weightSafe) NeonEmerald else NeonRose,
+                valueColor = when {
+                    !weightSafe -> NeonRose
+                    userWeightKg >= maxCapKg * 0.90f -> NeonAmber
+                    else -> NeonEmerald
+                },
             )
         }
     }

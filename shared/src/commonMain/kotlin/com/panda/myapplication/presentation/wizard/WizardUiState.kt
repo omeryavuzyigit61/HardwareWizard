@@ -76,4 +76,5 @@ data class WizardUiState(
     // Share System Card Dialog
     val isShareDialogOpen: Boolean = false,
     val shareCardText: String = "",
+    val isGeneratingSmartBuild: Boolean = false,
 )

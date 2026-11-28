@@ -129,17 +129,23 @@ data class TuningProfile(
      */
     val siliconLotteryTier: SiliconLotteryTier
         get() {
-            val absMv = abs(voltageOffsetMv ?: 0.0)
-            val tempDrop = -(tempDelta ?: 0.0)
-            val perfGain = scoreDeltaPercent ?: 0.0
+            val rawOffset = voltageOffsetMv ?: 0.0
+            // Only negative undervolt / Curve Optimizer offsets (-mV / -CO) indicate superior silicon efficiency;
+            // positive overvoltage (+mV) or extreme >250mV raw lock values never earn lottery bonus points.
+            val validNegativeOffset = if (rawOffset < 0.0 && rawOffset >= -250.0) -rawOffset else 0.0
+            val rawTempDrop = -(tempDelta ?: 0.0)
+            val tempDrop = if (rawTempDrop in 0.0..40.0) rawTempDrop else 0.0
+            val rawPerfGain = scoreDeltaPercent ?: 0.0
+            val perfGain = if (rawPerfGain in 0.0..45.0) rawPerfGain else 0.0
             val positiveReactions = reactionHotCount + reactionColdCount + reactionEfficientCount + reactionStableCount
 
             var qualityPoints = 0
-            if (absMv >= 28.0) qualityPoints += 2 else if (absMv >= 15.0) qualityPoints += 1
+            if (validNegativeOffset >= 28.0) qualityPoints += 2 else if (validNegativeOffset >= 15.0) qualityPoints += 1
             if (tempDrop >= 10.0) qualityPoints += 2 else if (tempDrop >= 5.0) qualityPoints += 1
             if (perfGain >= 5.0) qualityPoints += 2 else if (perfGain >= 1.5) qualityPoints += 1
             if (!proofImageUrl.isNullOrBlank()) qualityPoints += 1
             if (positiveReactions >= 3 && reactionUnstableCount == 0) qualityPoints += 1
+            if (reactionUnstableCount >= 2 && reactionUnstableCount > positiveReactions) qualityPoints -= 2
 
             return when {
                 qualityPoints >= 4 -> SiliconLotteryTier.GOLD

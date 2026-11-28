@@ -447,8 +447,21 @@ fun AuthSheet(
 
                 Button(
                     onClick = {
-                        if (signupUsername.isBlank() || signupEmail.isBlank() || signupPassword.isBlank()) {
-                            errorMessage = tr(isTr, "Lütfen tüm zorunlu alanları doldurun.", "Please fill in all required fields.")
+                        if (signupUsername.isBlank() || signupEmail.isBlank() || signupPassword.isBlank() || birthDateText.isBlank()) {
+                            errorMessage = tr(isTr, "Lütfen tüm zorunlu (*) alanları doldurun.", "Please fill in all required (*) fields.")
+                            return@Button
+                        }
+                        val dateParts = birthDateText.trim().split("-")
+                        val currentYear = UserProfile.currentCalendarDate().first
+                        val bYear = dateParts.getOrNull(0)?.toIntOrNull()
+                        val bMonth = dateParts.getOrNull(1)?.toIntOrNull()
+                        val bDay = dateParts.getOrNull(2)?.toIntOrNull()
+                        if (dateParts.size != 3 || bYear == null || bYear !in 1930..(currentYear - 13) || bMonth == null || bMonth !in 1..12 || bDay == null || bDay !in 1..31) {
+                            errorMessage = tr(
+                                isTr,
+                                "Lütfen geçerli bir doğum tarihi girin (Örn: 2000-01-15, en az 13 yaş).",
+                                "Please enter a valid birth date in YYYY-MM-DD format (minimum age 13).",
+                            )
                             return@Button
                         }
                         if (signupPassword.length < 6) {

@@ -8,6 +8,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -126,7 +127,8 @@ fun TuningShareDialog(
     onSubmit: (TuningProfile) -> Unit,
 ) {
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
+    val appLanguageCode = com.panda.myapplication.presentation.util.LocalAppSettings.current.language.code
+    val isTr = strings.isTurkish
     val coroutineScope = rememberCoroutineScope()
 
     var selectedHardwareId by remember(hardwareId) { mutableStateOf(hardwareId) }
@@ -151,13 +153,31 @@ fun TuningShareDialog(
     var title by remember { mutableStateOf("") }
     // Çoklu seçim (Multi-select): İşlemci için aynı anda Undervolt + PBO vb. seçilebilir
     var selectedTypes by remember { mutableStateOf(setOf(TuningType.UNDERVOLT)) }
-    var selectedLanguage by remember { mutableStateOf("tr") }
+    var selectedLanguage by remember(appLanguageCode) { mutableStateOf(appLanguageCode) }
 
     var voltageOffsetStr by remember { mutableStateOf("") }
     var clockMhzStr by remember { mutableStateOf("") }
     var tempBeforeStr by remember { mutableStateOf("") }
     var tempAfterStr by remember { mutableStateOf("") }
-    var benchName by remember { mutableStateOf("Cinebench R23") }
+    var benchNameEditedManually by remember { mutableStateOf(false) }
+    var benchName by remember {
+        mutableStateOf(
+            when (selectedCategory.uppercase()) {
+                "GPU" -> "3DMark Time Spy"
+                "RAM" -> "AIDA64 Latency"
+                else -> "Cinebench R23"
+            }
+        )
+    }
+    LaunchedEffect(selectedCategory) {
+        if (!benchNameEditedManually) {
+            benchName = when (selectedCategory.uppercase()) {
+                "GPU" -> "3DMark Time Spy"
+                "RAM" -> "AIDA64 Latency"
+                else -> "Cinebench R23"
+            }
+        }
+    }
     var scoreBeforeStr by remember { mutableStateOf("") }
     var scoreAfterStr by remember { mutableStateOf("") }
     var notes by remember { mutableStateOf("") }
@@ -614,22 +634,26 @@ fun TuningShareDialog(
                 }
 
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    languages.take(4).forEach { (code, label) ->
+                    languages.forEach { (code, label) ->
                         val isSelected = selectedLanguage == code
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = if (isSelected) NeonAmber.copy(alpha = 0.22f) else MaterialTheme.colorScheme.surfaceVariant,
                             border = BorderStroke(1.dp, if (isSelected) NeonAmber else MaterialTheme.colorScheme.outlineVariant),
                             modifier = Modifier
-                                .weight(1f)
                                 .height(34.dp)
                                 .clip(RoundedCornerShape(10.dp))
                                 .clickable { selectedLanguage = code },
                         ) {
-                            Box(contentAlignment = Alignment.Center) {
+                            Box(
+                                modifier = Modifier.padding(horizontal = 10.dp),
+                                contentAlignment = Alignment.Center,
+                            ) {
                                 Text(
                                     text = label,
                                     style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
@@ -723,6 +747,43 @@ fun TuningShareDialog(
                         onValueChange = { tempAfterStr = it },
                         label = { Text(if (isTr) "Sonraki (°C)" else "After (°C)", maxLines = 1) },
                         placeholder = { Text("71") },
+                        modifier = Modifier.weight(1f),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                        shape = RoundedCornerShape(10.dp),
+                        singleLine = true,
+                    )
+                }
+
+                // 5.5. Sentetik Benchmark Skoru (Önce / Sonra)
+                OutlinedTextField(
+                    value = benchName,
+                    onValueChange = {
+                        benchName = it
+                        benchNameEditedManually = true
+                    },
+                    label = { Text(if (isTr) "Test Yazılımı (Opsiyonel)" else "Benchmark Tool (Optional)", maxLines = 1) },
+                    placeholder = { Text(if (selectedCategory.equals("GPU", ignoreCase = true)) "3DMark Time Spy" else "Cinebench R23") },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(10.dp),
+                    singleLine = true,
+                )
+
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedTextField(
+                        value = scoreBeforeStr,
+                        onValueChange = { scoreBeforeStr = it },
+                        label = { Text(if (isTr) "Önceki Skor" else "Score Before", maxLines = 1) },
+                        placeholder = { Text(if (selectedCategory.equals("GPU", ignoreCase = true)) "24500" else "22400") },
+                        modifier = Modifier.weight(1f),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                        shape = RoundedCornerShape(10.dp),
+                        singleLine = true,
+                    )
+                    OutlinedTextField(
+                        value = scoreAfterStr,
+                        onValueChange = { scoreAfterStr = it },
+                        label = { Text(if (isTr) "Sonraki Skor" else "Score After", maxLines = 1) },
+                        placeholder = { Text(if (selectedCategory.equals("GPU", ignoreCase = true)) "26100" else "23850") },
                         modifier = Modifier.weight(1f),
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         shape = RoundedCornerShape(10.dp),
@@ -956,7 +1017,7 @@ fun TuningShareDialog(
                 shape = RoundedCornerShape(10.dp),
             ) {
                 Text(
-                    text = if (isTr) "Onaya Gönder (+50 Puan)" else "Submit for Review (+50 Pts)",
+                    text = if (isTr) "Onaya Gönder (+15 Puan)" else "Submit for Review (+15 Pts)",
                     fontWeight = FontWeight.Bold,
                 )
             }

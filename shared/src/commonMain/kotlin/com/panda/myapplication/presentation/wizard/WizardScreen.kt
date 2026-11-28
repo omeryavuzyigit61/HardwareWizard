@@ -7,6 +7,9 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,6 +43,7 @@ import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Air
+import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.ErrorOutline
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
@@ -105,10 +109,14 @@ import com.panda.myapplication.domain.engine.GamingSimulationResult
 import com.panda.myapplication.domain.engine.PlatformStatusBadge
 import com.panda.myapplication.domain.engine.QualityPreset
 import com.panda.myapplication.domain.engine.ResolutionOption
+import com.panda.myapplication.domain.engine.SmartBuildTier
+import com.panda.myapplication.domain.engine.SmartBuildUseCase
+import com.panda.myapplication.domain.engine.CpuPlatformPreference
 import com.panda.myapplication.domain.engine.UpgradeRecommendation
 import com.panda.myapplication.domain.engine.UpscalingMode
 import com.panda.myapplication.domain.engine.WattageCockpitInfo
 import com.panda.myapplication.domain.model.ActiveBuild
+import com.panda.myapplication.domain.model.LengthUnit
 import com.panda.myapplication.domain.model.CaseSpec
 import com.panda.myapplication.domain.model.CoolerSpec
 import com.panda.myapplication.domain.model.CpuSpec
@@ -193,6 +201,7 @@ fun WizardRoute(
         onSlotClicked = viewModel::onSlotClicked,
         onRemoveSlot = viewModel::onRemoveSlot,
         onClearBuild = viewModel::onClearBuild,
+        onGenerateSmartBuild = viewModel::onGenerateSmartBuild,
         onResolutionChanged = viewModel::onResolutionChanged,
         onPresetChanged = viewModel::onPresetChanged,
         onUpscalingChanged = viewModel::onUpscalingChanged,
@@ -217,6 +226,7 @@ fun WizardContent(
     onSlotClicked: (HardwareCategory) -> Unit,
     onRemoveSlot: (HardwareCategory) -> Unit,
     onClearBuild: () -> Unit,
+    onGenerateSmartBuild: (SmartBuildUseCase, SmartBuildTier, CpuPlatformPreference) -> Unit = { _, _, _ -> },
     onResolutionChanged: (ResolutionOption) -> Unit,
     onPresetChanged: (QualityPreset) -> Unit,
     onUpscalingChanged: (UpscalingMode) -> Unit,
@@ -255,6 +265,15 @@ fun WizardContent(
                 )
             }
 
+            // Smart Build Generator Card (1-Tap Compatible Rig Builder from Live Catalog)
+            item(key = "smart_build_generator") {
+                SmartBuildGeneratorCard(
+                    isGenerating = uiState.isGeneratingSmartBuild,
+                    hasExistingParts = uiState.activeBuild.totalCount > 0,
+                    onGenerate = onGenerateSmartBuild,
+                )
+            }
+
             // Module 2: Live Animated Cockpit HUD Header
             item {
                 LiveCockpitSection(
@@ -268,6 +287,8 @@ fun WizardContent(
             item {
                 BuildDoctorSection(
                     report = uiState.buildDoctor,
+                    compatibilityReport = uiState.compatibilityReport,
+                    onRecommendationClick = onSlotClicked,
                 )
             }
 
@@ -575,7 +596,7 @@ private fun LiveCockpitSection(
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
-                            text = "• ${tr(isTr, "Tepe", "Peak")}: ${cockpitInfo.peakTdpWithTolerance}W (+20%)",
+                            text = "• ${tr(isTr, "Tepe", "Peak")}: ${cockpitInfo.peakTdpWithTolerance}W (+25%)",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(bottom = 4.dp),
@@ -769,11 +790,12 @@ private fun ClearanceRadarSection(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             } else {
+                val unspecLabel = tr(isTr, "Belirtilmedi", "Unspecified")
                 // GPU Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Ekran Kartı Uzunluğu", "GPU Length"),
-                    currentValue = radar.gpuLengthMm?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "GPU Yok", "No GPU"),
-                    maxValue = "${formatLengthMm(radar.maxGpuLengthMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.gpuLengthMm?.takeIf { it > 0 }?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "GPU Yok", "No GPU"),
+                    maxValue = radar.maxGpuLengthMm?.takeIf { it > 0 }?.let { "${formatLengthMm(it, lengthUnit)} ${tr(isTr, "Destek", "Max")}" } ?: unspecLabel,
                     marginMm = radar.gpuClearanceMm,
                 )
 
@@ -782,8 +804,11 @@ private fun ClearanceRadarSection(
                 // Cooler Height Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Hava Soğutucu Yüksekliği", "Air Cooler Height"),
-                    currentValue = radar.coolerHeightMm?.let { "~${formatLengthMm(it, lengthUnit)}" } ?: tr(isTr, "Hava Soğutma Yok", "No Air Cooler"),
-                    maxValue = "${formatLengthMm(radar.maxCoolerHeightMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.coolerHeightMm?.takeIf { it > 0 }?.let {
+                        if (radar.isCoolerHeightEstimated) "~${formatLengthMm(it, lengthUnit)} (${tr(isTr, "Tahmini", "Est.")})"
+                        else formatLengthMm(it, lengthUnit)
+                    } ?: tr(isTr, "Hava Soğutma Yok", "No Air Cooler"),
+                    maxValue = radar.maxCoolerHeightMm?.takeIf { it > 0 }?.let { "${formatLengthMm(it, lengthUnit)} ${tr(isTr, "Destek", "Max")}" } ?: unspecLabel,
                     marginMm = radar.coolerClearanceMm,
                 )
 
@@ -792,8 +817,8 @@ private fun ClearanceRadarSection(
                 // Radiator Clearance
                 ClearanceMetricRow(
                     label = tr(isTr, "Sıvı Soğutma Radyatörü", "Liquid Cooler Radiator"),
-                    currentValue = radar.coolerRadiatorMm?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "Sıvı Soğutma Yok", "No AIO Cooler"),
-                    maxValue = "${formatLengthMm(radar.maxRadiatorMm ?: 0, lengthUnit)} ${tr(isTr, "Destek", "Max")}",
+                    currentValue = radar.coolerRadiatorMm?.takeIf { it > 0 }?.let { formatLengthMm(it, lengthUnit) } ?: tr(isTr, "Sıvı Soğutma Yok", "No AIO Cooler"),
+                    maxValue = radar.maxRadiatorMm?.takeIf { it > 0 }?.let { "${formatLengthMm(it, lengthUnit)} ${tr(isTr, "Destek", "Max")}" } ?: unspecLabel,
                     marginMm = radar.radiatorClearanceMm,
                 )
 
@@ -984,6 +1009,8 @@ private fun ClearanceMetricRow(
 @Composable
 private fun BuildDoctorSection(
     report: BuildDoctorReport,
+    compatibilityReport: com.panda.myapplication.domain.model.BuildCompatibilityReport? = null,
+    onRecommendationClick: (HardwareCategory) -> Unit = {},
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
@@ -1158,6 +1185,48 @@ private fun BuildDoctorSection(
                 }
             }
 
+            // Compatibility Warnings Banner (Motherboard/Case FF, Cooler Socket, RAM Slots, ATX 3.0 12V-2x6)
+            val allCompatWarnings = compatibilityReport?.warnings.orEmpty()
+            if (allCompatWarnings.isNotEmpty()) {
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = NeonRose.copy(alpha = 0.12f),
+                    border = BorderStroke(1.dp, NeonRose.copy(alpha = 0.65f)),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Column(
+                        modifier = Modifier.padding(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.ErrorOutline,
+                                contentDescription = null,
+                                tint = NeonRose,
+                                modifier = Modifier.size(15.dp),
+                            )
+                            Text(
+                                text = tr(isTr, "FİZİKSEL & DONANIMSAL UYUMLULUK UYARILARI", "PHYSICAL & HARDWARE COMPATIBILITY ALERTS"),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Black,
+                                color = NeonRose,
+                            )
+                        }
+                        allCompatWarnings.forEach { warn ->
+                            Text(
+                                text = "• $warn",
+                                style = MaterialTheme.typography.bodySmall,
+                                fontSize = 11.sp,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                        }
+                    }
+                }
+            }
+
             // Doctor diagnosis box
             Surface(
                 shape = RoundedCornerShape(8.dp),
@@ -1210,7 +1279,10 @@ private fun BuildDoctorSection(
                 if (isExpanded) {
                     Column(verticalArrangement = Arrangement.spacedBy(Spacing.small)) {
                         report.upgradeRecommendations.forEach { rec ->
-                            UpgradeRecommendationCard(rec = rec)
+                            UpgradeRecommendationCard(
+                                rec = rec,
+                                onClick = { onRecommendationClick(rec.targetCategory) },
+                            )
                         }
                     }
                 }
@@ -1222,11 +1294,13 @@ private fun BuildDoctorSection(
 @Composable
 private fun UpgradeRecommendationCard(
     rec: UpgradeRecommendation,
+    onClick: () -> Unit = {},
 ) {
     val strings = LocalAppStrings.current
     val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
 
     Surface(
+        onClick = onClick,
         shape = RoundedCornerShape(10.dp),
         color = MaterialTheme.colorScheme.surfaceVariant,
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
@@ -1313,12 +1387,27 @@ private fun UpgradeRecommendationCard(
 
             if (rec.suggestedModels.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "${if (isTr) "Tavsiye" else "Recommendation"}: ${rec.suggestedModels.joinToString(", ")}",
-                    style = MaterialTheme.typography.labelSmall,
-                    fontSize = 10.sp,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = "${if (isTr) "Tavsiye" else "Recommendation"}: ${rec.suggestedModels.joinToString(", ")}",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontSize = 10.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
+                        modifier = Modifier.weight(1f),
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = tr(isTr, "Slota Git →", "Pick Compatible →"),
+                        style = MaterialTheme.typography.labelSmall,
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = NeonCyan,
+                    )
+                }
             }
         }
     }
@@ -1869,7 +1958,7 @@ private fun ComponentSlotCard(
             modifier = modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-            border = BorderStroke(1.dp, if (item.isCustomPrice) NeonAmber.copy(alpha = 0.6f) else NeonCyan.copy(alpha = 0.4f)),
+            border = BorderStroke(1.dp, if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) NeonAmber.copy(alpha = 0.6f) else NeonCyan.copy(alpha = 0.4f)),
         ) {
             Column(modifier = Modifier.padding(Spacing.medium)) {
                 Row(
@@ -1878,7 +1967,7 @@ private fun ComponentSlotCard(
                 ) {
                     // Sol Blok (Görsel): 72x72dp
                     HardwareThumbnail(
-                        imageUrl = item.imageUrl,
+                        imageUrl = item.effectiveImageUrl,
                         displayName = item.displayName,
                         category = category,
                     )
@@ -1903,7 +1992,7 @@ private fun ComponentSlotCard(
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
-                            if (item.isCustomPrice) {
+                            if (FeatureFlags.IS_PRICING_ENABLED && item.isCustomPrice) {
                                 Row(
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.spacedBy(3.dp),
@@ -1933,7 +2022,8 @@ private fun ComponentSlotCard(
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.clickable { onDetailClick() },
                         )
-                        val specSummary = formatSlotSpecSummary(item, isTr)
+                        val lengthUnit = LocalAppSettings.current.lengthUnit
+                        val specSummary = formatSlotSpecSummary(item, isTr, lengthUnit)
                         if (specSummary.isNotBlank()) {
                             Text(
                                 text = specSummary,
@@ -2048,25 +2138,239 @@ private fun ComponentSlotCard(
     }
 }
 
-private fun formatSlotSpecSummary(item: HardwareItem, isTr: Boolean = true): String = when (val s = item.spec) {
+@Composable
+private fun SmartBuildGeneratorCard(
+    isGenerating: Boolean,
+    hasExistingParts: Boolean,
+    onGenerate: (SmartBuildUseCase, SmartBuildTier, CpuPlatformPreference) -> Unit,
+) {
+    val strings = LocalAppStrings.current
+    val isTr = strings.isTurkish
+    var expanded by remember { mutableStateOf(!hasExistingParts) }
+    var selectedUseCase by remember { mutableStateOf(SmartBuildUseCase.GAMING_1440P) }
+    var selectedTier by remember { mutableStateOf(SmartBuildTier.SWEET_SPOT) }
+    var selectedPlatform by remember { mutableStateOf(CpuPlatformPreference.AUTO) }
+
+    FluidOrganicCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = Spacing.medium),
+        accentColor = NeonCyan,
+        secondaryColor = NeonEmerald,
+        contentPadding = Spacing.medium,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { expanded = !expanded },
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    modifier = Modifier.weight(1f),
+                ) {
+                    ModernSoftIcon(
+                        icon = Icons.Rounded.AutoAwesome,
+                        accentColor = NeonCyan,
+                        size = 38.dp,
+                        iconSize = 20.dp,
+                        shape = RoundedCornerShape(10.dp),
+                    )
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = if (isTr) "AKILLI SİSTEM ÖNERİCİ" else "SMART BUILD GENERATOR",
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.Black,
+                            color = NeonCyan,
+                            letterSpacing = 0.7.sp,
+                        )
+                        Text(
+                            text = if (isTr) {
+                                "Hedefinize göre katalogdan %100 soket, kasa ve güç uyumlu 8 ana parçayı otomatik dizin"
+                            } else {
+                                "Auto-assemble 8 physically & electrically compatible core parts from the live catalog"
+                            },
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+                Icon(
+                    imageVector = if (expanded) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+
+            AnimatedVisibility(visible = expanded) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
+
+                    Text(
+                        text = if (isTr) "1. Kullanım Amacı" else "1. Primary Use Case",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        SmartBuildUseCase.entries.forEach { uc ->
+                            val isSelected = selectedUseCase == uc
+                            Surface(
+                                onClick = { selectedUseCase = uc },
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isSelected) NeonCyan.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                                border = BorderStroke(1.dp, if (isSelected) NeonCyan else MaterialTheme.colorScheme.outlineVariant),
+                            ) {
+                                Text(
+                                    text = uc.title(isTr),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = if (isSelected) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                                )
+                            }
+                        }
+                    }
+
+                    Text(
+                        text = if (isTr) "2. Performans Seviyesi" else "2. Performance Tier",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        SmartBuildTier.entries.forEach { t ->
+                            val isSelected = selectedTier == t
+                            Surface(
+                                onClick = { selectedTier = t },
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isSelected) NeonEmerald.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                                border = BorderStroke(1.dp, if (isSelected) NeonEmerald else MaterialTheme.colorScheme.outlineVariant),
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Text(
+                                    text = t.title(isTr),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = if (isSelected) NeonEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 6.dp),
+                                )
+                            }
+                        }
+                    }
+
+                    Text(
+                        text = if (isTr) "3. İşlemci Platformu" else "3. CPU Platform",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        CpuPlatformPreference.entries.forEach { plat ->
+                            val isSelected = selectedPlatform == plat
+                            Surface(
+                                onClick = { selectedPlatform = plat },
+                                shape = RoundedCornerShape(8.dp),
+                                color = if (isSelected) ElectricBlue.copy(alpha = 0.18f) else MaterialTheme.colorScheme.surfaceVariant,
+                                border = BorderStroke(1.dp, if (isSelected) ElectricBlue else MaterialTheme.colorScheme.outlineVariant),
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Text(
+                                    text = plat.title(isTr),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = if (isSelected) ElectricBlue else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
+                                )
+                            }
+                        }
+                    }
+
+                    Button(
+                        onClick = { onGenerate(selectedUseCase, selectedTier, selectedPlatform) },
+                        enabled = !isGenerating,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = NeonCyan,
+                            contentColor = androidx.compose.ui.graphics.Color.Black,
+                        ),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        if (isGenerating) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(16.dp),
+                                strokeWidth = 2.dp,
+                                color = androidx.compose.ui.graphics.Color.Black,
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                        } else {
+                            Icon(
+                                imageVector = Icons.Rounded.AutoAwesome,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                        }
+                        Text(
+                            text = if (isTr) "Uyumlu Sistemi Otomatik Oluştur" else "Auto-Build Compatible Rig",
+                            fontWeight = FontWeight.Bold,
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+private fun formatSlotSpecSummary(
+    item: HardwareItem,
+    isTr: Boolean = true,
+    lengthUnit: LengthUnit = LengthUnit.METRIC,
+): String = when (val s = item.spec) {
     is com.panda.myapplication.domain.model.PhoneSpec -> "${s.displaySizeInch}\" ${s.displayTech} • ${s.chipset} • ${s.storageGb}GB • ${s.mainCameraMp}MP"
-    is com.panda.myapplication.domain.model.TabletSpec -> "${s.displaySizeInch}\" • ${s.chipset} • ${s.storageGb}GB • ${s.batteryMah}mAh" 
+    is com.panda.myapplication.domain.model.TabletSpec -> "${s.displaySizeInch}\" • ${s.chipset} • ${s.storageGb}GB • ${s.batteryMah}mAh"
     is CpuSpec -> "${s.socket} • ${s.coreCount} ${if (isTr) "Çekirdek" else "Cores"} • ${s.tdp.watts}W"
     is MotherboardSpec -> "${s.socket} • ${s.chipset} • ${s.memoryGeneration.name} • ${s.formFactor.name}"
     is RamSpec -> "${s.generation.name} • ${s.speed.mhz}MT/s • ${s.capacity.megabytes / 1024}GB"
-    is GpuSpec -> listOfNotNull(s.chipset, "${s.vram.megabytes / 1024}GB", s.lengthMm?.let { "${it}mm" }).joinToString(" • ")
+    is GpuSpec -> listOfNotNull(s.chipset, "${s.vram.megabytes / 1024}GB", s.lengthMm?.let { formatLengthMm(it, lengthUnit) }).joinToString(" • ")
     is StorageSpec -> "${s.mediaType.name} • ${s.capacity.megabytes / 1024}GB • ${s.sequentialReadMbps}MB/s"
-    is CoolerSpec -> "${s.type.name} • ${s.radiatorSizeMm?.let { "${it}mm" } ?: "Hava"}"
+    is CoolerSpec -> "${s.type.name} • ${s.radiatorSizeMm?.let { formatLengthMm(it, lengthUnit) } ?: (if (isTr) "Hava" else "Air")}"
     is CaseSpec -> listOfNotNull(
-        s.type ?: "ATX Kasa",
-        s.maxGpuLengthMm?.let { "GPU: max ${it}mm" },
-        s.maxRadiatorSizeMm?.let { "Rad: ${it}mm" },
+        s.type ?: (if (isTr) "ATX Kasa" else "ATX Case"),
+        s.maxGpuLengthMm?.let { "GPU: max ${formatLengthMm(it, lengthUnit)}" },
+        s.maxRadiatorSizeMm?.let { "Rad: ${formatLengthMm(it, lengthUnit)}" },
     ).joinToString(" • ")
     is PsuSpec -> "${s.wattage.watts}W • ${s.efficiency.name}"
     is LaptopSpec -> "${s.gpuModel} (${s.gpuWattTgp}) • ${s.displaySpec}"
     is MouseSpec -> "${s.sensor} • ${s.pollingRateHz}Hz • ${s.weightG}g"
     is KeyboardSpec -> "${s.switchType} • ${s.minActuationMm}mm • ${s.layout}"
-    is HeadsetSpec -> "${s.driverType} (${s.driverSizeMm}mm) • ${s.impedanceOhm}Ω"
+    is HeadsetSpec -> "${s.driverType} (${formatLengthMm(s.driverSizeMm, lengthUnit)}) • ${s.impedanceOhm}Ω"
     is MonitorSpec -> "${s.screenSizeInch}\" ${s.panelType} • ${s.resolution} • ${s.refreshRateHz}Hz"
     is MicrophoneSpec -> "${s.capsuleType} • ${s.polarPattern} • ${s.connectivity}"
     is MousepadSpec -> "${s.surfaceType} • ${s.speedGlideTier} • ${s.dimensionsMm}"
@@ -2248,7 +2552,7 @@ private fun PickerItemCard(
         ) {
             // Sol Blok (Görsel): 72x72dp
             HardwareThumbnail(
-                imageUrl = item.imageUrl,
+                imageUrl = item.effectiveImageUrl,
                 displayName = item.displayName,
                 category = item.category,
             )
@@ -2341,7 +2645,7 @@ private fun SystemCardShareDialog(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(20.dp)),
-            color = MaterialTheme.colorScheme.onPrimary,
+            color = MaterialTheme.colorScheme.surface,
             border = BorderStroke(2.dp, NeonCyan),
         ) {
             Column(modifier = Modifier.padding(Spacing.large)) {
@@ -2397,7 +2701,7 @@ private fun SystemCardShareDialog(
                 HorizontalDivider(color = NeonCyan.copy(alpha = 0.4f), thickness = 1.dp)
                 Spacer(modifier = Modifier.height(Spacing.medium))
 
-                // Parts Summary List
+                // Parts Summary List (Core + Selected Peripherals)
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     SharePartRow(HardwareCategory.CPU.localized(strings), build.cpu?.displayName)
                     SharePartRow(HardwareCategory.MOTHERBOARD.localized(strings), build.motherboard?.displayName)
@@ -2407,6 +2711,14 @@ private fun SystemCardShareDialog(
                     SharePartRow(HardwareCategory.COOLER.localized(strings), build.cooler?.displayName)
                     SharePartRow(HardwareCategory.CASE.localized(strings), build.case?.displayName)
                     SharePartRow(HardwareCategory.PSU.localized(strings), build.psu?.displayName)
+                    build.monitor?.let { SharePartRow(HardwareCategory.MONITOR.localized(strings), it.displayName) }
+                    build.mouse?.let { SharePartRow(HardwareCategory.MOUSE.localized(strings), it.displayName) }
+                    build.keyboard?.let { SharePartRow(HardwareCategory.KEYBOARD.localized(strings), it.displayName) }
+                    build.headset?.let { SharePartRow(HardwareCategory.HEADSET.localized(strings), it.displayName) }
+                    build.microphone?.let { SharePartRow(HardwareCategory.MICROPHONE.localized(strings), it.displayName) }
+                    build.mousepad?.let { SharePartRow(HardwareCategory.MOUSEPAD.localized(strings), it.displayName) }
+                    build.webcam?.let { SharePartRow(HardwareCategory.WEBCAM.localized(strings), it.displayName) }
+                    build.gamingChair?.let { SharePartRow(HardwareCategory.GAMING_CHAIR.localized(strings), it.displayName) }
                 }
 
                 Spacer(modifier = Modifier.height(Spacing.medium))

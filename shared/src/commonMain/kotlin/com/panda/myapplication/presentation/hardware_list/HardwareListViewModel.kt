@@ -413,12 +413,17 @@ class HardwareListViewModel(
                     items.sortedByDescending { com.panda.myapplication.domain.engine.HardwareSearchEngine.calculateScore(it, query) }
                 } else if (items.any { it.category.isMobile }) {
                     items.sortedWith(
-                        compareByDescending<HardwareItem> { (it.spec as? PhoneSpec)?.antutuScore ?: (it.spec as? TabletSpec)?.antutuScore ?: 0 }
-                            .thenByDescending { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: 0.0 }
+                        compareByDescending<HardwareItem> { (it.spec as? PhoneSpec)?.antutuScore ?: (it.spec as? TabletSpec)?.antutuScore ?: it.benchmarkScore ?: 0 }
+                            .thenBy { it.displayName.lowercase() }
+                    )
+                } else if (com.panda.myapplication.domain.config.FeatureFlags.IS_PRICING_ENABLED) {
+                    items.sortedWith(
+                        compareBy<HardwareItem> { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: Double.MAX_VALUE }
+                            .thenBy { it.displayName.lowercase() },
                     )
                 } else {
                     items.sortedWith(
-                        compareBy<HardwareItem> { SecurityUtils.sanitizeTryPrice(it.currentPriceTry) ?: Double.MAX_VALUE }
+                        compareByDescending<HardwareItem> { com.panda.myapplication.domain.engine.VsArenaEngine.computeCompositePerformanceScore(it) }
                             .thenBy { it.displayName.lowercase() },
                     )
                 }
@@ -443,12 +448,21 @@ class HardwareListViewModel(
             }
 
             // CPU
+            HardwareSortOption.CPU_GAMING_PERF_DESC -> items.sortedByDescending {
+                it.benchmarkInfo?.gamingIndex ?: it.benchmarkScore ?: 0
+            }
+            HardwareSortOption.CPU_RENDER_PERF_DESC -> items.sortedByDescending {
+                it.benchmarkInfo?.effectiveMultiCore ?: it.benchmarkScore ?: 0
+            }
             HardwareSortOption.CPU_CORES_DESC -> items.sortedByDescending { (it.spec as? CpuSpec)?.coreCount ?: 0 }
             HardwareSortOption.CPU_CLOCK_DESC -> items.sortedByDescending { (it.spec as? CpuSpec)?.boostClock?.mhz ?: (it.spec as? CpuSpec)?.baseClock?.mhz ?: 0 }
             HardwareSortOption.CPU_TDP_ASC -> items.sortedBy { (it.spec as? CpuSpec)?.tdp?.watts ?: Int.MAX_VALUE }
             HardwareSortOption.CPU_TDP_DESC -> items.sortedByDescending { (it.spec as? CpuSpec)?.tdp?.watts ?: 0 }
 
             // GPU
+            HardwareSortOption.GPU_PERF_DESC -> items.sortedByDescending {
+                it.benchmarkInfo?.gamingIndex ?: it.benchmarkScore ?: 0
+            }
             HardwareSortOption.GPU_VRAM_DESC -> items.sortedByDescending { (it.spec as? GpuSpec)?.vram?.megabytes ?: 0 }
             HardwareSortOption.GPU_TDP_ASC -> items.sortedBy { (it.spec as? GpuSpec)?.tdp?.watts ?: Int.MAX_VALUE }
             HardwareSortOption.GPU_TDP_DESC -> items.sortedByDescending { (it.spec as? GpuSpec)?.tdp?.watts ?: 0 }

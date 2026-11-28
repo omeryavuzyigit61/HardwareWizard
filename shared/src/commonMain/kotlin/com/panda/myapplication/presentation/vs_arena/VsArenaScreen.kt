@@ -914,13 +914,13 @@ private fun VsArenaHeader(
 
                 items(
 
-                    items = listOf(HardwareCategory.SMARTPHONE, HardwareCategory.TABLET),
+                    items = VsArenaUiState.MOBILE_CATEGORIES,
 
                     key = { it.name },
 
                 ) { cat ->
 
-                    val selected = cat == componentCategory
+                    val selected = cat == componentCategory || (!componentCategory.isMobile && cat == HardwareCategory.SMARTPHONE)
 
                     val accent = cat.accentColor()
 
@@ -1349,11 +1349,12 @@ private fun VsFighterCornerCard(
 
                 ) {
 
-                    if (!item.imageUrl.isNullOrBlank()) {
+                    val effectiveUrl = item.effectiveImageUrl
+                    if (!effectiveUrl.isNullOrBlank()) {
 
                         AsyncImage(
 
-                            model = item.imageUrl,
+                            model = effectiveUrl,
 
                             contentDescription = item.displayName,
 
@@ -2863,6 +2864,7 @@ private fun VsProductPickerSheetContent(
 
                         // Sol Blok (Görsel): 72x72dp
 
+                        val pickerImageUrl = item.effectiveImageUrl
                         Box(
 
                             modifier = Modifier
@@ -2873,7 +2875,7 @@ private fun VsProductPickerSheetContent(
 
                                 .background(
 
-                                    if (!item.imageUrl.isNullOrBlank()) Color.White else MaterialTheme.colorScheme.surfaceVariant,
+                                    if (!pickerImageUrl.isNullOrBlank()) Color.White else MaterialTheme.colorScheme.surfaceVariant,
 
                                 ),
 
@@ -2881,11 +2883,11 @@ private fun VsProductPickerSheetContent(
 
                         ) {
 
-                            if (!item.imageUrl.isNullOrBlank()) {
+                            if (!pickerImageUrl.isNullOrBlank()) {
 
                                 AsyncImage(
 
-                                    model = item.imageUrl,
+                                    model = pickerImageUrl,
 
                                     contentDescription = item.displayName,
 
@@ -3059,7 +3061,11 @@ private fun localizeChampionSummary(s: VsChampionSummary): VsChampionSummary {
 
         "SAF PERFORMANS KAZANANI" -> "RAW PERFORMANCE WINNER"
 
-        "FİYAT / PERFORMANS ŞAMPİYONU" -> "PRICE / PERFORMANCE CHAMPION"
+        "OYUN PERFORMANSI ŞAMPİYONU" -> "GAMING PERFORMANCE CHAMPION"
+
+        "ÜRETKENLİK & RENDER ŞAMPİYONU" -> "PRODUCTIVITY & RENDER CHAMPION"
+
+        "FİYAT / PERFORMANS ŞAMPİYONU", "FİYAT / PERFORMANS (F/P) ŞAMPİYONU" -> "PRICE / PERFORMANCE CHAMPION"
 
         "MODERN MİMARİ & VERİMLİLİK LİDERİ" -> "MODERN ARCHITECTURE & EFFICIENCY LEADER"
 

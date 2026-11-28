@@ -443,22 +443,24 @@ fun App() {
                             )
                         }
 
-                        composable(route = Destinations.SECOND_HAND_VALUATOR) {
-                            SecondHandValuationScreen(
-                                activeBuildRepository = activeBuildRepository,
-                                communityPriceRepository = koinInject(),
-                                onNavigateBack = { navController.popBackStack() },
-                                onNavigateToWizard = {
-                                    navController.navigate(Destinations.WIZARD) {
-                                        popUpTo(navController.graph.findStartDestination().id) {
-                                            saveState = true
+                        if (FeatureFlags.IS_PRICING_ENABLED) {
+                            composable(route = Destinations.SECOND_HAND_VALUATOR) {
+                                SecondHandValuationScreen(
+                                    activeBuildRepository = activeBuildRepository,
+                                    communityPriceRepository = koinInject(),
+                                    onNavigateBack = { navController.popBackStack() },
+                                    onNavigateToWizard = {
+                                        navController.navigate(Destinations.WIZARD) {
+                                            popUpTo(navController.graph.findStartDestination().id) {
+                                                saveState = true
+                                            }
+                                            launchSingleTop = true
+                                            restoreState = true
                                         }
-                                        launchSingleTop = true
-                                        restoreState = true
-                                    }
-                                },
-                                onOpenDrawer = openDrawer,
-                            )
+                                    },
+                                    onOpenDrawer = openDrawer,
+                                )
+                            }
                         }
 
                         composable(route = Destinations.WORKSTATION_LAB) {
@@ -515,6 +517,7 @@ private fun HardwareEngineeringDrawerContent(
     onLogout: () -> Unit,
 ) {
     val strings = LocalAppStrings.current
+    val isTr = strings.isTurkish
     val engineeringTools = remember(strings) {
         listOfNotNull(
             EngineeringToolDrawerItem(
@@ -522,7 +525,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.AcUnit,
                 title = strings.drawerCoolingTitle,
                 subtitle = strings.drawerCoolingSubtitle,
-                badge = "THERMAL LAB",
+                badge = if (isTr) "TERMAL LAB" else "THERMAL LAB",
                 accentColor = ElectricBlue,
             ),
             EngineeringToolDrawerItem(
@@ -530,7 +533,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.Memory,
                 title = strings.drawerRamTitle,
                 subtitle = strings.drawerRamSubtitle,
-                badge = "MEMORY LAB",
+                badge = if (isTr) "BELLEK LAB" else "MEMORY LAB",
                 accentColor = NeonEmerald,
             ),
             EngineeringToolDrawerItem(
@@ -538,7 +541,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.BatteryChargingFull,
                 title = strings.drawerUpsTitle,
                 subtitle = strings.drawerUpsSubtitle,
-                badge = "POWER LAB",
+                badge = if (isTr) "GÜÇ LAB" else "POWER LAB",
                 accentColor = NeonAmber,
             ),
             EngineeringToolDrawerItem(
@@ -546,7 +549,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.SportsEsports,
                 title = strings.drawerDeskTitle,
                 subtitle = strings.drawerDeskSubtitle,
-                badge = "ESPORTS LAB",
+                badge = if (isTr) "E-SPOR LAB" else "ESPORTS LAB",
                 accentColor = ElectricBlue,
             ),
             EngineeringToolDrawerItem(
@@ -554,7 +557,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.Mic,
                 title = strings.drawerStudioLabTitle,
                 subtitle = strings.drawerStudioLabSubtitle,
-                badge = "STUDIO & ERGONOMICS",
+                badge = if (isTr) "STÜDYO & ERGONOMİ" else "STUDIO & ERGONOMICS",
                 accentColor = NeonAmber,
             ),
             EngineeringToolDrawerItem(
@@ -562,7 +565,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.PrecisionManufacturing,
                 title = strings.drawerWorkstationTitle,
                 subtitle = strings.drawerWorkstationSubtitle,
-                badge = "PRO WORKLOAD",
+                badge = if (isTr) "İŞ İSTASYONU" else "PRO WORKLOAD",
                 accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
@@ -570,7 +573,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.AutoMirrored.Rounded.MenuBook,
                 title = strings.drawerGlossaryTitle,
                 subtitle = strings.drawerGlossarySubtitle,
-                badge = "KNOWLEDGE",
+                badge = if (isTr) "TERİMLER" else "KNOWLEDGE",
                 accentColor = NeonEmerald,
             ),
             EngineeringToolDrawerItem(
@@ -578,7 +581,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.PhotoCamera,
                 title = strings.drawerBattlestationTitle,
                 subtitle = strings.drawerBattlestationSubtitle,
-                badge = "SHOWCASE",
+                badge = if (isTr) "SİSTEM VİTRİNİ" else "SHOWCASE",
                 accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
@@ -586,7 +589,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.Bolt,
                 title = strings.drawerTuningVaultTitle,
                 subtitle = strings.drawerTuningVaultSubtitle,
-                badge = "OC / UV VAULT",
+                badge = if (isTr) "SİLİKON KASASI" else "OC / UV VAULT",
                 accentColor = NeonCyan,
             ),
             EngineeringToolDrawerItem(
@@ -594,7 +597,7 @@ private fun HardwareEngineeringDrawerContent(
                 icon = Icons.Rounded.Tune,
                 title = strings.drawerUndervoltTitle,
                 subtitle = strings.drawerUndervoltSubtitle,
-                badge = "TUNING LAB",
+                badge = if (isTr) "OC / UV REHBERİ" else "TUNING LAB",
                 accentColor = NeonCyan,
             ),
             if (FeatureFlags.IS_PRICING_ENABLED) {
@@ -603,7 +606,7 @@ private fun HardwareEngineeringDrawerContent(
                     icon = Icons.Rounded.Autorenew,
                     title = strings.drawerValuationTitle,
                     subtitle = strings.drawerValuationSubtitle,
-                    badge = "2ND HAND VALUATION",
+                    badge = if (isTr) "2. EL DEĞERLEME" else "2ND HAND VALUATION",
                     accentColor = NeonEmerald,
                 )
             } else {

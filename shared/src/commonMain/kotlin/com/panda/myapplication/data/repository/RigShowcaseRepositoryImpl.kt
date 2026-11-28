@@ -6,6 +6,7 @@ import com.panda.myapplication.domain.common.DomainError
 import com.panda.myapplication.domain.common.DomainResult
 import com.panda.myapplication.domain.model.RigShowcase
 import com.panda.myapplication.domain.repository.RigShowcaseRepository
+import com.panda.myapplication.domain.repository.UserRepository
 import com.panda.myapplication.domain.util.ProfanityFilter
 import io.ktor.client.HttpClient
 import io.ktor.client.request.delete
@@ -46,6 +47,7 @@ internal class RigShowcaseRepositoryImpl(
     private val httpClient: HttpClient,
     private val json: Json,
     private val ioDispatcher: CoroutineDispatcher,
+    private val userRepository: UserRepository? = null,
 ) : RigShowcaseRepository {
 
     private val _showcases = MutableStateFlow<List<RigShowcase>>(emptyList())
@@ -55,12 +57,37 @@ internal class RigShowcaseRepositoryImpl(
 
     init {
         repoScope.launch {
+            userRepository?.currentUser?.collect { user ->
+                val uid = user?.id
+                if (uid.isNullOrBlank() || uid.startsWith("guest")) {
+                    _userLikes.value = emptySet()
+                    _showcases.update { list -> list.map { it.copy(isLikedByMe = false) } }
+                } else {
+                    syncUserLikes(uid)
+                }
+            }
+        }
+        repoScope.launch {
             fetchRemoteShowcases()
             while (true) {
                 delay(15_000.milliseconds)
                 if (_showcases.subscriptionCount.value > 0) {
                     fetchRemoteShowcases()
                 }
+            }
+        }
+    }
+
+    private suspend fun syncUserLikes(userId: String) {
+        runCatching {
+            val url = "${SupabaseConfig.restApiUrl}/${SupabaseConfig.TABLE_SHOWCASE_LIKES}?user_id=eq.$userId&select=showcase_id"
+            val response = httpClient.get(url) { applySupabaseHeaders() }
+            if (response.status == HttpStatusCode.OK) {
+                val likedIds = json.parseToJsonElement(response.bodyAsText()).jsonArray.mapNotNull { elem ->
+                    elem.jsonObject["showcase_id"]?.jsonPrimitive?.contentOrNull
+                }.toSet()
+                _userLikes.value = likedIds
+                _showcases.update { list -> list.map { it.copy(isLikedByMe = likedIds.contains(it.id)) } }
             }
         }
     }

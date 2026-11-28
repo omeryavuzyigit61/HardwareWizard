@@ -83,20 +83,6 @@ val dataModule = module {
             ioDispatcher = get(),
         )
     }
-    single<com.panda.myapplication.domain.repository.TuningVaultRepository> {
-        com.panda.myapplication.data.repository.TuningVaultRepositoryImpl(
-            httpClient = get(),
-            json = get(),
-            ioDispatcher = get(),
-        )
-    }
-    single<com.panda.myapplication.domain.repository.RigShowcaseRepository> {
-        com.panda.myapplication.data.repository.RigShowcaseRepositoryImpl(
-            httpClient = get(),
-            json = get(),
-            ioDispatcher = get(),
-        )
-    }
     single<com.panda.myapplication.domain.repository.UserRepository> {
         com.panda.myapplication.data.repository.UserRepositoryImpl(
             httpClient = get(),
@@ -104,6 +90,22 @@ val dataModule = module {
             hardwareDao = get(),
             secureStorage = getOrNull(),
             ioDispatcher = get(),
+        )
+    }
+    single<com.panda.myapplication.domain.repository.TuningVaultRepository> {
+        com.panda.myapplication.data.repository.TuningVaultRepositoryImpl(
+            httpClient = get(),
+            json = get(),
+            ioDispatcher = get(),
+            userRepository = get(),
+        )
+    }
+    single<com.panda.myapplication.domain.repository.RigShowcaseRepository> {
+        com.panda.myapplication.data.repository.RigShowcaseRepositoryImpl(
+            httpClient = get(),
+            json = get(),
+            ioDispatcher = get(),
+            userRepository = get(),
         )
     }
     single<com.panda.myapplication.domain.repository.SettingsRepository> {

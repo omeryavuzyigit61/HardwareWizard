@@ -14,6 +14,7 @@ data class MyDeviceDiagnostic(
     val isCharging: Boolean,
     val catalogPercentile: Int = 92,
     val matchedCatalogName: String? = null,
+    val isAvailableRamMeasured: Boolean = true,
 )
 
 expect fun getMyDeviceDiagnostic(): MyDeviceDiagnostic

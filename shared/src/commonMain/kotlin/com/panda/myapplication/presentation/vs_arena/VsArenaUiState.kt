@@ -28,7 +28,11 @@ data class VsArenaUiState(
         get() = when (mode) {
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
-            VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
+            VsArenaMode.MOBILE_VS_MOBILE -> when (componentCategory) {
+                HardwareCategory.TABLET -> HardwareCategory.TABLET
+                HardwareCategory.SMARTWATCH -> HardwareCategory.SMARTWATCH
+                else -> HardwareCategory.SMARTPHONE
+            }
         }
 
     companion object {
@@ -41,6 +45,8 @@ data class VsArenaUiState(
             HardwareCategory.PSU,
             HardwareCategory.COOLER,
             HardwareCategory.CASE,
+            HardwareCategory.CASE_FAN,
+            HardwareCategory.UPS,
             HardwareCategory.MONITOR,
             HardwareCategory.MOUSE,
             HardwareCategory.KEYBOARD,
@@ -49,8 +55,18 @@ data class VsArenaUiState(
             HardwareCategory.MOUSEPAD,
             HardwareCategory.WEBCAM,
             HardwareCategory.GAMING_CHAIR,
+            HardwareCategory.GAMING_DESK,
+            HardwareCategory.GAMING_LIGHTING,
+            HardwareCategory.ROUTER,
+            HardwareCategory.MODEM,
+            HardwareCategory.ACCESS_POINT,
+            HardwareCategory.RANGE_EXTENDER,
+        )
+
+        val MOBILE_CATEGORIES = listOf(
             HardwareCategory.SMARTPHONE,
             HardwareCategory.TABLET,
+            HardwareCategory.SMARTWATCH,
         )
     }
 }

@@ -104,7 +104,9 @@ import com.panda.myapplication.domain.repository.ActiveBuildRepository
 import com.panda.myapplication.domain.repository.HardwareRepository
 import com.panda.myapplication.domain.repository.RigShowcaseRepository
 import com.panda.myapplication.domain.repository.UserRepository
+import com.panda.myapplication.domain.util.SecurityUtils
 import com.panda.myapplication.presentation.components.HardwarePickerDialog
+import com.panda.myapplication.presentation.components.SoftCategoryIcon
 import com.panda.myapplication.presentation.components.rememberProofImagePicker
 import com.panda.myapplication.presentation.theme.ElectricBlue
 import com.panda.myapplication.presentation.theme.NeonAmber
@@ -333,9 +335,7 @@ fun BattlestationShowcaseScreen(
                     )
                     Spacer(modifier = Modifier.height(20.dp))
                     Button(
-                        onClick = {
-                            if (!isLoggedIn) onOpenAuthSheet() else showShareDialog = true
-                        },
+                        onClick = onTriggerShare,
                         colors = ButtonDefaults.buttonColors(
                             containerColor = NeonCyan,
                             contentColor = Color.Black,
@@ -351,11 +351,11 @@ fun BattlestationShowcaseScreen(
             } else {
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(16.dp),
+                    contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 92.dp),
                     verticalArrangement = Arrangement.spacedBy(20.dp),
                 ) {
                     items(showcases, key = { it.id }) { showcase ->
-                        val isSelf = currentUser?.id == showcase.userId || (currentUser?.username != null && showcase.userDisplayName == currentUser?.username)
+                        val isSelf = currentUser?.id != null && currentUser?.id == showcase.userId
                         BattlestationCard(
                             showcase = showcase,
                             isTr = isTr,
@@ -443,8 +443,8 @@ fun BattlestationShowcaseScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                val parsedSpecs = remember(showcase.hardwareSpecsJson) {
-                    parseSpecsJson(showcase.hardwareSpecsJson)
+                val parsedSpecs = remember(showcase.hardwareSpecsJson, strings) {
+                    parseSpecsJson(showcase.hardwareSpecsJson, strings)
                 }
 
                 if (parsedSpecs.isEmpty()) {
@@ -466,7 +466,7 @@ fun BattlestationShowcaseScreen(
                 }
 
                 Spacer(modifier = Modifier.height(14.dp))
-                val isInspectSelf = currentUser?.id == showcase.userId || (currentUser?.username != null && showcase.userDisplayName == currentUser?.username)
+                val isInspectSelf = currentUser?.id != null && currentUser?.id == showcase.userId
                 OutlinedButton(
                     onClick = {
                         val target = showcase
@@ -553,9 +553,9 @@ fun BattlestationShowcaseScreen(
                     if (result is DomainResult.Success) {
                         snackbarHostState.showSnackbar(
                             if (isTr) {
-                                "Kasa vitrininiz başarıyla paylaşıldı! +100 itibar puanı profilinize tanımlandı."
+                                "Kasa vitrininiz başarıyla paylaşıldı!"
                             } else {
-                                "Battlestation published! +100 reputation points granted."
+                                "Battlestation published to Rig Wall!"
                             }
                         )
                     } else if (result is DomainResult.Failure) {
@@ -569,7 +569,7 @@ fun BattlestationShowcaseScreen(
     }
 
     reportingTargetShowcase?.let { target ->
-        val isSelf = currentUser?.id == target.userId || target.userDisplayName == currentUser?.username
+        val isSelf = currentUser?.id != null && currentUser?.id == target.userId
         ReportContentDialog(
             targetType = ReportTargetType.BATTLESTATION,
             targetTitle = target.title,
@@ -579,22 +579,6 @@ fun BattlestationShowcaseScreen(
             onDismiss = { reportingTargetShowcase = null },
             onSubmitReport = { reason, details ->
                 coroutineScope.launch {
-                    val now = com.panda.myapplication.domain.util.currentEpochMillis()
-                    val report = ContentReport(
-                        id = "rep-bs-$now",
-                        targetType = ReportTargetType.BATTLESTATION,
-                        targetId = target.id,
-                        targetTitle = target.title,
-                        reportedUserId = target.userId,
-                        reportedUserDisplayName = target.userDisplayName,
-                        reporterUserId = currentUser?.id ?: "guest",
-                        reporterUserDisplayName = currentUser?.username ?: (if (isTr) "Misafir" else "Guest"),
-                        isSelfReport = isSelf,
-                        reason = reason,
-                        details = details,
-                        timestampMillis = now,
-                    )
-                    reportRepository.submitReport(report)
                     if (isSelf) {
                         when (val delRes = rigShowcaseRepository.deleteShowcase(target.id, currentUser?.id.orEmpty())) {
                             is DomainResult.Success -> {
@@ -611,6 +595,22 @@ fun BattlestationShowcaseScreen(
                             }
                         }
                     } else {
+                        val now = com.panda.myapplication.domain.util.currentEpochMillis()
+                        val report = ContentReport(
+                            id = "rep-bs-$now",
+                            targetType = ReportTargetType.BATTLESTATION,
+                            targetId = target.id,
+                            targetTitle = target.title,
+                            reportedUserId = target.userId,
+                            reportedUserDisplayName = target.userDisplayName,
+                            reporterUserId = currentUser?.id ?: "guest",
+                            reporterUserDisplayName = currentUser?.username ?: (if (isTr) "Misafir" else "Guest"),
+                            isSelfReport = false,
+                            reason = reason,
+                            details = details,
+                            timestampMillis = now,
+                        )
+                        reportRepository.submitReport(report)
                         snackbarHostState.showSnackbar(
                             if (isTr) "Raporunuz alındı. Moderatörler tarafından incelenecektir."
                             else "Report submitted. It will be reviewed by moderators."
@@ -634,7 +634,9 @@ private fun BattlestationCard(
     onReportClick: () -> Unit,
 ) {
     var selectedPhotoTab by remember { mutableStateOf(0) } // 0: Kasa İçi, 1: Masa Düzeni
-    val currentPhotoUrl = if (selectedPhotoTab == 0) showcase.photoRigUrl else showcase.photoSetupUrl
+    val currentPhotoUrl = SecurityUtils.sanitizeImageUrl(
+        if (selectedPhotoTab == 0) showcase.photoRigUrl else showcase.photoSetupUrl
+    ).orEmpty()
 
     Surface(
         shape = RoundedCornerShape(16.dp),
@@ -939,8 +941,7 @@ private fun BattlestationCard(
                             colors = ButtonDefaults.outlinedButtonColors(
                                 contentColor = NeonCyan,
                             ),
-                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
-                            modifier = Modifier.weight(1f, fill = false),
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
                         ) {
                             Icon(
                                 imageVector = Icons.Rounded.DeveloperBoard,
@@ -957,31 +958,6 @@ private fun BattlestationCard(
                                 softWrap = false,
                             )
                         }
-                    }
-
-                    // Direct, compact Report / Retract Action Button
-                    OutlinedButton(
-                        onClick = onReportClick,
-                        shape = RoundedCornerShape(20.dp),
-                        border = BorderStroke(1.dp, if (isSelf) NeonCyan.copy(alpha = 0.6f) else NeonRose.copy(alpha = 0.45f)),
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = if (isSelf) NeonCyan else NeonRose,
-                        ),
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Flag,
-                            contentDescription = if (isSelf) "Kaldır" else "Bildir",
-                            modifier = Modifier.size(13.dp),
-                        )
-                        Spacer(modifier = Modifier.width(3.dp))
-                        Text(
-                            text = if (isSelf) (if (isTr) "Kaldır" else "Retract") else (if (isTr) "Bildir" else "Report"),
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            maxLines = 1,
-                            softWrap = false,
-                        )
                     }
                 }
             }
@@ -1369,7 +1345,7 @@ private fun ShareRigShowcaseDialog(
                                         .clickable { selectedHardwareSectionTab = 0 }
                                 ) {
                                     Text(
-                                        text = if (isTr) "🖥️ Kasa İçi ($coreCount/8)" else "🖥️ Core Rig ($coreCount/8)",
+                                        text = if (isTr) "Kasa İçi ($coreCount/8)" else "Core Rig ($coreCount/8)",
                                         fontSize = 11.sp,
                                         fontWeight = FontWeight.Bold,
                                         color = if (selectedHardwareSectionTab == 0) NeonCyan else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1389,7 +1365,7 @@ private fun ShareRigShowcaseDialog(
                                         .clickable { selectedHardwareSectionTab = 1 }
                                 ) {
                                     Text(
-                                        text = if (isTr) "🎙️ Masa & Ekipman ($setupCount/8)" else "🎙️ Peripherals ($setupCount/8)",
+                                        text = if (isTr) "Masa & Ekipman ($setupCount/8)" else "Peripherals ($setupCount/8)",
                                         fontSize = 11.sp,
                                         fontWeight = FontWeight.Bold,
                                         color = if (selectedHardwareSectionTab == 1) NeonPurple else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1475,7 +1451,7 @@ private fun ShareRigShowcaseDialog(
                         shape = RoundedCornerShape(12.dp),
                     ) {
                         Text(
-                            text = if (isTr) "✨ Vitrine Gönder (+100 Puan)" else "✨ Publish to Rig Wall (+100 Rep)",
+                            text = if (isTr) "Vitrine Gönder" else "Publish to Rig Wall",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
                         )
@@ -1519,9 +1495,10 @@ private fun ShowcaseSlotPickerRow(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Text(
-                    text = category.iconEmoji(),
-                    fontSize = 18.sp,
+                SoftCategoryIcon(
+                    category = category,
+                    size = 30.dp,
+                    iconSize = 16.dp,
                 )
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
@@ -1737,7 +1714,7 @@ private fun PhotoUploadCard(
                     OutlinedTextField(
                         value = imageUrl,
                         onValueChange = onUrlChanged,
-                        label = { Text("Görsel URL") },
+                        label = { Text(if (isTr) "Görsel URL" else "Image URL") },
                         placeholder = { Text("https://...") },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(8.dp),
@@ -1749,7 +1726,10 @@ private fun PhotoUploadCard(
     }
 }
 
-private fun parseSpecsJson(jsonStr: String?): List<Pair<String, String>> {
+private fun parseSpecsJson(
+    jsonStr: String?,
+    strings: com.panda.myapplication.presentation.util.AppStrings,
+): List<Pair<String, String>> {
     if (jsonStr.isNullOrBlank()) return emptyList()
     return runCatching {
         val json = Json { ignoreUnknownKeys = true }
@@ -1757,26 +1737,26 @@ private fun parseSpecsJson(jsonStr: String?): List<Pair<String, String>> {
         obj.entries.mapNotNull { (key, element) ->
             val value = element.jsonPrimitive.content
             if (value.isNotBlank()) {
-                val label = when (key.lowercase()) {
-                    "cpu" -> "İşlemci (CPU)"
-                    "gpu" -> "Ekran Kartı (GPU)"
-                    "motherboard" -> "Anakart"
-                    "ram" -> "Bellek (RAM)"
-                    "cooler" -> "Soğutucu"
-                    "case" -> "Kasa"
-                    "storage" -> "Depolama (SSD)"
-                    "psu" -> "Güç Kaynağı (PSU)"
-                    "monitor" -> "Monitör"
-                    "mouse" -> "Oyuncu Mouse"
-                    "mousepad" -> "Oyuncu Mousepad"
-                    "keyboard" -> "Mekanik / Manyetik Klavye"
-                    "headset" -> "Kulaklık"
-                    "microphone" -> "Yayıncı Mikrofonu"
-                    "webcam" -> "Yayıncı Kamerası (Webcam)"
-                    "gaming_chair" -> "Oyuncu & Ergonomi Koltuğu"
-                    else -> key
+                val category = when (key.lowercase()) {
+                    "cpu" -> HardwareCategory.CPU
+                    "gpu" -> HardwareCategory.GPU
+                    "motherboard" -> HardwareCategory.MOTHERBOARD
+                    "ram" -> HardwareCategory.RAM
+                    "cooler" -> HardwareCategory.COOLER
+                    "case" -> HardwareCategory.CASE
+                    "storage" -> HardwareCategory.STORAGE
+                    "psu" -> HardwareCategory.PSU
+                    "monitor" -> HardwareCategory.MONITOR
+                    "mouse" -> HardwareCategory.MOUSE
+                    "mousepad" -> HardwareCategory.MOUSEPAD
+                    "keyboard" -> HardwareCategory.KEYBOARD
+                    "headset" -> HardwareCategory.HEADSET
+                    "microphone" -> HardwareCategory.MICROPHONE
+                    "webcam" -> HardwareCategory.WEBCAM
+                    "gaming_chair" -> HardwareCategory.GAMING_CHAIR
+                    else -> null
                 }
-                label to value
+                (category?.localized(strings) ?: key) to value
             } else null
         }
     }.getOrDefault(emptyList())

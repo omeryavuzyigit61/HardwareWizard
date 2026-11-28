@@ -53,7 +53,11 @@ data class VsArenaSelectionState(
         get() = when (mode) {
             VsArenaMode.COMPONENT_VS_COMPONENT -> componentCategory
             VsArenaMode.LAPTOP_VS_LAPTOP -> HardwareCategory.LAPTOP
-            VsArenaMode.MOBILE_VS_MOBILE -> if (componentCategory == HardwareCategory.TABLET) HardwareCategory.TABLET else HardwareCategory.SMARTPHONE
+            VsArenaMode.MOBILE_VS_MOBILE -> when (componentCategory) {
+                HardwareCategory.TABLET -> HardwareCategory.TABLET
+                HardwareCategory.SMARTWATCH -> HardwareCategory.SMARTWATCH
+                else -> HardwareCategory.SMARTPHONE
+            }
         }
 
     val filledCount: Int

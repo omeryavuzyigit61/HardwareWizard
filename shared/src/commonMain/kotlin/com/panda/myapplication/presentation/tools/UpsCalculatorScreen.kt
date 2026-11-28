@@ -7,27 +7,34 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.BatteryChargingFull
+import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.CheckCircle
+import androidx.compose.material.icons.rounded.Schedule
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import com.panda.myapplication.presentation.util.LocalAppStrings
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -35,14 +42,27 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.panda.myapplication.domain.common.DomainResult
+import com.panda.myapplication.domain.engine.BuildAnalysisEngine
+import com.panda.myapplication.domain.engine.UpsSizingEngine
+import com.panda.myapplication.domain.model.HardwareCategory
+import com.panda.myapplication.domain.model.UpsSpec
+import com.panda.myapplication.domain.repository.ActiveBuildRepository
+import com.panda.myapplication.domain.repository.HardwareRepository
+import com.panda.myapplication.presentation.components.FluidInteractiveSlider
 import com.panda.myapplication.presentation.components.FluidOrganicCard
 import com.panda.myapplication.presentation.hardware_list.Spacing
 import com.panda.myapplication.presentation.theme.NeonAmber
 import com.panda.myapplication.presentation.theme.NeonCyan
 import com.panda.myapplication.presentation.theme.NeonEmerald
 import com.panda.myapplication.presentation.theme.NeonRose
+import com.panda.myapplication.presentation.util.LocalAppStrings
+import kotlinx.coroutines.flow.map
+import org.koin.compose.koinInject
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 
@@ -53,29 +73,10 @@ private data class BuildPowerPreset(
 )
 
 private val BUILD_POWER_PRESETS = listOf(
-    BuildPowerPreset("R5 7500F + RTX 4060 (310W)", 310, 35),
-    BuildPowerPreset("R7 7800X3D + RTX 4070 Super (440W)", 440, 45),
-    BuildPowerPreset("R7 9800X3D + RTX 4080 Super (560W)", 560, 55),
-    BuildPowerPreset("R9 9950X + RTX 4090 / 5090 (820W)", 820, 65),
-)
-
-private data class UpsTierClass(
-    val vaRating: Int,
-    val realWattCapacity: Int,
-    val batteryConfig: String,
-    val totalBatteryWh: Int,
-    val topologyTr: String,
-    val topologyEn: String,
-) {
-    fun localizedTopology(isTr: Boolean): String = if (isTr) topologyTr else topologyEn
-}
-
-private val UPS_TIERS = listOf(
-    UpsTierClass(850, 480, "1x 12V 9Ah", 108, "Line-Interactive (Simüle Sinüs)", "Line-Interactive (Simulated Sine)"),
-    UpsTierClass(1000, 600, "2x 12V 7Ah", 168, "Line-Interactive", "Line-Interactive"),
-    UpsTierClass(1500, 900, "2x 12V 9Ah", 216, "Line-Interactive / Tam Sinüs", "Line-Interactive / Pure Sine Wave"),
-    UpsTierClass(2000, 1200, "4x 12V 9Ah", 432, "Online Tam Sinüs (Double Conversion)", "Online Pure Sine (Double Conversion)"),
-    UpsTierClass(3000, 1800, "6x 12V 9Ah", 648, "Online Tam Sinüs (Server/Workstation)", "Online Pure Sine (Server/Workstation)"),
+    BuildPowerPreset("R5 7500F + RTX 4060 (280W)", 280, 35),
+    BuildPowerPreset("R7 7800X3D + RTX 4070 Super (390W)", 390, 45),
+    BuildPowerPreset("R7 9800X3D + RTX 5080 (540W)", 540, 55),
+    BuildPowerPreset("R9 9950X + RTX 5090 (860W)", 860, 65),
 )
 
 @Composable
@@ -84,21 +85,36 @@ fun UpsCalculatorScreen(
     onNavigateBack: () -> Unit,
     onOpenDrawer: () -> Unit,
     modifier: Modifier = Modifier,
+    hardwareRepository: HardwareRepository = koinInject(),
+    activeBuildRepository: ActiveBuildRepository = koinInject(),
 ) {
     val strings = LocalAppStrings.current
-    val isTr = strings.activeStatusBadge == "AKTİF" || strings.tabCatalog == "Keşfet & Katalog"
-    var pcWatts by remember { mutableIntStateOf(initialBuildWatts.coerceIn(180, 1100)) }
+    val isTr = strings.isTurkish
+    val activeBuild by activeBuildRepository.activeBuild.collectAsState()
+    val wizardWatts = remember(activeBuild) {
+        BuildAnalysisEngine.calculateWattageCockpit(activeBuild).componentTdpSum.takeIf { it > 0 }
+    }
+
+    val catalogUpsItems by remember {
+        hardwareRepository.observeHardwareItemsByCategory(HardwareCategory.UPS).map { res ->
+            (res as? DomainResult.Success)?.data.orEmpty()
+        }
+    }.collectAsStateWithLifecycle(initialValue = emptyList())
+
+    var pcWatts by remember(initialBuildWatts) {
+        mutableIntStateOf((wizardWatts ?: initialBuildWatts).coerceIn(150, 1200))
+    }
     var monitorWatts by remember { mutableIntStateOf(45) }
 
-    val totalLoadWatts = pcWatts + monitorWatts
-    val idleTotalWatts = (pcWatts * 0.24).roundToInt() + (monitorWatts * 0.75).roundToInt()
-
-    // Engineering Formula: Required VA = Total Watts / 0.6 (with 20% safety margin recommended)
-    val rawRequiredVa = ceil(totalLoadWatts / 0.6).roundToInt()
-    val safeRecommendedVa = ceil((totalLoadWatts * 1.2) / 0.6).roundToInt()
-
-    val recommendedTier = UPS_TIERS.firstOrNull { it.realWattCapacity >= (totalLoadWatts * 1.15).roundToInt() }
-        ?: UPS_TIERS.last()
+    val report = remember(pcWatts, monitorWatts, catalogUpsItems) {
+        UpsSizingEngine.calculate(
+            pcDcWatts = pcWatts,
+            monitorWatts = monitorWatts,
+            catalogUpsItems = catalogUpsItems,
+        )
+    }
+    val recommendedTier = report.recommendedTier
+    val rawRequiredVa = ceil(report.acWallLoadWatts / 0.60).roundToInt()
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -106,8 +122,8 @@ fun UpsCalculatorScreen(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             ToolTopBar(
-                title = LocalAppStrings.current.drawerUpsTitle,
-                subtitle = LocalAppStrings.current.drawerUpsSubtitle,
+                title = strings.drawerUpsTitle,
+                subtitle = strings.drawerUpsSubtitle,
                 icon = "🔋",
                 onNavigateBack = onNavigateBack,
                 onOpenDrawer = onOpenDrawer,
@@ -122,6 +138,31 @@ fun UpsCalculatorScreen(
             contentPadding = PaddingValues(Spacing.medium),
             verticalArrangement = Arrangement.spacedBy(Spacing.medium),
         ) {
+            if (wizardWatts != null && wizardWatts != pcWatts) {
+                item {
+                    Surface(
+                        onClick = { pcWatts = wizardWatts.coerceIn(150, 1200) },
+                        shape = RoundedCornerShape(12.dp),
+                        color = NeonCyan.copy(alpha = 0.12f),
+                        border = BorderStroke(1.dp, NeonCyan.copy(alpha = 0.55f)),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                        ) {
+                            Text(
+                                text = if (isTr) "Sihirbazdaki Güç Yükünü Yükle (${wizardWatts}W DC)" else "Load Wizard System Power (${wizardWatts}W DC)",
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = NeonCyan,
+                            )
+                        }
+                    }
+                }
+            }
+
             // 1. Power Input Card
             item {
                 Card(
@@ -178,17 +219,17 @@ fun UpsCalculatorScreen(
                             )
                             Spacer(modifier = Modifier.width(Spacing.small))
                             Text(
-                                text = "$pcWatts W",
+                                text = "$pcWatts W DC",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Black,
                                 color = NeonCyan,
                                 softWrap = false,
                             )
                         }
-                        com.panda.myapplication.presentation.components.FluidInteractiveSlider(
+                        FluidInteractiveSlider(
                             value = pcWatts.toFloat(),
                             onValueChange = { pcWatts = (it / 10f).roundToInt() * 10 },
-                            valueRange = 150f..1100f,
+                            valueRange = 150f..1200f,
                             accentColor = NeonCyan,
                         )
 
@@ -212,7 +253,7 @@ fun UpsCalculatorScreen(
                                 softWrap = false,
                             )
                         }
-                        com.panda.myapplication.presentation.components.FluidInteractiveSlider(
+                        FluidInteractiveSlider(
                             value = monitorWatts.toFloat(),
                             onValueChange = { monitorWatts = (it / 5f).roundToInt() * 5 },
                             valueRange = 20f..160f,
@@ -234,31 +275,25 @@ fun UpsCalculatorScreen(
                         modifier = Modifier.fillMaxWidth(),
                         verticalArrangement = Arrangement.spacedBy(Spacing.medium),
                     ) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Column {
-                                Text(
-                                    text = strings.upsRecommendedTier,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = FontWeight.Black,
-                                    color = NeonEmerald,
-                                    letterSpacing = 1.sp,
-                                )
-                                Text(
-                                    text = "${recommendedTier.vaRating} VA / ${recommendedTier.realWattCapacity} W",
-                                    style = MaterialTheme.typography.headlineSmall,
-                                    fontWeight = FontWeight.Black,
-                                    color = MaterialTheme.colorScheme.onSurface,
-                                )
-                                Text(
-                                    text = "${recommendedTier.localizedTopology(isTr)} • ${if (isTr) "Akü" else "Battery"}: ${recommendedTier.batteryConfig}",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                )
-                            }
+                        Column {
+                            Text(
+                                text = strings.upsRecommendedTier,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Black,
+                                color = NeonEmerald,
+                                letterSpacing = 1.sp,
+                            )
+                            Text(
+                                text = "${recommendedTier.vaRating} VA / ${recommendedTier.realWattCapacity} W",
+                                style = MaterialTheme.typography.headlineSmall,
+                                fontWeight = FontWeight.Black,
+                                color = MaterialTheme.colorScheme.onSurface,
+                            )
+                            Text(
+                                text = "${recommendedTier.localizedTopology(isTr)} • ${if (isTr) "Akü" else "Battery"}: ${recommendedTier.batteryConfig}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
                         }
 
                         HorizontalDivider(color = MaterialTheme.colorScheme.outline)
@@ -269,12 +304,12 @@ fun UpsCalculatorScreen(
                         ) {
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
-                                    text = strings.upsTotalLoad,
+                                    text = if (isTr) "Priz Yükü (%90 PSU)" else "AC Wall Load (90% PSU)",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                                 Text(
-                                    text = "$totalLoadWatts W",
+                                    text = "${report.acWallLoadWatts} W",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonAmber,
@@ -306,7 +341,7 @@ fun UpsCalculatorScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                                 Text(
-                                    text = "$safeRecommendedVa VA",
+                                    text = "${report.safeRecommendedVa} VA",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonEmerald,
@@ -320,22 +355,105 @@ fun UpsCalculatorScreen(
                             border = BorderStroke(1.dp, NeonAmber.copy(alpha = 0.5f)),
                             modifier = Modifier.fillMaxWidth(),
                         ) {
-                            Text(
-                                text = if (isTr) {
-                                    "⚡ Aktif PFC Güç Kaynağı Notu: Modern 80+ Gold / ATX 3.0 güç kaynaklarında elektrik kesildiği an röle geçişinde (4-8ms) kapanma yaşanmaması için 650W üstü sistemlerde Saf Sinüs (Pure Sine Wave) veya Online UPS tercih edilmesi önerilir."
-                                } else {
-                                    "⚡ Active PFC Power Supply Note: For modern 80+ Gold / ATX 3.0 PSUs, Pure Sine Wave or Online UPS is strongly recommended above 650W to prevent shutdown during the 4-8ms transfer relay switch."
-                                },
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurface,
+                            Row(
                                 modifier = Modifier.padding(12.dp),
-                            )
+                                verticalAlignment = Alignment.Top,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            ) {
+                                Icon(Icons.Rounded.Bolt, contentDescription = null, tint = NeonAmber, modifier = Modifier.size(18.dp))
+                                Text(
+                                    text = if (isTr) {
+                                        "Aktif PFC Güç Kaynağı Notu: Modern 80+ Gold / ATX 3.1 güç kaynaklarında prizden çekilen gerçek AC güç (%90 verimle ${report.acWallLoadWatts}W) esas alınır. Röle geçişinde (4-8ms) kapanma olmaması için Tam Sinüs (Pure Sine Wave) veya Online UPS önerilir."
+                                    } else {
+                                        "Active PFC PSU Note: Real AC wall draw (${report.acWallLoadWatts}W at 90% PSU efficiency) is used. Pure Sine Wave or Online UPS is recommended to prevent reset during 4-8ms relay transfer."
+                                    },
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                )
+                            }
                         }
                     }
                 }
             }
 
-            // 3. Runtime Matrix across all UPS Tiers
+            // 3. Matching Real Catalog UPS Models (from 340 catalog items)
+            if (report.matchingCatalogUps.isNotEmpty()) {
+                item {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(Spacing.cardRadius),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                        border = BorderStroke(1.dp, NeonEmerald.copy(alpha = 0.55f)),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(Spacing.medium),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            ) {
+                                Icon(Icons.Rounded.BatteryChargingFull, contentDescription = null, tint = NeonEmerald, modifier = Modifier.size(18.dp))
+                                Text(
+                                    text = if (isTr) "KATALOGDAN UYUMLU GERÇEK UPS MODELLERİ (${catalogUpsItems.size} Model Arasından)" else "COMPATIBLE REAL CATALOG UPS MODELS (From ${catalogUpsItems.size} Models)",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = FontWeight.Black,
+                                    color = NeonEmerald,
+                                )
+                            }
+                            report.matchingCatalogUps.forEach { upsItem ->
+                                val us = upsItem.spec as? UpsSpec
+                                Surface(
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = MaterialTheme.colorScheme.surfaceVariant,
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)),
+                                    modifier = Modifier.fillMaxWidth(),
+                                ) {
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(horizontal = 12.dp, vertical = 9.dp),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically,
+                                    ) {
+                                        Column(modifier = Modifier.weight(1f)) {
+                                            Text(
+                                                text = upsItem.displayName,
+                                                style = MaterialTheme.typography.bodySmall,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.onSurface,
+                                                maxLines = 1,
+                                                overflow = TextOverflow.Ellipsis,
+                                            )
+                                            if (us != null) {
+                                                Text(
+                                                    text = "${us.topology} • ${us.sinewaveType}",
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                    maxLines = 1,
+                                                    overflow = TextOverflow.Ellipsis,
+                                                )
+                                            }
+                                        }
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        if (us != null) {
+                                            Text(
+                                                text = "${us.vaRating}VA / ${us.wattCapacity}W",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Black,
+                                                color = NeonCyan,
+                                                softWrap = false,
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 4. Runtime Matrix across all UPS Tiers (Real Peukert Curve)
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
@@ -347,40 +465,45 @@ fun UpsCalculatorScreen(
                         modifier = Modifier.padding(Spacing.medium),
                         verticalArrangement = Arrangement.spacedBy(Spacing.small),
                     ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            Icon(Icons.Rounded.Schedule, contentDescription = null, tint = NeonCyan, modifier = Modifier.size(18.dp))
+                            Text(
+                                text = strings.upsRuntimeSection,
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Black,
+                                color = NeonCyan,
+                                letterSpacing = 1.sp,
+                            )
+                        }
                         Text(
-                            text = "⏱️ " + strings.upsRuntimeSection,
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.Black,
-                            color = NeonCyan,
-                            letterSpacing = 1.sp,
-                        )
-                        Text(
-                            text = if (isTr) "İnverter verimliliği (%82) ve Peukert kurşun-asit deşarj eğrisine göre hesaplanmıştır:" else "Calculated based on 82% inverter efficiency and Peukert battery curve:",
+                            text = if (isTr) {
+                                "İnverter verimliliği (%85), PSU priz kaybı (%90) ve Peukert kurşun-asit üstel deşarj yasasına (k=1.18) göre hesaplanmıştır:"
+                            } else {
+                                "Calculated with 85% inverter efficiency, 90% PSU wall draw, and non-linear Peukert VRLA discharge law (k=1.18):"
+                            },
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
 
                         Spacer(modifier = Modifier.height(4.dp))
 
-                        UPS_TIERS.forEach { tier ->
-                            val isOverloaded = totalLoadWatts > tier.realWattCapacity
-                            val usableWh = tier.totalBatteryWh * 0.78 // Inverter + Peukert derating
-                            val gamingMinutes = if (isOverloaded) 0 else ((usableWh / totalLoadWatts.toDouble()) * 60.0).roundToInt().coerceAtLeast(2)
-                            val idleMinutes = ((usableWh / idleTotalWatts.toDouble()) * 60.0).roundToInt().coerceAtLeast(5)
-                            val isRecommended = tier.vaRating == recommendedTier.vaRating
-
+                        report.tierRows.forEach { row ->
+                            val tier = row.tier
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
                                 color = when {
-                                    isOverloaded -> NeonRose.copy(alpha = 0.1f)
-                                    isRecommended -> NeonEmerald.copy(alpha = 0.14f)
+                                    row.isOverloaded -> NeonRose.copy(alpha = 0.1f)
+                                    row.isRecommended -> NeonEmerald.copy(alpha = 0.14f)
                                     else -> MaterialTheme.colorScheme.surfaceVariant
                                 },
                                 border = BorderStroke(
                                     1.dp,
                                     when {
-                                        isOverloaded -> NeonRose.copy(alpha = 0.5f)
-                                        isRecommended -> NeonEmerald
+                                        row.isOverloaded -> NeonRose.copy(alpha = 0.5f)
+                                        row.isRecommended -> NeonEmerald
                                         else -> MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
                                     },
                                 ),
@@ -398,29 +521,37 @@ fun UpsCalculatorScreen(
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onSurface,
                                         )
-                                        Text(
-                                            text = when {
-                                                isOverloaded -> if (isTr) "AŞIRI YÜK (YETERSİZ)" else "OVERLOAD (INSUFFICIENT)"
-                                                isRecommended -> if (isTr) "★ ÖNERİLEN" else "★ RECOMMENDED"
-                                                else -> if (isTr) "UYGUN" else "COMPATIBLE"
-                                            },
-                                            style = MaterialTheme.typography.labelSmall,
-                                            fontWeight = FontWeight.Black,
-                                            color = when {
-                                                isOverloaded -> NeonRose
-                                                isRecommended -> NeonEmerald
-                                                else -> NeonCyan
-                                            },
-                                        )
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.spacedBy(3.dp),
+                                        ) {
+                                            if (row.isRecommended) {
+                                                Icon(Icons.Rounded.CheckCircle, contentDescription = null, tint = NeonEmerald, modifier = Modifier.size(13.dp))
+                                            }
+                                            Text(
+                                                text = when {
+                                                    row.isOverloaded -> if (isTr) "AŞIRI YÜK" else "OVERLOAD"
+                                                    row.isRecommended -> if (isTr) "ÖNERİLEN" else "RECOMMENDED"
+                                                    else -> if (isTr) "UYGUN" else "COMPATIBLE"
+                                                },
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Black,
+                                                color = when {
+                                                    row.isOverloaded -> NeonRose
+                                                    row.isRecommended -> NeonEmerald
+                                                    else -> NeonCyan
+                                                },
+                                            )
+                                        }
                                     }
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Text(
-                                        text = if (isOverloaded) {
-                                            if (isTr) "Oyun yükünde (${totalLoadWatts}W) UPS kapasitesi (${tier.realWattCapacity}W) aşılır ve aşırı yük koruması devreye girer."
-                                            else "At gaming load (${totalLoadWatts}W), UPS capacity (${tier.realWattCapacity}W) is exceeded and overload protection trips."
+                                        text = if (row.isOverloaded) {
+                                            if (isTr) "Oyun priz yükünde (${report.acWallLoadWatts}W) UPS kapasitesi (${tier.realWattCapacity}W) aşılır ve aşırı yük koruması devreye girer."
+                                            else "At gaming AC load (${report.acWallLoadWatts}W), UPS capacity (${tier.realWattCapacity}W) is exceeded and overload protection trips."
                                         } else {
-                                            if (isTr) "🎮 Oyun Yükünde (${totalLoadWatts}W): ~$gamingMinutes dk  •  🖥️ Masaüstü Boşta (${idleTotalWatts}W): ~$idleMinutes dk"
-                                            else "🎮 Gaming Load (${totalLoadWatts}W): ~$gamingMinutes min  •  🖥️ Desktop Idle (${idleTotalWatts}W): ~$idleMinutes min"
+                                            if (isTr) "Oyun Yükünde (${report.acWallLoadWatts}W AC): ~${row.gamingMinutes} dk  •  Masaüstü Boşta (${report.idleAcWatts}W AC): ~${row.idleMinutes} dk"
+                                            else "Gaming Load (${report.acWallLoadWatts}W AC): ~${row.gamingMinutes} min  •  Desktop Idle (${report.idleAcWatts}W AC): ~${row.idleMinutes} min"
                                         },
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
